@@ -21,6 +21,8 @@ import demo.GeneratedParameters;
 import demo.LearningPath;
 
 public class Generator {
+	
+	// Test VPN
 
 	private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
