@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generatorMetamodels:Knowledge xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generatorMetamodels="http://www.example.org/generatorMetamodels" xsi:schemaLocation="http://www.example.org/generatorMetamodels ../model/generatorMetamodels.ecore" name="Multiplication tables">
+  <knowledgefacts xsi:type="generatorMetamodels:SetOfFacts" name="Table 1">
+    <facts xsi:type="generatorMetamodels:Fact" description="1 * 1 = 1"/>
+  </knowledgefacts>
+  <knowledgefacts xsi:type="generatorMetamodels:SetOfFacts" name="Table 2"/>
+  <knowledgefacts xsi:type="generatorMetamodels:SetOfFacts" name="Table 3"/>
+  <knowledgefacts xsi:type="generatorMetamodels:SetOfFacts" name="Table 4"/>
+  <knowledgefacts xsi:type="generatorMetamodels:SetOfFacts" name="Table 5"/>
+  <knowledgefacts xsi:type="generatorMetamodels:SetOfFacts" name="Table 6"/>
+  <knowledgefacts xsi:type="generatorMetamodels:SetOfFacts" name="Table 7"/>
+  <knowledgefacts xsi:type="generatorMetamodels:SetOfFacts" name="Table 8"/>
+  <knowledgefacts xsi:type="generatorMetamodels:SetOfFacts" name="Table 9"/>
+  <knowledgefacts xsi:type="generatorMetamodels:SetOfFacts" name="Table 10"/>
+  <knowledgefacts xsi:type="generatorMetamodels:SetOfFacts" name="Table 11"/>
+  <knowledgefacts xsi:type="generatorMetamodels:SetOfFacts" name="Table 12"/>
+</generatorMetamodels:Knowledge>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generatorMetamodels:LearnerPlayer
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:generatorMetamodels="http://www.example.org/generatorMetamodels"
+    xsi:schemaLocation="http://www.example.org/generatorMetamodels ../model/generatorMetamodels.ecore"
+    firstname="Test"
+    lastname="Fake Subject">
+  <learningprofile>
+    <learningpath
+        href="MathsLearningPath.xmi#/"/>
+    <currentprogressions>
+      <learningobjective
+          href="MathsLearningPath.xmi#//@learningobjectives.3"/>
+      <level
+          href="MathsLearningPath.xmi#T4L1"/>
+    </currentprogressions>
+    <currentprogressions>
+      <learningobjective
+          href="MathsLearningPath.xmi#//@learningobjectives.1"/>
+      <level
+          href="MathsLearningPath.xmi#T2L3"/>
+    </currentprogressions>
+    <currentprogressions>
+      <learningobjective
+          href="MathsLearningPath.xmi#//@learningobjectives.0"/>
+      <level
+          href="MathsLearningPath.xmi#T1L3"/>
+    </currentprogressions>
+  </learningprofile>
+</generatorMetamodels:LearnerPlayer>

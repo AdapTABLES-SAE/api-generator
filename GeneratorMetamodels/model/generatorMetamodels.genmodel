@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/GeneratorMetamodels/src-gen" creationIcons="false"
+    editDirectory="/GeneratorMetamodels.edit/src-gen" editorDirectory="/GeneratorMetamodels.editor/src-gen"
+    modelPluginID="GeneratorMetamodels" modelName="GeneratorMetamodels" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>generatorMetamodels.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="GeneratorMetamodels" disposableProviderFactory="true" ecorePackage="generatorMetamodels.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generatorMetamodels.ecore#//GameMode">
+      <genEnumLiterals ecoreEnumLiteral="generatorMetamodels.ecore#//GameMode/LINEAR"/>
+      <genEnumLiterals ecoreEnumLiteral="generatorMetamodels.ecore#//GameMode/LABIRINTHINE"/>
+      <genEnumLiterals ecoreEnumLiteral="generatorMetamodels.ecore#//GameMode/RAMDOM"/>
+    </genEnums>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//MultipleChoice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//MultipleChoice/nbChoices"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//ResultVerification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//ResultVerification/checkIsRight"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//SetOfFacts">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//SetOfFacts/facts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//SetOfFacts/name"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//ProblemResolution"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//ExitRoom"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//MultipleCompletion"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//CurrentProgression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//CurrentProgression/learningobjective"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//CurrentProgression/level"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//Dungeon">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//Dungeon/mode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//Dungeon/rooms"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//Dungeon/entry"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="generatorMetamodels.ecore#//Settings"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//Input"/>
+    <genClasses image="false" ecoreClass="generatorMetamodels.ecore#//QuestionRoom"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//LearningPath">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningPath/learningobjectives"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningPath/subobjectives"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningPath/knowledge"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//LearningPath/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="generatorMetamodels.ecore#//AbstractFact"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//SimpleQuestionRoom"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//Fact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//Fact/description"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//LearnerPlayer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearnerPlayer/learningprofile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearnerPlayer/gameprofile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//LearnerPlayer/firstname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//LearnerPlayer/lastname"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//HighLevelActivity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//HighLevelActivity/level"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//EntryRoom"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//Door"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//BossRoom"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//Reconstruction"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//SubObjective">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//SubObjective/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//SubObjective/percentageOfApparition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//SubObjective/percentageOfValidFacts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//SubObjective/nbConsecutiveSuccess"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//SubObjective/responsemodality"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//SubObjective/settings"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="generatorMetamodels.ecore#//ResponseModality">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//ResponseModality/responseTime"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//SimpleCompletion"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//GameProfile"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//LearningProfile">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningProfile/learningpath"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningProfile/currentprogressions"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//LearningObjective">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningObjective/levels"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningObjective/prerequisites"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningObjective/setoffacts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//LearningObjective/ID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//LearningObjective/name"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//Level">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//Level/subobjectives"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//Level/ID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//Level/settings"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//Knowledge">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//Knowledge/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//Knowledge/knowledgefacts"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//FactValidityVerification"/>
+    <genClasses image="false" ecoreClass="generatorMetamodels.ecore#//Room"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generatorMetamodels:LearningPath xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generatorMetamodels="http://www.example.org/generatorMetamodels" xsi:schemaLocation="http://www.example.org/generatorMetamodels ../model/generatorMetamodels.ecore" name="Basic Maths LP">
+  <learningobjectives name="Learning Table 1">
+    <levels subobjectives="//@subobjectives.0 //@subobjectives.2" ID="T1L1"/>
+    <levels subobjectives="//@subobjectives.0 //@subobjectives.1" ID="T1L2"/>
+    <levels subobjectives="//@subobjectives.3 //@subobjectives.4 //@subobjectives.5" ID="T1L3"/>
+    <levels subobjectives="//@subobjectives.4 //@subobjectives.5 //@subobjectives.6 //@subobjectives.7" ID="T1L4"/>
+    <setoffacts href="MathsKnowledge.xmi#//@knowledgefacts.0"/>
+  </learningobjectives>
+  <learningobjectives name="Learning Table 2">
+    <levels subobjectives="//@subobjectives.0 //@subobjectives.2" ID="T2L1"/>
+    <levels subobjectives="//@subobjectives.0 //@subobjectives.1" ID="T2L2"/>
+    <levels subobjectives="//@subobjectives.3 //@subobjectives.4 //@subobjectives.5" ID="T2L3"/>
+    <levels subobjectives="//@subobjectives.4 //@subobjectives.5 //@subobjectives.6 //@subobjectives.7" ID="T2L4"/>
+    <setoffacts href="MathsKnowledge.xmi#//@knowledgefacts.1"/>
+  </learningobjectives>
+  <learningobjectives name="Learning Table 3">
+    <levels subobjectives="//@subobjectives.0 //@subobjectives.2" ID="T3L1"/>
+    <levels subobjectives="//@subobjectives.0 //@subobjectives.1" ID="T3L2"/>
+    <levels subobjectives="//@subobjectives.3 //@subobjectives.4 //@subobjectives.5" ID="T3L3"/>
+    <levels subobjectives="//@subobjectives.4 //@subobjectives.5 //@subobjectives.6 //@subobjectives.7" ID="T3L4"/>
+    <setoffacts href="MathsKnowledge.xmi#//@knowledgefacts.2"/>
+  </learningobjectives>
+  <learningobjectives prerequisites="T2L3 T1L3" name="Learning Table 4">
+    <levels subobjectives="//@subobjectives.0 //@subobjectives.2" ID="T4L1"/>
+    <levels subobjectives="//@subobjectives.0 //@subobjectives.1" ID="T4L2"/>
+    <levels subobjectives="//@subobjectives.3 //@subobjectives.4 //@subobjectives.5" ID="T4L3"/>
+    <levels subobjectives="//@subobjectives.4 //@subobjectives.5 //@subobjectives.6 //@subobjectives.7" ID="T4L4"/>
+    <setoffacts href="MathsKnowledge.xmi#//@knowledgefacts.3"/>
+  </learningobjectives>
+  <subobjectives xsi:type="generatorMetamodels:SimpleCompletion" percentageOfApparition="50" nbConsecutiveSuccess="3"/>
+  <subobjectives xsi:type="generatorMetamodels:MultipleCompletion" percentageOfApparition="50" nbConsecutiveSuccess="3"/>
+  <subobjectives xsi:type="generatorMetamodels:FactValidityVerification" percentageOfApparition="50" nbConsecutiveSuccess="1"/>
+  <subobjectives xsi:type="generatorMetamodels:Reconstruction" percentageOfApparition="25" nbConsecutiveSuccess="1"/>
+  <subobjectives xsi:type="generatorMetamodels:SimpleCompletion" percentageOfApparition="25" nbConsecutiveSuccess="3"/>
+  <subobjectives xsi:type="generatorMetamodels:MultipleCompletion" percentageOfApparition="25" nbConsecutiveSuccess="3"/>
+  <subobjectives xsi:type="generatorMetamodels:ResultVerification" percentageOfApparition="25" nbConsecutiveSuccess="1"/>
+  <subobjectives xsi:type="generatorMetamodels:ProblemResolution" percentageOfApparition="25"/>
+  <knowledge href="MathsKnowledge.xmi#/"/>
+</generatorMetamodels:LearningPath>

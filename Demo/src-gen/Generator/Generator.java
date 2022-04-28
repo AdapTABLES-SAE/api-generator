@@ -22,8 +22,6 @@ import demo.LearningPath;
 
 public class Generator {
 	
-	// Test VPN
-
 	private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
 	private LearningPath domainRoot;
@@ -55,6 +53,7 @@ public class Generator {
 
 	private void selectObjective() {
 		int index = (int) (Math.random() * domainRoot.getLearningobjective().size());
+		System.out.println("Objective : "+domainRoot.getLearningobjective().get(index).getDescription());
 		generatedRoot.setLearningobjective(domainRoot.getLearningobjective().get(index));
 		
 	}
