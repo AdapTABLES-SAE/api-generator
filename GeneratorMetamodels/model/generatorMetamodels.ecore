@@ -15,7 +15,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProblemResolution" eSuperTypes="#//SubObjective"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExitRoom" eSuperTypes="#//Room"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExitRoom" eSuperTypes="#//Room">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RoomType"
+        changeable="false" volatile="true" defaultValueLiteral="EXIT" unsettable="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MultipleCompletion" eSuperTypes="#//SubObjective"/>
   <eClassifiers xsi:type="ecore:EClass" name="CurrentProgression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjective" lowerBound="1"
@@ -24,10 +27,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dungeon">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" eType="#//GameMode"
-        defaultValueLiteral="LINEAR"/>
+        defaultValueLiteral="NONE"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" upperBound="-1"
         eType="#//Room" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entry" lowerBound="1" eType="#//EntryRoom"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfRooms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gamingobjective" lowerBound="1"
+        eType="#//GamingObjective"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Settings" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//ResponseModality"/>
@@ -41,7 +47,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractFact" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SimpleQuestionRoom" eSuperTypes="#//QuestionRoom"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleQuestionRoom" eSuperTypes="#//QuestionRoom">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RoomType"
+        changeable="false" volatile="true" defaultValueLiteral="SIMPLE_QUESTION" unsettable="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fact" eSuperTypes="#//AbstractFact">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -54,13 +63,30 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HighLevelActivity">
+    <eOperations name="addRoomPercentage">
+      <eParameters name="entry" eType="#//RoomTypeToEIntMap"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//Level"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfQuestions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="10"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gamingobjective" lowerBound="1"
+        eType="#//GamingObjective"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectedMode" eType="#//GameMode"
+        defaultValueLiteral="NONE"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roomTypesByPercentage"
+        upperBound="-1" eType="#//RoomTypeToEIntMap" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EntryRoom" eSuperTypes="#//Room"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntryRoom" eSuperTypes="#//Room">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RoomType"
+        changeable="false" volatile="true" defaultValueLiteral="ENTRY" unsettable="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Door"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BossRoom" eSuperTypes="#//QuestionRoom"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BossRoom" eSuperTypes="#//QuestionRoom">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RoomType"
+        changeable="false" volatile="true" defaultValueLiteral="BOSS" unsettable="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Reconstruction" eSuperTypes="#//SubObjective"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SubObjective">
+  <eClassifiers xsi:type="ecore:EClass" name="SubObjective" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfApparition"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -98,6 +124,7 @@
     <eLiterals name="LINEAR" literal="LINEAR"/>
     <eLiterals name="LABIRINTHINE" value="1"/>
     <eLiterals name="RAMDOM" value="2"/>
+    <eLiterals name="NONE" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Level">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subobjectives" upperBound="-1"
@@ -113,5 +140,47 @@
         eType="#//AbstractFact" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FactValidityVerification" eSuperTypes="#//SubObjective"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Room" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Room" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="concreteelements" upperBound="-1"
+        eType="#//ConcreteElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GamingObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RoomType">
+    <eLiterals name="ENTRY"/>
+    <eLiterals name="EXIT" value="1"/>
+    <eLiterals name="SIMPLE_QUESTION" value="2"/>
+    <eLiterals name="BOSS" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GameDomain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gamingobjectives" lowerBound="1"
+        upperBound="-1" eType="#//GamingObjective" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gameelements" upperBound="-1"
+        eType="#//GameElements" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GameElements" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//GameElementType"
+        defaultValueLiteral="OTHER"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConceptualElement" eSuperTypes="#//GameElements">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="representations" lowerBound="1"
+        upperBound="-1" eType="#//ConcreteElement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adaptable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConcreteElement" eSuperTypes="#//GameElements">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imgPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GameElementType">
+    <eLiterals name="CONTENT"/>
+    <eLiterals name="RULE" value="1"/>
+    <eLiterals name="AESTHETIC" value="2"/>
+    <eLiterals name="OTHER" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoomTypeToEIntMap" instanceClassName="java.util.Map$Entry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="#//RoomType"
+        defaultValueLiteral="ENTRY"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
 </ecore:EPackage>

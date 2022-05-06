@@ -46,7 +46,17 @@ public enum GameMode implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RAMDOM(2, "RAMDOM", "RAMDOM");
+	RAMDOM(2, "RAMDOM", "RAMDOM"),
+
+	/**
+	 * The '<em><b>NONE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NONE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	NONE(3, "NONE", "NONE");
 
 	/**
 	 * The '<em><b>LINEAR</b></em>' literal value.
@@ -82,12 +92,23 @@ public enum GameMode implements Enumerator {
 	public static final int RAMDOM_VALUE = 2;
 
 	/**
+	 * The '<em><b>NONE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NONE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NONE_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>Game Mode</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final GameMode[] VALUES_ARRAY = new GameMode[] { LINEAR, LABIRINTHINE, RAMDOM, };
+	private static final GameMode[] VALUES_ARRAY = new GameMode[] { LINEAR, LABIRINTHINE, RAMDOM, NONE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Game Mode</b></em>' enumerators.
@@ -149,6 +170,8 @@ public enum GameMode implements Enumerator {
 			return LABIRINTHINE;
 		case RAMDOM_VALUE:
 			return RAMDOM;
+		case NONE_VALUE:
+			return NONE;
 		}
 		return null;
 	}

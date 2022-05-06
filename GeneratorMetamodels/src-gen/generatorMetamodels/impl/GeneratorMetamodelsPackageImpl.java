@@ -4,6 +4,8 @@ package generatorMetamodels.impl;
 
 import generatorMetamodels.AbstractFact;
 import generatorMetamodels.BossRoom;
+import generatorMetamodels.ConceptualElement;
+import generatorMetamodels.ConcreteElement;
 import generatorMetamodels.CurrentProgression;
 import generatorMetamodels.Door;
 import generatorMetamodels.Dungeon;
@@ -11,8 +13,12 @@ import generatorMetamodels.EntryRoom;
 import generatorMetamodels.ExitRoom;
 import generatorMetamodels.Fact;
 import generatorMetamodels.FactValidityVerification;
+import generatorMetamodels.GameDomain;
+import generatorMetamodels.GameElementType;
+import generatorMetamodels.GameElements;
 import generatorMetamodels.GameMode;
 import generatorMetamodels.GameProfile;
+import generatorMetamodels.GamingObjective;
 import generatorMetamodels.GeneratorMetamodelsFactory;
 import generatorMetamodels.GeneratorMetamodelsPackage;
 import generatorMetamodels.HighLevelActivity;
@@ -31,15 +37,19 @@ import generatorMetamodels.Reconstruction;
 import generatorMetamodels.ResponseModality;
 import generatorMetamodels.ResultVerification;
 import generatorMetamodels.Room;
+import generatorMetamodels.RoomType;
 import generatorMetamodels.SetOfFacts;
 import generatorMetamodels.Settings;
 import generatorMetamodels.SimpleCompletion;
 import generatorMetamodels.SimpleQuestionRoom;
 import generatorMetamodels.SubObjective;
 
+import java.util.Map;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -274,7 +284,63 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass gamingObjectiveEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gameDomainEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gameElementsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass conceptualElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass concreteElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass roomTypeToEIntMapEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum gameModeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum roomTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum gameElementTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -427,6 +493,15 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getExitRoom_Type() {
+		return (EAttribute) exitRoomEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMultipleCompletion() {
 		return multipleCompletionEClass;
 	}
@@ -492,6 +567,24 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 */
 	public EReference getDungeon_Entry() {
 		return (EReference) dungeonEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDungeon_NumberOfRooms() {
+		return (EAttribute) dungeonEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDungeon_Gamingobjective() {
+		return (EReference) dungeonEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -589,6 +682,15 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSimpleQuestionRoom_Type() {
+		return (EAttribute) simpleQuestionRoomEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFact() {
 		return factEClass;
 	}
@@ -670,8 +772,62 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getHighLevelActivity_NumberOfQuestions() {
+		return (EAttribute) highLevelActivityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHighLevelActivity_Gamingobjective() {
+		return (EReference) highLevelActivityEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHighLevelActivity_SelectedMode() {
+		return (EAttribute) highLevelActivityEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHighLevelActivity_RoomTypesByPercentage() {
+		return (EReference) highLevelActivityEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getHighLevelActivity__AddRoomPercentage__EMap() {
+		return highLevelActivityEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEntryRoom() {
 		return entryRoomEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEntryRoom_Type() {
+		return (EAttribute) entryRoomEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -690,6 +846,15 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 */
 	public EClass getBossRoom() {
 		return bossRoomEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBossRoom_Type() {
+		return (EAttribute) bossRoomEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -967,8 +1132,179 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getRoom_Concreteelements() {
+		return (EReference) roomEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGamingObjective() {
+		return gamingObjectiveEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGamingObjective_Name() {
+		return (EAttribute) gamingObjectiveEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGameDomain() {
+		return gameDomainEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameDomain_Gamingobjectives() {
+		return (EReference) gameDomainEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameDomain_Gameelements() {
+		return (EReference) gameDomainEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGameElements() {
+		return gameElementsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGameElements_Name() {
+		return (EAttribute) gameElementsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGameElements_Type() {
+		return (EAttribute) gameElementsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConceptualElement() {
+		return conceptualElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConceptualElement_Representations() {
+		return (EReference) conceptualElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getConceptualElement_Adaptable() {
+		return (EAttribute) conceptualElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConcreteElement() {
+		return concreteElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getConcreteElement_ImgPath() {
+		return (EAttribute) concreteElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRoomTypeToEIntMap() {
+		return roomTypeToEIntMapEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRoomTypeToEIntMap_Key() {
+		return (EAttribute) roomTypeToEIntMapEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRoomTypeToEIntMap_Value() {
+		return (EAttribute) roomTypeToEIntMapEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getGameMode() {
 		return gameModeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getRoomType() {
+		return roomTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getGameElementType() {
+		return gameElementTypeEEnum;
 	}
 
 	/**
@@ -1013,6 +1349,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		problemResolutionEClass = createEClass(PROBLEM_RESOLUTION);
 
 		exitRoomEClass = createEClass(EXIT_ROOM);
+		createEAttribute(exitRoomEClass, EXIT_ROOM__TYPE);
 
 		multipleCompletionEClass = createEClass(MULTIPLE_COMPLETION);
 
@@ -1024,6 +1361,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		createEAttribute(dungeonEClass, DUNGEON__MODE);
 		createEReference(dungeonEClass, DUNGEON__ROOMS);
 		createEReference(dungeonEClass, DUNGEON__ENTRY);
+		createEAttribute(dungeonEClass, DUNGEON__NUMBER_OF_ROOMS);
+		createEReference(dungeonEClass, DUNGEON__GAMINGOBJECTIVE);
 
 		settingsEClass = createEClass(SETTINGS);
 
@@ -1040,6 +1379,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		abstractFactEClass = createEClass(ABSTRACT_FACT);
 
 		simpleQuestionRoomEClass = createEClass(SIMPLE_QUESTION_ROOM);
+		createEAttribute(simpleQuestionRoomEClass, SIMPLE_QUESTION_ROOM__TYPE);
 
 		factEClass = createEClass(FACT);
 		createEAttribute(factEClass, FACT__DESCRIPTION);
@@ -1052,12 +1392,19 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 
 		highLevelActivityEClass = createEClass(HIGH_LEVEL_ACTIVITY);
 		createEReference(highLevelActivityEClass, HIGH_LEVEL_ACTIVITY__LEVEL);
+		createEAttribute(highLevelActivityEClass, HIGH_LEVEL_ACTIVITY__NUMBER_OF_QUESTIONS);
+		createEReference(highLevelActivityEClass, HIGH_LEVEL_ACTIVITY__GAMINGOBJECTIVE);
+		createEAttribute(highLevelActivityEClass, HIGH_LEVEL_ACTIVITY__SELECTED_MODE);
+		createEReference(highLevelActivityEClass, HIGH_LEVEL_ACTIVITY__ROOM_TYPES_BY_PERCENTAGE);
+		createEOperation(highLevelActivityEClass, HIGH_LEVEL_ACTIVITY___ADD_ROOM_PERCENTAGE__EMAP);
 
 		entryRoomEClass = createEClass(ENTRY_ROOM);
+		createEAttribute(entryRoomEClass, ENTRY_ROOM__TYPE);
 
 		doorEClass = createEClass(DOOR);
 
 		bossRoomEClass = createEClass(BOSS_ROOM);
+		createEAttribute(bossRoomEClass, BOSS_ROOM__TYPE);
 
 		reconstructionEClass = createEClass(RECONSTRUCTION);
 
@@ -1099,9 +1446,34 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		factValidityVerificationEClass = createEClass(FACT_VALIDITY_VERIFICATION);
 
 		roomEClass = createEClass(ROOM);
+		createEReference(roomEClass, ROOM__CONCRETEELEMENTS);
+
+		gamingObjectiveEClass = createEClass(GAMING_OBJECTIVE);
+		createEAttribute(gamingObjectiveEClass, GAMING_OBJECTIVE__NAME);
+
+		gameDomainEClass = createEClass(GAME_DOMAIN);
+		createEReference(gameDomainEClass, GAME_DOMAIN__GAMINGOBJECTIVES);
+		createEReference(gameDomainEClass, GAME_DOMAIN__GAMEELEMENTS);
+
+		gameElementsEClass = createEClass(GAME_ELEMENTS);
+		createEAttribute(gameElementsEClass, GAME_ELEMENTS__NAME);
+		createEAttribute(gameElementsEClass, GAME_ELEMENTS__TYPE);
+
+		conceptualElementEClass = createEClass(CONCEPTUAL_ELEMENT);
+		createEReference(conceptualElementEClass, CONCEPTUAL_ELEMENT__REPRESENTATIONS);
+		createEAttribute(conceptualElementEClass, CONCEPTUAL_ELEMENT__ADAPTABLE);
+
+		concreteElementEClass = createEClass(CONCRETE_ELEMENT);
+		createEAttribute(concreteElementEClass, CONCRETE_ELEMENT__IMG_PATH);
+
+		roomTypeToEIntMapEClass = createEClass(ROOM_TYPE_TO_EINT_MAP);
+		createEAttribute(roomTypeToEIntMapEClass, ROOM_TYPE_TO_EINT_MAP__KEY);
+		createEAttribute(roomTypeToEIntMapEClass, ROOM_TYPE_TO_EINT_MAP__VALUE);
 
 		// Create enums
 		gameModeEEnum = createEEnum(GAME_MODE);
+		roomTypeEEnum = createEEnum(ROOM_TYPE);
+		gameElementTypeEEnum = createEEnum(GAME_ELEMENT_TYPE);
 	}
 
 	/**
@@ -1148,6 +1520,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		reconstructionEClass.getESuperTypes().add(this.getSubObjective());
 		simpleCompletionEClass.getESuperTypes().add(this.getSubObjective());
 		factValidityVerificationEClass.getESuperTypes().add(this.getSubObjective());
+		conceptualElementEClass.getESuperTypes().add(this.getGameElements());
+		concreteElementEClass.getESuperTypes().add(this.getGameElements());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(multipleChoiceEClass, MultipleChoice.class, "MultipleChoice", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1175,6 +1549,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 
 		initEClass(exitRoomEClass, ExitRoom.class, "ExitRoom", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExitRoom_Type(), this.getRoomType(), "type", "EXIT", 0, 1, ExitRoom.class, !IS_TRANSIENT,
+				IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(multipleCompletionEClass, MultipleCompletion.class, "MultipleCompletion", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1189,7 +1565,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dungeonEClass, Dungeon.class, "Dungeon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDungeon_Mode(), this.getGameMode(), "mode", "LINEAR", 0, 1, Dungeon.class, !IS_TRANSIENT,
+		initEAttribute(getDungeon_Mode(), this.getGameMode(), "mode", "NONE", 0, 1, Dungeon.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDungeon_Rooms(), this.getRoom(), null, "rooms", null, 0, -1, Dungeon.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
@@ -1197,6 +1573,11 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		initEReference(getDungeon_Entry(), this.getEntryRoom(), null, "entry", null, 1, 1, Dungeon.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEAttribute(getDungeon_NumberOfRooms(), ecorePackage.getEInt(), "numberOfRooms", null, 0, 1, Dungeon.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDungeon_Gamingobjective(), this.getGamingObjective(), null, "gamingobjective", null, 1, 1,
+				Dungeon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(settingsEClass, Settings.class, "Settings", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1224,6 +1605,9 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 
 		initEClass(simpleQuestionRoomEClass, SimpleQuestionRoom.class, "SimpleQuestionRoom", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSimpleQuestionRoom_Type(), this.getRoomType(), "type", "SIMPLE_QUESTION", 0, 1,
+				SimpleQuestionRoom.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(factEClass, Fact.class, "Fact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFact_Description(), ecorePackage.getEString(), "description", null, 0, 1, Fact.class,
@@ -1249,19 +1633,39 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		initEReference(getHighLevelActivity_Level(), this.getLevel(), null, "level", null, 1, 1,
 				HighLevelActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHighLevelActivity_NumberOfQuestions(), ecorePackage.getEInt(), "numberOfQuestions", "10", 0,
+				1, HighLevelActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHighLevelActivity_Gamingobjective(), this.getGamingObjective(), null, "gamingobjective", null,
+				1, 1, HighLevelActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHighLevelActivity_SelectedMode(), this.getGameMode(), "selectedMode", "NONE", 0, 1,
+				HighLevelActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getHighLevelActivity_RoomTypesByPercentage(), this.getRoomTypeToEIntMap(), null,
+				"roomTypesByPercentage", null, 0, -1, HighLevelActivity.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		EOperation op = initEOperation(getHighLevelActivity__AddRoomPercentage__EMap(), null, "addRoomPercentage", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getRoomTypeToEIntMap(), "entry", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(entryRoomEClass, EntryRoom.class, "EntryRoom", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEntryRoom_Type(), this.getRoomType(), "type", "ENTRY", 0, 1, EntryRoom.class, !IS_TRANSIENT,
+				IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(doorEClass, Door.class, "Door", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(bossRoomEClass, BossRoom.class, "BossRoom", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBossRoom_Type(), this.getRoomType(), "type", "BOSS", 0, 1, BossRoom.class, !IS_TRANSIENT,
+				IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(reconstructionEClass, Reconstruction.class, "Reconstruction", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(subObjectiveEClass, SubObjective.class, "SubObjective", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(subObjectiveEClass, SubObjective.class, "SubObjective", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSubObjective_Name(), ecorePackage.getEString(), "name", null, 0, 1, SubObjective.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1341,12 +1745,72 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(roomEClass, Room.class, "Room", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRoom_Concreteelements(), this.getConcreteElement(), null, "concreteelements", null, 0, -1,
+				Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(gamingObjectiveEClass, GamingObjective.class, "GamingObjective", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGamingObjective_Name(), ecorePackage.getEString(), "name", null, 0, 1, GamingObjective.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(gameDomainEClass, GameDomain.class, "GameDomain", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGameDomain_Gamingobjectives(), this.getGamingObjective(), null, "gamingobjectives", null, 1,
+				-1, GameDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGameDomain_Gameelements(), this.getGameElements(), null, "gameelements", null, 0, -1,
+				GameDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(gameElementsEClass, GameElements.class, "GameElements", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGameElements_Name(), ecorePackage.getEString(), "name", null, 0, 1, GameElements.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGameElements_Type(), this.getGameElementType(), "type", "OTHER", 0, 1, GameElements.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(conceptualElementEClass, ConceptualElement.class, "ConceptualElement", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConceptualElement_Representations(), this.getConcreteElement(), null, "representations", null,
+				1, -1, ConceptualElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConceptualElement_Adaptable(), ecorePackage.getEBoolean(), "adaptable", null, 0, 1,
+				ConceptualElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(concreteElementEClass, ConcreteElement.class, "ConcreteElement", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getConcreteElement_ImgPath(), ecorePackage.getEString(), "imgPath", null, 0, 1,
+				ConcreteElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(roomTypeToEIntMapEClass, Map.Entry.class, "RoomTypeToEIntMap", !IS_ABSTRACT, !IS_INTERFACE,
+				!IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRoomTypeToEIntMap_Key(), this.getRoomType(), "key", "ENTRY", 0, 1, Map.Entry.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoomTypeToEIntMap_Value(), ecorePackage.getEIntegerObject(), "value", null, 0, 1,
+				Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(gameModeEEnum, GameMode.class, "GameMode");
 		addEEnumLiteral(gameModeEEnum, GameMode.LINEAR);
 		addEEnumLiteral(gameModeEEnum, GameMode.LABIRINTHINE);
 		addEEnumLiteral(gameModeEEnum, GameMode.RAMDOM);
+		addEEnumLiteral(gameModeEEnum, GameMode.NONE);
+
+		initEEnum(roomTypeEEnum, RoomType.class, "RoomType");
+		addEEnumLiteral(roomTypeEEnum, RoomType.ENTRY);
+		addEEnumLiteral(roomTypeEEnum, RoomType.EXIT);
+		addEEnumLiteral(roomTypeEEnum, RoomType.SIMPLE_QUESTION);
+		addEEnumLiteral(roomTypeEEnum, RoomType.BOSS);
+
+		initEEnum(gameElementTypeEEnum, GameElementType.class, "GameElementType");
+		addEEnumLiteral(gameElementTypeEEnum, GameElementType.CONTENT);
+		addEEnumLiteral(gameElementTypeEEnum, GameElementType.RULE);
+		addEEnumLiteral(gameElementTypeEEnum, GameElementType.AESTHETIC);
+		addEEnumLiteral(gameElementTypeEEnum, GameElementType.OTHER);
 
 		// Create resource
 		createResource(eNS_URI);

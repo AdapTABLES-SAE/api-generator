@@ -59,6 +59,8 @@ public class DungeonItemProvider extends ItemProviderAdapter implements IEditing
 
 			addModePropertyDescriptor(object);
 			addEntryPropertyDescriptor(object);
+			addNumberOfRoomsPropertyDescriptor(object);
+			addGamingobjectivePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -91,6 +93,38 @@ public class DungeonItemProvider extends ItemProviderAdapter implements IEditing
 						getString("_UI_PropertyDescriptor_description", "_UI_Dungeon_entry_feature",
 								"_UI_Dungeon_type"),
 						GeneratorMetamodelsPackage.Literals.DUNGEON__ENTRY, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Number Of Rooms feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNumberOfRoomsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Dungeon_numberOfRooms_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Dungeon_numberOfRooms_feature",
+								"_UI_Dungeon_type"),
+						GeneratorMetamodelsPackage.Literals.DUNGEON__NUMBER_OF_ROOMS, true, false, false,
+						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Gamingobjective feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGamingobjectivePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Dungeon_gamingobjective_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Dungeon_gamingobjective_feature",
+								"_UI_Dungeon_type"),
+						GeneratorMetamodelsPackage.Literals.DUNGEON__GAMINGOBJECTIVE, true, false, true, null, null,
+						null));
 	}
 
 	/**
@@ -171,6 +205,7 @@ public class DungeonItemProvider extends ItemProviderAdapter implements IEditing
 
 		switch (notification.getFeatureID(Dungeon.class)) {
 		case GeneratorMetamodelsPackage.DUNGEON__MODE:
+		case GeneratorMetamodelsPackage.DUNGEON__NUMBER_OF_ROOMS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case GeneratorMetamodelsPackage.DUNGEON__ROOMS:

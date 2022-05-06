@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generatorMetamodels.Dungeon#getMode <em>Mode</em>}</li>
  *   <li>{@link generatorMetamodels.Dungeon#getRooms <em>Rooms</em>}</li>
  *   <li>{@link generatorMetamodels.Dungeon#getEntry <em>Entry</em>}</li>
+ *   <li>{@link generatorMetamodels.Dungeon#getNumberOfRooms <em>Number Of Rooms</em>}</li>
+ *   <li>{@link generatorMetamodels.Dungeon#getGamingobjective <em>Gamingobjective</em>}</li>
  * </ul>
  *
  * @see generatorMetamodels.GeneratorMetamodelsPackage#getDungeon()
@@ -27,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Dungeon extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Mode</b></em>' attribute.
-	 * The default value is <code>"LINEAR"</code>.
+	 * The default value is <code>"NONE"</code>.
 	 * The literals are from the enumeration {@link generatorMetamodels.GameMode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -35,7 +37,7 @@ public interface Dungeon extends EObject {
 	 * @see generatorMetamodels.GameMode
 	 * @see #setMode(GameMode)
 	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getDungeon_Mode()
-	 * @model default="LINEAR"
+	 * @model default="NONE"
 	 * @generated
 	 */
 	GameMode getMode();
@@ -84,5 +86,49 @@ public interface Dungeon extends EObject {
 	 * @generated
 	 */
 	void setEntry(EntryRoom value);
+
+	/**
+	 * Returns the value of the '<em><b>Number Of Rooms</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Number Of Rooms</em>' attribute.
+	 * @see #setNumberOfRooms(int)
+	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getDungeon_NumberOfRooms()
+	 * @model
+	 * @generated
+	 */
+	int getNumberOfRooms();
+
+	/**
+	 * Sets the value of the '{@link generatorMetamodels.Dungeon#getNumberOfRooms <em>Number Of Rooms</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Number Of Rooms</em>' attribute.
+	 * @see #getNumberOfRooms()
+	 * @generated
+	 */
+	void setNumberOfRooms(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Gamingobjective</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Gamingobjective</em>' reference.
+	 * @see #setGamingobjective(GamingObjective)
+	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getDungeon_Gamingobjective()
+	 * @model required="true"
+	 * @generated
+	 */
+	GamingObjective getGamingobjective();
+
+	/**
+	 * Sets the value of the '{@link generatorMetamodels.Dungeon#getGamingobjective <em>Gamingobjective</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Gamingobjective</em>' reference.
+	 * @see #getGamingobjective()
+	 * @generated
+	 */
+	void setGamingobjective(GamingObjective value);
 
 } // Dungeon

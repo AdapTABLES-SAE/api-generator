@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generatorMetamodels:GameDomain
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:generatorMetamodels="http://www.example.org/generatorMetamodels"
+    xsi:schemaLocation="http://www.example.org/generatorMetamodels ../model/generatorMetamodels.ecore">
+  <gamingobjectives
+      name="Find the exit"/>
+  <gamingobjectives
+      name="Find the exit in less than 1 min"/>
+  <gamingobjectives
+      name="Find the exit in less than 3 min"/>
+  <gamingobjectives
+      name="Find the 4 idems gems "/>
+  <gamingobjectives
+      name="Find the exist without be caught by the monster"/>
+</generatorMetamodels:GameDomain>

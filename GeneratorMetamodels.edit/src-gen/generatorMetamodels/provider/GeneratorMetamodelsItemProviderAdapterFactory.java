@@ -487,29 +487,6 @@ public class GeneratorMetamodelsItemProviderAdapterFactory extends GeneratorMeta
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link generatorMetamodels.SubObjective} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SubObjectiveItemProvider subObjectiveItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link generatorMetamodels.SubObjective}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSubObjectiveAdapter() {
-		if (subObjectiveItemProvider == null) {
-			subObjectiveItemProvider = new SubObjectiveItemProvider(this);
-		}
-
-		return subObjectiveItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link generatorMetamodels.SimpleCompletion} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -671,6 +648,121 @@ public class GeneratorMetamodelsItemProviderAdapterFactory extends GeneratorMeta
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link generatorMetamodels.GamingObjective} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GamingObjectiveItemProvider gamingObjectiveItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link generatorMetamodels.GamingObjective}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGamingObjectiveAdapter() {
+		if (gamingObjectiveItemProvider == null) {
+			gamingObjectiveItemProvider = new GamingObjectiveItemProvider(this);
+		}
+
+		return gamingObjectiveItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link generatorMetamodels.GameDomain} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GameDomainItemProvider gameDomainItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link generatorMetamodels.GameDomain}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGameDomainAdapter() {
+		if (gameDomainItemProvider == null) {
+			gameDomainItemProvider = new GameDomainItemProvider(this);
+		}
+
+		return gameDomainItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link generatorMetamodels.ConceptualElement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConceptualElementItemProvider conceptualElementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link generatorMetamodels.ConceptualElement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConceptualElementAdapter() {
+		if (conceptualElementItemProvider == null) {
+			conceptualElementItemProvider = new ConceptualElementItemProvider(this);
+		}
+
+		return conceptualElementItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link generatorMetamodels.ConcreteElement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConcreteElementItemProvider concreteElementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link generatorMetamodels.ConcreteElement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConcreteElementAdapter() {
+		if (concreteElementItemProvider == null) {
+			concreteElementItemProvider = new ConcreteElementItemProvider(this);
+		}
+
+		return concreteElementItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link java.util.Map.Entry} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RoomTypeToEIntMapItemProvider roomTypeToEIntMapItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link java.util.Map.Entry}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRoomTypeToEIntMapAdapter() {
+		if (roomTypeToEIntMapItemProvider == null) {
+			roomTypeToEIntMapItemProvider = new RoomTypeToEIntMapItemProvider(this);
+		}
+
+		return roomTypeToEIntMapItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -805,8 +897,6 @@ public class GeneratorMetamodelsItemProviderAdapterFactory extends GeneratorMeta
 			bossRoomItemProvider.dispose();
 		if (reconstructionItemProvider != null)
 			reconstructionItemProvider.dispose();
-		if (subObjectiveItemProvider != null)
-			subObjectiveItemProvider.dispose();
 		if (simpleCompletionItemProvider != null)
 			simpleCompletionItemProvider.dispose();
 		if (gameProfileItemProvider != null)
@@ -821,6 +911,16 @@ public class GeneratorMetamodelsItemProviderAdapterFactory extends GeneratorMeta
 			knowledgeItemProvider.dispose();
 		if (factValidityVerificationItemProvider != null)
 			factValidityVerificationItemProvider.dispose();
+		if (gamingObjectiveItemProvider != null)
+			gamingObjectiveItemProvider.dispose();
+		if (gameDomainItemProvider != null)
+			gameDomainItemProvider.dispose();
+		if (conceptualElementItemProvider != null)
+			conceptualElementItemProvider.dispose();
+		if (concreteElementItemProvider != null)
+			concreteElementItemProvider.dispose();
+		if (roomTypeToEIntMapItemProvider != null)
+			roomTypeToEIntMapItemProvider.dispose();
 	}
 
 }

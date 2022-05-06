@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see generatorMetamodels.GeneratorMetamodelsPackage#getSubObjective()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface SubObjective extends EObject {

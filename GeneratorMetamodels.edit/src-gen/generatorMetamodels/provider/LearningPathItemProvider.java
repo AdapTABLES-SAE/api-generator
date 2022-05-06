@@ -198,9 +198,6 @@ public class LearningPathItemProvider extends ItemProviderAdapter implements IEd
 						GeneratorMetamodelsFactory.eINSTANCE.createLearningObjective()));
 
 		newChildDescriptors.add(createChildParameter(GeneratorMetamodelsPackage.Literals.LEARNING_PATH__SUBOBJECTIVES,
-				GeneratorMetamodelsFactory.eINSTANCE.createSubObjective()));
-
-		newChildDescriptors.add(createChildParameter(GeneratorMetamodelsPackage.Literals.LEARNING_PATH__SUBOBJECTIVES,
 				GeneratorMetamodelsFactory.eINSTANCE.createResultVerification()));
 
 		newChildDescriptors.add(createChildParameter(GeneratorMetamodelsPackage.Literals.LEARNING_PATH__SUBOBJECTIVES,

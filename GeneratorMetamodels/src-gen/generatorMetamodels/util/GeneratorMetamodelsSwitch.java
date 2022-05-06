@@ -4,6 +4,8 @@ package generatorMetamodels.util;
 
 import generatorMetamodels.*;
 
+import java.util.Map;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -313,6 +315,53 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 		case GeneratorMetamodelsPackage.ROOM: {
 			Room room = (Room) theEObject;
 			T result = caseRoom(room);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.GAMING_OBJECTIVE: {
+			GamingObjective gamingObjective = (GamingObjective) theEObject;
+			T result = caseGamingObjective(gamingObjective);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.GAME_DOMAIN: {
+			GameDomain gameDomain = (GameDomain) theEObject;
+			T result = caseGameDomain(gameDomain);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.GAME_ELEMENTS: {
+			GameElements gameElements = (GameElements) theEObject;
+			T result = caseGameElements(gameElements);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.CONCEPTUAL_ELEMENT: {
+			ConceptualElement conceptualElement = (ConceptualElement) theEObject;
+			T result = caseConceptualElement(conceptualElement);
+			if (result == null)
+				result = caseGameElements(conceptualElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.CONCRETE_ELEMENT: {
+			ConcreteElement concreteElement = (ConcreteElement) theEObject;
+			T result = caseConcreteElement(concreteElement);
+			if (result == null)
+				result = caseGameElements(concreteElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.ROOM_TYPE_TO_EINT_MAP: {
+			@SuppressWarnings("unchecked")
+			Map.Entry<RoomType, Integer> roomTypeToEIntMap = (Map.Entry<RoomType, Integer>) theEObject;
+			T result = caseRoomTypeToEIntMap(roomTypeToEIntMap);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -784,6 +833,96 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRoom(Room object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Gaming Objective</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Gaming Objective</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGamingObjective(GamingObjective object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Game Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Game Domain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGameDomain(GameDomain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Game Elements</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Game Elements</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGameElements(GameElements object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Conceptual Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Conceptual Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConceptualElement(ConceptualElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Concrete Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Concrete Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConcreteElement(ConcreteElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Room Type To EInt Map</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Room Type To EInt Map</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRoomTypeToEIntMap(Map.Entry<RoomType, Integer> object) {
 		return null;
 	}
 

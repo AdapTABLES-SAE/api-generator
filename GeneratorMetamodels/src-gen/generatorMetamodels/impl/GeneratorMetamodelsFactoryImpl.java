@@ -4,6 +4,8 @@ package generatorMetamodels.impl;
 
 import generatorMetamodels.*;
 
+import java.util.Map;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -93,8 +95,6 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 			return createBossRoom();
 		case GeneratorMetamodelsPackage.RECONSTRUCTION:
 			return createReconstruction();
-		case GeneratorMetamodelsPackage.SUB_OBJECTIVE:
-			return createSubObjective();
 		case GeneratorMetamodelsPackage.SIMPLE_COMPLETION:
 			return createSimpleCompletion();
 		case GeneratorMetamodelsPackage.GAME_PROFILE:
@@ -109,6 +109,16 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 			return createKnowledge();
 		case GeneratorMetamodelsPackage.FACT_VALIDITY_VERIFICATION:
 			return createFactValidityVerification();
+		case GeneratorMetamodelsPackage.GAMING_OBJECTIVE:
+			return createGamingObjective();
+		case GeneratorMetamodelsPackage.GAME_DOMAIN:
+			return createGameDomain();
+		case GeneratorMetamodelsPackage.CONCEPTUAL_ELEMENT:
+			return createConceptualElement();
+		case GeneratorMetamodelsPackage.CONCRETE_ELEMENT:
+			return createConcreteElement();
+		case GeneratorMetamodelsPackage.ROOM_TYPE_TO_EINT_MAP:
+			return (EObject) createRoomTypeToEIntMap();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -124,6 +134,10 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 		switch (eDataType.getClassifierID()) {
 		case GeneratorMetamodelsPackage.GAME_MODE:
 			return createGameModeFromString(eDataType, initialValue);
+		case GeneratorMetamodelsPackage.ROOM_TYPE:
+			return createRoomTypeFromString(eDataType, initialValue);
+		case GeneratorMetamodelsPackage.GAME_ELEMENT_TYPE:
+			return createGameElementTypeFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -139,6 +153,10 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 		switch (eDataType.getClassifierID()) {
 		case GeneratorMetamodelsPackage.GAME_MODE:
 			return convertGameModeToString(eDataType, instanceValue);
+		case GeneratorMetamodelsPackage.ROOM_TYPE:
+			return convertRoomTypeToString(eDataType, instanceValue);
+		case GeneratorMetamodelsPackage.GAME_ELEMENT_TYPE:
+			return convertGameElementTypeToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -329,16 +347,6 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SubObjective createSubObjective() {
-		SubObjectiveImpl subObjective = new SubObjectiveImpl();
-		return subObjective;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public SimpleCompletion createSimpleCompletion() {
 		SimpleCompletionImpl simpleCompletion = new SimpleCompletionImpl();
 		return simpleCompletion;
@@ -409,6 +417,56 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GamingObjective createGamingObjective() {
+		GamingObjectiveImpl gamingObjective = new GamingObjectiveImpl();
+		return gamingObjective;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GameDomain createGameDomain() {
+		GameDomainImpl gameDomain = new GameDomainImpl();
+		return gameDomain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConceptualElement createConceptualElement() {
+		ConceptualElementImpl conceptualElement = new ConceptualElementImpl();
+		return conceptualElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConcreteElement createConcreteElement() {
+		ConcreteElementImpl concreteElement = new ConcreteElementImpl();
+		return concreteElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map.Entry<RoomType, Integer> createRoomTypeToEIntMap() {
+		RoomTypeToEIntMapImpl roomTypeToEIntMap = new RoomTypeToEIntMapImpl();
+		return roomTypeToEIntMap;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GameMode createGameModeFromString(EDataType eDataType, String initialValue) {
 		GameMode result = GameMode.get(initialValue);
 		if (result == null)
@@ -423,6 +481,50 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	 * @generated
 	 */
 	public String convertGameModeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomType createRoomTypeFromString(EDataType eDataType, String initialValue) {
+		RoomType result = RoomType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertRoomTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GameElementType createGameElementTypeFromString(EDataType eDataType, String initialValue) {
+		GameElementType result = GameElementType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGameElementTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

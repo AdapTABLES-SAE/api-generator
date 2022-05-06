@@ -5,6 +5,7 @@ package generatorMetamodels;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -480,13 +481,22 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int ROOM = 30;
 
 	/**
+	 * The feature id for the '<em><b>Concreteelements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM__CONCRETEELEMENTS = 0;
+
+	/**
 	 * The number of structural features of the '<em>Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_FEATURE_COUNT = 0;
+	int ROOM_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Room</em>' class.
@@ -508,13 +518,31 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int EXIT_ROOM = 4;
 
 	/**
+	 * The feature id for the '<em><b>Concreteelements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXIT_ROOM__CONCRETEELEMENTS = ROOM__CONCRETEELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXIT_ROOM__TYPE = ROOM_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Exit Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXIT_ROOM_FEATURE_COUNT = ROOM_FEATURE_COUNT + 0;
+	int EXIT_ROOM_FEATURE_COUNT = ROOM_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Exit Room</em>' class.
@@ -691,13 +719,31 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int DUNGEON__ENTRY = 2;
 
 	/**
+	 * The feature id for the '<em><b>Number Of Rooms</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUNGEON__NUMBER_OF_ROOMS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Gamingobjective</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUNGEON__GAMINGOBJECTIVE = 4;
+
+	/**
 	 * The number of structural features of the '<em>Dungeon</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DUNGEON_FEATURE_COUNT = 3;
+	int DUNGEON_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Dungeon</em>' class.
@@ -782,6 +828,15 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	int QUESTION_ROOM = 10;
+
+	/**
+	 * The feature id for the '<em><b>Concreteelements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION_ROOM__CONCRETEELEMENTS = ROOM__CONCRETEELEMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Question Room</em>' class.
@@ -876,13 +931,31 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int SIMPLE_QUESTION_ROOM = 13;
 
 	/**
+	 * The feature id for the '<em><b>Concreteelements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_QUESTION_ROOM__CONCRETEELEMENTS = QUESTION_ROOM__CONCRETEELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_QUESTION_ROOM__TYPE = QUESTION_ROOM_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Simple Question Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_QUESTION_ROOM_FEATURE_COUNT = QUESTION_ROOM_FEATURE_COUNT + 0;
+	int SIMPLE_QUESTION_ROOM_FEATURE_COUNT = QUESTION_ROOM_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Simple Question Room</em>' class.
@@ -1014,13 +1087,58 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int HIGH_LEVEL_ACTIVITY__LEVEL = 0;
 
 	/**
+	 * The feature id for the '<em><b>Number Of Questions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HIGH_LEVEL_ACTIVITY__NUMBER_OF_QUESTIONS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Gamingobjective</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HIGH_LEVEL_ACTIVITY__GAMINGOBJECTIVE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Selected Mode</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HIGH_LEVEL_ACTIVITY__SELECTED_MODE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Room Types By Percentage</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HIGH_LEVEL_ACTIVITY__ROOM_TYPES_BY_PERCENTAGE = 4;
+
+	/**
 	 * The number of structural features of the '<em>High Level Activity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HIGH_LEVEL_ACTIVITY_FEATURE_COUNT = 1;
+	int HIGH_LEVEL_ACTIVITY_FEATURE_COUNT = 5;
+
+	/**
+	 * The operation id for the '<em>Add Room Percentage</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HIGH_LEVEL_ACTIVITY___ADD_ROOM_PERCENTAGE__EMAP = 0;
 
 	/**
 	 * The number of operations of the '<em>High Level Activity</em>' class.
@@ -1029,7 +1147,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HIGH_LEVEL_ACTIVITY_OPERATION_COUNT = 0;
+	int HIGH_LEVEL_ACTIVITY_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.impl.EntryRoomImpl <em>Entry Room</em>}' class.
@@ -1042,13 +1160,31 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int ENTRY_ROOM = 17;
 
 	/**
+	 * The feature id for the '<em><b>Concreteelements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTRY_ROOM__CONCRETEELEMENTS = ROOM__CONCRETEELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTRY_ROOM__TYPE = ROOM_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Entry Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTRY_ROOM_FEATURE_COUNT = ROOM_FEATURE_COUNT + 0;
+	int ENTRY_ROOM_FEATURE_COUNT = ROOM_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Entry Room</em>' class.
@@ -1098,13 +1234,31 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int BOSS_ROOM = 19;
 
 	/**
+	 * The feature id for the '<em><b>Concreteelements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOSS_ROOM__CONCRETEELEMENTS = QUESTION_ROOM__CONCRETEELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOSS_ROOM__TYPE = QUESTION_ROOM_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Boss Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOSS_ROOM_FEATURE_COUNT = QUESTION_ROOM_FEATURE_COUNT + 0;
+	int BOSS_ROOM_FEATURE_COUNT = QUESTION_ROOM_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Boss Room</em>' class.
@@ -1610,6 +1764,300 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int FACT_VALIDITY_VERIFICATION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.GamingObjectiveImpl <em>Gaming Objective</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.GamingObjectiveImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGamingObjective()
+	 * @generated
+	 */
+	int GAMING_OBJECTIVE = 31;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMING_OBJECTIVE__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Gaming Objective</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMING_OBJECTIVE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Gaming Objective</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMING_OBJECTIVE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.GameDomainImpl <em>Game Domain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.GameDomainImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameDomain()
+	 * @generated
+	 */
+	int GAME_DOMAIN = 32;
+
+	/**
+	 * The feature id for the '<em><b>Gamingobjectives</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_DOMAIN__GAMINGOBJECTIVES = 0;
+
+	/**
+	 * The feature id for the '<em><b>Gameelements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_DOMAIN__GAMEELEMENTS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Game Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_DOMAIN_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Game Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_DOMAIN_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.GameElementsImpl <em>Game Elements</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.GameElementsImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameElements()
+	 * @generated
+	 */
+	int GAME_ELEMENTS = 33;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_ELEMENTS__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_ELEMENTS__TYPE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Game Elements</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_ELEMENTS_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Game Elements</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_ELEMENTS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.ConceptualElementImpl <em>Conceptual Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.ConceptualElementImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getConceptualElement()
+	 * @generated
+	 */
+	int CONCEPTUAL_ELEMENT = 34;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCEPTUAL_ELEMENT__NAME = GAME_ELEMENTS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCEPTUAL_ELEMENT__TYPE = GAME_ELEMENTS__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCEPTUAL_ELEMENT__REPRESENTATIONS = GAME_ELEMENTS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Adaptable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCEPTUAL_ELEMENT__ADAPTABLE = GAME_ELEMENTS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Conceptual Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCEPTUAL_ELEMENT_FEATURE_COUNT = GAME_ELEMENTS_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Conceptual Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCEPTUAL_ELEMENT_OPERATION_COUNT = GAME_ELEMENTS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.ConcreteElementImpl <em>Concrete Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.ConcreteElementImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getConcreteElement()
+	 * @generated
+	 */
+	int CONCRETE_ELEMENT = 35;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_ELEMENT__NAME = GAME_ELEMENTS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_ELEMENT__TYPE = GAME_ELEMENTS__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Img Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_ELEMENT__IMG_PATH = GAME_ELEMENTS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Concrete Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_ELEMENT_FEATURE_COUNT = GAME_ELEMENTS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Concrete Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_ELEMENT_OPERATION_COUNT = GAME_ELEMENTS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.RoomTypeToEIntMapImpl <em>Room Type To EInt Map</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.RoomTypeToEIntMapImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRoomTypeToEIntMap()
+	 * @generated
+	 */
+	int ROOM_TYPE_TO_EINT_MAP = 36;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_TO_EINT_MAP__KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_TO_EINT_MAP__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Room Type To EInt Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_TO_EINT_MAP_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Room Type To EInt Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_TO_EINT_MAP_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link generatorMetamodels.GameMode <em>Game Mode</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1617,7 +2065,27 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameMode()
 	 * @generated
 	 */
-	int GAME_MODE = 31;
+	int GAME_MODE = 37;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.RoomType <em>Room Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.RoomType
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRoomType()
+	 * @generated
+	 */
+	int ROOM_TYPE = 38;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.GameElementType <em>Game Element Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.GameElementType
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameElementType()
+	 * @generated
+	 */
+	int GAME_ELEMENT_TYPE = 39;
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.MultipleChoice <em>Multiple Choice</em>}'.
@@ -1714,6 +2182,17 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EClass getExitRoom();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.ExitRoom#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see generatorMetamodels.ExitRoom#getType()
+	 * @see #getExitRoom()
+	 * @generated
+	 */
+	EAttribute getExitRoom_Type();
+
+	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.MultipleCompletion <em>Multiple Completion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1797,6 +2276,28 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDungeon_Entry();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.Dungeon#getNumberOfRooms <em>Number Of Rooms</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Of Rooms</em>'.
+	 * @see generatorMetamodels.Dungeon#getNumberOfRooms()
+	 * @see #getDungeon()
+	 * @generated
+	 */
+	EAttribute getDungeon_NumberOfRooms();
+
+	/**
+	 * Returns the meta object for the reference '{@link generatorMetamodels.Dungeon#getGamingobjective <em>Gamingobjective</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Gamingobjective</em>'.
+	 * @see generatorMetamodels.Dungeon#getGamingobjective()
+	 * @see #getDungeon()
+	 * @generated
+	 */
+	EReference getDungeon_Gamingobjective();
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.Settings <em>Settings</em>}'.
@@ -1903,6 +2404,17 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EClass getSimpleQuestionRoom();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.SimpleQuestionRoom#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see generatorMetamodels.SimpleQuestionRoom#getType()
+	 * @see #getSimpleQuestionRoom()
+	 * @generated
+	 */
+	EAttribute getSimpleQuestionRoom_Type();
+
+	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.Fact <em>Fact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1999,6 +2511,60 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EReference getHighLevelActivity_Level();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.HighLevelActivity#getNumberOfQuestions <em>Number Of Questions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Of Questions</em>'.
+	 * @see generatorMetamodels.HighLevelActivity#getNumberOfQuestions()
+	 * @see #getHighLevelActivity()
+	 * @generated
+	 */
+	EAttribute getHighLevelActivity_NumberOfQuestions();
+
+	/**
+	 * Returns the meta object for the reference '{@link generatorMetamodels.HighLevelActivity#getGamingobjective <em>Gamingobjective</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Gamingobjective</em>'.
+	 * @see generatorMetamodels.HighLevelActivity#getGamingobjective()
+	 * @see #getHighLevelActivity()
+	 * @generated
+	 */
+	EReference getHighLevelActivity_Gamingobjective();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.HighLevelActivity#getSelectedMode <em>Selected Mode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Selected Mode</em>'.
+	 * @see generatorMetamodels.HighLevelActivity#getSelectedMode()
+	 * @see #getHighLevelActivity()
+	 * @generated
+	 */
+	EAttribute getHighLevelActivity_SelectedMode();
+
+	/**
+	 * Returns the meta object for the map '{@link generatorMetamodels.HighLevelActivity#getRoomTypesByPercentage <em>Room Types By Percentage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the map '<em>Room Types By Percentage</em>'.
+	 * @see generatorMetamodels.HighLevelActivity#getRoomTypesByPercentage()
+	 * @see #getHighLevelActivity()
+	 * @generated
+	 */
+	EReference getHighLevelActivity_RoomTypesByPercentage();
+
+	/**
+	 * Returns the meta object for the '{@link generatorMetamodels.HighLevelActivity#addRoomPercentage(org.eclipse.emf.common.util.EMap) <em>Add Room Percentage</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Room Percentage</em>' operation.
+	 * @see generatorMetamodels.HighLevelActivity#addRoomPercentage(org.eclipse.emf.common.util.EMap)
+	 * @generated
+	 */
+	EOperation getHighLevelActivity__AddRoomPercentage__EMap();
+
+	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.EntryRoom <em>Entry Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2007,6 +2573,17 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEntryRoom();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.EntryRoom#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see generatorMetamodels.EntryRoom#getType()
+	 * @see #getEntryRoom()
+	 * @generated
+	 */
+	EAttribute getEntryRoom_Type();
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.Door <em>Door</em>}'.
@@ -2027,6 +2604,17 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getBossRoom();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.BossRoom#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see generatorMetamodels.BossRoom#getType()
+	 * @see #getBossRoom()
+	 * @generated
+	 */
+	EAttribute getBossRoom_Type();
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.Reconstruction <em>Reconstruction</em>}'.
@@ -2348,6 +2936,189 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EClass getRoom();
 
 	/**
+	 * Returns the meta object for the reference list '{@link generatorMetamodels.Room#getConcreteelements <em>Concreteelements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Concreteelements</em>'.
+	 * @see generatorMetamodels.Room#getConcreteelements()
+	 * @see #getRoom()
+	 * @generated
+	 */
+	EReference getRoom_Concreteelements();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.GamingObjective <em>Gaming Objective</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Gaming Objective</em>'.
+	 * @see generatorMetamodels.GamingObjective
+	 * @generated
+	 */
+	EClass getGamingObjective();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.GamingObjective#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generatorMetamodels.GamingObjective#getName()
+	 * @see #getGamingObjective()
+	 * @generated
+	 */
+	EAttribute getGamingObjective_Name();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.GameDomain <em>Game Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Game Domain</em>'.
+	 * @see generatorMetamodels.GameDomain
+	 * @generated
+	 */
+	EClass getGameDomain();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generatorMetamodels.GameDomain#getGamingobjectives <em>Gamingobjectives</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Gamingobjectives</em>'.
+	 * @see generatorMetamodels.GameDomain#getGamingobjectives()
+	 * @see #getGameDomain()
+	 * @generated
+	 */
+	EReference getGameDomain_Gamingobjectives();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generatorMetamodels.GameDomain#getGameelements <em>Gameelements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Gameelements</em>'.
+	 * @see generatorMetamodels.GameDomain#getGameelements()
+	 * @see #getGameDomain()
+	 * @generated
+	 */
+	EReference getGameDomain_Gameelements();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.GameElements <em>Game Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Game Elements</em>'.
+	 * @see generatorMetamodels.GameElements
+	 * @generated
+	 */
+	EClass getGameElements();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.GameElements#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generatorMetamodels.GameElements#getName()
+	 * @see #getGameElements()
+	 * @generated
+	 */
+	EAttribute getGameElements_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.GameElements#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see generatorMetamodels.GameElements#getType()
+	 * @see #getGameElements()
+	 * @generated
+	 */
+	EAttribute getGameElements_Type();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.ConceptualElement <em>Conceptual Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Conceptual Element</em>'.
+	 * @see generatorMetamodels.ConceptualElement
+	 * @generated
+	 */
+	EClass getConceptualElement();
+
+	/**
+	 * Returns the meta object for the reference list '{@link generatorMetamodels.ConceptualElement#getRepresentations <em>Representations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Representations</em>'.
+	 * @see generatorMetamodels.ConceptualElement#getRepresentations()
+	 * @see #getConceptualElement()
+	 * @generated
+	 */
+	EReference getConceptualElement_Representations();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.ConceptualElement#isAdaptable <em>Adaptable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Adaptable</em>'.
+	 * @see generatorMetamodels.ConceptualElement#isAdaptable()
+	 * @see #getConceptualElement()
+	 * @generated
+	 */
+	EAttribute getConceptualElement_Adaptable();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.ConcreteElement <em>Concrete Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Concrete Element</em>'.
+	 * @see generatorMetamodels.ConcreteElement
+	 * @generated
+	 */
+	EClass getConcreteElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.ConcreteElement#getImgPath <em>Img Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Img Path</em>'.
+	 * @see generatorMetamodels.ConcreteElement#getImgPath()
+	 * @see #getConcreteElement()
+	 * @generated
+	 */
+	EAttribute getConcreteElement_ImgPath();
+
+	/**
+	 * Returns the meta object for class '{@link java.util.Map.Entry <em>Room Type To EInt Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Room Type To EInt Map</em>'.
+	 * @see java.util.Map.Entry
+	 * @model keyDefault="ENTRY" keyDataType="generatorMetamodels.RoomType"
+	 *        valueDataType="org.eclipse.emf.ecore.EIntegerObject"
+	 * @generated
+	 */
+	EClass getRoomTypeToEIntMap();
+
+	/**
+	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getRoomTypeToEIntMap()
+	 * @generated
+	 */
+	EAttribute getRoomTypeToEIntMap_Key();
+
+	/**
+	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getRoomTypeToEIntMap()
+	 * @generated
+	 */
+	EAttribute getRoomTypeToEIntMap_Value();
+
+	/**
 	 * Returns the meta object for enum '{@link generatorMetamodels.GameMode <em>Game Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2356,6 +3127,26 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getGameMode();
+
+	/**
+	 * Returns the meta object for enum '{@link generatorMetamodels.RoomType <em>Room Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Room Type</em>'.
+	 * @see generatorMetamodels.RoomType
+	 * @generated
+	 */
+	EEnum getRoomType();
+
+	/**
+	 * Returns the meta object for enum '{@link generatorMetamodels.GameElementType <em>Game Element Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Game Element Type</em>'.
+	 * @see generatorMetamodels.GameElementType
+	 * @generated
+	 */
+	EEnum getGameElementType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2463,6 +3254,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EClass EXIT_ROOM = eINSTANCE.getExitRoom();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXIT_ROOM__TYPE = eINSTANCE.getExitRoom_Type();
+
+		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.MultipleCompletionImpl <em>Multiple Completion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2531,6 +3330,22 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DUNGEON__ENTRY = eINSTANCE.getDungeon_Entry();
+
+		/**
+		 * The meta object literal for the '<em><b>Number Of Rooms</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DUNGEON__NUMBER_OF_ROOMS = eINSTANCE.getDungeon_NumberOfRooms();
+
+		/**
+		 * The meta object literal for the '<em><b>Gamingobjective</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DUNGEON__GAMINGOBJECTIVE = eINSTANCE.getDungeon_Gamingobjective();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.SettingsImpl <em>Settings</em>}' class.
@@ -2625,6 +3440,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EClass SIMPLE_QUESTION_ROOM = eINSTANCE.getSimpleQuestionRoom();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIMPLE_QUESTION_ROOM__TYPE = eINSTANCE.getSimpleQuestionRoom_Type();
+
+		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.FactImpl <em>Fact</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2703,6 +3526,48 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EReference HIGH_LEVEL_ACTIVITY__LEVEL = eINSTANCE.getHighLevelActivity_Level();
 
 		/**
+		 * The meta object literal for the '<em><b>Number Of Questions</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HIGH_LEVEL_ACTIVITY__NUMBER_OF_QUESTIONS = eINSTANCE.getHighLevelActivity_NumberOfQuestions();
+
+		/**
+		 * The meta object literal for the '<em><b>Gamingobjective</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HIGH_LEVEL_ACTIVITY__GAMINGOBJECTIVE = eINSTANCE.getHighLevelActivity_Gamingobjective();
+
+		/**
+		 * The meta object literal for the '<em><b>Selected Mode</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HIGH_LEVEL_ACTIVITY__SELECTED_MODE = eINSTANCE.getHighLevelActivity_SelectedMode();
+
+		/**
+		 * The meta object literal for the '<em><b>Room Types By Percentage</b></em>' map feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HIGH_LEVEL_ACTIVITY__ROOM_TYPES_BY_PERCENTAGE = eINSTANCE
+				.getHighLevelActivity_RoomTypesByPercentage();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Room Percentage</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation HIGH_LEVEL_ACTIVITY___ADD_ROOM_PERCENTAGE__EMAP = eINSTANCE
+				.getHighLevelActivity__AddRoomPercentage__EMap();
+
+		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.EntryRoomImpl <em>Entry Room</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2711,6 +3576,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ENTRY_ROOM = eINSTANCE.getEntryRoom();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENTRY_ROOM__TYPE = eINSTANCE.getEntryRoom_Type();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.DoorImpl <em>Door</em>}' class.
@@ -2731,6 +3604,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BOSS_ROOM = eINSTANCE.getBossRoom();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOSS_ROOM__TYPE = eINSTANCE.getBossRoom_Type();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.ReconstructionImpl <em>Reconstruction</em>}' class.
@@ -2995,6 +3876,154 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EClass ROOM = eINSTANCE.getRoom();
 
 		/**
+		 * The meta object literal for the '<em><b>Concreteelements</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROOM__CONCRETEELEMENTS = eINSTANCE.getRoom_Concreteelements();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.GamingObjectiveImpl <em>Gaming Objective</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.GamingObjectiveImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGamingObjective()
+		 * @generated
+		 */
+		EClass GAMING_OBJECTIVE = eINSTANCE.getGamingObjective();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GAMING_OBJECTIVE__NAME = eINSTANCE.getGamingObjective_Name();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.GameDomainImpl <em>Game Domain</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.GameDomainImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameDomain()
+		 * @generated
+		 */
+		EClass GAME_DOMAIN = eINSTANCE.getGameDomain();
+
+		/**
+		 * The meta object literal for the '<em><b>Gamingobjectives</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAME_DOMAIN__GAMINGOBJECTIVES = eINSTANCE.getGameDomain_Gamingobjectives();
+
+		/**
+		 * The meta object literal for the '<em><b>Gameelements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAME_DOMAIN__GAMEELEMENTS = eINSTANCE.getGameDomain_Gameelements();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.GameElementsImpl <em>Game Elements</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.GameElementsImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameElements()
+		 * @generated
+		 */
+		EClass GAME_ELEMENTS = eINSTANCE.getGameElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GAME_ELEMENTS__NAME = eINSTANCE.getGameElements_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GAME_ELEMENTS__TYPE = eINSTANCE.getGameElements_Type();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.ConceptualElementImpl <em>Conceptual Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.ConceptualElementImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getConceptualElement()
+		 * @generated
+		 */
+		EClass CONCEPTUAL_ELEMENT = eINSTANCE.getConceptualElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Representations</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONCEPTUAL_ELEMENT__REPRESENTATIONS = eINSTANCE.getConceptualElement_Representations();
+
+		/**
+		 * The meta object literal for the '<em><b>Adaptable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONCEPTUAL_ELEMENT__ADAPTABLE = eINSTANCE.getConceptualElement_Adaptable();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.ConcreteElementImpl <em>Concrete Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.ConcreteElementImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getConcreteElement()
+		 * @generated
+		 */
+		EClass CONCRETE_ELEMENT = eINSTANCE.getConcreteElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Img Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONCRETE_ELEMENT__IMG_PATH = eINSTANCE.getConcreteElement_ImgPath();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.RoomTypeToEIntMapImpl <em>Room Type To EInt Map</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.RoomTypeToEIntMapImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRoomTypeToEIntMap()
+		 * @generated
+		 */
+		EClass ROOM_TYPE_TO_EINT_MAP = eINSTANCE.getRoomTypeToEIntMap();
+
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOM_TYPE_TO_EINT_MAP__KEY = eINSTANCE.getRoomTypeToEIntMap_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOM_TYPE_TO_EINT_MAP__VALUE = eINSTANCE.getRoomTypeToEIntMap_Value();
+
+		/**
 		 * The meta object literal for the '{@link generatorMetamodels.GameMode <em>Game Mode</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3003,6 +4032,26 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum GAME_MODE = eINSTANCE.getGameMode();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.RoomType <em>Room Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.RoomType
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRoomType()
+		 * @generated
+		 */
+		EEnum ROOM_TYPE = eINSTANCE.getRoomType();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.GameElementType <em>Game Element Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.GameElementType
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameElementType()
+		 * @generated
+		 */
+		EEnum GAME_ELEMENT_TYPE = eINSTANCE.getGameElementType();
 
 	}
 

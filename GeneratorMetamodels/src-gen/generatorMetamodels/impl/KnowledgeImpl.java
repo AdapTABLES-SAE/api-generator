@@ -5,6 +5,7 @@ package generatorMetamodels.impl;
 import generatorMetamodels.AbstractFact;
 import generatorMetamodels.GeneratorMetamodelsPackage;
 import generatorMetamodels.Knowledge;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

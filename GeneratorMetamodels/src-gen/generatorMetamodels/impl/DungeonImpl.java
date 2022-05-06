@@ -5,6 +5,7 @@ package generatorMetamodels.impl;
 import generatorMetamodels.Dungeon;
 import generatorMetamodels.EntryRoom;
 import generatorMetamodels.GameMode;
+import generatorMetamodels.GamingObjective;
 import generatorMetamodels.GeneratorMetamodelsPackage;
 import generatorMetamodels.Room;
 
@@ -35,6 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generatorMetamodels.impl.DungeonImpl#getMode <em>Mode</em>}</li>
  *   <li>{@link generatorMetamodels.impl.DungeonImpl#getRooms <em>Rooms</em>}</li>
  *   <li>{@link generatorMetamodels.impl.DungeonImpl#getEntry <em>Entry</em>}</li>
+ *   <li>{@link generatorMetamodels.impl.DungeonImpl#getNumberOfRooms <em>Number Of Rooms</em>}</li>
+ *   <li>{@link generatorMetamodels.impl.DungeonImpl#getGamingobjective <em>Gamingobjective</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,7 +51,7 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GameMode MODE_EDEFAULT = GameMode.LINEAR;
+	protected static final GameMode MODE_EDEFAULT = GameMode.NONE;
 
 	/**
 	 * The cached value of the '{@link #getMode() <em>Mode</em>}' attribute.
@@ -79,6 +82,36 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * @ordered
 	 */
 	protected EntryRoom entry;
+
+	/**
+	 * The default value of the '{@link #getNumberOfRooms() <em>Number Of Rooms</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumberOfRooms()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NUMBER_OF_ROOMS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNumberOfRooms() <em>Number Of Rooms</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumberOfRooms()
+	 * @generated
+	 * @ordered
+	 */
+	protected int numberOfRooms = NUMBER_OF_ROOMS_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getGamingobjective() <em>Gamingobjective</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGamingobjective()
+	 * @generated
+	 * @ordered
+	 */
+	protected GamingObjective gamingobjective;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,6 +211,68 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getNumberOfRooms() {
+		return numberOfRooms;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNumberOfRooms(int newNumberOfRooms) {
+		int oldNumberOfRooms = numberOfRooms;
+		numberOfRooms = newNumberOfRooms;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorMetamodelsPackage.DUNGEON__NUMBER_OF_ROOMS,
+					oldNumberOfRooms, numberOfRooms));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GamingObjective getGamingobjective() {
+		if (gamingobjective != null && gamingobjective.eIsProxy()) {
+			InternalEObject oldGamingobjective = (InternalEObject) gamingobjective;
+			gamingobjective = (GamingObjective) eResolveProxy(oldGamingobjective);
+			if (gamingobjective != oldGamingobjective) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							GeneratorMetamodelsPackage.DUNGEON__GAMINGOBJECTIVE, oldGamingobjective, gamingobjective));
+			}
+		}
+		return gamingobjective;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GamingObjective basicGetGamingobjective() {
+		return gamingobjective;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGamingobjective(GamingObjective newGamingobjective) {
+		GamingObjective oldGamingobjective = gamingobjective;
+		gamingobjective = newGamingobjective;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorMetamodelsPackage.DUNGEON__GAMINGOBJECTIVE,
+					oldGamingobjective, gamingobjective));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -203,6 +298,12 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 			if (resolve)
 				return getEntry();
 			return basicGetEntry();
+		case GeneratorMetamodelsPackage.DUNGEON__NUMBER_OF_ROOMS:
+			return getNumberOfRooms();
+		case GeneratorMetamodelsPackage.DUNGEON__GAMINGOBJECTIVE:
+			if (resolve)
+				return getGamingobjective();
+			return basicGetGamingobjective();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -226,6 +327,12 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 		case GeneratorMetamodelsPackage.DUNGEON__ENTRY:
 			setEntry((EntryRoom) newValue);
 			return;
+		case GeneratorMetamodelsPackage.DUNGEON__NUMBER_OF_ROOMS:
+			setNumberOfRooms((Integer) newValue);
+			return;
+		case GeneratorMetamodelsPackage.DUNGEON__GAMINGOBJECTIVE:
+			setGamingobjective((GamingObjective) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -247,6 +354,12 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 		case GeneratorMetamodelsPackage.DUNGEON__ENTRY:
 			setEntry((EntryRoom) null);
 			return;
+		case GeneratorMetamodelsPackage.DUNGEON__NUMBER_OF_ROOMS:
+			setNumberOfRooms(NUMBER_OF_ROOMS_EDEFAULT);
+			return;
+		case GeneratorMetamodelsPackage.DUNGEON__GAMINGOBJECTIVE:
+			setGamingobjective((GamingObjective) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -265,6 +378,10 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 			return rooms != null && !rooms.isEmpty();
 		case GeneratorMetamodelsPackage.DUNGEON__ENTRY:
 			return entry != null;
+		case GeneratorMetamodelsPackage.DUNGEON__NUMBER_OF_ROOMS:
+			return numberOfRooms != NUMBER_OF_ROOMS_EDEFAULT;
+		case GeneratorMetamodelsPackage.DUNGEON__GAMINGOBJECTIVE:
+			return gamingobjective != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -282,6 +399,8 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (mode: ");
 		result.append(mode);
+		result.append(", numberOfRooms: ");
+		result.append(numberOfRooms);
 		result.append(')');
 		return result.toString();
 	}

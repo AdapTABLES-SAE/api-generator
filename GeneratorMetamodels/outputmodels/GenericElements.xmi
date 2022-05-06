@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<generatorMetamodels:HighLevelActivity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:generatorMetamodels="http://www.example.org/generatorMetamodels">
-  <level href="file:/C:/Users/Bérénice%20LEMOINE/Desktop/Thèse/Prog_workspace/gen1/GeneratorMetamodels/inputmodels/MathsLearningPath.xmi#T3L1"/>
+<generatorMetamodels:HighLevelActivity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:generatorMetamodels="http://www.example.org/generatorMetamodels" numberOfQuestions="10" selectedMode="NONE">
+  <level href="file:/C:/TheseGenerator/gen1/GeneratorMetamodels/inputmodels/MathsLearningPath.xmi#T2L3"/>
+  <gamingobjective href="file:/C:/TheseGenerator/gen1/GeneratorMetamodels/inputmodels/GameDomain.xmi#//@gamingobjectives.0"/>
 </generatorMetamodels:HighLevelActivity>

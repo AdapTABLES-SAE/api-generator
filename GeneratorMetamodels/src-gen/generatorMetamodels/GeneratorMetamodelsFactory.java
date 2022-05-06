@@ -184,15 +184,6 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	Reconstruction createReconstruction();
 
 	/**
-	 * Returns a new object of class '<em>Sub Objective</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sub Objective</em>'.
-	 * @generated
-	 */
-	SubObjective createSubObjective();
-
-	/**
 	 * Returns a new object of class '<em>Simple Completion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -254,6 +245,42 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	 * @generated
 	 */
 	FactValidityVerification createFactValidityVerification();
+
+	/**
+	 * Returns a new object of class '<em>Gaming Objective</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Gaming Objective</em>'.
+	 * @generated
+	 */
+	GamingObjective createGamingObjective();
+
+	/**
+	 * Returns a new object of class '<em>Game Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Game Domain</em>'.
+	 * @generated
+	 */
+	GameDomain createGameDomain();
+
+	/**
+	 * Returns a new object of class '<em>Conceptual Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Conceptual Element</em>'.
+	 * @generated
+	 */
+	ConceptualElement createConceptualElement();
+
+	/**
+	 * Returns a new object of class '<em>Concrete Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Concrete Element</em>'.
+	 * @generated
+	 */
+	ConcreteElement createConcreteElement();
 
 	/**
 	 * Returns the package supported by this factory.

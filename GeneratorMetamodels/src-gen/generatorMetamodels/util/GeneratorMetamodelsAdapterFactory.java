@@ -4,6 +4,8 @@ package generatorMetamodels.util;
 
 import generatorMetamodels.*;
 
+import java.util.Map;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -219,6 +221,36 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseRoom(Room object) {
 			return createRoomAdapter();
+		}
+
+		@Override
+		public Adapter caseGamingObjective(GamingObjective object) {
+			return createGamingObjectiveAdapter();
+		}
+
+		@Override
+		public Adapter caseGameDomain(GameDomain object) {
+			return createGameDomainAdapter();
+		}
+
+		@Override
+		public Adapter caseGameElements(GameElements object) {
+			return createGameElementsAdapter();
+		}
+
+		@Override
+		public Adapter caseConceptualElement(ConceptualElement object) {
+			return createConceptualElementAdapter();
+		}
+
+		@Override
+		public Adapter caseConcreteElement(ConcreteElement object) {
+			return createConcreteElementAdapter();
+		}
+
+		@Override
+		public Adapter caseRoomTypeToEIntMap(Map.Entry<RoomType, Integer> object) {
+			return createRoomTypeToEIntMapAdapter();
 		}
 
 		@Override
@@ -671,6 +703,90 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRoomAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.GamingObjective <em>Gaming Objective</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.GamingObjective
+	 * @generated
+	 */
+	public Adapter createGamingObjectiveAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.GameDomain <em>Game Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.GameDomain
+	 * @generated
+	 */
+	public Adapter createGameDomainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.GameElements <em>Game Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.GameElements
+	 * @generated
+	 */
+	public Adapter createGameElementsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.ConceptualElement <em>Conceptual Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.ConceptualElement
+	 * @generated
+	 */
+	public Adapter createConceptualElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.ConcreteElement <em>Concrete Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.ConcreteElement
+	 * @generated
+	 */
+	public Adapter createConcreteElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Room Type To EInt Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createRoomTypeToEIntMapAdapter() {
 		return null;
 	}
 

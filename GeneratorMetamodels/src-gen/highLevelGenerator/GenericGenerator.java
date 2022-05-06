@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import generatorMetamodels.CurrentProgression;
+import generatorMetamodels.GameDomain;
 import generatorMetamodels.GeneratorMetamodelsFactory;
 import generatorMetamodels.GeneratorMetamodelsPackage;
 import generatorMetamodels.HighLevelActivity;
@@ -21,19 +22,21 @@ import generatorMetamodels.Knowledge;
 import generatorMetamodels.LearnerPlayer;
 import generatorMetamodels.LearningObjective;
 import generatorMetamodels.LearningPath;
-import generatorMetamodels.Level;
+import generatorMetamodels.RoomType;
 
 public class GenericGenerator {
 
 	private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-	private final static String MODELS_PATH = "inputmodels/";
-	private final static String[] INPUT_MODELS_PATHS = {"MathsKnowledge.xmi", "MathsLearningPath.xmi", "LearnerPlayerModel.xmi"};
+	private final static String INPUT_MODELS_PATH = "inputmodels/";
+	private final static String OUTPUT_MODELS_PATH = "outputmodels/";
+	private final static String[] INPUT_MODELS_PATHS = {"MathsKnowledge.xmi", "MathsLearningPath.xmi", "LearnerPlayerModel.xmi", "GameDomain.xmi"};
 	
 	private Knowledge knowledge; 
 	private LearningPath learningPath; 
 	private LearnerPlayer learnerPlayer;
+	private GameDomain gameDomain;
 	
-	private HighLevelActivity genericSelectedElements; 
+	private HighLevelActivity highLevelActivity; 
 	private ResourceSet resourceSet;
 	
 	public GenericGenerator() {
@@ -41,7 +44,7 @@ public class GenericGenerator {
 	}
 	
 	public static void main(String[] args) {
-		new GenericGenerator().start();
+		new GenericGenerator().start(); 
 	}
 	
 	private void start() {
@@ -49,6 +52,7 @@ public class GenericGenerator {
 		
 		createRootGeneratedModel();
 		selectLearningObjective();
+		selectGamingObjective();
 		
 		saveGeneratedModel("GenericElements.xmi"); 
 	}
@@ -63,15 +67,24 @@ public class GenericGenerator {
 			}
 		}
 		if(current == null) { 
-			genericSelectedElements.setLevel(learningPath.getLearningobjectives().get(index).getLevels().get(0)); 
+			highLevelActivity.setLevel(learningPath.getLearningobjectives().get(index).getLevels().get(0)); 
 		} else {
-			genericSelectedElements.setLevel(current.getLevel());
+			highLevelActivity.setLevel(current.getLevel());
 		}
-		System.out.println(genericSelectedElements.getLevel().getID());
+		System.out.println(highLevelActivity.getLevel().getID());
+	}
+	
+	private void selectGamingObjective() {
+		int index = (int) (Math.random() * gameDomain.getGamingobjectives().size());
+		highLevelActivity.setGamingobjective(gameDomain.getGamingobjectives().get(index));
+	}
+	
+	private void selectRoomsPercentages() {
+		highLevelActivity.addRoomPercentage(Map.entry(RoomType.SIMPLE_QUESTION, 100));
 	}
 	
  	private void createRootGeneratedModel() {
-		genericSelectedElements = GeneratorMetamodelsFactory.eINSTANCE.createHighLevelActivity();
+		highLevelActivity = GeneratorMetamodelsFactory.eINSTANCE.createHighLevelActivity();
 	}
 	
 	/**
@@ -85,12 +98,12 @@ public class GenericGenerator {
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
 		
-		Resource resource = resourceSet.createResource(URI.createURI("outputmodels/" + outFileName));
-		resource.getContents().add(genericSelectedElements);
+		Resource resource = resourceSet.createResource(URI.createURI(OUTPUT_MODELS_PATH + outFileName));
+		resource.getContents().add(highLevelActivity);
 		try {
 			resource.save(map);
 		}catch (IOException e) {
-			LOGGER.severe("Error while saving : " + MODELS_PATH + outFileName);
+			LOGGER.severe("Error while saving : " + INPUT_MODELS_PATH + outFileName);
 			e.printStackTrace();
 		}
 		
@@ -106,18 +119,20 @@ public class GenericGenerator {
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		map.put("xmi", new XMIResourceFactoryImpl());
 		
-		File knowledgeModel = new File(MODELS_PATH + INPUT_MODELS_PATHS[0]);
-		File learningModel = new File(MODELS_PATH + INPUT_MODELS_PATHS[1]);
-		File learnerPlayerModel = new File(MODELS_PATH + INPUT_MODELS_PATHS[2]);
+		File knowledgeModel = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]);
+		File learningModel = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[1]);
+		File learnerPlayerModel = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[2]);
+		File gameModel = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[3]);
 
 		Resource resource1 = resourceSet.createResource(URI.createFileURI(knowledgeModel.getAbsolutePath()));
 		Resource resource2 = resourceSet.createResource(URI.createFileURI(learningModel.getAbsolutePath()));
 		Resource resource3 = resourceSet.createResource(URI.createFileURI(learnerPlayerModel.getAbsolutePath()));
-
+		Resource resource4 = resourceSet.createResource(URI.createFileURI(gameModel.getAbsolutePath()));
 		try {
 			resource1.load(null);
 			resource2.load(null);
 			resource3.load(null);
+			resource4.load(null);
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -125,6 +140,7 @@ public class GenericGenerator {
 		knowledge = (Knowledge) resource1.getContents().get(0);
 		learningPath = (LearningPath) resource2.getContents().get(0);
 		learnerPlayer = (LearnerPlayer) resource3.getContents().get(0);
+		gameDomain = (GameDomain) resource4.getContents().get(0);
 		
 		LOGGER.info("Loading input models : OK");
 	}
