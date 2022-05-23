@@ -10,125 +10,104 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Room Type</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Result Position</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see generatorMetamodels.GeneratorMetamodelsPackage#getRoomType()
+ * @see generatorMetamodels.GeneratorMetamodelsPackage#getResultPosition()
  * @model
  * @generated
  */
-public enum RoomType implements Enumerator {
+public enum ResultPosition implements Enumerator {
 	/**
-	 * The '<em><b>ENTRY</b></em>' literal object.
+	 * The '<em><b>LEFT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENTRY_VALUE
+	 * @see #LEFT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENTRY(0, "ENTRY", "ENTRY"),
+	LEFT(0, "LEFT", "LEFT"),
 
 	/**
-	 * The '<em><b>EXIT</b></em>' literal object.
+	 * The '<em><b>RIGHT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #EXIT_VALUE
+	 * @see #RIGHT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	EXIT(1, "EXIT", "EXIT"),
+	RIGHT(1, "RIGHT", "RIGHT"),
 
 	/**
-	 * The '<em><b>DOOR</b></em>' literal object.
+	 * The '<em><b>MIX</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #DOOR_VALUE
+	 * @see #MIX_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	DOOR(2, "DOOR", "DOOR"),
+	MIX(2, "MIX", "MIX");
 
 	/**
-	 * The '<em><b>CHEST</b></em>' literal object.
+	 * The '<em><b>LEFT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #CHEST_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	CHEST(3, "CHEST", "CHEST");
-
-	/**
-	 * The '<em><b>ENTRY</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENTRY
+	 * @see #LEFT
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENTRY_VALUE = 0;
+	public static final int LEFT_VALUE = 0;
 
 	/**
-	 * The '<em><b>EXIT</b></em>' literal value.
+	 * The '<em><b>RIGHT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #EXIT
+	 * @see #RIGHT
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int EXIT_VALUE = 1;
+	public static final int RIGHT_VALUE = 1;
 
 	/**
-	 * The '<em><b>DOOR</b></em>' literal value.
+	 * The '<em><b>MIX</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #DOOR
+	 * @see #MIX
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DOOR_VALUE = 2;
+	public static final int MIX_VALUE = 2;
 
 	/**
-	 * The '<em><b>CHEST</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #CHEST
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int CHEST_VALUE = 3;
-
-	/**
-	 * An array of all the '<em><b>Room Type</b></em>' enumerators.
+	 * An array of all the '<em><b>Result Position</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final RoomType[] VALUES_ARRAY = new RoomType[] { ENTRY, EXIT, DOOR, CHEST, };
+	private static final ResultPosition[] VALUES_ARRAY = new ResultPosition[] { LEFT, RIGHT, MIX, };
 
 	/**
-	 * A public read-only list of all the '<em><b>Room Type</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Result Position</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<RoomType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<ResultPosition> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Room Type</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Result Position</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static RoomType get(String literal) {
+	public static ResultPosition get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			RoomType result = VALUES_ARRAY[i];
+			ResultPosition result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -137,16 +116,16 @@ public enum RoomType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Room Type</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Result Position</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static RoomType getByName(String name) {
+	public static ResultPosition getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			RoomType result = VALUES_ARRAY[i];
+			ResultPosition result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -155,23 +134,21 @@ public enum RoomType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Room Type</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Result Position</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static RoomType get(int value) {
+	public static ResultPosition get(int value) {
 		switch (value) {
-		case ENTRY_VALUE:
-			return ENTRY;
-		case EXIT_VALUE:
-			return EXIT;
-		case DOOR_VALUE:
-			return DOOR;
-		case CHEST_VALUE:
-			return CHEST;
+		case LEFT_VALUE:
+			return LEFT;
+		case RIGHT_VALUE:
+			return RIGHT;
+		case MIX_VALUE:
+			return MIX;
 		}
 		return null;
 	}
@@ -203,7 +180,7 @@ public enum RoomType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private RoomType(int value, String name, String literal) {
+	private ResultPosition(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -247,4 +224,4 @@ public enum RoomType implements Enumerator {
 		return literal;
 	}
 
-} //RoomType
+} //ResultPosition

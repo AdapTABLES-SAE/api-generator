@@ -61,16 +61,10 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 		switch (eClass.getClassifierID()) {
 		case GeneratorMetamodelsPackage.MULTIPLE_CHOICE:
 			return createMultipleChoice();
-		case GeneratorMetamodelsPackage.RESULT_VERIFICATION:
-			return createResultVerification();
 		case GeneratorMetamodelsPackage.SET_OF_FACTS:
 			return createSetOfFacts();
-		case GeneratorMetamodelsPackage.PROBLEM_RESOLUTION:
-			return createProblemResolution();
 		case GeneratorMetamodelsPackage.EXIT_ROOM:
 			return createExitRoom();
-		case GeneratorMetamodelsPackage.MULTIPLE_COMPLETION:
-			return createMultipleCompletion();
 		case GeneratorMetamodelsPackage.CURRENT_PROGRESSION:
 			return createCurrentProgression();
 		case GeneratorMetamodelsPackage.DUNGEON:
@@ -79,8 +73,6 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 			return createInput();
 		case GeneratorMetamodelsPackage.LEARNING_PATH:
 			return createLearningPath();
-		case GeneratorMetamodelsPackage.SIMPLE_QUESTION_ROOM:
-			return createSimpleQuestionRoom();
 		case GeneratorMetamodelsPackage.FACT:
 			return createFact();
 		case GeneratorMetamodelsPackage.LEARNER_PLAYER:
@@ -91,24 +83,14 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 			return createEntryRoom();
 		case GeneratorMetamodelsPackage.DOOR:
 			return createDoor();
-		case GeneratorMetamodelsPackage.BOSS_ROOM:
-			return createBossRoom();
-		case GeneratorMetamodelsPackage.RECONSTRUCTION:
-			return createReconstruction();
-		case GeneratorMetamodelsPackage.SIMPLE_COMPLETION:
-			return createSimpleCompletion();
 		case GeneratorMetamodelsPackage.GAME_PROFILE:
 			return createGameProfile();
 		case GeneratorMetamodelsPackage.LEARNING_PROFILE:
 			return createLearningProfile();
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE:
 			return createLearningObjective();
-		case GeneratorMetamodelsPackage.LEVEL:
-			return createLevel();
 		case GeneratorMetamodelsPackage.KNOWLEDGE:
 			return createKnowledge();
-		case GeneratorMetamodelsPackage.FACT_VALIDITY_VERIFICATION:
-			return createFactValidityVerification();
 		case GeneratorMetamodelsPackage.GAMING_OBJECTIVE:
 			return createGamingObjective();
 		case GeneratorMetamodelsPackage.GAME_DOMAIN:
@@ -119,6 +101,22 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 			return createConcreteElement();
 		case GeneratorMetamodelsPackage.ROOM_TYPE_TO_EINT_MAP:
 			return (EObject) createRoomTypeToEIntMap();
+		case GeneratorMetamodelsPackage.LEARNING_PATHS:
+			return createLearningPaths();
+		case GeneratorMetamodelsPackage.DOORS3_ROOM:
+			return createDoors3Room();
+		case GeneratorMetamodelsPackage.CHESTS3_ROOM:
+			return createChests3Room();
+		case GeneratorMetamodelsPackage.ADAPTED_LEARNING_GAME_ACTIVITY:
+			return createAdaptedLearningGameActivity();
+		case GeneratorMetamodelsPackage.MTQF_ONE_COMPLETION:
+			return createMTQFOneCompletion();
+		case GeneratorMetamodelsPackage.MT_LEVEL_V1:
+			return createMTLevelV1();
+		case GeneratorMetamodelsPackage.DIMENSIONS_ENTANGLEMENT:
+			return createDimensionsEntanglement();
+		case GeneratorMetamodelsPackage.ROOM2_SUB_OBJECTIVE_COMPLIANCE:
+			return createRoom2SubObjectiveCompliance();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -138,6 +136,14 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 			return createRoomTypeFromString(eDataType, initialValue);
 		case GeneratorMetamodelsPackage.GAME_ELEMENT_TYPE:
 			return createGameElementTypeFromString(eDataType, initialValue);
+		case GeneratorMetamodelsPackage.TABLE_BUILD:
+			return createTableBuildFromString(eDataType, initialValue);
+		case GeneratorMetamodelsPackage.RESULT_POSITION:
+			return createResultPositionFromString(eDataType, initialValue);
+		case GeneratorMetamodelsPackage.TARGET_ELEMENT:
+			return createTargetElementFromString(eDataType, initialValue);
+		case GeneratorMetamodelsPackage.SUB_OBJECTIVE_TYPE:
+			return createSubObjectiveTypeFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -157,6 +163,14 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 			return convertRoomTypeToString(eDataType, instanceValue);
 		case GeneratorMetamodelsPackage.GAME_ELEMENT_TYPE:
 			return convertGameElementTypeToString(eDataType, instanceValue);
+		case GeneratorMetamodelsPackage.TABLE_BUILD:
+			return convertTableBuildToString(eDataType, instanceValue);
+		case GeneratorMetamodelsPackage.RESULT_POSITION:
+			return convertResultPositionToString(eDataType, instanceValue);
+		case GeneratorMetamodelsPackage.TARGET_ELEMENT:
+			return convertTargetElementToString(eDataType, instanceValue);
+		case GeneratorMetamodelsPackage.SUB_OBJECTIVE_TYPE:
+			return convertSubObjectiveTypeToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -177,16 +191,6 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResultVerification createResultVerification() {
-		ResultVerificationImpl resultVerification = new ResultVerificationImpl();
-		return resultVerification;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public SetOfFacts createSetOfFacts() {
 		SetOfFactsImpl setOfFacts = new SetOfFactsImpl();
 		return setOfFacts;
@@ -197,29 +201,9 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProblemResolution createProblemResolution() {
-		ProblemResolutionImpl problemResolution = new ProblemResolutionImpl();
-		return problemResolution;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ExitRoom createExitRoom() {
 		ExitRoomImpl exitRoom = new ExitRoomImpl();
 		return exitRoom;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MultipleCompletion createMultipleCompletion() {
-		MultipleCompletionImpl multipleCompletion = new MultipleCompletionImpl();
-		return multipleCompletion;
 	}
 
 	/**
@@ -260,16 +244,6 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	public LearningPath createLearningPath() {
 		LearningPathImpl learningPath = new LearningPathImpl();
 		return learningPath;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SimpleQuestionRoom createSimpleQuestionRoom() {
-		SimpleQuestionRoomImpl simpleQuestionRoom = new SimpleQuestionRoomImpl();
-		return simpleQuestionRoom;
 	}
 
 	/**
@@ -327,36 +301,6 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BossRoom createBossRoom() {
-		BossRoomImpl bossRoom = new BossRoomImpl();
-		return bossRoom;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Reconstruction createReconstruction() {
-		ReconstructionImpl reconstruction = new ReconstructionImpl();
-		return reconstruction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SimpleCompletion createSimpleCompletion() {
-		SimpleCompletionImpl simpleCompletion = new SimpleCompletionImpl();
-		return simpleCompletion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public GameProfile createGameProfile() {
 		GameProfileImpl gameProfile = new GameProfileImpl();
 		return gameProfile;
@@ -387,29 +331,9 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Level createLevel() {
-		LevelImpl level = new LevelImpl();
-		return level;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Knowledge createKnowledge() {
 		KnowledgeImpl knowledge = new KnowledgeImpl();
 		return knowledge;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FactValidityVerification createFactValidityVerification() {
-		FactValidityVerificationImpl factValidityVerification = new FactValidityVerificationImpl();
-		return factValidityVerification;
 	}
 
 	/**
@@ -460,6 +384,86 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	public Map.Entry<RoomType, Integer> createRoomTypeToEIntMap() {
 		RoomTypeToEIntMapImpl roomTypeToEIntMap = new RoomTypeToEIntMapImpl();
 		return roomTypeToEIntMap;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LearningPaths createLearningPaths() {
+		LearningPathsImpl learningPaths = new LearningPathsImpl();
+		return learningPaths;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Doors3Room createDoors3Room() {
+		Doors3RoomImpl doors3Room = new Doors3RoomImpl();
+		return doors3Room;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Chests3Room createChests3Room() {
+		Chests3RoomImpl chests3Room = new Chests3RoomImpl();
+		return chests3Room;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AdaptedLearningGameActivity createAdaptedLearningGameActivity() {
+		AdaptedLearningGameActivityImpl adaptedLearningGameActivity = new AdaptedLearningGameActivityImpl();
+		return adaptedLearningGameActivity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTQFOneCompletion createMTQFOneCompletion() {
+		MTQFOneCompletionImpl mtqfOneCompletion = new MTQFOneCompletionImpl();
+		return mtqfOneCompletion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTLevelV1 createMTLevelV1() {
+		MTLevelV1Impl mtLevelV1 = new MTLevelV1Impl();
+		return mtLevelV1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DimensionsEntanglement createDimensionsEntanglement() {
+		DimensionsEntanglementImpl dimensionsEntanglement = new DimensionsEntanglementImpl();
+		return dimensionsEntanglement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Room2SubObjectiveCompliance createRoom2SubObjectiveCompliance() {
+		Room2SubObjectiveComplianceImpl room2SubObjectiveCompliance = new Room2SubObjectiveComplianceImpl();
+		return room2SubObjectiveCompliance;
 	}
 
 	/**
@@ -525,6 +529,94 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	 * @generated
 	 */
 	public String convertGameElementTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableBuild createTableBuildFromString(EDataType eDataType, String initialValue) {
+		TableBuild result = TableBuild.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTableBuildToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResultPosition createResultPositionFromString(EDataType eDataType, String initialValue) {
+		ResultPosition result = ResultPosition.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertResultPositionToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TargetElement createTargetElementFromString(EDataType eDataType, String initialValue) {
+		TargetElement result = TargetElement.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTargetElementToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SubObjectiveType createSubObjectiveTypeFromString(EDataType eDataType, String initialValue) {
+		SubObjectiveType result = SubObjectiveType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSubObjectiveTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

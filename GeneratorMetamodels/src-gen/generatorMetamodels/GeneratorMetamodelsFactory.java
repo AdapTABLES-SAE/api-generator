@@ -31,15 +31,6 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	MultipleChoice createMultipleChoice();
 
 	/**
-	 * Returns a new object of class '<em>Result Verification</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Result Verification</em>'.
-	 * @generated
-	 */
-	ResultVerification createResultVerification();
-
-	/**
 	 * Returns a new object of class '<em>Set Of Facts</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,15 +40,6 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	SetOfFacts createSetOfFacts();
 
 	/**
-	 * Returns a new object of class '<em>Problem Resolution</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Problem Resolution</em>'.
-	 * @generated
-	 */
-	ProblemResolution createProblemResolution();
-
-	/**
 	 * Returns a new object of class '<em>Exit Room</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,15 +47,6 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	 * @generated
 	 */
 	ExitRoom createExitRoom();
-
-	/**
-	 * Returns a new object of class '<em>Multiple Completion</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Multiple Completion</em>'.
-	 * @generated
-	 */
-	MultipleCompletion createMultipleCompletion();
 
 	/**
 	 * Returns a new object of class '<em>Current Progression</em>'.
@@ -110,15 +83,6 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	 * @generated
 	 */
 	LearningPath createLearningPath();
-
-	/**
-	 * Returns a new object of class '<em>Simple Question Room</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Simple Question Room</em>'.
-	 * @generated
-	 */
-	SimpleQuestionRoom createSimpleQuestionRoom();
 
 	/**
 	 * Returns a new object of class '<em>Fact</em>'.
@@ -166,33 +130,6 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	Door createDoor();
 
 	/**
-	 * Returns a new object of class '<em>Boss Room</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Boss Room</em>'.
-	 * @generated
-	 */
-	BossRoom createBossRoom();
-
-	/**
-	 * Returns a new object of class '<em>Reconstruction</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reconstruction</em>'.
-	 * @generated
-	 */
-	Reconstruction createReconstruction();
-
-	/**
-	 * Returns a new object of class '<em>Simple Completion</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Simple Completion</em>'.
-	 * @generated
-	 */
-	SimpleCompletion createSimpleCompletion();
-
-	/**
 	 * Returns a new object of class '<em>Game Profile</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -220,15 +157,6 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	LearningObjective createLearningObjective();
 
 	/**
-	 * Returns a new object of class '<em>Level</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Level</em>'.
-	 * @generated
-	 */
-	Level createLevel();
-
-	/**
 	 * Returns a new object of class '<em>Knowledge</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -236,15 +164,6 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	 * @generated
 	 */
 	Knowledge createKnowledge();
-
-	/**
-	 * Returns a new object of class '<em>Fact Validity Verification</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Fact Validity Verification</em>'.
-	 * @generated
-	 */
-	FactValidityVerification createFactValidityVerification();
 
 	/**
 	 * Returns a new object of class '<em>Gaming Objective</em>'.
@@ -281,6 +200,78 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	 * @generated
 	 */
 	ConcreteElement createConcreteElement();
+
+	/**
+	 * Returns a new object of class '<em>Learning Paths</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Learning Paths</em>'.
+	 * @generated
+	 */
+	LearningPaths createLearningPaths();
+
+	/**
+	 * Returns a new object of class '<em>Doors3 Room</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Doors3 Room</em>'.
+	 * @generated
+	 */
+	Doors3Room createDoors3Room();
+
+	/**
+	 * Returns a new object of class '<em>Chests3 Room</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Chests3 Room</em>'.
+	 * @generated
+	 */
+	Chests3Room createChests3Room();
+
+	/**
+	 * Returns a new object of class '<em>Adapted Learning Game Activity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Adapted Learning Game Activity</em>'.
+	 * @generated
+	 */
+	AdaptedLearningGameActivity createAdaptedLearningGameActivity();
+
+	/**
+	 * Returns a new object of class '<em>MTQF One Completion</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MTQF One Completion</em>'.
+	 * @generated
+	 */
+	MTQFOneCompletion createMTQFOneCompletion();
+
+	/**
+	 * Returns a new object of class '<em>MT Level V1</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MT Level V1</em>'.
+	 * @generated
+	 */
+	MTLevelV1 createMTLevelV1();
+
+	/**
+	 * Returns a new object of class '<em>Dimensions Entanglement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dimensions Entanglement</em>'.
+	 * @generated
+	 */
+	DimensionsEntanglement createDimensionsEntanglement();
+
+	/**
+	 * Returns a new object of class '<em>Room2 Sub Objective Compliance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Room2 Sub Objective Compliance</em>'.
+	 * @generated
+	 */
+	Room2SubObjectiveCompliance createRoom2SubObjectiveCompliance();
 
 	/**
 	 * Returns the package supported by this factory.

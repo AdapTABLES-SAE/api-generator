@@ -77,11 +77,11 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorMetamodelsPackage.RESULT_VERIFICATION: {
-			ResultVerification resultVerification = (ResultVerification) theEObject;
-			T result = caseResultVerification(resultVerification);
+		case GeneratorMetamodelsPackage.RESULT_VALIDITY_DETERMINATION: {
+			ResultValidityDetermination resultValidityDetermination = (ResultValidityDetermination) theEObject;
+			T result = caseResultValidityDetermination(resultValidityDetermination);
 			if (result == null)
-				result = caseSubObjective(resultVerification);
+				result = caseSubObjective(resultValidityDetermination);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -113,11 +113,11 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorMetamodelsPackage.MULTIPLE_COMPLETION: {
-			MultipleCompletion multipleCompletion = (MultipleCompletion) theEObject;
-			T result = caseMultipleCompletion(multipleCompletion);
+		case GeneratorMetamodelsPackage.QF_TWO_COMPLETION: {
+			QFTwoCompletion qfTwoCompletion = (QFTwoCompletion) theEObject;
+			T result = caseQFTwoCompletion(qfTwoCompletion);
 			if (result == null)
-				result = caseSubObjective(multipleCompletion);
+				result = caseSubObjective(qfTwoCompletion);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -175,17 +175,6 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorMetamodelsPackage.SIMPLE_QUESTION_ROOM: {
-			SimpleQuestionRoom simpleQuestionRoom = (SimpleQuestionRoom) theEObject;
-			T result = caseSimpleQuestionRoom(simpleQuestionRoom);
-			if (result == null)
-				result = caseQuestionRoom(simpleQuestionRoom);
-			if (result == null)
-				result = caseRoom(simpleQuestionRoom);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case GeneratorMetamodelsPackage.FACT: {
 			Fact fact = (Fact) theEObject;
 			T result = caseFact(fact);
@@ -225,22 +214,11 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorMetamodelsPackage.BOSS_ROOM: {
-			BossRoom bossRoom = (BossRoom) theEObject;
-			T result = caseBossRoom(bossRoom);
+		case GeneratorMetamodelsPackage.QF_RECONSTRUCTION: {
+			QFReconstruction qfReconstruction = (QFReconstruction) theEObject;
+			T result = caseQFReconstruction(qfReconstruction);
 			if (result == null)
-				result = caseQuestionRoom(bossRoom);
-			if (result == null)
-				result = caseRoom(bossRoom);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorMetamodelsPackage.RECONSTRUCTION: {
-			Reconstruction reconstruction = (Reconstruction) theEObject;
-			T result = caseReconstruction(reconstruction);
-			if (result == null)
-				result = caseSubObjective(reconstruction);
+				result = caseSubObjective(qfReconstruction);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -259,11 +237,11 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorMetamodelsPackage.SIMPLE_COMPLETION: {
-			SimpleCompletion simpleCompletion = (SimpleCompletion) theEObject;
-			T result = caseSimpleCompletion(simpleCompletion);
+		case GeneratorMetamodelsPackage.QF_ONE_COMPLETION: {
+			QFOneCompletion qfOneCompletion = (QFOneCompletion) theEObject;
+			T result = caseQFOneCompletion(qfOneCompletion);
 			if (result == null)
-				result = caseSubObjective(simpleCompletion);
+				result = caseSubObjective(qfOneCompletion);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -303,11 +281,11 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorMetamodelsPackage.FACT_VALIDITY_VERIFICATION: {
-			FactValidityVerification factValidityVerification = (FactValidityVerification) theEObject;
-			T result = caseFactValidityVerification(factValidityVerification);
+		case GeneratorMetamodelsPackage.QF_VALIDITY_DETERMINATION: {
+			QFValidityDetermination qfValidityDetermination = (QFValidityDetermination) theEObject;
+			T result = caseQFValidityDetermination(qfValidityDetermination);
 			if (result == null)
-				result = caseSubObjective(factValidityVerification);
+				result = caseSubObjective(qfValidityDetermination);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -366,6 +344,85 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case GeneratorMetamodelsPackage.LEARNING_PATHS: {
+			LearningPaths learningPaths = (LearningPaths) theEObject;
+			T result = caseLearningPaths(learningPaths);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.DOORS3_ROOM: {
+			Doors3Room doors3Room = (Doors3Room) theEObject;
+			T result = caseDoors3Room(doors3Room);
+			if (result == null)
+				result = caseQuestionRoom(doors3Room);
+			if (result == null)
+				result = caseRoom(doors3Room);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.CHESTS3_ROOM: {
+			Chests3Room chests3Room = (Chests3Room) theEObject;
+			T result = caseChests3Room(chests3Room);
+			if (result == null)
+				result = caseQuestionRoom(chests3Room);
+			if (result == null)
+				result = caseRoom(chests3Room);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.ADAPTED_LEARNING_GAME_ACTIVITY: {
+			AdaptedLearningGameActivity adaptedLearningGameActivity = (AdaptedLearningGameActivity) theEObject;
+			T result = caseAdaptedLearningGameActivity(adaptedLearningGameActivity);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.MTQF_ONE_COMPLETION: {
+			MTQFOneCompletion mtqfOneCompletion = (MTQFOneCompletion) theEObject;
+			T result = caseMTQFOneCompletion(mtqfOneCompletion);
+			if (result == null)
+				result = caseQFOneCompletion(mtqfOneCompletion);
+			if (result == null)
+				result = caseSubObjective(mtqfOneCompletion);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.MT_LEVEL_V1: {
+			MTLevelV1 mtLevelV1 = (MTLevelV1) theEObject;
+			T result = caseMTLevelV1(mtLevelV1);
+			if (result == null)
+				result = caseLevel(mtLevelV1);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.DIMENSIONS_ENTANGLEMENT: {
+			DimensionsEntanglement dimensionsEntanglement = (DimensionsEntanglement) theEObject;
+			T result = caseDimensionsEntanglement(dimensionsEntanglement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.SEMANTIC_RELATION: {
+			SemanticRelation semanticRelation = (SemanticRelation) theEObject;
+			T result = caseSemanticRelation(semanticRelation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.ROOM2_SUB_OBJECTIVE_COMPLIANCE: {
+			Room2SubObjectiveCompliance room2SubObjectiveCompliance = (Room2SubObjectiveCompliance) theEObject;
+			T result = caseRoom2SubObjectiveCompliance(room2SubObjectiveCompliance);
+			if (result == null)
+				result = caseSemanticRelation(room2SubObjectiveCompliance);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -387,17 +444,17 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Result Verification</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Result Validity Determination</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Result Verification</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Result Validity Determination</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResultVerification(ResultVerification object) {
+	public T caseResultValidityDetermination(ResultValidityDetermination object) {
 		return null;
 	}
 
@@ -447,17 +504,17 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Multiple Completion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>QF Two Completion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Multiple Completion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>QF Two Completion</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMultipleCompletion(MultipleCompletion object) {
+	public T caseQFTwoCompletion(QFTwoCompletion object) {
 		return null;
 	}
 
@@ -567,21 +624,6 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Simple Question Room</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Simple Question Room</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSimpleQuestionRoom(SimpleQuestionRoom object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Fact</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -657,32 +699,17 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Boss Room</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>QF Reconstruction</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Boss Room</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>QF Reconstruction</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBossRoom(BossRoom object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reconstruction</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reconstruction</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseReconstruction(Reconstruction object) {
+	public T caseQFReconstruction(QFReconstruction object) {
 		return null;
 	}
 
@@ -717,17 +744,17 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Simple Completion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>QF One Completion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Simple Completion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>QF One Completion</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSimpleCompletion(SimpleCompletion object) {
+	public T caseQFOneCompletion(QFOneCompletion object) {
 		return null;
 	}
 
@@ -807,17 +834,17 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fact Validity Verification</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>QF Validity Determination</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fact Validity Verification</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>QF Validity Determination</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFactValidityVerification(FactValidityVerification object) {
+	public T caseQFValidityDetermination(QFValidityDetermination object) {
 		return null;
 	}
 
@@ -923,6 +950,141 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRoomTypeToEIntMap(Map.Entry<RoomType, Integer> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Learning Paths</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Learning Paths</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLearningPaths(LearningPaths object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Doors3 Room</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Doors3 Room</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDoors3Room(Doors3Room object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Chests3 Room</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Chests3 Room</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChests3Room(Chests3Room object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Adapted Learning Game Activity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Adapted Learning Game Activity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAdaptedLearningGameActivity(AdaptedLearningGameActivity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MTQF One Completion</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MTQF One Completion</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTQFOneCompletion(MTQFOneCompletion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MT Level V1</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MT Level V1</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTLevelV1(MTLevelV1 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Dimensions Entanglement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Dimensions Entanglement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDimensionsEntanglement(DimensionsEntanglement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Semantic Relation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Semantic Relation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSemanticRelation(SemanticRelation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Room2 Sub Objective Compliance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Room2 Sub Objective Compliance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRoom2SubObjectiveCompliance(Room2SubObjectiveCompliance object) {
 		return null;
 	}
 

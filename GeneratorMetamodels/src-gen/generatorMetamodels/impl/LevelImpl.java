@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class LevelImpl extends MinimalEObjectImpl.Container implements Level {
+public abstract class LevelImpl extends MinimalEObjectImpl.Container implements Level {
 	/**
 	 * The cached value of the '{@link #getSubobjectives() <em>Subobjectives</em>}' reference list.
 	 * <!-- begin-user-doc -->

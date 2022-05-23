@@ -5,21 +5,28 @@
   <eClassifiers xsi:type="ecore:EClass" name="MultipleChoice" eSuperTypes="#//ResponseModality">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResultVerification" eSuperTypes="#//SubObjective">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkIsRight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResultValidityDetermination" abstract="true"
+      eSuperTypes="#//SubObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newAttribute" eType="#//SubObjectiveType"
+        changeable="false" defaultValueLiteral="RES_VALIDITY" unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SetOfFacts" eSuperTypes="#//AbstractFact">
     <eStructuralFeatures xsi:type="ecore:EReference" name="facts" lowerBound="1" upperBound="-1"
         eType="#//AbstractFact" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ProblemResolution" eSuperTypes="#//SubObjective"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProblemResolution" abstract="true" eSuperTypes="#//SubObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newAttribute" eType="#//SubObjectiveType"
+        changeable="false" defaultValueLiteral="PB_RESOLUTION" unsettable="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExitRoom" eSuperTypes="#//Room">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RoomType"
         changeable="false" volatile="true" defaultValueLiteral="EXIT" unsettable="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MultipleCompletion" eSuperTypes="#//SubObjective"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QFTwoCompletion" abstract="true" eSuperTypes="#//SubObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newAttribute" eType="#//SubObjectiveType"
+        changeable="false" defaultValueLiteral="COMPLETION2" unsettable="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CurrentProgression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjective" lowerBound="1"
         eType="#//LearningObjective"/>
@@ -47,10 +54,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractFact" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SimpleQuestionRoom" eSuperTypes="#//QuestionRoom">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RoomType"
-        changeable="false" volatile="true" defaultValueLiteral="SIMPLE_QUESTION" unsettable="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fact" eSuperTypes="#//AbstractFact">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -81,11 +84,10 @@
         changeable="false" volatile="true" defaultValueLiteral="ENTRY" unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Door"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BossRoom" eSuperTypes="#//QuestionRoom">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RoomType"
-        changeable="false" volatile="true" defaultValueLiteral="BOSS" unsettable="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QFReconstruction" abstract="true" eSuperTypes="#//SubObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newAttribute" eType="#//SubObjectiveType"
+        changeable="false" defaultValueLiteral="RECONSTRUCTION" unsettable="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Reconstruction" eSuperTypes="#//SubObjective"/>
   <eClassifiers xsi:type="ecore:EClass" name="SubObjective" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfApparition"
@@ -101,7 +103,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="ResponseModality" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="responseTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SimpleCompletion" eSuperTypes="#//SubObjective"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QFOneCompletion" abstract="true" eSuperTypes="#//SubObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newAttribute" eType="#//SubObjectiveType"
+        changeable="false" defaultValueLiteral="COMPLETION1" unsettable="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GameProfile"/>
   <eClassifiers xsi:type="ecore:EClass" name="LearningProfile">
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningpath" lowerBound="1"
@@ -126,7 +131,7 @@
     <eLiterals name="RAMDOM" value="2"/>
     <eLiterals name="NONE" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Level">
+  <eClassifiers xsi:type="ecore:EClass" name="Level" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subobjectives" upperBound="-1"
         eType="#//SubObjective"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -139,7 +144,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="knowledgefacts" upperBound="-1"
         eType="#//AbstractFact" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FactValidityVerification" eSuperTypes="#//SubObjective"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QFValidityDetermination" abstract="true"
+      eSuperTypes="#//SubObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newAttribute" eType="#//SubObjectiveType"
+        changeable="false" defaultValueLiteral="QF_VALIDITY" unsettable="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Room" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="concreteelements" upperBound="-1"
         eType="#//ConcreteElement"/>
@@ -150,8 +159,8 @@
   <eClassifiers xsi:type="ecore:EEnum" name="RoomType">
     <eLiterals name="ENTRY"/>
     <eLiterals name="EXIT" value="1"/>
-    <eLiterals name="SIMPLE_QUESTION" value="2"/>
-    <eLiterals name="BOSS" value="3"/>
+    <eLiterals name="DOOR" value="2"/>
+    <eLiterals name="CHEST" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GameDomain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gamingobjectives" lowerBound="1"
@@ -182,5 +191,59 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="#//RoomType"
         defaultValueLiteral="ENTRY"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LearningPaths">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learningpaths" upperBound="-1"
+        eType="#//LearningPath" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TableBuild">
+    <eLiterals name="TABLE_OPERAND"/>
+    <eLiterals name="OPERAND_TABLE" value="1"/>
+    <eLiterals name="MIX" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ResultPosition">
+    <eLiterals name="LEFT"/>
+    <eLiterals name="RIGHT" value="1"/>
+    <eLiterals name="MIX" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TargetElement">
+    <eLiterals name="RESULT"/>
+    <eLiterals name="TABLE" value="1"/>
+    <eLiterals name="OPERAND" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SubObjectiveType">
+    <eLiterals name="COMPLETION1"/>
+    <eLiterals name="COMPLETION2" value="1"/>
+    <eLiterals name="RECONSTRUCTION" value="2"/>
+    <eLiterals name="QF_VALIDITY" value="3"/>
+    <eLiterals name="RES_VALIDITY" value="4"/>
+    <eLiterals name="PB_RESOLUTION" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Doors3Room" eSuperTypes="#//QuestionRoom"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Chests3Room" eSuperTypes="#//QuestionRoom"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AdaptedLearningGameActivity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dungeon" lowerBound="1"
+        eType="#//Dungeon" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTQFOneCompletion" eSuperTypes="#//QFOneCompletion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" upperBound="-1"
+        eType="#//TargetElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTLevelV1" eSuperTypes="#//Level">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="buildTableSetup" eType="#//TableBuild"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultPositionSetup" eType="#//ResultPosition"
+        defaultValueLiteral="RIGHT"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DimensionsEntanglement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semanticrelations" upperBound="-1"
+        eType="#//SemanticRelation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SemanticRelation" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Room2SubObjectiveCompliance" eSuperTypes="#//SemanticRelation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomType" eType="#//RoomType"
+        defaultValueLiteral="DOOR"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subObjType" eType="#//SubObjectiveType"/>
   </eClassifiers>
 </ecore:EPackage>

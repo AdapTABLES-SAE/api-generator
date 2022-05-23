@@ -3,16 +3,18 @@
 package generatorMetamodels.impl;
 
 import generatorMetamodels.AbstractFact;
-import generatorMetamodels.BossRoom;
+import generatorMetamodels.AdaptedLearningGameActivity;
+import generatorMetamodels.Chests3Room;
 import generatorMetamodels.ConceptualElement;
 import generatorMetamodels.ConcreteElement;
 import generatorMetamodels.CurrentProgression;
+import generatorMetamodels.DimensionsEntanglement;
 import generatorMetamodels.Door;
+import generatorMetamodels.Doors3Room;
 import generatorMetamodels.Dungeon;
 import generatorMetamodels.EntryRoom;
 import generatorMetamodels.ExitRoom;
 import generatorMetamodels.Fact;
-import generatorMetamodels.FactValidityVerification;
 import generatorMetamodels.GameDomain;
 import generatorMetamodels.GameElementType;
 import generatorMetamodels.GameElements;
@@ -27,22 +29,31 @@ import generatorMetamodels.Knowledge;
 import generatorMetamodels.LearnerPlayer;
 import generatorMetamodels.LearningObjective;
 import generatorMetamodels.LearningPath;
+import generatorMetamodels.LearningPaths;
 import generatorMetamodels.LearningProfile;
 import generatorMetamodels.Level;
+import generatorMetamodels.MTLevelV1;
+import generatorMetamodels.MTQFOneCompletion;
 import generatorMetamodels.MultipleChoice;
-import generatorMetamodels.MultipleCompletion;
 import generatorMetamodels.ProblemResolution;
+import generatorMetamodels.QFOneCompletion;
+import generatorMetamodels.QFReconstruction;
+import generatorMetamodels.QFTwoCompletion;
+import generatorMetamodels.QFValidityDetermination;
 import generatorMetamodels.QuestionRoom;
-import generatorMetamodels.Reconstruction;
 import generatorMetamodels.ResponseModality;
-import generatorMetamodels.ResultVerification;
+import generatorMetamodels.ResultPosition;
+import generatorMetamodels.ResultValidityDetermination;
 import generatorMetamodels.Room;
+import generatorMetamodels.Room2SubObjectiveCompliance;
 import generatorMetamodels.RoomType;
+import generatorMetamodels.SemanticRelation;
 import generatorMetamodels.SetOfFacts;
 import generatorMetamodels.Settings;
-import generatorMetamodels.SimpleCompletion;
-import generatorMetamodels.SimpleQuestionRoom;
 import generatorMetamodels.SubObjective;
+import generatorMetamodels.SubObjectiveType;
+import generatorMetamodels.TableBuild;
+import generatorMetamodels.TargetElement;
 
 import java.util.Map;
 
@@ -74,7 +85,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resultVerificationEClass = null;
+	private EClass resultValidityDeterminationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -102,7 +113,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass multipleCompletionEClass = null;
+	private EClass qfTwoCompletionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -158,13 +169,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass simpleQuestionRoomEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass factEClass = null;
 
 	/**
@@ -200,14 +204,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass bossRoomEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass reconstructionEClass = null;
+	private EClass qfReconstructionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -228,7 +225,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass simpleCompletionEClass = null;
+	private EClass qfOneCompletionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -270,7 +267,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass factValidityVerificationEClass = null;
+	private EClass qfValidityDeterminationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -326,6 +323,69 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass learningPathsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass doors3RoomEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass chests3RoomEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass adaptedLearningGameActivityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mtqfOneCompletionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mtLevelV1EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dimensionsEntanglementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass semanticRelationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass room2SubObjectiveComplianceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum gameModeEEnum = null;
 
 	/**
@@ -341,6 +401,34 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * @generated
 	 */
 	private EEnum gameElementTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum tableBuildEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum resultPositionEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum targetElementEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum subObjectiveTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -430,8 +518,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResultVerification() {
-		return resultVerificationEClass;
+	public EClass getResultValidityDetermination() {
+		return resultValidityDeterminationEClass;
 	}
 
 	/**
@@ -439,8 +527,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResultVerification_CheckIsRight() {
-		return (EAttribute) resultVerificationEClass.getEStructuralFeatures().get(0);
+	public EAttribute getResultValidityDetermination_NewAttribute() {
+		return (EAttribute) resultValidityDeterminationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -484,6 +572,15 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getProblemResolution_NewAttribute() {
+		return (EAttribute) problemResolutionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getExitRoom() {
 		return exitRoomEClass;
 	}
@@ -502,8 +599,17 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMultipleCompletion() {
-		return multipleCompletionEClass;
+	public EClass getQFTwoCompletion() {
+		return qfTwoCompletionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQFTwoCompletion_NewAttribute() {
+		return (EAttribute) qfTwoCompletionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -673,24 +779,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSimpleQuestionRoom() {
-		return simpleQuestionRoomEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSimpleQuestionRoom_Type() {
-		return (EAttribute) simpleQuestionRoomEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getFact() {
 		return factEClass;
 	}
@@ -844,8 +932,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBossRoom() {
-		return bossRoomEClass;
+	public EClass getQFReconstruction() {
+		return qfReconstructionEClass;
 	}
 
 	/**
@@ -853,17 +941,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBossRoom_Type() {
-		return (EAttribute) bossRoomEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getReconstruction() {
-		return reconstructionEClass;
+	public EAttribute getQFReconstruction_NewAttribute() {
+		return (EAttribute) qfReconstructionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -952,8 +1031,17 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSimpleCompletion() {
-		return simpleCompletionEClass;
+	public EClass getQFOneCompletion() {
+		return qfOneCompletionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQFOneCompletion_NewAttribute() {
+		return (EAttribute) qfOneCompletionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1114,8 +1202,17 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFactValidityVerification() {
-		return factValidityVerificationEClass;
+	public EClass getQFValidityDetermination() {
+		return qfValidityDeterminationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQFValidityDetermination_NewAttribute() {
+		return (EAttribute) qfValidityDeterminationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1285,6 +1382,177 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getLearningPaths() {
+		return learningPathsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLearningPaths_Learningpaths() {
+		return (EReference) learningPathsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDoors3Room() {
+		return doors3RoomEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getChests3Room() {
+		return chests3RoomEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAdaptedLearningGameActivity() {
+		return adaptedLearningGameActivityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAdaptedLearningGameActivity_Dungeon() {
+		return (EReference) adaptedLearningGameActivityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMTQFOneCompletion() {
+		return mtqfOneCompletionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQFOneCompletion_Targets() {
+		return (EAttribute) mtqfOneCompletionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMTLevelV1() {
+		return mtLevelV1EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTLevelV1_BuildTableSetup() {
+		return (EAttribute) mtLevelV1EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTLevelV1_ResultPositionSetup() {
+		return (EAttribute) mtLevelV1EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTLevelV1_MinInterval() {
+		return (EAttribute) mtLevelV1EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTLevelV1_MaxInterval() {
+		return (EAttribute) mtLevelV1EClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDimensionsEntanglement() {
+		return dimensionsEntanglementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDimensionsEntanglement_Semanticrelations() {
+		return (EReference) dimensionsEntanglementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSemanticRelation() {
+		return semanticRelationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRoom2SubObjectiveCompliance() {
+		return room2SubObjectiveComplianceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRoom2SubObjectiveCompliance_RoomType() {
+		return (EAttribute) room2SubObjectiveComplianceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRoom2SubObjectiveCompliance_SubObjType() {
+		return (EAttribute) room2SubObjectiveComplianceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getGameMode() {
 		return gameModeEEnum;
 	}
@@ -1305,6 +1573,42 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 */
 	public EEnum getGameElementType() {
 		return gameElementTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getTableBuild() {
+		return tableBuildEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getResultPosition() {
+		return resultPositionEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getTargetElement() {
+		return targetElementEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getSubObjectiveType() {
+		return subObjectiveTypeEEnum;
 	}
 
 	/**
@@ -1339,19 +1643,21 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		multipleChoiceEClass = createEClass(MULTIPLE_CHOICE);
 		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__NB_CHOICES);
 
-		resultVerificationEClass = createEClass(RESULT_VERIFICATION);
-		createEAttribute(resultVerificationEClass, RESULT_VERIFICATION__CHECK_IS_RIGHT);
+		resultValidityDeterminationEClass = createEClass(RESULT_VALIDITY_DETERMINATION);
+		createEAttribute(resultValidityDeterminationEClass, RESULT_VALIDITY_DETERMINATION__NEW_ATTRIBUTE);
 
 		setOfFactsEClass = createEClass(SET_OF_FACTS);
 		createEReference(setOfFactsEClass, SET_OF_FACTS__FACTS);
 		createEAttribute(setOfFactsEClass, SET_OF_FACTS__NAME);
 
 		problemResolutionEClass = createEClass(PROBLEM_RESOLUTION);
+		createEAttribute(problemResolutionEClass, PROBLEM_RESOLUTION__NEW_ATTRIBUTE);
 
 		exitRoomEClass = createEClass(EXIT_ROOM);
 		createEAttribute(exitRoomEClass, EXIT_ROOM__TYPE);
 
-		multipleCompletionEClass = createEClass(MULTIPLE_COMPLETION);
+		qfTwoCompletionEClass = createEClass(QF_TWO_COMPLETION);
+		createEAttribute(qfTwoCompletionEClass, QF_TWO_COMPLETION__NEW_ATTRIBUTE);
 
 		currentProgressionEClass = createEClass(CURRENT_PROGRESSION);
 		createEReference(currentProgressionEClass, CURRENT_PROGRESSION__LEARNINGOBJECTIVE);
@@ -1378,9 +1684,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 
 		abstractFactEClass = createEClass(ABSTRACT_FACT);
 
-		simpleQuestionRoomEClass = createEClass(SIMPLE_QUESTION_ROOM);
-		createEAttribute(simpleQuestionRoomEClass, SIMPLE_QUESTION_ROOM__TYPE);
-
 		factEClass = createEClass(FACT);
 		createEAttribute(factEClass, FACT__DESCRIPTION);
 
@@ -1403,10 +1706,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 
 		doorEClass = createEClass(DOOR);
 
-		bossRoomEClass = createEClass(BOSS_ROOM);
-		createEAttribute(bossRoomEClass, BOSS_ROOM__TYPE);
-
-		reconstructionEClass = createEClass(RECONSTRUCTION);
+		qfReconstructionEClass = createEClass(QF_RECONSTRUCTION);
+		createEAttribute(qfReconstructionEClass, QF_RECONSTRUCTION__NEW_ATTRIBUTE);
 
 		subObjectiveEClass = createEClass(SUB_OBJECTIVE);
 		createEAttribute(subObjectiveEClass, SUB_OBJECTIVE__NAME);
@@ -1419,7 +1720,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		responseModalityEClass = createEClass(RESPONSE_MODALITY);
 		createEAttribute(responseModalityEClass, RESPONSE_MODALITY__RESPONSE_TIME);
 
-		simpleCompletionEClass = createEClass(SIMPLE_COMPLETION);
+		qfOneCompletionEClass = createEClass(QF_ONE_COMPLETION);
+		createEAttribute(qfOneCompletionEClass, QF_ONE_COMPLETION__NEW_ATTRIBUTE);
 
 		gameProfileEClass = createEClass(GAME_PROFILE);
 
@@ -1443,7 +1745,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		createEAttribute(knowledgeEClass, KNOWLEDGE__NAME);
 		createEReference(knowledgeEClass, KNOWLEDGE__KNOWLEDGEFACTS);
 
-		factValidityVerificationEClass = createEClass(FACT_VALIDITY_VERIFICATION);
+		qfValidityDeterminationEClass = createEClass(QF_VALIDITY_DETERMINATION);
+		createEAttribute(qfValidityDeterminationEClass, QF_VALIDITY_DETERMINATION__NEW_ATTRIBUTE);
 
 		roomEClass = createEClass(ROOM);
 		createEReference(roomEClass, ROOM__CONCRETEELEMENTS);
@@ -1470,10 +1773,42 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		createEAttribute(roomTypeToEIntMapEClass, ROOM_TYPE_TO_EINT_MAP__KEY);
 		createEAttribute(roomTypeToEIntMapEClass, ROOM_TYPE_TO_EINT_MAP__VALUE);
 
+		learningPathsEClass = createEClass(LEARNING_PATHS);
+		createEReference(learningPathsEClass, LEARNING_PATHS__LEARNINGPATHS);
+
+		doors3RoomEClass = createEClass(DOORS3_ROOM);
+
+		chests3RoomEClass = createEClass(CHESTS3_ROOM);
+
+		adaptedLearningGameActivityEClass = createEClass(ADAPTED_LEARNING_GAME_ACTIVITY);
+		createEReference(adaptedLearningGameActivityEClass, ADAPTED_LEARNING_GAME_ACTIVITY__DUNGEON);
+
+		mtqfOneCompletionEClass = createEClass(MTQF_ONE_COMPLETION);
+		createEAttribute(mtqfOneCompletionEClass, MTQF_ONE_COMPLETION__TARGETS);
+
+		mtLevelV1EClass = createEClass(MT_LEVEL_V1);
+		createEAttribute(mtLevelV1EClass, MT_LEVEL_V1__BUILD_TABLE_SETUP);
+		createEAttribute(mtLevelV1EClass, MT_LEVEL_V1__RESULT_POSITION_SETUP);
+		createEAttribute(mtLevelV1EClass, MT_LEVEL_V1__MIN_INTERVAL);
+		createEAttribute(mtLevelV1EClass, MT_LEVEL_V1__MAX_INTERVAL);
+
+		dimensionsEntanglementEClass = createEClass(DIMENSIONS_ENTANGLEMENT);
+		createEReference(dimensionsEntanglementEClass, DIMENSIONS_ENTANGLEMENT__SEMANTICRELATIONS);
+
+		semanticRelationEClass = createEClass(SEMANTIC_RELATION);
+
+		room2SubObjectiveComplianceEClass = createEClass(ROOM2_SUB_OBJECTIVE_COMPLIANCE);
+		createEAttribute(room2SubObjectiveComplianceEClass, ROOM2_SUB_OBJECTIVE_COMPLIANCE__ROOM_TYPE);
+		createEAttribute(room2SubObjectiveComplianceEClass, ROOM2_SUB_OBJECTIVE_COMPLIANCE__SUB_OBJ_TYPE);
+
 		// Create enums
 		gameModeEEnum = createEEnum(GAME_MODE);
 		roomTypeEEnum = createEEnum(ROOM_TYPE);
 		gameElementTypeEEnum = createEEnum(GAME_ELEMENT_TYPE);
+		tableBuildEEnum = createEEnum(TABLE_BUILD);
+		resultPositionEEnum = createEEnum(RESULT_POSITION);
+		targetElementEEnum = createEEnum(TARGET_ELEMENT);
+		subObjectiveTypeEEnum = createEEnum(SUB_OBJECTIVE_TYPE);
 	}
 
 	/**
@@ -1506,22 +1841,25 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 
 		// Add supertypes to classes
 		multipleChoiceEClass.getESuperTypes().add(this.getResponseModality());
-		resultVerificationEClass.getESuperTypes().add(this.getSubObjective());
+		resultValidityDeterminationEClass.getESuperTypes().add(this.getSubObjective());
 		setOfFactsEClass.getESuperTypes().add(this.getAbstractFact());
 		problemResolutionEClass.getESuperTypes().add(this.getSubObjective());
 		exitRoomEClass.getESuperTypes().add(this.getRoom());
-		multipleCompletionEClass.getESuperTypes().add(this.getSubObjective());
+		qfTwoCompletionEClass.getESuperTypes().add(this.getSubObjective());
 		inputEClass.getESuperTypes().add(this.getResponseModality());
 		questionRoomEClass.getESuperTypes().add(this.getRoom());
-		simpleQuestionRoomEClass.getESuperTypes().add(this.getQuestionRoom());
 		factEClass.getESuperTypes().add(this.getAbstractFact());
 		entryRoomEClass.getESuperTypes().add(this.getRoom());
-		bossRoomEClass.getESuperTypes().add(this.getQuestionRoom());
-		reconstructionEClass.getESuperTypes().add(this.getSubObjective());
-		simpleCompletionEClass.getESuperTypes().add(this.getSubObjective());
-		factValidityVerificationEClass.getESuperTypes().add(this.getSubObjective());
+		qfReconstructionEClass.getESuperTypes().add(this.getSubObjective());
+		qfOneCompletionEClass.getESuperTypes().add(this.getSubObjective());
+		qfValidityDeterminationEClass.getESuperTypes().add(this.getSubObjective());
 		conceptualElementEClass.getESuperTypes().add(this.getGameElements());
 		concreteElementEClass.getESuperTypes().add(this.getGameElements());
+		doors3RoomEClass.getESuperTypes().add(this.getQuestionRoom());
+		chests3RoomEClass.getESuperTypes().add(this.getQuestionRoom());
+		mtqfOneCompletionEClass.getESuperTypes().add(this.getQFOneCompletion());
+		mtLevelV1EClass.getESuperTypes().add(this.getLevel());
+		room2SubObjectiveComplianceEClass.getESuperTypes().add(this.getSemanticRelation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(multipleChoiceEClass, MultipleChoice.class, "MultipleChoice", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1530,11 +1868,11 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 				MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
-		initEClass(resultVerificationEClass, ResultVerification.class, "ResultVerification", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getResultVerification_CheckIsRight(), ecorePackage.getEBoolean(), "checkIsRight", "true", 0, 1,
-				ResultVerification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEClass(resultValidityDeterminationEClass, ResultValidityDetermination.class, "ResultValidityDetermination",
+				IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getResultValidityDetermination_NewAttribute(), this.getSubObjectiveType(), "newAttribute",
+				"RES_VALIDITY", 0, 1, ResultValidityDetermination.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE,
+				IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(setOfFactsEClass, SetOfFacts.class, "SetOfFacts", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1544,16 +1882,22 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		initEAttribute(getSetOfFacts_Name(), ecorePackage.getEString(), "name", null, 0, 1, SetOfFacts.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(problemResolutionEClass, ProblemResolution.class, "ProblemResolution", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(problemResolutionEClass, ProblemResolution.class, "ProblemResolution", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getProblemResolution_NewAttribute(), this.getSubObjectiveType(), "newAttribute", "PB_RESOLUTION",
+				0, 1, ProblemResolution.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(exitRoomEClass, ExitRoom.class, "ExitRoom", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExitRoom_Type(), this.getRoomType(), "type", "EXIT", 0, 1, ExitRoom.class, !IS_TRANSIENT,
 				IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(multipleCompletionEClass, MultipleCompletion.class, "MultipleCompletion", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(qfTwoCompletionEClass, QFTwoCompletion.class, "QFTwoCompletion", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getQFTwoCompletion_NewAttribute(), this.getSubObjectiveType(), "newAttribute", "COMPLETION2", 0,
+				1, QFTwoCompletion.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(currentProgressionEClass, CurrentProgression.class, "CurrentProgression", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1603,12 +1947,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(simpleQuestionRoomEClass, SimpleQuestionRoom.class, "SimpleQuestionRoom", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSimpleQuestionRoom_Type(), this.getRoomType(), "type", "SIMPLE_QUESTION", 0, 1,
-				SimpleQuestionRoom.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-
 		initEClass(factEClass, Fact.class, "Fact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFact_Description(), ecorePackage.getEString(), "description", null, 0, 1, Fact.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1657,13 +1995,11 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 
 		initEClass(doorEClass, Door.class, "Door", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(bossRoomEClass, BossRoom.class, "BossRoom", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(qfReconstructionEClass, QFReconstruction.class, "QFReconstruction", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBossRoom_Type(), this.getRoomType(), "type", "BOSS", 0, 1, BossRoom.class, !IS_TRANSIENT,
-				IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(reconstructionEClass, Reconstruction.class, "Reconstruction", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getQFReconstruction_NewAttribute(), this.getSubObjectiveType(), "newAttribute", "RECONSTRUCTION",
+				0, 1, QFReconstruction.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(subObjectiveEClass, SubObjective.class, "SubObjective", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1691,8 +2027,11 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 				ResponseModality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
-		initEClass(simpleCompletionEClass, SimpleCompletion.class, "SimpleCompletion", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(qfOneCompletionEClass, QFOneCompletion.class, "QFOneCompletion", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getQFOneCompletion_NewAttribute(), this.getSubObjectiveType(), "newAttribute", "COMPLETION1", 0,
+				1, QFOneCompletion.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(gameProfileEClass, GameProfile.class, "GameProfile", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1723,7 +2062,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 				LearningObjective.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
-		initEClass(levelEClass, Level.class, "Level", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(levelEClass, Level.class, "Level", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLevel_Subobjectives(), this.getSubObjective(), null, "subobjectives", null, 0, -1,
 				Level.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1741,8 +2080,11 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 				Knowledge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(factValidityVerificationEClass, FactValidityVerification.class, "FactValidityVerification",
-				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(qfValidityDeterminationEClass, QFValidityDetermination.class, "QFValidityDetermination", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getQFValidityDetermination_NewAttribute(), this.getSubObjectiveType(), "newAttribute",
+				"QF_VALIDITY", 0, 1, QFValidityDetermination.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE,
+				IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roomEClass, Room.class, "Room", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoom_Concreteelements(), this.getConcreteElement(), null, "concreteelements", null, 0, -1,
@@ -1793,6 +2135,61 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 				Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
+		initEClass(learningPathsEClass, LearningPaths.class, "LearningPaths", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLearningPaths_Learningpaths(), this.getLearningPath(), null, "learningpaths", null, 0, -1,
+				LearningPaths.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(doors3RoomEClass, Doors3Room.class, "Doors3Room", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(chests3RoomEClass, Chests3Room.class, "Chests3Room", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(adaptedLearningGameActivityEClass, AdaptedLearningGameActivity.class, "AdaptedLearningGameActivity",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAdaptedLearningGameActivity_Dungeon(), this.getDungeon(), null, "dungeon", null, 1, 1,
+				AdaptedLearningGameActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mtqfOneCompletionEClass, MTQFOneCompletion.class, "MTQFOneCompletion", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTQFOneCompletion_Targets(), this.getTargetElement(), "targets", null, 0, -1,
+				MTQFOneCompletion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(mtLevelV1EClass, MTLevelV1.class, "MTLevelV1", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTLevelV1_BuildTableSetup(), this.getTableBuild(), "buildTableSetup", null, 0, 1,
+				MTLevelV1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTLevelV1_ResultPositionSetup(), this.getResultPosition(), "resultPositionSetup", "RIGHT", 0,
+				1, MTLevelV1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTLevelV1_MinInterval(), ecorePackage.getEInt(), "minInterval", null, 0, 1, MTLevelV1.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTLevelV1_MaxInterval(), ecorePackage.getEInt(), "maxInterval", null, 0, 1, MTLevelV1.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dimensionsEntanglementEClass, DimensionsEntanglement.class, "DimensionsEntanglement", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDimensionsEntanglement_Semanticrelations(), this.getSemanticRelation(), null,
+				"semanticrelations", null, 0, -1, DimensionsEntanglement.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(semanticRelationEClass, SemanticRelation.class, "SemanticRelation", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(room2SubObjectiveComplianceEClass, Room2SubObjectiveCompliance.class, "Room2SubObjectiveCompliance",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRoom2SubObjectiveCompliance_RoomType(), this.getRoomType(), "roomType", "DOOR", 0, 1,
+				Room2SubObjectiveCompliance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoom2SubObjectiveCompliance_SubObjType(), this.getSubObjectiveType(), "subObjType", null, 0,
+				1, Room2SubObjectiveCompliance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(gameModeEEnum, GameMode.class, "GameMode");
 		addEEnumLiteral(gameModeEEnum, GameMode.LINEAR);
@@ -1803,14 +2200,37 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		initEEnum(roomTypeEEnum, RoomType.class, "RoomType");
 		addEEnumLiteral(roomTypeEEnum, RoomType.ENTRY);
 		addEEnumLiteral(roomTypeEEnum, RoomType.EXIT);
-		addEEnumLiteral(roomTypeEEnum, RoomType.SIMPLE_QUESTION);
-		addEEnumLiteral(roomTypeEEnum, RoomType.BOSS);
+		addEEnumLiteral(roomTypeEEnum, RoomType.DOOR);
+		addEEnumLiteral(roomTypeEEnum, RoomType.CHEST);
 
 		initEEnum(gameElementTypeEEnum, GameElementType.class, "GameElementType");
 		addEEnumLiteral(gameElementTypeEEnum, GameElementType.CONTENT);
 		addEEnumLiteral(gameElementTypeEEnum, GameElementType.RULE);
 		addEEnumLiteral(gameElementTypeEEnum, GameElementType.AESTHETIC);
 		addEEnumLiteral(gameElementTypeEEnum, GameElementType.OTHER);
+
+		initEEnum(tableBuildEEnum, TableBuild.class, "TableBuild");
+		addEEnumLiteral(tableBuildEEnum, TableBuild.TABLE_OPERAND);
+		addEEnumLiteral(tableBuildEEnum, TableBuild.OPERAND_TABLE);
+		addEEnumLiteral(tableBuildEEnum, TableBuild.MIX);
+
+		initEEnum(resultPositionEEnum, ResultPosition.class, "ResultPosition");
+		addEEnumLiteral(resultPositionEEnum, ResultPosition.LEFT);
+		addEEnumLiteral(resultPositionEEnum, ResultPosition.RIGHT);
+		addEEnumLiteral(resultPositionEEnum, ResultPosition.MIX);
+
+		initEEnum(targetElementEEnum, TargetElement.class, "TargetElement");
+		addEEnumLiteral(targetElementEEnum, TargetElement.RESULT);
+		addEEnumLiteral(targetElementEEnum, TargetElement.TABLE);
+		addEEnumLiteral(targetElementEEnum, TargetElement.OPERAND);
+
+		initEEnum(subObjectiveTypeEEnum, SubObjectiveType.class, "SubObjectiveType");
+		addEEnumLiteral(subObjectiveTypeEEnum, SubObjectiveType.COMPLETION1);
+		addEEnumLiteral(subObjectiveTypeEEnum, SubObjectiveType.COMPLETION2);
+		addEEnumLiteral(subObjectiveTypeEEnum, SubObjectiveType.RECONSTRUCTION);
+		addEEnumLiteral(subObjectiveTypeEEnum, SubObjectiveType.QF_VALIDITY);
+		addEEnumLiteral(subObjectiveTypeEEnum, SubObjectiveType.RES_VALIDITY);
+		addEEnumLiteral(subObjectiveTypeEEnum, SubObjectiveType.PB_RESOLUTION);
 
 		// Create resource
 		createResource(eNS_URI);

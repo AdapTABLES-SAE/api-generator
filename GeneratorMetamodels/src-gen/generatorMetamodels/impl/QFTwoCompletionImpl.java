@@ -3,25 +3,25 @@
 package generatorMetamodels.impl;
 
 import generatorMetamodels.GeneratorMetamodelsPackage;
-import generatorMetamodels.ProblemResolution;
+import generatorMetamodels.QFTwoCompletion;
 import generatorMetamodels.SubObjectiveType;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Problem Resolution</b></em>'.
+ * An implementation of the model object '<em><b>QF Two Completion</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generatorMetamodels.impl.ProblemResolutionImpl#getNewAttribute <em>New Attribute</em>}</li>
+ *   <li>{@link generatorMetamodels.impl.QFTwoCompletionImpl#getNewAttribute <em>New Attribute</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class ProblemResolutionImpl extends SubObjectiveImpl implements ProblemResolution {
+public abstract class QFTwoCompletionImpl extends SubObjectiveImpl implements QFTwoCompletion {
 	/**
 	 * The default value of the '{@link #getNewAttribute() <em>New Attribute</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ public abstract class ProblemResolutionImpl extends SubObjectiveImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final SubObjectiveType NEW_ATTRIBUTE_EDEFAULT = SubObjectiveType.PB_RESOLUTION;
+	protected static final SubObjectiveType NEW_ATTRIBUTE_EDEFAULT = SubObjectiveType.COMPLETION2;
 
 	/**
 	 * The cached value of the '{@link #getNewAttribute() <em>New Attribute</em>}' attribute.
@@ -56,7 +56,7 @@ public abstract class ProblemResolutionImpl extends SubObjectiveImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ProblemResolutionImpl() {
+	protected QFTwoCompletionImpl() {
 		super();
 	}
 
@@ -67,7 +67,7 @@ public abstract class ProblemResolutionImpl extends SubObjectiveImpl implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorMetamodelsPackage.Literals.PROBLEM_RESOLUTION;
+		return GeneratorMetamodelsPackage.Literals.QF_TWO_COMPLETION;
 	}
 
 	/**
@@ -96,7 +96,7 @@ public abstract class ProblemResolutionImpl extends SubObjectiveImpl implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorMetamodelsPackage.PROBLEM_RESOLUTION__NEW_ATTRIBUTE:
+		case GeneratorMetamodelsPackage.QF_TWO_COMPLETION__NEW_ATTRIBUTE:
 			return getNewAttribute();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -110,7 +110,7 @@ public abstract class ProblemResolutionImpl extends SubObjectiveImpl implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorMetamodelsPackage.PROBLEM_RESOLUTION__NEW_ATTRIBUTE:
+		case GeneratorMetamodelsPackage.QF_TWO_COMPLETION__NEW_ATTRIBUTE:
 			return isSetNewAttribute();
 		}
 		return super.eIsSet(featureID);
@@ -136,4 +136,4 @@ public abstract class ProblemResolutionImpl extends SubObjectiveImpl implements 
 		return result.toString();
 	}
 
-} //ProblemResolutionImpl
+} //QFTwoCompletionImpl

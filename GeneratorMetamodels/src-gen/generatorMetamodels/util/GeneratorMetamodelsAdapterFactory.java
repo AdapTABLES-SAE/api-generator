@@ -74,8 +74,8 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseResultVerification(ResultVerification object) {
-			return createResultVerificationAdapter();
+		public Adapter caseResultValidityDetermination(ResultValidityDetermination object) {
+			return createResultValidityDeterminationAdapter();
 		}
 
 		@Override
@@ -94,8 +94,8 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMultipleCompletion(MultipleCompletion object) {
-			return createMultipleCompletionAdapter();
+		public Adapter caseQFTwoCompletion(QFTwoCompletion object) {
+			return createQFTwoCompletionAdapter();
 		}
 
 		@Override
@@ -134,11 +134,6 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseSimpleQuestionRoom(SimpleQuestionRoom object) {
-			return createSimpleQuestionRoomAdapter();
-		}
-
-		@Override
 		public Adapter caseFact(Fact object) {
 			return createFactAdapter();
 		}
@@ -164,13 +159,8 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseBossRoom(BossRoom object) {
-			return createBossRoomAdapter();
-		}
-
-		@Override
-		public Adapter caseReconstruction(Reconstruction object) {
-			return createReconstructionAdapter();
+		public Adapter caseQFReconstruction(QFReconstruction object) {
+			return createQFReconstructionAdapter();
 		}
 
 		@Override
@@ -184,8 +174,8 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseSimpleCompletion(SimpleCompletion object) {
-			return createSimpleCompletionAdapter();
+		public Adapter caseQFOneCompletion(QFOneCompletion object) {
+			return createQFOneCompletionAdapter();
 		}
 
 		@Override
@@ -214,8 +204,8 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseFactValidityVerification(FactValidityVerification object) {
-			return createFactValidityVerificationAdapter();
+		public Adapter caseQFValidityDetermination(QFValidityDetermination object) {
+			return createQFValidityDeterminationAdapter();
 		}
 
 		@Override
@@ -254,6 +244,51 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseLearningPaths(LearningPaths object) {
+			return createLearningPathsAdapter();
+		}
+
+		@Override
+		public Adapter caseDoors3Room(Doors3Room object) {
+			return createDoors3RoomAdapter();
+		}
+
+		@Override
+		public Adapter caseChests3Room(Chests3Room object) {
+			return createChests3RoomAdapter();
+		}
+
+		@Override
+		public Adapter caseAdaptedLearningGameActivity(AdaptedLearningGameActivity object) {
+			return createAdaptedLearningGameActivityAdapter();
+		}
+
+		@Override
+		public Adapter caseMTQFOneCompletion(MTQFOneCompletion object) {
+			return createMTQFOneCompletionAdapter();
+		}
+
+		@Override
+		public Adapter caseMTLevelV1(MTLevelV1 object) {
+			return createMTLevelV1Adapter();
+		}
+
+		@Override
+		public Adapter caseDimensionsEntanglement(DimensionsEntanglement object) {
+			return createDimensionsEntanglementAdapter();
+		}
+
+		@Override
+		public Adapter caseSemanticRelation(SemanticRelation object) {
+			return createSemanticRelationAdapter();
+		}
+
+		@Override
+		public Adapter caseRoom2SubObjectiveCompliance(Room2SubObjectiveCompliance object) {
+			return createRoom2SubObjectiveComplianceAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -287,16 +322,16 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generatorMetamodels.ResultVerification <em>Result Verification</em>}'.
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.ResultValidityDetermination <em>Result Validity Determination</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generatorMetamodels.ResultVerification
+	 * @see generatorMetamodels.ResultValidityDetermination
 	 * @generated
 	 */
-	public Adapter createResultVerificationAdapter() {
+	public Adapter createResultValidityDeterminationAdapter() {
 		return null;
 	}
 
@@ -343,16 +378,16 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generatorMetamodels.MultipleCompletion <em>Multiple Completion</em>}'.
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.QFTwoCompletion <em>QF Two Completion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generatorMetamodels.MultipleCompletion
+	 * @see generatorMetamodels.QFTwoCompletion
 	 * @generated
 	 */
-	public Adapter createMultipleCompletionAdapter() {
+	public Adapter createQFTwoCompletionAdapter() {
 		return null;
 	}
 
@@ -455,20 +490,6 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generatorMetamodels.SimpleQuestionRoom <em>Simple Question Room</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generatorMetamodels.SimpleQuestionRoom
-	 * @generated
-	 */
-	public Adapter createSimpleQuestionRoomAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link generatorMetamodels.Fact <em>Fact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -539,30 +560,16 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generatorMetamodels.BossRoom <em>Boss Room</em>}'.
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.QFReconstruction <em>QF Reconstruction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generatorMetamodels.BossRoom
+	 * @see generatorMetamodels.QFReconstruction
 	 * @generated
 	 */
-	public Adapter createBossRoomAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generatorMetamodels.Reconstruction <em>Reconstruction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generatorMetamodels.Reconstruction
-	 * @generated
-	 */
-	public Adapter createReconstructionAdapter() {
+	public Adapter createQFReconstructionAdapter() {
 		return null;
 	}
 
@@ -595,16 +602,16 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generatorMetamodels.SimpleCompletion <em>Simple Completion</em>}'.
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.QFOneCompletion <em>QF One Completion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generatorMetamodels.SimpleCompletion
+	 * @see generatorMetamodels.QFOneCompletion
 	 * @generated
 	 */
-	public Adapter createSimpleCompletionAdapter() {
+	public Adapter createQFOneCompletionAdapter() {
 		return null;
 	}
 
@@ -679,16 +686,16 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generatorMetamodels.FactValidityVerification <em>Fact Validity Verification</em>}'.
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.QFValidityDetermination <em>QF Validity Determination</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generatorMetamodels.FactValidityVerification
+	 * @see generatorMetamodels.QFValidityDetermination
 	 * @generated
 	 */
-	public Adapter createFactValidityVerificationAdapter() {
+	public Adapter createQFValidityDeterminationAdapter() {
 		return null;
 	}
 
@@ -787,6 +794,132 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRoomTypeToEIntMapAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.LearningPaths <em>Learning Paths</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.LearningPaths
+	 * @generated
+	 */
+	public Adapter createLearningPathsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.Doors3Room <em>Doors3 Room</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.Doors3Room
+	 * @generated
+	 */
+	public Adapter createDoors3RoomAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.Chests3Room <em>Chests3 Room</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.Chests3Room
+	 * @generated
+	 */
+	public Adapter createChests3RoomAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.AdaptedLearningGameActivity <em>Adapted Learning Game Activity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.AdaptedLearningGameActivity
+	 * @generated
+	 */
+	public Adapter createAdaptedLearningGameActivityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.MTQFOneCompletion <em>MTQF One Completion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.MTQFOneCompletion
+	 * @generated
+	 */
+	public Adapter createMTQFOneCompletionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.MTLevelV1 <em>MT Level V1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.MTLevelV1
+	 * @generated
+	 */
+	public Adapter createMTLevelV1Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.DimensionsEntanglement <em>Dimensions Entanglement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.DimensionsEntanglement
+	 * @generated
+	 */
+	public Adapter createDimensionsEntanglementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.SemanticRelation <em>Semantic Relation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.SemanticRelation
+	 * @generated
+	 */
+	public Adapter createSemanticRelationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.Room2SubObjectiveCompliance <em>Room2 Sub Objective Compliance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.Room2SubObjectiveCompliance
+	 * @generated
+	 */
+	public Adapter createRoom2SubObjectiveComplianceAdapter() {
 		return null;
 	}
 

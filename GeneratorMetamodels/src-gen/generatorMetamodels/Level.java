@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see generatorMetamodels.GeneratorMetamodelsPackage#getLevel()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Level extends EObject {

@@ -66,7 +66,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getResponseModality()
 	 * @generated
 	 */
-	int RESPONSE_MODALITY = 22;
+	int RESPONSE_MODALITY = 20;
 
 	/**
 	 * The feature id for the '<em><b>Response Time</b></em>' attribute.
@@ -149,7 +149,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSubObjective()
 	 * @generated
 	 */
-	int SUB_OBJECTIVE = 21;
+	int SUB_OBJECTIVE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -224,14 +224,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int SUB_OBJECTIVE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generatorMetamodels.impl.ResultVerificationImpl <em>Result Verification</em>}' class.
+	 * The meta object id for the '{@link generatorMetamodels.impl.ResultValidityDeterminationImpl <em>Result Validity Determination</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generatorMetamodels.impl.ResultVerificationImpl
-	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getResultVerification()
+	 * @see generatorMetamodels.impl.ResultValidityDeterminationImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getResultValidityDetermination()
 	 * @generated
 	 */
-	int RESULT_VERIFICATION = 1;
+	int RESULT_VALIDITY_DETERMINATION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -240,7 +240,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_VERIFICATION__NAME = SUB_OBJECTIVE__NAME;
+	int RESULT_VALIDITY_DETERMINATION__NAME = SUB_OBJECTIVE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
@@ -249,7 +249,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_VERIFICATION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
+	int RESULT_VALIDITY_DETERMINATION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
@@ -258,7 +258,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_VERIFICATION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
+	int RESULT_VALIDITY_DETERMINATION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
@@ -267,7 +267,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_VERIFICATION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
+	int RESULT_VALIDITY_DETERMINATION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
 
 	/**
 	 * The feature id for the '<em><b>Responsemodality</b></em>' containment reference.
@@ -276,7 +276,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_VERIFICATION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
+	int RESULT_VALIDITY_DETERMINATION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
 
 	/**
 	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
@@ -285,34 +285,34 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_VERIFICATION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
+	int RESULT_VALIDITY_DETERMINATION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
 
 	/**
-	 * The feature id for the '<em><b>Check Is Right</b></em>' attribute.
+	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_VERIFICATION__CHECK_IS_RIGHT = SUB_OBJECTIVE_FEATURE_COUNT + 0;
+	int RESULT_VALIDITY_DETERMINATION__NEW_ATTRIBUTE = SUB_OBJECTIVE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Result Verification</em>' class.
+	 * The number of structural features of the '<em>Result Validity Determination</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_VERIFICATION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 1;
+	int RESULT_VALIDITY_DETERMINATION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Result Verification</em>' class.
+	 * The number of operations of the '<em>Result Validity Determination</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_VERIFICATION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
+	int RESULT_VALIDITY_DETERMINATION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.impl.AbstractFactImpl <em>Abstract Fact</em>}' class.
@@ -453,13 +453,22 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int PROBLEM_RESOLUTION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
 
 	/**
+	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROBLEM_RESOLUTION__NEW_ATTRIBUTE = SUB_OBJECTIVE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Problem Resolution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROBLEM_RESOLUTION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 0;
+	int PROBLEM_RESOLUTION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Problem Resolution</em>' class.
@@ -478,7 +487,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRoom()
 	 * @generated
 	 */
-	int ROOM = 30;
+	int ROOM = 28;
 
 	/**
 	 * The feature id for the '<em><b>Concreteelements</b></em>' reference list.
@@ -554,14 +563,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int EXIT_ROOM_OPERATION_COUNT = ROOM_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generatorMetamodels.impl.MultipleCompletionImpl <em>Multiple Completion</em>}' class.
+	 * The meta object id for the '{@link generatorMetamodels.impl.QFTwoCompletionImpl <em>QF Two Completion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generatorMetamodels.impl.MultipleCompletionImpl
-	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMultipleCompletion()
+	 * @see generatorMetamodels.impl.QFTwoCompletionImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getQFTwoCompletion()
 	 * @generated
 	 */
-	int MULTIPLE_COMPLETION = 5;
+	int QF_TWO_COMPLETION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -570,7 +579,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_COMPLETION__NAME = SUB_OBJECTIVE__NAME;
+	int QF_TWO_COMPLETION__NAME = SUB_OBJECTIVE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
@@ -579,7 +588,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_COMPLETION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
+	int QF_TWO_COMPLETION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
@@ -588,7 +597,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_COMPLETION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
+	int QF_TWO_COMPLETION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
@@ -597,7 +606,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_COMPLETION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
+	int QF_TWO_COMPLETION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
 
 	/**
 	 * The feature id for the '<em><b>Responsemodality</b></em>' containment reference.
@@ -606,7 +615,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_COMPLETION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
+	int QF_TWO_COMPLETION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
 
 	/**
 	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
@@ -615,25 +624,34 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_COMPLETION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
+	int QF_TWO_COMPLETION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
 
 	/**
-	 * The number of structural features of the '<em>Multiple Completion</em>' class.
+	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_COMPLETION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 0;
+	int QF_TWO_COMPLETION__NEW_ATTRIBUTE = SUB_OBJECTIVE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Multiple Completion</em>' class.
+	 * The number of structural features of the '<em>QF Two Completion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_COMPLETION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
+	int QF_TWO_COMPLETION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>QF Two Completion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_TWO_COMPLETION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.impl.CurrentProgressionImpl <em>Current Progression</em>}' class.
@@ -921,52 +939,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int LEARNING_PATH_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generatorMetamodels.impl.SimpleQuestionRoomImpl <em>Simple Question Room</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generatorMetamodels.impl.SimpleQuestionRoomImpl
-	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSimpleQuestionRoom()
-	 * @generated
-	 */
-	int SIMPLE_QUESTION_ROOM = 13;
-
-	/**
-	 * The feature id for the '<em><b>Concreteelements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_QUESTION_ROOM__CONCRETEELEMENTS = QUESTION_ROOM__CONCRETEELEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_QUESTION_ROOM__TYPE = QUESTION_ROOM_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Simple Question Room</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_QUESTION_ROOM_FEATURE_COUNT = QUESTION_ROOM_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Simple Question Room</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_QUESTION_ROOM_OPERATION_COUNT = QUESTION_ROOM_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link generatorMetamodels.impl.FactImpl <em>Fact</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -974,7 +946,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getFact()
 	 * @generated
 	 */
-	int FACT = 14;
+	int FACT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1011,7 +983,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getLearnerPlayer()
 	 * @generated
 	 */
-	int LEARNER_PLAYER = 15;
+	int LEARNER_PLAYER = 14;
 
 	/**
 	 * The feature id for the '<em><b>Learningprofile</b></em>' containment reference.
@@ -1075,7 +1047,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getHighLevelActivity()
 	 * @generated
 	 */
-	int HIGH_LEVEL_ACTIVITY = 16;
+	int HIGH_LEVEL_ACTIVITY = 15;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' reference.
@@ -1157,7 +1129,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getEntryRoom()
 	 * @generated
 	 */
-	int ENTRY_ROOM = 17;
+	int ENTRY_ROOM = 16;
 
 	/**
 	 * The feature id for the '<em><b>Concreteelements</b></em>' reference list.
@@ -1203,7 +1175,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getDoor()
 	 * @generated
 	 */
-	int DOOR = 18;
+	int DOOR = 17;
 
 	/**
 	 * The number of structural features of the '<em>Door</em>' class.
@@ -1224,60 +1196,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int DOOR_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generatorMetamodels.impl.BossRoomImpl <em>Boss Room</em>}' class.
+	 * The meta object id for the '{@link generatorMetamodels.impl.QFReconstructionImpl <em>QF Reconstruction</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generatorMetamodels.impl.BossRoomImpl
-	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getBossRoom()
+	 * @see generatorMetamodels.impl.QFReconstructionImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getQFReconstruction()
 	 * @generated
 	 */
-	int BOSS_ROOM = 19;
-
-	/**
-	 * The feature id for the '<em><b>Concreteelements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOSS_ROOM__CONCRETEELEMENTS = QUESTION_ROOM__CONCRETEELEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOSS_ROOM__TYPE = QUESTION_ROOM_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Boss Room</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOSS_ROOM_FEATURE_COUNT = QUESTION_ROOM_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Boss Room</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOSS_ROOM_OPERATION_COUNT = QUESTION_ROOM_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generatorMetamodels.impl.ReconstructionImpl <em>Reconstruction</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generatorMetamodels.impl.ReconstructionImpl
-	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getReconstruction()
-	 * @generated
-	 */
-	int RECONSTRUCTION = 20;
+	int QF_RECONSTRUCTION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1286,7 +1212,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECONSTRUCTION__NAME = SUB_OBJECTIVE__NAME;
+	int QF_RECONSTRUCTION__NAME = SUB_OBJECTIVE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
@@ -1295,7 +1221,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECONSTRUCTION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
+	int QF_RECONSTRUCTION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
@@ -1304,7 +1230,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECONSTRUCTION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
+	int QF_RECONSTRUCTION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
@@ -1313,7 +1239,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECONSTRUCTION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
+	int QF_RECONSTRUCTION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
 
 	/**
 	 * The feature id for the '<em><b>Responsemodality</b></em>' containment reference.
@@ -1322,7 +1248,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECONSTRUCTION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
+	int QF_RECONSTRUCTION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
 
 	/**
 	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
@@ -1331,35 +1257,44 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECONSTRUCTION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
+	int QF_RECONSTRUCTION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
 
 	/**
-	 * The number of structural features of the '<em>Reconstruction</em>' class.
+	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECONSTRUCTION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 0;
+	int QF_RECONSTRUCTION__NEW_ATTRIBUTE = SUB_OBJECTIVE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Reconstruction</em>' class.
+	 * The number of structural features of the '<em>QF Reconstruction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECONSTRUCTION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
+	int QF_RECONSTRUCTION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link generatorMetamodels.impl.SimpleCompletionImpl <em>Simple Completion</em>}' class.
+	 * The number of operations of the '<em>QF Reconstruction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generatorMetamodels.impl.SimpleCompletionImpl
-	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSimpleCompletion()
+	 * @generated
+	 * @ordered
+	 */
+	int QF_RECONSTRUCTION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.QFOneCompletionImpl <em>QF One Completion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.QFOneCompletionImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getQFOneCompletion()
 	 * @generated
 	 */
-	int SIMPLE_COMPLETION = 23;
+	int QF_ONE_COMPLETION = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1368,7 +1303,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_COMPLETION__NAME = SUB_OBJECTIVE__NAME;
+	int QF_ONE_COMPLETION__NAME = SUB_OBJECTIVE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
@@ -1377,7 +1312,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_COMPLETION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
+	int QF_ONE_COMPLETION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
@@ -1386,7 +1321,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_COMPLETION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
+	int QF_ONE_COMPLETION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
@@ -1395,7 +1330,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_COMPLETION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
+	int QF_ONE_COMPLETION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
 
 	/**
 	 * The feature id for the '<em><b>Responsemodality</b></em>' containment reference.
@@ -1404,7 +1339,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_COMPLETION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
+	int QF_ONE_COMPLETION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
 
 	/**
 	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
@@ -1413,25 +1348,34 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_COMPLETION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
+	int QF_ONE_COMPLETION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
 
 	/**
-	 * The number of structural features of the '<em>Simple Completion</em>' class.
+	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_COMPLETION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 0;
+	int QF_ONE_COMPLETION__NEW_ATTRIBUTE = SUB_OBJECTIVE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Simple Completion</em>' class.
+	 * The number of structural features of the '<em>QF One Completion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_COMPLETION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
+	int QF_ONE_COMPLETION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>QF One Completion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_ONE_COMPLETION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.impl.GameProfileImpl <em>Game Profile</em>}' class.
@@ -1441,7 +1385,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameProfile()
 	 * @generated
 	 */
-	int GAME_PROFILE = 24;
+	int GAME_PROFILE = 22;
 
 	/**
 	 * The number of structural features of the '<em>Game Profile</em>' class.
@@ -1469,7 +1413,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getLearningProfile()
 	 * @generated
 	 */
-	int LEARNING_PROFILE = 25;
+	int LEARNING_PROFILE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Learningpath</b></em>' reference.
@@ -1515,7 +1459,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getLearningObjective()
 	 * @generated
 	 */
-	int LEARNING_OBJECTIVE = 26;
+	int LEARNING_OBJECTIVE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Levels</b></em>' containment reference list.
@@ -1588,7 +1532,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getLevel()
 	 * @generated
 	 */
-	int LEVEL = 27;
+	int LEVEL = 25;
 
 	/**
 	 * The feature id for the '<em><b>Subobjectives</b></em>' reference list.
@@ -1643,7 +1587,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getKnowledge()
 	 * @generated
 	 */
-	int KNOWLEDGE = 28;
+	int KNOWLEDGE = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1682,14 +1626,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int KNOWLEDGE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generatorMetamodels.impl.FactValidityVerificationImpl <em>Fact Validity Verification</em>}' class.
+	 * The meta object id for the '{@link generatorMetamodels.impl.QFValidityDeterminationImpl <em>QF Validity Determination</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generatorMetamodels.impl.FactValidityVerificationImpl
-	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getFactValidityVerification()
+	 * @see generatorMetamodels.impl.QFValidityDeterminationImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getQFValidityDetermination()
 	 * @generated
 	 */
-	int FACT_VALIDITY_VERIFICATION = 29;
+	int QF_VALIDITY_DETERMINATION = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1698,7 +1642,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FACT_VALIDITY_VERIFICATION__NAME = SUB_OBJECTIVE__NAME;
+	int QF_VALIDITY_DETERMINATION__NAME = SUB_OBJECTIVE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
@@ -1707,7 +1651,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FACT_VALIDITY_VERIFICATION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
+	int QF_VALIDITY_DETERMINATION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
@@ -1716,7 +1660,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FACT_VALIDITY_VERIFICATION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
+	int QF_VALIDITY_DETERMINATION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
@@ -1725,7 +1669,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FACT_VALIDITY_VERIFICATION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
+	int QF_VALIDITY_DETERMINATION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
 
 	/**
 	 * The feature id for the '<em><b>Responsemodality</b></em>' containment reference.
@@ -1734,7 +1678,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FACT_VALIDITY_VERIFICATION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
+	int QF_VALIDITY_DETERMINATION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
 
 	/**
 	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
@@ -1743,25 +1687,34 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FACT_VALIDITY_VERIFICATION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
+	int QF_VALIDITY_DETERMINATION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
 
 	/**
-	 * The number of structural features of the '<em>Fact Validity Verification</em>' class.
+	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FACT_VALIDITY_VERIFICATION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 0;
+	int QF_VALIDITY_DETERMINATION__NEW_ATTRIBUTE = SUB_OBJECTIVE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Fact Validity Verification</em>' class.
+	 * The number of structural features of the '<em>QF Validity Determination</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FACT_VALIDITY_VERIFICATION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
+	int QF_VALIDITY_DETERMINATION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>QF Validity Determination</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_VALIDITY_DETERMINATION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.impl.GamingObjectiveImpl <em>Gaming Objective</em>}' class.
@@ -1771,7 +1724,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGamingObjective()
 	 * @generated
 	 */
-	int GAMING_OBJECTIVE = 31;
+	int GAMING_OBJECTIVE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1808,7 +1761,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameDomain()
 	 * @generated
 	 */
-	int GAME_DOMAIN = 32;
+	int GAME_DOMAIN = 30;
 
 	/**
 	 * The feature id for the '<em><b>Gamingobjectives</b></em>' containment reference list.
@@ -1854,7 +1807,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameElements()
 	 * @generated
 	 */
-	int GAME_ELEMENTS = 33;
+	int GAME_ELEMENTS = 31;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1900,7 +1853,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getConceptualElement()
 	 * @generated
 	 */
-	int CONCEPTUAL_ELEMENT = 34;
+	int CONCEPTUAL_ELEMENT = 32;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1964,7 +1917,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getConcreteElement()
 	 * @generated
 	 */
-	int CONCRETE_ELEMENT = 35;
+	int CONCRETE_ELEMENT = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2019,7 +1972,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRoomTypeToEIntMap()
 	 * @generated
 	 */
-	int ROOM_TYPE_TO_EINT_MAP = 36;
+	int ROOM_TYPE_TO_EINT_MAP = 34;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -2058,6 +2011,456 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int ROOM_TYPE_TO_EINT_MAP_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.LearningPathsImpl <em>Learning Paths</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.LearningPathsImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getLearningPaths()
+	 * @generated
+	 */
+	int LEARNING_PATHS = 35;
+
+	/**
+	 * The feature id for the '<em><b>Learningpaths</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_PATHS__LEARNINGPATHS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Learning Paths</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_PATHS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Learning Paths</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_PATHS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.Doors3RoomImpl <em>Doors3 Room</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.Doors3RoomImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getDoors3Room()
+	 * @generated
+	 */
+	int DOORS3_ROOM = 36;
+
+	/**
+	 * The feature id for the '<em><b>Concreteelements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOORS3_ROOM__CONCRETEELEMENTS = QUESTION_ROOM__CONCRETEELEMENTS;
+
+	/**
+	 * The number of structural features of the '<em>Doors3 Room</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOORS3_ROOM_FEATURE_COUNT = QUESTION_ROOM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Doors3 Room</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOORS3_ROOM_OPERATION_COUNT = QUESTION_ROOM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.Chests3RoomImpl <em>Chests3 Room</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.Chests3RoomImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getChests3Room()
+	 * @generated
+	 */
+	int CHESTS3_ROOM = 37;
+
+	/**
+	 * The feature id for the '<em><b>Concreteelements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHESTS3_ROOM__CONCRETEELEMENTS = QUESTION_ROOM__CONCRETEELEMENTS;
+
+	/**
+	 * The number of structural features of the '<em>Chests3 Room</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHESTS3_ROOM_FEATURE_COUNT = QUESTION_ROOM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Chests3 Room</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHESTS3_ROOM_OPERATION_COUNT = QUESTION_ROOM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.AdaptedLearningGameActivityImpl <em>Adapted Learning Game Activity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.AdaptedLearningGameActivityImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getAdaptedLearningGameActivity()
+	 * @generated
+	 */
+	int ADAPTED_LEARNING_GAME_ACTIVITY = 38;
+
+	/**
+	 * The feature id for the '<em><b>Dungeon</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADAPTED_LEARNING_GAME_ACTIVITY__DUNGEON = 0;
+
+	/**
+	 * The number of structural features of the '<em>Adapted Learning Game Activity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADAPTED_LEARNING_GAME_ACTIVITY_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Adapted Learning Game Activity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADAPTED_LEARNING_GAME_ACTIVITY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.MTQFOneCompletionImpl <em>MTQF One Completion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.MTQFOneCompletionImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTQFOneCompletion()
+	 * @generated
+	 */
+	int MTQF_ONE_COMPLETION = 39;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_ONE_COMPLETION__NAME = QF_ONE_COMPLETION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_ONE_COMPLETION__PERCENTAGE_OF_APPARITION = QF_ONE_COMPLETION__PERCENTAGE_OF_APPARITION;
+
+	/**
+	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_ONE_COMPLETION__PERCENTAGE_OF_VALID_FACTS = QF_ONE_COMPLETION__PERCENTAGE_OF_VALID_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_ONE_COMPLETION__NB_CONSECUTIVE_SUCCESS = QF_ONE_COMPLETION__NB_CONSECUTIVE_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Responsemodality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_ONE_COMPLETION__RESPONSEMODALITY = QF_ONE_COMPLETION__RESPONSEMODALITY;
+
+	/**
+	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_ONE_COMPLETION__SETTINGS = QF_ONE_COMPLETION__SETTINGS;
+
+	/**
+	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_ONE_COMPLETION__NEW_ATTRIBUTE = QF_ONE_COMPLETION__NEW_ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Targets</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_ONE_COMPLETION__TARGETS = QF_ONE_COMPLETION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>MTQF One Completion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_ONE_COMPLETION_FEATURE_COUNT = QF_ONE_COMPLETION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>MTQF One Completion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_ONE_COMPLETION_OPERATION_COUNT = QF_ONE_COMPLETION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.MTLevelV1Impl <em>MT Level V1</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.MTLevelV1Impl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTLevelV1()
+	 * @generated
+	 */
+	int MT_LEVEL_V1 = 40;
+
+	/**
+	 * The feature id for the '<em><b>Subobjectives</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_V1__SUBOBJECTIVES = LEVEL__SUBOBJECTIVES;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_V1__ID = LEVEL__ID;
+
+	/**
+	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_V1__SETTINGS = LEVEL__SETTINGS;
+
+	/**
+	 * The feature id for the '<em><b>Build Table Setup</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_V1__BUILD_TABLE_SETUP = LEVEL_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Result Position Setup</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_V1__RESULT_POSITION_SETUP = LEVEL_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Min Interval</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_V1__MIN_INTERVAL = LEVEL_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Max Interval</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_V1__MAX_INTERVAL = LEVEL_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>MT Level V1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_V1_FEATURE_COUNT = LEVEL_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>MT Level V1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_V1_OPERATION_COUNT = LEVEL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.DimensionsEntanglementImpl <em>Dimensions Entanglement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.DimensionsEntanglementImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getDimensionsEntanglement()
+	 * @generated
+	 */
+	int DIMENSIONS_ENTANGLEMENT = 41;
+
+	/**
+	 * The feature id for the '<em><b>Semanticrelations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIMENSIONS_ENTANGLEMENT__SEMANTICRELATIONS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Dimensions Entanglement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIMENSIONS_ENTANGLEMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Dimensions Entanglement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIMENSIONS_ENTANGLEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.SemanticRelationImpl <em>Semantic Relation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.SemanticRelationImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSemanticRelation()
+	 * @generated
+	 */
+	int SEMANTIC_RELATION = 42;
+
+	/**
+	 * The number of structural features of the '<em>Semantic Relation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMANTIC_RELATION_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Semantic Relation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMANTIC_RELATION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.Room2SubObjectiveComplianceImpl <em>Room2 Sub Objective Compliance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.Room2SubObjectiveComplianceImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRoom2SubObjectiveCompliance()
+	 * @generated
+	 */
+	int ROOM2_SUB_OBJECTIVE_COMPLIANCE = 43;
+
+	/**
+	 * The feature id for the '<em><b>Room Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM2_SUB_OBJECTIVE_COMPLIANCE__ROOM_TYPE = SEMANTIC_RELATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Sub Obj Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM2_SUB_OBJECTIVE_COMPLIANCE__SUB_OBJ_TYPE = SEMANTIC_RELATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Room2 Sub Objective Compliance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM2_SUB_OBJECTIVE_COMPLIANCE_FEATURE_COUNT = SEMANTIC_RELATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Room2 Sub Objective Compliance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM2_SUB_OBJECTIVE_COMPLIANCE_OPERATION_COUNT = SEMANTIC_RELATION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link generatorMetamodels.GameMode <em>Game Mode</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2065,7 +2468,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameMode()
 	 * @generated
 	 */
-	int GAME_MODE = 37;
+	int GAME_MODE = 44;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.RoomType <em>Room Type</em>}' enum.
@@ -2075,7 +2478,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRoomType()
 	 * @generated
 	 */
-	int ROOM_TYPE = 38;
+	int ROOM_TYPE = 45;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.GameElementType <em>Game Element Type</em>}' enum.
@@ -2085,7 +2488,47 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameElementType()
 	 * @generated
 	 */
-	int GAME_ELEMENT_TYPE = 39;
+	int GAME_ELEMENT_TYPE = 46;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.TableBuild <em>Table Build</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.TableBuild
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getTableBuild()
+	 * @generated
+	 */
+	int TABLE_BUILD = 47;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.ResultPosition <em>Result Position</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.ResultPosition
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getResultPosition()
+	 * @generated
+	 */
+	int RESULT_POSITION = 48;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.TargetElement <em>Target Element</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.TargetElement
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getTargetElement()
+	 * @generated
+	 */
+	int TARGET_ELEMENT = 49;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.SubObjectiveType <em>Sub Objective Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.SubObjectiveType
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSubObjectiveType()
+	 * @generated
+	 */
+	int SUB_OBJECTIVE_TYPE = 50;
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.MultipleChoice <em>Multiple Choice</em>}'.
@@ -2109,25 +2552,25 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EAttribute getMultipleChoice_NbChoices();
 
 	/**
-	 * Returns the meta object for class '{@link generatorMetamodels.ResultVerification <em>Result Verification</em>}'.
+	 * Returns the meta object for class '{@link generatorMetamodels.ResultValidityDetermination <em>Result Validity Determination</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Result Verification</em>'.
-	 * @see generatorMetamodels.ResultVerification
+	 * @return the meta object for class '<em>Result Validity Determination</em>'.
+	 * @see generatorMetamodels.ResultValidityDetermination
 	 * @generated
 	 */
-	EClass getResultVerification();
+	EClass getResultValidityDetermination();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generatorMetamodels.ResultVerification#isCheckIsRight <em>Check Is Right</em>}'.
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.ResultValidityDetermination#getNewAttribute <em>New Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Check Is Right</em>'.
-	 * @see generatorMetamodels.ResultVerification#isCheckIsRight()
-	 * @see #getResultVerification()
+	 * @return the meta object for the attribute '<em>New Attribute</em>'.
+	 * @see generatorMetamodels.ResultValidityDetermination#getNewAttribute()
+	 * @see #getResultValidityDetermination()
 	 * @generated
 	 */
-	EAttribute getResultVerification_CheckIsRight();
+	EAttribute getResultValidityDetermination_NewAttribute();
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.SetOfFacts <em>Set Of Facts</em>}'.
@@ -2172,6 +2615,17 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EClass getProblemResolution();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.ProblemResolution#getNewAttribute <em>New Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>New Attribute</em>'.
+	 * @see generatorMetamodels.ProblemResolution#getNewAttribute()
+	 * @see #getProblemResolution()
+	 * @generated
+	 */
+	EAttribute getProblemResolution_NewAttribute();
+
+	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.ExitRoom <em>Exit Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2193,14 +2647,25 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EAttribute getExitRoom_Type();
 
 	/**
-	 * Returns the meta object for class '{@link generatorMetamodels.MultipleCompletion <em>Multiple Completion</em>}'.
+	 * Returns the meta object for class '{@link generatorMetamodels.QFTwoCompletion <em>QF Two Completion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Multiple Completion</em>'.
-	 * @see generatorMetamodels.MultipleCompletion
+	 * @return the meta object for class '<em>QF Two Completion</em>'.
+	 * @see generatorMetamodels.QFTwoCompletion
 	 * @generated
 	 */
-	EClass getMultipleCompletion();
+	EClass getQFTwoCompletion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.QFTwoCompletion#getNewAttribute <em>New Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>New Attribute</em>'.
+	 * @see generatorMetamodels.QFTwoCompletion#getNewAttribute()
+	 * @see #getQFTwoCompletion()
+	 * @generated
+	 */
+	EAttribute getQFTwoCompletion_NewAttribute();
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.CurrentProgression <em>Current Progression</em>}'.
@@ -2394,27 +2859,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EClass getAbstractFact();
 
 	/**
-	 * Returns the meta object for class '{@link generatorMetamodels.SimpleQuestionRoom <em>Simple Question Room</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Simple Question Room</em>'.
-	 * @see generatorMetamodels.SimpleQuestionRoom
-	 * @generated
-	 */
-	EClass getSimpleQuestionRoom();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generatorMetamodels.SimpleQuestionRoom#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generatorMetamodels.SimpleQuestionRoom#getType()
-	 * @see #getSimpleQuestionRoom()
-	 * @generated
-	 */
-	EAttribute getSimpleQuestionRoom_Type();
-
-	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.Fact <em>Fact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2596,35 +3040,25 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EClass getDoor();
 
 	/**
-	 * Returns the meta object for class '{@link generatorMetamodels.BossRoom <em>Boss Room</em>}'.
+	 * Returns the meta object for class '{@link generatorMetamodels.QFReconstruction <em>QF Reconstruction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Boss Room</em>'.
-	 * @see generatorMetamodels.BossRoom
+	 * @return the meta object for class '<em>QF Reconstruction</em>'.
+	 * @see generatorMetamodels.QFReconstruction
 	 * @generated
 	 */
-	EClass getBossRoom();
+	EClass getQFReconstruction();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generatorMetamodels.BossRoom#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.QFReconstruction#getNewAttribute <em>New Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generatorMetamodels.BossRoom#getType()
-	 * @see #getBossRoom()
+	 * @return the meta object for the attribute '<em>New Attribute</em>'.
+	 * @see generatorMetamodels.QFReconstruction#getNewAttribute()
+	 * @see #getQFReconstruction()
 	 * @generated
 	 */
-	EAttribute getBossRoom_Type();
-
-	/**
-	 * Returns the meta object for class '{@link generatorMetamodels.Reconstruction <em>Reconstruction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Reconstruction</em>'.
-	 * @see generatorMetamodels.Reconstruction
-	 * @generated
-	 */
-	EClass getReconstruction();
+	EAttribute getQFReconstruction_NewAttribute();
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.SubObjective <em>Sub Objective</em>}'.
@@ -2724,14 +3158,25 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EAttribute getResponseModality_ResponseTime();
 
 	/**
-	 * Returns the meta object for class '{@link generatorMetamodels.SimpleCompletion <em>Simple Completion</em>}'.
+	 * Returns the meta object for class '{@link generatorMetamodels.QFOneCompletion <em>QF One Completion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Simple Completion</em>'.
-	 * @see generatorMetamodels.SimpleCompletion
+	 * @return the meta object for class '<em>QF One Completion</em>'.
+	 * @see generatorMetamodels.QFOneCompletion
 	 * @generated
 	 */
-	EClass getSimpleCompletion();
+	EClass getQFOneCompletion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.QFOneCompletion#getNewAttribute <em>New Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>New Attribute</em>'.
+	 * @see generatorMetamodels.QFOneCompletion#getNewAttribute()
+	 * @see #getQFOneCompletion()
+	 * @generated
+	 */
+	EAttribute getQFOneCompletion_NewAttribute();
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.GameProfile <em>Game Profile</em>}'.
@@ -2916,14 +3361,25 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EReference getKnowledge_Knowledgefacts();
 
 	/**
-	 * Returns the meta object for class '{@link generatorMetamodels.FactValidityVerification <em>Fact Validity Verification</em>}'.
+	 * Returns the meta object for class '{@link generatorMetamodels.QFValidityDetermination <em>QF Validity Determination</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Fact Validity Verification</em>'.
-	 * @see generatorMetamodels.FactValidityVerification
+	 * @return the meta object for class '<em>QF Validity Determination</em>'.
+	 * @see generatorMetamodels.QFValidityDetermination
 	 * @generated
 	 */
-	EClass getFactValidityVerification();
+	EClass getQFValidityDetermination();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.QFValidityDetermination#getNewAttribute <em>New Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>New Attribute</em>'.
+	 * @see generatorMetamodels.QFValidityDetermination#getNewAttribute()
+	 * @see #getQFValidityDetermination()
+	 * @generated
+	 */
+	EAttribute getQFValidityDetermination_NewAttribute();
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.Room <em>Room</em>}'.
@@ -3119,6 +3575,206 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EAttribute getRoomTypeToEIntMap_Value();
 
 	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.LearningPaths <em>Learning Paths</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Learning Paths</em>'.
+	 * @see generatorMetamodels.LearningPaths
+	 * @generated
+	 */
+	EClass getLearningPaths();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generatorMetamodels.LearningPaths#getLearningpaths <em>Learningpaths</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Learningpaths</em>'.
+	 * @see generatorMetamodels.LearningPaths#getLearningpaths()
+	 * @see #getLearningPaths()
+	 * @generated
+	 */
+	EReference getLearningPaths_Learningpaths();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.Doors3Room <em>Doors3 Room</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Doors3 Room</em>'.
+	 * @see generatorMetamodels.Doors3Room
+	 * @generated
+	 */
+	EClass getDoors3Room();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.Chests3Room <em>Chests3 Room</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Chests3 Room</em>'.
+	 * @see generatorMetamodels.Chests3Room
+	 * @generated
+	 */
+	EClass getChests3Room();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.AdaptedLearningGameActivity <em>Adapted Learning Game Activity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Adapted Learning Game Activity</em>'.
+	 * @see generatorMetamodels.AdaptedLearningGameActivity
+	 * @generated
+	 */
+	EClass getAdaptedLearningGameActivity();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generatorMetamodels.AdaptedLearningGameActivity#getDungeon <em>Dungeon</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Dungeon</em>'.
+	 * @see generatorMetamodels.AdaptedLearningGameActivity#getDungeon()
+	 * @see #getAdaptedLearningGameActivity()
+	 * @generated
+	 */
+	EReference getAdaptedLearningGameActivity_Dungeon();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.MTQFOneCompletion <em>MTQF One Completion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MTQF One Completion</em>'.
+	 * @see generatorMetamodels.MTQFOneCompletion
+	 * @generated
+	 */
+	EClass getMTQFOneCompletion();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link generatorMetamodels.MTQFOneCompletion#getTargets <em>Targets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Targets</em>'.
+	 * @see generatorMetamodels.MTQFOneCompletion#getTargets()
+	 * @see #getMTQFOneCompletion()
+	 * @generated
+	 */
+	EAttribute getMTQFOneCompletion_Targets();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.MTLevelV1 <em>MT Level V1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MT Level V1</em>'.
+	 * @see generatorMetamodels.MTLevelV1
+	 * @generated
+	 */
+	EClass getMTLevelV1();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevelV1#getBuildTableSetup <em>Build Table Setup</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Build Table Setup</em>'.
+	 * @see generatorMetamodels.MTLevelV1#getBuildTableSetup()
+	 * @see #getMTLevelV1()
+	 * @generated
+	 */
+	EAttribute getMTLevelV1_BuildTableSetup();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevelV1#getResultPositionSetup <em>Result Position Setup</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Result Position Setup</em>'.
+	 * @see generatorMetamodels.MTLevelV1#getResultPositionSetup()
+	 * @see #getMTLevelV1()
+	 * @generated
+	 */
+	EAttribute getMTLevelV1_ResultPositionSetup();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevelV1#getMinInterval <em>Min Interval</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Min Interval</em>'.
+	 * @see generatorMetamodels.MTLevelV1#getMinInterval()
+	 * @see #getMTLevelV1()
+	 * @generated
+	 */
+	EAttribute getMTLevelV1_MinInterval();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevelV1#getMaxInterval <em>Max Interval</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Max Interval</em>'.
+	 * @see generatorMetamodels.MTLevelV1#getMaxInterval()
+	 * @see #getMTLevelV1()
+	 * @generated
+	 */
+	EAttribute getMTLevelV1_MaxInterval();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.DimensionsEntanglement <em>Dimensions Entanglement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Dimensions Entanglement</em>'.
+	 * @see generatorMetamodels.DimensionsEntanglement
+	 * @generated
+	 */
+	EClass getDimensionsEntanglement();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generatorMetamodels.DimensionsEntanglement#getSemanticrelations <em>Semanticrelations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Semanticrelations</em>'.
+	 * @see generatorMetamodels.DimensionsEntanglement#getSemanticrelations()
+	 * @see #getDimensionsEntanglement()
+	 * @generated
+	 */
+	EReference getDimensionsEntanglement_Semanticrelations();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.SemanticRelation <em>Semantic Relation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Semantic Relation</em>'.
+	 * @see generatorMetamodels.SemanticRelation
+	 * @generated
+	 */
+	EClass getSemanticRelation();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.Room2SubObjectiveCompliance <em>Room2 Sub Objective Compliance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Room2 Sub Objective Compliance</em>'.
+	 * @see generatorMetamodels.Room2SubObjectiveCompliance
+	 * @generated
+	 */
+	EClass getRoom2SubObjectiveCompliance();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.Room2SubObjectiveCompliance#getRoomType <em>Room Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Room Type</em>'.
+	 * @see generatorMetamodels.Room2SubObjectiveCompliance#getRoomType()
+	 * @see #getRoom2SubObjectiveCompliance()
+	 * @generated
+	 */
+	EAttribute getRoom2SubObjectiveCompliance_RoomType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.Room2SubObjectiveCompliance#getSubObjType <em>Sub Obj Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Sub Obj Type</em>'.
+	 * @see generatorMetamodels.Room2SubObjectiveCompliance#getSubObjType()
+	 * @see #getRoom2SubObjectiveCompliance()
+	 * @generated
+	 */
+	EAttribute getRoom2SubObjectiveCompliance_SubObjType();
+
+	/**
 	 * Returns the meta object for enum '{@link generatorMetamodels.GameMode <em>Game Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3147,6 +3803,46 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getGameElementType();
+
+	/**
+	 * Returns the meta object for enum '{@link generatorMetamodels.TableBuild <em>Table Build</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Table Build</em>'.
+	 * @see generatorMetamodels.TableBuild
+	 * @generated
+	 */
+	EEnum getTableBuild();
+
+	/**
+	 * Returns the meta object for enum '{@link generatorMetamodels.ResultPosition <em>Result Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Result Position</em>'.
+	 * @see generatorMetamodels.ResultPosition
+	 * @generated
+	 */
+	EEnum getResultPosition();
+
+	/**
+	 * Returns the meta object for enum '{@link generatorMetamodels.TargetElement <em>Target Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Target Element</em>'.
+	 * @see generatorMetamodels.TargetElement
+	 * @generated
+	 */
+	EEnum getTargetElement();
+
+	/**
+	 * Returns the meta object for enum '{@link generatorMetamodels.SubObjectiveType <em>Sub Objective Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Sub Objective Type</em>'.
+	 * @see generatorMetamodels.SubObjectiveType
+	 * @generated
+	 */
+	EEnum getSubObjectiveType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3190,22 +3886,23 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EAttribute MULTIPLE_CHOICE__NB_CHOICES = eINSTANCE.getMultipleChoice_NbChoices();
 
 		/**
-		 * The meta object literal for the '{@link generatorMetamodels.impl.ResultVerificationImpl <em>Result Verification</em>}' class.
+		 * The meta object literal for the '{@link generatorMetamodels.impl.ResultValidityDeterminationImpl <em>Result Validity Determination</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generatorMetamodels.impl.ResultVerificationImpl
-		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getResultVerification()
+		 * @see generatorMetamodels.impl.ResultValidityDeterminationImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getResultValidityDetermination()
 		 * @generated
 		 */
-		EClass RESULT_VERIFICATION = eINSTANCE.getResultVerification();
+		EClass RESULT_VALIDITY_DETERMINATION = eINSTANCE.getResultValidityDetermination();
 
 		/**
-		 * The meta object literal for the '<em><b>Check Is Right</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>New Attribute</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESULT_VERIFICATION__CHECK_IS_RIGHT = eINSTANCE.getResultVerification_CheckIsRight();
+		EAttribute RESULT_VALIDITY_DETERMINATION__NEW_ATTRIBUTE = eINSTANCE
+				.getResultValidityDetermination_NewAttribute();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.SetOfFactsImpl <em>Set Of Facts</em>}' class.
@@ -3244,6 +3941,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EClass PROBLEM_RESOLUTION = eINSTANCE.getProblemResolution();
 
 		/**
+		 * The meta object literal for the '<em><b>New Attribute</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROBLEM_RESOLUTION__NEW_ATTRIBUTE = eINSTANCE.getProblemResolution_NewAttribute();
+
+		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.ExitRoomImpl <em>Exit Room</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3262,14 +3967,22 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EAttribute EXIT_ROOM__TYPE = eINSTANCE.getExitRoom_Type();
 
 		/**
-		 * The meta object literal for the '{@link generatorMetamodels.impl.MultipleCompletionImpl <em>Multiple Completion</em>}' class.
+		 * The meta object literal for the '{@link generatorMetamodels.impl.QFTwoCompletionImpl <em>QF Two Completion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generatorMetamodels.impl.MultipleCompletionImpl
-		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMultipleCompletion()
+		 * @see generatorMetamodels.impl.QFTwoCompletionImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getQFTwoCompletion()
 		 * @generated
 		 */
-		EClass MULTIPLE_COMPLETION = eINSTANCE.getMultipleCompletion();
+		EClass QF_TWO_COMPLETION = eINSTANCE.getQFTwoCompletion();
+
+		/**
+		 * The meta object literal for the '<em><b>New Attribute</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QF_TWO_COMPLETION__NEW_ATTRIBUTE = eINSTANCE.getQFTwoCompletion_NewAttribute();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.CurrentProgressionImpl <em>Current Progression</em>}' class.
@@ -3430,24 +4143,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EClass ABSTRACT_FACT = eINSTANCE.getAbstractFact();
 
 		/**
-		 * The meta object literal for the '{@link generatorMetamodels.impl.SimpleQuestionRoomImpl <em>Simple Question Room</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generatorMetamodels.impl.SimpleQuestionRoomImpl
-		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSimpleQuestionRoom()
-		 * @generated
-		 */
-		EClass SIMPLE_QUESTION_ROOM = eINSTANCE.getSimpleQuestionRoom();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SIMPLE_QUESTION_ROOM__TYPE = eINSTANCE.getSimpleQuestionRoom_Type();
-
-		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.FactImpl <em>Fact</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3596,32 +4291,22 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EClass DOOR = eINSTANCE.getDoor();
 
 		/**
-		 * The meta object literal for the '{@link generatorMetamodels.impl.BossRoomImpl <em>Boss Room</em>}' class.
+		 * The meta object literal for the '{@link generatorMetamodels.impl.QFReconstructionImpl <em>QF Reconstruction</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generatorMetamodels.impl.BossRoomImpl
-		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getBossRoom()
+		 * @see generatorMetamodels.impl.QFReconstructionImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getQFReconstruction()
 		 * @generated
 		 */
-		EClass BOSS_ROOM = eINSTANCE.getBossRoom();
+		EClass QF_RECONSTRUCTION = eINSTANCE.getQFReconstruction();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>New Attribute</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BOSS_ROOM__TYPE = eINSTANCE.getBossRoom_Type();
-
-		/**
-		 * The meta object literal for the '{@link generatorMetamodels.impl.ReconstructionImpl <em>Reconstruction</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generatorMetamodels.impl.ReconstructionImpl
-		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getReconstruction()
-		 * @generated
-		 */
-		EClass RECONSTRUCTION = eINSTANCE.getReconstruction();
+		EAttribute QF_RECONSTRUCTION__NEW_ATTRIBUTE = eINSTANCE.getQFReconstruction_NewAttribute();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.SubObjectiveImpl <em>Sub Objective</em>}' class.
@@ -3700,14 +4385,22 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EAttribute RESPONSE_MODALITY__RESPONSE_TIME = eINSTANCE.getResponseModality_ResponseTime();
 
 		/**
-		 * The meta object literal for the '{@link generatorMetamodels.impl.SimpleCompletionImpl <em>Simple Completion</em>}' class.
+		 * The meta object literal for the '{@link generatorMetamodels.impl.QFOneCompletionImpl <em>QF One Completion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generatorMetamodels.impl.SimpleCompletionImpl
-		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSimpleCompletion()
+		 * @see generatorMetamodels.impl.QFOneCompletionImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getQFOneCompletion()
 		 * @generated
 		 */
-		EClass SIMPLE_COMPLETION = eINSTANCE.getSimpleCompletion();
+		EClass QF_ONE_COMPLETION = eINSTANCE.getQFOneCompletion();
+
+		/**
+		 * The meta object literal for the '<em><b>New Attribute</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QF_ONE_COMPLETION__NEW_ATTRIBUTE = eINSTANCE.getQFOneCompletion_NewAttribute();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.GameProfileImpl <em>Game Profile</em>}' class.
@@ -3856,14 +4549,22 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EReference KNOWLEDGE__KNOWLEDGEFACTS = eINSTANCE.getKnowledge_Knowledgefacts();
 
 		/**
-		 * The meta object literal for the '{@link generatorMetamodels.impl.FactValidityVerificationImpl <em>Fact Validity Verification</em>}' class.
+		 * The meta object literal for the '{@link generatorMetamodels.impl.QFValidityDeterminationImpl <em>QF Validity Determination</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generatorMetamodels.impl.FactValidityVerificationImpl
-		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getFactValidityVerification()
+		 * @see generatorMetamodels.impl.QFValidityDeterminationImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getQFValidityDetermination()
 		 * @generated
 		 */
-		EClass FACT_VALIDITY_VERIFICATION = eINSTANCE.getFactValidityVerification();
+		EClass QF_VALIDITY_DETERMINATION = eINSTANCE.getQFValidityDetermination();
+
+		/**
+		 * The meta object literal for the '<em><b>New Attribute</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QF_VALIDITY_DETERMINATION__NEW_ATTRIBUTE = eINSTANCE.getQFValidityDetermination_NewAttribute();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.RoomImpl <em>Room</em>}' class.
@@ -4024,6 +4725,176 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EAttribute ROOM_TYPE_TO_EINT_MAP__VALUE = eINSTANCE.getRoomTypeToEIntMap_Value();
 
 		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.LearningPathsImpl <em>Learning Paths</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.LearningPathsImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getLearningPaths()
+		 * @generated
+		 */
+		EClass LEARNING_PATHS = eINSTANCE.getLearningPaths();
+
+		/**
+		 * The meta object literal for the '<em><b>Learningpaths</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEARNING_PATHS__LEARNINGPATHS = eINSTANCE.getLearningPaths_Learningpaths();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.Doors3RoomImpl <em>Doors3 Room</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.Doors3RoomImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getDoors3Room()
+		 * @generated
+		 */
+		EClass DOORS3_ROOM = eINSTANCE.getDoors3Room();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.Chests3RoomImpl <em>Chests3 Room</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.Chests3RoomImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getChests3Room()
+		 * @generated
+		 */
+		EClass CHESTS3_ROOM = eINSTANCE.getChests3Room();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.AdaptedLearningGameActivityImpl <em>Adapted Learning Game Activity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.AdaptedLearningGameActivityImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getAdaptedLearningGameActivity()
+		 * @generated
+		 */
+		EClass ADAPTED_LEARNING_GAME_ACTIVITY = eINSTANCE.getAdaptedLearningGameActivity();
+
+		/**
+		 * The meta object literal for the '<em><b>Dungeon</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ADAPTED_LEARNING_GAME_ACTIVITY__DUNGEON = eINSTANCE.getAdaptedLearningGameActivity_Dungeon();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.MTQFOneCompletionImpl <em>MTQF One Completion</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.MTQFOneCompletionImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTQFOneCompletion()
+		 * @generated
+		 */
+		EClass MTQF_ONE_COMPLETION = eINSTANCE.getMTQFOneCompletion();
+
+		/**
+		 * The meta object literal for the '<em><b>Targets</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_ONE_COMPLETION__TARGETS = eINSTANCE.getMTQFOneCompletion_Targets();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.MTLevelV1Impl <em>MT Level V1</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.MTLevelV1Impl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTLevelV1()
+		 * @generated
+		 */
+		EClass MT_LEVEL_V1 = eINSTANCE.getMTLevelV1();
+
+		/**
+		 * The meta object literal for the '<em><b>Build Table Setup</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_LEVEL_V1__BUILD_TABLE_SETUP = eINSTANCE.getMTLevelV1_BuildTableSetup();
+
+		/**
+		 * The meta object literal for the '<em><b>Result Position Setup</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_LEVEL_V1__RESULT_POSITION_SETUP = eINSTANCE.getMTLevelV1_ResultPositionSetup();
+
+		/**
+		 * The meta object literal for the '<em><b>Min Interval</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_LEVEL_V1__MIN_INTERVAL = eINSTANCE.getMTLevelV1_MinInterval();
+
+		/**
+		 * The meta object literal for the '<em><b>Max Interval</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_LEVEL_V1__MAX_INTERVAL = eINSTANCE.getMTLevelV1_MaxInterval();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.DimensionsEntanglementImpl <em>Dimensions Entanglement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.DimensionsEntanglementImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getDimensionsEntanglement()
+		 * @generated
+		 */
+		EClass DIMENSIONS_ENTANGLEMENT = eINSTANCE.getDimensionsEntanglement();
+
+		/**
+		 * The meta object literal for the '<em><b>Semanticrelations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DIMENSIONS_ENTANGLEMENT__SEMANTICRELATIONS = eINSTANCE.getDimensionsEntanglement_Semanticrelations();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.SemanticRelationImpl <em>Semantic Relation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.SemanticRelationImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSemanticRelation()
+		 * @generated
+		 */
+		EClass SEMANTIC_RELATION = eINSTANCE.getSemanticRelation();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.Room2SubObjectiveComplianceImpl <em>Room2 Sub Objective Compliance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.Room2SubObjectiveComplianceImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRoom2SubObjectiveCompliance()
+		 * @generated
+		 */
+		EClass ROOM2_SUB_OBJECTIVE_COMPLIANCE = eINSTANCE.getRoom2SubObjectiveCompliance();
+
+		/**
+		 * The meta object literal for the '<em><b>Room Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOM2_SUB_OBJECTIVE_COMPLIANCE__ROOM_TYPE = eINSTANCE.getRoom2SubObjectiveCompliance_RoomType();
+
+		/**
+		 * The meta object literal for the '<em><b>Sub Obj Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOM2_SUB_OBJECTIVE_COMPLIANCE__SUB_OBJ_TYPE = eINSTANCE.getRoom2SubObjectiveCompliance_SubObjType();
+
+		/**
 		 * The meta object literal for the '{@link generatorMetamodels.GameMode <em>Game Mode</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4052,6 +4923,46 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum GAME_ELEMENT_TYPE = eINSTANCE.getGameElementType();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.TableBuild <em>Table Build</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.TableBuild
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getTableBuild()
+		 * @generated
+		 */
+		EEnum TABLE_BUILD = eINSTANCE.getTableBuild();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.ResultPosition <em>Result Position</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.ResultPosition
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getResultPosition()
+		 * @generated
+		 */
+		EEnum RESULT_POSITION = eINSTANCE.getResultPosition();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.TargetElement <em>Target Element</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.TargetElement
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getTargetElement()
+		 * @generated
+		 */
+		EEnum TARGET_ELEMENT = eINSTANCE.getTargetElement();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.SubObjectiveType <em>Sub Objective Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.SubObjectiveType
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSubObjectiveType()
+		 * @generated
+		 */
+		EEnum SUB_OBJECTIVE_TYPE = eINSTANCE.getSubObjectiveType();
 
 	}
 
