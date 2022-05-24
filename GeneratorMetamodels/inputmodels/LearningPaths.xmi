@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generatorMetamodels:LearningPaths
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:generatorMetamodels="http://www.example.org/generatorMetamodels"
+    xsi:schemaLocation="http://www.example.org/generatorMetamodels ../model/generatorMetamodels.ecore">
+  <learningpaths
+      name="MT CE2 Groupe &quot;EN COURS&quot; Rozenn">
+    <learningobjectives
+        ID="O1"
+        name="Revisions of CE1's tables">
+      <levels
+          xsi:type="generatorMetamodels:MTLevel"
+          ID="O1_N1"
+          minInterval="10"
+          maxInterval="1">
+        <subobjectives
+            xsi:type="generatorMetamodels:MTQFOneCompletion"
+            percentageOfApparition="70"
+            nbConsecutiveSuccess="3">
+          <targets>RESULT</targets>
+        </subobjectives>
+      </levels>
+      <levels
+          xsi:type="generatorMetamodels:MTLevel"
+          ID="O1_N2"
+          buildTableSetup="MIX"
+          resultPositionSetup="MIX"
+          minInterval="10"
+          maxInterval="1"/>
+    </learningobjectives>
+    <learningobjectives
+        ID="O2"
+        name="Training on table 6">
+      <levels
+          xsi:type="generatorMetamodels:MTLevel"
+          ID="O2_N1"
+          minInterval="10"
+          maxInterval="1"/>
+      <levels
+          xsi:type="generatorMetamodels:MTLevel"
+          ID="O2_N2"
+          buildTableSetup="MIX"
+          minInterval="10"
+          maxInterval="1"/>
+      <levels
+          xsi:type="generatorMetamodels:MTLevel"
+          ID="O2_N3"
+          buildTableSetup="MIX"
+          resultPositionSetup="MIX"
+          minInterval="10"
+          maxInterval="1"/>
+      <levels
+          xsi:type="generatorMetamodels:MTLevel"
+          ID="02_N4"
+          buildTableSetup="MIX"
+          resultPositionSetup="MIX"/>
+      <prerequisites
+          successPercentage="80"
+          prerequisite="O1_N1"/>
+    </learningobjectives>
+    <learningobjectives
+        ID="O3"
+        name="Training on table 7"/>
+    <learningobjectives
+        ID="O4"
+        name="Training on table 8"/>
+    <learningobjectives
+        ID="O5"
+        name="Training on table 9"/>
+    <learningobjectives
+        ID="O6"
+        name="Training on 1 to 10">
+      <levels
+          xsi:type="generatorMetamodels:MTLevel"
+          ID="O6_N1"
+          buildTableSetup="MIX"
+          resultPositionSetup="MIX"/>
+      <levels
+          xsi:type="generatorMetamodels:MTLevel"
+          ID="O6_N2"
+          buildTableSetup="MIX"
+          resultPositionSetup="MIX"/>
+    </learningobjectives>
+  </learningpaths>
+</generatorMetamodels:LearningPaths>

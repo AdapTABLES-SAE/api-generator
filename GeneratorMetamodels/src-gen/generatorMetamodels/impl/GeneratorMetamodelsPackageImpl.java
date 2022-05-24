@@ -32,9 +32,10 @@ import generatorMetamodels.LearningPath;
 import generatorMetamodels.LearningPaths;
 import generatorMetamodels.LearningProfile;
 import generatorMetamodels.Level;
-import generatorMetamodels.MTLevelV1;
+import generatorMetamodels.MTLevel;
 import generatorMetamodels.MTQFOneCompletion;
 import generatorMetamodels.MultipleChoice;
+import generatorMetamodels.Prerequisite;
 import generatorMetamodels.ProblemResolution;
 import generatorMetamodels.QFOneCompletion;
 import generatorMetamodels.QFReconstruction;
@@ -358,7 +359,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mtLevelV1EClass = null;
+	private EClass mtLevelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -380,6 +381,13 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * @generated
 	 */
 	private EClass room2SubObjectiveComplianceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass prerequisiteEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -743,7 +751,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLearningPath_Subobjectives() {
+	public EReference getLearningPath_Knowledge() {
 		return (EReference) learningPathEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -752,17 +760,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLearningPath_Knowledge() {
-		return (EReference) learningPathEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getLearningPath_Name() {
-		return (EAttribute) learningPathEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) learningPathEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -959,7 +958,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSubObjective_Name() {
+	public EAttribute getSubObjective_PercentageOfApparition() {
 		return (EAttribute) subObjectiveEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -968,7 +967,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSubObjective_PercentageOfApparition() {
+	public EAttribute getSubObjective_PercentageOfValidFacts() {
 		return (EAttribute) subObjectiveEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -977,7 +976,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSubObjective_PercentageOfValidFacts() {
+	public EAttribute getSubObjective_NbConsecutiveSuccess() {
 		return (EAttribute) subObjectiveEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -986,17 +985,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSubObjective_NbConsecutiveSuccess() {
-		return (EAttribute) subObjectiveEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getSubObjective_Responsemodality() {
-		return (EReference) subObjectiveEClass.getEStructuralFeatures().get(4);
+		return (EReference) subObjectiveEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1005,7 +995,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * @generated
 	 */
 	public EReference getSubObjective_Settings() {
-		return (EReference) subObjectiveEClass.getEStructuralFeatures().get(5);
+		return (EReference) subObjectiveEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1103,7 +1093,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLearningObjective_Prerequisites() {
+	public EReference getLearningObjective_Setoffacts() {
 		return (EReference) learningObjectiveEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1112,17 +1102,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLearningObjective_Setoffacts() {
-		return (EReference) learningObjectiveEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getLearningObjective_ID() {
-		return (EAttribute) learningObjectiveEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) learningObjectiveEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1131,7 +1112,16 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * @generated
 	 */
 	public EAttribute getLearningObjective_Name() {
-		return (EAttribute) learningObjectiveEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) learningObjectiveEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLearningObjective_Prerequisites() {
+		return (EReference) learningObjectiveEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1148,17 +1138,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLevel_Subobjectives() {
-		return (EReference) levelEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getLevel_ID() {
-		return (EAttribute) levelEClass.getEStructuralFeatures().get(1);
+		return (EAttribute) levelEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1167,6 +1148,15 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * @generated
 	 */
 	public EReference getLevel_Settings() {
+		return (EReference) levelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLevel_Subobjectives() {
 		return (EReference) levelEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1454,8 +1444,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMTLevelV1() {
-		return mtLevelV1EClass;
+	public EClass getMTLevel() {
+		return mtLevelEClass;
 	}
 
 	/**
@@ -1463,8 +1453,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMTLevelV1_BuildTableSetup() {
-		return (EAttribute) mtLevelV1EClass.getEStructuralFeatures().get(0);
+	public EAttribute getMTLevel_BuildTableSetup() {
+		return (EAttribute) mtLevelEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1472,8 +1462,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMTLevelV1_ResultPositionSetup() {
-		return (EAttribute) mtLevelV1EClass.getEStructuralFeatures().get(1);
+	public EAttribute getMTLevel_ResultPositionSetup() {
+		return (EAttribute) mtLevelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1481,8 +1471,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMTLevelV1_MinInterval() {
-		return (EAttribute) mtLevelV1EClass.getEStructuralFeatures().get(2);
+	public EAttribute getMTLevel_MinInterval() {
+		return (EAttribute) mtLevelEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1490,8 +1480,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMTLevelV1_MaxInterval() {
-		return (EAttribute) mtLevelV1EClass.getEStructuralFeatures().get(3);
+	public EAttribute getMTLevel_MaxInterval() {
+		return (EAttribute) mtLevelEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1546,6 +1536,33 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 */
 	public EAttribute getRoom2SubObjectiveCompliance_SubObjType() {
 		return (EAttribute) room2SubObjectiveComplianceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPrerequisite() {
+		return prerequisiteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPrerequisite_SuccessPercentage() {
+		return (EAttribute) prerequisiteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPrerequisite_Prerequisite() {
+		return (EReference) prerequisiteEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1678,7 +1695,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 
 		learningPathEClass = createEClass(LEARNING_PATH);
 		createEReference(learningPathEClass, LEARNING_PATH__LEARNINGOBJECTIVES);
-		createEReference(learningPathEClass, LEARNING_PATH__SUBOBJECTIVES);
 		createEReference(learningPathEClass, LEARNING_PATH__KNOWLEDGE);
 		createEAttribute(learningPathEClass, LEARNING_PATH__NAME);
 
@@ -1710,7 +1726,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		createEAttribute(qfReconstructionEClass, QF_RECONSTRUCTION__NEW_ATTRIBUTE);
 
 		subObjectiveEClass = createEClass(SUB_OBJECTIVE);
-		createEAttribute(subObjectiveEClass, SUB_OBJECTIVE__NAME);
 		createEAttribute(subObjectiveEClass, SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION);
 		createEAttribute(subObjectiveEClass, SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS);
 		createEAttribute(subObjectiveEClass, SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS);
@@ -1731,15 +1746,15 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 
 		learningObjectiveEClass = createEClass(LEARNING_OBJECTIVE);
 		createEReference(learningObjectiveEClass, LEARNING_OBJECTIVE__LEVELS);
-		createEReference(learningObjectiveEClass, LEARNING_OBJECTIVE__PREREQUISITES);
 		createEReference(learningObjectiveEClass, LEARNING_OBJECTIVE__SETOFFACTS);
 		createEAttribute(learningObjectiveEClass, LEARNING_OBJECTIVE__ID);
 		createEAttribute(learningObjectiveEClass, LEARNING_OBJECTIVE__NAME);
+		createEReference(learningObjectiveEClass, LEARNING_OBJECTIVE__PREREQUISITES);
 
 		levelEClass = createEClass(LEVEL);
-		createEReference(levelEClass, LEVEL__SUBOBJECTIVES);
 		createEAttribute(levelEClass, LEVEL__ID);
 		createEReference(levelEClass, LEVEL__SETTINGS);
+		createEReference(levelEClass, LEVEL__SUBOBJECTIVES);
 
 		knowledgeEClass = createEClass(KNOWLEDGE);
 		createEAttribute(knowledgeEClass, KNOWLEDGE__NAME);
@@ -1786,11 +1801,11 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		mtqfOneCompletionEClass = createEClass(MTQF_ONE_COMPLETION);
 		createEAttribute(mtqfOneCompletionEClass, MTQF_ONE_COMPLETION__TARGETS);
 
-		mtLevelV1EClass = createEClass(MT_LEVEL_V1);
-		createEAttribute(mtLevelV1EClass, MT_LEVEL_V1__BUILD_TABLE_SETUP);
-		createEAttribute(mtLevelV1EClass, MT_LEVEL_V1__RESULT_POSITION_SETUP);
-		createEAttribute(mtLevelV1EClass, MT_LEVEL_V1__MIN_INTERVAL);
-		createEAttribute(mtLevelV1EClass, MT_LEVEL_V1__MAX_INTERVAL);
+		mtLevelEClass = createEClass(MT_LEVEL);
+		createEAttribute(mtLevelEClass, MT_LEVEL__BUILD_TABLE_SETUP);
+		createEAttribute(mtLevelEClass, MT_LEVEL__RESULT_POSITION_SETUP);
+		createEAttribute(mtLevelEClass, MT_LEVEL__MIN_INTERVAL);
+		createEAttribute(mtLevelEClass, MT_LEVEL__MAX_INTERVAL);
 
 		dimensionsEntanglementEClass = createEClass(DIMENSIONS_ENTANGLEMENT);
 		createEReference(dimensionsEntanglementEClass, DIMENSIONS_ENTANGLEMENT__SEMANTICRELATIONS);
@@ -1800,6 +1815,10 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		room2SubObjectiveComplianceEClass = createEClass(ROOM2_SUB_OBJECTIVE_COMPLIANCE);
 		createEAttribute(room2SubObjectiveComplianceEClass, ROOM2_SUB_OBJECTIVE_COMPLIANCE__ROOM_TYPE);
 		createEAttribute(room2SubObjectiveComplianceEClass, ROOM2_SUB_OBJECTIVE_COMPLIANCE__SUB_OBJ_TYPE);
+
+		prerequisiteEClass = createEClass(PREREQUISITE);
+		createEAttribute(prerequisiteEClass, PREREQUISITE__SUCCESS_PERCENTAGE);
+		createEReference(prerequisiteEClass, PREREQUISITE__PREREQUISITE);
 
 		// Create enums
 		gameModeEEnum = createEEnum(GAME_MODE);
@@ -1858,7 +1877,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		doors3RoomEClass.getESuperTypes().add(this.getQuestionRoom());
 		chests3RoomEClass.getESuperTypes().add(this.getQuestionRoom());
 		mtqfOneCompletionEClass.getESuperTypes().add(this.getQFOneCompletion());
-		mtLevelV1EClass.getESuperTypes().add(this.getLevel());
+		mtLevelEClass.getESuperTypes().add(this.getLevel());
 		room2SubObjectiveComplianceEClass.getESuperTypes().add(this.getSemanticRelation());
 
 		// Initialize classes, features, and operations; add parameters
@@ -1935,9 +1954,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		initEReference(getLearningPath_Learningobjectives(), this.getLearningObjective(), null, "learningobjectives",
 				null, 0, -1, LearningPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLearningPath_Subobjectives(), this.getSubObjective(), null, "subobjectives", null, 0, -1,
-				LearningPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLearningPath_Knowledge(), this.getKnowledge(), null, "knowledge", null, 0, 1,
 				LearningPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2003,8 +2019,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 
 		initEClass(subObjectiveEClass, SubObjective.class, "SubObjective", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSubObjective_Name(), ecorePackage.getEString(), "name", null, 0, 1, SubObjective.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSubObjective_PercentageOfApparition(), ecorePackage.getEInt(), "percentageOfApparition", null,
 				0, 1, SubObjective.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
@@ -2050,9 +2064,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		initEReference(getLearningObjective_Levels(), this.getLevel(), null, "levels", null, 0, -1,
 				LearningObjective.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLearningObjective_Prerequisites(), this.getLevel(), null, "prerequisites", null, 0, -1,
-				LearningObjective.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLearningObjective_Setoffacts(), this.getSetOfFacts(), null, "setoffacts", null, 0, -1,
 				LearningObjective.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2061,16 +2072,19 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		initEAttribute(getLearningObjective_Name(), ecorePackage.getEString(), "name", null, 0, 1,
 				LearningObjective.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getLearningObjective_Prerequisites(), this.getPrerequisite(), null, "prerequisites", null, 0, -1,
+				LearningObjective.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(levelEClass, Level.class, "Level", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLevel_Subobjectives(), this.getSubObjective(), null, "subobjectives", null, 0, -1,
-				Level.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLevel_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Level.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLevel_Settings(), this.getSettings(), null, "settings", null, 0, -1, Level.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLevel_Subobjectives(), this.getSubObjective(), null, "subobjectives", null, 0, -1,
+				Level.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(knowledgeEClass, Knowledge.class, "Knowledge", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2159,17 +2173,15 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 				MTQFOneCompletion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
-		initEClass(mtLevelV1EClass, MTLevelV1.class, "MTLevelV1", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMTLevelV1_BuildTableSetup(), this.getTableBuild(), "buildTableSetup", null, 0, 1,
-				MTLevelV1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTLevelV1_ResultPositionSetup(), this.getResultPosition(), "resultPositionSetup", "RIGHT", 0,
-				1, MTLevelV1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTLevelV1_MinInterval(), ecorePackage.getEInt(), "minInterval", null, 0, 1, MTLevelV1.class,
+		initEClass(mtLevelEClass, MTLevel.class, "MTLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTLevel_BuildTableSetup(), this.getTableBuild(), "buildTableSetup", null, 0, 1, MTLevel.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTLevelV1_MaxInterval(), ecorePackage.getEInt(), "maxInterval", null, 0, 1, MTLevelV1.class,
+		initEAttribute(getMTLevel_ResultPositionSetup(), this.getResultPosition(), "resultPositionSetup", "RIGHT", 0, 1,
+				MTLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTLevel_MinInterval(), ecorePackage.getEInt(), "minInterval", "1", 0, 1, MTLevel.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTLevel_MaxInterval(), ecorePackage.getEInt(), "maxInterval", "10", 0, 1, MTLevel.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dimensionsEntanglementEClass, DimensionsEntanglement.class, "DimensionsEntanglement", !IS_ABSTRACT,
@@ -2189,6 +2201,15 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		initEAttribute(getRoom2SubObjectiveCompliance_SubObjType(), this.getSubObjectiveType(), "subObjType", null, 0,
 				1, Room2SubObjectiveCompliance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(prerequisiteEClass, Prerequisite.class, "Prerequisite", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPrerequisite_SuccessPercentage(), ecorePackage.getEInt(), "successPercentage", null, 0, 1,
+				Prerequisite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getPrerequisite_Prerequisite(), this.getLevel(), null, "prerequisite", null, 1, 1,
+				Prerequisite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(gameModeEEnum, GameMode.class, "GameMode");

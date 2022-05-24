@@ -5,6 +5,7 @@ package generatorMetamodels.impl;
 import generatorMetamodels.GeneratorMetamodelsPackage;
 import generatorMetamodels.LearningObjective;
 import generatorMetamodels.Level;
+import generatorMetamodels.Prerequisite;
 import generatorMetamodels.SetOfFacts;
 
 import java.util.Collection;
@@ -33,10 +34,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link generatorMetamodels.impl.LearningObjectiveImpl#getLevels <em>Levels</em>}</li>
- *   <li>{@link generatorMetamodels.impl.LearningObjectiveImpl#getPrerequisites <em>Prerequisites</em>}</li>
  *   <li>{@link generatorMetamodels.impl.LearningObjectiveImpl#getSetoffacts <em>Setoffacts</em>}</li>
  *   <li>{@link generatorMetamodels.impl.LearningObjectiveImpl#getID <em>ID</em>}</li>
  *   <li>{@link generatorMetamodels.impl.LearningObjectiveImpl#getName <em>Name</em>}</li>
+ *   <li>{@link generatorMetamodels.impl.LearningObjectiveImpl#getPrerequisites <em>Prerequisites</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,16 +52,6 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected EList<Level> levels;
-
-	/**
-	 * The cached value of the '{@link #getPrerequisites() <em>Prerequisites</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrerequisites()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Level> prerequisites;
 
 	/**
 	 * The cached value of the '{@link #getSetoffacts() <em>Setoffacts</em>}' reference list.
@@ -113,6 +104,16 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getPrerequisites() <em>Prerequisites</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrerequisites()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Prerequisite> prerequisites;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -142,19 +143,6 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 					GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__LEVELS);
 		}
 		return levels;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Level> getPrerequisites() {
-		if (prerequisites == null) {
-			prerequisites = new EObjectResolvingEList<Level>(Level.class, this,
-					GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__PREREQUISITES);
-		}
-		return prerequisites;
 	}
 
 	/**
@@ -219,11 +207,26 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Prerequisite> getPrerequisites() {
+		if (prerequisites == null) {
+			prerequisites = new EObjectContainmentEList<Prerequisite>(Prerequisite.class, this,
+					GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__PREREQUISITES);
+		}
+		return prerequisites;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__LEVELS:
 			return ((InternalEList<?>) getLevels()).basicRemove(otherEnd, msgs);
+		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__PREREQUISITES:
+			return ((InternalEList<?>) getPrerequisites()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -238,14 +241,14 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__LEVELS:
 			return getLevels();
-		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__PREREQUISITES:
-			return getPrerequisites();
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__SETOFFACTS:
 			return getSetoffacts();
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__ID:
 			return getID();
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__NAME:
 			return getName();
+		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__PREREQUISITES:
+			return getPrerequisites();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -263,10 +266,6 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 			getLevels().clear();
 			getLevels().addAll((Collection<? extends Level>) newValue);
 			return;
-		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__PREREQUISITES:
-			getPrerequisites().clear();
-			getPrerequisites().addAll((Collection<? extends Level>) newValue);
-			return;
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__SETOFFACTS:
 			getSetoffacts().clear();
 			getSetoffacts().addAll((Collection<? extends SetOfFacts>) newValue);
@@ -276,6 +275,10 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 			return;
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__NAME:
 			setName((String) newValue);
+			return;
+		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__PREREQUISITES:
+			getPrerequisites().clear();
+			getPrerequisites().addAll((Collection<? extends Prerequisite>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -292,9 +295,6 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__LEVELS:
 			getLevels().clear();
 			return;
-		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__PREREQUISITES:
-			getPrerequisites().clear();
-			return;
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__SETOFFACTS:
 			getSetoffacts().clear();
 			return;
@@ -303,6 +303,9 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 			return;
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__NAME:
 			setName(NAME_EDEFAULT);
+			return;
+		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__PREREQUISITES:
+			getPrerequisites().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -318,14 +321,14 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__LEVELS:
 			return levels != null && !levels.isEmpty();
-		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__PREREQUISITES:
-			return prerequisites != null && !prerequisites.isEmpty();
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__SETOFFACTS:
 			return setoffacts != null && !setoffacts.isEmpty();
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case GeneratorMetamodelsPackage.LEARNING_OBJECTIVE__PREREQUISITES:
+			return prerequisites != null && !prerequisites.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

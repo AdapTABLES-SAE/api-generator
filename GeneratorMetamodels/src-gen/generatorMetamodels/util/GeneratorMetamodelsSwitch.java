@@ -391,11 +391,11 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorMetamodelsPackage.MT_LEVEL_V1: {
-			MTLevelV1 mtLevelV1 = (MTLevelV1) theEObject;
-			T result = caseMTLevelV1(mtLevelV1);
+		case GeneratorMetamodelsPackage.MT_LEVEL: {
+			MTLevel mtLevel = (MTLevel) theEObject;
+			T result = caseMTLevel(mtLevel);
 			if (result == null)
-				result = caseLevel(mtLevelV1);
+				result = caseLevel(mtLevel);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -419,6 +419,13 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 			T result = caseRoom2SubObjectiveCompliance(room2SubObjectiveCompliance);
 			if (result == null)
 				result = caseSemanticRelation(room2SubObjectiveCompliance);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.PREREQUISITE: {
+			Prerequisite prerequisite = (Prerequisite) theEObject;
+			T result = casePrerequisite(prerequisite);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1029,17 +1036,17 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MT Level V1</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>MT Level</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MT Level V1</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>MT Level</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTLevelV1(MTLevelV1 object) {
+	public T caseMTLevel(MTLevel object) {
 		return null;
 	}
 
@@ -1085,6 +1092,21 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRoom2SubObjectiveCompliance(Room2SubObjectiveCompliance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Prerequisite</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Prerequisite</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePrerequisite(Prerequisite object) {
 		return null;
 	}
 

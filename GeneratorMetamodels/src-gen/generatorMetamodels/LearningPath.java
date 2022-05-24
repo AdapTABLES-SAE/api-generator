@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generatorMetamodels.LearningPath#getLearningobjectives <em>Learningobjectives</em>}</li>
- *   <li>{@link generatorMetamodels.LearningPath#getSubobjectives <em>Subobjectives</em>}</li>
  *   <li>{@link generatorMetamodels.LearningPath#getKnowledge <em>Knowledge</em>}</li>
  *   <li>{@link generatorMetamodels.LearningPath#getName <em>Name</em>}</li>
  * </ul>
@@ -37,18 +36,6 @@ public interface LearningPath extends EObject {
 	 * @generated
 	 */
 	EList<LearningObjective> getLearningobjectives();
-
-	/**
-	 * Returns the value of the '<em><b>Subobjectives</b></em>' containment reference list.
-	 * The list contents are of type {@link generatorMetamodels.SubObjective}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Subobjectives</em>' containment reference list.
-	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getLearningPath_Subobjectives()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<SubObjective> getSubobjectives();
 
 	/**
 	 * Returns the value of the '<em><b>Knowledge</b></em>' reference.

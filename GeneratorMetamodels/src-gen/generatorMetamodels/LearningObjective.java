@@ -16,10 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generatorMetamodels.LearningObjective#getLevels <em>Levels</em>}</li>
- *   <li>{@link generatorMetamodels.LearningObjective#getPrerequisites <em>Prerequisites</em>}</li>
  *   <li>{@link generatorMetamodels.LearningObjective#getSetoffacts <em>Setoffacts</em>}</li>
  *   <li>{@link generatorMetamodels.LearningObjective#getID <em>ID</em>}</li>
  *   <li>{@link generatorMetamodels.LearningObjective#getName <em>Name</em>}</li>
+ *   <li>{@link generatorMetamodels.LearningObjective#getPrerequisites <em>Prerequisites</em>}</li>
  * </ul>
  *
  * @see generatorMetamodels.GeneratorMetamodelsPackage#getLearningObjective()
@@ -38,18 +38,6 @@ public interface LearningObjective extends EObject {
 	 * @generated
 	 */
 	EList<Level> getLevels();
-
-	/**
-	 * Returns the value of the '<em><b>Prerequisites</b></em>' reference list.
-	 * The list contents are of type {@link generatorMetamodels.Level}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prerequisites</em>' reference list.
-	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getLearningObjective_Prerequisites()
-	 * @model
-	 * @generated
-	 */
-	EList<Level> getPrerequisites();
 
 	/**
 	 * Returns the value of the '<em><b>Setoffacts</b></em>' reference list.
@@ -106,5 +94,17 @@ public interface LearningObjective extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Prerequisites</b></em>' containment reference list.
+	 * The list contents are of type {@link generatorMetamodels.Prerequisite}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prerequisites</em>' containment reference list.
+	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getLearningObjective_Prerequisites()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Prerequisite> getPrerequisites();
 
 } // LearningObjective

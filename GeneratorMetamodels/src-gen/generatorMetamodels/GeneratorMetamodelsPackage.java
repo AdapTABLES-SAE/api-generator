@@ -152,22 +152,13 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int SUB_OBJECTIVE = 19;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUB_OBJECTIVE__NAME = 0;
-
-	/**
 	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION = 1;
+	int SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
@@ -176,7 +167,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS = 2;
+	int SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
@@ -185,7 +176,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS = 3;
+	int SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Responsemodality</b></em>' containment reference.
@@ -194,7 +185,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_OBJECTIVE__RESPONSEMODALITY = 4;
+	int SUB_OBJECTIVE__RESPONSEMODALITY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
@@ -203,7 +194,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_OBJECTIVE__SETTINGS = 5;
+	int SUB_OBJECTIVE__SETTINGS = 4;
 
 	/**
 	 * The number of structural features of the '<em>Sub Objective</em>' class.
@@ -212,7 +203,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_OBJECTIVE_FEATURE_COUNT = 6;
+	int SUB_OBJECTIVE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Sub Objective</em>' class.
@@ -232,15 +223,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	int RESULT_VALIDITY_DETERMINATION = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_VALIDITY_DETERMINATION__NAME = SUB_OBJECTIVE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
@@ -397,15 +379,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	int PROBLEM_RESOLUTION = 3;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROBLEM_RESOLUTION__NAME = SUB_OBJECTIVE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
@@ -571,15 +544,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	int QF_TWO_COMPLETION = 5;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_TWO_COMPLETION__NAME = SUB_OBJECTIVE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
@@ -894,22 +858,13 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int LEARNING_PATH__LEARNINGOBJECTIVES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Subobjectives</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_PATH__SUBOBJECTIVES = 1;
-
-	/**
 	 * The feature id for the '<em><b>Knowledge</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEARNING_PATH__KNOWLEDGE = 2;
+	int LEARNING_PATH__KNOWLEDGE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -918,7 +873,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LEARNING_PATH__NAME = 3;
+	int LEARNING_PATH__NAME = 2;
 
 	/**
 	 * The number of structural features of the '<em>Learning Path</em>' class.
@@ -927,7 +882,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LEARNING_PATH_FEATURE_COUNT = 4;
+	int LEARNING_PATH_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Learning Path</em>' class.
@@ -1206,15 +1161,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int QF_RECONSTRUCTION = 18;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_RECONSTRUCTION__NAME = SUB_OBJECTIVE__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1295,15 +1241,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	int QF_ONE_COMPLETION = 21;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_ONE_COMPLETION__NAME = SUB_OBJECTIVE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
@@ -1471,22 +1408,13 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int LEARNING_OBJECTIVE__LEVELS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Prerequisites</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_OBJECTIVE__PREREQUISITES = 1;
-
-	/**
 	 * The feature id for the '<em><b>Setoffacts</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEARNING_OBJECTIVE__SETOFFACTS = 2;
+	int LEARNING_OBJECTIVE__SETOFFACTS = 1;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -1495,7 +1423,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LEARNING_OBJECTIVE__ID = 3;
+	int LEARNING_OBJECTIVE__ID = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1504,7 +1432,16 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LEARNING_OBJECTIVE__NAME = 4;
+	int LEARNING_OBJECTIVE__NAME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Prerequisites</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_OBJECTIVE__PREREQUISITES = 4;
 
 	/**
 	 * The number of structural features of the '<em>Learning Objective</em>' class.
@@ -1535,22 +1472,13 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int LEVEL = 25;
 
 	/**
-	 * The feature id for the '<em><b>Subobjectives</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEVEL__SUBOBJECTIVES = 0;
-
-	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEVEL__ID = 1;
+	int LEVEL__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
@@ -1559,7 +1487,16 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LEVEL__SETTINGS = 2;
+	int LEVEL__SETTINGS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Subobjectives</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVEL__SUBOBJECTIVES = 2;
 
 	/**
 	 * The number of structural features of the '<em>Level</em>' class.
@@ -1634,15 +1571,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	int QF_VALIDITY_DETERMINATION = 27;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_VALIDITY_DETERMINATION__NAME = SUB_OBJECTIVE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
@@ -2169,15 +2097,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int MTQF_ONE_COMPLETION = 39;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTQF_ONE_COMPLETION__NAME = QF_ONE_COMPLETION__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2259,23 +2178,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int MTQF_ONE_COMPLETION_OPERATION_COUNT = QF_ONE_COMPLETION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generatorMetamodels.impl.MTLevelV1Impl <em>MT Level V1</em>}' class.
+	 * The meta object id for the '{@link generatorMetamodels.impl.MTLevelImpl <em>MT Level</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generatorMetamodels.impl.MTLevelV1Impl
-	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTLevelV1()
+	 * @see generatorMetamodels.impl.MTLevelImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTLevel()
 	 * @generated
 	 */
-	int MT_LEVEL_V1 = 40;
-
-	/**
-	 * The feature id for the '<em><b>Subobjectives</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_LEVEL_V1__SUBOBJECTIVES = LEVEL__SUBOBJECTIVES;
+	int MT_LEVEL = 40;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -2284,7 +2194,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_LEVEL_V1__ID = LEVEL__ID;
+	int MT_LEVEL__ID = LEVEL__ID;
 
 	/**
 	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
@@ -2293,7 +2203,16 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_LEVEL_V1__SETTINGS = LEVEL__SETTINGS;
+	int MT_LEVEL__SETTINGS = LEVEL__SETTINGS;
+
+	/**
+	 * The feature id for the '<em><b>Subobjectives</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL__SUBOBJECTIVES = LEVEL__SUBOBJECTIVES;
 
 	/**
 	 * The feature id for the '<em><b>Build Table Setup</b></em>' attribute.
@@ -2302,7 +2221,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_LEVEL_V1__BUILD_TABLE_SETUP = LEVEL_FEATURE_COUNT + 0;
+	int MT_LEVEL__BUILD_TABLE_SETUP = LEVEL_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Result Position Setup</b></em>' attribute.
@@ -2311,7 +2230,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_LEVEL_V1__RESULT_POSITION_SETUP = LEVEL_FEATURE_COUNT + 1;
+	int MT_LEVEL__RESULT_POSITION_SETUP = LEVEL_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Min Interval</b></em>' attribute.
@@ -2320,7 +2239,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_LEVEL_V1__MIN_INTERVAL = LEVEL_FEATURE_COUNT + 2;
+	int MT_LEVEL__MIN_INTERVAL = LEVEL_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Max Interval</b></em>' attribute.
@@ -2329,25 +2248,25 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_LEVEL_V1__MAX_INTERVAL = LEVEL_FEATURE_COUNT + 3;
+	int MT_LEVEL__MAX_INTERVAL = LEVEL_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>MT Level V1</em>' class.
+	 * The number of structural features of the '<em>MT Level</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_LEVEL_V1_FEATURE_COUNT = LEVEL_FEATURE_COUNT + 4;
+	int MT_LEVEL_FEATURE_COUNT = LEVEL_FEATURE_COUNT + 4;
 
 	/**
-	 * The number of operations of the '<em>MT Level V1</em>' class.
+	 * The number of operations of the '<em>MT Level</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_LEVEL_V1_OPERATION_COUNT = LEVEL_OPERATION_COUNT + 0;
+	int MT_LEVEL_OPERATION_COUNT = LEVEL_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.impl.DimensionsEntanglementImpl <em>Dimensions Entanglement</em>}' class.
@@ -2461,6 +2380,52 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int ROOM2_SUB_OBJECTIVE_COMPLIANCE_OPERATION_COUNT = SEMANTIC_RELATION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.PrerequisiteImpl <em>Prerequisite</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.PrerequisiteImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getPrerequisite()
+	 * @generated
+	 */
+	int PREREQUISITE = 44;
+
+	/**
+	 * The feature id for the '<em><b>Success Percentage</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE__SUCCESS_PERCENTAGE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Prerequisite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE__PREREQUISITE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Prerequisite</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Prerequisite</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link generatorMetamodels.GameMode <em>Game Mode</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2468,7 +2433,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameMode()
 	 * @generated
 	 */
-	int GAME_MODE = 44;
+	int GAME_MODE = 45;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.RoomType <em>Room Type</em>}' enum.
@@ -2478,7 +2443,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRoomType()
 	 * @generated
 	 */
-	int ROOM_TYPE = 45;
+	int ROOM_TYPE = 46;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.GameElementType <em>Game Element Type</em>}' enum.
@@ -2488,7 +2453,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameElementType()
 	 * @generated
 	 */
-	int GAME_ELEMENT_TYPE = 46;
+	int GAME_ELEMENT_TYPE = 47;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.TableBuild <em>Table Build</em>}' enum.
@@ -2498,7 +2463,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 47;
+	int TABLE_BUILD = 48;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.ResultPosition <em>Result Position</em>}' enum.
@@ -2508,7 +2473,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 48;
+	int RESULT_POSITION = 49;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.TargetElement <em>Target Element</em>}' enum.
@@ -2518,7 +2483,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getTargetElement()
 	 * @generated
 	 */
-	int TARGET_ELEMENT = 49;
+	int TARGET_ELEMENT = 50;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.SubObjectiveType <em>Sub Objective Type</em>}' enum.
@@ -2528,7 +2493,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSubObjectiveType()
 	 * @generated
 	 */
-	int SUB_OBJECTIVE_TYPE = 50;
+	int SUB_OBJECTIVE_TYPE = 51;
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.MultipleChoice <em>Multiple Choice</em>}'.
@@ -2816,17 +2781,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EReference getLearningPath_Learningobjectives();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generatorMetamodels.LearningPath#getSubobjectives <em>Subobjectives</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Subobjectives</em>'.
-	 * @see generatorMetamodels.LearningPath#getSubobjectives()
-	 * @see #getLearningPath()
-	 * @generated
-	 */
-	EReference getLearningPath_Subobjectives();
-
-	/**
 	 * Returns the meta object for the reference '{@link generatorMetamodels.LearningPath#getKnowledge <em>Knowledge</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3071,17 +3025,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EClass getSubObjective();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generatorMetamodels.SubObjective#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see generatorMetamodels.SubObjective#getName()
-	 * @see #getSubObjective()
-	 * @generated
-	 */
-	EAttribute getSubObjective_Name();
-
-	/**
 	 * Returns the meta object for the attribute '{@link generatorMetamodels.SubObjective#getPercentageOfApparition <em>Percentage Of Apparition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3242,17 +3185,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EReference getLearningObjective_Levels();
 
 	/**
-	 * Returns the meta object for the reference list '{@link generatorMetamodels.LearningObjective#getPrerequisites <em>Prerequisites</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Prerequisites</em>'.
-	 * @see generatorMetamodels.LearningObjective#getPrerequisites()
-	 * @see #getLearningObjective()
-	 * @generated
-	 */
-	EReference getLearningObjective_Prerequisites();
-
-	/**
 	 * Returns the meta object for the reference list '{@link generatorMetamodels.LearningObjective#getSetoffacts <em>Setoffacts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3286,6 +3218,17 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EAttribute getLearningObjective_Name();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link generatorMetamodels.LearningObjective#getPrerequisites <em>Prerequisites</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Prerequisites</em>'.
+	 * @see generatorMetamodels.LearningObjective#getPrerequisites()
+	 * @see #getLearningObjective()
+	 * @generated
+	 */
+	EReference getLearningObjective_Prerequisites();
+
+	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.Level <em>Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3294,17 +3237,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getLevel();
-
-	/**
-	 * Returns the meta object for the reference list '{@link generatorMetamodels.Level#getSubobjectives <em>Subobjectives</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Subobjectives</em>'.
-	 * @see generatorMetamodels.Level#getSubobjectives()
-	 * @see #getLevel()
-	 * @generated
-	 */
-	EReference getLevel_Subobjectives();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generatorMetamodels.Level#getID <em>ID</em>}'.
@@ -3327,6 +3259,17 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLevel_Settings();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generatorMetamodels.Level#getSubobjectives <em>Subobjectives</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Subobjectives</em>'.
+	 * @see generatorMetamodels.Level#getSubobjectives()
+	 * @see #getLevel()
+	 * @generated
+	 */
+	EReference getLevel_Subobjectives();
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.Knowledge <em>Knowledge</em>}'.
@@ -3658,58 +3601,58 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EAttribute getMTQFOneCompletion_Targets();
 
 	/**
-	 * Returns the meta object for class '{@link generatorMetamodels.MTLevelV1 <em>MT Level V1</em>}'.
+	 * Returns the meta object for class '{@link generatorMetamodels.MTLevel <em>MT Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MT Level V1</em>'.
-	 * @see generatorMetamodels.MTLevelV1
+	 * @return the meta object for class '<em>MT Level</em>'.
+	 * @see generatorMetamodels.MTLevel
 	 * @generated
 	 */
-	EClass getMTLevelV1();
+	EClass getMTLevel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevelV1#getBuildTableSetup <em>Build Table Setup</em>}'.
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevel#getBuildTableSetup <em>Build Table Setup</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Build Table Setup</em>'.
-	 * @see generatorMetamodels.MTLevelV1#getBuildTableSetup()
-	 * @see #getMTLevelV1()
+	 * @see generatorMetamodels.MTLevel#getBuildTableSetup()
+	 * @see #getMTLevel()
 	 * @generated
 	 */
-	EAttribute getMTLevelV1_BuildTableSetup();
+	EAttribute getMTLevel_BuildTableSetup();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevelV1#getResultPositionSetup <em>Result Position Setup</em>}'.
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevel#getResultPositionSetup <em>Result Position Setup</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Result Position Setup</em>'.
-	 * @see generatorMetamodels.MTLevelV1#getResultPositionSetup()
-	 * @see #getMTLevelV1()
+	 * @see generatorMetamodels.MTLevel#getResultPositionSetup()
+	 * @see #getMTLevel()
 	 * @generated
 	 */
-	EAttribute getMTLevelV1_ResultPositionSetup();
+	EAttribute getMTLevel_ResultPositionSetup();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevelV1#getMinInterval <em>Min Interval</em>}'.
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevel#getMinInterval <em>Min Interval</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Min Interval</em>'.
-	 * @see generatorMetamodels.MTLevelV1#getMinInterval()
-	 * @see #getMTLevelV1()
+	 * @see generatorMetamodels.MTLevel#getMinInterval()
+	 * @see #getMTLevel()
 	 * @generated
 	 */
-	EAttribute getMTLevelV1_MinInterval();
+	EAttribute getMTLevel_MinInterval();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevelV1#getMaxInterval <em>Max Interval</em>}'.
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevel#getMaxInterval <em>Max Interval</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Max Interval</em>'.
-	 * @see generatorMetamodels.MTLevelV1#getMaxInterval()
-	 * @see #getMTLevelV1()
+	 * @see generatorMetamodels.MTLevel#getMaxInterval()
+	 * @see #getMTLevel()
 	 * @generated
 	 */
-	EAttribute getMTLevelV1_MaxInterval();
+	EAttribute getMTLevel_MaxInterval();
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.DimensionsEntanglement <em>Dimensions Entanglement</em>}'.
@@ -3773,6 +3716,38 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRoom2SubObjectiveCompliance_SubObjType();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.Prerequisite <em>Prerequisite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Prerequisite</em>'.
+	 * @see generatorMetamodels.Prerequisite
+	 * @generated
+	 */
+	EClass getPrerequisite();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.Prerequisite#getSuccessPercentage <em>Success Percentage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Success Percentage</em>'.
+	 * @see generatorMetamodels.Prerequisite#getSuccessPercentage()
+	 * @see #getPrerequisite()
+	 * @generated
+	 */
+	EAttribute getPrerequisite_SuccessPercentage();
+
+	/**
+	 * Returns the meta object for the reference '{@link generatorMetamodels.Prerequisite#getPrerequisite <em>Prerequisite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Prerequisite</em>'.
+	 * @see generatorMetamodels.Prerequisite#getPrerequisite()
+	 * @see #getPrerequisite()
+	 * @generated
+	 */
+	EReference getPrerequisite_Prerequisite();
 
 	/**
 	 * Returns the meta object for enum '{@link generatorMetamodels.GameMode <em>Game Mode</em>}'.
@@ -4109,14 +4084,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EReference LEARNING_PATH__LEARNINGOBJECTIVES = eINSTANCE.getLearningPath_Learningobjectives();
 
 		/**
-		 * The meta object literal for the '<em><b>Subobjectives</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LEARNING_PATH__SUBOBJECTIVES = eINSTANCE.getLearningPath_Subobjectives();
-
-		/**
 		 * The meta object literal for the '<em><b>Knowledge</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4319,14 +4286,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EClass SUB_OBJECTIVE = eINSTANCE.getSubObjective();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SUB_OBJECTIVE__NAME = eINSTANCE.getSubObjective_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Percentage Of Apparition</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4457,14 +4416,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EReference LEARNING_OBJECTIVE__LEVELS = eINSTANCE.getLearningObjective_Levels();
 
 		/**
-		 * The meta object literal for the '<em><b>Prerequisites</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LEARNING_OBJECTIVE__PREREQUISITES = eINSTANCE.getLearningObjective_Prerequisites();
-
-		/**
 		 * The meta object literal for the '<em><b>Setoffacts</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4489,6 +4440,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EAttribute LEARNING_OBJECTIVE__NAME = eINSTANCE.getLearningObjective_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Prerequisites</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEARNING_OBJECTIVE__PREREQUISITES = eINSTANCE.getLearningObjective_Prerequisites();
+
+		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.LevelImpl <em>Level</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4497,14 +4456,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass LEVEL = eINSTANCE.getLevel();
-
-		/**
-		 * The meta object literal for the '<em><b>Subobjectives</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LEVEL__SUBOBJECTIVES = eINSTANCE.getLevel_Subobjectives();
 
 		/**
 		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
@@ -4521,6 +4472,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LEVEL__SETTINGS = eINSTANCE.getLevel_Settings();
+
+		/**
+		 * The meta object literal for the '<em><b>Subobjectives</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEVEL__SUBOBJECTIVES = eINSTANCE.getLevel_Subobjectives();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.KnowledgeImpl <em>Knowledge</em>}' class.
@@ -4799,14 +4758,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EAttribute MTQF_ONE_COMPLETION__TARGETS = eINSTANCE.getMTQFOneCompletion_Targets();
 
 		/**
-		 * The meta object literal for the '{@link generatorMetamodels.impl.MTLevelV1Impl <em>MT Level V1</em>}' class.
+		 * The meta object literal for the '{@link generatorMetamodels.impl.MTLevelImpl <em>MT Level</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generatorMetamodels.impl.MTLevelV1Impl
-		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTLevelV1()
+		 * @see generatorMetamodels.impl.MTLevelImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTLevel()
 		 * @generated
 		 */
-		EClass MT_LEVEL_V1 = eINSTANCE.getMTLevelV1();
+		EClass MT_LEVEL = eINSTANCE.getMTLevel();
 
 		/**
 		 * The meta object literal for the '<em><b>Build Table Setup</b></em>' attribute feature.
@@ -4814,7 +4773,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MT_LEVEL_V1__BUILD_TABLE_SETUP = eINSTANCE.getMTLevelV1_BuildTableSetup();
+		EAttribute MT_LEVEL__BUILD_TABLE_SETUP = eINSTANCE.getMTLevel_BuildTableSetup();
 
 		/**
 		 * The meta object literal for the '<em><b>Result Position Setup</b></em>' attribute feature.
@@ -4822,7 +4781,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MT_LEVEL_V1__RESULT_POSITION_SETUP = eINSTANCE.getMTLevelV1_ResultPositionSetup();
+		EAttribute MT_LEVEL__RESULT_POSITION_SETUP = eINSTANCE.getMTLevel_ResultPositionSetup();
 
 		/**
 		 * The meta object literal for the '<em><b>Min Interval</b></em>' attribute feature.
@@ -4830,7 +4789,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MT_LEVEL_V1__MIN_INTERVAL = eINSTANCE.getMTLevelV1_MinInterval();
+		EAttribute MT_LEVEL__MIN_INTERVAL = eINSTANCE.getMTLevel_MinInterval();
 
 		/**
 		 * The meta object literal for the '<em><b>Max Interval</b></em>' attribute feature.
@@ -4838,7 +4797,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MT_LEVEL_V1__MAX_INTERVAL = eINSTANCE.getMTLevelV1_MaxInterval();
+		EAttribute MT_LEVEL__MAX_INTERVAL = eINSTANCE.getMTLevel_MaxInterval();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.DimensionsEntanglementImpl <em>Dimensions Entanglement</em>}' class.
@@ -4893,6 +4852,32 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROOM2_SUB_OBJECTIVE_COMPLIANCE__SUB_OBJ_TYPE = eINSTANCE.getRoom2SubObjectiveCompliance_SubObjType();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.PrerequisiteImpl <em>Prerequisite</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.PrerequisiteImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getPrerequisite()
+		 * @generated
+		 */
+		EClass PREREQUISITE = eINSTANCE.getPrerequisite();
+
+		/**
+		 * The meta object literal for the '<em><b>Success Percentage</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PREREQUISITE__SUCCESS_PERCENTAGE = eINSTANCE.getPrerequisite_SuccessPercentage();
+
+		/**
+		 * The meta object literal for the '<em><b>Prerequisite</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PREREQUISITE__PREREQUISITE = eINSTANCE.getPrerequisite_Prerequisite();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.GameMode <em>Game Mode</em>}' enum.

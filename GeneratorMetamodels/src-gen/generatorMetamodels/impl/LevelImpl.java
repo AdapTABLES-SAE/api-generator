@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -32,24 +31,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generatorMetamodels.impl.LevelImpl#getSubobjectives <em>Subobjectives</em>}</li>
  *   <li>{@link generatorMetamodels.impl.LevelImpl#getID <em>ID</em>}</li>
  *   <li>{@link generatorMetamodels.impl.LevelImpl#getSettings <em>Settings</em>}</li>
+ *   <li>{@link generatorMetamodels.impl.LevelImpl#getSubobjectives <em>Subobjectives</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class LevelImpl extends MinimalEObjectImpl.Container implements Level {
-	/**
-	 * The cached value of the '{@link #getSubobjectives() <em>Subobjectives</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubobjectives()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SubObjective> subobjectives;
-
 	/**
 	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -81,6 +70,16 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	protected EList<Settings> settings;
 
 	/**
+	 * The cached value of the '{@link #getSubobjectives() <em>Subobjectives</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubobjectives()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SubObjective> subobjectives;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -97,19 +96,6 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	protected EClass eStaticClass() {
 		return GeneratorMetamodelsPackage.Literals.LEVEL;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<SubObjective> getSubobjectives() {
-		if (subobjectives == null) {
-			subobjectives = new EObjectResolvingEList<SubObjective>(SubObjective.class, this,
-					GeneratorMetamodelsPackage.LEVEL__SUBOBJECTIVES);
-		}
-		return subobjectives;
 	}
 
 	/**
@@ -151,11 +137,26 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<SubObjective> getSubobjectives() {
+		if (subobjectives == null) {
+			subobjectives = new EObjectContainmentEList<SubObjective>(SubObjective.class, this,
+					GeneratorMetamodelsPackage.LEVEL__SUBOBJECTIVES);
+		}
+		return subobjectives;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case GeneratorMetamodelsPackage.LEVEL__SETTINGS:
 			return ((InternalEList<?>) getSettings()).basicRemove(otherEnd, msgs);
+		case GeneratorMetamodelsPackage.LEVEL__SUBOBJECTIVES:
+			return ((InternalEList<?>) getSubobjectives()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -168,12 +169,12 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorMetamodelsPackage.LEVEL__SUBOBJECTIVES:
-			return getSubobjectives();
 		case GeneratorMetamodelsPackage.LEVEL__ID:
 			return getID();
 		case GeneratorMetamodelsPackage.LEVEL__SETTINGS:
 			return getSettings();
+		case GeneratorMetamodelsPackage.LEVEL__SUBOBJECTIVES:
+			return getSubobjectives();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -187,16 +188,16 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorMetamodelsPackage.LEVEL__SUBOBJECTIVES:
-			getSubobjectives().clear();
-			getSubobjectives().addAll((Collection<? extends SubObjective>) newValue);
-			return;
 		case GeneratorMetamodelsPackage.LEVEL__ID:
 			setID((String) newValue);
 			return;
 		case GeneratorMetamodelsPackage.LEVEL__SETTINGS:
 			getSettings().clear();
 			getSettings().addAll((Collection<? extends Settings>) newValue);
+			return;
+		case GeneratorMetamodelsPackage.LEVEL__SUBOBJECTIVES:
+			getSubobjectives().clear();
+			getSubobjectives().addAll((Collection<? extends SubObjective>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -210,14 +211,14 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorMetamodelsPackage.LEVEL__SUBOBJECTIVES:
-			getSubobjectives().clear();
-			return;
 		case GeneratorMetamodelsPackage.LEVEL__ID:
 			setID(ID_EDEFAULT);
 			return;
 		case GeneratorMetamodelsPackage.LEVEL__SETTINGS:
 			getSettings().clear();
+			return;
+		case GeneratorMetamodelsPackage.LEVEL__SUBOBJECTIVES:
+			getSubobjectives().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -231,12 +232,12 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorMetamodelsPackage.LEVEL__SUBOBJECTIVES:
-			return subobjectives != null && !subobjectives.isEmpty();
 		case GeneratorMetamodelsPackage.LEVEL__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		case GeneratorMetamodelsPackage.LEVEL__SETTINGS:
 			return settings != null && !settings.isEmpty();
+		case GeneratorMetamodelsPackage.LEVEL__SUBOBJECTIVES:
+			return subobjectives != null && !subobjectives.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

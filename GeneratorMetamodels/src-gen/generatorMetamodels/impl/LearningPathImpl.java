@@ -6,7 +6,6 @@ import generatorMetamodels.GeneratorMetamodelsPackage;
 import generatorMetamodels.Knowledge;
 import generatorMetamodels.LearningObjective;
 import generatorMetamodels.LearningPath;
-import generatorMetamodels.SubObjective;
 
 import java.util.Collection;
 
@@ -33,7 +32,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link generatorMetamodels.impl.LearningPathImpl#getLearningobjectives <em>Learningobjectives</em>}</li>
- *   <li>{@link generatorMetamodels.impl.LearningPathImpl#getSubobjectives <em>Subobjectives</em>}</li>
  *   <li>{@link generatorMetamodels.impl.LearningPathImpl#getKnowledge <em>Knowledge</em>}</li>
  *   <li>{@link generatorMetamodels.impl.LearningPathImpl#getName <em>Name</em>}</li>
  * </ul>
@@ -50,16 +48,6 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 	 * @ordered
 	 */
 	protected EList<LearningObjective> learningobjectives;
-
-	/**
-	 * The cached value of the '{@link #getSubobjectives() <em>Subobjectives</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubobjectives()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SubObjective> subobjectives;
 
 	/**
 	 * The cached value of the '{@link #getKnowledge() <em>Knowledge</em>}' reference.
@@ -121,19 +109,6 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 					GeneratorMetamodelsPackage.LEARNING_PATH__LEARNINGOBJECTIVES);
 		}
 		return learningobjectives;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<SubObjective> getSubobjectives() {
-		if (subobjectives == null) {
-			subobjectives = new EObjectContainmentEList<SubObjective>(SubObjective.class, this,
-					GeneratorMetamodelsPackage.LEARNING_PATH__SUBOBJECTIVES);
-		}
-		return subobjectives;
 	}
 
 	/**
@@ -208,8 +183,6 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 		switch (featureID) {
 		case GeneratorMetamodelsPackage.LEARNING_PATH__LEARNINGOBJECTIVES:
 			return ((InternalEList<?>) getLearningobjectives()).basicRemove(otherEnd, msgs);
-		case GeneratorMetamodelsPackage.LEARNING_PATH__SUBOBJECTIVES:
-			return ((InternalEList<?>) getSubobjectives()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -224,8 +197,6 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 		switch (featureID) {
 		case GeneratorMetamodelsPackage.LEARNING_PATH__LEARNINGOBJECTIVES:
 			return getLearningobjectives();
-		case GeneratorMetamodelsPackage.LEARNING_PATH__SUBOBJECTIVES:
-			return getSubobjectives();
 		case GeneratorMetamodelsPackage.LEARNING_PATH__KNOWLEDGE:
 			if (resolve)
 				return getKnowledge();
@@ -249,10 +220,6 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 			getLearningobjectives().clear();
 			getLearningobjectives().addAll((Collection<? extends LearningObjective>) newValue);
 			return;
-		case GeneratorMetamodelsPackage.LEARNING_PATH__SUBOBJECTIVES:
-			getSubobjectives().clear();
-			getSubobjectives().addAll((Collection<? extends SubObjective>) newValue);
-			return;
 		case GeneratorMetamodelsPackage.LEARNING_PATH__KNOWLEDGE:
 			setKnowledge((Knowledge) newValue);
 			return;
@@ -274,9 +241,6 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 		case GeneratorMetamodelsPackage.LEARNING_PATH__LEARNINGOBJECTIVES:
 			getLearningobjectives().clear();
 			return;
-		case GeneratorMetamodelsPackage.LEARNING_PATH__SUBOBJECTIVES:
-			getSubobjectives().clear();
-			return;
 		case GeneratorMetamodelsPackage.LEARNING_PATH__KNOWLEDGE:
 			setKnowledge((Knowledge) null);
 			return;
@@ -297,8 +261,6 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 		switch (featureID) {
 		case GeneratorMetamodelsPackage.LEARNING_PATH__LEARNINGOBJECTIVES:
 			return learningobjectives != null && !learningobjectives.isEmpty();
-		case GeneratorMetamodelsPackage.LEARNING_PATH__SUBOBJECTIVES:
-			return subobjectives != null && !subobjectives.isEmpty();
 		case GeneratorMetamodelsPackage.LEARNING_PATH__KNOWLEDGE:
 			return knowledge != null;
 		case GeneratorMetamodelsPackage.LEARNING_PATH__NAME:

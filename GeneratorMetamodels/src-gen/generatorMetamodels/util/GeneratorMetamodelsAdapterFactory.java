@@ -269,8 +269,8 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMTLevelV1(MTLevelV1 object) {
-			return createMTLevelV1Adapter();
+		public Adapter caseMTLevel(MTLevel object) {
+			return createMTLevelAdapter();
 		}
 
 		@Override
@@ -286,6 +286,11 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseRoom2SubObjectiveCompliance(Room2SubObjectiveCompliance object) {
 			return createRoom2SubObjectiveComplianceAdapter();
+		}
+
+		@Override
+		public Adapter casePrerequisite(Prerequisite object) {
+			return createPrerequisiteAdapter();
 		}
 
 		@Override
@@ -868,16 +873,16 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generatorMetamodels.MTLevelV1 <em>MT Level V1</em>}'.
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.MTLevel <em>MT Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generatorMetamodels.MTLevelV1
+	 * @see generatorMetamodels.MTLevel
 	 * @generated
 	 */
-	public Adapter createMTLevelV1Adapter() {
+	public Adapter createMTLevelAdapter() {
 		return null;
 	}
 
@@ -920,6 +925,20 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRoom2SubObjectiveComplianceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.Prerequisite <em>Prerequisite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.Prerequisite
+	 * @generated
+	 */
+	public Adapter createPrerequisiteAdapter() {
 		return null;
 	}
 

@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generatorMetamodels.Level#getSubobjectives <em>Subobjectives</em>}</li>
  *   <li>{@link generatorMetamodels.Level#getID <em>ID</em>}</li>
  *   <li>{@link generatorMetamodels.Level#getSettings <em>Settings</em>}</li>
+ *   <li>{@link generatorMetamodels.Level#getSubobjectives <em>Subobjectives</em>}</li>
  * </ul>
  *
  * @see generatorMetamodels.GeneratorMetamodelsPackage#getLevel()
@@ -25,18 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Level extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Subobjectives</b></em>' reference list.
-	 * The list contents are of type {@link generatorMetamodels.SubObjective}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Subobjectives</em>' reference list.
-	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getLevel_Subobjectives()
-	 * @model
-	 * @generated
-	 */
-	EList<SubObjective> getSubobjectives();
-
 	/**
 	 * Returns the value of the '<em><b>ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,5 +58,17 @@ public interface Level extends EObject {
 	 * @generated
 	 */
 	EList<Settings> getSettings();
+
+	/**
+	 * Returns the value of the '<em><b>Subobjectives</b></em>' containment reference list.
+	 * The list contents are of type {@link generatorMetamodels.SubObjective}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Subobjectives</em>' containment reference list.
+	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getLevel_Subobjectives()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<SubObjective> getSubobjectives();
 
 } // Level

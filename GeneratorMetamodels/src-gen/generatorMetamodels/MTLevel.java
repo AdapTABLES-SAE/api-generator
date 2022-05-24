@@ -4,24 +4,24 @@ package generatorMetamodels;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>MT Level V1</b></em>'.
+ * A representation of the model object '<em><b>MT Level</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generatorMetamodels.MTLevelV1#getBuildTableSetup <em>Build Table Setup</em>}</li>
- *   <li>{@link generatorMetamodels.MTLevelV1#getResultPositionSetup <em>Result Position Setup</em>}</li>
- *   <li>{@link generatorMetamodels.MTLevelV1#getMinInterval <em>Min Interval</em>}</li>
- *   <li>{@link generatorMetamodels.MTLevelV1#getMaxInterval <em>Max Interval</em>}</li>
+ *   <li>{@link generatorMetamodels.MTLevel#getBuildTableSetup <em>Build Table Setup</em>}</li>
+ *   <li>{@link generatorMetamodels.MTLevel#getResultPositionSetup <em>Result Position Setup</em>}</li>
+ *   <li>{@link generatorMetamodels.MTLevel#getMinInterval <em>Min Interval</em>}</li>
+ *   <li>{@link generatorMetamodels.MTLevel#getMaxInterval <em>Max Interval</em>}</li>
  * </ul>
  *
- * @see generatorMetamodels.GeneratorMetamodelsPackage#getMTLevelV1()
+ * @see generatorMetamodels.GeneratorMetamodelsPackage#getMTLevel()
  * @model
  * @generated
  */
-public interface MTLevelV1 extends Level {
+public interface MTLevel extends Level {
 	/**
 	 * Returns the value of the '<em><b>Build Table Setup</b></em>' attribute.
 	 * The literals are from the enumeration {@link generatorMetamodels.TableBuild}.
@@ -30,14 +30,14 @@ public interface MTLevelV1 extends Level {
 	 * @return the value of the '<em>Build Table Setup</em>' attribute.
 	 * @see generatorMetamodels.TableBuild
 	 * @see #setBuildTableSetup(TableBuild)
-	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getMTLevelV1_BuildTableSetup()
+	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getMTLevel_BuildTableSetup()
 	 * @model
 	 * @generated
 	 */
 	TableBuild getBuildTableSetup();
 
 	/**
-	 * Sets the value of the '{@link generatorMetamodels.MTLevelV1#getBuildTableSetup <em>Build Table Setup</em>}' attribute.
+	 * Sets the value of the '{@link generatorMetamodels.MTLevel#getBuildTableSetup <em>Build Table Setup</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Build Table Setup</em>' attribute.
@@ -56,14 +56,14 @@ public interface MTLevelV1 extends Level {
 	 * @return the value of the '<em>Result Position Setup</em>' attribute.
 	 * @see generatorMetamodels.ResultPosition
 	 * @see #setResultPositionSetup(ResultPosition)
-	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getMTLevelV1_ResultPositionSetup()
+	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getMTLevel_ResultPositionSetup()
 	 * @model default="RIGHT"
 	 * @generated
 	 */
 	ResultPosition getResultPositionSetup();
 
 	/**
-	 * Sets the value of the '{@link generatorMetamodels.MTLevelV1#getResultPositionSetup <em>Result Position Setup</em>}' attribute.
+	 * Sets the value of the '{@link generatorMetamodels.MTLevel#getResultPositionSetup <em>Result Position Setup</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Result Position Setup</em>' attribute.
@@ -75,18 +75,19 @@ public interface MTLevelV1 extends Level {
 
 	/**
 	 * Returns the value of the '<em><b>Min Interval</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min Interval</em>' attribute.
 	 * @see #setMinInterval(int)
-	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getMTLevelV1_MinInterval()
-	 * @model
+	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getMTLevel_MinInterval()
+	 * @model default="1"
 	 * @generated
 	 */
 	int getMinInterval();
 
 	/**
-	 * Sets the value of the '{@link generatorMetamodels.MTLevelV1#getMinInterval <em>Min Interval</em>}' attribute.
+	 * Sets the value of the '{@link generatorMetamodels.MTLevel#getMinInterval <em>Min Interval</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Min Interval</em>' attribute.
@@ -97,18 +98,19 @@ public interface MTLevelV1 extends Level {
 
 	/**
 	 * Returns the value of the '<em><b>Max Interval</b></em>' attribute.
+	 * The default value is <code>"10"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max Interval</em>' attribute.
 	 * @see #setMaxInterval(int)
-	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getMTLevelV1_MaxInterval()
-	 * @model
+	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getMTLevel_MaxInterval()
+	 * @model default="10"
 	 * @generated
 	 */
 	int getMaxInterval();
 
 	/**
-	 * Sets the value of the '{@link generatorMetamodels.MTLevelV1#getMaxInterval <em>Max Interval</em>}' attribute.
+	 * Sets the value of the '{@link generatorMetamodels.MTLevel#getMaxInterval <em>Max Interval</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Max Interval</em>' attribute.
@@ -117,4 +119,4 @@ public interface MTLevelV1 extends Level {
 	 */
 	void setMaxInterval(int value);
 
-} // MTLevelV1
+} // MTLevel

@@ -111,12 +111,14 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 			return createAdaptedLearningGameActivity();
 		case GeneratorMetamodelsPackage.MTQF_ONE_COMPLETION:
 			return createMTQFOneCompletion();
-		case GeneratorMetamodelsPackage.MT_LEVEL_V1:
-			return createMTLevelV1();
+		case GeneratorMetamodelsPackage.MT_LEVEL:
+			return createMTLevel();
 		case GeneratorMetamodelsPackage.DIMENSIONS_ENTANGLEMENT:
 			return createDimensionsEntanglement();
 		case GeneratorMetamodelsPackage.ROOM2_SUB_OBJECTIVE_COMPLIANCE:
 			return createRoom2SubObjectiveCompliance();
+		case GeneratorMetamodelsPackage.PREREQUISITE:
+			return createPrerequisite();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -441,9 +443,9 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MTLevelV1 createMTLevelV1() {
-		MTLevelV1Impl mtLevelV1 = new MTLevelV1Impl();
-		return mtLevelV1;
+	public MTLevel createMTLevel() {
+		MTLevelImpl mtLevel = new MTLevelImpl();
+		return mtLevel;
 	}
 
 	/**
@@ -464,6 +466,16 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	public Room2SubObjectiveCompliance createRoom2SubObjectiveCompliance() {
 		Room2SubObjectiveComplianceImpl room2SubObjectiveCompliance = new Room2SubObjectiveComplianceImpl();
 		return room2SubObjectiveCompliance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Prerequisite createPrerequisite() {
+		PrerequisiteImpl prerequisite = new PrerequisiteImpl();
+		return prerequisite;
 	}
 
 	/**

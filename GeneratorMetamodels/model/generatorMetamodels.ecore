@@ -48,8 +48,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="LearningPath">
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjectives" upperBound="-1"
         eType="#//LearningObjective" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subobjectives" upperBound="-1"
-        eType="#//SubObjective" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="knowledge" eType="#//Knowledge"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -89,7 +87,6 @@
         changeable="false" defaultValueLiteral="RECONSTRUCTION" unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SubObjective" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfApparition"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfValidFacts"
@@ -117,13 +114,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="LearningObjective">
     <eStructuralFeatures xsi:type="ecore:EReference" name="levels" upperBound="-1"
         eType="#//Level" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisites" upperBound="-1"
-        eType="#//Level"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="setoffacts" upperBound="-1"
         eType="#//SetOfFacts"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisites" upperBound="-1"
+        eType="#//Prerequisite" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GameMode">
     <eLiterals name="LINEAR" literal="LINEAR"/>
@@ -132,12 +129,12 @@
     <eLiterals name="NONE" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Level" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subobjectives" upperBound="-1"
-        eType="#//SubObjective"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="settings" upperBound="-1"
         eType="#//Settings" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subobjectives" upperBound="-1"
+        eType="#//SubObjective" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Knowledge">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -229,12 +226,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" upperBound="-1"
         eType="#//TargetElement"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MTLevelV1" eSuperTypes="#//Level">
+  <eClassifiers xsi:type="ecore:EClass" name="MTLevel" eSuperTypes="#//Level">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="buildTableSetup" eType="#//TableBuild"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultPositionSetup" eType="#//ResultPosition"
         defaultValueLiteral="RIGHT"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="10"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DimensionsEntanglement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="semanticrelations" upperBound="-1"
@@ -245,5 +244,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomType" eType="#//RoomType"
         defaultValueLiteral="DOOR"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="subObjType" eType="#//SubObjectiveType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Prerequisite">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="successPercentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" lowerBound="1"
+        eType="#//Level"/>
   </eClassifiers>
 </ecore:EPackage>

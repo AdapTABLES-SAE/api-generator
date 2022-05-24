@@ -85,7 +85,6 @@
     <genClasses image="false" ecoreClass="generatorMetamodels.ecore#//QuestionRoom"/>
     <genClasses ecoreClass="generatorMetamodels.ecore#//LearningPath">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningPath/learningobjectives"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningPath/subobjectives"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningPath/knowledge"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//LearningPath/name"/>
     </genClasses>
@@ -117,7 +116,6 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//QFReconstruction/newAttribute"/>
     </genClasses>
     <genClasses ecoreClass="generatorMetamodels.ecore#//SubObjective">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//SubObjective/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//SubObjective/percentageOfApparition"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//SubObjective/percentageOfValidFacts"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//SubObjective/nbConsecutiveSuccess"/>
@@ -137,15 +135,15 @@
     </genClasses>
     <genClasses ecoreClass="generatorMetamodels.ecore#//LearningObjective">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningObjective/levels"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningObjective/prerequisites"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningObjective/setoffacts"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//LearningObjective/ID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//LearningObjective/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//LearningObjective/prerequisites"/>
     </genClasses>
     <genClasses ecoreClass="generatorMetamodels.ecore#//Level">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//Level/subobjectives"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//Level/ID"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//Level/settings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//Level/subobjectives"/>
     </genClasses>
     <genClasses ecoreClass="generatorMetamodels.ecore#//Knowledge">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//Knowledge/name"/>
@@ -190,11 +188,11 @@
     <genClasses ecoreClass="generatorMetamodels.ecore#//MTQFOneCompletion">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//MTQFOneCompletion/targets"/>
     </genClasses>
-    <genClasses ecoreClass="generatorMetamodels.ecore#//MTLevelV1">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//MTLevelV1/buildTableSetup"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//MTLevelV1/resultPositionSetup"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//MTLevelV1/minInterval"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//MTLevelV1/maxInterval"/>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//MTLevel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//MTLevel/buildTableSetup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//MTLevel/resultPositionSetup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//MTLevel/minInterval"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//MTLevel/maxInterval"/>
     </genClasses>
     <genClasses ecoreClass="generatorMetamodels.ecore#//DimensionsEntanglement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//DimensionsEntanglement/semanticrelations"/>
@@ -203,6 +201,10 @@
     <genClasses ecoreClass="generatorMetamodels.ecore#//Room2SubObjectiveCompliance">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//Room2SubObjectiveCompliance/roomType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//Room2SubObjectiveCompliance/subObjType"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//Prerequisite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//Prerequisite/successPercentage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//Prerequisite/prerequisite"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

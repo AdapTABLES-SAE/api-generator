@@ -31,7 +31,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generatorMetamodels.impl.SubObjectiveImpl#getName <em>Name</em>}</li>
  *   <li>{@link generatorMetamodels.impl.SubObjectiveImpl#getPercentageOfApparition <em>Percentage Of Apparition</em>}</li>
  *   <li>{@link generatorMetamodels.impl.SubObjectiveImpl#getPercentageOfValidFacts <em>Percentage Of Valid Facts</em>}</li>
  *   <li>{@link generatorMetamodels.impl.SubObjectiveImpl#getNbConsecutiveSuccess <em>Nb Consecutive Success</em>}</li>
@@ -42,26 +41,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container implements SubObjective {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getPercentageOfApparition() <em>Percentage Of Apparition</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -159,28 +138,6 @@ public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	protected EClass eStaticClass() {
 		return GeneratorMetamodelsPackage.Literals.SUB_OBJECTIVE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorMetamodelsPackage.SUB_OBJECTIVE__NAME,
-					oldName, name));
 	}
 
 	/**
@@ -343,8 +300,6 @@ public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__NAME:
-			return getName();
 		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION:
 			return getPercentageOfApparition();
 		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS:
@@ -368,9 +323,6 @@ public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__NAME:
-			setName((String) newValue);
-			return;
 		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION:
 			setPercentageOfApparition((Integer) newValue);
 			return;
@@ -399,9 +351,6 @@ public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__NAME:
-			setName(NAME_EDEFAULT);
-			return;
 		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION:
 			setPercentageOfApparition(PERCENTAGE_OF_APPARITION_EDEFAULT);
 			return;
@@ -429,8 +378,6 @@ public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION:
 			return percentageOfApparition != PERCENTAGE_OF_APPARITION_EDEFAULT;
 		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS:
@@ -456,9 +403,7 @@ public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container impl
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", percentageOfApparition: ");
+		result.append(" (percentageOfApparition: ");
 		result.append(percentageOfApparition);
 		result.append(", percentageOfValidFacts: ");
 		result.append(percentageOfValidFacts);

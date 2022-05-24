@@ -247,13 +247,13 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	MTQFOneCompletion createMTQFOneCompletion();
 
 	/**
-	 * Returns a new object of class '<em>MT Level V1</em>'.
+	 * Returns a new object of class '<em>MT Level</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MT Level V1</em>'.
+	 * @return a new object of class '<em>MT Level</em>'.
 	 * @generated
 	 */
-	MTLevelV1 createMTLevelV1();
+	MTLevel createMTLevel();
 
 	/**
 	 * Returns a new object of class '<em>Dimensions Entanglement</em>'.
@@ -272,6 +272,15 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	 * @generated
 	 */
 	Room2SubObjectiveCompliance createRoom2SubObjectiveCompliance();
+
+	/**
+	 * Returns a new object of class '<em>Prerequisite</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Prerequisite</em>'.
+	 * @generated
+	 */
+	Prerequisite createPrerequisite();
 
 	/**
 	 * Returns the package supported by this factory.
