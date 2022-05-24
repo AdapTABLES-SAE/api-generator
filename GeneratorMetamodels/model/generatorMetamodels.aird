@@ -9,7 +9,7 @@
     <semanticResources>../inputmodels/GameDomain.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_5bnrwLzMEeyTW5bsc_tp1A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5b4xgLzMEeyTW5bsc_tp1A" name="generatorMetamodels" repPath="#_5b2VQLzMEeyTW5bsc_tp1A" changeId="49d12b84-75c6-4344-9128-0e9135127c28">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5b4xgLzMEeyTW5bsc_tp1A" name="generatorMetamodels" repPath="#_5b2VQLzMEeyTW5bsc_tp1A" changeId="b12df74f-4971-4705-b063-dc0191897964">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generatorMetamodels.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -1268,17 +1268,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_wedRwLzOEeyTW5bsc_tp1A" type="4001" element="_weVVzrzOEeyTW5bsc_tp1A" source="_weYZMLzOEeyTW5bsc_tp1A" target="_weXyHLzOEeyTW5bsc_tp1A">
           <children xmi:type="notation:Node" xmi:id="_wedRxLzOEeyTW5bsc_tp1A" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wedRxbzOEeyTW5bsc_tp1A" x="-23" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wedRxbzOEeyTW5bsc_tp1A" x="-11" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_wedRxrzOEeyTW5bsc_tp1A" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wedRx7zOEeyTW5bsc_tp1A" x="10" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wedRx7zOEeyTW5bsc_tp1A" x="29" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_wedRyLzOEeyTW5bsc_tp1A" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wedRybzOEeyTW5bsc_tp1A" x="-20"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wedRybzOEeyTW5bsc_tp1A" x="-16"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_wedRwbzOEeyTW5bsc_tp1A" routing="Tree"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_wedRwrzOEeyTW5bsc_tp1A" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wedRw7zOEeyTW5bsc_tp1A" points="[-1, 0, 712, -24]$[-1, -65, 712, -89]$[-574, -65, 139, -89]$[-574, -46, 139, -70]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wedRw7zOEeyTW5bsc_tp1A" points="[0, 0, 901, -39]$[0, -49, 901, -88]$[-762, -49, 139, -88]$[-762, -31, 139, -70]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wedRyrzOEeyTW5bsc_tp1A" id="(0.5657142857142857,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wedRy7zOEeyTW5bsc_tp1A" id="(0.22779922779922776,0.5158924205378972)"/>
         </edges>
