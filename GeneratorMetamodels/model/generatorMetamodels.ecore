@@ -42,7 +42,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="gamingobjective" lowerBound="1"
         eType="#//GamingObjective"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Settings" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//ResponseModality"/>
   <eClassifiers xsi:type="ecore:EClass" name="QuestionRoom" abstract="true" eSuperTypes="#//Room"/>
   <eClassifiers xsi:type="ecore:EClass" name="LearningPath">
@@ -94,8 +94,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="responsemodality" lowerBound="1"
         eType="#//ResponseModality" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="settings" upperBound="-1"
-        eType="#//Settings" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResponseModality" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="responseTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -131,8 +129,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Level" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="settings" upperBound="-1"
-        eType="#//Settings" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subobjectives" upperBound="-1"
         eType="#//SubObjective" containment="true"/>
   </eClassifiers>
@@ -249,5 +245,28 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="successPercentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" lowerBound="1"
         eType="#//Level"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTTableBuilding" eSuperTypes="#//Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//TableBuild"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTResultPosition" eSuperTypes="#//Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//ResultPosition"
+        defaultValueLiteral="RIGHT"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTLevelParam" eSuperTypes="#//Level">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="10"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="buildTableSetup" lowerBound="1"
+        eType="#//MTTableBuilding" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resultPositionSetup" lowerBound="1"
+        eType="#//MTResultPosition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter2RoomIncompliance" eSuperTypes="#//SemanticRelation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomType" eType="#//RoomType"
+        defaultValueLiteral="DOOR"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+        eType="#//Parameter" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

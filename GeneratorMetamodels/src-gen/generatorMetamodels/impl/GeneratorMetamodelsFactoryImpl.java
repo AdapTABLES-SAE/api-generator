@@ -119,6 +119,14 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 			return createRoom2SubObjectiveCompliance();
 		case GeneratorMetamodelsPackage.PREREQUISITE:
 			return createPrerequisite();
+		case GeneratorMetamodelsPackage.MT_TABLE_BUILDING:
+			return createMTTableBuilding();
+		case GeneratorMetamodelsPackage.MT_RESULT_POSITION:
+			return createMTResultPosition();
+		case GeneratorMetamodelsPackage.MT_LEVEL_PARAM:
+			return createMTLevelParam();
+		case GeneratorMetamodelsPackage.PARAMETER2_ROOM_INCOMPLIANCE:
+			return createParameter2RoomIncompliance();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -476,6 +484,46 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	public Prerequisite createPrerequisite() {
 		PrerequisiteImpl prerequisite = new PrerequisiteImpl();
 		return prerequisite;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTTableBuilding createMTTableBuilding() {
+		MTTableBuildingImpl mtTableBuilding = new MTTableBuildingImpl();
+		return mtTableBuilding;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTResultPosition createMTResultPosition() {
+		MTResultPositionImpl mtResultPosition = new MTResultPositionImpl();
+		return mtResultPosition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTLevelParam createMTLevelParam() {
+		MTLevelParamImpl mtLevelParam = new MTLevelParamImpl();
+		return mtLevelParam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Parameter2RoomIncompliance createParameter2RoomIncompliance() {
+		Parameter2RoomIncomplianceImpl parameter2RoomIncompliance = new Parameter2RoomIncomplianceImpl();
+		return parameter2RoomIncompliance;
 	}
 
 	/**

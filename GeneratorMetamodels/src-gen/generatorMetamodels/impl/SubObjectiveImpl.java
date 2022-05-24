@@ -4,24 +4,16 @@ package generatorMetamodels.impl;
 
 import generatorMetamodels.GeneratorMetamodelsPackage;
 import generatorMetamodels.ResponseModality;
-import generatorMetamodels.Settings;
 import generatorMetamodels.SubObjective;
-
-import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +27,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generatorMetamodels.impl.SubObjectiveImpl#getPercentageOfValidFacts <em>Percentage Of Valid Facts</em>}</li>
  *   <li>{@link generatorMetamodels.impl.SubObjectiveImpl#getNbConsecutiveSuccess <em>Nb Consecutive Success</em>}</li>
  *   <li>{@link generatorMetamodels.impl.SubObjectiveImpl#getResponsemodality <em>Responsemodality</em>}</li>
- *   <li>{@link generatorMetamodels.impl.SubObjectiveImpl#getSettings <em>Settings</em>}</li>
  * </ul>
  *
  * @generated
@@ -110,16 +101,6 @@ public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected ResponseModality responsemodality;
-
-	/**
-	 * The cached value of the '{@link #getSettings() <em>Settings</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSettings()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Settings> settings;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -268,26 +249,11 @@ public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Settings> getSettings() {
-		if (settings == null) {
-			settings = new EObjectContainmentEList<Settings>(Settings.class, this,
-					GeneratorMetamodelsPackage.SUB_OBJECTIVE__SETTINGS);
-		}
-		return settings;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__RESPONSEMODALITY:
 			return basicSetResponsemodality(null, msgs);
-		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__SETTINGS:
-			return ((InternalEList<?>) getSettings()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -308,8 +274,6 @@ public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container impl
 			return getNbConsecutiveSuccess();
 		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__RESPONSEMODALITY:
 			return getResponsemodality();
-		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__SETTINGS:
-			return getSettings();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -319,7 +283,6 @@ public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -334,10 +297,6 @@ public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container impl
 			return;
 		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__RESPONSEMODALITY:
 			setResponsemodality((ResponseModality) newValue);
-			return;
-		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__SETTINGS:
-			getSettings().clear();
-			getSettings().addAll((Collection<? extends Settings>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -363,9 +322,6 @@ public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container impl
 		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__RESPONSEMODALITY:
 			setResponsemodality((ResponseModality) null);
 			return;
-		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__SETTINGS:
-			getSettings().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -386,8 +342,6 @@ public abstract class SubObjectiveImpl extends MinimalEObjectImpl.Container impl
 			return nbConsecutiveSuccess != NB_CONSECUTIVE_SUCCESS_EDEFAULT;
 		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__RESPONSEMODALITY:
 			return responsemodality != null;
-		case GeneratorMetamodelsPackage.SUB_OBJECTIVE__SETTINGS:
-			return settings != null && !settings.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

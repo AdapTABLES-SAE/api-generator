@@ -136,9 +136,9 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorMetamodelsPackage.SETTINGS: {
-			Settings settings = (Settings) theEObject;
-			T result = caseSettings(settings);
+		case GeneratorMetamodelsPackage.PARAMETER: {
+			Parameter parameter = (Parameter) theEObject;
+			T result = caseParameter(parameter);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -430,6 +430,42 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case GeneratorMetamodelsPackage.MT_TABLE_BUILDING: {
+			MTTableBuilding mtTableBuilding = (MTTableBuilding) theEObject;
+			T result = caseMTTableBuilding(mtTableBuilding);
+			if (result == null)
+				result = caseParameter(mtTableBuilding);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.MT_RESULT_POSITION: {
+			MTResultPosition mtResultPosition = (MTResultPosition) theEObject;
+			T result = caseMTResultPosition(mtResultPosition);
+			if (result == null)
+				result = caseParameter(mtResultPosition);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.MT_LEVEL_PARAM: {
+			MTLevelParam mtLevelParam = (MTLevelParam) theEObject;
+			T result = caseMTLevelParam(mtLevelParam);
+			if (result == null)
+				result = caseLevel(mtLevelParam);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.PARAMETER2_ROOM_INCOMPLIANCE: {
+			Parameter2RoomIncompliance parameter2RoomIncompliance = (Parameter2RoomIncompliance) theEObject;
+			T result = caseParameter2RoomIncompliance(parameter2RoomIncompliance);
+			if (result == null)
+				result = caseSemanticRelation(parameter2RoomIncompliance);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -556,17 +592,17 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Settings</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Settings</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSettings(Settings object) {
+	public T caseParameter(Parameter object) {
 		return null;
 	}
 
@@ -1107,6 +1143,66 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePrerequisite(Prerequisite object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MT Table Building</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MT Table Building</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTTableBuilding(MTTableBuilding object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MT Result Position</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MT Result Position</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTResultPosition(MTResultPosition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MT Level Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MT Level Param</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTLevelParam(MTLevelParam object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Parameter2 Room Incompliance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Parameter2 Room Incompliance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseParameter2RoomIncompliance(Parameter2RoomIncompliance object) {
 		return null;
 	}
 

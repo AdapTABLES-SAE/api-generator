@@ -2,8 +2,6 @@
  */
 package generatorMetamodels;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -19,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generatorMetamodels.SubObjective#getPercentageOfValidFacts <em>Percentage Of Valid Facts</em>}</li>
  *   <li>{@link generatorMetamodels.SubObjective#getNbConsecutiveSuccess <em>Nb Consecutive Success</em>}</li>
  *   <li>{@link generatorMetamodels.SubObjective#getResponsemodality <em>Responsemodality</em>}</li>
- *   <li>{@link generatorMetamodels.SubObjective#getSettings <em>Settings</em>}</li>
  * </ul>
  *
  * @see generatorMetamodels.GeneratorMetamodelsPackage#getSubObjective()
@@ -114,17 +111,5 @@ public interface SubObjective extends EObject {
 	 * @generated
 	 */
 	void setResponsemodality(ResponseModality value);
-
-	/**
-	 * Returns the value of the '<em><b>Settings</b></em>' containment reference list.
-	 * The list contents are of type {@link generatorMetamodels.Settings}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Settings</em>' containment reference list.
-	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getSubObjective_Settings()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Settings> getSettings();
 
 } // SubObjective

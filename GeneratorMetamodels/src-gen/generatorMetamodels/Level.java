@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generatorMetamodels.Level#getID <em>ID</em>}</li>
- *   <li>{@link generatorMetamodels.Level#getSettings <em>Settings</em>}</li>
  *   <li>{@link generatorMetamodels.Level#getSubobjectives <em>Subobjectives</em>}</li>
  * </ul>
  *
@@ -46,18 +45,6 @@ public interface Level extends EObject {
 	 * @generated
 	 */
 	void setID(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Settings</b></em>' containment reference list.
-	 * The list contents are of type {@link generatorMetamodels.Settings}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Settings</em>' containment reference list.
-	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getLevel_Settings()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Settings> getSettings();
 
 	/**
 	 * Returns the value of the '<em><b>Subobjectives</b></em>' containment reference list.

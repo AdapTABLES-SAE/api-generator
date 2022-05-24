@@ -33,8 +33,13 @@ import generatorMetamodels.LearningPaths;
 import generatorMetamodels.LearningProfile;
 import generatorMetamodels.Level;
 import generatorMetamodels.MTLevel;
+import generatorMetamodels.MTLevelParam;
 import generatorMetamodels.MTQFOneCompletion;
+import generatorMetamodels.MTResultPosition;
+import generatorMetamodels.MTTableBuilding;
 import generatorMetamodels.MultipleChoice;
+import generatorMetamodels.Parameter;
+import generatorMetamodels.Parameter2RoomIncompliance;
 import generatorMetamodels.Prerequisite;
 import generatorMetamodels.ProblemResolution;
 import generatorMetamodels.QFOneCompletion;
@@ -50,7 +55,6 @@ import generatorMetamodels.Room2SubObjectiveCompliance;
 import generatorMetamodels.RoomType;
 import generatorMetamodels.SemanticRelation;
 import generatorMetamodels.SetOfFacts;
-import generatorMetamodels.Settings;
 import generatorMetamodels.SubObjective;
 import generatorMetamodels.SubObjectiveType;
 import generatorMetamodels.TableBuild;
@@ -135,7 +139,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass settingsEClass = null;
+	private EClass parameterEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -388,6 +392,34 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * @generated
 	 */
 	private EClass prerequisiteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mtTableBuildingEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mtResultPositionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mtLevelParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass parameter2RoomIncomplianceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -706,8 +738,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSettings() {
-		return settingsEClass;
+	public EClass getParameter() {
+		return parameterEClass;
 	}
 
 	/**
@@ -994,15 +1026,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSubObjective_Settings() {
-		return (EReference) subObjectiveEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getResponseModality() {
 		return responseModalityEClass;
 	}
@@ -1147,17 +1170,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLevel_Settings() {
-		return (EReference) levelEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getLevel_Subobjectives() {
-		return (EReference) levelEClass.getEStructuralFeatures().get(2);
+		return (EReference) levelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1570,6 +1584,114 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMTTableBuilding() {
+		return mtTableBuildingEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTTableBuilding_Value() {
+		return (EAttribute) mtTableBuildingEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMTResultPosition() {
+		return mtResultPositionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTResultPosition_Value() {
+		return (EAttribute) mtResultPositionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMTLevelParam() {
+		return mtLevelParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTLevelParam_MaxInterval() {
+		return (EAttribute) mtLevelParamEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTLevelParam_MinInterval() {
+		return (EAttribute) mtLevelParamEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMTLevelParam_BuildTableSetup() {
+		return (EReference) mtLevelParamEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMTLevelParam_ResultPositionSetup() {
+		return (EReference) mtLevelParamEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getParameter2RoomIncompliance() {
+		return parameter2RoomIncomplianceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getParameter2RoomIncompliance_RoomType() {
+		return (EAttribute) parameter2RoomIncomplianceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParameter2RoomIncompliance_Parameter() {
+		return (EReference) parameter2RoomIncomplianceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getGameMode() {
 		return gameModeEEnum;
 	}
@@ -1687,7 +1809,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		createEAttribute(dungeonEClass, DUNGEON__NUMBER_OF_ROOMS);
 		createEReference(dungeonEClass, DUNGEON__GAMINGOBJECTIVE);
 
-		settingsEClass = createEClass(SETTINGS);
+		parameterEClass = createEClass(PARAMETER);
 
 		inputEClass = createEClass(INPUT);
 
@@ -1730,7 +1852,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		createEAttribute(subObjectiveEClass, SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS);
 		createEAttribute(subObjectiveEClass, SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS);
 		createEReference(subObjectiveEClass, SUB_OBJECTIVE__RESPONSEMODALITY);
-		createEReference(subObjectiveEClass, SUB_OBJECTIVE__SETTINGS);
 
 		responseModalityEClass = createEClass(RESPONSE_MODALITY);
 		createEAttribute(responseModalityEClass, RESPONSE_MODALITY__RESPONSE_TIME);
@@ -1753,7 +1874,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 
 		levelEClass = createEClass(LEVEL);
 		createEAttribute(levelEClass, LEVEL__ID);
-		createEReference(levelEClass, LEVEL__SETTINGS);
 		createEReference(levelEClass, LEVEL__SUBOBJECTIVES);
 
 		knowledgeEClass = createEClass(KNOWLEDGE);
@@ -1820,6 +1940,22 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		createEAttribute(prerequisiteEClass, PREREQUISITE__SUCCESS_PERCENTAGE);
 		createEReference(prerequisiteEClass, PREREQUISITE__PREREQUISITE);
 
+		mtTableBuildingEClass = createEClass(MT_TABLE_BUILDING);
+		createEAttribute(mtTableBuildingEClass, MT_TABLE_BUILDING__VALUE);
+
+		mtResultPositionEClass = createEClass(MT_RESULT_POSITION);
+		createEAttribute(mtResultPositionEClass, MT_RESULT_POSITION__VALUE);
+
+		mtLevelParamEClass = createEClass(MT_LEVEL_PARAM);
+		createEAttribute(mtLevelParamEClass, MT_LEVEL_PARAM__MAX_INTERVAL);
+		createEAttribute(mtLevelParamEClass, MT_LEVEL_PARAM__MIN_INTERVAL);
+		createEReference(mtLevelParamEClass, MT_LEVEL_PARAM__BUILD_TABLE_SETUP);
+		createEReference(mtLevelParamEClass, MT_LEVEL_PARAM__RESULT_POSITION_SETUP);
+
+		parameter2RoomIncomplianceEClass = createEClass(PARAMETER2_ROOM_INCOMPLIANCE);
+		createEAttribute(parameter2RoomIncomplianceEClass, PARAMETER2_ROOM_INCOMPLIANCE__ROOM_TYPE);
+		createEReference(parameter2RoomIncomplianceEClass, PARAMETER2_ROOM_INCOMPLIANCE__PARAMETER);
+
 		// Create enums
 		gameModeEEnum = createEEnum(GAME_MODE);
 		roomTypeEEnum = createEEnum(ROOM_TYPE);
@@ -1879,6 +2015,10 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		mtqfOneCompletionEClass.getESuperTypes().add(this.getQFOneCompletion());
 		mtLevelEClass.getESuperTypes().add(this.getLevel());
 		room2SubObjectiveComplianceEClass.getESuperTypes().add(this.getSemanticRelation());
+		mtTableBuildingEClass.getESuperTypes().add(this.getParameter());
+		mtResultPositionEClass.getESuperTypes().add(this.getParameter());
+		mtLevelParamEClass.getESuperTypes().add(this.getLevel());
+		parameter2RoomIncomplianceEClass.getESuperTypes().add(this.getSemanticRelation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(multipleChoiceEClass, MultipleChoice.class, "MultipleChoice", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1942,7 +2082,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 				Dungeon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(settingsEClass, Settings.class, "Settings", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(parameterEClass, Parameter.class, "Parameter", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2031,9 +2172,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		initEReference(getSubObjective_Responsemodality(), this.getResponseModality(), null, "responsemodality", null,
 				1, 1, SubObjective.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSubObjective_Settings(), this.getSettings(), null, "settings", null, 0, -1,
-				SubObjective.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(responseModalityEClass, ResponseModality.class, "ResponseModality", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2079,9 +2217,6 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		initEClass(levelEClass, Level.class, "Level", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLevel_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Level.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLevel_Settings(), this.getSettings(), null, "settings", null, 0, -1, Level.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLevel_Subobjectives(), this.getSubObjective(), null, "subobjectives", null, 0, -1,
 				Level.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2210,6 +2345,41 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		initEReference(getPrerequisite_Prerequisite(), this.getLevel(), null, "prerequisite", null, 1, 1,
 				Prerequisite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mtTableBuildingEClass, MTTableBuilding.class, "MTTableBuilding", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTTableBuilding_Value(), this.getTableBuild(), "value", null, 0, 1, MTTableBuilding.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mtResultPositionEClass, MTResultPosition.class, "MTResultPosition", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTResultPosition_Value(), this.getResultPosition(), "value", "RIGHT", 0, 1,
+				MTResultPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(mtLevelParamEClass, MTLevelParam.class, "MTLevelParam", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTLevelParam_MaxInterval(), ecorePackage.getEInt(), "maxInterval", "10", 0, 1,
+				MTLevelParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTLevelParam_MinInterval(), ecorePackage.getEInt(), "minInterval", "1", 0, 1,
+				MTLevelParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getMTLevelParam_BuildTableSetup(), this.getMTTableBuilding(), null, "buildTableSetup", null, 1,
+				1, MTLevelParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMTLevelParam_ResultPositionSetup(), this.getMTResultPosition(), null, "resultPositionSetup",
+				null, 1, 1, MTLevelParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(parameter2RoomIncomplianceEClass, Parameter2RoomIncompliance.class, "Parameter2RoomIncompliance",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getParameter2RoomIncompliance_RoomType(), this.getRoomType(), "roomType", "DOOR", 0, 1,
+				Parameter2RoomIncompliance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParameter2RoomIncompliance_Parameter(), this.getParameter(), null, "parameter", null, 1, 1,
+				Parameter2RoomIncompliance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(gameModeEEnum, GameMode.class, "GameMode");

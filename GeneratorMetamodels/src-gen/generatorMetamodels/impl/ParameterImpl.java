@@ -3,7 +3,7 @@
 package generatorMetamodels.impl;
 
 import generatorMetamodels.GeneratorMetamodelsPackage;
-import generatorMetamodels.Settings;
+import generatorMetamodels.Parameter;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -11,18 +11,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Settings</b></em>'.
+ * An implementation of the model object '<em><b>Parameter</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public abstract class SettingsImpl extends MinimalEObjectImpl.Container implements Settings {
+public abstract class ParameterImpl extends MinimalEObjectImpl.Container implements Parameter {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SettingsImpl() {
+	protected ParameterImpl() {
 		super();
 	}
 
@@ -33,7 +33,7 @@ public abstract class SettingsImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorMetamodelsPackage.Literals.SETTINGS;
+		return GeneratorMetamodelsPackage.Literals.PARAMETER;
 	}
 
-} //SettingsImpl
+} //ParameterImpl

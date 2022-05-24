@@ -188,22 +188,13 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int SUB_OBJECTIVE__RESPONSEMODALITY = 3;
 
 	/**
-	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUB_OBJECTIVE__SETTINGS = 4;
-
-	/**
 	 * The number of structural features of the '<em>Sub Objective</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_OBJECTIVE_FEATURE_COUNT = 5;
+	int SUB_OBJECTIVE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Sub Objective</em>' class.
@@ -259,15 +250,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESULT_VALIDITY_DETERMINATION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
-
-	/**
-	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_VALIDITY_DETERMINATION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
 
 	/**
 	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
@@ -415,15 +397,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROBLEM_RESOLUTION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
-
-	/**
-	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROBLEM_RESOLUTION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
 
 	/**
 	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
@@ -582,15 +555,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int QF_TWO_COMPLETION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
 
 	/**
-	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_TWO_COMPLETION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
-
-	/**
 	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -737,32 +701,32 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int DUNGEON_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generatorMetamodels.impl.SettingsImpl <em>Settings</em>}' class.
+	 * The meta object id for the '{@link generatorMetamodels.impl.ParameterImpl <em>Parameter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generatorMetamodels.impl.SettingsImpl
-	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSettings()
+	 * @see generatorMetamodels.impl.ParameterImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getParameter()
 	 * @generated
 	 */
-	int SETTINGS = 8;
+	int PARAMETER = 8;
 
 	/**
-	 * The number of structural features of the '<em>Settings</em>' class.
+	 * The number of structural features of the '<em>Parameter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SETTINGS_FEATURE_COUNT = 0;
+	int PARAMETER_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Settings</em>' class.
+	 * The number of operations of the '<em>Parameter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SETTINGS_OPERATION_COUNT = 0;
+	int PARAMETER_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.impl.InputImpl <em>Input</em>}' class.
@@ -1197,15 +1161,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int QF_RECONSTRUCTION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
 
 	/**
-	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_RECONSTRUCTION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
-
-	/**
 	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1277,15 +1232,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @ordered
 	 */
 	int QF_ONE_COMPLETION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
-
-	/**
-	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_ONE_COMPLETION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
 
 	/**
 	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
@@ -1481,22 +1427,13 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int LEVEL__ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEVEL__SETTINGS = 1;
-
-	/**
 	 * The feature id for the '<em><b>Subobjectives</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEVEL__SUBOBJECTIVES = 2;
+	int LEVEL__SUBOBJECTIVES = 1;
 
 	/**
 	 * The number of structural features of the '<em>Level</em>' class.
@@ -1505,7 +1442,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LEVEL_FEATURE_COUNT = 3;
+	int LEVEL_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Level</em>' class.
@@ -1607,15 +1544,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @ordered
 	 */
 	int QF_VALIDITY_DETERMINATION__RESPONSEMODALITY = SUB_OBJECTIVE__RESPONSEMODALITY;
-
-	/**
-	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_VALIDITY_DETERMINATION__SETTINGS = SUB_OBJECTIVE__SETTINGS;
 
 	/**
 	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
@@ -2133,15 +2061,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int MTQF_ONE_COMPLETION__RESPONSEMODALITY = QF_ONE_COMPLETION__RESPONSEMODALITY;
 
 	/**
-	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTQF_ONE_COMPLETION__SETTINGS = QF_ONE_COMPLETION__SETTINGS;
-
-	/**
 	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2195,15 +2114,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_LEVEL__ID = LEVEL__ID;
-
-	/**
-	 * The feature id for the '<em><b>Settings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_LEVEL__SETTINGS = LEVEL__SETTINGS;
 
 	/**
 	 * The feature id for the '<em><b>Subobjectives</b></em>' containment reference list.
@@ -2426,6 +2336,208 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int PREREQUISITE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.MTTableBuildingImpl <em>MT Table Building</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.MTTableBuildingImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTTableBuilding()
+	 * @generated
+	 */
+	int MT_TABLE_BUILDING = 45;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_TABLE_BUILDING__VALUE = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>MT Table Building</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_TABLE_BUILDING_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>MT Table Building</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_TABLE_BUILDING_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.MTResultPositionImpl <em>MT Result Position</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.MTResultPositionImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTResultPosition()
+	 * @generated
+	 */
+	int MT_RESULT_POSITION = 46;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_RESULT_POSITION__VALUE = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>MT Result Position</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_RESULT_POSITION_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>MT Result Position</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_RESULT_POSITION_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.MTLevelParamImpl <em>MT Level Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.MTLevelParamImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTLevelParam()
+	 * @generated
+	 */
+	int MT_LEVEL_PARAM = 47;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_PARAM__ID = LEVEL__ID;
+
+	/**
+	 * The feature id for the '<em><b>Subobjectives</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_PARAM__SUBOBJECTIVES = LEVEL__SUBOBJECTIVES;
+
+	/**
+	 * The feature id for the '<em><b>Max Interval</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_PARAM__MAX_INTERVAL = LEVEL_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Min Interval</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_PARAM__MIN_INTERVAL = LEVEL_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Build Table Setup</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_PARAM__BUILD_TABLE_SETUP = LEVEL_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Result Position Setup</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_PARAM__RESULT_POSITION_SETUP = LEVEL_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>MT Level Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_PARAM_FEATURE_COUNT = LEVEL_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>MT Level Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_PARAM_OPERATION_COUNT = LEVEL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.Parameter2RoomIncomplianceImpl <em>Parameter2 Room Incompliance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.Parameter2RoomIncomplianceImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getParameter2RoomIncompliance()
+	 * @generated
+	 */
+	int PARAMETER2_ROOM_INCOMPLIANCE = 48;
+
+	/**
+	 * The feature id for the '<em><b>Room Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER2_ROOM_INCOMPLIANCE__ROOM_TYPE = SEMANTIC_RELATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER2_ROOM_INCOMPLIANCE__PARAMETER = SEMANTIC_RELATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Parameter2 Room Incompliance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER2_ROOM_INCOMPLIANCE_FEATURE_COUNT = SEMANTIC_RELATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Parameter2 Room Incompliance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER2_ROOM_INCOMPLIANCE_OPERATION_COUNT = SEMANTIC_RELATION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link generatorMetamodels.GameMode <em>Game Mode</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2433,7 +2545,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameMode()
 	 * @generated
 	 */
-	int GAME_MODE = 45;
+	int GAME_MODE = 49;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.RoomType <em>Room Type</em>}' enum.
@@ -2443,7 +2555,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRoomType()
 	 * @generated
 	 */
-	int ROOM_TYPE = 46;
+	int ROOM_TYPE = 50;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.GameElementType <em>Game Element Type</em>}' enum.
@@ -2453,7 +2565,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameElementType()
 	 * @generated
 	 */
-	int GAME_ELEMENT_TYPE = 47;
+	int GAME_ELEMENT_TYPE = 51;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.TableBuild <em>Table Build</em>}' enum.
@@ -2463,7 +2575,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 48;
+	int TABLE_BUILD = 52;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.ResultPosition <em>Result Position</em>}' enum.
@@ -2473,7 +2585,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 49;
+	int RESULT_POSITION = 53;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.TargetElement <em>Target Element</em>}' enum.
@@ -2483,7 +2595,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getTargetElement()
 	 * @generated
 	 */
-	int TARGET_ELEMENT = 50;
+	int TARGET_ELEMENT = 54;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.SubObjectiveType <em>Sub Objective Type</em>}' enum.
@@ -2493,7 +2605,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSubObjectiveType()
 	 * @generated
 	 */
-	int SUB_OBJECTIVE_TYPE = 51;
+	int SUB_OBJECTIVE_TYPE = 55;
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.MultipleChoice <em>Multiple Choice</em>}'.
@@ -2730,14 +2842,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EReference getDungeon_Gamingobjective();
 
 	/**
-	 * Returns the meta object for class '{@link generatorMetamodels.Settings <em>Settings</em>}'.
+	 * Returns the meta object for class '{@link generatorMetamodels.Parameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Settings</em>'.
-	 * @see generatorMetamodels.Settings
+	 * @return the meta object for class '<em>Parameter</em>'.
+	 * @see generatorMetamodels.Parameter
 	 * @generated
 	 */
-	EClass getSettings();
+	EClass getParameter();
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.Input <em>Input</em>}'.
@@ -3069,17 +3181,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EReference getSubObjective_Responsemodality();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generatorMetamodels.SubObjective#getSettings <em>Settings</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Settings</em>'.
-	 * @see generatorMetamodels.SubObjective#getSettings()
-	 * @see #getSubObjective()
-	 * @generated
-	 */
-	EReference getSubObjective_Settings();
-
-	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.ResponseModality <em>Response Modality</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3248,17 +3349,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLevel_ID();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generatorMetamodels.Level#getSettings <em>Settings</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Settings</em>'.
-	 * @see generatorMetamodels.Level#getSettings()
-	 * @see #getLevel()
-	 * @generated
-	 */
-	EReference getLevel_Settings();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link generatorMetamodels.Level#getSubobjectives <em>Subobjectives</em>}'.
@@ -3750,6 +3840,134 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EReference getPrerequisite_Prerequisite();
 
 	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.MTTableBuilding <em>MT Table Building</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MT Table Building</em>'.
+	 * @see generatorMetamodels.MTTableBuilding
+	 * @generated
+	 */
+	EClass getMTTableBuilding();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTTableBuilding#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see generatorMetamodels.MTTableBuilding#getValue()
+	 * @see #getMTTableBuilding()
+	 * @generated
+	 */
+	EAttribute getMTTableBuilding_Value();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.MTResultPosition <em>MT Result Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MT Result Position</em>'.
+	 * @see generatorMetamodels.MTResultPosition
+	 * @generated
+	 */
+	EClass getMTResultPosition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTResultPosition#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see generatorMetamodels.MTResultPosition#getValue()
+	 * @see #getMTResultPosition()
+	 * @generated
+	 */
+	EAttribute getMTResultPosition_Value();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.MTLevelParam <em>MT Level Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MT Level Param</em>'.
+	 * @see generatorMetamodels.MTLevelParam
+	 * @generated
+	 */
+	EClass getMTLevelParam();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevelParam#getMaxInterval <em>Max Interval</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Max Interval</em>'.
+	 * @see generatorMetamodels.MTLevelParam#getMaxInterval()
+	 * @see #getMTLevelParam()
+	 * @generated
+	 */
+	EAttribute getMTLevelParam_MaxInterval();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.MTLevelParam#getMinInterval <em>Min Interval</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Min Interval</em>'.
+	 * @see generatorMetamodels.MTLevelParam#getMinInterval()
+	 * @see #getMTLevelParam()
+	 * @generated
+	 */
+	EAttribute getMTLevelParam_MinInterval();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generatorMetamodels.MTLevelParam#getBuildTableSetup <em>Build Table Setup</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Build Table Setup</em>'.
+	 * @see generatorMetamodels.MTLevelParam#getBuildTableSetup()
+	 * @see #getMTLevelParam()
+	 * @generated
+	 */
+	EReference getMTLevelParam_BuildTableSetup();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generatorMetamodels.MTLevelParam#getResultPositionSetup <em>Result Position Setup</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Result Position Setup</em>'.
+	 * @see generatorMetamodels.MTLevelParam#getResultPositionSetup()
+	 * @see #getMTLevelParam()
+	 * @generated
+	 */
+	EReference getMTLevelParam_ResultPositionSetup();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.Parameter2RoomIncompliance <em>Parameter2 Room Incompliance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter2 Room Incompliance</em>'.
+	 * @see generatorMetamodels.Parameter2RoomIncompliance
+	 * @generated
+	 */
+	EClass getParameter2RoomIncompliance();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.Parameter2RoomIncompliance#getRoomType <em>Room Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Room Type</em>'.
+	 * @see generatorMetamodels.Parameter2RoomIncompliance#getRoomType()
+	 * @see #getParameter2RoomIncompliance()
+	 * @generated
+	 */
+	EAttribute getParameter2RoomIncompliance_RoomType();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generatorMetamodels.Parameter2RoomIncompliance#getParameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Parameter</em>'.
+	 * @see generatorMetamodels.Parameter2RoomIncompliance#getParameter()
+	 * @see #getParameter2RoomIncompliance()
+	 * @generated
+	 */
+	EReference getParameter2RoomIncompliance_Parameter();
+
+	/**
 	 * Returns the meta object for enum '{@link generatorMetamodels.GameMode <em>Game Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4036,14 +4254,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EReference DUNGEON__GAMINGOBJECTIVE = eINSTANCE.getDungeon_Gamingobjective();
 
 		/**
-		 * The meta object literal for the '{@link generatorMetamodels.impl.SettingsImpl <em>Settings</em>}' class.
+		 * The meta object literal for the '{@link generatorMetamodels.impl.ParameterImpl <em>Parameter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generatorMetamodels.impl.SettingsImpl
-		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSettings()
+		 * @see generatorMetamodels.impl.ParameterImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getParameter()
 		 * @generated
 		 */
-		EClass SETTINGS = eINSTANCE.getSettings();
+		EClass PARAMETER = eINSTANCE.getParameter();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.InputImpl <em>Input</em>}' class.
@@ -4318,14 +4536,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EReference SUB_OBJECTIVE__RESPONSEMODALITY = eINSTANCE.getSubObjective_Responsemodality();
 
 		/**
-		 * The meta object literal for the '<em><b>Settings</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SUB_OBJECTIVE__SETTINGS = eINSTANCE.getSubObjective_Settings();
-
-		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.ResponseModalityImpl <em>Response Modality</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4464,14 +4674,6 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LEVEL__ID = eINSTANCE.getLevel_ID();
-
-		/**
-		 * The meta object literal for the '<em><b>Settings</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LEVEL__SETTINGS = eINSTANCE.getLevel_Settings();
 
 		/**
 		 * The meta object literal for the '<em><b>Subobjectives</b></em>' containment reference list feature.
@@ -4878,6 +5080,110 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PREREQUISITE__PREREQUISITE = eINSTANCE.getPrerequisite_Prerequisite();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.MTTableBuildingImpl <em>MT Table Building</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.MTTableBuildingImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTTableBuilding()
+		 * @generated
+		 */
+		EClass MT_TABLE_BUILDING = eINSTANCE.getMTTableBuilding();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_TABLE_BUILDING__VALUE = eINSTANCE.getMTTableBuilding_Value();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.MTResultPositionImpl <em>MT Result Position</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.MTResultPositionImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTResultPosition()
+		 * @generated
+		 */
+		EClass MT_RESULT_POSITION = eINSTANCE.getMTResultPosition();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_RESULT_POSITION__VALUE = eINSTANCE.getMTResultPosition_Value();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.MTLevelParamImpl <em>MT Level Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.MTLevelParamImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getMTLevelParam()
+		 * @generated
+		 */
+		EClass MT_LEVEL_PARAM = eINSTANCE.getMTLevelParam();
+
+		/**
+		 * The meta object literal for the '<em><b>Max Interval</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_LEVEL_PARAM__MAX_INTERVAL = eINSTANCE.getMTLevelParam_MaxInterval();
+
+		/**
+		 * The meta object literal for the '<em><b>Min Interval</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_LEVEL_PARAM__MIN_INTERVAL = eINSTANCE.getMTLevelParam_MinInterval();
+
+		/**
+		 * The meta object literal for the '<em><b>Build Table Setup</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MT_LEVEL_PARAM__BUILD_TABLE_SETUP = eINSTANCE.getMTLevelParam_BuildTableSetup();
+
+		/**
+		 * The meta object literal for the '<em><b>Result Position Setup</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MT_LEVEL_PARAM__RESULT_POSITION_SETUP = eINSTANCE.getMTLevelParam_ResultPositionSetup();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.Parameter2RoomIncomplianceImpl <em>Parameter2 Room Incompliance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.Parameter2RoomIncomplianceImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getParameter2RoomIncompliance()
+		 * @generated
+		 */
+		EClass PARAMETER2_ROOM_INCOMPLIANCE = eINSTANCE.getParameter2RoomIncompliance();
+
+		/**
+		 * The meta object literal for the '<em><b>Room Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER2_ROOM_INCOMPLIANCE__ROOM_TYPE = eINSTANCE.getParameter2RoomIncompliance_RoomType();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARAMETER2_ROOM_INCOMPLIANCE__PARAMETER = eINSTANCE.getParameter2RoomIncompliance_Parameter();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.GameMode <em>Game Mode</em>}' enum.

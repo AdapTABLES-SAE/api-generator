@@ -109,8 +109,8 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseSettings(Settings object) {
-			return createSettingsAdapter();
+		public Adapter caseParameter(Parameter object) {
+			return createParameterAdapter();
 		}
 
 		@Override
@@ -294,6 +294,26 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseMTTableBuilding(MTTableBuilding object) {
+			return createMTTableBuildingAdapter();
+		}
+
+		@Override
+		public Adapter caseMTResultPosition(MTResultPosition object) {
+			return createMTResultPositionAdapter();
+		}
+
+		@Override
+		public Adapter caseMTLevelParam(MTLevelParam object) {
+			return createMTLevelParamAdapter();
+		}
+
+		@Override
+		public Adapter caseParameter2RoomIncompliance(Parameter2RoomIncompliance object) {
+			return createParameter2RoomIncomplianceAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -425,16 +445,16 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generatorMetamodels.Settings <em>Settings</em>}'.
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.Parameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generatorMetamodels.Settings
+	 * @see generatorMetamodels.Parameter
 	 * @generated
 	 */
-	public Adapter createSettingsAdapter() {
+	public Adapter createParameterAdapter() {
 		return null;
 	}
 
@@ -939,6 +959,62 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPrerequisiteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.MTTableBuilding <em>MT Table Building</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.MTTableBuilding
+	 * @generated
+	 */
+	public Adapter createMTTableBuildingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.MTResultPosition <em>MT Result Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.MTResultPosition
+	 * @generated
+	 */
+	public Adapter createMTResultPositionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.MTLevelParam <em>MT Level Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.MTLevelParam
+	 * @generated
+	 */
+	public Adapter createMTLevelParamAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.Parameter2RoomIncompliance <em>Parameter2 Room Incompliance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.Parameter2RoomIncompliance
+	 * @generated
+	 */
+	public Adapter createParameter2RoomIncomplianceAdapter() {
 		return null;
 	}
 

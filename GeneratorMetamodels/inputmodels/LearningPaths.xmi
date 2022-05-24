@@ -29,6 +29,10 @@
           resultPositionSetup="MIX"
           minInterval="10"
           maxInterval="1"/>
+      <levels
+          xsi:type="generatorMetamodels:MTLevelParam">
+        <buildTableSetup/>
+      </levels>
     </learningobjectives>
     <learningobjectives
         ID="O2"

@@ -283,6 +283,42 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	Prerequisite createPrerequisite();
 
 	/**
+	 * Returns a new object of class '<em>MT Table Building</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MT Table Building</em>'.
+	 * @generated
+	 */
+	MTTableBuilding createMTTableBuilding();
+
+	/**
+	 * Returns a new object of class '<em>MT Result Position</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MT Result Position</em>'.
+	 * @generated
+	 */
+	MTResultPosition createMTResultPosition();
+
+	/**
+	 * Returns a new object of class '<em>MT Level Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MT Level Param</em>'.
+	 * @generated
+	 */
+	MTLevelParam createMTLevelParam();
+
+	/**
+	 * Returns a new object of class '<em>Parameter2 Room Incompliance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Parameter2 Room Incompliance</em>'.
+	 * @generated
+	 */
+	Parameter2RoomIncompliance createParameter2RoomIncompliance();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
