@@ -701,32 +701,32 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int DUNGEON_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generatorMetamodels.impl.ParameterImpl <em>Parameter</em>}' class.
+	 * The meta object id for the '{@link generatorMetamodels.IParameter <em>IParameter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generatorMetamodels.impl.ParameterImpl
-	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getParameter()
+	 * @see generatorMetamodels.IParameter
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getIParameter()
 	 * @generated
 	 */
-	int PARAMETER = 8;
+	int IPARAMETER = 8;
 
 	/**
-	 * The number of structural features of the '<em>Parameter</em>' class.
+	 * The number of structural features of the '<em>IParameter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_FEATURE_COUNT = 0;
+	int IPARAMETER_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Parameter</em>' class.
+	 * The number of operations of the '<em>IParameter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_OPERATION_COUNT = 0;
+	int IPARAMETER_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.impl.InputImpl <em>Input</em>}' class.
@@ -2352,7 +2352,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_TABLE_BUILDING__VALUE = PARAMETER_FEATURE_COUNT + 0;
+	int MT_TABLE_BUILDING__VALUE = IPARAMETER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>MT Table Building</em>' class.
@@ -2361,7 +2361,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_TABLE_BUILDING_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 1;
+	int MT_TABLE_BUILDING_FEATURE_COUNT = IPARAMETER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>MT Table Building</em>' class.
@@ -2370,7 +2370,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_TABLE_BUILDING_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+	int MT_TABLE_BUILDING_OPERATION_COUNT = IPARAMETER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.impl.MTResultPositionImpl <em>MT Result Position</em>}' class.
@@ -2389,7 +2389,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RESULT_POSITION__VALUE = PARAMETER_FEATURE_COUNT + 0;
+	int MT_RESULT_POSITION__VALUE = IPARAMETER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>MT Result Position</em>' class.
@@ -2398,7 +2398,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RESULT_POSITION_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 1;
+	int MT_RESULT_POSITION_FEATURE_COUNT = IPARAMETER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>MT Result Position</em>' class.
@@ -2407,7 +2407,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RESULT_POSITION_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+	int MT_RESULT_POSITION_OPERATION_COUNT = IPARAMETER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.impl.MTLevelParamImpl <em>MT Level Param</em>}' class.
@@ -2538,6 +2538,80 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	int PARAMETER2_ROOM_INCOMPLIANCE_OPERATION_COUNT = SEMANTIC_RELATION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.Relations2ParameterImpl <em>Relations2 Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.Relations2ParameterImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRelations2Parameter()
+	 * @generated
+	 */
+	int RELATIONS2_PARAMETER = 49;
+
+	/**
+	 * The feature id for the '<em><b>Value1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONS2_PARAMETER__VALUE1 = SEMANTIC_RELATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Relations2 Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONS2_PARAMETER_FEATURE_COUNT = SEMANTIC_RELATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Relations2 Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONS2_PARAMETER_OPERATION_COUNT = SEMANTIC_RELATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generatorMetamodels.impl.ParamE2RoomComplianceImpl <em>Param E2 Room Compliance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generatorMetamodels.impl.ParamE2RoomComplianceImpl
+	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getParamE2RoomCompliance()
+	 * @generated
+	 */
+	int PARAM_E2_ROOM_COMPLIANCE = 50;
+
+	/**
+	 * The feature id for the '<em><b>Value1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAM_E2_ROOM_COMPLIANCE__VALUE1 = RELATIONS2_PARAMETER__VALUE1;
+
+	/**
+	 * The number of structural features of the '<em>Param E2 Room Compliance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAM_E2_ROOM_COMPLIANCE_FEATURE_COUNT = RELATIONS2_PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Param E2 Room Compliance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAM_E2_ROOM_COMPLIANCE_OPERATION_COUNT = RELATIONS2_PARAMETER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link generatorMetamodels.GameMode <em>Game Mode</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2545,7 +2619,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameMode()
 	 * @generated
 	 */
-	int GAME_MODE = 49;
+	int GAME_MODE = 51;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.RoomType <em>Room Type</em>}' enum.
@@ -2555,7 +2629,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRoomType()
 	 * @generated
 	 */
-	int ROOM_TYPE = 50;
+	int ROOM_TYPE = 52;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.GameElementType <em>Game Element Type</em>}' enum.
@@ -2565,7 +2639,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getGameElementType()
 	 * @generated
 	 */
-	int GAME_ELEMENT_TYPE = 51;
+	int GAME_ELEMENT_TYPE = 53;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.TableBuild <em>Table Build</em>}' enum.
@@ -2575,7 +2649,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 52;
+	int TABLE_BUILD = 54;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.ResultPosition <em>Result Position</em>}' enum.
@@ -2585,7 +2659,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 53;
+	int RESULT_POSITION = 55;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.TargetElement <em>Target Element</em>}' enum.
@@ -2595,7 +2669,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getTargetElement()
 	 * @generated
 	 */
-	int TARGET_ELEMENT = 54;
+	int TARGET_ELEMENT = 56;
 
 	/**
 	 * The meta object id for the '{@link generatorMetamodels.SubObjectiveType <em>Sub Objective Type</em>}' enum.
@@ -2605,7 +2679,7 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getSubObjectiveType()
 	 * @generated
 	 */
-	int SUB_OBJECTIVE_TYPE = 55;
+	int SUB_OBJECTIVE_TYPE = 57;
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.MultipleChoice <em>Multiple Choice</em>}'.
@@ -2842,14 +2916,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EReference getDungeon_Gamingobjective();
 
 	/**
-	 * Returns the meta object for class '{@link generatorMetamodels.Parameter <em>Parameter</em>}'.
+	 * Returns the meta object for class '{@link generatorMetamodels.IParameter <em>IParameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Parameter</em>'.
-	 * @see generatorMetamodels.Parameter
+	 * @return the meta object for class '<em>IParameter</em>'.
+	 * @see generatorMetamodels.IParameter
 	 * @generated
 	 */
-	EClass getParameter();
+	EClass getIParameter();
 
 	/**
 	 * Returns the meta object for class '{@link generatorMetamodels.Input <em>Input</em>}'.
@@ -3968,6 +4042,37 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 	EReference getParameter2RoomIncompliance_Parameter();
 
 	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.Relations2Parameter <em>Relations2 Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Relations2 Parameter</em>'.
+	 * @see generatorMetamodels.Relations2Parameter
+	 * @generated
+	 */
+	EClass getRelations2Parameter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generatorMetamodels.Relations2Parameter#getValue1 <em>Value1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value1</em>'.
+	 * @see generatorMetamodels.Relations2Parameter#getValue1()
+	 * @see #getRelations2Parameter()
+	 * @generated
+	 */
+	EAttribute getRelations2Parameter_Value1();
+
+	/**
+	 * Returns the meta object for class '{@link generatorMetamodels.ParamE2RoomCompliance <em>Param E2 Room Compliance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Param E2 Room Compliance</em>'.
+	 * @see generatorMetamodels.ParamE2RoomCompliance
+	 * @generated
+	 */
+	EClass getParamE2RoomCompliance();
+
+	/**
 	 * Returns the meta object for enum '{@link generatorMetamodels.GameMode <em>Game Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4254,14 +4359,14 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		EReference DUNGEON__GAMINGOBJECTIVE = eINSTANCE.getDungeon_Gamingobjective();
 
 		/**
-		 * The meta object literal for the '{@link generatorMetamodels.impl.ParameterImpl <em>Parameter</em>}' class.
+		 * The meta object literal for the '{@link generatorMetamodels.IParameter <em>IParameter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generatorMetamodels.impl.ParameterImpl
-		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getParameter()
+		 * @see generatorMetamodels.IParameter
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getIParameter()
 		 * @generated
 		 */
-		EClass PARAMETER = eINSTANCE.getParameter();
+		EClass IPARAMETER = eINSTANCE.getIParameter();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.impl.InputImpl <em>Input</em>}' class.
@@ -5184,6 +5289,34 @@ public interface GeneratorMetamodelsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PARAMETER2_ROOM_INCOMPLIANCE__PARAMETER = eINSTANCE.getParameter2RoomIncompliance_Parameter();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.Relations2ParameterImpl <em>Relations2 Parameter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.Relations2ParameterImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getRelations2Parameter()
+		 * @generated
+		 */
+		EClass RELATIONS2_PARAMETER = eINSTANCE.getRelations2Parameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Value1</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RELATIONS2_PARAMETER__VALUE1 = eINSTANCE.getRelations2Parameter_Value1();
+
+		/**
+		 * The meta object literal for the '{@link generatorMetamodels.impl.ParamE2RoomComplianceImpl <em>Param E2 Room Compliance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generatorMetamodels.impl.ParamE2RoomComplianceImpl
+		 * @see generatorMetamodels.impl.GeneratorMetamodelsPackageImpl#getParamE2RoomCompliance()
+		 * @generated
+		 */
+		EClass PARAM_E2_ROOM_COMPLIANCE = eINSTANCE.getParamE2RoomCompliance();
 
 		/**
 		 * The meta object literal for the '{@link generatorMetamodels.GameMode <em>Game Mode</em>}' enum.

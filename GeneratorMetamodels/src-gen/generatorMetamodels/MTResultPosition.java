@@ -18,7 +18,7 @@ package generatorMetamodels;
  * @model
  * @generated
  */
-public interface MTResultPosition extends Parameter {
+public interface MTResultPosition extends IParameter {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * The default value is <code>"RIGHT"</code>.

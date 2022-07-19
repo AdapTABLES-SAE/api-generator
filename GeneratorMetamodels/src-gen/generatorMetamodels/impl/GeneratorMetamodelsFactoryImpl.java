@@ -127,6 +127,8 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 			return createMTLevelParam();
 		case GeneratorMetamodelsPackage.PARAMETER2_ROOM_INCOMPLIANCE:
 			return createParameter2RoomIncompliance();
+		case GeneratorMetamodelsPackage.PARAM_E2_ROOM_COMPLIANCE:
+			return createParamE2RoomCompliance();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -524,6 +526,16 @@ public class GeneratorMetamodelsFactoryImpl extends EFactoryImpl implements Gene
 	public Parameter2RoomIncompliance createParameter2RoomIncompliance() {
 		Parameter2RoomIncomplianceImpl parameter2RoomIncompliance = new Parameter2RoomIncomplianceImpl();
 		return parameter2RoomIncompliance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ParamE2RoomCompliance createParamE2RoomCompliance() {
+		ParamE2RoomComplianceImpl paramE2RoomCompliance = new ParamE2RoomComplianceImpl();
+		return paramE2RoomCompliance;
 	}
 
 	/**

@@ -109,8 +109,8 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseParameter(Parameter object) {
-			return createParameterAdapter();
+		public Adapter caseIParameter(IParameter object) {
+			return createIParameterAdapter();
 		}
 
 		@Override
@@ -314,6 +314,16 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public <P> Adapter caseRelations2Parameter(Relations2Parameter<P> object) {
+			return createRelations2ParameterAdapter();
+		}
+
+		@Override
+		public Adapter caseParamE2RoomCompliance(ParamE2RoomCompliance object) {
+			return createParamE2RoomComplianceAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -445,16 +455,16 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generatorMetamodels.Parameter <em>Parameter</em>}'.
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.IParameter <em>IParameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generatorMetamodels.Parameter
+	 * @see generatorMetamodels.IParameter
 	 * @generated
 	 */
-	public Adapter createParameterAdapter() {
+	public Adapter createIParameterAdapter() {
 		return null;
 	}
 
@@ -1015,6 +1025,34 @@ public class GeneratorMetamodelsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createParameter2RoomIncomplianceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.Relations2Parameter <em>Relations2 Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.Relations2Parameter
+	 * @generated
+	 */
+	public Adapter createRelations2ParameterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generatorMetamodels.ParamE2RoomCompliance <em>Param E2 Room Compliance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generatorMetamodels.ParamE2RoomCompliance
+	 * @generated
+	 */
+	public Adapter createParamE2RoomComplianceAdapter() {
 		return null;
 	}
 

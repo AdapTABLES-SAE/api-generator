@@ -18,7 +18,7 @@ package generatorMetamodels;
  * @model
  * @generated
  */
-public interface MTTableBuilding extends Parameter {
+public interface MTTableBuilding extends IParameter {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * The literals are from the enumeration {@link generatorMetamodels.TableBuild}.

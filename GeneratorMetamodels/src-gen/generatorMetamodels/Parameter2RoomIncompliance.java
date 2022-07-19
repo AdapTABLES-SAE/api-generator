@@ -51,12 +51,12 @@ public interface Parameter2RoomIncompliance extends SemanticRelation {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameter</em>' containment reference.
-	 * @see #setParameter(Parameter)
+	 * @see #setParameter(IParameter)
 	 * @see generatorMetamodels.GeneratorMetamodelsPackage#getParameter2RoomIncompliance_Parameter()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Parameter getParameter();
+	IParameter getParameter();
 
 	/**
 	 * Sets the value of the '{@link generatorMetamodels.Parameter2RoomIncompliance#getParameter <em>Parameter</em>}' containment reference.
@@ -66,6 +66,6 @@ public interface Parameter2RoomIncompliance extends SemanticRelation {
 	 * @see #getParameter()
 	 * @generated
 	 */
-	void setParameter(Parameter value);
+	void setParameter(IParameter value);
 
 } // Parameter2RoomIncompliance

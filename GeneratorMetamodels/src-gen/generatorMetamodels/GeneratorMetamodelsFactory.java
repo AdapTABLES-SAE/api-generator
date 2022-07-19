@@ -319,6 +319,15 @@ public interface GeneratorMetamodelsFactory extends EFactory {
 	Parameter2RoomIncompliance createParameter2RoomIncompliance();
 
 	/**
+	 * Returns a new object of class '<em>Param E2 Room Compliance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Param E2 Room Compliance</em>'.
+	 * @generated
+	 */
+	ParamE2RoomCompliance createParamE2RoomCompliance();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

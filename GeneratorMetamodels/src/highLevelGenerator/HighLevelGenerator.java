@@ -26,10 +26,10 @@ import generatorMetamodels.RoomType;
 
 public class HighLevelGenerator {
 
-	private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-	private final static String INPUT_MODELS_PATH = "inputmodels/";
-	private final static String OUTPUT_MODELS_PATH = "outputmodels/";
-	private final static String[] INPUT_MODELS_PATHS = {"MathsKnowledge.xmi", "MathsLearningPath.xmi", "LearnerPlayerModel.xmi", "GameDomain.xmi"};
+	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+	private static final String INPUT_MODELS_PATH = "inputmodels/";
+	private static final String OUTPUT_MODELS_PATH = "outputmodels/";
+	private static final String[] INPUT_MODELS_PATHS = {"MathsKnowledge.xmi", "MathsLearningPath.xmi", "LearnerPlayerModel.xmi", "GameDomain.xmi"};
 	
 	private Knowledge knowledge; 
 	private LearningPath learningPath; 
@@ -71,7 +71,7 @@ public class HighLevelGenerator {
 		} else {
 			highLevelActivity.setLevel(current.getLevel());
 		}
-		System.out.println(highLevelActivity.getLevel().getID());
+		LOGGER.info(highLevelActivity.getLevel().getID().toString());
 	}
 	
 	private void selectGamingObjective() {

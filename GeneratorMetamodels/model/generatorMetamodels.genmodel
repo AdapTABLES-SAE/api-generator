@@ -80,7 +80,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//Dungeon/numberOfRooms"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//Dungeon/gamingobjective"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="generatorMetamodels.ecore#//Parameter"/>
+    <genClasses image="false" ecoreClass="generatorMetamodels.ecore#//IParameter"/>
     <genClasses ecoreClass="generatorMetamodels.ecore#//Input"/>
     <genClasses image="false" ecoreClass="generatorMetamodels.ecore#//QuestionRoom"/>
     <genClasses ecoreClass="generatorMetamodels.ecore#//LearningPath">
@@ -218,7 +218,12 @@
     </genClasses>
     <genClasses ecoreClass="generatorMetamodels.ecore#//Parameter2RoomIncompliance">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//Parameter2RoomIncompliance/roomType"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//Parameter2RoomIncompliance/parameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generatorMetamodels.ecore#//Parameter2RoomIncompliance/parameter"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="generatorMetamodels.ecore#//Relations2Parameter">
+      <genTypeParameters ecoreTypeParameter="generatorMetamodels.ecore#//Relations2Parameter/P"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generatorMetamodels.ecore#//Relations2Parameter/value1"/>
+    </genClasses>
+    <genClasses ecoreClass="generatorMetamodels.ecore#//ParamE2RoomCompliance"/>
   </genPackages>
 </genmodel:GenModel>

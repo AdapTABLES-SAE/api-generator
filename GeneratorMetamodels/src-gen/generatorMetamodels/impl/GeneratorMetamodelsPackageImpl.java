@@ -24,6 +24,7 @@ import generatorMetamodels.GamingObjective;
 import generatorMetamodels.GeneratorMetamodelsFactory;
 import generatorMetamodels.GeneratorMetamodelsPackage;
 import generatorMetamodels.HighLevelActivity;
+import generatorMetamodels.IParameter;
 import generatorMetamodels.Input;
 import generatorMetamodels.Knowledge;
 import generatorMetamodels.LearnerPlayer;
@@ -38,7 +39,7 @@ import generatorMetamodels.MTQFOneCompletion;
 import generatorMetamodels.MTResultPosition;
 import generatorMetamodels.MTTableBuilding;
 import generatorMetamodels.MultipleChoice;
-import generatorMetamodels.Parameter;
+import generatorMetamodels.ParamE2RoomCompliance;
 import generatorMetamodels.Parameter2RoomIncompliance;
 import generatorMetamodels.Prerequisite;
 import generatorMetamodels.ProblemResolution;
@@ -47,6 +48,7 @@ import generatorMetamodels.QFReconstruction;
 import generatorMetamodels.QFTwoCompletion;
 import generatorMetamodels.QFValidityDetermination;
 import generatorMetamodels.QuestionRoom;
+import generatorMetamodels.Relations2Parameter;
 import generatorMetamodels.ResponseModality;
 import generatorMetamodels.ResultPosition;
 import generatorMetamodels.ResultValidityDetermination;
@@ -65,9 +67,11 @@ import java.util.Map;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.ETypeParameter;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
@@ -139,7 +143,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass parameterEClass = null;
+	private EClass iParameterEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -420,6 +424,20 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * @generated
 	 */
 	private EClass parameter2RoomIncomplianceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass relations2ParameterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass paramE2RoomComplianceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -738,8 +756,8 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getParameter() {
-		return parameterEClass;
+	public EClass getIParameter() {
+		return iParameterEClass;
 	}
 
 	/**
@@ -1692,6 +1710,33 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRelations2Parameter() {
+		return relations2ParameterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRelations2Parameter_Value1() {
+		return (EAttribute) relations2ParameterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getParamE2RoomCompliance() {
+		return paramE2RoomComplianceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getGameMode() {
 		return gameModeEEnum;
 	}
@@ -1809,7 +1854,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		createEAttribute(dungeonEClass, DUNGEON__NUMBER_OF_ROOMS);
 		createEReference(dungeonEClass, DUNGEON__GAMINGOBJECTIVE);
 
-		parameterEClass = createEClass(PARAMETER);
+		iParameterEClass = createEClass(IPARAMETER);
 
 		inputEClass = createEClass(INPUT);
 
@@ -1956,6 +2001,11 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		createEAttribute(parameter2RoomIncomplianceEClass, PARAMETER2_ROOM_INCOMPLIANCE__ROOM_TYPE);
 		createEReference(parameter2RoomIncomplianceEClass, PARAMETER2_ROOM_INCOMPLIANCE__PARAMETER);
 
+		relations2ParameterEClass = createEClass(RELATIONS2_PARAMETER);
+		createEAttribute(relations2ParameterEClass, RELATIONS2_PARAMETER__VALUE1);
+
+		paramE2RoomComplianceEClass = createEClass(PARAM_E2_ROOM_COMPLIANCE);
+
 		// Create enums
 		gameModeEEnum = createEEnum(GAME_MODE);
 		roomTypeEEnum = createEEnum(ROOM_TYPE);
@@ -1991,6 +2041,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		setNsURI(eNS_URI);
 
 		// Create type parameters
+		ETypeParameter relations2ParameterEClass_P = addETypeParameter(relations2ParameterEClass, "P");
 
 		// Set bounds for type parameters
 
@@ -2015,10 +2066,15 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		mtqfOneCompletionEClass.getESuperTypes().add(this.getQFOneCompletion());
 		mtLevelEClass.getESuperTypes().add(this.getLevel());
 		room2SubObjectiveComplianceEClass.getESuperTypes().add(this.getSemanticRelation());
-		mtTableBuildingEClass.getESuperTypes().add(this.getParameter());
-		mtResultPositionEClass.getESuperTypes().add(this.getParameter());
+		mtTableBuildingEClass.getESuperTypes().add(this.getIParameter());
+		mtResultPositionEClass.getESuperTypes().add(this.getIParameter());
 		mtLevelParamEClass.getESuperTypes().add(this.getLevel());
 		parameter2RoomIncomplianceEClass.getESuperTypes().add(this.getSemanticRelation());
+		relations2ParameterEClass.getESuperTypes().add(this.getSemanticRelation());
+		EGenericType g1 = createEGenericType(this.getRelations2Parameter());
+		EGenericType g2 = createEGenericType(ecorePackage.getEEnumLiteral());
+		g1.getETypeArguments().add(g2);
+		paramE2RoomComplianceEClass.getEGenericSuperTypes().add(g1);
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(multipleChoiceEClass, MultipleChoice.class, "MultipleChoice", !IS_ABSTRACT, !IS_INTERFACE,
@@ -2082,7 +2138,7 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 				Dungeon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(parameterEClass, Parameter.class, "Parameter", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(iParameterEClass, IParameter.class, "IParameter", IS_ABSTRACT, IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2377,9 +2433,18 @@ public class GeneratorMetamodelsPackageImpl extends EPackageImpl implements Gene
 		initEAttribute(getParameter2RoomIncompliance_RoomType(), this.getRoomType(), "roomType", "DOOR", 0, 1,
 				Parameter2RoomIncompliance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getParameter2RoomIncompliance_Parameter(), this.getParameter(), null, "parameter", null, 1, 1,
+		initEReference(getParameter2RoomIncompliance_Parameter(), this.getIParameter(), null, "parameter", null, 1, 1,
 				Parameter2RoomIncompliance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(relations2ParameterEClass, Relations2Parameter.class, "Relations2Parameter", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		g1 = createEGenericType(relations2ParameterEClass_P);
+		initEAttribute(getRelations2Parameter_Value1(), g1, "value1", null, 0, 1, Relations2Parameter.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(paramE2RoomComplianceEClass, ParamE2RoomCompliance.class, "ParamE2RoomCompliance", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(gameModeEEnum, GameMode.class, "GameMode");

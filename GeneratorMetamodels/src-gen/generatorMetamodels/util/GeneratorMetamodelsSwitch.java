@@ -136,9 +136,9 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorMetamodelsPackage.PARAMETER: {
-			Parameter parameter = (Parameter) theEObject;
-			T result = caseParameter(parameter);
+		case GeneratorMetamodelsPackage.IPARAMETER: {
+			IParameter iParameter = (IParameter) theEObject;
+			T result = caseIParameter(iParameter);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -434,7 +434,7 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 			MTTableBuilding mtTableBuilding = (MTTableBuilding) theEObject;
 			T result = caseMTTableBuilding(mtTableBuilding);
 			if (result == null)
-				result = caseParameter(mtTableBuilding);
+				result = caseIParameter(mtTableBuilding);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -443,7 +443,7 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 			MTResultPosition mtResultPosition = (MTResultPosition) theEObject;
 			T result = caseMTResultPosition(mtResultPosition);
 			if (result == null)
-				result = caseParameter(mtResultPosition);
+				result = caseIParameter(mtResultPosition);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -462,6 +462,26 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 			T result = caseParameter2RoomIncompliance(parameter2RoomIncompliance);
 			if (result == null)
 				result = caseSemanticRelation(parameter2RoomIncompliance);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.RELATIONS2_PARAMETER: {
+			Relations2Parameter<?> relations2Parameter = (Relations2Parameter<?>) theEObject;
+			T result = caseRelations2Parameter(relations2Parameter);
+			if (result == null)
+				result = caseSemanticRelation(relations2Parameter);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorMetamodelsPackage.PARAM_E2_ROOM_COMPLIANCE: {
+			ParamE2RoomCompliance paramE2RoomCompliance = (ParamE2RoomCompliance) theEObject;
+			T result = caseParamE2RoomCompliance(paramE2RoomCompliance);
+			if (result == null)
+				result = caseRelations2Parameter(paramE2RoomCompliance);
+			if (result == null)
+				result = caseSemanticRelation(paramE2RoomCompliance);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -592,17 +612,17 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>IParameter</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>IParameter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameter(Parameter object) {
+	public T caseIParameter(IParameter object) {
 		return null;
 	}
 
@@ -1203,6 +1223,36 @@ public class GeneratorMetamodelsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseParameter2RoomIncompliance(Parameter2RoomIncompliance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Relations2 Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Relations2 Parameter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public <P> T caseRelations2Parameter(Relations2Parameter<P> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Param E2 Room Compliance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Param E2 Room Compliance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseParamE2RoomCompliance(ParamE2RoomCompliance object) {
 		return null;
 	}
 

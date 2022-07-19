@@ -42,7 +42,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="gamingobjective" lowerBound="1"
         eType="#//GamingObjective"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Parameter" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IParameter" abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//ResponseModality"/>
   <eClassifiers xsi:type="ecore:EClass" name="QuestionRoom" abstract="true" eSuperTypes="#//Room"/>
   <eClassifiers xsi:type="ecore:EClass" name="LearningPath">
@@ -246,10 +246,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" lowerBound="1"
         eType="#//Level"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MTTableBuilding" eSuperTypes="#//Parameter">
+  <eClassifiers xsi:type="ecore:EClass" name="MTTableBuilding" eSuperTypes="#//IParameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//TableBuild"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MTResultPosition" eSuperTypes="#//Parameter">
+  <eClassifiers xsi:type="ecore:EClass" name="MTResultPosition" eSuperTypes="#//IParameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//ResultPosition"
         defaultValueLiteral="RIGHT"/>
   </eClassifiers>
@@ -267,6 +267,18 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomType" eType="#//RoomType"
         defaultValueLiteral="DOOR"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
-        eType="#//Parameter" containment="true"/>
+        eType="#//IParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relations2Parameter" abstract="true"
+      eSuperTypes="#//SemanticRelation">
+    <eTypeParameters name="P"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value1">
+      <eGenericType eTypeParameter="#//Relations2Parameter/P"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParamE2RoomCompliance">
+    <eGenericSuperTypes eClassifier="#//Relations2Parameter">
+      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EEnumLiteral"/>
+    </eGenericSuperTypes>
   </eClassifiers>
 </ecore:EPackage>

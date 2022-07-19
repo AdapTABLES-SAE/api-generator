@@ -3,13 +3,13 @@
 package generatorMetamodels.impl;
 
 import generatorMetamodels.GeneratorMetamodelsPackage;
-import generatorMetamodels.Parameter;
+import generatorMetamodels.IParameter;
 import generatorMetamodels.Parameter2RoomIncompliance;
 import generatorMetamodels.RoomType;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -58,7 +58,7 @@ public class Parameter2RoomIncomplianceImpl extends SemanticRelationImpl impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected Parameter parameter;
+	protected IParameter parameter;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -106,7 +106,7 @@ public class Parameter2RoomIncomplianceImpl extends SemanticRelationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parameter getParameter() {
+	public IParameter getParameter() {
 		return parameter;
 	}
 
@@ -115,8 +115,8 @@ public class Parameter2RoomIncomplianceImpl extends SemanticRelationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetParameter(Parameter newParameter, NotificationChain msgs) {
-		Parameter oldParameter = parameter;
+	public NotificationChain basicSetParameter(IParameter newParameter, NotificationChain msgs) {
+		IParameter oldParameter = parameter;
 		parameter = newParameter;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -134,7 +134,7 @@ public class Parameter2RoomIncomplianceImpl extends SemanticRelationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParameter(Parameter newParameter) {
+	public void setParameter(IParameter newParameter) {
 		if (newParameter != parameter) {
 			NotificationChain msgs = null;
 			if (parameter != null)
@@ -195,7 +195,7 @@ public class Parameter2RoomIncomplianceImpl extends SemanticRelationImpl impleme
 			setRoomType((RoomType) newValue);
 			return;
 		case GeneratorMetamodelsPackage.PARAMETER2_ROOM_INCOMPLIANCE__PARAMETER:
-			setParameter((Parameter) newValue);
+			setParameter((IParameter) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -213,7 +213,7 @@ public class Parameter2RoomIncomplianceImpl extends SemanticRelationImpl impleme
 			setRoomType(ROOM_TYPE_EDEFAULT);
 			return;
 		case GeneratorMetamodelsPackage.PARAMETER2_ROOM_INCOMPLIANCE__PARAMETER:
-			setParameter((Parameter) null);
+			setParameter((IParameter) null);
 			return;
 		}
 		super.eUnset(featureID);
