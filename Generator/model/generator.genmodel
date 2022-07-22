@@ -33,6 +33,10 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//AvatarActions/PICKUP_CARRY"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//AvatarActions/NONE"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//DungeonMode">
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//DungeonMode/LINEAR"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//DungeonMode/LABYRINTHINE"/>
+    </genEnums>
     <genClasses ecoreClass="generator.ecore#//Prerequisite">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Prerequisite/successPercentage"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Prerequisite/prerequisite"/>
@@ -93,6 +97,7 @@
     <genClasses ecoreClass="generator.ecore#//GameContent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameContent/gameplays"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameContent/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameContent/gameobjectives"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Gameplay">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplay/coregamerules"/>
@@ -106,5 +111,23 @@
     <genClasses ecoreClass="generator.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Element/acceptedActions"/>
     </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Dungeon">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Dungeon/mode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Dungeon/numberOfRooms"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Dungeon/gameobjective"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Dungeon/rooms"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//GameObjective">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GameObjective/description"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Room">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Room/south"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Room/north"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Room/east"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Room/west"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//ClassicRoom"/>
+    <genClasses ecoreClass="generator.ecore#//QuestionRoom"/>
+    <genClasses ecoreClass="generator.ecore#//Pathway"/>
   </genPackages>
 </genmodel:GenModel>

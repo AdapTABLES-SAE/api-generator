@@ -92,6 +92,8 @@
         upperBound="-1" eType="#//Gameplay" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//Element" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gameobjectives" lowerBound="1"
+        upperBound="-1" eType="#//GameObjective" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GPBricks">
     <eLiterals name="SELECT"/>
@@ -125,4 +127,32 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="acceptedActions" lowerBound="1"
         upperBound="-1" eType="#//AvatarActions"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dungeon">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" eType="#//DungeonMode"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfRooms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gameobjective" lowerBound="1"
+        eType="#//GameObjective"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" lowerBound="2" upperBound="-1"
+        eType="#//Room" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DungeonMode">
+    <eLiterals name="LINEAR"/>
+    <eLiterals name="LABYRINTHINE" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GameObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Room" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="south" lowerBound="1" eType="#//Pathway"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="north" lowerBound="1" eType="#//Pathway"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="east" lowerBound="1" eType="#//Pathway"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="west" lowerBound="1" eType="#//Pathway"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassicRoom" eSuperTypes="#//Room"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionRoom" eSuperTypes="#//Room"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Pathway"/>
 </ecore:EPackage>
