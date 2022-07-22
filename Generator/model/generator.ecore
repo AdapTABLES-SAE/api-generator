@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="generator" nsURI="http://www.example.org/generator" nsPrefix="generator">
+  <eClassifiers xsi:type="ecore:EClass" name="Prerequisite">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="successPercentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" lowerBound="1"
+        eType="#//Level"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Level" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subobjectives" upperBound="-1"
+        eType="#//SubObjective" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QFValidityDetermination" abstract="true"
+      eSuperTypes="#//SubObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//SubObjectiveType"
+        changeable="false" defaultValueLiteral="QF_VALIDITY" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LearningPaths">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learningpaths" lowerBound="1"
+        upperBound="-1" eType="#//LearningPath" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResultValidityDetermination" abstract="true"
+      eSuperTypes="#//SubObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newAttribute" eType="#//SubObjectiveType"
+        changeable="false" defaultValueLiteral="RES_VALIDITY" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QFOneCompletion" abstract="true" eSuperTypes="#//SubObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//SubObjectiveType"
+        changeable="false" defaultValueLiteral="COMPLETION1" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QFReconstruction" abstract="true" eSuperTypes="#//SubObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//SubObjectiveType"
+        changeable="false" defaultValueLiteral="RECONSTRUCTION" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubObjective" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfApparition"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfValidFacts"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QFTwoCompletion" abstract="true" eSuperTypes="#//SubObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//SubObjectiveType"
+        changeable="false" defaultValueLiteral="COMPLETION2" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProblemResolution" abstract="true" eSuperTypes="#//SubObjective">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//SubObjectiveType"
+        changeable="false" defaultValueLiteral="PB_RESOLUTION" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SubObjectiveType">
+    <eLiterals name="COMPLETION1"/>
+    <eLiterals name="COMPLETION2" value="1"/>
+    <eLiterals name="RECONSTRUCTION" value="2"/>
+    <eLiterals name="QF_VALIDITY" value="3"/>
+    <eLiterals name="RES_VALIDITY" value="4"/>
+    <eLiterals name="PB_RESOLUTION" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractFact" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SetOfFacts" eSuperTypes="#//AbstractFact">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="facts" lowerBound="1" upperBound="-1"
+        eType="#//AbstractFact" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fact" eSuperTypes="#//AbstractFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Knowledge">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="knowledgefacts" upperBound="-1"
+        eType="#//AbstractFact" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LearningPath">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="knowledge" lowerBound="1"
+        eType="#//Knowledge"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjectives" upperBound="-1"
+        eType="#//LearningObjective" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LearningObjective">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="levels" upperBound="-1"
+        eType="#//Level" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisites" upperBound="-1"
+        eType="#//Prerequisite" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GameContent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gameplays" lowerBound="1"
+        upperBound="-1" eType="#//Gameplay" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//Element" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GPBricks">
+    <eLiterals name="SELECT"/>
+    <eLiterals name="MOVE" value="1"/>
+    <eLiterals name="AVOID" value="2"/>
+    <eLiterals name="DESTROY" value="3"/>
+    <eLiterals name="MANAGE" value="4"/>
+    <eLiterals name="WRITE" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AvatarActions">
+    <eLiterals name="TOUCH"/>
+    <eLiterals name="GO_THROUGH" value="1"/>
+    <eLiterals name="STRIKE" value="2"/>
+    <eLiterals name="WALK_RUN" value="3"/>
+    <eLiterals name="PICKUP_CARRY" value="4"/>
+    <eLiterals name="NONE" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Gameplay">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="coregamerules" lowerBound="1"
+        upperBound="-1" eType="#//CoreGameRule" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CoreGameRule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruleType" eType="#//GPBricks"
+        defaultValueLiteral="MOVE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionToDo" eType="#//AvatarActions"
+        defaultValueLiteral="WALK_RUN"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//Element"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="acceptedActions" lowerBound="1"
+        upperBound="-1" eType="#//AvatarActions"/>
+  </eClassifiers>
+</ecore:EPackage>
