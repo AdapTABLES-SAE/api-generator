@@ -91,9 +91,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="gameplays" lowerBound="1"
         upperBound="-1" eType="#//Gameplay" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
-        eType="#//Element" containment="true"/>
+        eType="#//ElementType" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="gameobjectives" lowerBound="1"
         upperBound="-1" eType="#//GameObjective" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roomtype" upperBound="-1"
+        eType="#//RoomType2" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GPBricks">
     <eLiterals name="SELECT"/>
@@ -121,28 +123,28 @@
         defaultValueLiteral="MOVE"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionToDo" eType="#//AvatarActions"
         defaultValueLiteral="WALK_RUN"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//Element"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//ElementType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Element">
+  <eClassifiers xsi:type="ecore:EClass" name="ElementType" eSuperTypes="#//IRoomElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="acceptedActions" lowerBound="1"
         upperBound="-1" eType="#//AvatarActions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shape" lowerBound="1" eType="#//ElementShape"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="state" lowerBound="1" upperBound="-1"
+        eType="#//ElementState" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Dungeon">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" eType="#//DungeonMode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DungeonOLD">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfRooms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="gameobjective" lowerBound="1"
         eType="#//GameObjective"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" lowerBound="2" upperBound="-1"
-        eType="#//Room" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="DungeonMode">
-    <eLiterals name="LINEAR"/>
-    <eLiterals name="LABYRINTHINE" value="1"/>
+        eType="#//RoomOLD" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GameObjective">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Room" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="RoomOLD" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="south" lowerBound="1" eType="#//Pathway"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="north" lowerBound="1" eType="#//Pathway"
@@ -151,8 +153,109 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="west" lowerBound="1" eType="#//Pathway"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roomtype" lowerBound="1"
+        eType="#//RoomType2"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="initialState" lowerBound="1"
+        eType="#//State" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClassicRoom" eSuperTypes="#//Room"/>
-  <eClassifiers xsi:type="ecore:EClass" name="QuestionRoom" eSuperTypes="#//Room"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassicRoom" eSuperTypes="#//RoomOLD"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionRoom" eSuperTypes="#//RoomOLD">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sucessState" lowerBound="1"
+        eType="#//State" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Pathway"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoomType2">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="acceptedfloors" lowerBound="1"
+        upperBound="-1" eType="#//Floor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paths" upperBound="4" eType="#//RoomPaths"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Floor" eSuperTypes="#//ElementType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
+        eType="#//Location" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Location">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="acceptedElements" lowerBound="1"
+        upperBound="-1" eType="#//IRoomElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="maxshape" lowerBound="1"
+        eType="#//ElementShape" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="State">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="placedobjects" upperBound="-1"
+        eType="#//PlacedObject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlacedObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="displayValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RoomPaths">
+    <eLiterals name="NORTH"/>
+    <eLiterals name="SOUTH" value="1"/>
+    <eLiterals name="EAST" value="2"/>
+    <eLiterals name="WEST" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IRoomElement" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementShape">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementState">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dungeon">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" lowerBound="1" upperBound="-1"
+        eType="#//Room" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" eType="#//DungeonMode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entry" lowerBound="1" eType="#//Room"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Room">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roomaccess" upperBound="-1"
+        eType="#//RoomAccess" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roomtype" lowerBound="1"
+        eType="#//RoomType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GameDescription">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roomtypes" lowerBound="1"
+        upperBound="-1" eType="#//RoomType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoomType" abstract="true">
+    <eOperations name="getDirections" upperBound="-1" eType="#//Directions"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SmallRoomType" eSuperTypes="#//RoomType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="directions" lowerBound="1"
+        upperBound="4" eType="#//Directions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LargeRoomType" eSuperTypes="#//RoomType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="directions" lowerBound="1"
+        upperBound="8" eType="#//Directions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Directions">
+    <eLiterals name="SOUTH"/>
+    <eLiterals name="EAST" value="1"/>
+    <eLiterals name="NORTH" value="2"/>
+    <eLiterals name="WEST" value="3"/>
+    <eLiterals name="SOUTH_EAST" value="4"/>
+    <eLiterals name="SOUTH_WEST" value="5"/>
+    <eLiterals name="NORTH_EAST" value="6"/>
+    <eLiterals name="NORTH_WEST" value="7"/>
+    <eLiterals name="EAST_SOUTH" value="8"/>
+    <eLiterals name="EAST_NORTH" value="9"/>
+    <eLiterals name="WEST_NORTH" value="10"/>
+    <eLiterals name="WEST_SOUTH" value="11"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoomAccess">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//Directions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="otherroomaccess" eType="#//RoomAccess"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RogueliteContext">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfRooms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" eType="#//DungeonMode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DungeonMode">
+    <eLiterals name="LINEAR"/>
+    <eLiterals name="LABYRINTHINE" value="1"/>
+  </eClassifiers>
 </ecore:EPackage>
