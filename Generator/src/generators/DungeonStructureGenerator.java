@@ -205,7 +205,7 @@ public class DungeonStructureGenerator {
  	 * @return A set of authorized exit directions for LargeRoomType with SOUTH_EAST or EAST_SOUTH as entry
  	 */
  	private Set<Directions> allowedDirectionForSouthEast(EnumMap<GridPositions, Boolean> gridPosOccupations, Directions possibleEntry){
- 		Set<Directions> directions = new HashSet<>();;
+ 		Set<Directions> directions = new HashSet<>();
  		if(!gridPosOccupations.get(GridPositions.YPLUS1) && !gridPosOccupations.get(GridPositions.XMOINS1) && !gridPosOccupations.get(GridPositions.XMOINS1_YPLUS1)) {
  			directions.addAll(complexDirections);
 			if(gridPosOccupations.get(GridPositions.YMOINS1)) directions.remove(Directions.SOUTH_EAST);
@@ -279,14 +279,14 @@ public class DungeonStructureGenerator {
  		Set<Directions> directions = new HashSet<>();
  		if(!gridPosOccupations.get(GridPositions.XMOINS1) && !gridPosOccupations.get(GridPositions.XY_MOINS1) && !gridPosOccupations.get(GridPositions.YMOINS1)) {
  			directions.addAll(complexDirections);
-			if(gridPosOccupations.get(GridPositions.YPLUS1)) directions.add(Directions.NORTH_EAST);
-			if(gridPosOccupations.get(GridPositions.XMOINS1_YPLUS1)) directions.add(Directions.NORTH_WEST);
-			if(gridPosOccupations.get(GridPositions.XMOINS2)) directions.add(Directions.WEST_NORTH);
-			if(gridPosOccupations.get(GridPositions.XMOINS2_YMOINS1)) directions.add(Directions.WEST_SOUTH);
-			if(gridPosOccupations.get(GridPositions.XMOINS1_YMOINS2)) directions.add(Directions.SOUTH_WEST);
-			if(gridPosOccupations.get(GridPositions.YMOINS2)) directions.add(Directions.SOUTH_EAST);
-			if(gridPosOccupations.get(GridPositions.XPLUS1_YMOINS1)) directions.add(Directions.EAST_SOUTH);
-			if(gridPosOccupations.get(GridPositions.XPLUS1)) directions.add(Directions.EAST_NORTH);
+			if(gridPosOccupations.get(GridPositions.YPLUS1)) directions.remove(Directions.NORTH_EAST);
+			if(gridPosOccupations.get(GridPositions.XMOINS1_YPLUS1)) directions.remove(Directions.NORTH_WEST);
+			if(gridPosOccupations.get(GridPositions.XMOINS2)) directions.remove(Directions.WEST_NORTH);
+			if(gridPosOccupations.get(GridPositions.XMOINS2_YMOINS1)) directions.remove(Directions.WEST_SOUTH);
+			if(gridPosOccupations.get(GridPositions.XMOINS1_YMOINS2)) directions.remove(Directions.SOUTH_WEST);
+			if(gridPosOccupations.get(GridPositions.YMOINS2)) directions.remove(Directions.SOUTH_EAST);
+			if(gridPosOccupations.get(GridPositions.XPLUS1_YMOINS1)) directions.remove(Directions.EAST_SOUTH);
+			if(gridPosOccupations.get(GridPositions.XPLUS1)) directions.remove(Directions.EAST_NORTH);
 			if(possibleEntry.equals(Directions.NORTH_EAST)) {directions.remove(Directions.NORTH_WEST);}
 			if(possibleEntry.equals(Directions.EAST_NORTH)) {directions.remove(Directions.EAST_SOUTH);}
 		}
