@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" nsURI="" nsPrefix="">
+  <eClassifiers xsi:type="ecore:EClass" name="Dungeon">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entryRoom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" eType="#//Rooms"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rooms">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="room" upperBound="-1" eType="#//Room"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Room">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="#//RoomType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roomaccesses" eType="#//RoomAccesses"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomTypeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoomAccesses">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roomaccess" upperBound="-1"
+        eType="#//RoomAccess" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoomAccess">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="accessRef" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RoomType">
+    <eLiterals name="SMALL"/>
+    <eLiterals name="LARGE" value="1" literal="LARGE"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -7,47 +7,35 @@
     xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore">
   <roomtypes
       xsi:type="generator:SmallRoomType"
-      name="SR N">
+      name="RegularRoomN">
     <directions>NORTH</directions>
   </roomtypes>
   <roomtypes
       xsi:type="generator:SmallRoomType"
-      name="SR S">
+      name="RegularRoomS">
     <directions>SOUTH</directions>
   </roomtypes>
   <roomtypes
       xsi:type="generator:SmallRoomType"
-      name="SR W">
+      name="RegularRoomW">
     <directions>WEST</directions>
   </roomtypes>
   <roomtypes
       xsi:type="generator:SmallRoomType"
-      name="SR E">
+      name="RegularRoomE">
     <directions>EAST</directions>
   </roomtypes>
   <roomtypes
       xsi:type="generator:SmallRoomType"
-      name="SR ALL">
+      name="RegularRoom1">
     <directions>EAST</directions>
     <directions>NORTH</directions>
     <directions>WEST</directions>
     <directions>SOUTH</directions>
-  </roomtypes>
-  <roomtypes
-      xsi:type="generator:SmallRoomType"
-      name="SR N/S">
-    <directions>SOUTH</directions>
-    <directions>NORTH</directions>
-  </roomtypes>
-  <roomtypes
-      xsi:type="generator:SmallRoomType"
-      name="SR E/W">
-    <directions>EAST</directions>
-    <directions>WEST</directions>
   </roomtypes>
   <roomtypes
       xsi:type="generator:LargeRoomType"
-      name="LR ALL">
+      name="LargeSimpleRoom1">
     <directions>SOUTH_EAST</directions>
     <directions>SOUTH_WEST</directions>
     <directions>NORTH_EAST</directions>
@@ -56,36 +44,5 @@
     <directions>EAST_NORTH</directions>
     <directions>WEST_NORTH</directions>
     <directions>WEST_SOUTH</directions>
-  </roomtypes>
-  <roomtypes
-      xsi:type="generator:LargeRoomType"
-      name="LR SE/NE/ES/WS">
-    <directions>SOUTH_EAST</directions>
-    <directions>NORTH_EAST</directions>
-    <directions>EAST_SOUTH</directions>
-    <directions>WEST_SOUTH</directions>
-  </roomtypes>
-  <roomtypes
-      xsi:type="generator:LargeRoomType"
-      name="LR SW/NW/EN/WN">
-    <directions>SOUTH_WEST</directions>
-    <directions>NORTH_WEST</directions>
-    <directions>EAST_NORTH</directions>
-    <directions>WEST_NORTH</directions>
-  </roomtypes>
-  <roomtypes
-      xsi:type="generator:LargeRoomType"
-      name="LR NE-W/ES-N/WS-N">
-    <directions>NORTH_EAST</directions>
-    <directions>NORTH_WEST</directions>
-    <directions>EAST_SOUTH</directions>
-    <directions>EAST_NORTH</directions>
-    <directions>WEST_NORTH</directions>
-    <directions>WEST_SOUTH</directions>
-  </roomtypes>
-  <roomtypes
-      xsi:type="generator:LargeRoomType"
-      name="LR NE">
-    <directions>NORTH_EAST</directions>
   </roomtypes>
 </generator:GameDescription>

@@ -1,0 +1,53 @@
+pre {
+  "Running ETL".println();
+  var cpt = 1;
+}
+
+rule Dungeon2Dungeon
+    transform dIn: IN!Dungeon
+    to dOut: OUT!Dungeon {
+        "Dungeon created".println();
+        dOut.entryRoom = "Room[" + dIn.entry.x + "/" + dIn.entry.y + "]";
+
+        // ROOMS
+        var rooms: new OUT!Rooms;
+        dOut.rooms = rooms;
+        dOut.rooms.room ::= dIn.rooms;
+}
+
+rule Room2Room
+    transform roomIn: IN!Room
+    to roomOut: OUT!Room {
+        "\tRoom created".println();
+        roomOut.x = roomIn.x;
+        roomOut.y = roomIn.y;
+        roomOut.id = "Room[" + roomIn.x + "/" + roomIn.y + "]";
+        roomOut.roomTypeName = roomIn.roomtype.name;
+
+        if (roomIn.roomtype.isTypeOf(SmallRoomType)) {
+            "\tsmall".println();
+            roomOut.size = OUT!RoomType#SMALL;
+        } else {
+            "\tlarge".println();
+            roomOut.size = OUT!RoomType#LARGE;
+        }
+		
+        // ROOM ACCESSES
+        var accesses: new OUT!RoomAccesses;
+        roomOut.roomaccesses = accesses;
+        roomOut.roomaccesses.roomaccess ::= roomIn.roomaccess;
+}
+
+rule RoomAccess2RoomAccess
+    transform access: IN!RoomAccess
+    to accessOut: OUT!RoomAccess {
+        "\t\tRoomAccess created".println();
+        accessOut.direction = "" + access.direction;
+        accessOut.id = "a" + cpt++;
+        accessOut.accessRef = access.otherroomaccess.equivalent().id;
+}
+
+
+post{
+    "done".println();
+}

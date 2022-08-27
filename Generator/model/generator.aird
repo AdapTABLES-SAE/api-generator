@@ -5,7 +5,6 @@
     <semanticResources>generator.genmodel</semanticResources>
     <semanticResources>../inputmodels/GameDescription.xmi</semanticResources>
     <semanticResources>../inputmodels/RogueliteContext.xmi</semanticResources>
-    <semanticResources>DungeonFlat.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_-oGdkAnBEe25_Pq4ehy-Rg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_-pEG4AnBEe25_Pq4ehy-Rg" name="generalView" repPath="#_-o2rgAnBEe25_Pq4ehy-Rg" changeId="9cfbb693-f6fa-4f5f-a3e7-ab102b1649bf">

@@ -11,8 +11,6 @@ import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import javax.annotation.processing.Generated;
-
 import generator.Directions;
 import generator.Dungeon;
 import generator.DungeonMode;
@@ -61,6 +59,7 @@ public class DungeonStructureGenerator {
 			}
 		}
 		dg.printDungeon();
+		dg.saveDungeon();
 		
 		/*for (int i = 0; i < 150; i++) {
 			System.out.println("Iteration "+ i);
@@ -83,6 +82,10 @@ public class DungeonStructureGenerator {
 		random = new Random();
 		occupiedCoordinates = new HashMap<>();
 		setData();
+	}
+	
+	public void saveDungeon() {
+		modelAccess.saveGeneratedModel(generatedDungeon, "GeneratedDungeon.xmi");
 	}
 	
 	/**
