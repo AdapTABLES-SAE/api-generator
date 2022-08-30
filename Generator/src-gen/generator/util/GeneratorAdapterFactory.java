@@ -2,57 +2,14 @@
  */
 package generator.util;
 
+import generator.*;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
-
-import generator.AbstractFact;
-import generator.ClassicRoom;
-import generator.CoreGameRule;
-import generator.Dungeon;
-import generator.DungeonOLD;
-import generator.ElementShape;
-import generator.ElementState;
-import generator.ElementType;
-import generator.Fact;
-import generator.Floor;
-import generator.GameContent;
-import generator.GameDescription;
-import generator.GameObjective;
-import generator.Gameplay;
-import generator.GeneratorPackage;
-import generator.IRoomElement;
-import generator.Knowledge;
-import generator.LargeRoomType;
-import generator.LearningObjective;
-import generator.LearningPath;
-import generator.LearningPaths;
-import generator.Level;
-import generator.Location;
-import generator.Pathway;
-import generator.PlacedObject;
-import generator.Prerequisite;
-import generator.ProblemResolution;
-import generator.QFOneCompletion;
-import generator.QFReconstruction;
-import generator.QFTwoCompletion;
-import generator.QFValidityDetermination;
-import generator.QuestionRoom;
-import generator.ResultValidityDetermination;
-import generator.RogueliteContext;
-import generator.Room;
-import generator.RoomAccess;
-import generator.RoomOLD;
-import generator.RoomType;
-import generator.RoomType2;
-import generator.SetOfFacts;
-import generator.SmallRoomType;
-import generator.State;
-import generator.SubObjective;
-import generators.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -110,56 +67,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected GeneratorSwitch<Adapter> modelSwitch = new GeneratorSwitch<Adapter>() {
 		@Override
-		public Adapter casePrerequisite(Prerequisite object) {
-			return createPrerequisiteAdapter();
-		}
-
-		@Override
-		public Adapter caseLevel(Level object) {
-			return createLevelAdapter();
-		}
-
-		@Override
-		public Adapter caseQFValidityDetermination(QFValidityDetermination object) {
-			return createQFValidityDeterminationAdapter();
-		}
-
-		@Override
-		public Adapter caseLearningPaths(LearningPaths object) {
-			return createLearningPathsAdapter();
-		}
-
-		@Override
-		public Adapter caseResultValidityDetermination(ResultValidityDetermination object) {
-			return createResultValidityDeterminationAdapter();
-		}
-
-		@Override
-		public Adapter caseQFOneCompletion(QFOneCompletion object) {
-			return createQFOneCompletionAdapter();
-		}
-
-		@Override
-		public Adapter caseQFReconstruction(QFReconstruction object) {
-			return createQFReconstructionAdapter();
-		}
-
-		@Override
-		public Adapter caseSubObjective(SubObjective object) {
-			return createSubObjectiveAdapter();
-		}
-
-		@Override
-		public Adapter caseQFTwoCompletion(QFTwoCompletion object) {
-			return createQFTwoCompletionAdapter();
-		}
-
-		@Override
-		public Adapter caseProblemResolution(ProblemResolution object) {
-			return createProblemResolutionAdapter();
-		}
-
-		@Override
 		public Adapter caseAbstractFact(AbstractFact object) {
 			return createAbstractFactAdapter();
 		}
@@ -177,16 +84,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseKnowledge(Knowledge object) {
 			return createKnowledgeAdapter();
-		}
-
-		@Override
-		public Adapter caseLearningPath(LearningPath object) {
-			return createLearningPathAdapter();
-		}
-
-		@Override
-		public Adapter caseLearningObjective(LearningObjective object) {
-			return createLearningObjectiveAdapter();
 		}
 
 		@Override
@@ -210,33 +107,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseDungeonOLD(DungeonOLD object) {
-			return createDungeonOLDAdapter();
-		}
-
-		@Override
 		public Adapter caseGameObjective(GameObjective object) {
 			return createGameObjectiveAdapter();
-		}
-
-		@Override
-		public Adapter caseRoomOLD(RoomOLD object) {
-			return createRoomOLDAdapter();
-		}
-
-		@Override
-		public Adapter caseClassicRoom(ClassicRoom object) {
-			return createClassicRoomAdapter();
-		}
-
-		@Override
-		public Adapter caseQuestionRoom(QuestionRoom object) {
-			return createQuestionRoomAdapter();
-		}
-
-		@Override
-		public Adapter casePathway(Pathway object) {
-			return createPathwayAdapter();
 		}
 
 		@Override
@@ -252,16 +124,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseLocation(Location object) {
 			return createLocationAdapter();
-		}
-
-		@Override
-		public Adapter caseState(State object) {
-			return createStateAdapter();
-		}
-
-		@Override
-		public Adapter casePlacedObject(PlacedObject object) {
-			return createPlacedObjectAdapter();
 		}
 
 		@Override
@@ -320,6 +182,81 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseTask(Task object) {
+			return createTaskAdapter();
+		}
+
+		@Override
+		public Adapter caseLearningDomain(LearningDomain object) {
+			return createLearningDomainAdapter();
+		}
+
+		@Override
+		public Adapter caseLearningPath(LearningPath object) {
+			return createLearningPathAdapter();
+		}
+
+		@Override
+		public Adapter caseLearningObjective(LearningObjective object) {
+			return createLearningObjectiveAdapter();
+		}
+
+		@Override
+		public Adapter casePrerequisite(Prerequisite object) {
+			return createPrerequisiteAdapter();
+		}
+
+		@Override
+		public Adapter caseLevel(Level object) {
+			return createLevelAdapter();
+		}
+
+		@Override
+		public Adapter caseMTLevel(MTLevel object) {
+			return createMTLevelAdapter();
+		}
+
+		@Override
+		public Adapter caseMTCompletionType(MTCompletionType object) {
+			return createMTCompletionTypeAdapter();
+		}
+
+		@Override
+		public Adapter caseTaskTypes(TaskTypes object) {
+			return createTaskTypesAdapter();
+		}
+
+		@Override
+		public Adapter caseCompletionType(CompletionType object) {
+			return createCompletionTypeAdapter();
+		}
+
+		@Override
+		public Adapter caseVerificationType(VerificationType object) {
+			return createVerificationTypeAdapter();
+		}
+
+		@Override
+		public Adapter caseReconstructionType(ReconstructionType object) {
+			return createReconstructionTypeAdapter();
+		}
+
+		@Override
+		public Adapter caseTaskType(TaskType object) {
+			return createTaskTypeAdapter();
+		}
+
+		@Override
+		public Adapter caseFactVerificationType(FactVerificationType object) {
+			return createFactVerificationTypeAdapter();
+		}
+
+		@Override
+		public Adapter caseResultVerificationType(ResultVerificationType object) {
+			return createResultVerificationTypeAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -336,146 +273,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	@Override
 	public Adapter createAdapter(Notifier target) {
 		return modelSwitch.doSwitch((EObject) target);
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.Prerequisite <em>Prerequisite</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.Prerequisite
-	 * @generated
-	 */
-	public Adapter createPrerequisiteAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.Level <em>Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.Level
-	 * @generated
-	 */
-	public Adapter createLevelAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.QFValidityDetermination <em>QF Validity Determination</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.QFValidityDetermination
-	 * @generated
-	 */
-	public Adapter createQFValidityDeterminationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.LearningPaths <em>Learning Paths</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.LearningPaths
-	 * @generated
-	 */
-	public Adapter createLearningPathsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.ResultValidityDetermination <em>Result Validity Determination</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.ResultValidityDetermination
-	 * @generated
-	 */
-	public Adapter createResultValidityDeterminationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.QFOneCompletion <em>QF One Completion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.QFOneCompletion
-	 * @generated
-	 */
-	public Adapter createQFOneCompletionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.QFReconstruction <em>QF Reconstruction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.QFReconstruction
-	 * @generated
-	 */
-	public Adapter createQFReconstructionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.SubObjective <em>Sub Objective</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.SubObjective
-	 * @generated
-	 */
-	public Adapter createSubObjectiveAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.QFTwoCompletion <em>QF Two Completion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.QFTwoCompletion
-	 * @generated
-	 */
-	public Adapter createQFTwoCompletionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.ProblemResolution <em>Problem Resolution</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.ProblemResolution
-	 * @generated
-	 */
-	public Adapter createProblemResolutionAdapter() {
-		return null;
 	}
 
 	/**
@@ -531,34 +328,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createKnowledgeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.LearningPath <em>Learning Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.LearningPath
-	 * @generated
-	 */
-	public Adapter createLearningPathAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.LearningObjective <em>Learning Objective</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.LearningObjective
-	 * @generated
-	 */
-	public Adapter createLearningObjectiveAdapter() {
 		return null;
 	}
 
@@ -619,20 +388,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.DungeonOLD <em>Dungeon OLD</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.DungeonOLD
-	 * @generated
-	 */
-	public Adapter createDungeonOLDAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link generator.GameObjective <em>Game Objective</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -643,62 +398,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGameObjectiveAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.RoomOLD <em>Room OLD</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.RoomOLD
-	 * @generated
-	 */
-	public Adapter createRoomOLDAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.ClassicRoom <em>Classic Room</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.ClassicRoom
-	 * @generated
-	 */
-	public Adapter createClassicRoomAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.QuestionRoom <em>Question Room</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.QuestionRoom
-	 * @generated
-	 */
-	public Adapter createQuestionRoomAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.Pathway <em>Pathway</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.Pathway
-	 * @generated
-	 */
-	public Adapter createPathwayAdapter() {
 		return null;
 	}
 
@@ -741,34 +440,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLocationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.State <em>State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.State
-	 * @generated
-	 */
-	public Adapter createStateAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.PlacedObject <em>Placed Object</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.PlacedObject
-	 * @generated
-	 */
-	public Adapter createPlacedObjectAdapter() {
 		return null;
 	}
 
@@ -923,6 +594,216 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRogueliteContextAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Task <em>Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Task
+	 * @generated
+	 */
+	public Adapter createTaskAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.LearningDomain <em>Learning Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.LearningDomain
+	 * @generated
+	 */
+	public Adapter createLearningDomainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.LearningPath <em>Learning Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.LearningPath
+	 * @generated
+	 */
+	public Adapter createLearningPathAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.LearningObjective <em>Learning Objective</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.LearningObjective
+	 * @generated
+	 */
+	public Adapter createLearningObjectiveAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Prerequisite <em>Prerequisite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Prerequisite
+	 * @generated
+	 */
+	public Adapter createPrerequisiteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Level <em>Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Level
+	 * @generated
+	 */
+	public Adapter createLevelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTLevel <em>MT Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTLevel
+	 * @generated
+	 */
+	public Adapter createMTLevelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTCompletionType <em>MT Completion Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTCompletionType
+	 * @generated
+	 */
+	public Adapter createMTCompletionTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.TaskTypes <em>Task Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.TaskTypes
+	 * @generated
+	 */
+	public Adapter createTaskTypesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.CompletionType <em>Completion Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.CompletionType
+	 * @generated
+	 */
+	public Adapter createCompletionTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.VerificationType <em>Verification Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.VerificationType
+	 * @generated
+	 */
+	public Adapter createVerificationTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.ReconstructionType <em>Reconstruction Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.ReconstructionType
+	 * @generated
+	 */
+	public Adapter createReconstructionTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.TaskType <em>Task Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.TaskType
+	 * @generated
+	 */
+	public Adapter createTaskTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.FactVerificationType <em>Fact Verification Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.FactVerificationType
+	 * @generated
+	 */
+	public Adapter createFactVerificationTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.ResultVerificationType <em>Result Verification Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.ResultVerificationType
+	 * @generated
+	 */
+	public Adapter createResultVerificationTypeAdapter() {
 		return null;
 	}
 

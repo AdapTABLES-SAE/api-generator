@@ -31,24 +31,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.LearningPathImpl#getKnowledge <em>Knowledge</em>}</li>
  *   <li>{@link generator.impl.LearningPathImpl#getName <em>Name</em>}</li>
- *   <li>{@link generator.impl.LearningPathImpl#getLearningobjectives <em>Learningobjectives</em>}</li>
+ *   <li>{@link generator.impl.LearningPathImpl#getLearningobjective <em>Learningobjective</em>}</li>
+ *   <li>{@link generator.impl.LearningPathImpl#getKnowledge <em>Knowledge</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class LearningPathImpl extends MinimalEObjectImpl.Container implements LearningPath {
-	/**
-	 * The cached value of the '{@link #getKnowledge() <em>Knowledge</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getKnowledge()
-	 * @generated
-	 * @ordered
-	 */
-	protected Knowledge knowledge;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,14 +60,24 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getLearningobjectives() <em>Learningobjectives</em>}' containment reference list.
+	 * The cached value of the '{@link #getLearningobjective() <em>Learningobjective</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLearningobjectives()
+	 * @see #getLearningobjective()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<LearningObjective> learningobjectives;
+	protected EList<LearningObjective> learningobjective;
+
+	/**
+	 * The cached value of the '{@link #getKnowledge() <em>Knowledge</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKnowledge()
+	 * @generated
+	 * @ordered
+	 */
+	protected Knowledge knowledge;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,6 +96,40 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 	@Override
 	protected EClass eStaticClass() {
 		return GeneratorPackage.Literals.LEARNING_PATH;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEARNING_PATH__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<LearningObjective> getLearningobjective() {
+		if (learningobjective == null) {
+			learningobjective = new EObjectContainmentEList<LearningObjective>(LearningObjective.class, this,
+					GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVE);
+		}
+		return learningobjective;
 	}
 
 	/**
@@ -143,45 +177,11 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEARNING_PATH__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<LearningObjective> getLearningobjectives() {
-		if (learningobjectives == null) {
-			learningobjectives = new EObjectContainmentEList<LearningObjective>(LearningObjective.class, this,
-					GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVES);
-		}
-		return learningobjectives;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVES:
-			return ((InternalEList<?>) getLearningobjectives()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVE:
+			return ((InternalEList<?>) getLearningobjective()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -194,14 +194,14 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case GeneratorPackage.LEARNING_PATH__NAME:
+			return getName();
+		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVE:
+			return getLearningobjective();
 		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
 			if (resolve)
 				return getKnowledge();
 			return basicGetKnowledge();
-		case GeneratorPackage.LEARNING_PATH__NAME:
-			return getName();
-		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVES:
-			return getLearningobjectives();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -215,15 +215,15 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
-			setKnowledge((Knowledge) newValue);
-			return;
 		case GeneratorPackage.LEARNING_PATH__NAME:
 			setName((String) newValue);
 			return;
-		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVES:
-			getLearningobjectives().clear();
-			getLearningobjectives().addAll((Collection<? extends LearningObjective>) newValue);
+		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVE:
+			getLearningobjective().clear();
+			getLearningobjective().addAll((Collection<? extends LearningObjective>) newValue);
+			return;
+		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
+			setKnowledge((Knowledge) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -237,14 +237,14 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
-			setKnowledge((Knowledge) null);
-			return;
 		case GeneratorPackage.LEARNING_PATH__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVES:
-			getLearningobjectives().clear();
+		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVE:
+			getLearningobjective().clear();
+			return;
+		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
+			setKnowledge((Knowledge) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -258,12 +258,12 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
-			return knowledge != null;
 		case GeneratorPackage.LEARNING_PATH__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVES:
-			return learningobjectives != null && !learningobjectives.isEmpty();
+		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVE:
+			return learningobjective != null && !learningobjective.isEmpty();
+		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
+			return knowledge != null;
 		}
 		return super.eIsSet(featureID);
 	}

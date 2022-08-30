@@ -22,42 +22,42 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.PrerequisiteImpl#getSuccessPercentage <em>Success Percentage</em>}</li>
- *   <li>{@link generator.impl.PrerequisiteImpl#getPrerequisite <em>Prerequisite</em>}</li>
+ *   <li>{@link generator.impl.PrerequisiteImpl#getSuccesPercentage <em>Succes Percentage</em>}</li>
+ *   <li>{@link generator.impl.PrerequisiteImpl#getRequiredLevel <em>Required Level</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Prerequisite {
 	/**
-	 * The default value of the '{@link #getSuccessPercentage() <em>Success Percentage</em>}' attribute.
+	 * The default value of the '{@link #getSuccesPercentage() <em>Succes Percentage</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSuccessPercentage()
+	 * @see #getSuccesPercentage()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int SUCCESS_PERCENTAGE_EDEFAULT = 0;
+	protected static final int SUCCES_PERCENTAGE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getSuccessPercentage() <em>Success Percentage</em>}' attribute.
+	 * The cached value of the '{@link #getSuccesPercentage() <em>Succes Percentage</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSuccessPercentage()
+	 * @see #getSuccesPercentage()
 	 * @generated
 	 * @ordered
 	 */
-	protected int successPercentage = SUCCESS_PERCENTAGE_EDEFAULT;
+	protected int succesPercentage = SUCCES_PERCENTAGE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPrerequisite() <em>Prerequisite</em>}' reference.
+	 * The cached value of the '{@link #getRequiredLevel() <em>Required Level</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrerequisite()
+	 * @see #getRequiredLevel()
 	 * @generated
 	 * @ordered
 	 */
-	protected Level prerequisite;
+	protected Level requiredLevel;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -83,8 +83,8 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getSuccessPercentage() {
-		return successPercentage;
+	public int getSuccesPercentage() {
+		return succesPercentage;
 	}
 
 	/**
@@ -92,12 +92,12 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSuccessPercentage(int newSuccessPercentage) {
-		int oldSuccessPercentage = successPercentage;
-		successPercentage = newSuccessPercentage;
+	public void setSuccesPercentage(int newSuccesPercentage) {
+		int oldSuccesPercentage = succesPercentage;
+		succesPercentage = newSuccesPercentage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PREREQUISITE__SUCCESS_PERCENTAGE,
-					oldSuccessPercentage, successPercentage));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PREREQUISITE__SUCCES_PERCENTAGE,
+					oldSuccesPercentage, succesPercentage));
 	}
 
 	/**
@@ -105,17 +105,17 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Level getPrerequisite() {
-		if (prerequisite != null && prerequisite.eIsProxy()) {
-			InternalEObject oldPrerequisite = (InternalEObject) prerequisite;
-			prerequisite = (Level) eResolveProxy(oldPrerequisite);
-			if (prerequisite != oldPrerequisite) {
+	public Level getRequiredLevel() {
+		if (requiredLevel != null && requiredLevel.eIsProxy()) {
+			InternalEObject oldRequiredLevel = (InternalEObject) requiredLevel;
+			requiredLevel = (Level) eResolveProxy(oldRequiredLevel);
+			if (requiredLevel != oldRequiredLevel) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.PREREQUISITE__PREREQUISITE, oldPrerequisite, prerequisite));
+							GeneratorPackage.PREREQUISITE__REQUIRED_LEVEL, oldRequiredLevel, requiredLevel));
 			}
 		}
-		return prerequisite;
+		return requiredLevel;
 	}
 
 	/**
@@ -123,8 +123,8 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Level basicGetPrerequisite() {
-		return prerequisite;
+	public Level basicGetRequiredLevel() {
+		return requiredLevel;
 	}
 
 	/**
@@ -132,12 +132,12 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrerequisite(Level newPrerequisite) {
-		Level oldPrerequisite = prerequisite;
-		prerequisite = newPrerequisite;
+	public void setRequiredLevel(Level newRequiredLevel) {
+		Level oldRequiredLevel = requiredLevel;
+		requiredLevel = newRequiredLevel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PREREQUISITE__PREREQUISITE,
-					oldPrerequisite, prerequisite));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PREREQUISITE__REQUIRED_LEVEL,
+					oldRequiredLevel, requiredLevel));
 	}
 
 	/**
@@ -148,12 +148,12 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.PREREQUISITE__SUCCESS_PERCENTAGE:
-			return getSuccessPercentage();
-		case GeneratorPackage.PREREQUISITE__PREREQUISITE:
+		case GeneratorPackage.PREREQUISITE__SUCCES_PERCENTAGE:
+			return getSuccesPercentage();
+		case GeneratorPackage.PREREQUISITE__REQUIRED_LEVEL:
 			if (resolve)
-				return getPrerequisite();
-			return basicGetPrerequisite();
+				return getRequiredLevel();
+			return basicGetRequiredLevel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -166,11 +166,11 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.PREREQUISITE__SUCCESS_PERCENTAGE:
-			setSuccessPercentage((Integer) newValue);
+		case GeneratorPackage.PREREQUISITE__SUCCES_PERCENTAGE:
+			setSuccesPercentage((Integer) newValue);
 			return;
-		case GeneratorPackage.PREREQUISITE__PREREQUISITE:
-			setPrerequisite((Level) newValue);
+		case GeneratorPackage.PREREQUISITE__REQUIRED_LEVEL:
+			setRequiredLevel((Level) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -184,11 +184,11 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.PREREQUISITE__SUCCESS_PERCENTAGE:
-			setSuccessPercentage(SUCCESS_PERCENTAGE_EDEFAULT);
+		case GeneratorPackage.PREREQUISITE__SUCCES_PERCENTAGE:
+			setSuccesPercentage(SUCCES_PERCENTAGE_EDEFAULT);
 			return;
-		case GeneratorPackage.PREREQUISITE__PREREQUISITE:
-			setPrerequisite((Level) null);
+		case GeneratorPackage.PREREQUISITE__REQUIRED_LEVEL:
+			setRequiredLevel((Level) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -202,10 +202,10 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.PREREQUISITE__SUCCESS_PERCENTAGE:
-			return successPercentage != SUCCESS_PERCENTAGE_EDEFAULT;
-		case GeneratorPackage.PREREQUISITE__PREREQUISITE:
-			return prerequisite != null;
+		case GeneratorPackage.PREREQUISITE__SUCCES_PERCENTAGE:
+			return succesPercentage != SUCCES_PERCENTAGE_EDEFAULT;
+		case GeneratorPackage.PREREQUISITE__REQUIRED_LEVEL:
+			return requiredLevel != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -221,8 +221,8 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (successPercentage: ");
-		result.append(successPercentage);
+		result.append(" (succesPercentage: ");
+		result.append(succesPercentage);
 		result.append(')');
 		return result.toString();
 	}

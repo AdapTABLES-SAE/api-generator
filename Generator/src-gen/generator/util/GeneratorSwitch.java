@@ -2,55 +2,12 @@
  */
 package generator.util;
 
+import generator.*;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
-
-import generator.AbstractFact;
-import generator.ClassicRoom;
-import generator.CoreGameRule;
-import generator.Dungeon;
-import generator.DungeonOLD;
-import generator.ElementShape;
-import generator.ElementState;
-import generator.ElementType;
-import generator.Fact;
-import generator.Floor;
-import generator.GameContent;
-import generator.GameDescription;
-import generator.GameObjective;
-import generator.Gameplay;
-import generator.GeneratorPackage;
-import generator.IRoomElement;
-import generator.Knowledge;
-import generator.LargeRoomType;
-import generator.LearningObjective;
-import generator.LearningPath;
-import generator.LearningPaths;
-import generator.Level;
-import generator.Location;
-import generator.Pathway;
-import generator.PlacedObject;
-import generator.Prerequisite;
-import generator.ProblemResolution;
-import generator.QFOneCompletion;
-import generator.QFReconstruction;
-import generator.QFTwoCompletion;
-import generator.QFValidityDetermination;
-import generator.QuestionRoom;
-import generator.ResultValidityDetermination;
-import generator.RogueliteContext;
-import generator.Room;
-import generator.RoomAccess;
-import generator.RoomOLD;
-import generator.RoomType;
-import generator.RoomType2;
-import generator.SetOfFacts;
-import generator.SmallRoomType;
-import generator.State;
-import generator.SubObjective;
-import generators.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -109,88 +66,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case GeneratorPackage.PREREQUISITE: {
-			Prerequisite prerequisite = (Prerequisite) theEObject;
-			T result = casePrerequisite(prerequisite);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.LEVEL: {
-			Level level = (Level) theEObject;
-			T result = caseLevel(level);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.QF_VALIDITY_DETERMINATION: {
-			QFValidityDetermination qfValidityDetermination = (QFValidityDetermination) theEObject;
-			T result = caseQFValidityDetermination(qfValidityDetermination);
-			if (result == null)
-				result = caseSubObjective(qfValidityDetermination);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.LEARNING_PATHS: {
-			LearningPaths learningPaths = (LearningPaths) theEObject;
-			T result = caseLearningPaths(learningPaths);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.RESULT_VALIDITY_DETERMINATION: {
-			ResultValidityDetermination resultValidityDetermination = (ResultValidityDetermination) theEObject;
-			T result = caseResultValidityDetermination(resultValidityDetermination);
-			if (result == null)
-				result = caseSubObjective(resultValidityDetermination);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.QF_ONE_COMPLETION: {
-			QFOneCompletion qfOneCompletion = (QFOneCompletion) theEObject;
-			T result = caseQFOneCompletion(qfOneCompletion);
-			if (result == null)
-				result = caseSubObjective(qfOneCompletion);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.QF_RECONSTRUCTION: {
-			QFReconstruction qfReconstruction = (QFReconstruction) theEObject;
-			T result = caseQFReconstruction(qfReconstruction);
-			if (result == null)
-				result = caseSubObjective(qfReconstruction);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.SUB_OBJECTIVE: {
-			SubObjective subObjective = (SubObjective) theEObject;
-			T result = caseSubObjective(subObjective);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.QF_TWO_COMPLETION: {
-			QFTwoCompletion qfTwoCompletion = (QFTwoCompletion) theEObject;
-			T result = caseQFTwoCompletion(qfTwoCompletion);
-			if (result == null)
-				result = caseSubObjective(qfTwoCompletion);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.PROBLEM_RESOLUTION: {
-			ProblemResolution problemResolution = (ProblemResolution) theEObject;
-			T result = caseProblemResolution(problemResolution);
-			if (result == null)
-				result = caseSubObjective(problemResolution);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case GeneratorPackage.ABSTRACT_FACT: {
 			AbstractFact abstractFact = (AbstractFact) theEObject;
 			T result = caseAbstractFact(abstractFact);
@@ -219,20 +94,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		case GeneratorPackage.KNOWLEDGE: {
 			Knowledge knowledge = (Knowledge) theEObject;
 			T result = caseKnowledge(knowledge);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.LEARNING_PATH: {
-			LearningPath learningPath = (LearningPath) theEObject;
-			T result = caseLearningPath(learningPath);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.LEARNING_OBJECTIVE: {
-			LearningObjective learningObjective = (LearningObjective) theEObject;
-			T result = caseLearningObjective(learningObjective);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -267,48 +128,9 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.DUNGEON_OLD: {
-			DungeonOLD dungeonOLD = (DungeonOLD) theEObject;
-			T result = caseDungeonOLD(dungeonOLD);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case GeneratorPackage.GAME_OBJECTIVE: {
 			GameObjective gameObjective = (GameObjective) theEObject;
 			T result = caseGameObjective(gameObjective);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.ROOM_OLD: {
-			RoomOLD roomOLD = (RoomOLD) theEObject;
-			T result = caseRoomOLD(roomOLD);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.CLASSIC_ROOM: {
-			ClassicRoom classicRoom = (ClassicRoom) theEObject;
-			T result = caseClassicRoom(classicRoom);
-			if (result == null)
-				result = caseRoomOLD(classicRoom);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.QUESTION_ROOM: {
-			QuestionRoom questionRoom = (QuestionRoom) theEObject;
-			T result = caseQuestionRoom(questionRoom);
-			if (result == null)
-				result = caseRoomOLD(questionRoom);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.PATHWAY: {
-			Pathway pathway = (Pathway) theEObject;
-			T result = casePathway(pathway);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -334,20 +156,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		case GeneratorPackage.LOCATION: {
 			Location location = (Location) theEObject;
 			T result = caseLocation(location);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.STATE: {
-			State state = (State) theEObject;
-			T result = caseState(state);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.PLACED_OBJECT: {
-			PlacedObject placedObject = (PlacedObject) theEObject;
-			T result = casePlacedObject(placedObject);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -433,159 +241,134 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case GeneratorPackage.TASK: {
+			Task task = (Task) theEObject;
+			T result = caseTask(task);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.LEARNING_DOMAIN: {
+			LearningDomain learningDomain = (LearningDomain) theEObject;
+			T result = caseLearningDomain(learningDomain);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.LEARNING_PATH: {
+			LearningPath learningPath = (LearningPath) theEObject;
+			T result = caseLearningPath(learningPath);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.LEARNING_OBJECTIVE: {
+			LearningObjective learningObjective = (LearningObjective) theEObject;
+			T result = caseLearningObjective(learningObjective);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.PREREQUISITE: {
+			Prerequisite prerequisite = (Prerequisite) theEObject;
+			T result = casePrerequisite(prerequisite);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.LEVEL: {
+			Level level = (Level) theEObject;
+			T result = caseLevel(level);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.MT_LEVEL: {
+			MTLevel mtLevel = (MTLevel) theEObject;
+			T result = caseMTLevel(mtLevel);
+			if (result == null)
+				result = caseLevel(mtLevel);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.MT_COMPLETION_TYPE: {
+			MTCompletionType mtCompletionType = (MTCompletionType) theEObject;
+			T result = caseMTCompletionType(mtCompletionType);
+			if (result == null)
+				result = caseCompletionType(mtCompletionType);
+			if (result == null)
+				result = caseTaskType(mtCompletionType);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.TASK_TYPES: {
+			TaskTypes taskTypes = (TaskTypes) theEObject;
+			T result = caseTaskTypes(taskTypes);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.COMPLETION_TYPE: {
+			CompletionType completionType = (CompletionType) theEObject;
+			T result = caseCompletionType(completionType);
+			if (result == null)
+				result = caseTaskType(completionType);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.VERIFICATION_TYPE: {
+			VerificationType verificationType = (VerificationType) theEObject;
+			T result = caseVerificationType(verificationType);
+			if (result == null)
+				result = caseTaskType(verificationType);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.RECONSTRUCTION_TYPE: {
+			ReconstructionType reconstructionType = (ReconstructionType) theEObject;
+			T result = caseReconstructionType(reconstructionType);
+			if (result == null)
+				result = caseTaskType(reconstructionType);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.TASK_TYPE: {
+			TaskType taskType = (TaskType) theEObject;
+			T result = caseTaskType(taskType);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.FACT_VERIFICATION_TYPE: {
+			FactVerificationType factVerificationType = (FactVerificationType) theEObject;
+			T result = caseFactVerificationType(factVerificationType);
+			if (result == null)
+				result = caseVerificationType(factVerificationType);
+			if (result == null)
+				result = caseTaskType(factVerificationType);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.RESULT_VERIFICATION_TYPE: {
+			ResultVerificationType resultVerificationType = (ResultVerificationType) theEObject;
+			T result = caseResultVerificationType(resultVerificationType);
+			if (result == null)
+				result = caseVerificationType(resultVerificationType);
+			if (result == null)
+				result = caseTaskType(resultVerificationType);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Prerequisite</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Prerequisite</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePrerequisite(Prerequisite object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Level</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Level</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLevel(Level object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>QF Validity Determination</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>QF Validity Determination</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseQFValidityDetermination(QFValidityDetermination object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Learning Paths</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Learning Paths</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLearningPaths(LearningPaths object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Result Validity Determination</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Result Validity Determination</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResultValidityDetermination(ResultValidityDetermination object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>QF One Completion</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>QF One Completion</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseQFOneCompletion(QFOneCompletion object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>QF Reconstruction</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>QF Reconstruction</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseQFReconstruction(QFReconstruction object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sub Objective</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sub Objective</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSubObjective(SubObjective object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>QF Two Completion</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>QF Two Completion</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseQFTwoCompletion(QFTwoCompletion object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Problem Resolution</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Problem Resolution</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseProblemResolution(ProblemResolution object) {
-		return null;
 	}
 
 	/**
@@ -645,36 +428,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseKnowledge(Knowledge object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Learning Path</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Learning Path</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLearningPath(LearningPath object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Learning Objective</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Learning Objective</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLearningObjective(LearningObjective object) {
 		return null;
 	}
 
@@ -739,21 +492,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Dungeon OLD</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Dungeon OLD</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDungeonOLD(DungeonOLD object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Game Objective</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -765,66 +503,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGameObjective(GameObjective object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Room OLD</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Room OLD</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRoomOLD(RoomOLD object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Classic Room</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Classic Room</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseClassicRoom(ClassicRoom object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Question Room</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Question Room</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseQuestionRoom(QuestionRoom object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Pathway</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Pathway</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePathway(Pathway object) {
 		return null;
 	}
 
@@ -870,36 +548,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLocation(Location object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>State</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>State</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseState(State object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Placed Object</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Placed Object</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePlacedObject(PlacedObject object) {
 		return null;
 	}
 
@@ -1065,6 +713,231 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRogueliteContext(RogueliteContext object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Task</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTask(Task object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Learning Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Learning Domain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLearningDomain(LearningDomain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Learning Path</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Learning Path</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLearningPath(LearningPath object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Learning Objective</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Learning Objective</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLearningObjective(LearningObjective object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Prerequisite</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Prerequisite</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePrerequisite(Prerequisite object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Level</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLevel(Level object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MT Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MT Level</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTLevel(MTLevel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MT Completion Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MT Completion Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTCompletionType(MTCompletionType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Task Types</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Task Types</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTaskTypes(TaskTypes object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Completion Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Completion Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCompletionType(CompletionType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Verification Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Verification Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVerificationType(VerificationType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Reconstruction Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Reconstruction Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReconstructionType(ReconstructionType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Task Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Task Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTaskType(TaskType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Fact Verification Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Fact Verification Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFactVerificationType(FactVerificationType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Result Verification Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Result Verification Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResultVerificationType(ResultVerificationType object) {
 		return null;
 	}
 

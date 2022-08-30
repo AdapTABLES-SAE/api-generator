@@ -59,574 +59,6 @@ public interface GeneratorPackage extends EPackage {
 	GeneratorPackage eINSTANCE = generator.impl.GeneratorPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link generator.impl.PrerequisiteImpl <em>Prerequisite</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.PrerequisiteImpl
-	 * @see generator.impl.GeneratorPackageImpl#getPrerequisite()
-	 * @generated
-	 */
-	int PREREQUISITE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Success Percentage</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREREQUISITE__SUCCESS_PERCENTAGE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Prerequisite</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREREQUISITE__PREREQUISITE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Prerequisite</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREREQUISITE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Prerequisite</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREREQUISITE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.LevelImpl <em>Level</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.LevelImpl
-	 * @see generator.impl.GeneratorPackageImpl#getLevel()
-	 * @generated
-	 */
-	int LEVEL = 1;
-
-	/**
-	 * The feature id for the '<em><b>ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEVEL__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Subobjectives</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEVEL__SUBOBJECTIVES = 1;
-
-	/**
-	 * The number of structural features of the '<em>Level</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEVEL_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Level</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEVEL_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.SubObjectiveImpl <em>Sub Objective</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.SubObjectiveImpl
-	 * @see generator.impl.GeneratorPackageImpl#getSubObjective()
-	 * @generated
-	 */
-	int SUB_OBJECTIVE = 7;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION = 0;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS = 2;
-
-	/**
-	 * The number of structural features of the '<em>Sub Objective</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUB_OBJECTIVE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Sub Objective</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUB_OBJECTIVE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.QFValidityDeterminationImpl <em>QF Validity Determination</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.QFValidityDeterminationImpl
-	 * @see generator.impl.GeneratorPackageImpl#getQFValidityDetermination()
-	 * @generated
-	 */
-	int QF_VALIDITY_DETERMINATION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_VALIDITY_DETERMINATION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_VALIDITY_DETERMINATION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
-
-	/**
-	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_VALIDITY_DETERMINATION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_VALIDITY_DETERMINATION__TYPE = SUB_OBJECTIVE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>QF Validity Determination</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_VALIDITY_DETERMINATION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>QF Validity Determination</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_VALIDITY_DETERMINATION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.LearningPathsImpl <em>Learning Paths</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.LearningPathsImpl
-	 * @see generator.impl.GeneratorPackageImpl#getLearningPaths()
-	 * @generated
-	 */
-	int LEARNING_PATHS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Learningpaths</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_PATHS__LEARNINGPATHS = 0;
-
-	/**
-	 * The number of structural features of the '<em>Learning Paths</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_PATHS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Learning Paths</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_PATHS_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.ResultValidityDeterminationImpl <em>Result Validity Determination</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.ResultValidityDeterminationImpl
-	 * @see generator.impl.GeneratorPackageImpl#getResultValidityDetermination()
-	 * @generated
-	 */
-	int RESULT_VALIDITY_DETERMINATION = 4;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_VALIDITY_DETERMINATION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_VALIDITY_DETERMINATION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
-
-	/**
-	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_VALIDITY_DETERMINATION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
-
-	/**
-	 * The feature id for the '<em><b>New Attribute</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_VALIDITY_DETERMINATION__NEW_ATTRIBUTE = SUB_OBJECTIVE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Result Validity Determination</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_VALIDITY_DETERMINATION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Result Validity Determination</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_VALIDITY_DETERMINATION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.QFOneCompletionImpl <em>QF One Completion</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.QFOneCompletionImpl
-	 * @see generator.impl.GeneratorPackageImpl#getQFOneCompletion()
-	 * @generated
-	 */
-	int QF_ONE_COMPLETION = 5;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_ONE_COMPLETION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_ONE_COMPLETION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
-
-	/**
-	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_ONE_COMPLETION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_ONE_COMPLETION__TYPE = SUB_OBJECTIVE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>QF One Completion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_ONE_COMPLETION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>QF One Completion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_ONE_COMPLETION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.QFReconstructionImpl <em>QF Reconstruction</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.QFReconstructionImpl
-	 * @see generator.impl.GeneratorPackageImpl#getQFReconstruction()
-	 * @generated
-	 */
-	int QF_RECONSTRUCTION = 6;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_RECONSTRUCTION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_RECONSTRUCTION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
-
-	/**
-	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_RECONSTRUCTION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_RECONSTRUCTION__TYPE = SUB_OBJECTIVE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>QF Reconstruction</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_RECONSTRUCTION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>QF Reconstruction</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_RECONSTRUCTION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.QFTwoCompletionImpl <em>QF Two Completion</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.QFTwoCompletionImpl
-	 * @see generator.impl.GeneratorPackageImpl#getQFTwoCompletion()
-	 * @generated
-	 */
-	int QF_TWO_COMPLETION = 8;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_TWO_COMPLETION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_TWO_COMPLETION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
-
-	/**
-	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_TWO_COMPLETION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_TWO_COMPLETION__TYPE = SUB_OBJECTIVE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>QF Two Completion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_TWO_COMPLETION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>QF Two Completion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QF_TWO_COMPLETION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.ProblemResolutionImpl <em>Problem Resolution</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.ProblemResolutionImpl
-	 * @see generator.impl.GeneratorPackageImpl#getProblemResolution()
-	 * @generated
-	 */
-	int PROBLEM_RESOLUTION = 9;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROBLEM_RESOLUTION__PERCENTAGE_OF_APPARITION = SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROBLEM_RESOLUTION__PERCENTAGE_OF_VALID_FACTS = SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS;
-
-	/**
-	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROBLEM_RESOLUTION__NB_CONSECUTIVE_SUCCESS = SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROBLEM_RESOLUTION__TYPE = SUB_OBJECTIVE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Problem Resolution</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROBLEM_RESOLUTION_FEATURE_COUNT = SUB_OBJECTIVE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Problem Resolution</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROBLEM_RESOLUTION_OPERATION_COUNT = SUB_OBJECTIVE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.AbstractFactImpl <em>Abstract Fact</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -634,7 +66,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAbstractFact()
 	 * @generated
 	 */
-	int ABSTRACT_FACT = 10;
+	int ABSTRACT_FACT = 0;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Fact</em>' class.
@@ -662,7 +94,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getSetOfFacts()
 	 * @generated
 	 */
-	int SET_OF_FACTS = 11;
+	int SET_OF_FACTS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Facts</b></em>' containment reference list.
@@ -708,7 +140,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getFact()
 	 * @generated
 	 */
-	int FACT = 12;
+	int FACT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -745,7 +177,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getKnowledge()
 	 * @generated
 	 */
-	int KNOWLEDGE = 13;
+	int KNOWLEDGE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -784,125 +216,6 @@ public interface GeneratorPackage extends EPackage {
 	int KNOWLEDGE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.LearningPathImpl <em>Learning Path</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.LearningPathImpl
-	 * @see generator.impl.GeneratorPackageImpl#getLearningPath()
-	 * @generated
-	 */
-	int LEARNING_PATH = 14;
-
-	/**
-	 * The feature id for the '<em><b>Knowledge</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_PATH__KNOWLEDGE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_PATH__NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Learningobjectives</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_PATH__LEARNINGOBJECTIVES = 2;
-
-	/**
-	 * The number of structural features of the '<em>Learning Path</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_PATH_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Learning Path</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_PATH_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.LearningObjectiveImpl <em>Learning Objective</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.LearningObjectiveImpl
-	 * @see generator.impl.GeneratorPackageImpl#getLearningObjective()
-	 * @generated
-	 */
-	int LEARNING_OBJECTIVE = 15;
-
-	/**
-	 * The feature id for the '<em><b>Levels</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_OBJECTIVE__LEVELS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Prerequisites</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_OBJECTIVE__PREREQUISITES = 1;
-
-	/**
-	 * The feature id for the '<em><b>ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_OBJECTIVE__ID = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_OBJECTIVE__NAME = 3;
-
-	/**
-	 * The number of structural features of the '<em>Learning Objective</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_OBJECTIVE_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Learning Objective</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNING_OBJECTIVE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.GameContentImpl <em>Game Content</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -910,7 +223,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameContent()
 	 * @generated
 	 */
-	int GAME_CONTENT = 16;
+	int GAME_CONTENT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Gameplays</b></em>' containment reference list.
@@ -974,7 +287,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameplay()
 	 * @generated
 	 */
-	int GAMEPLAY = 17;
+	int GAMEPLAY = 5;
 
 	/**
 	 * The feature id for the '<em><b>Coregamerules</b></em>' containment reference list.
@@ -1020,7 +333,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCoreGameRule()
 	 * @generated
 	 */
-	int CORE_GAME_RULE = 18;
+	int CORE_GAME_RULE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Rule Type</b></em>' attribute.
@@ -1075,7 +388,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getIRoomElement()
 	 * @generated
 	 */
-	int IROOM_ELEMENT = 31;
+	int IROOM_ELEMENT = 12;
 
 	/**
 	 * The number of structural features of the '<em>IRoom Element</em>' class.
@@ -1103,7 +416,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementType()
 	 * @generated
 	 */
-	int ELEMENT_TYPE = 19;
+	int ELEMENT_TYPE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1160,61 +473,6 @@ public interface GeneratorPackage extends EPackage {
 	int ELEMENT_TYPE_OPERATION_COUNT = IROOM_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.DungeonOLDImpl <em>Dungeon OLD</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.DungeonOLDImpl
-	 * @see generator.impl.GeneratorPackageImpl#getDungeonOLD()
-	 * @generated
-	 */
-	int DUNGEON_OLD = 20;
-
-	/**
-	 * The feature id for the '<em><b>Number Of Rooms</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUNGEON_OLD__NUMBER_OF_ROOMS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Gameobjective</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUNGEON_OLD__GAMEOBJECTIVE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Rooms</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUNGEON_OLD__ROOMS = 2;
-
-	/**
-	 * The number of structural features of the '<em>Dungeon OLD</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUNGEON_OLD_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Dungeon OLD</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUNGEON_OLD_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.GameObjectiveImpl <em>Game Objective</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1222,7 +480,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameObjective()
 	 * @generated
 	 */
-	int GAME_OBJECTIVE = 21;
+	int GAME_OBJECTIVE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1252,289 +510,6 @@ public interface GeneratorPackage extends EPackage {
 	int GAME_OBJECTIVE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.RoomOLDImpl <em>Room OLD</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.RoomOLDImpl
-	 * @see generator.impl.GeneratorPackageImpl#getRoomOLD()
-	 * @generated
-	 */
-	int ROOM_OLD = 22;
-
-	/**
-	 * The feature id for the '<em><b>South</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_OLD__SOUTH = 0;
-
-	/**
-	 * The feature id for the '<em><b>North</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_OLD__NORTH = 1;
-
-	/**
-	 * The feature id for the '<em><b>East</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_OLD__EAST = 2;
-
-	/**
-	 * The feature id for the '<em><b>West</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_OLD__WEST = 3;
-
-	/**
-	 * The feature id for the '<em><b>Roomtype</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_OLD__ROOMTYPE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Initial State</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_OLD__INITIAL_STATE = 5;
-
-	/**
-	 * The number of structural features of the '<em>Room OLD</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_OLD_FEATURE_COUNT = 6;
-
-	/**
-	 * The number of operations of the '<em>Room OLD</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_OLD_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.ClassicRoomImpl <em>Classic Room</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.ClassicRoomImpl
-	 * @see generator.impl.GeneratorPackageImpl#getClassicRoom()
-	 * @generated
-	 */
-	int CLASSIC_ROOM = 23;
-
-	/**
-	 * The feature id for the '<em><b>South</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSIC_ROOM__SOUTH = ROOM_OLD__SOUTH;
-
-	/**
-	 * The feature id for the '<em><b>North</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSIC_ROOM__NORTH = ROOM_OLD__NORTH;
-
-	/**
-	 * The feature id for the '<em><b>East</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSIC_ROOM__EAST = ROOM_OLD__EAST;
-
-	/**
-	 * The feature id for the '<em><b>West</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSIC_ROOM__WEST = ROOM_OLD__WEST;
-
-	/**
-	 * The feature id for the '<em><b>Roomtype</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSIC_ROOM__ROOMTYPE = ROOM_OLD__ROOMTYPE;
-
-	/**
-	 * The feature id for the '<em><b>Initial State</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSIC_ROOM__INITIAL_STATE = ROOM_OLD__INITIAL_STATE;
-
-	/**
-	 * The number of structural features of the '<em>Classic Room</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSIC_ROOM_FEATURE_COUNT = ROOM_OLD_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Classic Room</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSIC_ROOM_OPERATION_COUNT = ROOM_OLD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.QuestionRoomImpl <em>Question Room</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.QuestionRoomImpl
-	 * @see generator.impl.GeneratorPackageImpl#getQuestionRoom()
-	 * @generated
-	 */
-	int QUESTION_ROOM = 24;
-
-	/**
-	 * The feature id for the '<em><b>South</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION_ROOM__SOUTH = ROOM_OLD__SOUTH;
-
-	/**
-	 * The feature id for the '<em><b>North</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION_ROOM__NORTH = ROOM_OLD__NORTH;
-
-	/**
-	 * The feature id for the '<em><b>East</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION_ROOM__EAST = ROOM_OLD__EAST;
-
-	/**
-	 * The feature id for the '<em><b>West</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION_ROOM__WEST = ROOM_OLD__WEST;
-
-	/**
-	 * The feature id for the '<em><b>Roomtype</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION_ROOM__ROOMTYPE = ROOM_OLD__ROOMTYPE;
-
-	/**
-	 * The feature id for the '<em><b>Initial State</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION_ROOM__INITIAL_STATE = ROOM_OLD__INITIAL_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Sucess State</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION_ROOM__SUCESS_STATE = ROOM_OLD_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Question Room</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION_ROOM_FEATURE_COUNT = ROOM_OLD_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Question Room</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION_ROOM_OPERATION_COUNT = ROOM_OLD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.PathwayImpl <em>Pathway</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.PathwayImpl
-	 * @see generator.impl.GeneratorPackageImpl#getPathway()
-	 * @generated
-	 */
-	int PATHWAY = 25;
-
-	/**
-	 * The number of structural features of the '<em>Pathway</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATHWAY_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Pathway</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATHWAY_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.RoomType2Impl <em>Room Type2</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1542,7 +517,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRoomType2()
 	 * @generated
 	 */
-	int ROOM_TYPE2 = 26;
+	int ROOM_TYPE2 = 9;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1597,7 +572,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getFloor()
 	 * @generated
 	 */
-	int FLOOR = 27;
+	int FLOOR = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1679,7 +654,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLocation()
 	 * @generated
 	 */
-	int LOCATION = 28;
+	int LOCATION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Accepted Elements</b></em>' reference list.
@@ -1718,80 +693,6 @@ public interface GeneratorPackage extends EPackage {
 	int LOCATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.StateImpl <em>State</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.StateImpl
-	 * @see generator.impl.GeneratorPackageImpl#getState()
-	 * @generated
-	 */
-	int STATE = 29;
-
-	/**
-	 * The feature id for the '<em><b>Placedobjects</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__PLACEDOBJECTS = 0;
-
-	/**
-	 * The number of structural features of the '<em>State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.PlacedObjectImpl <em>Placed Object</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.PlacedObjectImpl
-	 * @see generator.impl.GeneratorPackageImpl#getPlacedObject()
-	 * @generated
-	 */
-	int PLACED_OBJECT = 30;
-
-	/**
-	 * The feature id for the '<em><b>Display Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLACED_OBJECT__DISPLAY_VALUE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Placed Object</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLACED_OBJECT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Placed Object</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLACED_OBJECT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.ElementShapeImpl <em>Element Shape</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1799,7 +700,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementShape()
 	 * @generated
 	 */
-	int ELEMENT_SHAPE = 32;
+	int ELEMENT_SHAPE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -1845,7 +746,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementState()
 	 * @generated
 	 */
-	int ELEMENT_STATE = 33;
+	int ELEMENT_STATE = 14;
 
 	/**
 	 * The feature id for the '<em><b>State</b></em>' attribute.
@@ -1882,7 +783,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeon()
 	 * @generated
 	 */
-	int DUNGEON = 34;
+	int DUNGEON = 15;
 
 	/**
 	 * The feature id for the '<em><b>Rooms</b></em>' containment reference list.
@@ -1937,7 +838,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRoom()
 	 * @generated
 	 */
-	int ROOM = 35;
+	int ROOM = 16;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -2001,7 +902,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameDescription()
 	 * @generated
 	 */
-	int GAME_DESCRIPTION = 36;
+	int GAME_DESCRIPTION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Roomtypes</b></em>' containment reference list.
@@ -2038,7 +939,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRoomType()
 	 * @generated
 	 */
-	int ROOM_TYPE = 37;
+	int ROOM_TYPE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2084,7 +985,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getSmallRoomType()
 	 * @generated
 	 */
-	int SMALL_ROOM_TYPE = 38;
+	int SMALL_ROOM_TYPE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2139,7 +1040,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLargeRoomType()
 	 * @generated
 	 */
-	int LARGE_ROOM_TYPE = 39;
+	int LARGE_ROOM_TYPE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2194,7 +1095,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRoomAccess()
 	 * @generated
 	 */
-	int ROOM_ACCESS = 40;
+	int ROOM_ACCESS = 21;
 
 	/**
 	 * The feature id for the '<em><b>Direction</b></em>' attribute.
@@ -2240,7 +1141,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRogueliteContext()
 	 * @generated
 	 */
-	int ROGUELITE_CONTEXT = 41;
+	int ROGUELITE_CONTEXT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Rooms</b></em>' attribute.
@@ -2279,14 +1180,883 @@ public interface GeneratorPackage extends EPackage {
 	int ROGUELITE_CONTEXT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.SubObjectiveType <em>Sub Objective Type</em>}' enum.
+	 * The meta object id for the '{@link generator.impl.TaskImpl <em>Task</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.SubObjectiveType
-	 * @see generator.impl.GeneratorPackageImpl#getSubObjectiveType()
+	 * @see generator.impl.TaskImpl
+	 * @see generator.impl.GeneratorPackageImpl#getTask()
 	 * @generated
 	 */
-	int SUB_OBJECTIVE_TYPE = 42;
+	int TASK = 23;
+
+	/**
+	 * The feature id for the '<em><b>Tasktype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__TASKTYPE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Percentage Of Apparition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__PERCENTAGE_OF_APPARITION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__NB_CONSECUTIVE_SUCCESS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__PERCENTAGE_OF_VALID_FACTS = 3;
+
+	/**
+	 * The number of structural features of the '<em>Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.LearningDomainImpl <em>Learning Domain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.LearningDomainImpl
+	 * @see generator.impl.GeneratorPackageImpl#getLearningDomain()
+	 * @generated
+	 */
+	int LEARNING_DOMAIN = 24;
+
+	/**
+	 * The feature id for the '<em><b>Learningpaths</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_DOMAIN__LEARNINGPATHS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Tasktypes</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_DOMAIN__TASKTYPES = 1;
+
+	/**
+	 * The number of structural features of the '<em>Learning Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_DOMAIN_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Learning Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_DOMAIN_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.LearningPathImpl <em>Learning Path</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.LearningPathImpl
+	 * @see generator.impl.GeneratorPackageImpl#getLearningPath()
+	 * @generated
+	 */
+	int LEARNING_PATH = 25;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_PATH__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Learningobjective</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_PATH__LEARNINGOBJECTIVE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Knowledge</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_PATH__KNOWLEDGE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Learning Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_PATH_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Learning Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_PATH_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.LearningObjectiveImpl <em>Learning Objective</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.LearningObjectiveImpl
+	 * @see generator.impl.GeneratorPackageImpl#getLearningObjective()
+	 * @generated
+	 */
+	int LEARNING_OBJECTIVE = 26;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_OBJECTIVE__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_OBJECTIVE__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Prerequisites</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_OBJECTIVE__PREREQUISITES = 2;
+
+	/**
+	 * The feature id for the '<em><b>Levels</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_OBJECTIVE__LEVELS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Setoffacts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_OBJECTIVE__SETOFFACTS = 4;
+
+	/**
+	 * The number of structural features of the '<em>Learning Objective</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_OBJECTIVE_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Learning Objective</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_OBJECTIVE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.PrerequisiteImpl <em>Prerequisite</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.PrerequisiteImpl
+	 * @see generator.impl.GeneratorPackageImpl#getPrerequisite()
+	 * @generated
+	 */
+	int PREREQUISITE = 27;
+
+	/**
+	 * The feature id for the '<em><b>Succes Percentage</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE__SUCCES_PERCENTAGE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Required Level</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE__REQUIRED_LEVEL = 1;
+
+	/**
+	 * The number of structural features of the '<em>Prerequisite</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Prerequisite</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREREQUISITE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.LevelImpl <em>Level</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.LevelImpl
+	 * @see generator.impl.GeneratorPackageImpl#getLevel()
+	 * @generated
+	 */
+	int LEVEL = 28;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVEL__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVEL__TASKS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Level</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVEL_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Level</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVEL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.MTLevelImpl <em>MT Level</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MTLevelImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMTLevel()
+	 * @generated
+	 */
+	int MT_LEVEL = 29;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL__ID = LEVEL__ID;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL__TASKS = LEVEL__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Build Setup</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL__BUILD_SETUP = LEVEL_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Result Position Setup</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL__RESULT_POSITION_SETUP = LEVEL_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Min Interval</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL__MIN_INTERVAL = LEVEL_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Max Interval</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL__MAX_INTERVAL = LEVEL_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>MT Level</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_FEATURE_COUNT = LEVEL_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>MT Level</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL_OPERATION_COUNT = LEVEL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.TaskTypeImpl <em>Task Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.TaskTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getTaskType()
+	 * @generated
+	 */
+	int TASK_TYPE = 35;
+
+	/**
+	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE__NB_PROPOSITIONS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE__ENTER_RESPONSE_ALLOWED = 1;
+
+	/**
+	 * The number of structural features of the '<em>Task Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Task Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.CompletionTypeImpl <em>Completion Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.CompletionTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getCompletionType()
+	 * @generated
+	 */
+	int COMPLETION_TYPE = 32;
+
+	/**
+	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION_TYPE__NB_PROPOSITIONS = TASK_TYPE__NB_PROPOSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION_TYPE__ENTER_RESPONSE_ALLOWED = TASK_TYPE__ENTER_RESPONSE_ALLOWED;
+
+	/**
+	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION_TYPE__NB_MISSING_ELEMENTS = TASK_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Fact Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION_TYPE__FACT_ORDER = TASK_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Natural Language</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION_TYPE__NATURAL_LANGUAGE = TASK_TYPE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Completion Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION_TYPE_FEATURE_COUNT = TASK_TYPE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Completion Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION_TYPE_OPERATION_COUNT = TASK_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.MTCompletionTypeImpl <em>MT Completion Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MTCompletionTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMTCompletionType()
+	 * @generated
+	 */
+	int MT_COMPLETION_TYPE = 30;
+
+	/**
+	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION_TYPE__NB_PROPOSITIONS = COMPLETION_TYPE__NB_PROPOSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION_TYPE__ENTER_RESPONSE_ALLOWED = COMPLETION_TYPE__ENTER_RESPONSE_ALLOWED;
+
+	/**
+	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION_TYPE__NB_MISSING_ELEMENTS = COMPLETION_TYPE__NB_MISSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Fact Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION_TYPE__FACT_ORDER = COMPLETION_TYPE__FACT_ORDER;
+
+	/**
+	 * The feature id for the '<em><b>Natural Language</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION_TYPE__NATURAL_LANGUAGE = COMPLETION_TYPE__NATURAL_LANGUAGE;
+
+	/**
+	 * The feature id for the '<em><b>Targets</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION_TYPE__TARGETS = COMPLETION_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>MT Completion Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION_TYPE_FEATURE_COUNT = COMPLETION_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>MT Completion Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION_TYPE_OPERATION_COUNT = COMPLETION_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.TaskTypesImpl <em>Task Types</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.TaskTypesImpl
+	 * @see generator.impl.GeneratorPackageImpl#getTaskTypes()
+	 * @generated
+	 */
+	int TASK_TYPES = 31;
+
+	/**
+	 * The feature id for the '<em><b>Tasktypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPES__TASKTYPES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Task Types</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPES_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Task Types</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.VerificationTypeImpl <em>Verification Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.VerificationTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getVerificationType()
+	 * @generated
+	 */
+	int VERIFICATION_TYPE = 33;
+
+	/**
+	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_TYPE__NB_PROPOSITIONS = TASK_TYPE__NB_PROPOSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_TYPE__ENTER_RESPONSE_ALLOWED = TASK_TYPE__ENTER_RESPONSE_ALLOWED;
+
+	/**
+	 * The feature id for the '<em><b>Verify True</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_TYPE__VERIFY_TRUE = TASK_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Verification Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_TYPE_FEATURE_COUNT = TASK_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Verification Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_TYPE_OPERATION_COUNT = TASK_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ReconstructionTypeImpl <em>Reconstruction Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ReconstructionTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getReconstructionType()
+	 * @generated
+	 */
+	int RECONSTRUCTION_TYPE = 34;
+
+	/**
+	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECONSTRUCTION_TYPE__NB_PROPOSITIONS = TASK_TYPE__NB_PROPOSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECONSTRUCTION_TYPE__ENTER_RESPONSE_ALLOWED = TASK_TYPE__ENTER_RESPONSE_ALLOWED;
+
+	/**
+	 * The feature id for the '<em><b>Nb False Proposition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECONSTRUCTION_TYPE__NB_FALSE_PROPOSITION = TASK_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Reconstruction Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECONSTRUCTION_TYPE_FEATURE_COUNT = TASK_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Reconstruction Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECONSTRUCTION_TYPE_OPERATION_COUNT = TASK_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.FactVerificationTypeImpl <em>Fact Verification Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.FactVerificationTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getFactVerificationType()
+	 * @generated
+	 */
+	int FACT_VERIFICATION_TYPE = 36;
+
+	/**
+	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACT_VERIFICATION_TYPE__NB_PROPOSITIONS = VERIFICATION_TYPE__NB_PROPOSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACT_VERIFICATION_TYPE__ENTER_RESPONSE_ALLOWED = VERIFICATION_TYPE__ENTER_RESPONSE_ALLOWED;
+
+	/**
+	 * The feature id for the '<em><b>Verify True</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACT_VERIFICATION_TYPE__VERIFY_TRUE = VERIFICATION_TYPE__VERIFY_TRUE;
+
+	/**
+	 * The number of structural features of the '<em>Fact Verification Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACT_VERIFICATION_TYPE_FEATURE_COUNT = VERIFICATION_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Fact Verification Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACT_VERIFICATION_TYPE_OPERATION_COUNT = VERIFICATION_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ResultVerificationTypeImpl <em>Result Verification Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ResultVerificationTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getResultVerificationType()
+	 * @generated
+	 */
+	int RESULT_VERIFICATION_TYPE = 37;
+
+	/**
+	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT_VERIFICATION_TYPE__NB_PROPOSITIONS = VERIFICATION_TYPE__NB_PROPOSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT_VERIFICATION_TYPE__ENTER_RESPONSE_ALLOWED = VERIFICATION_TYPE__ENTER_RESPONSE_ALLOWED;
+
+	/**
+	 * The feature id for the '<em><b>Verify True</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT_VERIFICATION_TYPE__VERIFY_TRUE = VERIFICATION_TYPE__VERIFY_TRUE;
+
+	/**
+	 * The feature id for the '<em><b>Nb False Proposition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT_VERIFICATION_TYPE__NB_FALSE_PROPOSITION = VERIFICATION_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Result Verification Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT_VERIFICATION_TYPE_FEATURE_COUNT = VERIFICATION_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Result Verification Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT_VERIFICATION_TYPE_OPERATION_COUNT = VERIFICATION_TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.GPBricks <em>GP Bricks</em>}' enum.
@@ -2296,7 +2066,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPBricks()
 	 * @generated
 	 */
-	int GP_BRICKS = 43;
+	int GP_BRICKS = 38;
 
 	/**
 	 * The meta object id for the '{@link generator.AvatarActions <em>Avatar Actions</em>}' enum.
@@ -2306,7 +2076,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAvatarActions()
 	 * @generated
 	 */
-	int AVATAR_ACTIONS = 44;
+	int AVATAR_ACTIONS = 39;
 
 	/**
 	 * The meta object id for the '{@link generator.RoomPaths <em>Room Paths</em>}' enum.
@@ -2316,7 +2086,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRoomPaths()
 	 * @generated
 	 */
-	int ROOM_PATHS = 45;
+	int ROOM_PATHS = 40;
 
 	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
@@ -2326,7 +2096,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 46;
+	int DIRECTIONS = 41;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -2336,261 +2106,57 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 47;
+	int DUNGEON_MODE = 42;
 
 	/**
-	 * Returns the meta object for class '{@link generator.Prerequisite <em>Prerequisite</em>}'.
+	 * The meta object id for the '{@link generator.VerifiableElement <em>Verifiable Element</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Prerequisite</em>'.
-	 * @see generator.Prerequisite
+	 * @see generator.VerifiableElement
+	 * @see generator.impl.GeneratorPackageImpl#getVerifiableElement()
 	 * @generated
 	 */
-	EClass getPrerequisite();
+	int VERIFIABLE_ELEMENT = 43;
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.Prerequisite#getSuccessPercentage <em>Success Percentage</em>}'.
+	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Success Percentage</em>'.
-	 * @see generator.Prerequisite#getSuccessPercentage()
-	 * @see #getPrerequisite()
+	 * @see generator.TableBuild
+	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	EAttribute getPrerequisite_SuccessPercentage();
+	int TABLE_BUILD = 44;
 
 	/**
-	 * Returns the meta object for the reference '{@link generator.Prerequisite#getPrerequisite <em>Prerequisite</em>}'.
+	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Prerequisite</em>'.
-	 * @see generator.Prerequisite#getPrerequisite()
-	 * @see #getPrerequisite()
+	 * @see generator.ResultPosition
+	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	EReference getPrerequisite_Prerequisite();
+	int RESULT_POSITION = 45;
 
 	/**
-	 * Returns the meta object for class '{@link generator.Level <em>Level</em>}'.
+	 * The meta object id for the '{@link generator.TargetElement <em>Target Element</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Level</em>'.
-	 * @see generator.Level
+	 * @see generator.TargetElement
+	 * @see generator.impl.GeneratorPackageImpl#getTargetElement()
 	 * @generated
 	 */
-	EClass getLevel();
+	int TARGET_ELEMENT = 46;
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.Level#getID <em>ID</em>}'.
+	 * The meta object id for the '{@link generator.Order <em>Order</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>ID</em>'.
-	 * @see generator.Level#getID()
-	 * @see #getLevel()
+	 * @see generator.Order
+	 * @see generator.impl.GeneratorPackageImpl#getOrder()
 	 * @generated
 	 */
-	EAttribute getLevel_ID();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.Level#getSubobjectives <em>Subobjectives</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Subobjectives</em>'.
-	 * @see generator.Level#getSubobjectives()
-	 * @see #getLevel()
-	 * @generated
-	 */
-	EReference getLevel_Subobjectives();
-
-	/**
-	 * Returns the meta object for class '{@link generator.QFValidityDetermination <em>QF Validity Determination</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>QF Validity Determination</em>'.
-	 * @see generator.QFValidityDetermination
-	 * @generated
-	 */
-	EClass getQFValidityDetermination();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.QFValidityDetermination#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.QFValidityDetermination#getType()
-	 * @see #getQFValidityDetermination()
-	 * @generated
-	 */
-	EAttribute getQFValidityDetermination_Type();
-
-	/**
-	 * Returns the meta object for class '{@link generator.LearningPaths <em>Learning Paths</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Learning Paths</em>'.
-	 * @see generator.LearningPaths
-	 * @generated
-	 */
-	EClass getLearningPaths();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.LearningPaths#getLearningpaths <em>Learningpaths</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Learningpaths</em>'.
-	 * @see generator.LearningPaths#getLearningpaths()
-	 * @see #getLearningPaths()
-	 * @generated
-	 */
-	EReference getLearningPaths_Learningpaths();
-
-	/**
-	 * Returns the meta object for class '{@link generator.ResultValidityDetermination <em>Result Validity Determination</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Result Validity Determination</em>'.
-	 * @see generator.ResultValidityDetermination
-	 * @generated
-	 */
-	EClass getResultValidityDetermination();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.ResultValidityDetermination#getNewAttribute <em>New Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>New Attribute</em>'.
-	 * @see generator.ResultValidityDetermination#getNewAttribute()
-	 * @see #getResultValidityDetermination()
-	 * @generated
-	 */
-	EAttribute getResultValidityDetermination_NewAttribute();
-
-	/**
-	 * Returns the meta object for class '{@link generator.QFOneCompletion <em>QF One Completion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>QF One Completion</em>'.
-	 * @see generator.QFOneCompletion
-	 * @generated
-	 */
-	EClass getQFOneCompletion();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.QFOneCompletion#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.QFOneCompletion#getType()
-	 * @see #getQFOneCompletion()
-	 * @generated
-	 */
-	EAttribute getQFOneCompletion_Type();
-
-	/**
-	 * Returns the meta object for class '{@link generator.QFReconstruction <em>QF Reconstruction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>QF Reconstruction</em>'.
-	 * @see generator.QFReconstruction
-	 * @generated
-	 */
-	EClass getQFReconstruction();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.QFReconstruction#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.QFReconstruction#getType()
-	 * @see #getQFReconstruction()
-	 * @generated
-	 */
-	EAttribute getQFReconstruction_Type();
-
-	/**
-	 * Returns the meta object for class '{@link generator.SubObjective <em>Sub Objective</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sub Objective</em>'.
-	 * @see generator.SubObjective
-	 * @generated
-	 */
-	EClass getSubObjective();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.SubObjective#getPercentageOfApparition <em>Percentage Of Apparition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Percentage Of Apparition</em>'.
-	 * @see generator.SubObjective#getPercentageOfApparition()
-	 * @see #getSubObjective()
-	 * @generated
-	 */
-	EAttribute getSubObjective_PercentageOfApparition();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.SubObjective#getPercentageOfValidFacts <em>Percentage Of Valid Facts</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Percentage Of Valid Facts</em>'.
-	 * @see generator.SubObjective#getPercentageOfValidFacts()
-	 * @see #getSubObjective()
-	 * @generated
-	 */
-	EAttribute getSubObjective_PercentageOfValidFacts();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.SubObjective#getNbConsecutiveSuccess <em>Nb Consecutive Success</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nb Consecutive Success</em>'.
-	 * @see generator.SubObjective#getNbConsecutiveSuccess()
-	 * @see #getSubObjective()
-	 * @generated
-	 */
-	EAttribute getSubObjective_NbConsecutiveSuccess();
-
-	/**
-	 * Returns the meta object for class '{@link generator.QFTwoCompletion <em>QF Two Completion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>QF Two Completion</em>'.
-	 * @see generator.QFTwoCompletion
-	 * @generated
-	 */
-	EClass getQFTwoCompletion();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.QFTwoCompletion#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.QFTwoCompletion#getType()
-	 * @see #getQFTwoCompletion()
-	 * @generated
-	 */
-	EAttribute getQFTwoCompletion_Type();
-
-	/**
-	 * Returns the meta object for class '{@link generator.ProblemResolution <em>Problem Resolution</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Problem Resolution</em>'.
-	 * @see generator.ProblemResolution
-	 * @generated
-	 */
-	EClass getProblemResolution();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.ProblemResolution#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.ProblemResolution#getType()
-	 * @see #getProblemResolution()
-	 * @generated
-	 */
-	EAttribute getProblemResolution_Type();
+	int ORDER = 47;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -2686,103 +2252,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getKnowledge_Knowledgefacts();
-
-	/**
-	 * Returns the meta object for class '{@link generator.LearningPath <em>Learning Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Learning Path</em>'.
-	 * @see generator.LearningPath
-	 * @generated
-	 */
-	EClass getLearningPath();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.LearningPath#getKnowledge <em>Knowledge</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Knowledge</em>'.
-	 * @see generator.LearningPath#getKnowledge()
-	 * @see #getLearningPath()
-	 * @generated
-	 */
-	EReference getLearningPath_Knowledge();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.LearningPath#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see generator.LearningPath#getName()
-	 * @see #getLearningPath()
-	 * @generated
-	 */
-	EAttribute getLearningPath_Name();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.LearningPath#getLearningobjectives <em>Learningobjectives</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Learningobjectives</em>'.
-	 * @see generator.LearningPath#getLearningobjectives()
-	 * @see #getLearningPath()
-	 * @generated
-	 */
-	EReference getLearningPath_Learningobjectives();
-
-	/**
-	 * Returns the meta object for class '{@link generator.LearningObjective <em>Learning Objective</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Learning Objective</em>'.
-	 * @see generator.LearningObjective
-	 * @generated
-	 */
-	EClass getLearningObjective();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.LearningObjective#getLevels <em>Levels</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Levels</em>'.
-	 * @see generator.LearningObjective#getLevels()
-	 * @see #getLearningObjective()
-	 * @generated
-	 */
-	EReference getLearningObjective_Levels();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.LearningObjective#getPrerequisites <em>Prerequisites</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Prerequisites</em>'.
-	 * @see generator.LearningObjective#getPrerequisites()
-	 * @see #getLearningObjective()
-	 * @generated
-	 */
-	EReference getLearningObjective_Prerequisites();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.LearningObjective#getID <em>ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>ID</em>'.
-	 * @see generator.LearningObjective#getID()
-	 * @see #getLearningObjective()
-	 * @generated
-	 */
-	EAttribute getLearningObjective_ID();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.LearningObjective#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see generator.LearningObjective#getName()
-	 * @see #getLearningObjective()
-	 * @generated
-	 */
-	EAttribute getLearningObjective_Name();
 
 	/**
 	 * Returns the meta object for class '{@link generator.GameContent <em>Game Content</em>}'.
@@ -2968,49 +2437,6 @@ public interface GeneratorPackage extends EPackage {
 	EReference getElementType_State();
 
 	/**
-	 * Returns the meta object for class '{@link generator.DungeonOLD <em>Dungeon OLD</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dungeon OLD</em>'.
-	 * @see generator.DungeonOLD
-	 * @generated
-	 */
-	EClass getDungeonOLD();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.DungeonOLD#getNumberOfRooms <em>Number Of Rooms</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Number Of Rooms</em>'.
-	 * @see generator.DungeonOLD#getNumberOfRooms()
-	 * @see #getDungeonOLD()
-	 * @generated
-	 */
-	EAttribute getDungeonOLD_NumberOfRooms();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.DungeonOLD#getGameobjective <em>Gameobjective</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Gameobjective</em>'.
-	 * @see generator.DungeonOLD#getGameobjective()
-	 * @see #getDungeonOLD()
-	 * @generated
-	 */
-	EReference getDungeonOLD_Gameobjective();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.DungeonOLD#getRooms <em>Rooms</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Rooms</em>'.
-	 * @see generator.DungeonOLD#getRooms()
-	 * @see #getDungeonOLD()
-	 * @generated
-	 */
-	EReference getDungeonOLD_Rooms();
-
-	/**
 	 * Returns the meta object for class '{@link generator.GameObjective <em>Game Objective</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3030,123 +2456,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGameObjective_Description();
-
-	/**
-	 * Returns the meta object for class '{@link generator.RoomOLD <em>Room OLD</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Room OLD</em>'.
-	 * @see generator.RoomOLD
-	 * @generated
-	 */
-	EClass getRoomOLD();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.RoomOLD#getSouth <em>South</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>South</em>'.
-	 * @see generator.RoomOLD#getSouth()
-	 * @see #getRoomOLD()
-	 * @generated
-	 */
-	EReference getRoomOLD_South();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.RoomOLD#getNorth <em>North</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>North</em>'.
-	 * @see generator.RoomOLD#getNorth()
-	 * @see #getRoomOLD()
-	 * @generated
-	 */
-	EReference getRoomOLD_North();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.RoomOLD#getEast <em>East</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>East</em>'.
-	 * @see generator.RoomOLD#getEast()
-	 * @see #getRoomOLD()
-	 * @generated
-	 */
-	EReference getRoomOLD_East();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.RoomOLD#getWest <em>West</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>West</em>'.
-	 * @see generator.RoomOLD#getWest()
-	 * @see #getRoomOLD()
-	 * @generated
-	 */
-	EReference getRoomOLD_West();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.RoomOLD#getRoomtype <em>Roomtype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Roomtype</em>'.
-	 * @see generator.RoomOLD#getRoomtype()
-	 * @see #getRoomOLD()
-	 * @generated
-	 */
-	EReference getRoomOLD_Roomtype();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.RoomOLD#getInitialState <em>Initial State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Initial State</em>'.
-	 * @see generator.RoomOLD#getInitialState()
-	 * @see #getRoomOLD()
-	 * @generated
-	 */
-	EReference getRoomOLD_InitialState();
-
-	/**
-	 * Returns the meta object for class '{@link generator.ClassicRoom <em>Classic Room</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Classic Room</em>'.
-	 * @see generator.ClassicRoom
-	 * @generated
-	 */
-	EClass getClassicRoom();
-
-	/**
-	 * Returns the meta object for class '{@link generator.QuestionRoom <em>Question Room</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Question Room</em>'.
-	 * @see generator.QuestionRoom
-	 * @generated
-	 */
-	EClass getQuestionRoom();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.QuestionRoom#getSucessState <em>Sucess State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Sucess State</em>'.
-	 * @see generator.QuestionRoom#getSucessState()
-	 * @see #getQuestionRoom()
-	 * @generated
-	 */
-	EReference getQuestionRoom_SucessState();
-
-	/**
-	 * Returns the meta object for class '{@link generator.Pathway <em>Pathway</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Pathway</em>'.
-	 * @see generator.Pathway
-	 * @generated
-	 */
-	EClass getPathway();
 
 	/**
 	 * Returns the meta object for class '{@link generator.RoomType2 <em>Room Type2</em>}'.
@@ -3254,48 +2563,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLocation_Maxshape();
-
-	/**
-	 * Returns the meta object for class '{@link generator.State <em>State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>State</em>'.
-	 * @see generator.State
-	 * @generated
-	 */
-	EClass getState();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.State#getPlacedobjects <em>Placedobjects</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Placedobjects</em>'.
-	 * @see generator.State#getPlacedobjects()
-	 * @see #getState()
-	 * @generated
-	 */
-	EReference getState_Placedobjects();
-
-	/**
-	 * Returns the meta object for class '{@link generator.PlacedObject <em>Placed Object</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Placed Object</em>'.
-	 * @see generator.PlacedObject
-	 * @generated
-	 */
-	EClass getPlacedObject();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.PlacedObject#getDisplayValue <em>Display Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Display Value</em>'.
-	 * @see generator.PlacedObject#getDisplayValue()
-	 * @see #getPlacedObject()
-	 * @generated
-	 */
-	EAttribute getPlacedObject_DisplayValue();
 
 	/**
 	 * Returns the meta object for class '{@link generator.IRoomElement <em>IRoom Element</em>}'.
@@ -3616,14 +2883,506 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getRogueliteContext_Mode();
 
 	/**
-	 * Returns the meta object for enum '{@link generator.SubObjectiveType <em>Sub Objective Type</em>}'.
+	 * Returns the meta object for class '{@link generator.Task <em>Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Sub Objective Type</em>'.
-	 * @see generator.SubObjectiveType
+	 * @return the meta object for class '<em>Task</em>'.
+	 * @see generator.Task
 	 * @generated
 	 */
-	EEnum getSubObjectiveType();
+	EClass getTask();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.Task#getTasktype <em>Tasktype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Tasktype</em>'.
+	 * @see generator.Task#getTasktype()
+	 * @see #getTask()
+	 * @generated
+	 */
+	EReference getTask_Tasktype();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Task#getPercentageOfApparition <em>Percentage Of Apparition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Percentage Of Apparition</em>'.
+	 * @see generator.Task#getPercentageOfApparition()
+	 * @see #getTask()
+	 * @generated
+	 */
+	EAttribute getTask_PercentageOfApparition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Task#getNbConsecutiveSuccess <em>Nb Consecutive Success</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Consecutive Success</em>'.
+	 * @see generator.Task#getNbConsecutiveSuccess()
+	 * @see #getTask()
+	 * @generated
+	 */
+	EAttribute getTask_NbConsecutiveSuccess();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Task#getPercentageOfValidFacts <em>Percentage Of Valid Facts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Percentage Of Valid Facts</em>'.
+	 * @see generator.Task#getPercentageOfValidFacts()
+	 * @see #getTask()
+	 * @generated
+	 */
+	EAttribute getTask_PercentageOfValidFacts();
+
+	/**
+	 * Returns the meta object for class '{@link generator.LearningDomain <em>Learning Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Learning Domain</em>'.
+	 * @see generator.LearningDomain
+	 * @generated
+	 */
+	EClass getLearningDomain();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.LearningDomain#getLearningpaths <em>Learningpaths</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Learningpaths</em>'.
+	 * @see generator.LearningDomain#getLearningpaths()
+	 * @see #getLearningDomain()
+	 * @generated
+	 */
+	EReference getLearningDomain_Learningpaths();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.LearningDomain#getTasktypes <em>Tasktypes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tasktypes</em>'.
+	 * @see generator.LearningDomain#getTasktypes()
+	 * @see #getLearningDomain()
+	 * @generated
+	 */
+	EReference getLearningDomain_Tasktypes();
+
+	/**
+	 * Returns the meta object for class '{@link generator.LearningPath <em>Learning Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Learning Path</em>'.
+	 * @see generator.LearningPath
+	 * @generated
+	 */
+	EClass getLearningPath();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.LearningPath#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.LearningPath#getName()
+	 * @see #getLearningPath()
+	 * @generated
+	 */
+	EAttribute getLearningPath_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.LearningPath#getLearningobjective <em>Learningobjective</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Learningobjective</em>'.
+	 * @see generator.LearningPath#getLearningobjective()
+	 * @see #getLearningPath()
+	 * @generated
+	 */
+	EReference getLearningPath_Learningobjective();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.LearningPath#getKnowledge <em>Knowledge</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Knowledge</em>'.
+	 * @see generator.LearningPath#getKnowledge()
+	 * @see #getLearningPath()
+	 * @generated
+	 */
+	EReference getLearningPath_Knowledge();
+
+	/**
+	 * Returns the meta object for class '{@link generator.LearningObjective <em>Learning Objective</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Learning Objective</em>'.
+	 * @see generator.LearningObjective
+	 * @generated
+	 */
+	EClass getLearningObjective();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.LearningObjective#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see generator.LearningObjective#getID()
+	 * @see #getLearningObjective()
+	 * @generated
+	 */
+	EAttribute getLearningObjective_ID();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.LearningObjective#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.LearningObjective#getName()
+	 * @see #getLearningObjective()
+	 * @generated
+	 */
+	EAttribute getLearningObjective_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.LearningObjective#getPrerequisites <em>Prerequisites</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Prerequisites</em>'.
+	 * @see generator.LearningObjective#getPrerequisites()
+	 * @see #getLearningObjective()
+	 * @generated
+	 */
+	EReference getLearningObjective_Prerequisites();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.LearningObjective#getLevels <em>Levels</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Levels</em>'.
+	 * @see generator.LearningObjective#getLevels()
+	 * @see #getLearningObjective()
+	 * @generated
+	 */
+	EReference getLearningObjective_Levels();
+
+	/**
+	 * Returns the meta object for the reference list '{@link generator.LearningObjective#getSetoffacts <em>Setoffacts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Setoffacts</em>'.
+	 * @see generator.LearningObjective#getSetoffacts()
+	 * @see #getLearningObjective()
+	 * @generated
+	 */
+	EReference getLearningObjective_Setoffacts();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Prerequisite <em>Prerequisite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Prerequisite</em>'.
+	 * @see generator.Prerequisite
+	 * @generated
+	 */
+	EClass getPrerequisite();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Prerequisite#getSuccesPercentage <em>Succes Percentage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Succes Percentage</em>'.
+	 * @see generator.Prerequisite#getSuccesPercentage()
+	 * @see #getPrerequisite()
+	 * @generated
+	 */
+	EAttribute getPrerequisite_SuccesPercentage();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.Prerequisite#getRequiredLevel <em>Required Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Required Level</em>'.
+	 * @see generator.Prerequisite#getRequiredLevel()
+	 * @see #getPrerequisite()
+	 * @generated
+	 */
+	EReference getPrerequisite_RequiredLevel();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Level <em>Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Level</em>'.
+	 * @see generator.Level
+	 * @generated
+	 */
+	EClass getLevel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Level#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see generator.Level#getID()
+	 * @see #getLevel()
+	 * @generated
+	 */
+	EAttribute getLevel_ID();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.Level#getTasks <em>Tasks</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tasks</em>'.
+	 * @see generator.Level#getTasks()
+	 * @see #getLevel()
+	 * @generated
+	 */
+	EReference getLevel_Tasks();
+
+	/**
+	 * Returns the meta object for class '{@link generator.MTLevel <em>MT Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MT Level</em>'.
+	 * @see generator.MTLevel
+	 * @generated
+	 */
+	EClass getMTLevel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTLevel#getBuildSetup <em>Build Setup</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Build Setup</em>'.
+	 * @see generator.MTLevel#getBuildSetup()
+	 * @see #getMTLevel()
+	 * @generated
+	 */
+	EAttribute getMTLevel_BuildSetup();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTLevel#getResultPositionSetup <em>Result Position Setup</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Result Position Setup</em>'.
+	 * @see generator.MTLevel#getResultPositionSetup()
+	 * @see #getMTLevel()
+	 * @generated
+	 */
+	EAttribute getMTLevel_ResultPositionSetup();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTLevel#getMinInterval <em>Min Interval</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Min Interval</em>'.
+	 * @see generator.MTLevel#getMinInterval()
+	 * @see #getMTLevel()
+	 * @generated
+	 */
+	EAttribute getMTLevel_MinInterval();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTLevel#getMaxInterval <em>Max Interval</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Max Interval</em>'.
+	 * @see generator.MTLevel#getMaxInterval()
+	 * @see #getMTLevel()
+	 * @generated
+	 */
+	EAttribute getMTLevel_MaxInterval();
+
+	/**
+	 * Returns the meta object for class '{@link generator.MTCompletionType <em>MT Completion Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MT Completion Type</em>'.
+	 * @see generator.MTCompletionType
+	 * @generated
+	 */
+	EClass getMTCompletionType();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link generator.MTCompletionType#getTargets <em>Targets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Targets</em>'.
+	 * @see generator.MTCompletionType#getTargets()
+	 * @see #getMTCompletionType()
+	 * @generated
+	 */
+	EAttribute getMTCompletionType_Targets();
+
+	/**
+	 * Returns the meta object for class '{@link generator.TaskTypes <em>Task Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Task Types</em>'.
+	 * @see generator.TaskTypes
+	 * @generated
+	 */
+	EClass getTaskTypes();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.TaskTypes#getTasktypes <em>Tasktypes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tasktypes</em>'.
+	 * @see generator.TaskTypes#getTasktypes()
+	 * @see #getTaskTypes()
+	 * @generated
+	 */
+	EReference getTaskTypes_Tasktypes();
+
+	/**
+	 * Returns the meta object for class '{@link generator.CompletionType <em>Completion Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Completion Type</em>'.
+	 * @see generator.CompletionType
+	 * @generated
+	 */
+	EClass getCompletionType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.CompletionType#getNbMissingElements <em>Nb Missing Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
+	 * @see generator.CompletionType#getNbMissingElements()
+	 * @see #getCompletionType()
+	 * @generated
+	 */
+	EAttribute getCompletionType_NbMissingElements();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.CompletionType#getFactOrder <em>Fact Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fact Order</em>'.
+	 * @see generator.CompletionType#getFactOrder()
+	 * @see #getCompletionType()
+	 * @generated
+	 */
+	EAttribute getCompletionType_FactOrder();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.CompletionType#isNaturalLanguage <em>Natural Language</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Natural Language</em>'.
+	 * @see generator.CompletionType#isNaturalLanguage()
+	 * @see #getCompletionType()
+	 * @generated
+	 */
+	EAttribute getCompletionType_NaturalLanguage();
+
+	/**
+	 * Returns the meta object for class '{@link generator.VerificationType <em>Verification Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Verification Type</em>'.
+	 * @see generator.VerificationType
+	 * @generated
+	 */
+	EClass getVerificationType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.VerificationType#isVerifyTrue <em>Verify True</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Verify True</em>'.
+	 * @see generator.VerificationType#isVerifyTrue()
+	 * @see #getVerificationType()
+	 * @generated
+	 */
+	EAttribute getVerificationType_VerifyTrue();
+
+	/**
+	 * Returns the meta object for class '{@link generator.ReconstructionType <em>Reconstruction Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Reconstruction Type</em>'.
+	 * @see generator.ReconstructionType
+	 * @generated
+	 */
+	EClass getReconstructionType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.ReconstructionType#getNbFalseProposition <em>Nb False Proposition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb False Proposition</em>'.
+	 * @see generator.ReconstructionType#getNbFalseProposition()
+	 * @see #getReconstructionType()
+	 * @generated
+	 */
+	EAttribute getReconstructionType_NbFalseProposition();
+
+	/**
+	 * Returns the meta object for class '{@link generator.TaskType <em>Task Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Task Type</em>'.
+	 * @see generator.TaskType
+	 * @generated
+	 */
+	EClass getTaskType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.TaskType#getNbPropositions <em>Nb Propositions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Propositions</em>'.
+	 * @see generator.TaskType#getNbPropositions()
+	 * @see #getTaskType()
+	 * @generated
+	 */
+	EAttribute getTaskType_NbPropositions();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.TaskType#isEnterResponseAllowed <em>Enter Response Allowed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Enter Response Allowed</em>'.
+	 * @see generator.TaskType#isEnterResponseAllowed()
+	 * @see #getTaskType()
+	 * @generated
+	 */
+	EAttribute getTaskType_EnterResponseAllowed();
+
+	/**
+	 * Returns the meta object for class '{@link generator.FactVerificationType <em>Fact Verification Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fact Verification Type</em>'.
+	 * @see generator.FactVerificationType
+	 * @generated
+	 */
+	EClass getFactVerificationType();
+
+	/**
+	 * Returns the meta object for class '{@link generator.ResultVerificationType <em>Result Verification Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Result Verification Type</em>'.
+	 * @see generator.ResultVerificationType
+	 * @generated
+	 */
+	EClass getResultVerificationType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.ResultVerificationType#getNbFalseProposition <em>Nb False Proposition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb False Proposition</em>'.
+	 * @see generator.ResultVerificationType#getNbFalseProposition()
+	 * @see #getResultVerificationType()
+	 * @generated
+	 */
+	EAttribute getResultVerificationType_NbFalseProposition();
 
 	/**
 	 * Returns the meta object for enum '{@link generator.GPBricks <em>GP Bricks</em>}'.
@@ -3676,6 +3435,56 @@ public interface GeneratorPackage extends EPackage {
 	EEnum getDungeonMode();
 
 	/**
+	 * Returns the meta object for enum '{@link generator.VerifiableElement <em>Verifiable Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Verifiable Element</em>'.
+	 * @see generator.VerifiableElement
+	 * @generated
+	 */
+	EEnum getVerifiableElement();
+
+	/**
+	 * Returns the meta object for enum '{@link generator.TableBuild <em>Table Build</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Table Build</em>'.
+	 * @see generator.TableBuild
+	 * @generated
+	 */
+	EEnum getTableBuild();
+
+	/**
+	 * Returns the meta object for enum '{@link generator.ResultPosition <em>Result Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Result Position</em>'.
+	 * @see generator.ResultPosition
+	 * @generated
+	 */
+	EEnum getResultPosition();
+
+	/**
+	 * Returns the meta object for enum '{@link generator.TargetElement <em>Target Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Target Element</em>'.
+	 * @see generator.TargetElement
+	 * @generated
+	 */
+	EEnum getTargetElement();
+
+	/**
+	 * Returns the meta object for enum '{@link generator.Order <em>Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Order</em>'.
+	 * @see generator.Order
+	 * @generated
+	 */
+	EEnum getOrder();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3698,219 +3507,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
-		/**
-		 * The meta object literal for the '{@link generator.impl.PrerequisiteImpl <em>Prerequisite</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.PrerequisiteImpl
-		 * @see generator.impl.GeneratorPackageImpl#getPrerequisite()
-		 * @generated
-		 */
-		EClass PREREQUISITE = eINSTANCE.getPrerequisite();
-
-		/**
-		 * The meta object literal for the '<em><b>Success Percentage</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PREREQUISITE__SUCCESS_PERCENTAGE = eINSTANCE.getPrerequisite_SuccessPercentage();
-
-		/**
-		 * The meta object literal for the '<em><b>Prerequisite</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PREREQUISITE__PREREQUISITE = eINSTANCE.getPrerequisite_Prerequisite();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.LevelImpl <em>Level</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.LevelImpl
-		 * @see generator.impl.GeneratorPackageImpl#getLevel()
-		 * @generated
-		 */
-		EClass LEVEL = eINSTANCE.getLevel();
-
-		/**
-		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LEVEL__ID = eINSTANCE.getLevel_ID();
-
-		/**
-		 * The meta object literal for the '<em><b>Subobjectives</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LEVEL__SUBOBJECTIVES = eINSTANCE.getLevel_Subobjectives();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.QFValidityDeterminationImpl <em>QF Validity Determination</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.QFValidityDeterminationImpl
-		 * @see generator.impl.GeneratorPackageImpl#getQFValidityDetermination()
-		 * @generated
-		 */
-		EClass QF_VALIDITY_DETERMINATION = eINSTANCE.getQFValidityDetermination();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute QF_VALIDITY_DETERMINATION__TYPE = eINSTANCE.getQFValidityDetermination_Type();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.LearningPathsImpl <em>Learning Paths</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.LearningPathsImpl
-		 * @see generator.impl.GeneratorPackageImpl#getLearningPaths()
-		 * @generated
-		 */
-		EClass LEARNING_PATHS = eINSTANCE.getLearningPaths();
-
-		/**
-		 * The meta object literal for the '<em><b>Learningpaths</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LEARNING_PATHS__LEARNINGPATHS = eINSTANCE.getLearningPaths_Learningpaths();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.ResultValidityDeterminationImpl <em>Result Validity Determination</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.ResultValidityDeterminationImpl
-		 * @see generator.impl.GeneratorPackageImpl#getResultValidityDetermination()
-		 * @generated
-		 */
-		EClass RESULT_VALIDITY_DETERMINATION = eINSTANCE.getResultValidityDetermination();
-
-		/**
-		 * The meta object literal for the '<em><b>New Attribute</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RESULT_VALIDITY_DETERMINATION__NEW_ATTRIBUTE = eINSTANCE
-				.getResultValidityDetermination_NewAttribute();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.QFOneCompletionImpl <em>QF One Completion</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.QFOneCompletionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getQFOneCompletion()
-		 * @generated
-		 */
-		EClass QF_ONE_COMPLETION = eINSTANCE.getQFOneCompletion();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute QF_ONE_COMPLETION__TYPE = eINSTANCE.getQFOneCompletion_Type();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.QFReconstructionImpl <em>QF Reconstruction</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.QFReconstructionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getQFReconstruction()
-		 * @generated
-		 */
-		EClass QF_RECONSTRUCTION = eINSTANCE.getQFReconstruction();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute QF_RECONSTRUCTION__TYPE = eINSTANCE.getQFReconstruction_Type();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.SubObjectiveImpl <em>Sub Objective</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.SubObjectiveImpl
-		 * @see generator.impl.GeneratorPackageImpl#getSubObjective()
-		 * @generated
-		 */
-		EClass SUB_OBJECTIVE = eINSTANCE.getSubObjective();
-
-		/**
-		 * The meta object literal for the '<em><b>Percentage Of Apparition</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SUB_OBJECTIVE__PERCENTAGE_OF_APPARITION = eINSTANCE.getSubObjective_PercentageOfApparition();
-
-		/**
-		 * The meta object literal for the '<em><b>Percentage Of Valid Facts</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SUB_OBJECTIVE__PERCENTAGE_OF_VALID_FACTS = eINSTANCE.getSubObjective_PercentageOfValidFacts();
-
-		/**
-		 * The meta object literal for the '<em><b>Nb Consecutive Success</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SUB_OBJECTIVE__NB_CONSECUTIVE_SUCCESS = eINSTANCE.getSubObjective_NbConsecutiveSuccess();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.QFTwoCompletionImpl <em>QF Two Completion</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.QFTwoCompletionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getQFTwoCompletion()
-		 * @generated
-		 */
-		EClass QF_TWO_COMPLETION = eINSTANCE.getQFTwoCompletion();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute QF_TWO_COMPLETION__TYPE = eINSTANCE.getQFTwoCompletion_Type();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.ProblemResolutionImpl <em>Problem Resolution</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.ProblemResolutionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getProblemResolution()
-		 * @generated
-		 */
-		EClass PROBLEM_RESOLUTION = eINSTANCE.getProblemResolution();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROBLEM_RESOLUTION__TYPE = eINSTANCE.getProblemResolution_Type();
-
 		/**
 		 * The meta object literal for the '{@link generator.impl.AbstractFactImpl <em>Abstract Fact</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -3990,82 +3586,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference KNOWLEDGE__KNOWLEDGEFACTS = eINSTANCE.getKnowledge_Knowledgefacts();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.LearningPathImpl <em>Learning Path</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.LearningPathImpl
-		 * @see generator.impl.GeneratorPackageImpl#getLearningPath()
-		 * @generated
-		 */
-		EClass LEARNING_PATH = eINSTANCE.getLearningPath();
-
-		/**
-		 * The meta object literal for the '<em><b>Knowledge</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LEARNING_PATH__KNOWLEDGE = eINSTANCE.getLearningPath_Knowledge();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LEARNING_PATH__NAME = eINSTANCE.getLearningPath_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Learningobjectives</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LEARNING_PATH__LEARNINGOBJECTIVES = eINSTANCE.getLearningPath_Learningobjectives();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.LearningObjectiveImpl <em>Learning Objective</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.LearningObjectiveImpl
-		 * @see generator.impl.GeneratorPackageImpl#getLearningObjective()
-		 * @generated
-		 */
-		EClass LEARNING_OBJECTIVE = eINSTANCE.getLearningObjective();
-
-		/**
-		 * The meta object literal for the '<em><b>Levels</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LEARNING_OBJECTIVE__LEVELS = eINSTANCE.getLearningObjective_Levels();
-
-		/**
-		 * The meta object literal for the '<em><b>Prerequisites</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LEARNING_OBJECTIVE__PREREQUISITES = eINSTANCE.getLearningObjective_Prerequisites();
-
-		/**
-		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LEARNING_OBJECTIVE__ID = eINSTANCE.getLearningObjective_ID();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LEARNING_OBJECTIVE__NAME = eINSTANCE.getLearningObjective_Name();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.GameContentImpl <em>Game Content</em>}' class.
@@ -4212,40 +3732,6 @@ public interface GeneratorPackage extends EPackage {
 		EReference ELEMENT_TYPE__STATE = eINSTANCE.getElementType_State();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.DungeonOLDImpl <em>Dungeon OLD</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.DungeonOLDImpl
-		 * @see generator.impl.GeneratorPackageImpl#getDungeonOLD()
-		 * @generated
-		 */
-		EClass DUNGEON_OLD = eINSTANCE.getDungeonOLD();
-
-		/**
-		 * The meta object literal for the '<em><b>Number Of Rooms</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DUNGEON_OLD__NUMBER_OF_ROOMS = eINSTANCE.getDungeonOLD_NumberOfRooms();
-
-		/**
-		 * The meta object literal for the '<em><b>Gameobjective</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DUNGEON_OLD__GAMEOBJECTIVE = eINSTANCE.getDungeonOLD_Gameobjective();
-
-		/**
-		 * The meta object literal for the '<em><b>Rooms</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DUNGEON_OLD__ROOMS = eINSTANCE.getDungeonOLD_Rooms();
-
-		/**
 		 * The meta object literal for the '{@link generator.impl.GameObjectiveImpl <em>Game Objective</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4262,102 +3748,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GAME_OBJECTIVE__DESCRIPTION = eINSTANCE.getGameObjective_Description();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.RoomOLDImpl <em>Room OLD</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.RoomOLDImpl
-		 * @see generator.impl.GeneratorPackageImpl#getRoomOLD()
-		 * @generated
-		 */
-		EClass ROOM_OLD = eINSTANCE.getRoomOLD();
-
-		/**
-		 * The meta object literal for the '<em><b>South</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM_OLD__SOUTH = eINSTANCE.getRoomOLD_South();
-
-		/**
-		 * The meta object literal for the '<em><b>North</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM_OLD__NORTH = eINSTANCE.getRoomOLD_North();
-
-		/**
-		 * The meta object literal for the '<em><b>East</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM_OLD__EAST = eINSTANCE.getRoomOLD_East();
-
-		/**
-		 * The meta object literal for the '<em><b>West</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM_OLD__WEST = eINSTANCE.getRoomOLD_West();
-
-		/**
-		 * The meta object literal for the '<em><b>Roomtype</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM_OLD__ROOMTYPE = eINSTANCE.getRoomOLD_Roomtype();
-
-		/**
-		 * The meta object literal for the '<em><b>Initial State</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM_OLD__INITIAL_STATE = eINSTANCE.getRoomOLD_InitialState();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.ClassicRoomImpl <em>Classic Room</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.ClassicRoomImpl
-		 * @see generator.impl.GeneratorPackageImpl#getClassicRoom()
-		 * @generated
-		 */
-		EClass CLASSIC_ROOM = eINSTANCE.getClassicRoom();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.QuestionRoomImpl <em>Question Room</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.QuestionRoomImpl
-		 * @see generator.impl.GeneratorPackageImpl#getQuestionRoom()
-		 * @generated
-		 */
-		EClass QUESTION_ROOM = eINSTANCE.getQuestionRoom();
-
-		/**
-		 * The meta object literal for the '<em><b>Sucess State</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUESTION_ROOM__SUCESS_STATE = eINSTANCE.getQuestionRoom_SucessState();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.PathwayImpl <em>Pathway</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.PathwayImpl
-		 * @see generator.impl.GeneratorPackageImpl#getPathway()
-		 * @generated
-		 */
-		EClass PATHWAY = eINSTANCE.getPathway();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.RoomType2Impl <em>Room Type2</em>}' class.
@@ -4444,42 +3834,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LOCATION__MAXSHAPE = eINSTANCE.getLocation_Maxshape();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.StateImpl <em>State</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.StateImpl
-		 * @see generator.impl.GeneratorPackageImpl#getState()
-		 * @generated
-		 */
-		EClass STATE = eINSTANCE.getState();
-
-		/**
-		 * The meta object literal for the '<em><b>Placedobjects</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATE__PLACEDOBJECTS = eINSTANCE.getState_Placedobjects();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.PlacedObjectImpl <em>Placed Object</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.PlacedObjectImpl
-		 * @see generator.impl.GeneratorPackageImpl#getPlacedObject()
-		 * @generated
-		 */
-		EClass PLACED_OBJECT = eINSTANCE.getPlacedObject();
-
-		/**
-		 * The meta object literal for the '<em><b>Display Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PLACED_OBJECT__DISPLAY_VALUE = eINSTANCE.getPlacedObject_DisplayValue();
 
 		/**
 		 * The meta object literal for the '{@link generator.IRoomElement <em>IRoom Element</em>}' class.
@@ -4744,14 +4098,411 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute ROGUELITE_CONTEXT__MODE = eINSTANCE.getRogueliteContext_Mode();
 
 		/**
-		 * The meta object literal for the '{@link generator.SubObjectiveType <em>Sub Objective Type</em>}' enum.
+		 * The meta object literal for the '{@link generator.impl.TaskImpl <em>Task</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.SubObjectiveType
-		 * @see generator.impl.GeneratorPackageImpl#getSubObjectiveType()
+		 * @see generator.impl.TaskImpl
+		 * @see generator.impl.GeneratorPackageImpl#getTask()
 		 * @generated
 		 */
-		EEnum SUB_OBJECTIVE_TYPE = eINSTANCE.getSubObjectiveType();
+		EClass TASK = eINSTANCE.getTask();
+
+		/**
+		 * The meta object literal for the '<em><b>Tasktype</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK__TASKTYPE = eINSTANCE.getTask_Tasktype();
+
+		/**
+		 * The meta object literal for the '<em><b>Percentage Of Apparition</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TASK__PERCENTAGE_OF_APPARITION = eINSTANCE.getTask_PercentageOfApparition();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Consecutive Success</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TASK__NB_CONSECUTIVE_SUCCESS = eINSTANCE.getTask_NbConsecutiveSuccess();
+
+		/**
+		 * The meta object literal for the '<em><b>Percentage Of Valid Facts</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TASK__PERCENTAGE_OF_VALID_FACTS = eINSTANCE.getTask_PercentageOfValidFacts();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.LearningDomainImpl <em>Learning Domain</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.LearningDomainImpl
+		 * @see generator.impl.GeneratorPackageImpl#getLearningDomain()
+		 * @generated
+		 */
+		EClass LEARNING_DOMAIN = eINSTANCE.getLearningDomain();
+
+		/**
+		 * The meta object literal for the '<em><b>Learningpaths</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEARNING_DOMAIN__LEARNINGPATHS = eINSTANCE.getLearningDomain_Learningpaths();
+
+		/**
+		 * The meta object literal for the '<em><b>Tasktypes</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEARNING_DOMAIN__TASKTYPES = eINSTANCE.getLearningDomain_Tasktypes();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.LearningPathImpl <em>Learning Path</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.LearningPathImpl
+		 * @see generator.impl.GeneratorPackageImpl#getLearningPath()
+		 * @generated
+		 */
+		EClass LEARNING_PATH = eINSTANCE.getLearningPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEARNING_PATH__NAME = eINSTANCE.getLearningPath_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Learningobjective</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEARNING_PATH__LEARNINGOBJECTIVE = eINSTANCE.getLearningPath_Learningobjective();
+
+		/**
+		 * The meta object literal for the '<em><b>Knowledge</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEARNING_PATH__KNOWLEDGE = eINSTANCE.getLearningPath_Knowledge();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.LearningObjectiveImpl <em>Learning Objective</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.LearningObjectiveImpl
+		 * @see generator.impl.GeneratorPackageImpl#getLearningObjective()
+		 * @generated
+		 */
+		EClass LEARNING_OBJECTIVE = eINSTANCE.getLearningObjective();
+
+		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEARNING_OBJECTIVE__ID = eINSTANCE.getLearningObjective_ID();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEARNING_OBJECTIVE__NAME = eINSTANCE.getLearningObjective_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Prerequisites</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEARNING_OBJECTIVE__PREREQUISITES = eINSTANCE.getLearningObjective_Prerequisites();
+
+		/**
+		 * The meta object literal for the '<em><b>Levels</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEARNING_OBJECTIVE__LEVELS = eINSTANCE.getLearningObjective_Levels();
+
+		/**
+		 * The meta object literal for the '<em><b>Setoffacts</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEARNING_OBJECTIVE__SETOFFACTS = eINSTANCE.getLearningObjective_Setoffacts();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.PrerequisiteImpl <em>Prerequisite</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.PrerequisiteImpl
+		 * @see generator.impl.GeneratorPackageImpl#getPrerequisite()
+		 * @generated
+		 */
+		EClass PREREQUISITE = eINSTANCE.getPrerequisite();
+
+		/**
+		 * The meta object literal for the '<em><b>Succes Percentage</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PREREQUISITE__SUCCES_PERCENTAGE = eINSTANCE.getPrerequisite_SuccesPercentage();
+
+		/**
+		 * The meta object literal for the '<em><b>Required Level</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PREREQUISITE__REQUIRED_LEVEL = eINSTANCE.getPrerequisite_RequiredLevel();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.LevelImpl <em>Level</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.LevelImpl
+		 * @see generator.impl.GeneratorPackageImpl#getLevel()
+		 * @generated
+		 */
+		EClass LEVEL = eINSTANCE.getLevel();
+
+		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEVEL__ID = eINSTANCE.getLevel_ID();
+
+		/**
+		 * The meta object literal for the '<em><b>Tasks</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEVEL__TASKS = eINSTANCE.getLevel_Tasks();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MTLevelImpl <em>MT Level</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MTLevelImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMTLevel()
+		 * @generated
+		 */
+		EClass MT_LEVEL = eINSTANCE.getMTLevel();
+
+		/**
+		 * The meta object literal for the '<em><b>Build Setup</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_LEVEL__BUILD_SETUP = eINSTANCE.getMTLevel_BuildSetup();
+
+		/**
+		 * The meta object literal for the '<em><b>Result Position Setup</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_LEVEL__RESULT_POSITION_SETUP = eINSTANCE.getMTLevel_ResultPositionSetup();
+
+		/**
+		 * The meta object literal for the '<em><b>Min Interval</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_LEVEL__MIN_INTERVAL = eINSTANCE.getMTLevel_MinInterval();
+
+		/**
+		 * The meta object literal for the '<em><b>Max Interval</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_LEVEL__MAX_INTERVAL = eINSTANCE.getMTLevel_MaxInterval();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MTCompletionTypeImpl <em>MT Completion Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MTCompletionTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMTCompletionType()
+		 * @generated
+		 */
+		EClass MT_COMPLETION_TYPE = eINSTANCE.getMTCompletionType();
+
+		/**
+		 * The meta object literal for the '<em><b>Targets</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_COMPLETION_TYPE__TARGETS = eINSTANCE.getMTCompletionType_Targets();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.TaskTypesImpl <em>Task Types</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.TaskTypesImpl
+		 * @see generator.impl.GeneratorPackageImpl#getTaskTypes()
+		 * @generated
+		 */
+		EClass TASK_TYPES = eINSTANCE.getTaskTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Tasktypes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_TYPES__TASKTYPES = eINSTANCE.getTaskTypes_Tasktypes();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.CompletionTypeImpl <em>Completion Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.CompletionTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getCompletionType()
+		 * @generated
+		 */
+		EClass COMPLETION_TYPE = eINSTANCE.getCompletionType();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPLETION_TYPE__NB_MISSING_ELEMENTS = eINSTANCE.getCompletionType_NbMissingElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Fact Order</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPLETION_TYPE__FACT_ORDER = eINSTANCE.getCompletionType_FactOrder();
+
+		/**
+		 * The meta object literal for the '<em><b>Natural Language</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPLETION_TYPE__NATURAL_LANGUAGE = eINSTANCE.getCompletionType_NaturalLanguage();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.VerificationTypeImpl <em>Verification Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.VerificationTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getVerificationType()
+		 * @generated
+		 */
+		EClass VERIFICATION_TYPE = eINSTANCE.getVerificationType();
+
+		/**
+		 * The meta object literal for the '<em><b>Verify True</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VERIFICATION_TYPE__VERIFY_TRUE = eINSTANCE.getVerificationType_VerifyTrue();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ReconstructionTypeImpl <em>Reconstruction Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ReconstructionTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getReconstructionType()
+		 * @generated
+		 */
+		EClass RECONSTRUCTION_TYPE = eINSTANCE.getReconstructionType();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb False Proposition</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECONSTRUCTION_TYPE__NB_FALSE_PROPOSITION = eINSTANCE.getReconstructionType_NbFalseProposition();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.TaskTypeImpl <em>Task Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.TaskTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getTaskType()
+		 * @generated
+		 */
+		EClass TASK_TYPE = eINSTANCE.getTaskType();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Propositions</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TASK_TYPE__NB_PROPOSITIONS = eINSTANCE.getTaskType_NbPropositions();
+
+		/**
+		 * The meta object literal for the '<em><b>Enter Response Allowed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TASK_TYPE__ENTER_RESPONSE_ALLOWED = eINSTANCE.getTaskType_EnterResponseAllowed();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.FactVerificationTypeImpl <em>Fact Verification Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.FactVerificationTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getFactVerificationType()
+		 * @generated
+		 */
+		EClass FACT_VERIFICATION_TYPE = eINSTANCE.getFactVerificationType();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ResultVerificationTypeImpl <em>Result Verification Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ResultVerificationTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getResultVerificationType()
+		 * @generated
+		 */
+		EClass RESULT_VERIFICATION_TYPE = eINSTANCE.getResultVerificationType();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb False Proposition</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RESULT_VERIFICATION_TYPE__NB_FALSE_PROPOSITION = eINSTANCE
+				.getResultVerificationType_NbFalseProposition();
 
 		/**
 		 * The meta object literal for the '{@link generator.GPBricks <em>GP Bricks</em>}' enum.
@@ -4802,6 +4553,56 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum DUNGEON_MODE = eINSTANCE.getDungeonMode();
+
+		/**
+		 * The meta object literal for the '{@link generator.VerifiableElement <em>Verifiable Element</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.VerifiableElement
+		 * @see generator.impl.GeneratorPackageImpl#getVerifiableElement()
+		 * @generated
+		 */
+		EEnum VERIFIABLE_ELEMENT = eINSTANCE.getVerifiableElement();
+
+		/**
+		 * The meta object literal for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.TableBuild
+		 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
+		 * @generated
+		 */
+		EEnum TABLE_BUILD = eINSTANCE.getTableBuild();
+
+		/**
+		 * The meta object literal for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.ResultPosition
+		 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
+		 * @generated
+		 */
+		EEnum RESULT_POSITION = eINSTANCE.getResultPosition();
+
+		/**
+		 * The meta object literal for the '{@link generator.TargetElement <em>Target Element</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.TargetElement
+		 * @see generator.impl.GeneratorPackageImpl#getTargetElement()
+		 * @generated
+		 */
+		EEnum TARGET_ELEMENT = eINSTANCE.getTargetElement();
+
+		/**
+		 * The meta object literal for the '{@link generator.Order <em>Order</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.Order
+		 * @see generator.impl.GeneratorPackageImpl#getOrder()
+		 * @generated
+		 */
+		EEnum ORDER = eINSTANCE.getOrder();
 
 	}
 

@@ -4,10 +4,11 @@ package generator.impl;
 
 import generator.GeneratorPackage;
 import generator.Level;
-import generator.SubObjective;
+import generator.Task;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -15,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -29,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.LevelImpl#getID <em>ID</em>}</li>
- *   <li>{@link generator.impl.LevelImpl#getSubobjectives <em>Subobjectives</em>}</li>
+ *   <li>{@link generator.impl.LevelImpl#getTasks <em>Tasks</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,14 +58,14 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	protected String id = ID_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSubobjectives() <em>Subobjectives</em>}' containment reference list.
+	 * The cached value of the '{@link #getTasks() <em>Tasks</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSubobjectives()
+	 * @see #getTasks()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SubObjective> subobjectives;
+	protected EList<Task> tasks;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -98,12 +100,23 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SubObjective> getSubobjectives() {
-		if (subobjectives == null) {
-			subobjectives = new EObjectContainmentEList<SubObjective>(SubObjective.class, this,
-					GeneratorPackage.LEVEL__SUBOBJECTIVES);
+	public void setID(String newID) {
+		String oldID = id;
+		id = newID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEVEL__ID, oldID, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Task> getTasks() {
+		if (tasks == null) {
+			tasks = new EObjectContainmentEList<Task>(Task.class, this, GeneratorPackage.LEVEL__TASKS);
 		}
-		return subobjectives;
+		return tasks;
 	}
 
 	/**
@@ -114,8 +127,8 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.LEVEL__SUBOBJECTIVES:
-			return ((InternalEList<?>) getSubobjectives()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.LEVEL__TASKS:
+			return ((InternalEList<?>) getTasks()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -130,8 +143,8 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 		case GeneratorPackage.LEVEL__ID:
 			return getID();
-		case GeneratorPackage.LEVEL__SUBOBJECTIVES:
-			return getSubobjectives();
+		case GeneratorPackage.LEVEL__TASKS:
+			return getTasks();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -145,9 +158,12 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.LEVEL__SUBOBJECTIVES:
-			getSubobjectives().clear();
-			getSubobjectives().addAll((Collection<? extends SubObjective>) newValue);
+		case GeneratorPackage.LEVEL__ID:
+			setID((String) newValue);
+			return;
+		case GeneratorPackage.LEVEL__TASKS:
+			getTasks().clear();
+			getTasks().addAll((Collection<? extends Task>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -161,8 +177,11 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.LEVEL__SUBOBJECTIVES:
-			getSubobjectives().clear();
+		case GeneratorPackage.LEVEL__ID:
+			setID(ID_EDEFAULT);
+			return;
+		case GeneratorPackage.LEVEL__TASKS:
+			getTasks().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -178,8 +197,8 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 		case GeneratorPackage.LEVEL__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-		case GeneratorPackage.LEVEL__SUBOBJECTIVES:
-			return subobjectives != null && !subobjectives.isEmpty();
+		case GeneratorPackage.LEVEL__TASKS:
+			return tasks != null && !tasks.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

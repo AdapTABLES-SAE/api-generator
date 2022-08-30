@@ -8,7 +8,8 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: generator.impl,
+Export-Package: generator,
+ generator.impl,
  generator.util,
  generators
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,

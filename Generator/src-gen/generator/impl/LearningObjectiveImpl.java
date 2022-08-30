@@ -6,6 +6,7 @@ import generator.GeneratorPackage;
 import generator.LearningObjective;
 import generator.Level;
 import generator.Prerequisite;
+import generator.SetOfFacts;
 
 import java.util.Collection;
 
@@ -21,6 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -31,35 +33,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.LearningObjectiveImpl#getLevels <em>Levels</em>}</li>
- *   <li>{@link generator.impl.LearningObjectiveImpl#getPrerequisites <em>Prerequisites</em>}</li>
  *   <li>{@link generator.impl.LearningObjectiveImpl#getID <em>ID</em>}</li>
  *   <li>{@link generator.impl.LearningObjectiveImpl#getName <em>Name</em>}</li>
+ *   <li>{@link generator.impl.LearningObjectiveImpl#getPrerequisites <em>Prerequisites</em>}</li>
+ *   <li>{@link generator.impl.LearningObjectiveImpl#getLevels <em>Levels</em>}</li>
+ *   <li>{@link generator.impl.LearningObjectiveImpl#getSetoffacts <em>Setoffacts</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implements LearningObjective {
-	/**
-	 * The cached value of the '{@link #getLevels() <em>Levels</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLevels()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Level> levels;
-
-	/**
-	 * The cached value of the '{@link #getPrerequisites() <em>Prerequisites</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrerequisites()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Prerequisite> prerequisites;
-
 	/**
 	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,6 +84,36 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getPrerequisites() <em>Prerequisites</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrerequisites()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Prerequisite> prerequisites;
+
+	/**
+	 * The cached value of the '{@link #getLevels() <em>Levels</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLevels()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Level> levels;
+
+	/**
+	 * The cached value of the '{@link #getSetoffacts() <em>Setoffacts</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSetoffacts()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SetOfFacts> setoffacts;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -124,33 +137,20 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Level> getLevels() {
-		if (levels == null) {
-			levels = new EObjectContainmentEList<Level>(Level.class, this, GeneratorPackage.LEARNING_OBJECTIVE__LEVELS);
-		}
-		return levels;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Prerequisite> getPrerequisites() {
-		if (prerequisites == null) {
-			prerequisites = new EObjectContainmentEList<Prerequisite>(Prerequisite.class, this,
-					GeneratorPackage.LEARNING_OBJECTIVE__PREREQUISITES);
-		}
-		return prerequisites;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getID() {
 		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setID(String newID) {
+		String oldID = id;
+		id = newID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEARNING_OBJECTIVE__ID, oldID, id));
 	}
 
 	/**
@@ -180,13 +180,51 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Prerequisite> getPrerequisites() {
+		if (prerequisites == null) {
+			prerequisites = new EObjectContainmentEList<Prerequisite>(Prerequisite.class, this,
+					GeneratorPackage.LEARNING_OBJECTIVE__PREREQUISITES);
+		}
+		return prerequisites;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Level> getLevels() {
+		if (levels == null) {
+			levels = new EObjectContainmentEList<Level>(Level.class, this, GeneratorPackage.LEARNING_OBJECTIVE__LEVELS);
+		}
+		return levels;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<SetOfFacts> getSetoffacts() {
+		if (setoffacts == null) {
+			setoffacts = new EObjectResolvingEList<SetOfFacts>(SetOfFacts.class, this,
+					GeneratorPackage.LEARNING_OBJECTIVE__SETOFFACTS);
+		}
+		return setoffacts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.LEARNING_OBJECTIVE__LEVELS:
-			return ((InternalEList<?>) getLevels()).basicRemove(otherEnd, msgs);
 		case GeneratorPackage.LEARNING_OBJECTIVE__PREREQUISITES:
 			return ((InternalEList<?>) getPrerequisites()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.LEARNING_OBJECTIVE__LEVELS:
+			return ((InternalEList<?>) getLevels()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -199,14 +237,16 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.LEARNING_OBJECTIVE__LEVELS:
-			return getLevels();
-		case GeneratorPackage.LEARNING_OBJECTIVE__PREREQUISITES:
-			return getPrerequisites();
 		case GeneratorPackage.LEARNING_OBJECTIVE__ID:
 			return getID();
 		case GeneratorPackage.LEARNING_OBJECTIVE__NAME:
 			return getName();
+		case GeneratorPackage.LEARNING_OBJECTIVE__PREREQUISITES:
+			return getPrerequisites();
+		case GeneratorPackage.LEARNING_OBJECTIVE__LEVELS:
+			return getLevels();
+		case GeneratorPackage.LEARNING_OBJECTIVE__SETOFFACTS:
+			return getSetoffacts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -220,16 +260,23 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.LEARNING_OBJECTIVE__LEVELS:
-			getLevels().clear();
-			getLevels().addAll((Collection<? extends Level>) newValue);
+		case GeneratorPackage.LEARNING_OBJECTIVE__ID:
+			setID((String) newValue);
+			return;
+		case GeneratorPackage.LEARNING_OBJECTIVE__NAME:
+			setName((String) newValue);
 			return;
 		case GeneratorPackage.LEARNING_OBJECTIVE__PREREQUISITES:
 			getPrerequisites().clear();
 			getPrerequisites().addAll((Collection<? extends Prerequisite>) newValue);
 			return;
-		case GeneratorPackage.LEARNING_OBJECTIVE__NAME:
-			setName((String) newValue);
+		case GeneratorPackage.LEARNING_OBJECTIVE__LEVELS:
+			getLevels().clear();
+			getLevels().addAll((Collection<? extends Level>) newValue);
+			return;
+		case GeneratorPackage.LEARNING_OBJECTIVE__SETOFFACTS:
+			getSetoffacts().clear();
+			getSetoffacts().addAll((Collection<? extends SetOfFacts>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -243,14 +290,20 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.LEARNING_OBJECTIVE__LEVELS:
-			getLevels().clear();
+		case GeneratorPackage.LEARNING_OBJECTIVE__ID:
+			setID(ID_EDEFAULT);
+			return;
+		case GeneratorPackage.LEARNING_OBJECTIVE__NAME:
+			setName(NAME_EDEFAULT);
 			return;
 		case GeneratorPackage.LEARNING_OBJECTIVE__PREREQUISITES:
 			getPrerequisites().clear();
 			return;
-		case GeneratorPackage.LEARNING_OBJECTIVE__NAME:
-			setName(NAME_EDEFAULT);
+		case GeneratorPackage.LEARNING_OBJECTIVE__LEVELS:
+			getLevels().clear();
+			return;
+		case GeneratorPackage.LEARNING_OBJECTIVE__SETOFFACTS:
+			getSetoffacts().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -264,14 +317,16 @@ public class LearningObjectiveImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.LEARNING_OBJECTIVE__LEVELS:
-			return levels != null && !levels.isEmpty();
-		case GeneratorPackage.LEARNING_OBJECTIVE__PREREQUISITES:
-			return prerequisites != null && !prerequisites.isEmpty();
 		case GeneratorPackage.LEARNING_OBJECTIVE__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		case GeneratorPackage.LEARNING_OBJECTIVE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case GeneratorPackage.LEARNING_OBJECTIVE__PREREQUISITES:
+			return prerequisites != null && !prerequisites.isEmpty();
+		case GeneratorPackage.LEARNING_OBJECTIVE__LEVELS:
+			return levels != null && !levels.isEmpty();
+		case GeneratorPackage.LEARNING_OBJECTIVE__SETOFFACTS:
+			return setoffacts != null && !setoffacts.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.Prerequisite#getSuccessPercentage <em>Success Percentage</em>}</li>
- *   <li>{@link generator.Prerequisite#getPrerequisite <em>Prerequisite</em>}</li>
+ *   <li>{@link generator.Prerequisite#getSuccesPercentage <em>Succes Percentage</em>}</li>
+ *   <li>{@link generator.Prerequisite#getRequiredLevel <em>Required Level</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getPrerequisite()
@@ -23,47 +23,47 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Prerequisite extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Success Percentage</b></em>' attribute.
+	 * Returns the value of the '<em><b>Succes Percentage</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Success Percentage</em>' attribute.
-	 * @see #setSuccessPercentage(int)
-	 * @see generator.GeneratorPackage#getPrerequisite_SuccessPercentage()
+	 * @return the value of the '<em>Succes Percentage</em>' attribute.
+	 * @see #setSuccesPercentage(int)
+	 * @see generator.GeneratorPackage#getPrerequisite_SuccesPercentage()
 	 * @model
 	 * @generated
 	 */
-	int getSuccessPercentage();
+	int getSuccesPercentage();
 
 	/**
-	 * Sets the value of the '{@link generator.Prerequisite#getSuccessPercentage <em>Success Percentage</em>}' attribute.
+	 * Sets the value of the '{@link generator.Prerequisite#getSuccesPercentage <em>Succes Percentage</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Success Percentage</em>' attribute.
-	 * @see #getSuccessPercentage()
+	 * @param value the new value of the '<em>Succes Percentage</em>' attribute.
+	 * @see #getSuccesPercentage()
 	 * @generated
 	 */
-	void setSuccessPercentage(int value);
+	void setSuccesPercentage(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Prerequisite</b></em>' reference.
+	 * Returns the value of the '<em><b>Required Level</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prerequisite</em>' reference.
-	 * @see #setPrerequisite(Level)
-	 * @see generator.GeneratorPackage#getPrerequisite_Prerequisite()
+	 * @return the value of the '<em>Required Level</em>' reference.
+	 * @see #setRequiredLevel(Level)
+	 * @see generator.GeneratorPackage#getPrerequisite_RequiredLevel()
 	 * @model required="true"
 	 * @generated
 	 */
-	Level getPrerequisite();
+	Level getRequiredLevel();
 
 	/**
-	 * Sets the value of the '{@link generator.Prerequisite#getPrerequisite <em>Prerequisite</em>}' reference.
+	 * Sets the value of the '{@link generator.Prerequisite#getRequiredLevel <em>Required Level</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prerequisite</em>' reference.
-	 * @see #getPrerequisite()
+	 * @param value the new value of the '<em>Required Level</em>' reference.
+	 * @see #getRequiredLevel()
 	 * @generated
 	 */
-	void setPrerequisite(Level value);
+	void setRequiredLevel(Level value);
 
 } // Prerequisite

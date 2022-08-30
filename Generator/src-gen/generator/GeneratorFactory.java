@@ -22,24 +22,6 @@ public interface GeneratorFactory extends EFactory {
 	GeneratorFactory eINSTANCE = generator.impl.GeneratorFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Prerequisite</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prerequisite</em>'.
-	 * @generated
-	 */
-	Prerequisite createPrerequisite();
-
-	/**
-	 * Returns a new object of class '<em>Learning Paths</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Learning Paths</em>'.
-	 * @generated
-	 */
-	LearningPaths createLearningPaths();
-
-	/**
 	 * Returns a new object of class '<em>Set Of Facts</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,24 +47,6 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	Knowledge createKnowledge();
-
-	/**
-	 * Returns a new object of class '<em>Learning Path</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Learning Path</em>'.
-	 * @generated
-	 */
-	LearningPath createLearningPath();
-
-	/**
-	 * Returns a new object of class '<em>Learning Objective</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Learning Objective</em>'.
-	 * @generated
-	 */
-	LearningObjective createLearningObjective();
 
 	/**
 	 * Returns a new object of class '<em>Game Content</em>'.
@@ -121,15 +85,6 @@ public interface GeneratorFactory extends EFactory {
 	ElementType createElementType();
 
 	/**
-	 * Returns a new object of class '<em>Dungeon OLD</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Dungeon OLD</em>'.
-	 * @generated
-	 */
-	DungeonOLD createDungeonOLD();
-
-	/**
 	 * Returns a new object of class '<em>Game Objective</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,33 +92,6 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	GameObjective createGameObjective();
-
-	/**
-	 * Returns a new object of class '<em>Classic Room</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Classic Room</em>'.
-	 * @generated
-	 */
-	ClassicRoom createClassicRoom();
-
-	/**
-	 * Returns a new object of class '<em>Question Room</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Question Room</em>'.
-	 * @generated
-	 */
-	QuestionRoom createQuestionRoom();
-
-	/**
-	 * Returns a new object of class '<em>Pathway</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Pathway</em>'.
-	 * @generated
-	 */
-	Pathway createPathway();
 
 	/**
 	 * Returns a new object of class '<em>Room Type2</em>'.
@@ -191,24 +119,6 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	Location createLocation();
-
-	/**
-	 * Returns a new object of class '<em>State</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>State</em>'.
-	 * @generated
-	 */
-	State createState();
-
-	/**
-	 * Returns a new object of class '<em>Placed Object</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Placed Object</em>'.
-	 * @generated
-	 */
-	PlacedObject createPlacedObject();
 
 	/**
 	 * Returns a new object of class '<em>Element Shape</em>'.
@@ -290,6 +200,114 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	RogueliteContext createRogueliteContext();
+
+	/**
+	 * Returns a new object of class '<em>Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Task</em>'.
+	 * @generated
+	 */
+	Task createTask();
+
+	/**
+	 * Returns a new object of class '<em>Learning Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Learning Domain</em>'.
+	 * @generated
+	 */
+	LearningDomain createLearningDomain();
+
+	/**
+	 * Returns a new object of class '<em>Learning Path</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Learning Path</em>'.
+	 * @generated
+	 */
+	LearningPath createLearningPath();
+
+	/**
+	 * Returns a new object of class '<em>Learning Objective</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Learning Objective</em>'.
+	 * @generated
+	 */
+	LearningObjective createLearningObjective();
+
+	/**
+	 * Returns a new object of class '<em>Prerequisite</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Prerequisite</em>'.
+	 * @generated
+	 */
+	Prerequisite createPrerequisite();
+
+	/**
+	 * Returns a new object of class '<em>MT Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MT Level</em>'.
+	 * @generated
+	 */
+	MTLevel createMTLevel();
+
+	/**
+	 * Returns a new object of class '<em>MT Completion Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MT Completion Type</em>'.
+	 * @generated
+	 */
+	MTCompletionType createMTCompletionType();
+
+	/**
+	 * Returns a new object of class '<em>Task Types</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Task Types</em>'.
+	 * @generated
+	 */
+	TaskTypes createTaskTypes();
+
+	/**
+	 * Returns a new object of class '<em>Completion Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Completion Type</em>'.
+	 * @generated
+	 */
+	CompletionType createCompletionType();
+
+	/**
+	 * Returns a new object of class '<em>Reconstruction Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Reconstruction Type</em>'.
+	 * @generated
+	 */
+	ReconstructionType createReconstructionType();
+
+	/**
+	 * Returns a new object of class '<em>Fact Verification Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fact Verification Type</em>'.
+	 * @generated
+	 */
+	FactVerificationType createFactVerificationType();
+
+	/**
+	 * Returns a new object of class '<em>Result Verification Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Result Verification Type</em>'.
+	 * @generated
+	 */
+	ResultVerificationType createResultVerificationType();
 
 	/**
 	 * Returns the package supported by this factory.

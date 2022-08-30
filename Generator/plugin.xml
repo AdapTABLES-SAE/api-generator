@@ -10,7 +10,7 @@
       <!-- @generated generator -->
       <package
             uri="http://www.example.org/generator"
-            class="generators.GeneratorPackage"
+            class="generator.GeneratorPackage"
             genModel="model/generator.genmodel"/>
    </extension>
 
