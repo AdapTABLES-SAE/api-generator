@@ -101,6 +101,9 @@
         eType="#//Room" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" eType="#//DungeonMode"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entry" lowerBound="1" eType="#//Room"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//Level"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjective" lowerBound="1"
+        eType="#//LearningObjective"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Room">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

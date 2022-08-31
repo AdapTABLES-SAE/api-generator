@@ -134,6 +134,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Dungeon/rooms"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Dungeon/mode"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Dungeon/entry"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Dungeon/level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Dungeon/learningobjective"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Room">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Room/x"/>
