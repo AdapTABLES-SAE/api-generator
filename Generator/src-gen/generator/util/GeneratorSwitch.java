@@ -234,9 +234,9 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.ROGUELITE_CONTEXT: {
-			RogueliteContext rogueliteContext = (RogueliteContext) theEObject;
-			T result = caseRogueliteContext(rogueliteContext);
+		case GeneratorPackage.GAME_CONTEXT: {
+			GameContext gameContext = (GameContext) theEObject;
+			T result = caseGameContext(gameContext);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -362,6 +362,34 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = caseVerificationType(resultVerificationType);
 			if (result == null)
 				result = caseTaskType(resultVerificationType);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.GENERATION_CONTEXT: {
+			GenerationContext generationContext = (GenerationContext) theEObject;
+			T result = caseGenerationContext(generationContext);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.LEARNER_PLAYER: {
+			LearnerPlayer learnerPlayer = (LearnerPlayer) theEObject;
+			T result = caseLearnerPlayer(learnerPlayer);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.PROGRESSION: {
+			Progression progression = (Progression) theEObject;
+			T result = caseProgression(progression);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL: {
+			CurrentObjectiveLevel currentObjectiveLevel = (CurrentObjectiveLevel) theEObject;
+			T result = caseCurrentObjectiveLevel(currentObjectiveLevel);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -702,17 +730,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Roguelite Context</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Game Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Roguelite Context</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Game Context</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRogueliteContext(RogueliteContext object) {
+	public T caseGameContext(GameContext object) {
 		return null;
 	}
 
@@ -938,6 +966,66 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseResultVerificationType(ResultVerificationType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Generation Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Generation Context</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGenerationContext(GenerationContext object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Learner Player</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Learner Player</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLearnerPlayer(LearnerPlayer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Progression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Progression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProgression(Progression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Current Objective Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Current Objective Level</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCurrentObjectiveLevel(CurrentObjectiveLevel object) {
 		return null;
 	}
 

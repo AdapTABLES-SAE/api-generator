@@ -13,9 +13,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import generator.Dungeon;
-import generator.GameDescription;
 import generator.GeneratorPackage;
-import generator.RogueliteContext;
 import generator.Room;
 import generator.RoomAccess;
 

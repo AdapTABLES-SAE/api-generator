@@ -1134,14 +1134,14 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM_ACCESS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.RogueliteContextImpl <em>Roguelite Context</em>}' class.
+	 * The meta object id for the '{@link generator.impl.GameContextImpl <em>Game Context</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.RogueliteContextImpl
-	 * @see generator.impl.GeneratorPackageImpl#getRogueliteContext()
+	 * @see generator.impl.GameContextImpl
+	 * @see generator.impl.GeneratorPackageImpl#getGameContext()
 	 * @generated
 	 */
-	int ROGUELITE_CONTEXT = 22;
+	int GAME_CONTEXT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Rooms</b></em>' attribute.
@@ -1150,7 +1150,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROGUELITE_CONTEXT__NUMBER_OF_ROOMS = 0;
+	int GAME_CONTEXT__NUMBER_OF_ROOMS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Mode</b></em>' attribute.
@@ -1159,25 +1159,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROGUELITE_CONTEXT__MODE = 1;
+	int GAME_CONTEXT__MODE = 1;
 
 	/**
-	 * The number of structural features of the '<em>Roguelite Context</em>' class.
+	 * The number of structural features of the '<em>Game Context</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROGUELITE_CONTEXT_FEATURE_COUNT = 2;
+	int GAME_CONTEXT_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Roguelite Context</em>' class.
+	 * The number of operations of the '<em>Game Context</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROGUELITE_CONTEXT_OPERATION_COUNT = 0;
+	int GAME_CONTEXT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.TaskImpl <em>Task</em>}' class.
@@ -2059,6 +2059,199 @@ public interface GeneratorPackage extends EPackage {
 	int RESULT_VERIFICATION_TYPE_OPERATION_COUNT = VERIFICATION_TYPE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.GenerationContextImpl <em>Generation Context</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.GenerationContextImpl
+	 * @see generator.impl.GeneratorPackageImpl#getGenerationContext()
+	 * @generated
+	 */
+	int GENERATION_CONTEXT = 38;
+
+	/**
+	 * The feature id for the '<em><b>Gamecontext</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATION_CONTEXT__GAMECONTEXT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Learnerplayer</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATION_CONTEXT__LEARNERPLAYER = 1;
+
+	/**
+	 * The number of structural features of the '<em>Generation Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATION_CONTEXT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Generation Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATION_CONTEXT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.LearnerPlayerImpl <em>Learner Player</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.LearnerPlayerImpl
+	 * @see generator.impl.GeneratorPackageImpl#getLearnerPlayer()
+	 * @generated
+	 */
+	int LEARNER_PLAYER = 39;
+
+	/**
+	 * The feature id for the '<em><b>Progression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNER_PLAYER__PROGRESSION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNER_PLAYER__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Learningpath</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNER_PLAYER__LEARNINGPATH = 2;
+
+	/**
+	 * The number of structural features of the '<em>Learner Player</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNER_PLAYER_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Learner Player</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNER_PLAYER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ProgressionImpl <em>Progression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ProgressionImpl
+	 * @see generator.impl.GeneratorPackageImpl#getProgression()
+	 * @generated
+	 */
+	int PROGRESSION = 40;
+
+	/**
+	 * The feature id for the '<em><b>Currentobjectivelevels</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRESSION__CURRENTOBJECTIVELEVELS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Progression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRESSION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Progression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRESSION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.CurrentObjectiveLevelImpl <em>Current Objective Level</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.CurrentObjectiveLevelImpl
+	 * @see generator.impl.GeneratorPackageImpl#getCurrentObjectiveLevel()
+	 * @generated
+	 */
+	int CURRENT_OBJECTIVE_LEVEL = 41;
+
+	/**
+	 * The feature id for the '<em><b>Learningobjective</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_OBJECTIVE_LEVEL__LEARNINGOBJECTIVE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_OBJECTIVE_LEVEL__ACHIEVED = 1;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_OBJECTIVE_LEVEL__LEVEL = 2;
+
+	/**
+	 * The number of structural features of the '<em>Current Objective Level</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_OBJECTIVE_LEVEL_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Current Objective Level</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_OBJECTIVE_LEVEL_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link generator.GPBricks <em>GP Bricks</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2066,7 +2259,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPBricks()
 	 * @generated
 	 */
-	int GP_BRICKS = 38;
+	int GP_BRICKS = 42;
 
 	/**
 	 * The meta object id for the '{@link generator.AvatarActions <em>Avatar Actions</em>}' enum.
@@ -2076,7 +2269,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAvatarActions()
 	 * @generated
 	 */
-	int AVATAR_ACTIONS = 39;
+	int AVATAR_ACTIONS = 43;
 
 	/**
 	 * The meta object id for the '{@link generator.RoomPaths <em>Room Paths</em>}' enum.
@@ -2086,7 +2279,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRoomPaths()
 	 * @generated
 	 */
-	int ROOM_PATHS = 40;
+	int ROOM_PATHS = 44;
 
 	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
@@ -2096,7 +2289,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 41;
+	int DIRECTIONS = 45;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -2106,7 +2299,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 42;
+	int DUNGEON_MODE = 46;
 
 	/**
 	 * The meta object id for the '{@link generator.VerifiableElement <em>Verifiable Element</em>}' enum.
@@ -2116,7 +2309,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getVerifiableElement()
 	 * @generated
 	 */
-	int VERIFIABLE_ELEMENT = 43;
+	int VERIFIABLE_ELEMENT = 47;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -2126,7 +2319,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 44;
+	int TABLE_BUILD = 48;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -2136,7 +2329,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 45;
+	int RESULT_POSITION = 49;
 
 	/**
 	 * The meta object id for the '{@link generator.TargetElement <em>Target Element</em>}' enum.
@@ -2146,7 +2339,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTargetElement()
 	 * @generated
 	 */
-	int TARGET_ELEMENT = 46;
+	int TARGET_ELEMENT = 50;
 
 	/**
 	 * The meta object id for the '{@link generator.Order <em>Order</em>}' enum.
@@ -2156,7 +2349,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 47;
+	int ORDER = 51;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -2851,36 +3044,36 @@ public interface GeneratorPackage extends EPackage {
 	EReference getRoomAccess_Otherroomaccess();
 
 	/**
-	 * Returns the meta object for class '{@link generator.RogueliteContext <em>Roguelite Context</em>}'.
+	 * Returns the meta object for class '{@link generator.GameContext <em>Game Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Roguelite Context</em>'.
-	 * @see generator.RogueliteContext
+	 * @return the meta object for class '<em>Game Context</em>'.
+	 * @see generator.GameContext
 	 * @generated
 	 */
-	EClass getRogueliteContext();
+	EClass getGameContext();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.RogueliteContext#getNumberOfRooms <em>Number Of Rooms</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.GameContext#getNumberOfRooms <em>Number Of Rooms</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Number Of Rooms</em>'.
-	 * @see generator.RogueliteContext#getNumberOfRooms()
-	 * @see #getRogueliteContext()
+	 * @see generator.GameContext#getNumberOfRooms()
+	 * @see #getGameContext()
 	 * @generated
 	 */
-	EAttribute getRogueliteContext_NumberOfRooms();
+	EAttribute getGameContext_NumberOfRooms();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.RogueliteContext#getMode <em>Mode</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.GameContext#getMode <em>Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Mode</em>'.
-	 * @see generator.RogueliteContext#getMode()
-	 * @see #getRogueliteContext()
+	 * @see generator.GameContext#getMode()
+	 * @see #getGameContext()
 	 * @generated
 	 */
-	EAttribute getRogueliteContext_Mode();
+	EAttribute getGameContext_Mode();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Task <em>Task</em>}'.
@@ -3383,6 +3576,145 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getResultVerificationType_NbFalseProposition();
+
+	/**
+	 * Returns the meta object for class '{@link generator.GenerationContext <em>Generation Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Generation Context</em>'.
+	 * @see generator.GenerationContext
+	 * @generated
+	 */
+	EClass getGenerationContext();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.GenerationContext#getGamecontext <em>Gamecontext</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Gamecontext</em>'.
+	 * @see generator.GenerationContext#getGamecontext()
+	 * @see #getGenerationContext()
+	 * @generated
+	 */
+	EReference getGenerationContext_Gamecontext();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.GenerationContext#getLearnerplayer <em>Learnerplayer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Learnerplayer</em>'.
+	 * @see generator.GenerationContext#getLearnerplayer()
+	 * @see #getGenerationContext()
+	 * @generated
+	 */
+	EReference getGenerationContext_Learnerplayer();
+
+	/**
+	 * Returns the meta object for class '{@link generator.LearnerPlayer <em>Learner Player</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Learner Player</em>'.
+	 * @see generator.LearnerPlayer
+	 * @generated
+	 */
+	EClass getLearnerPlayer();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.LearnerPlayer#getProgression <em>Progression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Progression</em>'.
+	 * @see generator.LearnerPlayer#getProgression()
+	 * @see #getLearnerPlayer()
+	 * @generated
+	 */
+	EReference getLearnerPlayer_Progression();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.LearnerPlayer#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.LearnerPlayer#getName()
+	 * @see #getLearnerPlayer()
+	 * @generated
+	 */
+	EAttribute getLearnerPlayer_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.LearnerPlayer#getLearningpath <em>Learningpath</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Learningpath</em>'.
+	 * @see generator.LearnerPlayer#getLearningpath()
+	 * @see #getLearnerPlayer()
+	 * @generated
+	 */
+	EReference getLearnerPlayer_Learningpath();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Progression <em>Progression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Progression</em>'.
+	 * @see generator.Progression
+	 * @generated
+	 */
+	EClass getProgression();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.Progression#getCurrentobjectivelevels <em>Currentobjectivelevels</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Currentobjectivelevels</em>'.
+	 * @see generator.Progression#getCurrentobjectivelevels()
+	 * @see #getProgression()
+	 * @generated
+	 */
+	EReference getProgression_Currentobjectivelevels();
+
+	/**
+	 * Returns the meta object for class '{@link generator.CurrentObjectiveLevel <em>Current Objective Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Current Objective Level</em>'.
+	 * @see generator.CurrentObjectiveLevel
+	 * @generated
+	 */
+	EClass getCurrentObjectiveLevel();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.CurrentObjectiveLevel#getLearningobjective <em>Learningobjective</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Learningobjective</em>'.
+	 * @see generator.CurrentObjectiveLevel#getLearningobjective()
+	 * @see #getCurrentObjectiveLevel()
+	 * @generated
+	 */
+	EReference getCurrentObjectiveLevel_Learningobjective();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.CurrentObjectiveLevel#isAchieved <em>Achieved</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Achieved</em>'.
+	 * @see generator.CurrentObjectiveLevel#isAchieved()
+	 * @see #getCurrentObjectiveLevel()
+	 * @generated
+	 */
+	EAttribute getCurrentObjectiveLevel_Achieved();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.CurrentObjectiveLevel#getLevel <em>Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level</em>'.
+	 * @see generator.CurrentObjectiveLevel#getLevel()
+	 * @see #getCurrentObjectiveLevel()
+	 * @generated
+	 */
+	EReference getCurrentObjectiveLevel_Level();
 
 	/**
 	 * Returns the meta object for enum '{@link generator.GPBricks <em>GP Bricks</em>}'.
@@ -4072,14 +4404,14 @@ public interface GeneratorPackage extends EPackage {
 		EReference ROOM_ACCESS__OTHERROOMACCESS = eINSTANCE.getRoomAccess_Otherroomaccess();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.RogueliteContextImpl <em>Roguelite Context</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.GameContextImpl <em>Game Context</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.RogueliteContextImpl
-		 * @see generator.impl.GeneratorPackageImpl#getRogueliteContext()
+		 * @see generator.impl.GameContextImpl
+		 * @see generator.impl.GeneratorPackageImpl#getGameContext()
 		 * @generated
 		 */
-		EClass ROGUELITE_CONTEXT = eINSTANCE.getRogueliteContext();
+		EClass GAME_CONTEXT = eINSTANCE.getGameContext();
 
 		/**
 		 * The meta object literal for the '<em><b>Number Of Rooms</b></em>' attribute feature.
@@ -4087,7 +4419,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROGUELITE_CONTEXT__NUMBER_OF_ROOMS = eINSTANCE.getRogueliteContext_NumberOfRooms();
+		EAttribute GAME_CONTEXT__NUMBER_OF_ROOMS = eINSTANCE.getGameContext_NumberOfRooms();
 
 		/**
 		 * The meta object literal for the '<em><b>Mode</b></em>' attribute feature.
@@ -4095,7 +4427,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROGUELITE_CONTEXT__MODE = eINSTANCE.getRogueliteContext_Mode();
+		EAttribute GAME_CONTEXT__MODE = eINSTANCE.getGameContext_Mode();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.TaskImpl <em>Task</em>}' class.
@@ -4503,6 +4835,118 @@ public interface GeneratorPackage extends EPackage {
 		 */
 		EAttribute RESULT_VERIFICATION_TYPE__NB_FALSE_PROPOSITION = eINSTANCE
 				.getResultVerificationType_NbFalseProposition();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.GenerationContextImpl <em>Generation Context</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.GenerationContextImpl
+		 * @see generator.impl.GeneratorPackageImpl#getGenerationContext()
+		 * @generated
+		 */
+		EClass GENERATION_CONTEXT = eINSTANCE.getGenerationContext();
+
+		/**
+		 * The meta object literal for the '<em><b>Gamecontext</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GENERATION_CONTEXT__GAMECONTEXT = eINSTANCE.getGenerationContext_Gamecontext();
+
+		/**
+		 * The meta object literal for the '<em><b>Learnerplayer</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GENERATION_CONTEXT__LEARNERPLAYER = eINSTANCE.getGenerationContext_Learnerplayer();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.LearnerPlayerImpl <em>Learner Player</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.LearnerPlayerImpl
+		 * @see generator.impl.GeneratorPackageImpl#getLearnerPlayer()
+		 * @generated
+		 */
+		EClass LEARNER_PLAYER = eINSTANCE.getLearnerPlayer();
+
+		/**
+		 * The meta object literal for the '<em><b>Progression</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEARNER_PLAYER__PROGRESSION = eINSTANCE.getLearnerPlayer_Progression();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEARNER_PLAYER__NAME = eINSTANCE.getLearnerPlayer_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Learningpath</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEARNER_PLAYER__LEARNINGPATH = eINSTANCE.getLearnerPlayer_Learningpath();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ProgressionImpl <em>Progression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ProgressionImpl
+		 * @see generator.impl.GeneratorPackageImpl#getProgression()
+		 * @generated
+		 */
+		EClass PROGRESSION = eINSTANCE.getProgression();
+
+		/**
+		 * The meta object literal for the '<em><b>Currentobjectivelevels</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROGRESSION__CURRENTOBJECTIVELEVELS = eINSTANCE.getProgression_Currentobjectivelevels();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.CurrentObjectiveLevelImpl <em>Current Objective Level</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.CurrentObjectiveLevelImpl
+		 * @see generator.impl.GeneratorPackageImpl#getCurrentObjectiveLevel()
+		 * @generated
+		 */
+		EClass CURRENT_OBJECTIVE_LEVEL = eINSTANCE.getCurrentObjectiveLevel();
+
+		/**
+		 * The meta object literal for the '<em><b>Learningobjective</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CURRENT_OBJECTIVE_LEVEL__LEARNINGOBJECTIVE = eINSTANCE.getCurrentObjectiveLevel_Learningobjective();
+
+		/**
+		 * The meta object literal for the '<em><b>Achieved</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CURRENT_OBJECTIVE_LEVEL__ACHIEVED = eINSTANCE.getCurrentObjectiveLevel_Achieved();
+
+		/**
+		 * The meta object literal for the '<em><b>Level</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CURRENT_OBJECTIVE_LEVEL__LEVEL = eINSTANCE.getCurrentObjectiveLevel_Level();
 
 		/**
 		 * The meta object literal for the '{@link generator.GPBricks <em>GP Bricks</em>}' enum.

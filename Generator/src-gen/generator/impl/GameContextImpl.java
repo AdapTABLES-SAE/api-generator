@@ -3,8 +3,8 @@
 package generator.impl;
 
 import generator.DungeonMode;
+import generator.GameContext;
 import generator.GeneratorPackage;
-import generator.RogueliteContext;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -15,19 +15,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Roguelite Context</b></em>'.
+ * An implementation of the model object '<em><b>Game Context</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.RogueliteContextImpl#getNumberOfRooms <em>Number Of Rooms</em>}</li>
- *   <li>{@link generator.impl.RogueliteContextImpl#getMode <em>Mode</em>}</li>
+ *   <li>{@link generator.impl.GameContextImpl#getNumberOfRooms <em>Number Of Rooms</em>}</li>
+ *   <li>{@link generator.impl.GameContextImpl#getMode <em>Mode</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RogueliteContextImpl extends MinimalEObjectImpl.Container implements RogueliteContext {
+public class GameContextImpl extends MinimalEObjectImpl.Container implements GameContext {
 	/**
 	 * The default value of the '{@link #getNumberOfRooms() <em>Number Of Rooms</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -73,7 +73,7 @@ public class RogueliteContextImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RogueliteContextImpl() {
+	public GameContextImpl() {
 		super();
 	}
 
@@ -84,7 +84,7 @@ public class RogueliteContextImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.ROGUELITE_CONTEXT;
+		return GeneratorPackage.Literals.GAME_CONTEXT;
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class RogueliteContextImpl extends MinimalEObjectImpl.Container implement
 		int oldNumberOfRooms = numberOfRooms;
 		numberOfRooms = newNumberOfRooms;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ROGUELITE_CONTEXT__NUMBER_OF_ROOMS,
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAME_CONTEXT__NUMBER_OF_ROOMS,
 					oldNumberOfRooms, numberOfRooms));
 	}
 
@@ -127,8 +127,7 @@ public class RogueliteContextImpl extends MinimalEObjectImpl.Container implement
 		DungeonMode oldMode = mode;
 		mode = newMode == null ? MODE_EDEFAULT : newMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ROGUELITE_CONTEXT__MODE, oldMode,
-					mode));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAME_CONTEXT__MODE, oldMode, mode));
 	}
 
 	/**
@@ -139,9 +138,9 @@ public class RogueliteContextImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.ROGUELITE_CONTEXT__NUMBER_OF_ROOMS:
+		case GeneratorPackage.GAME_CONTEXT__NUMBER_OF_ROOMS:
 			return getNumberOfRooms();
-		case GeneratorPackage.ROGUELITE_CONTEXT__MODE:
+		case GeneratorPackage.GAME_CONTEXT__MODE:
 			return getMode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -155,10 +154,10 @@ public class RogueliteContextImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.ROGUELITE_CONTEXT__NUMBER_OF_ROOMS:
+		case GeneratorPackage.GAME_CONTEXT__NUMBER_OF_ROOMS:
 			setNumberOfRooms((Integer) newValue);
 			return;
-		case GeneratorPackage.ROGUELITE_CONTEXT__MODE:
+		case GeneratorPackage.GAME_CONTEXT__MODE:
 			setMode((DungeonMode) newValue);
 			return;
 		}
@@ -173,10 +172,10 @@ public class RogueliteContextImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.ROGUELITE_CONTEXT__NUMBER_OF_ROOMS:
+		case GeneratorPackage.GAME_CONTEXT__NUMBER_OF_ROOMS:
 			setNumberOfRooms(NUMBER_OF_ROOMS_EDEFAULT);
 			return;
-		case GeneratorPackage.ROGUELITE_CONTEXT__MODE:
+		case GeneratorPackage.GAME_CONTEXT__MODE:
 			setMode(MODE_EDEFAULT);
 			return;
 		}
@@ -191,9 +190,9 @@ public class RogueliteContextImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.ROGUELITE_CONTEXT__NUMBER_OF_ROOMS:
+		case GeneratorPackage.GAME_CONTEXT__NUMBER_OF_ROOMS:
 			return numberOfRooms != NUMBER_OF_ROOMS_EDEFAULT;
-		case GeneratorPackage.ROGUELITE_CONTEXT__MODE:
+		case GeneratorPackage.GAME_CONTEXT__MODE:
 			return mode != MODE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -218,4 +217,4 @@ public class RogueliteContextImpl extends MinimalEObjectImpl.Container implement
 		return result.toString();
 	}
 
-} //RogueliteContextImpl
+} //GameContextImpl

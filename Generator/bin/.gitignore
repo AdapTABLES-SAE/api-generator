@@ -1,1 +1,6 @@
+/exceptions/
 /generator/
+/generators/
+/models/
+/reloadForTest/
+/structures/

@@ -177,8 +177,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseRogueliteContext(RogueliteContext object) {
-			return createRogueliteContextAdapter();
+		public Adapter caseGameContext(GameContext object) {
+			return createGameContextAdapter();
 		}
 
 		@Override
@@ -254,6 +254,26 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseResultVerificationType(ResultVerificationType object) {
 			return createResultVerificationTypeAdapter();
+		}
+
+		@Override
+		public Adapter caseGenerationContext(GenerationContext object) {
+			return createGenerationContextAdapter();
+		}
+
+		@Override
+		public Adapter caseLearnerPlayer(LearnerPlayer object) {
+			return createLearnerPlayerAdapter();
+		}
+
+		@Override
+		public Adapter caseProgression(Progression object) {
+			return createProgressionAdapter();
+		}
+
+		@Override
+		public Adapter caseCurrentObjectiveLevel(CurrentObjectiveLevel object) {
+			return createCurrentObjectiveLevelAdapter();
 		}
 
 		@Override
@@ -584,16 +604,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.RogueliteContext <em>Roguelite Context</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.GameContext <em>Game Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.RogueliteContext
+	 * @see generator.GameContext
 	 * @generated
 	 */
-	public Adapter createRogueliteContextAdapter() {
+	public Adapter createGameContextAdapter() {
 		return null;
 	}
 
@@ -804,6 +824,62 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createResultVerificationTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.GenerationContext <em>Generation Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.GenerationContext
+	 * @generated
+	 */
+	public Adapter createGenerationContextAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.LearnerPlayer <em>Learner Player</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.LearnerPlayer
+	 * @generated
+	 */
+	public Adapter createLearnerPlayerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Progression <em>Progression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Progression
+	 * @generated
+	 */
+	public Adapter createProgressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.CurrentObjectiveLevel <em>Current Objective Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.CurrentObjectiveLevel
+	 * @generated
+	 */
+	public Adapter createCurrentObjectiveLevelAdapter() {
 		return null;
 	}
 

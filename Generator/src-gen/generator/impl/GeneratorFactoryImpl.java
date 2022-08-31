@@ -95,8 +95,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createLargeRoomType();
 		case GeneratorPackage.ROOM_ACCESS:
 			return createRoomAccess();
-		case GeneratorPackage.ROGUELITE_CONTEXT:
-			return createRogueliteContext();
+		case GeneratorPackage.GAME_CONTEXT:
+			return createGameContext();
 		case GeneratorPackage.TASK:
 			return createTask();
 		case GeneratorPackage.LEARNING_DOMAIN:
@@ -121,6 +121,14 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createFactVerificationType();
 		case GeneratorPackage.RESULT_VERIFICATION_TYPE:
 			return createResultVerificationType();
+		case GeneratorPackage.GENERATION_CONTEXT:
+			return createGenerationContext();
+		case GeneratorPackage.LEARNER_PLAYER:
+			return createLearnerPlayer();
+		case GeneratorPackage.PROGRESSION:
+			return createProgression();
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL:
+			return createCurrentObjectiveLevel();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -387,9 +395,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RogueliteContext createRogueliteContext() {
-		RogueliteContextImpl rogueliteContext = new RogueliteContextImpl();
-		return rogueliteContext;
+	public GameContext createGameContext() {
+		GameContextImpl gameContext = new GameContextImpl();
+		return gameContext;
 	}
 
 	/**
@@ -510,6 +518,46 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public ResultVerificationType createResultVerificationType() {
 		ResultVerificationTypeImpl resultVerificationType = new ResultVerificationTypeImpl();
 		return resultVerificationType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GenerationContext createGenerationContext() {
+		GenerationContextImpl generationContext = new GenerationContextImpl();
+		return generationContext;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LearnerPlayer createLearnerPlayer() {
+		LearnerPlayerImpl learnerPlayer = new LearnerPlayerImpl();
+		return learnerPlayer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Progression createProgression() {
+		ProgressionImpl progression = new ProgressionImpl();
+		return progression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CurrentObjectiveLevel createCurrentObjectiveLevel() {
+		CurrentObjectiveLevelImpl currentObjectiveLevel = new CurrentObjectiveLevelImpl();
+		return currentObjectiveLevel;
 	}
 
 	/**

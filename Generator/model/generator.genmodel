@@ -158,9 +158,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//RoomAccess/direction"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//RoomAccess/otherroomaccess"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//RogueliteContext">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//RogueliteContext/numberOfRooms"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//RogueliteContext/mode"/>
+    <genClasses ecoreClass="generator.ecore#//GameContext">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GameContext/numberOfRooms"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GameContext/mode"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Task">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Task/tasktype"/>
@@ -224,16 +224,21 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ResultVerificationType/nbFalseProposition"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//GenerationContext">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GenerationContext/roguelitecontext"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GenerationContext/learnerProgress"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GenerationContext/gamecontext"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GenerationContext/learnerplayer"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//LearnerProgress">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerProgress/levelProgressions"/>
+    <genClasses ecoreClass="generator.ecore#//LearnerPlayer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayer/progression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LearnerPlayer/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayer/learningpath"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//LevelProgression">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LevelProgression/isAchieved"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//LevelProgression/learningobjective"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//LevelProgression/level"/>
+    <genClasses ecoreClass="generator.ecore#//Progression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Progression/currentobjectivelevels"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//CurrentObjectiveLevel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//CurrentObjectiveLevel/learningobjective"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CurrentObjectiveLevel/achieved"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//CurrentObjectiveLevel/level"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

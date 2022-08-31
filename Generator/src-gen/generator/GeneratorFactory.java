@@ -193,13 +193,13 @@ public interface GeneratorFactory extends EFactory {
 	RoomAccess createRoomAccess();
 
 	/**
-	 * Returns a new object of class '<em>Roguelite Context</em>'.
+	 * Returns a new object of class '<em>Game Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Roguelite Context</em>'.
+	 * @return a new object of class '<em>Game Context</em>'.
 	 * @generated
 	 */
-	RogueliteContext createRogueliteContext();
+	GameContext createGameContext();
 
 	/**
 	 * Returns a new object of class '<em>Task</em>'.
@@ -308,6 +308,42 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	ResultVerificationType createResultVerificationType();
+
+	/**
+	 * Returns a new object of class '<em>Generation Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Generation Context</em>'.
+	 * @generated
+	 */
+	GenerationContext createGenerationContext();
+
+	/**
+	 * Returns a new object of class '<em>Learner Player</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Learner Player</em>'.
+	 * @generated
+	 */
+	LearnerPlayer createLearnerPlayer();
+
+	/**
+	 * Returns a new object of class '<em>Progression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Progression</em>'.
+	 * @generated
+	 */
+	Progression createProgression();
+
+	/**
+	 * Returns a new object of class '<em>Current Objective Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Current Objective Level</em>'.
+	 * @generated
+	 */
+	CurrentObjectiveLevel createCurrentObjectiveLevel();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -6,6 +6,7 @@ import generator.AbstractFact;
 import generator.AvatarActions;
 import generator.CompletionType;
 import generator.CoreGameRule;
+import generator.CurrentObjectiveLevel;
 import generator.Directions;
 import generator.Dungeon;
 import generator.DungeonMode;
@@ -17,14 +18,17 @@ import generator.FactVerificationType;
 import generator.Floor;
 import generator.GPBricks;
 import generator.GameContent;
+import generator.GameContext;
 import generator.GameDescription;
 import generator.GameObjective;
 import generator.Gameplay;
+import generator.GenerationContext;
 import generator.GeneratorFactory;
 import generator.GeneratorPackage;
 import generator.IRoomElement;
 import generator.Knowledge;
 import generator.LargeRoomType;
+import generator.LearnerPlayer;
 import generator.LearningDomain;
 import generator.LearningObjective;
 import generator.LearningPath;
@@ -34,10 +38,10 @@ import generator.MTCompletionType;
 import generator.MTLevel;
 import generator.Order;
 import generator.Prerequisite;
+import generator.Progression;
 import generator.ReconstructionType;
 import generator.ResultPosition;
 import generator.ResultVerificationType;
-import generator.RogueliteContext;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomPaths;
@@ -228,7 +232,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass rogueliteContextEClass = null;
+	private EClass gameContextEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -334,6 +338,34 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass resultVerificationTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass generationContextEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass learnerPlayerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass progressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass currentObjectiveLevelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1059,8 +1091,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRogueliteContext() {
-		return rogueliteContextEClass;
+	public EClass getGameContext() {
+		return gameContextEClass;
 	}
 
 	/**
@@ -1068,8 +1100,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRogueliteContext_NumberOfRooms() {
-		return (EAttribute) rogueliteContextEClass.getEStructuralFeatures().get(0);
+	public EAttribute getGameContext_NumberOfRooms() {
+		return (EAttribute) gameContextEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1077,8 +1109,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRogueliteContext_Mode() {
-		return (EAttribute) rogueliteContextEClass.getEStructuralFeatures().get(1);
+	public EAttribute getGameContext_Mode() {
+		return (EAttribute) gameContextEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1509,6 +1541,123 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getGenerationContext() {
+		return generationContextEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGenerationContext_Gamecontext() {
+		return (EReference) generationContextEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGenerationContext_Learnerplayer() {
+		return (EReference) generationContextEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLearnerPlayer() {
+		return learnerPlayerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLearnerPlayer_Progression() {
+		return (EReference) learnerPlayerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLearnerPlayer_Name() {
+		return (EAttribute) learnerPlayerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLearnerPlayer_Learningpath() {
+		return (EReference) learnerPlayerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProgression() {
+		return progressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProgression_Currentobjectivelevels() {
+		return (EReference) progressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCurrentObjectiveLevel() {
+		return currentObjectiveLevelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCurrentObjectiveLevel_Learningobjective() {
+		return (EReference) currentObjectiveLevelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCurrentObjectiveLevel_Achieved() {
+		return (EAttribute) currentObjectiveLevelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCurrentObjectiveLevel_Level() {
+		return (EReference) currentObjectiveLevelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getGPBricks() {
 		return gpBricksEEnum;
 	}
@@ -1710,9 +1859,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(roomAccessEClass, ROOM_ACCESS__DIRECTION);
 		createEReference(roomAccessEClass, ROOM_ACCESS__OTHERROOMACCESS);
 
-		rogueliteContextEClass = createEClass(ROGUELITE_CONTEXT);
-		createEAttribute(rogueliteContextEClass, ROGUELITE_CONTEXT__NUMBER_OF_ROOMS);
-		createEAttribute(rogueliteContextEClass, ROGUELITE_CONTEXT__MODE);
+		gameContextEClass = createEClass(GAME_CONTEXT);
+		createEAttribute(gameContextEClass, GAME_CONTEXT__NUMBER_OF_ROOMS);
+		createEAttribute(gameContextEClass, GAME_CONTEXT__MODE);
 
 		taskEClass = createEClass(TASK);
 		createEReference(taskEClass, TASK__TASKTYPE);
@@ -1775,6 +1924,23 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		resultVerificationTypeEClass = createEClass(RESULT_VERIFICATION_TYPE);
 		createEAttribute(resultVerificationTypeEClass, RESULT_VERIFICATION_TYPE__NB_FALSE_PROPOSITION);
+
+		generationContextEClass = createEClass(GENERATION_CONTEXT);
+		createEReference(generationContextEClass, GENERATION_CONTEXT__GAMECONTEXT);
+		createEReference(generationContextEClass, GENERATION_CONTEXT__LEARNERPLAYER);
+
+		learnerPlayerEClass = createEClass(LEARNER_PLAYER);
+		createEReference(learnerPlayerEClass, LEARNER_PLAYER__PROGRESSION);
+		createEAttribute(learnerPlayerEClass, LEARNER_PLAYER__NAME);
+		createEReference(learnerPlayerEClass, LEARNER_PLAYER__LEARNINGPATH);
+
+		progressionEClass = createEClass(PROGRESSION);
+		createEReference(progressionEClass, PROGRESSION__CURRENTOBJECTIVELEVELS);
+
+		currentObjectiveLevelEClass = createEClass(CURRENT_OBJECTIVE_LEVEL);
+		createEReference(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__LEARNINGOBJECTIVE);
+		createEAttribute(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__ACHIEVED);
+		createEReference(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__LEVEL);
 
 		// Create enums
 		gpBricksEEnum = createEEnum(GP_BRICKS);
@@ -2007,12 +2173,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				RoomAccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(rogueliteContextEClass, RogueliteContext.class, "RogueliteContext", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(gameContextEClass, GameContext.class, "GameContext", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRogueliteContext_NumberOfRooms(), ecorePackage.getEInt(), "numberOfRooms", null, 0, 1,
-				RogueliteContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getGameContext_NumberOfRooms(), ecorePackage.getEInt(), "numberOfRooms", null, 0, 1,
+				GameContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRogueliteContext_Mode(), this.getDungeonMode(), "mode", null, 0, 1, RogueliteContext.class,
+		initEAttribute(getGameContext_Mode(), this.getDungeonMode(), "mode", null, 0, 1, GameContext.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2144,6 +2310,44 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getResultVerificationType_NbFalseProposition(), ecorePackage.getEInt(), "nbFalseProposition",
 				null, 0, 1, ResultVerificationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(generationContextEClass, GenerationContext.class, "GenerationContext", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGenerationContext_Gamecontext(), this.getGameContext(), null, "gamecontext", null, 1, 1,
+				GenerationContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGenerationContext_Learnerplayer(), this.getLearnerPlayer(), null, "learnerplayer", null, 1, 1,
+				GenerationContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(learnerPlayerEClass, LearnerPlayer.class, "LearnerPlayer", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLearnerPlayer_Progression(), this.getProgression(), null, "progression", null, 0, 1,
+				LearnerPlayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLearnerPlayer_Name(), ecorePackage.getEString(), "name", null, 0, 1, LearnerPlayer.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLearnerPlayer_Learningpath(), this.getLearningPath(), null, "learningpath", null, 1, 1,
+				LearnerPlayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(progressionEClass, Progression.class, "Progression", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProgression_Currentobjectivelevels(), this.getCurrentObjectiveLevel(), null,
+				"currentobjectivelevels", null, 0, -1, Progression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(currentObjectiveLevelEClass, CurrentObjectiveLevel.class, "CurrentObjectiveLevel", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCurrentObjectiveLevel_Learningobjective(), this.getLearningObjective(), null,
+				"learningobjective", null, 1, 1, CurrentObjectiveLevel.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCurrentObjectiveLevel_Achieved(), ecorePackage.getEBoolean(), "achieved", null, 0, 1,
+				CurrentObjectiveLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCurrentObjectiveLevel_Level(), this.getLevel(), null, "level", null, 1, 1,
+				CurrentObjectiveLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(gpBricksEEnum, GPBricks.class, "GPBricks");

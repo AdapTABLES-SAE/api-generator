@@ -11,12 +11,11 @@ import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import exceptions.MissingModelException;
 import generator.Directions;
 import generator.Dungeon;
 import generator.DungeonMode;
-import generator.GameDescription;
 import generator.LargeRoomType;
-import generator.RogueliteContext;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
@@ -28,11 +27,6 @@ import structures.Coordinate;
 import structures.GridPositions;
 
 public class DungeonStructureGenerator {
-	
-	/** Entry model */
-	private RogueliteContext context;
-	/** Entry model */
-	private GameDescription gameDescription;
 	
 	private Dungeon generatedDungeon; 
 	private ModelAccess modelAccess;
@@ -49,44 +43,29 @@ public class DungeonStructureGenerator {
 	/** Data structure enumerating complex directions (SOUTH_EAST, SOUTH_WEST, NORTH_EAST, NORTH_WEST, EAST_SOUTH, etc.) */
 	private Set<Directions> complexDirections;
 	
-	public static void main(String[] args) {
-		DungeonStructureGenerator dg = new DungeonStructureGenerator();
-		while(dg.generatedDungeon.getRooms().isEmpty()) {
-			try {
-				dg.generate();
-			} catch (IllegalArgumentException e) {
-				dg = new DungeonStructureGenerator();
-			}
-		}
-		dg.printDungeon();
-		dg.saveDungeon();
-		
-		/*for (int i = 0; i < 150; i++) {
-			System.out.println("Iteration "+ i);
-			while(dg.generatedDungeon.getRooms().isEmpty()) {
-				try {
-					dg.generate();
-				} catch (IllegalArgumentException e) {
-					dg = new DungeonStructureGenerator();
-				}
-			}
-		}*/
-		
-	}
-	
-	public DungeonStructureGenerator() {
-		modelAccess = new ModelAccess();
-		gameDescription = modelAccess.gameDescription;
-		context = modelAccess.context;
+	public DungeonStructureGenerator(ModelAccess modelAccess) {
+		this.modelAccess = modelAccess;
 		generatedDungeon = new DungeonImpl();
 		random = new Random();
 		occupiedCoordinates = new HashMap<>();
 		setData();
 	}
 	
-	public void saveDungeon() {
-		modelAccess.saveGeneratedModel(generatedDungeon, "GeneratedDungeon.xmi");
+	public static Dungeon generateDungeonStructure(ModelAccess modelAccess) {
+		DungeonStructureGenerator dg = new DungeonStructureGenerator(modelAccess);
+		while(dg.generatedDungeon.getRooms().isEmpty()) {
+			try {
+				dg.generate();
+			} catch (MissingModelException e) {
+				e.printStackTrace();
+			} catch (IllegalArgumentException e) {
+				dg = new DungeonStructureGenerator(modelAccess);
+			} 
+		}
+		return dg.generatedDungeon;
 	}
+	
+	
 	
 	/**
 	 * Initialization of the Data Structures
@@ -130,9 +109,12 @@ public class DungeonStructureGenerator {
 	/**
 	 * Dungeon structure generation algorithm 
 	 */
-	public void generate() throws IllegalArgumentException {
-		System.out.println("Mode du donjon : " + context.getMode());
-		if(context.getMode().equals(DungeonMode.LINEAR)) {
+	public void generate() throws IllegalArgumentException, MissingModelException {
+		if(modelAccess.context.getGamecontext() == null) {
+			throw new MissingModelException("Missing game context model");
+		}
+		System.out.println("Mode du donjon : " + modelAccess.context.getGamecontext().getMode());
+		if(modelAccess.context.getGamecontext().getMode().equals(DungeonMode.LINEAR)) {
 			generateLinearDungeon();
 		}else {
 		}
@@ -174,7 +156,7 @@ public class DungeonStructureGenerator {
 	 * @param entryDirections (i.e., opposition directions of the previous room exit direction; e.g., if previous room exit is SOUTH, then it contains  NORTH, NORTH_EAST, NORTH_WEST)  
 	 * @return An association between each verified entryDirection and their possible exits
 	 */
- 	public EnumMap<Directions, Set<Directions>> getAllowedDirections(Coordinate actualCoordinates, Set<Directions> entryDirections){
+ 	private EnumMap<Directions, Set<Directions>> getAllowedDirections(Coordinate actualCoordinates, Set<Directions> entryDirections){
 		EnumMap<Directions, Set<Directions>> originDtoPossibleD = new EnumMap<>(Directions.class); // Possible entry to possible exits 
 		EnumMap<GridPositions, Boolean> gridPosOccupations = computesGridPositionsOccupied(actualCoordinates);
 		Set<Directions> directions;
@@ -300,7 +282,7 @@ public class DungeonStructureGenerator {
 	 * Algorithm of Linear Dungeon Structure Generation
 	 */
 	private void generateLinearDungeon() throws IllegalArgumentException {  
-		int numberofrooms = context.getNumberOfRooms();
+		int numberofrooms = modelAccess.context.getGamecontext().getNumberOfRooms();
 		Room originRoom = createEntryRoom();
 		generatedDungeon.setEntry(originRoom);
 		generatedDungeon.getRooms().add(originRoom);
@@ -362,7 +344,7 @@ public class DungeonStructureGenerator {
 	 * @return Valid RoomType
 	 */
 	private RoomType getCompatibleRoomType(Directions entry, Directions exit) {
-		List<RoomType> roomtypes = new ArrayList<>(gameDescription.getRoomtypes());
+		List<RoomType> roomtypes = new ArrayList<>(modelAccess.gameDescription.getRoomtypes());
 		for (int i = 0; i < roomtypes.size(); i++) {
 			if(!roomtypes.get(i).getDirections().contains(entry)) {
 				roomtypes.remove(i);
@@ -395,7 +377,7 @@ public class DungeonStructureGenerator {
 	 * @param origineD
 	 * @return Temporary coordinates of the next room 
 	 */
-	public Coordinate getNextCoord(Room origineR, Directions origineD) {
+	private Coordinate getNextCoord(Room origineR, Directions origineD) {
 		Coordinate coord = new Coordinate();
 		switch (origineD) {
 		case SOUTH: coord.setX(origineR.getX()); coord.setY(origineR.getY() - 1); break;
@@ -471,7 +453,7 @@ public class DungeonStructureGenerator {
 	 */
 	private List<RoomType> roomsWithOneDirection() {
 		List<RoomType> rts = new ArrayList<>();
-		for (RoomType rt : gameDescription.getRoomtypes()) {
+		for (RoomType rt : modelAccess.gameDescription.getRoomtypes()) {
 			if(rt.getDirections().size() == 1) {
 				rts.add(rt);
 			}
@@ -495,22 +477,5 @@ public class DungeonStructureGenerator {
 			occupiedCoordinates.put(new Coordinate(c), room); // X,Y+1
 		}
 	}
-	
-	private void printRoom(Room r) {
-		System.out.println("****");
-		System.out.println(r.getRoomtype().getClass().getName() + " ("+r.getX()+","+r.getY()+")");
-		for (RoomAccess ra : r.getRoomaccess()) {
-			System.out.println("Access : "+ra.getDirection());
-		}
-		System.out.println("****");
-	}
-	
-	private void printDungeon() {
-		System.out.println("---- Dungeon -----");
-		for (Room r : generatedDungeon.getRooms()) {
-			printRoom(r);
-		}
-	}
-	
-	
+		
 }

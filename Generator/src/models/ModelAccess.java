@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import generator.Dungeon;
 import generator.GameDescription;
+import generator.GenerationContext;
 import generator.GeneratorPackage;
-import generator.RogueliteContext;
 
 
 public class ModelAccess {
@@ -24,12 +24,12 @@ public class ModelAccess {
 	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	private static final String INPUT_MODELS_PATH = "inputmodels/";
 	private static final String OUTPUT_MODELS_PATH = "outputmodels/";
-	private static final String[] INPUT_MODELS_PATHS = {"RogueliteContext.xmi", "GameDescription.xmi"};
+	private static final String[] INPUT_MODELS_PATHS = {"Context.xmi", "GameDescription.xmi"};
 
 	private ResourceSet resourceSet;
 	
 	
-	public RogueliteContext context; 
+	public GenerationContext context; 
 	public GameDescription gameDescription; 
 	
 	//Dungeon generatedDungeon;
@@ -79,7 +79,7 @@ public class ModelAccess {
 		}
 		EcoreUtil.resolveAll(resourceSet); 
 		
-		this.context = (RogueliteContext) resource1.getContents().get(0);
+		this.context = (GenerationContext) resource1.getContents().get(0);
 		this.gameDescription = (GameDescription) resource2.getContents().get(0);
 		
 		LOGGER.info("Loading input models : OK");

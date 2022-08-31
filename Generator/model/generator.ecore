@@ -144,7 +144,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//Directions"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="otherroomaccess" eType="#//RoomAccess"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RogueliteContext">
+  <eClassifiers xsi:type="ecore:EClass" name="GameContext">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfRooms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" eType="#//DungeonMode"/>
   </eClassifiers>
@@ -257,19 +257,26 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbFalseProposition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GenerationContext">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="roguelitecontext" upperBound="-1"
-        eType="#//RogueliteContext" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerProgress" eType="#//LearnerProgress"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gamecontext" lowerBound="1"
+        eType="#//GameContext" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerplayer" lowerBound="1"
+        eType="#//LearnerPlayer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LearnerPlayer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="progression" eType="#//Progression"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learningpath" lowerBound="1"
+        eType="#//LearningPath"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LearnerProgress">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="levelProgressions" upperBound="-1"
-        eType="#//LevelProgression" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Progression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentobjectivelevels"
+        upperBound="-1" eType="#//CurrentObjectiveLevel" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LevelProgression">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAchieved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CurrentObjectiveLevel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjective" lowerBound="1"
         eType="#//LearningObjective"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="achieved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//Level"/>
   </eClassifiers>
 </ecore:EPackage>
