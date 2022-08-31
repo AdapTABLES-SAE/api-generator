@@ -26,6 +26,25 @@ import models.ModelAccess;
 import structures.Coordinate;
 import structures.GridPositions;
 
+/**
+ * Permet la generation de la structure d'un donjon. 
+ * Génération classique : <br/>
+ * <code>DungeonStructureGenerator dg = new DungeonStructureGenerator();<br/>
+ * dg.generate();
+ * </code><br/>
+ * 
+ * ATTENTION ! Cette méthode de génération génération peut renvoyer une exception (cas où l'algorithme se retrouve bloqué).  
+ * Celle-ci est causé par le fait que l'algorithme n'est pas fondé sur un principe de BackTrack. 
+ * 
+ * Version de génération sans renvoie  d'Exception (regénération jusqu'à avoir une génération correcte) : 
+ * <br/><code> 
+ * ModelAccess modelAccess = new ModelAccess(); 
+ * <br/>DungeonStructureGenerator.generateDungeonStructure(modelAccess);</code>
+ * 
+ * @see models.ModelAccess
+ * @author Bérénice LEMOINE
+ *
+ */
 public class DungeonStructureGenerator {
 	
 	private Dungeon generatedDungeon; 
