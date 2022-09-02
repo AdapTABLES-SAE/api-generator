@@ -938,6 +938,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDungeon_Level() {
+		return (EReference) dungeonEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDungeon_Learningobjective() {
+		return (EReference) dungeonEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRoom() {
 		return roomEClass;
 	}
@@ -1835,6 +1853,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(dungeonEClass, DUNGEON__ROOMS);
 		createEAttribute(dungeonEClass, DUNGEON__MODE);
 		createEReference(dungeonEClass, DUNGEON__ENTRY);
+		createEReference(dungeonEClass, DUNGEON__LEVEL);
+		createEReference(dungeonEClass, DUNGEON__LEARNINGOBJECTIVE);
 
 		roomEClass = createEClass(ROOM);
 		createEAttribute(roomEClass, ROOM__X);
@@ -2127,6 +2147,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getDungeon_Entry(), this.getRoom(), null, "entry", null, 1, 1, Dungeon.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEReference(getDungeon_Level(), this.getLevel(), null, "level", null, 1, 1, Dungeon.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getDungeon_Learningobjective(), this.getLearningObjective(), null, "learningobjective", null, 1,
+				1, Dungeon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoom_X(), ecorePackage.getEInt(), "x", null, 0, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE,
@@ -2385,6 +2411,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(directionsEEnum, Directions.EAST_NORTH);
 		addEEnumLiteral(directionsEEnum, Directions.WEST_NORTH);
 		addEEnumLiteral(directionsEEnum, Directions.WEST_SOUTH);
+		addEEnumLiteral(directionsEEnum, Directions.NONE);
 
 		initEEnum(dungeonModeEEnum, DungeonMode.class, "DungeonMode");
 		addEEnumLiteral(dungeonModeEEnum, DungeonMode.LINEAR);

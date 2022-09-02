@@ -813,13 +813,31 @@ public interface GeneratorPackage extends EPackage {
 	int DUNGEON__ENTRY = 2;
 
 	/**
+	 * The feature id for the '<em><b>Level</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUNGEON__LEVEL = 3;
+
+	/**
+	 * The feature id for the '<em><b>Learningobjective</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUNGEON__LEARNINGOBJECTIVE = 4;
+
+	/**
 	 * The number of structural features of the '<em>Dungeon</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DUNGEON_FEATURE_COUNT = 3;
+	int DUNGEON_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Dungeon</em>' class.
@@ -2864,6 +2882,28 @@ public interface GeneratorPackage extends EPackage {
 	EReference getDungeon_Entry();
 
 	/**
+	 * Returns the meta object for the reference '{@link generator.Dungeon#getLevel <em>Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level</em>'.
+	 * @see generator.Dungeon#getLevel()
+	 * @see #getDungeon()
+	 * @generated
+	 */
+	EReference getDungeon_Level();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.Dungeon#getLearningobjective <em>Learningobjective</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Learningobjective</em>'.
+	 * @see generator.Dungeon#getLearningobjective()
+	 * @see #getDungeon()
+	 * @generated
+	 */
+	EReference getDungeon_Learningobjective();
+
+	/**
 	 * Returns the meta object for class '{@link generator.Room <em>Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4254,6 +4294,22 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DUNGEON__ENTRY = eINSTANCE.getDungeon_Entry();
+
+		/**
+		 * The meta object literal for the '<em><b>Level</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DUNGEON__LEVEL = eINSTANCE.getDungeon_Level();
+
+		/**
+		 * The meta object literal for the '<em><b>Learningobjective</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DUNGEON__LEARNINGOBJECTIVE = eINSTANCE.getDungeon_Learningobjective();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.RoomImpl <em>Room</em>}' class.

@@ -5,6 +5,8 @@ package generator.impl;
 import generator.Dungeon;
 import generator.DungeonMode;
 import generator.GeneratorPackage;
+import generator.LearningObjective;
+import generator.Level;
 import generator.Room;
 
 import java.util.Collection;
@@ -34,6 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.DungeonImpl#getRooms <em>Rooms</em>}</li>
  *   <li>{@link generator.impl.DungeonImpl#getMode <em>Mode</em>}</li>
  *   <li>{@link generator.impl.DungeonImpl#getEntry <em>Entry</em>}</li>
+ *   <li>{@link generator.impl.DungeonImpl#getLevel <em>Level</em>}</li>
+ *   <li>{@link generator.impl.DungeonImpl#getLearningobjective <em>Learningobjective</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,6 +82,26 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * @ordered
 	 */
 	protected Room entry;
+
+	/**
+	 * The cached value of the '{@link #getLevel() <em>Level</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLevel()
+	 * @generated
+	 * @ordered
+	 */
+	protected Level level;
+
+	/**
+	 * The cached value of the '{@link #getLearningobjective() <em>Learningobjective</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLearningobjective()
+	 * @generated
+	 * @ordered
+	 */
+	protected LearningObjective learningobjective;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +199,85 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Level getLevel() {
+		if (level != null && level.eIsProxy()) {
+			InternalEObject oldLevel = (InternalEObject) level;
+			level = (Level) eResolveProxy(oldLevel);
+			if (level != oldLevel) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.DUNGEON__LEVEL, oldLevel,
+							level));
+			}
+		}
+		return level;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Level basicGetLevel() {
+		return level;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLevel(Level newLevel) {
+		Level oldLevel = level;
+		level = newLevel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.DUNGEON__LEVEL, oldLevel, level));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LearningObjective getLearningobjective() {
+		if (learningobjective != null && learningobjective.eIsProxy()) {
+			InternalEObject oldLearningobjective = (InternalEObject) learningobjective;
+			learningobjective = (LearningObjective) eResolveProxy(oldLearningobjective);
+			if (learningobjective != oldLearningobjective) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							GeneratorPackage.DUNGEON__LEARNINGOBJECTIVE, oldLearningobjective, learningobjective));
+			}
+		}
+		return learningobjective;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LearningObjective basicGetLearningobjective() {
+		return learningobjective;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLearningobjective(LearningObjective newLearningobjective) {
+		LearningObjective oldLearningobjective = learningobjective;
+		learningobjective = newLearningobjective;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.DUNGEON__LEARNINGOBJECTIVE,
+					oldLearningobjective, learningobjective));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -200,6 +303,14 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 			if (resolve)
 				return getEntry();
 			return basicGetEntry();
+		case GeneratorPackage.DUNGEON__LEVEL:
+			if (resolve)
+				return getLevel();
+			return basicGetLevel();
+		case GeneratorPackage.DUNGEON__LEARNINGOBJECTIVE:
+			if (resolve)
+				return getLearningobjective();
+			return basicGetLearningobjective();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -223,6 +334,12 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 		case GeneratorPackage.DUNGEON__ENTRY:
 			setEntry((Room) newValue);
 			return;
+		case GeneratorPackage.DUNGEON__LEVEL:
+			setLevel((Level) newValue);
+			return;
+		case GeneratorPackage.DUNGEON__LEARNINGOBJECTIVE:
+			setLearningobjective((LearningObjective) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -244,6 +361,12 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 		case GeneratorPackage.DUNGEON__ENTRY:
 			setEntry((Room) null);
 			return;
+		case GeneratorPackage.DUNGEON__LEVEL:
+			setLevel((Level) null);
+			return;
+		case GeneratorPackage.DUNGEON__LEARNINGOBJECTIVE:
+			setLearningobjective((LearningObjective) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -262,6 +385,10 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 			return mode != MODE_EDEFAULT;
 		case GeneratorPackage.DUNGEON__ENTRY:
 			return entry != null;
+		case GeneratorPackage.DUNGEON__LEVEL:
+			return level != null;
+		case GeneratorPackage.DUNGEON__LEARNINGOBJECTIVE:
+			return learningobjective != null;
 		}
 		return super.eIsSet(featureID);
 	}

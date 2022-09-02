@@ -136,7 +136,16 @@ public enum Directions implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	WEST_SOUTH(11, "WEST_SOUTH", "WEST_SOUTH");
+	WEST_SOUTH(11, "WEST_SOUTH", "WEST_SOUTH"),
+	/**
+	* The '<em><b>NONE</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #NONE_VALUE
+	* @generated
+	* @ordered
+	*/
+	NONE(12, "NONE", "NONE");
 
 	/**
 	 * The '<em><b>SOUTH</b></em>' literal value.
@@ -271,13 +280,24 @@ public enum Directions implements Enumerator {
 	public static final int WEST_SOUTH_VALUE = 11;
 
 	/**
+	 * The '<em><b>NONE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NONE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NONE_VALUE = 12;
+
+	/**
 	 * An array of all the '<em><b>Directions</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static final Directions[] VALUES_ARRAY = new Directions[] { SOUTH, EAST, NORTH, WEST, SOUTH_EAST,
-			SOUTH_WEST, NORTH_EAST, NORTH_WEST, EAST_SOUTH, EAST_NORTH, WEST_NORTH, WEST_SOUTH, };
+			SOUTH_WEST, NORTH_EAST, NORTH_WEST, EAST_SOUTH, EAST_NORTH, WEST_NORTH, WEST_SOUTH, NONE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Directions</b></em>' enumerators.
@@ -357,6 +377,8 @@ public enum Directions implements Enumerator {
 			return WEST_NORTH;
 		case WEST_SOUTH_VALUE:
 			return WEST_SOUTH;
+		case NONE_VALUE:
+			return NONE;
 		}
 		return null;
 	}

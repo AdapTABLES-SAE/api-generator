@@ -44,6 +44,7 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//Directions/EAST_NORTH"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//Directions/WEST_NORTH"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//Directions/WEST_SOUTH"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//Directions/NONE"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//DungeonMode">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//DungeonMode/LINEAR"/>

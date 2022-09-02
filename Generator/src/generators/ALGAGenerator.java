@@ -10,20 +10,31 @@ public class ALGAGenerator {
 	private ModelAccess modelAccess;
 
 	public static void main(String[] args) {
+		//for(int i = 1; i < 11; i ++) {
+			/*ALGAGenerator generator = new ALGAGenerator();
+			Dungeon generatedDungeon = generator.generate();
+			generator.printDungeon(generatedDungeon);*/
+			//EducationalElementsGenerator edg = new EducationalElementsGenerator(generator.modelAccess);
+			//edg.generate();
+			//generator.saveDungeon(generatedDungeon, "GeneratedDungeon"+i+".xmi");
+		//}
 		ALGAGenerator generator = new ALGAGenerator();
-		Dungeon generatedDungeon = generator.generate();
-		generator.printDungeon(generatedDungeon);
-		EducationalElementsGenerator edg = new EducationalElementsGenerator(generator.modelAccess);
-		edg.generate();
-		//generator.saveDungeon(generatedDungeon);
+		ModelAccess ma = new ModelAccess();
+		for (int i = 0; i < 10; i++) {
+			System.out.println("Dungeon "+i+" OK ");
+			DungeonGenerator dg = new DungeonGenerator(ma);
+			
+			//dg.printDungeon();	
+			generator.saveDungeon(dg.generateDungeon(), "GeneratedDungeon"+i+i+".xmi");
+		}
 	}
 	
 	public ALGAGenerator() {
 		modelAccess = new ModelAccess();
 	}
 	
-	public void saveDungeon(Dungeon dungeon) {
-		modelAccess.saveGeneratedModel(dungeon, "GeneratedDungeon.xmi");
+	public void saveDungeon(Dungeon dungeon, String fileName) {
+		modelAccess.saveGeneratedModel(dungeon, fileName);
 	}
 	
 	public Dungeon generate() {

@@ -1,17 +1,17 @@
 package generators;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Random;
 import java.util.Set;
+import java.util.Stack;
 import java.util.stream.Collectors;
 
-import exceptions.MissingModelException;
 import generator.Directions;
 import generator.Dungeon;
 import generator.DungeonMode;
@@ -27,27 +27,7 @@ import structures.Coordinate;
 import structures.DataInitialize;
 import structures.GridPositions;
 
-/**
- * Permet la generation de la structure d'un donjon. 
- * Génération classique : <br/>
- * <code>DungeonStructureGenerator dg = new DungeonStructureGenerator();<br/>
- * dg.generate();
- * </code><br/>
- * 
- * ATTENTION ! Cette méthode de génération génération peut renvoyer une exception (cas où l'algorithme se retrouve bloqué).  
- * Celle-ci est causé par le fait que l'algorithme n'est pas fondé sur un principe de BackTrack. 
- * 
- * Version de génération sans renvoie  d'Exception (regénération jusqu'à avoir une génération correcte) : 
- * <br/><code> 
- * ModelAccess modelAccess = new ModelAccess(); 
- * <br/>DungeonStructureGenerator.generateDungeonStructure(modelAccess);</code>
- * 
- * @see models.ModelAccess
- * @author Bérénice LEMOINE
- *
- */
-public class DungeonStructureGenerator {
-	
+public class DungeonGenerator {
 	private Dungeon generatedDungeon; 
 	private ModelAccess modelAccess;
 	
@@ -63,7 +43,9 @@ public class DungeonStructureGenerator {
 	/** Data structure enumerating complex directions (SOUTH_EAST, SOUTH_WEST, NORTH_EAST, NORTH_WEST, EAST_SOUTH, etc.) */
 	private Set<Directions> complexDirections;
 	
-	public DungeonStructureGenerator(ModelAccess modelAccess) {
+	
+	
+	public DungeonGenerator(ModelAccess modelAccess) {
 		this.modelAccess = modelAccess;
 		generatedDungeon = new DungeonImpl();
 		random = new Random();
@@ -73,38 +55,134 @@ public class DungeonStructureGenerator {
 		simpleDirections = DataInitialize.setSimpleDirections();
 	}
 	
-	public static Dungeon generateDungeonStructure(ModelAccess modelAccess) {
-		DungeonStructureGenerator dg = new DungeonStructureGenerator(modelAccess);
-		while(dg.generatedDungeon.getRooms().isEmpty()) {
-			try {
-				dg.generate();
-			} catch (MissingModelException e) {
-				e.printStackTrace();
-			} catch (IllegalArgumentException e) {
-				dg = new DungeonStructureGenerator(modelAccess);
-			} 
-		}
-		return dg.generatedDungeon;
-	}
-
-	
-	
-	/**
-	 * Dungeon structure generation algorithm 
-	 */
-	public void generate() throws IllegalArgumentException, MissingModelException {
-		if(modelAccess.context.getGamecontext() == null) {
-			throw new MissingModelException("Missing game context model");
-		}
-		System.out.println("Mode du donjon : " + modelAccess.context.getGamecontext().getMode());
+	public Dungeon generateDungeon() {
 		if(modelAccess.context.getGamecontext().getMode().equals(DungeonMode.LINEAR)) {
 			generateLinearDungeon();
 		}else {
-			// TODO
+		}
+		return generatedDungeon;
+	}
+
+	private void generateLinearDungeon() {
+		Stack<Map.Entry<Room, Directions>> dungeonRooms = new Stack<>();
+		Stack<Map<Directions, Set<Directions>>> roomAllowedDirections = new Stack<>();
+		int numberofrooms = modelAccess.context.getGamecontext().getNumberOfRooms();
+		
+		Room originRoom = createEntryRoom();
+		dungeonRooms.add(Map.entry(originRoom, originRoom.getRoomaccess().get(0).getDirection()));
+	
+		boolean backtrack = false;
+		Coordinate nextPosition = null;//, position;
+		while(dungeonRooms.size() < numberofrooms + 1) {
+			
+			nextPosition = getNextCoord(dungeonRooms.peek().getKey(), dungeonRooms.peek().getValue());
+			if(!backtrack) {
+				roomAllowedDirections.add(getAllowedDirections(nextPosition, oppositeDirections.get(dungeonRooms.peek().getValue()))); 
+			}
+			if(roomAllowedDirections.peek().isEmpty()) {
+				System.out.println("Avec backtrack");
+				backtrack = true;
+				roomAllowedDirections.pop();
+				Entry<Room, Directions> r = dungeonRooms.pop();
+				removeAllOccupied(r.getKey());
+				for (Directions dir : new ArrayList<>(roomAllowedDirections.peek().keySet())) {
+					roomAllowedDirections.peek().get(dir).remove(r.getValue());
+					if(roomAllowedDirections.peek().get(dir).isEmpty()) {
+						roomAllowedDirections.peek().remove(dir);
+					}
+				}
+			}else {
+				backtrack = false;
+				Directions entry = roomAllowedDirections.peek().keySet().stream().collect(Collectors.toList()).get(random.nextInt(roomAllowedDirections.peek().keySet().size()));
+				Directions exit = Directions.NONE;
+				if(dungeonRooms.size() != numberofrooms) {
+					exit = roomAllowedDirections.peek().get(entry).stream().collect(Collectors.toList()).get(random.nextInt(roomAllowedDirections.peek().get(entry).size())); 
+				}
+				RoomType roomType = getCompatibleRoomType(entry, exit);
+				Coordinate validCoord = getValidCoordinates(entry, nextPosition);
+				Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, dungeonRooms.peek().getKey().getRoomaccess().get(dungeonRooms.peek().getKey().getRoomaccess().size()-1), entry, exit);
+				dungeonRooms.add(Map.entry(room, exit));
+			}
+		}
+		
+		for (Map.Entry<Room, Directions> entry : dungeonRooms) {
+			generatedDungeon.getRooms().add(entry.getKey());
+		}
+		generatedDungeon.setEntry(originRoom);
+	}
+	
+	private void removeAllOccupied(Room room) {
+		for (Coordinate entry :  new ArrayList<>(occupiedCoordinates.keySet())) {
+			if(occupiedCoordinates.get(entry).getX() == room.getX() && occupiedCoordinates.get(entry).getY() == room.getY()) {
+				occupiedCoordinates.remove(entry);
+			}
 		}
 	}
 	
-
+	/**
+	 * Computes the availability of each coordinates in <GridPositions> based on the starting coordinates (X,Y) <actualPosition>  
+	 * @param actualPosition
+	 * @return An association GridPositions to Boolean (true if occupied, else false)
+	 */
+	private EnumMap<GridPositions, Boolean> computesGridPositionsOccupied(Coordinate actualPosition){
+		EnumMap<GridPositions, Boolean> posOccupied = new EnumMap<>(GridPositions.class);
+		posOccupied.put(GridPositions.YPLUS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX(), actualPosition.getY() + 1)));
+		posOccupied.put(GridPositions.YMOINS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX(), actualPosition.getY() - 1)));
+		posOccupied.put(GridPositions.XMOINS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 1, actualPosition.getY())));
+		posOccupied.put(GridPositions.XPLUS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 1, actualPosition.getY())));
+		posOccupied.put(GridPositions.XY_MOINS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 1, actualPosition.getY() - 1)));
+		posOccupied.put(GridPositions.XY_PLUS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 1, actualPosition.getY() + 1)));
+		posOccupied.put(GridPositions.XPLUS1_YMOINS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 1, actualPosition.getY() - 1)));
+		posOccupied.put(GridPositions.XMOINS1_YPLUS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 1, actualPosition.getY() + 1)));
+		posOccupied.put(GridPositions.YPLUS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX(), actualPosition.getY() + 2)));
+		posOccupied.put(GridPositions.YMOINS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX(), actualPosition.getY() - 2)));
+		posOccupied.put(GridPositions.XMOINS1_YPLUS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 1, actualPosition.getY() + 2)));
+		posOccupied.put(GridPositions.XPLUS1_YPLUS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 1, actualPosition.getY() + 2)));
+		posOccupied.put(GridPositions.XPLUS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 2, actualPosition.getY())));
+		posOccupied.put(GridPositions.XPLUS2_YMOINS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 2, actualPosition.getY() - 1)));
+		posOccupied.put(GridPositions.XPLUS2_YPLUS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 2, actualPosition.getY() + 1)));
+		posOccupied.put(GridPositions.XMOINS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 2, actualPosition.getY())));
+		posOccupied.put(GridPositions.XMOINS2_YPLUS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 2, actualPosition.getY() + 1)));
+		posOccupied.put(GridPositions.XMOINS2_YMOINS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 2, actualPosition.getY() - 1)));
+		posOccupied.put(GridPositions.XMOINS1_YMOINS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 1, actualPosition.getY() - 2)));
+		posOccupied.put(GridPositions.XPLUS1_YMOINS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 1, actualPosition.getY() - 2)));
+		return posOccupied; 
+	}
+	
+	/**
+	 * Selection of a RoomType that at least possess the entry and exit directions/access.
+	 * @param entry
+	 * @param exit
+	 * @return Valid RoomType
+	 */
+	private RoomType getCompatibleRoomType(Directions entry, Directions exit) {
+		List<RoomType> roomtypes = new ArrayList<>(modelAccess.gameDescription.getRoomtypes());
+		for (int i = 0; i < roomtypes.size(); i++) {
+			if(!roomtypes.get(i).getDirections().contains(entry)) {
+				roomtypes.remove(i);
+				i--;
+			}else {
+				if(!exit.equals(Directions.NONE) && !roomtypes.get(i).getDirections().contains(exit)) {
+					roomtypes.remove(i);
+					i--;
+				}
+			}
+		}
+		return roomtypes.get(random.nextInt(roomtypes.size())); 
+	}
+	
+	/**
+	 * Function changing the coordinates of the room in order for the coordinates of LargeRoom to always be the one on the bottom-left.
+	 * @param entry (The entry direction of the room)
+	 * @param position (The position used to select the room)
+	 * @return Coordinates of the room (position if simple room or special case, else other coordinates)
+	 */
+	private Coordinate getValidCoordinates(Directions entry, Coordinate position) { 
+		if(entry.equals(Directions.EAST_NORTH) || entry.equals(Directions.NORTH_EAST)) { return new Coordinate(position.getX() - 1, position.getY() - 1); }
+		if(entry.equals(Directions.EAST_SOUTH) || entry.equals(Directions.SOUTH_EAST)) { return new Coordinate(position.getX() - 1, position.getY()); }
+		if(entry.equals(Directions.WEST_NORTH) || entry.equals(Directions.NORTH_WEST)) { return new Coordinate(position.getX(), position.getY() - 1); }
+		return position;
+	}
 	
 	/**
 	 * For each possible entry entryDirections (in theory), it verifies if the entry is really an option then select its possible exits
@@ -137,10 +215,22 @@ public class DungeonStructureGenerator {
 			}
 			if(!directions.isEmpty()) originDtoPossibleD.put(direction, directions);
 		}
+		/*if(key2remove != null) {
+			System.out.println("2 remove " + key2remove);
+			for (Directions dir : new ArrayList<>(originDtoPossibleD.keySet())) {
+				originDtoPossibleD.get(dir).removeAll(key2remove);
+				if(key2remove.contains(dir) || originDtoPossibleD.get(dir).isEmpty()){
+					originDtoPossibleD.remove(dir);
+				}
+				
+			}
+			//originDtoPossibleD.get(key2remove).removeAll(oppositeDirections.get(key2remove));
+			//if(originDtoPossibleD.get(key2remove).isEmpty()) {originDtoPossibleD.remove(key2remove.getKey());}
+		}*/
 		return originDtoPossibleD;
 	}
  	
- 	/**
+	/**
  	 * Computes the possible exits for LargeRoomType  with SOUTH_EAST or EAST_SOUTH as entry
  	 * @param gridPosOccupations (Association between Coordinates and their occupation : true is occupied)
  	 * @return A set of authorized exit directions for LargeRoomType with SOUTH_EAST or EAST_SOUTH as entry
@@ -209,35 +299,6 @@ public class DungeonStructureGenerator {
  		return directions;
  	}
 
-	/**
-	 * Computes the availability of each coordinates in <GridPositions> based on the starting coordinates (X,Y) <actualPosition>  
-	 * @param actualPosition
-	 * @return An association GridPositions to Boolean (true if occupied, else false)
-	 */
-	private EnumMap<GridPositions, Boolean> computesGridPositionsOccupied(Coordinate actualPosition){
-		EnumMap<GridPositions, Boolean> posOccupied = new EnumMap<>(GridPositions.class);
-		posOccupied.put(GridPositions.YPLUS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX(), actualPosition.getY() + 1)));
-		posOccupied.put(GridPositions.YMOINS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX(), actualPosition.getY() - 1)));
-		posOccupied.put(GridPositions.XMOINS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 1, actualPosition.getY())));
-		posOccupied.put(GridPositions.XPLUS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 1, actualPosition.getY())));
-		posOccupied.put(GridPositions.XY_MOINS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 1, actualPosition.getY() - 1)));
-		posOccupied.put(GridPositions.XY_PLUS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 1, actualPosition.getY() + 1)));
-		posOccupied.put(GridPositions.XPLUS1_YMOINS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 1, actualPosition.getY() - 1)));
-		posOccupied.put(GridPositions.XMOINS1_YPLUS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 1, actualPosition.getY() + 1)));
-		posOccupied.put(GridPositions.YPLUS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX(), actualPosition.getY() + 2)));
-		posOccupied.put(GridPositions.YMOINS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX(), actualPosition.getY() - 2)));
-		posOccupied.put(GridPositions.XMOINS1_YPLUS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 1, actualPosition.getY() + 2)));
-		posOccupied.put(GridPositions.XPLUS1_YPLUS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 1, actualPosition.getY() + 2)));
-		posOccupied.put(GridPositions.XPLUS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 2, actualPosition.getY())));
-		posOccupied.put(GridPositions.XPLUS2_YMOINS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 2, actualPosition.getY() - 1)));
-		posOccupied.put(GridPositions.XPLUS2_YPLUS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 2, actualPosition.getY() + 1)));
-		posOccupied.put(GridPositions.XMOINS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 2, actualPosition.getY())));
-		posOccupied.put(GridPositions.XMOINS2_YPLUS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 2, actualPosition.getY() + 1)));
-		posOccupied.put(GridPositions.XMOINS2_YMOINS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 2, actualPosition.getY() - 1)));
-		posOccupied.put(GridPositions.XMOINS1_YMOINS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() - 1, actualPosition.getY() - 2)));
-		posOccupied.put(GridPositions.XPLUS1_YMOINS2, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX() + 1, actualPosition.getY() - 2)));
-		return posOccupied; 
-	}
  	
  	/**
  	 * Computes the possible exits for LargeRoomType  with NORTH_EAST or EAST_NORTH as entry
@@ -262,99 +323,6 @@ public class DungeonStructureGenerator {
 		}
  		return directions;
  	}
-	
-	/**
-	 * Algorithm of Linear Dungeon Structure Generation
-	 */
-	private void generateLinearDungeon() throws IllegalArgumentException {  
-		int numberofrooms = modelAccess.context.getGamecontext().getNumberOfRooms();
-		Room originRoom = createEntryRoom();
-		generatedDungeon.setEntry(originRoom);
-		generatedDungeon.getRooms().add(originRoom);
-		RoomAccess originExitAccess = originRoom.getRoomaccess().get(0);
-		
-		for (int i = 0; i < numberofrooms + 1; i++) {
-			Coordinate nextPosition = getNextCoord(originRoom, originExitAccess.getDirection());
-			Map<Directions, Set<Directions>> allowedDirections = getAllowedDirections(nextPosition, oppositeDirections.get(originExitAccess.getDirection()));
-			if(allowedDirections.keySet().isEmpty()) {}
-			Directions entry = allowedDirections.keySet().stream().collect(Collectors.toList()).get(random.nextInt(allowedDirections.keySet().size()));
-			Directions exit;
-			if(i != numberofrooms) {
-				exit = allowedDirections.get(entry).stream().collect(Collectors.toList()).get(random.nextInt(allowedDirections.get(entry).size())); 
-			}else {
-				exit = null;
-			}
-			RoomType roomType = getCompatibleRoomType(entry, exit);
-			Coordinate validCoord = getValidCoordinates(entry, nextPosition);
-			Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, originExitAccess, entry, exit);
-			if(i != numberofrooms) {originExitAccess = room.getRoomaccess().get(1);} 
-			originRoom = room;	
-			generatedDungeon.getRooms().add(originRoom);
-		}
-	}
-	
-	/*private void printMap(Map<Directions, Set<Directions>> map) {
-		System.out.println("***allowed pos***");
-		for (Directions d : map.keySet()) {
-			System.out.println(d + " : "+map.get(d));
-		}
-		System.out.println("***");
-	}
-	
-	private void printMap2(Map<Coordinate, Room> map) {
-		System.out.println("***allowed pos***");
-		for (Coordinate d : map.keySet()) {
-			System.out.println(d + " : "+map.get(d));
-		}
-		System.out.println("***");
-	}*/
-	
-	/**
-	 * Function changing the coordinates of the room in order for the coordinates of LargeRoom to always be the one on the bottom-left.
-	 * @param entry (The entry direction of the room)
-	 * @param position (The position used to select the room)
-	 * @return Coordinates of the room (position if simple room or special case, else other coordinates)
-	 */
-	private Coordinate getValidCoordinates(Directions entry, Coordinate position) { 
-		if(entry.equals(Directions.EAST_NORTH) || entry.equals(Directions.NORTH_EAST)) { return new Coordinate(position.getX() - 1, position.getY() - 1); }
-		if(entry.equals(Directions.EAST_SOUTH) || entry.equals(Directions.SOUTH_EAST)) { return new Coordinate(position.getX() - 1, position.getY()); }
-		if(entry.equals(Directions.WEST_NORTH) || entry.equals(Directions.NORTH_WEST)) { return new Coordinate(position.getX(), position.getY() - 1); }
-		return position;
-	}
-	
-	/**
-	 * Selection of a RoomType that at least possess the entry and exit directions/access.
-	 * @param entry
-	 * @param exit
-	 * @return Valid RoomType
-	 */
-	private RoomType getCompatibleRoomType(Directions entry, Directions exit) {
-		List<RoomType> roomtypes = new ArrayList<>(modelAccess.gameDescription.getRoomtypes());
-		for (int i = 0; i < roomtypes.size(); i++) {
-			if(!roomtypes.get(i).getDirections().contains(entry)) {
-				roomtypes.remove(i);
-				i--;
-			}else {
-				if(exit != null && !roomtypes.get(i).getDirections().contains(exit)) {
-					roomtypes.remove(i);
-					i--;
-				}
-			}
-		}
-		return roomtypes.get(random.nextInt(roomtypes.size())); 
-	}
-	
-	/*private List<RoomType> getRoomTypesWith(Set<Directions> directions) {
-		List<RoomType> roomtypes = new ArrayList<>(gameDescription.getRoomtypes());
-		for (int i = 0; i < roomtypes.size(); i++) {
-			Set<Directions> intersection = roomtypes.get(i).getDirections().stream().distinct().filter(directions::contains).collect(Collectors.toSet());
-			if(intersection.isEmpty()) {
-				roomtypes.remove(i);
-				i--;
-			}
-		}
-		return roomtypes; 
-	}*/
 	
 	/**
 	 * Computes the position coordinates corresponding to the exit direction <origineD> of the starting room <origineR>
@@ -392,13 +360,6 @@ public class DungeonStructureGenerator {
 		return createRoom(0, 0, rt, null, null, rt.getDirections().get(0));
 	}
 	
-	/*private Room createExitRoom(RoomAccess previousRoomExitAccess) {
-		List<RoomType> rts = getRoomTypesWith(oppositeDirections.get(previousRoomExitAccess.getDirection()));
-		RoomType rt = rts.get(random.nextInt(rts.size()));
-		Directions entry = rt.getDirections().stream().distinct().filter(oppositeDirections.get(previousRoomExitAccess.getDirection())::contains).collect(Collectors.toList()).get(0);
-		return createRoom(0, 0, rt, previousRoomExitAccess, entry,  null);
-	}*/
-	
 	/**
 	 * Instanciate a Room with (X,Y) as coordinates, with the RoomType rt, with an entry direction as entryDirection and exit as exitDirection and set the access between previous and new room 
 	 * @param X
@@ -422,7 +383,7 @@ public class DungeonStructureGenerator {
 			previousRoomExitAccess.setOtherroomaccess(ra);
 			r.getRoomaccess().add(ra);
 		}
-		if(exitDirection != null) {
+		if(!exitDirection.equals(Directions.NONE)) {
 			ra = new RoomAccessImpl();
 			ra.setDirection(exitDirection);
 			r.getRoomaccess().add(ra);
@@ -432,6 +393,7 @@ public class DungeonStructureGenerator {
 		return r;
 	}
 
+	
 	/**
 	 * Get the RoomTypes with one access/direction only
 	 * @return valid RoomTypes
@@ -462,5 +424,20 @@ public class DungeonStructureGenerator {
 			occupiedCoordinates.put(new Coordinate(c), room); // X,Y+1
 		}
 	}
-		
+	
+	private void printRoom(Room r) {
+		System.out.println("****");
+		System.out.println(r.getRoomtype().getClass().getName() + " ("+r.getX()+","+r.getY()+")");
+		for (RoomAccess ra : r.getRoomaccess()) {
+			System.out.println("Access : "+ra.getDirection());
+		}
+		System.out.println("****");
+	}
+	
+	public void printDungeon() {
+		System.out.println("---- Dungeon -----");
+		for (Room r : generatedDungeon.getRooms()) {
+			printRoom(r);
+		}
+	}
 }

@@ -20,7 +20,7 @@ import generator.RoomAccess;
 public class ReloadTest {
 
 	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-	private static final String INPUT_MODELS_PATH = "outputmodels/GeneratedDungeon.xmi";
+	private static final String INPUT_MODELS_PATH = "outputmodels/GeneratedDungeon5.xmi";
 
 	private ResourceSet resourceSet;
 	public Dungeon generatedDungeon;

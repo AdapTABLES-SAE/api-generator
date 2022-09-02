@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.Dungeon#getRooms <em>Rooms</em>}</li>
  *   <li>{@link generator.Dungeon#getMode <em>Mode</em>}</li>
  *   <li>{@link generator.Dungeon#getEntry <em>Entry</em>}</li>
+ *   <li>{@link generator.Dungeon#getLevel <em>Level</em>}</li>
+ *   <li>{@link generator.Dungeon#getLearningobjective <em>Learningobjective</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getDungeon()
@@ -83,5 +85,49 @@ public interface Dungeon extends EObject {
 	 * @generated
 	 */
 	void setEntry(Room value);
+
+	/**
+	 * Returns the value of the '<em><b>Level</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Level</em>' reference.
+	 * @see #setLevel(Level)
+	 * @see generator.GeneratorPackage#getDungeon_Level()
+	 * @model required="true"
+	 * @generated
+	 */
+	Level getLevel();
+
+	/**
+	 * Sets the value of the '{@link generator.Dungeon#getLevel <em>Level</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Level</em>' reference.
+	 * @see #getLevel()
+	 * @generated
+	 */
+	void setLevel(Level value);
+
+	/**
+	 * Returns the value of the '<em><b>Learningobjective</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Learningobjective</em>' reference.
+	 * @see #setLearningobjective(LearningObjective)
+	 * @see generator.GeneratorPackage#getDungeon_Learningobjective()
+	 * @model required="true"
+	 * @generated
+	 */
+	LearningObjective getLearningobjective();
+
+	/**
+	 * Sets the value of the '{@link generator.Dungeon#getLearningobjective <em>Learningobjective</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Learningobjective</em>' reference.
+	 * @see #getLearningobjective()
+	 * @generated
+	 */
+	void setLearningobjective(LearningObjective value);
 
 } // Dungeon

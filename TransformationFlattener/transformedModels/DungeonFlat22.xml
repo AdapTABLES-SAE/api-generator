@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../models/FlattenDungeon.ecore" entryRoom="Room[0/0]">
+  <rooms>
+    <room id="Room[0/0]" roomTypeName="RegularRoomS">
+      <roomaccesses>
+        <roomaccess id="a2" direction="SOUTH" accessRef="a3"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[0/-1]" y="-1" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a3" direction="NORTH" accessRef="a2"/>
+        <roomaccess id="a4" direction="SOUTH" accessRef="a5"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[0/-3]" y="-3" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a5" direction="NORTH_WEST" accessRef="a4"/>
+        <roomaccess id="a6" direction="EAST_SOUTH" accessRef="a7"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[2/-4]" x="2" y="-4" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a7" direction="WEST_NORTH" accessRef="a6"/>
+        <roomaccess id="a8" direction="EAST_NORTH" accessRef="a9"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[4/-3]" x="4" y="-3" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a9" direction="WEST_SOUTH" accessRef="a8"/>
+        <roomaccess id="a10" direction="EAST_NORTH" accessRef="a11"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[6/-2]" x="6" y="-2" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a11" direction="WEST" accessRef="a10"/>
+        <roomaccess id="a12" direction="NORTH" accessRef="a13"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[5/-1]" x="5" y="-1" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a13" direction="SOUTH_EAST" accessRef="a12"/>
+        <roomaccess id="a14" direction="EAST_NORTH" accessRef="a15"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[7/0]" x="7" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a15" direction="WEST_SOUTH" accessRef="a14"/>
+        <roomaccess id="a16" direction="NORTH_WEST" accessRef="a17"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[7/2]" x="7" y="2" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a17" direction="SOUTH" accessRef="a16"/>
+        <roomaccess id="a18" direction="WEST" accessRef="a19"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[6/2]" x="6" y="2" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a19" direction="EAST" accessRef="a18"/>
+        <roomaccess id="a20" direction="SOUTH" accessRef="a21"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[6/1]" x="6" y="1" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a21" direction="NORTH" accessRef="a20"/>
+        <roomaccess id="a22" direction="WEST" accessRef="a23"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[5/1]" x="5" y="1" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a23" direction="EAST" accessRef="a22"/>
+        <roomaccess id="a24" direction="WEST" accessRef="a25"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[3/0]" x="3" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a25" direction="EAST_NORTH" accessRef="a24"/>
+        <roomaccess id="a26" direction="NORTH_WEST" accessRef="a27"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[3/2]" x="3" y="2" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a27" direction="SOUTH_WEST" accessRef="a26"/>
+        <roomaccess id="a28" direction="NORTH_WEST" accessRef="a29"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[2/4]" x="2" y="4" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a29" direction="SOUTH_EAST" accessRef="a28"/>
+        <roomaccess id="a30" direction="WEST_SOUTH" accessRef="a31"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[0/4]" y="4" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a31" direction="EAST_SOUTH" accessRef="a30"/>
+        <roomaccess id="a32" direction="NORTH_EAST" accessRef="a33"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[1/6]" x="1" y="6" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a33" direction="SOUTH" accessRef="a32"/>
+        <roomaccess id="a34" direction="WEST" accessRef="a35"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[0/6]" y="6" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a35" direction="EAST" accessRef="a34"/>
+        <roomaccess id="a36" direction="NORTH" accessRef="a37"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[0/7]" y="7" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a37" direction="SOUTH_WEST" accessRef="a36"/>
+        <roomaccess id="a38" direction="NORTH_WEST" accessRef="a39"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[0/9]" y="9" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a39" direction="SOUTH_WEST" accessRef="a38"/>
+        <roomaccess id="a40" direction="WEST_NORTH" accessRef="a41"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[-1/10]" x="-1" y="10" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a41" direction="EAST" accessRef="a40"/>
+      </roomaccesses>
+    </room>
+  </rooms>
+</Dungeon>
