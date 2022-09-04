@@ -7,6 +7,8 @@ import java.util.Map;
 import java.util.Random;
 
 import generator.CurrentObjectiveLevel;
+import generator.LearningObjective;
+import generator.Level;
 import generator.Task;
 import generator.TaskType;
 import models.ModelAccess;
@@ -30,11 +32,18 @@ public class EducationalElementsGenerator {
 		nbRoomsToTaskType = new HashMap<>();
 	}
 	
-	public void generate() {
-		
+	public void generateObjectiveLevelRoomTasks() {
 		selectObjectiveLevel();
 		defineNbRoomsToTask();
-		printGeneration();
+		//printGeneration();
+	}
+	
+	public Level getChosenLevel() {
+		return chosenObjectiveLevel.getLevel();
+	}
+	
+	public LearningObjective getChosenObjective() {
+		return chosenObjectiveLevel.getLearningobjective();
 	}
 	
 	private String taskTypeToString(TaskType tt) {

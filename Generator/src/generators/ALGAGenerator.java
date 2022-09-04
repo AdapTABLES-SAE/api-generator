@@ -8,6 +8,7 @@ import models.ModelAccess;
 public class ALGAGenerator {
 	
 	private ModelAccess modelAccess;
+	private Dungeon generatedDungeon;
 
 	public static void main(String[] args) {
 		//for(int i = 1; i < 11; i ++) {
@@ -19,14 +20,9 @@ public class ALGAGenerator {
 			//generator.saveDungeon(generatedDungeon, "GeneratedDungeon"+i+".xmi");
 		//}
 		ALGAGenerator generator = new ALGAGenerator();
-		ModelAccess ma = new ModelAccess();
-		for (int i = 0; i < 10; i++) {
-			System.out.println("Dungeon "+i+" OK ");
-			DungeonGenerator dg = new DungeonGenerator(ma);
-			
-			//dg.printDungeon();	
-			generator.saveDungeon(dg.generateDungeon(), "GeneratedDungeon"+i+i+".xmi");
-		}
+		generator.generate();
+		generator.printDungeon();
+		
 	}
 	
 	public ALGAGenerator() {
@@ -37,8 +33,20 @@ public class ALGAGenerator {
 		modelAccess.saveGeneratedModel(dungeon, fileName);
 	}
 	
-	public Dungeon generate() {
-		return DungeonStructureGenerator.generateDungeonStructure(modelAccess);
+	public void generate() {
+		EducationalElementsGenerator eduGeneration = new EducationalElementsGenerator(modelAccess);
+		DungeonGenerator dungeonGeneration = new DungeonGenerator(modelAccess);
+		
+		eduGeneration.generateObjectiveLevelRoomTasks();
+		generatedDungeon = dungeonGeneration.generateDungeon();
+		
+		generatedDungeon.setLearningobjective(eduGeneration.getChosenObjective());
+		generatedDungeon.setLevel(eduGeneration.getChosenLevel());
+		
+		if(generatedDungeon.getLevel() == null || generatedDungeon.getLearningobjective() == null) {
+			System.err.println("Dungeon objective and/or level are not set properly, possible mistake may appear");
+		}
+		
 	}
 	
 	private void printRoom(Room r) {
@@ -50,8 +58,10 @@ public class ALGAGenerator {
 		System.out.println("****");
 	}
 	
-	public void printDungeon(Dungeon generatedDungeon) {
+	public void printDungeon() {
 		System.out.println("---- Dungeon -----");
+		System.out.println("Objective : "+generatedDungeon.getLearningobjective());
+		System.out.println("Level : "+generatedDungeon.getLevel());
 		for (Room r : generatedDungeon.getRooms()) {
 			printRoom(r);
 		}

@@ -33,7 +33,7 @@ public class Main {
 	 */
 	public static void transformModels(String mmPathIN, String mmPathOUT, String modelIN, String modelOUT, int min, int max) {
 		for(int i = min; i < max; i++) {
-			transformModel(mmPathIN, mmPathOUT, modelIN+i+i+".xmi", modelOUT+i+i+".xml");
+			transformModel(mmPathIN, mmPathOUT, modelIN+i+".xmi", modelOUT+i+".xml");
 		}	
 	}
 
