@@ -37,8 +37,10 @@ import generator.Location;
 import generator.MTCompletionType;
 import generator.MTLevel;
 import generator.Order;
+import generator.Position;
 import generator.Prerequisite;
 import generator.Progression;
+import generator.Question;
 import generator.ReconstructionType;
 import generator.ResultPosition;
 import generator.ResultVerificationType;
@@ -366,6 +368,20 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass currentObjectiveLevelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass positionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass questionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1001,6 +1017,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getRoom_Question() {
+		return (EReference) roomEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGameDescription() {
 		return gameDescriptionEClass;
 	}
@@ -1030,6 +1055,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getRoomType_Name() {
 		return (EAttribute) roomTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRoomType_QuestionPositions() {
+		return (EReference) roomTypeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1676,6 +1710,51 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPosition() {
+		return positionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPosition_Name() {
+		return (EAttribute) positionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getQuestion() {
+		return questionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQuestion_Position() {
+		return (EReference) questionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestion_IncompleteFact() {
+		return (EAttribute) questionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getGPBricks() {
 		return gpBricksEEnum;
 	}
@@ -1861,12 +1940,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(roomEClass, ROOM__Y);
 		createEReference(roomEClass, ROOM__ROOMACCESS);
 		createEReference(roomEClass, ROOM__ROOMTYPE);
+		createEReference(roomEClass, ROOM__QUESTION);
 
 		gameDescriptionEClass = createEClass(GAME_DESCRIPTION);
 		createEReference(gameDescriptionEClass, GAME_DESCRIPTION__ROOMTYPES);
 
 		roomTypeEClass = createEClass(ROOM_TYPE);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__NAME);
+		createEReference(roomTypeEClass, ROOM_TYPE__QUESTION_POSITIONS);
 		createEOperation(roomTypeEClass, ROOM_TYPE___GET_DIRECTIONS);
 
 		smallRoomTypeEClass = createEClass(SMALL_ROOM_TYPE);
@@ -1961,6 +2042,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__LEARNINGOBJECTIVE);
 		createEAttribute(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__ACHIEVED);
 		createEReference(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__LEVEL);
+
+		positionEClass = createEClass(POSITION);
+		createEAttribute(positionEClass, POSITION__NAME);
+
+		questionEClass = createEClass(QUESTION);
+		createEReference(questionEClass, QUESTION__POSITION);
+		createEAttribute(questionEClass, QUESTION__INCOMPLETE_FACT);
 
 		// Create enums
 		gpBricksEEnum = createEEnum(GP_BRICKS);
@@ -2165,6 +2253,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getRoom_Roomtype(), this.getRoomType(), null, "roomtype", null, 1, 1, Room.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEReference(getRoom_Question(), this.getQuestion(), null, "question", null, 0, 1, Room.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(gameDescriptionEClass, GameDescription.class, "GameDescription", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2175,6 +2266,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(roomTypeEClass, RoomType.class, "RoomType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoomType_Name(), ecorePackage.getEString(), "name", null, 0, 1, RoomType.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRoomType_QuestionPositions(), this.getPosition(), null, "questionPositions", null, 0, -1,
+				RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getRoomType__GetDirections(), this.getDirections(), "getDirections", 0, -1, IS_UNIQUE,
 				IS_ORDERED);
@@ -2374,6 +2468,20 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getCurrentObjectiveLevel_Level(), this.getLevel(), null, "level", null, 1, 1,
 				CurrentObjectiveLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(positionEClass, Position.class, "Position", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPosition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Position.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(questionEClass, Question.class, "Question", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getQuestion_Position(), this.getPosition(), null, "position", null, 1, 1, Question.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestion_IncompleteFact(), ecorePackage.getEString(), "incompleteFact", null, 0, 1,
+				Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(gpBricksEEnum, GPBricks.class, "GPBricks");

@@ -112,6 +112,8 @@
         eType="#//RoomAccess" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="roomtype" lowerBound="1"
         eType="#//RoomType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="question" eType="#//Question"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GameDescription">
     <eStructuralFeatures xsi:type="ecore:EReference" name="roomtypes" lowerBound="1"
@@ -120,6 +122,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="RoomType" abstract="true">
     <eOperations name="getDirections" upperBound="-1" eType="#//Directions"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questionPositions" upperBound="-1"
+        eType="#//Position" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SmallRoomType" eSuperTypes="#//RoomType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="directions" lowerBound="1"
@@ -282,5 +286,13 @@
         eType="#//LearningObjective"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="achieved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//Level"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Position">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Question">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
+        eType="#//Position"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="incompleteFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

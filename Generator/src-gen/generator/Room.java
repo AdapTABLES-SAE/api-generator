@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.Room#getY <em>Y</em>}</li>
  *   <li>{@link generator.Room#getRoomaccess <em>Roomaccess</em>}</li>
  *   <li>{@link generator.Room#getRoomtype <em>Roomtype</em>}</li>
+ *   <li>{@link generator.Room#getQuestion <em>Question</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getRoom()
@@ -103,5 +104,27 @@ public interface Room extends EObject {
 	 * @generated
 	 */
 	void setRoomtype(RoomType value);
+
+	/**
+	 * Returns the value of the '<em><b>Question</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Question</em>' containment reference.
+	 * @see #setQuestion(Question)
+	 * @see generator.GeneratorPackage#getRoom_Question()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Question getQuestion();
+
+	/**
+	 * Sets the value of the '{@link generator.Room#getQuestion <em>Question</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Question</em>' containment reference.
+	 * @see #getQuestion()
+	 * @generated
+	 */
+	void setQuestion(Question value);
 
 } // Room

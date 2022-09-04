@@ -28,6 +28,8 @@
   <roomtypes
       xsi:type="generator:SmallRoomType"
       name="RegularRoom1">
+    <questionPositions
+        name="POSQ1"/>
     <directions>EAST</directions>
     <directions>NORTH</directions>
     <directions>WEST</directions>
@@ -36,6 +38,8 @@
   <roomtypes
       xsi:type="generator:LargeRoomType"
       name="LargeSimpleRoom1">
+    <questionPositions
+        name="POSQ1"/>
     <directions>SOUTH_EAST</directions>
     <directions>SOUTH_WEST</directions>
     <directions>NORTH_EAST</directions>

@@ -3,6 +3,7 @@
 package generator.impl;
 
 import generator.GeneratorPackage;
+import generator.Question;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
@@ -35,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.RoomImpl#getY <em>Y</em>}</li>
  *   <li>{@link generator.impl.RoomImpl#getRoomaccess <em>Roomaccess</em>}</li>
  *   <li>{@link generator.impl.RoomImpl#getRoomtype <em>Roomtype</em>}</li>
+ *   <li>{@link generator.impl.RoomImpl#getQuestion <em>Question</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +101,16 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * @ordered
 	 */
 	protected RoomType roomtype;
+
+	/**
+	 * The cached value of the '{@link #getQuestion() <em>Question</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuestion()
+	 * @generated
+	 * @ordered
+	 */
+	protected Question question;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -219,11 +231,63 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Question getQuestion() {
+		return question;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetQuestion(Question newQuestion, NotificationChain msgs) {
+		Question oldQuestion = question;
+		question = newQuestion;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.ROOM__QUESTION, oldQuestion, newQuestion);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setQuestion(Question newQuestion) {
+		if (newQuestion != question) {
+			NotificationChain msgs = null;
+			if (question != null)
+				msgs = ((InternalEObject) question).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.ROOM__QUESTION, null, msgs);
+			if (newQuestion != null)
+				msgs = ((InternalEObject) newQuestion).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.ROOM__QUESTION, null, msgs);
+			msgs = basicSetQuestion(newQuestion, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ROOM__QUESTION, newQuestion,
+					newQuestion));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case GeneratorPackage.ROOM__ROOMACCESS:
 			return ((InternalEList<?>) getRoomaccess()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.ROOM__QUESTION:
+			return basicSetQuestion(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -246,6 +310,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			if (resolve)
 				return getRoomtype();
 			return basicGetRoomtype();
+		case GeneratorPackage.ROOM__QUESTION:
+			return getQuestion();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -272,6 +338,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		case GeneratorPackage.ROOM__ROOMTYPE:
 			setRoomtype((RoomType) newValue);
 			return;
+		case GeneratorPackage.ROOM__QUESTION:
+			setQuestion((Question) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -296,6 +365,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		case GeneratorPackage.ROOM__ROOMTYPE:
 			setRoomtype((RoomType) null);
 			return;
+		case GeneratorPackage.ROOM__QUESTION:
+			setQuestion((Question) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -316,6 +388,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			return roomaccess != null && !roomaccess.isEmpty();
 		case GeneratorPackage.ROOM__ROOMTYPE:
 			return roomtype != null;
+		case GeneratorPackage.ROOM__QUESTION:
+			return question != null;
 		}
 		return super.eIsSet(featureID);
 	}

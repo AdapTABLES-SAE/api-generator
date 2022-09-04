@@ -4,18 +4,24 @@ package generator.impl;
 
 import generator.Directions;
 import generator.GeneratorPackage;
+import generator.Position;
 import generator.RoomType;
 
 import java.lang.reflect.InvocationTargetException;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,6 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.RoomTypeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link generator.impl.RoomTypeImpl#getQuestionPositions <em>Question Positions</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,6 +57,16 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getQuestionPositions() <em>Question Positions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuestionPositions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Position> questionPositions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,6 +113,19 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Position> getQuestionPositions() {
+		if (questionPositions == null) {
+			questionPositions = new EObjectContainmentEList<Position>(Position.class, this,
+					GeneratorPackage.ROOM_TYPE__QUESTION_POSITIONS);
+		}
+		return questionPositions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Directions> getDirections() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -108,10 +138,26 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case GeneratorPackage.ROOM_TYPE__QUESTION_POSITIONS:
+			return ((InternalEList<?>) getQuestionPositions()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case GeneratorPackage.ROOM_TYPE__NAME:
 			return getName();
+		case GeneratorPackage.ROOM_TYPE__QUESTION_POSITIONS:
+			return getQuestionPositions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -121,11 +167,16 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case GeneratorPackage.ROOM_TYPE__NAME:
 			setName((String) newValue);
+			return;
+		case GeneratorPackage.ROOM_TYPE__QUESTION_POSITIONS:
+			getQuestionPositions().clear();
+			getQuestionPositions().addAll((Collection<? extends Position>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -142,6 +193,9 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.ROOM_TYPE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
+		case GeneratorPackage.ROOM_TYPE__QUESTION_POSITIONS:
+			getQuestionPositions().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -156,6 +210,8 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 		case GeneratorPackage.ROOM_TYPE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case GeneratorPackage.ROOM_TYPE__QUESTION_POSITIONS:
+			return questionPositions != null && !questionPositions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

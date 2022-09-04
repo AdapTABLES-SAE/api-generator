@@ -31,6 +31,18 @@ rule Room2Room
             "\tlarge".println();
             roomOut.size = OUT!RoomType#LARGE;
         }
+        
+        if(roomIn.question.isDefined()){
+	        var question: new OUT!Question;
+	        question.incompleteFact = roomIn.question.incompleteFact;
+	        question.pos = roomIn.question.position.name;
+	        if(roomIn.question.incompleteFact == "MTCompletionTypeImpl"){
+	        question.type = "LargeText";
+	        }
+	        
+	        roomOut.question = question;
+        }
+        
 		
         // ROOM ACCESSES
         var accesses: new OUT!RoomAccesses;

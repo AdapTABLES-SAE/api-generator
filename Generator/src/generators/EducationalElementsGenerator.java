@@ -12,6 +12,7 @@ import generator.Level;
 import generator.Task;
 import generator.TaskType;
 import models.ModelAccess;
+import structures.DataAccess;
 
 /**
  * Cette classe permet de générer / choisir, l'objectif d'entrainement visée ainsi que le niveau de difficulté. 
@@ -59,6 +60,26 @@ public class EducationalElementsGenerator {
 		}
 		chosenObjectiveLevel = notAchieved.get(random.nextInt(notAchieved.size()));
 	}
+	
+	public List<TaskType> getListOfRoomTask() {
+		List<TaskType> taskTypes = new ArrayList<>();
+		for (TaskType taskType : nbRoomsToTaskType.keySet()) {
+			if(!DataAccess.getCompatibleRoomTypeSize(taskType).contains("SMALL")) {
+				for (int i = 0; i < nbRoomsToTaskType.get(taskType); i++) {
+					taskTypes.add(taskType);
+				}
+			}
+		}
+		for (TaskType taskType : nbRoomsToTaskType.keySet()) {
+			if(DataAccess.getCompatibleRoomTypeSize(taskType).contains("SMALL")) {
+				for (int i = 0; i < nbRoomsToTaskType.get(taskType); i++) {
+					taskTypes.add(taskType);
+				}
+			}
+		}
+		return taskTypes;
+	} 
+	
 	
 	private void defineNbRoomsToTask() {
 		if(chosenObjectiveLevel != null) {

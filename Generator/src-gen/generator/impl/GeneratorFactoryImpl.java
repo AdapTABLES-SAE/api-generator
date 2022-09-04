@@ -129,6 +129,10 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createProgression();
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL:
 			return createCurrentObjectiveLevel();
+		case GeneratorPackage.POSITION:
+			return createPosition();
+		case GeneratorPackage.QUESTION:
+			return createQuestion();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -558,6 +562,26 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public CurrentObjectiveLevel createCurrentObjectiveLevel() {
 		CurrentObjectiveLevelImpl currentObjectiveLevel = new CurrentObjectiveLevelImpl();
 		return currentObjectiveLevel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Position createPosition() {
+		PositionImpl position = new PositionImpl();
+		return position;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Question createQuestion() {
+		QuestionImpl question = new QuestionImpl();
+		return question;
 	}
 
 	/**

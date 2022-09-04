@@ -24,7 +24,7 @@ import generator.impl.RoomAccessImpl;
 import generator.impl.RoomImpl;
 import models.ModelAccess;
 import structures.Coordinate;
-import structures.DataInitialize;
+import structures.DataAccess;
 import structures.GridPositions;
 
 /**
@@ -68,9 +68,9 @@ public class DungeonStructureGenerator {
 		generatedDungeon = new DungeonImpl();
 		random = new Random();
 		occupiedCoordinates = new HashMap<>();
-		oppositeDirections = DataInitialize.setOppositeDirections();
-		complexDirections = DataInitialize.setComplexeDirections();
-		simpleDirections = DataInitialize.setSimpleDirections();
+		oppositeDirections = DataAccess.setOppositeDirections();
+		complexDirections = DataAccess.setComplexeDirections();
+		simpleDirections = DataAccess.setSimpleDirections();
 	}
 	
 	public static Dungeon generateDungeonStructure(ModelAccess modelAccess) {

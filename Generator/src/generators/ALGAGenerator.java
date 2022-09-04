@@ -21,6 +21,7 @@ public class ALGAGenerator {
 		//}
 		ALGAGenerator generator = new ALGAGenerator();
 		generator.generate();
+		generator.saveDungeon("DungeonG.xmi");
 		generator.printDungeon();
 		
 	}
@@ -29,15 +30,15 @@ public class ALGAGenerator {
 		modelAccess = new ModelAccess();
 	}
 	
-	public void saveDungeon(Dungeon dungeon, String fileName) {
-		modelAccess.saveGeneratedModel(dungeon, fileName);
+	public void saveDungeon(String fileName) {
+		modelAccess.saveGeneratedModel(generatedDungeon, fileName);
 	}
 	
 	public void generate() {
 		EducationalElementsGenerator eduGeneration = new EducationalElementsGenerator(modelAccess);
-		DungeonGenerator dungeonGeneration = new DungeonGenerator(modelAccess);
-		
 		eduGeneration.generateObjectiveLevelRoomTasks();
+		
+		DungeonGenerator dungeonGeneration = new DungeonGenerator(modelAccess, eduGeneration.getListOfRoomTask());
 		generatedDungeon = dungeonGeneration.generateDungeon();
 		
 		generatedDungeon.setLearningobjective(eduGeneration.getChosenObjective());
@@ -52,6 +53,9 @@ public class ALGAGenerator {
 	private void printRoom(Room r) {
 		System.out.println("****");
 		System.out.println(r.getRoomtype().getClass().getName() + " ("+r.getX()+","+r.getY()+")");
+		if(r.getQuestion() != null) {
+			System.out.println("\t IncompleteFact : "+r.getQuestion().getIncompleteFact()+" Position : "+r.getQuestion().getPosition().getName());
+		}
 		for (RoomAccess ra : r.getRoomaccess()) {
 			System.out.println("Access : "+ra.getDirection());
 		}

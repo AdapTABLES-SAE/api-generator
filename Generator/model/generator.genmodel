@@ -143,12 +143,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Room/y"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Room/roomaccess"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Room/roomtype"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Room/question"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//GameDescription">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameDescription/roomtypes"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//RoomType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//RoomType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//RoomType/questionPositions"/>
       <genOperations ecoreOperation="generator.ecore#//RoomType/getDirections"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//SmallRoomType">
@@ -242,6 +244,13 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//CurrentObjectiveLevel/learningobjective"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CurrentObjectiveLevel/achieved"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//CurrentObjectiveLevel/level"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Position">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Position/name"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Question">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Question/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Question/incompleteFact"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

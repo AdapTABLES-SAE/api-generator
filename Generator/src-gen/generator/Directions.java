@@ -138,13 +138,13 @@ public enum Directions implements Enumerator {
 	 */
 	WEST_SOUTH(11, "WEST_SOUTH", "WEST_SOUTH"),
 	/**
-	* The '<em><b>NONE</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>NONE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #NONE_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #NONE_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	NONE(12, "NONE", "NONE");
 
 	/**

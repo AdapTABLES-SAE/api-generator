@@ -895,13 +895,22 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM__ROOMTYPE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Question</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM__QUESTION = 4;
+
+	/**
 	 * The number of structural features of the '<em>Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_FEATURE_COUNT = 4;
+	int ROOM_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Room</em>' class.
@@ -969,13 +978,22 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM_TYPE__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Question Positions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE__QUESTION_POSITIONS = 1;
+
+	/**
 	 * The number of structural features of the '<em>Room Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_FEATURE_COUNT = 1;
+	int ROOM_TYPE_FEATURE_COUNT = 2;
 
 	/**
 	 * The operation id for the '<em>Get Directions</em>' operation.
@@ -1013,6 +1031,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int SMALL_ROOM_TYPE__NAME = ROOM_TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Question Positions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMALL_ROOM_TYPE__QUESTION_POSITIONS = ROOM_TYPE__QUESTION_POSITIONS;
 
 	/**
 	 * The feature id for the '<em><b>Directions</b></em>' attribute list.
@@ -1068,6 +1095,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int LARGE_ROOM_TYPE__NAME = ROOM_TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Question Positions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LARGE_ROOM_TYPE__QUESTION_POSITIONS = ROOM_TYPE__QUESTION_POSITIONS;
 
 	/**
 	 * The feature id for the '<em><b>Directions</b></em>' attribute list.
@@ -2270,6 +2306,89 @@ public interface GeneratorPackage extends EPackage {
 	int CURRENT_OBJECTIVE_LEVEL_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.PositionImpl <em>Position</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.PositionImpl
+	 * @see generator.impl.GeneratorPackageImpl#getPosition()
+	 * @generated
+	 */
+	int POSITION = 42;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Position</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Position</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.QuestionImpl <em>Question</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.QuestionImpl
+	 * @see generator.impl.GeneratorPackageImpl#getQuestion()
+	 * @generated
+	 */
+	int QUESTION = 43;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION__POSITION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Incomplete Fact</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION__INCOMPLETE_FACT = 1;
+
+	/**
+	 * The number of structural features of the '<em>Question</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Question</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link generator.GPBricks <em>GP Bricks</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2277,7 +2396,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPBricks()
 	 * @generated
 	 */
-	int GP_BRICKS = 42;
+	int GP_BRICKS = 44;
 
 	/**
 	 * The meta object id for the '{@link generator.AvatarActions <em>Avatar Actions</em>}' enum.
@@ -2287,7 +2406,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAvatarActions()
 	 * @generated
 	 */
-	int AVATAR_ACTIONS = 43;
+	int AVATAR_ACTIONS = 45;
 
 	/**
 	 * The meta object id for the '{@link generator.RoomPaths <em>Room Paths</em>}' enum.
@@ -2297,7 +2416,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRoomPaths()
 	 * @generated
 	 */
-	int ROOM_PATHS = 44;
+	int ROOM_PATHS = 46;
 
 	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
@@ -2307,7 +2426,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 45;
+	int DIRECTIONS = 47;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -2317,7 +2436,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 46;
+	int DUNGEON_MODE = 48;
 
 	/**
 	 * The meta object id for the '{@link generator.VerifiableElement <em>Verifiable Element</em>}' enum.
@@ -2327,7 +2446,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getVerifiableElement()
 	 * @generated
 	 */
-	int VERIFIABLE_ELEMENT = 47;
+	int VERIFIABLE_ELEMENT = 49;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -2337,7 +2456,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 48;
+	int TABLE_BUILD = 50;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -2347,7 +2466,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 49;
+	int RESULT_POSITION = 51;
 
 	/**
 	 * The meta object id for the '{@link generator.TargetElement <em>Target Element</em>}' enum.
@@ -2357,7 +2476,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTargetElement()
 	 * @generated
 	 */
-	int TARGET_ELEMENT = 50;
+	int TARGET_ELEMENT = 52;
 
 	/**
 	 * The meta object id for the '{@link generator.Order <em>Order</em>}' enum.
@@ -2367,7 +2486,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 51;
+	int ORDER = 53;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -2958,6 +3077,17 @@ public interface GeneratorPackage extends EPackage {
 	EReference getRoom_Roomtype();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link generator.Room#getQuestion <em>Question</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Question</em>'.
+	 * @see generator.Room#getQuestion()
+	 * @see #getRoom()
+	 * @generated
+	 */
+	EReference getRoom_Question();
+
+	/**
 	 * Returns the meta object for class '{@link generator.GameDescription <em>Game Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2998,6 +3128,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRoomType_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.RoomType#getQuestionPositions <em>Question Positions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Question Positions</em>'.
+	 * @see generator.RoomType#getQuestionPositions()
+	 * @see #getRoomType()
+	 * @generated
+	 */
+	EReference getRoomType_QuestionPositions();
 
 	/**
 	 * Returns the meta object for the '{@link generator.RoomType#getDirections() <em>Get Directions</em>}' operation.
@@ -3757,6 +3898,59 @@ public interface GeneratorPackage extends EPackage {
 	EReference getCurrentObjectiveLevel_Level();
 
 	/**
+	 * Returns the meta object for class '{@link generator.Position <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Position</em>'.
+	 * @see generator.Position
+	 * @generated
+	 */
+	EClass getPosition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Position#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.Position#getName()
+	 * @see #getPosition()
+	 * @generated
+	 */
+	EAttribute getPosition_Name();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Question <em>Question</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Question</em>'.
+	 * @see generator.Question
+	 * @generated
+	 */
+	EClass getQuestion();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.Question#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Position</em>'.
+	 * @see generator.Question#getPosition()
+	 * @see #getQuestion()
+	 * @generated
+	 */
+	EReference getQuestion_Position();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Question#getIncompleteFact <em>Incomplete Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Incomplete Fact</em>'.
+	 * @see generator.Question#getIncompleteFact()
+	 * @see #getQuestion()
+	 * @generated
+	 */
+	EAttribute getQuestion_IncompleteFact();
+
+	/**
 	 * Returns the meta object for enum '{@link generator.GPBricks <em>GP Bricks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4354,6 +4548,14 @@ public interface GeneratorPackage extends EPackage {
 		EReference ROOM__ROOMTYPE = eINSTANCE.getRoom_Roomtype();
 
 		/**
+		 * The meta object literal for the '<em><b>Question</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROOM__QUESTION = eINSTANCE.getRoom_Question();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.GameDescriptionImpl <em>Game Description</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4388,6 +4590,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROOM_TYPE__NAME = eINSTANCE.getRoomType_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Question Positions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROOM_TYPE__QUESTION_POSITIONS = eINSTANCE.getRoomType_QuestionPositions();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Directions</b></em>' operation.
@@ -5003,6 +5213,50 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CURRENT_OBJECTIVE_LEVEL__LEVEL = eINSTANCE.getCurrentObjectiveLevel_Level();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.PositionImpl <em>Position</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.PositionImpl
+		 * @see generator.impl.GeneratorPackageImpl#getPosition()
+		 * @generated
+		 */
+		EClass POSITION = eINSTANCE.getPosition();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute POSITION__NAME = eINSTANCE.getPosition_Name();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.QuestionImpl <em>Question</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.QuestionImpl
+		 * @see generator.impl.GeneratorPackageImpl#getQuestion()
+		 * @generated
+		 */
+		EClass QUESTION = eINSTANCE.getQuestion();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QUESTION__POSITION = eINSTANCE.getQuestion_Position();
+
+		/**
+		 * The meta object literal for the '<em><b>Incomplete Fact</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTION__INCOMPLETE_FACT = eINSTANCE.getQuestion_IncompleteFact();
 
 		/**
 		 * The meta object literal for the '{@link generator.GPBricks <em>GP Bricks</em>}' enum.

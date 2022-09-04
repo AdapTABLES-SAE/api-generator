@@ -16,15 +16,18 @@ import generator.Directions;
 import generator.Dungeon;
 import generator.DungeonMode;
 import generator.LargeRoomType;
+import generator.Question;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
+import generator.TaskType;
 import generator.impl.DungeonImpl;
+import generator.impl.QuestionImpl;
 import generator.impl.RoomAccessImpl;
 import generator.impl.RoomImpl;
 import models.ModelAccess;
 import structures.Coordinate;
-import structures.DataInitialize;
+import structures.DataAccess;
 import structures.GridPositions;
 
 public class DungeonGenerator {
@@ -42,22 +45,41 @@ public class DungeonGenerator {
 	private Set<Directions> simpleDirections;
 	/** Data structure enumerating complex directions (SOUTH_EAST, SOUTH_WEST, NORTH_EAST, NORTH_WEST, EAST_SOUTH, etc.) */
 	private Set<Directions> complexDirections;
-	
-	
+	private List<TaskType> taskTypes;
 	
 	public DungeonGenerator(ModelAccess modelAccess) {
 		this.modelAccess = modelAccess;
 		generatedDungeon = new DungeonImpl();
 		random = new Random();
 		occupiedCoordinates = new HashMap<>();
-		oppositeDirections = DataInitialize.setOppositeDirections();
-		complexDirections = DataInitialize.setComplexeDirections();
-		simpleDirections = DataInitialize.setSimpleDirections();
+		oppositeDirections = DataAccess.setOppositeDirections();
+		complexDirections = DataAccess.setComplexeDirections();
+		simpleDirections = DataAccess.setSimpleDirections();
 	}
 	
+	public DungeonGenerator(ModelAccess modelAccess, List<TaskType> taskTypes_) {
+		this.modelAccess = modelAccess;
+		generatedDungeon = new DungeonImpl();
+		random = new Random();
+		occupiedCoordinates = new HashMap<>();
+		oppositeDirections = DataAccess.setOppositeDirections();
+		complexDirections = DataAccess.setComplexeDirections();
+		simpleDirections = DataAccess.setSimpleDirections();
+		taskTypes = taskTypes_;
+	}
+	
+	public List<TaskType> getTaskTypes() {
+		return taskTypes;
+	}
+
+	public void setTaskTypes(List<TaskType> taskTypes) {
+		this.taskTypes = taskTypes;
+	}
+
 	public Dungeon generateDungeon() {
 		if(modelAccess.context.getGamecontext().getMode().equals(DungeonMode.LINEAR)) {
-			generateLinearDungeon();
+			//generateLinearDungeon();
+			generateLinearDungeon2();
 		}else {
 		}
 		return generatedDungeon;
@@ -109,6 +131,74 @@ public class DungeonGenerator {
 			generatedDungeon.getRooms().add(entry.getKey());
 		}
 		generatedDungeon.setEntry(originRoom);
+	}
+	
+	private void generateLinearDungeon2() {
+		Stack<Map.Entry<Room, Directions>> dungeonRooms = new Stack<>();
+		Stack<Map<Directions, Set<Directions>>> roomAllowedDirections = new Stack<>();
+		int numberofrooms = modelAccess.context.getGamecontext().getNumberOfRooms();
+		Room originRoom = createEntryRoom();
+		dungeonRooms.add(Map.entry(originRoom, originRoom.getRoomaccess().get(0).getDirection()));
+	
+		boolean backtrack = false;
+		Coordinate nextPosition = null;
+		TaskType tasktype = null;
+		while(dungeonRooms.size() < numberofrooms + 1) {
+			
+			nextPosition = getNextCoord(dungeonRooms.peek().getKey(), dungeonRooms.peek().getValue());
+			if(!backtrack) {
+				tasktype = taskTypes.get(dungeonRooms.size() - 1);
+				roomAllowedDirections.add(getAllowedDirections(nextPosition, oppositeDirections.get(dungeonRooms.peek().getValue()))); 
+			}
+			if(roomAllowedDirections.peek().isEmpty()) {
+				System.out.println("Avec backtrack");
+				backtrack = true;
+				roomAllowedDirections.pop();
+				Entry<Room, Directions> r = dungeonRooms.pop();
+				removeAllOccupied(r.getKey());
+				for (Directions dir : new ArrayList<>(roomAllowedDirections.peek().keySet())) {
+					roomAllowedDirections.peek().get(dir).remove(r.getValue());
+					if(roomAllowedDirections.peek().get(dir).isEmpty()) {
+						roomAllowedDirections.peek().remove(dir);
+					}
+				}
+			}else {
+				backtrack = false;
+				
+				Directions entry = chooseEntryDirection(roomAllowedDirections);
+				System.out.println("Is small room"+simpleDirections.contains(entry));
+				Directions exit = Directions.NONE;
+				if(dungeonRooms.size() != numberofrooms) {
+					exit = roomAllowedDirections.peek().get(entry).stream().collect(Collectors.toList()).get(random.nextInt(roomAllowedDirections.peek().get(entry).size())); 
+				}
+				RoomType roomType = getCompatibleRoomType(tasktype, entry, exit);
+				Coordinate validCoord = getValidCoordinates(entry, nextPosition);
+				Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, tasktype, dungeonRooms.peek().getKey().getRoomaccess().get(dungeonRooms.peek().getKey().getRoomaccess().size()-1), entry, exit);
+				dungeonRooms.add(Map.entry(room, exit));
+			}
+		}
+		
+		for (Map.Entry<Room, Directions> entry : dungeonRooms) {
+			generatedDungeon.getRooms().add(entry.getKey());
+		}
+		generatedDungeon.setEntry(originRoom);
+	}
+	
+	/**
+	 * In case of complex and simple entry direction, it prioritize small room 
+	 * 3/5 chance of getting a small room, 2/5 chance of getting a large room 
+	 * @param roomAllowedDirections
+	 * @return the chosen entry direction 
+	 */
+	private Directions chooseEntryDirection(Stack<Map<Directions, Set<Directions>>> roomAllowedDirections) {
+		List<Directions> possibleEntries = roomAllowedDirections.peek().keySet().stream().collect(Collectors.toList()); 
+		if(possibleEntries.size() == 3) {
+			Directions d = possibleEntries.stream().distinct().filter(simpleDirections::contains).collect(Collectors.toList()).get(0);
+			possibleEntries.add(d);
+			possibleEntries.add(d);
+		}
+		
+		return possibleEntries.get(random.nextInt(possibleEntries.size()));
 	}
 	
 	private void removeAllOccupied(Room room) {
@@ -172,6 +262,25 @@ public class DungeonGenerator {
 	}
 	
 	/**
+	 * Selection of a RoomType that at least possess the entry and exit directions/access.
+	 * @param entry
+	 * @param exit
+	 * @return Valid RoomType
+	 */
+	private RoomType getCompatibleRoomType(TaskType taskType, Directions entry, Directions exit) {
+		List<RoomType> roomTypes = DataAccess.getCompatibleRoomType(taskType, modelAccess.gameDescription);
+		
+		for (RoomType roomType : new ArrayList<>(roomTypes)) {
+			if(!roomType.getDirections().contains(entry) || (!exit.equals(Directions.NONE) && !roomType.getDirections().contains(exit))) {
+				roomTypes.remove(roomType);
+			}
+		}
+		
+		if(roomTypes.isEmpty()) {return null;}
+		return roomTypes.get(random.nextInt(roomTypes.size())); 
+	}
+	
+	/**
 	 * Function changing the coordinates of the room in order for the coordinates of LargeRoom to always be the one on the bottom-left.
 	 * @param entry (The entry direction of the room)
 	 * @param position (The position used to select the room)
@@ -215,18 +324,6 @@ public class DungeonGenerator {
 			}
 			if(!directions.isEmpty()) originDtoPossibleD.put(direction, directions);
 		}
-		/*if(key2remove != null) {
-			System.out.println("2 remove " + key2remove);
-			for (Directions dir : new ArrayList<>(originDtoPossibleD.keySet())) {
-				originDtoPossibleD.get(dir).removeAll(key2remove);
-				if(key2remove.contains(dir) || originDtoPossibleD.get(dir).isEmpty()){
-					originDtoPossibleD.remove(dir);
-				}
-				
-			}
-			//originDtoPossibleD.get(key2remove).removeAll(oppositeDirections.get(key2remove));
-			//if(originDtoPossibleD.get(key2remove).isEmpty()) {originDtoPossibleD.remove(key2remove.getKey());}
-		}*/
 		return originDtoPossibleD;
 	}
  	
@@ -393,6 +490,42 @@ public class DungeonGenerator {
 		return r;
 	}
 
+	/**
+	 * Instanciate a Room with (X,Y) as coordinates, with the RoomType rt, with an entry direction as entryDirection and exit as exitDirection and set the access between previous and new room 
+	 * @param X
+	 * @param Y
+	 * @param roomT
+	 * @param previousRoomExitAccess
+	 * @param entryDirection
+	 * @param exitDirection
+	 * @return a Room
+	 */
+	private Room createRoom(int X, int Y, RoomType roomT, TaskType taskType, RoomAccess previousRoomExitAccess,  Directions entryDirection, Directions exitDirection) {
+		Room r = new RoomImpl();
+		r.setRoomtype(roomT);
+		r.setX(X);
+		r.setY(Y);
+		
+		r.setQuestion(new QuestionImpl());
+		r.getQuestion().setPosition(roomT.getQuestionPositions().get(random.nextInt(roomT.getQuestionPositions().size())));
+		r.getQuestion().setIncompleteFact(taskType.getClass().getSimpleName());
+		
+		RoomAccess ra = new RoomAccessImpl();
+		if(entryDirection != null) {
+			ra.setOtherroomaccess(previousRoomExitAccess);
+			ra.setDirection(entryDirection);
+			previousRoomExitAccess.setOtherroomaccess(ra);
+			r.getRoomaccess().add(ra);
+		}
+		if(!exitDirection.equals(Directions.NONE)) {
+			ra = new RoomAccessImpl();
+			ra.setDirection(exitDirection);
+			r.getRoomaccess().add(ra);
+		}
+		
+		addOccupiedCoordinates(r);
+		return r;
+	}
 	
 	/**
 	 * Get the RoomTypes with one access/direction only
