@@ -329,7 +329,7 @@ public class DungeonStructureGenerator {
 	 * @return Valid RoomType
 	 */
 	private RoomType getCompatibleRoomType(Directions entry, Directions exit) {
-		List<RoomType> roomtypes = new ArrayList<>(modelAccess.gameDescription.getRoomtypes());
+		List<RoomType> roomtypes = new ArrayList<>(modelAccess.gameDescription.getRoomtypes().getRoomtypes());
 		for (int i = 0; i < roomtypes.size(); i++) {
 			if(!roomtypes.get(i).getDirections().contains(entry)) {
 				roomtypes.remove(i);
@@ -438,7 +438,7 @@ public class DungeonStructureGenerator {
 	 */
 	private List<RoomType> roomsWithOneDirection() {
 		List<RoomType> rts = new ArrayList<>();
-		for (RoomType rt : modelAccess.gameDescription.getRoomtypes()) {
+		for (RoomType rt : modelAccess.gameDescription.getRoomtypes().getRoomtypes()) {
 			if(rt.getDirections().size() == 1) {
 				rts.add(rt);
 			}

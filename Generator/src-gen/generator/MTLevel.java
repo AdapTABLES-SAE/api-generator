@@ -74,12 +74,13 @@ public interface MTLevel extends Level {
 
 	/**
 	 * Returns the value of the '<em><b>Min Interval</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min Interval</em>' attribute.
 	 * @see #setMinInterval(int)
 	 * @see generator.GeneratorPackage#getMTLevel_MinInterval()
-	 * @model
+	 * @model default="1"
 	 * @generated
 	 */
 	int getMinInterval();
@@ -96,12 +97,13 @@ public interface MTLevel extends Level {
 
 	/**
 	 * Returns the value of the '<em><b>Max Interval</b></em>' attribute.
+	 * The default value is <code>"10"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max Interval</em>' attribute.
 	 * @see #setMaxInterval(int)
 	 * @see generator.GeneratorPackage#getMTLevel_MaxInterval()
-	 * @model
+	 * @model default="10"
 	 * @generated
 	 */
 	int getMaxInterval();

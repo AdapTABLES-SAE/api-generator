@@ -36,10 +36,7 @@ rule Room2Room
 	        var question: new OUT!Question;
 	        question.incompleteFact = roomIn.question.incompleteFact;
 	        question.pos = roomIn.question.position.name;
-	        if(roomIn.question.incompleteFact == "MTCompletionTypeImpl"){
 	        question.type = "LargeText";
-	        }
-	        
 	        roomOut.question = question;
         }
         

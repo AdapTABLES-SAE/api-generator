@@ -5,6 +5,7 @@ package generator.impl;
 import generator.GeneratorPackage;
 import generator.LearningDomain;
 import generator.LearningPath;
+import generator.ResponseModalities;
 import generator.TaskTypes;
 
 import java.util.Collection;
@@ -33,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link generator.impl.LearningDomainImpl#getLearningpaths <em>Learningpaths</em>}</li>
  *   <li>{@link generator.impl.LearningDomainImpl#getTasktypes <em>Tasktypes</em>}</li>
+ *   <li>{@link generator.impl.LearningDomainImpl#getResponsemodalities <em>Responsemodalities</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,6 +59,16 @@ public class LearningDomainImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected TaskTypes tasktypes;
+
+	/**
+	 * The cached value of the '{@link #getResponsemodalities() <em>Responsemodalities</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResponsemodalities()
+	 * @generated
+	 * @ordered
+	 */
+	protected ResponseModalities responsemodalities;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -145,6 +157,57 @@ public class LearningDomainImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ResponseModalities getResponsemodalities() {
+		return responsemodalities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetResponsemodalities(ResponseModalities newResponsemodalities,
+			NotificationChain msgs) {
+		ResponseModalities oldResponsemodalities = responsemodalities;
+		responsemodalities = newResponsemodalities;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.LEARNING_DOMAIN__RESPONSEMODALITIES, oldResponsemodalities, newResponsemodalities);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setResponsemodalities(ResponseModalities newResponsemodalities) {
+		if (newResponsemodalities != responsemodalities) {
+			NotificationChain msgs = null;
+			if (responsemodalities != null)
+				msgs = ((InternalEObject) responsemodalities).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.LEARNING_DOMAIN__RESPONSEMODALITIES, null, msgs);
+			if (newResponsemodalities != null)
+				msgs = ((InternalEObject) newResponsemodalities).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.LEARNING_DOMAIN__RESPONSEMODALITIES, null, msgs);
+			msgs = basicSetResponsemodalities(newResponsemodalities, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEARNING_DOMAIN__RESPONSEMODALITIES,
+					newResponsemodalities, newResponsemodalities));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -152,6 +215,8 @@ public class LearningDomainImpl extends MinimalEObjectImpl.Container implements 
 			return ((InternalEList<?>) getLearningpaths()).basicRemove(otherEnd, msgs);
 		case GeneratorPackage.LEARNING_DOMAIN__TASKTYPES:
 			return basicSetTasktypes(null, msgs);
+		case GeneratorPackage.LEARNING_DOMAIN__RESPONSEMODALITIES:
+			return basicSetResponsemodalities(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -168,6 +233,8 @@ public class LearningDomainImpl extends MinimalEObjectImpl.Container implements 
 			return getLearningpaths();
 		case GeneratorPackage.LEARNING_DOMAIN__TASKTYPES:
 			return getTasktypes();
+		case GeneratorPackage.LEARNING_DOMAIN__RESPONSEMODALITIES:
+			return getResponsemodalities();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -188,6 +255,9 @@ public class LearningDomainImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.LEARNING_DOMAIN__TASKTYPES:
 			setTasktypes((TaskTypes) newValue);
 			return;
+		case GeneratorPackage.LEARNING_DOMAIN__RESPONSEMODALITIES:
+			setResponsemodalities((ResponseModalities) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -206,6 +276,9 @@ public class LearningDomainImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.LEARNING_DOMAIN__TASKTYPES:
 			setTasktypes((TaskTypes) null);
 			return;
+		case GeneratorPackage.LEARNING_DOMAIN__RESPONSEMODALITIES:
+			setResponsemodalities((ResponseModalities) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -222,6 +295,8 @@ public class LearningDomainImpl extends MinimalEObjectImpl.Container implements 
 			return learningpaths != null && !learningpaths.isEmpty();
 		case GeneratorPackage.LEARNING_DOMAIN__TASKTYPES:
 			return tasktypes != null;
+		case GeneratorPackage.LEARNING_DOMAIN__RESPONSEMODALITIES:
+			return responsemodalities != null;
 		}
 		return super.eIsSet(featureID);
 	}

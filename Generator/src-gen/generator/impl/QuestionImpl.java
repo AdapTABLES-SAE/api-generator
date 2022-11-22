@@ -48,6 +48,7 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * @ordered
 	 */
 	protected static final String INCOMPLETE_FACT_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getIncompleteFact() <em>Incomplete Fact</em>}' attribute.
 	 * <!-- begin-user-doc -->

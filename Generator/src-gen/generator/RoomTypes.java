@@ -1,0 +1,38 @@
+/**
+ */
+package generator;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Room Types</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link generator.RoomTypes#getRoomtypes <em>Roomtypes</em>}</li>
+ * </ul>
+ *
+ * @see generator.GeneratorPackage#getRoomTypes()
+ * @model
+ * @generated
+ */
+public interface RoomTypes extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Roomtypes</b></em>' containment reference list.
+	 * The list contents are of type {@link generator.RoomType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Roomtypes</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getRoomTypes_Roomtypes()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<RoomType> getRoomtypes();
+
+} // RoomTypes

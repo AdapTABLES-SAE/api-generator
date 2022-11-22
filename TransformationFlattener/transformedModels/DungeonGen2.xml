@@ -81,14 +81,14 @@
         <roomaccess id="a23" direction="SOUTH" accessRef="a22"/>
         <roomaccess id="a24" direction="WEST" accessRef="a25"/>
       </roomaccesses>
-      <question incompleteFact="ResultVerificationTypeImpl" pos="POSQ1"/>
+      <question incompleteFact="ResultVerificationTypeImpl" pos="POSQ1" type="LargeText"/>
     </room>
     <room id="Room[-8/1]" x="-8" y="1" roomTypeName="RegularRoom1">
       <roomaccesses>
         <roomaccess id="a25" direction="EAST" accessRef="a24"/>
         <roomaccess id="a26" direction="NORTH" accessRef="a27"/>
       </roomaccesses>
-      <question incompleteFact="ResultVerificationTypeImpl" pos="POSQ1"/>
+      <question incompleteFact="ResultVerificationTypeImpl" pos="POSQ1" type="LargeText"/>
     </room>
     <room id="Room[-8/2]" x="-8" y="2" roomTypeName="RegularRoom1">
       <roomaccesses>
@@ -123,27 +123,27 @@
         <roomaccess id="a35" direction="SOUTH_WEST" accessRef="a34"/>
         <roomaccess id="a36" direction="NORTH_WEST" accessRef="a37"/>
       </roomaccesses>
-      <question incompleteFact="ReconstructionTypeImpl" pos="POSQ1"/>
+      <question incompleteFact="ReconstructionTypeImpl" pos="POSQ1" type="LargeText"/>
     </room>
     <room id="Room[-4/7]" x="-4" y="7" roomTypeName="RegularRoom1">
       <roomaccesses>
         <roomaccess id="a37" direction="SOUTH" accessRef="a36"/>
         <roomaccess id="a38" direction="WEST" accessRef="a39"/>
       </roomaccesses>
-      <question incompleteFact="ReconstructionTypeImpl" pos="POSQ1"/>
+      <question incompleteFact="ReconstructionTypeImpl" pos="POSQ1" type="LargeText"/>
     </room>
     <room id="Room[-5/7]" x="-5" y="7" roomTypeName="RegularRoom1">
       <roomaccesses>
         <roomaccess id="a39" direction="EAST" accessRef="a38"/>
         <roomaccess id="a40" direction="SOUTH" accessRef="a41"/>
       </roomaccesses>
-      <question incompleteFact="FactVerificationTypeImpl" pos="POSQ1"/>
+      <question incompleteFact="FactVerificationTypeImpl" pos="POSQ1" type="LargeText"/>
     </room>
     <room id="Room[-5/6]" x="-5" y="6" roomTypeName="RegularRoom1">
       <roomaccesses>
         <roomaccess id="a41" direction="NORTH" accessRef="a40"/>
       </roomaccesses>
-      <question incompleteFact="FactVerificationTypeImpl" pos="POSQ1"/>
+      <question incompleteFact="FactVerificationTypeImpl" pos="POSQ1" type="LargeText"/>
     </room>
   </rooms>
 </Dungeon>

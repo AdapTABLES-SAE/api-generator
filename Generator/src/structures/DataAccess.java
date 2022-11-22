@@ -9,8 +9,11 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import generator.Directions;
+import generator.EnterResponse;
 import generator.GameDescription;
 import generator.LargeRoomType;
+import generator.MultipleChoice;
+import generator.ResponseModality;
 import generator.RoomType;
 import generator.SmallRoomType;
 import generator.TaskType;
@@ -61,16 +64,22 @@ public class DataAccess {
 	}
 	
 	public static List<RoomType> getCompatibleRoomType(TaskType taskType, GameDescription gD){
-		List<RoomType> roomTs = new ArrayList<>(gD.getRoomtypes());
+		List<RoomType> roomTs = new ArrayList<>(gD.getRoomtypes().getRoomtypes());
 		roomTs = roomTs.stream().filter(e -> e.getDirections().size() > 1).collect(Collectors.toList());
 		
-		for (RoomType roomType : gD.getRoomtypes()) {		
+		for (RoomType roomType : gD.getRoomtypes().getRoomtypes()) {		
 			switch (taskType.getClass().getName()) {
 				case "CompletionType":
-					if(taskType.getNbPropositions() <= 0 && roomType instanceof SmallRoomType) {
-						roomTs.remove(roomType);
+					boolean hasChoices = false; boolean hasEntry = false;
+					for (ResponseModality rm : taskType.getResponsemodalities()) {
+						if(rm instanceof MultipleChoice) {
+							hasChoices = true;
+						}else if(rm instanceof EnterResponse) {
+							hasEntry = true;
+						}
+						
 					}
-					if(!taskType.isEnterResponseAllowed() && roomType instanceof SmallRoomType) {
+					if((!hasEntry && roomType instanceof LargeRoomType) || (!hasChoices && roomType instanceof SmallRoomType)) {
 						roomTs.remove(roomType);
 					}
 					break;
@@ -97,10 +106,19 @@ public class DataAccess {
 		roomTsize.add("LARGE");
 		switch (taskType.getClass().getName()) {
 		case "CompletionType":
-			if(taskType.getNbPropositions() <= 0) {
+			boolean hasChoices = false; boolean hasEntry = false;
+			for (ResponseModality rm : taskType.getResponsemodalities()) {
+				if(rm instanceof MultipleChoice) {
+					hasChoices = true;
+				}else if(rm instanceof EnterResponse) {
+					hasEntry = true;
+				}
+				
+			}
+			if(!hasChoices) {
 				roomTsize.remove("SMALL");
 			}
-			if(!taskType.isEnterResponseAllowed()) {
+			if(!hasEntry) {
 				roomTsize.remove("LARGE");
 			}
 			break;

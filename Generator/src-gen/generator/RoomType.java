@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generator.RoomType#getName <em>Name</em>}</li>
- *   <li>{@link generator.RoomType#getQuestionPositions <em>Question Positions</em>}</li>
+ *   <li>{@link generator.RoomType#getPositions <em>Positions</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getRoomType()
@@ -47,16 +47,16 @@ public interface RoomType extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Question Positions</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Positions</b></em>' containment reference list.
 	 * The list contents are of type {@link generator.Position}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Question Positions</em>' containment reference list.
-	 * @see generator.GeneratorPackage#getRoomType_QuestionPositions()
+	 * @return the value of the '<em>Positions</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getRoomType_Positions()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Position> getQuestionPositions();
+	EList<Position> getPositions();
 
 	/**
 	 * <!-- begin-user-doc -->

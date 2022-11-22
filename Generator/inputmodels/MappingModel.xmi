@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator:MappingModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:generator="http://www.example.org/generator"
+    xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore">
+  <compliancerelations
+      xsi:type="generator:Modality2RoomType">
+    <responsemodality
+        xsi:type="generator:MultipleChoice"
+        href="MTLearningDomain.xmi#//@responsemodalities/@responsemodalities.4"/>
+    <roomtype
+        xsi:type="generator:SmallRoomType"
+        href="GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
+  </compliancerelations>
+  <compliancerelations
+      xsi:type="generator:Modality2RoomType">
+    <responsemodality
+        xsi:type="generator:MultipleChoice"
+        href="MTLearningDomain.xmi#//@responsemodalities/@responsemodalities.3"/>
+    <roomtype
+        xsi:type="generator:LargeRoomType"
+        href="GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+  </compliancerelations>
+  <compliancerelations
+      xsi:type="generator:Modality2RoomType">
+    <responsemodality
+        xsi:type="generator:EnterResponse"
+        href="MTLearningDomain.xmi#//@responsemodalities/@responsemodalities.5"/>
+    <roomtype
+        xsi:type="generator:LargeRoomType"
+        href="GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+  </compliancerelations>
+  <compliancerelations
+      xsi:type="generator:Modality2RoomType">
+    <responsemodality
+        xsi:type="generator:MultipleChoice"
+        href="MTLearningDomain.xmi#//@responsemodalities/@responsemodalities.1"/>
+    <roomtype
+        xsi:type="generator:SmallRoomType"
+        href="GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
+  </compliancerelations>
+  <compliancerelations
+      xsi:type="generator:TaskType2Gameplay">
+    <gameplay
+        href="GameDescription.xmi#Break element with correct answer"/>
+    <gameplay
+        href="GameDescription.xmi#Select the correct chest "/>
+    <gameplay
+        href="GameDescription.xmi#Kill ennemy with correct answer"/>
+    <tasktype
+        xsi:type="generator:MTCompletionType"
+        href="MTLearningDomain.xmi#COMP1_RES_CHOICE3-ENTRY"/>
+  </compliancerelations>
+  <compliancerelations
+      xsi:type="generator:Gameplay2RoomType">
+    <roomtype
+        xsi:type="generator:SmallRoomType"
+        href="GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
+    <gameplay
+        href="GameDescription.xmi#Break element with correct answer"/>
+    <gameplay
+        href="GameDescription.xmi#Select the correct chest "/>
+    <gameplay
+        href="GameDescription.xmi#Kill ennemy with correct answer"/>
+  </compliancerelations>
+</generator:MappingModel>

@@ -10,16 +10,18 @@ import generator.RoomType;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
-import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -32,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.RoomTypeImpl#getName <em>Name</em>}</li>
- *   <li>{@link generator.impl.RoomTypeImpl#getQuestionPositions <em>Question Positions</em>}</li>
+ *   <li>{@link generator.impl.RoomTypeImpl#getPositions <em>Positions</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,14 +61,14 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getQuestionPositions() <em>Question Positions</em>}' containment reference list.
+	 * The cached value of the '{@link #getPositions() <em>Positions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQuestionPositions()
+	 * @see #getPositions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Position> questionPositions;
+	protected EList<Position> positions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,12 +115,12 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Position> getQuestionPositions() {
-		if (questionPositions == null) {
-			questionPositions = new EObjectContainmentEList<Position>(Position.class, this,
-					GeneratorPackage.ROOM_TYPE__QUESTION_POSITIONS);
+	public EList<Position> getPositions() {
+		if (positions == null) {
+			positions = new EObjectContainmentEList<Position>(Position.class, this,
+					GeneratorPackage.ROOM_TYPE__POSITIONS);
 		}
-		return questionPositions;
+		return positions;
 	}
 
 	/**
@@ -140,8 +142,8 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.ROOM_TYPE__QUESTION_POSITIONS:
-			return ((InternalEList<?>) getQuestionPositions()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.ROOM_TYPE__POSITIONS:
+			return ((InternalEList<?>) getPositions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -156,8 +158,8 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 		case GeneratorPackage.ROOM_TYPE__NAME:
 			return getName();
-		case GeneratorPackage.ROOM_TYPE__QUESTION_POSITIONS:
-			return getQuestionPositions();
+		case GeneratorPackage.ROOM_TYPE__POSITIONS:
+			return getPositions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -174,9 +176,9 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.ROOM_TYPE__NAME:
 			setName((String) newValue);
 			return;
-		case GeneratorPackage.ROOM_TYPE__QUESTION_POSITIONS:
-			getQuestionPositions().clear();
-			getQuestionPositions().addAll((Collection<? extends Position>) newValue);
+		case GeneratorPackage.ROOM_TYPE__POSITIONS:
+			getPositions().clear();
+			getPositions().addAll((Collection<? extends Position>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -193,8 +195,8 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.ROOM_TYPE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case GeneratorPackage.ROOM_TYPE__QUESTION_POSITIONS:
-			getQuestionPositions().clear();
+		case GeneratorPackage.ROOM_TYPE__POSITIONS:
+			getPositions().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -210,8 +212,8 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 		case GeneratorPackage.ROOM_TYPE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case GeneratorPackage.ROOM_TYPE__QUESTION_POSITIONS:
-			return questionPositions != null && !questionPositions.isEmpty();
+		case GeneratorPackage.ROOM_TYPE__POSITIONS:
+			return positions != null && !positions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

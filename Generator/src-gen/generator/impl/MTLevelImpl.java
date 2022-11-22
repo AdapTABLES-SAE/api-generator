@@ -78,7 +78,7 @@ public class MTLevelImpl extends LevelImpl implements MTLevel {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int MIN_INTERVAL_EDEFAULT = 0;
+	protected static final int MIN_INTERVAL_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getMinInterval() <em>Min Interval</em>}' attribute.
@@ -98,7 +98,7 @@ public class MTLevelImpl extends LevelImpl implements MTLevel {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int MAX_INTERVAL_EDEFAULT = 0;
+	protected static final int MAX_INTERVAL_EDEFAULT = 10;
 
 	/**
 	 * The cached value of the '{@link #getMaxInterval() <em>Max Interval</em>}' attribute.

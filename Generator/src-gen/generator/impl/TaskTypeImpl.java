@@ -3,14 +3,21 @@
 package generator.impl;
 
 import generator.GeneratorPackage;
+import generator.ResponseModality;
 import generator.TaskType;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,52 +27,42 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.TaskTypeImpl#getNbPropositions <em>Nb Propositions</em>}</li>
- *   <li>{@link generator.impl.TaskTypeImpl#isEnterResponseAllowed <em>Enter Response Allowed</em>}</li>
+ *   <li>{@link generator.impl.TaskTypeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link generator.impl.TaskTypeImpl#getResponsemodalities <em>Responsemodalities</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class TaskTypeImpl extends MinimalEObjectImpl.Container implements TaskType {
 	/**
-	 * The default value of the '{@link #getNbPropositions() <em>Nb Propositions</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNbPropositions()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NB_PROPOSITIONS_EDEFAULT = 0;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNbPropositions() <em>Nb Propositions</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNbPropositions()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected int nbPropositions = NB_PROPOSITIONS_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isEnterResponseAllowed() <em>Enter Response Allowed</em>}' attribute.
+	 * The cached value of the '{@link #getResponsemodalities() <em>Responsemodalities</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isEnterResponseAllowed()
+	 * @see #getResponsemodalities()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean ENTER_RESPONSE_ALLOWED_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isEnterResponseAllowed() <em>Enter Response Allowed</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isEnterResponseAllowed()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean enterResponseAllowed = ENTER_RESPONSE_ALLOWED_EDEFAULT;
+	protected EList<ResponseModality> responsemodalities;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,8 +88,8 @@ public abstract class TaskTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNbPropositions() {
-		return nbPropositions;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -100,12 +97,11 @@ public abstract class TaskTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNbPropositions(int newNbPropositions) {
-		int oldNbPropositions = nbPropositions;
-		nbPropositions = newNbPropositions;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.TASK_TYPE__NB_PROPOSITIONS,
-					oldNbPropositions, nbPropositions));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.TASK_TYPE__NAME, oldName, name));
 	}
 
 	/**
@@ -113,21 +109,12 @@ public abstract class TaskTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isEnterResponseAllowed() {
-		return enterResponseAllowed;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEnterResponseAllowed(boolean newEnterResponseAllowed) {
-		boolean oldEnterResponseAllowed = enterResponseAllowed;
-		enterResponseAllowed = newEnterResponseAllowed;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.TASK_TYPE__ENTER_RESPONSE_ALLOWED,
-					oldEnterResponseAllowed, enterResponseAllowed));
+	public EList<ResponseModality> getResponsemodalities() {
+		if (responsemodalities == null) {
+			responsemodalities = new EObjectResolvingEList<ResponseModality>(ResponseModality.class, this,
+					GeneratorPackage.TASK_TYPE__RESPONSEMODALITIES);
+		}
+		return responsemodalities;
 	}
 
 	/**
@@ -138,10 +125,10 @@ public abstract class TaskTypeImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.TASK_TYPE__NB_PROPOSITIONS:
-			return getNbPropositions();
-		case GeneratorPackage.TASK_TYPE__ENTER_RESPONSE_ALLOWED:
-			return isEnterResponseAllowed();
+		case GeneratorPackage.TASK_TYPE__NAME:
+			return getName();
+		case GeneratorPackage.TASK_TYPE__RESPONSEMODALITIES:
+			return getResponsemodalities();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -151,14 +138,16 @@ public abstract class TaskTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.TASK_TYPE__NB_PROPOSITIONS:
-			setNbPropositions((Integer) newValue);
+		case GeneratorPackage.TASK_TYPE__NAME:
+			setName((String) newValue);
 			return;
-		case GeneratorPackage.TASK_TYPE__ENTER_RESPONSE_ALLOWED:
-			setEnterResponseAllowed((Boolean) newValue);
+		case GeneratorPackage.TASK_TYPE__RESPONSEMODALITIES:
+			getResponsemodalities().clear();
+			getResponsemodalities().addAll((Collection<? extends ResponseModality>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -172,11 +161,11 @@ public abstract class TaskTypeImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.TASK_TYPE__NB_PROPOSITIONS:
-			setNbPropositions(NB_PROPOSITIONS_EDEFAULT);
+		case GeneratorPackage.TASK_TYPE__NAME:
+			setName(NAME_EDEFAULT);
 			return;
-		case GeneratorPackage.TASK_TYPE__ENTER_RESPONSE_ALLOWED:
-			setEnterResponseAllowed(ENTER_RESPONSE_ALLOWED_EDEFAULT);
+		case GeneratorPackage.TASK_TYPE__RESPONSEMODALITIES:
+			getResponsemodalities().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -190,10 +179,10 @@ public abstract class TaskTypeImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.TASK_TYPE__NB_PROPOSITIONS:
-			return nbPropositions != NB_PROPOSITIONS_EDEFAULT;
-		case GeneratorPackage.TASK_TYPE__ENTER_RESPONSE_ALLOWED:
-			return enterResponseAllowed != ENTER_RESPONSE_ALLOWED_EDEFAULT;
+		case GeneratorPackage.TASK_TYPE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case GeneratorPackage.TASK_TYPE__RESPONSEMODALITIES:
+			return responsemodalities != null && !responsemodalities.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -209,10 +198,8 @@ public abstract class TaskTypeImpl extends MinimalEObjectImpl.Container implemen
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (nbPropositions: ");
-		result.append(nbPropositions);
-		result.append(", enterResponseAllowed: ");
-		result.append(enterResponseAllowed);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

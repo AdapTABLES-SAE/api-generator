@@ -1,9 +1,11 @@
 package generators;
 
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -16,7 +18,6 @@ import generator.Directions;
 import generator.Dungeon;
 import generator.DungeonMode;
 import generator.LargeRoomType;
-import generator.Question;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
@@ -79,13 +80,14 @@ public class DungeonGenerator {
 	public Dungeon generateDungeon() {
 		if(modelAccess.context.getGamecontext().getMode().equals(DungeonMode.LINEAR)) {
 			//generateLinearDungeon();
-			generateLinearDungeon2();
+			generateLinearDungeon();
 		}else {
 		}
 		return generatedDungeon;
 	}
 
-	private void generateLinearDungeon() {
+	@Deprecated
+	private void generateLinearDungeon2() {
 		Stack<Map.Entry<Room, Directions>> dungeonRooms = new Stack<>();
 		Stack<Map<Directions, Set<Directions>>> roomAllowedDirections = new Stack<>();
 		int numberofrooms = modelAccess.context.getGamecontext().getNumberOfRooms();
@@ -133,9 +135,9 @@ public class DungeonGenerator {
 		generatedDungeon.setEntry(originRoom);
 	}
 	
-	private void generateLinearDungeon2() {
-		Stack<Map.Entry<Room, Directions>> dungeonRooms = new Stack<>();
-		Stack<Map<Directions, Set<Directions>>> roomAllowedDirections = new Stack<>();
+	private void generateLinearDungeon() {
+		Deque<Map.Entry<Room, Directions>> dungeonRooms = new LinkedList<>();
+		Deque<Map<Directions, Set<Directions>>> roomAllowedDirections = new LinkedList<>();
 		int numberofrooms = modelAccess.context.getGamecontext().getNumberOfRooms();
 		Room originRoom = createEntryRoom();
 		dungeonRooms.add(Map.entry(originRoom, originRoom.getRoomaccess().get(0).getDirection()));
@@ -166,12 +168,11 @@ public class DungeonGenerator {
 				backtrack = false;
 				
 				Directions entry = chooseEntryDirection(roomAllowedDirections);
-				System.out.println("Is small room"+simpleDirections.contains(entry));
 				Directions exit = Directions.NONE;
 				if(dungeonRooms.size() != numberofrooms) {
 					exit = roomAllowedDirections.peek().get(entry).stream().collect(Collectors.toList()).get(random.nextInt(roomAllowedDirections.peek().get(entry).size())); 
 				}
-				RoomType roomType = getCompatibleRoomType(tasktype, entry, exit);
+				RoomType roomType = getCompatibleRoomType(tasktype, entry, exit); // TODO : Backtrack in case of null room type
 				Coordinate validCoord = getValidCoordinates(entry, nextPosition);
 				Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, tasktype, dungeonRooms.peek().getKey().getRoomaccess().get(dungeonRooms.peek().getKey().getRoomaccess().size()-1), entry, exit);
 				dungeonRooms.add(Map.entry(room, exit));
@@ -190,7 +191,7 @@ public class DungeonGenerator {
 	 * @param roomAllowedDirections
 	 * @return the chosen entry direction 
 	 */
-	private Directions chooseEntryDirection(Stack<Map<Directions, Set<Directions>>> roomAllowedDirections) {
+	private Directions chooseEntryDirection(Deque<Map<Directions, Set<Directions>>> roomAllowedDirections) {
 		List<Directions> possibleEntries = roomAllowedDirections.peek().keySet().stream().collect(Collectors.toList()); 
 		if(possibleEntries.size() == 3) {
 			Directions d = possibleEntries.stream().distinct().filter(simpleDirections::contains).collect(Collectors.toList()).get(0);
@@ -245,8 +246,9 @@ public class DungeonGenerator {
 	 * @param exit
 	 * @return Valid RoomType
 	 */
+	@Deprecated
 	private RoomType getCompatibleRoomType(Directions entry, Directions exit) {
-		List<RoomType> roomtypes = new ArrayList<>(modelAccess.gameDescription.getRoomtypes());
+		List<RoomType> roomtypes = new ArrayList<>(modelAccess.gameDescription.getRoomtypes().getRoomtypes());
 		for (int i = 0; i < roomtypes.size(); i++) {
 			if(!roomtypes.get(i).getDirections().contains(entry)) {
 				roomtypes.remove(i);
@@ -467,6 +469,7 @@ public class DungeonGenerator {
 	 * @param exitDirection
 	 * @return a Room
 	 */
+	@Deprecated
 	private Room createRoom(int X, int Y, RoomType roomT, RoomAccess previousRoomExitAccess,  Directions entryDirection, Directions exitDirection) {
 		Room r = new RoomImpl();
 		r.setRoomtype(roomT);
@@ -507,7 +510,7 @@ public class DungeonGenerator {
 		r.setY(Y);
 		
 		r.setQuestion(new QuestionImpl());
-		r.getQuestion().setPosition(roomT.getQuestionPositions().get(random.nextInt(roomT.getQuestionPositions().size())));
+		r.getQuestion().setPosition(roomT.getPositions().get(random.nextInt(roomT.getPositions().size())));
 		r.getQuestion().setIncompleteFact(taskType.getClass().getSimpleName());
 		
 		RoomAccess ra = new RoomAccessImpl();
@@ -533,7 +536,7 @@ public class DungeonGenerator {
 	 */
 	private List<RoomType> roomsWithOneDirection() {
 		List<RoomType> rts = new ArrayList<>();
-		for (RoomType rt : modelAccess.gameDescription.getRoomtypes()) {
+		for (RoomType rt : modelAccess.gameDescription.getRoomtypes().getRoomtypes()) {
 			if(rt.getDirections().size() == 1) {
 				rts.add(rt);
 			}

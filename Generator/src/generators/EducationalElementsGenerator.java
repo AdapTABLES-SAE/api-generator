@@ -48,7 +48,7 @@ public class EducationalElementsGenerator {
 	}
 	
 	private String taskTypeToString(TaskType tt) {
-		return tt.getClass().getSimpleName()+ " -- nbChoix = " + tt.getNbPropositions() + " -- saisie = " + tt.isEnterResponseAllowed();
+		return tt.getClass().getSimpleName() + tt.getResponsemodalities();
 	}
 	
 	private void selectObjectiveLevel() {

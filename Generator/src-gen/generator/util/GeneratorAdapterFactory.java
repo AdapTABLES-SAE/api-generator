@@ -87,61 +87,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseGameContent(GameContent object) {
-			return createGameContentAdapter();
-		}
-
-		@Override
-		public Adapter caseGameplay(Gameplay object) {
-			return createGameplayAdapter();
-		}
-
-		@Override
-		public Adapter caseCoreGameRule(CoreGameRule object) {
-			return createCoreGameRuleAdapter();
-		}
-
-		@Override
-		public Adapter caseElementType(ElementType object) {
-			return createElementTypeAdapter();
-		}
-
-		@Override
-		public Adapter caseGameObjective(GameObjective object) {
-			return createGameObjectiveAdapter();
-		}
-
-		@Override
-		public Adapter caseRoomType2(RoomType2 object) {
-			return createRoomType2Adapter();
-		}
-
-		@Override
-		public Adapter caseFloor(Floor object) {
-			return createFloorAdapter();
-		}
-
-		@Override
-		public Adapter caseLocation(Location object) {
-			return createLocationAdapter();
-		}
-
-		@Override
-		public Adapter caseIRoomElement(IRoomElement object) {
-			return createIRoomElementAdapter();
-		}
-
-		@Override
-		public Adapter caseElementShape(ElementShape object) {
-			return createElementShapeAdapter();
-		}
-
-		@Override
-		public Adapter caseElementState(ElementState object) {
-			return createElementStateAdapter();
-		}
-
-		@Override
 		public Adapter caseDungeon(Dungeon object) {
 			return createDungeonAdapter();
 		}
@@ -287,6 +232,136 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseResponseModality(ResponseModality object) {
+			return createResponseModalityAdapter();
+		}
+
+		@Override
+		public Adapter caseMultipleChoice(MultipleChoice object) {
+			return createMultipleChoiceAdapter();
+		}
+
+		@Override
+		public Adapter caseEnterResponse(EnterResponse object) {
+			return createEnterResponseAdapter();
+		}
+
+		@Override
+		public Adapter caseElementType(ElementType object) {
+			return createElementTypeAdapter();
+		}
+
+		@Override
+		public Adapter caseInteractionEType(InteractionEType object) {
+			return createInteractionETypeAdapter();
+		}
+
+		@Override
+		public Adapter caseAbility(Ability object) {
+			return createAbilityAdapter();
+		}
+
+		@Override
+		public Adapter caseActiveAbility(ActiveAbility object) {
+			return createActiveAbilityAdapter();
+		}
+
+		@Override
+		public Adapter casePassiveAbility(PassiveAbility object) {
+			return createPassiveAbilityAdapter();
+		}
+
+		@Override
+		public Adapter caseGameplay(Gameplay object) {
+			return createGameplayAdapter();
+		}
+
+		@Override
+		public Adapter caseGameRule(GameRule object) {
+			return createGameRuleAdapter();
+		}
+
+		@Override
+		public Adapter caseBuyableElement(BuyableElement object) {
+			return createBuyableElementAdapter();
+		}
+
+		@Override
+		public Adapter caseElement(Element object) {
+			return createElementAdapter();
+		}
+
+		@Override
+		public Adapter caseAvatarEquipment(AvatarEquipment object) {
+			return createAvatarEquipmentAdapter();
+		}
+
+		@Override
+		public Adapter caseElements(Elements object) {
+			return createElementsAdapter();
+		}
+
+		@Override
+		public Adapter caseGameplays(Gameplays object) {
+			return createGameplaysAdapter();
+		}
+
+		@Override
+		public Adapter caseElementTypes(ElementTypes object) {
+			return createElementTypesAdapter();
+		}
+
+		@Override
+		public Adapter caseAbilities(Abilities object) {
+			return createAbilitiesAdapter();
+		}
+
+		@Override
+		public Adapter caseRoomTypes(RoomTypes object) {
+			return createRoomTypesAdapter();
+		}
+
+		@Override
+		public Adapter caseEquipmentEType(EquipmentEType object) {
+			return createEquipmentETypeAdapter();
+		}
+
+		@Override
+		public Adapter caseElementPosition(ElementPosition object) {
+			return createElementPositionAdapter();
+		}
+
+		@Override
+		public Adapter caseMappingModel(MappingModel object) {
+			return createMappingModelAdapter();
+		}
+
+		@Override
+		public Adapter caseModality2RoomType(Modality2RoomType object) {
+			return createModality2RoomTypeAdapter();
+		}
+
+		@Override
+		public Adapter caseComplianceRelations(ComplianceRelations object) {
+			return createComplianceRelationsAdapter();
+		}
+
+		@Override
+		public Adapter caseTaskType2Gameplay(TaskType2Gameplay object) {
+			return createTaskType2GameplayAdapter();
+		}
+
+		@Override
+		public Adapter caseResponseModalities(ResponseModalities object) {
+			return createResponseModalitiesAdapter();
+		}
+
+		@Override
+		public Adapter caseGameplay2RoomType(Gameplay2RoomType object) {
+			return createGameplay2RoomTypeAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -358,160 +433,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createKnowledgeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.GameContent <em>Game Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.GameContent
-	 * @generated
-	 */
-	public Adapter createGameContentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.Gameplay <em>Gameplay</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.Gameplay
-	 * @generated
-	 */
-	public Adapter createGameplayAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.CoreGameRule <em>Core Game Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.CoreGameRule
-	 * @generated
-	 */
-	public Adapter createCoreGameRuleAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.ElementType <em>Element Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.ElementType
-	 * @generated
-	 */
-	public Adapter createElementTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.GameObjective <em>Game Objective</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.GameObjective
-	 * @generated
-	 */
-	public Adapter createGameObjectiveAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.RoomType2 <em>Room Type2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.RoomType2
-	 * @generated
-	 */
-	public Adapter createRoomType2Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.Floor <em>Floor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.Floor
-	 * @generated
-	 */
-	public Adapter createFloorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.Location <em>Location</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.Location
-	 * @generated
-	 */
-	public Adapter createLocationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.IRoomElement <em>IRoom Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.IRoomElement
-	 * @generated
-	 */
-	public Adapter createIRoomElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.ElementShape <em>Element Shape</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.ElementShape
-	 * @generated
-	 */
-	public Adapter createElementShapeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.ElementState <em>Element State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.ElementState
-	 * @generated
-	 */
-	public Adapter createElementStateAdapter() {
 		return null;
 	}
 
@@ -918,6 +839,370 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createQuestionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.ResponseModality <em>Response Modality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.ResponseModality
+	 * @generated
+	 */
+	public Adapter createResponseModalityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MultipleChoice <em>Multiple Choice</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MultipleChoice
+	 * @generated
+	 */
+	public Adapter createMultipleChoiceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.EnterResponse <em>Enter Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.EnterResponse
+	 * @generated
+	 */
+	public Adapter createEnterResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.ElementType <em>Element Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.ElementType
+	 * @generated
+	 */
+	public Adapter createElementTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.InteractionEType <em>Interaction EType</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.InteractionEType
+	 * @generated
+	 */
+	public Adapter createInteractionETypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Ability <em>Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Ability
+	 * @generated
+	 */
+	public Adapter createAbilityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.ActiveAbility <em>Active Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.ActiveAbility
+	 * @generated
+	 */
+	public Adapter createActiveAbilityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.PassiveAbility <em>Passive Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.PassiveAbility
+	 * @generated
+	 */
+	public Adapter createPassiveAbilityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Gameplay <em>Gameplay</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Gameplay
+	 * @generated
+	 */
+	public Adapter createGameplayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.GameRule <em>Game Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.GameRule
+	 * @generated
+	 */
+	public Adapter createGameRuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.BuyableElement <em>Buyable Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.BuyableElement
+	 * @generated
+	 */
+	public Adapter createBuyableElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Element <em>Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Element
+	 * @generated
+	 */
+	public Adapter createElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.AvatarEquipment <em>Avatar Equipment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.AvatarEquipment
+	 * @generated
+	 */
+	public Adapter createAvatarEquipmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Elements <em>Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Elements
+	 * @generated
+	 */
+	public Adapter createElementsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Gameplays <em>Gameplays</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Gameplays
+	 * @generated
+	 */
+	public Adapter createGameplaysAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.ElementTypes <em>Element Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.ElementTypes
+	 * @generated
+	 */
+	public Adapter createElementTypesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Abilities <em>Abilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Abilities
+	 * @generated
+	 */
+	public Adapter createAbilitiesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.RoomTypes <em>Room Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.RoomTypes
+	 * @generated
+	 */
+	public Adapter createRoomTypesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.EquipmentEType <em>Equipment EType</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.EquipmentEType
+	 * @generated
+	 */
+	public Adapter createEquipmentETypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.ElementPosition <em>Element Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.ElementPosition
+	 * @generated
+	 */
+	public Adapter createElementPositionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MappingModel <em>Mapping Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MappingModel
+	 * @generated
+	 */
+	public Adapter createMappingModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Modality2RoomType <em>Modality2 Room Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Modality2RoomType
+	 * @generated
+	 */
+	public Adapter createModality2RoomTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.ComplianceRelations <em>Compliance Relations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.ComplianceRelations
+	 * @generated
+	 */
+	public Adapter createComplianceRelationsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.TaskType2Gameplay <em>Task Type2 Gameplay</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.TaskType2Gameplay
+	 * @generated
+	 */
+	public Adapter createTaskType2GameplayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.ResponseModalities <em>Response Modalities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.ResponseModalities
+	 * @generated
+	 */
+	public Adapter createResponseModalitiesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Gameplay2RoomType <em>Gameplay2 Room Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Gameplay2RoomType
+	 * @generated
+	 */
+	public Adapter createGameplay2RoomTypeAdapter() {
 		return null;
 	}
 

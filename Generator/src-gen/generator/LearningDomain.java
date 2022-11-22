@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.LearningDomain#getLearningpaths <em>Learningpaths</em>}</li>
  *   <li>{@link generator.LearningDomain#getTasktypes <em>Tasktypes</em>}</li>
+ *   <li>{@link generator.LearningDomain#getResponsemodalities <em>Responsemodalities</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getLearningDomain()
@@ -57,5 +58,27 @@ public interface LearningDomain extends EObject {
 	 * @generated
 	 */
 	void setTasktypes(TaskTypes value);
+
+	/**
+	 * Returns the value of the '<em><b>Responsemodalities</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Responsemodalities</em>' containment reference.
+	 * @see #setResponsemodalities(ResponseModalities)
+	 * @see generator.GeneratorPackage#getLearningDomain_Responsemodalities()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ResponseModalities getResponsemodalities();
+
+	/**
+	 * Sets the value of the '{@link generator.LearningDomain#getResponsemodalities <em>Responsemodalities</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Responsemodalities</em>' containment reference.
+	 * @see #getResponsemodalities()
+	 * @generated
+	 */
+	void setResponsemodalities(ResponseModalities value);
 
 } // LearningDomain

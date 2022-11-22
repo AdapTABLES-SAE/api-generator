@@ -63,26 +63,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createFact();
 		case GeneratorPackage.KNOWLEDGE:
 			return createKnowledge();
-		case GeneratorPackage.GAME_CONTENT:
-			return createGameContent();
-		case GeneratorPackage.GAMEPLAY:
-			return createGameplay();
-		case GeneratorPackage.CORE_GAME_RULE:
-			return createCoreGameRule();
-		case GeneratorPackage.ELEMENT_TYPE:
-			return createElementType();
-		case GeneratorPackage.GAME_OBJECTIVE:
-			return createGameObjective();
-		case GeneratorPackage.ROOM_TYPE2:
-			return createRoomType2();
-		case GeneratorPackage.FLOOR:
-			return createFloor();
-		case GeneratorPackage.LOCATION:
-			return createLocation();
-		case GeneratorPackage.ELEMENT_SHAPE:
-			return createElementShape();
-		case GeneratorPackage.ELEMENT_STATE:
-			return createElementState();
 		case GeneratorPackage.DUNGEON:
 			return createDungeon();
 		case GeneratorPackage.ROOM:
@@ -133,6 +113,48 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createPosition();
 		case GeneratorPackage.QUESTION:
 			return createQuestion();
+		case GeneratorPackage.MULTIPLE_CHOICE:
+			return createMultipleChoice();
+		case GeneratorPackage.ENTER_RESPONSE:
+			return createEnterResponse();
+		case GeneratorPackage.INTERACTION_ETYPE:
+			return createInteractionEType();
+		case GeneratorPackage.ACTIVE_ABILITY:
+			return createActiveAbility();
+		case GeneratorPackage.PASSIVE_ABILITY:
+			return createPassiveAbility();
+		case GeneratorPackage.GAMEPLAY:
+			return createGameplay();
+		case GeneratorPackage.GAME_RULE:
+			return createGameRule();
+		case GeneratorPackage.ELEMENT:
+			return createElement();
+		case GeneratorPackage.AVATAR_EQUIPMENT:
+			return createAvatarEquipment();
+		case GeneratorPackage.ELEMENTS:
+			return createElements();
+		case GeneratorPackage.GAMEPLAYS:
+			return createGameplays();
+		case GeneratorPackage.ELEMENT_TYPES:
+			return createElementTypes();
+		case GeneratorPackage.ABILITIES:
+			return createAbilities();
+		case GeneratorPackage.ROOM_TYPES:
+			return createRoomTypes();
+		case GeneratorPackage.EQUIPMENT_ETYPE:
+			return createEquipmentEType();
+		case GeneratorPackage.ELEMENT_POSITION:
+			return createElementPosition();
+		case GeneratorPackage.MAPPING_MODEL:
+			return createMappingModel();
+		case GeneratorPackage.MODALITY2_ROOM_TYPE:
+			return createModality2RoomType();
+		case GeneratorPackage.TASK_TYPE2_GAMEPLAY:
+			return createTaskType2Gameplay();
+		case GeneratorPackage.RESPONSE_MODALITIES:
+			return createResponseModalities();
+		case GeneratorPackage.GAMEPLAY2_ROOM_TYPE:
+			return createGameplay2RoomType();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -148,10 +170,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 		switch (eDataType.getClassifierID()) {
 		case GeneratorPackage.GP_BRICKS:
 			return createGPBricksFromString(eDataType, initialValue);
-		case GeneratorPackage.AVATAR_ACTIONS:
-			return createAvatarActionsFromString(eDataType, initialValue);
-		case GeneratorPackage.ROOM_PATHS:
-			return createRoomPathsFromString(eDataType, initialValue);
 		case GeneratorPackage.DIRECTIONS:
 			return createDirectionsFromString(eDataType, initialValue);
 		case GeneratorPackage.DUNGEON_MODE:
@@ -166,6 +184,10 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createTargetElementFromString(eDataType, initialValue);
 		case GeneratorPackage.ORDER:
 			return createOrderFromString(eDataType, initialValue);
+		case GeneratorPackage.EPASSIVE_ABILITY:
+			return createEPassiveAbilityFromString(eDataType, initialValue);
+		case GeneratorPackage.EACTIVE_ABILITY:
+			return createEActiveAbilityFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -181,10 +203,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 		switch (eDataType.getClassifierID()) {
 		case GeneratorPackage.GP_BRICKS:
 			return convertGPBricksToString(eDataType, instanceValue);
-		case GeneratorPackage.AVATAR_ACTIONS:
-			return convertAvatarActionsToString(eDataType, instanceValue);
-		case GeneratorPackage.ROOM_PATHS:
-			return convertRoomPathsToString(eDataType, instanceValue);
 		case GeneratorPackage.DIRECTIONS:
 			return convertDirectionsToString(eDataType, instanceValue);
 		case GeneratorPackage.DUNGEON_MODE:
@@ -199,6 +217,10 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return convertTargetElementToString(eDataType, instanceValue);
 		case GeneratorPackage.ORDER:
 			return convertOrderToString(eDataType, instanceValue);
+		case GeneratorPackage.EPASSIVE_ABILITY:
+			return convertEPassiveAbilityToString(eDataType, instanceValue);
+		case GeneratorPackage.EACTIVE_ABILITY:
+			return convertEActiveAbilityToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -232,106 +254,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public Knowledge createKnowledge() {
 		KnowledgeImpl knowledge = new KnowledgeImpl();
 		return knowledge;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GameContent createGameContent() {
-		GameContentImpl gameContent = new GameContentImpl();
-		return gameContent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Gameplay createGameplay() {
-		GameplayImpl gameplay = new GameplayImpl();
-		return gameplay;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CoreGameRule createCoreGameRule() {
-		CoreGameRuleImpl coreGameRule = new CoreGameRuleImpl();
-		return coreGameRule;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ElementType createElementType() {
-		ElementTypeImpl elementType = new ElementTypeImpl();
-		return elementType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GameObjective createGameObjective() {
-		GameObjectiveImpl gameObjective = new GameObjectiveImpl();
-		return gameObjective;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoomType2 createRoomType2() {
-		RoomType2Impl roomType2 = new RoomType2Impl();
-		return roomType2;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Floor createFloor() {
-		FloorImpl floor = new FloorImpl();
-		return floor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Location createLocation() {
-		LocationImpl location = new LocationImpl();
-		return location;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ElementShape createElementShape() {
-		ElementShapeImpl elementShape = new ElementShapeImpl();
-		return elementShape;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ElementState createElementState() {
-		ElementStateImpl elementState = new ElementStateImpl();
-		return elementState;
 	}
 
 	/**
@@ -589,6 +511,216 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MultipleChoice createMultipleChoice() {
+		MultipleChoiceImpl multipleChoice = new MultipleChoiceImpl();
+		return multipleChoice;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EnterResponse createEnterResponse() {
+		EnterResponseImpl enterResponse = new EnterResponseImpl();
+		return enterResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InteractionEType createInteractionEType() {
+		InteractionETypeImpl interactionEType = new InteractionETypeImpl();
+		return interactionEType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ActiveAbility createActiveAbility() {
+		ActiveAbilityImpl activeAbility = new ActiveAbilityImpl();
+		return activeAbility;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PassiveAbility createPassiveAbility() {
+		PassiveAbilityImpl passiveAbility = new PassiveAbilityImpl();
+		return passiveAbility;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Gameplay createGameplay() {
+		GameplayImpl gameplay = new GameplayImpl();
+		return gameplay;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GameRule createGameRule() {
+		GameRuleImpl gameRule = new GameRuleImpl();
+		return gameRule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Element createElement() {
+		ElementImpl element = new ElementImpl();
+		return element;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AvatarEquipment createAvatarEquipment() {
+		AvatarEquipmentImpl avatarEquipment = new AvatarEquipmentImpl();
+		return avatarEquipment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Elements createElements() {
+		ElementsImpl elements = new ElementsImpl();
+		return elements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Gameplays createGameplays() {
+		GameplaysImpl gameplays = new GameplaysImpl();
+		return gameplays;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ElementTypes createElementTypes() {
+		ElementTypesImpl elementTypes = new ElementTypesImpl();
+		return elementTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Abilities createAbilities() {
+		AbilitiesImpl abilities = new AbilitiesImpl();
+		return abilities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomTypes createRoomTypes() {
+		RoomTypesImpl roomTypes = new RoomTypesImpl();
+		return roomTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EquipmentEType createEquipmentEType() {
+		EquipmentETypeImpl equipmentEType = new EquipmentETypeImpl();
+		return equipmentEType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ElementPosition createElementPosition() {
+		ElementPositionImpl elementPosition = new ElementPositionImpl();
+		return elementPosition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MappingModel createMappingModel() {
+		MappingModelImpl mappingModel = new MappingModelImpl();
+		return mappingModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Modality2RoomType createModality2RoomType() {
+		Modality2RoomTypeImpl modality2RoomType = new Modality2RoomTypeImpl();
+		return modality2RoomType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TaskType2Gameplay createTaskType2Gameplay() {
+		TaskType2GameplayImpl taskType2Gameplay = new TaskType2GameplayImpl();
+		return taskType2Gameplay;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResponseModalities createResponseModalities() {
+		ResponseModalitiesImpl responseModalities = new ResponseModalitiesImpl();
+		return responseModalities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Gameplay2RoomType createGameplay2RoomType() {
+		Gameplay2RoomTypeImpl gameplay2RoomType = new Gameplay2RoomTypeImpl();
+		return gameplay2RoomType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GPBricks createGPBricksFromString(EDataType eDataType, String initialValue) {
 		GPBricks result = GPBricks.get(initialValue);
 		if (result == null)
@@ -603,50 +735,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * @generated
 	 */
 	public String convertGPBricksToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AvatarActions createAvatarActionsFromString(EDataType eDataType, String initialValue) {
-		AvatarActions result = AvatarActions.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertAvatarActionsToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoomPaths createRoomPathsFromString(EDataType eDataType, String initialValue) {
-		RoomPaths result = RoomPaths.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertRoomPathsToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -801,6 +889,50 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * @generated
 	 */
 	public String convertOrderToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EPassiveAbility createEPassiveAbilityFromString(EDataType eDataType, String initialValue) {
+		EPassiveAbility result = EPassiveAbility.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEPassiveAbilityToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EActiveAbility createEActiveAbilityFromString(EDataType eDataType, String initialValue) {
+		EActiveAbility result = EActiveAbility.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEActiveAbilityToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

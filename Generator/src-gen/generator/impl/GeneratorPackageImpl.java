@@ -2,30 +2,40 @@
  */
 package generator.impl;
 
+import generator.Abilities;
+import generator.Ability;
 import generator.AbstractFact;
-import generator.AvatarActions;
+import generator.ActiveAbility;
+import generator.AvatarEquipment;
+import generator.BuyableElement;
 import generator.CompletionType;
-import generator.CoreGameRule;
+import generator.ComplianceRelations;
 import generator.CurrentObjectiveLevel;
 import generator.Directions;
 import generator.Dungeon;
 import generator.DungeonMode;
-import generator.ElementShape;
-import generator.ElementState;
+import generator.EActiveAbility;
+import generator.EPassiveAbility;
+import generator.Element;
+import generator.ElementPosition;
 import generator.ElementType;
+import generator.ElementTypes;
+import generator.Elements;
+import generator.EnterResponse;
+import generator.EquipmentEType;
 import generator.Fact;
 import generator.FactVerificationType;
-import generator.Floor;
 import generator.GPBricks;
-import generator.GameContent;
 import generator.GameContext;
 import generator.GameDescription;
-import generator.GameObjective;
+import generator.GameRule;
 import generator.Gameplay;
+import generator.Gameplay2RoomType;
+import generator.Gameplays;
 import generator.GenerationContext;
 import generator.GeneratorFactory;
 import generator.GeneratorPackage;
-import generator.IRoomElement;
+import generator.InteractionEType;
 import generator.Knowledge;
 import generator.LargeRoomType;
 import generator.LearnerPlayer;
@@ -33,28 +43,33 @@ import generator.LearningDomain;
 import generator.LearningObjective;
 import generator.LearningPath;
 import generator.Level;
-import generator.Location;
 import generator.MTCompletionType;
 import generator.MTLevel;
+import generator.MappingModel;
+import generator.Modality2RoomType;
+import generator.MultipleChoice;
 import generator.Order;
+import generator.PassiveAbility;
 import generator.Position;
 import generator.Prerequisite;
 import generator.Progression;
 import generator.Question;
 import generator.ReconstructionType;
+import generator.ResponseModalities;
+import generator.ResponseModality;
 import generator.ResultPosition;
 import generator.ResultVerificationType;
 import generator.Room;
 import generator.RoomAccess;
-import generator.RoomPaths;
 import generator.RoomType;
-import generator.RoomType2;
+import generator.RoomTypes;
 import generator.SetOfFacts;
 import generator.SmallRoomType;
 import generator.TableBuild;
 import generator.TargetElement;
 import generator.Task;
 import generator.TaskType;
+import generator.TaskType2Gameplay;
 import generator.TaskTypes;
 import generator.VerifiableElement;
 import generator.VerificationType;
@@ -102,83 +117,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass knowledgeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gameContentEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gameplayEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass coreGameRuleEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass elementTypeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gameObjectiveEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass roomType2EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass floorEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass locationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass iRoomElementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass elementShapeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass elementStateEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -388,21 +326,189 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass responseModalityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multipleChoiceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass enterResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass elementTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass interactionETypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abilityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass activeAbilityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass passiveAbilityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gameplayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gameRuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass buyableElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass elementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass avatarEquipmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass elementsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gameplaysEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass elementTypesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abilitiesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass roomTypesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass equipmentETypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass elementPositionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mappingModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modality2RoomTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass complianceRelationsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass taskType2GameplayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass responseModalitiesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gameplay2RoomTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum gpBricksEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum avatarActionsEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum roomPathsEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -452,6 +558,20 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EEnum orderEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum ePassiveAbilityEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eActiveAbilityEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -603,321 +723,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGameContent() {
-		return gameContentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGameContent_Gameplays() {
-		return (EReference) gameContentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGameContent_Elements() {
-		return (EReference) gameContentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGameContent_Gameobjectives() {
-		return (EReference) gameContentEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGameContent_Roomtype() {
-		return (EReference) gameContentEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGameplay() {
-		return gameplayEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGameplay_Coregamerules() {
-		return (EReference) gameplayEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGameplay_Description() {
-		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCoreGameRule() {
-		return coreGameRuleEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCoreGameRule_RuleType() {
-		return (EAttribute) coreGameRuleEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCoreGameRule_ActionToDo() {
-		return (EAttribute) coreGameRuleEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCoreGameRule_Element() {
-		return (EReference) coreGameRuleEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getElementType() {
-		return elementTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getElementType_Name() {
-		return (EAttribute) elementTypeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getElementType_AcceptedActions() {
-		return (EAttribute) elementTypeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getElementType_Shape() {
-		return (EReference) elementTypeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getElementType_State() {
-		return (EReference) elementTypeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGameObjective() {
-		return gameObjectiveEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGameObjective_Description() {
-		return (EAttribute) gameObjectiveEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getRoomType2() {
-		return roomType2EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRoomType2_Description() {
-		return (EAttribute) roomType2EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRoomType2_Acceptedfloors() {
-		return (EReference) roomType2EClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRoomType2_Paths() {
-		return (EAttribute) roomType2EClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getFloor() {
-		return floorEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getFloor_Locations() {
-		return (EReference) floorEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getFloor_Description() {
-		return (EAttribute) floorEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getLocation() {
-		return locationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getLocation_AcceptedElements() {
-		return (EReference) locationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getLocation_Maxshape() {
-		return (EReference) locationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getIRoomElement() {
-		return iRoomElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getElementShape() {
-		return elementShapeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getElementShape_Height() {
-		return (EAttribute) elementShapeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getElementShape_Width() {
-		return (EAttribute) elementShapeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getElementState() {
-		return elementStateEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getElementState_State() {
-		return (EAttribute) elementStateEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getDungeon() {
 		return dungeonEClass;
 	}
@@ -1035,8 +840,44 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGameDescription_Roomtypes() {
+	public EReference getGameDescription_Elements() {
 		return (EReference) gameDescriptionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameDescription_Gameplays() {
+		return (EReference) gameDescriptionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameDescription_Elementtypes() {
+		return (EReference) gameDescriptionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameDescription_Abilities() {
+		return (EReference) gameDescriptionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameDescription_Roomtypes() {
+		return (EReference) gameDescriptionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1062,7 +903,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRoomType_QuestionPositions() {
+	public EReference getRoomType_Positions() {
 		return (EReference) roomTypeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1235,6 +1076,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EReference getLearningDomain_Tasktypes() {
 		return (EReference) learningDomainEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLearningDomain_Responsemodalities() {
+		return (EReference) learningDomainEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1548,7 +1398,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTaskType_NbPropositions() {
+	public EAttribute getTaskType_Name() {
 		return (EAttribute) taskTypeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1557,8 +1407,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTaskType_EnterResponseAllowed() {
-		return (EAttribute) taskTypeEClass.getEStructuralFeatures().get(1);
+	public EReference getTaskType_Responsemodalities() {
+		return (EReference) taskTypeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1755,26 +1605,521 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getResponseModality() {
+		return responseModalityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMultipleChoice() {
+		return multipleChoiceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMultipleChoice_NbChoices() {
+		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEnterResponse() {
+		return enterResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getElementType() {
+		return elementTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getElementType_Name() {
+		return (EAttribute) elementTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInteractionEType() {
+		return interactionETypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInteractionEType_Abilities() {
+		return (EReference) interactionETypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAbility() {
+		return abilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbility_Name() {
+		return (EAttribute) abilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getActiveAbility() {
+		return activeAbilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getActiveAbility_Ability() {
+		return (EAttribute) activeAbilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPassiveAbility() {
+		return passiveAbilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPassiveAbility_Ability() {
+		return (EAttribute) passiveAbilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGameplay() {
+		return gameplayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGameplay_Description() {
+		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameplay_Gamerules() {
+		return (EReference) gameplayEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameplay_Requirement() {
+		return (EReference) gameplayEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getGameplay__IsAvailable() {
+		return gameplayEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGameRule() {
+		return gameRuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGameRule_Type() {
+		return (EAttribute) gameRuleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGameRule_Ability2activate() {
+		return (EAttribute) gameRuleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameRule_Interactionelementtype() {
+		return (EReference) gameRuleEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBuyableElement() {
+		return buyableElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBuyableElement_Bought() {
+		return (EAttribute) buyableElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBuyableElement_Activated() {
+		return (EAttribute) buyableElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getElement() {
+		return elementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getElement_Name() {
+		return (EAttribute) elementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElement_Type() {
+		return (EReference) elementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAvatarEquipment() {
+		return avatarEquipmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getElements() {
+		return elementsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElements_Elements() {
+		return (EReference) elementsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGameplays() {
+		return gameplaysEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameplays_Gameplays() {
+		return (EReference) gameplaysEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getElementTypes() {
+		return elementTypesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementTypes_Elementtypes() {
+		return (EReference) elementTypesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAbilities() {
+		return abilitiesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbilities_Abilities() {
+		return (EReference) abilitiesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRoomTypes() {
+		return roomTypesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRoomTypes_Roomtypes() {
+		return (EReference) roomTypesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEquipmentEType() {
+		return equipmentETypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getElementPosition() {
+		return elementPositionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementPosition_AutorizedETypes() {
+		return (EReference) elementPositionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMappingModel() {
+		return mappingModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappingModel_Compliancerelations() {
+		return (EReference) mappingModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getModality2RoomType() {
+		return modality2RoomTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModality2RoomType_Responsemodality() {
+		return (EReference) modality2RoomTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModality2RoomType_Roomtype() {
+		return (EReference) modality2RoomTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getComplianceRelations() {
+		return complianceRelationsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTaskType2Gameplay() {
+		return taskType2GameplayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskType2Gameplay_Gameplay() {
+		return (EReference) taskType2GameplayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskType2Gameplay_Tasktype() {
+		return (EReference) taskType2GameplayEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getResponseModalities() {
+		return responseModalitiesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getResponseModalities_Responsemodalities() {
+		return (EReference) responseModalitiesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGameplay2RoomType() {
+		return gameplay2RoomTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameplay2RoomType_Roomtype() {
+		return (EReference) gameplay2RoomTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameplay2RoomType_Gameplay() {
+		return (EReference) gameplay2RoomTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getGPBricks() {
 		return gpBricksEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getAvatarActions() {
-		return avatarActionsEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getRoomPaths() {
-		return roomPathsEEnum;
 	}
 
 	/**
@@ -1845,6 +2190,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getEPassiveAbility() {
+		return ePassiveAbilityEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getEActiveAbility() {
+		return eActiveAbilityEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GeneratorFactory getGeneratorFactory() {
 		return (GeneratorFactory) getEFactoryInstance();
 	}
@@ -1882,52 +2245,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(knowledgeEClass, KNOWLEDGE__NAME);
 		createEReference(knowledgeEClass, KNOWLEDGE__KNOWLEDGEFACTS);
 
-		gameContentEClass = createEClass(GAME_CONTENT);
-		createEReference(gameContentEClass, GAME_CONTENT__GAMEPLAYS);
-		createEReference(gameContentEClass, GAME_CONTENT__ELEMENTS);
-		createEReference(gameContentEClass, GAME_CONTENT__GAMEOBJECTIVES);
-		createEReference(gameContentEClass, GAME_CONTENT__ROOMTYPE);
-
-		gameplayEClass = createEClass(GAMEPLAY);
-		createEReference(gameplayEClass, GAMEPLAY__COREGAMERULES);
-		createEAttribute(gameplayEClass, GAMEPLAY__DESCRIPTION);
-
-		coreGameRuleEClass = createEClass(CORE_GAME_RULE);
-		createEAttribute(coreGameRuleEClass, CORE_GAME_RULE__RULE_TYPE);
-		createEAttribute(coreGameRuleEClass, CORE_GAME_RULE__ACTION_TO_DO);
-		createEReference(coreGameRuleEClass, CORE_GAME_RULE__ELEMENT);
-
-		elementTypeEClass = createEClass(ELEMENT_TYPE);
-		createEAttribute(elementTypeEClass, ELEMENT_TYPE__NAME);
-		createEAttribute(elementTypeEClass, ELEMENT_TYPE__ACCEPTED_ACTIONS);
-		createEReference(elementTypeEClass, ELEMENT_TYPE__SHAPE);
-		createEReference(elementTypeEClass, ELEMENT_TYPE__STATE);
-
-		gameObjectiveEClass = createEClass(GAME_OBJECTIVE);
-		createEAttribute(gameObjectiveEClass, GAME_OBJECTIVE__DESCRIPTION);
-
-		roomType2EClass = createEClass(ROOM_TYPE2);
-		createEAttribute(roomType2EClass, ROOM_TYPE2__DESCRIPTION);
-		createEReference(roomType2EClass, ROOM_TYPE2__ACCEPTEDFLOORS);
-		createEAttribute(roomType2EClass, ROOM_TYPE2__PATHS);
-
-		floorEClass = createEClass(FLOOR);
-		createEReference(floorEClass, FLOOR__LOCATIONS);
-		createEAttribute(floorEClass, FLOOR__DESCRIPTION);
-
-		locationEClass = createEClass(LOCATION);
-		createEReference(locationEClass, LOCATION__ACCEPTED_ELEMENTS);
-		createEReference(locationEClass, LOCATION__MAXSHAPE);
-
-		iRoomElementEClass = createEClass(IROOM_ELEMENT);
-
-		elementShapeEClass = createEClass(ELEMENT_SHAPE);
-		createEAttribute(elementShapeEClass, ELEMENT_SHAPE__HEIGHT);
-		createEAttribute(elementShapeEClass, ELEMENT_SHAPE__WIDTH);
-
-		elementStateEClass = createEClass(ELEMENT_STATE);
-		createEAttribute(elementStateEClass, ELEMENT_STATE__STATE);
-
 		dungeonEClass = createEClass(DUNGEON);
 		createEReference(dungeonEClass, DUNGEON__ROOMS);
 		createEAttribute(dungeonEClass, DUNGEON__MODE);
@@ -1943,11 +2260,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(roomEClass, ROOM__QUESTION);
 
 		gameDescriptionEClass = createEClass(GAME_DESCRIPTION);
+		createEReference(gameDescriptionEClass, GAME_DESCRIPTION__ELEMENTS);
+		createEReference(gameDescriptionEClass, GAME_DESCRIPTION__GAMEPLAYS);
+		createEReference(gameDescriptionEClass, GAME_DESCRIPTION__ELEMENTTYPES);
+		createEReference(gameDescriptionEClass, GAME_DESCRIPTION__ABILITIES);
 		createEReference(gameDescriptionEClass, GAME_DESCRIPTION__ROOMTYPES);
 
 		roomTypeEClass = createEClass(ROOM_TYPE);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__NAME);
-		createEReference(roomTypeEClass, ROOM_TYPE__QUESTION_POSITIONS);
+		createEReference(roomTypeEClass, ROOM_TYPE__POSITIONS);
 		createEOperation(roomTypeEClass, ROOM_TYPE___GET_DIRECTIONS);
 
 		smallRoomTypeEClass = createEClass(SMALL_ROOM_TYPE);
@@ -1973,6 +2294,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		learningDomainEClass = createEClass(LEARNING_DOMAIN);
 		createEReference(learningDomainEClass, LEARNING_DOMAIN__LEARNINGPATHS);
 		createEReference(learningDomainEClass, LEARNING_DOMAIN__TASKTYPES);
+		createEReference(learningDomainEClass, LEARNING_DOMAIN__RESPONSEMODALITIES);
 
 		learningPathEClass = createEClass(LEARNING_PATH);
 		createEAttribute(learningPathEClass, LEARNING_PATH__NAME);
@@ -2018,8 +2340,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(reconstructionTypeEClass, RECONSTRUCTION_TYPE__NB_FALSE_PROPOSITION);
 
 		taskTypeEClass = createEClass(TASK_TYPE);
-		createEAttribute(taskTypeEClass, TASK_TYPE__NB_PROPOSITIONS);
-		createEAttribute(taskTypeEClass, TASK_TYPE__ENTER_RESPONSE_ALLOWED);
+		createEAttribute(taskTypeEClass, TASK_TYPE__NAME);
+		createEReference(taskTypeEClass, TASK_TYPE__RESPONSEMODALITIES);
 
 		factVerificationTypeEClass = createEClass(FACT_VERIFICATION_TYPE);
 
@@ -2050,10 +2372,91 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(questionEClass, QUESTION__POSITION);
 		createEAttribute(questionEClass, QUESTION__INCOMPLETE_FACT);
 
+		responseModalityEClass = createEClass(RESPONSE_MODALITY);
+
+		multipleChoiceEClass = createEClass(MULTIPLE_CHOICE);
+		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__NB_CHOICES);
+
+		enterResponseEClass = createEClass(ENTER_RESPONSE);
+
+		elementTypeEClass = createEClass(ELEMENT_TYPE);
+		createEAttribute(elementTypeEClass, ELEMENT_TYPE__NAME);
+
+		interactionETypeEClass = createEClass(INTERACTION_ETYPE);
+		createEReference(interactionETypeEClass, INTERACTION_ETYPE__ABILITIES);
+
+		abilityEClass = createEClass(ABILITY);
+		createEAttribute(abilityEClass, ABILITY__NAME);
+
+		activeAbilityEClass = createEClass(ACTIVE_ABILITY);
+		createEAttribute(activeAbilityEClass, ACTIVE_ABILITY__ABILITY);
+
+		passiveAbilityEClass = createEClass(PASSIVE_ABILITY);
+		createEAttribute(passiveAbilityEClass, PASSIVE_ABILITY__ABILITY);
+
+		gameplayEClass = createEClass(GAMEPLAY);
+		createEAttribute(gameplayEClass, GAMEPLAY__DESCRIPTION);
+		createEReference(gameplayEClass, GAMEPLAY__GAMERULES);
+		createEReference(gameplayEClass, GAMEPLAY__REQUIREMENT);
+		createEOperation(gameplayEClass, GAMEPLAY___IS_AVAILABLE);
+
+		gameRuleEClass = createEClass(GAME_RULE);
+		createEAttribute(gameRuleEClass, GAME_RULE__TYPE);
+		createEAttribute(gameRuleEClass, GAME_RULE__ABILITY2ACTIVATE);
+		createEReference(gameRuleEClass, GAME_RULE__INTERACTIONELEMENTTYPE);
+
+		buyableElementEClass = createEClass(BUYABLE_ELEMENT);
+		createEAttribute(buyableElementEClass, BUYABLE_ELEMENT__BOUGHT);
+		createEAttribute(buyableElementEClass, BUYABLE_ELEMENT__ACTIVATED);
+
+		elementEClass = createEClass(ELEMENT);
+		createEAttribute(elementEClass, ELEMENT__NAME);
+		createEReference(elementEClass, ELEMENT__TYPE);
+
+		avatarEquipmentEClass = createEClass(AVATAR_EQUIPMENT);
+
+		elementsEClass = createEClass(ELEMENTS);
+		createEReference(elementsEClass, ELEMENTS__ELEMENTS);
+
+		gameplaysEClass = createEClass(GAMEPLAYS);
+		createEReference(gameplaysEClass, GAMEPLAYS__GAMEPLAYS);
+
+		elementTypesEClass = createEClass(ELEMENT_TYPES);
+		createEReference(elementTypesEClass, ELEMENT_TYPES__ELEMENTTYPES);
+
+		abilitiesEClass = createEClass(ABILITIES);
+		createEReference(abilitiesEClass, ABILITIES__ABILITIES);
+
+		roomTypesEClass = createEClass(ROOM_TYPES);
+		createEReference(roomTypesEClass, ROOM_TYPES__ROOMTYPES);
+
+		equipmentETypeEClass = createEClass(EQUIPMENT_ETYPE);
+
+		elementPositionEClass = createEClass(ELEMENT_POSITION);
+		createEReference(elementPositionEClass, ELEMENT_POSITION__AUTORIZED_ETYPES);
+
+		mappingModelEClass = createEClass(MAPPING_MODEL);
+		createEReference(mappingModelEClass, MAPPING_MODEL__COMPLIANCERELATIONS);
+
+		modality2RoomTypeEClass = createEClass(MODALITY2_ROOM_TYPE);
+		createEReference(modality2RoomTypeEClass, MODALITY2_ROOM_TYPE__RESPONSEMODALITY);
+		createEReference(modality2RoomTypeEClass, MODALITY2_ROOM_TYPE__ROOMTYPE);
+
+		complianceRelationsEClass = createEClass(COMPLIANCE_RELATIONS);
+
+		taskType2GameplayEClass = createEClass(TASK_TYPE2_GAMEPLAY);
+		createEReference(taskType2GameplayEClass, TASK_TYPE2_GAMEPLAY__GAMEPLAY);
+		createEReference(taskType2GameplayEClass, TASK_TYPE2_GAMEPLAY__TASKTYPE);
+
+		responseModalitiesEClass = createEClass(RESPONSE_MODALITIES);
+		createEReference(responseModalitiesEClass, RESPONSE_MODALITIES__RESPONSEMODALITIES);
+
+		gameplay2RoomTypeEClass = createEClass(GAMEPLAY2_ROOM_TYPE);
+		createEReference(gameplay2RoomTypeEClass, GAMEPLAY2_ROOM_TYPE__ROOMTYPE);
+		createEReference(gameplay2RoomTypeEClass, GAMEPLAY2_ROOM_TYPE__GAMEPLAY);
+
 		// Create enums
 		gpBricksEEnum = createEEnum(GP_BRICKS);
-		avatarActionsEEnum = createEEnum(AVATAR_ACTIONS);
-		roomPathsEEnum = createEEnum(ROOM_PATHS);
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
 		verifiableElementEEnum = createEEnum(VERIFIABLE_ELEMENT);
@@ -2061,6 +2464,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		resultPositionEEnum = createEEnum(RESULT_POSITION);
 		targetElementEEnum = createEEnum(TARGET_ELEMENT);
 		orderEEnum = createEEnum(ORDER);
+		ePassiveAbilityEEnum = createEEnum(EPASSIVE_ABILITY);
+		eActiveAbilityEEnum = createEEnum(EACTIVE_ABILITY);
 	}
 
 	/**
@@ -2094,8 +2499,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		// Add supertypes to classes
 		setOfFactsEClass.getESuperTypes().add(this.getAbstractFact());
 		factEClass.getESuperTypes().add(this.getAbstractFact());
-		elementTypeEClass.getESuperTypes().add(this.getIRoomElement());
-		floorEClass.getESuperTypes().add(this.getElementType());
 		smallRoomTypeEClass.getESuperTypes().add(this.getRoomType());
 		largeRoomTypeEClass.getESuperTypes().add(this.getRoomType());
 		mtLevelEClass.getESuperTypes().add(this.getLevel());
@@ -2105,6 +2508,18 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		reconstructionTypeEClass.getESuperTypes().add(this.getTaskType());
 		factVerificationTypeEClass.getESuperTypes().add(this.getVerificationType());
 		resultVerificationTypeEClass.getESuperTypes().add(this.getVerificationType());
+		multipleChoiceEClass.getESuperTypes().add(this.getResponseModality());
+		enterResponseEClass.getESuperTypes().add(this.getResponseModality());
+		interactionETypeEClass.getESuperTypes().add(this.getElementType());
+		activeAbilityEClass.getESuperTypes().add(this.getAbility());
+		passiveAbilityEClass.getESuperTypes().add(this.getAbility());
+		buyableElementEClass.getESuperTypes().add(this.getElement());
+		avatarEquipmentEClass.getESuperTypes().add(this.getBuyableElement());
+		equipmentETypeEClass.getESuperTypes().add(this.getElementType());
+		elementPositionEClass.getESuperTypes().add(this.getPosition());
+		modality2RoomTypeEClass.getESuperTypes().add(this.getComplianceRelations());
+		taskType2GameplayEClass.getESuperTypes().add(this.getComplianceRelations());
+		gameplay2RoomTypeEClass.getESuperTypes().add(this.getComplianceRelations());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -2129,102 +2544,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getKnowledge_Knowledgefacts(), this.getAbstractFact(), null, "knowledgefacts", null, 0, -1,
 				Knowledge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gameContentEClass, GameContent.class, "GameContent", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGameContent_Gameplays(), this.getGameplay(), null, "gameplays", null, 1, -1,
-				GameContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGameContent_Elements(), this.getElementType(), null, "elements", null, 0, -1,
-				GameContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGameContent_Gameobjectives(), this.getGameObjective(), null, "gameobjectives", null, 1, -1,
-				GameContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGameContent_Roomtype(), this.getRoomType2(), null, "roomtype", null, 0, -1, GameContent.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gameplayEClass, Gameplay.class, "Gameplay", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGameplay_Coregamerules(), this.getCoreGameRule(), null, "coregamerules", null, 1, -1,
-				Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGameplay_Description(), ecorePackage.getEString(), "description", null, 0, 1, Gameplay.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(coreGameRuleEClass, CoreGameRule.class, "CoreGameRule", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCoreGameRule_RuleType(), this.getGPBricks(), "ruleType", "MOVE", 0, 1, CoreGameRule.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCoreGameRule_ActionToDo(), this.getAvatarActions(), "actionToDo", "WALK_RUN", 0, 1,
-				CoreGameRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getCoreGameRule_Element(), this.getElementType(), null, "element", null, 0, 1,
-				CoreGameRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(elementTypeEClass, ElementType.class, "ElementType", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getElementType_Name(), ecorePackage.getEString(), "name", null, 0, 1, ElementType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElementType_AcceptedActions(), this.getAvatarActions(), "acceptedActions", null, 1, -1,
-				ElementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getElementType_Shape(), this.getElementShape(), null, "shape", null, 1, 1, ElementType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElementType_State(), this.getElementState(), null, "state", null, 1, -1, ElementType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gameObjectiveEClass, GameObjective.class, "GameObjective", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGameObjective_Description(), ecorePackage.getEString(), "description", null, 0, 1,
-				GameObjective.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-
-		initEClass(roomType2EClass, RoomType2.class, "RoomType2", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRoomType2_Description(), ecorePackage.getEString(), "description", null, 0, 1,
-				RoomType2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getRoomType2_Acceptedfloors(), this.getFloor(), null, "acceptedfloors", null, 1, -1,
-				RoomType2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRoomType2_Paths(), this.getRoomPaths(), "paths", null, 0, 4, RoomType2.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(floorEClass, Floor.class, "Floor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFloor_Locations(), this.getLocation(), null, "locations", null, 0, -1, Floor.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFloor_Description(), ecorePackage.getEString(), "description", null, 0, 1, Floor.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(locationEClass, Location.class, "Location", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLocation_AcceptedElements(), this.getIRoomElement(), null, "acceptedElements", null, 1, -1,
-				Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLocation_Maxshape(), this.getElementShape(), null, "maxshape", null, 1, 1, Location.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(iRoomElementEClass, IRoomElement.class, "IRoomElement", IS_ABSTRACT, IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(elementShapeEClass, ElementShape.class, "ElementShape", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getElementShape_Height(), ecorePackage.getEFloat(), "height", null, 0, 1, ElementShape.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElementShape_Width(), ecorePackage.getEFloat(), "width", null, 0, 1, ElementShape.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(elementStateEClass, ElementState.class, "ElementState", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getElementState_State(), ecorePackage.getEString(), "state", null, 0, 1, ElementState.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dungeonEClass, Dungeon.class, "Dungeon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDungeon_Rooms(), this.getRoom(), null, "rooms", null, 1, -1, Dungeon.class, !IS_TRANSIENT,
@@ -2259,16 +2578,28 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(gameDescriptionEClass, GameDescription.class, "GameDescription", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGameDescription_Roomtypes(), this.getRoomType(), null, "roomtypes", null, 1, -1,
+		initEReference(getGameDescription_Elements(), this.getElements(), null, "elements", null, 0, 1,
+				GameDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGameDescription_Gameplays(), this.getGameplays(), null, "gameplays", null, 0, 1,
+				GameDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGameDescription_Elementtypes(), this.getElementTypes(), null, "elementtypes", null, 0, 1,
+				GameDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGameDescription_Abilities(), this.getAbilities(), null, "abilities", null, 0, -1,
+				GameDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGameDescription_Roomtypes(), this.getRoomTypes(), null, "roomtypes", null, 0, 1,
 				GameDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roomTypeEClass, RoomType.class, "RoomType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoomType_Name(), ecorePackage.getEString(), "name", null, 0, 1, RoomType.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRoomType_QuestionPositions(), this.getPosition(), null, "questionPositions", null, 0, -1,
-				RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRoomType_Positions(), this.getPosition(), null, "positions", null, 0, -1, RoomType.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getRoomType__GetDirections(), this.getDirections(), "getDirections", 0, -1, IS_UNIQUE,
 				IS_ORDERED);
@@ -2323,6 +2654,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getLearningDomain_Tasktypes(), this.getTaskTypes(), null, "tasktypes", null, 0, 1,
 				LearningDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLearningDomain_Responsemodalities(), this.getResponseModalities(), null, "responsemodalities",
+				null, 0, 1, LearningDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(learningPathEClass, LearningPath.class, "LearningPath", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2374,9 +2708,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTLevel_ResultPositionSetup(), this.getResultPosition(), "resultPositionSetup", null, 0, 1,
 				MTLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTLevel_MinInterval(), ecorePackage.getEInt(), "minInterval", null, 0, 1, MTLevel.class,
+		initEAttribute(getMTLevel_MinInterval(), ecorePackage.getEInt(), "minInterval", "1", 0, 1, MTLevel.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTLevel_MaxInterval(), ecorePackage.getEInt(), "maxInterval", null, 0, 1, MTLevel.class,
+		initEAttribute(getMTLevel_MaxInterval(), ecorePackage.getEInt(), "maxInterval", "10", 0, 1, MTLevel.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtCompletionTypeEClass, MTCompletionType.class, "MTCompletionType", !IS_ABSTRACT, !IS_INTERFACE,
@@ -2415,12 +2749,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskTypeEClass, TaskType.class, "TaskType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTaskType_NbPropositions(), ecorePackage.getEInt(), "nbPropositions", null, 0, 1,
-				TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTaskType_EnterResponseAllowed(), ecorePackage.getEBoolean(), "enterResponseAllowed", "false",
-				0, 1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTaskType_Name(), ecorePackage.getEString(), "name", null, 0, 1, TaskType.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskType_Responsemodalities(), this.getResponseModality(), null, "responsemodalities", null,
+				0, 2, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(factVerificationTypeEClass, FactVerificationType.class, "FactVerificationType", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2483,6 +2816,169 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
+		initEClass(responseModalityEClass, ResponseModality.class, "ResponseModality", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(multipleChoiceEClass, MultipleChoice.class, "MultipleChoice", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMultipleChoice_NbChoices(), ecorePackage.getEInt(), "nbChoices", null, 0, 1,
+				MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(enterResponseEClass, EnterResponse.class, "EnterResponse", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(elementTypeEClass, ElementType.class, "ElementType", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getElementType_Name(), ecorePackage.getEString(), "name", null, 0, 1, ElementType.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(interactionETypeEClass, InteractionEType.class, "InteractionEType", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInteractionEType_Abilities(), this.getAbility(), null, "abilities", null, 0, -1,
+				InteractionEType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(abilityEClass, Ability.class, "Ability", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAbility_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ability.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(activeAbilityEClass, ActiveAbility.class, "ActiveAbility", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getActiveAbility_Ability(), this.getEActiveAbility(), "ability", null, 0, 1, ActiveAbility.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(passiveAbilityEClass, PassiveAbility.class, "PassiveAbility", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPassiveAbility_Ability(), this.getEPassiveAbility(), "ability", null, 0, 1,
+				PassiveAbility.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(gameplayEClass, Gameplay.class, "Gameplay", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGameplay_Description(), ecorePackage.getEString(), "description", null, 0, 1, Gameplay.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGameplay_Gamerules(), this.getGameRule(), null, "gamerules", null, 1, -1, Gameplay.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGameplay_Requirement(), this.getAvatarEquipment(), null, "requirement", null, 0, 1,
+				Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getGameplay__IsAvailable(), ecorePackage.getEBoolean(), "isAvailable", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		initEClass(gameRuleEClass, GameRule.class, "GameRule", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGameRule_Type(), this.getGPBricks(), "type", "MOVE", 0, 1, GameRule.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGameRule_Ability2activate(), this.getEActiveAbility(), "ability2activate", null, 0, 1,
+				GameRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getGameRule_Interactionelementtype(), this.getInteractionEType(), null, "interactionelementtype",
+				null, 0, 1, GameRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(buyableElementEClass, BuyableElement.class, "BuyableElement", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBuyableElement_Bought(), ecorePackage.getEBoolean(), "bought", null, 0, 1,
+				BuyableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBuyableElement_Activated(), ecorePackage.getEBoolean(), "activated", null, 0, 1,
+				BuyableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Element.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElement_Type(), this.getElementType(), null, "type", null, 0, 1, Element.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(avatarEquipmentEClass, AvatarEquipment.class, "AvatarEquipment", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(elementsEClass, Elements.class, "Elements", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getElements_Elements(), this.getElement(), null, "elements", null, 0, -1, Elements.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(gameplaysEClass, Gameplays.class, "Gameplays", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGameplays_Gameplays(), this.getGameplay(), null, "gameplays", null, 1, -1, Gameplays.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(elementTypesEClass, ElementTypes.class, "ElementTypes", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getElementTypes_Elementtypes(), this.getElementType(), null, "elementtypes", null, 0, -1,
+				ElementTypes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(abilitiesEClass, Abilities.class, "Abilities", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbilities_Abilities(), this.getAbility(), null, "abilities", null, 0, -1, Abilities.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(roomTypesEClass, RoomTypes.class, "RoomTypes", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRoomTypes_Roomtypes(), this.getRoomType(), null, "roomtypes", null, 1, -1, RoomTypes.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(equipmentETypeEClass, EquipmentEType.class, "EquipmentEType", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(elementPositionEClass, ElementPosition.class, "ElementPosition", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getElementPosition_AutorizedETypes(), this.getInteractionEType(), null, "autorizedETypes", null,
+				0, -1, ElementPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mappingModelEClass, MappingModel.class, "MappingModel", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMappingModel_Compliancerelations(), this.getComplianceRelations(), null,
+				"compliancerelations", null, 0, -1, MappingModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(modality2RoomTypeEClass, Modality2RoomType.class, "Modality2RoomType", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getModality2RoomType_Responsemodality(), this.getResponseModality(), null, "responsemodality",
+				null, 1, 1, Modality2RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModality2RoomType_Roomtype(), this.getRoomType(), null, "roomtype", null, 1, -1,
+				Modality2RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(complianceRelationsEClass, ComplianceRelations.class, "ComplianceRelations", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(taskType2GameplayEClass, TaskType2Gameplay.class, "TaskType2Gameplay", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTaskType2Gameplay_Gameplay(), this.getGameplay(), null, "gameplay", null, 1, -1,
+				TaskType2Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskType2Gameplay_Tasktype(), this.getTaskType(), null, "tasktype", null, 1, 1,
+				TaskType2Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(responseModalitiesEClass, ResponseModalities.class, "ResponseModalities", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getResponseModalities_Responsemodalities(), this.getResponseModality(), null,
+				"responsemodalities", null, 0, -1, ResponseModalities.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(gameplay2RoomTypeEClass, Gameplay2RoomType.class, "Gameplay2RoomType", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGameplay2RoomType_Roomtype(), this.getRoomType(), null, "roomtype", null, 1, 1,
+				Gameplay2RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGameplay2RoomType_Gameplay(), this.getGameplay(), null, "gameplay", null, 1, -1,
+				Gameplay2RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(gpBricksEEnum, GPBricks.class, "GPBricks");
 		addEEnumLiteral(gpBricksEEnum, GPBricks.SELECT);
@@ -2491,20 +2987,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(gpBricksEEnum, GPBricks.DESTROY);
 		addEEnumLiteral(gpBricksEEnum, GPBricks.MANAGE);
 		addEEnumLiteral(gpBricksEEnum, GPBricks.WRITE);
-
-		initEEnum(avatarActionsEEnum, AvatarActions.class, "AvatarActions");
-		addEEnumLiteral(avatarActionsEEnum, AvatarActions.TOUCH);
-		addEEnumLiteral(avatarActionsEEnum, AvatarActions.GO_THROUGH);
-		addEEnumLiteral(avatarActionsEEnum, AvatarActions.STRIKE);
-		addEEnumLiteral(avatarActionsEEnum, AvatarActions.WALK_RUN);
-		addEEnumLiteral(avatarActionsEEnum, AvatarActions.PICKUP_CARRY);
-		addEEnumLiteral(avatarActionsEEnum, AvatarActions.NONE);
-
-		initEEnum(roomPathsEEnum, RoomPaths.class, "RoomPaths");
-		addEEnumLiteral(roomPathsEEnum, RoomPaths.NORTH);
-		addEEnumLiteral(roomPathsEEnum, RoomPaths.SOUTH);
-		addEEnumLiteral(roomPathsEEnum, RoomPaths.EAST);
-		addEEnumLiteral(roomPathsEEnum, RoomPaths.WEST);
 
 		initEEnum(directionsEEnum, Directions.class, "Directions");
 		addEEnumLiteral(directionsEEnum, Directions.SOUTH);
@@ -2548,6 +3030,19 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(orderEEnum, Order.ASCENDING);
 		addEEnumLiteral(orderEEnum, Order.DESCENDING);
 		addEEnumLiteral(orderEEnum, Order.MIX);
+
+		initEEnum(ePassiveAbilityEEnum, EPassiveAbility.class, "EPassiveAbility");
+		addEEnumLiteral(ePassiveAbilityEEnum, EPassiveAbility.DETECT);
+		addEEnumLiteral(ePassiveAbilityEEnum, EPassiveAbility.KILL);
+
+		initEEnum(eActiveAbilityEEnum, EActiveAbility.class, "EActiveAbility");
+		addEEnumLiteral(eActiveAbilityEEnum, EActiveAbility.PORTABLE);
+		addEEnumLiteral(eActiveAbilityEEnum, EActiveAbility.PUSHABLE);
+		addEEnumLiteral(eActiveAbilityEEnum, EActiveAbility.KILLABLE);
+		addEEnumLiteral(eActiveAbilityEEnum, EActiveAbility.BREAKABLE);
+		addEEnumLiteral(eActiveAbilityEEnum, EActiveAbility.PULLABLE);
+		addEEnumLiteral(eActiveAbilityEEnum, EActiveAbility.NONE);
+		addEEnumLiteral(eActiveAbilityEEnum, EActiveAbility.OPENABLE);
 
 		// Create resource
 		createResource(eNS_URI);

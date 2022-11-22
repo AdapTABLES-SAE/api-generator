@@ -216,566 +216,6 @@ public interface GeneratorPackage extends EPackage {
 	int KNOWLEDGE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.GameContentImpl <em>Game Content</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.GameContentImpl
-	 * @see generator.impl.GeneratorPackageImpl#getGameContent()
-	 * @generated
-	 */
-	int GAME_CONTENT = 4;
-
-	/**
-	 * The feature id for the '<em><b>Gameplays</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_CONTENT__GAMEPLAYS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_CONTENT__ELEMENTS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Gameobjectives</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_CONTENT__GAMEOBJECTIVES = 2;
-
-	/**
-	 * The feature id for the '<em><b>Roomtype</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_CONTENT__ROOMTYPE = 3;
-
-	/**
-	 * The number of structural features of the '<em>Game Content</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_CONTENT_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Game Content</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_CONTENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.GameplayImpl <em>Gameplay</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.GameplayImpl
-	 * @see generator.impl.GeneratorPackageImpl#getGameplay()
-	 * @generated
-	 */
-	int GAMEPLAY = 5;
-
-	/**
-	 * The feature id for the '<em><b>Coregamerules</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAMEPLAY__COREGAMERULES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAMEPLAY__DESCRIPTION = 1;
-
-	/**
-	 * The number of structural features of the '<em>Gameplay</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAMEPLAY_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Gameplay</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAMEPLAY_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.CoreGameRuleImpl <em>Core Game Rule</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.CoreGameRuleImpl
-	 * @see generator.impl.GeneratorPackageImpl#getCoreGameRule()
-	 * @generated
-	 */
-	int CORE_GAME_RULE = 6;
-
-	/**
-	 * The feature id for the '<em><b>Rule Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CORE_GAME_RULE__RULE_TYPE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Action To Do</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CORE_GAME_RULE__ACTION_TO_DO = 1;
-
-	/**
-	 * The feature id for the '<em><b>Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CORE_GAME_RULE__ELEMENT = 2;
-
-	/**
-	 * The number of structural features of the '<em>Core Game Rule</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CORE_GAME_RULE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Core Game Rule</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CORE_GAME_RULE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.IRoomElement <em>IRoom Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.IRoomElement
-	 * @see generator.impl.GeneratorPackageImpl#getIRoomElement()
-	 * @generated
-	 */
-	int IROOM_ELEMENT = 12;
-
-	/**
-	 * The number of structural features of the '<em>IRoom Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IROOM_ELEMENT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>IRoom Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IROOM_ELEMENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.ElementTypeImpl <em>Element Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.ElementTypeImpl
-	 * @see generator.impl.GeneratorPackageImpl#getElementType()
-	 * @generated
-	 */
-	int ELEMENT_TYPE = 7;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE__NAME = IROOM_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Accepted Actions</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE__ACCEPTED_ACTIONS = IROOM_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Shape</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE__SHAPE = IROOM_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>State</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE__STATE = IROOM_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Element Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE_FEATURE_COUNT = IROOM_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of operations of the '<em>Element Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE_OPERATION_COUNT = IROOM_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.GameObjectiveImpl <em>Game Objective</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.GameObjectiveImpl
-	 * @see generator.impl.GeneratorPackageImpl#getGameObjective()
-	 * @generated
-	 */
-	int GAME_OBJECTIVE = 8;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_OBJECTIVE__DESCRIPTION = 0;
-
-	/**
-	 * The number of structural features of the '<em>Game Objective</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_OBJECTIVE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Game Objective</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_OBJECTIVE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.RoomType2Impl <em>Room Type2</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.RoomType2Impl
-	 * @see generator.impl.GeneratorPackageImpl#getRoomType2()
-	 * @generated
-	 */
-	int ROOM_TYPE2 = 9;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_TYPE2__DESCRIPTION = 0;
-
-	/**
-	 * The feature id for the '<em><b>Acceptedfloors</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_TYPE2__ACCEPTEDFLOORS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Paths</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_TYPE2__PATHS = 2;
-
-	/**
-	 * The number of structural features of the '<em>Room Type2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_TYPE2_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Room Type2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_TYPE2_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.FloorImpl <em>Floor</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.FloorImpl
-	 * @see generator.impl.GeneratorPackageImpl#getFloor()
-	 * @generated
-	 */
-	int FLOOR = 10;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOOR__NAME = ELEMENT_TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Accepted Actions</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOOR__ACCEPTED_ACTIONS = ELEMENT_TYPE__ACCEPTED_ACTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Shape</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOOR__SHAPE = ELEMENT_TYPE__SHAPE;
-
-	/**
-	 * The feature id for the '<em><b>State</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOOR__STATE = ELEMENT_TYPE__STATE;
-
-	/**
-	 * The feature id for the '<em><b>Locations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOOR__LOCATIONS = ELEMENT_TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOOR__DESCRIPTION = ELEMENT_TYPE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Floor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOOR_FEATURE_COUNT = ELEMENT_TYPE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Floor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOOR_OPERATION_COUNT = ELEMENT_TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.LocationImpl <em>Location</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.LocationImpl
-	 * @see generator.impl.GeneratorPackageImpl#getLocation()
-	 * @generated
-	 */
-	int LOCATION = 11;
-
-	/**
-	 * The feature id for the '<em><b>Accepted Elements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION__ACCEPTED_ELEMENTS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Maxshape</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION__MAXSHAPE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Location</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Location</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.ElementShapeImpl <em>Element Shape</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.ElementShapeImpl
-	 * @see generator.impl.GeneratorPackageImpl#getElementShape()
-	 * @generated
-	 */
-	int ELEMENT_SHAPE = 13;
-
-	/**
-	 * The feature id for the '<em><b>Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_SHAPE__HEIGHT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_SHAPE__WIDTH = 1;
-
-	/**
-	 * The number of structural features of the '<em>Element Shape</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_SHAPE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Element Shape</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_SHAPE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.ElementStateImpl <em>Element State</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.ElementStateImpl
-	 * @see generator.impl.GeneratorPackageImpl#getElementState()
-	 * @generated
-	 */
-	int ELEMENT_STATE = 14;
-
-	/**
-	 * The feature id for the '<em><b>State</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_STATE__STATE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Element State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_STATE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Element State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_STATE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.DungeonImpl <em>Dungeon</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -783,7 +223,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeon()
 	 * @generated
 	 */
-	int DUNGEON = 15;
+	int DUNGEON = 4;
 
 	/**
 	 * The feature id for the '<em><b>Rooms</b></em>' containment reference list.
@@ -856,7 +296,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRoom()
 	 * @generated
 	 */
-	int ROOM = 16;
+	int ROOM = 5;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -929,16 +369,52 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameDescription()
 	 * @generated
 	 */
-	int GAME_DESCRIPTION = 17;
+	int GAME_DESCRIPTION = 6;
 
 	/**
-	 * The feature id for the '<em><b>Roomtypes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GAME_DESCRIPTION__ROOMTYPES = 0;
+	int GAME_DESCRIPTION__ELEMENTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Gameplays</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_DESCRIPTION__GAMEPLAYS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Elementtypes</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_DESCRIPTION__ELEMENTTYPES = 2;
+
+	/**
+	 * The feature id for the '<em><b>Abilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_DESCRIPTION__ABILITIES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Roomtypes</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_DESCRIPTION__ROOMTYPES = 4;
 
 	/**
 	 * The number of structural features of the '<em>Game Description</em>' class.
@@ -947,7 +423,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GAME_DESCRIPTION_FEATURE_COUNT = 1;
+	int GAME_DESCRIPTION_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Game Description</em>' class.
@@ -966,7 +442,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRoomType()
 	 * @generated
 	 */
-	int ROOM_TYPE = 18;
+	int ROOM_TYPE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -978,13 +454,13 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM_TYPE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Question Positions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Positions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE__QUESTION_POSITIONS = 1;
+	int ROOM_TYPE__POSITIONS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Room Type</em>' class.
@@ -1021,7 +497,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getSmallRoomType()
 	 * @generated
 	 */
-	int SMALL_ROOM_TYPE = 19;
+	int SMALL_ROOM_TYPE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1033,13 +509,13 @@ public interface GeneratorPackage extends EPackage {
 	int SMALL_ROOM_TYPE__NAME = ROOM_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Question Positions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Positions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SMALL_ROOM_TYPE__QUESTION_POSITIONS = ROOM_TYPE__QUESTION_POSITIONS;
+	int SMALL_ROOM_TYPE__POSITIONS = ROOM_TYPE__POSITIONS;
 
 	/**
 	 * The feature id for the '<em><b>Directions</b></em>' attribute list.
@@ -1085,7 +561,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLargeRoomType()
 	 * @generated
 	 */
-	int LARGE_ROOM_TYPE = 20;
+	int LARGE_ROOM_TYPE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1097,13 +573,13 @@ public interface GeneratorPackage extends EPackage {
 	int LARGE_ROOM_TYPE__NAME = ROOM_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Question Positions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Positions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LARGE_ROOM_TYPE__QUESTION_POSITIONS = ROOM_TYPE__QUESTION_POSITIONS;
+	int LARGE_ROOM_TYPE__POSITIONS = ROOM_TYPE__POSITIONS;
 
 	/**
 	 * The feature id for the '<em><b>Directions</b></em>' attribute list.
@@ -1149,7 +625,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRoomAccess()
 	 * @generated
 	 */
-	int ROOM_ACCESS = 21;
+	int ROOM_ACCESS = 10;
 
 	/**
 	 * The feature id for the '<em><b>Direction</b></em>' attribute.
@@ -1195,7 +671,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameContext()
 	 * @generated
 	 */
-	int GAME_CONTEXT = 22;
+	int GAME_CONTEXT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Rooms</b></em>' attribute.
@@ -1241,7 +717,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTask()
 	 * @generated
 	 */
-	int TASK = 23;
+	int TASK = 12;
 
 	/**
 	 * The feature id for the '<em><b>Tasktype</b></em>' reference.
@@ -1305,7 +781,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLearningDomain()
 	 * @generated
 	 */
-	int LEARNING_DOMAIN = 24;
+	int LEARNING_DOMAIN = 13;
 
 	/**
 	 * The feature id for the '<em><b>Learningpaths</b></em>' containment reference list.
@@ -1326,13 +802,22 @@ public interface GeneratorPackage extends EPackage {
 	int LEARNING_DOMAIN__TASKTYPES = 1;
 
 	/**
+	 * The feature id for the '<em><b>Responsemodalities</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNING_DOMAIN__RESPONSEMODALITIES = 2;
+
+	/**
 	 * The number of structural features of the '<em>Learning Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEARNING_DOMAIN_FEATURE_COUNT = 2;
+	int LEARNING_DOMAIN_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Learning Domain</em>' class.
@@ -1351,7 +836,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLearningPath()
 	 * @generated
 	 */
-	int LEARNING_PATH = 25;
+	int LEARNING_PATH = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1406,7 +891,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLearningObjective()
 	 * @generated
 	 */
-	int LEARNING_OBJECTIVE = 26;
+	int LEARNING_OBJECTIVE = 15;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -1479,7 +964,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPrerequisite()
 	 * @generated
 	 */
-	int PREREQUISITE = 27;
+	int PREREQUISITE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Succes Percentage</b></em>' attribute.
@@ -1525,7 +1010,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLevel()
 	 * @generated
 	 */
-	int LEVEL = 28;
+	int LEVEL = 17;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -1571,7 +1056,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTLevel()
 	 * @generated
 	 */
-	int MT_LEVEL = 29;
+	int MT_LEVEL = 18;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -1653,25 +1138,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTaskType()
 	 * @generated
 	 */
-	int TASK_TYPE = 35;
+	int TASK_TYPE = 24;
 
 	/**
-	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE__NB_PROPOSITIONS = 0;
+	int TASK_TYPE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * The feature id for the '<em><b>Responsemodalities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE__ENTER_RESPONSE_ALLOWED = 1;
+	int TASK_TYPE__RESPONSEMODALITIES = 1;
 
 	/**
 	 * The number of structural features of the '<em>Task Type</em>' class.
@@ -1699,25 +1184,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCompletionType()
 	 * @generated
 	 */
-	int COMPLETION_TYPE = 32;
+	int COMPLETION_TYPE = 21;
 
 	/**
-	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION_TYPE__NB_PROPOSITIONS = TASK_TYPE__NB_PROPOSITIONS;
+	int COMPLETION_TYPE__NAME = TASK_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * The feature id for the '<em><b>Responsemodalities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION_TYPE__ENTER_RESPONSE_ALLOWED = TASK_TYPE__ENTER_RESPONSE_ALLOWED;
+	int COMPLETION_TYPE__RESPONSEMODALITIES = TASK_TYPE__RESPONSEMODALITIES;
 
 	/**
 	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
@@ -1772,25 +1257,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTCompletionType()
 	 * @generated
 	 */
-	int MT_COMPLETION_TYPE = 30;
+	int MT_COMPLETION_TYPE = 19;
 
 	/**
-	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION_TYPE__NB_PROPOSITIONS = COMPLETION_TYPE__NB_PROPOSITIONS;
+	int MT_COMPLETION_TYPE__NAME = COMPLETION_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * The feature id for the '<em><b>Responsemodalities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION_TYPE__ENTER_RESPONSE_ALLOWED = COMPLETION_TYPE__ENTER_RESPONSE_ALLOWED;
+	int MT_COMPLETION_TYPE__RESPONSEMODALITIES = COMPLETION_TYPE__RESPONSEMODALITIES;
 
 	/**
 	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
@@ -1854,7 +1339,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTaskTypes()
 	 * @generated
 	 */
-	int TASK_TYPES = 31;
+	int TASK_TYPES = 20;
 
 	/**
 	 * The feature id for the '<em><b>Tasktypes</b></em>' containment reference list.
@@ -1891,25 +1376,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getVerificationType()
 	 * @generated
 	 */
-	int VERIFICATION_TYPE = 33;
+	int VERIFICATION_TYPE = 22;
 
 	/**
-	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERIFICATION_TYPE__NB_PROPOSITIONS = TASK_TYPE__NB_PROPOSITIONS;
+	int VERIFICATION_TYPE__NAME = TASK_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * The feature id for the '<em><b>Responsemodalities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERIFICATION_TYPE__ENTER_RESPONSE_ALLOWED = TASK_TYPE__ENTER_RESPONSE_ALLOWED;
+	int VERIFICATION_TYPE__RESPONSEMODALITIES = TASK_TYPE__RESPONSEMODALITIES;
 
 	/**
 	 * The feature id for the '<em><b>Verify True</b></em>' attribute.
@@ -1946,25 +1431,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getReconstructionType()
 	 * @generated
 	 */
-	int RECONSTRUCTION_TYPE = 34;
+	int RECONSTRUCTION_TYPE = 23;
 
 	/**
-	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECONSTRUCTION_TYPE__NB_PROPOSITIONS = TASK_TYPE__NB_PROPOSITIONS;
+	int RECONSTRUCTION_TYPE__NAME = TASK_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * The feature id for the '<em><b>Responsemodalities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECONSTRUCTION_TYPE__ENTER_RESPONSE_ALLOWED = TASK_TYPE__ENTER_RESPONSE_ALLOWED;
+	int RECONSTRUCTION_TYPE__RESPONSEMODALITIES = TASK_TYPE__RESPONSEMODALITIES;
 
 	/**
 	 * The feature id for the '<em><b>Nb False Proposition</b></em>' attribute.
@@ -2001,25 +1486,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getFactVerificationType()
 	 * @generated
 	 */
-	int FACT_VERIFICATION_TYPE = 36;
+	int FACT_VERIFICATION_TYPE = 25;
 
 	/**
-	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FACT_VERIFICATION_TYPE__NB_PROPOSITIONS = VERIFICATION_TYPE__NB_PROPOSITIONS;
+	int FACT_VERIFICATION_TYPE__NAME = VERIFICATION_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * The feature id for the '<em><b>Responsemodalities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FACT_VERIFICATION_TYPE__ENTER_RESPONSE_ALLOWED = VERIFICATION_TYPE__ENTER_RESPONSE_ALLOWED;
+	int FACT_VERIFICATION_TYPE__RESPONSEMODALITIES = VERIFICATION_TYPE__RESPONSEMODALITIES;
 
 	/**
 	 * The feature id for the '<em><b>Verify True</b></em>' attribute.
@@ -2056,25 +1541,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultVerificationType()
 	 * @generated
 	 */
-	int RESULT_VERIFICATION_TYPE = 37;
+	int RESULT_VERIFICATION_TYPE = 26;
 
 	/**
-	 * The feature id for the '<em><b>Nb Propositions</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_VERIFICATION_TYPE__NB_PROPOSITIONS = VERIFICATION_TYPE__NB_PROPOSITIONS;
+	int RESULT_VERIFICATION_TYPE__NAME = VERIFICATION_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Enter Response Allowed</b></em>' attribute.
+	 * The feature id for the '<em><b>Responsemodalities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_VERIFICATION_TYPE__ENTER_RESPONSE_ALLOWED = VERIFICATION_TYPE__ENTER_RESPONSE_ALLOWED;
+	int RESULT_VERIFICATION_TYPE__RESPONSEMODALITIES = VERIFICATION_TYPE__RESPONSEMODALITIES;
 
 	/**
 	 * The feature id for the '<em><b>Verify True</b></em>' attribute.
@@ -2120,7 +1605,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGenerationContext()
 	 * @generated
 	 */
-	int GENERATION_CONTEXT = 38;
+	int GENERATION_CONTEXT = 27;
 
 	/**
 	 * The feature id for the '<em><b>Gamecontext</b></em>' containment reference.
@@ -2166,7 +1651,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLearnerPlayer()
 	 * @generated
 	 */
-	int LEARNER_PLAYER = 39;
+	int LEARNER_PLAYER = 28;
 
 	/**
 	 * The feature id for the '<em><b>Progression</b></em>' containment reference.
@@ -2221,7 +1706,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getProgression()
 	 * @generated
 	 */
-	int PROGRESSION = 40;
+	int PROGRESSION = 29;
 
 	/**
 	 * The feature id for the '<em><b>Currentobjectivelevels</b></em>' containment reference list.
@@ -2258,7 +1743,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCurrentObjectiveLevel()
 	 * @generated
 	 */
-	int CURRENT_OBJECTIVE_LEVEL = 41;
+	int CURRENT_OBJECTIVE_LEVEL = 30;
 
 	/**
 	 * The feature id for the '<em><b>Learningobjective</b></em>' reference.
@@ -2313,7 +1798,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPosition()
 	 * @generated
 	 */
-	int POSITION = 42;
+	int POSITION = 31;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2350,7 +1835,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuestion()
 	 * @generated
 	 */
-	int QUESTION = 43;
+	int QUESTION = 32;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' reference.
@@ -2389,6 +1874,1112 @@ public interface GeneratorPackage extends EPackage {
 	int QUESTION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.ResponseModalityImpl <em>Response Modality</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ResponseModalityImpl
+	 * @see generator.impl.GeneratorPackageImpl#getResponseModality()
+	 * @generated
+	 */
+	int RESPONSE_MODALITY = 33;
+
+	/**
+	 * The number of structural features of the '<em>Response Modality</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_MODALITY_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Response Modality</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_MODALITY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.MultipleChoiceImpl <em>Multiple Choice</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MultipleChoiceImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMultipleChoice()
+	 * @generated
+	 */
+	int MULTIPLE_CHOICE = 34;
+
+	/**
+	 * The feature id for the '<em><b>Nb Choices</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_CHOICE__NB_CHOICES = RESPONSE_MODALITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Multiple Choice</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_CHOICE_FEATURE_COUNT = RESPONSE_MODALITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Multiple Choice</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_CHOICE_OPERATION_COUNT = RESPONSE_MODALITY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.EnterResponseImpl <em>Enter Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.EnterResponseImpl
+	 * @see generator.impl.GeneratorPackageImpl#getEnterResponse()
+	 * @generated
+	 */
+	int ENTER_RESPONSE = 35;
+
+	/**
+	 * The number of structural features of the '<em>Enter Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTER_RESPONSE_FEATURE_COUNT = RESPONSE_MODALITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Enter Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTER_RESPONSE_OPERATION_COUNT = RESPONSE_MODALITY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ElementTypeImpl <em>Element Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ElementTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getElementType()
+	 * @generated
+	 */
+	int ELEMENT_TYPE = 36;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Element Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Element Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.InteractionETypeImpl <em>Interaction EType</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.InteractionETypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getInteractionEType()
+	 * @generated
+	 */
+	int INTERACTION_ETYPE = 37;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERACTION_ETYPE__NAME = ELEMENT_TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Abilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERACTION_ETYPE__ABILITIES = ELEMENT_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Interaction EType</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERACTION_ETYPE_FEATURE_COUNT = ELEMENT_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Interaction EType</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERACTION_ETYPE_OPERATION_COUNT = ELEMENT_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.AbilityImpl <em>Ability</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.AbilityImpl
+	 * @see generator.impl.GeneratorPackageImpl#getAbility()
+	 * @generated
+	 */
+	int ABILITY = 38;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABILITY__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Ability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABILITY_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Ability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABILITY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ActiveAbilityImpl <em>Active Ability</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ActiveAbilityImpl
+	 * @see generator.impl.GeneratorPackageImpl#getActiveAbility()
+	 * @generated
+	 */
+	int ACTIVE_ABILITY = 39;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVE_ABILITY__NAME = ABILITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Ability</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVE_ABILITY__ABILITY = ABILITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Active Ability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVE_ABILITY_FEATURE_COUNT = ABILITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Active Ability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVE_ABILITY_OPERATION_COUNT = ABILITY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.PassiveAbilityImpl <em>Passive Ability</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.PassiveAbilityImpl
+	 * @see generator.impl.GeneratorPackageImpl#getPassiveAbility()
+	 * @generated
+	 */
+	int PASSIVE_ABILITY = 40;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSIVE_ABILITY__NAME = ABILITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Ability</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSIVE_ABILITY__ABILITY = ABILITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Passive Ability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSIVE_ABILITY_FEATURE_COUNT = ABILITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Passive Ability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSIVE_ABILITY_OPERATION_COUNT = ABILITY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.GameplayImpl <em>Gameplay</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.GameplayImpl
+	 * @see generator.impl.GeneratorPackageImpl#getGameplay()
+	 * @generated
+	 */
+	int GAMEPLAY = 41;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAY__DESCRIPTION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Gamerules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAY__GAMERULES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Requirement</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAY__REQUIREMENT = 2;
+
+	/**
+	 * The number of structural features of the '<em>Gameplay</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAY_FEATURE_COUNT = 3;
+
+	/**
+	 * The operation id for the '<em>Is Available</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAY___IS_AVAILABLE = 0;
+
+	/**
+	 * The number of operations of the '<em>Gameplay</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAY_OPERATION_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.GameRuleImpl <em>Game Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.GameRuleImpl
+	 * @see generator.impl.GeneratorPackageImpl#getGameRule()
+	 * @generated
+	 */
+	int GAME_RULE = 42;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_RULE__TYPE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Ability2activate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_RULE__ABILITY2ACTIVATE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Interactionelementtype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_RULE__INTERACTIONELEMENTTYPE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Game Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_RULE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Game Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_RULE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ElementImpl <em>Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ElementImpl
+	 * @see generator.impl.GeneratorPackageImpl#getElement()
+	 * @generated
+	 */
+	int ELEMENT = 44;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT__TYPE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.BuyableElementImpl <em>Buyable Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.BuyableElementImpl
+	 * @see generator.impl.GeneratorPackageImpl#getBuyableElement()
+	 * @generated
+	 */
+	int BUYABLE_ELEMENT = 43;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUYABLE_ELEMENT__NAME = ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUYABLE_ELEMENT__TYPE = ELEMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Bought</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUYABLE_ELEMENT__BOUGHT = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Activated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUYABLE_ELEMENT__ACTIVATED = ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Buyable Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUYABLE_ELEMENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Buyable Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUYABLE_ELEMENT_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.AvatarEquipmentImpl <em>Avatar Equipment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.AvatarEquipmentImpl
+	 * @see generator.impl.GeneratorPackageImpl#getAvatarEquipment()
+	 * @generated
+	 */
+	int AVATAR_EQUIPMENT = 45;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AVATAR_EQUIPMENT__NAME = BUYABLE_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AVATAR_EQUIPMENT__TYPE = BUYABLE_ELEMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Bought</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AVATAR_EQUIPMENT__BOUGHT = BUYABLE_ELEMENT__BOUGHT;
+
+	/**
+	 * The feature id for the '<em><b>Activated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AVATAR_EQUIPMENT__ACTIVATED = BUYABLE_ELEMENT__ACTIVATED;
+
+	/**
+	 * The number of structural features of the '<em>Avatar Equipment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AVATAR_EQUIPMENT_FEATURE_COUNT = BUYABLE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Avatar Equipment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AVATAR_EQUIPMENT_OPERATION_COUNT = BUYABLE_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ElementsImpl <em>Elements</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ElementsImpl
+	 * @see generator.impl.GeneratorPackageImpl#getElements()
+	 * @generated
+	 */
+	int ELEMENTS = 46;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENTS__ELEMENTS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Elements</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENTS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Elements</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENTS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.GameplaysImpl <em>Gameplays</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.GameplaysImpl
+	 * @see generator.impl.GeneratorPackageImpl#getGameplays()
+	 * @generated
+	 */
+	int GAMEPLAYS = 47;
+
+	/**
+	 * The feature id for the '<em><b>Gameplays</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAYS__GAMEPLAYS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Gameplays</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAYS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Gameplays</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAYS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ElementTypesImpl <em>Element Types</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ElementTypesImpl
+	 * @see generator.impl.GeneratorPackageImpl#getElementTypes()
+	 * @generated
+	 */
+	int ELEMENT_TYPES = 48;
+
+	/**
+	 * The feature id for the '<em><b>Elementtypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPES__ELEMENTTYPES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Element Types</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPES_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Element Types</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.AbilitiesImpl <em>Abilities</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.AbilitiesImpl
+	 * @see generator.impl.GeneratorPackageImpl#getAbilities()
+	 * @generated
+	 */
+	int ABILITIES = 49;
+
+	/**
+	 * The feature id for the '<em><b>Abilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABILITIES__ABILITIES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Abilities</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABILITIES_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Abilities</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABILITIES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.RoomTypesImpl <em>Room Types</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.RoomTypesImpl
+	 * @see generator.impl.GeneratorPackageImpl#getRoomTypes()
+	 * @generated
+	 */
+	int ROOM_TYPES = 50;
+
+	/**
+	 * The feature id for the '<em><b>Roomtypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPES__ROOMTYPES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Room Types</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPES_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Room Types</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.EquipmentETypeImpl <em>Equipment EType</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.EquipmentETypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getEquipmentEType()
+	 * @generated
+	 */
+	int EQUIPMENT_ETYPE = 51;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EQUIPMENT_ETYPE__NAME = ELEMENT_TYPE__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Equipment EType</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EQUIPMENT_ETYPE_FEATURE_COUNT = ELEMENT_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Equipment EType</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EQUIPMENT_ETYPE_OPERATION_COUNT = ELEMENT_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ElementPositionImpl <em>Element Position</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ElementPositionImpl
+	 * @see generator.impl.GeneratorPackageImpl#getElementPosition()
+	 * @generated
+	 */
+	int ELEMENT_POSITION = 52;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_POSITION__NAME = POSITION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Autorized ETypes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_POSITION__AUTORIZED_ETYPES = POSITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Element Position</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_POSITION_FEATURE_COUNT = POSITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Element Position</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_POSITION_OPERATION_COUNT = POSITION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.MappingModelImpl <em>Mapping Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MappingModelImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMappingModel()
+	 * @generated
+	 */
+	int MAPPING_MODEL = 53;
+
+	/**
+	 * The feature id for the '<em><b>Compliancerelations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_MODEL__COMPLIANCERELATIONS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Mapping Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_MODEL_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Mapping Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_MODEL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ComplianceRelationsImpl <em>Compliance Relations</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ComplianceRelationsImpl
+	 * @see generator.impl.GeneratorPackageImpl#getComplianceRelations()
+	 * @generated
+	 */
+	int COMPLIANCE_RELATIONS = 55;
+
+	/**
+	 * The number of structural features of the '<em>Compliance Relations</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLIANCE_RELATIONS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Compliance Relations</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLIANCE_RELATIONS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.Modality2RoomTypeImpl <em>Modality2 Room Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.Modality2RoomTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getModality2RoomType()
+	 * @generated
+	 */
+	int MODALITY2_ROOM_TYPE = 54;
+
+	/**
+	 * The feature id for the '<em><b>Responsemodality</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODALITY2_ROOM_TYPE__RESPONSEMODALITY = COMPLIANCE_RELATIONS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Roomtype</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODALITY2_ROOM_TYPE__ROOMTYPE = COMPLIANCE_RELATIONS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Modality2 Room Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODALITY2_ROOM_TYPE_FEATURE_COUNT = COMPLIANCE_RELATIONS_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Modality2 Room Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODALITY2_ROOM_TYPE_OPERATION_COUNT = COMPLIANCE_RELATIONS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.TaskType2GameplayImpl <em>Task Type2 Gameplay</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.TaskType2GameplayImpl
+	 * @see generator.impl.GeneratorPackageImpl#getTaskType2Gameplay()
+	 * @generated
+	 */
+	int TASK_TYPE2_GAMEPLAY = 56;
+
+	/**
+	 * The feature id for the '<em><b>Gameplay</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE2_GAMEPLAY__GAMEPLAY = COMPLIANCE_RELATIONS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tasktype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE2_GAMEPLAY__TASKTYPE = COMPLIANCE_RELATIONS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Task Type2 Gameplay</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE2_GAMEPLAY_FEATURE_COUNT = COMPLIANCE_RELATIONS_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Task Type2 Gameplay</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE2_GAMEPLAY_OPERATION_COUNT = COMPLIANCE_RELATIONS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ResponseModalitiesImpl <em>Response Modalities</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ResponseModalitiesImpl
+	 * @see generator.impl.GeneratorPackageImpl#getResponseModalities()
+	 * @generated
+	 */
+	int RESPONSE_MODALITIES = 57;
+
+	/**
+	 * The feature id for the '<em><b>Responsemodalities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_MODALITIES__RESPONSEMODALITIES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Response Modalities</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_MODALITIES_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Response Modalities</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_MODALITIES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.Gameplay2RoomTypeImpl <em>Gameplay2 Room Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.Gameplay2RoomTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getGameplay2RoomType()
+	 * @generated
+	 */
+	int GAMEPLAY2_ROOM_TYPE = 58;
+
+	/**
+	 * The feature id for the '<em><b>Roomtype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAY2_ROOM_TYPE__ROOMTYPE = COMPLIANCE_RELATIONS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Gameplay</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAY2_ROOM_TYPE__GAMEPLAY = COMPLIANCE_RELATIONS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Gameplay2 Room Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAY2_ROOM_TYPE_FEATURE_COUNT = COMPLIANCE_RELATIONS_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Gameplay2 Room Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAY2_ROOM_TYPE_OPERATION_COUNT = COMPLIANCE_RELATIONS_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link generator.GPBricks <em>GP Bricks</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2396,27 +2987,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPBricks()
 	 * @generated
 	 */
-	int GP_BRICKS = 44;
-
-	/**
-	 * The meta object id for the '{@link generator.AvatarActions <em>Avatar Actions</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.AvatarActions
-	 * @see generator.impl.GeneratorPackageImpl#getAvatarActions()
-	 * @generated
-	 */
-	int AVATAR_ACTIONS = 45;
-
-	/**
-	 * The meta object id for the '{@link generator.RoomPaths <em>Room Paths</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.RoomPaths
-	 * @see generator.impl.GeneratorPackageImpl#getRoomPaths()
-	 * @generated
-	 */
-	int ROOM_PATHS = 46;
+	int GP_BRICKS = 59;
 
 	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
@@ -2426,7 +2997,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 47;
+	int DIRECTIONS = 60;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -2436,7 +3007,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 48;
+	int DUNGEON_MODE = 61;
 
 	/**
 	 * The meta object id for the '{@link generator.VerifiableElement <em>Verifiable Element</em>}' enum.
@@ -2446,7 +3017,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getVerifiableElement()
 	 * @generated
 	 */
-	int VERIFIABLE_ELEMENT = 49;
+	int VERIFIABLE_ELEMENT = 62;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -2456,7 +3027,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 50;
+	int TABLE_BUILD = 63;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -2466,7 +3037,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 51;
+	int RESULT_POSITION = 64;
 
 	/**
 	 * The meta object id for the '{@link generator.TargetElement <em>Target Element</em>}' enum.
@@ -2476,7 +3047,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTargetElement()
 	 * @generated
 	 */
-	int TARGET_ELEMENT = 52;
+	int TARGET_ELEMENT = 65;
 
 	/**
 	 * The meta object id for the '{@link generator.Order <em>Order</em>}' enum.
@@ -2486,7 +3057,27 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 53;
+	int ORDER = 66;
+
+	/**
+	 * The meta object id for the '{@link generator.EPassiveAbility <em>EPassive Ability</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.EPassiveAbility
+	 * @see generator.impl.GeneratorPackageImpl#getEPassiveAbility()
+	 * @generated
+	 */
+	int EPASSIVE_ABILITY = 67;
+
+	/**
+	 * The meta object id for the '{@link generator.EActiveAbility <em>EActive Ability</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.EActiveAbility
+	 * @see generator.impl.GeneratorPackageImpl#getEActiveAbility()
+	 * @generated
+	 */
+	int EACTIVE_ABILITY = 68;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -2582,380 +3173,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getKnowledge_Knowledgefacts();
-
-	/**
-	 * Returns the meta object for class '{@link generator.GameContent <em>Game Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Game Content</em>'.
-	 * @see generator.GameContent
-	 * @generated
-	 */
-	EClass getGameContent();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.GameContent#getGameplays <em>Gameplays</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Gameplays</em>'.
-	 * @see generator.GameContent#getGameplays()
-	 * @see #getGameContent()
-	 * @generated
-	 */
-	EReference getGameContent_Gameplays();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.GameContent#getElements <em>Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Elements</em>'.
-	 * @see generator.GameContent#getElements()
-	 * @see #getGameContent()
-	 * @generated
-	 */
-	EReference getGameContent_Elements();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.GameContent#getGameobjectives <em>Gameobjectives</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Gameobjectives</em>'.
-	 * @see generator.GameContent#getGameobjectives()
-	 * @see #getGameContent()
-	 * @generated
-	 */
-	EReference getGameContent_Gameobjectives();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.GameContent#getRoomtype <em>Roomtype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Roomtype</em>'.
-	 * @see generator.GameContent#getRoomtype()
-	 * @see #getGameContent()
-	 * @generated
-	 */
-	EReference getGameContent_Roomtype();
-
-	/**
-	 * Returns the meta object for class '{@link generator.Gameplay <em>Gameplay</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Gameplay</em>'.
-	 * @see generator.Gameplay
-	 * @generated
-	 */
-	EClass getGameplay();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.Gameplay#getCoregamerules <em>Coregamerules</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Coregamerules</em>'.
-	 * @see generator.Gameplay#getCoregamerules()
-	 * @see #getGameplay()
-	 * @generated
-	 */
-	EReference getGameplay_Coregamerules();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.Gameplay#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see generator.Gameplay#getDescription()
-	 * @see #getGameplay()
-	 * @generated
-	 */
-	EAttribute getGameplay_Description();
-
-	/**
-	 * Returns the meta object for class '{@link generator.CoreGameRule <em>Core Game Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Core Game Rule</em>'.
-	 * @see generator.CoreGameRule
-	 * @generated
-	 */
-	EClass getCoreGameRule();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.CoreGameRule#getRuleType <em>Rule Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rule Type</em>'.
-	 * @see generator.CoreGameRule#getRuleType()
-	 * @see #getCoreGameRule()
-	 * @generated
-	 */
-	EAttribute getCoreGameRule_RuleType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.CoreGameRule#getActionToDo <em>Action To Do</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Action To Do</em>'.
-	 * @see generator.CoreGameRule#getActionToDo()
-	 * @see #getCoreGameRule()
-	 * @generated
-	 */
-	EAttribute getCoreGameRule_ActionToDo();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.CoreGameRule#getElement <em>Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Element</em>'.
-	 * @see generator.CoreGameRule#getElement()
-	 * @see #getCoreGameRule()
-	 * @generated
-	 */
-	EReference getCoreGameRule_Element();
-
-	/**
-	 * Returns the meta object for class '{@link generator.ElementType <em>Element Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Element Type</em>'.
-	 * @see generator.ElementType
-	 * @generated
-	 */
-	EClass getElementType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.ElementType#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see generator.ElementType#getName()
-	 * @see #getElementType()
-	 * @generated
-	 */
-	EAttribute getElementType_Name();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link generator.ElementType#getAcceptedActions <em>Accepted Actions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Accepted Actions</em>'.
-	 * @see generator.ElementType#getAcceptedActions()
-	 * @see #getElementType()
-	 * @generated
-	 */
-	EAttribute getElementType_AcceptedActions();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.ElementType#getShape <em>Shape</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Shape</em>'.
-	 * @see generator.ElementType#getShape()
-	 * @see #getElementType()
-	 * @generated
-	 */
-	EReference getElementType_Shape();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.ElementType#getState <em>State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>State</em>'.
-	 * @see generator.ElementType#getState()
-	 * @see #getElementType()
-	 * @generated
-	 */
-	EReference getElementType_State();
-
-	/**
-	 * Returns the meta object for class '{@link generator.GameObjective <em>Game Objective</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Game Objective</em>'.
-	 * @see generator.GameObjective
-	 * @generated
-	 */
-	EClass getGameObjective();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.GameObjective#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see generator.GameObjective#getDescription()
-	 * @see #getGameObjective()
-	 * @generated
-	 */
-	EAttribute getGameObjective_Description();
-
-	/**
-	 * Returns the meta object for class '{@link generator.RoomType2 <em>Room Type2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Room Type2</em>'.
-	 * @see generator.RoomType2
-	 * @generated
-	 */
-	EClass getRoomType2();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.RoomType2#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see generator.RoomType2#getDescription()
-	 * @see #getRoomType2()
-	 * @generated
-	 */
-	EAttribute getRoomType2_Description();
-
-	/**
-	 * Returns the meta object for the reference list '{@link generator.RoomType2#getAcceptedfloors <em>Acceptedfloors</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Acceptedfloors</em>'.
-	 * @see generator.RoomType2#getAcceptedfloors()
-	 * @see #getRoomType2()
-	 * @generated
-	 */
-	EReference getRoomType2_Acceptedfloors();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link generator.RoomType2#getPaths <em>Paths</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Paths</em>'.
-	 * @see generator.RoomType2#getPaths()
-	 * @see #getRoomType2()
-	 * @generated
-	 */
-	EAttribute getRoomType2_Paths();
-
-	/**
-	 * Returns the meta object for class '{@link generator.Floor <em>Floor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Floor</em>'.
-	 * @see generator.Floor
-	 * @generated
-	 */
-	EClass getFloor();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.Floor#getLocations <em>Locations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Locations</em>'.
-	 * @see generator.Floor#getLocations()
-	 * @see #getFloor()
-	 * @generated
-	 */
-	EReference getFloor_Locations();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.Floor#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see generator.Floor#getDescription()
-	 * @see #getFloor()
-	 * @generated
-	 */
-	EAttribute getFloor_Description();
-
-	/**
-	 * Returns the meta object for class '{@link generator.Location <em>Location</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Location</em>'.
-	 * @see generator.Location
-	 * @generated
-	 */
-	EClass getLocation();
-
-	/**
-	 * Returns the meta object for the reference list '{@link generator.Location#getAcceptedElements <em>Accepted Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Accepted Elements</em>'.
-	 * @see generator.Location#getAcceptedElements()
-	 * @see #getLocation()
-	 * @generated
-	 */
-	EReference getLocation_AcceptedElements();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.Location#getMaxshape <em>Maxshape</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Maxshape</em>'.
-	 * @see generator.Location#getMaxshape()
-	 * @see #getLocation()
-	 * @generated
-	 */
-	EReference getLocation_Maxshape();
-
-	/**
-	 * Returns the meta object for class '{@link generator.IRoomElement <em>IRoom Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>IRoom Element</em>'.
-	 * @see generator.IRoomElement
-	 * @generated
-	 */
-	EClass getIRoomElement();
-
-	/**
-	 * Returns the meta object for class '{@link generator.ElementShape <em>Element Shape</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Element Shape</em>'.
-	 * @see generator.ElementShape
-	 * @generated
-	 */
-	EClass getElementShape();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.ElementShape#getHeight <em>Height</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Height</em>'.
-	 * @see generator.ElementShape#getHeight()
-	 * @see #getElementShape()
-	 * @generated
-	 */
-	EAttribute getElementShape_Height();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.ElementShape#getWidth <em>Width</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Width</em>'.
-	 * @see generator.ElementShape#getWidth()
-	 * @see #getElementShape()
-	 * @generated
-	 */
-	EAttribute getElementShape_Width();
-
-	/**
-	 * Returns the meta object for class '{@link generator.ElementState <em>Element State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Element State</em>'.
-	 * @see generator.ElementState
-	 * @generated
-	 */
-	EClass getElementState();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.ElementState#getState <em>State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>State</em>'.
-	 * @see generator.ElementState#getState()
-	 * @see #getElementState()
-	 * @generated
-	 */
-	EAttribute getElementState_State();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Dungeon <em>Dungeon</em>}'.
@@ -3098,10 +3315,54 @@ public interface GeneratorPackage extends EPackage {
 	EClass getGameDescription();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generator.GameDescription#getRoomtypes <em>Roomtypes</em>}'.
+	 * Returns the meta object for the containment reference '{@link generator.GameDescription#getElements <em>Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Roomtypes</em>'.
+	 * @return the meta object for the containment reference '<em>Elements</em>'.
+	 * @see generator.GameDescription#getElements()
+	 * @see #getGameDescription()
+	 * @generated
+	 */
+	EReference getGameDescription_Elements();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.GameDescription#getGameplays <em>Gameplays</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Gameplays</em>'.
+	 * @see generator.GameDescription#getGameplays()
+	 * @see #getGameDescription()
+	 * @generated
+	 */
+	EReference getGameDescription_Gameplays();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.GameDescription#getElementtypes <em>Elementtypes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Elementtypes</em>'.
+	 * @see generator.GameDescription#getElementtypes()
+	 * @see #getGameDescription()
+	 * @generated
+	 */
+	EReference getGameDescription_Elementtypes();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.GameDescription#getAbilities <em>Abilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Abilities</em>'.
+	 * @see generator.GameDescription#getAbilities()
+	 * @see #getGameDescription()
+	 * @generated
+	 */
+	EReference getGameDescription_Abilities();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.GameDescription#getRoomtypes <em>Roomtypes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Roomtypes</em>'.
 	 * @see generator.GameDescription#getRoomtypes()
 	 * @see #getGameDescription()
 	 * @generated
@@ -3130,15 +3391,15 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getRoomType_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generator.RoomType#getQuestionPositions <em>Question Positions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link generator.RoomType#getPositions <em>Positions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Question Positions</em>'.
-	 * @see generator.RoomType#getQuestionPositions()
+	 * @return the meta object for the containment reference list '<em>Positions</em>'.
+	 * @see generator.RoomType#getPositions()
 	 * @see #getRoomType()
 	 * @generated
 	 */
-	EReference getRoomType_QuestionPositions();
+	EReference getRoomType_Positions();
 
 	/**
 	 * Returns the meta object for the '{@link generator.RoomType#getDirections() <em>Get Directions</em>}' operation.
@@ -3341,6 +3602,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLearningDomain_Tasktypes();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.LearningDomain#getResponsemodalities <em>Responsemodalities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Responsemodalities</em>'.
+	 * @see generator.LearningDomain#getResponsemodalities()
+	 * @see #getLearningDomain()
+	 * @generated
+	 */
+	EReference getLearningDomain_Responsemodalities();
 
 	/**
 	 * Returns the meta object for class '{@link generator.LearningPath <em>Learning Path</em>}'.
@@ -3706,26 +3978,26 @@ public interface GeneratorPackage extends EPackage {
 	EClass getTaskType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.TaskType#getNbPropositions <em>Nb Propositions</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.TaskType#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nb Propositions</em>'.
-	 * @see generator.TaskType#getNbPropositions()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.TaskType#getName()
 	 * @see #getTaskType()
 	 * @generated
 	 */
-	EAttribute getTaskType_NbPropositions();
+	EAttribute getTaskType_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.TaskType#isEnterResponseAllowed <em>Enter Response Allowed</em>}'.
+	 * Returns the meta object for the reference list '{@link generator.TaskType#getResponsemodalities <em>Responsemodalities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Enter Response Allowed</em>'.
-	 * @see generator.TaskType#isEnterResponseAllowed()
+	 * @return the meta object for the reference list '<em>Responsemodalities</em>'.
+	 * @see generator.TaskType#getResponsemodalities()
 	 * @see #getTaskType()
 	 * @generated
 	 */
-	EAttribute getTaskType_EnterResponseAllowed();
+	EReference getTaskType_Responsemodalities();
 
 	/**
 	 * Returns the meta object for class '{@link generator.FactVerificationType <em>Fact Verification Type</em>}'.
@@ -3951,6 +4223,606 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getQuestion_IncompleteFact();
 
 	/**
+	 * Returns the meta object for class '{@link generator.ResponseModality <em>Response Modality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Response Modality</em>'.
+	 * @see generator.ResponseModality
+	 * @generated
+	 */
+	EClass getResponseModality();
+
+	/**
+	 * Returns the meta object for class '{@link generator.MultipleChoice <em>Multiple Choice</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Multiple Choice</em>'.
+	 * @see generator.MultipleChoice
+	 * @generated
+	 */
+	EClass getMultipleChoice();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MultipleChoice#getNbChoices <em>Nb Choices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Choices</em>'.
+	 * @see generator.MultipleChoice#getNbChoices()
+	 * @see #getMultipleChoice()
+	 * @generated
+	 */
+	EAttribute getMultipleChoice_NbChoices();
+
+	/**
+	 * Returns the meta object for class '{@link generator.EnterResponse <em>Enter Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Enter Response</em>'.
+	 * @see generator.EnterResponse
+	 * @generated
+	 */
+	EClass getEnterResponse();
+
+	/**
+	 * Returns the meta object for class '{@link generator.ElementType <em>Element Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Element Type</em>'.
+	 * @see generator.ElementType
+	 * @generated
+	 */
+	EClass getElementType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.ElementType#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.ElementType#getName()
+	 * @see #getElementType()
+	 * @generated
+	 */
+	EAttribute getElementType_Name();
+
+	/**
+	 * Returns the meta object for class '{@link generator.InteractionEType <em>Interaction EType</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Interaction EType</em>'.
+	 * @see generator.InteractionEType
+	 * @generated
+	 */
+	EClass getInteractionEType();
+
+	/**
+	 * Returns the meta object for the reference list '{@link generator.InteractionEType#getAbilities <em>Abilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Abilities</em>'.
+	 * @see generator.InteractionEType#getAbilities()
+	 * @see #getInteractionEType()
+	 * @generated
+	 */
+	EReference getInteractionEType_Abilities();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Ability <em>Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ability</em>'.
+	 * @see generator.Ability
+	 * @generated
+	 */
+	EClass getAbility();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Ability#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.Ability#getName()
+	 * @see #getAbility()
+	 * @generated
+	 */
+	EAttribute getAbility_Name();
+
+	/**
+	 * Returns the meta object for class '{@link generator.ActiveAbility <em>Active Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Active Ability</em>'.
+	 * @see generator.ActiveAbility
+	 * @generated
+	 */
+	EClass getActiveAbility();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.ActiveAbility#getAbility <em>Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ability</em>'.
+	 * @see generator.ActiveAbility#getAbility()
+	 * @see #getActiveAbility()
+	 * @generated
+	 */
+	EAttribute getActiveAbility_Ability();
+
+	/**
+	 * Returns the meta object for class '{@link generator.PassiveAbility <em>Passive Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Passive Ability</em>'.
+	 * @see generator.PassiveAbility
+	 * @generated
+	 */
+	EClass getPassiveAbility();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.PassiveAbility#getAbility <em>Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ability</em>'.
+	 * @see generator.PassiveAbility#getAbility()
+	 * @see #getPassiveAbility()
+	 * @generated
+	 */
+	EAttribute getPassiveAbility_Ability();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Gameplay <em>Gameplay</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Gameplay</em>'.
+	 * @see generator.Gameplay
+	 * @generated
+	 */
+	EClass getGameplay();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Gameplay#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see generator.Gameplay#getDescription()
+	 * @see #getGameplay()
+	 * @generated
+	 */
+	EAttribute getGameplay_Description();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.Gameplay#getGamerules <em>Gamerules</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Gamerules</em>'.
+	 * @see generator.Gameplay#getGamerules()
+	 * @see #getGameplay()
+	 * @generated
+	 */
+	EReference getGameplay_Gamerules();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.Gameplay#getRequirement <em>Requirement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Requirement</em>'.
+	 * @see generator.Gameplay#getRequirement()
+	 * @see #getGameplay()
+	 * @generated
+	 */
+	EReference getGameplay_Requirement();
+
+	/**
+	 * Returns the meta object for the '{@link generator.Gameplay#isAvailable() <em>Is Available</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Available</em>' operation.
+	 * @see generator.Gameplay#isAvailable()
+	 * @generated
+	 */
+	EOperation getGameplay__IsAvailable();
+
+	/**
+	 * Returns the meta object for class '{@link generator.GameRule <em>Game Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Game Rule</em>'.
+	 * @see generator.GameRule
+	 * @generated
+	 */
+	EClass getGameRule();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.GameRule#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see generator.GameRule#getType()
+	 * @see #getGameRule()
+	 * @generated
+	 */
+	EAttribute getGameRule_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.GameRule#getAbility2activate <em>Ability2activate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ability2activate</em>'.
+	 * @see generator.GameRule#getAbility2activate()
+	 * @see #getGameRule()
+	 * @generated
+	 */
+	EAttribute getGameRule_Ability2activate();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.GameRule#getInteractionelementtype <em>Interactionelementtype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Interactionelementtype</em>'.
+	 * @see generator.GameRule#getInteractionelementtype()
+	 * @see #getGameRule()
+	 * @generated
+	 */
+	EReference getGameRule_Interactionelementtype();
+
+	/**
+	 * Returns the meta object for class '{@link generator.BuyableElement <em>Buyable Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Buyable Element</em>'.
+	 * @see generator.BuyableElement
+	 * @generated
+	 */
+	EClass getBuyableElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.BuyableElement#isBought <em>Bought</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bought</em>'.
+	 * @see generator.BuyableElement#isBought()
+	 * @see #getBuyableElement()
+	 * @generated
+	 */
+	EAttribute getBuyableElement_Bought();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.BuyableElement#isActivated <em>Activated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Activated</em>'.
+	 * @see generator.BuyableElement#isActivated()
+	 * @see #getBuyableElement()
+	 * @generated
+	 */
+	EAttribute getBuyableElement_Activated();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Element <em>Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Element</em>'.
+	 * @see generator.Element
+	 * @generated
+	 */
+	EClass getElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Element#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.Element#getName()
+	 * @see #getElement()
+	 * @generated
+	 */
+	EAttribute getElement_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.Element#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see generator.Element#getType()
+	 * @see #getElement()
+	 * @generated
+	 */
+	EReference getElement_Type();
+
+	/**
+	 * Returns the meta object for class '{@link generator.AvatarEquipment <em>Avatar Equipment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Avatar Equipment</em>'.
+	 * @see generator.AvatarEquipment
+	 * @generated
+	 */
+	EClass getAvatarEquipment();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Elements <em>Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Elements</em>'.
+	 * @see generator.Elements
+	 * @generated
+	 */
+	EClass getElements();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.Elements#getElements <em>Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Elements</em>'.
+	 * @see generator.Elements#getElements()
+	 * @see #getElements()
+	 * @generated
+	 */
+	EReference getElements_Elements();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Gameplays <em>Gameplays</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Gameplays</em>'.
+	 * @see generator.Gameplays
+	 * @generated
+	 */
+	EClass getGameplays();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.Gameplays#getGameplays <em>Gameplays</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Gameplays</em>'.
+	 * @see generator.Gameplays#getGameplays()
+	 * @see #getGameplays()
+	 * @generated
+	 */
+	EReference getGameplays_Gameplays();
+
+	/**
+	 * Returns the meta object for class '{@link generator.ElementTypes <em>Element Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Element Types</em>'.
+	 * @see generator.ElementTypes
+	 * @generated
+	 */
+	EClass getElementTypes();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.ElementTypes#getElementtypes <em>Elementtypes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Elementtypes</em>'.
+	 * @see generator.ElementTypes#getElementtypes()
+	 * @see #getElementTypes()
+	 * @generated
+	 */
+	EReference getElementTypes_Elementtypes();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Abilities <em>Abilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abilities</em>'.
+	 * @see generator.Abilities
+	 * @generated
+	 */
+	EClass getAbilities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.Abilities#getAbilities <em>Abilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Abilities</em>'.
+	 * @see generator.Abilities#getAbilities()
+	 * @see #getAbilities()
+	 * @generated
+	 */
+	EReference getAbilities_Abilities();
+
+	/**
+	 * Returns the meta object for class '{@link generator.RoomTypes <em>Room Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Room Types</em>'.
+	 * @see generator.RoomTypes
+	 * @generated
+	 */
+	EClass getRoomTypes();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.RoomTypes#getRoomtypes <em>Roomtypes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Roomtypes</em>'.
+	 * @see generator.RoomTypes#getRoomtypes()
+	 * @see #getRoomTypes()
+	 * @generated
+	 */
+	EReference getRoomTypes_Roomtypes();
+
+	/**
+	 * Returns the meta object for class '{@link generator.EquipmentEType <em>Equipment EType</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Equipment EType</em>'.
+	 * @see generator.EquipmentEType
+	 * @generated
+	 */
+	EClass getEquipmentEType();
+
+	/**
+	 * Returns the meta object for class '{@link generator.ElementPosition <em>Element Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Element Position</em>'.
+	 * @see generator.ElementPosition
+	 * @generated
+	 */
+	EClass getElementPosition();
+
+	/**
+	 * Returns the meta object for the reference list '{@link generator.ElementPosition#getAutorizedETypes <em>Autorized ETypes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Autorized ETypes</em>'.
+	 * @see generator.ElementPosition#getAutorizedETypes()
+	 * @see #getElementPosition()
+	 * @generated
+	 */
+	EReference getElementPosition_AutorizedETypes();
+
+	/**
+	 * Returns the meta object for class '{@link generator.MappingModel <em>Mapping Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Mapping Model</em>'.
+	 * @see generator.MappingModel
+	 * @generated
+	 */
+	EClass getMappingModel();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.MappingModel#getCompliancerelations <em>Compliancerelations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Compliancerelations</em>'.
+	 * @see generator.MappingModel#getCompliancerelations()
+	 * @see #getMappingModel()
+	 * @generated
+	 */
+	EReference getMappingModel_Compliancerelations();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Modality2RoomType <em>Modality2 Room Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Modality2 Room Type</em>'.
+	 * @see generator.Modality2RoomType
+	 * @generated
+	 */
+	EClass getModality2RoomType();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.Modality2RoomType#getResponsemodality <em>Responsemodality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Responsemodality</em>'.
+	 * @see generator.Modality2RoomType#getResponsemodality()
+	 * @see #getModality2RoomType()
+	 * @generated
+	 */
+	EReference getModality2RoomType_Responsemodality();
+
+	/**
+	 * Returns the meta object for the reference list '{@link generator.Modality2RoomType#getRoomtype <em>Roomtype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Roomtype</em>'.
+	 * @see generator.Modality2RoomType#getRoomtype()
+	 * @see #getModality2RoomType()
+	 * @generated
+	 */
+	EReference getModality2RoomType_Roomtype();
+
+	/**
+	 * Returns the meta object for class '{@link generator.ComplianceRelations <em>Compliance Relations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Compliance Relations</em>'.
+	 * @see generator.ComplianceRelations
+	 * @generated
+	 */
+	EClass getComplianceRelations();
+
+	/**
+	 * Returns the meta object for class '{@link generator.TaskType2Gameplay <em>Task Type2 Gameplay</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Task Type2 Gameplay</em>'.
+	 * @see generator.TaskType2Gameplay
+	 * @generated
+	 */
+	EClass getTaskType2Gameplay();
+
+	/**
+	 * Returns the meta object for the reference list '{@link generator.TaskType2Gameplay#getGameplay <em>Gameplay</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Gameplay</em>'.
+	 * @see generator.TaskType2Gameplay#getGameplay()
+	 * @see #getTaskType2Gameplay()
+	 * @generated
+	 */
+	EReference getTaskType2Gameplay_Gameplay();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.TaskType2Gameplay#getTasktype <em>Tasktype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Tasktype</em>'.
+	 * @see generator.TaskType2Gameplay#getTasktype()
+	 * @see #getTaskType2Gameplay()
+	 * @generated
+	 */
+	EReference getTaskType2Gameplay_Tasktype();
+
+	/**
+	 * Returns the meta object for class '{@link generator.ResponseModalities <em>Response Modalities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Response Modalities</em>'.
+	 * @see generator.ResponseModalities
+	 * @generated
+	 */
+	EClass getResponseModalities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.ResponseModalities#getResponsemodalities <em>Responsemodalities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Responsemodalities</em>'.
+	 * @see generator.ResponseModalities#getResponsemodalities()
+	 * @see #getResponseModalities()
+	 * @generated
+	 */
+	EReference getResponseModalities_Responsemodalities();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Gameplay2RoomType <em>Gameplay2 Room Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Gameplay2 Room Type</em>'.
+	 * @see generator.Gameplay2RoomType
+	 * @generated
+	 */
+	EClass getGameplay2RoomType();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.Gameplay2RoomType#getRoomtype <em>Roomtype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Roomtype</em>'.
+	 * @see generator.Gameplay2RoomType#getRoomtype()
+	 * @see #getGameplay2RoomType()
+	 * @generated
+	 */
+	EReference getGameplay2RoomType_Roomtype();
+
+	/**
+	 * Returns the meta object for the reference list '{@link generator.Gameplay2RoomType#getGameplay <em>Gameplay</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Gameplay</em>'.
+	 * @see generator.Gameplay2RoomType#getGameplay()
+	 * @see #getGameplay2RoomType()
+	 * @generated
+	 */
+	EReference getGameplay2RoomType_Gameplay();
+
+	/**
 	 * Returns the meta object for enum '{@link generator.GPBricks <em>GP Bricks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3959,26 +4831,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getGPBricks();
-
-	/**
-	 * Returns the meta object for enum '{@link generator.AvatarActions <em>Avatar Actions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Avatar Actions</em>'.
-	 * @see generator.AvatarActions
-	 * @generated
-	 */
-	EEnum getAvatarActions();
-
-	/**
-	 * Returns the meta object for enum '{@link generator.RoomPaths <em>Room Paths</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Room Paths</em>'.
-	 * @see generator.RoomPaths
-	 * @generated
-	 */
-	EEnum getRoomPaths();
 
 	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
@@ -4049,6 +4901,26 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getOrder();
+
+	/**
+	 * Returns the meta object for enum '{@link generator.EPassiveAbility <em>EPassive Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>EPassive Ability</em>'.
+	 * @see generator.EPassiveAbility
+	 * @generated
+	 */
+	EEnum getEPassiveAbility();
+
+	/**
+	 * Returns the meta object for enum '{@link generator.EActiveAbility <em>EActive Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>EActive Ability</em>'.
+	 * @see generator.EActiveAbility
+	 * @generated
+	 */
+	EEnum getEActiveAbility();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4152,308 +5024,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference KNOWLEDGE__KNOWLEDGEFACTS = eINSTANCE.getKnowledge_Knowledgefacts();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.GameContentImpl <em>Game Content</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.GameContentImpl
-		 * @see generator.impl.GeneratorPackageImpl#getGameContent()
-		 * @generated
-		 */
-		EClass GAME_CONTENT = eINSTANCE.getGameContent();
-
-		/**
-		 * The meta object literal for the '<em><b>Gameplays</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GAME_CONTENT__GAMEPLAYS = eINSTANCE.getGameContent_Gameplays();
-
-		/**
-		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GAME_CONTENT__ELEMENTS = eINSTANCE.getGameContent_Elements();
-
-		/**
-		 * The meta object literal for the '<em><b>Gameobjectives</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GAME_CONTENT__GAMEOBJECTIVES = eINSTANCE.getGameContent_Gameobjectives();
-
-		/**
-		 * The meta object literal for the '<em><b>Roomtype</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GAME_CONTENT__ROOMTYPE = eINSTANCE.getGameContent_Roomtype();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.GameplayImpl <em>Gameplay</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.GameplayImpl
-		 * @see generator.impl.GeneratorPackageImpl#getGameplay()
-		 * @generated
-		 */
-		EClass GAMEPLAY = eINSTANCE.getGameplay();
-
-		/**
-		 * The meta object literal for the '<em><b>Coregamerules</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GAMEPLAY__COREGAMERULES = eINSTANCE.getGameplay_Coregamerules();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GAMEPLAY__DESCRIPTION = eINSTANCE.getGameplay_Description();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.CoreGameRuleImpl <em>Core Game Rule</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.CoreGameRuleImpl
-		 * @see generator.impl.GeneratorPackageImpl#getCoreGameRule()
-		 * @generated
-		 */
-		EClass CORE_GAME_RULE = eINSTANCE.getCoreGameRule();
-
-		/**
-		 * The meta object literal for the '<em><b>Rule Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CORE_GAME_RULE__RULE_TYPE = eINSTANCE.getCoreGameRule_RuleType();
-
-		/**
-		 * The meta object literal for the '<em><b>Action To Do</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CORE_GAME_RULE__ACTION_TO_DO = eINSTANCE.getCoreGameRule_ActionToDo();
-
-		/**
-		 * The meta object literal for the '<em><b>Element</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CORE_GAME_RULE__ELEMENT = eINSTANCE.getCoreGameRule_Element();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.ElementTypeImpl <em>Element Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.ElementTypeImpl
-		 * @see generator.impl.GeneratorPackageImpl#getElementType()
-		 * @generated
-		 */
-		EClass ELEMENT_TYPE = eINSTANCE.getElementType();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ELEMENT_TYPE__NAME = eINSTANCE.getElementType_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Accepted Actions</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ELEMENT_TYPE__ACCEPTED_ACTIONS = eINSTANCE.getElementType_AcceptedActions();
-
-		/**
-		 * The meta object literal for the '<em><b>Shape</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ELEMENT_TYPE__SHAPE = eINSTANCE.getElementType_Shape();
-
-		/**
-		 * The meta object literal for the '<em><b>State</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ELEMENT_TYPE__STATE = eINSTANCE.getElementType_State();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.GameObjectiveImpl <em>Game Objective</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.GameObjectiveImpl
-		 * @see generator.impl.GeneratorPackageImpl#getGameObjective()
-		 * @generated
-		 */
-		EClass GAME_OBJECTIVE = eINSTANCE.getGameObjective();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GAME_OBJECTIVE__DESCRIPTION = eINSTANCE.getGameObjective_Description();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.RoomType2Impl <em>Room Type2</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.RoomType2Impl
-		 * @see generator.impl.GeneratorPackageImpl#getRoomType2()
-		 * @generated
-		 */
-		EClass ROOM_TYPE2 = eINSTANCE.getRoomType2();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ROOM_TYPE2__DESCRIPTION = eINSTANCE.getRoomType2_Description();
-
-		/**
-		 * The meta object literal for the '<em><b>Acceptedfloors</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM_TYPE2__ACCEPTEDFLOORS = eINSTANCE.getRoomType2_Acceptedfloors();
-
-		/**
-		 * The meta object literal for the '<em><b>Paths</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ROOM_TYPE2__PATHS = eINSTANCE.getRoomType2_Paths();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.FloorImpl <em>Floor</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.FloorImpl
-		 * @see generator.impl.GeneratorPackageImpl#getFloor()
-		 * @generated
-		 */
-		EClass FLOOR = eINSTANCE.getFloor();
-
-		/**
-		 * The meta object literal for the '<em><b>Locations</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FLOOR__LOCATIONS = eINSTANCE.getFloor_Locations();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FLOOR__DESCRIPTION = eINSTANCE.getFloor_Description();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.LocationImpl <em>Location</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.LocationImpl
-		 * @see generator.impl.GeneratorPackageImpl#getLocation()
-		 * @generated
-		 */
-		EClass LOCATION = eINSTANCE.getLocation();
-
-		/**
-		 * The meta object literal for the '<em><b>Accepted Elements</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOCATION__ACCEPTED_ELEMENTS = eINSTANCE.getLocation_AcceptedElements();
-
-		/**
-		 * The meta object literal for the '<em><b>Maxshape</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOCATION__MAXSHAPE = eINSTANCE.getLocation_Maxshape();
-
-		/**
-		 * The meta object literal for the '{@link generator.IRoomElement <em>IRoom Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.IRoomElement
-		 * @see generator.impl.GeneratorPackageImpl#getIRoomElement()
-		 * @generated
-		 */
-		EClass IROOM_ELEMENT = eINSTANCE.getIRoomElement();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.ElementShapeImpl <em>Element Shape</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.ElementShapeImpl
-		 * @see generator.impl.GeneratorPackageImpl#getElementShape()
-		 * @generated
-		 */
-		EClass ELEMENT_SHAPE = eINSTANCE.getElementShape();
-
-		/**
-		 * The meta object literal for the '<em><b>Height</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ELEMENT_SHAPE__HEIGHT = eINSTANCE.getElementShape_Height();
-
-		/**
-		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ELEMENT_SHAPE__WIDTH = eINSTANCE.getElementShape_Width();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.ElementStateImpl <em>Element State</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.ElementStateImpl
-		 * @see generator.impl.GeneratorPackageImpl#getElementState()
-		 * @generated
-		 */
-		EClass ELEMENT_STATE = eINSTANCE.getElementState();
-
-		/**
-		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ELEMENT_STATE__STATE = eINSTANCE.getElementState_State();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.DungeonImpl <em>Dungeon</em>}' class.
@@ -4566,7 +5136,39 @@ public interface GeneratorPackage extends EPackage {
 		EClass GAME_DESCRIPTION = eINSTANCE.getGameDescription();
 
 		/**
-		 * The meta object literal for the '<em><b>Roomtypes</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAME_DESCRIPTION__ELEMENTS = eINSTANCE.getGameDescription_Elements();
+
+		/**
+		 * The meta object literal for the '<em><b>Gameplays</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAME_DESCRIPTION__GAMEPLAYS = eINSTANCE.getGameDescription_Gameplays();
+
+		/**
+		 * The meta object literal for the '<em><b>Elementtypes</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAME_DESCRIPTION__ELEMENTTYPES = eINSTANCE.getGameDescription_Elementtypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Abilities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAME_DESCRIPTION__ABILITIES = eINSTANCE.getGameDescription_Abilities();
+
+		/**
+		 * The meta object literal for the '<em><b>Roomtypes</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4592,12 +5194,12 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute ROOM_TYPE__NAME = eINSTANCE.getRoomType_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Question Positions</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Positions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROOM_TYPE__QUESTION_POSITIONS = eINSTANCE.getRoomType_QuestionPositions();
+		EReference ROOM_TYPE__POSITIONS = eINSTANCE.getRoomType_Positions();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Directions</b></em>' operation.
@@ -4762,6 +5364,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LEARNING_DOMAIN__TASKTYPES = eINSTANCE.getLearningDomain_Tasktypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Responsemodalities</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEARNING_DOMAIN__RESPONSEMODALITIES = eINSTANCE.getLearningDomain_Responsemodalities();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.LearningPathImpl <em>Learning Path</em>}' class.
@@ -5058,20 +5668,20 @@ public interface GeneratorPackage extends EPackage {
 		EClass TASK_TYPE = eINSTANCE.getTaskType();
 
 		/**
-		 * The meta object literal for the '<em><b>Nb Propositions</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TASK_TYPE__NB_PROPOSITIONS = eINSTANCE.getTaskType_NbPropositions();
+		EAttribute TASK_TYPE__NAME = eINSTANCE.getTaskType_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Enter Response Allowed</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Responsemodalities</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TASK_TYPE__ENTER_RESPONSE_ALLOWED = eINSTANCE.getTaskType_EnterResponseAllowed();
+		EReference TASK_TYPE__RESPONSEMODALITIES = eINSTANCE.getTaskType_Responsemodalities();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.FactVerificationTypeImpl <em>Fact Verification Type</em>}' class.
@@ -5259,6 +5869,514 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute QUESTION__INCOMPLETE_FACT = eINSTANCE.getQuestion_IncompleteFact();
 
 		/**
+		 * The meta object literal for the '{@link generator.impl.ResponseModalityImpl <em>Response Modality</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ResponseModalityImpl
+		 * @see generator.impl.GeneratorPackageImpl#getResponseModality()
+		 * @generated
+		 */
+		EClass RESPONSE_MODALITY = eINSTANCE.getResponseModality();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MultipleChoiceImpl <em>Multiple Choice</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MultipleChoiceImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMultipleChoice()
+		 * @generated
+		 */
+		EClass MULTIPLE_CHOICE = eINSTANCE.getMultipleChoice();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Choices</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MULTIPLE_CHOICE__NB_CHOICES = eINSTANCE.getMultipleChoice_NbChoices();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.EnterResponseImpl <em>Enter Response</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.EnterResponseImpl
+		 * @see generator.impl.GeneratorPackageImpl#getEnterResponse()
+		 * @generated
+		 */
+		EClass ENTER_RESPONSE = eINSTANCE.getEnterResponse();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ElementTypeImpl <em>Element Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ElementTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getElementType()
+		 * @generated
+		 */
+		EClass ELEMENT_TYPE = eINSTANCE.getElementType();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ELEMENT_TYPE__NAME = eINSTANCE.getElementType_Name();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.InteractionETypeImpl <em>Interaction EType</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.InteractionETypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getInteractionEType()
+		 * @generated
+		 */
+		EClass INTERACTION_ETYPE = eINSTANCE.getInteractionEType();
+
+		/**
+		 * The meta object literal for the '<em><b>Abilities</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERACTION_ETYPE__ABILITIES = eINSTANCE.getInteractionEType_Abilities();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.AbilityImpl <em>Ability</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.AbilityImpl
+		 * @see generator.impl.GeneratorPackageImpl#getAbility()
+		 * @generated
+		 */
+		EClass ABILITY = eINSTANCE.getAbility();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABILITY__NAME = eINSTANCE.getAbility_Name();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ActiveAbilityImpl <em>Active Ability</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ActiveAbilityImpl
+		 * @see generator.impl.GeneratorPackageImpl#getActiveAbility()
+		 * @generated
+		 */
+		EClass ACTIVE_ABILITY = eINSTANCE.getActiveAbility();
+
+		/**
+		 * The meta object literal for the '<em><b>Ability</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTIVE_ABILITY__ABILITY = eINSTANCE.getActiveAbility_Ability();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.PassiveAbilityImpl <em>Passive Ability</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.PassiveAbilityImpl
+		 * @see generator.impl.GeneratorPackageImpl#getPassiveAbility()
+		 * @generated
+		 */
+		EClass PASSIVE_ABILITY = eINSTANCE.getPassiveAbility();
+
+		/**
+		 * The meta object literal for the '<em><b>Ability</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PASSIVE_ABILITY__ABILITY = eINSTANCE.getPassiveAbility_Ability();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.GameplayImpl <em>Gameplay</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.GameplayImpl
+		 * @see generator.impl.GeneratorPackageImpl#getGameplay()
+		 * @generated
+		 */
+		EClass GAMEPLAY = eINSTANCE.getGameplay();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GAMEPLAY__DESCRIPTION = eINSTANCE.getGameplay_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Gamerules</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAMEPLAY__GAMERULES = eINSTANCE.getGameplay_Gamerules();
+
+		/**
+		 * The meta object literal for the '<em><b>Requirement</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAMEPLAY__REQUIREMENT = eINSTANCE.getGameplay_Requirement();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Available</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GAMEPLAY___IS_AVAILABLE = eINSTANCE.getGameplay__IsAvailable();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.GameRuleImpl <em>Game Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.GameRuleImpl
+		 * @see generator.impl.GeneratorPackageImpl#getGameRule()
+		 * @generated
+		 */
+		EClass GAME_RULE = eINSTANCE.getGameRule();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GAME_RULE__TYPE = eINSTANCE.getGameRule_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Ability2activate</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GAME_RULE__ABILITY2ACTIVATE = eINSTANCE.getGameRule_Ability2activate();
+
+		/**
+		 * The meta object literal for the '<em><b>Interactionelementtype</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAME_RULE__INTERACTIONELEMENTTYPE = eINSTANCE.getGameRule_Interactionelementtype();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.BuyableElementImpl <em>Buyable Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.BuyableElementImpl
+		 * @see generator.impl.GeneratorPackageImpl#getBuyableElement()
+		 * @generated
+		 */
+		EClass BUYABLE_ELEMENT = eINSTANCE.getBuyableElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Bought</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUYABLE_ELEMENT__BOUGHT = eINSTANCE.getBuyableElement_Bought();
+
+		/**
+		 * The meta object literal for the '<em><b>Activated</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUYABLE_ELEMENT__ACTIVATED = eINSTANCE.getBuyableElement_Activated();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ElementImpl <em>Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ElementImpl
+		 * @see generator.impl.GeneratorPackageImpl#getElement()
+		 * @generated
+		 */
+		EClass ELEMENT = eINSTANCE.getElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ELEMENT__NAME = eINSTANCE.getElement_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELEMENT__TYPE = eINSTANCE.getElement_Type();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.AvatarEquipmentImpl <em>Avatar Equipment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.AvatarEquipmentImpl
+		 * @see generator.impl.GeneratorPackageImpl#getAvatarEquipment()
+		 * @generated
+		 */
+		EClass AVATAR_EQUIPMENT = eINSTANCE.getAvatarEquipment();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ElementsImpl <em>Elements</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ElementsImpl
+		 * @see generator.impl.GeneratorPackageImpl#getElements()
+		 * @generated
+		 */
+		EClass ELEMENTS = eINSTANCE.getElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELEMENTS__ELEMENTS = eINSTANCE.getElements_Elements();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.GameplaysImpl <em>Gameplays</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.GameplaysImpl
+		 * @see generator.impl.GeneratorPackageImpl#getGameplays()
+		 * @generated
+		 */
+		EClass GAMEPLAYS = eINSTANCE.getGameplays();
+
+		/**
+		 * The meta object literal for the '<em><b>Gameplays</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAMEPLAYS__GAMEPLAYS = eINSTANCE.getGameplays_Gameplays();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ElementTypesImpl <em>Element Types</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ElementTypesImpl
+		 * @see generator.impl.GeneratorPackageImpl#getElementTypes()
+		 * @generated
+		 */
+		EClass ELEMENT_TYPES = eINSTANCE.getElementTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Elementtypes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELEMENT_TYPES__ELEMENTTYPES = eINSTANCE.getElementTypes_Elementtypes();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.AbilitiesImpl <em>Abilities</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.AbilitiesImpl
+		 * @see generator.impl.GeneratorPackageImpl#getAbilities()
+		 * @generated
+		 */
+		EClass ABILITIES = eINSTANCE.getAbilities();
+
+		/**
+		 * The meta object literal for the '<em><b>Abilities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABILITIES__ABILITIES = eINSTANCE.getAbilities_Abilities();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.RoomTypesImpl <em>Room Types</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.RoomTypesImpl
+		 * @see generator.impl.GeneratorPackageImpl#getRoomTypes()
+		 * @generated
+		 */
+		EClass ROOM_TYPES = eINSTANCE.getRoomTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Roomtypes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROOM_TYPES__ROOMTYPES = eINSTANCE.getRoomTypes_Roomtypes();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.EquipmentETypeImpl <em>Equipment EType</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.EquipmentETypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getEquipmentEType()
+		 * @generated
+		 */
+		EClass EQUIPMENT_ETYPE = eINSTANCE.getEquipmentEType();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ElementPositionImpl <em>Element Position</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ElementPositionImpl
+		 * @see generator.impl.GeneratorPackageImpl#getElementPosition()
+		 * @generated
+		 */
+		EClass ELEMENT_POSITION = eINSTANCE.getElementPosition();
+
+		/**
+		 * The meta object literal for the '<em><b>Autorized ETypes</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELEMENT_POSITION__AUTORIZED_ETYPES = eINSTANCE.getElementPosition_AutorizedETypes();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MappingModelImpl <em>Mapping Model</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MappingModelImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMappingModel()
+		 * @generated
+		 */
+		EClass MAPPING_MODEL = eINSTANCE.getMappingModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Compliancerelations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MAPPING_MODEL__COMPLIANCERELATIONS = eINSTANCE.getMappingModel_Compliancerelations();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.Modality2RoomTypeImpl <em>Modality2 Room Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.Modality2RoomTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getModality2RoomType()
+		 * @generated
+		 */
+		EClass MODALITY2_ROOM_TYPE = eINSTANCE.getModality2RoomType();
+
+		/**
+		 * The meta object literal for the '<em><b>Responsemodality</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODALITY2_ROOM_TYPE__RESPONSEMODALITY = eINSTANCE.getModality2RoomType_Responsemodality();
+
+		/**
+		 * The meta object literal for the '<em><b>Roomtype</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODALITY2_ROOM_TYPE__ROOMTYPE = eINSTANCE.getModality2RoomType_Roomtype();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ComplianceRelationsImpl <em>Compliance Relations</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ComplianceRelationsImpl
+		 * @see generator.impl.GeneratorPackageImpl#getComplianceRelations()
+		 * @generated
+		 */
+		EClass COMPLIANCE_RELATIONS = eINSTANCE.getComplianceRelations();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.TaskType2GameplayImpl <em>Task Type2 Gameplay</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.TaskType2GameplayImpl
+		 * @see generator.impl.GeneratorPackageImpl#getTaskType2Gameplay()
+		 * @generated
+		 */
+		EClass TASK_TYPE2_GAMEPLAY = eINSTANCE.getTaskType2Gameplay();
+
+		/**
+		 * The meta object literal for the '<em><b>Gameplay</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_TYPE2_GAMEPLAY__GAMEPLAY = eINSTANCE.getTaskType2Gameplay_Gameplay();
+
+		/**
+		 * The meta object literal for the '<em><b>Tasktype</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_TYPE2_GAMEPLAY__TASKTYPE = eINSTANCE.getTaskType2Gameplay_Tasktype();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ResponseModalitiesImpl <em>Response Modalities</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ResponseModalitiesImpl
+		 * @see generator.impl.GeneratorPackageImpl#getResponseModalities()
+		 * @generated
+		 */
+		EClass RESPONSE_MODALITIES = eINSTANCE.getResponseModalities();
+
+		/**
+		 * The meta object literal for the '<em><b>Responsemodalities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESPONSE_MODALITIES__RESPONSEMODALITIES = eINSTANCE.getResponseModalities_Responsemodalities();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.Gameplay2RoomTypeImpl <em>Gameplay2 Room Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.Gameplay2RoomTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getGameplay2RoomType()
+		 * @generated
+		 */
+		EClass GAMEPLAY2_ROOM_TYPE = eINSTANCE.getGameplay2RoomType();
+
+		/**
+		 * The meta object literal for the '<em><b>Roomtype</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAMEPLAY2_ROOM_TYPE__ROOMTYPE = eINSTANCE.getGameplay2RoomType_Roomtype();
+
+		/**
+		 * The meta object literal for the '<em><b>Gameplay</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAMEPLAY2_ROOM_TYPE__GAMEPLAY = eINSTANCE.getGameplay2RoomType_Gameplay();
+
+		/**
 		 * The meta object literal for the '{@link generator.GPBricks <em>GP Bricks</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5267,26 +6385,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum GP_BRICKS = eINSTANCE.getGPBricks();
-
-		/**
-		 * The meta object literal for the '{@link generator.AvatarActions <em>Avatar Actions</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.AvatarActions
-		 * @see generator.impl.GeneratorPackageImpl#getAvatarActions()
-		 * @generated
-		 */
-		EEnum AVATAR_ACTIONS = eINSTANCE.getAvatarActions();
-
-		/**
-		 * The meta object literal for the '{@link generator.RoomPaths <em>Room Paths</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.RoomPaths
-		 * @see generator.impl.GeneratorPackageImpl#getRoomPaths()
-		 * @generated
-		 */
-		EEnum ROOM_PATHS = eINSTANCE.getRoomPaths();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.
@@ -5357,6 +6455,26 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ORDER = eINSTANCE.getOrder();
+
+		/**
+		 * The meta object literal for the '{@link generator.EPassiveAbility <em>EPassive Ability</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.EPassiveAbility
+		 * @see generator.impl.GeneratorPackageImpl#getEPassiveAbility()
+		 * @generated
+		 */
+		EEnum EPASSIVE_ABILITY = eINSTANCE.getEPassiveAbility();
+
+		/**
+		 * The meta object literal for the '{@link generator.EActiveAbility <em>EActive Ability</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.EActiveAbility
+		 * @see generator.impl.GeneratorPackageImpl#getEActiveAbility()
+		 * @generated
+		 */
+		EEnum EACTIVE_ABILITY = eINSTANCE.getEActiveAbility();
 
 	}
 

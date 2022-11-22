@@ -49,96 +49,6 @@ public interface GeneratorFactory extends EFactory {
 	Knowledge createKnowledge();
 
 	/**
-	 * Returns a new object of class '<em>Game Content</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Game Content</em>'.
-	 * @generated
-	 */
-	GameContent createGameContent();
-
-	/**
-	 * Returns a new object of class '<em>Gameplay</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Gameplay</em>'.
-	 * @generated
-	 */
-	Gameplay createGameplay();
-
-	/**
-	 * Returns a new object of class '<em>Core Game Rule</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Core Game Rule</em>'.
-	 * @generated
-	 */
-	CoreGameRule createCoreGameRule();
-
-	/**
-	 * Returns a new object of class '<em>Element Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Element Type</em>'.
-	 * @generated
-	 */
-	ElementType createElementType();
-
-	/**
-	 * Returns a new object of class '<em>Game Objective</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Game Objective</em>'.
-	 * @generated
-	 */
-	GameObjective createGameObjective();
-
-	/**
-	 * Returns a new object of class '<em>Room Type2</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Room Type2</em>'.
-	 * @generated
-	 */
-	RoomType2 createRoomType2();
-
-	/**
-	 * Returns a new object of class '<em>Floor</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Floor</em>'.
-	 * @generated
-	 */
-	Floor createFloor();
-
-	/**
-	 * Returns a new object of class '<em>Location</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Location</em>'.
-	 * @generated
-	 */
-	Location createLocation();
-
-	/**
-	 * Returns a new object of class '<em>Element Shape</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Element Shape</em>'.
-	 * @generated
-	 */
-	ElementShape createElementShape();
-
-	/**
-	 * Returns a new object of class '<em>Element State</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Element State</em>'.
-	 * @generated
-	 */
-	ElementState createElementState();
-
-	/**
 	 * Returns a new object of class '<em>Dungeon</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -362,6 +272,195 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	Question createQuestion();
+
+	/**
+	 * Returns a new object of class '<em>Multiple Choice</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Multiple Choice</em>'.
+	 * @generated
+	 */
+	MultipleChoice createMultipleChoice();
+
+	/**
+	 * Returns a new object of class '<em>Enter Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Enter Response</em>'.
+	 * @generated
+	 */
+	EnterResponse createEnterResponse();
+
+	/**
+	 * Returns a new object of class '<em>Interaction EType</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Interaction EType</em>'.
+	 * @generated
+	 */
+	InteractionEType createInteractionEType();
+
+	/**
+	 * Returns a new object of class '<em>Active Ability</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Active Ability</em>'.
+	 * @generated
+	 */
+	ActiveAbility createActiveAbility();
+
+	/**
+	 * Returns a new object of class '<em>Passive Ability</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Passive Ability</em>'.
+	 * @generated
+	 */
+	PassiveAbility createPassiveAbility();
+
+	/**
+	 * Returns a new object of class '<em>Gameplay</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Gameplay</em>'.
+	 * @generated
+	 */
+	Gameplay createGameplay();
+
+	/**
+	 * Returns a new object of class '<em>Game Rule</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Game Rule</em>'.
+	 * @generated
+	 */
+	GameRule createGameRule();
+
+	/**
+	 * Returns a new object of class '<em>Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Element</em>'.
+	 * @generated
+	 */
+	Element createElement();
+
+	/**
+	 * Returns a new object of class '<em>Avatar Equipment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Avatar Equipment</em>'.
+	 * @generated
+	 */
+	AvatarEquipment createAvatarEquipment();
+
+	/**
+	 * Returns a new object of class '<em>Elements</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Elements</em>'.
+	 * @generated
+	 */
+	Elements createElements();
+
+	/**
+	 * Returns a new object of class '<em>Gameplays</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Gameplays</em>'.
+	 * @generated
+	 */
+	Gameplays createGameplays();
+
+	/**
+	 * Returns a new object of class '<em>Element Types</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Element Types</em>'.
+	 * @generated
+	 */
+	ElementTypes createElementTypes();
+
+	/**
+	 * Returns a new object of class '<em>Abilities</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Abilities</em>'.
+	 * @generated
+	 */
+	Abilities createAbilities();
+
+	/**
+	 * Returns a new object of class '<em>Room Types</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Room Types</em>'.
+	 * @generated
+	 */
+	RoomTypes createRoomTypes();
+
+	/**
+	 * Returns a new object of class '<em>Equipment EType</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Equipment EType</em>'.
+	 * @generated
+	 */
+	EquipmentEType createEquipmentEType();
+
+	/**
+	 * Returns a new object of class '<em>Element Position</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Element Position</em>'.
+	 * @generated
+	 */
+	ElementPosition createElementPosition();
+
+	/**
+	 * Returns a new object of class '<em>Mapping Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Mapping Model</em>'.
+	 * @generated
+	 */
+	MappingModel createMappingModel();
+
+	/**
+	 * Returns a new object of class '<em>Modality2 Room Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Modality2 Room Type</em>'.
+	 * @generated
+	 */
+	Modality2RoomType createModality2RoomType();
+
+	/**
+	 * Returns a new object of class '<em>Task Type2 Gameplay</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Task Type2 Gameplay</em>'.
+	 * @generated
+	 */
+	TaskType2Gameplay createTaskType2Gameplay();
+
+	/**
+	 * Returns a new object of class '<em>Response Modalities</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Response Modalities</em>'.
+	 * @generated
+	 */
+	ResponseModalities createResponseModalities();
+
+	/**
+	 * Returns a new object of class '<em>Gameplay2 Room Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Gameplay2 Room Type</em>'.
+	 * @generated
+	 */
+	Gameplay2RoomType createGameplay2RoomType();
 
 	/**
 	 * Returns the package supported by this factory.

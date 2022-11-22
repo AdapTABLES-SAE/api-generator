@@ -2,9 +2,12 @@
  */
 package generator.impl;
 
-import generator.CoreGameRule;
+import generator.AvatarEquipment;
+import generator.GameRule;
 import generator.Gameplay;
 import generator.GeneratorPackage;
+
+import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 
@@ -30,23 +33,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.GameplayImpl#getCoregamerules <em>Coregamerules</em>}</li>
  *   <li>{@link generator.impl.GameplayImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link generator.impl.GameplayImpl#getGamerules <em>Gamerules</em>}</li>
+ *   <li>{@link generator.impl.GameplayImpl#getRequirement <em>Requirement</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class GameplayImpl extends MinimalEObjectImpl.Container implements Gameplay {
-	/**
-	 * The cached value of the '{@link #getCoregamerules() <em>Coregamerules</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCoregamerules()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CoreGameRule> coregamerules;
-
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -68,6 +62,26 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getGamerules() <em>Gamerules</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGamerules()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GameRule> gamerules;
+
+	/**
+	 * The cached value of the '{@link #getRequirement() <em>Requirement</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRequirement()
+	 * @generated
+	 * @ordered
+	 */
+	protected AvatarEquipment requirement;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -84,19 +98,6 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	@Override
 	protected EClass eStaticClass() {
 		return GeneratorPackage.Literals.GAMEPLAY;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<CoreGameRule> getCoregamerules() {
-		if (coregamerules == null) {
-			coregamerules = new EObjectContainmentEList<CoreGameRule>(CoreGameRule.class, this,
-					GeneratorPackage.GAMEPLAY__COREGAMERULES);
-		}
-		return coregamerules;
 	}
 
 	/**
@@ -126,11 +127,75 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<GameRule> getGamerules() {
+		if (gamerules == null) {
+			gamerules = new EObjectContainmentEList<GameRule>(GameRule.class, this,
+					GeneratorPackage.GAMEPLAY__GAMERULES);
+		}
+		return gamerules;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AvatarEquipment getRequirement() {
+		if (requirement != null && requirement.eIsProxy()) {
+			InternalEObject oldRequirement = (InternalEObject) requirement;
+			requirement = (AvatarEquipment) eResolveProxy(oldRequirement);
+			if (requirement != oldRequirement) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.GAMEPLAY__REQUIREMENT,
+							oldRequirement, requirement));
+			}
+		}
+		return requirement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AvatarEquipment basicGetRequirement() {
+		return requirement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRequirement(AvatarEquipment newRequirement) {
+		AvatarEquipment oldRequirement = requirement;
+		requirement = newRequirement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAMEPLAY__REQUIREMENT,
+					oldRequirement, requirement));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isAvailable() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.GAMEPLAY__COREGAMERULES:
-			return ((InternalEList<?>) getCoregamerules()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.GAMEPLAY__GAMERULES:
+			return ((InternalEList<?>) getGamerules()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -143,10 +208,14 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.GAMEPLAY__COREGAMERULES:
-			return getCoregamerules();
 		case GeneratorPackage.GAMEPLAY__DESCRIPTION:
 			return getDescription();
+		case GeneratorPackage.GAMEPLAY__GAMERULES:
+			return getGamerules();
+		case GeneratorPackage.GAMEPLAY__REQUIREMENT:
+			if (resolve)
+				return getRequirement();
+			return basicGetRequirement();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -160,12 +229,15 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.GAMEPLAY__COREGAMERULES:
-			getCoregamerules().clear();
-			getCoregamerules().addAll((Collection<? extends CoreGameRule>) newValue);
-			return;
 		case GeneratorPackage.GAMEPLAY__DESCRIPTION:
 			setDescription((String) newValue);
+			return;
+		case GeneratorPackage.GAMEPLAY__GAMERULES:
+			getGamerules().clear();
+			getGamerules().addAll((Collection<? extends GameRule>) newValue);
+			return;
+		case GeneratorPackage.GAMEPLAY__REQUIREMENT:
+			setRequirement((AvatarEquipment) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -179,11 +251,14 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GAMEPLAY__COREGAMERULES:
-			getCoregamerules().clear();
-			return;
 		case GeneratorPackage.GAMEPLAY__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
+			return;
+		case GeneratorPackage.GAMEPLAY__GAMERULES:
+			getGamerules().clear();
+			return;
+		case GeneratorPackage.GAMEPLAY__REQUIREMENT:
+			setRequirement((AvatarEquipment) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -197,12 +272,28 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GAMEPLAY__COREGAMERULES:
-			return coregamerules != null && !coregamerules.isEmpty();
 		case GeneratorPackage.GAMEPLAY__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+		case GeneratorPackage.GAMEPLAY__GAMERULES:
+			return gamerules != null && !gamerules.isEmpty();
+		case GeneratorPackage.GAMEPLAY__REQUIREMENT:
+			return requirement != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case GeneratorPackage.GAMEPLAY___IS_AVAILABLE:
+			return isAvailable();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
