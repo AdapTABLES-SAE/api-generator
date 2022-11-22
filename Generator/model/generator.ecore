@@ -15,14 +15,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="knowledgefacts" upperBound="-1"
         eType="#//AbstractFact" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="GPBricks">
-    <eLiterals name="SELECT"/>
-    <eLiterals name="MOVE" value="1"/>
-    <eLiterals name="AVOID" value="2"/>
-    <eLiterals name="DESTROY" value="3"/>
-    <eLiterals name="MANAGE" value="4"/>
-    <eLiterals name="WRITE" value="5"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dungeon">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" lowerBound="1" upperBound="-1"
         eType="#//Room" containment="true"/>
@@ -30,7 +22,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="entry" lowerBound="1" eType="#//Room"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//Level"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjective" lowerBound="1"
-        eType="#//LearningObjective"/>
+        eType="#//Objective"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Room">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -43,14 +35,6 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GameDescription">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" eType="#//Elements"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gameplays" eType="#//Gameplays"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elementtypes" eType="#//ElementTypes"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="abilities" upperBound="-1"
-        eType="#//Abilities" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="roomtypes" eType="#//RoomTypes"
         containment="true"/>
   </eClassifiers>
@@ -95,31 +79,18 @@
     <eLiterals name="LINEAR"/>
     <eLiterals name="LABYRINTHINE" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Task">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tasktype" lowerBound="1"
-        eType="#//TaskType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfApparition"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfValidFacts"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LearningDomain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningpaths" upperBound="-1"
         eType="#//LearningPath" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tasktypes" eType="#//TaskTypes"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="responsemodalities" eType="#//ResponseModalities"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LearningPath">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjective" upperBound="-1"
-        eType="#//LearningObjective" containment="true"/>
+        eType="#//Objective" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="knowledge" lowerBound="1"
         eType="#//Knowledge"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LearningObjective">
+  <eClassifiers xsi:type="ecore:EClass" name="Objective">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -139,11 +110,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" upperBound="-1"
-        eType="#//Task" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="VerifiableElement">
-    <eLiterals name="FULL_FACTS"/>
-    <eLiterals name="RESULTS" value="1"/>
+        eType="#//ATask" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTLevel" eSuperTypes="#//Level">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="buildSetup" eType="#//TableBuild"/>
@@ -168,41 +135,9 @@
     <eLiterals name="TABLE" value="1"/>
     <eLiterals name="OPERAND" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MTCompletionType" eSuperTypes="#//CompletionType">
+  <eClassifiers xsi:type="ecore:EClass" name="MTCompletionType" eSuperTypes="#//Completion1Task">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" lowerBound="1"
         upperBound="-1" eType="#//TargetElement"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskTypes">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tasktypes" upperBound="-1"
-        eType="#//TaskType" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Order">
-    <eLiterals name="ASCENDING"/>
-    <eLiterals name="DESCENDING" value="1"/>
-    <eLiterals name="MIX" value="2"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CompletionType" eSuperTypes="#//TaskType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbMissingElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="factOrder" eType="#//Order"
-        defaultValueLiteral="MIX"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="naturalLanguage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VerificationType" abstract="true" eSuperTypes="#//TaskType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="verifyTrue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReconstructionType" eSuperTypes="#//TaskType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbFalseProposition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskType" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="responsemodalities" upperBound="2"
-        eType="#//ResponseModality"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FactVerificationType" eSuperTypes="#//VerificationType"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ResultVerificationType" eSuperTypes="#//VerificationType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbFalseProposition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GenerationContext">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gamecontext" lowerBound="1"
@@ -223,7 +158,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CurrentObjectiveLevel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjective" lowerBound="1"
-        eType="#//LearningObjective"/>
+        eType="#//Objective"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="achieved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//Level"/>
   </eClassifiers>
@@ -237,112 +172,56 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResponseModality" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="MultipleChoice" eSuperTypes="#//ResponseModality">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"
+        changeable="false" defaultValueLiteral="CHOICE"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EnterResponse" eSuperTypes="#//ResponseModality"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ElementType" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InteractionEType" eSuperTypes="#//ElementType">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="abilities" upperBound="-1"
-        eType="#//Ability"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EPassiveAbility">
-    <eLiterals name="DETECT"/>
-    <eLiterals name="KILL" value="1"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EActiveAbility">
-    <eLiterals name="PORTABLE"/>
-    <eLiterals name="PUSHABLE" value="1"/>
-    <eLiterals name="KILLABLE" value="3"/>
-    <eLiterals name="BREAKABLE" value="3"/>
-    <eLiterals name="PULLABLE" value="4"/>
-    <eLiterals name="NONE" value="5"/>
-    <eLiterals name="OPENABLE" value="6"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Ability" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ActiveAbility" eSuperTypes="#//Ability">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ability" eType="#//EActiveAbility"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PassiveAbility" eSuperTypes="#//Ability">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ability" eType="#//EPassiveAbility"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Gameplay">
-    <eOperations name="isAvailable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gamerules" lowerBound="1"
-        upperBound="-1" eType="#//GameRule" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requirement" eType="#//AvatarEquipment"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GameRule">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//GPBricks"
-        defaultValueLiteral="MOVE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ability2activate" eType="#//EActiveAbility"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="interactionelementtype"
-        eType="#//InteractionEType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BuyableElement" abstract="true" eSuperTypes="#//Element">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bought" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Element">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ElementType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AvatarEquipment" eSuperTypes="#//BuyableElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Elements">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
-        eType="#//Element" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Gameplays">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gameplays" lowerBound="1"
-        upperBound="-1" eType="#//Gameplay" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ElementTypes">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elementtypes" upperBound="-1"
-        eType="#//ElementType" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Abilities">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="abilities" upperBound="-1"
-        eType="#//Ability" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EnterResponse" eSuperTypes="#//ResponseModality">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"
+        changeable="false" defaultValueLiteral="INPUT"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoomTypes">
     <eStructuralFeatures xsi:type="ecore:EReference" name="roomtypes" lowerBound="1"
         upperBound="-1" eType="#//RoomType" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EquipmentEType" eSuperTypes="#//ElementType"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ElementPosition" eSuperTypes="#//Position">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="autorizedETypes" upperBound="-1"
-        eType="#//InteractionEType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MappingModel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="compliancerelations" upperBound="-1"
-        eType="#//ComplianceRelations" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Modality2RoomType" eSuperTypes="#//ComplianceRelations">
+  <eClassifiers xsi:type="ecore:EClass" name="ATask" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfApparition"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfValidFacts"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="responsemodality" lowerBound="1"
-        eType="#//ResponseModality"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="roomtype" lowerBound="1"
-        upperBound="-1" eType="#//RoomType"/>
+        upperBound="-1" eType="#//ResponseModality" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ComplianceRelations" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskType2Gameplay" eSuperTypes="#//ComplianceRelations">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gameplay" lowerBound="1"
-        upperBound="-1" eType="#//Gameplay"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tasktype" lowerBound="1"
-        eType="#//TaskType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Completion1Task" eSuperTypes="#//ATask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
+        changeable="false" defaultValueLiteral="COMPLETE1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResponseModalities">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="responsemodalities" upperBound="-1"
-        eType="#//ResponseModality" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Completion2Task" eSuperTypes="#//ATask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
+        changeable="false" defaultValueLiteral="COMPLETE2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Gameplay2RoomType" eSuperTypes="#//ComplianceRelations">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="roomtype" lowerBound="1"
-        eType="#//RoomType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gameplay" lowerBound="1"
-        upperBound="-1" eType="#//Gameplay"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReconstructionTask" eSuperTypes="#//ATask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
+        changeable="false" defaultValueLiteral="REBUILD"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IdentificationTask" eSuperTypes="#//ATask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
+        changeable="false" defaultValueLiteral="IDENTIFY"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MembershipIDTask" eSuperTypes="#//ATask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
+        changeable="false" defaultValueLiteral="MEMBERSHIP"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ETaskType">
+    <eLiterals name="COMPLETE1"/>
+    <eLiterals name="COMPLETE2" value="1"/>
+    <eLiterals name="REBUILD" value="2"/>
+    <eLiterals name="IDENTIFY" value="3"/>
+    <eLiterals name="MEMBERSHIP" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EModality">
+    <eLiterals name="CHOICE"/>
+    <eLiterals name="INPUT" value="1"/>
   </eClassifiers>
 </ecore:EPackage>

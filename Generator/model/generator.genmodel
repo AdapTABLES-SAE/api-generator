@@ -9,14 +9,6 @@
   <foreignModel>generator.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Generator" disposableProviderFactory="true" ecorePackage="generator.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//GPBricks">
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPBricks/SELECT"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPBricks/MOVE"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPBricks/AVOID"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPBricks/DESTROY"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPBricks/MANAGE"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPBricks/WRITE"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//Directions">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//Directions/SOUTH"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//Directions/EAST"/>
@@ -36,10 +28,6 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//DungeonMode/LINEAR"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//DungeonMode/LABYRINTHINE"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//VerifiableElement">
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//VerifiableElement/FULL_FACTS"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//VerifiableElement/RESULTS"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//TableBuild">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//TableBuild/TABLE_OPERAND"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//TableBuild/OPERAND_TABLE"/>
@@ -55,23 +43,16 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//TargetElement/TABLE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//TargetElement/OPERAND"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//Order">
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//Order/ASCENDING"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//Order/DESCENDING"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//Order/MIX"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//ETaskType">
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETaskType/COMPLETE1"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETaskType/COMPLETE2"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETaskType/REBUILD"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETaskType/IDENTIFY"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETaskType/MEMBERSHIP"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EPassiveAbility">
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EPassiveAbility/DETECT"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EPassiveAbility/KILL"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EActiveAbility">
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EActiveAbility/PORTABLE"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EActiveAbility/PUSHABLE"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EActiveAbility/KILLABLE"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EActiveAbility/BREAKABLE"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EActiveAbility/PULLABLE"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EActiveAbility/NONE"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EActiveAbility/OPENABLE"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EModality">
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EModality/CHOICE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EModality/INPUT"/>
     </genEnums>
     <genClasses image="false" ecoreClass="generator.ecore#//AbstractFact"/>
     <genClasses ecoreClass="generator.ecore#//SetOfFacts">
@@ -100,10 +81,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Room/question"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//GameDescription">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameDescription/elements"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameDescription/gameplays"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameDescription/elementtypes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameDescription/abilities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameDescription/roomtypes"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//RoomType">
@@ -125,28 +102,20 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GameContext/numberOfRooms"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GameContext/mode"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Task">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Task/tasktype"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Task/percentageOfApparition"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Task/nbConsecutiveSuccess"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Task/percentageOfValidFacts"/>
-    </genClasses>
     <genClasses ecoreClass="generator.ecore#//LearningDomain">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearningDomain/learningpaths"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearningDomain/tasktypes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearningDomain/responsemodalities"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//LearningPath">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LearningPath/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearningPath/learningobjective"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//LearningPath/knowledge"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//LearningObjective">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LearningObjective/ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LearningObjective/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearningObjective/prerequisites"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearningObjective/levels"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//LearningObjective/setoffacts"/>
+    <genClasses ecoreClass="generator.ecore#//Objective">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Objective/ID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Objective/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Objective/prerequisites"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Objective/levels"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Objective/setoffacts"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Prerequisite">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Prerequisite/succesPercentage"/>
@@ -164,28 +133,6 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTCompletionType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletionType/targets"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//TaskTypes">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//TaskTypes/tasktypes"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//CompletionType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionType/nbMissingElements"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionType/factOrder"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionType/naturalLanguage"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//VerificationType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//VerificationType/verifyTrue"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//ReconstructionType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ReconstructionType/nbFalseProposition"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//TaskType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//TaskType/name"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference generator.ecore#//TaskType/responsemodalities"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//FactVerificationType"/>
-    <genClasses ecoreClass="generator.ecore#//ResultVerificationType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ResultVerificationType/nbFalseProposition"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//GenerationContext">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GenerationContext/gamecontext"/>
@@ -213,81 +160,35 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//ResponseModality"/>
     <genClasses ecoreClass="generator.ecore#//MultipleChoice">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MultipleChoice/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MultipleChoice/nbChoices"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//EnterResponse"/>
-    <genClasses ecoreClass="generator.ecore#//ElementType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ElementType/name"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//InteractionEType">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//InteractionEType/abilities"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Ability">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Ability/name"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//ActiveAbility">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ActiveAbility/ability"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//PassiveAbility">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//PassiveAbility/ability"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Gameplay">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/description"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplay/gamerules"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplay/requirement"/>
-      <genOperations ecoreOperation="generator.ecore#//Gameplay/isAvailable"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//GameRule">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GameRule/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GameRule/ability2activate"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//GameRule/interactionelementtype"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//BuyableElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//BuyableElement/bought"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//BuyableElement/activated"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Element">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Element/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Element/type"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//AvatarEquipment"/>
-    <genClasses ecoreClass="generator.ecore#//Elements">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Elements/elements"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Gameplays">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplays/gameplays"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//ElementTypes">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//ElementTypes/elementtypes"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Abilities">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Abilities/abilities"/>
+    <genClasses ecoreClass="generator.ecore#//EnterResponse">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//EnterResponse/type"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//RoomTypes">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//RoomTypes/roomtypes"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//EquipmentEType"/>
-    <genClasses ecoreClass="generator.ecore#//ElementPosition">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//ElementPosition/autorizedETypes"/>
+    <genClasses ecoreClass="generator.ecore#//ATask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/percentageOfApparition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/nbConsecutiveSuccess"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/percentageOfValidFacts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//ATask/responsemodality"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//MappingModel">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//MappingModel/compliancerelations"/>
+    <genClasses ecoreClass="generator.ecore#//Completion1Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Completion1Task/type"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Modality2RoomType">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Modality2RoomType/responsemodality"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Modality2RoomType/roomtype"/>
+    <genClasses ecoreClass="generator.ecore#//Completion2Task">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Completion2Task/type"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//ComplianceRelations"/>
-    <genClasses ecoreClass="generator.ecore#//TaskType2Gameplay">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//TaskType2Gameplay/gameplay"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//TaskType2Gameplay/tasktype"/>
+    <genClasses ecoreClass="generator.ecore#//ReconstructionTask">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ReconstructionTask/type"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//ResponseModalities">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//ResponseModalities/responsemodalities"/>
+    <genClasses ecoreClass="generator.ecore#//IdentificationTask">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentificationTask/type"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Gameplay2RoomType">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplay2RoomType/roomtype"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplay2RoomType/gameplay"/>
+    <genClasses ecoreClass="generator.ecore#//MembershipIDTask">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/type"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

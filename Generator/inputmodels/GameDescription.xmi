@@ -1,40 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<generator:GameDescription xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore">
-  <elements>
-    <elements name="GRAY POT" type="//@elementtypes/@elementtypes.1"/>
-    <elements name="GREEN ENNEMY" type="//@elementtypes/@elementtypes.0"/>
-    <elements xsi:type="generator:AvatarEquipment" name="SWORD" type="//@elementtypes/@elementtypes.4"/>
-    <elements name="BLUE ENNEMY" type="//@elementtypes/@elementtypes.0"/>
-    <elements name="DOOR" type="//@elementtypes/@elementtypes.3"/>
-    <elements name="CHEST" type="//@elementtypes/@elementtypes.2"/>
-  </elements>
-  <gameplays>
-    <gameplays description="Break element with correct answer">
-      <gamerules type="DESTROY" ability2activate="BREAKABLE" interactionelementtype="//@elementtypes/@elementtypes.1"/>
-    </gameplays>
-    <gameplays description="Kill ennemy with correct answer" requirement="//@elements/@elements.2">
-      <gamerules type="DESTROY" ability2activate="KILLABLE" interactionelementtype="//@elementtypes/@elementtypes.0"/>
-    </gameplays>
-    <gameplays description="Select the correct chest ">
-      <gamerules type="SELECT" ability2activate="NONE" interactionelementtype="//@elementtypes/@elementtypes.3"/>
-    </gameplays>
-  </gameplays>
-  <elementtypes>
-    <elementtypes xsi:type="generator:InteractionEType" name="Ennemy" abilities="//@abilities.0/@abilities.1 //@abilities.0/@abilities.4"/>
-    <elementtypes xsi:type="generator:InteractionEType" name="POT / BOX" abilities="//@abilities.0/@abilities.2 //@abilities.0/@abilities.3 //@abilities.0/@abilities.5"/>
-    <elementtypes xsi:type="generator:InteractionEType" name="Container / Detector" abilities="//@abilities.0/@abilities.6 //@abilities.0/@abilities.0"/>
-    <elementtypes xsi:type="generator:InteractionEType" name="Detector "/>
-    <elementtypes xsi:type="generator:EquipmentEType"/>
-  </elementtypes>
-  <abilities>
-    <abilities xsi:type="generator:PassiveAbility" name="DETECTOR "/>
-    <abilities xsi:type="generator:ActiveAbility" name="KILLABLE " ability="KILLABLE"/>
-    <abilities xsi:type="generator:ActiveAbility" name="PORTABLE"/>
-    <abilities xsi:type="generator:ActiveAbility" name="BREAKABLE" ability="BREAKABLE"/>
-    <abilities xsi:type="generator:PassiveAbility" name="KILLER" ability="KILL"/>
-    <abilities xsi:type="generator:ActiveAbility" name="PUSHABLE" ability="PUSHABLE"/>
-    <abilities xsi:type="generator:ActiveAbility" name="OPENABLE" ability="OPENABLE"/>
-  </abilities>
+<generator:GameDescription xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:generator="http://www.example.org/generator" xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore">
   <roomtypes>
     <roomtypes xsi:type="generator:SmallRoomType" name="RegularRoomS">
       <directions>SOUTH</directions>
@@ -68,3 +34,4 @@
     </roomtypes>
   </roomtypes>
 </generator:GameDescription>
+    
