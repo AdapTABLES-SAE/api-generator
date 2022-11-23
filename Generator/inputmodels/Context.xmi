@@ -6,7 +6,7 @@
     xmlns:generator="http://www.example.org/generator"
     xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore">
   <gamecontext
-      numberOfRooms="10"/>
+      numberOfRooms="20"/>
   <learnerplayer
       name="Harry Potter">
     <progression>

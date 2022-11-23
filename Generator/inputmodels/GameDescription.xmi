@@ -38,7 +38,7 @@
     </roomtypes>
     <roomtypes
         xsi:type="generator:LargeRoomType"
-        name="LargeRoom1">
+        name="LargeSimpleRoom1">
       <positions
           name="POSQ1"/>
       <directions>SOUTH_EAST</directions>

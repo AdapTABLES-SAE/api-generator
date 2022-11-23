@@ -8,8 +8,8 @@ public class Main {
 		String modelIN = "models2transform/";
 		String modelOUT = "transformedModels/"; 
 		
-		transformModel(mmPathIN, mmPathOUT, modelIN+"DungeonG2.xmi", modelOUT+"DungeonGen2.xml");
-		//transformModel(mmPathIN, mmPathOUT, modelIN+"GeneratedDungeon.xmi", modelOUT+"DungeonFlat.xml");
+		transformModel(mmPathIN, mmPathOUT, modelIN+"DungeonTESTSL.xmi", modelOUT+"DungeonTESTSL.xml");
+		transformModel(mmPathIN, mmPathOUT, modelIN+"DungeonTESTS.xmi", modelOUT+"DungeonTESTS.xml");
 		//transformModels(mmPathIN, mmPathOUT, modelIN+"GeneratedDungeon", modelOUT+"DungeonFlat", 0, 10);
 	}
 	

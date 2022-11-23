@@ -3,7 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="generator" nsURI="http://www.example.org/generator" nsPrefix="generator">
   <eClassifiers xsi:type="ecore:EClass" name="AbstractFact" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="SetOfFacts" eSuperTypes="#//AbstractFact">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="facts" lowerBound="1" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="facts" upperBound="-1"
         eType="#//AbstractFact" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -15,87 +15,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="knowledgefacts" upperBound="-1"
         eType="#//AbstractFact" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GameContent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gameplays" lowerBound="1"
-        upperBound="-1" eType="#//Gameplay" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
-        eType="#//ElementType" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gameobjectives" lowerBound="1"
-        upperBound="-1" eType="#//GameObjective" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="roomtype" upperBound="-1"
-        eType="#//RoomType2" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="GPBricks">
-    <eLiterals name="SELECT"/>
-    <eLiterals name="MOVE" value="1"/>
-    <eLiterals name="AVOID" value="2"/>
-    <eLiterals name="DESTROY" value="3"/>
-    <eLiterals name="MANAGE" value="4"/>
-    <eLiterals name="WRITE" value="5"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="AvatarActions">
-    <eLiterals name="TOUCH"/>
-    <eLiterals name="GO_THROUGH" value="1"/>
-    <eLiterals name="STRIKE" value="2"/>
-    <eLiterals name="WALK_RUN" value="3"/>
-    <eLiterals name="PICKUP_CARRY" value="4"/>
-    <eLiterals name="NONE" value="5"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Gameplay">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="coregamerules" lowerBound="1"
-        upperBound="-1" eType="#//CoreGameRule" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CoreGameRule">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruleType" eType="#//GPBricks"
-        defaultValueLiteral="MOVE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionToDo" eType="#//AvatarActions"
-        defaultValueLiteral="WALK_RUN"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//ElementType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ElementType" eSuperTypes="#//IRoomElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="acceptedActions" lowerBound="1"
-        upperBound="-1" eType="#//AvatarActions"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="shape" lowerBound="1" eType="#//ElementShape"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="state" lowerBound="1" upperBound="-1"
-        eType="#//ElementState" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GameObjective">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RoomType2">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="acceptedfloors" lowerBound="1"
-        upperBound="-1" eType="#//Floor"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paths" upperBound="4" eType="#//RoomPaths"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Floor" eSuperTypes="#//ElementType">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
-        eType="#//Location" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Location">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="acceptedElements" lowerBound="1"
-        upperBound="-1" eType="#//IRoomElement"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="maxshape" lowerBound="1"
-        eType="#//ElementShape" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="RoomPaths">
-    <eLiterals name="NORTH"/>
-    <eLiterals name="SOUTH" value="1"/>
-    <eLiterals name="EAST" value="2"/>
-    <eLiterals name="WEST" value="3"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IRoomElement" abstract="true" interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ElementShape">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ElementState">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dungeon">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" lowerBound="1" upperBound="-1"
         eType="#//Room" containment="true"/>
@@ -103,7 +22,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="entry" lowerBound="1" eType="#//Room"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//Level"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjective" lowerBound="1"
-        eType="#//LearningObjective"/>
+        eType="#//Objective"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Room">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -116,13 +35,13 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GameDescription">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="roomtypes" lowerBound="1"
-        upperBound="-1" eType="#//RoomType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roomtypes" eType="#//RoomTypes"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoomType" abstract="true">
     <eOperations name="getDirections" upperBound="-1" eType="#//Directions"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="questionPositions" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="positions" upperBound="-1"
         eType="#//Position" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SmallRoomType" eSuperTypes="#//RoomType">
@@ -160,29 +79,18 @@
     <eLiterals name="LINEAR"/>
     <eLiterals name="LABYRINTHINE" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Task">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tasktype" lowerBound="1"
-        eType="#//TaskType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfApparition"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfValidFacts"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LearningDomain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningpaths" upperBound="-1"
         eType="#//LearningPath" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tasktypes" eType="#//TaskTypes"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LearningPath">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjective" upperBound="-1"
-        eType="#//LearningObjective" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectives" upperBound="-1"
+        eType="#//Objective" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="knowledge" lowerBound="1"
         eType="#//Knowledge"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LearningObjective">
+  <eClassifiers xsi:type="ecore:EClass" name="Objective">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -201,18 +109,16 @@
   <eClassifiers xsi:type="ecore:EClass" name="Level" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" upperBound="-1"
-        eType="#//Task" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="VerifiableElement">
-    <eLiterals name="FULL_FACTS"/>
-    <eLiterals name="RESULTS" value="1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" lowerBound="1" upperBound="-1"
+        eType="#//ATask" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTLevel" eSuperTypes="#//Level">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="buildSetup" eType="#//TableBuild"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultPositionSetup" eType="#//ResultPosition"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="10"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TableBuild">
     <eLiterals name="TABLE_OPERAND"/>
@@ -229,40 +135,9 @@
     <eLiterals name="TABLE" value="1"/>
     <eLiterals name="OPERAND" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MTCompletionType" eSuperTypes="#//CompletionType">
+  <eClassifiers xsi:type="ecore:EClass" name="MTCompletion1" eSuperTypes="#//Completion1Task">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" lowerBound="1"
         upperBound="-1" eType="#//TargetElement"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskTypes">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tasktypes" upperBound="-1"
-        eType="#//TaskType" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Order">
-    <eLiterals name="ASCENDING"/>
-    <eLiterals name="DESCENDING" value="1"/>
-    <eLiterals name="MIX" value="2"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CompletionType" eSuperTypes="#//TaskType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbMissingElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="factOrder" eType="#//Order"
-        defaultValueLiteral="MIX"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="naturalLanguage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VerificationType" abstract="true" eSuperTypes="#//TaskType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="verifyTrue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReconstructionType" eSuperTypes="#//TaskType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbFalseProposition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskType" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbPropositions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enterResponseAllowed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="false"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FactVerificationType" eSuperTypes="#//VerificationType"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ResultVerificationType" eSuperTypes="#//VerificationType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbFalseProposition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GenerationContext">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gamecontext" lowerBound="1"
@@ -282,10 +157,12 @@
         upperBound="-1" eType="#//CurrentObjectiveLevel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CurrentObjectiveLevel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjective" lowerBound="1"
-        eType="#//LearningObjective"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objective" lowerBound="1"
+        eType="#//Objective"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="achieved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//Level"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="results" eType="#//Results"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Position">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -295,4 +172,90 @@
         eType="#//Position"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="incompleteFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseModality" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MultipleChoice" eSuperTypes="#//ResponseModality">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"
+        changeable="false" defaultValueLiteral="CHOICE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbBadChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnterResponse" eSuperTypes="#//ResponseModality">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"
+        changeable="false" defaultValueLiteral="INPUT"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoomTypes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roomtypes" lowerBound="1"
+        upperBound="-1" eType="#//RoomType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ATask" abstract="true">
+    <eOperations name="getType" eType="#//ETaskType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfApparition"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageOfValidFacts"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responsemodalities" upperBound="-1"
+        eType="#//ResponseModality" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Completion1Task" abstract="true" eSuperTypes="#//ATask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
+        changeable="false" defaultValueLiteral="COMPLETE1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Completion2Task" abstract="true" eSuperTypes="#//ATask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
+        changeable="false" defaultValueLiteral="COMPLETE2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReconstructionTask" abstract="true"
+      eSuperTypes="#//ATask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
+        changeable="false" defaultValueLiteral="REBUILD"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IdentificationTask" abstract="true"
+      eSuperTypes="#//ATask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
+        changeable="false" defaultValueLiteral="IDENTIFY"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbFacts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MembershipIDTask" abstract="true" eSuperTypes="#//ATask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
+        changeable="false" defaultValueLiteral="MEMBERSHIP"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkIsTrue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ETaskType">
+    <eLiterals name="COMPLETE1"/>
+    <eLiterals name="COMPLETE2" value="1"/>
+    <eLiterals name="REBUILD" value="2"/>
+    <eLiterals name="IDENTIFY" value="3"/>
+    <eLiterals name="MEMBERSHIP" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EModality">
+    <eLiterals name="CHOICE"/>
+    <eLiterals name="INPUT" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTCompletion2" eSuperTypes="#//Completion2Task">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" lowerBound="2"
+        upperBound="-1" eType="#//TargetElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTRecontruction" eSuperTypes="#//ReconstructionTask"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MTIdentification" eSuperTypes="#//IdentificationTask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="target" lowerBound="1"
+        eType="#//TargetElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTMembership" eSuperTypes="#//MembershipIDTask"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Results">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resultsbytask" upperBound="-1"
+        eType="#//ResultsByTask" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResultsByTask">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//ATask"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questionedfacts" upperBound="-1"
+        eType="#//QuestionedFact" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionedFact">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="qfresults" upperBound="-1"
+        eType="#//QFResults" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QFResults"/>
 </ecore:EPackage>

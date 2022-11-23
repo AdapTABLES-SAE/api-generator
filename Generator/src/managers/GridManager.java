@@ -58,7 +58,7 @@ public class GridManager {
 	
 	public void removeAllOccupied(Room room) {
 		for (Coordinate entry :  new ArrayList<>(occupiedCoordinates.keySet())) {
-			if(occupiedCoordinates.get(entry).getX() == room.getX() && occupiedCoordinates.get(entry).getY() == room.getY()) {
+			if(occupiedCoordinates.get(entry).equals(room)) {
 				occupiedCoordinates.remove(entry);
 			}
 		}
@@ -258,7 +258,6 @@ public class GridManager {
 			c.setX(room.getX());
 			occupiedCoordinates.put(new Coordinate(c), room); // X,Y+1
 		}
-		//System.out.println("OCC "+occupiedCoordinates);
 	}
 	
 }
