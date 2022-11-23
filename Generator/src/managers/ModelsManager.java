@@ -1,4 +1,4 @@
-package models;
+package managers;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,7 +19,7 @@ import generator.GenerationContext;
 import generator.GeneratorPackage;
 
 
-public class ModelAccess {
+public class ModelsManager {
 	
 	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	private static final String INPUT_MODELS_PATH = "inputmodels/";
@@ -34,7 +34,7 @@ public class ModelAccess {
 	
 	//Dungeon generatedDungeon;
 	
-	public ModelAccess() {
+	public ModelsManager() {
 		resourceSet = new ResourceSetImpl();
 		loadInputModels();
 	}

@@ -8,7 +8,7 @@ import generator.CurrentObjectiveLevel;
 import generator.Level;
 import generator.Objective;
 import managers.EducationElementsManager;
-import models.ModelAccess;
+import managers.ModelsManager;
 
 /**
  * Cette classe permet de générer / choisir, l'objectif d'entrainement visée ainsi que le niveau de difficulté. 
@@ -16,13 +16,13 @@ import models.ModelAccess;
  */
 public class EducationalElementsGenerator {
 	
-	private ModelAccess modelAccess;
+	private ModelsManager modelAccess;
 	private Random random;
 	
 	private EducationElementsManager eeManager;
 
 
-	public EducationalElementsGenerator(ModelAccess modelAccess) {
+	public EducationalElementsGenerator(ModelsManager modelAccess) {
 		this.modelAccess = modelAccess;
 		random = new Random();
 		eeManager = new EducationElementsManager(modelAccess.context.getGamecontext().getNumberOfRooms());

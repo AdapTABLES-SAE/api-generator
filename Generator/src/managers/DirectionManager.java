@@ -10,11 +10,10 @@ import generator.Directions;
 import generator.LargeRoomType;
 import generator.RoomType;
 import generator.SmallRoomType;
-import models.ModelAccess;
 
 public class DirectionManager {
 
-	private ModelAccess modelAccess; 
+	private ModelsManager modelAccess; 
 	/** Data structure saving for each direction, its opposite directions (e.g., SOUTH => NORTH, NORTH_EAST, NORTH_WEST) */
 	private EnumMap<Directions, Set<Directions>> oppositeDirections;
 	/** Data structure enumerating simple directions (SOUTH, NORTH, EAST, WEST) */
@@ -44,7 +43,7 @@ public class DirectionManager {
 		return largeRT;
 	}
 	
-	public DirectionManager(ModelAccess modelAccess) {
+	public DirectionManager(ModelsManager modelAccess) {
 		this.modelAccess = modelAccess;
 		if (isLargeRoomTypes()) {setComplexeDirections();}
 		if(isSmallRoomTypes()) {setSimpleDirections();}

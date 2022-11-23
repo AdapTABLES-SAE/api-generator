@@ -10,7 +10,6 @@ import java.util.Set;
 import generator.Directions;
 import generator.LargeRoomType;
 import generator.Room;
-import models.ModelAccess;
 import structures.Coordinate;
 import structures.GridPositions;
 
@@ -21,7 +20,7 @@ public class GridManager {
 	private DirectionManager directionManager; 
 
 	
-	public GridManager(ModelAccess modelAccess) {
+	public GridManager(ModelsManager modelAccess) {
 		directionManager = new DirectionManager(modelAccess); 
 		occupiedCoordinates = new HashMap<>();
 	}

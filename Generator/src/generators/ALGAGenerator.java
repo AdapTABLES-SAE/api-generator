@@ -3,11 +3,11 @@ package generators;
 import generator.Dungeon;
 import generator.Room;
 import generator.RoomAccess;
-import models.ModelAccess;
+import managers.ModelsManager;
 
 public class ALGAGenerator {
 	
-	private ModelAccess modelAccess;
+	private ModelsManager modelAccess;
 	private Dungeon generatedDungeon;
 
 	public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class ALGAGenerator {
 	}
 	
 	public ALGAGenerator() {
-		modelAccess = new ModelAccess();
+		modelAccess = new ModelsManager();
 	}
 	
 	public void saveDungeon(String fileName) {

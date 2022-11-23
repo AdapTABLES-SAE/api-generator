@@ -23,12 +23,12 @@ import generator.impl.RoomAccessImpl;
 import generator.impl.RoomImpl;
 import managers.EducationElementsManager;
 import managers.GridManager;
-import models.ModelAccess;
+import managers.ModelsManager;
 import structures.Coordinate;
 
 public class DungeonGenerator {
 	private Dungeon generatedDungeon; 
-	private ModelAccess modelAccess;
+	private ModelsManager modelAccess;
 	
 	
 	/** Attribute to generate random elements */
@@ -37,14 +37,14 @@ public class DungeonGenerator {
 	private GridManager gridManager;
 	private EducationElementsManager eeManager; 
 	
-	private DungeonGenerator(ModelAccess modelAccess) {
+	private DungeonGenerator(ModelsManager modelAccess) {
 		this.modelAccess = modelAccess;
 		generatedDungeon = new DungeonImpl();
 		random = new Random();
 		gridManager = new GridManager(modelAccess);	
 	}
 	
-	public DungeonGenerator(ModelAccess modelAccess, EducationElementsManager eeManager) {
+	public DungeonGenerator(ModelsManager modelAccess, EducationElementsManager eeManager) {
 		this(modelAccess); 		
 		this.eeManager = eeManager;
 	}
