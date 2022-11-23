@@ -14,6 +14,7 @@ import generator.Directions;
 import generator.Dungeon;
 import generator.DungeonMode;
 import generator.ETaskType;
+import generator.LargeRoomType;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
@@ -72,8 +73,6 @@ public class DungeonGenerator {
 		
 	
 		while(dungeonRooms.size() < numberofrooms + 1) {
-			//System.out.println(roomAllowedDirections);
-			//System.out.println(roomAllowedDirections.getLast());
 			nextPosition = gridManager.getNextCoord(dungeonRooms.getLast().getKey(), dungeonRooms.getLast().getValue());
 			if(!backtrack) {
 				tasktype = eeManager.getOrderedTaskTypes().get(dungeonRooms.size() - 1);
@@ -104,6 +103,13 @@ public class DungeonGenerator {
 					roomType = getCompatibleRoomType(tasktype, entry, exit); 
 				}
 				Coordinate validCoord = gridManager.getValidCoordinates(entry, nextPosition);
+				if(roomType instanceof LargeRoomType) {
+					System.out.println(gridManager.occupiedCoordinates.containsKey(validCoord));
+					System.out.println(gridManager.occupiedCoordinates.containsKey(new Coordinate(validCoord.getX(), validCoord.getY()+1)));
+					System.out.println(gridManager.occupiedCoordinates.containsKey(new Coordinate(validCoord.getX()+1, validCoord.getY()+1)));
+					System.out.println(gridManager.occupiedCoordinates.containsKey(new Coordinate(validCoord.getX()+1, validCoord.getY())));
+				}
+				System.out.println(gridManager.occupiedCoordinates.containsKey(validCoord));
 				Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, tasktype, dungeonRooms.getLast().getKey().getRoomaccess().get(dungeonRooms.getLast().getKey().getRoomaccess().size()-1), entry, exit);
 				dungeonRooms.add(Map.entry(room, exit));
 			}

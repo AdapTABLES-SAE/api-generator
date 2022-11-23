@@ -16,7 +16,7 @@ import structures.GridPositions;
 public class GridManager {
 
 	/** Structure to save occupied Coordinates on a fake grid */
-	private Map<Coordinate, Room> occupiedCoordinates;
+	public Map<Coordinate, Room> occupiedCoordinates;
 	private DirectionManager directionManager; 
 
 	
@@ -88,34 +88,38 @@ public class GridManager {
 		EnumMap<Directions, Set<Directions>> originDtoPossibleD = new EnumMap<>(Directions.class); // Possible entry to possible exits 
 		EnumMap<GridPositions, Boolean> gridPosOccupations = computesGridPositionsOccupied(actualCoordinates);
 		
-		// TODO : Corriger bug WEST -> EAST_NORTH allowed but should'nt have been 
-		
 		Set<Directions> directions;
 		for (Directions direction : entryDirections) {
-			if(directionManager.isSimpleDirection(direction)) {
+			if(directionManager.getSimpleDirections().contains(direction)) {
 				directions = simpleAllowedDirections(gridPosOccupations);
 			} else {
-				directions = complexAllowedDirections(gridPosOccupations, direction);
+				directions = complexeAllowedDirections(gridPosOccupations, direction);
 			}
 			if(!directions.isEmpty()) originDtoPossibleD.put(direction, directions);
 		}
 		return originDtoPossibleD;
 	}
  	
- 	private Set<Directions> complexAllowedDirections(EnumMap<GridPositions, Boolean> gridPosOccupations, Directions aDirection){
- 		Set<Directions> directions;
- 		if(aDirection.equals(Directions.SOUTH_EAST) || aDirection.equals(Directions.EAST_SOUTH)) {
- 			directions = allowedDirectionForSouthEast(gridPosOccupations, aDirection);
-		} else if(aDirection.equals(Directions.SOUTH_WEST) || aDirection.equals(Directions.WEST_SOUTH)) {
-			directions = allowedDirectionForSouthWest(gridPosOccupations, aDirection);
-		} else if(aDirection.equals(Directions.WEST_NORTH) || aDirection.equals(Directions.NORTH_WEST)) {
-			directions = allowedDirectionForNorthWest(gridPosOccupations, aDirection);
-		} else {
-			directions = allowedDirectionForNorthEast(gridPosOccupations, aDirection);
-		}
- 		return directions;
+ 	public Set<Directions> simpleAllowedDirections(EnumMap<GridPositions, Boolean> gridPosOccupations){
+ 		Set<Directions> directions = new HashSet<>(directionManager.getSimpleDirections());
+		if(gridPosOccupations.get(GridPositions.YPLUS1)) {directions.remove(Directions.NORTH);}
+		if(gridPosOccupations.get(GridPositions.YMOINS1)) {directions.remove(Directions.SOUTH);}
+		if(gridPosOccupations.get(GridPositions.XMOINS1)) {directions.remove(Directions.WEST);}
+		if(gridPosOccupations.get(GridPositions.XPLUS1)) {directions.remove(Directions.EAST);}
+		return directions;
  	}
  	
+ 	public Set<Directions> complexeAllowedDirections(EnumMap<GridPositions, Boolean> gridPosOccupations, Directions direction){
+ 		if(direction.equals(Directions.SOUTH_EAST) || direction.equals(Directions.EAST_SOUTH)) {
+			return allowedDirectionForSouthEast(gridPosOccupations, direction);
+		} else if(direction.equals(Directions.SOUTH_WEST) || direction.equals(Directions.WEST_SOUTH)) {
+			return allowedDirectionForSouthWest(gridPosOccupations, direction);
+		} else if(direction.equals(Directions.WEST_NORTH) || direction.equals(Directions.NORTH_WEST) ) {
+			return allowedDirectionForNorthWest(gridPosOccupations, direction);
+		} else {
+			return allowedDirectionForNorthEast(gridPosOccupations, direction);
+		}
+ 	}
  	
 	/**
  	 * Computes the possible exits for LargeRoomType  with SOUTH_EAST or EAST_SOUTH as entry
@@ -123,8 +127,9 @@ public class GridManager {
  	 * @return A set of authorized exit directions for LargeRoomType with SOUTH_EAST or EAST_SOUTH as entry
  	 */
  	private Set<Directions> allowedDirectionForSouthEast(EnumMap<GridPositions, Boolean> gridPosOccupations, Directions possibleEntry){
- 		Set<Directions> directions = new HashSet<>(directionManager.getComplexDirections());
+ 		Set<Directions> directions = new HashSet<>();
  		if(!gridPosOccupations.get(GridPositions.YPLUS1) && !gridPosOccupations.get(GridPositions.XMOINS1) && !gridPosOccupations.get(GridPositions.XMOINS1_YPLUS1)) {
+ 			directions.addAll(directionManager.getComplexDirections());
 			if(gridPosOccupations.get(GridPositions.YMOINS1)) directions.remove(Directions.SOUTH_EAST);
 			if(gridPosOccupations.get(GridPositions.XPLUS1)) directions.remove(Directions.EAST_SOUTH);
 			if(gridPosOccupations.get(GridPositions.XY_PLUS1)) directions.remove(Directions.EAST_NORTH);
@@ -145,8 +150,9 @@ public class GridManager {
  	 * @return A set of authorized exit directions for LargeRoomType with SOUTH_WEST or WEST_SOUTH as entry
  	 */
  	private Set<Directions> allowedDirectionForSouthWest(EnumMap<GridPositions, Boolean> gridPosOccupations, Directions possibleEntry){
- 		Set<Directions> directions = new HashSet<>(directionManager.getComplexDirections());
+ 		Set<Directions> directions = new HashSet<>();
  		if(!gridPosOccupations.get(GridPositions.YPLUS1) && !gridPosOccupations.get(GridPositions.XY_PLUS1) && !gridPosOccupations.get(GridPositions.XPLUS1)) {
+ 			directions.addAll(directionManager.getComplexDirections());
  			if(gridPosOccupations.get(GridPositions.XMOINS1)) directions.remove(Directions.WEST_SOUTH);
 			if(gridPosOccupations.get(GridPositions.YMOINS1)) directions.remove(Directions.SOUTH_WEST);
 			if(gridPosOccupations.get(GridPositions.XMOINS1_YPLUS1)) directions.remove(Directions.WEST_NORTH);
@@ -167,8 +173,9 @@ public class GridManager {
  	 * @return A set of authorized exit directions for LargeRoomType with NORTH_WEST or WEST_NORTH as entry
  	 */
  	private Set<Directions> allowedDirectionForNorthWest(EnumMap<GridPositions, Boolean> gridPosOccupations, Directions possibleEntry){
- 		Set<Directions> directions = new HashSet<>(directionManager.getComplexDirections());
+ 		Set<Directions> directions = new HashSet<>(); 
  		if(!gridPosOccupations.get(GridPositions.XPLUS1) && !gridPosOccupations.get(GridPositions.XPLUS1_YMOINS1) && !gridPosOccupations.get(GridPositions.YMOINS1)) {
+ 			directions.addAll(directionManager.getComplexDirections());
 			if(gridPosOccupations.get(GridPositions.YPLUS1)) directions.remove(Directions.NORTH_WEST);
 			if(gridPosOccupations.get(GridPositions.XY_PLUS1)) directions.remove(Directions.NORTH_EAST);
 			if(gridPosOccupations.get(GridPositions.XMOINS1)) directions.remove(Directions.WEST_NORTH);
@@ -182,6 +189,7 @@ public class GridManager {
 		}
  		return directions;
  	}
+
  	
  	/**
  	 * Computes the possible exits for LargeRoomType  with NORTH_EAST or EAST_NORTH as entry
@@ -190,8 +198,9 @@ public class GridManager {
  	 * @return A set of authorized exit directions for LargeRoomType with NORTH_EAST or EAST_NORTH as entry
  	 */
  	private Set<Directions> allowedDirectionForNorthEast(EnumMap<GridPositions, Boolean> gridPosOccupations, Directions possibleEntry){
- 		Set<Directions> directions = new HashSet<>(directionManager.getComplexDirections());
+ 		Set<Directions> directions = new HashSet<>();
  		if(!gridPosOccupations.get(GridPositions.XMOINS1) && !gridPosOccupations.get(GridPositions.XY_MOINS1) && !gridPosOccupations.get(GridPositions.YMOINS1)) {
+ 			directions.addAll(directionManager.getComplexDirections());
 			if(gridPosOccupations.get(GridPositions.YPLUS1)) directions.remove(Directions.NORTH_EAST);
 			if(gridPosOccupations.get(GridPositions.XMOINS1_YPLUS1)) directions.remove(Directions.NORTH_WEST);
 			if(gridPosOccupations.get(GridPositions.XMOINS2)) directions.remove(Directions.WEST_NORTH);
@@ -205,15 +214,7 @@ public class GridManager {
 		}
  		return directions;
  	}
- 	
- 	private Set<Directions> simpleAllowedDirections(EnumMap<GridPositions, Boolean> gridPosOccupations) {
- 		Set<Directions> directions = new HashSet<>(directionManager.getSimpleDirections());
-		if(gridPosOccupations.get(GridPositions.YPLUS1)) {directions.remove(Directions.NORTH);}
-		if(gridPosOccupations.get(GridPositions.YMOINS1)) {directions.remove(Directions.SOUTH);}
-		if(gridPosOccupations.get(GridPositions.XMOINS1)) {directions.remove(Directions.WEST);}
-		if(gridPosOccupations.get(GridPositions.XPLUS1)) {directions.remove(Directions.EAST);}
-		return directions;
- 	}
+
  	
 	/**
 	 * Computes the position coordinates corresponding to the exit direction <origineD> of the starting room <origineR>

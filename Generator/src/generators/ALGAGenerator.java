@@ -13,7 +13,7 @@ public class ALGAGenerator {
 	public static void main(String[] args) {
 		ALGAGenerator generator = new ALGAGenerator();
 		generator.generate();
-		generator.saveDungeon("DungeonTESTS.xmi");
+		generator.saveDungeon("DungeonTESTSL.xmi");
 		generator.printDungeon();
 	}
 	

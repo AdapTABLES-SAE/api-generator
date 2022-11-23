@@ -1,7 +1,5 @@
 /generator/
-/exceptions/
 /generators/
 /managers/
-/models/
-/reloadForTest/
 /structures/
+/tests/
