@@ -13,9 +13,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.CurrentObjectiveLevel#getLearningobjective <em>Learningobjective</em>}</li>
+ *   <li>{@link generator.CurrentObjectiveLevel#getObjective <em>Objective</em>}</li>
  *   <li>{@link generator.CurrentObjectiveLevel#isAchieved <em>Achieved</em>}</li>
  *   <li>{@link generator.CurrentObjectiveLevel#getLevel <em>Level</em>}</li>
+ *   <li>{@link generator.CurrentObjectiveLevel#getResults <em>Results</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getCurrentObjectiveLevel()
@@ -24,26 +25,26 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface CurrentObjectiveLevel extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Learningobjective</b></em>' reference.
+	 * Returns the value of the '<em><b>Objective</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Learningobjective</em>' reference.
-	 * @see #setLearningobjective(LearningObjective)
-	 * @see generator.GeneratorPackage#getCurrentObjectiveLevel_Learningobjective()
+	 * @return the value of the '<em>Objective</em>' reference.
+	 * @see #setObjective(Objective)
+	 * @see generator.GeneratorPackage#getCurrentObjectiveLevel_Objective()
 	 * @model required="true"
 	 * @generated
 	 */
-	LearningObjective getLearningobjective();
+	Objective getObjective();
 
 	/**
-	 * Sets the value of the '{@link generator.CurrentObjectiveLevel#getLearningobjective <em>Learningobjective</em>}' reference.
+	 * Sets the value of the '{@link generator.CurrentObjectiveLevel#getObjective <em>Objective</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Learningobjective</em>' reference.
-	 * @see #getLearningobjective()
+	 * @param value the new value of the '<em>Objective</em>' reference.
+	 * @see #getObjective()
 	 * @generated
 	 */
-	void setLearningobjective(LearningObjective value);
+	void setObjective(Objective value);
 
 	/**
 	 * Returns the value of the '<em><b>Achieved</b></em>' attribute.
@@ -88,5 +89,27 @@ public interface CurrentObjectiveLevel extends EObject {
 	 * @generated
 	 */
 	void setLevel(Level value);
+
+	/**
+	 * Returns the value of the '<em><b>Results</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Results</em>' containment reference.
+	 * @see #setResults(Results)
+	 * @see generator.GeneratorPackage#getCurrentObjectiveLevel_Results()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Results getResults();
+
+	/**
+	 * Sets the value of the '{@link generator.CurrentObjectiveLevel#getResults <em>Results</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Results</em>' containment reference.
+	 * @see #getResults()
+	 * @generated
+	 */
+	void setResults(Results value);
 
 } // CurrentObjectiveLevel

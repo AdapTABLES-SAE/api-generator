@@ -48,14 +48,14 @@ public interface Level extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Tasks</b></em>' containment reference list.
-	 * The list contents are of type {@link generator.Task}.
+	 * The list contents are of type {@link generator.ATask}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tasks</em>' containment reference list.
 	 * @see generator.GeneratorPackage#getLevel_Tasks()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Task> getTasks();
+	EList<ATask> getTasks();
 
 } // Level

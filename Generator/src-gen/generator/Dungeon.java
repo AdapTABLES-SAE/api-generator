@@ -113,12 +113,12 @@ public interface Dungeon extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Learningobjective</em>' reference.
-	 * @see #setLearningobjective(LearningObjective)
+	 * @see #setLearningobjective(Objective)
 	 * @see generator.GeneratorPackage#getDungeon_Learningobjective()
 	 * @model required="true"
 	 * @generated
 	 */
-	LearningObjective getLearningobjective();
+	Objective getLearningobjective();
 
 	/**
 	 * Sets the value of the '{@link generator.Dungeon#getLearningobjective <em>Learningobjective</em>}' reference.
@@ -128,6 +128,6 @@ public interface Dungeon extends EObject {
 	 * @see #getLearningobjective()
 	 * @generated
 	 */
-	void setLearningobjective(LearningObjective value);
+	void setLearningobjective(Objective value);
 
 } // Dungeon

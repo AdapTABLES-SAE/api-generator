@@ -6,34 +6,86 @@
     xmlns:generator="http://www.example.org/generator"
     xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore">
   <gamecontext
-      numberOfRooms="20"/>
+      numberOfRooms="10"/>
   <learnerplayer
       name="Harry Potter">
     <progression>
       <currentobjectivelevels
           achieved="true">
-        <learningobjective
-            href="MTLearningDomain.xmi#O1"/>
+        <objective
+            href="LearningDomain.xmi#REC-O1"/>
         <level
             xsi:type="generator:MTLevel"
-            href="MTLearningDomain.xmi#O1-N1"/>
+            href="LearningDomain.xmi#REC-O1-N1"/>
+      </currentobjectivelevels>
+      <currentobjectivelevels
+          achieved="true">
+        <objective
+            href="LearningDomain.xmi#REC-O2"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="LearningDomain.xmi#REC-O2-N1"/>
+      </currentobjectivelevels>
+      <currentobjectivelevels
+          achieved="true">
+        <objective
+            href="LearningDomain.xmi#REC-O2"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="LearningDomain.xmi#REC-O2-N2"/>
       </currentobjectivelevels>
       <currentobjectivelevels>
-        <learningobjective
-            href="MTLearningDomain.xmi#O1"/>
+        <objective
+            href="LearningDomain.xmi#REC-O2"/>
         <level
             xsi:type="generator:MTLevel"
-            href="MTLearningDomain.xmi#O1-N2"/>
+            href="LearningDomain.xmi#REC-O2-N3"/>
+      </currentobjectivelevels>
+      <currentobjectivelevels
+          achieved="true">
+        <objective
+            href="LearningDomain.xmi#REC-O3"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="LearningDomain.xmi#REC-O3-N1"/>
       </currentobjectivelevels>
       <currentobjectivelevels>
-        <learningobjective
-            href="MTLearningDomain.xmi#O2"/>
+        <objective
+            href="LearningDomain.xmi#REC-O3"/>
         <level
             xsi:type="generator:MTLevel"
-            href="MTLearningDomain.xmi#O2-N1"/>
+            href="LearningDomain.xmi#REC-O3-N2"/>
+      </currentobjectivelevels>
+      <currentobjectivelevels>
+        <objective
+            href="LearningDomain.xmi#REC-O1"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="LearningDomain.xmi#REC-O2-N2"/>
+      </currentobjectivelevels>
+      <currentobjectivelevels>
+        <objective
+            href="LearningDomain.xmi#REC-O4"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="LearningDomain.xmi#REC-O4-N1"/>
+      </currentobjectivelevels>
+      <currentobjectivelevels>
+        <objective
+            href="LearningDomain.xmi#REC-O5"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="LearningDomain.xmi#REC-O5-N1"/>
+      </currentobjectivelevels>
+      <currentobjectivelevels>
+        <objective
+            href="LearningDomain.xmi#REC-O6"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="LearningDomain.xmi#REC-O6-N1"/>
       </currentobjectivelevels>
     </progression>
     <learningpath
-        href="MTLearningDomain.xmi#//@learningpaths.0"/>
+        href="LearningDomain.xmi#//@learningpaths.1"/>
   </learnerplayer>
 </generator:GenerationContext>

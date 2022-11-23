@@ -29,7 +29,7 @@ public interface SetOfFacts extends AbstractFact {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Facts</em>' containment reference list.
 	 * @see generator.GeneratorPackage#getSetOfFacts_Facts()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<AbstractFact> getFacts();

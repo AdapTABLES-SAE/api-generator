@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generator.LearningPath#getName <em>Name</em>}</li>
- *   <li>{@link generator.LearningPath#getLearningobjective <em>Learningobjective</em>}</li>
+ *   <li>{@link generator.LearningPath#getObjectives <em>Objectives</em>}</li>
  *   <li>{@link generator.LearningPath#getKnowledge <em>Knowledge</em>}</li>
  * </ul>
  *
@@ -48,16 +48,16 @@ public interface LearningPath extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Learningobjective</b></em>' containment reference list.
-	 * The list contents are of type {@link generator.LearningObjective}.
+	 * Returns the value of the '<em><b>Objectives</b></em>' containment reference list.
+	 * The list contents are of type {@link generator.Objective}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Learningobjective</em>' containment reference list.
-	 * @see generator.GeneratorPackage#getLearningPath_Learningobjective()
+	 * @return the value of the '<em>Objectives</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getLearningPath_Objectives()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<LearningObjective> getLearningobjective();
+	EList<Objective> getObjectives();
 
 	/**
 	 * Returns the value of the '<em><b>Knowledge</b></em>' reference.

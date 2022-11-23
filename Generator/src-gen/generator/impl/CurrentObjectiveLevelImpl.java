@@ -4,10 +4,12 @@ package generator.impl;
 
 import generator.CurrentObjectiveLevel;
 import generator.GeneratorPackage;
-import generator.LearningObjective;
 import generator.Level;
+import generator.Objective;
+import generator.Results;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -23,23 +25,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.CurrentObjectiveLevelImpl#getLearningobjective <em>Learningobjective</em>}</li>
+ *   <li>{@link generator.impl.CurrentObjectiveLevelImpl#getObjective <em>Objective</em>}</li>
  *   <li>{@link generator.impl.CurrentObjectiveLevelImpl#isAchieved <em>Achieved</em>}</li>
  *   <li>{@link generator.impl.CurrentObjectiveLevelImpl#getLevel <em>Level</em>}</li>
+ *   <li>{@link generator.impl.CurrentObjectiveLevelImpl#getResults <em>Results</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container implements CurrentObjectiveLevel {
 	/**
-	 * The cached value of the '{@link #getLearningobjective() <em>Learningobjective</em>}' reference.
+	 * The cached value of the '{@link #getObjective() <em>Objective</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLearningobjective()
+	 * @see #getObjective()
 	 * @generated
 	 * @ordered
 	 */
-	protected LearningObjective learningobjective;
+	protected Objective objective;
 
 	/**
 	 * The default value of the '{@link #isAchieved() <em>Achieved</em>}' attribute.
@@ -72,6 +75,16 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 	protected Level level;
 
 	/**
+	 * The cached value of the '{@link #getResults() <em>Results</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResults()
+	 * @generated
+	 * @ordered
+	 */
+	protected Results results;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -95,18 +108,17 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LearningObjective getLearningobjective() {
-		if (learningobjective != null && learningobjective.eIsProxy()) {
-			InternalEObject oldLearningobjective = (InternalEObject) learningobjective;
-			learningobjective = (LearningObjective) eResolveProxy(oldLearningobjective);
-			if (learningobjective != oldLearningobjective) {
+	public Objective getObjective() {
+		if (objective != null && objective.eIsProxy()) {
+			InternalEObject oldObjective = (InternalEObject) objective;
+			objective = (Objective) eResolveProxy(oldObjective);
+			if (objective != oldObjective) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__LEARNINGOBJECTIVE, oldLearningobjective,
-							learningobjective));
+							GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__OBJECTIVE, oldObjective, objective));
 			}
 		}
-		return learningobjective;
+		return objective;
 	}
 
 	/**
@@ -114,8 +126,8 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LearningObjective basicGetLearningobjective() {
-		return learningobjective;
+	public Objective basicGetObjective() {
+		return objective;
 	}
 
 	/**
@@ -123,13 +135,12 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLearningobjective(LearningObjective newLearningobjective) {
-		LearningObjective oldLearningobjective = learningobjective;
-		learningobjective = newLearningobjective;
+	public void setObjective(Objective newObjective) {
+		Objective oldObjective = objective;
+		objective = newObjective;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__LEARNINGOBJECTIVE, oldLearningobjective,
-					learningobjective));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__OBJECTIVE,
+					oldObjective, objective));
 	}
 
 	/**
@@ -199,19 +210,85 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Results getResults() {
+		return results;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetResults(Results newResults, NotificationChain msgs) {
+		Results oldResults = results;
+		results = newResults;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__RESULTS, oldResults, newResults);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setResults(Results newResults) {
+		if (newResults != results) {
+			NotificationChain msgs = null;
+			if (results != null)
+				msgs = ((InternalEObject) results).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__RESULTS, null, msgs);
+			if (newResults != null)
+				msgs = ((InternalEObject) newResults).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__RESULTS, null, msgs);
+			msgs = basicSetResults(newResults, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__RESULTS,
+					newResults, newResults));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__RESULTS:
+			return basicSetResults(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__LEARNINGOBJECTIVE:
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__OBJECTIVE:
 			if (resolve)
-				return getLearningobjective();
-			return basicGetLearningobjective();
+				return getObjective();
+			return basicGetObjective();
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__ACHIEVED:
 			return isAchieved();
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__LEVEL:
 			if (resolve)
 				return getLevel();
 			return basicGetLevel();
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__RESULTS:
+			return getResults();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -224,14 +301,17 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__LEARNINGOBJECTIVE:
-			setLearningobjective((LearningObjective) newValue);
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__OBJECTIVE:
+			setObjective((Objective) newValue);
 			return;
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__ACHIEVED:
 			setAchieved((Boolean) newValue);
 			return;
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__LEVEL:
 			setLevel((Level) newValue);
+			return;
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__RESULTS:
+			setResults((Results) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -245,14 +325,17 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__LEARNINGOBJECTIVE:
-			setLearningobjective((LearningObjective) null);
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__OBJECTIVE:
+			setObjective((Objective) null);
 			return;
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__ACHIEVED:
 			setAchieved(ACHIEVED_EDEFAULT);
 			return;
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__LEVEL:
 			setLevel((Level) null);
+			return;
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__RESULTS:
+			setResults((Results) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -266,12 +349,14 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__LEARNINGOBJECTIVE:
-			return learningobjective != null;
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__OBJECTIVE:
+			return objective != null;
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__ACHIEVED:
 			return achieved != ACHIEVED_EDEFAULT;
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__LEVEL:
 			return level != null;
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__RESULTS:
+			return results != null;
 		}
 		return super.eIsSet(featureID);
 	}

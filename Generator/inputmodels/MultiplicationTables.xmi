@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator:Knowledge xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore" name="Multiplication Tables">
+  <knowledgefacts xsi:type="generator:SetOfFacts" name="Table 1"/>
+  <knowledgefacts xsi:type="generator:SetOfFacts" name="Table 2"/>
+  <knowledgefacts xsi:type="generator:SetOfFacts" name="Table 3"/>
+  <knowledgefacts xsi:type="generator:SetOfFacts" name="Table 4"/>
+  <knowledgefacts xsi:type="generator:SetOfFacts" name="Table 5"/>
+  <knowledgefacts xsi:type="generator:SetOfFacts" name="Table 6"/>
+  <knowledgefacts xsi:type="generator:SetOfFacts" name="Table 7"/>
+  <knowledgefacts xsi:type="generator:SetOfFacts" name="Table 8"/>
+  <knowledgefacts xsi:type="generator:SetOfFacts" name="Table 9"/>
+  <knowledgefacts xsi:type="generator:SetOfFacts" name="Table 10"/>
+  <knowledgefacts xsi:type="generator:SetOfFacts" name="Table 11"/>
+  <knowledgefacts xsi:type="generator:SetOfFacts" name="Table 12"/>
+</generator:Knowledge>

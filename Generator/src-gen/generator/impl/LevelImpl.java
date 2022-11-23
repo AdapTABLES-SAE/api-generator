@@ -2,9 +2,9 @@
  */
 package generator.impl;
 
+import generator.ATask;
 import generator.GeneratorPackage;
 import generator.Level;
-import generator.Task;
 
 import java.util.Collection;
 
@@ -65,7 +65,7 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Task> tasks;
+	protected EList<ATask> tasks;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,9 +112,9 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Task> getTasks() {
+	public EList<ATask> getTasks() {
 		if (tasks == null) {
-			tasks = new EObjectContainmentEList<Task>(Task.class, this, GeneratorPackage.LEVEL__TASKS);
+			tasks = new EObjectContainmentEList<ATask>(ATask.class, this, GeneratorPackage.LEVEL__TASKS);
 		}
 		return tasks;
 	}
@@ -163,7 +163,7 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 			return;
 		case GeneratorPackage.LEVEL__TASKS:
 			getTasks().clear();
-			getTasks().addAll((Collection<? extends Task>) newValue);
+			getTasks().addAll((Collection<? extends ATask>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

@@ -4,8 +4,8 @@ package generator.impl;
 
 import generator.GeneratorPackage;
 import generator.Knowledge;
-import generator.LearningObjective;
 import generator.LearningPath;
+import generator.Objective;
 
 import java.util.Collection;
 
@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.LearningPathImpl#getName <em>Name</em>}</li>
- *   <li>{@link generator.impl.LearningPathImpl#getLearningobjective <em>Learningobjective</em>}</li>
+ *   <li>{@link generator.impl.LearningPathImpl#getObjectives <em>Objectives</em>}</li>
  *   <li>{@link generator.impl.LearningPathImpl#getKnowledge <em>Knowledge</em>}</li>
  * </ul>
  *
@@ -60,14 +60,14 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getLearningobjective() <em>Learningobjective</em>}' containment reference list.
+	 * The cached value of the '{@link #getObjectives() <em>Objectives</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLearningobjective()
+	 * @see #getObjectives()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<LearningObjective> learningobjective;
+	protected EList<Objective> objectives;
 
 	/**
 	 * The cached value of the '{@link #getKnowledge() <em>Knowledge</em>}' reference.
@@ -124,12 +124,12 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<LearningObjective> getLearningobjective() {
-		if (learningobjective == null) {
-			learningobjective = new EObjectContainmentEList<LearningObjective>(LearningObjective.class, this,
-					GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVE);
+	public EList<Objective> getObjectives() {
+		if (objectives == null) {
+			objectives = new EObjectContainmentEList<Objective>(Objective.class, this,
+					GeneratorPackage.LEARNING_PATH__OBJECTIVES);
 		}
-		return learningobjective;
+		return objectives;
 	}
 
 	/**
@@ -180,8 +180,8 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVE:
-			return ((InternalEList<?>) getLearningobjective()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.LEARNING_PATH__OBJECTIVES:
+			return ((InternalEList<?>) getObjectives()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -196,8 +196,8 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 		switch (featureID) {
 		case GeneratorPackage.LEARNING_PATH__NAME:
 			return getName();
-		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVE:
-			return getLearningobjective();
+		case GeneratorPackage.LEARNING_PATH__OBJECTIVES:
+			return getObjectives();
 		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
 			if (resolve)
 				return getKnowledge();
@@ -218,9 +218,9 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 		case GeneratorPackage.LEARNING_PATH__NAME:
 			setName((String) newValue);
 			return;
-		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVE:
-			getLearningobjective().clear();
-			getLearningobjective().addAll((Collection<? extends LearningObjective>) newValue);
+		case GeneratorPackage.LEARNING_PATH__OBJECTIVES:
+			getObjectives().clear();
+			getObjectives().addAll((Collection<? extends Objective>) newValue);
 			return;
 		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
 			setKnowledge((Knowledge) newValue);
@@ -240,8 +240,8 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 		case GeneratorPackage.LEARNING_PATH__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVE:
-			getLearningobjective().clear();
+		case GeneratorPackage.LEARNING_PATH__OBJECTIVES:
+			getObjectives().clear();
 			return;
 		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
 			setKnowledge((Knowledge) null);
@@ -260,8 +260,8 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 		switch (featureID) {
 		case GeneratorPackage.LEARNING_PATH__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case GeneratorPackage.LEARNING_PATH__LEARNINGOBJECTIVE:
-			return learningobjective != null && !learningobjective.isEmpty();
+		case GeneratorPackage.LEARNING_PATH__OBJECTIVES:
+			return objectives != null && !objectives.isEmpty();
 		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
 			return knowledge != null;
 		}

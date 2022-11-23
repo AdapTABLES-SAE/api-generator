@@ -1,28 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<generator:GameDescription xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:generator="http://www.example.org/generator" xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore">
+<generator:GameDescription
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:generator="http://www.example.org/generator"
+    xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore">
   <roomtypes>
-    <roomtypes xsi:type="generator:SmallRoomType" name="RegularRoomS">
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoomS">
       <directions>SOUTH</directions>
     </roomtypes>
-    <roomtypes xsi:type="generator:SmallRoomType" name="RegularRoomN">
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoomN">
       <directions>NORTH</directions>
     </roomtypes>
-    <roomtypes xsi:type="generator:SmallRoomType" name="RegularRoomE">
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoomE">
       <directions>EAST</directions>
     </roomtypes>
-    <roomtypes xsi:type="generator:SmallRoomType" name="RegularRoomW">
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoomW">
       <directions>WEST</directions>
     </roomtypes>
-    <roomtypes xsi:type="generator:SmallRoomType" name="RegularRoom1">
-      <positions name="POSQ1"/>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoom1">
+      <positions
+          name="POSQ1"/>
       <directions>SOUTH</directions>
       <directions>EAST</directions>
       <directions>NORTH</directions>
       <directions>WEST</directions>
     </roomtypes>
-    <roomtypes xsi:type="generator:LargeRoomType" name="LargeRoom1">
-      <positions name="POSQ1"/>
+    <roomtypes
+        xsi:type="generator:LargeRoomType"
+        name="LargeRoom1">
+      <positions
+          name="POSQ1"/>
       <directions>SOUTH_EAST</directions>
       <directions>SOUTH_WEST</directions>
       <directions>NORTH_EAST</directions>
@@ -34,4 +52,3 @@
     </roomtypes>
   </roomtypes>
 </generator:GameDescription>
-    

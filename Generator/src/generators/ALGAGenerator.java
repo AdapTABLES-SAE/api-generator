@@ -11,19 +11,10 @@ public class ALGAGenerator {
 	private Dungeon generatedDungeon;
 
 	public static void main(String[] args) {
-		//for(int i = 1; i < 11; i ++) {
-			/*ALGAGenerator generator = new ALGAGenerator();
-			Dungeon generatedDungeon = generator.generate();
-			generator.printDungeon(generatedDungeon);*/
-			//EducationalElementsGenerator edg = new EducationalElementsGenerator(generator.modelAccess);
-			//edg.generate();
-			//generator.saveDungeon(generatedDungeon, "GeneratedDungeon"+i+".xmi");
-		//}
 		ALGAGenerator generator = new ALGAGenerator();
 		generator.generate();
-		generator.saveDungeon("DungeonTEST.xmi");
+		//generator.saveDungeon("DungeonTEST.xmi");
 		generator.printDungeon();
-		
 	}
 	
 	public ALGAGenerator() {
@@ -36,9 +27,8 @@ public class ALGAGenerator {
 	
 	public void generate() {
 		EducationalElementsGenerator eduGeneration = new EducationalElementsGenerator(modelAccess);
-		eduGeneration.generateObjectiveLevelRoomTasks();
 		
-		DungeonGenerator dungeonGeneration = new DungeonGenerator(modelAccess, eduGeneration.getListOfRoomTask());
+		DungeonGenerator dungeonGeneration = new DungeonGenerator(modelAccess, eduGeneration.generateEE());
 		generatedDungeon = dungeonGeneration.generateDungeon();
 		
 		generatedDungeon.setLearningobjective(eduGeneration.getChosenObjective());

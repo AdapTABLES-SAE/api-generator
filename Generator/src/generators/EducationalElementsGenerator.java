@@ -1,18 +1,14 @@
 package generators;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 import generator.CurrentObjectiveLevel;
-import generator.LearningObjective;
 import generator.Level;
-import generator.Task;
-import generator.TaskType;
+import generator.Objective;
+import managers.EducationElementsManager;
 import models.ModelAccess;
-import structures.DataAccess;
 
 /**
  * Cette classe permet de générer / choisir, l'objectif d'entrainement visée ainsi que le niveau de difficulté. 
@@ -23,32 +19,27 @@ public class EducationalElementsGenerator {
 	private ModelAccess modelAccess;
 	private Random random;
 	
-	private CurrentObjectiveLevel chosenObjectiveLevel;
-	private Map<TaskType, Integer> nbRoomsToTaskType;
-	
+	private EducationElementsManager eeManager;
+
 
 	public EducationalElementsGenerator(ModelAccess modelAccess) {
 		this.modelAccess = modelAccess;
 		random = new Random();
-		nbRoomsToTaskType = new HashMap<>();
+		eeManager = new EducationElementsManager(modelAccess.context.getGamecontext().getNumberOfRooms());
 	}
 	
-	public void generateObjectiveLevelRoomTasks() {
+	public EducationElementsManager generateEE() {
 		selectObjectiveLevel();
-		defineNbRoomsToTask();
-		//printGeneration();
+		printGeneration();
+		return eeManager;
 	}
 	
 	public Level getChosenLevel() {
-		return chosenObjectiveLevel.getLevel();
+		return eeManager.getLevel();
 	}
 	
-	public LearningObjective getChosenObjective() {
-		return chosenObjectiveLevel.getLearningobjective();
-	}
-	
-	private String taskTypeToString(TaskType tt) {
-		return tt.getClass().getSimpleName() + tt.getResponsemodalities();
+	public Objective getChosenObjective() {
+		return eeManager.getObjective();
 	}
 	
 	private void selectObjectiveLevel() {
@@ -58,44 +49,13 @@ public class EducationalElementsGenerator {
 				notAchieved.add(currentObjectiveLevel);
 			}
 		}
-		chosenObjectiveLevel = notAchieved.get(random.nextInt(notAchieved.size()));
-	}
-	
-	public List<TaskType> getListOfRoomTask() {
-		List<TaskType> taskTypes = new ArrayList<>();
-		for (TaskType taskType : nbRoomsToTaskType.keySet()) {
-			if(!DataAccess.getCompatibleRoomTypeSize(taskType).contains("SMALL")) {
-				for (int i = 0; i < nbRoomsToTaskType.get(taskType); i++) {
-					taskTypes.add(taskType);
-				}
-			}
-		}
-		for (TaskType taskType : nbRoomsToTaskType.keySet()) {
-			if(DataAccess.getCompatibleRoomTypeSize(taskType).contains("SMALL")) {
-				for (int i = 0; i < nbRoomsToTaskType.get(taskType); i++) {
-					taskTypes.add(taskType);
-				}
-			}
-		}
-		return taskTypes;
-	} 
-	
-	
-	private void defineNbRoomsToTask() {
-		if(chosenObjectiveLevel != null) {
-			int nbRooms = modelAccess.context.getGamecontext().getNumberOfRooms();
-			for (Task task : chosenObjectiveLevel.getLevel().getTasks()) {
-				nbRoomsToTaskType.put(task.getTasktype(), (task.getPercentageOfApparition()*nbRooms)/100);
-			}
-		}
-	}
+		// TODO : choix en fonction des pourcentages !!! 
+		eeManager.setChosenObjectiveLevel(notAchieved.get(random.nextInt(notAchieved.size())));
+	}	
+
 	
 	public void printGeneration() {
-		System.out.println("Objectif : "+chosenObjectiveLevel.getLearningobjective().getName()+" niveau : "+chosenObjectiveLevel.getLevel().getID());
-		System.out.println("Salle / Taches : ");
-		for (TaskType tt : nbRoomsToTaskType.keySet()) {
-			System.out.println("\t"+ nbRoomsToTaskType.get(tt) + " room of type : " + taskTypeToString(tt));
-		}
+		System.out.println(eeManager.toString());
 	}
 	
 }

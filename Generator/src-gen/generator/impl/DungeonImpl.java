@@ -5,8 +5,8 @@ package generator.impl;
 import generator.Dungeon;
 import generator.DungeonMode;
 import generator.GeneratorPackage;
-import generator.LearningObjective;
 import generator.Level;
+import generator.Objective;
 import generator.Room;
 
 import java.util.Collection;
@@ -101,7 +101,7 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * @generated
 	 * @ordered
 	 */
-	protected LearningObjective learningobjective;
+	protected Objective learningobjective;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -238,10 +238,10 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LearningObjective getLearningobjective() {
+	public Objective getLearningobjective() {
 		if (learningobjective != null && learningobjective.eIsProxy()) {
 			InternalEObject oldLearningobjective = (InternalEObject) learningobjective;
-			learningobjective = (LearningObjective) eResolveProxy(oldLearningobjective);
+			learningobjective = (Objective) eResolveProxy(oldLearningobjective);
 			if (learningobjective != oldLearningobjective) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
@@ -256,7 +256,7 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LearningObjective basicGetLearningobjective() {
+	public Objective basicGetLearningobjective() {
 		return learningobjective;
 	}
 
@@ -265,8 +265,8 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLearningobjective(LearningObjective newLearningobjective) {
-		LearningObjective oldLearningobjective = learningobjective;
+	public void setLearningobjective(Objective newLearningobjective) {
+		Objective oldLearningobjective = learningobjective;
 		learningobjective = newLearningobjective;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.DUNGEON__LEARNINGOBJECTIVE,
@@ -338,7 +338,7 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 			setLevel((Level) newValue);
 			return;
 		case GeneratorPackage.DUNGEON__LEARNINGOBJECTIVE:
-			setLearningobjective((LearningObjective) newValue);
+			setLearningobjective((Objective) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -365,7 +365,7 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 			setLevel((Level) null);
 			return;
 		case GeneratorPackage.DUNGEON__LEARNINGOBJECTIVE:
-			setLearningobjective((LearningObjective) null);
+			setLearningobjective((Objective) null);
 			return;
 		}
 		super.eUnset(featureID);

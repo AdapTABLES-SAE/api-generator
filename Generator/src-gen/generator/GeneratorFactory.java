@@ -112,15 +112,6 @@ public interface GeneratorFactory extends EFactory {
 	GameContext createGameContext();
 
 	/**
-	 * Returns a new object of class '<em>Task</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Task</em>'.
-	 * @generated
-	 */
-	Task createTask();
-
-	/**
 	 * Returns a new object of class '<em>Learning Domain</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -139,13 +130,13 @@ public interface GeneratorFactory extends EFactory {
 	LearningPath createLearningPath();
 
 	/**
-	 * Returns a new object of class '<em>Learning Objective</em>'.
+	 * Returns a new object of class '<em>Objective</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Learning Objective</em>'.
+	 * @return a new object of class '<em>Objective</em>'.
 	 * @generated
 	 */
-	LearningObjective createLearningObjective();
+	Objective createObjective();
 
 	/**
 	 * Returns a new object of class '<em>Prerequisite</em>'.
@@ -166,58 +157,13 @@ public interface GeneratorFactory extends EFactory {
 	MTLevel createMTLevel();
 
 	/**
-	 * Returns a new object of class '<em>MT Completion Type</em>'.
+	 * Returns a new object of class '<em>MT Completion1</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MT Completion Type</em>'.
+	 * @return a new object of class '<em>MT Completion1</em>'.
 	 * @generated
 	 */
-	MTCompletionType createMTCompletionType();
-
-	/**
-	 * Returns a new object of class '<em>Task Types</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Task Types</em>'.
-	 * @generated
-	 */
-	TaskTypes createTaskTypes();
-
-	/**
-	 * Returns a new object of class '<em>Completion Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Completion Type</em>'.
-	 * @generated
-	 */
-	CompletionType createCompletionType();
-
-	/**
-	 * Returns a new object of class '<em>Reconstruction Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reconstruction Type</em>'.
-	 * @generated
-	 */
-	ReconstructionType createReconstructionType();
-
-	/**
-	 * Returns a new object of class '<em>Fact Verification Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Fact Verification Type</em>'.
-	 * @generated
-	 */
-	FactVerificationType createFactVerificationType();
-
-	/**
-	 * Returns a new object of class '<em>Result Verification Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Result Verification Type</em>'.
-	 * @generated
-	 */
-	ResultVerificationType createResultVerificationType();
+	MTCompletion1 createMTCompletion1();
 
 	/**
 	 * Returns a new object of class '<em>Generation Context</em>'.
@@ -292,105 +238,6 @@ public interface GeneratorFactory extends EFactory {
 	EnterResponse createEnterResponse();
 
 	/**
-	 * Returns a new object of class '<em>Interaction EType</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Interaction EType</em>'.
-	 * @generated
-	 */
-	InteractionEType createInteractionEType();
-
-	/**
-	 * Returns a new object of class '<em>Active Ability</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Active Ability</em>'.
-	 * @generated
-	 */
-	ActiveAbility createActiveAbility();
-
-	/**
-	 * Returns a new object of class '<em>Passive Ability</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Passive Ability</em>'.
-	 * @generated
-	 */
-	PassiveAbility createPassiveAbility();
-
-	/**
-	 * Returns a new object of class '<em>Gameplay</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Gameplay</em>'.
-	 * @generated
-	 */
-	Gameplay createGameplay();
-
-	/**
-	 * Returns a new object of class '<em>Game Rule</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Game Rule</em>'.
-	 * @generated
-	 */
-	GameRule createGameRule();
-
-	/**
-	 * Returns a new object of class '<em>Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Element</em>'.
-	 * @generated
-	 */
-	Element createElement();
-
-	/**
-	 * Returns a new object of class '<em>Avatar Equipment</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Avatar Equipment</em>'.
-	 * @generated
-	 */
-	AvatarEquipment createAvatarEquipment();
-
-	/**
-	 * Returns a new object of class '<em>Elements</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Elements</em>'.
-	 * @generated
-	 */
-	Elements createElements();
-
-	/**
-	 * Returns a new object of class '<em>Gameplays</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Gameplays</em>'.
-	 * @generated
-	 */
-	Gameplays createGameplays();
-
-	/**
-	 * Returns a new object of class '<em>Element Types</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Element Types</em>'.
-	 * @generated
-	 */
-	ElementTypes createElementTypes();
-
-	/**
-	 * Returns a new object of class '<em>Abilities</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Abilities</em>'.
-	 * @generated
-	 */
-	Abilities createAbilities();
-
-	/**
 	 * Returns a new object of class '<em>Room Types</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -400,67 +247,76 @@ public interface GeneratorFactory extends EFactory {
 	RoomTypes createRoomTypes();
 
 	/**
-	 * Returns a new object of class '<em>Equipment EType</em>'.
+	 * Returns a new object of class '<em>MT Completion2</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Equipment EType</em>'.
+	 * @return a new object of class '<em>MT Completion2</em>'.
 	 * @generated
 	 */
-	EquipmentEType createEquipmentEType();
+	MTCompletion2 createMTCompletion2();
 
 	/**
-	 * Returns a new object of class '<em>Element Position</em>'.
+	 * Returns a new object of class '<em>MT Recontruction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Element Position</em>'.
+	 * @return a new object of class '<em>MT Recontruction</em>'.
 	 * @generated
 	 */
-	ElementPosition createElementPosition();
+	MTRecontruction createMTRecontruction();
 
 	/**
-	 * Returns a new object of class '<em>Mapping Model</em>'.
+	 * Returns a new object of class '<em>MT Identification</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Mapping Model</em>'.
+	 * @return a new object of class '<em>MT Identification</em>'.
 	 * @generated
 	 */
-	MappingModel createMappingModel();
+	MTIdentification createMTIdentification();
 
 	/**
-	 * Returns a new object of class '<em>Modality2 Room Type</em>'.
+	 * Returns a new object of class '<em>MT Membership</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Modality2 Room Type</em>'.
+	 * @return a new object of class '<em>MT Membership</em>'.
 	 * @generated
 	 */
-	Modality2RoomType createModality2RoomType();
+	MTMembership createMTMembership();
 
 	/**
-	 * Returns a new object of class '<em>Task Type2 Gameplay</em>'.
+	 * Returns a new object of class '<em>Results</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Task Type2 Gameplay</em>'.
+	 * @return a new object of class '<em>Results</em>'.
 	 * @generated
 	 */
-	TaskType2Gameplay createTaskType2Gameplay();
+	Results createResults();
 
 	/**
-	 * Returns a new object of class '<em>Response Modalities</em>'.
+	 * Returns a new object of class '<em>Results By Task</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Response Modalities</em>'.
+	 * @return a new object of class '<em>Results By Task</em>'.
 	 * @generated
 	 */
-	ResponseModalities createResponseModalities();
+	ResultsByTask createResultsByTask();
 
 	/**
-	 * Returns a new object of class '<em>Gameplay2 Room Type</em>'.
+	 * Returns a new object of class '<em>Questioned Fact</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Gameplay2 Room Type</em>'.
+	 * @return a new object of class '<em>Questioned Fact</em>'.
 	 * @generated
 	 */
-	Gameplay2RoomType createGameplay2RoomType();
+	QuestionedFact createQuestionedFact();
+
+	/**
+	 * Returns a new object of class '<em>QF Results</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>QF Results</em>'.
+	 * @generated
+	 */
+	QFResults createQFResults();
 
 	/**
 	 * Returns the package supported by this factory.
