@@ -16,7 +16,7 @@ import structures.GridPositions;
 public class GridManager {
 
 	/** Structure to save occupied Coordinates on a fake grid */
-	public Map<Coordinate, Room> occupiedCoordinates;
+	private Map<Coordinate, Room> occupiedCoordinates;
 	private DirectionManager directionManager; 
 
 	
@@ -30,7 +30,7 @@ public class GridManager {
 	 * @param actualPosition
 	 * @return An association GridPositions to Boolean (true if occupied, else false)
 	 */
-	public EnumMap<GridPositions, Boolean> computesGridPositionsOccupied(Coordinate actualPosition){
+	public Map<GridPositions, Boolean> computesGridPositionsOccupied(Coordinate actualPosition){
 		EnumMap<GridPositions, Boolean> posOccupied = new EnumMap<>(GridPositions.class);
 		posOccupied.put(GridPositions.YPLUS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX(), actualPosition.getY() + 1)));
 		posOccupied.put(GridPositions.YMOINS1, occupiedCoordinates.keySet().contains(new Coordinate(actualPosition.getX(), actualPosition.getY() - 1)));
@@ -83,10 +83,10 @@ public class GridManager {
 	 * @param entryDirections (i.e., opposition directions of the previous room exit direction; e.g., if previous room exit is SOUTH, then it contains  NORTH, NORTH_EAST, NORTH_WEST)  
 	 * @return An association between each verified entryDirection and their possible exits
 	 */
- 	public EnumMap<Directions, Set<Directions>> getAllowedDirections(Coordinate actualCoordinates, Directions theOriginDirection){
+ 	public Map<Directions, Set<Directions>> getAllowedDirections(Coordinate actualCoordinates, Directions theOriginDirection){
  		Set<Directions> entryDirections = directionManager.getOppositeDirections().get(theOriginDirection);
 		EnumMap<Directions, Set<Directions>> originDtoPossibleD = new EnumMap<>(Directions.class); // Possible entry to possible exits 
-		EnumMap<GridPositions, Boolean> gridPosOccupations = computesGridPositionsOccupied(actualCoordinates);
+		Map<GridPositions, Boolean> gridPosOccupations = computesGridPositionsOccupied(actualCoordinates);
 		
 		Set<Directions> directions;
 		for (Directions direction : entryDirections) {
@@ -100,7 +100,7 @@ public class GridManager {
 		return originDtoPossibleD;
 	}
  	
- 	public Set<Directions> simpleAllowedDirections(EnumMap<GridPositions, Boolean> gridPosOccupations){
+ 	public Set<Directions> simpleAllowedDirections(Map<GridPositions, Boolean> gridPosOccupations){
  		Set<Directions> directions = new HashSet<>(directionManager.getSimpleDirections());
 		if(gridPosOccupations.get(GridPositions.YPLUS1)) {directions.remove(Directions.NORTH);}
 		if(gridPosOccupations.get(GridPositions.YMOINS1)) {directions.remove(Directions.SOUTH);}
@@ -109,7 +109,7 @@ public class GridManager {
 		return directions;
  	}
  	
- 	public Set<Directions> complexeAllowedDirections(EnumMap<GridPositions, Boolean> gridPosOccupations, Directions direction){
+ 	public Set<Directions> complexeAllowedDirections(Map<GridPositions, Boolean> gridPosOccupations, Directions direction){
  		if(direction.equals(Directions.SOUTH_EAST) || direction.equals(Directions.EAST_SOUTH)) {
 			return allowedDirectionForSouthEast(gridPosOccupations, direction);
 		} else if(direction.equals(Directions.SOUTH_WEST) || direction.equals(Directions.WEST_SOUTH)) {
@@ -126,7 +126,7 @@ public class GridManager {
  	 * @param gridPosOccupations (Association between Coordinates and their occupation : true is occupied)
  	 * @return A set of authorized exit directions for LargeRoomType with SOUTH_EAST or EAST_SOUTH as entry
  	 */
- 	private Set<Directions> allowedDirectionForSouthEast(EnumMap<GridPositions, Boolean> gridPosOccupations, Directions possibleEntry){
+ 	private Set<Directions> allowedDirectionForSouthEast(Map<GridPositions, Boolean> gridPosOccupations, Directions possibleEntry){
  		Set<Directions> directions = new HashSet<>();
  		if(!gridPosOccupations.get(GridPositions.YPLUS1) && !gridPosOccupations.get(GridPositions.XMOINS1) && !gridPosOccupations.get(GridPositions.XMOINS1_YPLUS1)) {
  			directions.addAll(directionManager.getComplexDirections());
@@ -149,7 +149,7 @@ public class GridManager {
  	 * @param gridPosOccupations (Association between Coordinates and their occupation : true is occupied)
  	 * @return A set of authorized exit directions for LargeRoomType with SOUTH_WEST or WEST_SOUTH as entry
  	 */
- 	private Set<Directions> allowedDirectionForSouthWest(EnumMap<GridPositions, Boolean> gridPosOccupations, Directions possibleEntry){
+ 	private Set<Directions> allowedDirectionForSouthWest(Map<GridPositions, Boolean> gridPosOccupations, Directions possibleEntry){
  		Set<Directions> directions = new HashSet<>();
  		if(!gridPosOccupations.get(GridPositions.YPLUS1) && !gridPosOccupations.get(GridPositions.XY_PLUS1) && !gridPosOccupations.get(GridPositions.XPLUS1)) {
  			directions.addAll(directionManager.getComplexDirections());
@@ -172,7 +172,7 @@ public class GridManager {
  	 * @param gridPosOccupations (Association between Coordinates and their occupation : true is occupied)
  	 * @return A set of authorized exit directions for LargeRoomType with NORTH_WEST or WEST_NORTH as entry
  	 */
- 	private Set<Directions> allowedDirectionForNorthWest(EnumMap<GridPositions, Boolean> gridPosOccupations, Directions possibleEntry){
+ 	private Set<Directions> allowedDirectionForNorthWest(Map<GridPositions, Boolean> gridPosOccupations, Directions possibleEntry){
  		Set<Directions> directions = new HashSet<>(); 
  		if(!gridPosOccupations.get(GridPositions.XPLUS1) && !gridPosOccupations.get(GridPositions.XPLUS1_YMOINS1) && !gridPosOccupations.get(GridPositions.YMOINS1)) {
  			directions.addAll(directionManager.getComplexDirections());
@@ -197,7 +197,7 @@ public class GridManager {
  	 * @param possibleEntry 
  	 * @return A set of authorized exit directions for LargeRoomType with NORTH_EAST or EAST_NORTH as entry
  	 */
- 	private Set<Directions> allowedDirectionForNorthEast(EnumMap<GridPositions, Boolean> gridPosOccupations, Directions possibleEntry){
+ 	private Set<Directions> allowedDirectionForNorthEast(Map<GridPositions, Boolean> gridPosOccupations, Directions possibleEntry){
  		Set<Directions> directions = new HashSet<>();
  		if(!gridPosOccupations.get(GridPositions.XMOINS1) && !gridPosOccupations.get(GridPositions.XY_MOINS1) && !gridPosOccupations.get(GridPositions.YMOINS1)) {
  			directions.addAll(directionManager.getComplexDirections());
@@ -239,7 +239,6 @@ public class GridManager {
 			case WEST_SOUTH: coord.setX(origineR.getX() - 1); coord.setY(origineR.getY()); break;
 			default: break;
 		}
-		//System.out.println(occupiedCoordinates.containsKey(coord));
 		return coord;
 	}
  	

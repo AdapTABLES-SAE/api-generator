@@ -14,7 +14,6 @@ import generator.Directions;
 import generator.Dungeon;
 import generator.DungeonMode;
 import generator.ETaskType;
-import generator.LargeRoomType;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
@@ -54,6 +53,7 @@ public class DungeonGenerator {
 		if(modelAccess.context.getGamecontext().getMode().equals(DungeonMode.LINEAR)) {
 			generateLinearDungeon();
 		}else {
+			// TODO : Labyrinthine dungeon
 		}
 		return generatedDungeon;
 	}
@@ -68,7 +68,8 @@ public class DungeonGenerator {
 		boolean backtrack = false;
 		Coordinate nextPosition = null;
 		ETaskType tasktype = null;
-		Directions entry = null, exit = null;
+		Directions entry = null; 
+		Directions exit = null;
 		RoomType roomType = null;
 		
 	
@@ -100,16 +101,16 @@ public class DungeonGenerator {
 					}else {
 						exit = Directions.NONE;
 					}
-					roomType = getCompatibleRoomType(tasktype, entry, exit); 
+					roomType = getCompatibleRoomType(entry, exit); 
 				}
 				Coordinate validCoord = gridManager.getValidCoordinates(entry, nextPosition);
-				if(roomType instanceof LargeRoomType) {
+				/*if(roomType instanceof LargeRoomType) {
 					System.out.println(gridManager.occupiedCoordinates.containsKey(validCoord));
 					System.out.println(gridManager.occupiedCoordinates.containsKey(new Coordinate(validCoord.getX(), validCoord.getY()+1)));
 					System.out.println(gridManager.occupiedCoordinates.containsKey(new Coordinate(validCoord.getX()+1, validCoord.getY()+1)));
 					System.out.println(gridManager.occupiedCoordinates.containsKey(new Coordinate(validCoord.getX()+1, validCoord.getY())));
 				}
-				System.out.println(gridManager.occupiedCoordinates.containsKey(validCoord));
+				System.out.println(gridManager.occupiedCoordinates.containsKey(validCoord));*/
 				Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, tasktype, dungeonRooms.getLast().getKey().getRoomaccess().get(dungeonRooms.getLast().getKey().getRoomaccess().size()-1), entry, exit);
 				dungeonRooms.add(Map.entry(room, exit));
 			}
@@ -145,7 +146,7 @@ public class DungeonGenerator {
 	 * @param exit
 	 * @return Valid RoomType
 	 */
-	private RoomType getCompatibleRoomType(ETaskType taskType, Directions entry, Directions exit) {
+	private RoomType getCompatibleRoomType(Directions entry, Directions exit) {
 		List<RoomType> roomTypes = new ArrayList<>(modelAccess.gameDescription.getRoomtypes().getRoomtypes());
 		roomTypes = roomTypes.stream().filter(e -> e.getDirections().size() > 1).collect(Collectors.toList());
 		
@@ -172,19 +173,19 @@ public class DungeonGenerator {
 
 	/**
 	 * Instanciate a Room with (X,Y) as coordinates, with the RoomType rt, with an entry direction as entryDirection and exit as exitDirection and set the access between previous and new room 
-	 * @param X
-	 * @param Y
+	 * @param x
+	 * @param y
 	 * @param roomT
 	 * @param previousRoomExitAccess
 	 * @param entryDirection
 	 * @param exitDirection
 	 * @return a Room
 	 */
-	private Room createRoom(int X, int Y, RoomType roomT, ETaskType taskType, RoomAccess previousRoomExitAccess,  Directions entryDirection, Directions exitDirection) {
+	private Room createRoom(int x, int y, RoomType roomT, ETaskType taskType, RoomAccess previousRoomExitAccess,  Directions entryDirection, Directions exitDirection) {
 		Room r = new RoomImpl();
 		r.setRoomtype(roomT);
-		r.setX(X);
-		r.setY(Y);
+		r.setX(x);
+		r.setY(y);
 		
 		if(taskType != null) {
 			r.setQuestion(new QuestionImpl());

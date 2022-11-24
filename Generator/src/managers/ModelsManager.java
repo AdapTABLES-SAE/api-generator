@@ -17,6 +17,7 @@ import generator.Dungeon;
 import generator.GameDescription;
 import generator.GenerationContext;
 import generator.GeneratorPackage;
+import generator.Knowledge;
 
 
 public class ModelsManager {
@@ -24,13 +25,14 @@ public class ModelsManager {
 	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	private static final String INPUT_MODELS_PATH = "inputmodels/";
 	private static final String OUTPUT_MODELS_PATH = "outputmodels/";
-	private static final String[] INPUT_MODELS_PATHS = {"Context.xmi", "GameDescription.xmi"};
+	private static final String[] INPUT_MODELS_PATHS = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi"};
 
 	private ResourceSet resourceSet;
 	
 	
 	public GenerationContext context; 
 	public GameDescription gameDescription; 
+	public Knowledge multiplicationTables;
 	
 	//Dungeon generatedDungeon;
 	
@@ -66,13 +68,16 @@ public class ModelsManager {
 		
 		File contexte = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]);
 		File gamedescription = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[1]);
+		File multiplicationTables = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[12]);
 
 		Resource resource1 = resourceSet.createResource(URI.createFileURI(contexte.getAbsolutePath()));
 		Resource resource2 = resourceSet.createResource(URI.createFileURI(gamedescription.getAbsolutePath()));
+		Resource resource3 = resourceSet.createResource(URI.createFileURI(multiplicationTables.getAbsolutePath()));
 
 		try {
 			resource1.load(null);
 			resource2.load(null);
+			resource3.load(null);
 
 		}catch (IOException e) {
 			e.printStackTrace();
@@ -81,6 +86,7 @@ public class ModelsManager {
 		
 		this.context = (GenerationContext) resource1.getContents().get(0);
 		this.gameDescription = (GameDescription) resource2.getContents().get(0);
+		this.multiplicationTables = (Knowledge) resource3.getContents().get(0);
 		
 		LOGGER.info("Loading input models : OK");
 	}
