@@ -2,10 +2,9 @@
  */
 package generator.impl;
 
+import generator.ESeveralTarget;
 import generator.GeneratorPackage;
 import generator.MTCompletion2;
-import generator.TargetElement;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
@@ -36,7 +35,7 @@ public class MTCompletion2Impl extends Completion2TaskImpl implements MTCompleti
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TargetElement> targets;
+	protected EList<ESeveralTarget> targets;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,9 +61,9 @@ public class MTCompletion2Impl extends Completion2TaskImpl implements MTCompleti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TargetElement> getTargets() {
+	public EList<ESeveralTarget> getTargets() {
 		if (targets == null) {
-			targets = new EDataTypeUniqueEList<TargetElement>(TargetElement.class, this,
+			targets = new EDataTypeUniqueEList<ESeveralTarget>(ESeveralTarget.class, this,
 					GeneratorPackage.MT_COMPLETION2__TARGETS);
 		}
 		return targets;
@@ -95,7 +94,7 @@ public class MTCompletion2Impl extends Completion2TaskImpl implements MTCompleti
 		switch (featureID) {
 		case GeneratorPackage.MT_COMPLETION2__TARGETS:
 			getTargets().clear();
-			getTargets().addAll((Collection<? extends TargetElement>) newValue);
+			getTargets().addAll((Collection<? extends ESeveralTarget>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

@@ -77,17 +77,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			SetOfFacts setOfFacts = (SetOfFacts) theEObject;
 			T result = caseSetOfFacts(setOfFacts);
 			if (result == null)
-				result = caseAbstractFact(setOfFacts);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.FACT: {
-			Fact fact = (Fact) theEObject;
-			T result = caseFact(fact);
-			if (result == null)
-				result = caseAbstractFact(fact);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -397,16 +386,52 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.QUESTIONED_FACT: {
-			QuestionedFact questionedFact = (QuestionedFact) theEObject;
-			T result = caseQuestionedFact(questionedFact);
+		case GeneratorPackage.QF_RESULTS: {
+			QFResults qfResults = (QFResults) theEObject;
+			T result = caseQFResults(qfResults);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.QF_RESULTS: {
-			QFResults qfResults = (QFResults) theEObject;
-			T result = caseQFResults(qfResults);
+		case GeneratorPackage.MT_FACT: {
+			MTFact mtFact = (MTFact) theEObject;
+			T result = caseMTFact(mtFact);
+			if (result == null)
+				result = caseAbstractFact(mtFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.MT_RESULT_FACT: {
+			MTResultFact mtResultFact = (MTResultFact) theEObject;
+			T result = caseMTResultFact(mtResultFact);
+			if (result == null)
+				result = caseAbstractFact(mtResultFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.QUESTIONABLE_FACT: {
+			QuestionableFact questionableFact = (QuestionableFact) theEObject;
+			T result = caseQuestionableFact(questionableFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.MTQF_COMPLETION1: {
+			MTQFCompletion1 mtqfCompletion1 = (MTQFCompletion1) theEObject;
+			T result = caseMTQFCompletion1(mtqfCompletion1);
+			if (result == null)
+				result = caseQuestionableFact(mtqfCompletion1);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.MTQF_COMPLETION2: {
+			MTQFCompletion2 mtqfCompletion2 = (MTQFCompletion2) theEObject;
+			T result = caseMTQFCompletion2(mtqfCompletion2);
+			if (result == null)
+				result = caseQuestionableFact(mtqfCompletion2);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -443,21 +468,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSetOfFacts(SetOfFacts object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fact</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fact</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFact(Fact object) {
 		return null;
 	}
 
@@ -1032,21 +1042,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Questioned Fact</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Questioned Fact</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseQuestionedFact(QuestionedFact object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>QF Results</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1058,6 +1053,81 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseQFResults(QFResults object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MT Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MT Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTFact(MTFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MT Result Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MT Result Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTResultFact(MTResultFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Questionable Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQuestionableFact(QuestionableFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MTQF Completion1</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MTQF Completion1</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTQFCompletion1(MTQFCompletion1 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MTQF Completion2</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MTQF Completion2</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTQFCompletion2(MTQFCompletion2 object) {
 		return null;
 	}
 

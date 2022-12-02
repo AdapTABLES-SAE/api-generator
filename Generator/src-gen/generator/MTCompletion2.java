@@ -23,16 +23,16 @@ import org.eclipse.emf.common.util.EList;
 public interface MTCompletion2 extends Completion2Task {
 	/**
 	 * Returns the value of the '<em><b>Targets</b></em>' attribute list.
-	 * The list contents are of type {@link generator.TargetElement}.
-	 * The literals are from the enumeration {@link generator.TargetElement}.
+	 * The list contents are of type {@link generator.ESeveralTarget}.
+	 * The literals are from the enumeration {@link generator.ESeveralTarget}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Targets</em>' attribute list.
-	 * @see generator.TargetElement
+	 * @see generator.ESeveralTarget
 	 * @see generator.GeneratorPackage#getMTCompletion2_Targets()
 	 * @model lower="2"
 	 * @generated
 	 */
-	EList<TargetElement> getTargets();
+	EList<ESeveralTarget> getTargets();
 
 } // MTCompletion2

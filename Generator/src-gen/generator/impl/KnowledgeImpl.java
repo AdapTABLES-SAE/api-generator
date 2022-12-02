@@ -2,9 +2,9 @@
  */
 package generator.impl;
 
-import generator.AbstractFact;
 import generator.GeneratorPackage;
 import generator.Knowledge;
+import generator.SetOfFacts;
 
 import java.util.Collection;
 
@@ -65,7 +65,7 @@ public class KnowledgeImpl extends MinimalEObjectImpl.Container implements Knowl
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<AbstractFact> knowledgefacts;
+	protected EList<SetOfFacts> knowledgefacts;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,9 +112,9 @@ public class KnowledgeImpl extends MinimalEObjectImpl.Container implements Knowl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<AbstractFact> getKnowledgefacts() {
+	public EList<SetOfFacts> getKnowledgefacts() {
 		if (knowledgefacts == null) {
-			knowledgefacts = new EObjectContainmentEList<AbstractFact>(AbstractFact.class, this,
+			knowledgefacts = new EObjectContainmentEList<SetOfFacts>(SetOfFacts.class, this,
 					GeneratorPackage.KNOWLEDGE__KNOWLEDGEFACTS);
 		}
 		return knowledgefacts;
@@ -164,7 +164,7 @@ public class KnowledgeImpl extends MinimalEObjectImpl.Container implements Knowl
 			return;
 		case GeneratorPackage.KNOWLEDGE__KNOWLEDGEFACTS:
 			getKnowledgefacts().clear();
-			getKnowledgefacts().addAll((Collection<? extends AbstractFact>) newValue);
+			getKnowledgefacts().addAll((Collection<? extends SetOfFacts>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

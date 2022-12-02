@@ -4,7 +4,7 @@ package generator.impl;
 
 import generator.ATask;
 import generator.GeneratorPackage;
-import generator.QuestionedFact;
+import generator.QuestionableFact;
 import generator.ResultsByTask;
 
 import java.util.Collection;
@@ -56,7 +56,7 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<QuestionedFact> questionedfacts;
+	protected EList<QuestionableFact> questionedfacts;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,9 +122,9 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<QuestionedFact> getQuestionedfacts() {
+	public EList<QuestionableFact> getQuestionedfacts() {
 		if (questionedfacts == null) {
-			questionedfacts = new EObjectContainmentEList<QuestionedFact>(QuestionedFact.class, this,
+			questionedfacts = new EObjectContainmentEList<QuestionableFact>(QuestionableFact.class, this,
 					GeneratorPackage.RESULTS_BY_TASK__QUESTIONEDFACTS);
 		}
 		return questionedfacts;
@@ -176,7 +176,7 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 			return;
 		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONEDFACTS:
 			getQuestionedfacts().clear();
-			getQuestionedfacts().addAll((Collection<? extends QuestionedFact>) newValue);
+			getQuestionedfacts().addAll((Collection<? extends QuestionableFact>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

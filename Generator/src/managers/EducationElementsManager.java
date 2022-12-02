@@ -77,9 +77,9 @@ public class EducationElementsManager {
 			for (ATask task : getTasks()) {
 				if(nbRoomsToTaskType.containsKey(task.getType())) {
 					nbRoomsToTaskType.put(task.getType(), nbRoomsToTaskType.get(task.getType()) +
-							(task.getPercentageOfApparition()*nbRooms)/100);
+							(task.getPercentOfApparition()*nbRooms)/100);
 				}else {
-					nbRoomsToTaskType.put(task.getType(), (task.getPercentageOfApparition()*nbRooms)/100);
+					nbRoomsToTaskType.put(task.getType(), (task.getPercentOfApparition()*nbRooms)/100);
 				}
 			}
 		}

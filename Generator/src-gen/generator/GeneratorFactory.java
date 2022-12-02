@@ -31,15 +31,6 @@ public interface GeneratorFactory extends EFactory {
 	SetOfFacts createSetOfFacts();
 
 	/**
-	 * Returns a new object of class '<em>Fact</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Fact</em>'.
-	 * @generated
-	 */
-	Fact createFact();
-
-	/**
 	 * Returns a new object of class '<em>Knowledge</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -301,15 +292,6 @@ public interface GeneratorFactory extends EFactory {
 	ResultsByTask createResultsByTask();
 
 	/**
-	 * Returns a new object of class '<em>Questioned Fact</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Questioned Fact</em>'.
-	 * @generated
-	 */
-	QuestionedFact createQuestionedFact();
-
-	/**
 	 * Returns a new object of class '<em>QF Results</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -317,6 +299,42 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	QFResults createQFResults();
+
+	/**
+	 * Returns a new object of class '<em>MT Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MT Fact</em>'.
+	 * @generated
+	 */
+	MTFact createMTFact();
+
+	/**
+	 * Returns a new object of class '<em>MT Result Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MT Result Fact</em>'.
+	 * @generated
+	 */
+	MTResultFact createMTResultFact();
+
+	/**
+	 * Returns a new object of class '<em>MTQF Completion1</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MTQF Completion1</em>'.
+	 * @generated
+	 */
+	MTQFCompletion1 createMTQFCompletion1();
+
+	/**
+	 * Returns a new object of class '<em>MTQF Completion2</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MTQF Completion2</em>'.
+	 * @generated
+	 */
+	MTQFCompletion2 createMTQFCompletion2();
 
 	/**
 	 * Returns the package supported by this factory.

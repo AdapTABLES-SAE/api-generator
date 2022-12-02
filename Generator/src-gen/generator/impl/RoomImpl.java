@@ -2,6 +2,7 @@
  */
 package generator.impl;
 
+import generator.ATask;
 import generator.GeneratorPackage;
 import generator.Question;
 import generator.Room;
@@ -37,6 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.RoomImpl#getRoomaccess <em>Roomaccess</em>}</li>
  *   <li>{@link generator.impl.RoomImpl#getRoomtype <em>Roomtype</em>}</li>
  *   <li>{@link generator.impl.RoomImpl#getQuestion <em>Question</em>}</li>
+ *   <li>{@link generator.impl.RoomImpl#getTask <em>Task</em>}</li>
  * </ul>
  *
  * @generated
@@ -111,6 +113,16 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * @ordered
 	 */
 	protected Question question;
+
+	/**
+	 * The cached value of the '{@link #getTask() <em>Task</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected ATask task;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -281,6 +293,45 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ATask getTask() {
+		if (task != null && task.eIsProxy()) {
+			InternalEObject oldTask = (InternalEObject) task;
+			task = (ATask) eResolveProxy(oldTask);
+			if (task != oldTask) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.ROOM__TASK, oldTask,
+							task));
+			}
+		}
+		return task;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ATask basicGetTask() {
+		return task;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTask(ATask newTask) {
+		ATask oldTask = task;
+		task = newTask;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ROOM__TASK, oldTask, task));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -312,6 +363,10 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			return basicGetRoomtype();
 		case GeneratorPackage.ROOM__QUESTION:
 			return getQuestion();
+		case GeneratorPackage.ROOM__TASK:
+			if (resolve)
+				return getTask();
+			return basicGetTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -341,6 +396,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		case GeneratorPackage.ROOM__QUESTION:
 			setQuestion((Question) newValue);
 			return;
+		case GeneratorPackage.ROOM__TASK:
+			setTask((ATask) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -368,6 +426,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		case GeneratorPackage.ROOM__QUESTION:
 			setQuestion((Question) null);
 			return;
+		case GeneratorPackage.ROOM__TASK:
+			setTask((ATask) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -390,6 +451,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			return roomtype != null;
 		case GeneratorPackage.ROOM__QUESTION:
 			return question != null;
+		case GeneratorPackage.ROOM__TASK:
+			return task != null;
 		}
 		return super.eIsSet(featureID);
 	}

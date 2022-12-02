@@ -48,7 +48,7 @@ public interface ResultsByTask extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Questionedfacts</b></em>' containment reference list.
-	 * The list contents are of type {@link generator.QuestionedFact}.
+	 * The list contents are of type {@link generator.QuestionableFact}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Questionedfacts</em>' containment reference list.
@@ -56,6 +56,6 @@ public interface ResultsByTask extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<QuestionedFact> getQuestionedfacts();
+	EList<QuestionableFact> getQuestionedfacts();
 
 } // ResultsByTask

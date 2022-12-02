@@ -15,9 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.ATask#getPercentageOfApparition <em>Percentage Of Apparition</em>}</li>
+ *   <li>{@link generator.ATask#getPercentOfApparition <em>Percent Of Apparition</em>}</li>
  *   <li>{@link generator.ATask#getNbConsecutiveSuccess <em>Nb Consecutive Success</em>}</li>
- *   <li>{@link generator.ATask#getPercentageOfValidFacts <em>Percentage Of Valid Facts</em>}</li>
  *   <li>{@link generator.ATask#getResponsemodalities <em>Responsemodalities</em>}</li>
  * </ul>
  *
@@ -27,26 +26,26 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ATask extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Percentage Of Apparition</b></em>' attribute.
+	 * Returns the value of the '<em><b>Percent Of Apparition</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Percentage Of Apparition</em>' attribute.
-	 * @see #setPercentageOfApparition(int)
-	 * @see generator.GeneratorPackage#getATask_PercentageOfApparition()
+	 * @return the value of the '<em>Percent Of Apparition</em>' attribute.
+	 * @see #setPercentOfApparition(int)
+	 * @see generator.GeneratorPackage#getATask_PercentOfApparition()
 	 * @model
 	 * @generated
 	 */
-	int getPercentageOfApparition();
+	int getPercentOfApparition();
 
 	/**
-	 * Sets the value of the '{@link generator.ATask#getPercentageOfApparition <em>Percentage Of Apparition</em>}' attribute.
+	 * Sets the value of the '{@link generator.ATask#getPercentOfApparition <em>Percent Of Apparition</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Percentage Of Apparition</em>' attribute.
-	 * @see #getPercentageOfApparition()
+	 * @param value the new value of the '<em>Percent Of Apparition</em>' attribute.
+	 * @see #getPercentOfApparition()
 	 * @generated
 	 */
-	void setPercentageOfApparition(int value);
+	void setPercentOfApparition(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Nb Consecutive Success</b></em>' attribute.
@@ -69,29 +68,6 @@ public interface ATask extends EObject {
 	 * @generated
 	 */
 	void setNbConsecutiveSuccess(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Percentage Of Valid Facts</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Percentage Of Valid Facts</em>' attribute.
-	 * @see #setPercentageOfValidFacts(int)
-	 * @see generator.GeneratorPackage#getATask_PercentageOfValidFacts()
-	 * @model default="0"
-	 * @generated
-	 */
-	int getPercentageOfValidFacts();
-
-	/**
-	 * Sets the value of the '{@link generator.ATask#getPercentageOfValidFacts <em>Percentage Of Valid Facts</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Percentage Of Valid Facts</em>' attribute.
-	 * @see #getPercentageOfValidFacts()
-	 * @generated
-	 */
-	void setPercentageOfValidFacts(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Responsemodalities</b></em>' containment reference list.

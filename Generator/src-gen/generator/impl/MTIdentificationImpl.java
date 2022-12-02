@@ -2,10 +2,9 @@
  */
 package generator.impl;
 
+import generator.ESingleTarget;
 import generator.GeneratorPackage;
 import generator.MTIdentification;
-import generator.TargetElement;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -34,7 +33,7 @@ public class MTIdentificationImpl extends IdentificationTaskImpl implements MTId
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TargetElement TARGET_EDEFAULT = TargetElement.RESULT;
+	protected static final ESingleTarget TARGET_EDEFAULT = ESingleTarget.RESULT;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' attribute.
@@ -44,7 +43,7 @@ public class MTIdentificationImpl extends IdentificationTaskImpl implements MTId
 	 * @generated
 	 * @ordered
 	 */
-	protected TargetElement target = TARGET_EDEFAULT;
+	protected ESingleTarget target = TARGET_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,7 +69,7 @@ public class MTIdentificationImpl extends IdentificationTaskImpl implements MTId
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TargetElement getTarget() {
+	public ESingleTarget getTarget() {
 		return target;
 	}
 
@@ -79,8 +78,8 @@ public class MTIdentificationImpl extends IdentificationTaskImpl implements MTId
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTarget(TargetElement newTarget) {
-		TargetElement oldTarget = target;
+	public void setTarget(ESingleTarget newTarget) {
+		ESingleTarget oldTarget = target;
 		target = newTarget == null ? TARGET_EDEFAULT : newTarget;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MT_IDENTIFICATION__TARGET, oldTarget,
@@ -110,7 +109,7 @@ public class MTIdentificationImpl extends IdentificationTaskImpl implements MTId
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case GeneratorPackage.MT_IDENTIFICATION__TARGET:
-			setTarget((TargetElement) newValue);
+			setTarget((ESingleTarget) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

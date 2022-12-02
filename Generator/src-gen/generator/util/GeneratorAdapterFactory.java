@@ -77,11 +77,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseFact(Fact object) {
-			return createFactAdapter();
-		}
-
-		@Override
 		public Adapter caseKnowledge(Knowledge object) {
 			return createKnowledgeAdapter();
 		}
@@ -272,13 +267,33 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseQuestionedFact(QuestionedFact object) {
-			return createQuestionedFactAdapter();
+		public Adapter caseQFResults(QFResults object) {
+			return createQFResultsAdapter();
 		}
 
 		@Override
-		public Adapter caseQFResults(QFResults object) {
-			return createQFResultsAdapter();
+		public Adapter caseMTFact(MTFact object) {
+			return createMTFactAdapter();
+		}
+
+		@Override
+		public Adapter caseMTResultFact(MTResultFact object) {
+			return createMTResultFactAdapter();
+		}
+
+		@Override
+		public Adapter caseQuestionableFact(QuestionableFact object) {
+			return createQuestionableFactAdapter();
+		}
+
+		@Override
+		public Adapter caseMTQFCompletion1(MTQFCompletion1 object) {
+			return createMTQFCompletion1Adapter();
+		}
+
+		@Override
+		public Adapter caseMTQFCompletion2(MTQFCompletion2 object) {
+			return createMTQFCompletion2Adapter();
 		}
 
 		@Override
@@ -325,20 +340,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSetOfFactsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.Fact <em>Fact</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.Fact
-	 * @generated
-	 */
-	public Adapter createFactAdapter() {
 		return null;
 	}
 
@@ -875,20 +876,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.QuestionedFact <em>Questioned Fact</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.QuestionedFact
-	 * @generated
-	 */
-	public Adapter createQuestionedFactAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link generator.QFResults <em>QF Results</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -899,6 +886,76 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createQFResultsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTFact <em>MT Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTFact
+	 * @generated
+	 */
+	public Adapter createMTFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTResultFact <em>MT Result Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTResultFact
+	 * @generated
+	 */
+	public Adapter createMTResultFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.QuestionableFact <em>Questionable Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.QuestionableFact
+	 * @generated
+	 */
+	public Adapter createQuestionableFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTQFCompletion1 <em>MTQF Completion1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTQFCompletion1
+	 * @generated
+	 */
+	public Adapter createMTQFCompletion1Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTQFCompletion2 <em>MTQF Completion2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTQFCompletion2
+	 * @generated
+	 */
+	public Adapter createMTQFCompletion2Adapter() {
 		return null;
 	}
 

@@ -13,8 +13,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.Prerequisite#getSuccesPercentage <em>Succes Percentage</em>}</li>
+ *   <li>{@link generator.Prerequisite#getSuccesPercent <em>Succes Percent</em>}</li>
  *   <li>{@link generator.Prerequisite#getRequiredLevel <em>Required Level</em>}</li>
+ *   <li>{@link generator.Prerequisite#getAchievementPercent <em>Achievement Percent</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getPrerequisite()
@@ -23,26 +24,26 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Prerequisite extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Succes Percentage</b></em>' attribute.
+	 * Returns the value of the '<em><b>Succes Percent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Succes Percentage</em>' attribute.
-	 * @see #setSuccesPercentage(int)
-	 * @see generator.GeneratorPackage#getPrerequisite_SuccesPercentage()
+	 * @return the value of the '<em>Succes Percent</em>' attribute.
+	 * @see #setSuccesPercent(int)
+	 * @see generator.GeneratorPackage#getPrerequisite_SuccesPercent()
 	 * @model
 	 * @generated
 	 */
-	int getSuccesPercentage();
+	int getSuccesPercent();
 
 	/**
-	 * Sets the value of the '{@link generator.Prerequisite#getSuccesPercentage <em>Succes Percentage</em>}' attribute.
+	 * Sets the value of the '{@link generator.Prerequisite#getSuccesPercent <em>Succes Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Succes Percentage</em>' attribute.
-	 * @see #getSuccesPercentage()
+	 * @param value the new value of the '<em>Succes Percent</em>' attribute.
+	 * @see #getSuccesPercent()
 	 * @generated
 	 */
-	void setSuccesPercentage(int value);
+	void setSuccesPercent(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Required Level</b></em>' reference.
@@ -65,5 +66,27 @@ public interface Prerequisite extends EObject {
 	 * @generated
 	 */
 	void setRequiredLevel(Level value);
+
+	/**
+	 * Returns the value of the '<em><b>Achievement Percent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Achievement Percent</em>' attribute.
+	 * @see #setAchievementPercent(int)
+	 * @see generator.GeneratorPackage#getPrerequisite_AchievementPercent()
+	 * @model
+	 * @generated
+	 */
+	int getAchievementPercent();
+
+	/**
+	 * Sets the value of the '{@link generator.Prerequisite#getAchievementPercent <em>Achievement Percent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Achievement Percent</em>' attribute.
+	 * @see #getAchievementPercent()
+	 * @generated
+	 */
+	void setAchievementPercent(int value);
 
 } // Prerequisite

@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.Room#getRoomaccess <em>Roomaccess</em>}</li>
  *   <li>{@link generator.Room#getRoomtype <em>Roomtype</em>}</li>
  *   <li>{@link generator.Room#getQuestion <em>Question</em>}</li>
+ *   <li>{@link generator.Room#getTask <em>Task</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getRoom()
@@ -126,5 +127,27 @@ public interface Room extends EObject {
 	 * @generated
 	 */
 	void setQuestion(Question value);
+
+	/**
+	 * Returns the value of the '<em><b>Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Task</em>' reference.
+	 * @see #setTask(ATask)
+	 * @see generator.GeneratorPackage#getRoom_Task()
+	 * @model
+	 * @generated
+	 */
+	ATask getTask();
+
+	/**
+	 * Sets the value of the '{@link generator.Room#getTask <em>Task</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Task</em>' reference.
+	 * @see #getTask()
+	 * @generated
+	 */
+	void setTask(ATask value);
 
 } // Room

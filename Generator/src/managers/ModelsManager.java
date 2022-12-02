@@ -68,7 +68,7 @@ public class ModelsManager {
 		
 		File contexte = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]);
 		File gamedescription = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[1]);
-		File multiplicationTables = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[12]);
+		File multiplicationTables = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[2]);
 
 		Resource resource1 = resourceSet.createResource(URI.createFileURI(contexte.getAbsolutePath()));
 		Resource resource2 = resourceSet.createResource(URI.createFileURI(gamedescription.getAbsolutePath()));

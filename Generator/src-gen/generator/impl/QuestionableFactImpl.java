@@ -4,7 +4,7 @@ package generator.impl;
 
 import generator.GeneratorPackage;
 import generator.QFResults;
-import generator.QuestionedFact;
+import generator.QuestionableFact;
 
 import java.util.Collection;
 
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Questioned Fact</b></em>'.
+ * An implementation of the model object '<em><b>Questionable Fact</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.QuestionedFactImpl#getQfresults <em>Qfresults</em>}</li>
+ *   <li>{@link generator.impl.QuestionableFactImpl#getQfresults <em>Qfresults</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements QuestionedFact {
+public abstract class QuestionableFactImpl extends MinimalEObjectImpl.Container implements QuestionableFact {
 	/**
 	 * The cached value of the '{@link #getQfresults() <em>Qfresults</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -49,7 +49,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuestionedFactImpl() {
+	public QuestionableFactImpl() {
 		super();
 	}
 
@@ -60,7 +60,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.QUESTIONED_FACT;
+		return GeneratorPackage.Literals.QUESTIONABLE_FACT;
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	public EList<QFResults> getQfresults() {
 		if (qfresults == null) {
 			qfresults = new EObjectContainmentEList<QFResults>(QFResults.class, this,
-					GeneratorPackage.QUESTIONED_FACT__QFRESULTS);
+					GeneratorPackage.QUESTIONABLE_FACT__QFRESULTS);
 		}
 		return qfresults;
 	}
@@ -84,7 +84,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.QUESTIONED_FACT__QFRESULTS:
+		case GeneratorPackage.QUESTIONABLE_FACT__QFRESULTS:
 			return ((InternalEList<?>) getQfresults()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -98,7 +98,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.QUESTIONED_FACT__QFRESULTS:
+		case GeneratorPackage.QUESTIONABLE_FACT__QFRESULTS:
 			return getQfresults();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,7 +113,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.QUESTIONED_FACT__QFRESULTS:
+		case GeneratorPackage.QUESTIONABLE_FACT__QFRESULTS:
 			getQfresults().clear();
 			getQfresults().addAll((Collection<? extends QFResults>) newValue);
 			return;
@@ -129,7 +129,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.QUESTIONED_FACT__QFRESULTS:
+		case GeneratorPackage.QUESTIONABLE_FACT__QFRESULTS:
 			getQfresults().clear();
 			return;
 		}
@@ -144,10 +144,10 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.QUESTIONED_FACT__QFRESULTS:
+		case GeneratorPackage.QUESTIONABLE_FACT__QFRESULTS:
 			return qfresults != null && !qfresults.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //QuestionedFactImpl
+} //QuestionableFactImpl

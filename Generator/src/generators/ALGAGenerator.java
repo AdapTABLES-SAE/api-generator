@@ -1,8 +1,10 @@
 package generators;
 
+import factsgenerator.MTFactGenerator;
 import generator.Dungeon;
 import generator.Room;
 import generator.RoomAccess;
+import managers.EducationElementsManager;
 import managers.ModelsManager;
 
 public class ALGAGenerator {
@@ -13,7 +15,7 @@ public class ALGAGenerator {
 	public static void main(String[] args) {
 		ALGAGenerator generator = new ALGAGenerator();
 		generator.generate();
-		generator.saveDungeon("DungeonTESTSL.xmi");
+		generator.saveDungeon("DungeonT.xmi");
 		generator.printDungeon();
 	}
 	
@@ -27,8 +29,9 @@ public class ALGAGenerator {
 	
 	public void generate() {
 		EducationalElementsGenerator eduGeneration = new EducationalElementsGenerator(modelAccess);
+		EducationElementsManager eeManager =  eduGeneration.generateEE();
 		
-		DungeonGenerator dungeonGeneration = new DungeonGenerator(modelAccess, eduGeneration.generateEE());
+		DungeonGenerator dungeonGeneration = new DungeonGenerator(modelAccess, eeManager);
 		generatedDungeon = dungeonGeneration.generateDungeon();
 		
 		generatedDungeon.setLearningobjective(eduGeneration.getChosenObjective());
@@ -37,6 +40,9 @@ public class ALGAGenerator {
 		if(generatedDungeon.getLevel() == null || generatedDungeon.getLearningobjective() == null) {
 			System.err.println("Dungeon objective and/or level are not set properly, possible mistake may appear");
 		}
+		
+		MTFactGenerator mtf = new MTFactGenerator(eeManager);
+		mtf.generateQFacts();
 		
 	}
 	

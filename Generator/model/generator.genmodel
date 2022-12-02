@@ -38,10 +38,10 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ResultPosition/LEFT"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ResultPosition/MIX"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//TargetElement">
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//TargetElement/RESULT"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//TargetElement/TABLE"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//TargetElement/OPERAND"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//ESingleTarget">
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ESingleTarget/RESULT"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ESingleTarget/TABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ESingleTarget/OPERAND"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//ETaskType">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETaskType/COMPLETE1"/>
@@ -54,13 +54,15 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EModality/CHOICE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EModality/INPUT"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//ESeveralTarget">
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ESeveralTarget/OPERAND_TABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ESeveralTarget/OPERAND_RESULT"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ESeveralTarget/TABLE_RESULT"/>
+    </genEnums>
     <genClasses image="false" ecoreClass="generator.ecore#//AbstractFact"/>
     <genClasses ecoreClass="generator.ecore#//SetOfFacts">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//SetOfFacts/facts"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//SetOfFacts/name"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Fact">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Fact/description"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Knowledge">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Knowledge/name"/>
@@ -79,6 +81,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Room/roomaccess"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Room/roomtype"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Room/question"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Room/task"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//GameDescription">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameDescription/roomtypes"/>
@@ -118,8 +121,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Objective/setoffacts"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Prerequisite">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Prerequisite/succesPercentage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Prerequisite/succesPercent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Prerequisite/requiredLevel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Prerequisite/achievementPercent"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Level">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Level/ID"/>
@@ -172,9 +176,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//RoomTypes/roomtypes"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//ATask">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/percentageOfApparition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/percentOfApparition"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/nbConsecutiveSuccess"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/percentageOfValidFacts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//ATask/responsemodalities"/>
       <genOperations ecoreOperation="generator.ecore#//ATask/getType"/>
     </genClasses>
@@ -210,9 +213,38 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//ResultsByTask/task"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//ResultsByTask/questionedfacts"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//QuestionedFact">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionedFact/qfresults"/>
-    </genClasses>
     <genClasses ecoreClass="generator.ecore#//QFResults"/>
+    <genClasses ecoreClass="generator.ecore#//MTFact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTFact/table"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTFact/op"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTFact/res"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//MTResultFact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTResultFact/table"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTResultFact/res"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//QuestionableFact">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionableFact/qfresults"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//MTQFCompletion1">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion1/leftOperand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion1/rightOperand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion1/result"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion1/soluce"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion1/resultOnRight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion1/NO_VALUE"/>
+      <genOperations ecoreOperation="generator.ecore#//MTQFCompletion1/getQuestionableFact"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//MTQFCompletion2">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion2/leftOperand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion2/rightOperand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion2/result"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion2/soluceLeft"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion2/soluceRight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion2/soluceRes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion2/resultOnRight"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion2/NO_VALUE"/>
+      <genOperations ecoreOperation="generator.ecore#//MTQFCompletion2/getQuestionableFact"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

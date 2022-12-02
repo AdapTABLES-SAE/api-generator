@@ -59,8 +59,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 		switch (eClass.getClassifierID()) {
 		case GeneratorPackage.SET_OF_FACTS:
 			return createSetOfFacts();
-		case GeneratorPackage.FACT:
-			return createFact();
 		case GeneratorPackage.KNOWLEDGE:
 			return createKnowledge();
 		case GeneratorPackage.DUNGEON:
@@ -119,10 +117,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createResults();
 		case GeneratorPackage.RESULTS_BY_TASK:
 			return createResultsByTask();
-		case GeneratorPackage.QUESTIONED_FACT:
-			return createQuestionedFact();
 		case GeneratorPackage.QF_RESULTS:
 			return createQFResults();
+		case GeneratorPackage.MT_FACT:
+			return createMTFact();
+		case GeneratorPackage.MT_RESULT_FACT:
+			return createMTResultFact();
+		case GeneratorPackage.MTQF_COMPLETION1:
+			return createMTQFCompletion1();
+		case GeneratorPackage.MTQF_COMPLETION2:
+			return createMTQFCompletion2();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -144,12 +148,14 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createTableBuildFromString(eDataType, initialValue);
 		case GeneratorPackage.RESULT_POSITION:
 			return createResultPositionFromString(eDataType, initialValue);
-		case GeneratorPackage.TARGET_ELEMENT:
-			return createTargetElementFromString(eDataType, initialValue);
+		case GeneratorPackage.ESINGLE_TARGET:
+			return createESingleTargetFromString(eDataType, initialValue);
 		case GeneratorPackage.ETASK_TYPE:
 			return createETaskTypeFromString(eDataType, initialValue);
 		case GeneratorPackage.EMODALITY:
 			return createEModalityFromString(eDataType, initialValue);
+		case GeneratorPackage.ESEVERAL_TARGET:
+			return createESeveralTargetFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -171,12 +177,14 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return convertTableBuildToString(eDataType, instanceValue);
 		case GeneratorPackage.RESULT_POSITION:
 			return convertResultPositionToString(eDataType, instanceValue);
-		case GeneratorPackage.TARGET_ELEMENT:
-			return convertTargetElementToString(eDataType, instanceValue);
+		case GeneratorPackage.ESINGLE_TARGET:
+			return convertESingleTargetToString(eDataType, instanceValue);
 		case GeneratorPackage.ETASK_TYPE:
 			return convertETaskTypeToString(eDataType, instanceValue);
 		case GeneratorPackage.EMODALITY:
 			return convertEModalityToString(eDataType, instanceValue);
+		case GeneratorPackage.ESEVERAL_TARGET:
+			return convertESeveralTargetToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -190,16 +198,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public SetOfFacts createSetOfFacts() {
 		SetOfFactsImpl setOfFacts = new SetOfFactsImpl();
 		return setOfFacts;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Fact createFact() {
-		FactImpl fact = new FactImpl();
-		return fact;
 	}
 
 	/**
@@ -497,9 +495,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuestionedFact createQuestionedFact() {
-		QuestionedFactImpl questionedFact = new QuestionedFactImpl();
-		return questionedFact;
+	public QFResults createQFResults() {
+		QFResultsImpl qfResults = new QFResultsImpl();
+		return qfResults;
 	}
 
 	/**
@@ -507,9 +505,39 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QFResults createQFResults() {
-		QFResultsImpl qfResults = new QFResultsImpl();
-		return qfResults;
+	public MTFact createMTFact() {
+		MTFactImpl mtFact = new MTFactImpl();
+		return mtFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTResultFact createMTResultFact() {
+		MTResultFactImpl mtResultFact = new MTResultFactImpl();
+		return mtResultFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTQFCompletion1 createMTQFCompletion1() {
+		MTQFCompletion1Impl mtqfCompletion1 = new MTQFCompletion1Impl();
+		return mtqfCompletion1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTQFCompletion2 createMTQFCompletion2() {
+		MTQFCompletion2Impl mtqfCompletion2 = new MTQFCompletion2Impl();
+		return mtqfCompletion2;
 	}
 
 	/**
@@ -605,8 +633,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TargetElement createTargetElementFromString(EDataType eDataType, String initialValue) {
-		TargetElement result = TargetElement.get(initialValue);
+	public ESingleTarget createESingleTargetFromString(EDataType eDataType, String initialValue) {
+		ESingleTarget result = ESingleTarget.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -618,7 +646,7 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertTargetElementToString(EDataType eDataType, Object instanceValue) {
+	public String convertESingleTargetToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -663,6 +691,28 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * @generated
 	 */
 	public String convertEModalityToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ESeveralTarget createESeveralTargetFromString(EDataType eDataType, String initialValue) {
+		ESeveralTarget result = ESeveralTarget.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertESeveralTargetToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -48,7 +48,7 @@ public interface Knowledge extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Knowledgefacts</b></em>' containment reference list.
-	 * The list contents are of type {@link generator.AbstractFact}.
+	 * The list contents are of type {@link generator.SetOfFacts}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Knowledgefacts</em>' containment reference list.
@@ -56,6 +56,6 @@ public interface Knowledge extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<AbstractFact> getKnowledgefacts();
+	EList<SetOfFacts> getKnowledgefacts();
 
 } // Knowledge

@@ -21,27 +21,27 @@ package generator;
 public interface MTIdentification extends IdentificationTask {
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' attribute.
-	 * The literals are from the enumeration {@link generator.TargetElement}.
+	 * The literals are from the enumeration {@link generator.ESingleTarget}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' attribute.
-	 * @see generator.TargetElement
-	 * @see #setTarget(TargetElement)
+	 * @see generator.ESingleTarget
+	 * @see #setTarget(ESingleTarget)
 	 * @see generator.GeneratorPackage#getMTIdentification_Target()
 	 * @model required="true"
 	 * @generated
 	 */
-	TargetElement getTarget();
+	ESingleTarget getTarget();
 
 	/**
 	 * Sets the value of the '{@link generator.MTIdentification#getTarget <em>Target</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Target</em>' attribute.
-	 * @see generator.TargetElement
+	 * @see generator.ESingleTarget
 	 * @see #getTarget()
 	 * @generated
 	 */
-	void setTarget(TargetElement value);
+	void setTarget(ESingleTarget value);
 
 } // MTIdentification
