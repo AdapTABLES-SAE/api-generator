@@ -246,5 +246,24 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion2/NO_VALUE"/>
       <genOperations ecoreOperation="generator.ecore#//MTQFCompletion2/getQuestionableFact"/>
     </genClasses>
+    <genClasses ecoreClass="generator.ecore#//MTQFRebuild">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFRebuild/soluceLeft"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFRebuild/soluceRes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFRebuild/resultOnRight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFRebuild/soluceRight"/>
+      <genOperations ecoreOperation="generator.ecore#//MTQFRebuild/getQuestionableFact"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//MTQFIdentification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFIdentification/result"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFIdentification/rightOperand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFIdentification/leftOperand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFIdentification/soluce"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFIdentification/resultOnRight"/>
+      <genOperations ecoreOperation="generator.ecore#//MTQFIdentification/getQuestionableFact"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//MTQFMembership">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFMembership/goodResults"/>
+      <genOperations ecoreOperation="generator.ecore#//MTQFMembership/getQuestionableFact"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

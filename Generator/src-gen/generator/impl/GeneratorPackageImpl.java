@@ -35,6 +35,9 @@ import generator.MTLevel;
 import generator.MTMembership;
 import generator.MTQFCompletion1;
 import generator.MTQFCompletion2;
+import generator.MTQFIdentification;
+import generator.MTQFMembership;
+import generator.MTQFRebuild;
 import generator.MTRecontruction;
 import generator.MTResultFact;
 import generator.MembershipIDTask;
@@ -397,6 +400,27 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass mtqfCompletion2EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mtqfRebuildEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mtqfIdentificationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mtqfMembershipEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1840,6 +1864,150 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMTQFRebuild() {
+		return mtqfRebuildEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQFRebuild_SoluceLeft() {
+		return (EAttribute) mtqfRebuildEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQFRebuild_SoluceRes() {
+		return (EAttribute) mtqfRebuildEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQFRebuild_ResultOnRight() {
+		return (EAttribute) mtqfRebuildEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQFRebuild_SoluceRight() {
+		return (EAttribute) mtqfRebuildEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getMTQFRebuild__GetQuestionableFact() {
+		return mtqfRebuildEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMTQFIdentification() {
+		return mtqfIdentificationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQFIdentification_Result() {
+		return (EAttribute) mtqfIdentificationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQFIdentification_RightOperand() {
+		return (EAttribute) mtqfIdentificationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQFIdentification_LeftOperand() {
+		return (EAttribute) mtqfIdentificationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQFIdentification_Soluce() {
+		return (EAttribute) mtqfIdentificationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQFIdentification_ResultOnRight() {
+		return (EAttribute) mtqfIdentificationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getMTQFIdentification__GetQuestionableFact() {
+		return mtqfIdentificationEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMTQFMembership() {
+		return mtqfMembershipEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQFMembership_GoodResults() {
+		return (EAttribute) mtqfMembershipEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getMTQFMembership__GetQuestionableFact() {
+		return mtqfMembershipEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDirections() {
 		return directionsEEnum;
 	}
@@ -2128,6 +2296,25 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(mtqfCompletion2EClass, MTQF_COMPLETION2__NO_VALUE);
 		createEOperation(mtqfCompletion2EClass, MTQF_COMPLETION2___GET_QUESTIONABLE_FACT);
 
+		mtqfRebuildEClass = createEClass(MTQF_REBUILD);
+		createEAttribute(mtqfRebuildEClass, MTQF_REBUILD__SOLUCE_LEFT);
+		createEAttribute(mtqfRebuildEClass, MTQF_REBUILD__SOLUCE_RES);
+		createEAttribute(mtqfRebuildEClass, MTQF_REBUILD__RESULT_ON_RIGHT);
+		createEAttribute(mtqfRebuildEClass, MTQF_REBUILD__SOLUCE_RIGHT);
+		createEOperation(mtqfRebuildEClass, MTQF_REBUILD___GET_QUESTIONABLE_FACT);
+
+		mtqfIdentificationEClass = createEClass(MTQF_IDENTIFICATION);
+		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__RESULT);
+		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__RIGHT_OPERAND);
+		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__LEFT_OPERAND);
+		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__SOLUCE);
+		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__RESULT_ON_RIGHT);
+		createEOperation(mtqfIdentificationEClass, MTQF_IDENTIFICATION___GET_QUESTIONABLE_FACT);
+
+		mtqfMembershipEClass = createEClass(MTQF_MEMBERSHIP);
+		createEAttribute(mtqfMembershipEClass, MTQF_MEMBERSHIP__GOOD_RESULTS);
+		createEOperation(mtqfMembershipEClass, MTQF_MEMBERSHIP___GET_QUESTIONABLE_FACT);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -2191,6 +2378,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtResultFactEClass.getESuperTypes().add(this.getAbstractFact());
 		mtqfCompletion1EClass.getESuperTypes().add(this.getQuestionableFact());
 		mtqfCompletion2EClass.getESuperTypes().add(this.getQuestionableFact());
+		mtqfRebuildEClass.getESuperTypes().add(this.getQuestionableFact());
+		mtqfIdentificationEClass.getESuperTypes().add(this.getQuestionableFact());
+		mtqfMembershipEClass.getESuperTypes().add(this.getQuestionableFact());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -2595,6 +2785,52 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEOperation(getMTQFCompletion2__GetQuestionableFact(), ecorePackage.getEString(), "getQuestionableFact", 0,
 				1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(mtqfRebuildEClass, MTQFRebuild.class, "MTQFRebuild", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTQFRebuild_SoluceLeft(), ecorePackage.getEInt(), "soluceLeft", null, 0, 1, MTQFRebuild.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTQFRebuild_SoluceRes(), ecorePackage.getEInt(), "soluceRes", null, 0, 1, MTQFRebuild.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTQFRebuild_ResultOnRight(), theXMLTypePackage.getBoolean(), "resultOnRight", "true", 0, 1,
+				MTQFRebuild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTQFRebuild_SoluceRight(), ecorePackage.getEInt(), "soluceRight", null, 0, 1,
+				MTQFRebuild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getMTQFRebuild__GetQuestionableFact(), ecorePackage.getEString(), "getQuestionableFact", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+
+		initEClass(mtqfIdentificationEClass, MTQFIdentification.class, "MTQFIdentification", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTQFIdentification_Result(), ecorePackage.getEInt(), "result", null, 0, 1,
+				MTQFIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTQFIdentification_RightOperand(), ecorePackage.getEInt(), "rightOperand", null, 0, 1,
+				MTQFIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTQFIdentification_LeftOperand(), ecorePackage.getEInt(), "leftOperand", null, 0, 1,
+				MTQFIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTQFIdentification_Soluce(), ecorePackage.getEBoolean(), "soluce", null, 0, 1,
+				MTQFIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTQFIdentification_ResultOnRight(), theXMLTypePackage.getBoolean(), "resultOnRight", "true",
+				0, 1, MTQFIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getMTQFIdentification__GetQuestionableFact(), ecorePackage.getEString(), "getQuestionableFact",
+				0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(mtqfMembershipEClass, MTQFMembership.class, "MTQFMembership", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTQFMembership_GoodResults(), ecorePackage.getEInt(), "goodResults", null, 1, -1,
+				MTQFMembership.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getMTQFMembership__GetQuestionableFact(), ecorePackage.getEString(), "getQuestionableFact", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

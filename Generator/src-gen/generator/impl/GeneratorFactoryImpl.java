@@ -127,6 +127,12 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createMTQFCompletion1();
 		case GeneratorPackage.MTQF_COMPLETION2:
 			return createMTQFCompletion2();
+		case GeneratorPackage.MTQF_REBUILD:
+			return createMTQFRebuild();
+		case GeneratorPackage.MTQF_IDENTIFICATION:
+			return createMTQFIdentification();
+		case GeneratorPackage.MTQF_MEMBERSHIP:
+			return createMTQFMembership();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -538,6 +544,36 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public MTQFCompletion2 createMTQFCompletion2() {
 		MTQFCompletion2Impl mtqfCompletion2 = new MTQFCompletion2Impl();
 		return mtqfCompletion2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTQFRebuild createMTQFRebuild() {
+		MTQFRebuildImpl mtqfRebuild = new MTQFRebuildImpl();
+		return mtqfRebuild;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTQFIdentification createMTQFIdentification() {
+		MTQFIdentificationImpl mtqfIdentification = new MTQFIdentificationImpl();
+		return mtqfIdentification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTQFMembership createMTQFMembership() {
+		MTQFMembershipImpl mtqfMembership = new MTQFMembershipImpl();
+		return mtqfMembership;
 	}
 
 	/**

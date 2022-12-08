@@ -387,7 +387,7 @@
           <responsemodalities
               xsi:type="generator:MultipleChoice"
               nbChoices="4"/>
-          <targets>OPERAND_TABLE</targets>
+          <targets>OPERAND_RESULT</targets>
         </tasks>
         <tasks
             xsi:type="generator:MTRecontruction"

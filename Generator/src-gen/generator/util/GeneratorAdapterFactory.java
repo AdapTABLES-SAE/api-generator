@@ -297,6 +297,21 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseMTQFRebuild(MTQFRebuild object) {
+			return createMTQFRebuildAdapter();
+		}
+
+		@Override
+		public Adapter caseMTQFIdentification(MTQFIdentification object) {
+			return createMTQFIdentificationAdapter();
+		}
+
+		@Override
+		public Adapter caseMTQFMembership(MTQFMembership object) {
+			return createMTQFMembershipAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -956,6 +971,48 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMTQFCompletion2Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTQFRebuild <em>MTQF Rebuild</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTQFRebuild
+	 * @generated
+	 */
+	public Adapter createMTQFRebuildAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTQFIdentification <em>MTQF Identification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTQFIdentification
+	 * @generated
+	 */
+	public Adapter createMTQFIdentificationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTQFMembership <em>MTQF Membership</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTQFMembership
+	 * @generated
+	 */
+	public Adapter createMTQFMembershipAdapter() {
 		return null;
 	}
 

@@ -436,6 +436,33 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case GeneratorPackage.MTQF_REBUILD: {
+			MTQFRebuild mtqfRebuild = (MTQFRebuild) theEObject;
+			T result = caseMTQFRebuild(mtqfRebuild);
+			if (result == null)
+				result = caseQuestionableFact(mtqfRebuild);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.MTQF_IDENTIFICATION: {
+			MTQFIdentification mtqfIdentification = (MTQFIdentification) theEObject;
+			T result = caseMTQFIdentification(mtqfIdentification);
+			if (result == null)
+				result = caseQuestionableFact(mtqfIdentification);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.MTQF_MEMBERSHIP: {
+			MTQFMembership mtqfMembership = (MTQFMembership) theEObject;
+			T result = caseMTQFMembership(mtqfMembership);
+			if (result == null)
+				result = caseQuestionableFact(mtqfMembership);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -1128,6 +1155,51 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMTQFCompletion2(MTQFCompletion2 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MTQF Rebuild</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MTQF Rebuild</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTQFRebuild(MTQFRebuild object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MTQF Identification</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MTQF Identification</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTQFIdentification(MTQFIdentification object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MTQF Membership</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MTQF Membership</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMTQFMembership(MTQFMembership object) {
 		return null;
 	}
 

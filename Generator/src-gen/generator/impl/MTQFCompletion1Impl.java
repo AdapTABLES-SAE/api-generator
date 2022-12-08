@@ -303,9 +303,9 @@ public class MTQFCompletion1Impl extends QuestionableFactImpl implements MTQFCom
 		String res = getResult() == getNO_VALUE() ? "?" : getResult() + "";
 
 		if (resultOnRight) {
-			return left + " x " + right + " = " + res;
+			return left + " x " + right + " = " + res + " (" + soluce + ")";
 		} else {
-			return res + " = " + left + " x " + right;
+			return res + " = " + left + " x " + right + " (" + soluce + ")";
 		}
 	}
 

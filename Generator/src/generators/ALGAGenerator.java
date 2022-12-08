@@ -15,8 +15,8 @@ public class ALGAGenerator {
 	public static void main(String[] args) {
 		ALGAGenerator generator = new ALGAGenerator();
 		generator.generate();
-		generator.saveDungeon("DungeonT.xmi");
-		generator.printDungeon();
+		//generator.saveDungeon("DungeonT.xmi");
+		//generator.printDungeon();
 	}
 	
 	public ALGAGenerator() {

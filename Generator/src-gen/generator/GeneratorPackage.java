@@ -2760,6 +2760,234 @@ public interface GeneratorPackage extends EPackage {
 	int MTQF_COMPLETION2_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.MTQFRebuildImpl <em>MTQF Rebuild</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MTQFRebuildImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMTQFRebuild()
+	 * @generated
+	 */
+	int MTQF_REBUILD = 46;
+
+	/**
+	 * The feature id for the '<em><b>Qfresults</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_REBUILD__QFRESULTS = QUESTIONABLE_FACT__QFRESULTS;
+
+	/**
+	 * The feature id for the '<em><b>Soluce Left</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_REBUILD__SOLUCE_LEFT = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Soluce Res</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_REBUILD__SOLUCE_RES = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Result On Right</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_REBUILD__RESULT_ON_RIGHT = QUESTIONABLE_FACT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Soluce Right</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_REBUILD__SOLUCE_RIGHT = QUESTIONABLE_FACT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>MTQF Rebuild</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_REBUILD_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_REBUILD___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>MTQF Rebuild</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_REBUILD_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.MTQFIdentificationImpl <em>MTQF Identification</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MTQFIdentificationImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMTQFIdentification()
+	 * @generated
+	 */
+	int MTQF_IDENTIFICATION = 47;
+
+	/**
+	 * The feature id for the '<em><b>Qfresults</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION__QFRESULTS = QUESTIONABLE_FACT__QFRESULTS;
+
+	/**
+	 * The feature id for the '<em><b>Result</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION__RESULT = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Right Operand</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION__RIGHT_OPERAND = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Left Operand</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION__LEFT_OPERAND = QUESTIONABLE_FACT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Soluce</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION__SOLUCE = QUESTIONABLE_FACT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Result On Right</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION__RESULT_ON_RIGHT = QUESTIONABLE_FACT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>MTQF Identification</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>MTQF Identification</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.MTQFMembershipImpl <em>MTQF Membership</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MTQFMembershipImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMTQFMembership()
+	 * @generated
+	 */
+	int MTQF_MEMBERSHIP = 48;
+
+	/**
+	 * The feature id for the '<em><b>Qfresults</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_MEMBERSHIP__QFRESULTS = QUESTIONABLE_FACT__QFRESULTS;
+
+	/**
+	 * The feature id for the '<em><b>Good Results</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_MEMBERSHIP__GOOD_RESULTS = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>MTQF Membership</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_MEMBERSHIP_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_MEMBERSHIP___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>MTQF Membership</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_MEMBERSHIP_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2767,7 +2995,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 46;
+	int DIRECTIONS = 49;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -2777,7 +3005,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 47;
+	int DUNGEON_MODE = 50;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -2787,7 +3015,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 48;
+	int TABLE_BUILD = 51;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -2797,7 +3025,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 49;
+	int RESULT_POSITION = 52;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -2807,7 +3035,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 50;
+	int ESINGLE_TARGET = 53;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -2817,7 +3045,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 51;
+	int ETASK_TYPE = 54;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -2827,7 +3055,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 52;
+	int EMODALITY = 55;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -2837,7 +3065,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 53;
+	int ESEVERAL_TARGET = 56;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -4396,6 +4624,176 @@ public interface GeneratorPackage extends EPackage {
 	EOperation getMTQFCompletion2__GetQuestionableFact();
 
 	/**
+	 * Returns the meta object for class '{@link generator.MTQFRebuild <em>MTQF Rebuild</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MTQF Rebuild</em>'.
+	 * @see generator.MTQFRebuild
+	 * @generated
+	 */
+	EClass getMTQFRebuild();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTQFRebuild#getSoluceLeft <em>Soluce Left</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Soluce Left</em>'.
+	 * @see generator.MTQFRebuild#getSoluceLeft()
+	 * @see #getMTQFRebuild()
+	 * @generated
+	 */
+	EAttribute getMTQFRebuild_SoluceLeft();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTQFRebuild#getSoluceRes <em>Soluce Res</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Soluce Res</em>'.
+	 * @see generator.MTQFRebuild#getSoluceRes()
+	 * @see #getMTQFRebuild()
+	 * @generated
+	 */
+	EAttribute getMTQFRebuild_SoluceRes();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTQFRebuild#isResultOnRight <em>Result On Right</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Result On Right</em>'.
+	 * @see generator.MTQFRebuild#isResultOnRight()
+	 * @see #getMTQFRebuild()
+	 * @generated
+	 */
+	EAttribute getMTQFRebuild_ResultOnRight();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTQFRebuild#getSoluceRight <em>Soluce Right</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Soluce Right</em>'.
+	 * @see generator.MTQFRebuild#getSoluceRight()
+	 * @see #getMTQFRebuild()
+	 * @generated
+	 */
+	EAttribute getMTQFRebuild_SoluceRight();
+
+	/**
+	 * Returns the meta object for the '{@link generator.MTQFRebuild#getQuestionableFact() <em>Get Questionable Fact</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Questionable Fact</em>' operation.
+	 * @see generator.MTQFRebuild#getQuestionableFact()
+	 * @generated
+	 */
+	EOperation getMTQFRebuild__GetQuestionableFact();
+
+	/**
+	 * Returns the meta object for class '{@link generator.MTQFIdentification <em>MTQF Identification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MTQF Identification</em>'.
+	 * @see generator.MTQFIdentification
+	 * @generated
+	 */
+	EClass getMTQFIdentification();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTQFIdentification#getResult <em>Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Result</em>'.
+	 * @see generator.MTQFIdentification#getResult()
+	 * @see #getMTQFIdentification()
+	 * @generated
+	 */
+	EAttribute getMTQFIdentification_Result();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTQFIdentification#getRightOperand <em>Right Operand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Right Operand</em>'.
+	 * @see generator.MTQFIdentification#getRightOperand()
+	 * @see #getMTQFIdentification()
+	 * @generated
+	 */
+	EAttribute getMTQFIdentification_RightOperand();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTQFIdentification#getLeftOperand <em>Left Operand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Left Operand</em>'.
+	 * @see generator.MTQFIdentification#getLeftOperand()
+	 * @see #getMTQFIdentification()
+	 * @generated
+	 */
+	EAttribute getMTQFIdentification_LeftOperand();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTQFIdentification#isSoluce <em>Soluce</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Soluce</em>'.
+	 * @see generator.MTQFIdentification#isSoluce()
+	 * @see #getMTQFIdentification()
+	 * @generated
+	 */
+	EAttribute getMTQFIdentification_Soluce();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTQFIdentification#isResultOnRight <em>Result On Right</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Result On Right</em>'.
+	 * @see generator.MTQFIdentification#isResultOnRight()
+	 * @see #getMTQFIdentification()
+	 * @generated
+	 */
+	EAttribute getMTQFIdentification_ResultOnRight();
+
+	/**
+	 * Returns the meta object for the '{@link generator.MTQFIdentification#getQuestionableFact() <em>Get Questionable Fact</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Questionable Fact</em>' operation.
+	 * @see generator.MTQFIdentification#getQuestionableFact()
+	 * @generated
+	 */
+	EOperation getMTQFIdentification__GetQuestionableFact();
+
+	/**
+	 * Returns the meta object for class '{@link generator.MTQFMembership <em>MTQF Membership</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MTQF Membership</em>'.
+	 * @see generator.MTQFMembership
+	 * @generated
+	 */
+	EClass getMTQFMembership();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link generator.MTQFMembership#getGoodResults <em>Good Results</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Good Results</em>'.
+	 * @see generator.MTQFMembership#getGoodResults()
+	 * @see #getMTQFMembership()
+	 * @generated
+	 */
+	EAttribute getMTQFMembership_GoodResults();
+
+	/**
+	 * Returns the meta object for the '{@link generator.MTQFMembership#getQuestionableFact() <em>Get Questionable Fact</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Questionable Fact</em>' operation.
+	 * @see generator.MTQFMembership#getQuestionableFact()
+	 * @generated
+	 */
+	EOperation getMTQFMembership__GetQuestionableFact();
+
+	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5757,6 +6155,140 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation MTQF_COMPLETION2___GET_QUESTIONABLE_FACT = eINSTANCE.getMTQFCompletion2__GetQuestionableFact();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MTQFRebuildImpl <em>MTQF Rebuild</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MTQFRebuildImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMTQFRebuild()
+		 * @generated
+		 */
+		EClass MTQF_REBUILD = eINSTANCE.getMTQFRebuild();
+
+		/**
+		 * The meta object literal for the '<em><b>Soluce Left</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_REBUILD__SOLUCE_LEFT = eINSTANCE.getMTQFRebuild_SoluceLeft();
+
+		/**
+		 * The meta object literal for the '<em><b>Soluce Res</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_REBUILD__SOLUCE_RES = eINSTANCE.getMTQFRebuild_SoluceRes();
+
+		/**
+		 * The meta object literal for the '<em><b>Result On Right</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_REBUILD__RESULT_ON_RIGHT = eINSTANCE.getMTQFRebuild_ResultOnRight();
+
+		/**
+		 * The meta object literal for the '<em><b>Soluce Right</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_REBUILD__SOLUCE_RIGHT = eINSTANCE.getMTQFRebuild_SoluceRight();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Questionable Fact</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MTQF_REBUILD___GET_QUESTIONABLE_FACT = eINSTANCE.getMTQFRebuild__GetQuestionableFact();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MTQFIdentificationImpl <em>MTQF Identification</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MTQFIdentificationImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMTQFIdentification()
+		 * @generated
+		 */
+		EClass MTQF_IDENTIFICATION = eINSTANCE.getMTQFIdentification();
+
+		/**
+		 * The meta object literal for the '<em><b>Result</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_IDENTIFICATION__RESULT = eINSTANCE.getMTQFIdentification_Result();
+
+		/**
+		 * The meta object literal for the '<em><b>Right Operand</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_IDENTIFICATION__RIGHT_OPERAND = eINSTANCE.getMTQFIdentification_RightOperand();
+
+		/**
+		 * The meta object literal for the '<em><b>Left Operand</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_IDENTIFICATION__LEFT_OPERAND = eINSTANCE.getMTQFIdentification_LeftOperand();
+
+		/**
+		 * The meta object literal for the '<em><b>Soluce</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_IDENTIFICATION__SOLUCE = eINSTANCE.getMTQFIdentification_Soluce();
+
+		/**
+		 * The meta object literal for the '<em><b>Result On Right</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_IDENTIFICATION__RESULT_ON_RIGHT = eINSTANCE.getMTQFIdentification_ResultOnRight();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Questionable Fact</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MTQF_IDENTIFICATION___GET_QUESTIONABLE_FACT = eINSTANCE.getMTQFIdentification__GetQuestionableFact();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MTQFMembershipImpl <em>MTQF Membership</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MTQFMembershipImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMTQFMembership()
+		 * @generated
+		 */
+		EClass MTQF_MEMBERSHIP = eINSTANCE.getMTQFMembership();
+
+		/**
+		 * The meta object literal for the '<em><b>Good Results</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_MEMBERSHIP__GOOD_RESULTS = eINSTANCE.getMTQFMembership_GoodResults();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Questionable Fact</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MTQF_MEMBERSHIP___GET_QUESTIONABLE_FACT = eINSTANCE.getMTQFMembership__GetQuestionableFact();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.

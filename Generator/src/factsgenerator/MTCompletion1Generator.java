@@ -1,8 +1,6 @@
 package factsgenerator;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import generator.AbstractFact;
@@ -25,7 +23,7 @@ public class MTCompletion1Generator {
 		this.eeManager = eeManager; 
 	}
 
-	public Set<MTQFCompletion1> generateCompletion1QFacts(MTCompletion1 task) {
+	public Set<MTQFCompletion1> generateQuestionableFacts(MTCompletion1 task) {
 		HashSet<MTQFCompletion1> questionedFacts = new HashSet<>();
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
@@ -41,7 +39,7 @@ public class MTCompletion1Generator {
 				if(f instanceof MTFact) {
 					MTFact fact = (MTFact) f;
 					if(min <= fact.getOp() && fact.getOp()<= max){
-						questionedFacts.addAll(getQuestionableFactsCompletion1(task, fact));
+						questionedFacts.addAll(generateQuestionableFactsOf(task, fact));
 					}
 				}
 				
@@ -52,8 +50,8 @@ public class MTCompletion1Generator {
 		return questionedFacts; 
 	}
 	
-	private List<MTQFCompletion1> getQuestionableFactsCompletion1(MTCompletion1 task, MTFact fact){
-		List<MTQFCompletion1> qfs = new ArrayList<>(); 
+	private Set<MTQFCompletion1> generateQuestionableFactsOf(MTCompletion1 task, MTFact fact){
+		HashSet<MTQFCompletion1> qfs = new HashSet<>(); 
 		
 		TableBuild build = ((MTLevel) eeManager.getLevel()).getBuildSetup();
 		ResultPosition equalPos = ((MTLevel) eeManager.getLevel()).getResultPositionSetup();
@@ -61,20 +59,20 @@ public class MTCompletion1Generator {
 		for (ESingleTarget target : task.getTargets()) {
 			if(build.equals(TableBuild.MIX)) {
 				if(equalPos.equals(ResultPosition.MIX)) {
-					qfs.add(buildQC1Fact(fact, ResultPosition.LEFT, TableBuild.OPERAND_TABLE, target));
-					qfs.add(buildQC1Fact(fact, ResultPosition.RIGHT, TableBuild.OPERAND_TABLE, target));
-					qfs.add(buildQC1Fact(fact, ResultPosition.LEFT, TableBuild.TABLE_OPERAND, target));
-					qfs.add(buildQC1Fact(fact, ResultPosition.RIGHT, TableBuild.TABLE_OPERAND, target));
+					qfs.add(buildQF(fact, ResultPosition.LEFT, TableBuild.OPERAND_TABLE, target));
+					qfs.add(buildQF(fact, ResultPosition.RIGHT, TableBuild.OPERAND_TABLE, target));
+					qfs.add(buildQF(fact, ResultPosition.LEFT, TableBuild.TABLE_OPERAND, target));
+					qfs.add(buildQF(fact, ResultPosition.RIGHT, TableBuild.TABLE_OPERAND, target));
 				} else {
-					qfs.add(buildQC1Fact(fact, equalPos, TableBuild.OPERAND_TABLE, target));
-					qfs.add(buildQC1Fact(fact, equalPos, TableBuild.TABLE_OPERAND, target));
+					qfs.add(buildQF(fact, equalPos, TableBuild.OPERAND_TABLE, target));
+					qfs.add(buildQF(fact, equalPos, TableBuild.TABLE_OPERAND, target));
 				}
 			} else {
 				if(equalPos.equals(ResultPosition.MIX)) {
-					qfs.add(buildQC1Fact(fact, ResultPosition.LEFT, build, target));
-					qfs.add(buildQC1Fact(fact, ResultPosition.RIGHT, build, target));
+					qfs.add(buildQF(fact, ResultPosition.LEFT, build, target));
+					qfs.add(buildQF(fact, ResultPosition.RIGHT, build, target));
 				} else {
-					qfs.add(buildQC1Fact(fact, equalPos, build, target));
+					qfs.add(buildQF(fact, equalPos, build, target));
 				}
 			}
 		}
@@ -82,10 +80,9 @@ public class MTCompletion1Generator {
 		return qfs;
 	}
 	
-	private MTQFCompletion1 buildQC1Fact(MTFact fact, ResultPosition resPos, TableBuild build, ESingleTarget target) {
+	private MTQFCompletion1 buildQF(MTFact fact, ResultPosition resPos, TableBuild build, ESingleTarget target) {
 		MTQFCompletion1 qf = new MTQFCompletion1Impl(); 
 				
-		// Y a des couillandres : faits complets 
 		if(build.equals(TableBuild.OPERAND_TABLE)) {
 			qf.setLeftOperand(fact.getOp());
 			qf.setRightOperand(fact.getTable());

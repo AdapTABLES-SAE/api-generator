@@ -6,6 +6,8 @@ import generator.GeneratorPackage;
 import generator.MTQFCompletion2;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Objects;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
@@ -379,12 +381,18 @@ public class MTQFCompletion2Impl extends QuestionableFactImpl implements MTQFCom
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getQuestionableFact() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		String left = getLeftOperand() == getNO_VALUE() ? "?" : getLeftOperand() + "";
+		String right = getRightOperand() == getNO_VALUE() ? "?" : getRightOperand() + "";
+		String res = getResult() == getNO_VALUE() ? "?" : getResult() + "";
+
+		if (resultOnRight) {
+			return left + " x " + right + " = " + res + " (" + soluceLeft + "x" + soluceRight + "=" + soluceRes + ")";
+		} else {
+			return res + " = " + left + " x " + right + " (" + soluceRes + "=" + soluceLeft + "x" + soluceRight + ")";
+		}
 	}
 
 	/**
@@ -552,6 +560,26 @@ public class MTQFCompletion2Impl extends QuestionableFactImpl implements MTQFCom
 		result.append(nO_VALUE);
 		result.append(')');
 		return result.toString();
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(leftOperand, nO_VALUE, result, resultOnRight, rightOperand, soluceLeft, soluceRes,
+				soluceRight);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MTQFCompletion2Impl other = (MTQFCompletion2Impl) obj;
+		return leftOperand == other.leftOperand && nO_VALUE == other.nO_VALUE && result == other.result
+				&& resultOnRight == other.resultOnRight && rightOperand == other.rightOperand
+				&& soluceLeft == other.soluceLeft && soluceRes == other.soluceRes && soluceRight == other.soluceRight;
 	}
 
 } //MTQFCompletion2Impl

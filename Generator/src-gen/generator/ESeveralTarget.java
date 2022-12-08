@@ -38,13 +38,13 @@ public enum ESeveralTarget implements Enumerator {
 	 */
 	OPERAND_RESULT(1, "OPERAND_RESULT", "OPERAND_RESULT"),
 	/**
-	* The '<em><b>TABLE RESULT</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>TABLE RESULT</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #TABLE_RESULT_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #TABLE_RESULT_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	TABLE_RESULT(2, "TABLE_RESULT", "TABLE_RESULT");
 
 	/**

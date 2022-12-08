@@ -337,6 +337,33 @@ public interface GeneratorFactory extends EFactory {
 	MTQFCompletion2 createMTQFCompletion2();
 
 	/**
+	 * Returns a new object of class '<em>MTQF Rebuild</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MTQF Rebuild</em>'.
+	 * @generated
+	 */
+	MTQFRebuild createMTQFRebuild();
+
+	/**
+	 * Returns a new object of class '<em>MTQF Identification</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MTQF Identification</em>'.
+	 * @generated
+	 */
+	MTQFIdentification createMTQFIdentification();
+
+	/**
+	 * Returns a new object of class '<em>MTQF Membership</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MTQF Membership</em>'.
+	 * @generated
+	 */
+	MTQFMembership createMTQFMembership();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
