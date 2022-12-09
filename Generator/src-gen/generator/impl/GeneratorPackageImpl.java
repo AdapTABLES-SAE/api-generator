@@ -1999,6 +1999,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMTQFMembership_Table() {
+		return (EAttribute) mtqfMembershipEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getMTQFMembership__GetQuestionableFact() {
 		return mtqfMembershipEClass.getEOperations().get(0);
 	}
@@ -2313,6 +2322,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		mtqfMembershipEClass = createEClass(MTQF_MEMBERSHIP);
 		createEAttribute(mtqfMembershipEClass, MTQF_MEMBERSHIP__GOOD_RESULTS);
+		createEAttribute(mtqfMembershipEClass, MTQF_MEMBERSHIP__TABLE);
 		createEOperation(mtqfMembershipEClass, MTQF_MEMBERSHIP___GET_QUESTIONABLE_FACT);
 
 		// Create enums
@@ -2828,6 +2838,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTQFMembership_GoodResults(), ecorePackage.getEInt(), "goodResults", null, 1, -1,
 				MTQFMembership.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTQFMembership_Table(), ecorePackage.getEInt(), "table", null, 0, 1, MTQFMembership.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getMTQFMembership__GetQuestionableFact(), ecorePackage.getEString(), "getQuestionableFact", 0, 1,
 				IS_UNIQUE, IS_ORDERED);

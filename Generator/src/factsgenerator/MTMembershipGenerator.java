@@ -17,7 +17,6 @@ import managers.EducationElementsManager;
 
 public class MTMembershipGenerator {
 	
-	// TODO : Debug
 	private EducationElementsManager eeManager;
 	
 	public MTMembershipGenerator(EducationElementsManager eeManager) {
@@ -35,17 +34,17 @@ public class MTMembershipGenerator {
 		int nbByFact = mc.getNbChoices() - mc.getNbBadChoices();
 
 		for (SetOfFacts setoffact : eeManager.getObjective().getSetoffacts()) {
+			List<MTResultFact> facts = new ArrayList<>();
 			for (AbstractFact f : setoffact.getFacts()) { 
-				List<MTResultFact> facts = new ArrayList<>();
 				if(f instanceof MTResultFact) {
 					MTResultFact fact = (MTResultFact) f;
 					if(min <= (fact.getRes()/fact.getTable()) && (fact.getRes()/fact.getTable()) <= max){
 						facts.add(fact);
 					}
 				}
-				questionedFacts.addAll(generateQuestionableFactsOf(task, facts, nbByFact));
-
 			}
+			System.out.println("facts "+facts);
+			questionedFacts.addAll(generateQuestionableFactsOf(task, facts, nbByFact));
 		}
 		
 		return questionedFacts; 
@@ -71,6 +70,7 @@ public class MTMembershipGenerator {
 		for (MTResultFact mtResultFact : facts) {
 			qf.getGoodResults().add(mtResultFact.getRes());
 		}
+		qf.setTable(facts.get(0).getTable());		
 		return qf;
 	}
 }

@@ -263,6 +263,7 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTQFMembership">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFMembership/goodResults"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFMembership/table"/>
       <genOperations ecoreOperation="generator.ecore#//MTQFMembership/getQuestionableFact"/>
     </genClasses>
   </genPackages>

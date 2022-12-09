@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link generator.MTQFMembership#getGoodResults <em>Good Results</em>}</li>
+ *   <li>{@link generator.MTQFMembership#getTable <em>Table</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getMTQFMembership()
@@ -32,6 +33,28 @@ public interface MTQFMembership extends QuestionableFact {
 	 * @generated
 	 */
 	EList<Integer> getGoodResults();
+
+	/**
+	 * Returns the value of the '<em><b>Table</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Table</em>' attribute.
+	 * @see #setTable(int)
+	 * @see generator.GeneratorPackage#getMTQFMembership_Table()
+	 * @model
+	 * @generated
+	 */
+	int getTable();
+
+	/**
+	 * Sets the value of the '{@link generator.MTQFMembership#getTable <em>Table</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Table</em>' attribute.
+	 * @see #getTable()
+	 * @generated
+	 */
+	void setTable(int value);
 
 	/**
 	 * <!-- begin-user-doc -->

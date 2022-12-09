@@ -9,10 +9,12 @@ import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
@@ -24,6 +26,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.MTQFMembershipImpl#getGoodResults <em>Good Results</em>}</li>
+ *   <li>{@link generator.impl.MTQFMembershipImpl#getTable <em>Table</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +41,25 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 	 * @ordered
 	 */
 	protected EList<Integer> goodResults;
+
+	/**
+	 * The default value of the '{@link #getTable() <em>Table</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTable()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int TABLE_EDEFAULT = 0;
+	/**
+	 * The cached value of the '{@link #getTable() <em>Table</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTable()
+	 * @generated
+	 * @ordered
+	 */
+	protected int table = TABLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,18 +96,40 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getTable() {
+		return table;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTable(int newTable) {
+		int oldTable = table;
+		table = newTable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MTQF_MEMBERSHIP__TABLE, oldTable,
+					table));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public String getQuestionableFact() {
-		String fact = "{"; 
+		String fact = "{";
 		for (int i = 0; i < goodResults.size(); i++) {
-			if(i == goodResults.size() - 1) {
+			if (i == goodResults.size() - 1) {
 				fact += goodResults.get(i);
-			}else {
-				fact += goodResults.get(i) + ",";	
+			} else {
+				fact += goodResults.get(i) + ",";
 			}
 		}
-		return fact + "}";
+		return fact + "} (" + getTable() + ")";
 	}
 
 	/**
@@ -98,6 +142,8 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 		switch (featureID) {
 		case GeneratorPackage.MTQF_MEMBERSHIP__GOOD_RESULTS:
 			return getGoodResults();
+		case GeneratorPackage.MTQF_MEMBERSHIP__TABLE:
+			return getTable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -115,6 +161,9 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 			getGoodResults().clear();
 			getGoodResults().addAll((Collection<? extends Integer>) newValue);
 			return;
+		case GeneratorPackage.MTQF_MEMBERSHIP__TABLE:
+			setTable((Integer) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -130,6 +179,9 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 		case GeneratorPackage.MTQF_MEMBERSHIP__GOOD_RESULTS:
 			getGoodResults().clear();
 			return;
+		case GeneratorPackage.MTQF_MEMBERSHIP__TABLE:
+			setTable(TABLE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -144,6 +196,8 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 		switch (featureID) {
 		case GeneratorPackage.MTQF_MEMBERSHIP__GOOD_RESULTS:
 			return goodResults != null && !goodResults.isEmpty();
+		case GeneratorPackage.MTQF_MEMBERSHIP__TABLE:
+			return table != TABLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -175,6 +229,8 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (goodResults: ");
 		result.append(goodResults);
+		result.append(", table: ");
+		result.append(table);
 		result.append(')');
 		return result.toString();
 	}

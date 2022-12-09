@@ -14,5 +14,7 @@ Export-Package: generator,
  generators
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime,
- org.eclipse.emf.ecore.xmi
+ org.eclipse.emf.ecore.xmi,
+ org.junit,
+ org.junit.jupiter.api
 Bundle-ActivationPolicy: lazy

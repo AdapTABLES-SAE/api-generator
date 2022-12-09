@@ -2961,13 +2961,22 @@ public interface GeneratorPackage extends EPackage {
 	int MTQF_MEMBERSHIP__GOOD_RESULTS = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Table</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_MEMBERSHIP__TABLE = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>MTQF Membership</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_MEMBERSHIP_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+	int MTQF_MEMBERSHIP_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
@@ -4784,6 +4793,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTQFMembership_GoodResults();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.MTQFMembership#getTable <em>Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Table</em>'.
+	 * @see generator.MTQFMembership#getTable()
+	 * @see #getMTQFMembership()
+	 * @generated
+	 */
+	EAttribute getMTQFMembership_Table();
+
+	/**
 	 * Returns the meta object for the '{@link generator.MTQFMembership#getQuestionableFact() <em>Get Questionable Fact</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6281,6 +6301,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MTQF_MEMBERSHIP__GOOD_RESULTS = eINSTANCE.getMTQFMembership_GoodResults();
+
+		/**
+		 * The meta object literal for the '<em><b>Table</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_MEMBERSHIP__TABLE = eINSTANCE.getMTQFMembership_Table();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Questionable Fact</b></em>' operation.
