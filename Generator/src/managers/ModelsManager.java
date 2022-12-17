@@ -18,6 +18,7 @@ import generator.GameDescription;
 import generator.GenerationContext;
 import generator.GeneratorPackage;
 import generator.Knowledge;
+import generator.LearningDomain;
 
 
 public class ModelsManager {
@@ -25,7 +26,7 @@ public class ModelsManager {
 	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	private static final String INPUT_MODELS_PATH = "inputmodels/";
 	private static final String OUTPUT_MODELS_PATH = "outputmodels/";
-	private static final String[] INPUT_MODELS_PATHS = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi"};
+	private static final String[] INPUT_MODELS_PATHS = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi"};
 
 	private ResourceSet resourceSet;
 	
@@ -33,6 +34,7 @@ public class ModelsManager {
 	public GenerationContext context; 
 	public GameDescription gameDescription; 
 	public Knowledge multiplicationTables;
+	public LearningDomain structures;
 	
 	//Dungeon generatedDungeon;
 	
@@ -69,16 +71,18 @@ public class ModelsManager {
 		File contexte = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]);
 		File gamedescription = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[1]);
 		File multiplicationTables = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[2]);
+		File structure = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[3]);
 
 		Resource resource1 = resourceSet.createResource(URI.createFileURI(contexte.getAbsolutePath()));
 		Resource resource2 = resourceSet.createResource(URI.createFileURI(gamedescription.getAbsolutePath()));
 		Resource resource3 = resourceSet.createResource(URI.createFileURI(multiplicationTables.getAbsolutePath()));
+		Resource resource4 = resourceSet.createResource(URI.createFileURI(structure.getAbsolutePath()));
 
 		try {
 			resource1.load(null);
 			resource2.load(null);
 			resource3.load(null);
-
+			resource4.load(null);
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -87,6 +91,7 @@ public class ModelsManager {
 		this.context = (GenerationContext) resource1.getContents().get(0);
 		this.gameDescription = (GameDescription) resource2.getContents().get(0);
 		this.multiplicationTables = (Knowledge) resource3.getContents().get(0);
+		this.structures = (LearningDomain) resource4.getContents().get(0);
 		
 		LOGGER.info("Loading input models : OK");
 	}
