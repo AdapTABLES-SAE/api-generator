@@ -158,7 +158,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="CurrentObjectiveLevel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="objective" lowerBound="1"
         eType="#//Objective"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="achieved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="achieved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//Level"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="results" eType="#//Results"
         containment="true"/>

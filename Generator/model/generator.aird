@@ -13,7 +13,7 @@
     <semanticResources>../inputmodels/MultiplicationTables.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_-oGdkAnBEe25_Pq4ehy-Rg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_-pEG4AnBEe25_Pq4ehy-Rg" name="generalView" repPath="#_-o2rgAnBEe25_Pq4ehy-Rg" changeId="72fe6ca4-21c6-4420-8dcf-2865735fceed">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_-pEG4AnBEe25_Pq4ehy-Rg" name="generalView" repPath="#_-o2rgAnBEe25_Pq4ehy-Rg" changeId="f6fc8432-65dd-4cf8-ba11-1eca3db80e1e">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -41,7 +41,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5Q1zgCkGEe2Mu67rFJOXFg" name="learnerPlayer" repPath="#_5QvF0CkGEe2Mu67rFJOXFg" changeId="4f5e2c67-8e6f-4ff7-8c0e-e2393b70a2a3">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5Q1zgCkGEe2Mu67rFJOXFg" name="learnerPlayer" repPath="#_5QvF0CkGEe2Mu67rFJOXFg" changeId="982d645e-6f84-44a8-9c7f-87869b046d6d">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -1262,7 +1262,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_sGQWoSkIEe273IP9OAkmZg" name="achieved : EBoolean = false" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_sGQWoSkIEe273IP9OAkmZg" name="achieved : EBoolean = true" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="generator.ecore#//CurrentObjectiveLevel/achieved"/>
         <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//CurrentObjectiveLevel/achieved"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_sGQWoikIEe273IP9OAkmZg" labelAlignment="LEFT">
@@ -6689,7 +6689,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Sgpq5ikHEe2Mu67rFJOXFg" name="achieved : EBoolean = false" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Sgpq5ikHEe2Mu67rFJOXFg" name="achieved : EBoolean = true" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="generator.ecore#//CurrentObjectiveLevel/achieved"/>
         <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//CurrentObjectiveLevel/achieved"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_SgqR8CkHEe2Mu67rFJOXFg" labelAlignment="LEFT">

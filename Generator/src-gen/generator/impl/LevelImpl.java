@@ -7,6 +7,7 @@ import generator.GeneratorPackage;
 import generator.Level;
 
 import java.util.Collection;
+import java.util.Objects;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -220,4 +221,22 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 		return result.toString();
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, tasks);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		LevelImpl other = (LevelImpl) obj;
+		return Objects.equals(id, other.id) && Objects.equals(tasks, other.tasks);
+	}
+
+	
 } //LevelImpl

@@ -31,7 +31,7 @@ public class ALGAGenerator {
 		EducationalElementsGenerator eduGeneration = new EducationalElementsGenerator(modelAccess);
 		EducationElementsManager eeManager =  eduGeneration.generateEE();
 		
-		DungeonGenerator dungeonGeneration = new DungeonGenerator(modelAccess, eeManager);
+		/*DungeonGenerator dungeonGeneration = new DungeonGenerator(modelAccess, eeManager);
 		generatedDungeon = dungeonGeneration.generateDungeon();
 		
 		generatedDungeon.setLearningobjective(eduGeneration.getChosenObjective());
@@ -42,7 +42,7 @@ public class ALGAGenerator {
 		}
 		
 		MTFactGenerator mtf = new MTFactGenerator(eeManager);
-		mtf.generateQFacts();
+		mtf.generateQFacts();*/
 		
 	}
 	

@@ -318,7 +318,7 @@
         name="Apprentissage Table 6">
       <prerequisites
           succesPercent="80"
-          requiredLevel="ICM-O1-N1"/>
+          requiredLevel="REC-O1-N1"/>
       <levels
           xsi:type="generator:MTLevel"
           ID="REC-O2-N1">
@@ -441,7 +441,7 @@
         name="Apprentissage Table 7">
       <prerequisites
           succesPercent="80"
-          requiredLevel="ICM-O1-N1"/>
+          requiredLevel="REC-O1-N1"/>
       <levels
           xsi:type="generator:MTLevel"
           ID="REC-O3-N1">
@@ -564,7 +564,7 @@
         name="Apprentissage Table 8">
       <prerequisites
           succesPercent="80"
-          requiredLevel="ICM-O1-N1"/>
+          requiredLevel="REC-O1-N1"/>
       <levels
           xsi:type="generator:MTLevel"
           ID="REC-O4-N1">
@@ -687,7 +687,7 @@
         name="Apprentissage Table 9">
       <prerequisites
           succesPercent="80"
-          requiredLevel="ICM-O1-N1"/>
+          requiredLevel="REC-O1-N1"/>
       <levels
           xsi:type="generator:MTLevel"
           ID="REC-O5-N1">
@@ -810,10 +810,10 @@
         name="ALL IN">
       <prerequisites
           succesPercent="70"
-          requiredLevel="ICM-O2-N3"/>
+          requiredLevel="REC-O2-N3"/>
       <prerequisites
           succesPercent="70"
-          requiredLevel="ICM-O3-N3"/>
+          requiredLevel="REC-O3-N3"/>
       <prerequisites
           succesPercent="70"
           requiredLevel="REC-O4-N3"/>
