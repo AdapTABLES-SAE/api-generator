@@ -33,6 +33,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link generator.impl.ResultsByTaskImpl#getTask <em>Task</em>}</li>
  *   <li>{@link generator.impl.ResultsByTaskImpl#getQuestionedfacts <em>Questionedfacts</em>}</li>
+ *   <li>{@link generator.impl.ResultsByTaskImpl#getSucessPercent <em>Sucess Percent</em>}</li>
+ *   <li>{@link generator.impl.ResultsByTaskImpl#getEncountersPercent <em>Encounters Percent</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,6 +59,46 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 	 * @ordered
 	 */
 	protected EList<QuestionableFact> questionedfacts;
+
+	/**
+	 * The default value of the '{@link #getSucessPercent() <em>Sucess Percent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSucessPercent()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double SUCESS_PERCENT_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getSucessPercent() <em>Sucess Percent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSucessPercent()
+	 * @generated
+	 * @ordered
+	 */
+	protected double sucessPercent = SUCESS_PERCENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEncountersPercent() <em>Encounters Percent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEncountersPercent()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double ENCOUNTERS_PERCENT_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getEncountersPercent() <em>Encounters Percent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEncountersPercent()
+	 * @generated
+	 * @ordered
+	 */
+	protected double encountersPercent = ENCOUNTERS_PERCENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,6 +177,50 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double getSucessPercent() {
+		return sucessPercent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSucessPercent(double newSucessPercent) {
+		double oldSucessPercent = sucessPercent;
+		sucessPercent = newSucessPercent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT,
+					oldSucessPercent, sucessPercent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getEncountersPercent() {
+		return encountersPercent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEncountersPercent(double newEncountersPercent) {
+		double oldEncountersPercent = encountersPercent;
+		encountersPercent = newEncountersPercent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.RESULTS_BY_TASK__ENCOUNTERS_PERCENT,
+					oldEncountersPercent, encountersPercent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -158,6 +244,10 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 			return basicGetTask();
 		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONEDFACTS:
 			return getQuestionedfacts();
+		case GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT:
+			return getSucessPercent();
+		case GeneratorPackage.RESULTS_BY_TASK__ENCOUNTERS_PERCENT:
+			return getEncountersPercent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -178,6 +268,12 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 			getQuestionedfacts().clear();
 			getQuestionedfacts().addAll((Collection<? extends QuestionableFact>) newValue);
 			return;
+		case GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT:
+			setSucessPercent((Double) newValue);
+			return;
+		case GeneratorPackage.RESULTS_BY_TASK__ENCOUNTERS_PERCENT:
+			setEncountersPercent((Double) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -196,6 +292,12 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONEDFACTS:
 			getQuestionedfacts().clear();
 			return;
+		case GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT:
+			setSucessPercent(SUCESS_PERCENT_EDEFAULT);
+			return;
+		case GeneratorPackage.RESULTS_BY_TASK__ENCOUNTERS_PERCENT:
+			setEncountersPercent(ENCOUNTERS_PERCENT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -212,8 +314,31 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 			return task != null;
 		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONEDFACTS:
 			return questionedfacts != null && !questionedfacts.isEmpty();
+		case GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT:
+			return sucessPercent != SUCESS_PERCENT_EDEFAULT;
+		case GeneratorPackage.RESULTS_BY_TASK__ENCOUNTERS_PERCENT:
+			return encountersPercent != ENCOUNTERS_PERCENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (sucessPercent: ");
+		result.append(sucessPercent);
+		result.append(", encountersPercent: ");
+		result.append(encountersPercent);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ResultsByTaskImpl

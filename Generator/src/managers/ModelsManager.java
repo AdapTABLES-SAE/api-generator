@@ -34,7 +34,7 @@ public class ModelsManager {
 	public GenerationContext context; 
 	public GameDescription gameDescription; 
 	public Knowledge multiplicationTables;
-	public LearningDomain learningPath; 
+	public LearningDomain learningPath;
 	
 	//Dungeon generatedDungeon;
 	

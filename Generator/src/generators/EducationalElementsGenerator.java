@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import generator.ATask;
 import generator.CurrentObjectiveLevel;
+import generator.LearnerPlayer;
 import generator.LearningPath;
 import generator.Level;
 import generator.Objective;
@@ -19,20 +21,21 @@ import managers.ModelsManager;
  */
 public class EducationalElementsGenerator {
 	
-	private ModelsManager modelAccess;
 	private Random random;
 	
 	private EducationElementsManager eeManager;
+	private LearnerPlayer learnerPlayer;
 
 
 	public EducationalElementsGenerator(ModelsManager modelAccess) {
-		this.modelAccess = modelAccess;
+		this.learnerPlayer = modelAccess.context.getLearnerplayer();
 		random = new Random();
 		eeManager = new EducationElementsManager(modelAccess.context.getGamecontext().getNumberOfRooms());
 	}
 	
 	public EducationElementsManager generateEE() {
 		selectObjectiveLevel();
+		defineDungeonRoom2Task();
 		printGeneration();
 		return eeManager;
 	}
@@ -45,16 +48,33 @@ public class EducationalElementsGenerator {
 		return eeManager.getObjective();
 	}
 	
-	/*private void selectObjectiveLevel() {
-		List<CurrentObjectiveLevel> notAchieved = new ArrayList<>();
-		for (CurrentObjectiveLevel currentObjectiveLevel : modelAccess.context.getLearnerplayer().getProgression().getCurrentobjectivelevels()) {
-			if(!currentObjectiveLevel.isAchieved()) {
-				notAchieved.add(currentObjectiveLevel);
+	/**
+	 * Défini le nombre de salle du donjon pour chaque tâche
+	 */
+	private void defineDungeonRoom2Task() {
+		if(eeManager.getObjective() != null && eeManager.getLevel() != null) {
+			List<ATask> tasksAchieved = new ArrayList<>();
+			for (ATask task : eeManager.getTasks()) {
+				if(eeManager.successPercentageByTask(task) == 100) {
+					tasksAchieved.add(task);
+				}
+			}
+			
+			double somme = 0; 
+			for (ATask task : eeManager.getTasks()) {
+				if(!tasksAchieved.contains(task)) {
+					somme += task.getPercentOfApparition();
+				}
+			}
+			double coeff = 100 / somme;
+			
+			for (ATask task : eeManager.getTasks()) {
+				if(!tasksAchieved.contains(task)) {
+					eeManager.addRoom2Task(task, coeff);
+				}
 			}
 		}
-		// TODO : choix en fonction des pourcentages !!! 
-		eeManager.setChosenObjectiveLevel(notAchieved.get(random.nextInt(notAchieved.size())));
-	}	*/
+	}
 	
 	private void selectObjectiveLevel() {
 		List<CurrentObjectiveLevel> allowed = eligibleObjectiveLevels(); 
@@ -62,7 +82,7 @@ public class EducationalElementsGenerator {
 	}
 	
 	private List<CurrentObjectiveLevel> eligibleObjectiveLevels(){
-		LearningPath learningPath = modelAccess.context.getLearnerplayer().getLearningpath();
+		LearningPath learningPath = learnerPlayer.getLearningpath();
 		List<CurrentObjectiveLevel> allowed = new ArrayList<>(); 
 
 		for (Objective obj : learningPath.getObjectives()) {
@@ -92,7 +112,7 @@ public class EducationalElementsGenerator {
 	}
 	
 	private boolean achievedLevel(Level level) {
-		List<CurrentObjectiveLevel> achieved = modelAccess.context.getLearnerplayer().getProgression().getCurrentobjectivelevels();
+		List<CurrentObjectiveLevel> achieved = learnerPlayer.getProgression().getCurrentobjectivelevels();
 		int i = 0; 
 		boolean trouver = false;
 		while(i < achieved.size() && !trouver) {

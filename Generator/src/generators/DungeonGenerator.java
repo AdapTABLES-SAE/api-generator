@@ -10,10 +10,10 @@ import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import generator.ATask;
 import generator.Directions;
 import generator.Dungeon;
 import generator.DungeonMode;
-import generator.ETaskType;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
@@ -67,7 +67,7 @@ public class DungeonGenerator {
 	
 		boolean backtrack = false;
 		Coordinate nextPosition = null;
-		ETaskType tasktype = null;
+		ATask task = null;
 		Directions entry = null; 
 		Directions exit = null;
 		RoomType roomType = null;
@@ -76,7 +76,7 @@ public class DungeonGenerator {
 		while(dungeonRooms.size() < numberofrooms + 1) {
 			nextPosition = gridManager.getNextCoord(dungeonRooms.getLast().getKey(), dungeonRooms.getLast().getValue());
 			if(!backtrack) {
-				tasktype = eeManager.getOrderedTaskTypes().get(dungeonRooms.size() - 1);
+				task = eeManager.getOrderedTasks().get(dungeonRooms.size() - 1);
 				roomAllowedDirections.add(gridManager.getAllowedDirections(nextPosition, dungeonRooms.getLast().getValue())); 
 			}
 			if(roomAllowedDirections.getLast().isEmpty()) {
@@ -111,7 +111,7 @@ public class DungeonGenerator {
 					System.out.println(gridManager.occupiedCoordinates.containsKey(new Coordinate(validCoord.getX()+1, validCoord.getY())));
 				}
 				System.out.println(gridManager.occupiedCoordinates.containsKey(validCoord));*/
-				Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, tasktype, dungeonRooms.getLast().getKey().getRoomaccess().get(dungeonRooms.getLast().getKey().getRoomaccess().size()-1), entry, exit);
+				Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, task, dungeonRooms.getLast().getKey().getRoomaccess().get(dungeonRooms.getLast().getKey().getRoomaccess().size()-1), entry, exit);
 				dungeonRooms.add(Map.entry(room, exit));
 			}
 		}
@@ -181,16 +181,16 @@ public class DungeonGenerator {
 	 * @param exitDirection
 	 * @return a Room
 	 */
-	private Room createRoom(int x, int y, RoomType roomT, ETaskType taskType, RoomAccess previousRoomExitAccess,  Directions entryDirection, Directions exitDirection) {
+	private Room createRoom(int x, int y, RoomType roomT, ATask task, RoomAccess previousRoomExitAccess,  Directions entryDirection, Directions exitDirection) {
 		Room r = new RoomImpl();
 		r.setRoomtype(roomT);
 		r.setX(x);
 		r.setY(y);
 		
-		if(taskType != null) {
+		if(task != null) {
 			r.setQuestion(new QuestionImpl());
 			r.getQuestion().setPosition(roomT.getPositions().get(random.nextInt(roomT.getPositions().size())));
-			r.getQuestion().setIncompleteFact(taskType.getLiteral());
+			r.getQuestion().setIncompleteFact(task.getType().getLiteral());
 		}
 				
 		RoomAccess ra = new RoomAccessImpl();

@@ -238,5 +238,4 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 		return Objects.equals(id, other.id) && Objects.equals(tasks, other.tasks);
 	}
 
-	
 } //LevelImpl

@@ -17,6 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.CurrentObjectiveLevel#isAchieved <em>Achieved</em>}</li>
  *   <li>{@link generator.CurrentObjectiveLevel#getLevel <em>Level</em>}</li>
  *   <li>{@link generator.CurrentObjectiveLevel#getResults <em>Results</em>}</li>
+ *   <li>{@link generator.CurrentObjectiveLevel#getEncountersPercent <em>Encounters Percent</em>}</li>
+ *   <li>{@link generator.CurrentObjectiveLevel#getSucessPercent <em>Sucess Percent</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getCurrentObjectiveLevel()
@@ -48,12 +50,13 @@ public interface CurrentObjectiveLevel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Achieved</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Achieved</em>' attribute.
 	 * @see #setAchieved(boolean)
 	 * @see generator.GeneratorPackage#getCurrentObjectiveLevel_Achieved()
-	 * @model
+	 * @model default="true"
 	 * @generated
 	 */
 	boolean isAchieved();
@@ -111,5 +114,49 @@ public interface CurrentObjectiveLevel extends EObject {
 	 * @generated
 	 */
 	void setResults(Results value);
+
+	/**
+	 * Returns the value of the '<em><b>Encounters Percent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Encounters Percent</em>' attribute.
+	 * @see #setEncountersPercent(double)
+	 * @see generator.GeneratorPackage#getCurrentObjectiveLevel_EncountersPercent()
+	 * @model derived="true"
+	 * @generated
+	 */
+	double getEncountersPercent();
+
+	/**
+	 * Sets the value of the '{@link generator.CurrentObjectiveLevel#getEncountersPercent <em>Encounters Percent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Encounters Percent</em>' attribute.
+	 * @see #getEncountersPercent()
+	 * @generated
+	 */
+	void setEncountersPercent(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Sucess Percent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sucess Percent</em>' attribute.
+	 * @see #setSucessPercent(double)
+	 * @see generator.GeneratorPackage#getCurrentObjectiveLevel_SucessPercent()
+	 * @model derived="true"
+	 * @generated
+	 */
+	double getSucessPercent();
+
+	/**
+	 * Sets the value of the '{@link generator.CurrentObjectiveLevel#getSucessPercent <em>Sucess Percent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sucess Percent</em>' attribute.
+	 * @see #getSucessPercent()
+	 * @generated
+	 */
+	void setSucessPercent(double value);
 
 } // CurrentObjectiveLevel

@@ -28,7 +28,7 @@ public class MTMembershipGenerator {
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
-		System.out.println("min "+min+" max "+max);
+		//System.out.println("min "+min+" max "+max);
 		
 		MultipleChoice mc = (MultipleChoice) task.getResponsemodalities().get(0);
 		int nbByFact = mc.getNbChoices() - mc.getNbBadChoices();
@@ -43,7 +43,7 @@ public class MTMembershipGenerator {
 					}
 				}
 			}
-			System.out.println("facts "+facts);
+			//System.out.println("facts "+facts);
 			questionedFacts.addAll(generateQuestionableFactsOf(task, facts, nbByFact));
 		}
 		

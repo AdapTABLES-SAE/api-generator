@@ -27,9 +27,9 @@ public class MTRebuildGenerator {
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
-		System.out.println("min "+min+" max "+max);
+		/*System.out.println("min "+min+" max "+max);
 		System.out.println("build "+((MTLevel) eeManager.getLevel()).getBuildSetup());
-		System.out.println("res pos "+((MTLevel) eeManager.getLevel()).getResultPositionSetup());
+		System.out.println("res pos "+((MTLevel) eeManager.getLevel()).getResultPositionSetup());*/
 
 		
 		for (SetOfFacts setoffact : eeManager.getObjective().getSetoffacts()) {

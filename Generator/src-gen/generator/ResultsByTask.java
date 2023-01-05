@@ -17,6 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.ResultsByTask#getTask <em>Task</em>}</li>
  *   <li>{@link generator.ResultsByTask#getQuestionedfacts <em>Questionedfacts</em>}</li>
+ *   <li>{@link generator.ResultsByTask#getSucessPercent <em>Sucess Percent</em>}</li>
+ *   <li>{@link generator.ResultsByTask#getEncountersPercent <em>Encounters Percent</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getResultsByTask()
@@ -57,5 +59,49 @@ public interface ResultsByTask extends EObject {
 	 * @generated
 	 */
 	EList<QuestionableFact> getQuestionedfacts();
+
+	/**
+	 * Returns the value of the '<em><b>Sucess Percent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sucess Percent</em>' attribute.
+	 * @see #setSucessPercent(double)
+	 * @see generator.GeneratorPackage#getResultsByTask_SucessPercent()
+	 * @model derived="true"
+	 * @generated
+	 */
+	double getSucessPercent();
+
+	/**
+	 * Sets the value of the '{@link generator.ResultsByTask#getSucessPercent <em>Sucess Percent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sucess Percent</em>' attribute.
+	 * @see #getSucessPercent()
+	 * @generated
+	 */
+	void setSucessPercent(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Encounters Percent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Encounters Percent</em>' attribute.
+	 * @see #setEncountersPercent(double)
+	 * @see generator.GeneratorPackage#getResultsByTask_EncountersPercent()
+	 * @model derived="true"
+	 * @generated
+	 */
+	double getEncountersPercent();
+
+	/**
+	 * Sets the value of the '{@link generator.ResultsByTask#getEncountersPercent <em>Encounters Percent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Encounters Percent</em>' attribute.
+	 * @see #getEncountersPercent()
+	 * @generated
+	 */
+	void setEncountersPercent(double value);
 
 } // ResultsByTask

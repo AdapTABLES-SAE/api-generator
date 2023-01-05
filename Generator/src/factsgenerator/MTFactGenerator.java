@@ -25,10 +25,10 @@ public class MTFactGenerator {
 	}
 	
 	public void generateQFacts() {
-		System.out.println("Obj/Level :" + eeManager.getObjective().getName() + " " + eeManager.getLevel());
+		//System.out.println("Obj/Level :" + eeManager.getObjective().getName() + " " + eeManager.getLevel());
 
 		for (ATask task : eeManager.getTasks()) {
-			System.out.println("\tTask Type :" +  task.getType());
+			//System.out.println("\tTask Type :" +  task.getType());
 			switch(task.getType()) {
 				case COMPLETE1: 
 					MTCompletion1Generator generatorC1 = new MTCompletion1Generator(eeManager);
@@ -65,10 +65,10 @@ public class MTFactGenerator {
 				case MEMBERSHIP: 
 					MTMembershipGenerator generatorMem = new MTMembershipGenerator(eeManager);
 					Set<MTQFMembership> qfsmem = generatorMem.generateQuestionableFacts((MTMembership) task);
-					System.out.println("QF Membership = "+qfsmem.size());
+					/*System.out.println("QF Membership = "+qfsmem.size());
 					for (MTQFMembership qf : qfsmem) {
 						System.out.println(qf.getQuestionableFact());
-					}
+					}*/
 					break;
 					
 			}
