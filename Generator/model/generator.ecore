@@ -100,10 +100,11 @@
         upperBound="-1" eType="#//SetOfFacts"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Prerequisite">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="succesPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="succesPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="requiredLevel" lowerBound="1"
         eType="#//Level"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="achievementPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="encountersPercent" upperBound="100"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="100.0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Level" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -158,10 +159,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="CurrentObjectiveLevel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="objective" lowerBound="1"
         eType="#//Objective"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="achieved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="achieved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//Level"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="results" eType="#//Results"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="encountersPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sucessPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Position">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -237,7 +243,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="MTRecontruction" eSuperTypes="#//ReconstructionTask"/>
   <eClassifiers xsi:type="ecore:EClass" name="MTIdentification" eSuperTypes="#//IdentificationTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="target" lowerBound="1"
-        eType="#//ESingleTarget"/>
+        eType="#//ESingleTarget" defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTMembership" eSuperTypes="#//MembershipIDTask"/>
   <eClassifiers xsi:type="ecore:EClass" name="Results">
@@ -248,6 +254,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//ATask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="questionedfacts" upperBound="-1"
         eType="#//QuestionableFact" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sucessPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="encountersPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QFResults"/>
   <eClassifiers xsi:type="ecore:EClass" name="MTFact" eSuperTypes="#//AbstractFact">

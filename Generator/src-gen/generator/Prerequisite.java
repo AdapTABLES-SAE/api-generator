@@ -2,6 +2,7 @@
  */
 package generator;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.Prerequisite#getSuccesPercent <em>Succes Percent</em>}</li>
  *   <li>{@link generator.Prerequisite#getRequiredLevel <em>Required Level</em>}</li>
- *   <li>{@link generator.Prerequisite#getAchievementPercent <em>Achievement Percent</em>}</li>
+ *   <li>{@link generator.Prerequisite#getEncountersPercent <em>Encounters Percent</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getPrerequisite()
@@ -28,12 +29,12 @@ public interface Prerequisite extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Succes Percent</em>' attribute.
-	 * @see #setSuccesPercent(int)
+	 * @see #setSuccesPercent(double)
 	 * @see generator.GeneratorPackage#getPrerequisite_SuccesPercent()
 	 * @model
 	 * @generated
 	 */
-	int getSuccesPercent();
+	double getSuccesPercent();
 
 	/**
 	 * Sets the value of the '{@link generator.Prerequisite#getSuccesPercent <em>Succes Percent</em>}' attribute.
@@ -43,7 +44,7 @@ public interface Prerequisite extends EObject {
 	 * @see #getSuccesPercent()
 	 * @generated
 	 */
-	void setSuccesPercent(int value);
+	void setSuccesPercent(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Required Level</b></em>' reference.
@@ -68,25 +69,15 @@ public interface Prerequisite extends EObject {
 	void setRequiredLevel(Level value);
 
 	/**
-	 * Returns the value of the '<em><b>Achievement Percent</b></em>' attribute.
+	 * Returns the value of the '<em><b>Encounters Percent</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.Double}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Achievement Percent</em>' attribute.
-	 * @see #setAchievementPercent(int)
-	 * @see generator.GeneratorPackage#getPrerequisite_AchievementPercent()
-	 * @model
+	 * @return the value of the '<em>Encounters Percent</em>' attribute list.
+	 * @see generator.GeneratorPackage#getPrerequisite_EncountersPercent()
+	 * @model default="100.0" upper="100"
 	 * @generated
 	 */
-	int getAchievementPercent();
-
-	/**
-	 * Sets the value of the '{@link generator.Prerequisite#getAchievementPercent <em>Achievement Percent</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Achievement Percent</em>' attribute.
-	 * @see #getAchievementPercent()
-	 * @generated
-	 */
-	void setAchievementPercent(int value);
+	EList<Double> getEncountersPercent();
 
 } // Prerequisite

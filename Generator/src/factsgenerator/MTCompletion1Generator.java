@@ -28,10 +28,10 @@ public class MTCompletion1Generator {
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
-		System.out.println("min "+min+" max "+max);
+		/*System.out.println("min "+min+" max "+max);
 		System.out.println("build "+((MTLevel) eeManager.getLevel()).getBuildSetup());
 		System.out.println("res pos "+((MTLevel) eeManager.getLevel()).getResultPositionSetup());
-		System.out.println("targets "+task.getTargets());
+		System.out.println("targets "+task.getTargets());*/
 
 		
 		for (SetOfFacts setoffact : eeManager.getObjective().getSetoffacts()) {

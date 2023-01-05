@@ -34,10 +34,9 @@ public class ModelsManager {
 	public GenerationContext context; 
 	public GameDescription gameDescription; 
 	public Knowledge multiplicationTables;
-	public LearningDomain structures;
+	public LearningDomain learningPath;
 	
-	//Dungeon generatedDungeon;
-	
+
 	public ModelsManager() {
 		resourceSet = new ResourceSetImpl();
 		loadInputModels();
@@ -71,12 +70,13 @@ public class ModelsManager {
 		File contexte = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]);
 		File gamedescription = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[1]);
 		File multiplicationTables = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[2]);
-		File structure = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[3]);
+		File learningPaths = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[3]);
 
 		Resource resource1 = resourceSet.createResource(URI.createFileURI(contexte.getAbsolutePath()));
 		Resource resource2 = resourceSet.createResource(URI.createFileURI(gamedescription.getAbsolutePath()));
 		Resource resource3 = resourceSet.createResource(URI.createFileURI(multiplicationTables.getAbsolutePath()));
-		Resource resource4 = resourceSet.createResource(URI.createFileURI(structure.getAbsolutePath()));
+		Resource resource4 = resourceSet.createResource(URI.createFileURI(learningPaths.getAbsolutePath()));
+
 
 		try {
 			resource1.load(null);
@@ -91,7 +91,7 @@ public class ModelsManager {
 		this.context = (GenerationContext) resource1.getContents().get(0);
 		this.gameDescription = (GameDescription) resource2.getContents().get(0);
 		this.multiplicationTables = (Knowledge) resource3.getContents().get(0);
-		this.structures = (LearningDomain) resource4.getContents().get(0);
+		this.learningPath = (LearningDomain) resource4.getContents().get(0);
 		
 		LOGGER.info("Loading input models : OK");
 	}
