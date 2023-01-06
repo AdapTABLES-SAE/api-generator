@@ -1,4 +1,4 @@
-package objectif_tests;
+package edu_elements_tests;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
