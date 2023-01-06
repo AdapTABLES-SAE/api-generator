@@ -26,7 +26,7 @@ public class ModelsManager {
 	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	private static final String INPUT_MODELS_PATH = "inputmodels/";
 	private static final String OUTPUT_MODELS_PATH = "outputmodels/";
-	private static final String[] INPUT_MODELS_PATHS = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi"};
+	private static String[] INPUT_MODELS_PATHS = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi"};
 
 	private ResourceSet resourceSet;
 	
@@ -37,8 +37,11 @@ public class ModelsManager {
 	public LearningDomain learningPath;
 	
 
-	public ModelsManager() {
+	public ModelsManager(String contextFileName) {
 		resourceSet = new ResourceSetImpl();
+		if(!contextFileName.isEmpty()) {
+			INPUT_MODELS_PATHS[0] = contextFileName;
+		}
 		loadInputModels();
 	}
 

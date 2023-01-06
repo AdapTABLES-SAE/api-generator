@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.ATaskImpl#getPercentOfApparition <em>Percent Of Apparition</em>}</li>
  *   <li>{@link generator.impl.ATaskImpl#getNbConsecutiveSuccess <em>Nb Consecutive Success</em>}</li>
  *   <li>{@link generator.impl.ATaskImpl#getResponsemodalities <em>Responsemodalities</em>}</li>
+ *   <li>{@link generator.impl.ATaskImpl#getID <em>ID</em>}</li>
  * </ul>
  *
  * @generated
@@ -90,6 +91,26 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<ResponseModality> responsemodalities;
+
+	/**
+	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getID() <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getID()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -172,6 +193,27 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getID() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setID(String newID) {
+		String oldID = id;
+		id = newID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ATASK__ID, oldID, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ETaskType getType() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -206,6 +248,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			return getNbConsecutiveSuccess();
 		case GeneratorPackage.ATASK__RESPONSEMODALITIES:
 			return getResponsemodalities();
+		case GeneratorPackage.ATASK__ID:
+			return getID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -229,6 +273,9 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			getResponsemodalities().clear();
 			getResponsemodalities().addAll((Collection<? extends ResponseModality>) newValue);
 			return;
+		case GeneratorPackage.ATASK__ID:
+			setID((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -250,6 +297,9 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.ATASK__RESPONSEMODALITIES:
 			getResponsemodalities().clear();
 			return;
+		case GeneratorPackage.ATASK__ID:
+			setID(ID_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -268,6 +318,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			return nbConsecutiveSuccess != NB_CONSECUTIVE_SUCCESS_EDEFAULT;
 		case GeneratorPackage.ATASK__RESPONSEMODALITIES:
 			return responsemodalities != null && !responsemodalities.isEmpty();
+		case GeneratorPackage.ATASK__ID:
+			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -301,6 +353,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 		result.append(percentOfApparition);
 		result.append(", nbConsecutiveSuccess: ");
 		result.append(nbConsecutiveSuccess);
+		result.append(", ID: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

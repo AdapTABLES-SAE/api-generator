@@ -181,6 +181,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/percentOfApparition"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/nbConsecutiveSuccess"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//ATask/responsemodalities"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/ID"/>
       <genOperations ecoreOperation="generator.ecore#//ATask/getType"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Completion1Task">

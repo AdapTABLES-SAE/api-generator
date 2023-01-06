@@ -55,7 +55,8 @@ public class EducationalElementsGenerator {
 		if(eeManager.getObjective() != null && eeManager.getLevel() != null) {
 			List<ATask> tasksAchieved = new ArrayList<>();
 			for (ATask task : eeManager.getTasks()) {
-				if(eeManager.successPercentageByTask(task) == 100) {
+				if(eeManager.successPercentageByTask(task) == 100 && 
+						eeManager.encounterPercentageByTask(task) == 100) {
 					tasksAchieved.add(task);
 				}
 			}
@@ -95,23 +96,16 @@ public class EducationalElementsGenerator {
 				}
 			}
 			System.out.println("OBJ " + obj.getID() + " eligible? " + (eligible == true));
-			if(eligible) {	
-				for (Level level : obj.getLevels()) {
-					if(!achievedLevel(level)) {
-						CurrentObjectiveLevel col = new CurrentObjectiveLevelImpl(); 
-						col.setObjective(obj);
-						col.setLevel(level);
-						col.setAchieved(false);
-						allowed.add(col);
-						break;
-					}
-				}
+			if(eligible) {
+				CurrentObjectiveLevel col = getEligibleCurrentLevelForObjective(obj);
+				if(col != null) {allowed.add(col);}
 			}
 		}	
 		return allowed;
 	}
 	
 	private boolean achievedLevel(Level level) {
+		if(learnerPlayer.getProgression() == null) { return false; }
 		List<CurrentObjectiveLevel> achieved = learnerPlayer.getProgression().getCurrentobjectivelevels();
 		int i = 0; 
 		boolean trouver = false;
@@ -122,7 +116,26 @@ public class EducationalElementsGenerator {
 		return trouver;
 	}
 	
-	
+	private CurrentObjectiveLevel getEligibleCurrentLevelForObjective(Objective objective) {
+		if(learnerPlayer.getProgression() != null) {
+			for (CurrentObjectiveLevel currentObjectiveLevel : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
+				if(currentObjectiveLevel.getObjective().equals(objective) && !currentObjectiveLevel.isAchieved()) {
+					return currentObjectiveLevel; 
+				}
+			}
+		}
+
+		for (Level level : objective.getLevels()) {
+			if(!achievedLevel(level)) {
+				CurrentObjectiveLevel col = new CurrentObjectiveLevelImpl(); 
+				col.setObjective(objective);
+				col.setLevel(level);
+				col.setAchieved(false);
+				return col;
+			}
+		}
+		return null;
+	}
 
 	
 	public void printGeneration() {

@@ -1,10 +1,10 @@
 package managers;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import generator.ATask;
 import generator.CurrentObjectiveLevel;
@@ -52,14 +52,28 @@ public class EducationElementsManager {
 	 * @return
 	 */
 	public List<ATask> getOrderedTasks(){
+		
 		List<ATask> taskTypes = new ArrayList<>(); 
 		for (ATask task : nbRoomsToTask.keySet()) {
 			for (int i = 0; i < nbRoomsToTask.get(task); i++) {
 				taskTypes.add(task);
 			}
 		}
-		Collections.shuffle(taskTypes);
-		return taskTypes;
+		//Collections.shuffle(taskTypes);
+		return shuffle(taskTypes);
+	}
+	
+	private List<ATask> shuffle(List<ATask> tasks){
+		Random rand = new Random();
+		List<ATask> tasksShuffled = new ArrayList<>();
+		int number = tasks.size();
+		int j;
+		while (tasksShuffled.size() != number) {
+			j = rand.nextInt(tasks.size()); 
+			tasksShuffled.add(tasks.get(j));
+			tasks.remove(j);
+		}
+		return tasksShuffled;
 	}
 	
 	public void addRoom2Task(ATask task, double coeffAdditional) {
@@ -76,6 +90,17 @@ public class EducationElementsManager {
 			for (ResultsByTask resBytask : this.chosenObjectiveLevel.getResults().getResultsbytask()) {
 				if(resBytask.getTask().equals(task)) {
 					return resBytask.getSucessPercent();
+				}
+			}
+		}
+		return 0;
+	}
+	
+	public double encounterPercentageByTask(ATask task) {
+		if(this.chosenObjectiveLevel.getResults() != null) {
+			for (ResultsByTask resBytask : this.chosenObjectiveLevel.getResults().getResultsbytask()) {
+				if(resBytask.getTask().equals(task)) {
+					return resBytask.getEncountersPercent();
 				}
 			}
 		}

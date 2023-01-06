@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.ATask#getPercentOfApparition <em>Percent Of Apparition</em>}</li>
  *   <li>{@link generator.ATask#getNbConsecutiveSuccess <em>Nb Consecutive Success</em>}</li>
  *   <li>{@link generator.ATask#getResponsemodalities <em>Responsemodalities</em>}</li>
+ *   <li>{@link generator.ATask#getID <em>ID</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getATask()
@@ -80,6 +81,28 @@ public interface ATask extends EObject {
 	 * @generated
 	 */
 	EList<ResponseModality> getResponsemodalities();
+
+	/**
+	 * Returns the value of the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>ID</em>' attribute.
+	 * @see #setID(String)
+	 * @see generator.GeneratorPackage#getATask_ID()
+	 * @model id="true" dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @generated
+	 */
+	String getID();
+
+	/**
+	 * Sets the value of the '{@link generator.ATask#getID <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ID</em>' attribute.
+	 * @see #getID()
+	 * @generated
+	 */
+	void setID(String value);
 
 	/**
 	 * <!-- begin-user-doc -->

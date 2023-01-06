@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator:GenerationContext
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:generator="http://www.example.org/generator"
+    xsi:schemaLocation="http://www.example.org/generator ../../model/generator.ecore">
+  <gamecontext
+      numberOfRooms="20"/>
+  <learnerplayer
+      name="Learner FICTIF">
+    <progression>
+      <currentobjectivelevels
+          achieved="false">
+        <objective
+            href="../LearningDomain.xmi#O1"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="../LearningDomain.xmi#O1_N1"/>
+        <results>
+          <resultsbytask
+              sucessPercent="100.0"
+              encountersPercent="100.0">
+            <task
+                xsi:type="generator:MTCompletion1"
+                href="../LearningDomain.xmi#C1-RES"/>
+          </resultsbytask>
+          <resultsbytask
+              sucessPercent="100.0"
+              encountersPercent="100.0">
+            <task
+                xsi:type="generator:MTCompletion1"
+                href="../LearningDomain.xmi#C1-TABOP"/>
+          </resultsbytask>
+          <resultsbytask
+              sucessPercent="100.0"
+              encountersPercent="100.0">
+            <task
+                xsi:type="generator:MTCompletion2"
+                href="../LearningDomain.xmi#C2-OPTABLE"/>
+          </resultsbytask>
+          <resultsbytask
+              sucessPercent="100.0"
+              encountersPercent="100.0">
+            <task
+                xsi:type="generator:MTRecontruction"
+                href="../LearningDomain.xmi#REB"/>
+          </resultsbytask>
+          <resultsbytask
+              sucessPercent="100.0"
+              encountersPercent="100.0">
+            <task
+                xsi:type="generator:MTIdentification"
+                href="../LearningDomain.xmi#ID-RES"/>
+          </resultsbytask>
+        </results>
+      </currentobjectivelevels>
+    </progression>
+    <learningpath
+        href="../LearningDomain.xmi#//@learningpaths.2"/>
+  </learnerplayer>
+</generator:GenerationContext>

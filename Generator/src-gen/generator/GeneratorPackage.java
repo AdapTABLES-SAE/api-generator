@@ -839,7 +839,7 @@ public interface GeneratorPackage extends EPackage {
 	int PREREQUISITE__REQUIRED_LEVEL = 1;
 
 	/**
-	 * The feature id for the '<em><b>Encounters Percent</b></em>' attribute list.
+	 * The feature id for the '<em><b>Encounters Percent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1031,13 +1031,22 @@ public interface GeneratorPackage extends EPackage {
 	int ATASK__RESPONSEMODALITIES = 2;
 
 	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATASK__ID = 3;
+
+	/**
 	 * The number of structural features of the '<em>ATask</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATASK_FEATURE_COUNT = 3;
+	int ATASK_FEATURE_COUNT = 4;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -1093,6 +1102,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPLETION1_TASK__RESPONSEMODALITIES = ATASK__RESPONSEMODALITIES;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION1_TASK__ID = ATASK__ID;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1166,6 +1184,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_COMPLETION1__RESPONSEMODALITIES = COMPLETION1_TASK__RESPONSEMODALITIES;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION1__ID = COMPLETION1_TASK__ID;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1710,6 +1737,15 @@ public interface GeneratorPackage extends EPackage {
 	int COMPLETION2_TASK__RESPONSEMODALITIES = ATASK__RESPONSEMODALITIES;
 
 	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION2_TASK__ID = ATASK__ID;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1783,6 +1819,15 @@ public interface GeneratorPackage extends EPackage {
 	int RECONSTRUCTION_TASK__RESPONSEMODALITIES = ATASK__RESPONSEMODALITIES;
 
 	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECONSTRUCTION_TASK__ID = ATASK__ID;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1854,6 +1899,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int IDENTIFICATION_TASK__RESPONSEMODALITIES = ATASK__RESPONSEMODALITIES;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFICATION_TASK__ID = ATASK__ID;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1938,6 +1992,15 @@ public interface GeneratorPackage extends EPackage {
 	int MEMBERSHIP_ID_TASK__RESPONSEMODALITIES = ATASK__RESPONSEMODALITIES;
 
 	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBERSHIP_ID_TASK__ID = ATASK__ID;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2018,6 +2081,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_COMPLETION2__RESPONSEMODALITIES = COMPLETION2_TASK__RESPONSEMODALITIES;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION2__ID = COMPLETION2_TASK__ID;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2102,6 +2174,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_RECONTRUCTION__RESPONSEMODALITIES = RECONSTRUCTION_TASK__RESPONSEMODALITIES;
 
 	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_RECONTRUCTION__ID = RECONSTRUCTION_TASK__ID;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2173,6 +2254,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_IDENTIFICATION__RESPONSEMODALITIES = IDENTIFICATION_TASK__RESPONSEMODALITIES;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_IDENTIFICATION__ID = IDENTIFICATION_TASK__ID;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2264,6 +2354,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_MEMBERSHIP__RESPONSEMODALITIES = MEMBERSHIP_ID_TASK__RESPONSEMODALITIES;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_MEMBERSHIP__ID = MEMBERSHIP_ID_TASK__ID;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -3658,10 +3757,10 @@ public interface GeneratorPackage extends EPackage {
 	EReference getPrerequisite_RequiredLevel();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link generator.Prerequisite#getEncountersPercent <em>Encounters Percent</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.Prerequisite#getEncountersPercent <em>Encounters Percent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Encounters Percent</em>'.
+	 * @return the meta object for the attribute '<em>Encounters Percent</em>'.
 	 * @see generator.Prerequisite#getEncountersPercent()
 	 * @see #getPrerequisite()
 	 * @generated
@@ -4137,6 +4236,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getATask_Responsemodalities();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.ATask#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see generator.ATask#getID()
+	 * @see #getATask()
+	 * @generated
+	 */
+	EAttribute getATask_ID();
 
 	/**
 	 * Returns the meta object for the '{@link generator.ATask#getType() <em>Get Type</em>}' operation.
@@ -5435,7 +5545,7 @@ public interface GeneratorPackage extends EPackage {
 		EReference PREREQUISITE__REQUIRED_LEVEL = eINSTANCE.getPrerequisite_RequiredLevel();
 
 		/**
-		 * The meta object literal for the '<em><b>Encounters Percent</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Encounters Percent</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5821,6 +5931,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ATASK__RESPONSEMODALITIES = eINSTANCE.getATask_Responsemodalities();
+
+		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATASK__ID = eINSTANCE.getATask_ID();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Type</b></em>' operation.

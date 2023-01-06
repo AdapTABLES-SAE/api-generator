@@ -2,7 +2,6 @@
  */
 package generator;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -69,15 +68,26 @@ public interface Prerequisite extends EObject {
 	void setRequiredLevel(Level value);
 
 	/**
-	 * Returns the value of the '<em><b>Encounters Percent</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Double}.
+	 * Returns the value of the '<em><b>Encounters Percent</b></em>' attribute.
+	 * The default value is <code>"100.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Encounters Percent</em>' attribute list.
+	 * @return the value of the '<em>Encounters Percent</em>' attribute.
+	 * @see #setEncountersPercent(double)
 	 * @see generator.GeneratorPackage#getPrerequisite_EncountersPercent()
-	 * @model default="100.0" upper="100"
+	 * @model default="100.0"
 	 * @generated
 	 */
-	EList<Double> getEncountersPercent();
+	double getEncountersPercent();
+
+	/**
+	 * Sets the value of the '{@link generator.Prerequisite#getEncountersPercent <em>Encounters Percent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Encounters Percent</em>' attribute.
+	 * @see #getEncountersPercent()
+	 * @generated
+	 */
+	void setEncountersPercent(double value);
 
 } // Prerequisite

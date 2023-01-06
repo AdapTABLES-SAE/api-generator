@@ -5,17 +5,12 @@ package generator.impl;
 import generator.GeneratorPackage;
 import generator.Level;
 import generator.Prerequisite;
-
-import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -64,14 +59,24 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	protected Level requiredLevel;
 
 	/**
-	 * The cached value of the '{@link #getEncountersPercent() <em>Encounters Percent</em>}' attribute list.
+	 * The default value of the '{@link #getEncountersPercent() <em>Encounters Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEncountersPercent()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Double> encountersPercent;
+	protected static final double ENCOUNTERS_PERCENT_EDEFAULT = 100.0;
+
+	/**
+	 * The cached value of the '{@link #getEncountersPercent() <em>Encounters Percent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEncountersPercent()
+	 * @generated
+	 * @ordered
+	 */
+	protected double encountersPercent = ENCOUNTERS_PERCENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,12 +164,21 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Double> getEncountersPercent() {
-		if (encountersPercent == null) {
-			encountersPercent = new EDataTypeUniqueEList<Double>(Double.class, this,
-					GeneratorPackage.PREREQUISITE__ENCOUNTERS_PERCENT);
-		}
+	public double getEncountersPercent() {
 		return encountersPercent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEncountersPercent(double newEncountersPercent) {
+		double oldEncountersPercent = encountersPercent;
+		encountersPercent = newEncountersPercent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PREREQUISITE__ENCOUNTERS_PERCENT,
+					oldEncountersPercent, encountersPercent));
 	}
 
 	/**
@@ -203,8 +217,7 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 			setRequiredLevel((Level) newValue);
 			return;
 		case GeneratorPackage.PREREQUISITE__ENCOUNTERS_PERCENT:
-			getEncountersPercent().clear();
-			getEncountersPercent().addAll((Collection<? extends Double>) newValue);
+			setEncountersPercent((Double) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -225,7 +238,7 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 			setRequiredLevel((Level) null);
 			return;
 		case GeneratorPackage.PREREQUISITE__ENCOUNTERS_PERCENT:
-			getEncountersPercent().clear();
+			setEncountersPercent(ENCOUNTERS_PERCENT_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -244,7 +257,7 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 		case GeneratorPackage.PREREQUISITE__REQUIRED_LEVEL:
 			return requiredLevel != null;
 		case GeneratorPackage.PREREQUISITE__ENCOUNTERS_PERCENT:
-			return encountersPercent != null && !encountersPercent.isEmpty();
+			return encountersPercent != ENCOUNTERS_PERCENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

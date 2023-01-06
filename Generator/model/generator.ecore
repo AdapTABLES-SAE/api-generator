@@ -103,8 +103,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="succesPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="requiredLevel" lowerBound="1"
         eType="#//Level"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="encountersPercent" upperBound="100"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="100.0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="encountersPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        defaultValueLiteral="100.0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Level" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -198,6 +198,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="responsemodalities" upperBound="-1"
         eType="#//ResponseModality" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
+        iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Completion1Task" abstract="true" eSuperTypes="#//ATask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"

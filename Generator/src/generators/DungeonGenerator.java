@@ -72,11 +72,12 @@ public class DungeonGenerator {
 		Directions exit = null;
 		RoomType roomType = null;
 		
+		List<ATask> orderedTasks = eeManager.getOrderedTasks();
 	
 		while(dungeonRooms.size() < numberofrooms + 1) {
 			nextPosition = gridManager.getNextCoord(dungeonRooms.getLast().getKey(), dungeonRooms.getLast().getValue());
 			if(!backtrack) {
-				task = eeManager.getOrderedTasks().get(dungeonRooms.size() - 1);
+				task = orderedTasks.get(dungeonRooms.size() - 1);
 				roomAllowedDirections.add(gridManager.getAllowedDirections(nextPosition, dungeonRooms.getLast().getValue())); 
 			}
 			if(roomAllowedDirections.getLast().isEmpty()) {
@@ -191,6 +192,7 @@ public class DungeonGenerator {
 			r.setQuestion(new QuestionImpl());
 			r.getQuestion().setPosition(roomT.getPositions().get(random.nextInt(roomT.getPositions().size())));
 			r.getQuestion().setIncompleteFact(task.getType().getLiteral());
+			r.setTask(task);
 		}
 				
 		RoomAccess ra = new RoomAccessImpl();

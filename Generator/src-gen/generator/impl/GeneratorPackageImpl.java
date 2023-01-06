@@ -1414,6 +1414,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getATask_ID() {
+		return (EAttribute) aTaskEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getATask__GetType() {
 		return aTaskEClass.getEOperations().get(0);
 	}
@@ -2273,6 +2282,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(aTaskEClass, ATASK__PERCENT_OF_APPARITION);
 		createEAttribute(aTaskEClass, ATASK__NB_CONSECUTIVE_SUCCESS);
 		createEReference(aTaskEClass, ATASK__RESPONSEMODALITIES);
+		createEAttribute(aTaskEClass, ATASK__ID);
 		createEOperation(aTaskEClass, ATASK___GET_TYPE);
 
 		completion1TaskEClass = createEClass(COMPLETION1_TASK);
@@ -2572,7 +2582,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				Prerequisite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPrerequisite_EncountersPercent(), ecorePackage.getEDouble(), "encountersPercent", "100.0", 0,
-				100, Prerequisite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				1, Prerequisite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(levelEClass, Level.class, "Level", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2696,6 +2706,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getATask_Responsemodalities(), this.getResponseModality(), null, "responsemodalities", null, 0,
 				-1, ATask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getATask_ID(), theXMLTypePackage.getString(), "ID", null, 0, 1, ATask.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getATask__GetType(), this.getETaskType(), "getType", 0, 1, IS_UNIQUE, IS_ORDERED);
 
