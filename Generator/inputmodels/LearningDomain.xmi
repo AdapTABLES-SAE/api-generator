@@ -26,7 +26,7 @@
           <targets>RESULT</targets>
         </tasks>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O3-N2" buildSetup="OPERAND_TABLE">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O2-N2" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="100"/>
       </levels>
       <levels xsi:type="generator:MTLevel" ID="ICM-O2-N3" buildSetup="OPERAND_TABLE">
@@ -37,7 +37,7 @@
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
     <objectives ID="ICM-O3" name="Automatisation Table 2">
-      <prerequisites requiredLevel="ICM-O1-N3"/>
+      <prerequisites requiredLevel="ICM-O2-N3"/>
       <levels xsi:type="generator:MTLevel" ID="ICM-O3-N1" buildSetup="MIX">
         <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
           <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
@@ -63,9 +63,10 @@
       </levels>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
     </objectives>
-    <objectives ID="ICM-O10" name="Maitrise Table 2,3,4,5,10">
-      <prerequisites requiredLevel="ICM-O3-N3"/>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O10-N1" buildSetup="MIX" resultPositionSetup="MIX">
+    <objectives ID="ICM-O11" name="Maitrise Table 2,3,4,5,10">
+      <prerequisites requiredLevel="ICM-O10-N3"/>
+      <prerequisites requiredLevel="ICM-O9-N3"/>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O11-N1" buildSetup="MIX" resultPositionSetup="MIX">
         <tasks xsi:type="generator:MTCompletion1">
           <responsemodalities xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
@@ -73,7 +74,7 @@
           <targets>OPERAND</targets>
         </tasks>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O10-N2" buildSetup="MIX" resultPositionSetup="MIX">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O11-N2" buildSetup="MIX" resultPositionSetup="MIX">
         <tasks xsi:type="generator:MTCompletion1" percentOfApparition="40">
           <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
@@ -91,6 +92,178 @@
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+    </objectives>
+    <objectives ID="ICM-O4" name="Découverte Table 5">
+      <prerequisites requiredLevel="ICM-O2-N3"/>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O4-N1" buildSetup="OPERAND_TABLE">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:EnterResponse"/>
+          <targets>RESULT</targets>
+        </tasks>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O4-N2" buildSetup="OPERAND_TABLE">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100"/>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O4-N3" buildSetup="OPERAND_TABLE">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
+        </tasks>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+    </objectives>
+    <objectives ID="ICM-O5" name="Découverte Table 3">
+      <prerequisites requiredLevel="ICM-O3-N3"/>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O5-N1" buildSetup="OPERAND_TABLE">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:EnterResponse"/>
+          <targets>RESULT</targets>
+        </tasks>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O5-N2" buildSetup="OPERAND_TABLE">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100"/>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O5-N3" buildSetup="OPERAND_TABLE">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
+        </tasks>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+    </objectives>
+    <objectives ID="ICM-O6" name="Découverte Table 4">
+      <prerequisites requiredLevel="ICM-O5-N3"/>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O6-N1" buildSetup="OPERAND_TABLE">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:EnterResponse"/>
+          <targets>RESULT</targets>
+        </tasks>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O6-N2" buildSetup="OPERAND_TABLE">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100"/>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O6-N3" buildSetup="OPERAND_TABLE">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
+        </tasks>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+    </objectives>
+    <objectives ID="ICM-O7" name="Automatisation Tables 2 + 10">
+      <prerequisites requiredLevel="ICM-O3-N3"/>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O7-N1" buildSetup="MIX">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+        </tasks>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O7-N2" buildSetup="MIX">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+          <targets>OPERAND</targets>
+        </tasks>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O7-N3" buildSetup="MIX">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3"/>
+          <targets>OPERAND_TABLE</targets>
+        </tasks>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+    </objectives>
+    <objectives ID="ICM-O8" name="Automatisation Table 2 + 5 + 10">
+      <prerequisites requiredLevel="ICM-O5-N3"/>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O8-N1" buildSetup="MIX">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+        </tasks>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O8-N2" buildSetup="MIX">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+          <targets>OPERAND</targets>
+        </tasks>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O8-N3" buildSetup="MIX">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3"/>
+          <targets>OPERAND_TABLE</targets>
+        </tasks>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+    </objectives>
+    <objectives ID="ICM-O9" name="Automatisation Tables 2 + 3 + 5 + 10">
+      <prerequisites requiredLevel="ICM-O6-N3"/>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O9-N1" buildSetup="MIX">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+        </tasks>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O9-N2" buildSetup="MIX">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+          <targets>OPERAND</targets>
+        </tasks>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O9-N3" buildSetup="MIX">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3"/>
+          <targets>OPERAND_TABLE</targets>
+        </tasks>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+    </objectives>
+    <objectives ID="ICM-10" name="Automatisation Tables 2 + 3 + 4 + 5 + 10 ">
+      <prerequisites requiredLevel="ICM-O6-N3"/>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O10-N1" buildSetup="MIX">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+        </tasks>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O10-N2" buildSetup="MIX">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+          <targets>OPERAND</targets>
+        </tasks>
+      </levels>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O10-N3" buildSetup="MIX">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100">
+          <responsemodalities xsi:type="generator:MultipleChoice" nbChoices="3"/>
+          <targets>OPERAND_TABLE</targets>
+        </tasks>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>

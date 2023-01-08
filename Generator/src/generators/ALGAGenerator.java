@@ -1,5 +1,6 @@
 package generators;
 
+import flattener.Main;
 import generator.Dungeon;
 import generator.Room;
 import generator.RoomAccess;
@@ -13,11 +14,28 @@ public class ALGAGenerator {
 
 	public static void main(String[] args) {
 		
-		ALGAGenerator generator = new ALGAGenerator(args != null? args[0]: "");
+		// eiah23TestGeneration();
+		
+		/*ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_RM_Init.xmi");
 		generator.generate();
-		//generator.saveDungeon("DungeonT.xmi");
-		//generator.printDungeon();
+		generator.saveDungeon("RM_Dungeon_xmi");*/
 	}
+	
+	/*public static void eiah23EduVarietyTest() {
+		String modelIN = "outputmodels/tests/unflatten/";
+		String modelOUT = "outputmodels/tests/flatten/"; 
+		
+		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_RM_Init.xmi");//args != null? args[0]: "");
+		ALGAGenerator generator2 = new ALGAGenerator("learnerProfils/LP_IM_Init.xmi");
+		for (int i = 1; i < 6; i++) {
+			generator.generate();
+			generator.saveDungeon("tests/unflatten/RM_Dungeon"+i+".xmi");
+			generator2.generate();
+			generator2.saveDungeon("tests/unflatten/IM_Dungeon"+i+".xmi");
+			Main.transformModel(modelIN+"RM_Dungeon"+i+".xmi", modelOUT+"RM_Dungeon"+i+".xmi");
+			Main.transformModel(modelIN+"IM_Dungeon"+i+".xmi", modelOUT+"IM_Dungeon"+i+".xmi");
+		}
+	}*/
 	
 	public ALGAGenerator(String fileContext) {
 		modelAccess = new ModelsManager(fileContext);
@@ -25,6 +43,10 @@ public class ALGAGenerator {
 	
 	public void saveDungeon(String fileName) {
 		modelAccess.saveGeneratedModel(generatedDungeon, fileName);
+	}
+	
+	public void saveDungeon(String fileName, Dungeon dungeon) {
+		modelAccess.saveGeneratedModel(dungeon, fileName);
 	}
 	
 	public Dungeon generate() {

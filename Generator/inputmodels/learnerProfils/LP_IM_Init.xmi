@@ -9,7 +9,50 @@
       numberOfRooms="20"/>
   <learnerplayer
       name="Learner CE1">
-    <progression/>
+    <progression>
+      <currentobjectivelevels>
+        <objective
+            href="../LearningDomain.xmi#ICM-O1"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="../LearningDomain.xmi#ICM-O1-N3"/>
+      </currentobjectivelevels>
+      <currentobjectivelevels>
+        <objective
+            href="../LearningDomain.xmi#ICM-O2"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="../LearningDomain.xmi#ICM-O2-N3"/>
+      </currentobjectivelevels>
+      <currentobjectivelevels>
+        <objective
+            href="../LearningDomain.xmi#ICM-O1"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="../LearningDomain.xmi#ICM-O1-N1"/>
+      </currentobjectivelevels>
+      <currentobjectivelevels>
+        <objective
+            href="../LearningDomain.xmi#ICM-O1"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="../LearningDomain.xmi#ICM-O1-N2"/>
+      </currentobjectivelevels>
+      <currentobjectivelevels>
+        <objective
+            href="../LearningDomain.xmi#ICM-O2"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="../LearningDomain.xmi#ICM-O2-N1"/>
+      </currentobjectivelevels>
+      <currentobjectivelevels>
+        <objective
+            href="../LearningDomain.xmi#ICM-O2"/>
+        <level
+            xsi:type="generator:MTLevel"
+            href="../LearningDomain.xmi#ICM-O2-N2"/>
+      </currentobjectivelevels>
+    </progression>
     <learningpath
         href="../LearningDomain.xmi#//@learningpaths.0"/>
   </learnerplayer>

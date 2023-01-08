@@ -1,3 +1,4 @@
+package flattener;
 import java.io.File;
 import java.net.URISyntaxException;
 
@@ -16,7 +17,7 @@ public class Util {
 		EmfModel source = createEmfModel("IN", modelIN, mmPathIN, true, false);
 		EmfModel target = createEmfModel("OUT", modelOUT, mmPathOUT, false, true);
 
-		etl.parse(new File("flattener/dungeonFlat.etl"));
+		etl.parse(new File("C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\flattener\\dungeonFlat.etl"));
 		if (etl.getParseProblems().size() > 0) {
 			System.err.println("Parse errors occured...");
 			for (ParseProblem problem : etl.getParseProblems()) {

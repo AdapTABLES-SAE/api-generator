@@ -1,3 +1,4 @@
+package flattener;
 
 public class Main {
 
@@ -12,11 +13,23 @@ public class Main {
 		transformModel(mmPathIN, mmPathOUT, modelIN+"DungeonTESTS.xmi", modelOUT+"DungeonTESTS.xml");
 		//transformModels(mmPathIN, mmPathOUT, modelIN+"GeneratedDungeon", modelOUT+"DungeonFlat", 0, 10);
 	}
-	
+		
 	public static void transformModel(String mmPathIN, String mmPathOUT, String modelIN, String modelOUT) {
 		System.out.println("begin "+modelIN+" => "+modelOUT);
 		try {
 			new Util().generateFlateScenario(modelIN, mmPathIN, modelOUT, mmPathOUT);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("end "+modelIN+" => "+modelOUT);
+	}
+	
+	public static void transformModel(String modelIN, String modelOUT) {
+		System.out.println("begin "+modelIN+" => "+modelOUT);
+		try {
+			new Util().generateFlateScenario(modelIN, 
+					"C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\generator.ecore", 
+					modelOUT, "C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\FlattenDungeon.ecore");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
