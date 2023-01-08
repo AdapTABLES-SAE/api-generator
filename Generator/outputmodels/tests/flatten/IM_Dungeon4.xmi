@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]">
+  <rooms>
+    <room id="Room[0/0]" roomTypeName="RegularRoomN">
+      <roomaccesses>
+        <roomaccess id="a2" direction="NORTH" accessRef="a3"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[0/1]" y="1" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a3" direction="SOUTH" accessRef="a2"/>
+        <roomaccess id="a4" direction="NORTH" accessRef="a5"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[0/2]" y="2" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a5" direction="SOUTH_WEST" accessRef="a4"/>
+        <roomaccess id="a6" direction="NORTH_EAST" accessRef="a7"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[0/4]" y="4" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a7" direction="SOUTH_EAST" accessRef="a6"/>
+        <roomaccess id="a8" direction="WEST_NORTH" accessRef="a9"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-1/5]" x="-1" y="5" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a9" direction="EAST" accessRef="a8"/>
+        <roomaccess id="a10" direction="SOUTH" accessRef="a11"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-1/4]" x="-1" y="4" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a11" direction="NORTH" accessRef="a10"/>
+        <roomaccess id="a12" direction="SOUTH" accessRef="a13"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-1/3]" x="-1" y="3" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a13" direction="NORTH" accessRef="a12"/>
+        <roomaccess id="a14" direction="SOUTH" accessRef="a15"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-2/1]" x="-2" y="1" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a15" direction="NORTH_EAST" accessRef="a14"/>
+        <roomaccess id="a16" direction="WEST_NORTH" accessRef="a17"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-3/2]" x="-3" y="2" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a17" direction="EAST" accessRef="a16"/>
+        <roomaccess id="a18" direction="WEST" accessRef="a19"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-5/1]" x="-5" y="1" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a19" direction="EAST_NORTH" accessRef="a18"/>
+        <roomaccess id="a20" direction="SOUTH_WEST" accessRef="a21"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-5/-1]" x="-5" y="-1" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a21" direction="NORTH_WEST" accessRef="a20"/>
+        <roomaccess id="a22" direction="EAST_NORTH" accessRef="a23"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-3/-1]" x="-3" y="-1" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a23" direction="WEST_NORTH" accessRef="a22"/>
+        <roomaccess id="a24" direction="SOUTH_WEST" accessRef="a25"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-3/-2]" x="-3" y="-2" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a25" direction="NORTH" accessRef="a24"/>
+        <roomaccess id="a26" direction="WEST" accessRef="a27"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-5/-3]" x="-5" y="-3" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a27" direction="EAST_NORTH" accessRef="a26"/>
+        <roomaccess id="a28" direction="WEST_SOUTH" accessRef="a29"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-6/-3]" x="-6" y="-3" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a29" direction="EAST" accessRef="a28"/>
+        <roomaccess id="a30" direction="NORTH" accessRef="a31"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-6/-2]" x="-6" y="-2" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a31" direction="SOUTH" accessRef="a30"/>
+        <roomaccess id="a32" direction="NORTH" accessRef="a33"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-6/-1]" x="-6" y="-1" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a33" direction="SOUTH" accessRef="a32"/>
+        <roomaccess id="a34" direction="WEST" accessRef="a35"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-8/-1]" x="-8" y="-1" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a35" direction="EAST_SOUTH" accessRef="a34"/>
+        <roomaccess id="a36" direction="SOUTH_WEST" accessRef="a37"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-8/-3]" x="-8" y="-3" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a37" direction="NORTH_WEST" accessRef="a36"/>
+        <roomaccess id="a38" direction="WEST_SOUTH" accessRef="a39"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-10/-4]" x="-10" y="-4" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a39" direction="EAST_NORTH" accessRef="a38"/>
+        <roomaccess id="a40" direction="SOUTH_WEST" accessRef="a41"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+    <room id="Room[-10/-5]" x="-10" y="-5" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a41" direction="NORTH" accessRef="a40"/>
+      </roomaccesses>
+      <question incompleteFact="COMPLETE1" pos="POSQ1" type="LargeText"/>
+    </room>
+  </rooms>
+</Dungeon>
