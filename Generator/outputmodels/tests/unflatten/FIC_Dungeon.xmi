@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" entry="//@rooms.0">
+  <rooms>
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.1/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.3"/>
+  </rooms>
+  <rooms x="-1">
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.0/@roomaccess.0"/>
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.2/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
+    <question incompleteFact="COMPLETE2">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTCompletion2" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C2-OPTABLE"/>
+  </rooms>
+  <rooms x="-3">
+    <roomaccess direction="EAST_SOUTH" otherroomaccess="//@rooms.1/@roomaccess.1"/>
+    <roomaccess direction="SOUTH_WEST" otherroomaccess="//@rooms.3/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <question incompleteFact="REBUILD">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTRecontruction" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REB"/>
+  </rooms>
+  <rooms x="-3" y="-2">
+    <roomaccess direction="NORTH_WEST" otherroomaccess="//@rooms.2/@roomaccess.1"/>
+    <roomaccess direction="WEST_SOUTH" otherroomaccess="//@rooms.4/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <question incompleteFact="IDENTIFY">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#ID-RES"/>
+  </rooms>
+  <rooms x="-5" y="-3">
+    <roomaccess direction="EAST_NORTH" otherroomaccess="//@rooms.3/@roomaccess.1"/>
+    <roomaccess direction="WEST_NORTH" otherroomaccess="//@rooms.5/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <question incompleteFact="IDENTIFY">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#ID-RES"/>
+  </rooms>
+  <rooms x="-7" y="-2">
+    <roomaccess direction="EAST_SOUTH" otherroomaccess="//@rooms.4/@roomaccess.1"/>
+    <roomaccess direction="SOUTH_WEST" otherroomaccess="//@rooms.6/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <question incompleteFact="MEMBERSHIP">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTMembership" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#MEMB"/>
+  </rooms>
+  <rooms x="-8" y="-4">
+    <roomaccess direction="NORTH_EAST" otherroomaccess="//@rooms.5/@roomaccess.1"/>
+    <roomaccess direction="WEST_SOUTH" otherroomaccess="//@rooms.7/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <question incompleteFact="COMPLETE2">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTCompletion2" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C2-OPTABLE"/>
+  </rooms>
+  <rooms x="-9" y="-4">
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.6/@roomaccess.1"/>
+    <roomaccess otherroomaccess="//@rooms.8/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
+    <question incompleteFact="IDENTIFY">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#ID-RES"/>
+  </rooms>
+  <rooms x="-9" y="-5">
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.7/@roomaccess.1"/>
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.9/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
+    <question incompleteFact="COMPLETE1">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C1-RES"/>
+  </rooms>
+  <rooms x="-11" y="-6">
+    <roomaccess direction="EAST_NORTH" otherroomaccess="//@rooms.8/@roomaccess.1"/>
+    <roomaccess direction="WEST_SOUTH" otherroomaccess="//@rooms.10/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <question incompleteFact="COMPLETE1">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C1-RES"/>
+  </rooms>
+  <rooms x="-13" y="-7">
+    <roomaccess direction="EAST_NORTH" otherroomaccess="//@rooms.9/@roomaccess.1"/>
+    <roomaccess direction="WEST_NORTH" otherroomaccess="//@rooms.11/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <question incompleteFact="COMPLETE1">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C1-TABOP"/>
+  </rooms>
+  <rooms x="-14" y="-6">
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.10/@roomaccess.1"/>
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.12/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
+    <question incompleteFact="COMPLETE1">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C1-TABOP"/>
+  </rooms>
+  <rooms x="-16" y="-7">
+    <roomaccess direction="EAST_NORTH" otherroomaccess="//@rooms.11/@roomaccess.1"/>
+    <roomaccess direction="WEST_SOUTH" otherroomaccess="//@rooms.13/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <question incompleteFact="REBUILD">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTRecontruction" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REB"/>
+  </rooms>
+  <rooms x="-18" y="-7">
+    <roomaccess direction="EAST_SOUTH" otherroomaccess="//@rooms.12/@roomaccess.1"/>
+    <roomaccess direction="SOUTH_WEST" otherroomaccess="//@rooms.14/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <question incompleteFact="REBUILD">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTRecontruction" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REB"/>
+  </rooms>
+  <rooms x="-18" y="-8">
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.13/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.15/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
+    <question incompleteFact="COMPLETE1">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C1-RES"/>
+  </rooms>
+  <rooms x="-17" y="-9">
+    <roomaccess direction="WEST_NORTH" otherroomaccess="//@rooms.14/@roomaccess.1"/>
+    <roomaccess direction="EAST_SOUTH" otherroomaccess="//@rooms.16/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <question incompleteFact="COMPLETE2">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTCompletion2" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C2-OPTABLE"/>
+  </rooms>
+  <rooms x="-15" y="-9">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.15/@roomaccess.1"/>
+    <roomaccess otherroomaccess="//@rooms.17/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
+    <question incompleteFact="REBUILD">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTRecontruction" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REB"/>
+  </rooms>
+  <rooms x="-16" y="-11">
+    <roomaccess direction="NORTH_EAST" otherroomaccess="//@rooms.16/@roomaccess.1"/>
+    <roomaccess direction="EAST_SOUTH" otherroomaccess="//@rooms.18/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <question incompleteFact="REBUILD">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTRecontruction" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REB"/>
+  </rooms>
+  <rooms x="-14" y="-11">
+    <roomaccess direction="WEST_SOUTH" otherroomaccess="//@rooms.17/@roomaccess.1"/>
+    <roomaccess direction="NORTH_EAST" otherroomaccess="//@rooms.19/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <question incompleteFact="IDENTIFY">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#ID-RES"/>
+  </rooms>
+  <rooms x="-13" y="-9">
+    <roomaccess otherroomaccess="//@rooms.18/@roomaccess.1"/>
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.20/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
+    <question incompleteFact="MEMBERSHIP">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTMembership" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#MEMB"/>
+  </rooms>
+  <rooms x="-14" y="-9">
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.19/@roomaccess.1"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
+    <question incompleteFact="MEMBERSHIP">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@positions.0"/>
+    </question>
+    <task xsi:type="generator:MTMembership" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#MEMB"/>
+  </rooms>
+  <level xsi:type="generator:MTLevel" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#O1_N1"/>
+  <learningobjective href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#O1"/>
+</generator:Dungeon>

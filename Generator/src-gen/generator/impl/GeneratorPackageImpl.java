@@ -1045,6 +1045,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLevel_Prerequisite() {
+		return (EReference) levelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMTLevel() {
 		return mtLevelEClass;
 	}
@@ -2228,6 +2237,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		levelEClass = createEClass(LEVEL);
 		createEAttribute(levelEClass, LEVEL__ID);
 		createEReference(levelEClass, LEVEL__TASKS);
+		createEReference(levelEClass, LEVEL__PREREQUISITE);
 
 		mtLevelEClass = createEClass(MT_LEVEL);
 		createEAttribute(mtLevelEClass, MT_LEVEL__BUILD_SETUP);
@@ -2591,6 +2601,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getLevel_Tasks(), this.getATask(), null, "tasks", null, 1, -1, Level.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEReference(getLevel_Prerequisite(), this.getPrerequisite(), null, "prerequisite", null, 0, 1, Level.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtLevelEClass, MTLevel.class, "MTLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMTLevel_BuildSetup(), this.getTableBuild(), "buildSetup", null, 0, 1, MTLevel.class,

@@ -894,13 +894,22 @@ public interface GeneratorPackage extends EPackage {
 	int LEVEL__TASKS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Prerequisite</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVEL__PREREQUISITE = 2;
+
+	/**
 	 * The number of structural features of the '<em>Level</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEVEL_FEATURE_COUNT = 2;
+	int LEVEL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Level</em>' class.
@@ -938,6 +947,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_LEVEL__TASKS = LEVEL__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Prerequisite</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL__PREREQUISITE = LEVEL__PREREQUISITE;
 
 	/**
 	 * The feature id for the '<em><b>Build Setup</b></em>' attribute.
@@ -3800,6 +3818,17 @@ public interface GeneratorPackage extends EPackage {
 	EReference getLevel_Tasks();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link generator.Level#getPrerequisite <em>Prerequisite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Prerequisite</em>'.
+	 * @see generator.Level#getPrerequisite()
+	 * @see #getLevel()
+	 * @generated
+	 */
+	EReference getLevel_Prerequisite();
+
+	/**
 	 * Returns the meta object for class '{@link generator.MTLevel <em>MT Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5577,6 +5606,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LEVEL__TASKS = eINSTANCE.getLevel_Tasks();
+
+		/**
+		 * The meta object literal for the '<em><b>Prerequisite</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEVEL__PREREQUISITE = eINSTANCE.getLevel_Prerequisite();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTLevelImpl <em>MT Level</em>}' class.

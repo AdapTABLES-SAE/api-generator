@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.Level#getID <em>ID</em>}</li>
  *   <li>{@link generator.Level#getTasks <em>Tasks</em>}</li>
+ *   <li>{@link generator.Level#getPrerequisite <em>Prerequisite</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getLevel()
@@ -57,5 +58,27 @@ public interface Level extends EObject {
 	 * @generated
 	 */
 	EList<ATask> getTasks();
+
+	/**
+	 * Returns the value of the '<em><b>Prerequisite</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prerequisite</em>' containment reference.
+	 * @see #setPrerequisite(Prerequisite)
+	 * @see generator.GeneratorPackage#getLevel_Prerequisite()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Prerequisite getPrerequisite();
+
+	/**
+	 * Sets the value of the '{@link generator.Level#getPrerequisite <em>Prerequisite</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Prerequisite</em>' containment reference.
+	 * @see #getPrerequisite()
+	 * @generated
+	 */
+	void setPrerequisite(Prerequisite value);
 
 } // Level

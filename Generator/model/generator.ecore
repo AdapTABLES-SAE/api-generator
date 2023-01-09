@@ -111,6 +111,8 @@
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" lowerBound="1" upperBound="-1"
         eType="#//ATask" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" eType="#//Prerequisite"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTLevel" eSuperTypes="#//Level">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="buildSetup" eType="#//TableBuild"/>

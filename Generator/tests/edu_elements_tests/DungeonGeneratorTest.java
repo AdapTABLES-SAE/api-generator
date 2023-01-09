@@ -10,7 +10,7 @@ public class DungeonGeneratorTest {
 		String modelIN = "outputmodels/tests/unflatten/";
 		String modelOUT = "outputmodels/tests/flatten/"; 
 		
-		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_RM_Init.xmi");//args != null? args[0]: "");
+		/*ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_RM_Init.xmi");//args != null? args[0]: "");
 		ALGAGenerator generator2 = new ALGAGenerator("learnerProfils/LP_IM_Init.xmi");
 		for (int i = 1; i < 6; i++) {
 			generator.generate();
@@ -19,7 +19,13 @@ public class DungeonGeneratorTest {
 			generator2.saveDungeon("tests/unflatten/IM_Dungeon"+i+".xmi");
 			Main.transformModel(modelIN+"RM_Dungeon"+i+".xmi", modelOUT+"RM_Dungeon"+i+".xmi");
 			Main.transformModel(modelIN+"IM_Dungeon"+i+".xmi", modelOUT+"IM_Dungeon"+i+".xmi");
-		}
+		}*/
+		
+		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_FIC_Init.xmi");
+		generator.generate();
+		generator.saveDungeon("tests/unflatten/FIC_Dungeon.xmi");
+		Main.transformModel(modelIN+"FIC_Dungeon.xmi", modelOUT+"FIC_Dungeon.xmi");
+
 	}
 
 }
