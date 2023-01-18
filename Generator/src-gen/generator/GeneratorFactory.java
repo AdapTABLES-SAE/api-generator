@@ -202,15 +202,6 @@ public interface GeneratorFactory extends EFactory {
 	Position createPosition();
 
 	/**
-	 * Returns a new object of class '<em>Question</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Question</em>'.
-	 * @generated
-	 */
-	Question createQuestion();
-
-	/**
 	 * Returns a new object of class '<em>Multiple Choice</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -362,6 +353,51 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	MTQFMembership createMTQFMembership();
+
+	/**
+	 * Returns a new object of class '<em>MT Qe FCompletion1</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MT Qe FCompletion1</em>'.
+	 * @generated
+	 */
+	MTQeFCompletion1 createMTQeFCompletion1();
+
+	/**
+	 * Returns a new object of class '<em>MT Qe FCompletion2</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MT Qe FCompletion2</em>'.
+	 * @generated
+	 */
+	MTQeFCompletion2 createMTQeFCompletion2();
+
+	/**
+	 * Returns a new object of class '<em>MT Qe FRebuild</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MT Qe FRebuild</em>'.
+	 * @generated
+	 */
+	MTQeFRebuild createMTQeFRebuild();
+
+	/**
+	 * Returns a new object of class '<em>MT Qe FIdentication</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MT Qe FIdentication</em>'.
+	 * @generated
+	 */
+	MTQeFIdentication createMTQeFIdentication();
+
+	/**
+	 * Returns a new object of class '<em>MT Qe FMembership</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MT Qe FMembership</em>'.
+	 * @generated
+	 */
+	MTQeFMembership createMTQeFMembership();
 
 	/**
 	 * Returns the package supported by this factory.

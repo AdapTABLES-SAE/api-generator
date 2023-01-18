@@ -9,8 +9,6 @@ import generator.ResponseModality;
 
 import java.lang.reflect.InvocationTargetException;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -22,9 +20,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>ATask</b></em>'.
@@ -35,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link generator.impl.ATaskImpl#getPercentOfApparition <em>Percent Of Apparition</em>}</li>
  *   <li>{@link generator.impl.ATaskImpl#getNbConsecutiveSuccess <em>Nb Consecutive Success</em>}</li>
- *   <li>{@link generator.impl.ATaskImpl#getResponsemodalities <em>Responsemodalities</em>}</li>
+ *   <li>{@link generator.impl.ATaskImpl#getResponseModality <em>Response Modality</em>}</li>
  *   <li>{@link generator.impl.ATaskImpl#getID <em>ID</em>}</li>
  * </ul>
  *
@@ -83,14 +78,14 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	protected int nbConsecutiveSuccess = NB_CONSECUTIVE_SUCCESS_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getResponsemodalities() <em>Responsemodalities</em>}' containment reference list.
+	 * The cached value of the '{@link #getResponseModality() <em>Response Modality</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResponsemodalities()
+	 * @see #getResponseModality()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ResponseModality> responsemodalities;
+	protected ResponseModality responseModality;
 
 	/**
 	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
@@ -180,12 +175,49 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ResponseModality> getResponsemodalities() {
-		if (responsemodalities == null) {
-			responsemodalities = new EObjectContainmentEList<ResponseModality>(ResponseModality.class, this,
-					GeneratorPackage.ATASK__RESPONSEMODALITIES);
+	public ResponseModality getResponseModality() {
+		return responseModality;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetResponseModality(ResponseModality newResponseModality, NotificationChain msgs) {
+		ResponseModality oldResponseModality = responseModality;
+		responseModality = newResponseModality;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.ATASK__RESPONSE_MODALITY, oldResponseModality, newResponseModality);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
 		}
-		return responsemodalities;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setResponseModality(ResponseModality newResponseModality) {
+		if (newResponseModality != responseModality) {
+			NotificationChain msgs = null;
+			if (responseModality != null)
+				msgs = ((InternalEObject) responseModality).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.ATASK__RESPONSE_MODALITY, null, msgs);
+			if (newResponseModality != null)
+				msgs = ((InternalEObject) newResponseModality).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.ATASK__RESPONSE_MODALITY, null, msgs);
+			msgs = basicSetResponseModality(newResponseModality, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ATASK__RESPONSE_MODALITY,
+					newResponseModality, newResponseModality));
 	}
 
 	/**
@@ -228,8 +260,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.ATASK__RESPONSEMODALITIES:
-			return ((InternalEList<?>) getResponsemodalities()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.ATASK__RESPONSE_MODALITY:
+			return basicSetResponseModality(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -246,8 +278,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			return getPercentOfApparition();
 		case GeneratorPackage.ATASK__NB_CONSECUTIVE_SUCCESS:
 			return getNbConsecutiveSuccess();
-		case GeneratorPackage.ATASK__RESPONSEMODALITIES:
-			return getResponsemodalities();
+		case GeneratorPackage.ATASK__RESPONSE_MODALITY:
+			return getResponseModality();
 		case GeneratorPackage.ATASK__ID:
 			return getID();
 		}
@@ -259,7 +291,6 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -269,9 +300,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.ATASK__NB_CONSECUTIVE_SUCCESS:
 			setNbConsecutiveSuccess((Integer) newValue);
 			return;
-		case GeneratorPackage.ATASK__RESPONSEMODALITIES:
-			getResponsemodalities().clear();
-			getResponsemodalities().addAll((Collection<? extends ResponseModality>) newValue);
+		case GeneratorPackage.ATASK__RESPONSE_MODALITY:
+			setResponseModality((ResponseModality) newValue);
 			return;
 		case GeneratorPackage.ATASK__ID:
 			setID((String) newValue);
@@ -294,8 +324,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.ATASK__NB_CONSECUTIVE_SUCCESS:
 			setNbConsecutiveSuccess(NB_CONSECUTIVE_SUCCESS_EDEFAULT);
 			return;
-		case GeneratorPackage.ATASK__RESPONSEMODALITIES:
-			getResponsemodalities().clear();
+		case GeneratorPackage.ATASK__RESPONSE_MODALITY:
+			setResponseModality((ResponseModality) null);
 			return;
 		case GeneratorPackage.ATASK__ID:
 			setID(ID_EDEFAULT);
@@ -316,8 +346,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			return percentOfApparition != PERCENT_OF_APPARITION_EDEFAULT;
 		case GeneratorPackage.ATASK__NB_CONSECUTIVE_SUCCESS:
 			return nbConsecutiveSuccess != NB_CONSECUTIVE_SUCCESS_EDEFAULT;
-		case GeneratorPackage.ATASK__RESPONSEMODALITIES:
-			return responsemodalities != null && !responsemodalities.isEmpty();
+		case GeneratorPackage.ATASK__RESPONSE_MODALITY:
+			return responseModality != null;
 		case GeneratorPackage.ATASK__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}

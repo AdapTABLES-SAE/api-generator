@@ -1,4 +1,4 @@
-package factsgenerator;
+package factsgenerator_maths;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -38,6 +38,11 @@ import generator.MTQFCompletion2;
 import generator.MTQFIdentification;
 import generator.MTQFMembership;
 import generator.MTQFRebuild;
+import generator.MTQeFCompletion1;
+import generator.MTQeFCompletion2;
+import generator.MTQeFIdentication;
+import generator.MTQeFMembership;
+import generator.MTQeFRebuild;
 import generator.MTRecontruction;
 import generator.MTResultFact;
 import generator.MembershipIDTask;
@@ -47,8 +52,8 @@ import generator.Position;
 import generator.Prerequisite;
 import generator.Progression;
 import generator.QFResults;
-import generator.Question;
 import generator.QuestionableFact;
+import generator.QuestionedFact;
 import generator.ReconstructionTask;
 import generator.ResponseModality;
 import generator.ResultPosition;
@@ -61,6 +66,7 @@ import generator.RoomTypes;
 import generator.SetOfFacts;
 import generator.SmallRoomType;
 import generator.TableBuild;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -245,13 +251,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass questionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass responseModalityEClass = null;
 
 	/**
@@ -421,6 +420,48 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass mtqfMembershipEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass questionedFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mtQeFCompletion1EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mtQeFCompletion2EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mtQeFRebuildEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mtQeFIdenticationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mtQeFMembershipEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -712,7 +753,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRoom_Question() {
+	public EReference getRoom_QuestionedFacts() {
 		return (EReference) roomEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1279,33 +1320,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getQuestion() {
-		return questionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQuestion_Position() {
-		return (EReference) questionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getQuestion_IncompleteFact() {
-		return (EAttribute) questionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getResponseModality() {
 		return responseModalityEClass;
 	}
@@ -1414,7 +1428,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getATask_Responsemodalities() {
+	public EReference getATask_ResponseModality() {
 		return (EReference) aTaskEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1639,7 +1653,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResultsByTask_Questionedfacts() {
+	public EReference getResultsByTask_QuestionableFacts() {
 		return (EReference) resultsByTaskEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1756,6 +1770,33 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getQuestionableFact_Achieved() {
+		return (EAttribute) questionableFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestionableFact_WasSelected() {
+		return (EAttribute) questionableFactEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getQuestionableFact__GetQuestionableFact() {
+		return questionableFactEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMTQFCompletion1() {
 		return mtqfCompletion1EClass;
 	}
@@ -1803,24 +1844,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getMTQFCompletion1_ResultOnRight() {
 		return (EAttribute) mtqfCompletion1EClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMTQFCompletion1_NO_VALUE() {
-		return (EAttribute) mtqfCompletion1EClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMTQFCompletion1__GetQuestionableFact() {
-		return mtqfCompletion1EClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1900,24 +1923,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMTQFCompletion2_NO_VALUE() {
-		return (EAttribute) mtqfCompletion2EClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMTQFCompletion2__GetQuestionableFact() {
-		return mtqfCompletion2EClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMTQFRebuild() {
 		return mtqfRebuildEClass;
 	}
@@ -1956,15 +1961,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getMTQFRebuild_SoluceRight() {
 		return (EAttribute) mtqfRebuildEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMTQFRebuild__GetQuestionableFact() {
-		return mtqfRebuildEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -2026,15 +2022,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getMTQFIdentification__GetQuestionableFact() {
-		return mtqfIdentificationEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMTQFMembership() {
 		return mtqfMembershipEClass;
 	}
@@ -2062,8 +2049,116 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getMTQFMembership__GetQuestionableFact() {
-		return mtqfMembershipEClass.getEOperations().get(0);
+	public EClass getQuestionedFact() {
+		return questionedFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQuestionedFact_Questionablefact() {
+		return (EReference) questionedFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQuestionedFact_Position() {
+		return (EReference) questionedFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getQuestionedFact__GetQuestionedFactQuestion() {
+		return questionedFactEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMTQeFCompletion1() {
+		return mtQeFCompletion1EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQeFCompletion1_Propositions() {
+		return (EAttribute) mtQeFCompletion1EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMTQeFCompletion2() {
+		return mtQeFCompletion2EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQeFCompletion2_Propositions() {
+		return (EAttribute) mtQeFCompletion2EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMTQeFRebuild() {
+		return mtQeFRebuildEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQeFRebuild_Propositions() {
+		return (EAttribute) mtQeFRebuildEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMTQeFIdentication() {
+		return mtQeFIdenticationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMTQeFMembership() {
+		return mtQeFMembershipEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQeFMembership_BadPropositions() {
+		return (EAttribute) mtQeFMembershipEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2189,7 +2284,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(roomEClass, ROOM__Y);
 		createEReference(roomEClass, ROOM__ROOMACCESS);
 		createEReference(roomEClass, ROOM__ROOMTYPE);
-		createEReference(roomEClass, ROOM__QUESTION);
+		createEReference(roomEClass, ROOM__QUESTIONED_FACTS);
 		createEReference(roomEClass, ROOM__TASK);
 
 		gameDescriptionEClass = createEClass(GAME_DESCRIPTION);
@@ -2271,10 +2366,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		positionEClass = createEClass(POSITION);
 		createEAttribute(positionEClass, POSITION__NAME);
 
-		questionEClass = createEClass(QUESTION);
-		createEReference(questionEClass, QUESTION__POSITION);
-		createEAttribute(questionEClass, QUESTION__INCOMPLETE_FACT);
-
 		responseModalityEClass = createEClass(RESPONSE_MODALITY);
 
 		multipleChoiceEClass = createEClass(MULTIPLE_CHOICE);
@@ -2291,7 +2382,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		aTaskEClass = createEClass(ATASK);
 		createEAttribute(aTaskEClass, ATASK__PERCENT_OF_APPARITION);
 		createEAttribute(aTaskEClass, ATASK__NB_CONSECUTIVE_SUCCESS);
-		createEReference(aTaskEClass, ATASK__RESPONSEMODALITIES);
+		createEReference(aTaskEClass, ATASK__RESPONSE_MODALITY);
 		createEAttribute(aTaskEClass, ATASK__ID);
 		createEOperation(aTaskEClass, ATASK___GET_TYPE);
 
@@ -2327,7 +2418,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		resultsByTaskEClass = createEClass(RESULTS_BY_TASK);
 		createEReference(resultsByTaskEClass, RESULTS_BY_TASK__TASK);
-		createEReference(resultsByTaskEClass, RESULTS_BY_TASK__QUESTIONEDFACTS);
+		createEReference(resultsByTaskEClass, RESULTS_BY_TASK__QUESTIONABLE_FACTS);
 		createEAttribute(resultsByTaskEClass, RESULTS_BY_TASK__SUCESS_PERCENT);
 		createEAttribute(resultsByTaskEClass, RESULTS_BY_TASK__ENCOUNTERS_PERCENT);
 
@@ -2344,6 +2435,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		questionableFactEClass = createEClass(QUESTIONABLE_FACT);
 		createEReference(questionableFactEClass, QUESTIONABLE_FACT__QFRESULTS);
+		createEAttribute(questionableFactEClass, QUESTIONABLE_FACT__ACHIEVED);
+		createEAttribute(questionableFactEClass, QUESTIONABLE_FACT__WAS_SELECTED);
+		createEOperation(questionableFactEClass, QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT);
 
 		mtqfCompletion1EClass = createEClass(MTQF_COMPLETION1);
 		createEAttribute(mtqfCompletion1EClass, MTQF_COMPLETION1__LEFT_OPERAND);
@@ -2351,8 +2445,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(mtqfCompletion1EClass, MTQF_COMPLETION1__RESULT);
 		createEAttribute(mtqfCompletion1EClass, MTQF_COMPLETION1__SOLUCE);
 		createEAttribute(mtqfCompletion1EClass, MTQF_COMPLETION1__RESULT_ON_RIGHT);
-		createEAttribute(mtqfCompletion1EClass, MTQF_COMPLETION1__NO_VALUE);
-		createEOperation(mtqfCompletion1EClass, MTQF_COMPLETION1___GET_QUESTIONABLE_FACT);
 
 		mtqfCompletion2EClass = createEClass(MTQF_COMPLETION2);
 		createEAttribute(mtqfCompletion2EClass, MTQF_COMPLETION2__LEFT_OPERAND);
@@ -2362,15 +2454,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(mtqfCompletion2EClass, MTQF_COMPLETION2__SOLUCE_RIGHT);
 		createEAttribute(mtqfCompletion2EClass, MTQF_COMPLETION2__SOLUCE_RES);
 		createEAttribute(mtqfCompletion2EClass, MTQF_COMPLETION2__RESULT_ON_RIGHT);
-		createEAttribute(mtqfCompletion2EClass, MTQF_COMPLETION2__NO_VALUE);
-		createEOperation(mtqfCompletion2EClass, MTQF_COMPLETION2___GET_QUESTIONABLE_FACT);
 
 		mtqfRebuildEClass = createEClass(MTQF_REBUILD);
 		createEAttribute(mtqfRebuildEClass, MTQF_REBUILD__SOLUCE_LEFT);
 		createEAttribute(mtqfRebuildEClass, MTQF_REBUILD__SOLUCE_RES);
 		createEAttribute(mtqfRebuildEClass, MTQF_REBUILD__RESULT_ON_RIGHT);
 		createEAttribute(mtqfRebuildEClass, MTQF_REBUILD__SOLUCE_RIGHT);
-		createEOperation(mtqfRebuildEClass, MTQF_REBUILD___GET_QUESTIONABLE_FACT);
 
 		mtqfIdentificationEClass = createEClass(MTQF_IDENTIFICATION);
 		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__RESULT);
@@ -2378,12 +2467,29 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__LEFT_OPERAND);
 		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__SOLUCE);
 		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__RESULT_ON_RIGHT);
-		createEOperation(mtqfIdentificationEClass, MTQF_IDENTIFICATION___GET_QUESTIONABLE_FACT);
 
 		mtqfMembershipEClass = createEClass(MTQF_MEMBERSHIP);
 		createEAttribute(mtqfMembershipEClass, MTQF_MEMBERSHIP__GOOD_RESULTS);
 		createEAttribute(mtqfMembershipEClass, MTQF_MEMBERSHIP__TABLE);
-		createEOperation(mtqfMembershipEClass, MTQF_MEMBERSHIP___GET_QUESTIONABLE_FACT);
+
+		questionedFactEClass = createEClass(QUESTIONED_FACT);
+		createEReference(questionedFactEClass, QUESTIONED_FACT__QUESTIONABLEFACT);
+		createEReference(questionedFactEClass, QUESTIONED_FACT__POSITION);
+		createEOperation(questionedFactEClass, QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION);
+
+		mtQeFCompletion1EClass = createEClass(MT_QE_FCOMPLETION1);
+		createEAttribute(mtQeFCompletion1EClass, MT_QE_FCOMPLETION1__PROPOSITIONS);
+
+		mtQeFCompletion2EClass = createEClass(MT_QE_FCOMPLETION2);
+		createEAttribute(mtQeFCompletion2EClass, MT_QE_FCOMPLETION2__PROPOSITIONS);
+
+		mtQeFRebuildEClass = createEClass(MT_QE_FREBUILD);
+		createEAttribute(mtQeFRebuildEClass, MT_QE_FREBUILD__PROPOSITIONS);
+
+		mtQeFIdenticationEClass = createEClass(MT_QE_FIDENTICATION);
+
+		mtQeFMembershipEClass = createEClass(MT_QE_FMEMBERSHIP);
+		createEAttribute(mtQeFMembershipEClass, MT_QE_FMEMBERSHIP__BAD_PROPOSITIONS);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -2451,6 +2557,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtqfRebuildEClass.getESuperTypes().add(this.getQuestionableFact());
 		mtqfIdentificationEClass.getESuperTypes().add(this.getQuestionableFact());
 		mtqfMembershipEClass.getESuperTypes().add(this.getQuestionableFact());
+		mtQeFCompletion1EClass.getESuperTypes().add(this.getQuestionedFact());
+		mtQeFCompletion2EClass.getESuperTypes().add(this.getQuestionedFact());
+		mtQeFRebuildEClass.getESuperTypes().add(this.getQuestionedFact());
+		mtQeFIdenticationEClass.getESuperTypes().add(this.getQuestionedFact());
+		mtQeFMembershipEClass.getESuperTypes().add(this.getQuestionedFact());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -2499,9 +2610,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getRoom_Roomtype(), this.getRoomType(), null, "roomtype", null, 1, 1, Room.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getRoom_Question(), this.getQuestion(), null, "question", null, 0, 1, Room.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+		initEReference(getRoom_QuestionedFacts(), this.getQuestionedFact(), null, "questionedFacts", null, 0, -1,
+				Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRoom_Task(), this.getATask(), null, "task", null, 0, 1, Room.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
@@ -2673,15 +2784,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getPosition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Position.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(questionEClass, Question.class, "Question", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getQuestion_Position(), this.getPosition(), null, "position", null, 1, 1, Question.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getQuestion_IncompleteFact(), ecorePackage.getEString(), "incompleteFact", null, 0, 1,
-				Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-
 		initEClass(responseModalityEClass, ResponseModality.class, "ResponseModality", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
@@ -2716,8 +2818,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getATask_NbConsecutiveSuccess(), ecorePackage.getEInt(), "nbConsecutiveSuccess", null, 0, 1,
 				ATask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getATask_Responsemodalities(), this.getResponseModality(), null, "responsemodalities", null, 0,
-				-1, ATask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getATask_ResponseModality(), this.getResponseModality(), null, "responseModality", null, 0, 1,
+				ATask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getATask_ID(), theXMLTypePackage.getString(), "ID", null, 0, 1, ATask.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2788,9 +2890,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getResultsByTask_Task(), this.getATask(), null, "task", null, 0, 1, ResultsByTask.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getResultsByTask_Questionedfacts(), this.getQuestionableFact(), null, "questionedfacts", null, 0,
-				-1, ResultsByTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResultsByTask_QuestionableFacts(), this.getQuestionableFact(), null, "questionableFacts",
+				null, 0, -1, ResultsByTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResultsByTask_SucessPercent(), ecorePackage.getEDouble(), "sucessPercent", null, 0, 1,
 				ResultsByTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				IS_DERIVED, IS_ORDERED);
@@ -2821,6 +2923,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getQuestionableFact_Qfresults(), this.getQFResults(), null, "qfresults", null, 0, -1,
 				QuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestionableFact_Achieved(), ecorePackage.getEBoolean(), "achieved", "false", 0, 1,
+				QuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestionableFact_WasSelected(), ecorePackage.getEBoolean(), "wasSelected", "false", 0, 1,
+				QuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getQuestionableFact__GetQuestionableFact(), ecorePackage.getEString(), "getQuestionableFact", 0,
+				1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mtqfCompletion1EClass, MTQFCompletion1.class, "MTQFCompletion1", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2837,12 +2948,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTQFCompletion1_ResultOnRight(), theXMLTypePackage.getBoolean(), "resultOnRight", "true", 0,
 				1, MTQFCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTQFCompletion1_NO_VALUE(), ecorePackage.getEInt(), "NO_VALUE", "-1", 0, 1,
-				MTQFCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getMTQFCompletion1__GetQuestionableFact(), ecorePackage.getEString(), "getQuestionableFact", 0,
-				1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mtqfCompletion2EClass, MTQFCompletion2.class, "MTQFCompletion2", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2866,12 +2971,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTQFCompletion2_ResultOnRight(), theXMLTypePackage.getBoolean(), "resultOnRight", "true", 0,
 				1, MTQFCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTQFCompletion2_NO_VALUE(), ecorePackage.getEInt(), "NO_VALUE", "-1", 0, 1,
-				MTQFCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getMTQFCompletion2__GetQuestionableFact(), ecorePackage.getEString(), "getQuestionableFact", 0,
-				1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mtqfRebuildEClass, MTQFRebuild.class, "MTQFRebuild", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2885,9 +2984,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTQFRebuild_SoluceRight(), ecorePackage.getEInt(), "soluceRight", null, 0, 1,
 				MTQFRebuild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getMTQFRebuild__GetQuestionableFact(), ecorePackage.getEString(), "getQuestionableFact", 0, 1,
-				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mtqfIdentificationEClass, MTQFIdentification.class, "MTQFIdentification", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2907,9 +3003,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				0, 1, MTQFIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getMTQFIdentification__GetQuestionableFact(), ecorePackage.getEString(), "getQuestionableFact",
-				0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(mtqfMembershipEClass, MTQFMembership.class, "MTQFMembership", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMTQFMembership_GoodResults(), ecorePackage.getEInt(), "goodResults", null, 1, -1,
@@ -2918,8 +3011,44 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTQFMembership_Table(), ecorePackage.getEInt(), "table", null, 0, 1, MTQFMembership.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getMTQFMembership__GetQuestionableFact(), ecorePackage.getEString(), "getQuestionableFact", 0, 1,
-				IS_UNIQUE, IS_ORDERED);
+		initEClass(questionedFactEClass, QuestionedFact.class, "QuestionedFact", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getQuestionedFact_Questionablefact(), this.getQuestionableFact(), null, "questionablefact", null,
+				1, 1, QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQuestionedFact_Position(), this.getPosition(), null, "position", null, 1, 1,
+				QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getQuestionedFact__GetQuestionedFactQuestion(), ecorePackage.getEString(),
+				"getQuestionedFactQuestion", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(mtQeFCompletion1EClass, MTQeFCompletion1.class, "MTQeFCompletion1", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTQeFCompletion1_Propositions(), ecorePackage.getEInt(), "propositions", null, 0, -1,
+				MTQeFCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(mtQeFCompletion2EClass, MTQeFCompletion2.class, "MTQeFCompletion2", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTQeFCompletion2_Propositions(), ecorePackage.getEInt(), "propositions", null, 0, -1,
+				MTQeFCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(mtQeFRebuildEClass, MTQeFRebuild.class, "MTQeFRebuild", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTQeFRebuild_Propositions(), ecorePackage.getEInt(), "propositions", null, 3, -1,
+				MTQeFRebuild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(mtQeFIdenticationEClass, MTQeFIdentication.class, "MTQeFIdentication", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mtQeFMembershipEClass, MTQeFMembership.class, "MTQeFMembership", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTQeFMembership_BadPropositions(), ecorePackage.getEInt(), "badPropositions", null, 0, -1,
+				MTQeFMembership.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

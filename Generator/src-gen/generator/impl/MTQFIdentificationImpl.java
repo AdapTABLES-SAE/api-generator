@@ -5,11 +5,7 @@ package generator.impl;
 import generator.GeneratorPackage;
 import generator.MTQFIdentification;
 
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -265,19 +261,6 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String getQuestionableFact() {
-		if (resultOnRight) {
-			return getLeftOperand() + " x " + getRightOperand() + " = " + getResult() + " (" + soluce + ")";
-		} else {
-			return getResult() + " = " + getLeftOperand() + " x " + getRightOperand() + " (" + soluce + ")";
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -379,20 +362,6 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 	 * @generated
 	 */
 	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-		case GeneratorPackage.MTQF_IDENTIFICATION___GET_QUESTIONABLE_FACT:
-			return getQuestionableFact();
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String toString() {
 		if (eIsProxy())
 			return super.toString();
@@ -410,6 +379,15 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 		result.append(resultOnRight);
 		result.append(')');
 		return result.toString();
+	}
+
+	@Override
+	public String getQuestionableFact() {
+        if (resultOnRight) {
+            return getLeftOperand() + " x " + getRightOperand() + " = " + getResult() + " (" + soluce + ")";
+        } else {
+            return getResult() + " = " + getLeftOperand() + " x " + getRightOperand() + " (" + soluce + ")";
+        }
 	}
 
 } //MTQFIdentificationImpl

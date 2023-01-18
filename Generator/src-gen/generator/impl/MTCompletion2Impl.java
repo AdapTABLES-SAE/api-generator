@@ -5,6 +5,7 @@ package generator.impl;
 import generator.ESeveralTarget;
 import generator.GeneratorPackage;
 import generator.MTCompletion2;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;

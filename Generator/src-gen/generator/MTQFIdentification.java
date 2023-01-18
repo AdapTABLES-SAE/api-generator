@@ -134,12 +134,4 @@ public interface MTQFIdentification extends QuestionableFact {
 	 */
 	void setResultOnRight(boolean value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	String getQuestionableFact();
-
 } // MTQFIdentification

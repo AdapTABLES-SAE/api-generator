@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generator.ResultsByTask#getTask <em>Task</em>}</li>
- *   <li>{@link generator.ResultsByTask#getQuestionedfacts <em>Questionedfacts</em>}</li>
+ *   <li>{@link generator.ResultsByTask#getQuestionableFacts <em>Questionable Facts</em>}</li>
  *   <li>{@link generator.ResultsByTask#getSucessPercent <em>Sucess Percent</em>}</li>
  *   <li>{@link generator.ResultsByTask#getEncountersPercent <em>Encounters Percent</em>}</li>
  * </ul>
@@ -49,16 +49,16 @@ public interface ResultsByTask extends EObject {
 	void setTask(ATask value);
 
 	/**
-	 * Returns the value of the '<em><b>Questionedfacts</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Questionable Facts</b></em>' containment reference list.
 	 * The list contents are of type {@link generator.QuestionableFact}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Questionedfacts</em>' containment reference list.
-	 * @see generator.GeneratorPackage#getResultsByTask_Questionedfacts()
+	 * @return the value of the '<em>Questionable Facts</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getResultsByTask_QuestionableFacts()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<QuestionableFact> getQuestionedfacts();
+	EList<QuestionableFact> getQuestionableFacts();
 
 	/**
 	 * Returns the value of the '<em><b>Sucess Percent</b></em>' attribute.

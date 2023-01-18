@@ -111,12 +111,4 @@ public interface MTQFRebuild extends QuestionableFact {
 	 */
 	void setSoluceRight(int value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	String getQuestionableFact();
-
 } // MTQFRebuild

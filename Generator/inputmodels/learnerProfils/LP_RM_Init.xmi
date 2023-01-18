@@ -1,33 +1,216 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<generator:GenerationContext
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:generator="http://www.example.org/generator"
-    xsi:schemaLocation="http://www.example.org/generator ../../model/generator.ecore">
-  <gamecontext
-      numberOfRooms="20"/>
-  <learnerplayer
-      name="Learner CE2">
+<?xml version="1.0" encoding="ASCII"?>
+<generator:GenerationContext xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator">
+  <gamecontext numberOfRooms="20"/>
+  <learnerplayer name="Learner CE2">
     <progression>
-      <currentobjectivelevels
-          encountersPercent="100.0"
-          sucessPercent="81.0">
-        <objective
-            href="../LearningDomain.xmi#REC-O1"/>
-        <level
-            xsi:type="generator:MTLevel"
-            href="../LearningDomain.xmi#REC-O1-N1"/>
+      <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="81.0">
+        <objective href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REC-O1"/>
+        <level xsi:type="generator:MTLevel" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REC-O1-N1"/>
+        <results>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.0/@levels.0/@tasks.0"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.0/@levels.0/@tasks.1"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTRecontruction" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.0/@levels.0/@tasks.2"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTMembership" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.0/@levels.0/@tasks.3"/>
+          </resultsbytask>
+        </results>
       </currentobjectivelevels>
-      <currentobjectivelevels>
-        <objective
-            href="../LearningDomain.xmi#REC-O1"/>
-        <level
-            xsi:type="generator:MTLevel"
-            href="../LearningDomain.xmi#REC-O1-N2"/>
+      <currentobjectivelevels achieved="true">
+        <objective href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REC-O1"/>
+        <level xsi:type="generator:MTLevel" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REC-O1-N2"/>
+        <results>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.0/@levels.1/@tasks.0"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion2" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.0/@levels.1/@tasks.1"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.0/@levels.1/@tasks.2"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTRecontruction" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.0/@levels.1/@tasks.3"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTMembership" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.0/@levels.1/@tasks.4"/>
+          </resultsbytask>
+        </results>
+      </currentobjectivelevels>
+      <currentobjectivelevels achieved="false">
+        <objective href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REC-O2"/>
+        <level xsi:type="generator:MTLevel" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REC-O2-N1"/>
+        <results>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.1/@levels.0/@tasks.0"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="6" rightOperand="2" result="-1" soluce="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="6" rightOperand="6" result="-1" soluce="36" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="6" rightOperand="1" result="-1" soluce="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="6" rightOperand="10" result="-1" soluce="60" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="6" rightOperand="4" result="-1" soluce="24" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="6" rightOperand="3" result="-1" soluce="18" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="6" rightOperand="7" result="-1" soluce="42" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="6" rightOperand="8" result="-1" soluce="48" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="6" rightOperand="5" result="-1" soluce="30" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="6" rightOperand="9" result="-1" soluce="54" resultOnRight="true"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.1/@levels.0/@tasks.1"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="30" rightOperand="5" leftOperand="6" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="6" rightOperand="1" leftOperand="6" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="37" rightOperand="7" leftOperand="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="44" rightOperand="8" leftOperand="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="12" rightOperand="2" leftOperand="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="24" rightOperand="4" leftOperand="6" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="54" rightOperand="9" leftOperand="6" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="60" rightOperand="10" leftOperand="6" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="42" rightOperand="7" leftOperand="6" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="32" rightOperand="6" leftOperand="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="48" rightOperand="8" leftOperand="6" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="18" rightOperand="3" leftOperand="6" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="23" rightOperand="3" leftOperand="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="7" rightOperand="1" leftOperand="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="62" rightOperand="10" leftOperand="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="26" rightOperand="5" leftOperand="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="12" rightOperand="2" leftOperand="6" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="36" rightOperand="6" leftOperand="6" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="26" rightOperand="4" leftOperand="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="51" rightOperand="9" leftOperand="6" resultOnRight="true"/>
+          </resultsbytask>
+        </results>
+      </currentobjectivelevels>
+      <currentobjectivelevels achieved="false">
+        <objective href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REC-O3"/>
+        <level xsi:type="generator:MTLevel" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REC-O3-N1"/>
+        <results>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.2/@levels.0/@tasks.0"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="7" rightOperand="9" result="-1" soluce="63" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="7" rightOperand="3" result="-1" soluce="21" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="7" rightOperand="1" result="-1" soluce="7" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="7" rightOperand="5" result="-1" soluce="35" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="7" rightOperand="10" result="-1" soluce="70" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="7" rightOperand="8" result="-1" soluce="56" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="7" rightOperand="6" result="-1" soluce="42" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="7" rightOperand="7" result="-1" soluce="79" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="7" rightOperand="2" result="-1" soluce="14" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="7" rightOperand="4" result="-1" soluce="28" resultOnRight="true"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.2/@levels.0/@tasks.1"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="84" rightOperand="7" leftOperand="7" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="69" rightOperand="10" leftOperand="7" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="47" rightOperand="6" leftOperand="7" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="58" rightOperand="9" leftOperand="7" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="57" rightOperand="8" leftOperand="7" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="70" rightOperand="10" leftOperand="7" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="23" rightOperand="3" leftOperand="7" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="2" rightOperand="1" leftOperand="7" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="32" rightOperand="5" leftOperand="7" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="56" rightOperand="8" leftOperand="7" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="42" rightOperand="6" leftOperand="7" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="32" rightOperand="4" leftOperand="7" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="63" rightOperand="9" leftOperand="7" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="35" rightOperand="5" leftOperand="7" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="12" rightOperand="2" leftOperand="7" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="21" rightOperand="3" leftOperand="7" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="79" rightOperand="7" leftOperand="7" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="7" rightOperand="1" leftOperand="7" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="14" rightOperand="2" leftOperand="7" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="28" rightOperand="4" leftOperand="7" soluce="true" resultOnRight="true"/>
+          </resultsbytask>
+        </results>
+      </currentobjectivelevels>
+      <currentobjectivelevels achieved="false">
+        <objective href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REC-O4"/>
+        <level xsi:type="generator:MTLevel" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REC-O4-N1"/>
+        <results>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.3/@levels.0/@tasks.0"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="2" result="-1" soluce="16" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="8" result="-1" soluce="64" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="1" result="-1" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="4" result="-1" soluce="32" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="6" result="-1" soluce="48" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="9" result="-1" soluce="72" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="7" result="-1" soluce="56" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="5" result="-1" soluce="40" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="10" result="-1" soluce="80" resultOnRight="true"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.3/@levels.0/@tasks.1"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="8" rightOperand="1" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="12" rightOperand="1" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="45" rightOperand="6" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="30" rightOperand="4" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="64" rightOperand="8" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="24" rightOperand="3" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="56" rightOperand="7" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="40" rightOperand="5" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="51" rightOperand="7" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="72" rightOperand="9" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="64" rightOperand="8" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="15" rightOperand="2" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="16" rightOperand="2" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="32" rightOperand="4" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="80" rightOperand="10" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="48" rightOperand="6" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="26" rightOperand="3" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="38" rightOperand="5" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="68" rightOperand="9" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="80" rightOperand="10" leftOperand="8" resultOnRight="true"/>
+          </resultsbytask>
+        </results>
+      </currentobjectivelevels>
+      <currentobjectivelevels achieved="false">
+        <objective href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REC-O5"/>
+        <level xsi:type="generator:MTLevel" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REC-O5-N1"/>
+        <results>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.4/@levels.0/@tasks.0"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="9" rightOperand="8" result="-1" soluce="72" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="9" rightOperand="3" result="-1" soluce="27" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="9" rightOperand="9" result="-1" soluce="81" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="9" rightOperand="1" result="-1" soluce="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="9" rightOperand="10" result="-1" soluce="90" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="9" rightOperand="7" result="-1" soluce="63" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="9" rightOperand="4" result="-1" soluce="36" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="9" rightOperand="2" result="-1" soluce="18" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="9" rightOperand="6" result="-1" soluce="54" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="9" rightOperand="5" result="-1" soluce="45" resultOnRight="true"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1/@objectives.4/@levels.0/@tasks.1"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="45" rightOperand="5" leftOperand="9" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="18" rightOperand="2" leftOperand="9" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="60" rightOperand="7" leftOperand="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="47" rightOperand="5" leftOperand="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="50" rightOperand="6" leftOperand="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="90" rightOperand="10" leftOperand="9" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="16" rightOperand="2" leftOperand="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="81" rightOperand="9" leftOperand="9" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="30" rightOperand="3" leftOperand="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="70" rightOperand="8" leftOperand="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="36" rightOperand="4" leftOperand="9" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="34" rightOperand="4" leftOperand="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="86" rightOperand="9" leftOperand="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="89" rightOperand="10" leftOperand="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="9" rightOperand="1" leftOperand="9" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="27" rightOperand="3" leftOperand="9" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="54" rightOperand="6" leftOperand="9" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="13" rightOperand="1" leftOperand="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="72" rightOperand="8" leftOperand="9" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="63" rightOperand="7" leftOperand="9" soluce="true" resultOnRight="true"/>
+          </resultsbytask>
+        </results>
       </currentobjectivelevels>
     </progression>
-    <learningpath
-        href="../LearningDomain.xmi#//@learningpaths.1"/>
+    <learningpath href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.1"/>
   </learnerplayer>
 </generator:GenerationContext>

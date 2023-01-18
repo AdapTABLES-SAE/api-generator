@@ -64,6 +64,26 @@ public class ModelsManager {
 		LOGGER.info("Saving '" + outFileName + "' file : OK");
 	}
 	
+	public void saveContextModel() {
+		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> map = registry.getExtensionToFactoryMap();
+		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
+		map.put("xmi", toSave);
+		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
+		//map.put(XMLResource.OPTION_ENCODING, "UTF-8");
+		
+		Resource resource = resourceSet.createResource(URI.createURI(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]));
+		resource.getContents().add(context);
+		try {
+			resource.save(map);
+		}catch (IOException e) {
+			LOGGER.severe("Error while saving : " + INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]);
+			e.printStackTrace();
+		}
+		
+		LOGGER.info("Saving '"+INPUT_MODELS_PATHS[0]+"' file : OK");
+	}
+		
 	private void loadInputModels() {
 		GeneratorPackage.eINSTANCE.eClass();
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;

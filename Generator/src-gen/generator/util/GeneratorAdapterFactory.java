@@ -182,11 +182,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseQuestion(Question object) {
-			return createQuestionAdapter();
-		}
-
-		@Override
 		public Adapter caseResponseModality(ResponseModality object) {
 			return createResponseModalityAdapter();
 		}
@@ -309,6 +304,36 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseMTQFMembership(MTQFMembership object) {
 			return createMTQFMembershipAdapter();
+		}
+
+		@Override
+		public Adapter caseQuestionedFact(QuestionedFact object) {
+			return createQuestionedFactAdapter();
+		}
+
+		@Override
+		public Adapter caseMTQeFCompletion1(MTQeFCompletion1 object) {
+			return createMTQeFCompletion1Adapter();
+		}
+
+		@Override
+		public Adapter caseMTQeFCompletion2(MTQeFCompletion2 object) {
+			return createMTQeFCompletion2Adapter();
+		}
+
+		@Override
+		public Adapter caseMTQeFRebuild(MTQeFRebuild object) {
+			return createMTQeFRebuildAdapter();
+		}
+
+		@Override
+		public Adapter caseMTQeFIdentication(MTQeFIdentication object) {
+			return createMTQeFIdenticationAdapter();
+		}
+
+		@Override
+		public Adapter caseMTQeFMembership(MTQeFMembership object) {
+			return createMTQeFMembershipAdapter();
 		}
 
 		@Override
@@ -649,20 +674,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPositionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.Question <em>Question</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.Question
-	 * @generated
-	 */
-	public Adapter createQuestionAdapter() {
 		return null;
 	}
 
@@ -1013,6 +1024,90 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMTQFMembershipAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.QuestionedFact <em>Questioned Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.QuestionedFact
+	 * @generated
+	 */
+	public Adapter createQuestionedFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTQeFCompletion1 <em>MT Qe FCompletion1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTQeFCompletion1
+	 * @generated
+	 */
+	public Adapter createMTQeFCompletion1Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTQeFCompletion2 <em>MT Qe FCompletion2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTQeFCompletion2
+	 * @generated
+	 */
+	public Adapter createMTQeFCompletion2Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTQeFRebuild <em>MT Qe FRebuild</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTQeFRebuild
+	 * @generated
+	 */
+	public Adapter createMTQeFRebuildAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTQeFIdentication <em>MT Qe FIdentication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTQeFIdentication
+	 * @generated
+	 */
+	public Adapter createMTQeFIdenticationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MTQeFMembership <em>MT Qe FMembership</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MTQeFMembership
+	 * @generated
+	 */
+	public Adapter createMTQeFMembershipAdapter() {
 		return null;
 	}
 

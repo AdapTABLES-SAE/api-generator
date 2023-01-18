@@ -5,12 +5,8 @@ package generator.impl;
 import generator.GeneratorPackage;
 import generator.MTQFCompletion1;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.Objects;
-
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -28,7 +24,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link generator.impl.MTQFCompletion1Impl#getResult <em>Result</em>}</li>
  *   <li>{@link generator.impl.MTQFCompletion1Impl#getSoluce <em>Soluce</em>}</li>
  *   <li>{@link generator.impl.MTQFCompletion1Impl#isResultOnRight <em>Result On Right</em>}</li>
- *   <li>{@link generator.impl.MTQFCompletion1Impl#getNO_VALUE <em>NO VALUE</em>}</li>
  * </ul>
  *
  * @generated
@@ -133,26 +128,6 @@ public class MTQFCompletion1Impl extends QuestionableFactImpl implements MTQFCom
 	 * @ordered
 	 */
 	protected boolean resultOnRight = RESULT_ON_RIGHT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getNO_VALUE() <em>NO VALUE</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNO_VALUE()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int NO_VALUE_EDEFAULT = -1;
-
-	/**
-	 * The cached value of the '{@link #getNO_VALUE() <em>NO VALUE</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNO_VALUE()
-	 * @generated
-	 * @ordered
-	 */
-	protected int nO_VALUE = NO_VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -288,32 +263,6 @@ public class MTQFCompletion1Impl extends QuestionableFactImpl implements MTQFCom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNO_VALUE() {
-		return nO_VALUE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String getQuestionableFact() {
-		String left = getLeftOperand() == getNO_VALUE() ? "?" : getLeftOperand() + "";
-		String right = getRightOperand() == getNO_VALUE() ? "?" : getRightOperand() + "";
-		String res = getResult() == getNO_VALUE() ? "?" : getResult() + "";
-
-		if (resultOnRight) {
-			return left + " x " + right + " = " + res + " (" + soluce + ")";
-		} else {
-			return res + " = " + left + " x " + right + " (" + soluce + ")";
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -327,8 +276,6 @@ public class MTQFCompletion1Impl extends QuestionableFactImpl implements MTQFCom
 			return getSoluce();
 		case GeneratorPackage.MTQF_COMPLETION1__RESULT_ON_RIGHT:
 			return isResultOnRight();
-		case GeneratorPackage.MTQF_COMPLETION1__NO_VALUE:
-			return getNO_VALUE();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -405,24 +352,8 @@ public class MTQFCompletion1Impl extends QuestionableFactImpl implements MTQFCom
 			return soluce != SOLUCE_EDEFAULT;
 		case GeneratorPackage.MTQF_COMPLETION1__RESULT_ON_RIGHT:
 			return resultOnRight != RESULT_ON_RIGHT_EDEFAULT;
-		case GeneratorPackage.MTQF_COMPLETION1__NO_VALUE:
-			return nO_VALUE != NO_VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-		case GeneratorPackage.MTQF_COMPLETION1___GET_QUESTIONABLE_FACT:
-			return getQuestionableFact();
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -446,28 +377,21 @@ public class MTQFCompletion1Impl extends QuestionableFactImpl implements MTQFCom
 		result.append(soluce);
 		result.append(", resultOnRight: ");
 		result.append(resultOnRight);
-		result.append(", NO_VALUE: ");
-		result.append(nO_VALUE);
 		result.append(')');
 		return result.toString();
 	}
 
 	@Override
-	public int hashCode() {
-		return Objects.hash(leftOperand, nO_VALUE, result, resultOnRight, rightOperand, soluce);
-	}
+	public String getQuestionableFact() {
+        String left = getLeftOperand() == -1 ? "?" : getLeftOperand() + "";
+        String right = getRightOperand() == -1 ? "?" : getRightOperand() + "";
+        String res = getResult() == -1 ? "?" : getResult() + "";
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		MTQFCompletion1Impl other = (MTQFCompletion1Impl) obj;
-		return leftOperand == other.leftOperand && nO_VALUE == other.nO_VALUE && result == other.result
-				&& resultOnRight == other.resultOnRight && rightOperand == other.rightOperand && soluce == other.soluce;
+        if (resultOnRight) {
+            return left + " x " + right + " = " + res + " (" + soluce + ")";
+        } else {
+            return res + " = " + left + " x " + right + " (" + soluce + ")";
+        }
 	}
 
 } //MTQFCompletion1Impl

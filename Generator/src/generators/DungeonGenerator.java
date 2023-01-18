@@ -14,17 +14,18 @@ import generator.ATask;
 import generator.Directions;
 import generator.Dungeon;
 import generator.DungeonMode;
+import generator.QuestionedFact;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
 import generator.impl.DungeonImpl;
-import generator.impl.QuestionImpl;
 import generator.impl.RoomAccessImpl;
 import generator.impl.RoomImpl;
 import managers.EducationElementsManager;
 import managers.GridManager;
 import managers.ModelsManager;
 import structures.Coordinate;
+import structures.TaskFactPair;
 
 public class DungeonGenerator {
 	private Dungeon generatedDungeon; 
@@ -67,17 +68,17 @@ public class DungeonGenerator {
 	
 		boolean backtrack = false;
 		Coordinate nextPosition = null;
-		ATask task = null;
+		TaskFactPair factsToQuestionByRoom = null;
 		Directions entry = null; 
 		Directions exit = null;
 		RoomType roomType = null;
 		
-		List<ATask> orderedTasks = eeManager.getOrderedTasks();
+		List<TaskFactPair> factsToQuestion = eeManager.getFactsToQuestion();
 	
 		while(dungeonRooms.size() < numberofrooms + 1) {
 			nextPosition = gridManager.getNextCoord(dungeonRooms.getLast().getKey(), dungeonRooms.getLast().getValue());
 			if(!backtrack) {
-				task = orderedTasks.get(dungeonRooms.size() - 1);
+				factsToQuestionByRoom = factsToQuestion.get(dungeonRooms.size() - 1);
 				roomAllowedDirections.add(gridManager.getAllowedDirections(nextPosition, dungeonRooms.getLast().getValue())); 
 			}
 			if(roomAllowedDirections.getLast().isEmpty()) {
@@ -93,7 +94,6 @@ public class DungeonGenerator {
 				}
 			}else {
 				backtrack = false;
-
 				roomType = null;
 				while(roomType == null) {
 					entry = chooseEntryDirection(roomAllowedDirections);
@@ -102,17 +102,10 @@ public class DungeonGenerator {
 					}else {
 						exit = Directions.NONE;
 					}
-					roomType = getCompatibleRoomType(entry, exit); 
+					roomType = getCompatibleRoomType(entry, exit, factsToQuestionByRoom.getNumberOfFacts()); 
 				}
 				Coordinate validCoord = gridManager.getValidCoordinates(entry, nextPosition);
-				/*if(roomType instanceof LargeRoomType) {
-					System.out.println(gridManager.occupiedCoordinates.containsKey(validCoord));
-					System.out.println(gridManager.occupiedCoordinates.containsKey(new Coordinate(validCoord.getX(), validCoord.getY()+1)));
-					System.out.println(gridManager.occupiedCoordinates.containsKey(new Coordinate(validCoord.getX()+1, validCoord.getY()+1)));
-					System.out.println(gridManager.occupiedCoordinates.containsKey(new Coordinate(validCoord.getX()+1, validCoord.getY())));
-				}
-				System.out.println(gridManager.occupiedCoordinates.containsKey(validCoord));*/
-				Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, task, dungeonRooms.getLast().getKey().getRoomaccess().get(dungeonRooms.getLast().getKey().getRoomaccess().size()-1), entry, exit);
+				Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, factsToQuestionByRoom, dungeonRooms.getLast().getKey().getRoomaccess().get(dungeonRooms.getLast().getKey().getRoomaccess().size()-1), entry, exit);
 				dungeonRooms.add(Map.entry(room, exit));
 			}
 		}
@@ -147,12 +140,12 @@ public class DungeonGenerator {
 	 * @param exit
 	 * @return Valid RoomType
 	 */
-	private RoomType getCompatibleRoomType(Directions entry, Directions exit) {
+	private RoomType getCompatibleRoomType(Directions entry, Directions exit, int numberOfFact) {
 		List<RoomType> roomTypes = new ArrayList<>(modelAccess.gameDescription.getRoomtypes().getRoomtypes());
 		roomTypes = roomTypes.stream().filter(e -> e.getDirections().size() > 1).collect(Collectors.toList());
 		
 		for (RoomType roomType : new ArrayList<>(roomTypes)) {
-			if(!roomType.getDirections().contains(entry) || (!exit.equals(Directions.NONE) && !roomType.getDirections().contains(exit))) {
+			if(!roomType.getDirections().contains(entry) || (!exit.equals(Directions.NONE) && !roomType.getDirections().contains(exit) || (roomType.getPositions().size() < numberOfFact))) {
 				roomTypes.remove(roomType);
 			}
 		}
@@ -181,18 +174,20 @@ public class DungeonGenerator {
 	 * @param entryDirection
 	 * @param exitDirection
 	 * @return a Room
-	 */
-	private Room createRoom(int x, int y, RoomType roomT, ATask task, RoomAccess previousRoomExitAccess,  Directions entryDirection, Directions exitDirection) {
+	 */ // TODO : S'occuper des positions des QUESTIONS 
+	private Room createRoom(int x, int y, RoomType roomT, TaskFactPair factsToQuestion, RoomAccess previousRoomExitAccess,  Directions entryDirection, Directions exitDirection) {
 		Room r = new RoomImpl();
 		r.setRoomtype(roomT);
 		r.setX(x);
 		r.setY(y);
 		
-		if(task != null) {
-			r.setQuestion(new QuestionImpl());
-			r.getQuestion().setPosition(roomT.getPositions().get(random.nextInt(roomT.getPositions().size())));
-			r.getQuestion().setIncompleteFact(task.getType().getLiteral());
-			r.setTask(task);
+		if(factsToQuestion != null) {
+			for (QuestionedFact questionedFact : factsToQuestion.getFacts()) {
+				/*Position p = null;
+				questionedFact.setPosition(p);*/
+			}
+			r.getQuestionedFacts().addAll(factsToQuestion.getFacts());
+			r.setTask(factsToQuestion.getTask());
 		}
 				
 		RoomAccess ra = new RoomAccessImpl();

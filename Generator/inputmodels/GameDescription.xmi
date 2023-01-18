@@ -31,6 +31,10 @@
         name="RegularRoom1">
       <positions
           name="POSQ1"/>
+      <positions
+          name="POSQ2"/>
+      <positions
+          name="POSQ3"/>
       <directions>SOUTH</directions>
       <directions>EAST</directions>
       <directions>NORTH</directions>
@@ -41,6 +45,10 @@
         name="LargeSimpleRoom1">
       <positions
           name="POSQ1"/>
+      <positions
+          name="POSQ2"/>
+      <positions
+          name="POSQ3"/>
       <directions>SOUTH_EAST</directions>
       <directions>SOUTH_WEST</directions>
       <directions>NORTH_EAST</directions>

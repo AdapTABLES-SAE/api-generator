@@ -97,8 +97,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createCurrentObjectiveLevel();
 		case GeneratorPackage.POSITION:
 			return createPosition();
-		case GeneratorPackage.QUESTION:
-			return createQuestion();
 		case GeneratorPackage.MULTIPLE_CHOICE:
 			return createMultipleChoice();
 		case GeneratorPackage.ENTER_RESPONSE:
@@ -133,6 +131,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createMTQFIdentification();
 		case GeneratorPackage.MTQF_MEMBERSHIP:
 			return createMTQFMembership();
+		case GeneratorPackage.MT_QE_FCOMPLETION1:
+			return createMTQeFCompletion1();
+		case GeneratorPackage.MT_QE_FCOMPLETION2:
+			return createMTQeFCompletion2();
+		case GeneratorPackage.MT_QE_FREBUILD:
+			return createMTQeFRebuild();
+		case GeneratorPackage.MT_QE_FIDENTICATION:
+			return createMTQeFIdentication();
+		case GeneratorPackage.MT_QE_FMEMBERSHIP:
+			return createMTQeFMembership();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -401,16 +409,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Question createQuestion() {
-		QuestionImpl question = new QuestionImpl();
-		return question;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public MultipleChoice createMultipleChoice() {
 		MultipleChoiceImpl multipleChoice = new MultipleChoiceImpl();
 		return multipleChoice;
@@ -574,6 +572,56 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public MTQFMembership createMTQFMembership() {
 		MTQFMembershipImpl mtqfMembership = new MTQFMembershipImpl();
 		return mtqfMembership;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTQeFCompletion1 createMTQeFCompletion1() {
+		MTQeFCompletion1Impl mtQeFCompletion1 = new MTQeFCompletion1Impl();
+		return mtQeFCompletion1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTQeFCompletion2 createMTQeFCompletion2() {
+		MTQeFCompletion2Impl mtQeFCompletion2 = new MTQeFCompletion2Impl();
+		return mtQeFCompletion2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTQeFRebuild createMTQeFRebuild() {
+		MTQeFRebuildImpl mtQeFRebuild = new MTQeFRebuildImpl();
+		return mtQeFRebuild;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTQeFIdentication createMTQeFIdentication() {
+		MTQeFIdenticationImpl mtQeFIdentication = new MTQeFIdenticationImpl();
+		return mtQeFIdentication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MTQeFMembership createMTQeFMembership() {
+		MTQeFMembershipImpl mtQeFMembership = new MTQeFMembershipImpl();
+		return mtQeFMembership;
 	}
 
 	/**

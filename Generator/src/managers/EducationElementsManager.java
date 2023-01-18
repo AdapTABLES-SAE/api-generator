@@ -1,34 +1,63 @@
 package managers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 import generator.ATask;
 import generator.CurrentObjectiveLevel;
+import generator.LearnerPlayer;
+import generator.LearningPath;
 import generator.Level;
 import generator.Objective;
+import generator.QuestionedFact;
 import generator.ResultsByTask;
+import generator.impl.ProgressionImpl;
+import generator.impl.ResultsByTaskImpl;
+import generator.impl.ResultsImpl;
+import structures.TaskFactPair;
 
 public class EducationElementsManager {
-
-	private CurrentObjectiveLevel chosenObjectiveLevel;
+	
+	private LearnerPlayer learnerPlayer;
+	public CurrentObjectiveLevel chosenObjectiveLevel;
+	private ModelsManager modelAccess; 
 	/**
 	 * Structure donnant pour chaque type de tache, le nombre de piece necessaires
 	 */
-	private Map<ATask, Double> nbRoomsToTask; 
-	
+	private Map<ResultsByTask, Double> nbRoomsToTask; 
 	private double nbRooms;
+	private List<TaskFactPair> factsToQuestionPerRoom;
 	
-	public EducationElementsManager(int nbRooms) {
-		this.nbRooms = nbRooms;
+	public EducationElementsManager(ModelsManager modelAccess) {
+		this.nbRooms = modelAccess.context.getGamecontext().getNumberOfRooms();
+		this.modelAccess = modelAccess;
+		this.learnerPlayer = this.modelAccess.context.getLearnerplayer();
 		this.nbRoomsToTask = new HashMap<>();
+		this.factsToQuestionPerRoom = new ArrayList<>();
 	}
 
+	/**
+	 * Enregistre le couple objectif/niveau et l'ajoute à la progression de l'apprenant s'il est nouveau
+	 * @param chosenObjectiveLevel
+	 */
 	public void setChosenObjectiveLevel(CurrentObjectiveLevel chosenObjectiveLevel) {
 		this.chosenObjectiveLevel = chosenObjectiveLevel;
+		if(learnerPlayer.getProgression() != null && !learnerPlayer.getProgression().getCurrentobjectivelevels().contains(chosenObjectiveLevel)) {
+			learnerPlayer.getProgression().getCurrentobjectivelevels().add(chosenObjectiveLevel);
+		}
+	}
+	
+	public void addLearnerNewCurrentObjectifLevel(CurrentObjectiveLevel currentObjectiveLevel) {
+		if(!learnerPlayer.getProgression().getCurrentobjectivelevels().contains(currentObjectiveLevel)) {
+			learnerPlayer.getProgression().getCurrentobjectivelevels().add(currentObjectiveLevel);
+		}
+	}
+	
+	public LearningPath getLearnerLearningPath() {
+		return learnerPlayer.getLearningpath();
 	}
 
 	public Level getLevel() {
@@ -39,10 +68,6 @@ public class EducationElementsManager {
 		return this.chosenObjectiveLevel.getObjective();
 	}
 	
-	public Map<ATask, Double> getNbRoomsToTaskType() {
-		return nbRoomsToTask;
-	}
-
 	public List<ATask> getTasks() {
 		return chosenObjectiveLevel.getLevel().getTasks();
 	}
@@ -51,7 +76,7 @@ public class EducationElementsManager {
 	 * Fourni la liste des types de taches (avec doublons : une par salle du donjon) ordonée via une <heuristique>  
 	 * @return
 	 */
-	public List<ATask> getOrderedTasks(){
+	/*private List<ATask> getOrderedTasks(){ // TODO : THink about how to do that properly 
 		
 		List<ATask> taskTypes = new ArrayList<>(); 
 		for (ATask task : nbRoomsToTask.keySet()) {
@@ -61,27 +86,39 @@ public class EducationElementsManager {
 		}
 		//Collections.shuffle(taskTypes);
 		return shuffle(taskTypes);
-	}
+	}*/
 	
-	private List<ATask> shuffle(List<ATask> tasks){
-		Random rand = new Random();
-		List<ATask> tasksShuffled = new ArrayList<>();
-		int number = tasks.size();
-		int j;
-		while (tasksShuffled.size() != number) {
-			j = rand.nextInt(tasks.size()); 
-			tasksShuffled.add(tasks.get(j));
-			tasks.remove(j);
-		}
-		return tasksShuffled;
-	}
-	
-	public void addRoom2Task(ATask task, double coeffAdditional) {
-		if(nbRoomsToTask.containsKey(task)) {
-			nbRoomsToTask.put(task, nbRoomsToTask.get(task) +
-					((task.getPercentOfApparition()*coeffAdditional)*nbRooms)/100);
+	public double getNbRoomFor(ResultsByTask rbt) {
+		if(nbRoomsToTask.containsKey(rbt)) {
+			return nbRoomsToTask.get(rbt);
 		}else {
-			nbRoomsToTask.put(task, ((task.getPercentOfApparition()*coeffAdditional)*nbRooms)/100);
+			return -1.;
+		}
+	}
+	
+	public List<ResultsByTask> getResultsByTasksForRooms(){
+		/*List<ResultsByTask> rbts = new ArrayList<>();
+		for (Resu task : nbRoomsToTask.keySet()) {
+			for (ResultsByTask resultsByTask : getLearnerResultsByTasks()) {
+				if(resultsByTask.getTask().equals(task)) {
+					rbts.add(resultsByTask);
+				}
+			}
+		}*/
+		return new ArrayList<>(nbRoomsToTask.keySet());
+	}
+	
+	public List<TaskFactPair> getFactsToQuestion(){		
+		return factsToQuestionPerRoom;
+	}
+	
+	public void addRoom2Task(ResultsByTask rbt, double coeffAdditional) throws Exception {
+		//ResultsByTask rtask = getAssociatedResultByTask(task);
+		if(nbRoomsToTask.containsKey(rbt)) {
+			nbRoomsToTask.put(rbt, nbRoomsToTask.get(rbt) +
+					((rbt.getTask().getPercentOfApparition()*coeffAdditional)*nbRooms)/100);
+		}else {
+			nbRoomsToTask.put(rbt, ((rbt.getTask().getPercentOfApparition()*coeffAdditional)*nbRooms)/100);
 		}
 	}
 	
@@ -107,12 +144,72 @@ public class EducationElementsManager {
 		return 0;
 	}
 	
+	public void instanciateQFbyTasks() {
+		if(learnerPlayer.getProgression() == null) {
+			learnerPlayer.setProgression(new ProgressionImpl());
+		}
+		if(!learnerPlayer.getProgression().getCurrentobjectivelevels().contains(chosenObjectiveLevel)) {
+			learnerPlayer.getProgression().getCurrentobjectivelevels().add(this.chosenObjectiveLevel);
+		}
+		if(chosenObjectiveLevel.getResults() == null) {
+			chosenObjectiveLevel.setResults(new ResultsImpl());
+			for(ATask task: this.getLevel().getTasks()) {
+				ResultsByTask rbt = new ResultsByTaskImpl();
+				rbt.setTask(task);
+				chosenObjectiveLevel.getResults().getResultsbytask().add(rbt);
+			}
+		}
+		
+		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
+			if(col.getResults() == null) {
+				col.setResults(new ResultsImpl());
+			}
+			addResultByTasks(col);
+		}
+	}
+	
+	private void addResultByTasks(CurrentObjectiveLevel currentObjectiveLevel) {
+		for(ATask task: currentObjectiveLevel.getLevel().getTasks()) {
+			if(!containsResultBytask(currentObjectiveLevel, task)) {
+				ResultsByTask rbt = new ResultsByTaskImpl();
+				rbt.setTask(task);
+				currentObjectiveLevel.getResults().getResultsbytask().add(rbt);
+			}
+		}
+	}
+	
+	private boolean containsResultBytask(CurrentObjectiveLevel currentObjectiveLevel, ATask task) {
+		for (ResultsByTask rbt : currentObjectiveLevel.getResults().getResultsbytask()) {
+			if(rbt.getTask().equals(task)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public List<ResultsByTask> getLearnerResultsByTasks(){		
+		return chosenObjectiveLevel.getResults().getResultsbytask();
+	}
+	
+	public void saveLearnerModel() {
+		modelAccess.context.setLearnerplayer(learnerPlayer);
+		modelAccess.saveContextModel();
+	}
+	
+	public void addFactToQuestion(ATask task, List<QuestionedFact> qEfacts) {
+		this.factsToQuestionPerRoom.add(new TaskFactPair(task, qEfacts));
+	}
+	
+	public void addFactToQuestion(ATask task, QuestionedFact qEfact) {
+		this.factsToQuestionPerRoom.add(new TaskFactPair(task, Arrays.asList(qEfact)));
+	}
+	
 	@Override
 	public String toString() {
 		String s = "Objectif : " + getObjective().getName() + 
 				"\nNiveau : " + getLevel().getID() + "\nSalles/Taches : \n";
-		for (ATask tt : nbRoomsToTask.keySet()) {
-			s += "\t"+ nbRoomsToTask.get(tt) + " room of type : " + tt + "\n";
+		for (ResultsByTask tt : nbRoomsToTask.keySet()) {
+			s += "\t"+ nbRoomsToTask.get(tt) + " room of type : " + tt.getTask().getType() + "\n";
 		}
 		return s;
 	}

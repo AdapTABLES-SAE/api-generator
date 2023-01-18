@@ -5,11 +5,7 @@ package generator.impl;
 import generator.GeneratorPackage;
 import generator.MTQFRebuild;
 
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -222,19 +218,6 @@ public class MTQFRebuildImpl extends QuestionableFactImpl implements MTQFRebuild
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String getQuestionableFact() {
-		if (resultOnRight) {
-			return "? x ? = ? (" + getSoluceLeft() + " x " + getSoluceRight() + " = " + getSoluceRes() + ")";
-		} else {
-			return "? = ? x ? (" + getSoluceRes() + " = " + getSoluceLeft() + " x " + getSoluceRight() + ")";
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -326,20 +309,6 @@ public class MTQFRebuildImpl extends QuestionableFactImpl implements MTQFRebuild
 	 * @generated
 	 */
 	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-		case GeneratorPackage.MTQF_REBUILD___GET_QUESTIONABLE_FACT:
-			return getQuestionableFact();
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String toString() {
 		if (eIsProxy())
 			return super.toString();
@@ -355,6 +324,15 @@ public class MTQFRebuildImpl extends QuestionableFactImpl implements MTQFRebuild
 		result.append(soluceRight);
 		result.append(')');
 		return result.toString();
+	}
+
+	@Override
+	public String getQuestionableFact() {
+        if (resultOnRight) {
+            return "? x ? = ? (" + getSoluceLeft() + " x " + getSoluceRight() + " = " + getSoluceRes() + ")";
+        } else {
+            return "? = ? x ? (" + getSoluceRes() + " = " + getSoluceLeft() + " x " + getSoluceRight() + ")";
+        }
 	}
 
 } //MTQFRebuildImpl

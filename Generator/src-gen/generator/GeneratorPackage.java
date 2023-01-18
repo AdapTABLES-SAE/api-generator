@@ -298,13 +298,13 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM__ROOMTYPE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Question</b></em>' containment reference.
+	 * The feature id for the '<em><b>Questioned Facts</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM__QUESTION = 4;
+	int ROOM__QUESTIONED_FACTS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -1019,7 +1019,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getATask()
 	 * @generated
 	 */
-	int ATASK = 28;
+	int ATASK = 27;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -1040,13 +1040,13 @@ public interface GeneratorPackage extends EPackage {
 	int ATASK__NB_CONSECUTIVE_SUCCESS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Responsemodalities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATASK__RESPONSEMODALITIES = 2;
+	int ATASK__RESPONSE_MODALITY = 2;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -1092,7 +1092,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCompletion1Task()
 	 * @generated
 	 */
-	int COMPLETION1_TASK = 29;
+	int COMPLETION1_TASK = 28;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -1113,13 +1113,13 @@ public interface GeneratorPackage extends EPackage {
 	int COMPLETION1_TASK__NB_CONSECUTIVE_SUCCESS = ATASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
-	 * The feature id for the '<em><b>Responsemodalities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION1_TASK__RESPONSEMODALITIES = ATASK__RESPONSEMODALITIES;
+	int COMPLETION1_TASK__RESPONSE_MODALITY = ATASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -1195,13 +1195,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_COMPLETION1__NB_CONSECUTIVE_SUCCESS = COMPLETION1_TASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
-	 * The feature id for the '<em><b>Responsemodalities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1__RESPONSEMODALITIES = COMPLETION1_TASK__RESPONSEMODALITIES;
+	int MT_COMPLETION1__RESPONSE_MODALITY = COMPLETION1_TASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -1515,52 +1515,6 @@ public interface GeneratorPackage extends EPackage {
 	int POSITION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.QuestionImpl <em>Question</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.QuestionImpl
-	 * @see generator.impl.GeneratorPackageImpl#getQuestion()
-	 * @generated
-	 */
-	int QUESTION = 23;
-
-	/**
-	 * The feature id for the '<em><b>Position</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__POSITION = 0;
-
-	/**
-	 * The feature id for the '<em><b>Incomplete Fact</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__INCOMPLETE_FACT = 1;
-
-	/**
-	 * The number of structural features of the '<em>Question</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Question</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.ResponseModalityImpl <em>Response Modality</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1568,7 +1522,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResponseModality()
 	 * @generated
 	 */
-	int RESPONSE_MODALITY = 24;
+	int RESPONSE_MODALITY = 23;
 
 	/**
 	 * The number of structural features of the '<em>Response Modality</em>' class.
@@ -1596,7 +1550,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMultipleChoice()
 	 * @generated
 	 */
-	int MULTIPLE_CHOICE = 25;
+	int MULTIPLE_CHOICE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1651,7 +1605,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEnterResponse()
 	 * @generated
 	 */
-	int ENTER_RESPONSE = 26;
+	int ENTER_RESPONSE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1688,7 +1642,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRoomTypes()
 	 * @generated
 	 */
-	int ROOM_TYPES = 27;
+	int ROOM_TYPES = 26;
 
 	/**
 	 * The feature id for the '<em><b>Roomtypes</b></em>' containment reference list.
@@ -1725,7 +1679,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCompletion2Task()
 	 * @generated
 	 */
-	int COMPLETION2_TASK = 30;
+	int COMPLETION2_TASK = 29;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -1746,13 +1700,13 @@ public interface GeneratorPackage extends EPackage {
 	int COMPLETION2_TASK__NB_CONSECUTIVE_SUCCESS = ATASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
-	 * The feature id for the '<em><b>Responsemodalities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION2_TASK__RESPONSEMODALITIES = ATASK__RESPONSEMODALITIES;
+	int COMPLETION2_TASK__RESPONSE_MODALITY = ATASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -1807,7 +1761,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getReconstructionTask()
 	 * @generated
 	 */
-	int RECONSTRUCTION_TASK = 31;
+	int RECONSTRUCTION_TASK = 30;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -1828,13 +1782,13 @@ public interface GeneratorPackage extends EPackage {
 	int RECONSTRUCTION_TASK__NB_CONSECUTIVE_SUCCESS = ATASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
-	 * The feature id for the '<em><b>Responsemodalities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECONSTRUCTION_TASK__RESPONSEMODALITIES = ATASK__RESPONSEMODALITIES;
+	int RECONSTRUCTION_TASK__RESPONSE_MODALITY = ATASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -1889,7 +1843,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getIdentificationTask()
 	 * @generated
 	 */
-	int IDENTIFICATION_TASK = 32;
+	int IDENTIFICATION_TASK = 31;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -1910,13 +1864,13 @@ public interface GeneratorPackage extends EPackage {
 	int IDENTIFICATION_TASK__NB_CONSECUTIVE_SUCCESS = ATASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
-	 * The feature id for the '<em><b>Responsemodalities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IDENTIFICATION_TASK__RESPONSEMODALITIES = ATASK__RESPONSEMODALITIES;
+	int IDENTIFICATION_TASK__RESPONSE_MODALITY = ATASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -1980,7 +1934,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMembershipIDTask()
 	 * @generated
 	 */
-	int MEMBERSHIP_ID_TASK = 33;
+	int MEMBERSHIP_ID_TASK = 32;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2001,13 +1955,13 @@ public interface GeneratorPackage extends EPackage {
 	int MEMBERSHIP_ID_TASK__NB_CONSECUTIVE_SUCCESS = ATASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
-	 * The feature id for the '<em><b>Responsemodalities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEMBERSHIP_ID_TASK__RESPONSEMODALITIES = ATASK__RESPONSEMODALITIES;
+	int MEMBERSHIP_ID_TASK__RESPONSE_MODALITY = ATASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -2071,7 +2025,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTCompletion2()
 	 * @generated
 	 */
-	int MT_COMPLETION2 = 34;
+	int MT_COMPLETION2 = 33;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2092,13 +2046,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_COMPLETION2__NB_CONSECUTIVE_SUCCESS = COMPLETION2_TASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
-	 * The feature id for the '<em><b>Responsemodalities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2__RESPONSEMODALITIES = COMPLETION2_TASK__RESPONSEMODALITIES;
+	int MT_COMPLETION2__RESPONSE_MODALITY = COMPLETION2_TASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -2162,7 +2116,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTRecontruction()
 	 * @generated
 	 */
-	int MT_RECONTRUCTION = 35;
+	int MT_RECONTRUCTION = 34;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2183,13 +2137,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_RECONTRUCTION__NB_CONSECUTIVE_SUCCESS = RECONSTRUCTION_TASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
-	 * The feature id for the '<em><b>Responsemodalities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__RESPONSEMODALITIES = RECONSTRUCTION_TASK__RESPONSEMODALITIES;
+	int MT_RECONTRUCTION__RESPONSE_MODALITY = RECONSTRUCTION_TASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -2244,7 +2198,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTIdentification()
 	 * @generated
 	 */
-	int MT_IDENTIFICATION = 36;
+	int MT_IDENTIFICATION = 35;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2265,13 +2219,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_IDENTIFICATION__NB_CONSECUTIVE_SUCCESS = IDENTIFICATION_TASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
-	 * The feature id for the '<em><b>Responsemodalities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_IDENTIFICATION__RESPONSEMODALITIES = IDENTIFICATION_TASK__RESPONSEMODALITIES;
+	int MT_IDENTIFICATION__RESPONSE_MODALITY = IDENTIFICATION_TASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -2344,7 +2298,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTMembership()
 	 * @generated
 	 */
-	int MT_MEMBERSHIP = 37;
+	int MT_MEMBERSHIP = 36;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2365,13 +2319,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_MEMBERSHIP__NB_CONSECUTIVE_SUCCESS = MEMBERSHIP_ID_TASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
-	 * The feature id for the '<em><b>Responsemodalities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_MEMBERSHIP__RESPONSEMODALITIES = MEMBERSHIP_ID_TASK__RESPONSEMODALITIES;
+	int MT_MEMBERSHIP__RESPONSE_MODALITY = MEMBERSHIP_ID_TASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -2435,7 +2389,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResults()
 	 * @generated
 	 */
-	int RESULTS = 38;
+	int RESULTS = 37;
 
 	/**
 	 * The feature id for the '<em><b>Resultsbytask</b></em>' containment reference list.
@@ -2472,7 +2426,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultsByTask()
 	 * @generated
 	 */
-	int RESULTS_BY_TASK = 39;
+	int RESULTS_BY_TASK = 38;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -2484,13 +2438,13 @@ public interface GeneratorPackage extends EPackage {
 	int RESULTS_BY_TASK__TASK = 0;
 
 	/**
-	 * The feature id for the '<em><b>Questionedfacts</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Questionable Facts</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESULTS_BY_TASK__QUESTIONEDFACTS = 1;
+	int RESULTS_BY_TASK__QUESTIONABLE_FACTS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Sucess Percent</b></em>' attribute.
@@ -2536,7 +2490,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQFResults()
 	 * @generated
 	 */
-	int QF_RESULTS = 40;
+	int QF_RESULTS = 39;
 
 	/**
 	 * The number of structural features of the '<em>QF Results</em>' class.
@@ -2564,7 +2518,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTFact()
 	 * @generated
 	 */
-	int MT_FACT = 41;
+	int MT_FACT = 40;
 
 	/**
 	 * The feature id for the '<em><b>Table</b></em>' attribute.
@@ -2619,7 +2573,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTResultFact()
 	 * @generated
 	 */
-	int MT_RESULT_FACT = 42;
+	int MT_RESULT_FACT = 41;
 
 	/**
 	 * The feature id for the '<em><b>Table</b></em>' attribute.
@@ -2665,7 +2619,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuestionableFact()
 	 * @generated
 	 */
-	int QUESTIONABLE_FACT = 43;
+	int QUESTIONABLE_FACT = 42;
 
 	/**
 	 * The feature id for the '<em><b>Qfresults</b></em>' containment reference list.
@@ -2677,13 +2631,40 @@ public interface GeneratorPackage extends EPackage {
 	int QUESTIONABLE_FACT__QFRESULTS = 0;
 
 	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONABLE_FACT__ACHIEVED = 1;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONABLE_FACT__WAS_SELECTED = 2;
+
+	/**
 	 * The number of structural features of the '<em>Questionable Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONABLE_FACT_FEATURE_COUNT = 1;
+	int QUESTIONABLE_FACT_FEATURE_COUNT = 3;
+
+	/**
+	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT = 0;
 
 	/**
 	 * The number of operations of the '<em>Questionable Fact</em>' class.
@@ -2692,7 +2673,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONABLE_FACT_OPERATION_COUNT = 0;
+	int QUESTIONABLE_FACT_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MTQFCompletion1Impl <em>MTQF Completion1</em>}' class.
@@ -2702,7 +2683,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFCompletion1()
 	 * @generated
 	 */
-	int MTQF_COMPLETION1 = 44;
+	int MTQF_COMPLETION1 = 43;
 
 	/**
 	 * The feature id for the '<em><b>Qfresults</b></em>' containment reference list.
@@ -2712,6 +2693,24 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTQF_COMPLETION1__QFRESULTS = QUESTIONABLE_FACT__QFRESULTS;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_COMPLETION1__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_COMPLETION1__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
 
 	/**
 	 * The feature id for the '<em><b>Left Operand</b></em>' attribute.
@@ -2759,22 +2758,13 @@ public interface GeneratorPackage extends EPackage {
 	int MTQF_COMPLETION1__RESULT_ON_RIGHT = QUESTIONABLE_FACT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>NO VALUE</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTQF_COMPLETION1__NO_VALUE = QUESTIONABLE_FACT_FEATURE_COUNT + 5;
-
-	/**
 	 * The number of structural features of the '<em>MTQF Completion1</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_COMPLETION1_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 6;
+	int MTQF_COMPLETION1_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
@@ -2783,7 +2773,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_COMPLETION1___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+	int MTQF_COMPLETION1___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
 
 	/**
 	 * The number of operations of the '<em>MTQF Completion1</em>' class.
@@ -2792,7 +2782,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_COMPLETION1_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 1;
+	int MTQF_COMPLETION1_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MTQFCompletion2Impl <em>MTQF Completion2</em>}' class.
@@ -2802,7 +2792,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFCompletion2()
 	 * @generated
 	 */
-	int MTQF_COMPLETION2 = 45;
+	int MTQF_COMPLETION2 = 44;
 
 	/**
 	 * The feature id for the '<em><b>Qfresults</b></em>' containment reference list.
@@ -2812,6 +2802,24 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTQF_COMPLETION2__QFRESULTS = QUESTIONABLE_FACT__QFRESULTS;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_COMPLETION2__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_COMPLETION2__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
 
 	/**
 	 * The feature id for the '<em><b>Left Operand</b></em>' attribute.
@@ -2877,22 +2885,13 @@ public interface GeneratorPackage extends EPackage {
 	int MTQF_COMPLETION2__RESULT_ON_RIGHT = QUESTIONABLE_FACT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>NO VALUE</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTQF_COMPLETION2__NO_VALUE = QUESTIONABLE_FACT_FEATURE_COUNT + 7;
-
-	/**
 	 * The number of structural features of the '<em>MTQF Completion2</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_COMPLETION2_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 8;
+	int MTQF_COMPLETION2_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
@@ -2901,7 +2900,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_COMPLETION2___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+	int MTQF_COMPLETION2___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
 
 	/**
 	 * The number of operations of the '<em>MTQF Completion2</em>' class.
@@ -2910,7 +2909,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_COMPLETION2_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 1;
+	int MTQF_COMPLETION2_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MTQFRebuildImpl <em>MTQF Rebuild</em>}' class.
@@ -2920,7 +2919,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFRebuild()
 	 * @generated
 	 */
-	int MTQF_REBUILD = 46;
+	int MTQF_REBUILD = 45;
 
 	/**
 	 * The feature id for the '<em><b>Qfresults</b></em>' containment reference list.
@@ -2930,6 +2929,24 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTQF_REBUILD__QFRESULTS = QUESTIONABLE_FACT__QFRESULTS;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_REBUILD__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_REBUILD__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
 
 	/**
 	 * The feature id for the '<em><b>Soluce Left</b></em>' attribute.
@@ -2983,7 +3000,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_REBUILD___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+	int MTQF_REBUILD___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
 
 	/**
 	 * The number of operations of the '<em>MTQF Rebuild</em>' class.
@@ -2992,7 +3009,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_REBUILD_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 1;
+	int MTQF_REBUILD_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MTQFIdentificationImpl <em>MTQF Identification</em>}' class.
@@ -3002,7 +3019,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFIdentification()
 	 * @generated
 	 */
-	int MTQF_IDENTIFICATION = 47;
+	int MTQF_IDENTIFICATION = 46;
 
 	/**
 	 * The feature id for the '<em><b>Qfresults</b></em>' containment reference list.
@@ -3012,6 +3029,24 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTQF_IDENTIFICATION__QFRESULTS = QUESTIONABLE_FACT__QFRESULTS;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
 
 	/**
 	 * The feature id for the '<em><b>Result</b></em>' attribute.
@@ -3074,7 +3109,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_IDENTIFICATION___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+	int MTQF_IDENTIFICATION___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
 
 	/**
 	 * The number of operations of the '<em>MTQF Identification</em>' class.
@@ -3083,7 +3118,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_IDENTIFICATION_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 1;
+	int MTQF_IDENTIFICATION_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MTQFMembershipImpl <em>MTQF Membership</em>}' class.
@@ -3093,7 +3128,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFMembership()
 	 * @generated
 	 */
-	int MTQF_MEMBERSHIP = 48;
+	int MTQF_MEMBERSHIP = 47;
 
 	/**
 	 * The feature id for the '<em><b>Qfresults</b></em>' containment reference list.
@@ -3103,6 +3138,24 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTQF_MEMBERSHIP__QFRESULTS = QUESTIONABLE_FACT__QFRESULTS;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_MEMBERSHIP__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_MEMBERSHIP__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
 
 	/**
 	 * The feature id for the '<em><b>Good Results</b></em>' attribute list.
@@ -3138,7 +3191,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_MEMBERSHIP___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+	int MTQF_MEMBERSHIP___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
 
 	/**
 	 * The number of operations of the '<em>MTQF Membership</em>' class.
@@ -3147,7 +3200,373 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_MEMBERSHIP_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 1;
+	int MTQF_MEMBERSHIP_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.QuestionedFactImpl <em>Questioned Fact</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.QuestionedFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getQuestionedFact()
+	 * @generated
+	 */
+	int QUESTIONED_FACT = 48;
+
+	/**
+	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONED_FACT__QUESTIONABLEFACT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONED_FACT__POSITION = 1;
+
+	/**
+	 * The number of structural features of the '<em>Questioned Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONED_FACT_FEATURE_COUNT = 2;
+
+	/**
+	 * The operation id for the '<em>Get Questioned Fact Question</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION = 0;
+
+	/**
+	 * The number of operations of the '<em>Questioned Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONED_FACT_OPERATION_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.MTQeFCompletion1Impl <em>MT Qe FCompletion1</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MTQeFCompletion1Impl
+	 * @see generator.impl.GeneratorPackageImpl#getMTQeFCompletion1()
+	 * @generated
+	 */
+	int MT_QE_FCOMPLETION1 = 49;
+
+	/**
+	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION1__QUESTIONABLEFACT = QUESTIONED_FACT__QUESTIONABLEFACT;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION1__POSITION = QUESTIONED_FACT__POSITION;
+
+	/**
+	 * The feature id for the '<em><b>Propositions</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION1__PROPOSITIONS = QUESTIONED_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>MT Qe FCompletion1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION1_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Questioned Fact Question</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION1___GET_QUESTIONED_FACT_QUESTION = QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION;
+
+	/**
+	 * The number of operations of the '<em>MT Qe FCompletion1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION1_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.MTQeFCompletion2Impl <em>MT Qe FCompletion2</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MTQeFCompletion2Impl
+	 * @see generator.impl.GeneratorPackageImpl#getMTQeFCompletion2()
+	 * @generated
+	 */
+	int MT_QE_FCOMPLETION2 = 50;
+
+	/**
+	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION2__QUESTIONABLEFACT = QUESTIONED_FACT__QUESTIONABLEFACT;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION2__POSITION = QUESTIONED_FACT__POSITION;
+
+	/**
+	 * The feature id for the '<em><b>Propositions</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION2__PROPOSITIONS = QUESTIONED_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>MT Qe FCompletion2</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION2_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Questioned Fact Question</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION2___GET_QUESTIONED_FACT_QUESTION = QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION;
+
+	/**
+	 * The number of operations of the '<em>MT Qe FCompletion2</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION2_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.MTQeFRebuildImpl <em>MT Qe FRebuild</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MTQeFRebuildImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMTQeFRebuild()
+	 * @generated
+	 */
+	int MT_QE_FREBUILD = 51;
+
+	/**
+	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FREBUILD__QUESTIONABLEFACT = QUESTIONED_FACT__QUESTIONABLEFACT;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FREBUILD__POSITION = QUESTIONED_FACT__POSITION;
+
+	/**
+	 * The feature id for the '<em><b>Propositions</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FREBUILD__PROPOSITIONS = QUESTIONED_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>MT Qe FRebuild</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FREBUILD_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Questioned Fact Question</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FREBUILD___GET_QUESTIONED_FACT_QUESTION = QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION;
+
+	/**
+	 * The number of operations of the '<em>MT Qe FRebuild</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FREBUILD_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.MTQeFIdenticationImpl <em>MT Qe FIdentication</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MTQeFIdenticationImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMTQeFIdentication()
+	 * @generated
+	 */
+	int MT_QE_FIDENTICATION = 52;
+
+	/**
+	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FIDENTICATION__QUESTIONABLEFACT = QUESTIONED_FACT__QUESTIONABLEFACT;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FIDENTICATION__POSITION = QUESTIONED_FACT__POSITION;
+
+	/**
+	 * The number of structural features of the '<em>MT Qe FIdentication</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FIDENTICATION_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Questioned Fact Question</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FIDENTICATION___GET_QUESTIONED_FACT_QUESTION = QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION;
+
+	/**
+	 * The number of operations of the '<em>MT Qe FIdentication</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FIDENTICATION_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.MTQeFMembershipImpl <em>MT Qe FMembership</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MTQeFMembershipImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMTQeFMembership()
+	 * @generated
+	 */
+	int MT_QE_FMEMBERSHIP = 53;
+
+	/**
+	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FMEMBERSHIP__QUESTIONABLEFACT = QUESTIONED_FACT__QUESTIONABLEFACT;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FMEMBERSHIP__POSITION = QUESTIONED_FACT__POSITION;
+
+	/**
+	 * The feature id for the '<em><b>Bad Propositions</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FMEMBERSHIP__BAD_PROPOSITIONS = QUESTIONED_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>MT Qe FMembership</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FMEMBERSHIP_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Questioned Fact Question</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FMEMBERSHIP___GET_QUESTIONED_FACT_QUESTION = QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION;
+
+	/**
+	 * The number of operations of the '<em>MT Qe FMembership</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FMEMBERSHIP_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
@@ -3157,7 +3576,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 49;
+	int DIRECTIONS = 54;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -3167,7 +3586,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 50;
+	int DUNGEON_MODE = 55;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -3177,7 +3596,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 51;
+	int TABLE_BUILD = 56;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -3187,7 +3606,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 52;
+	int RESULT_POSITION = 57;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -3197,7 +3616,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 53;
+	int ESINGLE_TARGET = 58;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -3207,7 +3626,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 54;
+	int ETASK_TYPE = 59;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -3217,7 +3636,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 55;
+	int EMODALITY = 60;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -3227,7 +3646,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 56;
+	int ESEVERAL_TARGET = 61;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -3423,15 +3842,15 @@ public interface GeneratorPackage extends EPackage {
 	EReference getRoom_Roomtype();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.Room#getQuestion <em>Question</em>}'.
+	 * Returns the meta object for the containment reference list '{@link generator.Room#getQuestionedFacts <em>Questioned Facts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Question</em>'.
-	 * @see generator.Room#getQuestion()
+	 * @return the meta object for the containment reference list '<em>Questioned Facts</em>'.
+	 * @see generator.Room#getQuestionedFacts()
 	 * @see #getRoom()
 	 * @generated
 	 */
-	EReference getRoom_Question();
+	EReference getRoom_QuestionedFacts();
 
 	/**
 	 * Returns the meta object for the reference '{@link generator.Room#getTask <em>Task</em>}'.
@@ -4097,38 +4516,6 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getPosition_Name();
 
 	/**
-	 * Returns the meta object for class '{@link generator.Question <em>Question</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Question</em>'.
-	 * @see generator.Question
-	 * @generated
-	 */
-	EClass getQuestion();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.Question#getPosition <em>Position</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Position</em>'.
-	 * @see generator.Question#getPosition()
-	 * @see #getQuestion()
-	 * @generated
-	 */
-	EReference getQuestion_Position();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.Question#getIncompleteFact <em>Incomplete Fact</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Incomplete Fact</em>'.
-	 * @see generator.Question#getIncompleteFact()
-	 * @see #getQuestion()
-	 * @generated
-	 */
-	EAttribute getQuestion_IncompleteFact();
-
-	/**
 	 * Returns the meta object for class '{@link generator.ResponseModality <em>Response Modality</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4256,15 +4643,15 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getATask_NbConsecutiveSuccess();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generator.ATask#getResponsemodalities <em>Responsemodalities</em>}'.
+	 * Returns the meta object for the containment reference '{@link generator.ATask#getResponseModality <em>Response Modality</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Responsemodalities</em>'.
-	 * @see generator.ATask#getResponsemodalities()
+	 * @return the meta object for the containment reference '<em>Response Modality</em>'.
+	 * @see generator.ATask#getResponseModality()
 	 * @see #getATask()
 	 * @generated
 	 */
-	EReference getATask_Responsemodalities();
+	EReference getATask_ResponseModality();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.ATask#getID <em>ID</em>}'.
@@ -4519,15 +4906,15 @@ public interface GeneratorPackage extends EPackage {
 	EReference getResultsByTask_Task();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generator.ResultsByTask#getQuestionedfacts <em>Questionedfacts</em>}'.
+	 * Returns the meta object for the containment reference list '{@link generator.ResultsByTask#getQuestionableFacts <em>Questionable Facts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Questionedfacts</em>'.
-	 * @see generator.ResultsByTask#getQuestionedfacts()
+	 * @return the meta object for the containment reference list '<em>Questionable Facts</em>'.
+	 * @see generator.ResultsByTask#getQuestionableFacts()
 	 * @see #getResultsByTask()
 	 * @generated
 	 */
-	EReference getResultsByTask_Questionedfacts();
+	EReference getResultsByTask_QuestionableFacts();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.ResultsByTask#getSucessPercent <em>Sucess Percent</em>}'.
@@ -4658,6 +5045,38 @@ public interface GeneratorPackage extends EPackage {
 	EReference getQuestionableFact_Qfresults();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.QuestionableFact#isAchieved <em>Achieved</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Achieved</em>'.
+	 * @see generator.QuestionableFact#isAchieved()
+	 * @see #getQuestionableFact()
+	 * @generated
+	 */
+	EAttribute getQuestionableFact_Achieved();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.QuestionableFact#isWasSelected <em>Was Selected</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Was Selected</em>'.
+	 * @see generator.QuestionableFact#isWasSelected()
+	 * @see #getQuestionableFact()
+	 * @generated
+	 */
+	EAttribute getQuestionableFact_WasSelected();
+
+	/**
+	 * Returns the meta object for the '{@link generator.QuestionableFact#getQuestionableFact() <em>Get Questionable Fact</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Questionable Fact</em>' operation.
+	 * @see generator.QuestionableFact#getQuestionableFact()
+	 * @generated
+	 */
+	EOperation getQuestionableFact__GetQuestionableFact();
+
+	/**
 	 * Returns the meta object for class '{@link generator.MTQFCompletion1 <em>MTQF Completion1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4721,27 +5140,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMTQFCompletion1_ResultOnRight();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.MTQFCompletion1#getNO_VALUE <em>NO VALUE</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>NO VALUE</em>'.
-	 * @see generator.MTQFCompletion1#getNO_VALUE()
-	 * @see #getMTQFCompletion1()
-	 * @generated
-	 */
-	EAttribute getMTQFCompletion1_NO_VALUE();
-
-	/**
-	 * Returns the meta object for the '{@link generator.MTQFCompletion1#getQuestionableFact() <em>Get Questionable Fact</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Questionable Fact</em>' operation.
-	 * @see generator.MTQFCompletion1#getQuestionableFact()
-	 * @generated
-	 */
-	EOperation getMTQFCompletion1__GetQuestionableFact();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MTQFCompletion2 <em>MTQF Completion2</em>}'.
@@ -4831,27 +5229,6 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTQFCompletion2_ResultOnRight();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.MTQFCompletion2#getNO_VALUE <em>NO VALUE</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>NO VALUE</em>'.
-	 * @see generator.MTQFCompletion2#getNO_VALUE()
-	 * @see #getMTQFCompletion2()
-	 * @generated
-	 */
-	EAttribute getMTQFCompletion2_NO_VALUE();
-
-	/**
-	 * Returns the meta object for the '{@link generator.MTQFCompletion2#getQuestionableFact() <em>Get Questionable Fact</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Questionable Fact</em>' operation.
-	 * @see generator.MTQFCompletion2#getQuestionableFact()
-	 * @generated
-	 */
-	EOperation getMTQFCompletion2__GetQuestionableFact();
-
-	/**
 	 * Returns the meta object for class '{@link generator.MTQFRebuild <em>MTQF Rebuild</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4904,16 +5281,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMTQFRebuild_SoluceRight();
-
-	/**
-	 * Returns the meta object for the '{@link generator.MTQFRebuild#getQuestionableFact() <em>Get Questionable Fact</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Questionable Fact</em>' operation.
-	 * @see generator.MTQFRebuild#getQuestionableFact()
-	 * @generated
-	 */
-	EOperation getMTQFRebuild__GetQuestionableFact();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MTQFIdentification <em>MTQF Identification</em>}'.
@@ -4981,16 +5348,6 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTQFIdentification_ResultOnRight();
 
 	/**
-	 * Returns the meta object for the '{@link generator.MTQFIdentification#getQuestionableFact() <em>Get Questionable Fact</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Questionable Fact</em>' operation.
-	 * @see generator.MTQFIdentification#getQuestionableFact()
-	 * @generated
-	 */
-	EOperation getMTQFIdentification__GetQuestionableFact();
-
-	/**
 	 * Returns the meta object for class '{@link generator.MTQFMembership <em>MTQF Membership</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5023,14 +5380,140 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTQFMembership_Table();
 
 	/**
-	 * Returns the meta object for the '{@link generator.MTQFMembership#getQuestionableFact() <em>Get Questionable Fact</em>}' operation.
+	 * Returns the meta object for class '{@link generator.QuestionedFact <em>Questioned Fact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Questionable Fact</em>' operation.
-	 * @see generator.MTQFMembership#getQuestionableFact()
+	 * @return the meta object for class '<em>Questioned Fact</em>'.
+	 * @see generator.QuestionedFact
 	 * @generated
 	 */
-	EOperation getMTQFMembership__GetQuestionableFact();
+	EClass getQuestionedFact();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.QuestionedFact#getQuestionablefact <em>Questionablefact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Questionablefact</em>'.
+	 * @see generator.QuestionedFact#getQuestionablefact()
+	 * @see #getQuestionedFact()
+	 * @generated
+	 */
+	EReference getQuestionedFact_Questionablefact();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.QuestionedFact#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Position</em>'.
+	 * @see generator.QuestionedFact#getPosition()
+	 * @see #getQuestionedFact()
+	 * @generated
+	 */
+	EReference getQuestionedFact_Position();
+
+	/**
+	 * Returns the meta object for the '{@link generator.QuestionedFact#getQuestionedFactQuestion() <em>Get Questioned Fact Question</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Questioned Fact Question</em>' operation.
+	 * @see generator.QuestionedFact#getQuestionedFactQuestion()
+	 * @generated
+	 */
+	EOperation getQuestionedFact__GetQuestionedFactQuestion();
+
+	/**
+	 * Returns the meta object for class '{@link generator.MTQeFCompletion1 <em>MT Qe FCompletion1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MT Qe FCompletion1</em>'.
+	 * @see generator.MTQeFCompletion1
+	 * @generated
+	 */
+	EClass getMTQeFCompletion1();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link generator.MTQeFCompletion1#getPropositions <em>Propositions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Propositions</em>'.
+	 * @see generator.MTQeFCompletion1#getPropositions()
+	 * @see #getMTQeFCompletion1()
+	 * @generated
+	 */
+	EAttribute getMTQeFCompletion1_Propositions();
+
+	/**
+	 * Returns the meta object for class '{@link generator.MTQeFCompletion2 <em>MT Qe FCompletion2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MT Qe FCompletion2</em>'.
+	 * @see generator.MTQeFCompletion2
+	 * @generated
+	 */
+	EClass getMTQeFCompletion2();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link generator.MTQeFCompletion2#getPropositions <em>Propositions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Propositions</em>'.
+	 * @see generator.MTQeFCompletion2#getPropositions()
+	 * @see #getMTQeFCompletion2()
+	 * @generated
+	 */
+	EAttribute getMTQeFCompletion2_Propositions();
+
+	/**
+	 * Returns the meta object for class '{@link generator.MTQeFRebuild <em>MT Qe FRebuild</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MT Qe FRebuild</em>'.
+	 * @see generator.MTQeFRebuild
+	 * @generated
+	 */
+	EClass getMTQeFRebuild();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link generator.MTQeFRebuild#getPropositions <em>Propositions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Propositions</em>'.
+	 * @see generator.MTQeFRebuild#getPropositions()
+	 * @see #getMTQeFRebuild()
+	 * @generated
+	 */
+	EAttribute getMTQeFRebuild_Propositions();
+
+	/**
+	 * Returns the meta object for class '{@link generator.MTQeFIdentication <em>MT Qe FIdentication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MT Qe FIdentication</em>'.
+	 * @see generator.MTQeFIdentication
+	 * @generated
+	 */
+	EClass getMTQeFIdentication();
+
+	/**
+	 * Returns the meta object for class '{@link generator.MTQeFMembership <em>MT Qe FMembership</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MT Qe FMembership</em>'.
+	 * @see generator.MTQeFMembership
+	 * @generated
+	 */
+	EClass getMTQeFMembership();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link generator.MTQeFMembership#getBadPropositions <em>Bad Propositions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Bad Propositions</em>'.
+	 * @see generator.MTQeFMembership#getBadPropositions()
+	 * @see #getMTQeFMembership()
+	 * @generated
+	 */
+	EAttribute getMTQeFMembership_BadPropositions();
 
 	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
@@ -5290,12 +5773,12 @@ public interface GeneratorPackage extends EPackage {
 		EReference ROOM__ROOMTYPE = eINSTANCE.getRoom_Roomtype();
 
 		/**
-		 * The meta object literal for the '<em><b>Question</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Questioned Facts</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROOM__QUESTION = eINSTANCE.getRoom_Question();
+		EReference ROOM__QUESTIONED_FACTS = eINSTANCE.getRoom_QuestionedFacts();
 
 		/**
 		 * The meta object literal for the '<em><b>Task</b></em>' reference feature.
@@ -5830,32 +6313,6 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute POSITION__NAME = eINSTANCE.getPosition_Name();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.QuestionImpl <em>Question</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.QuestionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getQuestion()
-		 * @generated
-		 */
-		EClass QUESTION = eINSTANCE.getQuestion();
-
-		/**
-		 * The meta object literal for the '<em><b>Position</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUESTION__POSITION = eINSTANCE.getQuestion_Position();
-
-		/**
-		 * The meta object literal for the '<em><b>Incomplete Fact</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute QUESTION__INCOMPLETE_FACT = eINSTANCE.getQuestion_IncompleteFact();
-
-		/**
 		 * The meta object literal for the '{@link generator.impl.ResponseModalityImpl <em>Response Modality</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5962,12 +6419,12 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute ATASK__NB_CONSECUTIVE_SUCCESS = eINSTANCE.getATask_NbConsecutiveSuccess();
 
 		/**
-		 * The meta object literal for the '<em><b>Responsemodalities</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Response Modality</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ATASK__RESPONSEMODALITIES = eINSTANCE.getATask_Responsemodalities();
+		EReference ATASK__RESPONSE_MODALITY = eINSTANCE.getATask_ResponseModality();
 
 		/**
 		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
@@ -6184,12 +6641,12 @@ public interface GeneratorPackage extends EPackage {
 		EReference RESULTS_BY_TASK__TASK = eINSTANCE.getResultsByTask_Task();
 
 		/**
-		 * The meta object literal for the '<em><b>Questionedfacts</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Questionable Facts</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESULTS_BY_TASK__QUESTIONEDFACTS = eINSTANCE.getResultsByTask_Questionedfacts();
+		EReference RESULTS_BY_TASK__QUESTIONABLE_FACTS = eINSTANCE.getResultsByTask_QuestionableFacts();
 
 		/**
 		 * The meta object literal for the '<em><b>Sucess Percent</b></em>' attribute feature.
@@ -6296,6 +6753,30 @@ public interface GeneratorPackage extends EPackage {
 		EReference QUESTIONABLE_FACT__QFRESULTS = eINSTANCE.getQuestionableFact_Qfresults();
 
 		/**
+		 * The meta object literal for the '<em><b>Achieved</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTIONABLE_FACT__ACHIEVED = eINSTANCE.getQuestionableFact_Achieved();
+
+		/**
+		 * The meta object literal for the '<em><b>Was Selected</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTIONABLE_FACT__WAS_SELECTED = eINSTANCE.getQuestionableFact_WasSelected();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Questionable Fact</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT = eINSTANCE.getQuestionableFact__GetQuestionableFact();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.MTQFCompletion1Impl <em>MTQF Completion1</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6344,22 +6825,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MTQF_COMPLETION1__RESULT_ON_RIGHT = eINSTANCE.getMTQFCompletion1_ResultOnRight();
-
-		/**
-		 * The meta object literal for the '<em><b>NO VALUE</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MTQF_COMPLETION1__NO_VALUE = eINSTANCE.getMTQFCompletion1_NO_VALUE();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Questionable Fact</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation MTQF_COMPLETION1___GET_QUESTIONABLE_FACT = eINSTANCE.getMTQFCompletion1__GetQuestionableFact();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTQFCompletion2Impl <em>MTQF Completion2</em>}' class.
@@ -6428,22 +6893,6 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MTQF_COMPLETION2__RESULT_ON_RIGHT = eINSTANCE.getMTQFCompletion2_ResultOnRight();
 
 		/**
-		 * The meta object literal for the '<em><b>NO VALUE</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MTQF_COMPLETION2__NO_VALUE = eINSTANCE.getMTQFCompletion2_NO_VALUE();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Questionable Fact</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation MTQF_COMPLETION2___GET_QUESTIONABLE_FACT = eINSTANCE.getMTQFCompletion2__GetQuestionableFact();
-
-		/**
 		 * The meta object literal for the '{@link generator.impl.MTQFRebuildImpl <em>MTQF Rebuild</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6484,14 +6933,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MTQF_REBUILD__SOLUCE_RIGHT = eINSTANCE.getMTQFRebuild_SoluceRight();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Questionable Fact</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation MTQF_REBUILD___GET_QUESTIONABLE_FACT = eINSTANCE.getMTQFRebuild__GetQuestionableFact();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTQFIdentificationImpl <em>MTQF Identification</em>}' class.
@@ -6544,14 +6985,6 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MTQF_IDENTIFICATION__RESULT_ON_RIGHT = eINSTANCE.getMTQFIdentification_ResultOnRight();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Questionable Fact</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation MTQF_IDENTIFICATION___GET_QUESTIONABLE_FACT = eINSTANCE.getMTQFIdentification__GetQuestionableFact();
-
-		/**
 		 * The meta object literal for the '{@link generator.impl.MTQFMembershipImpl <em>MTQF Membership</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6578,12 +7011,121 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MTQF_MEMBERSHIP__TABLE = eINSTANCE.getMTQFMembership_Table();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Questionable Fact</b></em>' operation.
+		 * The meta object literal for the '{@link generator.impl.QuestionedFactImpl <em>Questioned Fact</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.QuestionedFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getQuestionedFact()
+		 * @generated
+		 */
+		EClass QUESTIONED_FACT = eINSTANCE.getQuestionedFact();
+
+		/**
+		 * The meta object literal for the '<em><b>Questionablefact</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation MTQF_MEMBERSHIP___GET_QUESTIONABLE_FACT = eINSTANCE.getMTQFMembership__GetQuestionableFact();
+		EReference QUESTIONED_FACT__QUESTIONABLEFACT = eINSTANCE.getQuestionedFact_Questionablefact();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QUESTIONED_FACT__POSITION = eINSTANCE.getQuestionedFact_Position();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Questioned Fact Question</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION = eINSTANCE
+				.getQuestionedFact__GetQuestionedFactQuestion();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MTQeFCompletion1Impl <em>MT Qe FCompletion1</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MTQeFCompletion1Impl
+		 * @see generator.impl.GeneratorPackageImpl#getMTQeFCompletion1()
+		 * @generated
+		 */
+		EClass MT_QE_FCOMPLETION1 = eINSTANCE.getMTQeFCompletion1();
+
+		/**
+		 * The meta object literal for the '<em><b>Propositions</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_QE_FCOMPLETION1__PROPOSITIONS = eINSTANCE.getMTQeFCompletion1_Propositions();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MTQeFCompletion2Impl <em>MT Qe FCompletion2</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MTQeFCompletion2Impl
+		 * @see generator.impl.GeneratorPackageImpl#getMTQeFCompletion2()
+		 * @generated
+		 */
+		EClass MT_QE_FCOMPLETION2 = eINSTANCE.getMTQeFCompletion2();
+
+		/**
+		 * The meta object literal for the '<em><b>Propositions</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_QE_FCOMPLETION2__PROPOSITIONS = eINSTANCE.getMTQeFCompletion2_Propositions();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MTQeFRebuildImpl <em>MT Qe FRebuild</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MTQeFRebuildImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMTQeFRebuild()
+		 * @generated
+		 */
+		EClass MT_QE_FREBUILD = eINSTANCE.getMTQeFRebuild();
+
+		/**
+		 * The meta object literal for the '<em><b>Propositions</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_QE_FREBUILD__PROPOSITIONS = eINSTANCE.getMTQeFRebuild_Propositions();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MTQeFIdenticationImpl <em>MT Qe FIdentication</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MTQeFIdenticationImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMTQeFIdentication()
+		 * @generated
+		 */
+		EClass MT_QE_FIDENTICATION = eINSTANCE.getMTQeFIdentication();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MTQeFMembershipImpl <em>MT Qe FMembership</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MTQeFMembershipImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMTQeFMembership()
+		 * @generated
+		 */
+		EClass MT_QE_FMEMBERSHIP = eINSTANCE.getMTQeFMembership();
+
+		/**
+		 * The meta object literal for the '<em><b>Bad Propositions</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_QE_FMEMBERSHIP__BAD_PROPOSITIONS = eINSTANCE.getMTQeFMembership_BadPropositions();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.

@@ -18,7 +18,6 @@ package generator;
  *   <li>{@link generator.MTQFCompletion2#getSoluceRight <em>Soluce Right</em>}</li>
  *   <li>{@link generator.MTQFCompletion2#getSoluceRes <em>Soluce Res</em>}</li>
  *   <li>{@link generator.MTQFCompletion2#isResultOnRight <em>Result On Right</em>}</li>
- *   <li>{@link generator.MTQFCompletion2#getNO_VALUE <em>NO VALUE</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getMTQFCompletion2()
@@ -180,25 +179,5 @@ public interface MTQFCompletion2 extends QuestionableFact {
 	 * @generated
 	 */
 	void setResultOnRight(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>NO VALUE</b></em>' attribute.
-	 * The default value is <code>"-1"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>NO VALUE</em>' attribute.
-	 * @see generator.GeneratorPackage#getMTQFCompletion2_NO_VALUE()
-	 * @model default="-1" changeable="false"
-	 * @generated
-	 */
-	int getNO_VALUE();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	String getQuestionableFact();
 
 } // MTQFCompletion2

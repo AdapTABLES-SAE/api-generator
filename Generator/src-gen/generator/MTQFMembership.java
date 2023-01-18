@@ -56,12 +56,4 @@ public interface MTQFMembership extends QuestionableFact {
 	 */
 	void setTable(int value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	String getQuestionableFact();
-
 } // MTQFMembership

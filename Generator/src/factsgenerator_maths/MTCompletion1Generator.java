@@ -1,29 +1,31 @@
-package factsgenerator;
+package factsgenerator_maths;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import generator.AbstractFact;
-import generator.MTCompletion2;
+import generator.ESingleTarget;
+import generator.MTCompletion1;
 import generator.MTFact;
 import generator.MTLevel;
-import generator.MTQFCompletion2;
+import generator.MTQFCompletion1;
+import generator.QuestionableFact;
 import generator.ResultPosition;
 import generator.SetOfFacts;
 import generator.TableBuild;
-import generator.ESeveralTarget;
-import generator.impl.MTQFCompletion2Impl;
+import generator.impl.MTQFCompletion1Impl;
 import managers.EducationElementsManager;
 
-public class MTCompletion2Generator {
-private EducationElementsManager eeManager;
+public class MTCompletion1Generator {
 	
-	public MTCompletion2Generator(EducationElementsManager eeManager) {
+	private EducationElementsManager eeManager;
+	
+	public MTCompletion1Generator(EducationElementsManager eeManager) {
 		this.eeManager = eeManager; 
 	}
 
-	public Set<MTQFCompletion2> generateQuestionableFacts(MTCompletion2 task) {
-		HashSet<MTQFCompletion2> questionedFacts = new HashSet<>();
+	public Set<QuestionableFact> generateQuestionableFacts(MTCompletion1 task) {
+		HashSet<QuestionableFact> questionedFacts = new HashSet<>();
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
@@ -43,20 +45,18 @@ private EducationElementsManager eeManager;
 				}
 				
 			}
-		}
-		
-		
+		}	
 		return questionedFacts; 
 	}
 	
-	private Set<MTQFCompletion2> generateQuestionableFactsOf(MTCompletion2 task, MTFact fact){
-		HashSet<MTQFCompletion2> qfs = new HashSet<>(); 
+	private Set<MTQFCompletion1> generateQuestionableFactsOf(MTCompletion1 task, MTFact fact){
+		HashSet<MTQFCompletion1> qfs = new HashSet<>(); 
 		
 		TableBuild build = ((MTLevel) eeManager.getLevel()).getBuildSetup();
 		ResultPosition equalPos = ((MTLevel) eeManager.getLevel()).getResultPositionSetup();
 		
-		for (ESeveralTarget target : task.getTargets()) {
-			if(build.equals(TableBuild.MIX) && !target.equals(ESeveralTarget.OPERAND_TABLE)) {
+		for (ESingleTarget target : task.getTargets()) {
+			if(build.equals(TableBuild.MIX)) {
 				if(equalPos.equals(ResultPosition.MIX)) {
 					qfs.add(buildQF(fact, ResultPosition.LEFT, TableBuild.OPERAND_TABLE, target));
 					qfs.add(buildQF(fact, ResultPosition.RIGHT, TableBuild.OPERAND_TABLE, target));
@@ -68,8 +68,8 @@ private EducationElementsManager eeManager;
 				}
 			} else {
 				if(equalPos.equals(ResultPosition.MIX)) {
-					qfs.add(buildQF(fact, ResultPosition.LEFT, build.equals(TableBuild.MIX)? TableBuild.OPERAND_TABLE : build, target));
-					qfs.add(buildQF(fact, ResultPosition.RIGHT, build.equals(TableBuild.MIX)? TableBuild.OPERAND_TABLE : build, target));
+					qfs.add(buildQF(fact, ResultPosition.LEFT, build, target));
+					qfs.add(buildQF(fact, ResultPosition.RIGHT, build, target));
 				} else {
 					qfs.add(buildQF(fact, equalPos, build, target));
 				}
@@ -79,32 +79,31 @@ private EducationElementsManager eeManager;
 		return qfs;
 	}
 	
-	private MTQFCompletion2 buildQF(MTFact fact, ResultPosition resPos, TableBuild build, ESeveralTarget target) {
-		MTQFCompletion2 qf = new MTQFCompletion2Impl(); 
+	private MTQFCompletion1 buildQF(MTFact fact, ResultPosition resPos, TableBuild build, ESingleTarget target) {
+		MTQFCompletion1 qf = new MTQFCompletion1Impl(); 
 				
 		if(build.equals(TableBuild.OPERAND_TABLE)) {
-			qf.setSoluceLeft(fact.getOp());
-			qf.setSoluceRight(fact.getTable());
+			qf.setLeftOperand(fact.getOp());
+			qf.setRightOperand(fact.getTable());
 		}else {
-			qf.setSoluceRight(fact.getOp());
-			qf.setSoluceLeft(fact.getTable());
+			qf.setRightOperand(fact.getOp());
+			qf.setLeftOperand(fact.getTable());	
 		}
-		qf.setSoluceRes(fact.getRes());
+		qf.setResult(fact.getRes());
 		qf.setResultOnRight(resPos.equals(ResultPosition.RIGHT));
 		
 		switch (target) {
-		case OPERAND_TABLE:
-			qf.setLeftOperand(-1); 
-			qf.setRightOperand(-1);
-			qf.setResult(fact.getRes());
+		case OPERAND:
+			if(build.equals(TableBuild.OPERAND_TABLE)) {qf.setLeftOperand(-1);} else {qf.setRightOperand(-1);}
+			qf.setSoluce(fact.getOp());
 			break;
-		case TABLE_RESULT:
-			if(build.equals(TableBuild.OPERAND_TABLE)) {qf.setRightOperand(-1); qf.setLeftOperand(fact.getOp());} else {qf.setLeftOperand(-1); qf.setRightOperand(fact.getOp());} 
-			qf.setResult(-1);
+		case TABLE:
+			if(build.equals(TableBuild.OPERAND_TABLE)) {qf.setRightOperand(-1);} else {qf.setLeftOperand(-1);} 
+			qf.setSoluce(fact.getTable());
 			break;
-		case OPERAND_RESULT:
-			if(build.equals(TableBuild.TABLE_OPERAND)) {qf.setRightOperand(-1); qf.setLeftOperand(fact.getTable());} else {qf.setLeftOperand(-1); qf.setRightOperand(fact.getTable());} 
+		case RESULT:
 			qf.setResult(-1);
+			qf.setSoluce(fact.getRes());
 			break;
 		}
 		return qf;

@@ -5,16 +5,16 @@ package generator.impl;
 import generator.GeneratorPackage;
 import generator.MTQFMembership;
 
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
@@ -51,6 +51,7 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 	 * @ordered
 	 */
 	protected static final int TABLE_EDEFAULT = 0;
+
 	/**
 	 * The cached value of the '{@link #getTable() <em>Table</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -113,23 +114,6 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MTQF_MEMBERSHIP__TABLE, oldTable,
 					table));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String getQuestionableFact() {
-		String fact = "{";
-		for (int i = 0; i < goodResults.size(); i++) {
-			if (i == goodResults.size() - 1) {
-				fact += goodResults.get(i);
-			} else {
-				fact += goodResults.get(i) + ",";
-			}
-		}
-		return fact + "} (" + getTable() + ")";
 	}
 
 	/**
@@ -208,20 +192,6 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 	 * @generated
 	 */
 	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-		case GeneratorPackage.MTQF_MEMBERSHIP___GET_QUESTIONABLE_FACT:
-			return getQuestionableFact();
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String toString() {
 		if (eIsProxy())
 			return super.toString();
@@ -233,6 +203,19 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 		result.append(table);
 		result.append(')');
 		return result.toString();
+	}
+
+	@Override
+	public String getQuestionableFact() {
+        String fact = "{";
+        for (int i = 0; i < goodResults.size(); i++) {
+            if (i == goodResults.size() - 1) {
+                fact += goodResults.get(i);
+            } else {
+                fact += goodResults.get(i) + ",";
+            }
+        }
+        return fact + "} (" + getTable() + ")";
 	}
 
 } //MTQFMembershipImpl

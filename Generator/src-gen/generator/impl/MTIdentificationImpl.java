@@ -5,6 +5,7 @@ package generator.impl;
 import generator.ESingleTarget;
 import generator.GeneratorPackage;
 import generator.MTIdentification;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

@@ -8,8 +8,6 @@ import generator.Level;
 import generator.Objective;
 import generator.Results;
 
-import java.util.Objects;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -489,24 +487,6 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 		result.append(sucessPercent);
 		result.append(')');
 		return result.toString();
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(achieved, level, objective, results);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		CurrentObjectiveLevelImpl other = (CurrentObjectiveLevelImpl) obj;
-		return achieved == other.achieved && Objects.equals(level, other.level)
-				&& Objects.equals(objective, other.objective) && Objects.equals(results, other.results);
 	}
 
 } //CurrentObjectiveLevelImpl

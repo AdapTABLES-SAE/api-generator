@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.Room#getY <em>Y</em>}</li>
  *   <li>{@link generator.Room#getRoomaccess <em>Roomaccess</em>}</li>
  *   <li>{@link generator.Room#getRoomtype <em>Roomtype</em>}</li>
- *   <li>{@link generator.Room#getQuestion <em>Question</em>}</li>
+ *   <li>{@link generator.Room#getQuestionedFacts <em>Questioned Facts</em>}</li>
  *   <li>{@link generator.Room#getTask <em>Task</em>}</li>
  * </ul>
  *
@@ -107,26 +107,16 @@ public interface Room extends EObject {
 	void setRoomtype(RoomType value);
 
 	/**
-	 * Returns the value of the '<em><b>Question</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Questioned Facts</b></em>' containment reference list.
+	 * The list contents are of type {@link generator.QuestionedFact}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Question</em>' containment reference.
-	 * @see #setQuestion(Question)
-	 * @see generator.GeneratorPackage#getRoom_Question()
+	 * @return the value of the '<em>Questioned Facts</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getRoom_QuestionedFacts()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Question getQuestion();
-
-	/**
-	 * Sets the value of the '{@link generator.Room#getQuestion <em>Question</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Question</em>' containment reference.
-	 * @see #getQuestion()
-	 * @generated
-	 */
-	void setQuestion(Question value);
+	EList<QuestionedFact> getQuestionedFacts();
 
 	/**
 	 * Returns the value of the '<em><b>Task</b></em>' reference.

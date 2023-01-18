@@ -2,8 +2,6 @@
  */
 package generator;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.ATask#getPercentOfApparition <em>Percent Of Apparition</em>}</li>
  *   <li>{@link generator.ATask#getNbConsecutiveSuccess <em>Nb Consecutive Success</em>}</li>
- *   <li>{@link generator.ATask#getResponsemodalities <em>Responsemodalities</em>}</li>
+ *   <li>{@link generator.ATask#getResponseModality <em>Response Modality</em>}</li>
  *   <li>{@link generator.ATask#getID <em>ID</em>}</li>
  * </ul>
  *
@@ -71,16 +69,26 @@ public interface ATask extends EObject {
 	void setNbConsecutiveSuccess(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Responsemodalities</b></em>' containment reference list.
-	 * The list contents are of type {@link generator.ResponseModality}.
+	 * Returns the value of the '<em><b>Response Modality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Responsemodalities</em>' containment reference list.
-	 * @see generator.GeneratorPackage#getATask_Responsemodalities()
+	 * @return the value of the '<em>Response Modality</em>' containment reference.
+	 * @see #setResponseModality(ResponseModality)
+	 * @see generator.GeneratorPackage#getATask_ResponseModality()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ResponseModality> getResponsemodalities();
+	ResponseModality getResponseModality();
+
+	/**
+	 * Sets the value of the '{@link generator.ATask#getResponseModality <em>Response Modality</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Response Modality</em>' containment reference.
+	 * @see #getResponseModality()
+	 * @generated
+	 */
+	void setResponseModality(ResponseModality value);
 
 	/**
 	 * Returns the value of the '<em><b>ID</b></em>' attribute.

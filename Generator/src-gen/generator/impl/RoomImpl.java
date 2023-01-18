@@ -4,7 +4,7 @@ package generator.impl;
 
 import generator.ATask;
 import generator.GeneratorPackage;
-import generator.Question;
+import generator.QuestionedFact;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
@@ -37,7 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.RoomImpl#getY <em>Y</em>}</li>
  *   <li>{@link generator.impl.RoomImpl#getRoomaccess <em>Roomaccess</em>}</li>
  *   <li>{@link generator.impl.RoomImpl#getRoomtype <em>Roomtype</em>}</li>
- *   <li>{@link generator.impl.RoomImpl#getQuestion <em>Question</em>}</li>
+ *   <li>{@link generator.impl.RoomImpl#getQuestionedFacts <em>Questioned Facts</em>}</li>
  *   <li>{@link generator.impl.RoomImpl#getTask <em>Task</em>}</li>
  * </ul>
  *
@@ -105,14 +105,14 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	protected RoomType roomtype;
 
 	/**
-	 * The cached value of the '{@link #getQuestion() <em>Question</em>}' containment reference.
+	 * The cached value of the '{@link #getQuestionedFacts() <em>Questioned Facts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQuestion()
+	 * @see #getQuestionedFacts()
 	 * @generated
 	 * @ordered
 	 */
-	protected Question question;
+	protected EList<QuestionedFact> questionedFacts;
 
 	/**
 	 * The cached value of the '{@link #getTask() <em>Task</em>}' reference.
@@ -243,49 +243,12 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Question getQuestion() {
-		return question;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetQuestion(Question newQuestion, NotificationChain msgs) {
-		Question oldQuestion = question;
-		question = newQuestion;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.ROOM__QUESTION, oldQuestion, newQuestion);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+	public EList<QuestionedFact> getQuestionedFacts() {
+		if (questionedFacts == null) {
+			questionedFacts = new EObjectContainmentEList<QuestionedFact>(QuestionedFact.class, this,
+					GeneratorPackage.ROOM__QUESTIONED_FACTS);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setQuestion(Question newQuestion) {
-		if (newQuestion != question) {
-			NotificationChain msgs = null;
-			if (question != null)
-				msgs = ((InternalEObject) question).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.ROOM__QUESTION, null, msgs);
-			if (newQuestion != null)
-				msgs = ((InternalEObject) newQuestion).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.ROOM__QUESTION, null, msgs);
-			msgs = basicSetQuestion(newQuestion, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ROOM__QUESTION, newQuestion,
-					newQuestion));
+		return questionedFacts;
 	}
 
 	/**
@@ -337,8 +300,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		switch (featureID) {
 		case GeneratorPackage.ROOM__ROOMACCESS:
 			return ((InternalEList<?>) getRoomaccess()).basicRemove(otherEnd, msgs);
-		case GeneratorPackage.ROOM__QUESTION:
-			return basicSetQuestion(null, msgs);
+		case GeneratorPackage.ROOM__QUESTIONED_FACTS:
+			return ((InternalEList<?>) getQuestionedFacts()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -361,8 +324,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			if (resolve)
 				return getRoomtype();
 			return basicGetRoomtype();
-		case GeneratorPackage.ROOM__QUESTION:
-			return getQuestion();
+		case GeneratorPackage.ROOM__QUESTIONED_FACTS:
+			return getQuestionedFacts();
 		case GeneratorPackage.ROOM__TASK:
 			if (resolve)
 				return getTask();
@@ -393,8 +356,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		case GeneratorPackage.ROOM__ROOMTYPE:
 			setRoomtype((RoomType) newValue);
 			return;
-		case GeneratorPackage.ROOM__QUESTION:
-			setQuestion((Question) newValue);
+		case GeneratorPackage.ROOM__QUESTIONED_FACTS:
+			getQuestionedFacts().clear();
+			getQuestionedFacts().addAll((Collection<? extends QuestionedFact>) newValue);
 			return;
 		case GeneratorPackage.ROOM__TASK:
 			setTask((ATask) newValue);
@@ -423,8 +387,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		case GeneratorPackage.ROOM__ROOMTYPE:
 			setRoomtype((RoomType) null);
 			return;
-		case GeneratorPackage.ROOM__QUESTION:
-			setQuestion((Question) null);
+		case GeneratorPackage.ROOM__QUESTIONED_FACTS:
+			getQuestionedFacts().clear();
 			return;
 		case GeneratorPackage.ROOM__TASK:
 			setTask((ATask) null);
@@ -449,8 +413,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			return roomaccess != null && !roomaccess.isEmpty();
 		case GeneratorPackage.ROOM__ROOMTYPE:
 			return roomtype != null;
-		case GeneratorPackage.ROOM__QUESTION:
-			return question != null;
+		case GeneratorPackage.ROOM__QUESTIONED_FACTS:
+			return questionedFacts != null && !questionedFacts.isEmpty();
 		case GeneratorPackage.ROOM__TASK:
 			return task != null;
 		}

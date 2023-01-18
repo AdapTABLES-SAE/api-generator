@@ -1,4 +1,4 @@
-package factsgenerator;
+package factsgenerator_maths;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -14,6 +14,7 @@ import generator.MultipleChoice;
 import generator.SetOfFacts;
 import generator.impl.MTQFMembershipImpl;
 import managers.EducationElementsManager;
+import structures.Shuffle;
 
 public class MTMembershipGenerator {
 	
@@ -28,14 +29,15 @@ public class MTMembershipGenerator {
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
-		//System.out.println("min "+min+" max "+max);
 		
-		MultipleChoice mc = (MultipleChoice) task.getResponsemodalities().get(0);
+		//System.out.println("min = "+min+" / max = "+max);
+		
+		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
 		int nbByFact = mc.getNbChoices() - mc.getNbBadChoices();
-
+		
 		for (SetOfFacts setoffact : eeManager.getObjective().getSetoffacts()) {
 			List<MTResultFact> facts = new ArrayList<>();
-			for (AbstractFact f : setoffact.getFacts()) { 
+			for (AbstractFact f : Shuffle.shuffle(setoffact.getFacts())) { 
 				if(f instanceof MTResultFact) {
 					MTResultFact fact = (MTResultFact) f;
 					if(min <= (fact.getRes()/fact.getTable()) && (fact.getRes()/fact.getTable()) <= max){

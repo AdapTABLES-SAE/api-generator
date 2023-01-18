@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.ResultsByTaskImpl#getTask <em>Task</em>}</li>
- *   <li>{@link generator.impl.ResultsByTaskImpl#getQuestionedfacts <em>Questionedfacts</em>}</li>
+ *   <li>{@link generator.impl.ResultsByTaskImpl#getQuestionableFacts <em>Questionable Facts</em>}</li>
  *   <li>{@link generator.impl.ResultsByTaskImpl#getSucessPercent <em>Sucess Percent</em>}</li>
  *   <li>{@link generator.impl.ResultsByTaskImpl#getEncountersPercent <em>Encounters Percent</em>}</li>
  * </ul>
@@ -51,14 +51,14 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 	protected ATask task;
 
 	/**
-	 * The cached value of the '{@link #getQuestionedfacts() <em>Questionedfacts</em>}' containment reference list.
+	 * The cached value of the '{@link #getQuestionableFacts() <em>Questionable Facts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQuestionedfacts()
+	 * @see #getQuestionableFacts()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<QuestionableFact> questionedfacts;
+	protected EList<QuestionableFact> questionableFacts;
 
 	/**
 	 * The default value of the '{@link #getSucessPercent() <em>Sucess Percent</em>}' attribute.
@@ -164,12 +164,12 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<QuestionableFact> getQuestionedfacts() {
-		if (questionedfacts == null) {
-			questionedfacts = new EObjectContainmentEList<QuestionableFact>(QuestionableFact.class, this,
-					GeneratorPackage.RESULTS_BY_TASK__QUESTIONEDFACTS);
+	public EList<QuestionableFact> getQuestionableFacts() {
+		if (questionableFacts == null) {
+			questionableFacts = new EObjectContainmentEList<QuestionableFact>(QuestionableFact.class, this,
+					GeneratorPackage.RESULTS_BY_TASK__QUESTIONABLE_FACTS);
 		}
-		return questionedfacts;
+		return questionableFacts;
 	}
 
 	/**
@@ -224,8 +224,8 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONEDFACTS:
-			return ((InternalEList<?>) getQuestionedfacts()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONABLE_FACTS:
+			return ((InternalEList<?>) getQuestionableFacts()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -242,8 +242,8 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 			if (resolve)
 				return getTask();
 			return basicGetTask();
-		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONEDFACTS:
-			return getQuestionedfacts();
+		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONABLE_FACTS:
+			return getQuestionableFacts();
 		case GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT:
 			return getSucessPercent();
 		case GeneratorPackage.RESULTS_BY_TASK__ENCOUNTERS_PERCENT:
@@ -264,9 +264,9 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 		case GeneratorPackage.RESULTS_BY_TASK__TASK:
 			setTask((ATask) newValue);
 			return;
-		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONEDFACTS:
-			getQuestionedfacts().clear();
-			getQuestionedfacts().addAll((Collection<? extends QuestionableFact>) newValue);
+		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONABLE_FACTS:
+			getQuestionableFacts().clear();
+			getQuestionableFacts().addAll((Collection<? extends QuestionableFact>) newValue);
 			return;
 		case GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT:
 			setSucessPercent((Double) newValue);
@@ -289,8 +289,8 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 		case GeneratorPackage.RESULTS_BY_TASK__TASK:
 			setTask((ATask) null);
 			return;
-		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONEDFACTS:
-			getQuestionedfacts().clear();
+		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONABLE_FACTS:
+			getQuestionableFacts().clear();
 			return;
 		case GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT:
 			setSucessPercent(SUCESS_PERCENT_EDEFAULT);
@@ -312,8 +312,8 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 		switch (featureID) {
 		case GeneratorPackage.RESULTS_BY_TASK__TASK:
 			return task != null;
-		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONEDFACTS:
-			return questionedfacts != null && !questionedfacts.isEmpty();
+		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONABLE_FACTS:
+			return questionableFacts != null && !questionableFacts.isEmpty();
 		case GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT:
 			return sucessPercent != SUCESS_PERCENT_EDEFAULT;
 		case GeneratorPackage.RESULTS_BY_TASK__ENCOUNTERS_PERCENT:
