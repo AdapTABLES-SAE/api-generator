@@ -5,6 +5,8 @@ package generator.impl;
 import generator.GeneratorPackage;
 import generator.MTQFCompletion2;
 
+import java.util.Objects;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -493,15 +495,34 @@ public class MTQFCompletion2Impl extends QuestionableFactImpl implements MTQFCom
 
 	@Override
 	public String getQuestionableFact() {
-        String left = getLeftOperand() == -1 ? "?" : getLeftOperand() + "";
-        String right = getRightOperand() == -1 ? "?" : getRightOperand() + "";
-        String res = getResult() == -1 ? "?" : getResult() + "";
+		String left = getLeftOperand() == -1 ? "?" : getLeftOperand() + "";
+		String right = getRightOperand() == -1 ? "?" : getRightOperand() + "";
+		String res = getResult() == -1 ? "?" : getResult() + "";
 
-        if (resultOnRight) {
-            return left + " x " + right + " = " + res + " (" + soluceLeft + "x" + soluceRight + "=" + soluceRes + ")";
-        } else {
-            return res + " = " + left + " x " + right + " (" + soluceRes + "=" + soluceLeft + "x" + soluceRight + ")";
-        }
+		if (resultOnRight) {
+			return left + " x " + right + " = " + res + " (" + soluceLeft + "x" + soluceRight + "=" + soluceRes + ")";
+		} else {
+			return res + " = " + left + " x " + right + " (" + soluceRes + "=" + soluceLeft + "x" + soluceRight + ")";
+		}
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(leftOperand, result, resultOnRight, rightOperand, soluceLeft, soluceRes, soluceRight);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MTQFCompletion2Impl other = (MTQFCompletion2Impl) obj;
+		return leftOperand == other.leftOperand && result == other.result && resultOnRight == other.resultOnRight
+				&& rightOperand == other.rightOperand && soluceLeft == other.soluceLeft && soluceRes == other.soluceRes
+				&& soluceRight == other.soluceRight;
 	}
 
 } //MTQFCompletion2Impl

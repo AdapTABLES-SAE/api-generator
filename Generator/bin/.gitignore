@@ -1,8 +1,2 @@
-/edu_elements_tests/
-/exceptions/
 /factsgenerator_maths/
-/generator/
-/generators/
-/managers/
-/structures/
-/tests/
+/edu_facts_maths_tests/

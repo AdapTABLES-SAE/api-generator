@@ -2022,6 +2022,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMTQFIdentification_Build() {
+		return (EAttribute) mtqfIdentificationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMTQFMembership() {
 		return mtqfMembershipEClass;
 	}
@@ -2467,6 +2476,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__LEFT_OPERAND);
 		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__SOLUCE);
 		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__RESULT_ON_RIGHT);
+		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__BUILD);
 
 		mtqfMembershipEClass = createEClass(MTQF_MEMBERSHIP);
 		createEAttribute(mtqfMembershipEClass, MTQF_MEMBERSHIP__GOOD_RESULTS);
@@ -3002,6 +3012,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTQFIdentification_ResultOnRight(), theXMLTypePackage.getBoolean(), "resultOnRight", "true",
 				0, 1, MTQFIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTQFIdentification_Build(), this.getTableBuild(), "build", null, 0, 1,
+				MTQFIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtqfMembershipEClass, MTQFMembership.class, "MTQFMembership", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

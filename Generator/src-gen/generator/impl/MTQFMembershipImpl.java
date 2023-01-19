@@ -6,6 +6,7 @@ import generator.GeneratorPackage;
 import generator.MTQFMembership;
 
 import java.util.Collection;
+import java.util.Objects;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -207,15 +208,32 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 
 	@Override
 	public String getQuestionableFact() {
-        String fact = "{";
-        for (int i = 0; i < goodResults.size(); i++) {
-            if (i == goodResults.size() - 1) {
-                fact += goodResults.get(i);
-            } else {
-                fact += goodResults.get(i) + ",";
-            }
-        }
-        return fact + "} (" + getTable() + ")";
+		String fact = "{";
+		for (int i = 0; i < goodResults.size(); i++) {
+			if (i == goodResults.size() - 1) {
+				fact += goodResults.get(i);
+			} else {
+				fact += goodResults.get(i) + ",";
+			}
+		}
+		return fact + "} (" + getTable() + ")";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(goodResults, table);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MTQFMembershipImpl other = (MTQFMembershipImpl) obj;
+		return Objects.equals(goodResults, other.goodResults) && table == other.table;
 	}
 
 } //MTQFMembershipImpl

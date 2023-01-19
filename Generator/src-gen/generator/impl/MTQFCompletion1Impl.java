@@ -5,6 +5,8 @@ package generator.impl;
 import generator.GeneratorPackage;
 import generator.MTQFCompletion1;
 
+import java.util.Objects;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -383,15 +385,33 @@ public class MTQFCompletion1Impl extends QuestionableFactImpl implements MTQFCom
 
 	@Override
 	public String getQuestionableFact() {
-        String left = getLeftOperand() == -1 ? "?" : getLeftOperand() + "";
-        String right = getRightOperand() == -1 ? "?" : getRightOperand() + "";
-        String res = getResult() == -1 ? "?" : getResult() + "";
+		String left = getLeftOperand() == -1 ? "?" : getLeftOperand() + "";
+		String right = getRightOperand() == -1 ? "?" : getRightOperand() + "";
+		String res = getResult() == -1 ? "?" : getResult() + "";
 
-        if (resultOnRight) {
-            return left + " x " + right + " = " + res + " (" + soluce + ")";
-        } else {
-            return res + " = " + left + " x " + right + " (" + soluce + ")";
-        }
+		if (resultOnRight) {
+			return left + " x " + right + " = " + res + " (" + soluce + ")";
+		} else {
+			return res + " = " + left + " x " + right + " (" + soluce + ")";
+		}
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(leftOperand, result, resultOnRight, rightOperand, soluce);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MTQFCompletion1Impl other = (MTQFCompletion1Impl) obj;
+		return leftOperand == other.leftOperand && result == other.result && resultOnRight == other.resultOnRight
+				&& rightOperand == other.rightOperand && soluce == other.soluce;
 	}
 
 } //MTQFCompletion1Impl

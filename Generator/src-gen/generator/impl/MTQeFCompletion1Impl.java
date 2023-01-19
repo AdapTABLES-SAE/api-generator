@@ -6,6 +6,7 @@ import generator.GeneratorPackage;
 import generator.MTQeFCompletion1;
 
 import java.util.Collection;
+import java.util.Objects;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -148,16 +149,33 @@ public class MTQeFCompletion1Impl extends QuestionedFactImpl implements MTQeFCom
 
 	@Override
 	public String getQuestionedFactQuestion() {
-		if(propositions != null) {
+		if (propositions != null) {
 			String choices = " | choices = {";
 			for (Integer integer : propositions) {
-				choices += integer + (propositions.get(propositions.size()-1).equals(integer)? "}" : ",");
+				choices += integer + (propositions.get(propositions.size() - 1).equals(integer) ? "}" : ",");
 			}
 			return getQuestionablefact().getQuestionableFact() + choices;
 		} else {
 			return getQuestionablefact().getQuestionableFact() + " | enter response";
 		}
-		
+
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(propositions);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MTQeFCompletion1Impl other = (MTQeFCompletion1Impl) obj;
+		return Objects.equals(propositions, other.propositions);
 	}
 
 } //MTQeFCompletion1Impl

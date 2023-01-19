@@ -48,7 +48,7 @@ public class MTFactGenerator {
 		
 	}
 	
-	private static void  generateQuestionableFactsByTask(EducationElementsManager eeManager, ResultsByTask resBytask) {
+	private static void  generateQuestionableFactsByTask(EducationElementsManager eeManager, ResultsByTask resBytask) { // TODO : corriger trop de faits sont générés ! 
 		switch(resBytask.getTask().getType()) {
 		case COMPLETE1: 
 			MTCompletion1Generator generatorC1 = new MTCompletion1Generator(eeManager);

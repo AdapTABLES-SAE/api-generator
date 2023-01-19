@@ -259,6 +259,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFIdentification/leftOperand"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFIdentification/soluce"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFIdentification/resultOnRight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFIdentification/build"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTQFMembership">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFMembership/goodResults"/>

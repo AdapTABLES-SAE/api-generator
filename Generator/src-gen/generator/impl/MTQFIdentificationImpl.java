@@ -5,6 +5,9 @@ package generator.impl;
 import generator.GeneratorPackage;
 import generator.MTQFIdentification;
 
+import generator.TableBuild;
+import java.util.Objects;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -24,6 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link generator.impl.MTQFIdentificationImpl#getLeftOperand <em>Left Operand</em>}</li>
  *   <li>{@link generator.impl.MTQFIdentificationImpl#isSoluce <em>Soluce</em>}</li>
  *   <li>{@link generator.impl.MTQFIdentificationImpl#isResultOnRight <em>Result On Right</em>}</li>
+ *   <li>{@link generator.impl.MTQFIdentificationImpl#getBuild <em>Build</em>}</li>
  * </ul>
  *
  * @generated
@@ -128,6 +132,26 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 	 * @ordered
 	 */
 	protected boolean resultOnRight = RESULT_ON_RIGHT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBuild() <em>Build</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBuild()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final TableBuild BUILD_EDEFAULT = TableBuild.TABLE_OPERAND;
+
+	/**
+	 * The cached value of the '{@link #getBuild() <em>Build</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBuild()
+	 * @generated
+	 * @ordered
+	 */
+	protected TableBuild build = BUILD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -263,6 +287,28 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TableBuild getBuild() {
+		return build;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBuild(TableBuild newBuild) {
+		TableBuild oldBuild = build;
+		build = newBuild == null ? BUILD_EDEFAULT : newBuild;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MTQF_IDENTIFICATION__BUILD, oldBuild,
+					build));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -276,6 +322,8 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 			return isSoluce();
 		case GeneratorPackage.MTQF_IDENTIFICATION__RESULT_ON_RIGHT:
 			return isResultOnRight();
+		case GeneratorPackage.MTQF_IDENTIFICATION__BUILD:
+			return getBuild();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -302,6 +350,9 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 			return;
 		case GeneratorPackage.MTQF_IDENTIFICATION__RESULT_ON_RIGHT:
 			setResultOnRight((Boolean) newValue);
+			return;
+		case GeneratorPackage.MTQF_IDENTIFICATION__BUILD:
+			setBuild((TableBuild) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -330,6 +381,9 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 		case GeneratorPackage.MTQF_IDENTIFICATION__RESULT_ON_RIGHT:
 			setResultOnRight(RESULT_ON_RIGHT_EDEFAULT);
 			return;
+		case GeneratorPackage.MTQF_IDENTIFICATION__BUILD:
+			setBuild(BUILD_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -352,6 +406,8 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 			return soluce != SOLUCE_EDEFAULT;
 		case GeneratorPackage.MTQF_IDENTIFICATION__RESULT_ON_RIGHT:
 			return resultOnRight != RESULT_ON_RIGHT_EDEFAULT;
+		case GeneratorPackage.MTQF_IDENTIFICATION__BUILD:
+			return build != BUILD_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -377,17 +433,37 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 		result.append(soluce);
 		result.append(", resultOnRight: ");
 		result.append(resultOnRight);
+		result.append(", build: ");
+		result.append(build);
 		result.append(')');
 		return result.toString();
 	}
 
 	@Override
 	public String getQuestionableFact() {
-        if (resultOnRight) {
-            return getLeftOperand() + " x " + getRightOperand() + " = " + getResult() + " (" + soluce + ")";
-        } else {
-            return getResult() + " = " + getLeftOperand() + " x " + getRightOperand() + " (" + soluce + ")";
-        }
+		if (resultOnRight) {
+			return getLeftOperand() + " x " + getRightOperand() + " = " + getResult() + " (" + soluce + ")";
+		} else {
+			return getResult() + " = " + getLeftOperand() + " x " + getRightOperand() + " (" + soluce + ")";
+		}
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(leftOperand, result, resultOnRight, rightOperand, soluce);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MTQFIdentificationImpl other = (MTQFIdentificationImpl) obj;
+		return leftOperand == other.leftOperand && result == other.result && resultOnRight == other.resultOnRight
+				&& rightOperand == other.rightOperand && soluce == other.soluce;
 	}
 
 } //MTQFIdentificationImpl

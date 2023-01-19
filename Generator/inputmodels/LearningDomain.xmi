@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<generator:LearningDomain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" xsi:schemaLocation="http://www.example.org/generator platform:/resource/Generator/model/generator.ecore">
+<generator:LearningDomain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore">
   <learningpaths name="Ingrid | CE1-REP -- Classe Moyenne ">
     <objectives ID="ICM-O1" name="Découverte Table 2">
       <levels xsi:type="generator:MTLevel" ID="ICM-O1-N1" buildSetup="OPERAND_TABLE">
@@ -625,6 +625,34 @@
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.10"/>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.11"/>
+    </objectives>
+    <knowledge href="MultiplicationTables.xmi#/"/>
+  </learningpaths>
+  <learningpaths name="EIAH TEST TRAINING PATH 2">
+    <objectives ID="O1" name="FICTIF SINGLE OBJECTIVE">
+      <levels xsi:type="generator:MTLevel" ID="O1_N1" buildSetup="MIX" resultPositionSetup="MIX" maxInterval="12">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" nbConsecutiveSuccess="1" ID="C1-RES">
+          <responseModality xsi:type="generator:EnterResponse"/>
+          <targets>RESULT</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="10" nbConsecutiveSuccess="1" ID="C1-TABOP">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>TABLE</targets>
+          <targets>OPERAND</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" nbConsecutiveSuccess="1" ID="C2-OPTABLE">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
+          <targets>OPERAND_TABLE</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="REB">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
+        </tasks>
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES" nbFacts="2" target="RESULT"/>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="MEMB">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
+        </tasks>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.0"/>
     </objectives>
     <knowledge href="MultiplicationTables.xmi#/"/>
   </learningpaths>

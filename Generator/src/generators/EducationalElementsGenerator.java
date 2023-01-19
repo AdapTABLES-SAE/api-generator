@@ -52,12 +52,12 @@ public class EducationalElementsGenerator {
 		}*/
 		
 		//System.out.println(learnerPlayer.getProgression().getCurrentobjectivelevels().get(i).getResults().getResultsbytask().size());
-		defineDungeonRooms2Tasks();
+		
 		/*for (ResultsByTask r : eeManager.chosenObjectiveLevel.getResults().getResultsbytask()) {
 			System.out.println("Are null "+r.getTask().getType()+" "+r.getQuestionableFacts().get(0));
 		}*/
-		
-		generateFactsToQuestion();
+		//defineDungeonRooms2Tasks();
+		//generateFactsToQuestion();
 		return eeManager;
 	}
 	

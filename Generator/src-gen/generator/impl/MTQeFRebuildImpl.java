@@ -6,6 +6,7 @@ import generator.GeneratorPackage;
 import generator.MTQeFRebuild;
 
 import java.util.Collection;
+import java.util.Objects;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -150,9 +151,26 @@ public class MTQeFRebuildImpl extends QuestionedFactImpl implements MTQeFRebuild
 	public String getQuestionedFactQuestion() {
 		String choices = "{";
 		for (Integer integer : propositions) {
-			choices += integer + (propositions.get(propositions.size()-1).equals(integer)? "}" : ",");
+			choices += integer + (propositions.get(propositions.size() - 1).equals(integer) ? "}" : ",");
 		}
 		return getQuestionablefact().getQuestionableFact() + " | choices = " + choices;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(propositions);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MTQeFRebuildImpl other = (MTQeFRebuildImpl) obj;
+		return Objects.equals(propositions, other.propositions);
 	}
 
 } //MTQeFRebuildImpl

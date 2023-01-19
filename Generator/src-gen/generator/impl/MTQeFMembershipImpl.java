@@ -6,6 +6,7 @@ import generator.GeneratorPackage;
 import generator.MTQeFMembership;
 
 import java.util.Collection;
+import java.util.Objects;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -150,9 +151,26 @@ public class MTQeFMembershipImpl extends QuestionedFactImpl implements MTQeFMemb
 	public String getQuestionedFactQuestion() {
 		String choices = "{";
 		for (Integer integer : badPropositions) {
-			choices += integer + (badPropositions.get(badPropositions.size()-1).equals(integer)? "}" : ",");
+			choices += integer + (badPropositions.get(badPropositions.size() - 1).equals(integer) ? "}" : ",");
 		}
 		return getQuestionablefact().getQuestionableFact() + " | bad choices = " + choices;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(badPropositions);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MTQeFMembershipImpl other = (MTQeFMembershipImpl) obj;
+		return Objects.equals(badPropositions, other.badPropositions);
 	}
 
 } //MTQeFMembershipImpl

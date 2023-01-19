@@ -16,6 +16,7 @@ package generator;
  *   <li>{@link generator.MTQFIdentification#getLeftOperand <em>Left Operand</em>}</li>
  *   <li>{@link generator.MTQFIdentification#isSoluce <em>Soluce</em>}</li>
  *   <li>{@link generator.MTQFIdentification#isResultOnRight <em>Result On Right</em>}</li>
+ *   <li>{@link generator.MTQFIdentification#getBuild <em>Build</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getMTQFIdentification()
@@ -133,5 +134,30 @@ public interface MTQFIdentification extends QuestionableFact {
 	 * @generated
 	 */
 	void setResultOnRight(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Build</b></em>' attribute.
+	 * The literals are from the enumeration {@link generator.TableBuild}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Build</em>' attribute.
+	 * @see generator.TableBuild
+	 * @see #setBuild(TableBuild)
+	 * @see generator.GeneratorPackage#getMTQFIdentification_Build()
+	 * @model
+	 * @generated
+	 */
+	TableBuild getBuild();
+
+	/**
+	 * Sets the value of the '{@link generator.MTQFIdentification#getBuild <em>Build</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Build</em>' attribute.
+	 * @see generator.TableBuild
+	 * @see #getBuild()
+	 * @generated
+	 */
+	void setBuild(TableBuild value);
 
 } // MTQFIdentification

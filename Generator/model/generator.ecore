@@ -314,6 +314,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="soluce" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultOnRight" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
         defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="build" eType="#//TableBuild"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTQFMembership" eSuperTypes="#//QuestionableFact">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="goodResults" lowerBound="1"

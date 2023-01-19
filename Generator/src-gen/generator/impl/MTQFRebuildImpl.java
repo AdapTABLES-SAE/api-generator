@@ -5,6 +5,8 @@ package generator.impl;
 import generator.GeneratorPackage;
 import generator.MTQFRebuild;
 
+import java.util.Objects;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -328,11 +330,29 @@ public class MTQFRebuildImpl extends QuestionableFactImpl implements MTQFRebuild
 
 	@Override
 	public String getQuestionableFact() {
-        if (resultOnRight) {
-            return "? x ? = ? (" + getSoluceLeft() + " x " + getSoluceRight() + " = " + getSoluceRes() + ")";
-        } else {
-            return "? = ? x ? (" + getSoluceRes() + " = " + getSoluceLeft() + " x " + getSoluceRight() + ")";
-        }
+		if (resultOnRight) {
+			return "? x ? = ? (" + getSoluceLeft() + " x " + getSoluceRight() + " = " + getSoluceRes() + ")";
+		} else {
+			return "? = ? x ? (" + getSoluceRes() + " = " + getSoluceLeft() + " x " + getSoluceRight() + ")";
+		}
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(resultOnRight, soluceLeft, soluceRes, soluceRight);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MTQFRebuildImpl other = (MTQFRebuildImpl) obj;
+		return resultOnRight == other.resultOnRight && soluceLeft == other.soluceLeft && soluceRes == other.soluceRes
+				&& soluceRight == other.soluceRight;
 	}
 
 } //MTQFRebuildImpl

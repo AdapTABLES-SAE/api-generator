@@ -25,7 +25,7 @@ public class MTCompletion1Generator {
 	}
 
 	public Set<QuestionableFact> generateQuestionableFacts(MTCompletion1 task) {
-		HashSet<QuestionableFact> questionedFacts = new HashSet<>();
+		Set<QuestionableFact> questionedFacts = new HashSet<>();
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
@@ -46,11 +46,17 @@ public class MTCompletion1Generator {
 				
 			}
 		}	
+		
+		/*System.out.println(questionedFacts.size());
+		for (QuestionableFact questionableFact : questionedFacts) {
+			System.out.println(questionableFact.getQuestionableFact());
+		}*/
+		
 		return questionedFacts; 
 	}
 	
 	private Set<MTQFCompletion1> generateQuestionableFactsOf(MTCompletion1 task, MTFact fact){
-		HashSet<MTQFCompletion1> qfs = new HashSet<>(); 
+		Set<MTQFCompletion1> qfs = new HashSet<>(); 
 		
 		TableBuild build = ((MTLevel) eeManager.getLevel()).getBuildSetup();
 		ResultPosition equalPos = ((MTLevel) eeManager.getLevel()).getResultPositionSetup();

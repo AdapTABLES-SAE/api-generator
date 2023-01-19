@@ -3094,13 +3094,22 @@ public interface GeneratorPackage extends EPackage {
 	int MTQF_IDENTIFICATION__RESULT_ON_RIGHT = QUESTIONABLE_FACT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Build</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION__BUILD = QUESTIONABLE_FACT_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>MTQF Identification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_IDENTIFICATION_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 5;
+	int MTQF_IDENTIFICATION_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
@@ -5348,6 +5357,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTQFIdentification_ResultOnRight();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.MTQFIdentification#getBuild <em>Build</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Build</em>'.
+	 * @see generator.MTQFIdentification#getBuild()
+	 * @see #getMTQFIdentification()
+	 * @generated
+	 */
+	EAttribute getMTQFIdentification_Build();
+
+	/**
 	 * Returns the meta object for class '{@link generator.MTQFMembership <em>MTQF Membership</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6983,6 +7003,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MTQF_IDENTIFICATION__RESULT_ON_RIGHT = eINSTANCE.getMTQFIdentification_ResultOnRight();
+
+		/**
+		 * The meta object literal for the '<em><b>Build</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_IDENTIFICATION__BUILD = eINSTANCE.getMTQFIdentification_Build();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTQFMembershipImpl <em>MTQF Membership</em>}' class.

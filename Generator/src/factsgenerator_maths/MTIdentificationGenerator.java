@@ -12,6 +12,7 @@ import generator.MTFact;
 import generator.MTIdentification;
 import generator.MTLevel;
 import generator.MTQFIdentification;
+import generator.QuestionableFact;
 import generator.ResultPosition;
 import generator.SetOfFacts;
 import generator.TableBuild;
@@ -26,6 +27,8 @@ public class MTIdentificationGenerator {
 	private List<Integer> alreadyUsed; 
 	private Random rand;
 	
+	private List<Integer> alreadyChosen;
+	
 	public MTIdentificationGenerator(EducationElementsManager eeManager) {
 		this.eeManager = eeManager; 
 		this.alreadyUsed = new ArrayList<>();
@@ -33,7 +36,7 @@ public class MTIdentificationGenerator {
 	}
 	
 	public Set<MTQFIdentification> generateQuestionableFacts(MTIdentification task) {
-		HashSet<MTQFIdentification> questionedFacts = new HashSet<>();
+		Set<MTQFIdentification> questionableFacts = new HashSet<>();
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
@@ -45,17 +48,26 @@ public class MTIdentificationGenerator {
 			for (AbstractFact f : setoffact.getFacts()) { 
 				if(f instanceof MTFact) {
 					MTFact fact = (MTFact) f;
-					if(min <= fact.getOp() && fact.getOp()<= max){
-						questionedFacts.addAll(generateQuestionableFactsOf(task, fact));
+					if(min <= fact.getOp() && fact.getOp() <= max){
+						questionableFacts.addAll(generateGoodQuestionableFactsOf(task, fact));
 					}
 				}
 			}
 		}
-		return questionedFacts; 
+		
+		System.out.println("__ "+questionableFacts.size());
+		questionableFacts.addAll(generateFalseFacts(task, questionableFacts));
+		
+		System.out.println(questionableFacts.size());
+		for (MTQFIdentification mtqfIdentification : questionableFacts) {
+			System.out.println(mtqfIdentification.getQuestionableFact());
+		}
+		
+		return questionableFacts; 
 	}
 	
-	private Set<MTQFIdentification> generateQuestionableFactsOf(MTIdentification task, MTFact fact){
-		HashSet<MTQFIdentification> qfs = new HashSet<>(); 
+	private Set<MTQFIdentification> generateGoodQuestionableFactsOf(MTIdentification task, MTFact fact){
+		Set<MTQFIdentification> qfs = new HashSet<>();
 		
 		TableBuild build = ((MTLevel) eeManager.getLevel()).getBuildSetup();
 		ResultPosition equalPos = ((MTLevel) eeManager.getLevel()).getResultPositionSetup();
@@ -63,29 +75,20 @@ public class MTIdentificationGenerator {
 		
 		if(build.equals(TableBuild.MIX)) {
 			if(equalPos.equals(ResultPosition.MIX)) {
-				qfs.add(buildQF(fact, TableBuild.OPERAND_TABLE, ResultPosition.LEFT, null));
-				qfs.add(buildQF(fact, TableBuild.OPERAND_TABLE, ResultPosition.LEFT, falseTarget));
-				qfs.add(buildQF(fact, TableBuild.TABLE_OPERAND, ResultPosition.LEFT, null));
-				qfs.add(buildQF(fact, TableBuild.TABLE_OPERAND, ResultPosition.LEFT, falseTarget));
-				qfs.add(buildQF(fact, TableBuild.OPERAND_TABLE, ResultPosition.RIGHT, null));
-				qfs.add(buildQF(fact, TableBuild.OPERAND_TABLE, ResultPosition.RIGHT, falseTarget));
-				qfs.add(buildQF(fact, TableBuild.TABLE_OPERAND, ResultPosition.RIGHT, null));
-				qfs.add(buildQF(fact, TableBuild.TABLE_OPERAND, ResultPosition.RIGHT, falseTarget));
+				qfs.add(buildQF(fact, TableBuild.OPERAND_TABLE, ResultPosition.LEFT));
+				qfs.add(buildQF(fact, TableBuild.TABLE_OPERAND, ResultPosition.LEFT));
+				qfs.add(buildQF(fact, TableBuild.OPERAND_TABLE, ResultPosition.RIGHT));
+				qfs.add(buildQF(fact, TableBuild.TABLE_OPERAND, ResultPosition.RIGHT));
 			}else {
-				qfs.add(buildQF(fact, TableBuild.OPERAND_TABLE, equalPos, null));
-				qfs.add(buildQF(fact, TableBuild.OPERAND_TABLE, equalPos, falseTarget));
-				qfs.add(buildQF(fact, TableBuild.TABLE_OPERAND, equalPos, null));
-				qfs.add(buildQF(fact, TableBuild.TABLE_OPERAND, equalPos, falseTarget));
+				qfs.add(buildQF(fact, TableBuild.OPERAND_TABLE, equalPos));
+				qfs.add(buildQF(fact, TableBuild.TABLE_OPERAND, equalPos));
 			}
 		}else {
 			if(equalPos.equals(ResultPosition.MIX)) {
-				qfs.add(buildQF(fact, build, ResultPosition.LEFT, null));
-				qfs.add(buildQF(fact, build, ResultPosition.LEFT, falseTarget));
-				qfs.add(buildQF(fact, build, ResultPosition.RIGHT, null));
-				qfs.add(buildQF(fact, build, ResultPosition.RIGHT, falseTarget));
+				qfs.add(buildQF(fact, build, ResultPosition.LEFT));
+				qfs.add(buildQF(fact, build, ResultPosition.RIGHT));
 			}else {
-				qfs.add(buildQF(fact, build, equalPos, null));
-				qfs.add(buildQF(fact, build, equalPos, falseTarget));
+				qfs.add(buildQF(fact, build, equalPos));
 			}
 		}
 		
@@ -93,49 +96,74 @@ public class MTIdentificationGenerator {
 		return qfs;
 	}
 	
-	private MTQFIdentification buildQF(MTFact fact, TableBuild build, ResultPosition equalPos, ESingleTarget target) {
+	private List<MTQFIdentification> generateFalseFacts(MTIdentification task, Set<MTQFIdentification> goodFacts){
+		ESingleTarget falseTarget = task.getTarget();
+		List<MTQFIdentification> allFacts = new ArrayList<>(goodFacts); 
+		
+		for (MTQFIdentification questionableFact : goodFacts) {
+			allFacts.add(buildBadQF(questionableFact, falseTarget));
+		}
+		
+		return allFacts;
+	}
+	
+	private MTQFIdentification buildBadQF(MTQFIdentification goodFact, ESingleTarget target) { // TODO : Reimplement to correct bug
 		MTQFIdentification qf = new MTQFIdentificationImpl(); 
 		
-		if(target != null) {
-			int min, max, chosenFalse = -1;
-			if(target.equals(ESingleTarget.RESULT)) {
-				min = fact.getRes() - buildFalseInteraval[0] >= 0? fact.getRes() - buildFalseInteraval[0]: 0;
-				max = fact.getRes() + buildFalseInteraval[1];
-			}else {
-				min = fact.getOp() - buildFalseInteraval[0] >= 0? fact.getOp() - buildFalseInteraval[0]: 0;
-				max = fact.getOp() + buildFalseInteraval[1];
-			}
-			
-			while(chosenFalse == -1) {
-				chosenFalse = rand.nextInt((max - min) + 1) + min;
-				if(alreadyUsed.contains(chosenFalse)) {
-					chosenFalse = -1;
-				}
-			}
-			
-			if(build.equals(TableBuild.OPERAND_TABLE)) {
-				qf.setLeftOperand(target.equals(ESingleTarget.RESULT)? fact.getOp(): chosenFalse);
-				qf.setRightOperand(fact.getTable());
-			}else {
-				qf.setLeftOperand(fact.getTable());
-				qf.setRightOperand(target.equals(ESingleTarget.RESULT)? fact.getOp(): chosenFalse);
-			}			
-			
-			qf.setResult(target.equals(ESingleTarget.RESULT)? chosenFalse: fact.getRes());
-			qf.setResultOnRight(equalPos.equals(ResultPosition.RIGHT));
-			qf.setSoluce(false);
+		int min, max, chosenFalse = -1;
+		int solution = -1;
+		if(target.equals(ESingleTarget.RESULT)) { 
+			min = goodFact.getResult() - buildFalseInteraval[0] >= 0? goodFact.getResult() - buildFalseInteraval[0]: 0;
+			max = goodFact.getResult() + buildFalseInteraval[1];
+			solution = goodFact.getResult();
 		}else {
-			if(build.equals(TableBuild.OPERAND_TABLE)) {
-				qf.setLeftOperand(fact.getOp());
-				qf.setRightOperand(fact.getTable());
+			if(goodFact.getBuild().equals(TableBuild.OPERAND_TABLE)) {
+				min = goodFact.getLeftOperand() - buildFalseInteraval[0] >= 0? goodFact.getLeftOperand() - buildFalseInteraval[0]: 0;
+				max = goodFact.getLeftOperand() + buildFalseInteraval[1];
+				solution = goodFact.getLeftOperand();
 			}else {
-				qf.setLeftOperand(fact.getTable());
-				qf.setRightOperand(fact.getOp());
+				min = goodFact.getRightOperand() - buildFalseInteraval[0] >= 0? goodFact.getRightOperand() - buildFalseInteraval[0]: 0;
+				max = goodFact.getRightOperand() + buildFalseInteraval[1];
+				solution = goodFact.getRightOperand();
 			}
-			qf.setResult(fact.getRes());
-			qf.setResultOnRight(equalPos.equals(ResultPosition.RIGHT));
-			qf.setSoluce(true);
+			
 		}
+			
+		while(chosenFalse == -1) {
+			chosenFalse = rand.nextInt((max - min) + 1) + min;
+			if(alreadyUsed.contains(chosenFalse) && !(chosenFalse == solution)) {
+				chosenFalse = -1;
+			}
+		}
+			
+		if(goodFact.getBuild().equals(TableBuild.OPERAND_TABLE)) {
+			qf.setLeftOperand(target.equals(ESingleTarget.RESULT)? goodFact.getLeftOperand(): chosenFalse);
+			qf.setRightOperand(goodFact.getRightOperand());
+		}else {
+			qf.setLeftOperand(goodFact.getLeftOperand());
+			qf.setRightOperand(target.equals(ESingleTarget.RESULT)? goodFact.getRightOperand(): chosenFalse);
+		}			
+		
+		qf.setResult(target.equals(ESingleTarget.RESULT)? chosenFalse: goodFact.getResult());
+		qf.setResultOnRight(goodFact.isResultOnRight());
+		qf.setSoluce(false);
+		return qf;
+	}
+	
+	private MTQFIdentification buildQF(MTFact fact, TableBuild build, ResultPosition equalPos) { 
+		MTQFIdentification qf = new MTQFIdentificationImpl(); 
+		
+		if(build.equals(TableBuild.OPERAND_TABLE)) {
+			qf.setLeftOperand(fact.getOp());
+			qf.setRightOperand(fact.getTable());
+		}else {
+			qf.setLeftOperand(fact.getTable());
+			qf.setRightOperand(fact.getOp());
+		}
+		qf.setResult(fact.getRes());
+		qf.setResultOnRight(equalPos.equals(ResultPosition.RIGHT));
+		qf.setBuild(build);
+		qf.setSoluce(true);
 		
 		return qf;
 	}
