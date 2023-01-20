@@ -894,13 +894,13 @@ public interface GeneratorPackage extends EPackage {
 	int LEVEL__TASKS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Prerequisite</b></em>' containment reference.
+	 * The feature id for the '<em><b>Completion Criteria</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEVEL__PREREQUISITE = 2;
+	int LEVEL__COMPLETION_CRITERIA = 2;
 
 	/**
 	 * The number of structural features of the '<em>Level</em>' class.
@@ -949,13 +949,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_LEVEL__TASKS = LEVEL__TASKS;
 
 	/**
-	 * The feature id for the '<em><b>Prerequisite</b></em>' containment reference.
+	 * The feature id for the '<em><b>Completion Criteria</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_LEVEL__PREREQUISITE = LEVEL__PREREQUISITE;
+	int MT_LEVEL__COMPLETION_CRITERIA = LEVEL__COMPLETION_CRITERIA;
 
 	/**
 	 * The feature id for the '<em><b>Build Setup</b></em>' attribute.
@@ -3578,6 +3578,52 @@ public interface GeneratorPackage extends EPackage {
 	int MT_QE_FMEMBERSHIP_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.CompletionCriteriaImpl <em>Completion Criteria</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.CompletionCriteriaImpl
+	 * @see generator.impl.GeneratorPackageImpl#getCompletionCriteria()
+	 * @generated
+	 */
+	int COMPLETION_CRITERIA = 54;
+
+	/**
+	 * The feature id for the '<em><b>Succes Percent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION_CRITERIA__SUCCES_PERCENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Encounters Percent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION_CRITERIA__ENCOUNTERS_PERCENT = 1;
+
+	/**
+	 * The number of structural features of the '<em>Completion Criteria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION_CRITERIA_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Completion Criteria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION_CRITERIA_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3585,7 +3631,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 54;
+	int DIRECTIONS = 55;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -3595,7 +3641,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 55;
+	int DUNGEON_MODE = 56;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -3605,7 +3651,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 56;
+	int TABLE_BUILD = 57;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -3615,7 +3661,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 57;
+	int RESULT_POSITION = 58;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -3625,7 +3671,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 58;
+	int ESINGLE_TARGET = 59;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -3635,7 +3681,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 59;
+	int ETASK_TYPE = 60;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -3645,7 +3691,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 60;
+	int EMODALITY = 61;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -3655,7 +3701,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 61;
+	int ESEVERAL_TARGET = 62;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -4246,15 +4292,15 @@ public interface GeneratorPackage extends EPackage {
 	EReference getLevel_Tasks();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.Level#getPrerequisite <em>Prerequisite</em>}'.
+	 * Returns the meta object for the containment reference '{@link generator.Level#getCompletionCriteria <em>Completion Criteria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Prerequisite</em>'.
-	 * @see generator.Level#getPrerequisite()
+	 * @return the meta object for the containment reference '<em>Completion Criteria</em>'.
+	 * @see generator.Level#getCompletionCriteria()
 	 * @see #getLevel()
 	 * @generated
 	 */
-	EReference getLevel_Prerequisite();
+	EReference getLevel_CompletionCriteria();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MTLevel <em>MT Level</em>}'.
@@ -5536,6 +5582,38 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTQeFMembership_BadPropositions();
 
 	/**
+	 * Returns the meta object for class '{@link generator.CompletionCriteria <em>Completion Criteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Completion Criteria</em>'.
+	 * @see generator.CompletionCriteria
+	 * @generated
+	 */
+	EClass getCompletionCriteria();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.CompletionCriteria#getSuccesPercent <em>Succes Percent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Succes Percent</em>'.
+	 * @see generator.CompletionCriteria#getSuccesPercent()
+	 * @see #getCompletionCriteria()
+	 * @generated
+	 */
+	EAttribute getCompletionCriteria_SuccesPercent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.CompletionCriteria#getEncountersPercent <em>Encounters Percent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Encounters Percent</em>'.
+	 * @see generator.CompletionCriteria#getEncountersPercent()
+	 * @see #getCompletionCriteria()
+	 * @generated
+	 */
+	EAttribute getCompletionCriteria_EncountersPercent();
+
+	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6111,12 +6189,12 @@ public interface GeneratorPackage extends EPackage {
 		EReference LEVEL__TASKS = eINSTANCE.getLevel_Tasks();
 
 		/**
-		 * The meta object literal for the '<em><b>Prerequisite</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Completion Criteria</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LEVEL__PREREQUISITE = eINSTANCE.getLevel_Prerequisite();
+		EReference LEVEL__COMPLETION_CRITERIA = eINSTANCE.getLevel_CompletionCriteria();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTLevelImpl <em>MT Level</em>}' class.
@@ -7154,6 +7232,32 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MT_QE_FMEMBERSHIP__BAD_PROPOSITIONS = eINSTANCE.getMTQeFMembership_BadPropositions();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.CompletionCriteriaImpl <em>Completion Criteria</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.CompletionCriteriaImpl
+		 * @see generator.impl.GeneratorPackageImpl#getCompletionCriteria()
+		 * @generated
+		 */
+		EClass COMPLETION_CRITERIA = eINSTANCE.getCompletionCriteria();
+
+		/**
+		 * The meta object literal for the '<em><b>Succes Percent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPLETION_CRITERIA__SUCCES_PERCENT = eINSTANCE.getCompletionCriteria_SuccesPercent();
+
+		/**
+		 * The meta object literal for the '<em><b>Encounters Percent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPLETION_CRITERIA__ENCOUNTERS_PERCENT = eINSTANCE.getCompletionCriteria_EncountersPercent();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.

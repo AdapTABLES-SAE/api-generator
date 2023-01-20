@@ -16,7 +16,7 @@ public class ALGAGenerator {
 		
 		ALGAGenerator generator = new ALGAGenerator();
 		generator.generate();
-		//generator.printDungeon();
+		generator.printDungeon();
 		//generator.saveDungeon("Dungeon.xmi");
 	}
 	
@@ -42,18 +42,18 @@ public class ALGAGenerator {
 		DungeonGenerator dungeonGeneration;
 		try {
 			eeManager = eduGeneration.generateEE();
-		//	dungeonGeneration = new DungeonGenerator(modelAccess, eeManager);
-			//generatedDungeon = dungeonGeneration.generateDungeon();
+			dungeonGeneration = new DungeonGenerator(modelAccess, eeManager);
+			generatedDungeon = dungeonGeneration.generateDungeon();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
-		/*generatedDungeon.setLearningobjective(eduGeneration.getChosenObjective());
+		generatedDungeon.setLearningobjective(eduGeneration.getChosenObjective());
 		generatedDungeon.setLevel(eduGeneration.getChosenLevel());
 		
 		if(generatedDungeon.getLevel() == null || generatedDungeon.getLearningobjective() == null) {
 			System.err.println("Dungeon objective and/or level are not set properly, possible mistake may appear");
-		}		*/
+		}		
 		
 		return generatedDungeon;
 	}

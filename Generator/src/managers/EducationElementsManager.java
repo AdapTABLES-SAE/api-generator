@@ -201,6 +201,7 @@ public class EducationElementsManager {
 	}
 	
 	public void addFactToQuestion(ATask task, QuestionedFact qEfact) {
+		System.out.println("ici");
 		this.factsToQuestionPerRoom.add(new TaskFactPair(task, Arrays.asList(qEfact)));
 	}
 	

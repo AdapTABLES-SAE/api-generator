@@ -12,7 +12,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -64,7 +64,7 @@ public class MTQeFRebuildImpl extends QuestionedFactImpl implements MTQeFRebuild
 	 */
 	public EList<Integer> getPropositions() {
 		if (propositions == null) {
-			propositions = new EDataTypeUniqueEList<Integer>(Integer.class, this,
+			propositions = new EDataTypeEList<Integer>(Integer.class, this,
 					GeneratorPackage.MT_QE_FREBUILD__PROPOSITIONS);
 		}
 		return propositions;

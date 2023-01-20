@@ -3,10 +3,9 @@
 package generator.impl;
 
 import generator.ATask;
+import generator.CompletionCriteria;
 import generator.GeneratorPackage;
 import generator.Level;
-import generator.Prerequisite;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -33,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link generator.impl.LevelImpl#getID <em>ID</em>}</li>
  *   <li>{@link generator.impl.LevelImpl#getTasks <em>Tasks</em>}</li>
- *   <li>{@link generator.impl.LevelImpl#getPrerequisite <em>Prerequisite</em>}</li>
+ *   <li>{@link generator.impl.LevelImpl#getCompletionCriteria <em>Completion Criteria</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,14 +69,14 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	protected EList<ATask> tasks;
 
 	/**
-	 * The cached value of the '{@link #getPrerequisite() <em>Prerequisite</em>}' containment reference.
+	 * The cached value of the '{@link #getCompletionCriteria() <em>Completion Criteria</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrerequisite()
+	 * @see #getCompletionCriteria()
 	 * @generated
 	 * @ordered
 	 */
-	protected Prerequisite prerequisite;
+	protected CompletionCriteria completionCriteria;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -136,8 +135,8 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Prerequisite getPrerequisite() {
-		return prerequisite;
+	public CompletionCriteria getCompletionCriteria() {
+		return completionCriteria;
 	}
 
 	/**
@@ -145,12 +144,13 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPrerequisite(Prerequisite newPrerequisite, NotificationChain msgs) {
-		Prerequisite oldPrerequisite = prerequisite;
-		prerequisite = newPrerequisite;
+	public NotificationChain basicSetCompletionCriteria(CompletionCriteria newCompletionCriteria,
+			NotificationChain msgs) {
+		CompletionCriteria oldCompletionCriteria = completionCriteria;
+		completionCriteria = newCompletionCriteria;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.LEVEL__PREREQUISITE, oldPrerequisite, newPrerequisite);
+					GeneratorPackage.LEVEL__COMPLETION_CRITERIA, oldCompletionCriteria, newCompletionCriteria);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -164,21 +164,21 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrerequisite(Prerequisite newPrerequisite) {
-		if (newPrerequisite != prerequisite) {
+	public void setCompletionCriteria(CompletionCriteria newCompletionCriteria) {
+		if (newCompletionCriteria != completionCriteria) {
 			NotificationChain msgs = null;
-			if (prerequisite != null)
-				msgs = ((InternalEObject) prerequisite).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.LEVEL__PREREQUISITE, null, msgs);
-			if (newPrerequisite != null)
-				msgs = ((InternalEObject) newPrerequisite).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.LEVEL__PREREQUISITE, null, msgs);
-			msgs = basicSetPrerequisite(newPrerequisite, msgs);
+			if (completionCriteria != null)
+				msgs = ((InternalEObject) completionCriteria).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.LEVEL__COMPLETION_CRITERIA, null, msgs);
+			if (newCompletionCriteria != null)
+				msgs = ((InternalEObject) newCompletionCriteria).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.LEVEL__COMPLETION_CRITERIA, null, msgs);
+			msgs = basicSetCompletionCriteria(newCompletionCriteria, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEVEL__PREREQUISITE, newPrerequisite,
-					newPrerequisite));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEVEL__COMPLETION_CRITERIA,
+					newCompletionCriteria, newCompletionCriteria));
 	}
 
 	/**
@@ -191,8 +191,8 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 		case GeneratorPackage.LEVEL__TASKS:
 			return ((InternalEList<?>) getTasks()).basicRemove(otherEnd, msgs);
-		case GeneratorPackage.LEVEL__PREREQUISITE:
-			return basicSetPrerequisite(null, msgs);
+		case GeneratorPackage.LEVEL__COMPLETION_CRITERIA:
+			return basicSetCompletionCriteria(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -209,8 +209,8 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 			return getID();
 		case GeneratorPackage.LEVEL__TASKS:
 			return getTasks();
-		case GeneratorPackage.LEVEL__PREREQUISITE:
-			return getPrerequisite();
+		case GeneratorPackage.LEVEL__COMPLETION_CRITERIA:
+			return getCompletionCriteria();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -231,8 +231,8 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 			getTasks().clear();
 			getTasks().addAll((Collection<? extends ATask>) newValue);
 			return;
-		case GeneratorPackage.LEVEL__PREREQUISITE:
-			setPrerequisite((Prerequisite) newValue);
+		case GeneratorPackage.LEVEL__COMPLETION_CRITERIA:
+			setCompletionCriteria((CompletionCriteria) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -252,8 +252,8 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.LEVEL__TASKS:
 			getTasks().clear();
 			return;
-		case GeneratorPackage.LEVEL__PREREQUISITE:
-			setPrerequisite((Prerequisite) null);
+		case GeneratorPackage.LEVEL__COMPLETION_CRITERIA:
+			setCompletionCriteria((CompletionCriteria) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -271,8 +271,8 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		case GeneratorPackage.LEVEL__TASKS:
 			return tasks != null && !tasks.isEmpty();
-		case GeneratorPackage.LEVEL__PREREQUISITE:
-			return prerequisite != null;
+		case GeneratorPackage.LEVEL__COMPLETION_CRITERIA:
+			return completionCriteria != null;
 		}
 		return super.eIsSet(featureID);
 	}

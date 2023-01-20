@@ -28,7 +28,7 @@ public interface MTQeFCompletion2 extends QuestionedFact {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Propositions</em>' attribute list.
 	 * @see generator.GeneratorPackage#getMTQeFCompletion2_Propositions()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	EList<Integer> getPropositions();

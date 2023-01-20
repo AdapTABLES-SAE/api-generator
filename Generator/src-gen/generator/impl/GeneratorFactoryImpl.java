@@ -141,6 +141,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createMTQeFIdentication();
 		case GeneratorPackage.MT_QE_FMEMBERSHIP:
 			return createMTQeFMembership();
+		case GeneratorPackage.COMPLETION_CRITERIA:
+			return createCompletionCriteria();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -622,6 +624,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public MTQeFMembership createMTQeFMembership() {
 		MTQeFMembershipImpl mtQeFMembership = new MTQeFMembershipImpl();
 		return mtQeFMembership;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CompletionCriteria createCompletionCriteria() {
+		CompletionCriteriaImpl completionCriteria = new CompletionCriteriaImpl();
+		return completionCriteria;
 	}
 
 	/**

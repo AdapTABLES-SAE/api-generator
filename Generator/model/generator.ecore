@@ -111,7 +111,7 @@
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" lowerBound="1" upperBound="-1"
         eType="#//ATask" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" eType="#//Prerequisite"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="completionCriteria" eType="#//CompletionCriteria"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTLevel" eSuperTypes="#//Level">
@@ -329,20 +329,26 @@
         eType="#//Position"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTQeFCompletion1" eSuperTypes="#//QuestionedFact">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propositions" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propositions" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTQeFCompletion2" eSuperTypes="#//QuestionedFact">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propositions" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propositions" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTQeFRebuild" eSuperTypes="#//QuestionedFact">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propositions" lowerBound="3"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propositions" unique="false"
+        lowerBound="3" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTQeFIdentication" eSuperTypes="#//QuestionedFact"/>
   <eClassifiers xsi:type="ecore:EClass" name="MTQeFMembership" eSuperTypes="#//QuestionedFact">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="badPropositions" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompletionCriteria">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="succesPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        defaultValueLiteral="80.0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="encountersPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        defaultValueLiteral="100.0"/>
   </eClassifiers>
 </ecore:EPackage>

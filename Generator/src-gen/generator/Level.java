@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.Level#getID <em>ID</em>}</li>
  *   <li>{@link generator.Level#getTasks <em>Tasks</em>}</li>
- *   <li>{@link generator.Level#getPrerequisite <em>Prerequisite</em>}</li>
+ *   <li>{@link generator.Level#getCompletionCriteria <em>Completion Criteria</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getLevel()
@@ -60,25 +60,25 @@ public interface Level extends EObject {
 	EList<ATask> getTasks();
 
 	/**
-	 * Returns the value of the '<em><b>Prerequisite</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Completion Criteria</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prerequisite</em>' containment reference.
-	 * @see #setPrerequisite(Prerequisite)
-	 * @see generator.GeneratorPackage#getLevel_Prerequisite()
+	 * @return the value of the '<em>Completion Criteria</em>' containment reference.
+	 * @see #setCompletionCriteria(CompletionCriteria)
+	 * @see generator.GeneratorPackage#getLevel_CompletionCriteria()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Prerequisite getPrerequisite();
+	CompletionCriteria getCompletionCriteria();
 
 	/**
-	 * Sets the value of the '{@link generator.Level#getPrerequisite <em>Prerequisite</em>}' containment reference.
+	 * Sets the value of the '{@link generator.Level#getCompletionCriteria <em>Completion Criteria</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prerequisite</em>' containment reference.
-	 * @see #getPrerequisite()
+	 * @param value the new value of the '<em>Completion Criteria</em>' containment reference.
+	 * @see #getCompletionCriteria()
 	 * @generated
 	 */
-	void setPrerequisite(Prerequisite value);
+	void setCompletionCriteria(CompletionCriteria value);
 
 } // Level

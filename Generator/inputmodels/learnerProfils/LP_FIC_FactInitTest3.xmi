@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:GenerationContext xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator">
+  <gamecontext numberOfRooms="20"/>
+  <learnerplayer name="Learner FICTIF 3">
+    <progression>
+      <currentobjectivelevels achieved="false">
+        <objective href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#O1"/>
+        <level xsi:type="generator:MTLevel" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#O1_N1"/>
+        <results>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C1-RES"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="3" result="-1" soluce="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="4" result="-1" soluce="32" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="3" result="-1" soluce="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="3" result="-1" soluce="15" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="3" result="-1" soluce="15" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="5" result="-1" soluce="15" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="5" result="-1" soluce="55" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="4" result="-1" soluce="32" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="3" result="-1" soluce="9" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="8" result="-1" soluce="32" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="4" result="-1" soluce="12" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="8" result="-1" soluce="24" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="5" result="-1" soluce="55" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="8" result="-1" soluce="32" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="5" result="-1" soluce="40" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="8" result="-1" soluce="24" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="4" result="-1" soluce="16" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="4" result="-1" soluce="16" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="4" result="-1" soluce="44" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="11" result="-1" soluce="44" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="4" result="-1" soluce="20" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="4" result="-1" soluce="20" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="4" result="-1" soluce="44" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="4" result="-1" soluce="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="11" result="-1" soluce="44" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="11" result="-1" soluce="55" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="11" result="-1" soluce="55" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="5" result="-1" soluce="40" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="5" result="-1" soluce="15" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="8" result="-1" soluce="40" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="8" result="-1" soluce="40" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="11" result="-1" soluce="33" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="3" result="-1" soluce="33" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="3" result="-1" soluce="12" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="11" result="-1" soluce="33" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="3" result="-1" soluce="33" resultOnRight="false"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C1-TABOP"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="16" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="20" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="11" result="33" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="-1" result="44" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="9" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="16" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="20" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="32" soluce="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="11" result="33" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="-1" result="44" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="12" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="20" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="-1" result="33" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="33" soluce="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="55" soluce="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="12" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="11" result="44" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="12" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="9" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="15" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="20" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="33" soluce="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="12" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="15" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="11" result="55" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="11" result="55" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="55" soluce="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="-1" result="33" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="11" result="44" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="55" soluce="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="-1" result="40" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="12" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="24" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="15" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="12" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="15" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="-1" result="32" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="-1" result="40" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="-1" result="24" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="44" soluce="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="24" soluce="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="8" result="40" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="44" soluce="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="-1" result="32" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="8" result="32" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="8" result="40" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="-1" result="24" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="8" result="32" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="32" soluce="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="8" result="24" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="8" result="24" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="32" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="9" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="15" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="9" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="20" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="33" soluce="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="16" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="15" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="15" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="20" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="44" soluce="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="40" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="33" soluce="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="16" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="15" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="40" soluce="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="40" soluce="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="12" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="40" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="44" soluce="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="55" soluce="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="-1" result="55" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="24" soluce="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="-1" result="55" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="32" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="20" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="12" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="24" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="20" soluce="4" resultOnRight="false"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion2" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C2-OPTABLE"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="33" soluceLeft="3" soluceRight="11" soluceRes="33" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="16" soluceLeft="4" soluceRight="4" soluceRes="16" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="40" soluceLeft="5" soluceRight="8" soluceRes="40" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="9" soluceLeft="3" soluceRight="3" soluceRes="9" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="20" soluceLeft="5" soluceRight="4" soluceRes="20" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="55" soluceLeft="5" soluceRight="11" soluceRes="55" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="24" soluceLeft="3" soluceRight="8" soluceRes="24" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="12" soluceLeft="3" soluceRight="4" soluceRes="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="12" soluceLeft="4" soluceRight="3" soluceRes="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="44" soluceLeft="4" soluceRight="11" soluceRes="44" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="15" soluceLeft="5" soluceRight="3" soluceRes="15" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="12" soluceLeft="3" soluceRight="4" soluceRes="12" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="12" soluceLeft="4" soluceRight="3" soluceRes="12" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="20" soluceLeft="5" soluceRight="4" soluceRes="20" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="40" soluceLeft="5" soluceRight="8" soluceRes="40" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="15" soluceLeft="5" soluceRight="3" soluceRes="15" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="33" soluceLeft="3" soluceRight="11" soluceRes="33" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="44" soluceLeft="4" soluceRight="11" soluceRes="44" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="24" soluceLeft="3" soluceRight="8" soluceRes="24" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="55" soluceLeft="5" soluceRight="11" soluceRes="55" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="9" soluceLeft="3" soluceRight="3" soluceRes="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="16" soluceLeft="4" soluceRight="4" soluceRes="16" resultOnRight="true"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTRecontruction" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REB"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="20" resultOnRight="false" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="33" resultOnRight="true" soluceRight="11"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="16" resultOnRight="false" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="55" resultOnRight="false" soluceRight="11"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="15" resultOnRight="false" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="12" resultOnRight="false" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="12" resultOnRight="false" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="44" resultOnRight="true" soluceRight="11"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="9" resultOnRight="false" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="40" resultOnRight="true" soluceRight="8"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="44" resultOnRight="false" soluceRight="11"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="12" resultOnRight="true" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="12" resultOnRight="true" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="40" resultOnRight="false" soluceRight="8"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="9" resultOnRight="true" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="55" resultOnRight="true" soluceRight="11"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="15" resultOnRight="true" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="16" resultOnRight="true" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="24" resultOnRight="true" soluceRight="8"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="32" resultOnRight="false" soluceRight="8"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="33" resultOnRight="false" soluceRight="11"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="20" resultOnRight="true" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="24" resultOnRight="false" soluceRight="8"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#ID-RES"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="12" rightOperand="4" leftOperand="3" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="20" rightOperand="5" leftOperand="4" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="12" rightOperand="4" leftOperand="3" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="20" rightOperand="5" leftOperand="4" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="45" rightOperand="11" leftOperand="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="24" rightOperand="3" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="60" rightOperand="11" leftOperand="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="11" rightOperand="3" leftOperand="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="24" rightOperand="3" leftOperand="8" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="33" rightOperand="11" leftOperand="3" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="19" rightOperand="4" leftOperand="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="14" rightOperand="3" leftOperand="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="24" rightOperand="8" leftOperand="3" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="33" rightOperand="11" leftOperand="3" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="24" rightOperand="8" leftOperand="3" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="35" rightOperand="8" leftOperand="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="32" rightOperand="4" leftOperand="8" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="17" rightOperand="3" leftOperand="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="44" rightOperand="11" leftOperand="4" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="32" rightOperand="4" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="44" rightOperand="4" leftOperand="11" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="30" rightOperand="8" leftOperand="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="53" rightOperand="11" leftOperand="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="9" rightOperand="4" leftOperand="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="18" rightOperand="5" leftOperand="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="44" rightOperand="4" leftOperand="11" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="27" rightOperand="3" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="53" rightOperand="5" leftOperand="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="40" rightOperand="5" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="44" rightOperand="5" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="10" rightOperand="3" leftOperand="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="15" rightOperand="5" leftOperand="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="40" rightOperand="5" leftOperand="8" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="44" rightOperand="11" leftOperand="4" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="48" rightOperand="11" leftOperand="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="36" rightOperand="11" leftOperand="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="9" rightOperand="3" leftOperand="3" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="54" rightOperand="5" leftOperand="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="32" rightOperand="11" leftOperand="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="17" rightOperand="4" leftOperand="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="40" rightOperand="8" leftOperand="5" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="15" rightOperand="5" leftOperand="3" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="31" rightOperand="4" leftOperand="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="40" rightOperand="8" leftOperand="5" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="14" rightOperand="4" leftOperand="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="9" rightOperand="3" leftOperand="3" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="32" rightOperand="8" leftOperand="4" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="16" rightOperand="3" leftOperand="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="32" rightOperand="8" leftOperand="4" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="33" rightOperand="3" leftOperand="11" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="15" rightOperand="5" leftOperand="3" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="37" rightOperand="3" leftOperand="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="46" rightOperand="4" leftOperand="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="12" rightOperand="3" leftOperand="4" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="6" rightOperand="3" leftOperand="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="22" rightOperand="3" leftOperand="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="33" rightOperand="3" leftOperand="11" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="12" rightOperand="3" leftOperand="4" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="37" rightOperand="3" leftOperand="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="55" rightOperand="11" leftOperand="5" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="15" rightOperand="3" leftOperand="5" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="15" rightOperand="3" leftOperand="5" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="20" rightOperand="4" leftOperand="5" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="55" rightOperand="11" leftOperand="5" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="39" rightOperand="8" leftOperand="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="55" rightOperand="5" leftOperand="11" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="24" rightOperand="4" leftOperand="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="16" rightOperand="4" leftOperand="4" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="30" rightOperand="4" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="39" rightOperand="5" leftOperand="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="28" rightOperand="8" leftOperand="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="39" rightOperand="4" leftOperand="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="19" rightOperand="8" leftOperand="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="16" rightOperand="4" leftOperand="4" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="55" rightOperand="5" leftOperand="11" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="23" rightOperand="8" leftOperand="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="20" rightOperand="5" leftOperand="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="21" rightOperand="5" leftOperand="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="20" rightOperand="4" leftOperand="5" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="16" rightOperand="4" leftOperand="4" resultOnRight="false"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTMembership" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#MEMB"/>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" table="8">
+              <goodResults>24</goodResults>
+              <goodResults>32</goodResults>
+              <goodResults>40</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" table="11">
+              <goodResults>44</goodResults>
+              <goodResults>33</goodResults>
+              <goodResults>55</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" table="4">
+              <goodResults>16</goodResults>
+              <goodResults>20</goodResults>
+              <goodResults>12</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" table="3">
+              <goodResults>9</goodResults>
+              <goodResults>12</goodResults>
+              <goodResults>15</goodResults>
+            </questionableFacts>
+          </resultsbytask>
+        </results>
+      </currentobjectivelevels>
+      <currentobjectivelevels achieved="false">
+        <objective href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#O1"/>
+        <level xsi:type="generator:MTLevel" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#O1_N1"/>
+        <results>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C1-RES"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="3" result="-1" soluce="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="4" result="-1" soluce="32" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="3" result="-1" soluce="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="3" result="-1" soluce="15" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="3" result="-1" soluce="15" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="5" result="-1" soluce="15" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="5" result="-1" soluce="55" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="4" result="-1" soluce="32" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="3" result="-1" soluce="9" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="8" result="-1" soluce="32" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="4" result="-1" soluce="12" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="8" result="-1" soluce="24" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="5" result="-1" soluce="55" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="8" result="-1" soluce="32" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="5" result="-1" soluce="40" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="8" result="-1" soluce="24" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="4" result="-1" soluce="16" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="4" result="-1" soluce="16" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="4" result="-1" soluce="44" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="11" result="-1" soluce="44" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="4" result="-1" soluce="20" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="4" result="-1" soluce="20" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="4" result="-1" soluce="44" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="4" result="-1" soluce="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="11" result="-1" soluce="44" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="11" result="-1" soluce="55" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="11" result="-1" soluce="55" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="5" result="-1" soluce="40" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="5" result="-1" soluce="15" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="8" result="-1" soluce="40" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="8" result="-1" soluce="40" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="11" result="-1" soluce="33" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="3" result="-1" soluce="33" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="3" result="-1" soluce="12" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="11" result="-1" soluce="33" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="3" result="-1" soluce="33" resultOnRight="false"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C1-TABOP"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="16" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="20" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="11" result="33" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="-1" result="44" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="9" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="16" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="20" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="32" soluce="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="11" result="33" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="-1" result="44" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="12" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="20" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="-1" result="33" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="33" soluce="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="55" soluce="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="12" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="11" result="44" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="12" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="9" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="15" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="20" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="33" soluce="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="12" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="15" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="11" result="55" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="11" result="55" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="55" soluce="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="-1" result="33" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="11" result="44" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="55" soluce="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="-1" result="40" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="12" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="24" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="15" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="12" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="15" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="-1" result="32" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="-1" result="40" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="-1" result="24" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="44" soluce="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="24" soluce="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="8" result="40" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="44" soluce="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="-1" result="32" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="8" result="32" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="8" result="40" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="8" rightOperand="-1" result="24" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="8" result="32" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="32" soluce="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="8" result="24" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="8" result="24" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="32" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="9" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="15" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="3" result="9" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="20" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="33" soluce="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="16" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="15" soluce="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="15" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="20" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="44" soluce="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="40" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="33" soluce="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="4" result="16" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="15" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="40" soluce="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="40" soluce="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="12" soluce="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="5" rightOperand="-1" result="40" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="44" soluce="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="55" soluce="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="-1" result="55" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="24" soluce="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="11" rightOperand="-1" result="55" soluce="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="4" rightOperand="-1" result="32" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="20" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="12" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="3" rightOperand="-1" result="24" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="5" result="20" soluce="4" resultOnRight="false"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion2" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#C2-OPTABLE"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="33" soluceLeft="3" soluceRight="11" soluceRes="33" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="16" soluceLeft="4" soluceRight="4" soluceRes="16" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="40" soluceLeft="5" soluceRight="8" soluceRes="40" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="9" soluceLeft="3" soluceRight="3" soluceRes="9" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="20" soluceLeft="5" soluceRight="4" soluceRes="20" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="55" soluceLeft="5" soluceRight="11" soluceRes="55" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="24" soluceLeft="3" soluceRight="8" soluceRes="24" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="12" soluceLeft="3" soluceRight="4" soluceRes="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="12" soluceLeft="4" soluceRight="3" soluceRes="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="44" soluceLeft="4" soluceRight="11" soluceRes="44" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="15" soluceLeft="5" soluceRight="3" soluceRes="15" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="12" soluceLeft="3" soluceRight="4" soluceRes="12" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="12" soluceLeft="4" soluceRight="3" soluceRes="12" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="20" soluceLeft="5" soluceRight="4" soluceRes="20" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="40" soluceLeft="5" soluceRight="8" soluceRes="40" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="15" soluceLeft="5" soluceRight="3" soluceRes="15" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="33" soluceLeft="3" soluceRight="11" soluceRes="33" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="44" soluceLeft="4" soluceRight="11" soluceRes="44" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="24" soluceLeft="3" soluceRight="8" soluceRes="24" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="55" soluceLeft="5" soluceRight="11" soluceRes="55" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="9" soluceLeft="3" soluceRight="3" soluceRes="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" leftOperand="-1" rightOperand="-1" result="16" soluceLeft="4" soluceRight="4" soluceRes="16" resultOnRight="true"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTRecontruction" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#REB"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="20" resultOnRight="false" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="33" resultOnRight="true" soluceRight="11"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="16" resultOnRight="false" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="55" resultOnRight="false" soluceRight="11"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="15" resultOnRight="false" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="12" resultOnRight="false" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="12" resultOnRight="false" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="44" resultOnRight="true" soluceRight="11"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="9" resultOnRight="false" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="40" resultOnRight="true" soluceRight="8"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="44" resultOnRight="false" soluceRight="11"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="12" resultOnRight="true" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="12" resultOnRight="true" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="40" resultOnRight="false" soluceRight="8"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="9" resultOnRight="true" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="55" resultOnRight="true" soluceRight="11"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="15" resultOnRight="true" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="16" resultOnRight="true" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="24" resultOnRight="true" soluceRight="8"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="4" soluceRes="32" resultOnRight="false" soluceRight="8"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="33" resultOnRight="false" soluceRight="11"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="5" soluceRes="20" resultOnRight="true" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" soluceLeft="3" soluceRes="24" resultOnRight="false" soluceRight="8"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#ID-RES"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="12" rightOperand="4" leftOperand="3" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="20" rightOperand="5" leftOperand="4" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="38" rightOperand="8" leftOperand="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="12" rightOperand="4" leftOperand="3" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="20" rightOperand="5" leftOperand="4" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="24" rightOperand="3" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="35" rightOperand="8" leftOperand="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="8" rightOperand="4" leftOperand="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="60" rightOperand="5" leftOperand="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="24" rightOperand="3" leftOperand="8" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="33" rightOperand="11" leftOperand="3" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="16" rightOperand="5" leftOperand="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="37" rightOperand="11" leftOperand="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="29" rightOperand="4" leftOperand="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="40" rightOperand="4" leftOperand="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="24" rightOperand="8" leftOperand="3" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="33" rightOperand="11" leftOperand="3" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="24" rightOperand="8" leftOperand="3" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="11" rightOperand="4" leftOperand="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="15" rightOperand="4" leftOperand="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="16" rightOperand="5" leftOperand="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="35" rightOperand="8" leftOperand="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="32" rightOperand="4" leftOperand="8" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="44" rightOperand="11" leftOperand="4" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="32" rightOperand="4" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="48" rightOperand="11" leftOperand="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="44" rightOperand="4" leftOperand="11" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="13" rightOperand="3" leftOperand="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="44" rightOperand="4" leftOperand="11" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="30" rightOperand="8" leftOperand="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="17" rightOperand="4" leftOperand="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="27" rightOperand="3" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="14" rightOperand="5" leftOperand="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="37" rightOperand="5" leftOperand="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="40" rightOperand="5" leftOperand="8" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="13" rightOperand="3" leftOperand="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="21" rightOperand="8" leftOperand="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="45" rightOperand="4" leftOperand="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="40" rightOperand="5" leftOperand="8" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="44" rightOperand="11" leftOperand="4" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="25" rightOperand="8" leftOperand="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="28" rightOperand="11" leftOperand="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="11" rightOperand="5" leftOperand="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="9" rightOperand="3" leftOperand="3" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="33" rightOperand="3" leftOperand="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="21" rightOperand="4" leftOperand="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="43" rightOperand="11" leftOperand="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="58" rightOperand="11" leftOperand="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="40" rightOperand="8" leftOperand="5" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="15" rightOperand="5" leftOperand="3" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="40" rightOperand="8" leftOperand="5" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="58" rightOperand="11" leftOperand="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="9" rightOperand="3" leftOperand="3" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="27" rightOperand="4" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="32" rightOperand="8" leftOperand="4" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="32" rightOperand="8" leftOperand="4" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="33" rightOperand="3" leftOperand="11" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="15" rightOperand="5" leftOperand="3" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="37" rightOperand="3" leftOperand="11" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="12" rightOperand="3" leftOperand="4" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="22" rightOperand="3" leftOperand="8" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="21" rightOperand="4" leftOperand="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="33" rightOperand="3" leftOperand="11" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="12" rightOperand="3" leftOperand="4" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="55" rightOperand="11" leftOperand="5" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="15" rightOperand="3" leftOperand="5" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="14" rightOperand="3" leftOperand="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="55" rightOperand="5" leftOperand="11" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="15" rightOperand="3" leftOperand="5" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="35" rightOperand="5" leftOperand="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="20" rightOperand="4" leftOperand="5" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="55" rightOperand="11" leftOperand="5" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="15" rightOperand="3" leftOperand="5" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="55" rightOperand="5" leftOperand="11" soluce="true" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="16" rightOperand="4" leftOperand="4" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="16" rightOperand="4" leftOperand="4" soluce="true" resultOnRight="false" build="OPERAND_TABLE"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="55" rightOperand="5" leftOperand="11" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="7" rightOperand="3" leftOperand="3" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="11" rightOperand="3" leftOperand="4" resultOnRight="false"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" result="20" rightOperand="4" leftOperand="5" soluce="true" resultOnRight="true" build="OPERAND_TABLE"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTMembership" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#MEMB"/>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" table="3">
+              <goodResults>15</goodResults>
+              <goodResults>9</goodResults>
+              <goodResults>12</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" table="8">
+              <goodResults>32</goodResults>
+              <goodResults>24</goodResults>
+              <goodResults>40</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" table="11">
+              <goodResults>44</goodResults>
+              <goodResults>33</goodResults>
+              <goodResults>55</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" table="4">
+              <goodResults>16</goodResults>
+              <goodResults>20</goodResults>
+              <goodResults>12</goodResults>
+            </questionableFacts>
+          </resultsbytask>
+        </results>
+      </currentobjectivelevels>
+    </progression>
+    <learningpath href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.4"/>
+  </learnerplayer>
+</generator:GenerationContext>

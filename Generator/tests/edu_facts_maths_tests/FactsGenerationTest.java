@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import generator.ResultsByTask;
@@ -67,6 +66,70 @@ class FactsGenerationTest {
 				break;
 			case "ID-RES":
 				assertTrue(resultsByTask.getQuestionableFacts().size() == 92, "ID-RES");
+				break;
+			case "MEMB":
+				assertTrue(resultsByTask.getQuestionableFacts().size() == 4, "MEMB");
+				break;
+			default:
+				break;
+			}
+		}
+	}
+	
+	@Test
+	void numberOfQuestionableFactsGenerated4TablesTest() {
+		generator = new ALGAGenerator("learnerProfils/LP_FIC_FactInitTest2.xmi");
+		generator.generate();
+		List<ResultsByTask> learnerResultsByTask = generator.getModelsManager().context.getLearnerplayer().getProgression().getCurrentobjectivelevels().get(0).getResults().getResultsbytask();
+		for (ResultsByTask resultsByTask : learnerResultsByTask) {
+			System.out.println(resultsByTask.getQuestionableFacts().size());
+			switch (resultsByTask.getTask().getID()) {
+			case "C1-RES":
+				assertTrue(resultsByTask.getQuestionableFacts().size() == 160, "C1-RES");
+				break;
+			case "C1-TABOP":
+				assertTrue(resultsByTask.getQuestionableFacts().size() == 320, "C1-TABOP");
+				break;
+			case "C2-OPTABLE":
+				assertTrue(resultsByTask.getQuestionableFacts().size() == 96, "C2-OPTABLE");
+				break;
+			case "REB":
+				assertTrue(resultsByTask.getQuestionableFacts().size() == 96, "REB");
+				break;
+			case "ID-RES":
+				assertTrue(resultsByTask.getQuestionableFacts().size() == 320, "ID-RES");
+				break;
+			case "MEMB":
+				assertTrue(resultsByTask.getQuestionableFacts().size() == 16, "MEMB");
+				break;
+			default:
+				break;
+			}
+		}
+	}
+	
+	@Test
+	void numberOfQuestionableFactsGenerated4TablesMinMax35Test() {
+		generator = new ALGAGenerator("learnerProfils/LP_FIC_FactInitTest3.xmi");
+		generator.generate();
+		List<ResultsByTask> learnerResultsByTask = generator.getModelsManager().context.getLearnerplayer().getProgression().getCurrentobjectivelevels().get(0).getResults().getResultsbytask();
+		for (ResultsByTask resultsByTask : learnerResultsByTask) {
+			System.out.println(resultsByTask.getQuestionableFacts().size());
+			switch (resultsByTask.getTask().getID()) {
+			case "C1-RES":
+				assertTrue(resultsByTask.getQuestionableFacts().size() == 40, "C1-RES");
+				break;
+			case "C1-TABOP":
+				assertTrue(resultsByTask.getQuestionableFacts().size() == 80, "C1-TABOP");
+				break;
+			case "C2-OPTABLE":
+				assertTrue(resultsByTask.getQuestionableFacts().size() == 24, "C2-OPTABLE");
+				break;
+			case "REB":
+				assertTrue(resultsByTask.getQuestionableFacts().size() == 24, "REB");
+				break;
+			case "ID-RES":
+				assertTrue(resultsByTask.getQuestionableFacts().size() == 80, "ID-RES");
 				break;
 			case "MEMB":
 				assertTrue(resultsByTask.getQuestionableFacts().size() == 4, "MEMB");

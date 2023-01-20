@@ -32,6 +32,8 @@ import managers.EducationElementsManager;
 import structures.EMTQFactClass;
 
 public class MTFactGenerator {
+	
+	private MTFactGenerator() { super(); }
 		
 	public static void generateQuestionableFacts(EducationElementsManager eeManager) {
 		eeManager.instanciateQFbyTasks();
@@ -48,7 +50,7 @@ public class MTFactGenerator {
 		
 	}
 	
-	private static void  generateQuestionableFactsByTask(EducationElementsManager eeManager, ResultsByTask resBytask) { // TODO : corriger trop de faits sont générés ! 
+	private static void  generateQuestionableFactsByTask(EducationElementsManager eeManager, ResultsByTask resBytask) {  
 		switch(resBytask.getTask().getType()) {
 		case COMPLETE1: 
 			MTCompletion1Generator generatorC1 = new MTCompletion1Generator(eeManager);
@@ -153,19 +155,17 @@ public class MTFactGenerator {
 		chosenPropositions.add(((MTQFRebuild) qfact).getSoluceRight());
 		chosenPropositions.add(((MTQFRebuild) qfact).getSoluceRes());
 		
-		int min = ((MTQFRebuild) qfact).getSoluceRight() < ((MTQFRebuild) qfact).getSoluceLeft()? ((MTQFRebuild) qfact).getSoluceRight(): ((MTQFRebuild) qfact).getSoluceLeft();
-	
-		while(chosenPropositions.size() < ((MultipleChoice) task.getResponseModality()).getNbBadChoices()) {
-			//System.out.println("While Rebuild proposition");
-			int number = new Random().nextInt((((MTQFRebuild) qfact).getSoluceRes()+5) - (min+5)) + (min+5);
+		int range = ((MTQFRebuild) qfact).getSoluceRight() + ((MTQFRebuild) qfact).getSoluceLeft() + ((MTQFRebuild) qfact).getSoluceRes() + 5;
+		while(chosenPropositions.size() < ((MultipleChoice) task.getResponseModality()).getNbChoices()) {
+			int number = new Random().nextInt(range) + 1;
 			if(!chosenPropositions.contains(number) && !createsOtherSolution(((MTQFRebuild) qfact), chosenPropositions, number)) {
 				chosenPropositions.add(number);
 			}
 		}
-		
 		qef.getPropositions().addAll(chosenPropositions);
 		eeManager.addFactToQuestion(task, qef);
 	}
+	
 	
 	private static boolean isFactSolution(MTQFRebuild fact, int i, int j, int z) {
 		boolean s1 = i == fact.getSoluceLeft() || i == fact.getSoluceRight() || i == fact.getSoluceRes();
@@ -235,14 +235,17 @@ public class MTFactGenerator {
 		boolean left = qfact.getLeftOperand() == -1; 
 		boolean right = qfact.getRightOperand() == -1;
 		boolean res = qfact.getResult() == -1;
-		if(left) {propositions.add(qfact.getSoluceLeft());}
+		if(left) {propositions.add(qfact.getSoluceLeft());} 
 		if(right) {propositions.add(qfact.getSoluceRight());}
 		if(res) {propositions.add(qfact.getSoluceRes());}
 		
-		/*while(propositions.size() < numberOfBadChoices+2) {
-			//System.out.println("While Comp2 proposition");
-			new Random()
-		}*/
+		int range = qfact.getSoluceLeft() + qfact.getSoluceRight() + qfact.getSoluceRes() + 5;
+		while(propositions.size() < numberOfBadChoices + 2) {
+			int number = new Random().nextInt(range);
+			if(!propositions.contains(number)) {
+				propositions.add(number);
+			}
+		}
 		return propositions; 
 	}
 

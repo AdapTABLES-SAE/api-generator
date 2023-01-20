@@ -25,7 +25,7 @@ public class MTMembershipGenerator {
 	}
 	
 	public Set<MTQFMembership> generateQuestionableFacts(MTMembership task) {
-		HashSet<MTQFMembership> questionedFacts = new HashSet<>();
+		HashSet<MTQFMembership> questionableFacts = new HashSet<>();
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
@@ -46,13 +46,13 @@ public class MTMembershipGenerator {
 				}
 			}
 			//System.out.println("facts "+facts);
-			questionedFacts.addAll(generateQuestionableFactsOf(task, facts, nbByFact));
+			questionableFacts.addAll(generateQuestionableFactsOf(facts, nbByFact));
 		}
 		
-		return questionedFacts; 
+		return questionableFacts; 
 	}
 	
-	private Set<MTQFMembership> generateQuestionableFactsOf(MTMembership task, List<MTResultFact> facts, int nbByFact){
+	private Set<MTQFMembership> generateQuestionableFactsOf(List<MTResultFact> facts, int nbByFact){
 		HashSet<MTQFMembership> qfs = new HashSet<>(); 
 		
 		int k = 0;

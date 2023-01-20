@@ -23,7 +23,7 @@ public class MTRebuildGenerator {
 	}
 	
 	public Set<MTQFRebuild> generateQuestionableFacts(MTRecontruction task) {
-		HashSet<MTQFRebuild> questionedFacts = new HashSet<>();
+		HashSet<MTQFRebuild> questionableFacts = new HashSet<>();
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
@@ -37,7 +37,7 @@ public class MTRebuildGenerator {
 				if(f instanceof MTFact) {
 					MTFact fact = (MTFact) f;
 					if(min <= fact.getOp() && fact.getOp()<= max){
-						questionedFacts.addAll(generateQuestionableFactsOf(task, fact));
+						questionableFacts.addAll(generateQuestionableFactsOf(fact));
 					}
 				}
 				
@@ -45,9 +45,9 @@ public class MTRebuildGenerator {
 		}
 		
 		
-		return questionedFacts; 		
+		return questionableFacts; 		
 	}
-	private Set<MTQFRebuild> generateQuestionableFactsOf(MTRecontruction task, MTFact fact){
+	private Set<MTQFRebuild> generateQuestionableFactsOf(MTFact fact){
 		HashSet<MTQFRebuild> qfs = new HashSet<>(); 
 		
 		TableBuild build = ((MTLevel) eeManager.getLevel()).getBuildSetup();

@@ -128,7 +128,7 @@
     <genClasses ecoreClass="generator.ecore#//Level">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Level/ID"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Level/tasks"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Level/prerequisite"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Level/completionCriteria"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTLevel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTLevel/buildSetup"/>
@@ -282,6 +282,10 @@
     <genClasses ecoreClass="generator.ecore#//MTQeFIdentication"/>
     <genClasses ecoreClass="generator.ecore#//MTQeFMembership">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQeFMembership/badPropositions"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//CompletionCriteria">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionCriteria/succesPercent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionCriteria/encountersPercent"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

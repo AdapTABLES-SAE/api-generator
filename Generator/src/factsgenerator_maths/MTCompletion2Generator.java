@@ -23,7 +23,7 @@ private EducationElementsManager eeManager;
 	}
 
 	public Set<MTQFCompletion2> generateQuestionableFacts(MTCompletion2 task) {
-		HashSet<MTQFCompletion2> questionedFacts = new HashSet<>();
+		HashSet<MTQFCompletion2> questionableFacts = new HashSet<>();
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
@@ -38,7 +38,7 @@ private EducationElementsManager eeManager;
 				if(f instanceof MTFact) {
 					MTFact fact = (MTFact) f;
 					if(min <= fact.getOp() && fact.getOp()<= max){
-						questionedFacts.addAll(generateQuestionableFactsOf(task, fact));
+						questionableFacts.addAll(generateQuestionableFactsOf(task, fact));
 					}
 				}
 				
@@ -46,7 +46,7 @@ private EducationElementsManager eeManager;
 		}
 		
 		
-		return questionedFacts; 
+		return questionableFacts; 
 	}
 	
 	private Set<MTQFCompletion2> generateQuestionableFactsOf(MTCompletion2 task, MTFact fact){

@@ -25,34 +25,23 @@ public class MTCompletion1Generator {
 	}
 
 	public Set<QuestionableFact> generateQuestionableFacts(MTCompletion1 task) {
-		Set<QuestionableFact> questionedFacts = new HashSet<>();
+		Set<QuestionableFact> questionableFacts = new HashSet<>();
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
-		/*System.out.println("min "+min+" max "+max);
-		System.out.println("build "+((MTLevel) eeManager.getLevel()).getBuildSetup());
-		System.out.println("res pos "+((MTLevel) eeManager.getLevel()).getResultPositionSetup());
-		System.out.println("targets "+task.getTargets());*/
-
 		
 		for (SetOfFacts setoffact : eeManager.getObjective().getSetoffacts()) {
 			for (AbstractFact f : setoffact.getFacts()) { 
 				if(f instanceof MTFact) {
 					MTFact fact = (MTFact) f;
 					if(min <= fact.getOp() && fact.getOp()<= max){
-						questionedFacts.addAll(generateQuestionableFactsOf(task, fact));
+						questionableFacts.addAll(generateQuestionableFactsOf(task, fact));
 					}
 				}
 				
 			}
 		}	
-		
-		/*System.out.println(questionedFacts.size());
-		for (QuestionableFact questionableFact : questionedFacts) {
-			System.out.println(questionableFact.getQuestionableFact());
-		}*/
-		
-		return questionedFacts; 
+		return questionableFacts; 
 	}
 	
 	private Set<MTQFCompletion1> generateQuestionableFactsOf(MTCompletion1 task, MTFact fact){

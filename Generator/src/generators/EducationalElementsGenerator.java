@@ -56,8 +56,8 @@ public class EducationalElementsGenerator {
 		/*for (ResultsByTask r : eeManager.chosenObjectiveLevel.getResults().getResultsbytask()) {
 			System.out.println("Are null "+r.getTask().getType()+" "+r.getQuestionableFacts().get(0));
 		}*/
-		//defineDungeonRooms2Tasks();
-		//generateFactsToQuestion();
+		defineDungeonRooms2Tasks();
+		generateFactsToQuestion();
 		return eeManager;
 	}
 	

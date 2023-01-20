@@ -12,22 +12,18 @@ import generator.MTFact;
 import generator.MTIdentification;
 import generator.MTLevel;
 import generator.MTQFIdentification;
-import generator.QuestionableFact;
 import generator.ResultPosition;
 import generator.SetOfFacts;
 import generator.TableBuild;
 import generator.impl.MTQFIdentificationImpl;
 import managers.EducationElementsManager;
 
-// TODO : est-ce qu'on prends en compte la construction des tables ? la position du résulats ? 
 public class MTIdentificationGenerator {
 
 	private EducationElementsManager eeManager;
 	private final int[] buildFalseInteraval = {5,5};
 	private List<Integer> alreadyUsed; 
 	private Random rand;
-	
-	private List<Integer> alreadyChosen;
 	
 	public MTIdentificationGenerator(EducationElementsManager eeManager) {
 		this.eeManager = eeManager; 
@@ -40,38 +36,27 @@ public class MTIdentificationGenerator {
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
-		/*System.out.println("min "+min+" max "+max);
-		System.out.println("build "+((MTLevel) eeManager.getLevel()).getBuildSetup());
-		System.out.println("res pos "+((MTLevel) eeManager.getLevel()).getResultPositionSetup());*/
 
 		for (SetOfFacts setoffact : eeManager.getObjective().getSetoffacts()) {
 			for (AbstractFact f : setoffact.getFacts()) { 
 				if(f instanceof MTFact) {
 					MTFact fact = (MTFact) f;
 					if(min <= fact.getOp() && fact.getOp() <= max){
-						questionableFacts.addAll(generateGoodQuestionableFactsOf(task, fact));
+						questionableFacts.addAll(generateGoodQuestionableFactsOf(fact));
 					}
 				}
 			}
 		}
 		
-		System.out.println("__ "+questionableFacts.size());
-		questionableFacts.addAll(generateFalseFacts(task, questionableFacts));
-		
-		System.out.println(questionableFacts.size());
-		for (MTQFIdentification mtqfIdentification : questionableFacts) {
-			System.out.println(mtqfIdentification.getQuestionableFact());
-		}
-		
+		questionableFacts.addAll(generateFalseFacts(task, questionableFacts));	
 		return questionableFacts; 
 	}
 	
-	private Set<MTQFIdentification> generateGoodQuestionableFactsOf(MTIdentification task, MTFact fact){
+	private Set<MTQFIdentification> generateGoodQuestionableFactsOf(MTFact fact){
 		Set<MTQFIdentification> qfs = new HashSet<>();
 		
 		TableBuild build = ((MTLevel) eeManager.getLevel()).getBuildSetup();
 		ResultPosition equalPos = ((MTLevel) eeManager.getLevel()).getResultPositionSetup();
-		ESingleTarget falseTarget = task.getTarget();
 		
 		if(build.equals(TableBuild.MIX)) {
 			if(equalPos.equals(ResultPosition.MIX)) {
@@ -107,7 +92,7 @@ public class MTIdentificationGenerator {
 		return allFacts;
 	}
 	
-	private MTQFIdentification buildBadQF(MTQFIdentification goodFact, ESingleTarget target) { // TODO : Reimplement to correct bug
+	private MTQFIdentification buildBadQF(MTQFIdentification goodFact, ESingleTarget target) { 
 		MTQFIdentification qf = new MTQFIdentificationImpl(); 
 		
 		int min, max, chosenFalse = -1;

@@ -28,7 +28,7 @@ public interface MTQeFRebuild extends QuestionedFact {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Propositions</em>' attribute list.
 	 * @see generator.GeneratorPackage#getMTQeFRebuild_Propositions()
-	 * @model lower="3"
+	 * @model unique="false" lower="3"
 	 * @generated
 	 */
 	EList<Integer> getPropositions();

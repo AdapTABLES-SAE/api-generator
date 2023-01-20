@@ -6,6 +6,7 @@ import generator.ATask;
 import generator.AbstractFact;
 import generator.Completion1Task;
 import generator.Completion2Task;
+import generator.CompletionCriteria;
 import generator.CurrentObjectiveLevel;
 import generator.Directions;
 import generator.Dungeon;
@@ -462,6 +463,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass mtQeFMembershipEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass completionCriteriaEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1086,7 +1094,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLevel_Prerequisite() {
+	public EReference getLevel_CompletionCriteria() {
 		return (EReference) levelEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2175,6 +2183,33 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCompletionCriteria() {
+		return completionCriteriaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCompletionCriteria_SuccesPercent() {
+		return (EAttribute) completionCriteriaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCompletionCriteria_EncountersPercent() {
+		return (EAttribute) completionCriteriaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDirections() {
 		return directionsEEnum;
 	}
@@ -2341,7 +2376,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		levelEClass = createEClass(LEVEL);
 		createEAttribute(levelEClass, LEVEL__ID);
 		createEReference(levelEClass, LEVEL__TASKS);
-		createEReference(levelEClass, LEVEL__PREREQUISITE);
+		createEReference(levelEClass, LEVEL__COMPLETION_CRITERIA);
 
 		mtLevelEClass = createEClass(MT_LEVEL);
 		createEAttribute(mtLevelEClass, MT_LEVEL__BUILD_SETUP);
@@ -2500,6 +2535,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		mtQeFMembershipEClass = createEClass(MT_QE_FMEMBERSHIP);
 		createEAttribute(mtQeFMembershipEClass, MT_QE_FMEMBERSHIP__BAD_PROPOSITIONS);
+
+		completionCriteriaEClass = createEClass(COMPLETION_CRITERIA);
+		createEAttribute(completionCriteriaEClass, COMPLETION_CRITERIA__SUCCES_PERCENT);
+		createEAttribute(completionCriteriaEClass, COMPLETION_CRITERIA__ENCOUNTERS_PERCENT);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -2722,9 +2761,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getLevel_Tasks(), this.getATask(), null, "tasks", null, 1, -1, Level.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getLevel_Prerequisite(), this.getPrerequisite(), null, "prerequisite", null, 0, 1, Level.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLevel_CompletionCriteria(), this.getCompletionCriteria(), null, "completionCriteria", null, 0,
+				1, Level.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtLevelEClass, MTLevel.class, "MTLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMTLevel_BuildSetup(), this.getTableBuild(), "buildSetup", null, 0, 1, MTLevel.class,
@@ -3039,19 +3078,19 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(mtQeFCompletion1EClass, MTQeFCompletion1.class, "MTQeFCompletion1", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMTQeFCompletion1_Propositions(), ecorePackage.getEInt(), "propositions", null, 0, -1,
-				MTQeFCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				MTQeFCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtQeFCompletion2EClass, MTQeFCompletion2.class, "MTQeFCompletion2", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMTQeFCompletion2_Propositions(), ecorePackage.getEInt(), "propositions", null, 0, -1,
-				MTQeFCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				MTQeFCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtQeFRebuildEClass, MTQeFRebuild.class, "MTQeFRebuild", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMTQeFRebuild_Propositions(), ecorePackage.getEInt(), "propositions", null, 3, -1,
-				MTQeFRebuild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				MTQeFRebuild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtQeFIdenticationEClass, MTQeFIdentication.class, "MTQeFIdentication", !IS_ABSTRACT, !IS_INTERFACE,
@@ -3062,6 +3101,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTQeFMembership_BadPropositions(), ecorePackage.getEInt(), "badPropositions", null, 0, -1,
 				MTQeFMembership.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(completionCriteriaEClass, CompletionCriteria.class, "CompletionCriteria", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCompletionCriteria_SuccesPercent(), ecorePackage.getEDouble(), "succesPercent", "80.0", 0, 1,
+				CompletionCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCompletionCriteria_EncountersPercent(), ecorePackage.getEDouble(), "encountersPercent",
+				"100.0", 0, 1, CompletionCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");
