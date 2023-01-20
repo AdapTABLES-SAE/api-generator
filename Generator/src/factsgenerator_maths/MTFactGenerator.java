@@ -15,7 +15,7 @@ import generator.MTQFMembership;
 import generator.MTQFRebuild;
 import generator.MTQeFCompletion1;
 import generator.MTQeFCompletion2;
-import generator.MTQeFIdentication;
+import generator.MTQeFIdentification;
 import generator.MTQeFMembership;
 import generator.MTQeFRebuild;
 import generator.MTRecontruction;
@@ -25,7 +25,7 @@ import generator.QuestionedFact;
 import generator.ResultsByTask;
 import generator.impl.MTQeFCompletion1Impl;
 import generator.impl.MTQeFCompletion2Impl;
-import generator.impl.MTQeFIdenticationImpl;
+import generator.impl.MTQeFIdentificationImpl;
 import generator.impl.MTQeFMembershipImpl;
 import generator.impl.MTQeFRebuildImpl;
 import managers.EducationElementsManager;
@@ -127,7 +127,7 @@ public class MTFactGenerator {
 	}
 	
 	private static QuestionedFact createQuestionedFactForIdentify(EducationElementsManager eeManager, ATask task, QuestionableFact qfact) {
-		MTQeFIdentication qef = new MTQeFIdenticationImpl(); 
+		MTQeFIdentification qef = new MTQeFIdentificationImpl(); 
 		qef.setQuestionablefact(qfact);
 		return qef;
 	}

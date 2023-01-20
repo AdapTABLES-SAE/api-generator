@@ -3,24 +3,24 @@
 package generator.impl;
 
 import generator.GeneratorPackage;
-import generator.MTQeFIdentication;
+import generator.MTQeFIdentification;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>MT Qe FIdentication</b></em>'.
+ * An implementation of the model object '<em><b>MT Qe FIdentification</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class MTQeFIdenticationImpl extends QuestionedFactImpl implements MTQeFIdentication {
+public class MTQeFIdentificationImpl extends QuestionedFactImpl implements MTQeFIdentification {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MTQeFIdenticationImpl() {
+	public MTQeFIdentificationImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class MTQeFIdenticationImpl extends QuestionedFactImpl implements MTQeFId
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.MT_QE_FIDENTICATION;
+		return GeneratorPackage.Literals.MT_QE_FIDENTIFICATION;
 	}
 
 	@Override
@@ -39,4 +39,4 @@ public class MTQeFIdenticationImpl extends QuestionedFactImpl implements MTQeFId
 		return getQuestionablefact().getQuestionableFact();
 	}
 
-} //MTQeFIdenticationImpl
+} //MTQeFIdentificationImpl

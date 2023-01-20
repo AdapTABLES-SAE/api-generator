@@ -382,13 +382,13 @@ public interface GeneratorFactory extends EFactory {
 	MTQeFRebuild createMTQeFRebuild();
 
 	/**
-	 * Returns a new object of class '<em>MT Qe FIdentication</em>'.
+	 * Returns a new object of class '<em>MT Qe FIdentification</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MT Qe FIdentication</em>'.
+	 * @return a new object of class '<em>MT Qe FIdentification</em>'.
 	 * @generated
 	 */
-	MTQeFIdentication createMTQeFIdentication();
+	MTQeFIdentification createMTQeFIdentification();
 
 	/**
 	 * Returns a new object of class '<em>MT Qe FMembership</em>'.

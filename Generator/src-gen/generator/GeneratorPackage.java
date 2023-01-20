@@ -3459,14 +3459,14 @@ public interface GeneratorPackage extends EPackage {
 	int MT_QE_FREBUILD_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.MTQeFIdenticationImpl <em>MT Qe FIdentication</em>}' class.
+	 * The meta object id for the '{@link generator.impl.MTQeFIdentificationImpl <em>MT Qe FIdentification</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.MTQeFIdenticationImpl
-	 * @see generator.impl.GeneratorPackageImpl#getMTQeFIdentication()
+	 * @see generator.impl.MTQeFIdentificationImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMTQeFIdentification()
 	 * @generated
 	 */
-	int MT_QE_FIDENTICATION = 52;
+	int MT_QE_FIDENTIFICATION = 52;
 
 	/**
 	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
@@ -3475,7 +3475,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_QE_FIDENTICATION__QUESTIONABLEFACT = QUESTIONED_FACT__QUESTIONABLEFACT;
+	int MT_QE_FIDENTIFICATION__QUESTIONABLEFACT = QUESTIONED_FACT__QUESTIONABLEFACT;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' reference.
@@ -3484,16 +3484,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_QE_FIDENTICATION__POSITION = QUESTIONED_FACT__POSITION;
+	int MT_QE_FIDENTIFICATION__POSITION = QUESTIONED_FACT__POSITION;
 
 	/**
-	 * The number of structural features of the '<em>MT Qe FIdentication</em>' class.
+	 * The number of structural features of the '<em>MT Qe FIdentification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_QE_FIDENTICATION_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 0;
+	int MT_QE_FIDENTIFICATION_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Questioned Fact Question</em>' operation.
@@ -3502,16 +3502,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_QE_FIDENTICATION___GET_QUESTIONED_FACT_QUESTION = QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION;
+	int MT_QE_FIDENTIFICATION___GET_QUESTIONED_FACT_QUESTION = QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION;
 
 	/**
-	 * The number of operations of the '<em>MT Qe FIdentication</em>' class.
+	 * The number of operations of the '<em>MT Qe FIdentification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_QE_FIDENTICATION_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
+	int MT_QE_FIDENTIFICATION_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MTQeFMembershipImpl <em>MT Qe FMembership</em>}' class.
@@ -5551,14 +5551,14 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTQeFRebuild_Propositions();
 
 	/**
-	 * Returns the meta object for class '{@link generator.MTQeFIdentication <em>MT Qe FIdentication</em>}'.
+	 * Returns the meta object for class '{@link generator.MTQeFIdentification <em>MT Qe FIdentification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MT Qe FIdentication</em>'.
-	 * @see generator.MTQeFIdentication
+	 * @return the meta object for class '<em>MT Qe FIdentification</em>'.
+	 * @see generator.MTQeFIdentification
 	 * @generated
 	 */
-	EClass getMTQeFIdentication();
+	EClass getMTQeFIdentification();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MTQeFMembership <em>MT Qe FMembership</em>}'.
@@ -7206,14 +7206,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MT_QE_FREBUILD__PROPOSITIONS = eINSTANCE.getMTQeFRebuild_Propositions();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.MTQeFIdenticationImpl <em>MT Qe FIdentication</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.MTQeFIdentificationImpl <em>MT Qe FIdentification</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.MTQeFIdenticationImpl
-		 * @see generator.impl.GeneratorPackageImpl#getMTQeFIdentication()
+		 * @see generator.impl.MTQeFIdentificationImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMTQeFIdentification()
 		 * @generated
 		 */
-		EClass MT_QE_FIDENTICATION = eINSTANCE.getMTQeFIdentication();
+		EClass MT_QE_FIDENTIFICATION = eINSTANCE.getMTQeFIdentification();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTQeFMembershipImpl <em>MT Qe FMembership</em>}' class.

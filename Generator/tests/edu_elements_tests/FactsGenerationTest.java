@@ -1,4 +1,4 @@
-package edu_facts_maths_tests;
+package edu_elements_tests;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

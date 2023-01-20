@@ -41,7 +41,7 @@ import generator.MTQFMembership;
 import generator.MTQFRebuild;
 import generator.MTQeFCompletion1;
 import generator.MTQeFCompletion2;
-import generator.MTQeFIdentication;
+import generator.MTQeFIdentification;
 import generator.MTQeFMembership;
 import generator.MTQeFRebuild;
 import generator.MTRecontruction;
@@ -455,7 +455,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mtQeFIdenticationEClass = null;
+	private EClass mtQeFIdentificationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2156,8 +2156,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMTQeFIdentication() {
-		return mtQeFIdenticationEClass;
+	public EClass getMTQeFIdentification() {
+		return mtQeFIdentificationEClass;
 	}
 
 	/**
@@ -2531,7 +2531,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtQeFRebuildEClass = createEClass(MT_QE_FREBUILD);
 		createEAttribute(mtQeFRebuildEClass, MT_QE_FREBUILD__PROPOSITIONS);
 
-		mtQeFIdenticationEClass = createEClass(MT_QE_FIDENTICATION);
+		mtQeFIdentificationEClass = createEClass(MT_QE_FIDENTIFICATION);
 
 		mtQeFMembershipEClass = createEClass(MT_QE_FMEMBERSHIP);
 		createEAttribute(mtQeFMembershipEClass, MT_QE_FMEMBERSHIP__BAD_PROPOSITIONS);
@@ -2609,7 +2609,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtQeFCompletion1EClass.getESuperTypes().add(this.getQuestionedFact());
 		mtQeFCompletion2EClass.getESuperTypes().add(this.getQuestionedFact());
 		mtQeFRebuildEClass.getESuperTypes().add(this.getQuestionedFact());
-		mtQeFIdenticationEClass.getESuperTypes().add(this.getQuestionedFact());
+		mtQeFIdentificationEClass.getESuperTypes().add(this.getQuestionedFact());
 		mtQeFMembershipEClass.getESuperTypes().add(this.getQuestionedFact());
 
 		// Initialize classes, features, and operations; add parameters
@@ -3093,8 +3093,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				MTQeFRebuild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
-		initEClass(mtQeFIdenticationEClass, MTQeFIdentication.class, "MTQeFIdentication", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
+		initEClass(mtQeFIdentificationEClass, MTQeFIdentification.class, "MTQeFIdentification", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(mtQeFMembershipEClass, MTQeFMembership.class, "MTQeFMembership", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

@@ -490,11 +490,11 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.MT_QE_FIDENTICATION: {
-			MTQeFIdentication mtQeFIdentication = (MTQeFIdentication) theEObject;
-			T result = caseMTQeFIdentication(mtQeFIdentication);
+		case GeneratorPackage.MT_QE_FIDENTIFICATION: {
+			MTQeFIdentification mtQeFIdentification = (MTQeFIdentification) theEObject;
+			T result = caseMTQeFIdentification(mtQeFIdentification);
 			if (result == null)
-				result = caseQuestionedFact(mtQeFIdentication);
+				result = caseQuestionedFact(mtQeFIdentification);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1301,17 +1301,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MT Qe FIdentication</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>MT Qe FIdentification</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MT Qe FIdentication</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>MT Qe FIdentification</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTQeFIdentication(MTQeFIdentication object) {
+	public T caseMTQeFIdentification(MTQeFIdentification object) {
 		return null;
 	}
 

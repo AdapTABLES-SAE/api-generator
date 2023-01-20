@@ -137,8 +137,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createMTQeFCompletion2();
 		case GeneratorPackage.MT_QE_FREBUILD:
 			return createMTQeFRebuild();
-		case GeneratorPackage.MT_QE_FIDENTICATION:
-			return createMTQeFIdentication();
+		case GeneratorPackage.MT_QE_FIDENTIFICATION:
+			return createMTQeFIdentification();
 		case GeneratorPackage.MT_QE_FMEMBERSHIP:
 			return createMTQeFMembership();
 		case GeneratorPackage.COMPLETION_CRITERIA:
@@ -611,9 +611,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MTQeFIdentication createMTQeFIdentication() {
-		MTQeFIdenticationImpl mtQeFIdentication = new MTQeFIdenticationImpl();
-		return mtQeFIdentication;
+	public MTQeFIdentification createMTQeFIdentification() {
+		MTQeFIdentificationImpl mtQeFIdentification = new MTQeFIdentificationImpl();
+		return mtQeFIdentification;
 	}
 
 	/**

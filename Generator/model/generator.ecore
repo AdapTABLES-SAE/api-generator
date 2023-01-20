@@ -340,7 +340,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="propositions" unique="false"
         lowerBound="3" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MTQeFIdentication" eSuperTypes="#//QuestionedFact"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MTQeFIdentification" eSuperTypes="#//QuestionedFact"/>
   <eClassifiers xsi:type="ecore:EClass" name="MTQeFMembership" eSuperTypes="#//QuestionedFact">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="badPropositions" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

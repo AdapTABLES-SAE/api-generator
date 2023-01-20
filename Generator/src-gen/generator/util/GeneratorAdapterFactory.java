@@ -327,8 +327,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMTQeFIdentication(MTQeFIdentication object) {
-			return createMTQeFIdenticationAdapter();
+		public Adapter caseMTQeFIdentification(MTQeFIdentification object) {
+			return createMTQeFIdentificationAdapter();
 		}
 
 		@Override
@@ -1089,16 +1089,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.MTQeFIdentication <em>MT Qe FIdentication</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.MTQeFIdentification <em>MT Qe FIdentification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.MTQeFIdentication
+	 * @see generator.MTQeFIdentification
 	 * @generated
 	 */
-	public Adapter createMTQeFIdenticationAdapter() {
+	public Adapter createMTQeFIdentificationAdapter() {
 		return null;
 	}
 

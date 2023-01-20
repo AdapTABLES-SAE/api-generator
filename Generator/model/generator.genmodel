@@ -279,7 +279,7 @@
     <genClasses ecoreClass="generator.ecore#//MTQeFRebuild">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQeFRebuild/propositions"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//MTQeFIdentication"/>
+    <genClasses ecoreClass="generator.ecore#//MTQeFIdentification"/>
     <genClasses ecoreClass="generator.ecore#//MTQeFMembership">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQeFMembership/badPropositions"/>
     </genClasses>
