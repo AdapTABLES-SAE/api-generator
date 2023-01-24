@@ -14,12 +14,6 @@
     <semanticResources>file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/MultiplicationTables.xmi</semanticResources>
     <semanticResources>../inputmodels/Context2.xmi</semanticResources>
     <semanticResources>../inputmodels/Context.xmi</semanticResources>
-    <semanticResources>../inputmodels/backup/LP_FIC_Case1.xmi</semanticResources>
-    <semanticResources>../inputmodels/backup/LP_FIC_Case2.xmi</semanticResources>
-    <semanticResources>../inputmodels/backup/LP_FIC_Case3.xmi</semanticResources>
-    <semanticResources>../inputmodels/backup/LP_FIC_Init.xmi</semanticResources>
-    <semanticResources>../inputmodels/backup/LP_IM_Init.xmi</semanticResources>
-    <semanticResources>../inputmodels/backup/LP_RM_Init.xmi</semanticResources>
     <semanticResources>../inputmodels/learnerProfils/LearningDomain.xmi</semanticResources>
     <semanticResources>../inputmodels/learnerProfils/LP_FIC_Case1.xmi</semanticResources>
     <semanticResources>../inputmodels/learnerProfils/LP_FIC_Case2.xmi</semanticResources>

@@ -17,6 +17,7 @@ import generators.ALGAGenerator;
 
 class TasksSelectionTest {
 
+	// TODO : Recalculer les nombres de salles car on est plus à 20
 	Map<String, Integer> numberOfRoomsByTasks;
 	
 	@BeforeEach
@@ -66,7 +67,7 @@ class TasksSelectionTest {
 		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_FIC_Case2.xmi"); 
 		Dungeon dungeon = generator.generate();
 		for (Room room : dungeon.getRooms()) {
-			if(!room.equals(dungeon.getEntry())) {
+			if(!room.equals(dungeon.getEntry()) && !room.getQuestionedFacts().isEmpty()) {
 				if(!numberOfRoomsByTasks.containsKey(room.getTask().getID())) {
 					numberOfRoomsByTasks.put(room.getTask().getID(), 1);
 				} else {

@@ -4,30 +4,26 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:generator="http://www.example.org/generator"
-    xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore">
-  <gamecontext
-      numberOfRooms="20"/>
+    xsi:schemaLocation="http://www.example.org/generator ../../model/generator.ecore">
+  <gamecontext/>
   <learnerplayer
       name="Harry Potter">
     <progression>
-      <currentobjectivelevels
-          achieved="true">
+      <currentobjectivelevels>
         <objective
             href="LearningDomain.xmi#REC-O1"/>
         <level
             xsi:type="generator:MTLevel"
             href="LearningDomain.xmi#REC-O1-N1"/>
       </currentobjectivelevels>
-      <currentobjectivelevels
-          achieved="true">
+      <currentobjectivelevels>
         <objective
             href="LearningDomain.xmi#REC-O2"/>
         <level
             xsi:type="generator:MTLevel"
             href="LearningDomain.xmi#REC-O2-N1"/>
       </currentobjectivelevels>
-      <currentobjectivelevels
-          achieved="true">
+      <currentobjectivelevels>
         <objective
             href="LearningDomain.xmi#REC-O2"/>
         <level
@@ -41,8 +37,7 @@
             xsi:type="generator:MTLevel"
             href="LearningDomain.xmi#REC-O2-N3"/>
       </currentobjectivelevels>
-      <currentobjectivelevels
-          achieved="true">
+      <currentobjectivelevels>
         <objective
             href="LearningDomain.xmi#REC-O3"/>
         <level
@@ -84,6 +79,7 @@
             xsi:type="generator:MTLevel"
             href="LearningDomain.xmi#REC-O6-N1"/>
       </currentobjectivelevels>
+      <currentGameLevel/>
     </progression>
     <learningpath
         href="LearningDomain.xmi#//@learningpaths.1"/>
