@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]">
+  <rooms>
+    <room id="Room[0/0]" roomTypeName="RegularRoomE">
+      <roomaccesses>
+        <roomaccess id="a2" direction="EAST" accessRef="a3"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[1/-1]" x="1" y="-1" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a3" direction="WEST_NORTH" accessRef="a2"/>
+        <roomaccess id="a4" direction="EAST_NORTH" accessRef="a5"/>
+      </roomaccesses>
+      <questions incompleteFact="{88,121,55} (11) | bad choices = {137,119}" pos="POS1" type="LargeText"/>
+    </room>
+    <room id="Room[3/0]" x="3" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a5" direction="WEST_SOUTH" accessRef="a4"/>
+        <roomaccess id="a6" direction="NORTH_EAST" accessRef="a7"/>
+      </roomaccesses>
+      <questions incompleteFact="? = 5 x 12 (60) | enter response" pos="POS1" type="LargeText"/>
+    </room>
+    <room id="Room[4/2]" x="4" y="2" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a7" direction="SOUTH_WEST" accessRef="a6"/>
+        <roomaccess id="a8" direction="EAST_SOUTH" accessRef="a9"/>
+      </roomaccesses>
+      <questions incompleteFact="? x ? = 64 (8x8=64) | choices = {8,8,68,80}" pos="POS1" type="LargeText"/>
+    </room>
+    <room id="Room[6/2]" x="6" y="2" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a9" direction="WEST_SOUTH" accessRef="a8"/>
+        <roomaccess id="a10" direction="SOUTH_WEST" accessRef="a11"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[5/0]" x="5" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a11" direction="NORTH_EAST" accessRef="a10"/>
+        <roomaccess id="a12" direction="SOUTH_EAST" accessRef="a13"/>
+      </roomaccesses>
+      <questions incompleteFact="{18,45,54} (9) | bad choices = {32,91}" pos="POS1" type="LargeText"/>
+    </room>
+    <room id="Room[6/-1]" x="6" y="-1" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a13" direction="NORTH" accessRef="a12"/>
+        <roomaccess id="a14" direction="SOUTH" accessRef="a15"/>
+      </roomaccesses>
+      <questions incompleteFact="1 x 9 = ? (9) | enter response" pos="POS1" type="LargeText"/>
+    </room>
+    <room id="Room[5/-3]" x="5" y="-3" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a15" direction="NORTH_EAST" accessRef="a14"/>
+        <roomaccess id="a16" direction="EAST_SOUTH" accessRef="a17"/>
+      </roomaccesses>
+      <questions incompleteFact="3 x 4 = 12 (true)" pos="POS1" type="LargeText"/>
+      <questions incompleteFact="1 x 1 = 1 (true)" pos="POS1" type="LargeText"/>
+    </room>
+    <room id="Room[7/-4]" x="7" y="-4" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a17" direction="WEST_NORTH" accessRef="a16"/>
+        <roomaccess id="a18" direction="NORTH_EAST" accessRef="a19"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[8/-2]" x="8" y="-2" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a19" direction="SOUTH_WEST" accessRef="a18"/>
+        <roomaccess id="a20" direction="NORTH_EAST" accessRef="a21"/>
+      </roomaccesses>
+      <questions incompleteFact="12 = ? x ? (12=2x6) | choices = {2,6,18,7}" pos="POS1" type="LargeText"/>
+    </room>
+    <room id="Room[8/0]" x="8" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a21" direction="SOUTH_EAST" accessRef="a20"/>
+        <roomaccess id="a22" direction="EAST_SOUTH" accessRef="a23"/>
+      </roomaccesses>
+      <questions incompleteFact="10 x 4 = 37 (false)" pos="POS1" type="LargeText"/>
+      <questions incompleteFact="4 x 3 = 15 (false)" pos="POS1" type="LargeText"/>
+    </room>
+    <room id="Room[10/0]" x="10" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a23" direction="WEST_SOUTH" accessRef="a22"/>
+        <roomaccess id="a24" direction="EAST_SOUTH" accessRef="a25"/>
+      </roomaccesses>
+      <questions incompleteFact="? = ? x ? (132 = 11 x 12) | choices = {11,12,132,154,75,8}" pos="POS1" type="LargeText"/>
+    </room>
+    <room id="Room[12/-1]" x="12" y="-1" size="LARGE" roomTypeName="LargeSimpleRoom1">
+      <roomaccesses>
+        <roomaccess id="a25" direction="WEST_NORTH" accessRef="a24"/>
+      </roomaccesses>
+    </room>
+  </rooms>
+</Dungeon>

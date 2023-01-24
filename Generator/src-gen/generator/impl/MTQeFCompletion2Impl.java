@@ -147,14 +147,14 @@ public class MTQeFCompletion2Impl extends QuestionedFactImpl implements MTQeFCom
 		return result.toString();
 	}
 
-	@Override
+	/*@Override
 	public String getQuestionedFactQuestion() {
 		String choices = "{";
 		for (Integer integer : propositions) {
 			choices += integer + (propositions.get(propositions.size() - 1).equals(integer) ? "}" : ",");
 		}
 		return getQuestionablefact().getQuestionableFact() + " | choices = " + choices;
-	}
+	}*/
 
 	@Override
 	public int hashCode() {
@@ -171,6 +171,15 @@ public class MTQeFCompletion2Impl extends QuestionedFactImpl implements MTQeFCom
 			return false;
 		MTQeFCompletion2Impl other = (MTQeFCompletion2Impl) obj;
 		return Objects.equals(propositions, other.propositions);
+	}
+
+	@Override
+	public void setQuestionText() {
+		String choices = "{";
+		for (Integer integer : propositions) {
+			choices += integer + (propositions.get(propositions.size() - 1).equals(integer) ? "}" : ",");
+		}
+		questionText = getQuestionablefact().getQuestionableFact() + " | choices = " + choices;
 	}
 
 } //MTQeFCompletion2Impl

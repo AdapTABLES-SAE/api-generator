@@ -3249,22 +3249,31 @@ public interface GeneratorPackage extends EPackage {
 	int QUESTIONED_FACT__POSITION = 1;
 
 	/**
+	 * The feature id for the '<em><b>Question Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONED_FACT__QUESTION_TEXT = 2;
+
+	/**
 	 * The number of structural features of the '<em>Questioned Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONED_FACT_FEATURE_COUNT = 2;
+	int QUESTIONED_FACT_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>Get Questioned Fact Question</em>' operation.
+	 * The operation id for the '<em>Set Question Text</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION = 0;
+	int QUESTIONED_FACT___SET_QUESTION_TEXT = 0;
 
 	/**
 	 * The number of operations of the '<em>Questioned Fact</em>' class.
@@ -3304,6 +3313,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_QE_FCOMPLETION1__POSITION = QUESTIONED_FACT__POSITION;
 
 	/**
+	 * The feature id for the '<em><b>Question Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION1__QUESTION_TEXT = QUESTIONED_FACT__QUESTION_TEXT;
+
+	/**
 	 * The feature id for the '<em><b>Propositions</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3322,13 +3340,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_QE_FCOMPLETION1_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Questioned Fact Question</em>' operation.
+	 * The operation id for the '<em>Set Question Text</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_QE_FCOMPLETION1___GET_QUESTIONED_FACT_QUESTION = QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION;
+	int MT_QE_FCOMPLETION1___SET_QUESTION_TEXT = QUESTIONED_FACT___SET_QUESTION_TEXT;
 
 	/**
 	 * The number of operations of the '<em>MT Qe FCompletion1</em>' class.
@@ -3368,6 +3386,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_QE_FCOMPLETION2__POSITION = QUESTIONED_FACT__POSITION;
 
 	/**
+	 * The feature id for the '<em><b>Question Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FCOMPLETION2__QUESTION_TEXT = QUESTIONED_FACT__QUESTION_TEXT;
+
+	/**
 	 * The feature id for the '<em><b>Propositions</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3386,13 +3413,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_QE_FCOMPLETION2_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Questioned Fact Question</em>' operation.
+	 * The operation id for the '<em>Set Question Text</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_QE_FCOMPLETION2___GET_QUESTIONED_FACT_QUESTION = QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION;
+	int MT_QE_FCOMPLETION2___SET_QUESTION_TEXT = QUESTIONED_FACT___SET_QUESTION_TEXT;
 
 	/**
 	 * The number of operations of the '<em>MT Qe FCompletion2</em>' class.
@@ -3432,6 +3459,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_QE_FREBUILD__POSITION = QUESTIONED_FACT__POSITION;
 
 	/**
+	 * The feature id for the '<em><b>Question Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FREBUILD__QUESTION_TEXT = QUESTIONED_FACT__QUESTION_TEXT;
+
+	/**
 	 * The feature id for the '<em><b>Propositions</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3450,13 +3486,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_QE_FREBUILD_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Questioned Fact Question</em>' operation.
+	 * The operation id for the '<em>Set Question Text</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_QE_FREBUILD___GET_QUESTIONED_FACT_QUESTION = QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION;
+	int MT_QE_FREBUILD___SET_QUESTION_TEXT = QUESTIONED_FACT___SET_QUESTION_TEXT;
 
 	/**
 	 * The number of operations of the '<em>MT Qe FRebuild</em>' class.
@@ -3496,6 +3532,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_QE_FIDENTIFICATION__POSITION = QUESTIONED_FACT__POSITION;
 
 	/**
+	 * The feature id for the '<em><b>Question Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FIDENTIFICATION__QUESTION_TEXT = QUESTIONED_FACT__QUESTION_TEXT;
+
+	/**
 	 * The number of structural features of the '<em>MT Qe FIdentification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3505,13 +3550,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_QE_FIDENTIFICATION_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Get Questioned Fact Question</em>' operation.
+	 * The operation id for the '<em>Set Question Text</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_QE_FIDENTIFICATION___GET_QUESTIONED_FACT_QUESTION = QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION;
+	int MT_QE_FIDENTIFICATION___SET_QUESTION_TEXT = QUESTIONED_FACT___SET_QUESTION_TEXT;
 
 	/**
 	 * The number of operations of the '<em>MT Qe FIdentification</em>' class.
@@ -3551,6 +3596,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_QE_FMEMBERSHIP__POSITION = QUESTIONED_FACT__POSITION;
 
 	/**
+	 * The feature id for the '<em><b>Question Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_QE_FMEMBERSHIP__QUESTION_TEXT = QUESTIONED_FACT__QUESTION_TEXT;
+
+	/**
 	 * The feature id for the '<em><b>Bad Propositions</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3569,13 +3623,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_QE_FMEMBERSHIP_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Questioned Fact Question</em>' operation.
+	 * The operation id for the '<em>Set Question Text</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_QE_FMEMBERSHIP___GET_QUESTIONED_FACT_QUESTION = QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION;
+	int MT_QE_FMEMBERSHIP___SET_QUESTION_TEXT = QUESTIONED_FACT___SET_QUESTION_TEXT;
 
 	/**
 	 * The number of operations of the '<em>MT Qe FMembership</em>' class.
@@ -5599,14 +5653,25 @@ public interface GeneratorPackage extends EPackage {
 	EReference getQuestionedFact_Position();
 
 	/**
-	 * Returns the meta object for the '{@link generator.QuestionedFact#getQuestionedFactQuestion() <em>Get Questioned Fact Question</em>}' operation.
+	 * Returns the meta object for the attribute '{@link generator.QuestionedFact#getQuestionText <em>Question Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Questioned Fact Question</em>' operation.
-	 * @see generator.QuestionedFact#getQuestionedFactQuestion()
+	 * @return the meta object for the attribute '<em>Question Text</em>'.
+	 * @see generator.QuestionedFact#getQuestionText()
+	 * @see #getQuestionedFact()
 	 * @generated
 	 */
-	EOperation getQuestionedFact__GetQuestionedFactQuestion();
+	EAttribute getQuestionedFact_QuestionText();
+
+	/**
+	 * Returns the meta object for the '{@link generator.QuestionedFact#setQuestionText() <em>Set Question Text</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Set Question Text</em>' operation.
+	 * @see generator.QuestionedFact#setQuestionText()
+	 * @generated
+	 */
+	EOperation getQuestionedFact__SetQuestionText();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MTQeFCompletion1 <em>MT Qe FCompletion1</em>}'.
@@ -7348,13 +7413,20 @@ public interface GeneratorPackage extends EPackage {
 		EReference QUESTIONED_FACT__POSITION = eINSTANCE.getQuestionedFact_Position();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Questioned Fact Question</b></em>' operation.
+		 * The meta object literal for the '<em><b>Question Text</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION = eINSTANCE
-				.getQuestionedFact__GetQuestionedFactQuestion();
+		EAttribute QUESTIONED_FACT__QUESTION_TEXT = eINSTANCE.getQuestionedFact_QuestionText();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Question Text</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation QUESTIONED_FACT___SET_QUESTION_TEXT = eINSTANCE.getQuestionedFact__SetQuestionText();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTQeFCompletion1Impl <em>MT Qe FCompletion1</em>}' class.

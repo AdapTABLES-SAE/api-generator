@@ -35,7 +35,8 @@ rule Room2Room
         if(roomIn.questionedFacts.isDefined()){
         	for (fact in roomIn.questionedFacts) { 
 				var question: new OUT!Question;
-	        	question.incompleteFact = fact.getQuestionedFactQuestion;
+	        	question.incompleteFact = fact.questionText;
+	        	("\t\t"+question.incompleteFact).println();
 	        	question.pos = "POS1";//roomIn.question.position.name;
 		        question.type = "LargeText";
 		        roomOut.questions.add(question);

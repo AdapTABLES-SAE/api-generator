@@ -69,7 +69,7 @@ public class ALGAGenerator {
 		if(r.getQuestionedFacts() != null && !r.getQuestionedFacts().isEmpty()) {
 			String facts = "{";
 			for (QuestionedFact qef : r.getQuestionedFacts()) {
-				facts += qef.getQuestionedFactQuestion() + (r.getQuestionedFacts().get(r.getQuestionedFacts().size()-1).equals(qef)? "}":", ");
+				facts += qef.getQuestionText() + (r.getQuestionedFacts().get(r.getQuestionedFacts().size()-1).equals(qef)? "}":", ");
 			}
 			System.out.println("\t Facts : "+facts);
 		}

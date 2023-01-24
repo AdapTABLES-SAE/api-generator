@@ -6,13 +6,9 @@ import generator.GeneratorPackage;
 import generator.Position;
 import generator.QuestionableFact;
 import generator.QuestionedFact;
-
 import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -29,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link generator.impl.QuestionedFactImpl#getQuestionablefact <em>Questionablefact</em>}</li>
  *   <li>{@link generator.impl.QuestionedFactImpl#getPosition <em>Position</em>}</li>
+ *   <li>{@link generator.impl.QuestionedFactImpl#getQuestionText <em>Question Text</em>}</li>
  * </ul>
  *
  * @generated
@@ -53,6 +50,35 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected Position position;
+
+	/**
+	 * The default value of the '{@link #getQuestionText() <em>Question Text</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuestionText()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String QUESTION_TEXT_EDEFAULT = "TEST";
+
+	/**
+	 * The cached value of the '{@link #getQuestionText() <em>Question Text</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuestionText()
+	 * @generated
+	 * @ordered
+	 */
+	protected String questionText = QUESTION_TEXT_EDEFAULT;
+
+	/**
+	 * This is true if the Question Text attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean questionTextESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,6 +182,61 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getQuestionText() {
+		return questionText;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setQuestionText(String newQuestionText) {
+		String oldQuestionText = questionText;
+		questionText = newQuestionText;
+		boolean oldQuestionTextESet = questionTextESet;
+		questionTextESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.QUESTIONED_FACT__QUESTION_TEXT,
+					oldQuestionText, questionText, !oldQuestionTextESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetQuestionText() {
+		String oldQuestionText = questionText;
+		boolean oldQuestionTextESet = questionTextESet;
+		questionText = QUESTION_TEXT_EDEFAULT;
+		questionTextESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, GeneratorPackage.QUESTIONED_FACT__QUESTION_TEXT,
+					oldQuestionText, QUESTION_TEXT_EDEFAULT, oldQuestionTextESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetQuestionText() {
+		return questionTextESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public abstract void setQuestionText();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public String getQuestionedFactQuestion() {
@@ -178,6 +259,8 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 			if (resolve)
 				return getPosition();
 			return basicGetPosition();
+		case GeneratorPackage.QUESTIONED_FACT__QUESTION_TEXT:
+			return getQuestionText();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -195,6 +278,9 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 			return;
 		case GeneratorPackage.QUESTIONED_FACT__POSITION:
 			setPosition((Position) newValue);
+			return;
+		case GeneratorPackage.QUESTIONED_FACT__QUESTION_TEXT:
+			setQuestionText((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -214,6 +300,9 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 		case GeneratorPackage.QUESTIONED_FACT__POSITION:
 			setPosition((Position) null);
 			return;
+		case GeneratorPackage.QUESTIONED_FACT__QUESTION_TEXT:
+			unsetQuestionText();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -230,6 +319,8 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 			return questionablefact != null;
 		case GeneratorPackage.QUESTIONED_FACT__POSITION:
 			return position != null;
+		case GeneratorPackage.QUESTIONED_FACT__QUESTION_TEXT:
+			return isSetQuestionText();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -242,10 +333,31 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case GeneratorPackage.QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION:
-			return getQuestionedFactQuestion();
+		case GeneratorPackage.QUESTIONED_FACT___SET_QUESTION_TEXT:
+			setQuestionText();
+			return null;
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (questionText: ");
+		if (questionTextESet)
+			result.append(questionText);
+		else
+			result.append("<unset>");
+		result.append(')');
+		return result.toString();
 	}
 
 } //QuestionedFactImpl

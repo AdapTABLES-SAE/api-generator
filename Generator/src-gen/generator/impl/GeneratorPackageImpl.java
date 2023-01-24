@@ -2118,7 +2118,16 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getQuestionedFact__GetQuestionedFactQuestion() {
+	public EAttribute getQuestionedFact_QuestionText() {
+		return (EAttribute) questionedFactEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getQuestionedFact__SetQuestionText() {
 		return questionedFactEClass.getEOperations().get(0);
 	}
 
@@ -2609,7 +2618,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		questionedFactEClass = createEClass(QUESTIONED_FACT);
 		createEReference(questionedFactEClass, QUESTIONED_FACT__QUESTIONABLEFACT);
 		createEReference(questionedFactEClass, QUESTIONED_FACT__POSITION);
-		createEOperation(questionedFactEClass, QUESTIONED_FACT___GET_QUESTIONED_FACT_QUESTION);
+		createEAttribute(questionedFactEClass, QUESTIONED_FACT__QUESTION_TEXT);
+		createEOperation(questionedFactEClass, QUESTIONED_FACT___SET_QUESTION_TEXT);
 
 		mtQeFCompletion1EClass = createEClass(MT_QE_FCOMPLETION1);
 		createEAttribute(mtQeFCompletion1EClass, MT_QE_FCOMPLETION1__PROPOSITIONS);
@@ -3023,7 +3033,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(mtIdentificationEClass, MTIdentification.class, "MTIdentification", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMTIdentification_Target(), this.getESingleTarget(), "target", "", 1, 1,
+		initEAttribute(getMTIdentification_Target(), this.getESingleTarget(), "target", "RESULT", 1, 1,
 				MTIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
@@ -3172,9 +3182,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getQuestionedFact_Position(), this.getPosition(), null, "position", null, 1, 1,
 				QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestionedFact_QuestionText(), ecorePackage.getEString(), "questionText", "TEST", 0, 1,
+				QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getQuestionedFact__GetQuestionedFactQuestion(), ecorePackage.getEString(),
-				"getQuestionedFactQuestion", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getQuestionedFact__SetQuestionText(), null, "setQuestionText", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mtQeFCompletion1EClass, MTQeFCompletion1.class, "MTQeFCompletion1", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

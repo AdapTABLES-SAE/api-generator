@@ -147,14 +147,14 @@ public class MTQeFMembershipImpl extends QuestionedFactImpl implements MTQeFMemb
 		return result.toString();
 	}
 
-	@Override
+	/*@Override
 	public String getQuestionedFactQuestion() {
 		String choices = "{";
 		for (Integer integer : badPropositions) {
 			choices += integer + (badPropositions.get(badPropositions.size() - 1).equals(integer) ? "}" : ",");
 		}
 		return getQuestionablefact().getQuestionableFact() + " | bad choices = " + choices;
-	}
+	}*/
 
 	@Override
 	public int hashCode() {
@@ -171,6 +171,15 @@ public class MTQeFMembershipImpl extends QuestionedFactImpl implements MTQeFMemb
 			return false;
 		MTQeFMembershipImpl other = (MTQeFMembershipImpl) obj;
 		return Objects.equals(badPropositions, other.badPropositions);
+	}
+
+	@Override
+	public void setQuestionText() {
+		String choices = "{";
+		for (Integer integer : badPropositions) {
+			choices += integer + (badPropositions.get(badPropositions.size() - 1).equals(integer) ? "}" : ",");
+		}
+		questionText = getQuestionablefact().getQuestionableFact() + " | bad choices = " + choices;
 	}
 
 } //MTQeFMembershipImpl

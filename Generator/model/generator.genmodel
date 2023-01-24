@@ -269,7 +269,8 @@
     <genClasses ecoreClass="generator.ecore#//QuestionedFact">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionedFact/questionablefact"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionedFact/position"/>
-      <genOperations ecoreOperation="generator.ecore#//QuestionedFact/getQuestionedFactQuestion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionedFact/questionText"/>
+      <genOperations ecoreOperation="generator.ecore#//QuestionedFact/setQuestionText"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTQeFCompletion1">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQeFCompletion1/propositions"/>

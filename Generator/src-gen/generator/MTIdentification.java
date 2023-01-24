@@ -21,7 +21,7 @@ package generator;
 public interface MTIdentification extends IdentificationTask {
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' attribute.
-	 * The default value is <code>""</code>.
+	 * The default value is <code>"RESULT"</code>.
 	 * The literals are from the enumeration {@link generator.ESingleTarget}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -29,7 +29,7 @@ public interface MTIdentification extends IdentificationTask {
 	 * @see generator.ESingleTarget
 	 * @see #setTarget(ESingleTarget)
 	 * @see generator.GeneratorPackage#getMTIdentification_Target()
-	 * @model default="" required="true"
+	 * @model default="RESULT" required="true"
 	 * @generated
 	 */
 	ESingleTarget getTarget();

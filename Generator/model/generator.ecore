@@ -245,7 +245,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="MTRecontruction" eSuperTypes="#//ReconstructionTask"/>
   <eClassifiers xsi:type="ecore:EClass" name="MTIdentification" eSuperTypes="#//IdentificationTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="target" lowerBound="1"
-        eType="#//ESingleTarget" defaultValueLiteral=""/>
+        eType="#//ESingleTarget" defaultValueLiteral="RESULT"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTMembership" eSuperTypes="#//MembershipIDTask"/>
   <eClassifiers xsi:type="ecore:EClass" name="Results">
@@ -325,11 +325,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="table" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QuestionedFact" abstract="true">
-    <eOperations name="getQuestionedFactQuestion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setQuestionText"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="questionablefact" lowerBound="1"
         eType="#//QuestionableFact"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
         eType="#//Position"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="questionText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="TEST" unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTQeFCompletion1" eSuperTypes="#//QuestionedFact">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="propositions" unique="false"

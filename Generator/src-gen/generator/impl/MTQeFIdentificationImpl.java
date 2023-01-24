@@ -34,9 +34,15 @@ public class MTQeFIdentificationImpl extends QuestionedFactImpl implements MTQeF
 		return GeneratorPackage.Literals.MT_QE_FIDENTIFICATION;
 	}
 
-	@Override
+	/*@Override
 	public String getQuestionedFactQuestion() {
 		return getQuestionablefact().getQuestionableFact();
+	}*/
+
+	@Override
+	public void setQuestionText() {
+		questionText = getQuestionablefact().getQuestionableFact();
+		
 	}
 
 } //MTQeFIdentificationImpl
