@@ -12,11 +12,11 @@ import generator.Level;
 import generator.Objective;
 import generator.Prerequisite;
 import generator.ResultsByTask;
+import generator.impl.CurrentGameLevelImpl;
 import generator.impl.CurrentObjectiveLevelImpl;
 import generator.impl.ProgressionImpl;
 import managers.EducationElementsManager;
 import managers.ModelsManager;
-import structures.Shuffle;
 
 /**
  * Cette classe permet de générer / choisir, l'objectif d'entrainement visée ainsi que le niveau de difficulté. 
@@ -30,15 +30,16 @@ public class EducationalElementsGenerator {
 	private LearnerPlayer learnerPlayer;
 
 
-	public EducationalElementsGenerator(ModelsManager modelAccess) {
+	public EducationalElementsGenerator(ModelsManager modelAccess, double nbQuestionRooms, double nbNonQuestionRooms) {
 		this.learnerPlayer = modelAccess.context.getLearnerplayer();
 		random = new Random();
-		eeManager = new EducationElementsManager(modelAccess);
+		eeManager = new EducationElementsManager(modelAccess, nbQuestionRooms, nbNonQuestionRooms);
 	}
 	
 	public EducationElementsManager generateEE() throws Exception {
 		if(learnerPlayer.getProgression() == null) {
 			learnerPlayer.setProgression(new ProgressionImpl());
+			learnerPlayer.getProgression().setCurrentGameLevel(new CurrentGameLevelImpl());
 		}
 		selectObjectiveLevel();	
 		System.out.println("Selected Objective/Level "+eeManager.getObjective().getName()+" "+eeManager.getLevel().getID());
@@ -58,6 +59,7 @@ public class EducationalElementsGenerator {
 		}*/
 		defineDungeonRooms2Tasks();
 		generateFactsToQuestion();
+		eeManager.createDungeonQAndNQRoomOrder();
 		return eeManager;
 	}
 	
@@ -237,10 +239,10 @@ public class EducationalElementsGenerator {
 				tasks.add(rbt);
 			}
 		}
-		return Shuffle.shuffleTask(tasks);
+		return tasks; // Shuffle.shuffleTask(tasks);
 	}
 
-
+	
 	
 	public void printGeneration() {
 		System.out.println(eeManager.toString());

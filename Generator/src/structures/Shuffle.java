@@ -23,6 +23,19 @@ public class Shuffle {
 		return shuffledElem;
 	}
 	
+	public static List<TaskFactPair> shuffleRoomFacts(List<TaskFactPair> tasks){
+		Random rand = new Random();
+		List<TaskFactPair> factsShuffled = new ArrayList<>();
+		int number = tasks.size();
+		int j;
+		while (factsShuffled.size() != number) {
+			j = rand.nextInt(tasks.size()); 
+			factsShuffled.add(tasks.get(j));
+			tasks.remove(j);
+		}
+		return factsShuffled;
+	}
+	
 	public static List<ResultsByTask> shuffleTask(List<ResultsByTask> tasks){
 		Random rand = new Random();
 		List<ResultsByTask> tasksShuffled = new ArrayList<>();

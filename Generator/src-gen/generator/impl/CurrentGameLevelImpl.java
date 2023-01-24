@@ -2,8 +2,7 @@
  */
 package generator.impl;
 
-import generator.DungeonMode;
-import generator.GameContext;
+import generator.CurrentGameLevel;
 import generator.GeneratorPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -15,44 +14,44 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Game Context</b></em>'.
+ * An implementation of the model object '<em><b>Current Game Level</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.GameContextImpl#getMode <em>Mode</em>}</li>
+ *   <li>{@link generator.impl.CurrentGameLevelImpl#getLevel <em>Level</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GameContextImpl extends MinimalEObjectImpl.Container implements GameContext {
+public class CurrentGameLevelImpl extends MinimalEObjectImpl.Container implements CurrentGameLevel {
 	/**
-	 * The default value of the '{@link #getMode() <em>Mode</em>}' attribute.
+	 * The default value of the '{@link #getLevel() <em>Level</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMode()
+	 * @see #getLevel()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final DungeonMode MODE_EDEFAULT = DungeonMode.LINEAR;
+	protected static final int LEVEL_EDEFAULT = 1;
 
 	/**
-	 * The cached value of the '{@link #getMode() <em>Mode</em>}' attribute.
+	 * The cached value of the '{@link #getLevel() <em>Level</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMode()
+	 * @see #getLevel()
 	 * @generated
 	 * @ordered
 	 */
-	protected DungeonMode mode = MODE_EDEFAULT;
+	protected int level = LEVEL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GameContextImpl() {
+	public CurrentGameLevelImpl() {
 		super();
 	}
 
@@ -63,7 +62,7 @@ public class GameContextImpl extends MinimalEObjectImpl.Container implements Gam
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.GAME_CONTEXT;
+		return GeneratorPackage.Literals.CURRENT_GAME_LEVEL;
 	}
 
 	/**
@@ -71,8 +70,8 @@ public class GameContextImpl extends MinimalEObjectImpl.Container implements Gam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DungeonMode getMode() {
-		return mode;
+	public int getLevel() {
+		return level;
 	}
 
 	/**
@@ -80,11 +79,12 @@ public class GameContextImpl extends MinimalEObjectImpl.Container implements Gam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMode(DungeonMode newMode) {
-		DungeonMode oldMode = mode;
-		mode = newMode == null ? MODE_EDEFAULT : newMode;
+	public void setLevel(int newLevel) {
+		int oldLevel = level;
+		level = newLevel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAME_CONTEXT__MODE, oldMode, mode));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.CURRENT_GAME_LEVEL__LEVEL, oldLevel,
+					level));
 	}
 
 	/**
@@ -95,8 +95,8 @@ public class GameContextImpl extends MinimalEObjectImpl.Container implements Gam
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.GAME_CONTEXT__MODE:
-			return getMode();
+		case GeneratorPackage.CURRENT_GAME_LEVEL__LEVEL:
+			return getLevel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,8 +109,8 @@ public class GameContextImpl extends MinimalEObjectImpl.Container implements Gam
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.GAME_CONTEXT__MODE:
-			setMode((DungeonMode) newValue);
+		case GeneratorPackage.CURRENT_GAME_LEVEL__LEVEL:
+			setLevel((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -124,8 +124,8 @@ public class GameContextImpl extends MinimalEObjectImpl.Container implements Gam
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GAME_CONTEXT__MODE:
-			setMode(MODE_EDEFAULT);
+		case GeneratorPackage.CURRENT_GAME_LEVEL__LEVEL:
+			setLevel(LEVEL_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -139,8 +139,8 @@ public class GameContextImpl extends MinimalEObjectImpl.Container implements Gam
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GAME_CONTEXT__MODE:
-			return mode != MODE_EDEFAULT;
+		case GeneratorPackage.CURRENT_GAME_LEVEL__LEVEL:
+			return level != LEVEL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -156,10 +156,10 @@ public class GameContextImpl extends MinimalEObjectImpl.Container implements Gam
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (mode: ");
-		result.append(mode);
+		result.append(" (level: ");
+		result.append(level);
 		result.append(')');
 		return result.toString();
 	}
 
-} //GameContextImpl
+} //CurrentGameLevelImpl

@@ -353,13 +353,22 @@ public interface GeneratorPackage extends EPackage {
 	int GAME_DESCRIPTION__ROOMTYPES = 0;
 
 	/**
+	 * The feature id for the '<em><b>Levels Difficulty Progress</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_DESCRIPTION__LEVELS_DIFFICULTY_PROGRESS = 1;
+
+	/**
 	 * The number of structural features of the '<em>Game Description</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GAME_DESCRIPTION_FEATURE_COUNT = 1;
+	int GAME_DESCRIPTION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Game Description</em>' class.
@@ -610,22 +619,13 @@ public interface GeneratorPackage extends EPackage {
 	int GAME_CONTEXT = 10;
 
 	/**
-	 * The feature id for the '<em><b>Number Of Rooms</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_CONTEXT__NUMBER_OF_ROOMS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Mode</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GAME_CONTEXT__MODE = 1;
+	int GAME_CONTEXT__MODE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Game Context</em>' class.
@@ -634,7 +634,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GAME_CONTEXT_FEATURE_COUNT = 2;
+	int GAME_CONTEXT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Game Context</em>' class.
@@ -1378,13 +1378,22 @@ public interface GeneratorPackage extends EPackage {
 	int PROGRESSION__CURRENTOBJECTIVELEVELS = 0;
 
 	/**
+	 * The feature id for the '<em><b>Current Game Level</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRESSION__CURRENT_GAME_LEVEL = 1;
+
+	/**
 	 * The number of structural features of the '<em>Progression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRESSION_FEATURE_COUNT = 1;
+	int PROGRESSION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Progression</em>' class.
@@ -3624,6 +3633,107 @@ public interface GeneratorPackage extends EPackage {
 	int COMPLETION_CRITERIA_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.LevelsDifficultyProgressImpl <em>Levels Difficulty Progress</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.LevelsDifficultyProgressImpl
+	 * @see generator.impl.GeneratorPackageImpl#getLevelsDifficultyProgress()
+	 * @generated
+	 */
+	int LEVELS_DIFFICULTY_PROGRESS = 55;
+
+	/**
+	 * The feature id for the '<em><b>Nb QRoom Increase</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVELS_DIFFICULTY_PROGRESS__NB_QROOM_INCREASE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Nb NQ Room Increase</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVELS_DIFFICULTY_PROGRESS__NB_NQ_ROOM_INCREASE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Init Nb QRoom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVELS_DIFFICULTY_PROGRESS__INIT_NB_QROOM = 2;
+
+	/**
+	 * The feature id for the '<em><b>Init Nb NQ Room</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVELS_DIFFICULTY_PROGRESS__INIT_NB_NQ_ROOM = 3;
+
+	/**
+	 * The number of structural features of the '<em>Levels Difficulty Progress</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVELS_DIFFICULTY_PROGRESS_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Levels Difficulty Progress</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVELS_DIFFICULTY_PROGRESS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.CurrentGameLevelImpl <em>Current Game Level</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.CurrentGameLevelImpl
+	 * @see generator.impl.GeneratorPackageImpl#getCurrentGameLevel()
+	 * @generated
+	 */
+	int CURRENT_GAME_LEVEL = 56;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_GAME_LEVEL__LEVEL = 0;
+
+	/**
+	 * The number of structural features of the '<em>Current Game Level</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_GAME_LEVEL_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Current Game Level</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_GAME_LEVEL_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3631,7 +3741,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 55;
+	int DIRECTIONS = 57;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -3641,7 +3751,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 56;
+	int DUNGEON_MODE = 58;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -3651,7 +3761,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 57;
+	int TABLE_BUILD = 59;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -3661,7 +3771,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 58;
+	int RESULT_POSITION = 60;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -3671,7 +3781,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 59;
+	int ESINGLE_TARGET = 61;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -3681,7 +3791,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 60;
+	int ETASK_TYPE = 62;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -3691,7 +3801,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 61;
+	int EMODALITY = 63;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -3701,7 +3811,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 62;
+	int ESEVERAL_TARGET = 64;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -3940,6 +4050,17 @@ public interface GeneratorPackage extends EPackage {
 	EReference getGameDescription_Roomtypes();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link generator.GameDescription#getLevelsDifficultyProgress <em>Levels Difficulty Progress</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Levels Difficulty Progress</em>'.
+	 * @see generator.GameDescription#getLevelsDifficultyProgress()
+	 * @see #getGameDescription()
+	 * @generated
+	 */
+	EReference getGameDescription_LevelsDifficultyProgress();
+
+	/**
 	 * Returns the meta object for class '{@link generator.RoomType <em>Room Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4064,17 +4185,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGameContext();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.GameContext#getNumberOfRooms <em>Number Of Rooms</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Number Of Rooms</em>'.
-	 * @see generator.GameContext#getNumberOfRooms()
-	 * @see #getGameContext()
-	 * @generated
-	 */
-	EAttribute getGameContext_NumberOfRooms();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.GameContext#getMode <em>Mode</em>}'.
@@ -4472,6 +4582,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getProgression_Currentobjectivelevels();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.Progression#getCurrentGameLevel <em>Current Game Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Current Game Level</em>'.
+	 * @see generator.Progression#getCurrentGameLevel()
+	 * @see #getProgression()
+	 * @generated
+	 */
+	EReference getProgression_CurrentGameLevel();
 
 	/**
 	 * Returns the meta object for class '{@link generator.CurrentObjectiveLevel <em>Current Objective Level</em>}'.
@@ -5614,6 +5735,81 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getCompletionCriteria_EncountersPercent();
 
 	/**
+	 * Returns the meta object for class '{@link generator.LevelsDifficultyProgress <em>Levels Difficulty Progress</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Levels Difficulty Progress</em>'.
+	 * @see generator.LevelsDifficultyProgress
+	 * @generated
+	 */
+	EClass getLevelsDifficultyProgress();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.LevelsDifficultyProgress#getNbQRoomIncrease <em>Nb QRoom Increase</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb QRoom Increase</em>'.
+	 * @see generator.LevelsDifficultyProgress#getNbQRoomIncrease()
+	 * @see #getLevelsDifficultyProgress()
+	 * @generated
+	 */
+	EAttribute getLevelsDifficultyProgress_NbQRoomIncrease();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.LevelsDifficultyProgress#getNbNQRoomIncrease <em>Nb NQ Room Increase</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb NQ Room Increase</em>'.
+	 * @see generator.LevelsDifficultyProgress#getNbNQRoomIncrease()
+	 * @see #getLevelsDifficultyProgress()
+	 * @generated
+	 */
+	EAttribute getLevelsDifficultyProgress_NbNQRoomIncrease();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.LevelsDifficultyProgress#getInitNbQRoom <em>Init Nb QRoom</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Init Nb QRoom</em>'.
+	 * @see generator.LevelsDifficultyProgress#getInitNbQRoom()
+	 * @see #getLevelsDifficultyProgress()
+	 * @generated
+	 */
+	EAttribute getLevelsDifficultyProgress_InitNbQRoom();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.LevelsDifficultyProgress#getInitNbNQRoom <em>Init Nb NQ Room</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Init Nb NQ Room</em>'.
+	 * @see generator.LevelsDifficultyProgress#getInitNbNQRoom()
+	 * @see #getLevelsDifficultyProgress()
+	 * @generated
+	 */
+	EAttribute getLevelsDifficultyProgress_InitNbNQRoom();
+
+	/**
+	 * Returns the meta object for class '{@link generator.CurrentGameLevel <em>Current Game Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Current Game Level</em>'.
+	 * @see generator.CurrentGameLevel
+	 * @generated
+	 */
+	EClass getCurrentGameLevel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.CurrentGameLevel#getLevel <em>Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Level</em>'.
+	 * @see generator.CurrentGameLevel#getLevel()
+	 * @see #getCurrentGameLevel()
+	 * @generated
+	 */
+	EAttribute getCurrentGameLevel_Level();
+
+	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5905,6 +6101,15 @@ public interface GeneratorPackage extends EPackage {
 		EReference GAME_DESCRIPTION__ROOMTYPES = eINSTANCE.getGameDescription_Roomtypes();
 
 		/**
+		 * The meta object literal for the '<em><b>Levels Difficulty Progress</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAME_DESCRIPTION__LEVELS_DIFFICULTY_PROGRESS = eINSTANCE
+				.getGameDescription_LevelsDifficultyProgress();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.RoomTypeImpl <em>Room Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6009,14 +6214,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GAME_CONTEXT = eINSTANCE.getGameContext();
-
-		/**
-		 * The meta object literal for the '<em><b>Number Of Rooms</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GAME_CONTEXT__NUMBER_OF_ROOMS = eINSTANCE.getGameContext_NumberOfRooms();
 
 		/**
 		 * The meta object literal for the '<em><b>Mode</b></em>' attribute feature.
@@ -6333,6 +6530,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PROGRESSION__CURRENTOBJECTIVELEVELS = eINSTANCE.getProgression_Currentobjectivelevels();
+
+		/**
+		 * The meta object literal for the '<em><b>Current Game Level</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROGRESSION__CURRENT_GAME_LEVEL = eINSTANCE.getProgression_CurrentGameLevel();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.CurrentObjectiveLevelImpl <em>Current Objective Level</em>}' class.
@@ -7258,6 +7463,68 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COMPLETION_CRITERIA__ENCOUNTERS_PERCENT = eINSTANCE.getCompletionCriteria_EncountersPercent();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.LevelsDifficultyProgressImpl <em>Levels Difficulty Progress</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.LevelsDifficultyProgressImpl
+		 * @see generator.impl.GeneratorPackageImpl#getLevelsDifficultyProgress()
+		 * @generated
+		 */
+		EClass LEVELS_DIFFICULTY_PROGRESS = eINSTANCE.getLevelsDifficultyProgress();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb QRoom Increase</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEVELS_DIFFICULTY_PROGRESS__NB_QROOM_INCREASE = eINSTANCE
+				.getLevelsDifficultyProgress_NbQRoomIncrease();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb NQ Room Increase</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEVELS_DIFFICULTY_PROGRESS__NB_NQ_ROOM_INCREASE = eINSTANCE
+				.getLevelsDifficultyProgress_NbNQRoomIncrease();
+
+		/**
+		 * The meta object literal for the '<em><b>Init Nb QRoom</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEVELS_DIFFICULTY_PROGRESS__INIT_NB_QROOM = eINSTANCE.getLevelsDifficultyProgress_InitNbQRoom();
+
+		/**
+		 * The meta object literal for the '<em><b>Init Nb NQ Room</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEVELS_DIFFICULTY_PROGRESS__INIT_NB_NQ_ROOM = eINSTANCE.getLevelsDifficultyProgress_InitNbNQRoom();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.CurrentGameLevelImpl <em>Current Game Level</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.CurrentGameLevelImpl
+		 * @see generator.impl.GeneratorPackageImpl#getCurrentGameLevel()
+		 * @generated
+		 */
+		EClass CURRENT_GAME_LEVEL = eINSTANCE.getCurrentGameLevel();
+
+		/**
+		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CURRENT_GAME_LEVEL__LEVEL = eINSTANCE.getCurrentGameLevel_Level();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.

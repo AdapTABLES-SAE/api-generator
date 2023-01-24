@@ -17,6 +17,7 @@ import generator.ResultsByTask;
 import generator.impl.ProgressionImpl;
 import generator.impl.ResultsByTaskImpl;
 import generator.impl.ResultsImpl;
+import structures.Shuffle;
 import structures.TaskFactPair;
 
 public class EducationElementsManager {
@@ -28,13 +29,15 @@ public class EducationElementsManager {
 	 * Structure donnant pour chaque type de tache, le nombre de piece necessaires
 	 */
 	private Map<ResultsByTask, Double> nbRoomsToTask; 
-	private double nbRooms;
+	private double nbQRooms;
+	private double nbNQRooms;
 	private List<TaskFactPair> factsToQuestionPerRoom;
 	
-	public EducationElementsManager(ModelsManager modelAccess) {
-		this.nbRooms = modelAccess.context.getGamecontext().getNumberOfRooms();
+	public EducationElementsManager(ModelsManager modelAccess, double nbQuestionRooms, double nbNonQuestionRooms) {
 		this.modelAccess = modelAccess;
 		this.learnerPlayer = this.modelAccess.context.getLearnerplayer();
+		this.nbQRooms = nbQuestionRooms;
+		this.nbNQRooms = nbNonQuestionRooms;
 		this.nbRoomsToTask = new HashMap<>();
 		this.factsToQuestionPerRoom = new ArrayList<>();
 	}
@@ -116,9 +119,9 @@ public class EducationElementsManager {
 		//ResultsByTask rtask = getAssociatedResultByTask(task);
 		if(nbRoomsToTask.containsKey(rbt)) {
 			nbRoomsToTask.put(rbt, nbRoomsToTask.get(rbt) +
-					((rbt.getTask().getPercentOfApparition()*coeffAdditional)*nbRooms)/100);
+					((rbt.getTask().getPercentOfApparition()*coeffAdditional)*nbQRooms)/100);
 		}else {
-			nbRoomsToTask.put(rbt, ((rbt.getTask().getPercentOfApparition()*coeffAdditional)*nbRooms)/100);
+			nbRoomsToTask.put(rbt, ((rbt.getTask().getPercentOfApparition()*coeffAdditional)*nbQRooms)/100);
 		}
 	}
 	
@@ -200,9 +203,22 @@ public class EducationElementsManager {
 		this.factsToQuestionPerRoom.add(new TaskFactPair(task, qEfacts));
 	}
 	
+	
+	/**
+	 * Create the order of training task rooms and pure game rooms of the dungeon
+	 */
+	public void createDungeonQAndNQRoomOrder() {
+		for (int i = 0; i < nbNQRooms; i++) {
+			factsToQuestionPerRoom.add(null);
+		}
+		
+		factsToQuestionPerRoom = Shuffle.shuffleRoomFacts(factsToQuestionPerRoom);
+	}
+	
 	public void addFactToQuestion(ATask task, QuestionedFact qEfact) {
 		this.factsToQuestionPerRoom.add(new TaskFactPair(task, Arrays.asList(qEfact)));
 	}
+	
 	
 	@Override
 	public String toString() {

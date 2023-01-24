@@ -28,8 +28,8 @@
         eType="#//RoomAccess" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="roomtype" lowerBound="1"
         eType="#//RoomType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="question" eType="#//Question"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questionedFacts" upperBound="-1"
+        eType="#//QuestionedFact" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//ATask"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GameDescription">
@@ -111,6 +111,8 @@
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" lowerBound="1" upperBound="-1"
         eType="#//ATask" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="completionCriteria" eType="#//CompletionCriteria"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTLevel" eSuperTypes="#//Level">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="buildSetup" eType="#//TableBuild"/>
@@ -172,11 +174,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Position">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Question">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
-        eType="#//Position"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="incompleteFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResponseModality" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="MultipleChoice" eSuperTypes="#//ResponseModality">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"
@@ -196,8 +193,8 @@
     <eOperations name="getType" eType="#//ETaskType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentOfApparition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="responsemodalities" upperBound="-1"
-        eType="#//ResponseModality" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responseModality" eType="#//ResponseModality"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
         iD="true"/>
   </eClassifiers>
@@ -254,7 +251,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResultsByTask">
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//ATask"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="questionedfacts" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questionableFacts" upperBound="-1"
         eType="#//QuestionableFact" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sucessPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         derived="true"/>
@@ -272,22 +269,23 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="res" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QuestionableFact" abstract="true">
+    <eOperations name="getQuestionableFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="qfresults" upperBound="-1"
         eType="#//QFResults" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="achieved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wasSelected" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTQFCompletion1" eSuperTypes="#//QuestionableFact">
-    <eOperations name="getQuestionableFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="leftOperand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rightOperand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="result" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="soluce" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultOnRight" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
         defaultValueLiteral="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NO_VALUE" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false" defaultValueLiteral="-1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTQFCompletion2" eSuperTypes="#//QuestionableFact">
-    <eOperations name="getQuestionableFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="leftOperand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rightOperand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="result" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -296,8 +294,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="soluceRes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultOnRight" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
         defaultValueLiteral="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NO_VALUE" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false" defaultValueLiteral="-1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ESeveralTarget">
     <eLiterals name="OPERAND_TABLE"/>
@@ -305,7 +301,6 @@
     <eLiterals name="TABLE_RESULT" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTQFRebuild" eSuperTypes="#//QuestionableFact">
-    <eOperations name="getQuestionableFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="soluceLeft" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="soluceRes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultOnRight" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
@@ -313,18 +308,47 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="soluceRight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTQFIdentification" eSuperTypes="#//QuestionableFact">
-    <eOperations name="getQuestionableFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="result" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rightOperand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="leftOperand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="soluce" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultOnRight" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
         defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="build" eType="#//TableBuild"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTQFMembership" eSuperTypes="#//QuestionableFact">
-    <eOperations name="getQuestionableFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="goodResults" lowerBound="1"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="table" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionedFact" abstract="true">
+    <eOperations name="getQuestionedFactQuestion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questionablefact" lowerBound="1"
+        eType="#//QuestionableFact"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
+        eType="#//Position"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTQeFCompletion1" eSuperTypes="#//QuestionedFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propositions" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTQeFCompletion2" eSuperTypes="#//QuestionedFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propositions" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTQeFRebuild" eSuperTypes="#//QuestionedFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propositions" unique="false"
+        lowerBound="3" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTQeFIdentification" eSuperTypes="#//QuestionedFact"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MTQeFMembership" eSuperTypes="#//QuestionedFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="badPropositions" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompletionCriteria">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="succesPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        defaultValueLiteral="80.0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="encountersPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        defaultValueLiteral="100.0"/>
   </eClassifiers>
 </ecore:EPackage>

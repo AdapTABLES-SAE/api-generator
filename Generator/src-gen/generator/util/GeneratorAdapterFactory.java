@@ -342,6 +342,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseLevelsDifficultyProgress(LevelsDifficultyProgress object) {
+			return createLevelsDifficultyProgressAdapter();
+		}
+
+		@Override
+		public Adapter caseCurrentGameLevel(CurrentGameLevel object) {
+			return createCurrentGameLevelAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1127,6 +1137,34 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCompletionCriteriaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.LevelsDifficultyProgress <em>Levels Difficulty Progress</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.LevelsDifficultyProgress
+	 * @generated
+	 */
+	public Adapter createLevelsDifficultyProgressAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.CurrentGameLevel <em>Current Game Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.CurrentGameLevel
+	 * @generated
+	 */
+	public Adapter createCurrentGameLevelAdapter() {
 		return null;
 	}
 

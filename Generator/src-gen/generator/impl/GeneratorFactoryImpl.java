@@ -143,6 +143,10 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createMTQeFMembership();
 		case GeneratorPackage.COMPLETION_CRITERIA:
 			return createCompletionCriteria();
+		case GeneratorPackage.LEVELS_DIFFICULTY_PROGRESS:
+			return createLevelsDifficultyProgress();
+		case GeneratorPackage.CURRENT_GAME_LEVEL:
+			return createCurrentGameLevel();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -634,6 +638,26 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public CompletionCriteria createCompletionCriteria() {
 		CompletionCriteriaImpl completionCriteria = new CompletionCriteriaImpl();
 		return completionCriteria;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LevelsDifficultyProgress createLevelsDifficultyProgress() {
+		LevelsDifficultyProgressImpl levelsDifficultyProgress = new LevelsDifficultyProgressImpl();
+		return levelsDifficultyProgress;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CurrentGameLevel createCurrentGameLevel() {
+		CurrentGameLevelImpl currentGameLevel = new CurrentGameLevelImpl();
+		return currentGameLevel;
 	}
 
 	/**

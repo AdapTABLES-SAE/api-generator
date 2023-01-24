@@ -32,14 +32,15 @@ rule Room2Room
             roomOut.size = OUT!RoomType#LARGE;
         }
         
-        if(roomIn.question.isDefined()){
-	        var question: new OUT!Question;
-	        question.incompleteFact = roomIn.question.incompleteFact;
-	        question.pos = roomIn.question.position.name;
-	        question.type = "LargeText";
-	        roomOut.question = question;
+        if(roomIn.questionedFacts.isDefined()){
+        	for (fact in roomIn.questionedFacts) { 
+				var question: new OUT!Question;
+	        	question.incompleteFact = fact.getQuestionedFactQuestion;
+	        	question.pos = "POS1";//roomIn.question.position.name;
+		        question.type = "LargeText";
+		        roomOut.questions.add(question);
+			}		        
         }
-        
 		
         // ROOM ACCESSES
         var accesses: new OUT!RoomAccesses;

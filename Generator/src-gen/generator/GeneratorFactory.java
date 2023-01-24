@@ -409,6 +409,24 @@ public interface GeneratorFactory extends EFactory {
 	CompletionCriteria createCompletionCriteria();
 
 	/**
+	 * Returns a new object of class '<em>Levels Difficulty Progress</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Levels Difficulty Progress</em>'.
+	 * @generated
+	 */
+	LevelsDifficultyProgress createLevelsDifficultyProgress();
+
+	/**
+	 * Returns a new object of class '<em>Current Game Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Current Game Level</em>'.
+	 * @generated
+	 */
+	CurrentGameLevel createCurrentGameLevel();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

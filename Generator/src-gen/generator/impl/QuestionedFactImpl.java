@@ -158,7 +158,9 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public abstract String getQuestionedFactQuestion();
+	public String getQuestionedFactQuestion() {
+		return getQuestionablefact().getQuestionableFact();
+	}
 
 	/**
 	 * <!-- begin-user-doc -->

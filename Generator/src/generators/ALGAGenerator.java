@@ -1,6 +1,7 @@
 package generators;
 
 import generator.Dungeon;
+import generator.LevelsDifficultyProgress;
 import generator.QuestionedFact;
 import generator.Room;
 import generator.RoomAccess;
@@ -37,19 +38,23 @@ public class ALGAGenerator {
 	}
 	
 	public Dungeon generate() {
-		EducationalElementsGenerator eduGeneration = new EducationalElementsGenerator(modelAccess);
+		LevelsDifficultyProgress gameDifficulty = modelAccess.gameDescription.getLevelsDifficultyProgress();
+		double nbQRooms = gameDifficulty.getInitNbQRoom() + gameDifficulty.getNbQRoomIncrease() * (modelAccess.context.getLearnerplayer().getProgression().getCurrentGameLevel().getLevel() - 1);
+		double nbNQRooms = gameDifficulty.getInitNbNQRoom() + gameDifficulty.getNbNQRoomIncrease() * (modelAccess.context.getLearnerplayer().getProgression().getCurrentGameLevel().getLevel() - 1);
+		
+		EducationalElementsGenerator eduGeneration = new EducationalElementsGenerator(modelAccess, nbQRooms, nbNQRooms);
 		EducationElementsManager eeManager;
 		DungeonGenerator dungeonGeneration;
 		try {
 			eeManager = eduGeneration.generateEE();
-			dungeonGeneration = new DungeonGenerator(modelAccess, eeManager);
+			dungeonGeneration = new DungeonGenerator(modelAccess, eeManager, nbNQRooms+nbQRooms);
 			generatedDungeon = dungeonGeneration.generateDungeon();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
-		generatedDungeon.setLearningobjective(eduGeneration.getChosenObjective());
-		generatedDungeon.setLevel(eduGeneration.getChosenLevel());
+		//generatedDungeon.setLearningobjective(eduGeneration.getChosenObjective());
+		//generatedDungeon.setLevel(eduGeneration.getChosenLevel());
 		
 		if(generatedDungeon.getLevel() == null || generatedDungeon.getLearningobjective() == null) {
 			System.err.println("Dungeon objective and/or level are not set properly, possible mistake may appear");

@@ -7,6 +7,7 @@ import generator.AbstractFact;
 import generator.Completion1Task;
 import generator.Completion2Task;
 import generator.CompletionCriteria;
+import generator.CurrentGameLevel;
 import generator.CurrentObjectiveLevel;
 import generator.Directions;
 import generator.Dungeon;
@@ -28,6 +29,7 @@ import generator.LearnerPlayer;
 import generator.LearningDomain;
 import generator.LearningPath;
 import generator.Level;
+import generator.LevelsDifficultyProgress;
 import generator.MTCompletion1;
 import generator.MTCompletion2;
 import generator.MTFact;
@@ -476,6 +478,20 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass levelsDifficultyProgressEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass currentGameLevelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum directionsEEnum = null;
 
 	/**
@@ -797,6 +813,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getGameDescription_LevelsDifficultyProgress() {
+		return (EReference) gameDescriptionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRoomType() {
 		return roomTypeEClass;
 	}
@@ -905,17 +930,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGameContext_NumberOfRooms() {
-		return (EAttribute) gameContextEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getGameContext_Mode() {
-		return (EAttribute) gameContextEClass.getEStructuralFeatures().get(1);
+		return (EAttribute) gameContextEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1240,6 +1256,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EReference getProgression_Currentobjectivelevels() {
 		return (EReference) progressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProgression_CurrentGameLevel() {
+		return (EReference) progressionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2210,6 +2235,69 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getLevelsDifficultyProgress() {
+		return levelsDifficultyProgressEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLevelsDifficultyProgress_NbQRoomIncrease() {
+		return (EAttribute) levelsDifficultyProgressEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLevelsDifficultyProgress_NbNQRoomIncrease() {
+		return (EAttribute) levelsDifficultyProgressEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLevelsDifficultyProgress_InitNbQRoom() {
+		return (EAttribute) levelsDifficultyProgressEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLevelsDifficultyProgress_InitNbNQRoom() {
+		return (EAttribute) levelsDifficultyProgressEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCurrentGameLevel() {
+		return currentGameLevelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCurrentGameLevel_Level() {
+		return (EAttribute) currentGameLevelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDirections() {
 		return directionsEEnum;
 	}
@@ -2333,6 +2421,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		gameDescriptionEClass = createEClass(GAME_DESCRIPTION);
 		createEReference(gameDescriptionEClass, GAME_DESCRIPTION__ROOMTYPES);
+		createEReference(gameDescriptionEClass, GAME_DESCRIPTION__LEVELS_DIFFICULTY_PROGRESS);
 
 		roomTypeEClass = createEClass(ROOM_TYPE);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__NAME);
@@ -2350,7 +2439,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(roomAccessEClass, ROOM_ACCESS__OTHERROOMACCESS);
 
 		gameContextEClass = createEClass(GAME_CONTEXT);
-		createEAttribute(gameContextEClass, GAME_CONTEXT__NUMBER_OF_ROOMS);
 		createEAttribute(gameContextEClass, GAME_CONTEXT__MODE);
 
 		learningDomainEClass = createEClass(LEARNING_DOMAIN);
@@ -2398,6 +2486,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		progressionEClass = createEClass(PROGRESSION);
 		createEReference(progressionEClass, PROGRESSION__CURRENTOBJECTIVELEVELS);
+		createEReference(progressionEClass, PROGRESSION__CURRENT_GAME_LEVEL);
 
 		currentObjectiveLevelEClass = createEClass(CURRENT_OBJECTIVE_LEVEL);
 		createEReference(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__OBJECTIVE);
@@ -2540,6 +2629,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(completionCriteriaEClass, COMPLETION_CRITERIA__SUCCES_PERCENT);
 		createEAttribute(completionCriteriaEClass, COMPLETION_CRITERIA__ENCOUNTERS_PERCENT);
 
+		levelsDifficultyProgressEClass = createEClass(LEVELS_DIFFICULTY_PROGRESS);
+		createEAttribute(levelsDifficultyProgressEClass, LEVELS_DIFFICULTY_PROGRESS__NB_QROOM_INCREASE);
+		createEAttribute(levelsDifficultyProgressEClass, LEVELS_DIFFICULTY_PROGRESS__NB_NQ_ROOM_INCREASE);
+		createEAttribute(levelsDifficultyProgressEClass, LEVELS_DIFFICULTY_PROGRESS__INIT_NB_QROOM);
+		createEAttribute(levelsDifficultyProgressEClass, LEVELS_DIFFICULTY_PROGRESS__INIT_NB_NQ_ROOM);
+
+		currentGameLevelEClass = createEClass(CURRENT_GAME_LEVEL);
+		createEAttribute(currentGameLevelEClass, CURRENT_GAME_LEVEL__LEVEL);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -2671,6 +2769,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getGameDescription_Roomtypes(), this.getRoomTypes(), null, "roomtypes", null, 0, 1,
 				GameDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGameDescription_LevelsDifficultyProgress(), this.getLevelsDifficultyProgress(), null,
+				"levelsDifficultyProgress", null, 1, 1, GameDescription.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roomTypeEClass, RoomType.class, "RoomType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoomType_Name(), ecorePackage.getEString(), "name", null, 0, 1, RoomType.class, !IS_TRANSIENT,
@@ -2704,9 +2805,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(gameContextEClass, GameContext.class, "GameContext", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGameContext_NumberOfRooms(), ecorePackage.getEInt(), "numberOfRooms", null, 0, 1,
-				GameContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGameContext_Mode(), this.getDungeonMode(), "mode", null, 0, 1, GameContext.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2806,6 +2904,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getProgression_Currentobjectivelevels(), this.getCurrentObjectiveLevel(), null,
 				"currentobjectivelevels", null, 0, -1, Progression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProgression_CurrentGameLevel(), this.getCurrentGameLevel(), null, "currentGameLevel", null, 0,
+				1, Progression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(currentObjectiveLevelEClass, CurrentObjectiveLevel.class, "CurrentObjectiveLevel", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3110,6 +3211,26 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getCompletionCriteria_EncountersPercent(), ecorePackage.getEDouble(), "encountersPercent",
 				"100.0", 0, 1, CompletionCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(levelsDifficultyProgressEClass, LevelsDifficultyProgress.class, "LevelsDifficultyProgress",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLevelsDifficultyProgress_NbQRoomIncrease(), ecorePackage.getEInt(), "nbQRoomIncrease", "2", 0,
+				1, LevelsDifficultyProgress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLevelsDifficultyProgress_NbNQRoomIncrease(), ecorePackage.getEInt(), "nbNQRoomIncrease", "1",
+				0, 1, LevelsDifficultyProgress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLevelsDifficultyProgress_InitNbQRoom(), ecorePackage.getEInt(), "initNbQRoom", "5", 0, 1,
+				LevelsDifficultyProgress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLevelsDifficultyProgress_InitNbNQRoom(), ecorePackage.getEInt(), "initNbNQRoom", "1", 0, 1,
+				LevelsDifficultyProgress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(currentGameLevelEClass, CurrentGameLevel.class, "CurrentGameLevel", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCurrentGameLevel_Level(), ecorePackage.getEInt(), "level", "1", 0, 1, CurrentGameLevel.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");
