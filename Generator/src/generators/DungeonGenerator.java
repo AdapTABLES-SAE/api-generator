@@ -1,13 +1,12 @@
 package generators;
 
 import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
 import java.util.Set;
+import java.util.Stack;
 import java.util.stream.Collectors;
 
 import generator.Directions;
@@ -68,8 +67,8 @@ public class DungeonGenerator {
 	}
 
 	private void generateLinearDungeon() {
-		Deque<Map.Entry<Room, Directions>> dungeonRooms = new LinkedList<>();
-		Deque<Map<Directions, Set<Directions>>> roomAllowedDirections = new LinkedList<>();
+		Stack<Map.Entry<Room, Directions>> dungeonRooms = new Stack<>();
+		Stack<Map<Directions, Set<Directions>>> roomAllowedDirections = new Stack<>();
 		Room originRoom = createEntryRoom();
 		dungeonRooms.add(Map.entry(originRoom, originRoom.getRoomaccess().get(0).getDirection()));
 	
@@ -83,20 +82,20 @@ public class DungeonGenerator {
 		List<TaskFactPair> factsToQuestion = eeManager.getFactsToQuestion();
 	
 		while(dungeonRooms.size() < nbRooms + 1) {
-			nextPosition = gridManager.getNextCoord(dungeonRooms.getLast().getKey(), dungeonRooms.getLast().getValue());
+			nextPosition = gridManager.getNextCoord(dungeonRooms.lastElement().getKey(), dungeonRooms.lastElement().getValue());
+			factsToQuestionByRoom = factsToQuestion.get(dungeonRooms.size() - 1);
 			if(!backtrack) {
-				factsToQuestionByRoom = factsToQuestion.get(dungeonRooms.size() - 1);
-				roomAllowedDirections.add(gridManager.getAllowedDirections(nextPosition, dungeonRooms.getLast().getValue())); 
+				roomAllowedDirections.add(gridManager.getAllowedDirections(nextPosition, dungeonRooms.lastElement().getValue())); 
 			}
-			if(roomAllowedDirections.getLast().isEmpty()) {
+			if(roomAllowedDirections.lastElement().isEmpty()) {
+				System.out.println("\t Backtrack");
 				backtrack = true;
-				roomAllowedDirections.removeLast();
-				Entry<Room, Directions> r = dungeonRooms.removeLast();
-				gridManager.removeAllOccupied(r.getKey());
-				for (Directions dir : new ArrayList<>(roomAllowedDirections.getLast().keySet())) {
-					roomAllowedDirections.getLast().get(dir).remove(r.getValue());
-					if(roomAllowedDirections.getLast().get(dir).isEmpty()) {
-						roomAllowedDirections.getLast().remove(dir);
+				roomAllowedDirections.pop();
+				Entry<Room, Directions> r = dungeonRooms.pop();
+				for (Directions dir : new ArrayList<>(roomAllowedDirections.lastElement().keySet())) {
+					roomAllowedDirections.lastElement().get(dir).remove(r.getValue());
+					if(roomAllowedDirections.lastElement().get(dir).isEmpty()) {
+						roomAllowedDirections.lastElement().remove(dir);
 					}
 				}
 			}else {
@@ -105,14 +104,14 @@ public class DungeonGenerator {
 				while(roomType == null) {
 					entry = chooseEntryDirection(roomAllowedDirections);
 					if(dungeonRooms.size() != nbRooms) {
-						exit = roomAllowedDirections.getLast().get(entry).stream().collect(Collectors.toList()).get(random.nextInt(roomAllowedDirections.getLast().get(entry).size())); 
+						exit = roomAllowedDirections.lastElement().get(entry).stream().collect(Collectors.toList()).get(random.nextInt(roomAllowedDirections.lastElement().get(entry).size())); 
 					}else {
 						exit = Directions.NONE;
 					}
 					roomType = getCompatibleRoomType(entry, exit, factsToQuestionByRoom == null? 0 : factsToQuestionByRoom.getNumberOfFacts()); 
 				}
 				Coordinate validCoord = gridManager.getValidCoordinates(entry, nextPosition);
-				Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, factsToQuestionByRoom, dungeonRooms.getLast().getKey().getRoomaccess().get(dungeonRooms.getLast().getKey().getRoomaccess().size()-1), entry, exit);
+				Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, factsToQuestionByRoom, dungeonRooms.lastElement().getKey().getRoomaccess().get(dungeonRooms.lastElement().getKey().getRoomaccess().size()-1), entry, exit);
 				dungeonRooms.add(Map.entry(room, exit));
 			}
 		}
@@ -129,8 +128,8 @@ public class DungeonGenerator {
 	 * @param roomAllowedDirections
 	 * @return the chosen entry direction 
 	 */
-	private Directions chooseEntryDirection(Deque<Map<Directions, Set<Directions>>> roomAllowedDirections) {
-		List<Directions> possibleEntries = roomAllowedDirections.getLast().keySet().stream().collect(Collectors.toList());
+	private Directions chooseEntryDirection(Stack<Map<Directions, Set<Directions>>> roomAllowedDirections) {
+		List<Directions> possibleEntries = roomAllowedDirections.lastElement().keySet().stream().collect(Collectors.toList());
 		// TODO : Heuristique de choix de petite salle ou grande
 				
 		/*if(possibleEntries.size() == 3) {

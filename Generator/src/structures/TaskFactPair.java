@@ -26,4 +26,9 @@ public class TaskFactPair {
 	public int getNumberOfFacts() {
 		return values.size();
 	}
+	
+	@Override
+	public String toString() {
+		return key.getID();
+	}
 }

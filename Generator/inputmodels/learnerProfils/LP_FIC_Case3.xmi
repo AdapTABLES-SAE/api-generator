@@ -22565,7 +22565,8 @@
           </resultsbytask>
         </results>
       </currentobjectivelevels>
-      <currentGameLevel/>
+      <currentGameLevel
+          level="3"/>
     </progression>
     <learningpath
         href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#//@learningpaths.2"/>

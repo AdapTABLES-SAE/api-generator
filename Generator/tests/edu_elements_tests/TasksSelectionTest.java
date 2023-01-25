@@ -17,7 +17,6 @@ import generators.ALGAGenerator;
 
 class TasksSelectionTest {
 
-	// TODO : Recalculer les nombres de salles car on est plus à 20
 	Map<String, Integer> numberOfRoomsByTasks;
 	
 	@BeforeEach
@@ -31,7 +30,7 @@ class TasksSelectionTest {
 		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_FIC_Init.xmi"); 
 		Dungeon dungeon = generator.generate();
 		for (Room room : dungeon.getRooms()) {
-			if(!room.equals(dungeon.getEntry())) {
+			if(!room.equals(dungeon.getEntry()) && room.getTask() != null) {
 				if(!numberOfRoomsByTasks.containsKey(room.getTask().getID())) {
 					numberOfRoomsByTasks.put(room.getTask().getID(), 1);
 				} else {
@@ -39,12 +38,13 @@ class TasksSelectionTest {
 				}
 			}
 		}
-        assertTrue(numberOfRoomsByTasks.get("C1-RES") == 4, "C1-RES");
-        assertTrue(numberOfRoomsByTasks.get("C1-TABOP") == 2, "C1-TABOP");
-        assertTrue(numberOfRoomsByTasks.get("C2-OPTABLE") == 3, "C2-OPTABLE");
-        assertTrue(numberOfRoomsByTasks.get("REB") == 4, "REB");
-        assertTrue(numberOfRoomsByTasks.get("ID-RES") == 4, "ID-RES");
-        assertTrue(numberOfRoomsByTasks.get("MEMB") == 3, "MEMB");
+		System.out.println(numberOfRoomsByTasks);
+        assertTrue(numberOfRoomsByTasks.get("C1-RES") == 2, "C1-RES");
+        assertTrue(numberOfRoomsByTasks.get("C1-TABOP") == 1, "C1-TABOP");
+        assertTrue(numberOfRoomsByTasks.get("C2-OPTABLE") == 1, "C2-OPTABLE");
+        assertTrue(numberOfRoomsByTasks.get("REB") == 2, "REB");
+        assertTrue(numberOfRoomsByTasks.get("ID-RES") == 2, "ID-RES");
+        assertTrue(numberOfRoomsByTasks.get("MEMB") == 1, "MEMB");
 	}
 	
 	@Test
@@ -67,7 +67,7 @@ class TasksSelectionTest {
 		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_FIC_Case2.xmi"); 
 		Dungeon dungeon = generator.generate();
 		for (Room room : dungeon.getRooms()) {
-			if(!room.equals(dungeon.getEntry()) && !room.getQuestionedFacts().isEmpty()) {
+			if(!room.equals(dungeon.getEntry()) && room.getTask() != null) {
 				if(!numberOfRoomsByTasks.containsKey(room.getTask().getID())) {
 					numberOfRoomsByTasks.put(room.getTask().getID(), 1);
 				} else {
@@ -76,12 +76,12 @@ class TasksSelectionTest {
 			}
 		}
 		System.out.println(numberOfRoomsByTasks);
-        assertTrue(numberOfRoomsByTasks.get("C1-RES") == 4, "C1-RES");
-        assertTrue(numberOfRoomsByTasks.get("C1-TABOP") == 2, "C1-TABOP");
-        assertTrue(numberOfRoomsByTasks.get("C2-OPTABLE") == 3, "C2-OPTABLE");
-        assertTrue(numberOfRoomsByTasks.get("REB") == 4, "REB");
-        assertTrue(numberOfRoomsByTasks.get("ID-RES") == 4, "ID-RES");
-        assertTrue(numberOfRoomsByTasks.get("MEMB") == 3, "MEMB");
+        assertTrue(numberOfRoomsByTasks.get("C1-RES") == 2, "C1-RES");
+        assertTrue(numberOfRoomsByTasks.get("C1-TABOP") == 1, "C1-TABOP");
+        assertTrue(numberOfRoomsByTasks.get("C2-OPTABLE") == 1, "C2-OPTABLE");
+        assertTrue(numberOfRoomsByTasks.get("REB") == 2, "REB");
+        assertTrue(numberOfRoomsByTasks.get("ID-RES") == 2, "ID-RES");
+        assertTrue(numberOfRoomsByTasks.get("MEMB") == 1, "MEMB");
 	}
 	
 	@Test
@@ -89,7 +89,7 @@ class TasksSelectionTest {
 		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_FIC_Case3.xmi"); 
 		Dungeon dungeon = generator.generate();
 		for (Room room : dungeon.getRooms()) {
-			if(!room.equals(dungeon.getEntry())) {
+			if(!room.equals(dungeon.getEntry()) && room.getTask() != null) {
 				 assertTrue(room.getTask().getID().equals("MEMB"), "MEMB");	
 			}
 		}       

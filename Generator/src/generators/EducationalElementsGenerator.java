@@ -140,9 +140,7 @@ public class EducationalElementsGenerator {
 	
 	private Level getAvailableLevelForObjective(Objective o) {
 		for (Level level : o.getLevels()) {
-			//System.out.println(level.getID());
 			if(!hasLearnerFinishedLevel(o, level)) {
-				//System.out.println("\tnot finished");
 				return level;
 			}
 		}
@@ -223,23 +221,17 @@ public class EducationalElementsGenerator {
 	
 	private void generateFactsToQuestion() throws Exception {
 		List<ResultsByTask> toto = getOrderedTasks();
-		/*System.out.println(toto.size());
-		for (ResultsByTask resultsByTask : toto) {
-			System.out.println("__"+resultsByTask.getQuestionableFacts());
-		}*/
 		MTFactGenerator.generateQuestionedFact(eeManager, toto);
 	}
 	
 	private List<ResultsByTask> getOrderedTasks(){ 
 		List<ResultsByTask> tasks = new ArrayList<>(); 
-		//System.out.println("ordered "+eeManager.getResultsByTasksForRooms().isEmpty());
 		for (ResultsByTask rbt : eeManager.getResultsByTasksForRooms()) {
-			//System.out.println("ordered nb "+ eeManager.getNbRoomFor(rbt));
 			for (int i = 0; i <  eeManager.getNbRoomFor(rbt); i++) {
 				tasks.add(rbt);
 			}
 		}
-		return tasks; // Shuffle.shuffleTask(tasks);
+		return tasks; 
 	}
 
 	

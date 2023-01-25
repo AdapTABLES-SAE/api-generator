@@ -75,22 +75,6 @@ public class EducationElementsManager {
 		return chosenObjectiveLevel.getLevel().getTasks();
 	}
 	
-	/**
-	 * Fourni la liste des types de taches (avec doublons : une par salle du donjon) ordonée via une <heuristique>  
-	 * @return
-	 */
-	/*private List<ATask> getOrderedTasks(){ // TODO : THink about how to do that properly 
-		
-		List<ATask> taskTypes = new ArrayList<>(); 
-		for (ATask task : nbRoomsToTask.keySet()) {
-			for (int i = 0; i < nbRoomsToTask.get(task); i++) {
-				taskTypes.add(task);
-			}
-		}
-		//Collections.shuffle(taskTypes);
-		return shuffle(taskTypes);
-	}*/
-	
 	public double getNbRoomFor(ResultsByTask rbt) {
 		if(nbRoomsToTask.containsKey(rbt)) {
 			return nbRoomsToTask.get(rbt);
@@ -116,12 +100,11 @@ public class EducationElementsManager {
 	}
 	
 	public void addRoom2Task(ResultsByTask rbt, double coeffAdditional) throws Exception {
-		//ResultsByTask rtask = getAssociatedResultByTask(task);
 		if(nbRoomsToTask.containsKey(rbt)) {
-			nbRoomsToTask.put(rbt, nbRoomsToTask.get(rbt) +
-					((rbt.getTask().getPercentOfApparition()*coeffAdditional)*nbQRooms)/100);
+			nbRoomsToTask.put(rbt, (double) Math.round(nbRoomsToTask.get(rbt) +
+					((rbt.getTask().getPercentOfApparition()*coeffAdditional)*nbQRooms)/100));
 		}else {
-			nbRoomsToTask.put(rbt, ((rbt.getTask().getPercentOfApparition()*coeffAdditional)*nbQRooms)/100);
+			nbRoomsToTask.put(rbt, (double) Math.round(((rbt.getTask().getPercentOfApparition()*coeffAdditional)*nbQRooms)/100));
 		}
 	}
 	
@@ -211,7 +194,6 @@ public class EducationElementsManager {
 		for (int i = 0; i < nbNQRooms; i++) {
 			factsToQuestionPerRoom.add(null);
 		}
-		
 		factsToQuestionPerRoom = Shuffle.shuffleRoomFacts(factsToQuestionPerRoom);
 	}
 	

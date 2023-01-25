@@ -23,8 +23,8 @@ public class DungeonGeneratorTest {
 		
 		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_FIC_Init.xmi");
 		generator.generate();
-		generator.saveDungeon("tests/unflatten/FIC_Dungeon.xmi");
-		Main.transformModel(modelIN+"FIC_Dungeon.xmi", modelOUT+"FIC_Dungeon.xml");
+		generator.saveDungeon("tests/unflatten/FIC_DungeonTEST.xmi");
+		Main.transformModel(modelIN+"FIC_DungeonTEST.xmi", modelOUT+"FIC_DungeonTEST.xml");
 
 	}
 
