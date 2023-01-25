@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.RepeatedTest;
 
 import generator.Dungeon;
 import generator.Room;
@@ -24,7 +24,7 @@ class TasksSelectionTest {
 		numberOfRoomsByTasks = new HashMap<>();
 	}
 	
-	@Test
+	@RepeatedTest(30)
 	void initialConfigurationAllTasks() {
 		numberOfRoomsByTasks = new HashMap<>();
 		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_FIC_Init.xmi"); 
@@ -47,7 +47,7 @@ class TasksSelectionTest {
         assertTrue(numberOfRoomsByTasks.get("MEMB") == 1, "MEMB");
 	}
 	
-	@Test
+	@RepeatedTest(30)
 	void configurationOneTaskAchieved() {
 		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_FIC_Case1.xmi"); 
 		Dungeon dungeon = generator.generate();
@@ -60,8 +60,7 @@ class TasksSelectionTest {
 		assertFalse(tasksIDs.contains("C1-RES"), "C1-RES");
 	}
 	
-	
-	@Test
+	@RepeatedTest(30)
 	void configurationAllTaskSuccessSup0() {
 		numberOfRoomsByTasks = new HashMap<>();
 		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_FIC_Case2.xmi"); 
@@ -84,7 +83,7 @@ class TasksSelectionTest {
         assertTrue(numberOfRoomsByTasks.get("MEMB") == 1, "MEMB");
 	}
 	
-	@Test
+	@RepeatedTest(30)
 	void configurationOnlyOneTaskIsLeft() {
 		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_FIC_Case3.xmi"); 
 		Dungeon dungeon = generator.generate();
