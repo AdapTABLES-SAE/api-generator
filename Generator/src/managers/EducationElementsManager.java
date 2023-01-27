@@ -191,7 +191,7 @@ public class EducationElementsManager {
 	 * Create the order of training task rooms and pure game rooms of the dungeon
 	 */
 	public void createDungeonQAndNQRoomOrder() {
-		for (int i = 0; i < nbNQRooms; i++) {
+		while(factsToQuestionPerRoom.size() < (nbNQRooms + nbQRooms)) {
 			factsToQuestionPerRoom.add(null);
 		}
 		factsToQuestionPerRoom = Shuffle.shuffleRoomFacts(factsToQuestionPerRoom);

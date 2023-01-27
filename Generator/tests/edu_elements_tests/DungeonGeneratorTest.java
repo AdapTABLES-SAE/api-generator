@@ -21,10 +21,18 @@ public class DungeonGeneratorTest {
 			Main.transformModel(modelIN+"IM_Dungeon"+i+".xmi", modelOUT+"IM_Dungeon"+i+".xmi");
 		}*/
 		
-		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_FIC_Init.xmi");
+		ALGAGenerator generator = new ALGAGenerator();
+		//ALGAGenerator generator = new ALGAGenerator();
 		generator.generate();
-		generator.saveDungeon("tests/unflatten/FIC_DungeonTEST.xmi");
-		Main.transformModel(modelIN+"FIC_DungeonTEST.xmi", modelOUT+"FIC_DungeonTEST.xml");
+		generator.printDungeon();
+		generator.saveDungeon("tests/unflatten/DungeonGen.xmi");
+		Main.transformModel(modelIN+"DungeonGen.xmi", modelOUT+"DungeonGen.xml");
+		
+		generator = new ALGAGenerator("learnerProfils/LP_FIC_Init.xmi");
+		generator.generate();
+		generator.printDungeon();
+		generator.saveDungeon("tests/unflatten/DungeonGen2.xmi");
+		Main.transformModel(modelIN+"DungeonGen2.xmi", modelOUT+"DungeonGen2.xml");
 
 	}
 

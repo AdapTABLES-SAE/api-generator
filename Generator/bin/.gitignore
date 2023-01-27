@@ -1,6 +1,9 @@
-/edu_facts_maths_tests/
-/edu_elements_tests/
-/managers/
 /generator/
-/structures/
+/edu_elements_tests/
+/edu_facts_maths_tests/
+/exceptions/
+/factsgenerator_maths/
 /generators/
+/managers/
+/structures/
+/tests/

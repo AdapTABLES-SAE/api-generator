@@ -4,25 +4,198 @@ import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import generator.Directions;
 import generator.LargeRoomType;
 import generator.Room;
+import generator.SmallRoomType;
 import structures.Coordinate;
 import structures.GridPositions;
+import structures.LinearRoomOrientations;
+import structures.NeighborAccess;
 
 public class GridManager {
 
 	/** Structure to save occupied Coordinates on a fake grid */
-	private Map<Coordinate, Room> occupiedCoordinates;
+	public Map<Coordinate, Room> occupiedCoordinates;
 	private DirectionManager directionManager; 
 
 	
 	public GridManager(ModelsManager modelAccess) {
 		directionManager = new DirectionManager(modelAccess); 
 		occupiedCoordinates = new HashMap<>();
+	}
+	
+	public boolean isAvailableDirection(Coordinate origin, Directions aDirection) {
+		Coordinate coord = null;
+		switch (aDirection) {
+		case SOUTH:
+			coord = new Coordinate(origin.getX(), origin.getY()-1);
+			break;
+		case SOUTH_WEST:
+			coord = new Coordinate(origin.getX(), origin.getY()-1);
+			break;
+		case SOUTH_EAST:
+			coord = new Coordinate(origin.getX()+1, origin.getY()-1);
+			break;
+		case NORTH:
+			coord = new Coordinate(origin.getX(), origin.getY()+1);
+			break;
+		case NORTH_WEST:
+			coord = new Coordinate(origin.getX(), origin.getY()+2);
+			break;
+		case NORTH_EAST:
+			coord = new Coordinate(origin.getX()+1, origin.getY()+2);
+			break;		
+		case WEST:
+			coord = new Coordinate(origin.getX()-1, origin.getY());
+			break;
+		case WEST_NORTH:
+			coord = new Coordinate(origin.getX()-1, origin.getY()+1);
+			break;
+		case WEST_SOUTH:
+			coord = new Coordinate(origin.getX()-1, origin.getY());
+			break;
+		case EAST:
+			coord = new Coordinate(origin.getX()+1, origin.getY());
+			break;
+		case EAST_SOUTH:
+			coord = new Coordinate(origin.getX()+2, origin.getY());
+			break;
+		case EAST_NORTH:
+			coord = new Coordinate(origin.getX()+2, origin.getY()+1);
+			break;
+		default:
+			break;
+		}		
+		return !occupiedCoordinates.containsKey(coord);
+	}
+	
+	public List<NeighborAccess> getNeighbors(Coordinate roomCoord, boolean isSimpleRoom){
+		List<NeighborAccess> neighbors = new ArrayList<>();
+		
+		Coordinate v2 = new Coordinate(roomCoord.getX(), roomCoord.getY() - 1);
+		Coordinate v3 = new Coordinate(roomCoord.getX() - 1, roomCoord.getY());
+		Directions dirV2, dirV3;
+		
+		if(isSimpleRoom) {
+			Coordinate v1 = new Coordinate(roomCoord.getX(), roomCoord.getY() + 1);
+			Coordinate v4 = new Coordinate(roomCoord.getX() + 1, roomCoord.getY());
+			if(occupiedCoordinates.keySet().contains(v1)) {neighbors.add(createNeighborWithAccesses(true, roomCoord, occupiedCoordinates.get(v1), Directions.NORTH));}
+			if(occupiedCoordinates.keySet().contains(v4)) {neighbors.add(createNeighborWithAccesses(true, roomCoord, occupiedCoordinates.get(v4), Directions.EAST));}
+			dirV2 = Directions.SOUTH;
+			dirV3 = Directions.WEST;
+		}else {
+			Coordinate v5 = new Coordinate(roomCoord.getX() - 1, roomCoord.getY() + 1);
+			Coordinate v6 = new Coordinate(roomCoord.getX(), roomCoord.getY() + 2);
+			Coordinate v7 = new Coordinate(roomCoord.getX() + 1, roomCoord.getY() + 2);
+			Coordinate v8 = new Coordinate(roomCoord.getX() + 2, roomCoord.getY() + 1);
+			Coordinate v9 = new Coordinate(roomCoord.getX() + 2, roomCoord.getY());
+			Coordinate v10 = new Coordinate(roomCoord.getX() + 1, roomCoord.getY() - 1);
+			
+			if(occupiedCoordinates.keySet().contains(v5)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v5), Directions.WEST_NORTH));}
+			if(occupiedCoordinates.keySet().contains(v6)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v6), Directions.NORTH_WEST));}
+			if(occupiedCoordinates.keySet().contains(v7)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v7), Directions.NORTH_EAST));}
+			if(occupiedCoordinates.keySet().contains(v8)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v8), Directions.EAST_NORTH));}
+			if(occupiedCoordinates.keySet().contains(v9)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v9), Directions.EAST_SOUTH));}
+			if(occupiedCoordinates.keySet().contains(v10)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v10), Directions.SOUTH_EAST));}
+			dirV2 = Directions.SOUTH_WEST;
+			dirV3 = Directions.WEST_SOUTH;
+		}
+		
+		if(occupiedCoordinates.keySet().contains(v2)) {neighbors.add(createNeighborWithAccesses(isSimpleRoom, roomCoord, occupiedCoordinates.get(v2), dirV2));}
+		if(occupiedCoordinates.keySet().contains(v3)) {neighbors.add(createNeighborWithAccesses(isSimpleRoom, roomCoord, occupiedCoordinates.get(v3), dirV3));}
+		
+		return neighbors;
+	}
+	
+	private NeighborAccess createNeighborWithAccesses(boolean originIsSimpleRoom, Coordinate origin, Room neighbor, Directions originAccessToRoom) {
+		if(neighbor.getRoomtype() instanceof SmallRoomType) {
+			return new NeighborAccess(neighbor, originAccessToRoom, directionManager.getSimpleOppositeDirections(originAccessToRoom));
+		}
+		Directions neighborAccess = Directions.NONE; 
+		Coordinate v1;
+		if(originIsSimpleRoom) {
+			switch (originAccessToRoom) {
+			case WEST:
+				v1 = new Coordinate(origin.getX() - 1, origin.getY() + 1);
+				if(occupiedCoordinates.keySet().contains(v1) && occupiedCoordinates.get(v1).equals(neighbor)) {
+					neighborAccess = Directions.EAST_SOUTH;
+				} else {neighborAccess = Directions.EAST_NORTH;}
+				break;
+			case NORTH:
+				v1 = new Coordinate(origin.getX() + 1, origin.getY() + 1);
+				if(occupiedCoordinates.keySet().contains(v1) && occupiedCoordinates.get(v1).equals(neighbor)) {
+					neighborAccess = Directions.SOUTH_WEST;
+				} else {neighborAccess = Directions.SOUTH_EAST;}
+				break;
+			case EAST:
+				v1 = new Coordinate(origin.getX() + 1, origin.getY() - 1);
+				if(occupiedCoordinates.keySet().contains(v1) && occupiedCoordinates.get(v1).equals(neighbor)) {
+					neighborAccess = Directions.WEST_NORTH;
+				} else {neighborAccess = Directions.WEST_SOUTH;}
+				break;
+			case SOUTH:
+				v1 = new Coordinate(origin.getX() - 1, origin.getY() - 1);
+				if(occupiedCoordinates.keySet().contains(v1) && occupiedCoordinates.get(v1).equals(neighbor)) {
+					neighborAccess = Directions.SOUTH_EAST;
+				} else {neighborAccess = Directions.SOUTH_WEST;}
+				break;
+			default:
+				break;
+			}
+		} else {
+			switch (originAccessToRoom) {
+			case WEST_NORTH:
+				v1 = new Coordinate(origin.getX() - 1, origin.getY() + 2);
+				if(occupiedCoordinates.keySet().contains(v1) && occupiedCoordinates.get(v1).equals(neighbor)) {
+					neighborAccess = Directions.EAST_SOUTH;
+				} else {neighborAccess = Directions.EAST_NORTH;}
+				break;	
+			case NORTH_WEST:
+				v1 = new Coordinate(origin.getX() - 1, origin.getY() + 2);
+				if(occupiedCoordinates.keySet().contains(v1) && occupiedCoordinates.get(v1).equals(neighbor)) {
+					neighborAccess = Directions.SOUTH_EAST;
+				} else {neighborAccess = Directions.SOUTH_WEST;}
+				break;
+			case NORTH_EAST:
+				v1 = new Coordinate(origin.getX() + 2, origin.getY() + 2);
+				if(occupiedCoordinates.keySet().contains(v1) && occupiedCoordinates.get(v1).equals(neighbor)) {
+					neighborAccess = Directions.SOUTH_WEST;
+				} else {neighborAccess = Directions.SOUTH_EAST;}
+				break;
+			case EAST_NORTH:
+				v1 = new Coordinate(origin.getX() + 2, origin.getY() + 2);
+				if(occupiedCoordinates.keySet().contains(v1) && occupiedCoordinates.get(v1).equals(neighbor)) {
+					neighborAccess = Directions.WEST_SOUTH;
+				} else {neighborAccess = Directions.WEST_NORTH;}
+				break;
+			case EAST_SOUTH:
+				v1 = new Coordinate(origin.getX() + 2, origin.getY() - 1);
+				if(occupiedCoordinates.keySet().contains(v1) && occupiedCoordinates.get(v1).equals(neighbor)) {
+					neighborAccess = Directions.WEST_NORTH;
+				} else {neighborAccess = Directions.WEST_SOUTH;}
+				break;
+			case SOUTH_EAST:
+				v1 = new Coordinate(origin.getX() + 2, origin.getY() - 1);
+				if(occupiedCoordinates.keySet().contains(v1) && occupiedCoordinates.get(v1).equals(neighbor)) {
+					neighborAccess = Directions.NORTH_WEST;
+				} else {neighborAccess = Directions.NORTH_EAST;}
+				break;
+			case SOUTH_WEST:
+				v1 = new Coordinate(origin.getX() - 1, origin.getY() - 1);
+				if(occupiedCoordinates.keySet().contains(v1) && occupiedCoordinates.get(v1).equals(neighbor)) {
+					neighborAccess = Directions.SOUTH_EAST;
+				} else {neighborAccess = Directions.SOUTH_WEST;}
+				break;
+			default:
+				break;
+			}
+		}
+		return new NeighborAccess(neighbor, originAccessToRoom, neighborAccess);
 	}
 	
 	/**
@@ -76,16 +249,15 @@ public class GridManager {
 		return position;
 	}
 	
-	
 	/**
 	 * For each possible entry entryDirections (in theory), it verifies if the entry is really an option then select its possible exits
 	 * @param actualCoordinates
 	 * @param entryDirections (i.e., opposition directions of the previous room exit direction; e.g., if previous room exit is SOUTH, then it contains  NORTH, NORTH_EAST, NORTH_WEST)  
 	 * @return An association between each verified entryDirection and their possible exits
 	 */
- 	public Map<Directions, Set<Directions>> getAllowedDirections(Coordinate actualCoordinates, Directions theOriginDirection){
+ 	public LinearRoomOrientations getAllowedDirections(Coordinate actualCoordinates, Directions theOriginDirection){
  		Set<Directions> entryDirections = directionManager.getOppositeDirections().get(theOriginDirection);
-		EnumMap<Directions, Set<Directions>> originDtoPossibleD = new EnumMap<>(Directions.class); // Possible entry to possible exits 
+ 		LinearRoomOrientations roomOrientations = new LinearRoomOrientations(); // Possible entry to possible exits 
 		Map<GridPositions, Boolean> gridPosOccupations = computesGridPositionsOccupied(actualCoordinates);
 		
 		Set<Directions> directions;
@@ -95,10 +267,27 @@ public class GridManager {
 			} else {
 				directions = complexeAllowedDirections(gridPosOccupations, direction);
 			}
-			if(!directions.isEmpty()) originDtoPossibleD.put(direction, directions);
+			if(!directions.isEmpty()) roomOrientations.addAnOrientation(direction, directions);
 		}
-		return originDtoPossibleD;
+		return roomOrientations;
 	}
+ 	
+ 	public Set<Directions> getAllowedNewRoomEntries(Coordinate actualCoordinates, Directions theOriginDirection){
+ 		Set<Directions> entryDirections = directionManager.getOppositeDirections().get(theOriginDirection);
+		Map<GridPositions, Boolean> gridPosOccupations = computesGridPositionsOccupied(actualCoordinates);
+		for (Directions direction : new ArrayList<>(entryDirections)) {
+			if(directionManager.getSimpleDirections().contains(direction)) {
+				if(simpleAllowedDirections(gridPosOccupations).isEmpty()) {
+					entryDirections.remove(direction);
+				}
+			} else {
+				if(complexeAllowedDirections(gridPosOccupations, direction).isEmpty()) {
+					entryDirections.remove(direction);
+				}
+			}
+		}
+		return entryDirections;
+ 	}
  	
  	public Set<Directions> simpleAllowedDirections(Map<GridPositions, Boolean> gridPosOccupations){
  		Set<Directions> directions = new HashSet<>(directionManager.getSimpleDirections());

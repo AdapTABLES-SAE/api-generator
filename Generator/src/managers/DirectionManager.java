@@ -10,6 +10,7 @@ import generator.Directions;
 import generator.LargeRoomType;
 import generator.RoomType;
 import generator.SmallRoomType;
+import structures.Coordinate;
 
 public class DirectionManager {
 
@@ -20,7 +21,7 @@ public class DirectionManager {
 	private Set<Directions> simpleDirections;
 	/** Data structure enumerating complex directions (SOUTH_EAST, SOUTH_WEST, NORTH_EAST, NORTH_WEST, EAST_SOUTH, etc.) */
 	private Set<Directions> complexDirections;
-	
+		
 	public boolean isSmallRoomTypes() {
 		List<RoomType> roomtypes = modelAccess.gameDescription.getRoomtypes().getRoomtypes();
 		boolean smallRT = false;
@@ -126,5 +127,34 @@ public class DirectionManager {
 		return complexDirections.contains(direction);
 	}
 	
-	
+	public Directions getSimpleOppositeDirections(Directions direction) {
+		switch (direction) {
+		case SOUTH:
+			return Directions.NORTH;
+		case EAST:
+			return Directions.WEST;
+		case WEST:
+			return Directions.EAST;
+		case NORTH:
+			return Directions.SOUTH;
+		case SOUTH_EAST:
+			return Directions.NORTH;
+		case SOUTH_WEST:
+			return Directions.NORTH;
+		case WEST_SOUTH:
+			return Directions.EAST;
+		case WEST_NORTH:
+			return Directions.EAST;
+		case EAST_SOUTH:
+			return Directions.WEST;
+		case EAST_NORTH:
+			return Directions.WEST;
+		case NORTH_EAST:
+			return Directions.SOUTH;
+		case NORTH_WEST:
+			return Directions.SOUTH;
+		default:
+			return Directions.NONE;
+		}
+	}
 }
