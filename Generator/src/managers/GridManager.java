@@ -149,6 +149,12 @@ public class GridManager {
 			}
 		} else {
 			switch (originAccessToRoom) {
+			case WEST_SOUTH:
+				v1 = new Coordinate(origin.getX() - 1, origin.getY() - 1);
+				if(occupiedCoordinates.keySet().contains(v1) && occupiedCoordinates.get(v1).equals(neighbor)) {
+					neighborAccess = Directions.EAST_NORTH;
+				} else {neighborAccess = Directions.EAST_SOUTH;}
+				break;
 			case WEST_NORTH:
 				v1 = new Coordinate(origin.getX() - 1, origin.getY() + 2);
 				if(occupiedCoordinates.keySet().contains(v1) && occupiedCoordinates.get(v1).equals(neighbor)) {
@@ -195,6 +201,7 @@ public class GridManager {
 				break;
 			}
 		}
+		if(neighborAccess.equals(Directions.NONE)) {return null;}
 		return new NeighborAccess(neighbor, originAccessToRoom, neighborAccess);
 	}
 	

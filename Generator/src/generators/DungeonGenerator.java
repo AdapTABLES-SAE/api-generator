@@ -81,7 +81,7 @@ public class DungeonGenerator {
 			LabyrinthineRoom aRoom = createNewRoomFrom(randomStartingRoom, factsToQuestion.get(dungeonRooms.size() - 1));
 			if(aRoom != null) {
 				dungeonRooms.add(aRoom);
-				//createNewPath(randomStartingRoom);
+				createNewPath(randomStartingRoom);
 			}
 		}	
 		
@@ -102,7 +102,6 @@ public class DungeonGenerator {
 				raOrigin.setOtherroomaccess(raOther);
 				raOther.setOtherroomaccess(raOrigin);
 				originRoom.getRoom().getRoomaccess().add(raOrigin);
-				//neighbor.getRoom().getRoomaccess().add(raOther);
 				neighbor.addNeighborAccessRoomAccess(raOther);
 				return;
 			}
