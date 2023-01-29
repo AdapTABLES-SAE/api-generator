@@ -31,17 +31,8 @@ public class LinearRoomOrientations {
 		if(entriesToExists.containsKey(entry)) {
 			return entriesToExists.get(entry);
 		}
-		return null; 
+		return new HashSet<>(); 
 	}
-	
-	/*public void addAnOrientation(Directions entry, Directions exit) {
-		Set<Directions> orientations = new HashSet<>();
-		orientations.add(exit);
-		if(entriesToExists.containsKey(entry)) {
-			orientations.addAll(entriesToExists.get(entry));
-		} 
-		entriesToExists.put(entry, orientations);
-	}*/
 	
 	public void addAnOrientation(Directions entry, Set<Directions> exits) {
 		Set<Directions> orientations = new HashSet<>();

@@ -199,12 +199,6 @@ public class DungeonGenerator {
 				eligibleRoomsOrientations.pop();
 				LinearRoom r = dungeonRooms.pop();
 				eligibleRoomsOrientations.lastElement().removeExitForEntry(r.getEntry(), r.getExit());
-				/*for (Directions dir : new ArrayList<>(eligibleRoomOrientations.lastElement().keySet())) {
-					eligibleRoomOrientations.lastElement().get(dir).remove(r.getExit());
-					if(eligibleRoomOrientations.lastElement().get(dir).isEmpty()) {
-						eligibleRoomOrientations.lastElement().remove(dir);
-					}
-				}*/
 			}else {
 				backtrack = false;
 				LinearRoom aRoom = createNewRoomFrom(eligibleRoomsOrientations.lastElement(), nextPosition, factsToQuestion.get(dungeonRooms.size() - 1), 
@@ -223,7 +217,7 @@ public class DungeonGenerator {
 		Directions entry = null; 
 		Directions exit = null;
 		RoomType roomType = null;
-		while(roomType == null) {
+		while(roomType == null) { // TODO : RoomSizeChoice
 			entry = chooseEntryDirection(eligibleRoomOrientations);
 			if(!isLastRoom) {
 				exit = chooseExitDirection(eligibleRoomOrientations, entry);
@@ -252,13 +246,6 @@ public class DungeonGenerator {
 	 */
 	private Directions chooseEntryDirection(LinearRoomOrientations roomAllowedOrientations) {
 		List<Directions> possibleEntries = roomAllowedOrientations.eligibleEntries();
-		// TODO : Heuristique de choix de petite salle ou grande
-				
-		/*if(possibleEntries.size() == 3) {
-			Directions d = possibleEntries.stream().distinct().filter(simpleDirections::contains).collect(Collectors.toList()).get(0);
-			possibleEntries.add(d);
-			possibleEntries.add(d);
-		}*/		
 		return possibleEntries.get(random.nextInt(possibleEntries.size()));
 	}
 		
