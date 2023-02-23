@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.LearningPathImpl#getName <em>Name</em>}</li>
  *   <li>{@link generator.impl.LearningPathImpl#getObjectives <em>Objectives</em>}</li>
  *   <li>{@link generator.impl.LearningPathImpl#getKnowledge <em>Knowledge</em>}</li>
+ *   <li>{@link generator.impl.LearningPathImpl#getID <em>ID</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,6 +79,35 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 	 * @ordered
 	 */
 	protected Knowledge knowledge;
+
+	/**
+	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getID() <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getID()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * This is true if the ID attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean idESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,6 +207,54 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getID() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setID(String newID) {
+		String oldID = id;
+		id = newID;
+		boolean oldIDESet = idESet;
+		idESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEARNING_PATH__ID, oldID, id,
+					!oldIDESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetID() {
+		String oldID = id;
+		boolean oldIDESet = idESet;
+		id = ID_EDEFAULT;
+		idESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, GeneratorPackage.LEARNING_PATH__ID, oldID,
+					ID_EDEFAULT, oldIDESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetID() {
+		return idESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -202,6 +280,8 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 			if (resolve)
 				return getKnowledge();
 			return basicGetKnowledge();
+		case GeneratorPackage.LEARNING_PATH__ID:
+			return getID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -225,6 +305,9 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
 			setKnowledge((Knowledge) newValue);
 			return;
+		case GeneratorPackage.LEARNING_PATH__ID:
+			setID((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -246,6 +329,9 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
 			setKnowledge((Knowledge) null);
 			return;
+		case GeneratorPackage.LEARNING_PATH__ID:
+			unsetID();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -264,6 +350,8 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 			return objectives != null && !objectives.isEmpty();
 		case GeneratorPackage.LEARNING_PATH__KNOWLEDGE:
 			return knowledge != null;
+		case GeneratorPackage.LEARNING_PATH__ID:
+			return isSetID();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -281,6 +369,11 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", ID: ");
+		if (idESet)
+			result.append(id);
+		else
+			result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

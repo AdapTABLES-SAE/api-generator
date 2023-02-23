@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator:Knowledge xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore">
+  <knowledgefacts name="Table 1">
+    <facts xsi:type="generator:MTFact" table="1"/>
+    <facts xsi:type="generator:MTFact" table="1" op="1" res="1"/>
+    <facts xsi:type="generator:MTFact" table="1" op="2" res="2"/>
+    <facts xsi:type="generator:MTFact" table="1" op="3" res="3"/>
+    <facts xsi:type="generator:MTFact" table="1" op="4" res="4"/>
+    <facts xsi:type="generator:MTFact" table="1" op="5" res="5"/>
+    <facts xsi:type="generator:MTFact" table="1" op="6" res="6"/>
+    <facts xsi:type="generator:MTFact" table="1" op="7" res="7"/>
+    <facts xsi:type="generator:MTFact" table="1" op="8" res="8"/>
+    <facts xsi:type="generator:MTFact" table="1" op="9" res="9"/>
+    <facts xsi:type="generator:MTFact" table="1" op="10" res="10"/>
+    <facts xsi:type="generator:MTFact" table="1" op="11" res="11"/>
+    <facts xsi:type="generator:MTFact" table="1" op="12" res="12"/>
+    <facts xsi:type="generator:MTResultFact" table="1" res="1"/>
+    <facts xsi:type="generator:MTResultFact" table="1" res="2"/>
+    <facts xsi:type="generator:MTResultFact" table="1" res="3"/>
+    <facts xsi:type="generator:MTResultFact" table="1" res="4"/>
+    <facts xsi:type="generator:MTResultFact" table="1" res="5"/>
+    <facts xsi:type="generator:MTResultFact" table="1" res="6"/>
+    <facts xsi:type="generator:MTResultFact" table="1" res="7"/>
+    <facts xsi:type="generator:MTResultFact" table="1" res="8"/>
+    <facts xsi:type="generator:MTResultFact" table="1" res="9"/>
+    <facts xsi:type="generator:MTResultFact" table="1" res="10"/>
+    <facts xsi:type="generator:MTResultFact" table="1" res="11"/>
+    <facts xsi:type="generator:MTResultFact" table="1" res="12"/>
+  </knowledgefacts>
+  <knowledgefacts name="Table 2">
+    <facts xsi:type="generator:MTFact" table="2"/>
+    <facts xsi:type="generator:MTFact" table="2" op="1" res="2"/>
+    <facts xsi:type="generator:MTFact" table="2" op="2" res="4"/>
+    <facts xsi:type="generator:MTFact" table="2" op="3" res="6"/>
+    <facts xsi:type="generator:MTFact" table="2" op="4" res="8"/>
+    <facts xsi:type="generator:MTFact" table="2" op="5" res="10"/>
+    <facts xsi:type="generator:MTFact" table="2" op="6" res="12"/>
+    <facts xsi:type="generator:MTFact" table="2" op="7" res="14"/>
+    <facts xsi:type="generator:MTFact" table="2" op="8" res="16"/>
+    <facts xsi:type="generator:MTFact" table="2" op="9" res="18"/>
+    <facts xsi:type="generator:MTFact" table="2" op="10" res="20"/>
+    <facts xsi:type="generator:MTFact" table="2" op="11" res="22"/>
+    <facts xsi:type="generator:MTFact" table="2" op="12" res="24"/>
+    <facts xsi:type="generator:MTResultFact" table="2" res="2"/>
+    <facts xsi:type="generator:MTResultFact" table="2" res="4"/>
+    <facts xsi:type="generator:MTResultFact" table="2" res="6"/>
+    <facts xsi:type="generator:MTResultFact" table="2" res="8"/>
+    <facts xsi:type="generator:MTResultFact" table="2" res="10"/>
+    <facts xsi:type="generator:MTResultFact" table="2" res="12"/>
+    <facts xsi:type="generator:MTResultFact" table="2" res="14"/>
+    <facts xsi:type="generator:MTResultFact" table="2" res="16"/>
+    <facts xsi:type="generator:MTResultFact" table="2" res="18"/>
+    <facts xsi:type="generator:MTResultFact" table="2" res="20"/>
+    <facts xsi:type="generator:MTResultFact" table="2" res="22"/>
+    <facts xsi:type="generator:MTResultFact" table="2" res="24"/>
+  </knowledgefacts>
+  <knowledgefacts name="Table 3">
+    <facts xsi:type="generator:MTFact" table="3"/>
+    <facts xsi:type="generator:MTFact" table="3" op="1" res="3"/>
+    <facts xsi:type="generator:MTFact" table="3" op="2" res="6"/>
+    <facts xsi:type="generator:MTFact" table="3" op="3" res="9"/>
+    <facts xsi:type="generator:MTFact" table="3" op="4" res="12"/>
+    <facts xsi:type="generator:MTFact" table="3" op="5" res="15"/>
+    <facts xsi:type="generator:MTFact" table="3" op="6" res="18"/>
+    <facts xsi:type="generator:MTFact" table="3" op="7" res="21"/>
+    <facts xsi:type="generator:MTFact" table="3" op="8" res="24"/>
+    <facts xsi:type="generator:MTFact" table="3" op="9" res="27"/>
+    <facts xsi:type="generator:MTFact" table="3" op="10" res="30"/>
+    <facts xsi:type="generator:MTFact" table="3" op="11" res="33"/>
+    <facts xsi:type="generator:MTFact" table="3" op="12" res="36"/>
+    <facts xsi:type="generator:MTResultFact" table="3" res="3"/>
+    <facts xsi:type="generator:MTResultFact" table="3" res="6"/>
+    <facts xsi:type="generator:MTResultFact" table="3" res="9"/>
+    <facts xsi:type="generator:MTResultFact" table="3" res="12"/>
+    <facts xsi:type="generator:MTResultFact" table="3" res="15"/>
+    <facts xsi:type="generator:MTResultFact" table="3" res="18"/>
+    <facts xsi:type="generator:MTResultFact" table="3" res="21"/>
+    <facts xsi:type="generator:MTResultFact" table="3" res="24"/>
+    <facts xsi:type="generator:MTResultFact" table="3" res="27"/>
+    <facts xsi:type="generator:MTResultFact" table="3" res="30"/>
+    <facts xsi:type="generator:MTResultFact" table="3" res="33"/>
+    <facts xsi:type="generator:MTResultFact" table="3" res="36"/>
+  </knowledgefacts>
+  <knowledgefacts name="Table 4">
+    <facts xsi:type="generator:MTFact" table="4"/>
+    <facts xsi:type="generator:MTFact" table="4" op="1" res="4"/>
+    <facts xsi:type="generator:MTFact" table="4" op="2" res="8"/>
+    <facts xsi:type="generator:MTFact" table="4" op="3" res="12"/>
+    <facts xsi:type="generator:MTFact" table="4" op="4" res="16"/>
+    <facts xsi:type="generator:MTFact" table="4" op="5" res="20"/>
+    <facts xsi:type="generator:MTFact" table="4" op="6" res="24"/>
+    <facts xsi:type="generator:MTFact" table="4" op="7" res="28"/>
+    <facts xsi:type="generator:MTFact" table="4" op="8" res="32"/>
+    <facts xsi:type="generator:MTFact" table="4" op="9" res="36"/>
+    <facts xsi:type="generator:MTFact" table="4" op="10" res="40"/>
+    <facts xsi:type="generator:MTFact" table="4" op="11" res="44"/>
+    <facts xsi:type="generator:MTFact" table="4" op="12" res="48"/>
+    <facts xsi:type="generator:MTResultFact" table="4" res="4"/>
+    <facts xsi:type="generator:MTResultFact" table="4" res="8"/>
+    <facts xsi:type="generator:MTResultFact" table="4" res="12"/>
+    <facts xsi:type="generator:MTResultFact" table="4" res="16"/>
+    <facts xsi:type="generator:MTResultFact" table="4" res="20"/>
+    <facts xsi:type="generator:MTResultFact" table="4" res="24"/>
+    <facts xsi:type="generator:MTResultFact" table="4" res="28"/>
+    <facts xsi:type="generator:MTResultFact" table="4" res="32"/>
+    <facts xsi:type="generator:MTResultFact" table="4" res="36"/>
+    <facts xsi:type="generator:MTResultFact" table="4" res="40"/>
+    <facts xsi:type="generator:MTResultFact" table="4" res="44"/>
+    <facts xsi:type="generator:MTResultFact" table="4" res="48"/>
+  </knowledgefacts>
+  <knowledgefacts name="Table 5">
+    <facts xsi:type="generator:MTFact" table="5"/>
+    <facts xsi:type="generator:MTFact" table="5" op="1" res="5"/>
+    <facts xsi:type="generator:MTFact" table="5" op="2" res="10"/>
+    <facts xsi:type="generator:MTFact" table="5" op="3" res="15"/>
+    <facts xsi:type="generator:MTFact" table="5" op="4" res="20"/>
+    <facts xsi:type="generator:MTFact" table="5" op="5" res="25"/>
+    <facts xsi:type="generator:MTFact" table="5" op="6" res="30"/>
+    <facts xsi:type="generator:MTFact" table="5" op="7" res="35"/>
+    <facts xsi:type="generator:MTFact" table="5" op="8" res="40"/>
+    <facts xsi:type="generator:MTFact" table="5" op="9" res="45"/>
+    <facts xsi:type="generator:MTFact" table="5" op="10" res="50"/>
+    <facts xsi:type="generator:MTFact" table="5" op="11" res="55"/>
+    <facts xsi:type="generator:MTFact" table="5" op="12" res="60"/>
+    <facts xsi:type="generator:MTResultFact" table="5" res="5"/>
+    <facts xsi:type="generator:MTResultFact" table="5" res="10"/>
+    <facts xsi:type="generator:MTResultFact" table="5" res="15"/>
+    <facts xsi:type="generator:MTResultFact" table="5" res="20"/>
+    <facts xsi:type="generator:MTResultFact" table="5" res="25"/>
+    <facts xsi:type="generator:MTResultFact" table="5" res="30"/>
+    <facts xsi:type="generator:MTResultFact" table="5" res="35"/>
+    <facts xsi:type="generator:MTResultFact" table="5" res="40"/>
+    <facts xsi:type="generator:MTResultFact" table="5" res="45"/>
+    <facts xsi:type="generator:MTResultFact" table="5" res="50"/>
+    <facts xsi:type="generator:MTResultFact" table="5" res="55"/>
+    <facts xsi:type="generator:MTResultFact" table="5" res="60"/>
+  </knowledgefacts>
+  <knowledgefacts name="Table 6">
+    <facts xsi:type="generator:MTFact" table="6"/>
+    <facts xsi:type="generator:MTFact" table="6" op="1" res="6"/>
+    <facts xsi:type="generator:MTFact" table="6" op="2" res="12"/>
+    <facts xsi:type="generator:MTFact" table="6" op="3" res="18"/>
+    <facts xsi:type="generator:MTFact" table="6" op="4" res="24"/>
+    <facts xsi:type="generator:MTFact" table="6" op="5" res="30"/>
+    <facts xsi:type="generator:MTFact" table="6" op="6" res="36"/>
+    <facts xsi:type="generator:MTFact" table="6" op="7" res="42"/>
+    <facts xsi:type="generator:MTFact" table="6" op="8" res="48"/>
+    <facts xsi:type="generator:MTFact" table="6" op="9" res="54"/>
+    <facts xsi:type="generator:MTFact" table="6" op="10" res="60"/>
+    <facts xsi:type="generator:MTFact" table="6" op="11" res="66"/>
+    <facts xsi:type="generator:MTFact" table="6" op="12" res="72"/>
+    <facts xsi:type="generator:MTResultFact" table="6" res="6"/>
+    <facts xsi:type="generator:MTResultFact" table="6" res="12"/>
+    <facts xsi:type="generator:MTResultFact" table="6" res="18"/>
+    <facts xsi:type="generator:MTResultFact" table="6" res="24"/>
+    <facts xsi:type="generator:MTResultFact" table="6" res="30"/>
+    <facts xsi:type="generator:MTResultFact" table="6" res="36"/>
+    <facts xsi:type="generator:MTResultFact" table="6" res="42"/>
+    <facts xsi:type="generator:MTResultFact" table="6" res="48"/>
+    <facts xsi:type="generator:MTResultFact" table="6" res="54"/>
+    <facts xsi:type="generator:MTResultFact" table="6" res="60"/>
+    <facts xsi:type="generator:MTResultFact" table="6" res="66"/>
+    <facts xsi:type="generator:MTResultFact" table="6" res="72"/>
+  </knowledgefacts>
+  <knowledgefacts name="Table 7">
+    <facts xsi:type="generator:MTFact" table="7"/>
+    <facts xsi:type="generator:MTFact" table="7" op="1" res="7"/>
+    <facts xsi:type="generator:MTFact" table="7" op="2" res="14"/>
+    <facts xsi:type="generator:MTFact" table="7" op="3" res="21"/>
+    <facts xsi:type="generator:MTFact" table="7" op="4" res="28"/>
+    <facts xsi:type="generator:MTFact" table="7" op="5" res="35"/>
+    <facts xsi:type="generator:MTFact" table="7" op="6" res="42"/>
+    <facts xsi:type="generator:MTFact" table="7" op="7" res="79"/>
+    <facts xsi:type="generator:MTFact" table="7" op="8" res="56"/>
+    <facts xsi:type="generator:MTFact" table="7" op="9" res="63"/>
+    <facts xsi:type="generator:MTFact" table="7" op="10" res="70"/>
+    <facts xsi:type="generator:MTFact" table="7" op="11" res="77"/>
+    <facts xsi:type="generator:MTFact" table="7" op="12" res="84"/>
+    <facts xsi:type="generator:MTResultFact" table="7" res="7"/>
+    <facts xsi:type="generator:MTResultFact" table="7" res="14"/>
+    <facts xsi:type="generator:MTResultFact" table="7" res="21"/>
+    <facts xsi:type="generator:MTResultFact" table="7" res="28"/>
+    <facts xsi:type="generator:MTResultFact" table="7" res="35"/>
+    <facts xsi:type="generator:MTResultFact" table="7" res="42"/>
+    <facts xsi:type="generator:MTResultFact" table="7" res="49"/>
+    <facts xsi:type="generator:MTResultFact" table="7" res="56"/>
+    <facts xsi:type="generator:MTResultFact" table="7" res="63"/>
+    <facts xsi:type="generator:MTResultFact" table="7" res="70"/>
+    <facts xsi:type="generator:MTResultFact" table="7" res="77"/>
+    <facts xsi:type="generator:MTResultFact" table="7" res="84"/>
+  </knowledgefacts>
+  <knowledgefacts name="Table 8">
+    <facts xsi:type="generator:MTFact" table="8"/>
+    <facts xsi:type="generator:MTFact" table="8" op="1" res="8"/>
+    <facts xsi:type="generator:MTFact" table="8" op="2" res="16"/>
+    <facts xsi:type="generator:MTFact" table="8" op="3" res="24"/>
+    <facts xsi:type="generator:MTFact" table="8" op="4" res="32"/>
+    <facts xsi:type="generator:MTFact" table="8" op="5" res="40"/>
+    <facts xsi:type="generator:MTFact" table="8" op="6" res="48"/>
+    <facts xsi:type="generator:MTFact" table="8" op="7" res="56"/>
+    <facts xsi:type="generator:MTFact" table="8" op="8" res="64"/>
+    <facts xsi:type="generator:MTFact" table="8" op="9" res="72"/>
+    <facts xsi:type="generator:MTFact" table="8" op="10" res="80"/>
+    <facts xsi:type="generator:MTFact" table="8" op="11" res="88"/>
+    <facts xsi:type="generator:MTFact" table="8" op="12" res="96"/>
+    <facts xsi:type="generator:MTResultFact" table="8" res="8"/>
+    <facts xsi:type="generator:MTResultFact" table="8" res="16"/>
+    <facts xsi:type="generator:MTResultFact" table="8" res="24"/>
+    <facts xsi:type="generator:MTResultFact" table="8" res="32"/>
+    <facts xsi:type="generator:MTResultFact" table="8" res="40"/>
+    <facts xsi:type="generator:MTResultFact" table="8" res="48"/>
+    <facts xsi:type="generator:MTResultFact" table="8" res="56"/>
+    <facts xsi:type="generator:MTResultFact" table="8" res="64"/>
+    <facts xsi:type="generator:MTResultFact" table="8" res="72"/>
+    <facts xsi:type="generator:MTResultFact" table="8" res="80"/>
+    <facts xsi:type="generator:MTResultFact" table="8" res="88"/>
+    <facts xsi:type="generator:MTResultFact" table="8" res="96"/>
+  </knowledgefacts>
+  <knowledgefacts name="Table 9">
+    <facts xsi:type="generator:MTFact" table="9"/>
+    <facts xsi:type="generator:MTFact" table="9" op="1" res="9"/>
+    <facts xsi:type="generator:MTFact" table="9" op="2" res="18"/>
+    <facts xsi:type="generator:MTFact" table="9" op="3" res="27"/>
+    <facts xsi:type="generator:MTFact" table="9" op="4" res="36"/>
+    <facts xsi:type="generator:MTFact" table="9" op="5" res="45"/>
+    <facts xsi:type="generator:MTFact" table="9" op="6" res="54"/>
+    <facts xsi:type="generator:MTFact" table="9" op="7" res="63"/>
+    <facts xsi:type="generator:MTFact" table="9" op="8" res="72"/>
+    <facts xsi:type="generator:MTFact" table="9" op="9" res="81"/>
+    <facts xsi:type="generator:MTFact" table="9" op="10" res="90"/>
+    <facts xsi:type="generator:MTFact" table="9" op="11" res="99"/>
+    <facts xsi:type="generator:MTFact" table="9" op="12" res="108"/>
+    <facts xsi:type="generator:MTResultFact" table="9" res="9"/>
+    <facts xsi:type="generator:MTResultFact" table="9" res="18"/>
+    <facts xsi:type="generator:MTResultFact" table="9" res="27"/>
+    <facts xsi:type="generator:MTResultFact" table="9" res="36"/>
+    <facts xsi:type="generator:MTResultFact" table="9" res="45"/>
+    <facts xsi:type="generator:MTResultFact" table="9" res="54"/>
+    <facts xsi:type="generator:MTResultFact" table="9" res="63"/>
+    <facts xsi:type="generator:MTResultFact" table="9" res="72"/>
+    <facts xsi:type="generator:MTResultFact" table="9" res="81"/>
+    <facts xsi:type="generator:MTResultFact" table="9" res="90"/>
+    <facts xsi:type="generator:MTResultFact" table="9" res="99"/>
+    <facts xsi:type="generator:MTResultFact" table="9" res="108"/>
+  </knowledgefacts>
+  <knowledgefacts name="Table 10">
+    <facts xsi:type="generator:MTFact" table="10"/>
+    <facts xsi:type="generator:MTFact" table="10" op="1" res="10"/>
+    <facts xsi:type="generator:MTFact" table="10" op="2" res="20"/>
+    <facts xsi:type="generator:MTFact" table="10" op="3" res="30"/>
+    <facts xsi:type="generator:MTFact" table="10" op="4" res="40"/>
+    <facts xsi:type="generator:MTFact" table="10" op="5" res="50"/>
+    <facts xsi:type="generator:MTFact" table="10" op="6" res="60"/>
+    <facts xsi:type="generator:MTFact" table="10" op="7" res="70"/>
+    <facts xsi:type="generator:MTFact" table="10" op="8" res="80"/>
+    <facts xsi:type="generator:MTFact" table="10" op="9" res="90"/>
+    <facts xsi:type="generator:MTFact" table="10" op="10" res="100"/>
+    <facts xsi:type="generator:MTFact" table="10" op="11" res="110"/>
+    <facts xsi:type="generator:MTFact" table="10" op="12" res="120"/>
+    <facts xsi:type="generator:MTResultFact" table="10" res="10"/>
+    <facts xsi:type="generator:MTResultFact" table="10" res="20"/>
+    <facts xsi:type="generator:MTResultFact" table="10" res="30"/>
+    <facts xsi:type="generator:MTResultFact" table="10" res="40"/>
+    <facts xsi:type="generator:MTResultFact" table="10" res="50"/>
+    <facts xsi:type="generator:MTResultFact" table="10" res="60"/>
+    <facts xsi:type="generator:MTResultFact" table="10" res="70"/>
+    <facts xsi:type="generator:MTResultFact" table="10" res="80"/>
+    <facts xsi:type="generator:MTResultFact" table="10" res="90"/>
+    <facts xsi:type="generator:MTResultFact" table="10" res="100"/>
+    <facts xsi:type="generator:MTResultFact" table="10" res="110"/>
+    <facts xsi:type="generator:MTResultFact" table="10" res="120"/>
+  </knowledgefacts>
+  <knowledgefacts name="Table 11">
+    <facts xsi:type="generator:MTResultFact" table="11" res="11"/>
+    <facts xsi:type="generator:MTResultFact" table="11" res="22"/>
+    <facts xsi:type="generator:MTResultFact" table="11" res="33"/>
+    <facts xsi:type="generator:MTResultFact" table="11" res="44"/>
+    <facts xsi:type="generator:MTResultFact" table="11" res="55"/>
+    <facts xsi:type="generator:MTResultFact" table="11" res="66"/>
+    <facts xsi:type="generator:MTResultFact" table="11" res="77"/>
+    <facts xsi:type="generator:MTResultFact" table="11" res="88"/>
+    <facts xsi:type="generator:MTResultFact" table="11" res="99"/>
+    <facts xsi:type="generator:MTResultFact" table="11" res="110"/>
+    <facts xsi:type="generator:MTResultFact" table="11" res="121"/>
+    <facts xsi:type="generator:MTResultFact" table="11" res="132"/>
+    <facts xsi:type="generator:MTFact" table="11"/>
+    <facts xsi:type="generator:MTFact" table="11" op="1" res="11"/>
+    <facts xsi:type="generator:MTFact" table="11" op="2" res="22"/>
+    <facts xsi:type="generator:MTFact" table="11" op="3" res="33"/>
+    <facts xsi:type="generator:MTFact" table="11" op="4" res="44"/>
+    <facts xsi:type="generator:MTFact" table="11" op="5" res="55"/>
+    <facts xsi:type="generator:MTFact" table="11" op="6" res="66"/>
+    <facts xsi:type="generator:MTFact" table="11" op="7" res="77"/>
+    <facts xsi:type="generator:MTFact" table="11" op="8" res="88"/>
+    <facts xsi:type="generator:MTFact" table="11" op="9" res="99"/>
+    <facts xsi:type="generator:MTFact" table="11" op="10" res="110"/>
+    <facts xsi:type="generator:MTFact" table="11" op="11" res="121"/>
+    <facts xsi:type="generator:MTFact" table="11" op="12" res="132"/>
+  </knowledgefacts>
+  <knowledgefacts name="Table 12">
+    <facts xsi:type="generator:MTResultFact" table="12" res="12"/>
+    <facts xsi:type="generator:MTResultFact" table="12" res="24"/>
+    <facts xsi:type="generator:MTResultFact" table="12" res="36"/>
+    <facts xsi:type="generator:MTResultFact" table="12" res="48"/>
+    <facts xsi:type="generator:MTResultFact" table="12" res="60"/>
+    <facts xsi:type="generator:MTResultFact" table="12" res="72"/>
+    <facts xsi:type="generator:MTResultFact" table="12" res="84"/>
+    <facts xsi:type="generator:MTResultFact" table="12" res="96"/>
+    <facts xsi:type="generator:MTResultFact" table="12" res="108"/>
+    <facts xsi:type="generator:MTResultFact" table="12" res="120"/>
+    <facts xsi:type="generator:MTResultFact" table="12" res="132"/>
+    <facts xsi:type="generator:MTResultFact" table="12" res="144"/>
+    <facts xsi:type="generator:MTFact" table="12"/>
+    <facts xsi:type="generator:MTFact" table="12" op="1" res="12"/>
+    <facts xsi:type="generator:MTFact" table="12" op="2" res="24"/>
+    <facts xsi:type="generator:MTFact" table="12" op="3" res="36"/>
+    <facts xsi:type="generator:MTFact" table="12" op="4" res="48"/>
+    <facts xsi:type="generator:MTFact" table="12" op="5" res="60"/>
+    <facts xsi:type="generator:MTFact" table="12" op="6" res="72"/>
+    <facts xsi:type="generator:MTFact" table="12" op="7" res="84"/>
+    <facts xsi:type="generator:MTFact" table="12" op="8" res="96"/>
+    <facts xsi:type="generator:MTFact" table="12" op="9" res="108"/>
+    <facts xsi:type="generator:MTFact" table="12" op="10" res="120"/>
+    <facts xsi:type="generator:MTFact" table="12" op="11" res="132"/>
+    <facts xsi:type="generator:MTFact" table="12" op="12" res="144"/>
+  </knowledgefacts>
+</generator:Knowledge>

@@ -28,7 +28,7 @@ public interface Completion2Task extends ATask {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see generator.ETaskType
 	 * @see generator.GeneratorPackage#getCompletion2Task_Type()
-	 * @model default="COMPLETE2" changeable="false"
+	 * @model default="COMPLETE2" transient="true" changeable="false"
 	 * @generated
 	 */
 	ETaskType getType();

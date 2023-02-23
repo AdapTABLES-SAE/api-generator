@@ -427,6 +427,114 @@ public interface GeneratorFactory extends EFactory {
 	CurrentGameLevel createCurrentGameLevel();
 
 	/**
+	 * Returns a new object of class '<em>Game Elements</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Game Elements</em>'.
+	 * @generated
+	 */
+	GameElements createGameElements();
+
+	/**
+	 * Returns a new object of class '<em>Core GP Elements</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Core GP Elements</em>'.
+	 * @generated
+	 */
+	CoreGPElements createCoreGPElements();
+
+	/**
+	 * Returns a new object of class '<em>Equipments</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Equipments</em>'.
+	 * @generated
+	 */
+	Equipments createEquipments();
+
+	/**
+	 * Returns a new object of class '<em>Equipment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Equipment</em>'.
+	 * @generated
+	 */
+	Equipment createEquipment();
+
+	/**
+	 * Returns a new object of class '<em>Answer Elements</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Answer Elements</em>'.
+	 * @generated
+	 */
+	AnswerElements createAnswerElements();
+
+	/**
+	 * Returns a new object of class '<em>Unique Answer Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unique Answer Element</em>'.
+	 * @generated
+	 */
+	UniqueAnswerElement createUniqueAnswerElement();
+
+	/**
+	 * Returns a new object of class '<em>Many Answer Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Many Answer Element</em>'.
+	 * @generated
+	 */
+	ManyAnswerElement createManyAnswerElement();
+
+	/**
+	 * Returns a new object of class '<em>Non Answer Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Non Answer Element</em>'.
+	 * @generated
+	 */
+	NonAnswerElement createNonAnswerElement();
+
+	/**
+	 * Returns a new object of class '<em>Gameplay</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Gameplay</em>'.
+	 * @generated
+	 */
+	Gameplay createGameplay();
+
+	/**
+	 * Returns a new object of class '<em>Quantified Elements By Ability</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Quantified Elements By Ability</em>'.
+	 * @generated
+	 */
+	QuantifiedElementsByAbility createQuantifiedElementsByAbility();
+
+	/**
+	 * Returns a new object of class '<em>Positioned Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Positioned Element</em>'.
+	 * @generated
+	 */
+	PositionedElement createPositionedElement();
+
+	/**
+	 * Returns a new object of class '<em>Gameplays</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Gameplays</em>'.
+	 * @generated
+	 */
+	Gameplays createGameplays();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

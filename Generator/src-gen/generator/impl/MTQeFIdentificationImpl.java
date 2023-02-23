@@ -42,7 +42,7 @@ public class MTQeFIdentificationImpl extends QuestionedFactImpl implements MTQeF
 	@Override
 	public void setQuestionText() {
 		questionText = getQuestionablefact().getQuestionableFact();
-		
+
 	}
 
 } //MTQeFIdentificationImpl

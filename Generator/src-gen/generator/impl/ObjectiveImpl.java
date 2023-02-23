@@ -64,6 +64,15 @@ public class ObjectiveImpl extends MinimalEObjectImpl.Container implements Objec
 	protected String id = ID_EDEFAULT;
 
 	/**
+	 * This is true if the ID attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean idESet;
+
+	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -149,8 +158,35 @@ public class ObjectiveImpl extends MinimalEObjectImpl.Container implements Objec
 	public void setID(String newID) {
 		String oldID = id;
 		id = newID;
+		boolean oldIDESet = idESet;
+		idESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.OBJECTIVE__ID, oldID, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.OBJECTIVE__ID, oldID, id,
+					!oldIDESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetID() {
+		String oldID = id;
+		boolean oldIDESet = idESet;
+		id = ID_EDEFAULT;
+		idESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, GeneratorPackage.OBJECTIVE__ID, oldID, ID_EDEFAULT,
+					oldIDESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetID() {
+		return idESet;
 	}
 
 	/**
@@ -290,7 +326,7 @@ public class ObjectiveImpl extends MinimalEObjectImpl.Container implements Objec
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case GeneratorPackage.OBJECTIVE__ID:
-			setID(ID_EDEFAULT);
+			unsetID();
 			return;
 		case GeneratorPackage.OBJECTIVE__NAME:
 			setName(NAME_EDEFAULT);
@@ -317,7 +353,7 @@ public class ObjectiveImpl extends MinimalEObjectImpl.Container implements Objec
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case GeneratorPackage.OBJECTIVE__ID:
-			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			return isSetID();
 		case GeneratorPackage.OBJECTIVE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case GeneratorPackage.OBJECTIVE__PREREQUISITES:
@@ -342,7 +378,10 @@ public class ObjectiveImpl extends MinimalEObjectImpl.Container implements Objec
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (ID: ");
-		result.append(id);
+		if (idESet)
+			result.append(id);
+		else
+			result.append("<unset>");
 		result.append(", name: ");
 		result.append(name);
 		result.append(')');

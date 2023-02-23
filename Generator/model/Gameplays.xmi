@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator:Gameplays
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:generator="http://www.example.org/generator"
+    xsi:schemaLocation="http://www.example.org/generator generator.ecore">
+  <gameplays
+      name="Chest Gameplay">
+    <quantifiedElementsByAbility
+        ability="OPENABLE"
+        min="10"/>
+  </gameplays>
+  <gameplays
+      name="Statues Gameplay ">
+    <quantifiedElementsByAbility
+        ability="ROTABLE"
+        min="3"/>
+    <quantifiedElementsByAbility
+        ability="VERIFICATOR"/>
+  </gameplays>
+  <gameplays
+      name="Floor switch Gameplay">
+    <quantifiedElementsByAbility
+        ability="TOUCHABLE"
+        min="10"/>
+  </gameplays>
+</generator:Gameplays>

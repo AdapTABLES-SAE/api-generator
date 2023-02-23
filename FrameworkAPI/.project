@@ -3,6 +3,8 @@
 	<name>FrameworkAPI</name>
 	<comment></comment>
 	<projects>
+		<project>TransformationFlattener</project>
+		<project>Generator</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

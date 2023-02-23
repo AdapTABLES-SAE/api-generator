@@ -24,8 +24,8 @@ import generator.LearningDomain;
 public class ModelsManager {
 	
 	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-	private static final String INPUT_MODELS_PATH = "inputmodels/";
-	private static final String OUTPUT_MODELS_PATH = "outputmodels/";
+	private static String INPUT_MODELS_PATH = "inputmodels/";
+	private static String OUTPUT_MODELS_PATH = "outputmodels/";
 	private static String[] INPUT_MODELS_PATHS = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi"};
 
 	private ResourceSet resourceSet;
@@ -44,6 +44,25 @@ public class ModelsManager {
 		}
 		loadInputModels();
 	}
+	
+	public ModelsManager(String inputPath, String outputPath) {
+		System.out.println(INPUT_MODELS_PATH);
+		INPUT_MODELS_PATH = inputPath;
+		OUTPUT_MODELS_PATH = outputPath;
+		resourceSet = new ResourceSetImpl();
+		loadInputModels();
+	}
+	
+	public ModelsManager(String inputPath, String outputPath, String contextFilePath) {
+		System.out.println(INPUT_MODELS_PATH);
+		INPUT_MODELS_PATH = inputPath;
+		OUTPUT_MODELS_PATH = outputPath;
+		if(!contextFilePath.isEmpty()) {
+			INPUT_MODELS_PATHS[0] = contextFilePath;
+		}
+		resourceSet = new ResourceSetImpl();
+		loadInputModels();
+	}
 
 	public void saveGeneratedModel(Dungeon generatedDungeon, String outFileName) {
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
@@ -52,7 +71,7 @@ public class ModelsManager {
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
 		
-		Resource resource = resourceSet.createResource(URI.createURI(OUTPUT_MODELS_PATH + outFileName));
+		Resource resource = resourceSet.createResource(URI.createURI("file:///" + OUTPUT_MODELS_PATH + outFileName));
 		resource.getContents().add(generatedDungeon);
 		try {
 			resource.save(map);
@@ -62,6 +81,67 @@ public class ModelsManager {
 		}
 		
 		LOGGER.info("Saving '" + outFileName + "' file : OK");
+	}
+	
+	public void saveDomainModel(LearningDomain learningPaths) {
+		ResourceSet resourceSet = new ResourceSetImpl();
+		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> map = registry.getExtensionToFactoryMap();
+		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
+		map.put("xmi", toSave);
+		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
+		//map.put(XMLResource.OPTION_ENCODING, "UTF-8");
+		
+		Resource resource = resourceSet.createResource(URI.createURI("file:///" + INPUT_MODELS_PATH + INPUT_MODELS_PATHS[3]));
+		resource.getContents().add(learningPaths);
+		try {
+			resource.save(map);
+		}catch (IOException e) {
+			LOGGER.severe("Error while saving : " + INPUT_MODELS_PATH + INPUT_MODELS_PATHS[3]);
+			e.printStackTrace();
+		}
+		
+		LOGGER.info("Saving '"+INPUT_MODELS_PATHS[3]+"' file : OK");
+	}
+	
+	public LearningDomain loadDomainModel() {
+		ResourceSet resourceSet = new ResourceSetImpl();
+		GeneratorPackage.eINSTANCE.eClass();
+		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> map = registry.getExtensionToFactoryMap();
+		map.put("xmi", new XMIResourceFactoryImpl());
+		
+		File learningPaths = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[3]);
+		Resource resource = resourceSet.createResource(URI.createFileURI(learningPaths.getAbsolutePath()));
+
+		try {
+			resource.load(null);
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+		EcoreUtil.resolveAll(resourceSet); 
+		
+		return (LearningDomain) resource.getContents().get(0);		
+	}
+	
+	public Knowledge loadKnowledgeModel() {
+		ResourceSet resourceSet = new ResourceSetImpl();
+		GeneratorPackage.eINSTANCE.eClass();
+		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> map = registry.getExtensionToFactoryMap();
+		map.put("xmi", new XMIResourceFactoryImpl());
+		
+		File knowledge = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[2]);
+		Resource resource = resourceSet.createResource(URI.createFileURI(knowledge.getAbsolutePath()));
+
+		try {
+			resource.load(null);
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+		EcoreUtil.resolveAll(resourceSet); 
+		
+		return (Knowledge) resource.getContents().get(0);		
 	}
 	
 	public void saveContextModel() {

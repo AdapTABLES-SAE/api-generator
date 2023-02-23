@@ -59,6 +59,15 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	protected String id = ID_EDEFAULT;
 
 	/**
+	 * This is true if the ID attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean idESet;
+
+	/**
 	 * The cached value of the '{@link #getTasks() <em>Tasks</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -114,8 +123,34 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	public void setID(String newID) {
 		String oldID = id;
 		id = newID;
+		boolean oldIDESet = idESet;
+		idESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEVEL__ID, oldID, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEVEL__ID, oldID, id, !oldIDESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetID() {
+		String oldID = id;
+		boolean oldIDESet = idESet;
+		id = ID_EDEFAULT;
+		idESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, GeneratorPackage.LEVEL__ID, oldID, ID_EDEFAULT,
+					oldIDESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetID() {
+		return idESet;
 	}
 
 	/**
@@ -247,7 +282,7 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case GeneratorPackage.LEVEL__ID:
-			setID(ID_EDEFAULT);
+			unsetID();
 			return;
 		case GeneratorPackage.LEVEL__TASKS:
 			getTasks().clear();
@@ -268,7 +303,7 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case GeneratorPackage.LEVEL__ID:
-			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			return isSetID();
 		case GeneratorPackage.LEVEL__TASKS:
 			return tasks != null && !tasks.isEmpty();
 		case GeneratorPackage.LEVEL__COMPLETION_CRITERIA:
@@ -289,7 +324,10 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (ID: ");
-		result.append(id);
+		if (idESet)
+			result.append(id);
+		else
+			result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

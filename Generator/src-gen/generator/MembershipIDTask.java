@@ -29,7 +29,7 @@ public interface MembershipIDTask extends ATask {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see generator.ETaskType
 	 * @see generator.GeneratorPackage#getMembershipIDTask_Type()
-	 * @model default="MEMBERSHIP" changeable="false"
+	 * @model default="MEMBERSHIP" transient="true" changeable="false"
 	 * @generated
 	 */
 	ETaskType getType();

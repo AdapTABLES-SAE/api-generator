@@ -29,7 +29,7 @@ public interface IdentificationTask extends ATask {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see generator.ETaskType
 	 * @see generator.GeneratorPackage#getIdentificationTask_Type()
-	 * @model default="IDENTIFY" changeable="false"
+	 * @model default="IDENTIFY" transient="true" changeable="false"
 	 * @generated
 	 */
 	ETaskType getType();

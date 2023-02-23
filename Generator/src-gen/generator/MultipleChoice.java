@@ -30,7 +30,7 @@ public interface MultipleChoice extends ResponseModality {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see generator.EModality
 	 * @see generator.GeneratorPackage#getMultipleChoice_Type()
-	 * @model default="CHOICE" changeable="false"
+	 * @model default="CHOICE" transient="true" changeable="false"
 	 * @generated
 	 */
 	EModality getType();

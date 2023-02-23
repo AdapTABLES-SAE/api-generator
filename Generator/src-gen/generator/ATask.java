@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.ATask#getNbConsecutiveSuccess <em>Nb Consecutive Success</em>}</li>
  *   <li>{@link generator.ATask#getResponseModality <em>Response Modality</em>}</li>
  *   <li>{@link generator.ATask#getID <em>ID</em>}</li>
+ *   <li>{@link generator.ATask#getMaxTime <em>Max Time</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getATask()
@@ -95,9 +96,11 @@ public interface ATask extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ID</em>' attribute.
+	 * @see #isSetID()
+	 * @see #unsetID()
 	 * @see #setID(String)
 	 * @see generator.GeneratorPackage#getATask_ID()
-	 * @model id="true" dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model unsettable="true" id="true" dataType="org.eclipse.emf.ecore.xml.type.String"
 	 * @generated
 	 */
 	String getID();
@@ -107,10 +110,58 @@ public interface ATask extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ID</em>' attribute.
+	 * @see #isSetID()
+	 * @see #unsetID()
 	 * @see #getID()
 	 * @generated
 	 */
 	void setID(String value);
+
+	/**
+	 * Unsets the value of the '{@link generator.ATask#getID <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetID()
+	 * @see #getID()
+	 * @see #setID(String)
+	 * @generated
+	 */
+	void unsetID();
+
+	/**
+	 * Returns whether the value of the '{@link generator.ATask#getID <em>ID</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>ID</em>' attribute is set.
+	 * @see #unsetID()
+	 * @see #getID()
+	 * @see #setID(String)
+	 * @generated
+	 */
+	boolean isSetID();
+
+	/**
+	 * Returns the value of the '<em><b>Max Time</b></em>' attribute.
+	 * The default value is <code>"20"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Max Time</em>' attribute.
+	 * @see #setMaxTime(int)
+	 * @see generator.GeneratorPackage#getATask_MaxTime()
+	 * @model default="20"
+	 * @generated
+	 */
+	int getMaxTime();
+
+	/**
+	 * Sets the value of the '{@link generator.ATask#getMaxTime <em>Max Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Max Time</em>' attribute.
+	 * @see #getMaxTime()
+	 * @generated
+	 */
+	void setMaxTime(int value);
 
 	/**
 	 * <!-- begin-user-doc -->

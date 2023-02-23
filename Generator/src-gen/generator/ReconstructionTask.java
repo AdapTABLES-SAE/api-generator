@@ -28,7 +28,7 @@ public interface ReconstructionTask extends ATask {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see generator.ETaskType
 	 * @see generator.GeneratorPackage#getReconstructionTask_Type()
-	 * @model default="REBUILD" changeable="false"
+	 * @model default="REBUILD" transient="true" changeable="false"
 	 * @generated
 	 */
 	ETaskType getType();

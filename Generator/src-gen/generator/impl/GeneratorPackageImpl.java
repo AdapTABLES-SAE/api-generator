@@ -3,10 +3,14 @@
 package generator.impl;
 
 import generator.ATask;
+import generator.Ability;
 import generator.AbstractFact;
+import generator.AnswerElements;
 import generator.Completion1Task;
 import generator.Completion2Task;
 import generator.CompletionCriteria;
+import generator.CoreGPElement;
+import generator.CoreGPElements;
 import generator.CurrentGameLevel;
 import generator.CurrentObjectiveLevel;
 import generator.Directions;
@@ -16,9 +20,15 @@ import generator.EModality;
 import generator.ESeveralTarget;
 import generator.ESingleTarget;
 import generator.ETaskType;
+import generator.Effect;
 import generator.EnterResponse;
+import generator.Equipment;
+import generator.Equipments;
 import generator.GameContext;
 import generator.GameDescription;
+import generator.GameElements;
+import generator.Gameplay;
+import generator.Gameplays;
 import generator.GenerationContext;
 import generator.GeneratorFactory;
 import generator.GeneratorPackage;
@@ -48,13 +58,17 @@ import generator.MTQeFMembership;
 import generator.MTQeFRebuild;
 import generator.MTRecontruction;
 import generator.MTResultFact;
+import generator.ManyAnswerElement;
 import generator.MembershipIDTask;
 import generator.MultipleChoice;
+import generator.NonAnswerElement;
 import generator.Objective;
 import generator.Position;
+import generator.PositionedElement;
 import generator.Prerequisite;
 import generator.Progression;
 import generator.QFResults;
+import generator.QuantifiedElementsByAbility;
 import generator.QuestionableFact;
 import generator.QuestionedFact;
 import generator.ReconstructionTask;
@@ -70,6 +84,7 @@ import generator.SetOfFacts;
 import generator.SmallRoomType;
 import generator.TableBuild;
 
+import generator.UniqueAnswerElement;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -492,6 +507,97 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass gameElementsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass coreGPElementsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass equipmentsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass coreGPElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass equipmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass answerElementsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass uniqueAnswerElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass manyAnswerElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nonAnswerElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gameplayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass quantifiedElementsByAbilityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass positionedElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gameplaysEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum directionsEEnum = null;
 
 	/**
@@ -542,6 +648,20 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EEnum eSeveralTargetEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum effectEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum abilityEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -986,6 +1106,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EReference getLearningPath_Knowledge() {
 		return (EReference) learningPathEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLearningPath_ID() {
+		return (EAttribute) learningPathEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1472,6 +1601,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getATask_ID() {
 		return (EAttribute) aTaskEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getATask_MaxTime() {
+		return (EAttribute) aTaskEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2307,6 +2445,303 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getGameElements() {
+		return gameElementsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameElements_Equipments() {
+		return (EReference) gameElementsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameElements_GameplayElements() {
+		return (EReference) gameElementsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCoreGPElements() {
+		return coreGPElementsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCoreGPElements_Elements() {
+		return (EReference) coreGPElementsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEquipments() {
+		return equipmentsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEquipments_Equipments() {
+		return (EReference) equipmentsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCoreGPElement() {
+		return coreGPElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCoreGPElement_ID() {
+		return (EAttribute) coreGPElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCoreGPElement_Type() {
+		return (EAttribute) coreGPElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCoreGPElement_Ability() {
+		return (EAttribute) coreGPElementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEquipment() {
+		return equipmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEquipment_ID() {
+		return (EAttribute) equipmentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEquipment_Bought() {
+		return (EAttribute) equipmentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEquipment_Activated() {
+		return (EAttribute) equipmentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAnswerElements() {
+		return answerElementsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAnswerElements_SingleAnswer() {
+		return (EAttribute) answerElementsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUniqueAnswerElement() {
+		return uniqueAnswerElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUniqueAnswerElement_DisplayValue() {
+		return (EAttribute) uniqueAnswerElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getManyAnswerElement() {
+		return manyAnswerElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getManyAnswerElement_DisplayValues() {
+		return (EAttribute) manyAnswerElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getManyAnswerElement_RightValue() {
+		return (EAttribute) manyAnswerElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNonAnswerElement() {
+		return nonAnswerElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGameplay() {
+		return gameplayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameplay_QuantifiedElementsByAbility() {
+		return (EReference) gameplayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGameplay_Name() {
+		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getQuantifiedElementsByAbility() {
+		return quantifiedElementsByAbilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuantifiedElementsByAbility_Ability() {
+		return (EAttribute) quantifiedElementsByAbilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuantifiedElementsByAbility_Min() {
+		return (EAttribute) quantifiedElementsByAbilityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuantifiedElementsByAbility_Max() {
+		return (EAttribute) quantifiedElementsByAbilityEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPositionedElement() {
+		return positionedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGameplays() {
+		return gameplaysEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameplays_Gameplays() {
+		return (EReference) gameplaysEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDirections() {
 		return directionsEEnum;
 	}
@@ -2372,6 +2807,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EEnum getESeveralTarget() {
 		return eSeveralTargetEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getEffect() {
+		return effectEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getAbility() {
+		return abilityEEnum;
 	}
 
 	/**
@@ -2457,6 +2910,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(learningPathEClass, LEARNING_PATH__NAME);
 		createEReference(learningPathEClass, LEARNING_PATH__OBJECTIVES);
 		createEReference(learningPathEClass, LEARNING_PATH__KNOWLEDGE);
+		createEAttribute(learningPathEClass, LEARNING_PATH__ID);
 
 		objectiveEClass = createEClass(OBJECTIVE);
 		createEAttribute(objectiveEClass, OBJECTIVE__ID);
@@ -2526,6 +2980,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(aTaskEClass, ATASK__NB_CONSECUTIVE_SUCCESS);
 		createEReference(aTaskEClass, ATASK__RESPONSE_MODALITY);
 		createEAttribute(aTaskEClass, ATASK__ID);
+		createEAttribute(aTaskEClass, ATASK__MAX_TIME);
 		createEOperation(aTaskEClass, ATASK___GET_TYPE);
 
 		completion1TaskEClass = createEClass(COMPLETION1_TASK);
@@ -2648,6 +3103,52 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		currentGameLevelEClass = createEClass(CURRENT_GAME_LEVEL);
 		createEAttribute(currentGameLevelEClass, CURRENT_GAME_LEVEL__LEVEL);
 
+		gameElementsEClass = createEClass(GAME_ELEMENTS);
+		createEReference(gameElementsEClass, GAME_ELEMENTS__EQUIPMENTS);
+		createEReference(gameElementsEClass, GAME_ELEMENTS__GAMEPLAY_ELEMENTS);
+
+		coreGPElementsEClass = createEClass(CORE_GP_ELEMENTS);
+		createEReference(coreGPElementsEClass, CORE_GP_ELEMENTS__ELEMENTS);
+
+		equipmentsEClass = createEClass(EQUIPMENTS);
+		createEReference(equipmentsEClass, EQUIPMENTS__EQUIPMENTS);
+
+		coreGPElementEClass = createEClass(CORE_GP_ELEMENT);
+		createEAttribute(coreGPElementEClass, CORE_GP_ELEMENT__ID);
+		createEAttribute(coreGPElementEClass, CORE_GP_ELEMENT__TYPE);
+		createEAttribute(coreGPElementEClass, CORE_GP_ELEMENT__ABILITY);
+
+		equipmentEClass = createEClass(EQUIPMENT);
+		createEAttribute(equipmentEClass, EQUIPMENT__ID);
+		createEAttribute(equipmentEClass, EQUIPMENT__BOUGHT);
+		createEAttribute(equipmentEClass, EQUIPMENT__ACTIVATED);
+
+		answerElementsEClass = createEClass(ANSWER_ELEMENTS);
+		createEAttribute(answerElementsEClass, ANSWER_ELEMENTS__SINGLE_ANSWER);
+
+		uniqueAnswerElementEClass = createEClass(UNIQUE_ANSWER_ELEMENT);
+		createEAttribute(uniqueAnswerElementEClass, UNIQUE_ANSWER_ELEMENT__DISPLAY_VALUE);
+
+		manyAnswerElementEClass = createEClass(MANY_ANSWER_ELEMENT);
+		createEAttribute(manyAnswerElementEClass, MANY_ANSWER_ELEMENT__DISPLAY_VALUES);
+		createEAttribute(manyAnswerElementEClass, MANY_ANSWER_ELEMENT__RIGHT_VALUE);
+
+		nonAnswerElementEClass = createEClass(NON_ANSWER_ELEMENT);
+
+		gameplayEClass = createEClass(GAMEPLAY);
+		createEReference(gameplayEClass, GAMEPLAY__QUANTIFIED_ELEMENTS_BY_ABILITY);
+		createEAttribute(gameplayEClass, GAMEPLAY__NAME);
+
+		quantifiedElementsByAbilityEClass = createEClass(QUANTIFIED_ELEMENTS_BY_ABILITY);
+		createEAttribute(quantifiedElementsByAbilityEClass, QUANTIFIED_ELEMENTS_BY_ABILITY__ABILITY);
+		createEAttribute(quantifiedElementsByAbilityEClass, QUANTIFIED_ELEMENTS_BY_ABILITY__MIN);
+		createEAttribute(quantifiedElementsByAbilityEClass, QUANTIFIED_ELEMENTS_BY_ABILITY__MAX);
+
+		positionedElementEClass = createEClass(POSITIONED_ELEMENT);
+
+		gameplaysEClass = createEClass(GAMEPLAYS);
+		createEReference(gameplaysEClass, GAMEPLAYS__GAMEPLAYS);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -2657,6 +3158,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		eTaskTypeEEnum = createEEnum(ETASK_TYPE);
 		eModalityEEnum = createEEnum(EMODALITY);
 		eSeveralTargetEEnum = createEEnum(ESEVERAL_TARGET);
+		effectEEnum = createEEnum(EFFECT);
+		abilityEEnum = createEEnum(ABILITY);
 	}
 
 	/**
@@ -2719,6 +3222,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtQeFRebuildEClass.getESuperTypes().add(this.getQuestionedFact());
 		mtQeFIdentificationEClass.getESuperTypes().add(this.getQuestionedFact());
 		mtQeFMembershipEClass.getESuperTypes().add(this.getQuestionedFact());
+		answerElementsEClass.getESuperTypes().add(this.getCoreGPElement());
+		uniqueAnswerElementEClass.getESuperTypes().add(this.getPositionedElement());
+		manyAnswerElementEClass.getESuperTypes().add(this.getPositionedElement());
+		nonAnswerElementEClass.getESuperTypes().add(this.getCoreGPElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -2834,11 +3341,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getLearningPath_Knowledge(), this.getKnowledge(), null, "knowledge", null, 1, 1,
 				LearningPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLearningPath_ID(), ecorePackage.getEString(), "ID", null, 0, 1, LearningPath.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(objectiveEClass, Objective.class, "Objective", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getObjective_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Objective.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getObjective_Name(), ecorePackage.getEString(), "name", null, 0, 1, Objective.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getObjective_Prerequisites(), this.getPrerequisite(), null, "prerequisites", null, 0, -1,
@@ -2865,7 +3374,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(levelEClass, Level.class, "Level", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLevel_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Level.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLevel_Tasks(), this.getATask(), null, "tasks", null, 1, -1, Level.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
@@ -2950,8 +3459,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(multipleChoiceEClass, MultipleChoice.class, "MultipleChoice", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMultipleChoice_Type(), this.getEModality(), "type", "CHOICE", 0, 1, MultipleChoice.class,
-				!IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMultipleChoice_NbChoices(), ecorePackage.getEInt(), "nbChoices", null, 0, 1,
 				MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
@@ -2962,8 +3470,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(enterResponseEClass, EnterResponse.class, "EnterResponse", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEnterResponse_Type(), this.getEModality(), "type", "INPUT", 0, 1, EnterResponse.class,
-				!IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roomTypesEClass, RoomTypes.class, "RoomTypes", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2982,33 +3489,33 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				ATask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getATask_ID(), theXMLTypePackage.getString(), "ID", null, 0, 1, ATask.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getATask_MaxTime(), ecorePackage.getEInt(), "maxTime", "20", 0, 1, ATask.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getATask__GetType(), this.getETaskType(), "getType", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(completion1TaskEClass, Completion1Task.class, "Completion1Task", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCompletion1Task_Type(), this.getETaskType(), "type", "COMPLETE1", 0, 1, Completion1Task.class,
-				!IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(completion2TaskEClass, Completion2Task.class, "Completion2Task", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCompletion2Task_Type(), this.getETaskType(), "type", "COMPLETE2", 0, 1, Completion2Task.class,
-				!IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(reconstructionTaskEClass, ReconstructionTask.class, "ReconstructionTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getReconstructionTask_Type(), this.getETaskType(), "type", "REBUILD", 0, 1,
-				ReconstructionTask.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				ReconstructionTask.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(identificationTaskEClass, IdentificationTask.class, "IdentificationTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIdentificationTask_Type(), this.getETaskType(), "type", "IDENTIFY", 0, 1,
-				IdentificationTask.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				IdentificationTask.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getIdentificationTask_NbFacts(), ecorePackage.getEInt(), "nbFacts", "1", 0, 1,
 				IdentificationTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
@@ -3016,7 +3523,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(membershipIDTaskEClass, MembershipIDTask.class, "MembershipIDTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMembershipIDTask_Type(), this.getETaskType(), "type", "MEMBERSHIP", 0, 1,
-				MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				MembershipIDTask.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMembershipIDTask_CheckIsTrue(), ecorePackage.getEBoolean(), "checkIsTrue", "true", 0, 1,
 				MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
@@ -3244,6 +3751,98 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getCurrentGameLevel_Level(), ecorePackage.getEInt(), "level", "1", 0, 1, CurrentGameLevel.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(gameElementsEClass, GameElements.class, "GameElements", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGameElements_Equipments(), this.getEquipments(), null, "equipments", null, 0, 1,
+				GameElements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGameElements_GameplayElements(), this.getCoreGPElements(), null, "gameplayElements", null, 0,
+				-1, GameElements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(coreGPElementsEClass, CoreGPElements.class, "CoreGPElements", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCoreGPElements_Elements(), this.getCoreGPElement(), null, "elements", null, 0, -1,
+				CoreGPElements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(equipmentsEClass, Equipments.class, "Equipments", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEquipments_Equipments(), this.getEquipment(), null, "equipments", null, 0, -1,
+				Equipments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(coreGPElementEClass, CoreGPElement.class, "CoreGPElement", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCoreGPElement_ID(), ecorePackage.getEString(), "ID", null, 0, 1, CoreGPElement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCoreGPElement_Type(), ecorePackage.getEString(), "type", "", 0, 1, CoreGPElement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCoreGPElement_Ability(), this.getAbility(), "ability", null, 0, 1, CoreGPElement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(equipmentEClass, Equipment.class, "Equipment", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEquipment_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Equipment.class, !IS_TRANSIENT,
+				!IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEquipment_Bought(), ecorePackage.getEBoolean(), "bought", null, 0, 1, Equipment.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEquipment_Activated(), ecorePackage.getEBoolean(), "activated", null, 0, 1, Equipment.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(answerElementsEClass, AnswerElements.class, "AnswerElements", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAnswerElements_SingleAnswer(), ecorePackage.getEBoolean(), "singleAnswer", "true", 0, 1,
+				AnswerElements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(uniqueAnswerElementEClass, UniqueAnswerElement.class, "UniqueAnswerElement", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getUniqueAnswerElement_DisplayValue(), ecorePackage.getEString(), "displayValue", null, 0, 1,
+				UniqueAnswerElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(manyAnswerElementEClass, ManyAnswerElement.class, "ManyAnswerElement", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getManyAnswerElement_DisplayValues(), ecorePackage.getEString(), "displayValues", null, 0, -1,
+				ManyAnswerElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getManyAnswerElement_RightValue(), ecorePackage.getEString(), "rightValue", null, 0, 1,
+				ManyAnswerElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(nonAnswerElementEClass, NonAnswerElement.class, "NonAnswerElement", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(gameplayEClass, Gameplay.class, "Gameplay", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGameplay_QuantifiedElementsByAbility(), this.getQuantifiedElementsByAbility(), null,
+				"quantifiedElementsByAbility", null, 0, -1, Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGameplay_Name(), ecorePackage.getEString(), "name", null, 0, 1, Gameplay.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(quantifiedElementsByAbilityEClass, QuantifiedElementsByAbility.class, "QuantifiedElementsByAbility",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getQuantifiedElementsByAbility_Ability(), this.getAbility(), "ability", null, 0, 1,
+				QuantifiedElementsByAbility.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuantifiedElementsByAbility_Min(), ecorePackage.getEInt(), "min", "1", 0, 1,
+				QuantifiedElementsByAbility.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuantifiedElementsByAbility_Max(), ecorePackage.getEInt(), "max", "1", 0, 1,
+				QuantifiedElementsByAbility.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(positionedElementEClass, PositionedElement.class, "PositionedElement", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(gameplaysEClass, Gameplays.class, "Gameplays", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGameplays_Gameplays(), this.getGameplay(), null, "gameplays", null, 0, -1, Gameplays.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");
 		addEEnumLiteral(directionsEEnum, Directions.SOUTH);
@@ -3294,6 +3893,21 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(eSeveralTargetEEnum, ESeveralTarget.OPERAND_TABLE);
 		addEEnumLiteral(eSeveralTargetEEnum, ESeveralTarget.OPERAND_RESULT);
 		addEEnumLiteral(eSeveralTargetEEnum, ESeveralTarget.TABLE_RESULT);
+
+		initEEnum(effectEEnum, Effect.class, "Effect");
+		addEEnumLiteral(effectEEnum, Effect.WIN);
+		addEEnumLiteral(effectEEnum, Effect.LOSE);
+		addEEnumLiteral(effectEEnum, Effect.PARTIAL_WIN);
+		addEEnumLiteral(effectEEnum, Effect.NONE);
+
+		initEEnum(abilityEEnum, Ability.class, "Ability");
+		addEEnumLiteral(abilityEEnum, Ability.MOVABLE);
+		addEEnumLiteral(abilityEEnum, Ability.TOUCHABLE);
+		addEEnumLiteral(abilityEEnum, Ability.PUSHABLE);
+		addEEnumLiteral(abilityEEnum, Ability.OPENABLE);
+		addEEnumLiteral(abilityEEnum, Ability.ROTABLE);
+		addEEnumLiteral(abilityEEnum, Ability.DETECTOR);
+		addEEnumLiteral(abilityEEnum, Ability.VERIFICATOR);
 
 		// Create resource
 		createResource(eNS_URI);

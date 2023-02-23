@@ -29,6 +29,10 @@ public class ALGAGenerator {
 		modelAccess = new ModelsManager(fileContext);
 	}
 	
+	public ALGAGenerator(String inputPath, String outputPath, String contextFileName) {
+		modelAccess = new ModelsManager(inputPath, outputPath, contextFileName);
+	}
+	
 	public void saveDungeon(String fileName) {
 		modelAccess.saveGeneratedModel(generatedDungeon, fileName);
 	}

@@ -362,5 +362,4 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 				&& Objects.equals(task, other.task);
 	}
 
-	
 } //ResultsByTaskImpl

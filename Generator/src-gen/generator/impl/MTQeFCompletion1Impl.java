@@ -158,7 +158,7 @@ public class MTQeFCompletion1Impl extends QuestionedFactImpl implements MTQeFCom
 		} else {
 			return getQuestionablefact().getQuestionableFact() + " | enter response";
 		}
-
+	
 	}*/
 
 	@Override

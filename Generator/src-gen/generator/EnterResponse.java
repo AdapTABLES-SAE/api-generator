@@ -28,7 +28,7 @@ public interface EnterResponse extends ResponseModality {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see generator.EModality
 	 * @see generator.GeneratorPackage#getEnterResponse_Type()
-	 * @model default="INPUT" changeable="false"
+	 * @model default="INPUT" transient="true" changeable="false"
 	 * @generated
 	 */
 	EModality getType();

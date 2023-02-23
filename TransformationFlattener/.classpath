@@ -6,17 +6,65 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="jars/org.antlr.runtime_3.1.b1_3.1.0.jar"/>
-	<classpathentry kind="lib" path="jars/org.eclipse.emf_2.6.0.v20170609-0928.jar"/>
-	<classpathentry kind="lib" path="jars/org.eclipse.emf.common_2.13.0.v20170609-0707.jar"/>
-	<classpathentry kind="lib" path="jars/org.eclipse.emf.ecore_2.13.0.v20170609-0707.jar"/>
-	<classpathentry kind="lib" path="jars/org.eclipse.epsilon.common_1.4.0.201611012202.jar"/>
-	<classpathentry kind="lib" path="jars/org.eclipse.epsilon.dependencies_1.4.0.201611012202.jar"/>
-	<classpathentry kind="lib" path="jars/org.eclipse.epsilon.emc.emf_1.4.0.201611012202.jar"/>
-	<classpathentry kind="lib" path="jars/org.eclipse.epsilon.eol.engine_1.4.0.201611012202.jar"/>
-	<classpathentry kind="lib" path="jars/org.eclipse.epsilon.erl.engine_1.4.0.201611012202.jar"/>
-	<classpathentry kind="lib" path="jars/org.eclipse.epsilon.etl.engine_1.4.0.201611012202.jar"/>
-	<classpathentry kind="lib" path="jars/org.eclipse.xsd_2.13.0.v20170609-0928.jar"/>
-	<classpathentry kind="lib" path="jars/org.eclipse.emf.ecore.xmi-2.16.0.jar"/>
+	<classpathentry kind="lib" path="jars/org.antlr.runtime_3.1.b1_3.1.0.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jars/org.eclipse.emf_2.6.0.v20170609-0928.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jars/org.eclipse.emf.common_2.13.0.v20170609-0707.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jars/org.eclipse.emf.ecore_2.13.0.v20170609-0707.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jars/org.eclipse.epsilon.common_1.4.0.201611012202.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jars/org.eclipse.epsilon.dependencies_1.4.0.201611012202.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jars/org.eclipse.epsilon.emc.emf_1.4.0.201611012202.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jars/org.eclipse.epsilon.eol.engine_1.4.0.201611012202.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jars/org.eclipse.epsilon.erl.engine_1.4.0.201611012202.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jars/org.eclipse.epsilon.etl.engine_1.4.0.201611012202.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jars/org.eclipse.xsd_2.13.0.v20170609-0928.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jars/org.eclipse.emf.ecore.xmi-2.16.0.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

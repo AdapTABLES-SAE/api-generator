@@ -32,11 +32,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link generator.impl.ATaskImpl#getNbConsecutiveSuccess <em>Nb Consecutive Success</em>}</li>
  *   <li>{@link generator.impl.ATaskImpl#getResponseModality <em>Response Modality</em>}</li>
  *   <li>{@link generator.impl.ATaskImpl#getID <em>ID</em>}</li>
+ *   <li>{@link generator.impl.ATaskImpl#getMaxTime <em>Max Time</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements ATask {
+
 	/**
 	 * The default value of the '{@link #getPercentOfApparition() <em>Percent Of Apparition</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -106,6 +108,35 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
+
+	/**
+	 * This is true if the ID attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean idESet;
+
+	/**
+	 * The default value of the '{@link #getMaxTime() <em>Max Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int MAX_TIME_EDEFAULT = 20;
+
+	/**
+	 * The cached value of the '{@link #getMaxTime() <em>Max Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected int maxTime = MAX_TIME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -237,8 +268,56 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	public void setID(String newID) {
 		String oldID = id;
 		id = newID;
+		boolean oldIDESet = idESet;
+		idESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ATASK__ID, oldID, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ATASK__ID, oldID, id, !oldIDESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetID() {
+		String oldID = id;
+		boolean oldIDESet = idESet;
+		id = ID_EDEFAULT;
+		idESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, GeneratorPackage.ATASK__ID, oldID, ID_EDEFAULT,
+					oldIDESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetID() {
+		return idESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getMaxTime() {
+		return maxTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMaxTime(int newMaxTime) {
+		int oldMaxTime = maxTime;
+		maxTime = newMaxTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ATASK__MAX_TIME, oldMaxTime,
+					maxTime));
 	}
 
 	/**
@@ -282,6 +361,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			return getResponseModality();
 		case GeneratorPackage.ATASK__ID:
 			return getID();
+		case GeneratorPackage.ATASK__MAX_TIME:
+			return getMaxTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -306,6 +387,9 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.ATASK__ID:
 			setID((String) newValue);
 			return;
+		case GeneratorPackage.ATASK__MAX_TIME:
+			setMaxTime((Integer) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -328,7 +412,10 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			setResponseModality((ResponseModality) null);
 			return;
 		case GeneratorPackage.ATASK__ID:
-			setID(ID_EDEFAULT);
+			unsetID();
+			return;
+		case GeneratorPackage.ATASK__MAX_TIME:
+			setMaxTime(MAX_TIME_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -349,7 +436,9 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.ATASK__RESPONSE_MODALITY:
 			return responseModality != null;
 		case GeneratorPackage.ATASK__ID:
-			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			return isSetID();
+		case GeneratorPackage.ATASK__MAX_TIME:
+			return maxTime != MAX_TIME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -384,7 +473,12 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 		result.append(", nbConsecutiveSuccess: ");
 		result.append(nbConsecutiveSuccess);
 		result.append(", ID: ");
-		result.append(id);
+		if (idESet)
+			result.append(id);
+		else
+			result.append("<unset>");
+		result.append(", maxTime: ");
+		result.append(maxTime);
 		result.append(')');
 		return result.toString();
 	}
