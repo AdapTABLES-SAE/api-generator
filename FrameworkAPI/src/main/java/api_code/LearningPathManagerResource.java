@@ -147,8 +147,8 @@ public class LearningPathManagerResource {
 			case "C2":
 				level.getTasks().add(createC2Task(jtask, idTask));
 				break;
-			case "REB":
-				level.getTasks().add(createREBTask(jtask, idTask));
+			case "REC":
+				level.getTasks().add(createRECTask(jtask, idTask));
 				break;
 			case "ID":
 				level.getTasks().add(createIDTask(jtask, idTask));
@@ -174,14 +174,15 @@ public class LearningPathManagerResource {
 		List<ESingleTarget> targets = new ArrayList<>();
 		for (Object jtarget : (JSONArray) jtask.get("targets")) {
 			String starget = (String) jtarget; 
-			targets.add(ESingleTarget.valueOf(starget));
+			if(starget.equals("FACTOR"))targets.add(ESingleTarget.OPERAND);
+			else targets.add(ESingleTarget.valueOf(starget));
 		}
 		task.getTargets().addAll(targets);
 		
 		if(((String) jtask.get("answerModality")).equals("CHOICE")) {
 			MultipleChoice modality = new MultipleChoiceImpl();
-			modality.setNbChoices((int)(long) jtask.get("nbChoices"));
-			modality.setNbBadChoices((int)(long) jtask.get("nbBadChoices"));	
+			modality.setNbChoices((int)(long) jtask.get("nbCorrectChoices") + (int)(long) jtask.get("nbIncorrectChoices"));
+			modality.setNbBadChoices((int)(long) jtask.get("nbIncorrectChoices"));	
 			task.setResponseModality(modality);
 		} else {
 			task.setResponseModality(new EnterResponseImpl());
@@ -208,14 +209,14 @@ public class LearningPathManagerResource {
 		task.getTargets().addAll(targets);
 		
 		MultipleChoice modality = new MultipleChoiceImpl();
-		modality.setNbChoices((int)(long) jtask.get("nbChoices"));
-		modality.setNbBadChoices((int)(long) jtask.get("nbBadChoices"));	
+		modality.setNbChoices((int)(long) jtask.get("nbCorrectChoices") + (int)(long) jtask.get("nbIncorrectChoices"));
+		modality.setNbBadChoices((int)(long) jtask.get("nbIncorrectChoices"));	
 		task.setResponseModality(modality);
 		
 		return task;
 	}
 	
-	private ATask createREBTask(JSONObject jtask, String taskID) {
+	private ATask createRECTask(JSONObject jtask, String taskID) {
 		MTRecontruction task = new MTRecontructionImpl();
 		task.setID(taskID);
 		
@@ -224,8 +225,8 @@ public class LearningPathManagerResource {
 		task.setNbConsecutiveSuccess((int)(long)jtask.get("successiveSuccessesToReach"));
 		
 		MultipleChoice modality = new MultipleChoiceImpl();
-		modality.setNbChoices((int)(long) jtask.get("nbChoices"));
-		modality.setNbBadChoices((int)(long) jtask.get("nbBadChoices"));	
+		modality.setNbChoices((int)(long) jtask.get("nbCorrectChoices") + (int)(long) jtask.get("nbIncorrectChoices"));
+		modality.setNbBadChoices((int)(long) jtask.get("nbIncorrectChoices"));	
 		task.setResponseModality(modality);
 		
 		return task;
@@ -265,8 +266,8 @@ public class LearningPathManagerResource {
 		}
 				
 		MultipleChoice modality = new MultipleChoiceImpl();
-		modality.setNbChoices((int)(long) jtask.get("nbChoices"));
-		modality.setNbBadChoices((int)(long) jtask.get("nbBadChoices"));	
+		modality.setNbChoices((int)(long) jtask.get("nbCorrectChoices") + (int)(long) jtask.get("nbIncorrectChoices"));
+		modality.setNbBadChoices((int)(long) jtask.get("nbIncorrectChoices"));	
 		task.setResponseModality(modality);
 		
 		return task;

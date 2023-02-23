@@ -742,23 +742,24 @@
   <learningpaths name="Just another test" ID="PATH404">
     <objectives ID="PATH404-O0">
       <levels xsi:type="generator:MTLevel" ID="PATH404" minInterval="1" maxInterval="10">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" nbConsecutiveSuccess="1" ID="PATH404-T1" maxTime="30">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" nbConsecutiveSuccess="1" ID="PATH404-T1" maxTime="30">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
+          <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="20" nbConsecutiveSuccess="1" ID="PATH404-T2" maxTime="30">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" nbConsecutiveSuccess="1" ID="PATH404-T2" maxTime="30">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
           <targets>OPERAND_RESULT</targets>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="PATH404-T3" maxTime="30">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
-        </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="PATH404-T4" maxTime="30" nbFacts="1" target="RESULT">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
-        </tasks>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="20" nbConsecutiveSuccess="1" ID="PATH404-T5" maxTime="30" checkIsTrue="true">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="15" nbConsecutiveSuccess="1" ID="PATH404-T3" maxTime="30">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
+        </tasks>
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="10" nbConsecutiveSuccess="1" ID="PATH404-T4" maxTime="30" nbFacts="1" target="RESULT">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
+        </tasks>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="PATH404-T5" maxTime="30" checkIsTrue="true">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
         </tasks>
       </levels>
       <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
