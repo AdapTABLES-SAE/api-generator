@@ -379,13 +379,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.QF_RESULTS: {
-			QFResults qfResults = (QFResults) theEObject;
-			T result = caseQFResults(qfResults);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case GeneratorPackage.MT_FACT: {
 			MTFact mtFact = (MTFact) theEObject;
 			T result = caseMTFact(mtFact);
@@ -624,6 +617,13 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		case GeneratorPackage.GAMEPLAYS: {
 			Gameplays gameplays = (Gameplays) theEObject;
 			T result = caseGameplays(gameplays);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.QUESTIONABLE_FACT_RESULT: {
+			QuestionableFactResult questionableFactResult = (QuestionableFactResult) theEObject;
+			T result = caseQuestionableFactResult(questionableFactResult);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1219,21 +1219,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>QF Results</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>QF Results</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseQFResults(QFResults object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>MT Fact</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1680,6 +1665,21 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGameplays(Gameplays object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Questionable Fact Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Questionable Fact Result</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQuestionableFactResult(QuestionableFactResult object) {
 		return null;
 	}
 

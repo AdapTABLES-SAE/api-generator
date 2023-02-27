@@ -163,6 +163,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayer/progression"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LearnerPlayer/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayer/learningpath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LearnerPlayer/ID"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Progression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Progression/currentobjectivelevels"/>
@@ -233,7 +234,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ResultsByTask/sucessPercent"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ResultsByTask/encountersPercent"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//QFResults"/>
     <genClasses ecoreClass="generator.ecore#//MTFact">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTFact/table"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTFact/op"/>
@@ -244,9 +244,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTResultFact/res"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//QuestionableFact">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionableFact/qfresults"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFact/achieved"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFact/wasSelected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFact/ID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionableFact/results"/>
       <genOperations ecoreOperation="generator.ecore#//QuestionableFact/getQuestionableFact"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTQFCompletion1">
@@ -358,6 +359,11 @@
     <genClasses ecoreClass="generator.ecore#//PositionedElement"/>
     <genClasses ecoreClass="generator.ecore#//Gameplays">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplays/gameplays"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//QuestionableFactResult">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFactResult/responseTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFactResult/answerValid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFactResult/givenAnswers"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

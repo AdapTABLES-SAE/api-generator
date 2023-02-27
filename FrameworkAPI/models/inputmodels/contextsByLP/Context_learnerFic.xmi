@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:GenerationContext xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator">
+  <gamecontext mode="LABYRINTHINE"/>
+  <learnerplayer name="Learner FICTIF" ID="learnerFic">
+    <progression>
+      <currentobjectivelevels achieved="false">
+        <objective href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1"/>
+        <level xsi:type="generator:MTLevel" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1"/>
+        <results>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T1"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT32" leftOperand="12" rightOperand="-1" result="72" soluce="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT40" leftOperand="12" rightOperand="-1" result="120" soluce="10" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT1" leftOperand="2" rightOperand="1" result="-1" soluce="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT9" leftOperand="2" rightOperand="5" result="-1" soluce="10" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT5" leftOperand="2" rightOperand="3" result="-1" soluce="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT17" leftOperand="2" rightOperand="9" result="-1" soluce="18" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT34" leftOperand="12" rightOperand="-1" result="84" soluce="7" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT36" leftOperand="12" rightOperand="-1" result="96" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT38" leftOperand="12" rightOperand="-1" result="108" soluce="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT13" leftOperand="2" rightOperand="7" result="-1" soluce="14" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT35" leftOperand="12" rightOperand="8" result="-1" soluce="96" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT29" leftOperand="12" rightOperand="5" result="-1" soluce="60" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT23" leftOperand="12" rightOperand="2" result="-1" soluce="24" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT12" leftOperand="2" rightOperand="-1" result="12" soluce="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT14" leftOperand="2" rightOperand="-1" result="14" soluce="7" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT16" leftOperand="2" rightOperand="-1" result="16" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT18" leftOperand="2" rightOperand="-1" result="18" soluce="9" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT22" leftOperand="12" rightOperand="-1" result="12" soluce="1" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT39" leftOperand="12" rightOperand="10" result="-1" soluce="120" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT33" leftOperand="12" rightOperand="7" result="-1" soluce="84" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT27" leftOperand="12" rightOperand="4" result="-1" soluce="48" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT21" leftOperand="12" rightOperand="1" result="-1" soluce="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT28" leftOperand="12" rightOperand="-1" result="48" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT4" leftOperand="2" rightOperand="-1" result="4" soluce="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT6" leftOperand="2" rightOperand="-1" result="6" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT8" leftOperand="2" rightOperand="-1" result="8" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT10" leftOperand="2" rightOperand="-1" result="10" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT20" leftOperand="2" rightOperand="-1" result="20" soluce="10" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT30" leftOperand="12" rightOperand="-1" result="60" soluce="5" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT3" leftOperand="2" rightOperand="2" result="-1" soluce="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT37" leftOperand="12" rightOperand="9" result="-1" soluce="108" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT31" leftOperand="12" rightOperand="6" result="-1" soluce="72" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT2" leftOperand="2" rightOperand="-1" result="2" soluce="1" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT25" leftOperand="12" rightOperand="3" result="-1" soluce="36" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT11" leftOperand="2" rightOperand="6" result="-1" soluce="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT7" leftOperand="2" rightOperand="4" result="-1" soluce="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT19" leftOperand="2" rightOperand="10" result="-1" soluce="20" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT26" leftOperand="12" rightOperand="-1" result="36" soluce="3" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT15" leftOperand="2" rightOperand="8" result="-1" soluce="16" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT24" leftOperand="12" rightOperand="-1" result="24" soluce="2" resultOnRight="true"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion2" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T2"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT33" leftOperand="12" rightOperand="-1" result="-1" soluceLeft="12" soluceRight="7" soluceRes="84" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT38" leftOperand="-1" rightOperand="-1" result="108" soluceLeft="12" soluceRight="9" soluceRes="108" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT21" leftOperand="12" rightOperand="-1" result="-1" soluceLeft="12" soluceRight="1" soluceRes="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT30" leftOperand="-1" rightOperand="-1" result="60" soluceLeft="12" soluceRight="5" soluceRes="60" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT1" leftOperand="2" rightOperand="-1" result="-1" soluceLeft="2" soluceRight="1" soluceRes="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT3" leftOperand="2" rightOperand="-1" result="-1" soluceLeft="2" soluceRight="2" soluceRes="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT12" leftOperand="-1" rightOperand="-1" result="12" soluceLeft="2" soluceRight="6" soluceRes="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT35" leftOperand="12" rightOperand="-1" result="-1" soluceLeft="12" soluceRight="8" soluceRes="96" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT5" leftOperand="2" rightOperand="-1" result="-1" soluceLeft="2" soluceRight="3" soluceRes="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT32" leftOperand="-1" rightOperand="-1" result="72" soluceLeft="12" soluceRight="6" soluceRes="72" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT7" leftOperand="2" rightOperand="-1" result="-1" soluceLeft="2" soluceRight="4" soluceRes="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT23" leftOperand="12" rightOperand="-1" result="-1" soluceLeft="12" soluceRight="2" soluceRes="24" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT10" leftOperand="-1" rightOperand="-1" result="10" soluceLeft="2" soluceRight="5" soluceRes="10" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT17" leftOperand="2" rightOperand="-1" result="-1" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT19" leftOperand="2" rightOperand="-1" result="-1" soluceLeft="2" soluceRight="10" soluceRes="20" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT9" leftOperand="2" rightOperand="-1" result="-1" soluceLeft="2" soluceRight="5" soluceRes="10" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT11" leftOperand="2" rightOperand="-1" result="-1" soluceLeft="2" soluceRight="6" soluceRes="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT13" leftOperand="2" rightOperand="-1" result="-1" soluceLeft="2" soluceRight="7" soluceRes="14" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT15" leftOperand="2" rightOperand="-1" result="-1" soluceLeft="2" soluceRight="8" soluceRes="16" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT28" leftOperand="-1" rightOperand="-1" result="48" soluceLeft="12" soluceRight="4" soluceRes="48" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT4" leftOperand="-1" rightOperand="-1" result="4" soluceLeft="2" soluceRight="2" soluceRes="4" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT14" leftOperand="-1" rightOperand="-1" result="14" soluceLeft="2" soluceRight="7" soluceRes="14" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT37" leftOperand="12" rightOperand="-1" result="-1" soluceLeft="12" soluceRight="9" soluceRes="108" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT24" leftOperand="-1" rightOperand="-1" result="24" soluceLeft="12" soluceRight="2" soluceRes="24" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT25" leftOperand="12" rightOperand="-1" result="-1" soluceLeft="12" soluceRight="3" soluceRes="36" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT8" leftOperand="-1" rightOperand="-1" result="8" soluceLeft="2" soluceRight="4" soluceRes="8" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT39" leftOperand="12" rightOperand="-1" result="-1" soluceLeft="12" soluceRight="10" soluceRes="120" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT27" leftOperand="12" rightOperand="-1" result="-1" soluceLeft="12" soluceRight="4" soluceRes="48" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT29" leftOperand="12" rightOperand="-1" result="-1" soluceLeft="12" soluceRight="5" soluceRes="60" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT2" leftOperand="-1" rightOperand="-1" result="2" soluceLeft="2" soluceRight="1" soluceRes="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT20" leftOperand="-1" rightOperand="-1" result="20" soluceLeft="2" soluceRight="10" soluceRes="20" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT36" leftOperand="-1" rightOperand="-1" result="96" soluceLeft="12" soluceRight="8" soluceRes="96" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT34" leftOperand="-1" rightOperand="-1" result="84" soluceLeft="12" soluceRight="7" soluceRes="84" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT16" leftOperand="-1" rightOperand="-1" result="16" soluceLeft="2" soluceRight="8" soluceRes="16" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT22" leftOperand="-1" rightOperand="-1" result="12" soluceLeft="12" soluceRight="1" soluceRes="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT40" leftOperand="-1" rightOperand="-1" result="120" soluceLeft="12" soluceRight="10" soluceRes="120" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT26" leftOperand="-1" rightOperand="-1" result="36" soluceLeft="12" soluceRight="3" soluceRes="36" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT6" leftOperand="-1" rightOperand="-1" result="6" soluceLeft="2" soluceRight="3" soluceRes="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT31" leftOperand="12" rightOperand="-1" result="-1" soluceLeft="12" soluceRight="6" soluceRes="72" resultOnRight="true"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTRecontruction" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT25" soluceLeft="12" soluceRes="36" resultOnRight="true" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT31" soluceLeft="12" soluceRes="72" resultOnRight="true" soluceRight="6"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT37" soluceLeft="12" soluceRes="108" resultOnRight="true" soluceRight="9"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT5" soluceLeft="2" soluceRes="6" resultOnRight="true" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT33" soluceLeft="12" soluceRes="84" resultOnRight="true" soluceRight="7"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT7" soluceLeft="2" soluceRes="8" resultOnRight="true" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT39" soluceLeft="12" soluceRes="120" resultOnRight="true" soluceRight="10"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT1" soluceLeft="2" soluceRes="2" resultOnRight="true" soluceRight="1"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT21" soluceLeft="12" soluceRes="12" resultOnRight="true" soluceRight="1"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT3" soluceLeft="2" soluceRes="4" resultOnRight="true" soluceRight="2"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT27" soluceLeft="12" soluceRes="48" resultOnRight="true" soluceRight="4"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT13" soluceLeft="2" soluceRes="14" resultOnRight="true" soluceRight="7"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT15" soluceLeft="2" soluceRes="16" resultOnRight="true" soluceRight="8"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT9" soluceLeft="2" soluceRes="10" resultOnRight="true" soluceRight="5"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT11" soluceLeft="2" soluceRes="12" resultOnRight="true" soluceRight="6"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT23" soluceLeft="12" soluceRes="24" resultOnRight="true" soluceRight="2"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT17" soluceLeft="2" soluceRes="18" resultOnRight="true" soluceRight="9"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT19" soluceLeft="2" soluceRes="20" resultOnRight="true" soluceRight="10"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT29" soluceLeft="12" soluceRes="60" resultOnRight="true" soluceRight="5"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT35" soluceLeft="12" soluceRes="96" resultOnRight="true" soluceRight="8"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT29" result="16" rightOperand="10" leftOperand="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT13" result="36" rightOperand="3" leftOperand="12" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT6" result="12" rightOperand="6" leftOperand="2" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT22" result="40" rightOperand="3" leftOperand="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT34" result="26" rightOperand="2" leftOperand="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT8" result="16" rightOperand="8" leftOperand="2" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT10" result="20" rightOperand="10" leftOperand="2" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT14" result="48" rightOperand="4" leftOperand="12" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT27" result="72" rightOperand="6" leftOperand="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT4" result="8" rightOperand="4" leftOperand="2" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT12" result="24" rightOperand="2" leftOperand="12" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT19" result="108" rightOperand="9" leftOperand="12" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT39" result="91" rightOperand="8" leftOperand="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT17" result="84" rightOperand="7" leftOperand="12" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT2" result="4" rightOperand="2" leftOperand="2" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT24" result="62" rightOperand="5" leftOperand="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT37" result="1" rightOperand="1" leftOperand="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT40" rightOperand="2" leftOperand="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT20" result="120" rightOperand="10" leftOperand="12" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT28" result="19" rightOperand="8" leftOperand="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT30" result="18" rightOperand="9" leftOperand="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT7" result="14" rightOperand="7" leftOperand="2" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT15" result="60" rightOperand="5" leftOperand="12" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT38" result="87" rightOperand="7" leftOperand="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT11" result="12" rightOperand="1" leftOperand="12" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT21" result="118" rightOperand="10" leftOperand="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT16" result="72" rightOperand="6" leftOperand="12" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT9" result="18" rightOperand="9" leftOperand="2" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT25" result="9" rightOperand="6" leftOperand="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT26" result="9" rightOperand="1" leftOperand="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT3" result="6" rightOperand="3" leftOperand="2" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT5" result="10" rightOperand="5" leftOperand="2" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT1" result="2" rightOperand="1" leftOperand="2" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT23" result="14" rightOperand="7" leftOperand="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT18" result="96" rightOperand="8" leftOperand="12" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT31" result="45" rightOperand="4" leftOperand="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT35" result="107" rightOperand="9" leftOperand="12" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT36" result="14" rightOperand="5" leftOperand="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT32" result="8" rightOperand="3" leftOperand="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT33" result="13" rightOperand="4" leftOperand="2" resultOnRight="true"/>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:MTMembership" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T5"/>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT7" table="12">
+              <goodResults>48</goodResults>
+              <goodResults>108</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT3" table="2">
+              <goodResults>20</goodResults>
+              <goodResults>18</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT5" table="2">
+              <goodResults>6</goodResults>
+              <goodResults>4</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT9" table="12">
+              <goodResults>60</goodResults>
+              <goodResults>36</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT10" table="12">
+              <goodResults>12</goodResults>
+              <goodResults>96</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT8" table="12">
+              <goodResults>84</goodResults>
+              <goodResults>120</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT1" table="2">
+              <goodResults>8</goodResults>
+              <goodResults>14</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT2" table="2">
+              <goodResults>12</goodResults>
+              <goodResults>2</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT4" table="2">
+              <goodResults>10</goodResults>
+              <goodResults>16</goodResults>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT6" table="12">
+              <goodResults>24</goodResults>
+              <goodResults>72</goodResults>
+            </questionableFacts>
+          </resultsbytask>
+        </results>
+      </currentobjectivelevels>
+      <currentGameLevel level="1"/>
+    </progression>
+    <learningpath href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404"/>
+  </learnerplayer>
+</generator:GenerationContext>

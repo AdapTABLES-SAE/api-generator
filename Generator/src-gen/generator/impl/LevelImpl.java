@@ -6,6 +6,7 @@ import generator.ATask;
 import generator.CompletionCriteria;
 import generator.GeneratorPackage;
 import generator.Level;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

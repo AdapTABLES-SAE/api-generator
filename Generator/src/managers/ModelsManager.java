@@ -70,7 +70,8 @@ public class ModelsManager {
 		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
-		
+		//Resource resource = resourceSet.createResource(URI.createURI( OUTPUT_MODELS_PATH + outFileName));
+
 		Resource resource = resourceSet.createResource(URI.createURI("file:///" + OUTPUT_MODELS_PATH + outFileName));
 		resource.getContents().add(generatedDungeon);
 		try {
@@ -124,6 +125,7 @@ public class ModelsManager {
 		return (LearningDomain) resource.getContents().get(0);		
 	}
 	
+	
 	public Knowledge loadKnowledgeModel() {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		GeneratorPackage.eINSTANCE.eClass();
@@ -151,8 +153,9 @@ public class ModelsManager {
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
 		//map.put(XMLResource.OPTION_ENCODING, "UTF-8");
-		
-		Resource resource = resourceSet.createResource(URI.createURI(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]));
+		System.out.println(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]);
+		Resource resource = resourceSet.createResource(URI.createURI("file:///" + INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]));
+		//Resource resource = resourceSet.createResource(URI.createURI(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]));
 		resource.getContents().add(context);
 		try {
 			resource.save(map);

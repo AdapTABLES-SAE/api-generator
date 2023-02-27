@@ -19,6 +19,8 @@ import managers.EducationElementsManager;
 public class MTCompletion1Generator {
 	
 	private EducationElementsManager eeManager;
+	private int factsCounter = 1; 
+	private String taskID;
 	
 	public MTCompletion1Generator(EducationElementsManager eeManager) {
 		this.eeManager = eeManager; 
@@ -26,6 +28,7 @@ public class MTCompletion1Generator {
 
 	public Set<QuestionableFact> generateQuestionableFacts(MTCompletion1 task) {
 		Set<QuestionableFact> questionableFacts = new HashSet<>();
+		taskID = task.getID();
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
@@ -76,7 +79,8 @@ public class MTCompletion1Generator {
 	
 	private MTQFCompletion1 buildQF(MTFact fact, ResultPosition resPos, TableBuild build, ESingleTarget target) {
 		MTQFCompletion1 qf = new MTQFCompletion1Impl(); 
-				
+		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
+		
 		if(build.equals(TableBuild.OPERAND_TABLE)) {
 			qf.setLeftOperand(fact.getOp());
 			qf.setRightOperand(fact.getTable());

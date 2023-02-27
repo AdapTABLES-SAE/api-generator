@@ -283,15 +283,6 @@ public interface GeneratorFactory extends EFactory {
 	ResultsByTask createResultsByTask();
 
 	/**
-	 * Returns a new object of class '<em>QF Results</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>QF Results</em>'.
-	 * @generated
-	 */
-	QFResults createQFResults();
-
-	/**
 	 * Returns a new object of class '<em>MT Fact</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -533,6 +524,15 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	Gameplays createGameplays();
+
+	/**
+	 * Returns a new object of class '<em>Questionable Fact Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Questionable Fact Result</em>'.
+	 * @generated
+	 */
+	QuestionableFactResult createQuestionableFactResult();
 
 	/**
 	 * Returns the package supported by this factory.

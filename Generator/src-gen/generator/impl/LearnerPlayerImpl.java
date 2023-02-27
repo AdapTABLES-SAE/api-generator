@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link generator.impl.LearnerPlayerImpl#getProgression <em>Progression</em>}</li>
  *   <li>{@link generator.impl.LearnerPlayerImpl#getName <em>Name</em>}</li>
  *   <li>{@link generator.impl.LearnerPlayerImpl#getLearningpath <em>Learningpath</em>}</li>
+ *   <li>{@link generator.impl.LearnerPlayerImpl#getID <em>ID</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,6 +72,35 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 	 * @ordered
 	 */
 	protected LearningPath learningpath;
+
+	/**
+	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getID() <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getID()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * This is true if the ID attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean idESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -208,6 +238,54 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getID() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setID(String newID) {
+		String oldID = id;
+		id = newID;
+		boolean oldIDESet = idESet;
+		idESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEARNER_PLAYER__ID, oldID, id,
+					!oldIDESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetID() {
+		String oldID = id;
+		boolean oldIDESet = idESet;
+		id = ID_EDEFAULT;
+		idESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, GeneratorPackage.LEARNER_PLAYER__ID, oldID,
+					ID_EDEFAULT, oldIDESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetID() {
+		return idESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -233,6 +311,8 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 			if (resolve)
 				return getLearningpath();
 			return basicGetLearningpath();
+		case GeneratorPackage.LEARNER_PLAYER__ID:
+			return getID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -253,6 +333,9 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 			return;
 		case GeneratorPackage.LEARNER_PLAYER__LEARNINGPATH:
 			setLearningpath((LearningPath) newValue);
+			return;
+		case GeneratorPackage.LEARNER_PLAYER__ID:
+			setID((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -275,6 +358,9 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 		case GeneratorPackage.LEARNER_PLAYER__LEARNINGPATH:
 			setLearningpath((LearningPath) null);
 			return;
+		case GeneratorPackage.LEARNER_PLAYER__ID:
+			unsetID();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -293,6 +379,8 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case GeneratorPackage.LEARNER_PLAYER__LEARNINGPATH:
 			return learningpath != null;
+		case GeneratorPackage.LEARNER_PLAYER__ID:
+			return isSetID();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -310,6 +398,11 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", ID: ");
+		if (idESet)
+			result.append(id);
+		else
+			result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

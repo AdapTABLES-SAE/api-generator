@@ -115,8 +115,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createResults();
 		case GeneratorPackage.RESULTS_BY_TASK:
 			return createResultsByTask();
-		case GeneratorPackage.QF_RESULTS:
-			return createQFResults();
 		case GeneratorPackage.MT_FACT:
 			return createMTFact();
 		case GeneratorPackage.MT_RESULT_FACT:
@@ -171,6 +169,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createPositionedElement();
 		case GeneratorPackage.GAMEPLAYS:
 			return createGameplays();
+		case GeneratorPackage.QUESTIONABLE_FACT_RESULT:
+			return createQuestionableFactResult();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -537,16 +537,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QFResults createQFResults() {
-		QFResultsImpl qfResults = new QFResultsImpl();
-		return qfResults;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public MTFact createMTFact() {
 		MTFactImpl mtFact = new MTFactImpl();
 		return mtFact;
@@ -810,6 +800,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public Gameplays createGameplays() {
 		GameplaysImpl gameplays = new GameplaysImpl();
 		return gameplays;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QuestionableFactResult createQuestionableFactResult() {
+		QuestionableFactResultImpl questionableFactResult = new QuestionableFactResultImpl();
+		return questionableFactResult;
 	}
 
 	/**

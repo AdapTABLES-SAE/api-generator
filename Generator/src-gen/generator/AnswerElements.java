@@ -19,7 +19,6 @@ package generator;
  * @generated
  */
 public interface AnswerElements extends CoreGPElement {
-
 	/**
 	 * Returns the value of the '<em><b>Single Answer</b></em>' attribute.
 	 * The default value is <code>"true"</code>.
@@ -42,4 +41,5 @@ public interface AnswerElements extends CoreGPElement {
 	 * @generated
 	 */
 	void setSingleAnswer(boolean value);
+
 } // AnswerElements

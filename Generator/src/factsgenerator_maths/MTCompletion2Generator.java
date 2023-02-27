@@ -16,7 +16,10 @@ import generator.impl.MTQFCompletion2Impl;
 import managers.EducationElementsManager;
 
 public class MTCompletion2Generator {
-private EducationElementsManager eeManager;
+	
+	private EducationElementsManager eeManager;
+	private int factsCounter = 1; 
+	private String taskID;
 	
 	public MTCompletion2Generator(EducationElementsManager eeManager) {
 		this.eeManager = eeManager; 
@@ -24,6 +27,7 @@ private EducationElementsManager eeManager;
 
 	public Set<MTQFCompletion2> generateQuestionableFacts(MTCompletion2 task) {
 		HashSet<MTQFCompletion2> questionableFacts = new HashSet<>();
+		taskID = task.getID();
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
@@ -51,7 +55,7 @@ private EducationElementsManager eeManager;
 	
 	private Set<MTQFCompletion2> generateQuestionableFactsOf(MTCompletion2 task, MTFact fact){
 		HashSet<MTQFCompletion2> qfs = new HashSet<>(); 
-		
+				
 		TableBuild build = ((MTLevel) eeManager.getLevel()).getBuildSetup();
 		ResultPosition equalPos = ((MTLevel) eeManager.getLevel()).getResultPositionSetup();
 		
@@ -81,7 +85,8 @@ private EducationElementsManager eeManager;
 	
 	private MTQFCompletion2 buildQF(MTFact fact, ResultPosition resPos, TableBuild build, ESeveralTarget target) {
 		MTQFCompletion2 qf = new MTQFCompletion2Impl(); 
-				
+		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
+		
 		if(build.equals(TableBuild.OPERAND_TABLE)) {
 			qf.setSoluceLeft(fact.getOp());
 			qf.setSoluceRight(fact.getTable());

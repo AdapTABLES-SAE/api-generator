@@ -8,7 +8,6 @@ import generator.QuestionableFact;
 import generator.ResultsByTask;
 
 import java.util.Collection;
-import java.util.Objects;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -340,26 +339,6 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 		result.append(encountersPercent);
 		result.append(')');
 		return result.toString();
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(encountersPercent, questionableFacts, sucessPercent, task);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ResultsByTaskImpl other = (ResultsByTaskImpl) obj;
-		return Double.doubleToLongBits(encountersPercent) == Double.doubleToLongBits(other.encountersPercent)
-				&& Objects.equals(questionableFacts, other.questionableFacts)
-				&& Double.doubleToLongBits(sucessPercent) == Double.doubleToLongBits(other.sucessPercent)
-				&& Objects.equals(task, other.task);
 	}
 
 } //ResultsByTaskImpl

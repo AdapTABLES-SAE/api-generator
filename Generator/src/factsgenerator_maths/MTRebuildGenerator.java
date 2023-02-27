@@ -17,6 +17,8 @@ import managers.EducationElementsManager;
 public class MTRebuildGenerator {
 
 	private EducationElementsManager eeManager;
+	private int factsCounter = 1; 
+	private String taskID;
 	
 	public MTRebuildGenerator(EducationElementsManager eeManager) {
 		this.eeManager = eeManager; 
@@ -24,6 +26,7 @@ public class MTRebuildGenerator {
 	
 	public Set<MTQFRebuild> generateQuestionableFacts(MTRecontruction task) {
 		HashSet<MTQFRebuild> questionableFacts = new HashSet<>();
+		taskID = task.getID();
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
@@ -67,6 +70,7 @@ public class MTRebuildGenerator {
 	
 	private MTQFRebuild buildQF(MTFact fact, ResultPosition resPos, TableBuild build) {
 		MTQFRebuild qf = new MTQFRebuildImpl(); 
+		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		
 		if(build.equals(TableBuild.OPERAND_TABLE)) {
 			qf.setSoluceLeft(fact.getOp());

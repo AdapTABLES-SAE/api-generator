@@ -38,7 +38,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements ATask {
-
 	/**
 	 * The default value of the '{@link #getPercentOfApparition() <em>Percent Of Apparition</em>}' attribute.
 	 * <!-- begin-user-doc -->

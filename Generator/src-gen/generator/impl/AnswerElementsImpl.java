@@ -6,7 +6,9 @@ import generator.AnswerElements;
 import generator.GeneratorPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -32,6 +34,7 @@ public class AnswerElementsImpl extends CoreGPElementImpl implements AnswerEleme
 	 * @ordered
 	 */
 	protected static final boolean SINGLE_ANSWER_EDEFAULT = true;
+
 	/**
 	 * The cached value of the '{@link #isSingleAnswer() <em>Single Answer</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -3,7 +3,6 @@
 package generator;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,9 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.QuestionableFact#getQfresults <em>Qfresults</em>}</li>
  *   <li>{@link generator.QuestionableFact#isAchieved <em>Achieved</em>}</li>
  *   <li>{@link generator.QuestionableFact#isWasSelected <em>Was Selected</em>}</li>
+ *   <li>{@link generator.QuestionableFact#getID <em>ID</em>}</li>
+ *   <li>{@link generator.QuestionableFact#getResults <em>Results</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getQuestionableFact()
@@ -25,18 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface QuestionableFact extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Qfresults</b></em>' containment reference list.
-	 * The list contents are of type {@link generator.QFResults}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Qfresults</em>' containment reference list.
-	 * @see generator.GeneratorPackage#getQuestionableFact_Qfresults()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<QFResults> getQfresults();
-
 	/**
 	 * Returns the value of the '<em><b>Achieved</b></em>' attribute.
 	 * The default value is <code>"false"</code>.
@@ -82,6 +70,67 @@ public interface QuestionableFact extends EObject {
 	 * @generated
 	 */
 	void setWasSelected(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>ID</em>' attribute.
+	 * @see #isSetID()
+	 * @see #unsetID()
+	 * @see #setID(String)
+	 * @see generator.GeneratorPackage#getQuestionableFact_ID()
+	 * @model unsettable="true" id="true"
+	 * @generated
+	 */
+	String getID();
+
+	/**
+	 * Sets the value of the '{@link generator.QuestionableFact#getID <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ID</em>' attribute.
+	 * @see #isSetID()
+	 * @see #unsetID()
+	 * @see #getID()
+	 * @generated
+	 */
+	void setID(String value);
+
+	/**
+	 * Unsets the value of the '{@link generator.QuestionableFact#getID <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetID()
+	 * @see #getID()
+	 * @see #setID(String)
+	 * @generated
+	 */
+	void unsetID();
+
+	/**
+	 * Returns whether the value of the '{@link generator.QuestionableFact#getID <em>ID</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>ID</em>' attribute is set.
+	 * @see #unsetID()
+	 * @see #getID()
+	 * @see #setID(String)
+	 * @generated
+	 */
+	boolean isSetID();
+
+	/**
+	 * Returns the value of the '<em><b>Results</b></em>' containment reference list.
+	 * The list contents are of type {@link generator.QuestionableFactResult}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Results</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getQuestionableFact_Results()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<QuestionableFactResult> getResults();
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -131,9 +131,10 @@ public class EducationElementsManager {
 	}
 	
 	public void instanciateQFbyTasks() {
-		if(learnerPlayer.getProgression() == null) {
+		/*if(learnerPlayer.getProgression() == null) {
 			learnerPlayer.setProgression(new ProgressionImpl());
-		}
+		}*/
+		System.out.println("chosen OBJLVL "+ chosenObjectiveLevel.getLevel().getID()+" "+chosenObjectiveLevel.getObjective().getID());
 		if(!learnerPlayer.getProgression().getCurrentobjectivelevels().contains(chosenObjectiveLevel)) {
 			learnerPlayer.getProgression().getCurrentobjectivelevels().add(this.chosenObjectiveLevel);
 		}

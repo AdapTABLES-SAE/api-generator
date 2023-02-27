@@ -262,11 +262,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseQFResults(QFResults object) {
-			return createQFResultsAdapter();
-		}
-
-		@Override
 		public Adapter caseMTFact(MTFact object) {
 			return createMTFactAdapter();
 		}
@@ -414,6 +409,11 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseGameplays(Gameplays object) {
 			return createGameplaysAdapter();
+		}
+
+		@Override
+		public Adapter caseQuestionableFactResult(QuestionableFactResult object) {
+			return createQuestionableFactResultAdapter();
 		}
 
 		@Override
@@ -982,20 +982,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.QFResults <em>QF Results</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.QFResults
-	 * @generated
-	 */
-	public Adapter createQFResultsAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link generator.MTFact <em>MT Fact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1412,6 +1398,20 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGameplaysAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.QuestionableFactResult <em>Questionable Fact Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.QuestionableFactResult
+	 * @generated
+	 */
+	public Adapter createQuestionableFactResultAdapter() {
 		return null;
 	}
 

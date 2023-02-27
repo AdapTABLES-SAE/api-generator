@@ -12,9 +12,7 @@ import generator.Level;
 import generator.Objective;
 import generator.Prerequisite;
 import generator.ResultsByTask;
-import generator.impl.CurrentGameLevelImpl;
 import generator.impl.CurrentObjectiveLevelImpl;
-import generator.impl.ProgressionImpl;
 import managers.EducationElementsManager;
 import managers.ModelsManager;
 
@@ -37,10 +35,6 @@ public class EducationalElementsGenerator {
 	}
 	
 	public EducationElementsManager generateEE() throws Exception {
-		if(learnerPlayer.getProgression() == null) {
-			learnerPlayer.setProgression(new ProgressionImpl());
-			learnerPlayer.getProgression().setCurrentGameLevel(new CurrentGameLevelImpl());
-		}
 		selectObjectiveLevel();	
 		System.out.println("Selected Objective/Level "+eeManager.getObjective().getName()+" "+eeManager.getLevel().getID());
 		generateQuestionnableFacts();

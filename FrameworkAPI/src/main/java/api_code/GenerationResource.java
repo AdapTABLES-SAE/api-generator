@@ -51,6 +51,10 @@ public class GenerationResource {
 		return sb.toString();
 	}
 	
+	/***********************************/
+	/**          JOB METHODS          **/
+	/***********************************/
+	
 	private void generateDungeon(String learnerPlayerID) {
 		System.out.println(INPUT_MODELS_PATH);
 		ALGAGenerator generator = new ALGAGenerator(INPUT_MODELS_PATH, OUTPUT_MODELS_PATH, CONTEXTS_FILES_PATHS + learnerPlayerID + ".xmi");

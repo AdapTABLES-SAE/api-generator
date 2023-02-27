@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.LearnerPlayer#getProgression <em>Progression</em>}</li>
  *   <li>{@link generator.LearnerPlayer#getName <em>Name</em>}</li>
  *   <li>{@link generator.LearnerPlayer#getLearningpath <em>Learningpath</em>}</li>
+ *   <li>{@link generator.LearnerPlayer#getID <em>ID</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getLearnerPlayer()
@@ -88,5 +89,54 @@ public interface LearnerPlayer extends EObject {
 	 * @generated
 	 */
 	void setLearningpath(LearningPath value);
+
+	/**
+	 * Returns the value of the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>ID</em>' attribute.
+	 * @see #isSetID()
+	 * @see #unsetID()
+	 * @see #setID(String)
+	 * @see generator.GeneratorPackage#getLearnerPlayer_ID()
+	 * @model unsettable="true" id="true"
+	 * @generated
+	 */
+	String getID();
+
+	/**
+	 * Sets the value of the '{@link generator.LearnerPlayer#getID <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ID</em>' attribute.
+	 * @see #isSetID()
+	 * @see #unsetID()
+	 * @see #getID()
+	 * @generated
+	 */
+	void setID(String value);
+
+	/**
+	 * Unsets the value of the '{@link generator.LearnerPlayer#getID <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetID()
+	 * @see #getID()
+	 * @see #setID(String)
+	 * @generated
+	 */
+	void unsetID();
+
+	/**
+	 * Returns whether the value of the '{@link generator.LearnerPlayer#getID <em>ID</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>ID</em>' attribute is set.
+	 * @see #unsetID()
+	 * @see #getID()
+	 * @see #setID(String)
+	 * @generated
+	 */
+	boolean isSetID();
 
 } // LearnerPlayer

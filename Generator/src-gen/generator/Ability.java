@@ -67,19 +67,21 @@ public enum Ability implements Enumerator {
 	 * @ordered
 	 */
 	ROTABLE(4, "ROTABLE", "ROTABLE"),
+
 	/**
 	 * The '<em><b>DETECTOR</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #DETECTOR_VALUE
 	 * @generated
 	 * @ordered
 	 */
 	DETECTOR(5, "DETECTOR", "DETECTOR"),
+
 	/**
 	 * The '<em><b>VERIFICATOR</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #VERIFICATOR_VALUE
 	 * @generated
 	 * @ordered

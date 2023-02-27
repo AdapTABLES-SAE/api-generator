@@ -5,6 +5,8 @@ import generator.LevelsDifficultyProgress;
 import generator.QuestionedFact;
 import generator.Room;
 import generator.RoomAccess;
+import generator.impl.CurrentGameLevelImpl;
+import generator.impl.ProgressionImpl;
 import managers.EducationElementsManager;
 import managers.ModelsManager;
 
@@ -41,8 +43,18 @@ public class ALGAGenerator {
 		modelAccess.saveGeneratedModel(dungeon, fileName);
 	}
 	
+	private void checkLearnerPlayerSetProgression() {
+		if(modelAccess.context.getLearnerplayer().getProgression() == null) {
+			modelAccess.context.getLearnerplayer().setProgression(new ProgressionImpl());
+			modelAccess.context.getLearnerplayer().getProgression().setCurrentGameLevel(new CurrentGameLevelImpl());
+		}
+	}
+	
 	public Dungeon generate() {
 		LevelsDifficultyProgress gameDifficulty = modelAccess.gameDescription.getLevelsDifficultyProgress();
+
+		checkLearnerPlayerSetProgression();
+		
 		double nbQRooms = gameDifficulty.getInitNbQRoom() + gameDifficulty.getNbQRoomIncrease() * (modelAccess.context.getLearnerplayer().getProgression().getCurrentGameLevel().getLevel() - 1);
 		double nbNQRooms = gameDifficulty.getInitNbNQRoom() + gameDifficulty.getNbNQRoomIncrease() * (modelAccess.context.getLearnerplayer().getProgression().getCurrentGameLevel().getLevel() - 1);
 		

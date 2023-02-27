@@ -46,7 +46,6 @@ import managers.ModelsManager;
 public class LearningPathManagerResource {
 	
 	private static final String WORKSPACE_PATH = "C:/blemoine/TheseGenerator/gen1/FrameworkAPI/";
-
 	private static final String INPUT_MODELS_PATH = WORKSPACE_PATH + "models/inputmodels/";
 	private static final String OUTPUT_MODELS_PATH = WORKSPACE_PATH + "models/";
 	
@@ -68,6 +67,10 @@ public class LearningPathManagerResource {
 		return obj.toString();
 	}
 	
+	/***********************************/
+	/**          JOB METHODS          **/
+	/***********************************/
+	
 	private void updateOrCreateLP(JSONObject json) {
 		String pathName = (String) json.get("learningPathID");
 		LearningDomain paths = modelsManager.loadDomainModel();
@@ -83,7 +86,7 @@ public class LearningPathManagerResource {
 		
 		
 		Objective obj = getCorrespondingObjective(aPath, knowledge, json);
-		addLevelToObjective(obj, pathName, json);
+		addLevelToObjective(obj, json);
 		// si il existe pas : le creer 
 		// sinon ouvrir le path 
 		// ajouter un objectif niveau 
@@ -111,12 +114,10 @@ public class LearningPathManagerResource {
 		return buildingParams;
 	}
 	
-	private void addLevelToObjective(Objective obj, String levelName, JSONObject json) {
+	private void addLevelToObjective(Objective obj,  JSONObject json) {
 		JSONObject buildingParams = getBuildSetupJSON(json);
+		String levelName = obj.getID()+"-L"+(obj.getLevels().size() + 1);
 		
-		if(levelName.isEmpty()) {
-			levelName = obj.getID()+"-L"+obj.getLevels().size();
-		} 
 		MTLevel level = new MTLevelImpl();
 		level.setID(levelName);
 		
@@ -277,9 +278,11 @@ public class LearningPathManagerResource {
 	private Objective getCorrespondingObjective(LearningPath learningPath, Knowledge knowledge, JSONObject json) {
 		Objective obj = new ObjectiveImpl();
 		String objID = (String) json.get("objective");
+		System.out.println(objID);
 		if(objID.isEmpty()) {
-			int nbObjs = learningPath.getObjectives().size();
+			int nbObjs = learningPath.getObjectives().size() + 1;
 			obj.setID(learningPath.getID()+"-O"+nbObjs);
+			obj.setName(obj.getID());
 		} else {
 			for (Objective objective : learningPath.getObjectives()) {
 				if(objective.getID().equals(objID)) {

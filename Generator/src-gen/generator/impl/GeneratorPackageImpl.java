@@ -67,9 +67,9 @@ import generator.Position;
 import generator.PositionedElement;
 import generator.Prerequisite;
 import generator.Progression;
-import generator.QFResults;
 import generator.QuantifiedElementsByAbility;
 import generator.QuestionableFact;
+import generator.QuestionableFactResult;
 import generator.QuestionedFact;
 import generator.ReconstructionTask;
 import generator.ResponseModality;
@@ -83,8 +83,8 @@ import generator.RoomTypes;
 import generator.SetOfFacts;
 import generator.SmallRoomType;
 import generator.TableBuild;
-
 import generator.UniqueAnswerElement;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -381,13 +381,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass qfResultsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass mtFactEClass = null;
 
 	/**
@@ -592,6 +585,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass gameplaysEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass questionableFactResultEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1374,6 +1374,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getLearnerPlayer_ID() {
+		return (EAttribute) learnerPlayerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getProgression() {
 		return progressionEClass;
 	}
@@ -1851,15 +1860,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getQFResults() {
-		return qfResultsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMTFact() {
 		return mtFactEClass;
 	}
@@ -1932,17 +1932,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getQuestionableFact_Qfresults() {
-		return (EReference) questionableFactEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getQuestionableFact_Achieved() {
-		return (EAttribute) questionableFactEClass.getEStructuralFeatures().get(1);
+		return (EAttribute) questionableFactEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1951,7 +1942,25 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EAttribute getQuestionableFact_WasSelected() {
+		return (EAttribute) questionableFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestionableFact_ID() {
 		return (EAttribute) questionableFactEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQuestionableFact_Results() {
+		return (EReference) questionableFactEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2742,6 +2751,42 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getQuestionableFactResult() {
+		return questionableFactResultEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestionableFactResult_ResponseTime() {
+		return (EAttribute) questionableFactResultEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestionableFactResult_AnswerValid() {
+		return (EAttribute) questionableFactResultEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestionableFactResult_GivenAnswers() {
+		return (EAttribute) questionableFactResultEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDirections() {
 		return directionsEEnum;
 	}
@@ -2946,6 +2991,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(learnerPlayerEClass, LEARNER_PLAYER__PROGRESSION);
 		createEAttribute(learnerPlayerEClass, LEARNER_PLAYER__NAME);
 		createEReference(learnerPlayerEClass, LEARNER_PLAYER__LEARNINGPATH);
+		createEAttribute(learnerPlayerEClass, LEARNER_PLAYER__ID);
 
 		progressionEClass = createEClass(PROGRESSION);
 		createEReference(progressionEClass, PROGRESSION__CURRENTOBJECTIVELEVELS);
@@ -3019,8 +3065,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(resultsByTaskEClass, RESULTS_BY_TASK__SUCESS_PERCENT);
 		createEAttribute(resultsByTaskEClass, RESULTS_BY_TASK__ENCOUNTERS_PERCENT);
 
-		qfResultsEClass = createEClass(QF_RESULTS);
-
 		mtFactEClass = createEClass(MT_FACT);
 		createEAttribute(mtFactEClass, MT_FACT__TABLE);
 		createEAttribute(mtFactEClass, MT_FACT__OP);
@@ -3031,9 +3075,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(mtResultFactEClass, MT_RESULT_FACT__RES);
 
 		questionableFactEClass = createEClass(QUESTIONABLE_FACT);
-		createEReference(questionableFactEClass, QUESTIONABLE_FACT__QFRESULTS);
 		createEAttribute(questionableFactEClass, QUESTIONABLE_FACT__ACHIEVED);
 		createEAttribute(questionableFactEClass, QUESTIONABLE_FACT__WAS_SELECTED);
+		createEAttribute(questionableFactEClass, QUESTIONABLE_FACT__ID);
+		createEReference(questionableFactEClass, QUESTIONABLE_FACT__RESULTS);
 		createEOperation(questionableFactEClass, QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT);
 
 		mtqfCompletion1EClass = createEClass(MTQF_COMPLETION1);
@@ -3148,6 +3193,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		gameplaysEClass = createEClass(GAMEPLAYS);
 		createEReference(gameplaysEClass, GAMEPLAYS__GAMEPLAYS);
+
+		questionableFactResultEClass = createEClass(QUESTIONABLE_FACT_RESULT);
+		createEAttribute(questionableFactResultEClass, QUESTIONABLE_FACT_RESULT__RESPONSE_TIME);
+		createEAttribute(questionableFactResultEClass, QUESTIONABLE_FACT_RESULT__ANSWER_VALID);
+		createEAttribute(questionableFactResultEClass, QUESTIONABLE_FACT_RESULT__GIVEN_ANSWERS);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -3417,6 +3467,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getLearnerPlayer_Learningpath(), this.getLearningPath(), null, "learningpath", null, 1, 1,
 				LearnerPlayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLearnerPlayer_ID(), ecorePackage.getEString(), "ID", null, 0, 1, LearnerPlayer.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(progressionEClass, Progression.class, "Progression", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -3567,9 +3619,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				ResultsByTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				IS_DERIVED, IS_ORDERED);
 
-		initEClass(qfResultsEClass, QFResults.class, "QFResults", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(mtFactEClass, MTFact.class, "MTFact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMTFact_Table(), ecorePackage.getEInt(), "table", null, 0, 1, MTFact.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3587,15 +3636,17 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(questionableFactEClass, QuestionableFact.class, "QuestionableFact", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getQuestionableFact_Qfresults(), this.getQFResults(), null, "qfresults", null, 0, -1,
-				QuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuestionableFact_Achieved(), ecorePackage.getEBoolean(), "achieved", "false", 0, 1,
 				QuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuestionableFact_WasSelected(), ecorePackage.getEBoolean(), "wasSelected", "false", 0, 1,
 				QuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestionableFact_ID(), ecorePackage.getEString(), "ID", null, 0, 1, QuestionableFact.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQuestionableFact_Results(), this.getQuestionableFactResult(), null, "results", null, 0, -1,
+				QuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getQuestionableFact__GetQuestionableFact(), ecorePackage.getEString(), "getQuestionableFact", 0,
 				1, IS_UNIQUE, IS_ORDERED);
@@ -3841,6 +3892,18 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGameplays_Gameplays(), this.getGameplay(), null, "gameplays", null, 0, -1, Gameplays.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(questionableFactResultEClass, QuestionableFactResult.class, "QuestionableFactResult", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getQuestionableFactResult_ResponseTime(), ecorePackage.getEInt(), "responseTime", null, 0, 1,
+				QuestionableFactResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestionableFactResult_AnswerValid(), ecorePackage.getEBoolean(), "answerValid", null, 0, 1,
+				QuestionableFactResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestionableFactResult_GivenAnswers(), ecorePackage.getEString(), "givenAnswers", null, 0, -1,
+				QuestionableFactResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals

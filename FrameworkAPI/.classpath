@@ -20,5 +20,9 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/blemoine/TheseGenerator/org.eclipse.emf_2.6.0.v20170609-0928.jar"/>
+	<classpathentry kind="lib" path="C:/blemoine/TheseGenerator/org.eclipse.emf.ecore.xmi_2.13.0.v20170609-0707.jar"/>
+	<classpathentry kind="lib" path="C:/blemoine/TheseGenerator/org.eclipse.emf.ecore.xmi-2.16.0.jar"/>
+	<classpathentry kind="lib" path="C:/blemoine/TheseGenerator/org.eclipse.emf.ecore_2.13.0.v20170609-0707.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

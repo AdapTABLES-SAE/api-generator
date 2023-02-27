@@ -24,6 +24,8 @@ public class MTIdentificationGenerator {
 	private final int[] buildFalseInteraval = {5,5};
 	private List<Integer> alreadyUsed; 
 	private Random rand;
+	private int factsCounter = 1; 
+	private String taskID;
 	
 	public MTIdentificationGenerator(EducationElementsManager eeManager) {
 		this.eeManager = eeManager; 
@@ -33,6 +35,7 @@ public class MTIdentificationGenerator {
 	
 	public Set<MTQFIdentification> generateQuestionableFacts(MTIdentification task) {
 		Set<MTQFIdentification> questionableFacts = new HashSet<>();
+		taskID = task.getID();
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
@@ -94,6 +97,7 @@ public class MTIdentificationGenerator {
 	
 	private MTQFIdentification buildBadQF(MTQFIdentification goodFact, ESingleTarget target) { 
 		MTQFIdentification qf = new MTQFIdentificationImpl(); 
+		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		
 		int min, max, chosenFalse = -1;
 		int solution = -1;
@@ -137,6 +141,7 @@ public class MTIdentificationGenerator {
 	
 	private MTQFIdentification buildQF(MTFact fact, TableBuild build, ResultPosition equalPos) { 
 		MTQFIdentification qf = new MTQFIdentificationImpl(); 
+		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		
 		if(build.equals(TableBuild.OPERAND_TABLE)) {
 			qf.setLeftOperand(fact.getOp());

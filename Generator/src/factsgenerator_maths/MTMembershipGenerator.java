@@ -19,6 +19,8 @@ import structures.Shuffle;
 public class MTMembershipGenerator {
 	
 	private EducationElementsManager eeManager;
+	private int factsCounter = 1; 
+	private String taskID;
 	
 	public MTMembershipGenerator(EducationElementsManager eeManager) {
 		this.eeManager = eeManager; 
@@ -26,6 +28,7 @@ public class MTMembershipGenerator {
 	
 	public Set<MTQFMembership> generateQuestionableFacts(MTMembership task) {
 		HashSet<MTQFMembership> questionableFacts = new HashSet<>();
+		taskID = task.getID();
 		
 		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
 		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
@@ -69,6 +72,8 @@ public class MTMembershipGenerator {
 	
 	private MTQFMembership buildQF(List<MTResultFact> facts) {
 		MTQFMembership qf = new MTQFMembershipImpl(); 
+		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
+		
 		for (MTResultFact mtResultFact : facts) {
 			qf.getGoodResults().add(mtResultFact.getRes());
 		}
