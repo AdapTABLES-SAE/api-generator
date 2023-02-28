@@ -81,19 +81,11 @@ public class LearningPathManagerResource {
 			aPath.setKnowledge(knowledge);
 			aPath.setName("Just another test");
 		} 
-		
-		
-		
-		
 		Objective obj = getCorrespondingObjective(aPath, knowledge, json);
 		addLevelToObjective(obj, json);
-		// si il existe pas : le creer 
-		// sinon ouvrir le path 
-		// ajouter un objectif niveau 
 		aPath.getObjectives().add(obj);
 		paths.getLearningpaths().add(aPath);
 		modelsManager.saveDomainModel(paths);
-		
 	}
 	
 	private List<JSONObject> getJSONTasks(JSONObject json){

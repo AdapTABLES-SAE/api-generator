@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" entry="//@rooms.0">
+  <rooms>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.1/@roomaccess.0"/>
+    <roomaccess otherroomaccess="//@rooms.2/@roomaccess.2"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.2"/>
+  </rooms>
+  <rooms x="1" y="-1">
+    <roomaccess direction="WEST_NORTH" otherroomaccess="//@rooms.0/@roomaccess.0"/>
+    <roomaccess direction="WEST_SOUTH" otherroomaccess="//@rooms.2/@roomaccess.0"/>
+    <roomaccess direction="SOUTH_WEST" otherroomaccess="//@rooms.3/@roomaccess.2"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <questionedFacts xsi:type="generator:MTQeFCompletion2" questionText="? x ? = 20 (2x10=20) | choices = {2,10,4,19}">
+      <questionablefact xsi:type="generator:MTQFCompletion2" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/contextsByLP/Context_learnerFic2.xmi#PATH404-O1-L1-T2-QAFACT20"/>
+      <propositions>2</propositions>
+      <propositions>10</propositions>
+      <propositions>4</propositions>
+      <propositions>19</propositions>
+    </questionedFacts>
+    <task xsi:type="generator:MTCompletion2" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T2"/>
+  </rooms>
+  <rooms x="-1" y="-2">
+    <roomaccess direction="EAST_NORTH" otherroomaccess="//@rooms.1/@roomaccess.1"/>
+    <roomaccess direction="EAST_SOUTH" otherroomaccess="//@rooms.3/@roomaccess.0"/>
+    <roomaccess direction="NORTH_EAST" otherroomaccess="//@rooms.0/@roomaccess.1"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <questionedFacts xsi:type="generator:MTQeFCompletion1" questionText="2 x ? = 2 (1) | choices = {1,6,7}">
+      <questionablefact xsi:type="generator:MTQFCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/contextsByLP/Context_learnerFic2.xmi#PATH404-O1-L1-T1-QAFACT2"/>
+      <propositions>1</propositions>
+      <propositions>6</propositions>
+      <propositions>7</propositions>
+    </questionedFacts>
+    <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T1"/>
+  </rooms>
+  <rooms x="1" y="-3">
+    <roomaccess direction="WEST_NORTH" otherroomaccess="//@rooms.2/@roomaccess.1"/>
+    <roomaccess direction="SOUTH_WEST" otherroomaccess="//@rooms.4/@roomaccess.0"/>
+    <roomaccess direction="NORTH_WEST" otherroomaccess="//@rooms.1/@roomaccess.2"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <questionedFacts xsi:type="generator:MTQeFRebuild" questionText="? x ? = ? (12 x 2 = 24) | choices = {12,2,24,19,20}">
+      <questionablefact xsi:type="generator:MTQFRebuild" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/contextsByLP/Context_learnerFic2.xmi#PATH404-O1-L1-T3-QAFACT23"/>
+      <propositions>12</propositions>
+      <propositions>2</propositions>
+      <propositions>24</propositions>
+      <propositions>19</propositions>
+      <propositions>20</propositions>
+    </questionedFacts>
+    <task xsi:type="generator:MTRecontruction" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T3"/>
+  </rooms>
+  <rooms y="-5">
+    <roomaccess direction="NORTH_EAST" otherroomaccess="//@rooms.3/@roomaccess.1"/>
+    <roomaccess direction="EAST_SOUTH" otherroomaccess="//@rooms.5/@roomaccess.0"/>
+    <roomaccess direction="SOUTH_EAST" otherroomaccess="//@rooms.6/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <questionedFacts xsi:type="generator:MTQeFMembership" questionText="{72,96} (12) | bad choices = {67,23}">
+      <questionablefact xsi:type="generator:MTQFMembership" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/contextsByLP/Context_learnerFic2.xmi#PATH404-O1-L1-T5-QAFACT6"/>
+      <badPropositions>67</badPropositions>
+      <badPropositions>23</badPropositions>
+    </questionedFacts>
+    <task xsi:type="generator:MTMembership" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T5"/>
+  </rooms>
+  <rooms x="2" y="-5">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.4/@roomaccess.1"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
+  </rooms>
+  <rooms x="1" y="-7">
+    <roomaccess direction="NORTH_WEST" otherroomaccess="//@rooms.4/@roomaccess.2"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <questionedFacts xsi:type="generator:MTQeFCompletion1" questionText="2 x ? = 8 (4) | choices = {4,11,9}">
+      <questionablefact xsi:type="generator:MTQFCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/contextsByLP/Context_learnerFic2.xmi#PATH404-O1-L1-T1-QAFACT8"/>
+      <propositions>4</propositions>
+      <propositions>11</propositions>
+      <propositions>9</propositions>
+    </questionedFacts>
+    <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T1"/>
+  </rooms>
+  <level xsi:type="generator:MTLevel" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1"/>
+  <learningobjective href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1"/>
+</generator:Dungeon>

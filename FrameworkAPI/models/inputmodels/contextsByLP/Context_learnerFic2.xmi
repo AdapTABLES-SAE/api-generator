@@ -9,7 +9,20 @@
         <results>
           <resultsbytask>
             <task xsi:type="generator:MTCompletion1" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T1"/>
-            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT32" leftOperand="12" rightOperand="-1" result="72" soluce="6" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT32" leftOperand="12" rightOperand="-1" result="72" soluce="6" resultOnRight="true">
+              <results responseTime="8" answerValid="true">
+                <givenAnswers>6</givenAnswers>
+              </results>
+              <results responseTime="8" answerValid="true">
+                <givenAnswers>6</givenAnswers>
+              </results>
+              <results responseTime="8" answerValid="true">
+                <givenAnswers>6</givenAnswers>
+              </results>
+              <results responseTime="8" answerValid="true">
+                <givenAnswers>6</givenAnswers>
+              </results>
+            </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT40" leftOperand="12" rightOperand="-1" result="120" soluce="10" resultOnRight="true"/>
             <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT1" leftOperand="2" rightOperand="1" result="-1" soluce="2" resultOnRight="true"/>
             <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T1-QAFACT9" leftOperand="2" rightOperand="5" result="-1" soluce="10" resultOnRight="true"/>
@@ -52,7 +65,24 @@
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:MTCompletion2" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T2"/>
-            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true">
+              <results responseTime="12" answerValid="true">
+                <givenAnswers>2</givenAnswers>
+                <givenAnswers>9</givenAnswers>
+              </results>
+              <results responseTime="12" answerValid="true">
+                <givenAnswers>2</givenAnswers>
+                <givenAnswers>9</givenAnswers>
+              </results>
+              <results responseTime="12" answerValid="true">
+                <givenAnswers>2</givenAnswers>
+                <givenAnswers>9</givenAnswers>
+              </results>
+              <results responseTime="12" answerValid="true">
+                <givenAnswers>2</givenAnswers>
+                <givenAnswers>9</givenAnswers>
+              </results>
+            </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT33" leftOperand="12" rightOperand="-1" result="-1" soluceLeft="12" soluceRight="7" soluceRes="84" resultOnRight="true"/>
             <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT38" leftOperand="-1" rightOperand="-1" result="108" soluceLeft="12" soluceRight="9" soluceRes="108" resultOnRight="true"/>
             <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T2-QAFACT21" leftOperand="12" rightOperand="-1" result="-1" soluceLeft="12" soluceRight="1" soluceRes="12" resultOnRight="true"/>
@@ -95,7 +125,28 @@
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:MTRecontruction" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T3"/>
-            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT25" soluceLeft="12" soluceRes="36" resultOnRight="true" soluceRight="3"/>
+            <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT25" soluceLeft="12" soluceRes="36" resultOnRight="true" soluceRight="3">
+              <results responseTime="20">
+                <givenAnswers>12</givenAnswers>
+                <givenAnswers>3</givenAnswers>
+                <givenAnswers>35</givenAnswers>
+              </results>
+              <results responseTime="20">
+                <givenAnswers>12</givenAnswers>
+                <givenAnswers>3</givenAnswers>
+                <givenAnswers>35</givenAnswers>
+              </results>
+              <results responseTime="20">
+                <givenAnswers>12</givenAnswers>
+                <givenAnswers>3</givenAnswers>
+                <givenAnswers>35</givenAnswers>
+              </results>
+              <results responseTime="20">
+                <givenAnswers>12</givenAnswers>
+                <givenAnswers>3</givenAnswers>
+                <givenAnswers>35</givenAnswers>
+              </results>
+            </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT31" soluceLeft="12" soluceRes="72" resultOnRight="true" soluceRight="6"/>
             <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT37" soluceLeft="12" soluceRes="108" resultOnRight="true" soluceRight="9"/>
             <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T3-QAFACT5" soluceLeft="2" soluceRes="6" resultOnRight="true" soluceRight="3"/>
@@ -120,7 +171,20 @@
             <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
             <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT28" result="18" rightOperand="8" leftOperand="2" resultOnRight="true"/>
             <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT30" result="17" rightOperand="9" leftOperand="2" resultOnRight="true"/>
-            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT13" result="36" rightOperand="3" leftOperand="12" soluce="true" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT13" result="36" rightOperand="3" leftOperand="12" soluce="true" resultOnRight="true">
+              <results responseTime="10" answerValid="true">
+                <givenAnswers>true</givenAnswers>
+              </results>
+              <results responseTime="10" answerValid="true">
+                <givenAnswers>true</givenAnswers>
+              </results>
+              <results responseTime="10" answerValid="true">
+                <givenAnswers>true</givenAnswers>
+              </results>
+              <results responseTime="10" answerValid="true">
+                <givenAnswers>true</givenAnswers>
+              </results>
+            </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT6" result="12" rightOperand="6" leftOperand="2" soluce="true" resultOnRight="true"/>
             <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT24" result="59" rightOperand="5" leftOperand="12" resultOnRight="true"/>
             <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT34" result="26" rightOperand="2" leftOperand="12" resultOnRight="true"/>
@@ -140,7 +204,20 @@
             <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT15" result="60" rightOperand="5" leftOperand="12" soluce="true" resultOnRight="true"/>
             <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT25" result="17" rightOperand="6" leftOperand="2" resultOnRight="true"/>
             <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT37" result="3" rightOperand="1" leftOperand="2" resultOnRight="true"/>
-            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT40" result="2" rightOperand="2" leftOperand="2" resultOnRight="true"/>
+            <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT40" result="2" rightOperand="2" leftOperand="2" resultOnRight="true">
+              <results responseTime="10">
+                <givenAnswers>true</givenAnswers>
+              </results>
+              <results responseTime="10">
+                <givenAnswers>true</givenAnswers>
+              </results>
+              <results responseTime="10">
+                <givenAnswers>true</givenAnswers>
+              </results>
+              <results responseTime="10">
+                <givenAnswers>true</givenAnswers>
+              </results>
+            </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT38" result="87" rightOperand="7" leftOperand="12" resultOnRight="true"/>
             <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT27" result="67" rightOperand="6" leftOperand="12" resultOnRight="true"/>
             <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT11" result="12" rightOperand="1" leftOperand="12" soluce="true" resultOnRight="true"/>
@@ -190,6 +267,26 @@
               <goodResults>18</goodResults>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT8" table="12">
+              <results responseTime="20">
+                <givenAnswers>12</givenAnswers>
+                <givenAnswers>72</givenAnswers>
+                <givenAnswers>11</givenAnswers>
+              </results>
+              <results responseTime="20">
+                <givenAnswers>12</givenAnswers>
+                <givenAnswers>72</givenAnswers>
+                <givenAnswers>11</givenAnswers>
+              </results>
+              <results responseTime="20">
+                <givenAnswers>12</givenAnswers>
+                <givenAnswers>72</givenAnswers>
+                <givenAnswers>11</givenAnswers>
+              </results>
+              <results responseTime="20">
+                <givenAnswers>12</givenAnswers>
+                <givenAnswers>72</givenAnswers>
+                <givenAnswers>11</givenAnswers>
+              </results>
               <goodResults>120</goodResults>
               <goodResults>12</goodResults>
             </questionableFacts>

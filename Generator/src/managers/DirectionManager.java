@@ -10,7 +10,6 @@ import generator.Directions;
 import generator.LargeRoomType;
 import generator.RoomType;
 import generator.SmallRoomType;
-import structures.Coordinate;
 
 public class DirectionManager {
 

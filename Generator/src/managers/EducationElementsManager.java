@@ -14,7 +14,6 @@ import generator.Level;
 import generator.Objective;
 import generator.QuestionedFact;
 import generator.ResultsByTask;
-import generator.impl.ProgressionImpl;
 import generator.impl.ResultsByTaskImpl;
 import generator.impl.ResultsImpl;
 import structures.Shuffle;
