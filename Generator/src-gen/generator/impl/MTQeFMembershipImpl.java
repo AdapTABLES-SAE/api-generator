@@ -173,13 +173,4 @@ public class MTQeFMembershipImpl extends QuestionedFactImpl implements MTQeFMemb
 		return Objects.equals(badPropositions, other.badPropositions);
 	}
 
-	@Override
-	public void setQuestionText() {
-		String choices = "{";
-		for (Integer integer : badPropositions) {
-			choices += integer + (badPropositions.get(badPropositions.size() - 1).equals(integer) ? "}" : ",");
-		}
-		questionText = getQuestionablefact().getQuestionableFact() + " | bad choices = " + choices;
-	}
-
 } //MTQeFMembershipImpl

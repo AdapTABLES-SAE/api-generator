@@ -20,10 +20,6 @@ import managers.ModelsManager;
 @Path("/learnerPlayerManager")
 public class LearnerPlayerManagerResource {
 
-	private static final String WORKSPACE_PATH = "C:/blemoine/TheseGenerator/gen1/FrameworkAPI/";
-	private static final String INPUT_MODELS_PATH = WORKSPACE_PATH + "models/inputmodels/";
-	private static final String OUTPUT_MODELS_PATH = WORKSPACE_PATH + "models/";
-	private static final String CONTEXTS_FILES_PATHS = "contextsByLP/Context_";
 	private ModelsManager modelsManager;
 	
 	@POST
@@ -37,7 +33,7 @@ public class LearnerPlayerManagerResource {
 			e.printStackTrace();
 		}
 		
-		modelsManager = new ModelsManager(INPUT_MODELS_PATH, OUTPUT_MODELS_PATH, CONTEXTS_FILES_PATHS + obj.get("learnerID") + ".xmi");
+		modelsManager = new ModelsManager(Paths.INPUT_MODELS_PATH, Paths.OUTPUT_MODELS_PATH, Paths.CONTEXTS_FILES_SHORT_PATHS + obj.get("learnerID") + ".xmi", true);
 				
 		CurrentObjectiveLevel col = getCorrespondingCOL((String) obj.get("objectiveID"), (String) obj.get("levelID"));
 		if(col != null) {

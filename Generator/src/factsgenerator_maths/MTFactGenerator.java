@@ -123,14 +123,15 @@ public class MTFactGenerator {
 		}
 		
 		qef.getBadPropositions().addAll(chosenPropositions);
-		qef.setQuestionText();
+		//qef.setQuestionText();
+		qef.setCorrectnessToReach(((MTQFMembership)qfact).getGoodResults().size());
 		eeManager.addFactToQuestion(task, qef);
 	}
 	
 	private static QuestionedFact createQuestionedFactForIdentify(EducationElementsManager eeManager, ATask task, QuestionableFact qfact) {
 		MTQeFIdentification qef = new MTQeFIdentificationImpl(); 
 		qef.setQuestionablefact(qfact);
-		qef.setQuestionText();
+		//qef.setQuestionText();
 		return qef;
 	}
 	
@@ -165,7 +166,8 @@ public class MTFactGenerator {
 			}
 		}
 		qef.getPropositions().addAll(chosenPropositions);
-		qef.setQuestionText();
+		qef.setCompleteFact();
+		qef.setCorrectnessToReach(3);
 		eeManager.addFactToQuestion(task, qef);
 	}
 	
@@ -201,7 +203,8 @@ public class MTFactGenerator {
 		if(!(task.getResponseModality() instanceof MultipleChoice)) {throw new Exception("Completion2 task with Entry response modality");}
 		
 		qef.getPropositions().addAll(generateCompletion2Proposition(((MTQFCompletion2) qfact), ((MultipleChoice) task.getResponseModality()).getNbBadChoices()));
-		qef.setQuestionText();
+		qef.setCompleteFact();
+		qef.setCorrectnessToReach(2);
 		eeManager.addFactToQuestion(task, qef);
 	}
 	
@@ -212,7 +215,8 @@ public class MTFactGenerator {
 		if(task.getResponseModality() instanceof MultipleChoice) {			
 			qef.getPropositions().addAll(generateCompletion1Proposition(((MTQFCompletion1) qfact), ((MultipleChoice) task.getResponseModality()).getNbBadChoices()));
 		} 
-		qef.setQuestionText();		
+		qef.setCompleteFact();
+		qef.setCorrectnessToReach(1);
 		eeManager.addFactToQuestion(task, qef);
 	}
 	

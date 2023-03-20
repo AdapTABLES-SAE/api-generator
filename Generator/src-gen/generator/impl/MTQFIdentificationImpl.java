@@ -442,9 +442,9 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 	@Override
 	public String getQuestionableFact() {
 		if (resultOnRight) {
-			return getLeftOperand() + " x " + getRightOperand() + " = " + getResult() + " (" + soluce + ")";
+			return getLeftOperand() + " x " + getRightOperand() + " = " + getResult(); // + " (" + soluce + ")";
 		} else {
-			return getResult() + " = " + getLeftOperand() + " x " + getRightOperand() + " (" + soluce + ")";
+			return getResult() + " = " + getLeftOperand() + " x " + getRightOperand(); // + " (" + soluce + ")";
 		}
 	}
 

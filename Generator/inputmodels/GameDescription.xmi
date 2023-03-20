@@ -3,8 +3,7 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:generator="http://www.example.org/generator"
-    xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore">
+    xmlns:generator="http://www.example.org/generator">
   <roomtypes>
     <roomtypes
         xsi:type="generator:SmallRoomType"
@@ -29,35 +28,72 @@
     <roomtypes
         xsi:type="generator:SmallRoomType"
         name="RegularRoom1">
-      <positions
-          name="POSQ1"/>
-      <positions
-          name="POSQ2"/>
-      <positions
-          name="POSQ3"/>
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          ID="POS3"/>
+      <elementPositions
+          ID="POS4"/>
+      <elementPositions
+          ID="POS5"/>
+      <elementPositions
+          ID="POS6"/>
+      <elementPositions
+          ID="POS7"/>
+      <statementPositions
+          ID="POSQ1"/>
       <directions>SOUTH</directions>
       <directions>EAST</directions>
       <directions>NORTH</directions>
       <directions>WEST</directions>
     </roomtypes>
-    <roomtypes
-        xsi:type="generator:LargeRoomType"
-        name="LargeSimpleRoom1">
-      <positions
-          name="POSQ1"/>
-      <positions
-          name="POSQ2"/>
-      <positions
-          name="POSQ3"/>
-      <directions>SOUTH_EAST</directions>
-      <directions>SOUTH_WEST</directions>
-      <directions>NORTH_EAST</directions>
-      <directions>NORTH_WEST</directions>
-      <directions>EAST_SOUTH</directions>
-      <directions>EAST_NORTH</directions>
-      <directions>WEST_NORTH</directions>
-      <directions>WEST_SOUTH</directions>
-    </roomtypes>
   </roomtypes>
   <levelsDifficultyProgress/>
+  <gameplays>
+    <gameplays
+        name="Interrupteur Unique">
+      <quantifiedElements
+          min="2"
+          ability="TOUCHABLE"
+          max="10"/>
+      <quantifiedElements
+          ability="VERIFICATOR"/>
+      <allowedStatements>TEXTUAL</allowedStatements>
+    </gameplays>
+    <gameplays
+        name="GAMEPLAY SAISIE"
+        category="DIRECT_RESPONSE">
+      <quantifiedElements
+          ability="TYPABLE"/>
+      <allowedStatements>TEXTUAL</allowedStatements>
+    </gameplays>
+  </gameplays>
+  <elements>
+    <gameplayElements>
+      <elements
+          ID="ELEM1"
+          type="FloorInterrupt"
+          ability="TOUCHABLE"
+          category="SINGLE_ANSWER"/>
+      <elements
+          ID="ELEM2"
+          type="Switch"
+          ability="VERIFICATOR"/>
+      <elements
+          ID="ELEM3"
+          type="KeyBoard"
+          ability="TYPABLE"/>
+    </gameplayElements>
+  </elements>
+  <abilities>
+    <abilities
+        name="TOUCHABLE"
+        category="SINGLE_ANSWER"/>
+    <abilities
+        name="VERIFICATOR"/>
+    <abilities
+        name="TYPABLE"/>
+  </abilities>
 </generator:GameDescription>

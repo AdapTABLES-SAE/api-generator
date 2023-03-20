@@ -3,7 +3,6 @@
 package generator.impl;
 
 import generator.GeneratorPackage;
-import generator.Position;
 import generator.QuestionableFact;
 import generator.QuestionedFact;
 
@@ -28,8 +27,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.QuestionedFactImpl#getQuestionablefact <em>Questionablefact</em>}</li>
- *   <li>{@link generator.impl.QuestionedFactImpl#getPosition <em>Position</em>}</li>
- *   <li>{@link generator.impl.QuestionedFactImpl#getQuestionText <em>Question Text</em>}</li>
+ *   <li>{@link generator.impl.QuestionedFactImpl#getCompleteFact <em>Complete Fact</em>}</li>
+ *   <li>{@link generator.impl.QuestionedFactImpl#getCorrectnessToReach <em>Correctness To Reach</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,43 +45,53 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 	protected QuestionableFact questionablefact;
 
 	/**
-	 * The cached value of the '{@link #getPosition() <em>Position</em>}' reference.
+	 * The default value of the '{@link #getCompleteFact() <em>Complete Fact</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPosition()
+	 * @see #getCompleteFact()
 	 * @generated
 	 * @ordered
 	 */
-	protected Position position;
+	protected static final String COMPLETE_FACT_EDEFAULT = "";
 
 	/**
-	 * The default value of the '{@link #getQuestionText() <em>Question Text</em>}' attribute.
+	 * The cached value of the '{@link #getCompleteFact() <em>Complete Fact</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQuestionText()
+	 * @see #getCompleteFact()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String QUESTION_TEXT_EDEFAULT = "TEST";
+	protected String completeFact = COMPLETE_FACT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getQuestionText() <em>Question Text</em>}' attribute.
+	 * This is true if the Complete Fact attribute has been set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQuestionText()
 	 * @generated
 	 * @ordered
 	 */
-	protected String questionText = QUESTION_TEXT_EDEFAULT;
+	protected boolean completeFactESet;
 
 	/**
-	 * This is true if the Question Text attribute has been set.
+	 * The default value of the '{@link #getCorrectnessToReach() <em>Correctness To Reach</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see #getCorrectnessToReach()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean questionTextESet;
+	protected static final int CORRECTNESS_TO_REACH_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getCorrectnessToReach() <em>Correctness To Reach</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCorrectnessToReach()
+	 * @generated
+	 * @ordered
+	 */
+	protected int correctnessToReach = CORRECTNESS_TO_REACH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,17 +157,8 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Position getPosition() {
-		if (position != null && position.eIsProxy()) {
-			InternalEObject oldPosition = (InternalEObject) position;
-			position = (Position) eResolveProxy(oldPosition);
-			if (position != oldPosition) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.QUESTIONED_FACT__POSITION, oldPosition, position));
-			}
-		}
-		return position;
+	public String getCompleteFact() {
+		return completeFact;
 	}
 
 	/**
@@ -166,21 +166,14 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Position basicGetPosition() {
-		return position;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPosition(Position newPosition) {
-		Position oldPosition = position;
-		position = newPosition;
+	public void setCompleteFact(String newCompleteFact) {
+		String oldCompleteFact = completeFact;
+		completeFact = newCompleteFact;
+		boolean oldCompleteFactESet = completeFactESet;
+		completeFactESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.QUESTIONED_FACT__POSITION,
-					oldPosition, position));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT,
+					oldCompleteFact, completeFact, !oldCompleteFactESet));
 	}
 
 	/**
@@ -188,23 +181,14 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getQuestionText() {
-		return questionText;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setQuestionText(String newQuestionText) {
-		String oldQuestionText = questionText;
-		questionText = newQuestionText;
-		boolean oldQuestionTextESet = questionTextESet;
-		questionTextESet = true;
+	public void unsetCompleteFact() {
+		String oldCompleteFact = completeFact;
+		boolean oldCompleteFactESet = completeFactESet;
+		completeFact = COMPLETE_FACT_EDEFAULT;
+		completeFactESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.QUESTIONED_FACT__QUESTION_TEXT,
-					oldQuestionText, questionText, !oldQuestionTextESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT,
+					oldCompleteFact, COMPLETE_FACT_EDEFAULT, oldCompleteFactESet));
 	}
 
 	/**
@@ -212,14 +196,30 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void unsetQuestionText() {
-		String oldQuestionText = questionText;
-		boolean oldQuestionTextESet = questionTextESet;
-		questionText = QUESTION_TEXT_EDEFAULT;
-		questionTextESet = false;
+	public boolean isSetCompleteFact() {
+		return completeFactESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getCorrectnessToReach() {
+		return correctnessToReach;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCorrectnessToReach(int newCorrectnessToReach) {
+		int oldCorrectnessToReach = correctnessToReach;
+		correctnessToReach = newCorrectnessToReach;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, GeneratorPackage.QUESTIONED_FACT__QUESTION_TEXT,
-					oldQuestionText, QUESTION_TEXT_EDEFAULT, oldQuestionTextESet));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.QUESTIONED_FACT__CORRECTNESS_TO_REACH, oldCorrectnessToReach, correctnessToReach));
 	}
 
 	/**
@@ -227,16 +227,7 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isSetQuestionText() {
-		return questionTextESet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setQuestionText() {
+	public void setCompleteFact() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -254,12 +245,10 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 			if (resolve)
 				return getQuestionablefact();
 			return basicGetQuestionablefact();
-		case GeneratorPackage.QUESTIONED_FACT__POSITION:
-			if (resolve)
-				return getPosition();
-			return basicGetPosition();
-		case GeneratorPackage.QUESTIONED_FACT__QUESTION_TEXT:
-			return getQuestionText();
+		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
+			return getCompleteFact();
+		case GeneratorPackage.QUESTIONED_FACT__CORRECTNESS_TO_REACH:
+			return getCorrectnessToReach();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -275,11 +264,11 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 		case GeneratorPackage.QUESTIONED_FACT__QUESTIONABLEFACT:
 			setQuestionablefact((QuestionableFact) newValue);
 			return;
-		case GeneratorPackage.QUESTIONED_FACT__POSITION:
-			setPosition((Position) newValue);
+		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
+			setCompleteFact((String) newValue);
 			return;
-		case GeneratorPackage.QUESTIONED_FACT__QUESTION_TEXT:
-			setQuestionText((String) newValue);
+		case GeneratorPackage.QUESTIONED_FACT__CORRECTNESS_TO_REACH:
+			setCorrectnessToReach((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -296,11 +285,11 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 		case GeneratorPackage.QUESTIONED_FACT__QUESTIONABLEFACT:
 			setQuestionablefact((QuestionableFact) null);
 			return;
-		case GeneratorPackage.QUESTIONED_FACT__POSITION:
-			setPosition((Position) null);
+		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
+			unsetCompleteFact();
 			return;
-		case GeneratorPackage.QUESTIONED_FACT__QUESTION_TEXT:
-			unsetQuestionText();
+		case GeneratorPackage.QUESTIONED_FACT__CORRECTNESS_TO_REACH:
+			setCorrectnessToReach(CORRECTNESS_TO_REACH_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -316,10 +305,10 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 		switch (featureID) {
 		case GeneratorPackage.QUESTIONED_FACT__QUESTIONABLEFACT:
 			return questionablefact != null;
-		case GeneratorPackage.QUESTIONED_FACT__POSITION:
-			return position != null;
-		case GeneratorPackage.QUESTIONED_FACT__QUESTION_TEXT:
-			return isSetQuestionText();
+		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
+			return isSetCompleteFact();
+		case GeneratorPackage.QUESTIONED_FACT__CORRECTNESS_TO_REACH:
+			return correctnessToReach != CORRECTNESS_TO_REACH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -332,8 +321,8 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case GeneratorPackage.QUESTIONED_FACT___SET_QUESTION_TEXT:
-			setQuestionText();
+		case GeneratorPackage.QUESTIONED_FACT___SET_COMPLETE_FACT:
+			setCompleteFact();
 			return null;
 		}
 		return super.eInvoke(operationID, arguments);
@@ -350,11 +339,13 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (questionText: ");
-		if (questionTextESet)
-			result.append(questionText);
+		result.append(" (completeFact: ");
+		if (completeFactESet)
+			result.append(completeFact);
 		else
 			result.append("<unset>");
+		result.append(", correctnessToReach: ");
+		result.append(correctnessToReach);
 		result.append(')');
 		return result.toString();
 	}

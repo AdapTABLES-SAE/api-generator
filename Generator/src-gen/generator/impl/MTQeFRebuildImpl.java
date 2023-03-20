@@ -3,6 +3,7 @@
 package generator.impl;
 
 import generator.GeneratorPackage;
+import generator.MTQFRebuild;
 import generator.MTQeFRebuild;
 
 import java.util.Collection;
@@ -174,12 +175,11 @@ public class MTQeFRebuildImpl extends QuestionedFactImpl implements MTQeFRebuild
 	}
 
 	@Override
-	public void setQuestionText() {
-		String choices = "{";
-		for (Integer integer : propositions) {
-			choices += integer + (propositions.get(propositions.size() - 1).equals(integer) ? "}" : ",");
-		}
-		questionText = getQuestionablefact().getQuestionableFact() + " | choices = " + choices;
+	public void setCompleteFact() {
+		MTQFRebuild qfact = ((MTQFRebuild) questionablefact);
+		completeFact = qfact.isResultOnRight()
+				? qfact.getSoluceLeft() + " x " + qfact.getSoluceRight() + " = " + qfact.getSoluceRes()
+				: qfact.getSoluceRes() + " = " + qfact.getSoluceLeft() + " x " + qfact.getSoluceRight();
 	}
 
 } //MTQeFRebuildImpl

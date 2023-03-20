@@ -97,6 +97,7 @@ public class MTCompletion2Generator {
 		qf.setSoluceRes(fact.getRes());
 		qf.setResultOnRight(resPos.equals(ResultPosition.RIGHT));
 		
+		
 		switch (target) {
 		case OPERAND_TABLE:
 			qf.setLeftOperand(-1); 

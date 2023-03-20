@@ -45,10 +45,6 @@ import managers.ModelsManager;
 @Path("/learningPathManager")
 public class LearningPathManagerResource {
 	
-	private static final String WORKSPACE_PATH = "C:/blemoine/TheseGenerator/gen1/FrameworkAPI/";
-	private static final String INPUT_MODELS_PATH = WORKSPACE_PATH + "models/inputmodels/";
-	private static final String OUTPUT_MODELS_PATH = WORKSPACE_PATH + "models/";
-	
 	private ModelsManager modelsManager;
 	
 	@POST
@@ -56,7 +52,7 @@ public class LearningPathManagerResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String addObjectiveLevel(String jsonContent) { // https://waytolearnx.com/2020/03/lire-un-fichier-json-avec-java.html
 		JSONObject obj = new JSONObject();
-		modelsManager = new ModelsManager(INPUT_MODELS_PATH, OUTPUT_MODELS_PATH);
+		modelsManager = new ModelsManager(Paths.INPUT_MODELS_PATH, Paths.OUTPUT_MODELS_PATH, true);
 		try {
 			obj = (JSONObject) new JSONParser().parse(jsonContent);
 		} catch (ParseException e) {

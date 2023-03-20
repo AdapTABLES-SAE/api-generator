@@ -2,17 +2,16 @@
  */
 package generator.impl;
 
-import generator.GeneratorPackage;
-import generator.MTQeFCompletion2;
-
 import java.util.Collection;
 import java.util.Objects;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.util.EDataTypeEList;
+
+import generator.GeneratorPackage;
+import generator.MTQFCompletion2;
+import generator.MTQeFCompletion2;
 
 /**
  * <!-- begin-user-doc -->
@@ -174,12 +173,11 @@ public class MTQeFCompletion2Impl extends QuestionedFactImpl implements MTQeFCom
 	}
 
 	@Override
-	public void setQuestionText() {
-		String choices = "{";
-		for (Integer integer : propositions) {
-			choices += integer + (propositions.get(propositions.size() - 1).equals(integer) ? "}" : ",");
-		}
-		questionText = getQuestionablefact().getQuestionableFact() + " | choices = " + choices;
+	public void setCompleteFact() {
+		MTQFCompletion2 qfact = ((MTQFCompletion2) questionablefact);
+		completeFact = qfact.isResultOnRight()
+				? qfact.getSoluceLeft() + " x " + qfact.getSoluceRight() + " = " + qfact.getSoluceRes()
+				: qfact.getSoluceRes() + " = " + qfact.getSoluceLeft() + " x " + qfact.getSoluceRight();
 	}
 
 } //MTQeFCompletion2Impl

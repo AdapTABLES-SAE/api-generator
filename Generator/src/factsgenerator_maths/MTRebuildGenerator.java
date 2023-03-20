@@ -71,13 +71,13 @@ public class MTRebuildGenerator {
 	private MTQFRebuild buildQF(MTFact fact, ResultPosition resPos, TableBuild build) {
 		MTQFRebuild qf = new MTQFRebuildImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
-		
+				
 		if(build.equals(TableBuild.OPERAND_TABLE)) {
 			qf.setSoluceLeft(fact.getOp());
 			qf.setSoluceRight(fact.getTable());
 		}else {
 			qf.setSoluceRight(fact.getOp());
-			qf.setSoluceLeft(fact.getTable());	
+			qf.setSoluceLeft(fact.getTable());
 		}
 		qf.setSoluceRes(fact.getRes());
 		qf.setResultOnRight(resPos.equals(ResultPosition.RIGHT));

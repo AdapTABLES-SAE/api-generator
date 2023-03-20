@@ -347,13 +347,13 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseGameElements(GameElements object) {
-			return createGameElementsAdapter();
+		public Adapter caseElementTypes(ElementTypes object) {
+			return createElementTypesAdapter();
 		}
 
 		@Override
-		public Adapter caseCoreGPElements(CoreGPElements object) {
-			return createCoreGPElementsAdapter();
+		public Adapter caseCoreElements(CoreElements object) {
+			return createCoreElementsAdapter();
 		}
 
 		@Override
@@ -362,8 +362,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseCoreGPElement(CoreGPElement object) {
-			return createCoreGPElementAdapter();
+		public Adapter caseCoreElement(CoreElement object) {
+			return createCoreElementAdapter();
 		}
 
 		@Override
@@ -372,38 +372,13 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseAnswerElements(AnswerElements object) {
-			return createAnswerElementsAdapter();
-		}
-
-		@Override
-		public Adapter caseUniqueAnswerElement(UniqueAnswerElement object) {
-			return createUniqueAnswerElementAdapter();
-		}
-
-		@Override
-		public Adapter caseManyAnswerElement(ManyAnswerElement object) {
-			return createManyAnswerElementAdapter();
-		}
-
-		@Override
-		public Adapter caseNonAnswerElement(NonAnswerElement object) {
-			return createNonAnswerElementAdapter();
-		}
-
-		@Override
 		public Adapter caseGameplay(Gameplay object) {
 			return createGameplayAdapter();
 		}
 
 		@Override
-		public Adapter caseQuantifiedElementsByAbility(QuantifiedElementsByAbility object) {
-			return createQuantifiedElementsByAbilityAdapter();
-		}
-
-		@Override
-		public Adapter casePositionedElement(PositionedElement object) {
-			return createPositionedElementAdapter();
+		public Adapter caseQuantifiedElements(QuantifiedElements object) {
+			return createQuantifiedElementsAdapter();
 		}
 
 		@Override
@@ -414,6 +389,66 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseQuestionableFactResult(QuestionableFactResult object) {
 			return createQuestionableFactResultAdapter();
+		}
+
+		@Override
+		public Adapter caseAbility(Ability object) {
+			return createAbilityAdapter();
+		}
+
+		@Override
+		public Adapter caseAbilities(Abilities object) {
+			return createAbilitiesAdapter();
+		}
+
+		@Override
+		public Adapter caseAPosition(APosition object) {
+			return createAPositionAdapter();
+		}
+
+		@Override
+		public Adapter caseStructurePosition(StructurePosition object) {
+			return createStructurePositionAdapter();
+		}
+
+		@Override
+		public Adapter caseStatementPosition(StatementPosition object) {
+			return createStatementPositionAdapter();
+		}
+
+		@Override
+		public Adapter caseQuestionedFactStatement(QuestionedFactStatement object) {
+			return createQuestionedFactStatementAdapter();
+		}
+
+		@Override
+		public Adapter casePositionedElement(PositionedElement object) {
+			return createPositionedElementAdapter();
+		}
+
+		@Override
+		public Adapter caseDisplay(Display object) {
+			return createDisplayAdapter();
+		}
+
+		@Override
+		public Adapter caseAbstractAttributes(AbstractAttributes object) {
+			return createAbstractAttributesAdapter();
+		}
+
+		@Override
+		public Adapter caseCorrectness(Correctness object) {
+			return createCorrectnessAdapter();
+		}
+
+		@Override
+		public Adapter caseStructureElement(StructureElement object) {
+			return createStructureElementAdapter();
+		}
+
+		@Override
+		public Adapter caseWantedAnswer(WantedAnswer object) {
+			return createWantedAnswerAdapter();
 		}
 
 		@Override
@@ -1220,30 +1255,30 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.GameElements <em>Game Elements</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.ElementTypes <em>Element Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.GameElements
+	 * @see generator.ElementTypes
 	 * @generated
 	 */
-	public Adapter createGameElementsAdapter() {
+	public Adapter createElementTypesAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.CoreGPElements <em>Core GP Elements</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.CoreElements <em>Core Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.CoreGPElements
+	 * @see generator.CoreElements
 	 * @generated
 	 */
-	public Adapter createCoreGPElementsAdapter() {
+	public Adapter createCoreElementsAdapter() {
 		return null;
 	}
 
@@ -1262,16 +1297,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.CoreGPElement <em>Core GP Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.CoreElement <em>Core Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.CoreGPElement
+	 * @see generator.CoreElement
 	 * @generated
 	 */
-	public Adapter createCoreGPElementAdapter() {
+	public Adapter createCoreElementAdapter() {
 		return null;
 	}
 
@@ -1290,62 +1325,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.AnswerElements <em>Answer Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.AnswerElements
-	 * @generated
-	 */
-	public Adapter createAnswerElementsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.UniqueAnswerElement <em>Unique Answer Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.UniqueAnswerElement
-	 * @generated
-	 */
-	public Adapter createUniqueAnswerElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.ManyAnswerElement <em>Many Answer Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.ManyAnswerElement
-	 * @generated
-	 */
-	public Adapter createManyAnswerElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.NonAnswerElement <em>Non Answer Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.NonAnswerElement
-	 * @generated
-	 */
-	public Adapter createNonAnswerElementAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link generator.Gameplay <em>Gameplay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1360,16 +1339,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.QuantifiedElementsByAbility <em>Quantified Elements By Ability</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.QuantifiedElements <em>Quantified Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.QuantifiedElementsByAbility
+	 * @see generator.QuantifiedElements
 	 * @generated
 	 */
-	public Adapter createQuantifiedElementsByAbilityAdapter() {
+	public Adapter createQuantifiedElementsAdapter() {
 		return null;
 	}
 
@@ -1384,6 +1363,76 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPositionedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Display <em>Display</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Display
+	 * @generated
+	 */
+	public Adapter createDisplayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.AbstractAttributes <em>Abstract Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.AbstractAttributes
+	 * @generated
+	 */
+	public Adapter createAbstractAttributesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Correctness <em>Correctness</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Correctness
+	 * @generated
+	 */
+	public Adapter createCorrectnessAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.StructureElement <em>Structure Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.StructureElement
+	 * @generated
+	 */
+	public Adapter createStructureElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.WantedAnswer <em>Wanted Answer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.WantedAnswer
+	 * @generated
+	 */
+	public Adapter createWantedAnswerAdapter() {
 		return null;
 	}
 
@@ -1412,6 +1461,90 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createQuestionableFactResultAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Ability <em>Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Ability
+	 * @generated
+	 */
+	public Adapter createAbilityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Abilities <em>Abilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Abilities
+	 * @generated
+	 */
+	public Adapter createAbilitiesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.APosition <em>APosition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.APosition
+	 * @generated
+	 */
+	public Adapter createAPositionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.StructurePosition <em>Structure Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.StructurePosition
+	 * @generated
+	 */
+	public Adapter createStructurePositionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.StatementPosition <em>Statement Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.StatementPosition
+	 * @generated
+	 */
+	public Adapter createStatementPositionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.QuestionedFactStatement <em>Questioned Fact Statement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.QuestionedFactStatement
+	 * @generated
+	 */
+	public Adapter createQuestionedFactStatementAdapter() {
 		return null;
 	}
 

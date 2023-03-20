@@ -63,7 +63,7 @@ class MTQuestionedFactTest {
 				validNbChoice = task.getResponseModality() instanceof MultipleChoice? 
 						(((MTQeFCompletion1) qfact).getPropositions().size() == 
 						((MultipleChoice) task.getResponseModality()).getNbChoices()) : true;
-				hasMissingElem = StringUtils.countMatches(qfact.getQuestionText(), "?") == 1;
+				hasMissingElem = StringUtils.countMatches(qfact.getCompleteFact(), "?") == 1;
 				if(task instanceof MTCompletion1 && validResponse && validNbChoice && hasMissingElem) {
 					return true; 
 				}
@@ -75,7 +75,7 @@ class MTQuestionedFactTest {
 				validNbChoice = task.getResponseModality() instanceof MultipleChoice? 
 						(((MTQeFCompletion2) qfact).getPropositions().size() == 
 						((MultipleChoice) task.getResponseModality()).getNbChoices()) : true;
-				hasMissingElem = StringUtils.countMatches(qfact.getQuestionText(), "?") == 2;
+				hasMissingElem = StringUtils.countMatches(qfact.getCompleteFact(), "?") == 2;
 				if(task instanceof MTCompletion2 && validNbChoice && hasMissingElem) {
 					return true; 
 				}
@@ -86,7 +86,7 @@ class MTQuestionedFactTest {
 				validNbChoice = task.getResponseModality() instanceof MultipleChoice? 
 						(((MTQeFRebuild) qfact).getPropositions().size() == 
 						((MultipleChoice) task.getResponseModality()).getNbChoices()) : true;
-				hasMissingElem = StringUtils.countMatches(qfact.getQuestionText(), "?") == 3;
+				hasMissingElem = StringUtils.countMatches(qfact.getCompleteFact(), "?") == 3;
 				if(task instanceof MTRecontruction && validNbChoice && hasMissingElem) {
 					return true; 
 				}

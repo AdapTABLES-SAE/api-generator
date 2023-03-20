@@ -390,9 +390,9 @@ public class MTQFCompletion1Impl extends QuestionableFactImpl implements MTQFCom
 		String res = getResult() == -1 ? "?" : getResult() + "";
 
 		if (resultOnRight) {
-			return left + " x " + right + " = " + res + " (" + soluce + ")";
+			return left + " x " + right + " = " + res; //+ " (" + soluce + ")";
 		} else {
-			return res + " = " + left + " x " + right + " (" + soluce + ")";
+			return res + " = " + left + " x " + right; // + " (" + soluce + ")";
 		}
 	}
 

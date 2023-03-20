@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generator.QuestionedFact#getQuestionablefact <em>Questionablefact</em>}</li>
- *   <li>{@link generator.QuestionedFact#getPosition <em>Position</em>}</li>
- *   <li>{@link generator.QuestionedFact#getQuestionText <em>Question Text</em>}</li>
+ *   <li>{@link generator.QuestionedFact#getCompleteFact <em>Complete Fact</em>}</li>
+ *   <li>{@link generator.QuestionedFact#getCorrectnessToReach <em>Correctness To Reach</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getQuestionedFact()
@@ -46,76 +46,76 @@ public interface QuestionedFact extends EObject {
 	void setQuestionablefact(QuestionableFact value);
 
 	/**
-	 * Returns the value of the '<em><b>Position</b></em>' reference.
+	 * Returns the value of the '<em><b>Complete Fact</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Position</em>' reference.
-	 * @see #setPosition(Position)
-	 * @see generator.GeneratorPackage#getQuestionedFact_Position()
-	 * @model required="true"
+	 * @return the value of the '<em>Complete Fact</em>' attribute.
+	 * @see #isSetCompleteFact()
+	 * @see #unsetCompleteFact()
+	 * @see #setCompleteFact(String)
+	 * @see generator.GeneratorPackage#getQuestionedFact_CompleteFact()
+	 * @model default="" unsettable="true"
 	 * @generated
 	 */
-	Position getPosition();
+	String getCompleteFact();
 
 	/**
-	 * Sets the value of the '{@link generator.QuestionedFact#getPosition <em>Position</em>}' reference.
+	 * Sets the value of the '{@link generator.QuestionedFact#getCompleteFact <em>Complete Fact</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Position</em>' reference.
-	 * @see #getPosition()
+	 * @param value the new value of the '<em>Complete Fact</em>' attribute.
+	 * @see #isSetCompleteFact()
+	 * @see #unsetCompleteFact()
+	 * @see #getCompleteFact()
 	 * @generated
 	 */
-	void setPosition(Position value);
+	void setCompleteFact(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Question Text</b></em>' attribute.
-	 * The default value is <code>"TEST"</code>.
+	 * Unsets the value of the '{@link generator.QuestionedFact#getCompleteFact <em>Complete Fact</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Question Text</em>' attribute.
-	 * @see #isSetQuestionText()
-	 * @see #unsetQuestionText()
-	 * @see #setQuestionText(String)
-	 * @see generator.GeneratorPackage#getQuestionedFact_QuestionText()
-	 * @model default="TEST" unsettable="true"
+	 * @see #isSetCompleteFact()
+	 * @see #getCompleteFact()
+	 * @see #setCompleteFact(String)
 	 * @generated
 	 */
-	String getQuestionText();
+	void unsetCompleteFact();
 
 	/**
-	 * Sets the value of the '{@link generator.QuestionedFact#getQuestionText <em>Question Text</em>}' attribute.
+	 * Returns whether the value of the '{@link generator.QuestionedFact#getCompleteFact <em>Complete Fact</em>}' attribute is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Question Text</em>' attribute.
-	 * @see #isSetQuestionText()
-	 * @see #unsetQuestionText()
-	 * @see #getQuestionText()
+	 * @return whether the value of the '<em>Complete Fact</em>' attribute is set.
+	 * @see #unsetCompleteFact()
+	 * @see #getCompleteFact()
+	 * @see #setCompleteFact(String)
 	 * @generated
 	 */
-	void setQuestionText(String value);
+	boolean isSetCompleteFact();
 
 	/**
-	 * Unsets the value of the '{@link generator.QuestionedFact#getQuestionText <em>Question Text</em>}' attribute.
+	 * Returns the value of the '<em><b>Correctness To Reach</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isSetQuestionText()
-	 * @see #getQuestionText()
-	 * @see #setQuestionText(String)
+	 * @return the value of the '<em>Correctness To Reach</em>' attribute.
+	 * @see #setCorrectnessToReach(int)
+	 * @see generator.GeneratorPackage#getQuestionedFact_CorrectnessToReach()
+	 * @model
 	 * @generated
 	 */
-	void unsetQuestionText();
+	int getCorrectnessToReach();
 
 	/**
-	 * Returns whether the value of the '{@link generator.QuestionedFact#getQuestionText <em>Question Text</em>}' attribute is set.
+	 * Sets the value of the '{@link generator.QuestionedFact#getCorrectnessToReach <em>Correctness To Reach</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Question Text</em>' attribute is set.
-	 * @see #unsetQuestionText()
-	 * @see #getQuestionText()
-	 * @see #setQuestionText(String)
+	 * @param value the new value of the '<em>Correctness To Reach</em>' attribute.
+	 * @see #getCorrectnessToReach()
 	 * @generated
 	 */
-	boolean isSetQuestionText();
+	void setCorrectnessToReach(int value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,6 +123,6 @@ public interface QuestionedFact extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void setQuestionText();
+	void setCompleteFact();
 
 } // QuestionedFact

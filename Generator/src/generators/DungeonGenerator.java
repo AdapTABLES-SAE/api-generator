@@ -17,14 +17,15 @@ import generator.impl.DungeonImpl;
 import generator.impl.RoomAccessImpl;
 import generator.impl.RoomImpl;
 import managers.EducationElementsManager;
+import managers.GameElementsManager;
 import managers.GridManager;
 import managers.ModelsManager;
 import structures.Coordinate;
-import structures.NeighborAccess;
+import structures.GameplayTaskFactPair;
 import structures.LabyrinthineRoom;
 import structures.LinearRoom;
 import structures.LinearRoomOrientations;
-import structures.TaskFactPair;
+import structures.NeighborAccess;
 
 public class DungeonGenerator {
 	private Dungeon generatedDungeon; 
@@ -35,7 +36,8 @@ public class DungeonGenerator {
 	private Random random;
 	
 	private GridManager gridManager;
-	private EducationElementsManager eeManager; 
+	//private EducationElementsManager eeManager; 
+	private GameElementsManager geManager;
 	
 	private double nbRooms;
 	
@@ -46,9 +48,11 @@ public class DungeonGenerator {
 		gridManager = new GridManager(modelAccess);	
 	}
 	
-	public DungeonGenerator(ModelsManager modelAccess, EducationElementsManager eeManager, double nbRooms) {
+	public DungeonGenerator(ModelsManager modelAccess, EducationElementsManager eeManager, GameElementsManager geManager,  double nbRooms) {
 		this(modelAccess); 		
-		this.eeManager = eeManager;
+		generatedDungeon.setLearningobjective(eeManager.getObjective());
+		generatedDungeon.setLevel(eeManager.getLevel());
+		this.geManager = geManager;
 		this.nbRooms = nbRooms;
 	}
 	
@@ -58,14 +62,12 @@ public class DungeonGenerator {
 		}else {
 			generateLabyrinthineDungeon();
 		}
-		generatedDungeon.setLearningobjective(eeManager.getObjective());
-		generatedDungeon.setLevel(eeManager.getLevel());
 		return generatedDungeon;
 	}
 	
-	/* ****************************************** */
-	/*  LABYRINTHINE DUNGEON GENERATIION METHODS  */
-	/* ****************************************** */
+	/* ******************************************* */
+	/*   LABYRINTHINE DUNGEON GENERATION METHODS   */
+	/* ******************************************* */
 	
 	private void generateLabyrinthineDungeon() {
 		System.out.println("Labyrinthe");
@@ -74,11 +76,11 @@ public class DungeonGenerator {
 		Room originRoom = createEntryRoomLabyrinthine();
 		dungeonRooms.add(new LabyrinthineRoom(originRoom));
 		
-		List<TaskFactPair> factsToQuestion = eeManager.getFactsToQuestion();
+		//List<TaskFactPair> factsToQuestion = eeManager.getFactsToQuestion();
 				
 		while(dungeonRooms.size() < nbRooms + 1) {
 			LabyrinthineRoom randomStartingRoom = chooseEntryRoomForNewPathIn(dungeonRooms);
-			LabyrinthineRoom aRoom = createNewRoomFrom(randomStartingRoom, factsToQuestion.get(dungeonRooms.size() - 1));
+			LabyrinthineRoom aRoom = createNewRoomFrom(randomStartingRoom, geManager.get(dungeonRooms.size() - 1));
 			if(aRoom != null) {
 				dungeonRooms.add(aRoom);
 				createNewPath(randomStartingRoom);
@@ -108,7 +110,7 @@ public class DungeonGenerator {
 		}
 	}
 	
-	private LabyrinthineRoom createNewRoomFrom(LabyrinthineRoom originRoom, TaskFactPair factsToQuestionByRoom) {
+	private LabyrinthineRoom createNewRoomFrom(LabyrinthineRoom originRoom, GameplayTaskFactPair factsToQuestionByRoom) {
 		Directions originRoomAvailableDirection = originRoom.getAvailableExit(gridManager);
 		if(originRoomAvailableDirection.equals(Directions.NONE)) { return null; }
 		Coordinate nextPosition = gridManager.getNextCoord(originRoom.getRoom(), originRoomAvailableDirection);
@@ -117,7 +119,7 @@ public class DungeonGenerator {
 		Directions entry = null;
 		while(roomType == null && !allowedDirections.isEmpty()) {
 			entry = chooseEntryDirection(allowedDirections);
-			roomType = getCompatibleRoomType(entry, factsToQuestionByRoom == null? 0 : factsToQuestionByRoom.getNumberOfFacts()); 
+			roomType = getCompatibleRoomType(entry, factsToQuestionByRoom == null? 0 : factsToQuestionByRoom.getTask2facts().getNumberOfFacts()); 
 			if(roomType == null) {
 				allowedDirections.remove(entry);
 			}
@@ -168,7 +170,7 @@ public class DungeonGenerator {
 		return createRoom(0, 0, rt, null, null, null, Directions.NONE);
 	}
 	
-	private Room createRoom(int x, int y, RoomType roomT, TaskFactPair factsToQuestion, RoomAccess previousRoomExitAccess,  Directions entryDirection) {
+	private Room createRoom(int x, int y, RoomType roomT, GameplayTaskFactPair factsToQuestion, RoomAccess previousRoomExitAccess,  Directions entryDirection) {
 		return createRoom(x, y, roomT, factsToQuestion, previousRoomExitAccess, entryDirection, Directions.NONE);
 	}
 		
@@ -186,7 +188,7 @@ public class DungeonGenerator {
 	
 		boolean backtrack = false;
 		Coordinate nextPosition = null;	
-		List<TaskFactPair> factsToQuestion = eeManager.getFactsToQuestion();
+		//List<TaskFactPair> factsToQuestion = eeManager.getFactsToQuestion();
 	
 		while(dungeonRooms.size() < nbRooms + 1) {
 			nextPosition = gridManager.getNextCoord(dungeonRooms.lastElement().getRoom(), dungeonRooms.lastElement().getExit());
@@ -201,7 +203,7 @@ public class DungeonGenerator {
 				eligibleRoomsOrientations.lastElement().removeExitForEntry(r.getEntry(), r.getExit());
 			}else {
 				backtrack = false;
-				LinearRoom aRoom = createNewRoomFrom(eligibleRoomsOrientations.lastElement(), nextPosition, factsToQuestion.get(dungeonRooms.size() - 1), 
+				LinearRoom aRoom = createNewRoomFrom(eligibleRoomsOrientations.lastElement(), nextPosition, geManager.get(dungeonRooms.size() - 1), 
 						dungeonRooms.lastElement().getLastRoomAccess(), dungeonRooms.size() == nbRooms);
 				dungeonRooms.add(aRoom);
 			}
@@ -213,7 +215,7 @@ public class DungeonGenerator {
 		generatedDungeon.setEntry(originRoom);
 	}
 	
-	private LinearRoom createNewRoomFrom(LinearRoomOrientations eligibleRoomOrientations, Coordinate nextPosition, TaskFactPair factsToQuestionByRoom, RoomAccess originRoomAccess, boolean isLastRoom) {
+	private LinearRoom createNewRoomFrom(LinearRoomOrientations eligibleRoomOrientations, Coordinate nextPosition, GameplayTaskFactPair factsToQuestionByRoom, RoomAccess originRoomAccess, boolean isLastRoom) {
 		Directions entry = null; 
 		Directions exit = null;
 		RoomType roomType = null;
@@ -224,7 +226,7 @@ public class DungeonGenerator {
 			}else {
 				exit = Directions.NONE;
 			}
-			roomType = getCompatibleRoomType(entry, exit, factsToQuestionByRoom == null? 0 : factsToQuestionByRoom.getNumberOfFacts()); 
+			roomType = getCompatibleRoomType(entry, exit, factsToQuestionByRoom == null? 0 : factsToQuestionByRoom.getTask2facts().getNumberOfFacts()); 
 		}
 		Coordinate validCoord = gridManager.getValidCoordinates(entry, nextPosition);
 		Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, factsToQuestionByRoom, originRoomAccess, entry, exit);
@@ -274,7 +276,7 @@ public class DungeonGenerator {
 		roomTypes = roomTypes.stream().filter(e -> e.getDirections().size() > 1).collect(Collectors.toList());
 		
 		for (RoomType roomType : new ArrayList<>(roomTypes)) {
-			if(!roomType.getDirections().contains(entry) || (!exit.equals(Directions.NONE) && !roomType.getDirections().contains(exit) || (roomType.getPositions().size() < numberOfFact))) {
+			if(!roomType.getDirections().contains(entry) || (!exit.equals(Directions.NONE) && !roomType.getDirections().contains(exit) )) { // || (roomType.getStatementPositions ().size() < numberOfFact)
 				roomTypes.remove(roomType);
 			}
 		}
@@ -293,19 +295,20 @@ public class DungeonGenerator {
 	 * @param exitDirection
 	 * @return a Room
 	 */ // TODO : S'occuper des positions des QUESTIONS 
-	private Room createRoom(int x, int y, RoomType roomT, TaskFactPair factsToQuestion, RoomAccess previousRoomExitAccess,  Directions entryDirection, Directions exitDirection) {
+	private Room createRoom(int x, int y, RoomType roomT, GameplayTaskFactPair gpTofactsToQuestion, RoomAccess previousRoomExitAccess,  Directions entryDirection, Directions exitDirection) {
 		Room r = new RoomImpl();
 		r.setRoomtype(roomT);
 		r.setX(x);
 		r.setY(y);
 		
-		if(factsToQuestion != null) {
+		if(gpTofactsToQuestion != null) {
 			/*for (QuestionedFact questionedFact : factsToQuestion.getFacts()) {
 				Position p = null;
 				questionedFact.setPosition(p);
 			}*/
-			r.getQuestionedFacts().addAll(factsToQuestion.getFacts());
-			r.setTask(factsToQuestion.getTask());
+			r.getQuestionedFacts().addAll(gpTofactsToQuestion.getTask2facts().getFacts());
+			r.setTask(gpTofactsToQuestion.getTask2facts().getTask());
+			r.setGameplay(gpTofactsToQuestion.getGameplay());
 		}
 				
 		RoomAccess ra = new RoomAccessImpl();
@@ -343,19 +346,21 @@ public class DungeonGenerator {
 	/*       DEBUG DUNGEON PRINTING METHODS       */
 	/* ****************************************** */
 	
-	private void printRoom(Room r) {
+	private void printRoom(Room r, int i) {
 		System.out.println("****");
 		System.out.println(r.getRoomtype().getClass().getName() + " ("+r.getX()+","+r.getY()+")");
 		for (RoomAccess ra : r.getRoomaccess()) {
 			System.out.println("Access : "+ra.getDirection());
 		}
+		System.out.println("Gameplay : "+geManager.get(i).getGameplay().getName());
 		System.out.println("****");
 	}
 	
 	public void printDungeon() {
 		System.out.println("---- Dungeon -----");
+		int i = 0;
 		for (Room r : generatedDungeon.getRooms()) {
-			printRoom(r);
+			printRoom(r, i); i++;
 		}
 	}
 }

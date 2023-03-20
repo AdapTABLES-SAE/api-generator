@@ -145,32 +145,44 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createLevelsDifficultyProgress();
 		case GeneratorPackage.CURRENT_GAME_LEVEL:
 			return createCurrentGameLevel();
-		case GeneratorPackage.GAME_ELEMENTS:
-			return createGameElements();
-		case GeneratorPackage.CORE_GP_ELEMENTS:
-			return createCoreGPElements();
+		case GeneratorPackage.ELEMENT_TYPES:
+			return createElementTypes();
+		case GeneratorPackage.CORE_ELEMENTS:
+			return createCoreElements();
 		case GeneratorPackage.EQUIPMENTS:
 			return createEquipments();
+		case GeneratorPackage.CORE_ELEMENT:
+			return createCoreElement();
 		case GeneratorPackage.EQUIPMENT:
 			return createEquipment();
-		case GeneratorPackage.ANSWER_ELEMENTS:
-			return createAnswerElements();
-		case GeneratorPackage.UNIQUE_ANSWER_ELEMENT:
-			return createUniqueAnswerElement();
-		case GeneratorPackage.MANY_ANSWER_ELEMENT:
-			return createManyAnswerElement();
-		case GeneratorPackage.NON_ANSWER_ELEMENT:
-			return createNonAnswerElement();
 		case GeneratorPackage.GAMEPLAY:
 			return createGameplay();
-		case GeneratorPackage.QUANTIFIED_ELEMENTS_BY_ABILITY:
-			return createQuantifiedElementsByAbility();
-		case GeneratorPackage.POSITIONED_ELEMENT:
-			return createPositionedElement();
+		case GeneratorPackage.QUANTIFIED_ELEMENTS:
+			return createQuantifiedElements();
 		case GeneratorPackage.GAMEPLAYS:
 			return createGameplays();
 		case GeneratorPackage.QUESTIONABLE_FACT_RESULT:
 			return createQuestionableFactResult();
+		case GeneratorPackage.ABILITY:
+			return createAbility();
+		case GeneratorPackage.ABILITIES:
+			return createAbilities();
+		case GeneratorPackage.STRUCTURE_POSITION:
+			return createStructurePosition();
+		case GeneratorPackage.STATEMENT_POSITION:
+			return createStatementPosition();
+		case GeneratorPackage.QUESTIONED_FACT_STATEMENT:
+			return createQuestionedFactStatement();
+		case GeneratorPackage.POSITIONED_ELEMENT:
+			return createPositionedElement();
+		case GeneratorPackage.DISPLAY:
+			return createDisplay();
+		case GeneratorPackage.CORRECTNESS:
+			return createCorrectness();
+		case GeneratorPackage.STRUCTURE_ELEMENT:
+			return createStructureElement();
+		case GeneratorPackage.WANTED_ANSWER:
+			return createWantedAnswer();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -200,10 +212,18 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createEModalityFromString(eDataType, initialValue);
 		case GeneratorPackage.ESEVERAL_TARGET:
 			return createESeveralTargetFromString(eDataType, initialValue);
-		case GeneratorPackage.EFFECT:
-			return createEffectFromString(eDataType, initialValue);
-		case GeneratorPackage.ABILITY:
-			return createAbilityFromString(eDataType, initialValue);
+		case GeneratorPackage.ELEMENT_SIZE:
+			return createElementSizeFromString(eDataType, initialValue);
+		case GeneratorPackage.ELEMENT_CATEGORY:
+			return createElementCategoryFromString(eDataType, initialValue);
+		case GeneratorPackage.STATEMENT_TYPE:
+			return createStatementTypeFromString(eDataType, initialValue);
+		case GeneratorPackage.VERIFICATION_VALUES:
+			return createVerificationValuesFromString(eDataType, initialValue);
+		case GeneratorPackage.GP_CATEGORY:
+			return createGPCategoryFromString(eDataType, initialValue);
+		case GeneratorPackage.GP_TYPE:
+			return createGPTypeFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -233,10 +253,18 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return convertEModalityToString(eDataType, instanceValue);
 		case GeneratorPackage.ESEVERAL_TARGET:
 			return convertESeveralTargetToString(eDataType, instanceValue);
-		case GeneratorPackage.EFFECT:
-			return convertEffectToString(eDataType, instanceValue);
-		case GeneratorPackage.ABILITY:
-			return convertAbilityToString(eDataType, instanceValue);
+		case GeneratorPackage.ELEMENT_SIZE:
+			return convertElementSizeToString(eDataType, instanceValue);
+		case GeneratorPackage.ELEMENT_CATEGORY:
+			return convertElementCategoryToString(eDataType, instanceValue);
+		case GeneratorPackage.STATEMENT_TYPE:
+			return convertStatementTypeToString(eDataType, instanceValue);
+		case GeneratorPackage.VERIFICATION_VALUES:
+			return convertVerificationValuesToString(eDataType, instanceValue);
+		case GeneratorPackage.GP_CATEGORY:
+			return convertGPCategoryToString(eDataType, instanceValue);
+		case GeneratorPackage.GP_TYPE:
+			return convertGPTypeToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -687,9 +715,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GameElements createGameElements() {
-		GameElementsImpl gameElements = new GameElementsImpl();
-		return gameElements;
+	public ElementTypes createElementTypes() {
+		ElementTypesImpl elementTypes = new ElementTypesImpl();
+		return elementTypes;
 	}
 
 	/**
@@ -697,9 +725,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CoreGPElements createCoreGPElements() {
-		CoreGPElementsImpl coreGPElements = new CoreGPElementsImpl();
-		return coreGPElements;
+	public CoreElements createCoreElements() {
+		CoreElementsImpl coreElements = new CoreElementsImpl();
+		return coreElements;
 	}
 
 	/**
@@ -717,49 +745,19 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public CoreElement createCoreElement() {
+		CoreElementImpl coreElement = new CoreElementImpl();
+		return coreElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Equipment createEquipment() {
 		EquipmentImpl equipment = new EquipmentImpl();
 		return equipment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AnswerElements createAnswerElements() {
-		AnswerElementsImpl answerElements = new AnswerElementsImpl();
-		return answerElements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UniqueAnswerElement createUniqueAnswerElement() {
-		UniqueAnswerElementImpl uniqueAnswerElement = new UniqueAnswerElementImpl();
-		return uniqueAnswerElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ManyAnswerElement createManyAnswerElement() {
-		ManyAnswerElementImpl manyAnswerElement = new ManyAnswerElementImpl();
-		return manyAnswerElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NonAnswerElement createNonAnswerElement() {
-		NonAnswerElementImpl nonAnswerElement = new NonAnswerElementImpl();
-		return nonAnswerElement;
 	}
 
 	/**
@@ -777,9 +775,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuantifiedElementsByAbility createQuantifiedElementsByAbility() {
-		QuantifiedElementsByAbilityImpl quantifiedElementsByAbility = new QuantifiedElementsByAbilityImpl();
-		return quantifiedElementsByAbility;
+	public QuantifiedElements createQuantifiedElements() {
+		QuantifiedElementsImpl quantifiedElements = new QuantifiedElementsImpl();
+		return quantifiedElements;
 	}
 
 	/**
@@ -790,6 +788,46 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public PositionedElement createPositionedElement() {
 		PositionedElementImpl positionedElement = new PositionedElementImpl();
 		return positionedElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Display createDisplay() {
+		DisplayImpl display = new DisplayImpl();
+		return display;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Correctness createCorrectness() {
+		CorrectnessImpl correctness = new CorrectnessImpl();
+		return correctness;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StructureElement createStructureElement() {
+		StructureElementImpl structureElement = new StructureElementImpl();
+		return structureElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public WantedAnswer createWantedAnswer() {
+		WantedAnswerImpl wantedAnswer = new WantedAnswerImpl();
+		return wantedAnswer;
 	}
 
 	/**
@@ -810,6 +848,56 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public QuestionableFactResult createQuestionableFactResult() {
 		QuestionableFactResultImpl questionableFactResult = new QuestionableFactResultImpl();
 		return questionableFactResult;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Ability createAbility() {
+		AbilityImpl ability = new AbilityImpl();
+		return ability;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Abilities createAbilities() {
+		AbilitiesImpl abilities = new AbilitiesImpl();
+		return abilities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StructurePosition createStructurePosition() {
+		StructurePositionImpl structurePosition = new StructurePositionImpl();
+		return structurePosition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StatementPosition createStatementPosition() {
+		StatementPositionImpl statementPosition = new StatementPositionImpl();
+		return statementPosition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QuestionedFactStatement createQuestionedFactStatement() {
+		QuestionedFactStatementImpl questionedFactStatement = new QuestionedFactStatementImpl();
+		return questionedFactStatement;
 	}
 
 	/**
@@ -993,8 +1081,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Effect createEffectFromString(EDataType eDataType, String initialValue) {
-		Effect result = Effect.get(initialValue);
+	public ElementSize createElementSizeFromString(EDataType eDataType, String initialValue) {
+		ElementSize result = ElementSize.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -1006,7 +1094,7 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertEffectToString(EDataType eDataType, Object instanceValue) {
+	public String convertElementSizeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1015,8 +1103,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Ability createAbilityFromString(EDataType eDataType, String initialValue) {
-		Ability result = Ability.get(initialValue);
+	public ElementCategory createElementCategoryFromString(EDataType eDataType, String initialValue) {
+		ElementCategory result = ElementCategory.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -1028,7 +1116,95 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertAbilityToString(EDataType eDataType, Object instanceValue) {
+	public String convertElementCategoryToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StatementType createStatementTypeFromString(EDataType eDataType, String initialValue) {
+		StatementType result = StatementType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertStatementTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VerificationValues createVerificationValuesFromString(EDataType eDataType, String initialValue) {
+		VerificationValues result = VerificationValues.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVerificationValuesToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GPCategory createGPCategoryFromString(EDataType eDataType, String initialValue) {
+		GPCategory result = GPCategory.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGPCategoryToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GPType createGPTypeFromString(EDataType eDataType, String initialValue) {
+		GPType result = GPType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGPTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

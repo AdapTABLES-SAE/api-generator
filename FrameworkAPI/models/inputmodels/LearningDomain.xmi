@@ -2,746 +2,746 @@
 <generator:LearningDomain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator">
   <learningpaths name="Ingrid | CE1-REP -- Classe Moyenne " ID="PATH1">
     <objectives ID="ICM-O1" name="D&#xe9;couverte Table 2">
-      <levels xsi:type="generator:MTLevel" ID="ICM-O1-N1" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK1">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O1-N1" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK1" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O1-N2" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK2"/>
-        <completionCriteria encountersPercent="80.0"/>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O1-N2" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK2" maxTime="20" nbFacts="1" target="RESULT"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O1-N3" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK3">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O1-N3" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK3" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
     </objectives>
     <objectives ID="ICM-O2" name="D&#xe9;couverte Table 10">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O1-N3" encountersPercent="80.0"/>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O2-N1" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK4">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O2-N1" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK4" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O2-N2" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK5"/>
-        <completionCriteria encountersPercent="80.0"/>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O2-N2" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK5" maxTime="20" nbFacts="1" target="RESULT"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O2-N3" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK6">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O2-N3" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK6" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
     <objectives ID="ICM-O3" name="Automatisation Table 2">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O2-N3" encountersPercent="80.0"/>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O3-N1" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK7">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O3-N1" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK7" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O3-N2" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK8">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O3-N2" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK8" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK9">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK9" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O3-N3" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100" ID="TASK10">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O3-N3" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100" ID="TASK10" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
     </objectives>
     <objectives ID="ICM-O11" name="Maitrise Table 2,3,4,5,10">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O10-N3" encountersPercent="80.0"/>
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O9-N3" encountersPercent="80.0"/>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O11-N1" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" ID="TASK11">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O11-N1" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" ID="TASK11" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O11-N2" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="40" ID="TASK12">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O11-N2" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="40" ID="TASK12" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="40" ID="TASK13">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="40" ID="TASK13" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="-1"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="TASK14">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="TASK14" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
     <objectives ID="ICM-O4" name="D&#xe9;couverte Table 5">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O2-N3" encountersPercent="80.0"/>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O4-N1" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK15">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O4-N1" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK15" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O4-N2" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK16"/>
-        <completionCriteria encountersPercent="80.0"/>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O4-N2" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK16" maxTime="20" nbFacts="1" target="RESULT"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O4-N3" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK17">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O4-N3" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK17" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
     </objectives>
     <objectives ID="ICM-O5" name="D&#xe9;couverte Table 3">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O3-N3" encountersPercent="80.0"/>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O5-N1" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK18">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O5-N1" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK18" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O5-N2" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK19"/>
-        <completionCriteria encountersPercent="80.0"/>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O5-N2" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK19" maxTime="20" nbFacts="1" target="RESULT"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O5-N3" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK20">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O5-N3" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK20" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
     </objectives>
     <objectives ID="ICM-O6" name="D&#xe9;couverte Table 4">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O5-N3" encountersPercent="80.0"/>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O6-N1" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK21">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O6-N1" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK21" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O6-N2" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK22"/>
-        <completionCriteria encountersPercent="80.0"/>
+      <levels xsi:type="generator:MTLevel" ID="ICM-O6-N2" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK22" maxTime="20" nbFacts="1" target="RESULT"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O6-N3" buildSetup="OPERAND_TABLE">
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK23">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O6-N3" buildSetup="OPERAND_TABLE" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK23" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
     </objectives>
     <objectives ID="ICM-O7" name="Automatisation Tables 2 + 10">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O3-N3" encountersPercent="80.0"/>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O7-N1" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK24">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O7-N1" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK24" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O7-N2" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK25">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O7-N2" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK25" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK26">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK26" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O7-N3" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100" ID="TASK27">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O7-N3" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100" ID="TASK27" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
     </objectives>
     <objectives ID="ICM-O8" name="Automatisation Table 2 + 5 + 10">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O5-N3" encountersPercent="80.0"/>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O8-N1" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK28">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O8-N1" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK28" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O8-N2" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK29">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O8-N2" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK29" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK30">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK30" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O8-N3" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100" ID="TASK31">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O8-N3" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100" ID="TASK31" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
     <objectives ID="ICM-O9" name="Automatisation Tables 2 + 3 + 5 + 10">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O6-N3" encountersPercent="80.0"/>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O9-N1" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK32">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O9-N1" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK32" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O9-N2" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK33">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O9-N2" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK33" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK34">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK34" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O9-N3" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100" ID="TASK35">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O9-N3" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100" ID="TASK35" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
     <objectives ID="ICM-10" name="Automatisation Tables 2 + 3 + 4 + 5 + 10 ">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O6-N3" encountersPercent="80.0"/>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O10-N1" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK36">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O10-N1" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK36" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O10-N2" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK37">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O10-N2" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK37" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK38">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK38" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <completionCriteria encountersPercent="80.0"/>
+        <completionCriteria succesPercent="80.0" encountersPercent="80.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="ICM-O10-N3" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100" ID="TASK39">
+      <levels xsi:type="generator:MTLevel" ID="ICM-O10-N3" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="100" ID="TASK39" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <completionCriteria succesPercent="100.0"/>
+        <completionCriteria succesPercent="100.0" encountersPercent="100.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
-    <knowledge href="MultiplicationTables.xmi#/"/>
+    <knowledge href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#/"/>
   </learningpaths>
   <learningpaths name="Rozenn | CE2 -- En cours" ID="PATH2">
     <objectives ID="REC-O1" name="R&#xe9;vision table travaill&#xe9;e en CE1">
-      <levels xsi:type="generator:MTLevel" ID="REC-O1-N1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="70" ID="TASK40">
+      <levels xsi:type="generator:MTLevel" ID="REC-O1-N1" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="70" ID="TASK40" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="10" ID="TASK41"/>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="10" ID="TASK42">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="10" ID="TASK41" maxTime="20" nbFacts="1" target="RESULT"/>
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="10" ID="TASK42" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK43">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK43" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O1-N2" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" ID="TASK44">
+      <levels xsi:type="generator:MTLevel" ID="REC-O1-N2" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" ID="TASK44" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" ID="TASK45">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" ID="TASK45" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="-1"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="15" ID="TASK46"/>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="10" ID="TASK47">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="15" ID="TASK46" maxTime="20" nbFacts="1" target="RESULT"/>
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="10" ID="TASK47" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK48">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK48" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
     <objectives ID="REC-O2" name="Apprentissage Table 6">
-      <prerequisites succesPercent="80.0" requiredLevel="REC-O1-N1"/>
-      <levels xsi:type="generator:MTLevel" ID="REC-O2-N1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="80" ID="TASK49">
+      <prerequisites succesPercent="80.0" requiredLevel="REC-O1-N1" encountersPercent="100.0"/>
+      <levels xsi:type="generator:MTLevel" ID="REC-O2-N1" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="80" ID="TASK49" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK50">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK50" maxTime="20" nbFacts="1" target="RESULT">
           <responseModality xsi:type="generator:MultipleChoice"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O2-N2" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="70" ID="TASK51">
+      <levels xsi:type="generator:MTLevel" ID="REC-O2-N2" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="70" ID="TASK51" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK52"/>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK53">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK52" maxTime="20" nbFacts="1" target="RESULT"/>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK53" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O2-N3" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" ID="TASK54">
+      <levels xsi:type="generator:MTLevel" ID="REC-O2-N3" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" ID="TASK54" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="25" ID="TASK55">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="25" ID="TASK55" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4"/>
           <targets>OPERAND_RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="25" ID="TASK56">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="25" ID="TASK56" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O2-N4" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="40" ID="TASK57">
+      <levels xsi:type="generator:MTLevel" ID="REC-O2-N4" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="40" ID="TASK57" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="30" ID="TASK58">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="30" ID="TASK58" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4"/>
           <targets>OPERAND_RESULT</targets>
           <targets>TABLE_RESULT</targets>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="30" ID="TASK59">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="30" ID="TASK59" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.5"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.5"/>
     </objectives>
     <objectives ID="REC-O3" name="Apprentissage Table 7">
-      <prerequisites succesPercent="80.0" requiredLevel="REC-O1-N1"/>
-      <levels xsi:type="generator:MTLevel" ID="REC-O3-N1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="80" ID="TASK60">
+      <prerequisites succesPercent="80.0" requiredLevel="REC-O1-N1" encountersPercent="100.0"/>
+      <levels xsi:type="generator:MTLevel" ID="REC-O3-N1" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="80" ID="TASK60" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK61">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK61" maxTime="20" nbFacts="1" target="RESULT">
           <responseModality xsi:type="generator:MultipleChoice"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O3-N2" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="70" ID="TASK62">
+      <levels xsi:type="generator:MTLevel" ID="REC-O3-N2" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="70" ID="TASK62" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK63"/>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK64">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK63" maxTime="20" nbFacts="1" target="RESULT"/>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK64" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O3-N3" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" ID="TASK65">
+      <levels xsi:type="generator:MTLevel" ID="REC-O3-N3" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" ID="TASK65" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="25" ID="TASK66">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="25" ID="TASK66" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="25" ID="TASK67">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="25" ID="TASK67" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O3-N4" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="40">
+      <levels xsi:type="generator:MTLevel" ID="REC-O3-N4" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="40" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="30">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="30" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4"/>
           <targets>OPERAND_RESULT</targets>
           <targets>TABLE_RESULT</targets>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="30">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="30" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.6"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.6"/>
     </objectives>
     <objectives ID="REC-O4" name="Apprentissage Table 8">
-      <prerequisites succesPercent="80.0" requiredLevel="REC-O1-N1"/>
-      <levels xsi:type="generator:MTLevel" ID="REC-O4-N1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="80" ID="TASK68">
+      <prerequisites succesPercent="80.0" requiredLevel="REC-O1-N1" encountersPercent="100.0"/>
+      <levels xsi:type="generator:MTLevel" ID="REC-O4-N1" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="80" ID="TASK68" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK69">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK69" maxTime="20" nbFacts="1" target="RESULT">
           <responseModality xsi:type="generator:MultipleChoice"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O4-N2" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="70" ID="TASK70">
+      <levels xsi:type="generator:MTLevel" ID="REC-O4-N2" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="70" ID="TASK70" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK71"/>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK72">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK71" maxTime="20" nbFacts="1" target="RESULT"/>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK72" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O4-N3" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" ID="TASK73">
+      <levels xsi:type="generator:MTLevel" ID="REC-O4-N3" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" ID="TASK73" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="25" ID="TASK74">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="25" ID="TASK74" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="25" ID="TASK75">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="25" ID="TASK75" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O4-N4" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="40" ID="TASK76">
+      <levels xsi:type="generator:MTLevel" ID="REC-O4-N4" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="40" ID="TASK76" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="30" ID="TASK77">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="30" ID="TASK77" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4"/>
           <targets>OPERAND_RESULT</targets>
           <targets>TABLE_RESULT</targets>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="30" ID="TASK78">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="30" ID="TASK78" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.7"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.7"/>
     </objectives>
     <objectives ID="REC-O5" name="Apprentissage Table 9">
-      <prerequisites succesPercent="80.0" requiredLevel="REC-O1-N1"/>
-      <levels xsi:type="generator:MTLevel" ID="REC-O5-N1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="80" ID="TASK79">
+      <prerequisites succesPercent="80.0" requiredLevel="REC-O1-N1" encountersPercent="100.0"/>
+      <levels xsi:type="generator:MTLevel" ID="REC-O5-N1" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="80" ID="TASK79" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK80">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK80" maxTime="20" nbFacts="1" target="RESULT">
           <responseModality xsi:type="generator:MultipleChoice"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O5-N2" buildSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="70" ID="TASK81">
+      <levels xsi:type="generator:MTLevel" ID="REC-O5-N2" buildSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="70" ID="TASK81" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK82"/>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK83">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK82" maxTime="20" nbFacts="1" target="RESULT"/>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK83" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O5-N3" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" ID="TASK84">
+      <levels xsi:type="generator:MTLevel" ID="REC-O5-N3" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" ID="TASK84" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="25" ID="TASK85">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="25" ID="TASK85" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="25" ID="TASK86">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="25" ID="TASK86" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O5-N4" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="40" ID="TASK87">
+      <levels xsi:type="generator:MTLevel" ID="REC-O5-N4" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="40" ID="TASK87" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="30" ID="TASK88">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="30" ID="TASK88" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4"/>
           <targets>OPERAND_RESULT</targets>
           <targets>TABLE_RESULT</targets>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="30" ID="TASK89">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="30" ID="TASK89" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.8"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.8"/>
     </objectives>
     <objectives ID="REC-O6" name="ALL IN">
-      <prerequisites succesPercent="70.0" requiredLevel="REC-O2-N3"/>
-      <prerequisites succesPercent="70.0" requiredLevel="REC-O3-N3"/>
-      <prerequisites succesPercent="70.0" requiredLevel="REC-O4-N3"/>
-      <prerequisites succesPercent="70.0" requiredLevel="REC-O5-N3"/>
-      <levels xsi:type="generator:MTLevel" ID="REC-O6-N1" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="40" ID="TASK90">
+      <prerequisites succesPercent="70.0" requiredLevel="REC-O2-N3" encountersPercent="100.0"/>
+      <prerequisites succesPercent="70.0" requiredLevel="REC-O3-N3" encountersPercent="100.0"/>
+      <prerequisites succesPercent="70.0" requiredLevel="REC-O4-N3" encountersPercent="100.0"/>
+      <prerequisites succesPercent="70.0" requiredLevel="REC-O5-N3" encountersPercent="100.0"/>
+      <levels xsi:type="generator:MTLevel" ID="REC-O6-N1" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="40" ID="TASK90" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="TASK91">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="TASK91" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK92"/>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="20" ID="TASK93">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK92" maxTime="20" nbFacts="1" target="RESULT"/>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="20" ID="TASK93" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria succesPercent="80.0" encountersPercent="100.0"/>
       </levels>
-      <levels xsi:type="generator:MTLevel" ID="REC-O6-N2" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" ID="TASK94">
+      <levels xsi:type="generator:MTLevel" ID="REC-O6-N2" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="10">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" ID="TASK94" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="20" ID="TASK95">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="20" ID="TASK95" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4"/>
           <targets>OPERAND_RESULT</targets>
           <targets>TABLE_RESULT</targets>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="TASK96">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="TASK96" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK97"/>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="20" ID="TASK98" checkIsTrue="false">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK97" maxTime="20" nbFacts="1" target="RESULT"/>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="20" ID="TASK98" maxTime="20" checkIsTrue="false">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
-        <completionCriteria succesPercent="100.0"/>
+        <completionCriteria succesPercent="100.0" encountersPercent="100.0"/>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.0"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.5"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.6"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.7"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.8"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.0"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.5"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.6"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.7"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.8"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
-    <knowledge href="MultiplicationTables.xmi#/"/>
+    <knowledge href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#/"/>
   </learningpaths>
   <learningpaths name="EIAH TEST TRAINING PATH" ID="PATH3">
     <objectives ID="O1" name="FICTIF SINGLE OBJECTIVE">
-      <levels xsi:type="generator:MTLevel" ID="O1_N1" buildSetup="MIX" resultPositionSetup="MIX" maxInterval="12">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" nbConsecutiveSuccess="1" ID="C1-RES">
+      <levels xsi:type="generator:MTLevel" ID="O1_N1" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="12">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" nbConsecutiveSuccess="1" ID="C1-RES" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="10" nbConsecutiveSuccess="1" ID="C1-TABOP">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="10" nbConsecutiveSuccess="1" ID="C1-TABOP" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" nbConsecutiveSuccess="1" ID="C2-OPTABLE">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" nbConsecutiveSuccess="1" ID="C2-OPTABLE" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="REB">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="REB" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES" nbFacts="2"/>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="MEMB">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES" maxTime="20" nbFacts="2" target="RESULT"/>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="MEMB" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.0"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.5"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.6"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.7"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.8"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.10"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.11"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.0"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.5"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.6"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.7"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.8"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.10"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.11"/>
     </objectives>
-    <knowledge href="MultiplicationTables.xmi#/"/>
+    <knowledge href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#/"/>
   </learningpaths>
   <learningpaths name="EIAH TEST TRAINING PATH 2" ID="PATH4">
     <objectives ID="O1" name="FICTIF SINGLE OBJECTIVE">
-      <levels xsi:type="generator:MTLevel" ID="O1_N1" buildSetup="MIX" resultPositionSetup="MIX" maxInterval="12">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" nbConsecutiveSuccess="1" ID="C1-RES">
+      <levels xsi:type="generator:MTLevel" ID="O1_N1" buildSetup="MIX" resultPositionSetup="MIX" minInterval="1" maxInterval="12">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" nbConsecutiveSuccess="1" ID="C1-RES" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="10" nbConsecutiveSuccess="1" ID="C1-TABOP">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="10" nbConsecutiveSuccess="1" ID="C1-TABOP" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" nbConsecutiveSuccess="1" ID="C2-OPTABLE">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" nbConsecutiveSuccess="1" ID="C2-OPTABLE" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="REB">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="REB" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES" nbFacts="2"/>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="MEMB">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES" maxTime="20" nbFacts="2" target="RESULT"/>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="MEMB" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.0"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.0"/>
     </objectives>
-    <knowledge href="MultiplicationTables.xmi#/"/>
+    <knowledge href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#/"/>
   </learningpaths>
   <learningpaths name="EIAH TEST TRAINING PATH 3" ID="PATH5">
     <objectives ID="O1" name="FICTIF SINGLE OBJECTIVE">
       <levels xsi:type="generator:MTLevel" ID="O1_N1" buildSetup="MIX" resultPositionSetup="MIX" minInterval="3" maxInterval="5">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" nbConsecutiveSuccess="1" ID="C1-RES">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" nbConsecutiveSuccess="1" ID="C1-RES" maxTime="20">
           <responseModality xsi:type="generator:EnterResponse"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="10" nbConsecutiveSuccess="1" ID="C1-TABOP">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="10" nbConsecutiveSuccess="1" ID="C1-TABOP" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>TABLE</targets>
           <targets>OPERAND</targets>
         </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" nbConsecutiveSuccess="1" ID="C2-OPTABLE">
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" nbConsecutiveSuccess="1" ID="C2-OPTABLE" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="REB">
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="REB" maxTime="20">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES" nbFacts="2"/>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="MEMB">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES" maxTime="20" nbFacts="2" target="RESULT"/>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="MEMB" maxTime="20" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.7"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.10"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.7"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.10"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
     </objectives>
-    <knowledge href="MultiplicationTables.xmi#/"/>
+    <knowledge href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#/"/>
   </learningpaths>
   <learningpaths name="Just another test" ID="PATH404">
-    <objectives ID="PATH404-O1">
-      <levels xsi:type="generator:MTLevel" ID="PATH404-O1-L1">
+    <objectives ID="PATH404-O1" name="PATH404-O1">
+      <levels xsi:type="generator:MTLevel" ID="PATH404-O1-L1" minInterval="1" maxInterval="10">
         <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T1" maxTime="30">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
           <targets>RESULT</targets>
@@ -755,16 +755,16 @@
         <tasks xsi:type="generator:MTRecontruction" percentOfApparition="15" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T3" maxTime="30">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="10" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T4" maxTime="30" nbFacts="2">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="10" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T4" maxTime="30" nbFacts="2" target="RESULT">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
         </tasks>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T5" maxTime="30">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T5" maxTime="30" checkIsTrue="true">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
         </tasks>
       </levels>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.11"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.11"/>
     </objectives>
-    <knowledge href="MultiplicationTables.xmi#/"/>
+    <knowledge href="file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#/"/>
   </learningpaths>
 </generator:LearningDomain>

@@ -91,6 +91,7 @@ public class MTCompletion1Generator {
 		qf.setResult(fact.getRes());
 		qf.setResultOnRight(resPos.equals(ResultPosition.RIGHT));
 		
+		
 		switch (target) {
 		case OPERAND:
 			if(build.equals(TableBuild.OPERAND_TABLE)) {qf.setLeftOperand(-1);} else {qf.setRightOperand(-1);}

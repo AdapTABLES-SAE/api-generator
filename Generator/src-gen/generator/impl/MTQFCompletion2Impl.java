@@ -500,9 +500,9 @@ public class MTQFCompletion2Impl extends QuestionableFactImpl implements MTQFCom
 		String res = getResult() == -1 ? "?" : getResult() + "";
 
 		if (resultOnRight) {
-			return left + " x " + right + " = " + res + " (" + soluceLeft + "x" + soluceRight + "=" + soluceRes + ")";
+			return left + " x " + right + " = " + res; // + " (" + soluceLeft + "x" + soluceRight + "=" + soluceRes + ")";
 		} else {
-			return res + " = " + left + " x " + right + " (" + soluceRes + "=" + soluceLeft + "x" + soluceRight + ")";
+			return res + " = " + left + " x " + right; // + " (" + soluceRes + "=" + soluceLeft + "x" + soluceRight + ")";
 		}
 	}
 

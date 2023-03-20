@@ -77,7 +77,7 @@ public class MTMembershipGenerator {
 		for (MTResultFact mtResultFact : facts) {
 			qf.getGoodResults().add(mtResultFact.getRes());
 		}
-		qf.setTable(facts.get(0).getTable());		
+		qf.setTable(facts.get(0).getTable());
 		return qf;
 	}
 }

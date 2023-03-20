@@ -331,9 +331,9 @@ public class MTQFRebuildImpl extends QuestionableFactImpl implements MTQFRebuild
 	@Override
 	public String getQuestionableFact() {
 		if (resultOnRight) {
-			return "? x ? = ? (" + getSoluceLeft() + " x " + getSoluceRight() + " = " + getSoluceRes() + ")";
+			return "? x ? = ?"; // + getSoluceLeft() + " x " + getSoluceRight() + " = " + getSoluceRes() + ")";
 		} else {
-			return "? = ? x ? (" + getSoluceRes() + " = " + getSoluceLeft() + " x " + getSoluceRight() + ")";
+			return "? = ? x ?";// + getSoluceRes() + " = " + getSoluceLeft() + " x " + getSoluceRight() + ")";
 		}
 	}
 

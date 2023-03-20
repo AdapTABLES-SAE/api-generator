@@ -2,14 +2,15 @@
  */
 package generator.impl;
 
+import generator.Abilities;
+import generator.ElementTypes;
 import generator.GameDescription;
+import generator.Gameplays;
 import generator.GeneratorPackage;
 import generator.LevelsDifficultyProgress;
 import generator.RoomTypes;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -26,6 +27,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link generator.impl.GameDescriptionImpl#getRoomtypes <em>Roomtypes</em>}</li>
  *   <li>{@link generator.impl.GameDescriptionImpl#getLevelsDifficultyProgress <em>Levels Difficulty Progress</em>}</li>
+ *   <li>{@link generator.impl.GameDescriptionImpl#getGameplays <em>Gameplays</em>}</li>
+ *   <li>{@link generator.impl.GameDescriptionImpl#getElements <em>Elements</em>}</li>
+ *   <li>{@link generator.impl.GameDescriptionImpl#getAbilities <em>Abilities</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,6 +54,36 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected LevelsDifficultyProgress levelsDifficultyProgress;
+
+	/**
+	 * The cached value of the '{@link #getGameplays() <em>Gameplays</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGameplays()
+	 * @generated
+	 * @ordered
+	 */
+	protected Gameplays gameplays;
+
+	/**
+	 * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElements()
+	 * @generated
+	 * @ordered
+	 */
+	protected ElementTypes elements;
+
+	/**
+	 * The cached value of the '{@link #getAbilities() <em>Abilities</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAbilities()
+	 * @generated
+	 * @ordered
+	 */
+	protected Abilities abilities;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -180,6 +214,156 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Gameplays getGameplays() {
+		return gameplays;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetGameplays(Gameplays newGameplays, NotificationChain msgs) {
+		Gameplays oldGameplays = gameplays;
+		gameplays = newGameplays;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.GAME_DESCRIPTION__GAMEPLAYS, oldGameplays, newGameplays);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGameplays(Gameplays newGameplays) {
+		if (newGameplays != gameplays) {
+			NotificationChain msgs = null;
+			if (gameplays != null)
+				msgs = ((InternalEObject) gameplays).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GAME_DESCRIPTION__GAMEPLAYS, null, msgs);
+			if (newGameplays != null)
+				msgs = ((InternalEObject) newGameplays).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GAME_DESCRIPTION__GAMEPLAYS, null, msgs);
+			msgs = basicSetGameplays(newGameplays, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAME_DESCRIPTION__GAMEPLAYS,
+					newGameplays, newGameplays));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ElementTypes getElements() {
+		return elements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetElements(ElementTypes newElements, NotificationChain msgs) {
+		ElementTypes oldElements = elements;
+		elements = newElements;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.GAME_DESCRIPTION__ELEMENTS, oldElements, newElements);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setElements(ElementTypes newElements) {
+		if (newElements != elements) {
+			NotificationChain msgs = null;
+			if (elements != null)
+				msgs = ((InternalEObject) elements).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GAME_DESCRIPTION__ELEMENTS, null, msgs);
+			if (newElements != null)
+				msgs = ((InternalEObject) newElements).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GAME_DESCRIPTION__ELEMENTS, null, msgs);
+			msgs = basicSetElements(newElements, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAME_DESCRIPTION__ELEMENTS,
+					newElements, newElements));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Abilities getAbilities() {
+		return abilities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAbilities(Abilities newAbilities, NotificationChain msgs) {
+		Abilities oldAbilities = abilities;
+		abilities = newAbilities;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.GAME_DESCRIPTION__ABILITIES, oldAbilities, newAbilities);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAbilities(Abilities newAbilities) {
+		if (newAbilities != abilities) {
+			NotificationChain msgs = null;
+			if (abilities != null)
+				msgs = ((InternalEObject) abilities).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GAME_DESCRIPTION__ABILITIES, null, msgs);
+			if (newAbilities != null)
+				msgs = ((InternalEObject) newAbilities).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GAME_DESCRIPTION__ABILITIES, null, msgs);
+			msgs = basicSetAbilities(newAbilities, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAME_DESCRIPTION__ABILITIES,
+					newAbilities, newAbilities));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -187,6 +371,12 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 			return basicSetRoomtypes(null, msgs);
 		case GeneratorPackage.GAME_DESCRIPTION__LEVELS_DIFFICULTY_PROGRESS:
 			return basicSetLevelsDifficultyProgress(null, msgs);
+		case GeneratorPackage.GAME_DESCRIPTION__GAMEPLAYS:
+			return basicSetGameplays(null, msgs);
+		case GeneratorPackage.GAME_DESCRIPTION__ELEMENTS:
+			return basicSetElements(null, msgs);
+		case GeneratorPackage.GAME_DESCRIPTION__ABILITIES:
+			return basicSetAbilities(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -203,6 +393,12 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 			return getRoomtypes();
 		case GeneratorPackage.GAME_DESCRIPTION__LEVELS_DIFFICULTY_PROGRESS:
 			return getLevelsDifficultyProgress();
+		case GeneratorPackage.GAME_DESCRIPTION__GAMEPLAYS:
+			return getGameplays();
+		case GeneratorPackage.GAME_DESCRIPTION__ELEMENTS:
+			return getElements();
+		case GeneratorPackage.GAME_DESCRIPTION__ABILITIES:
+			return getAbilities();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -212,6 +408,7 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -220,6 +417,15 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 			return;
 		case GeneratorPackage.GAME_DESCRIPTION__LEVELS_DIFFICULTY_PROGRESS:
 			setLevelsDifficultyProgress((LevelsDifficultyProgress) newValue);
+			return;
+		case GeneratorPackage.GAME_DESCRIPTION__GAMEPLAYS:
+			setGameplays((Gameplays) newValue);
+			return;
+		case GeneratorPackage.GAME_DESCRIPTION__ELEMENTS:
+			setElements((ElementTypes) newValue);
+			return;
+		case GeneratorPackage.GAME_DESCRIPTION__ABILITIES:
+			setAbilities((Abilities) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -239,6 +445,15 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 		case GeneratorPackage.GAME_DESCRIPTION__LEVELS_DIFFICULTY_PROGRESS:
 			setLevelsDifficultyProgress((LevelsDifficultyProgress) null);
 			return;
+		case GeneratorPackage.GAME_DESCRIPTION__GAMEPLAYS:
+			setGameplays((Gameplays) null);
+			return;
+		case GeneratorPackage.GAME_DESCRIPTION__ELEMENTS:
+			setElements((ElementTypes) null);
+			return;
+		case GeneratorPackage.GAME_DESCRIPTION__ABILITIES:
+			setAbilities((Abilities) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -255,6 +470,12 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 			return roomtypes != null;
 		case GeneratorPackage.GAME_DESCRIPTION__LEVELS_DIFFICULTY_PROGRESS:
 			return levelsDifficultyProgress != null;
+		case GeneratorPackage.GAME_DESCRIPTION__GAMEPLAYS:
+			return gameplays != null;
+		case GeneratorPackage.GAME_DESCRIPTION__ELEMENTS:
+			return elements != null;
+		case GeneratorPackage.GAME_DESCRIPTION__ABILITIES:
+			return abilities != null;
 		}
 		return super.eIsSet(featureID);
 	}

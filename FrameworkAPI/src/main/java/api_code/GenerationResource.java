@@ -21,18 +21,12 @@ import jakarta.ws.rs.core.MediaType;
 
 @Path("/generator")
 public class GenerationResource {
-
-	private static final String WORKSPACE_PATH = "C:/blemoine/TheseGenerator/gen1/FrameworkAPI/";
-	
-	private static final String INPUT_MODELS_PATH = WORKSPACE_PATH + "models/inputmodels/";
-	private static final String OUTPUT_MODELS_PATH = WORKSPACE_PATH + "models/";
-	private static final String CONTEXTS_FILES_PATHS = "contextsByLP/Context_";
-	
+		
 	@GET
 	@Produces(MediaType.TEXT_XML)
 	public String generate(@QueryParam("ID") String learnerID) { // 
 		generateDungeon(learnerID);
-		File xmlFile = new File(OUTPUT_MODELS_PATH + "/DungeonGen_"+ learnerID +".xml");
+		File xmlFile = new File(Paths.OUTPUT_MODELS_PATH + "/DungeonGen_"+ learnerID +".xml");
 		Reader fileReader;
 		StringBuilder sb = new StringBuilder();
 		System.out.println(xmlFile.getAbsolutePath());
@@ -56,12 +50,12 @@ public class GenerationResource {
 	/***********************************/
 	
 	private void generateDungeon(String learnerPlayerID) {
-		System.out.println(INPUT_MODELS_PATH);
-		ALGAGenerator generator = new ALGAGenerator(INPUT_MODELS_PATH, OUTPUT_MODELS_PATH, CONTEXTS_FILES_PATHS + learnerPlayerID + ".xmi");
+		System.out.println(Paths.PROJECT_PATH);
+		ALGAGenerator generator = new ALGAGenerator(Paths.INPUT_MODELS_PATH, Paths.OUTPUT_MODELS_PATH, Paths.CONTEXTS_FILES_SHORT_PATHS + learnerPlayerID + ".xmi", true);
 		generator.generate();
 		generator.printDungeon();
 		generator.saveDungeon("DungeonGen_"+ learnerPlayerID +".xmi");
-		Main.transformModel(OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xmi", OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xml");
+		Main.transformModel(Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xmi", Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xml");
 	}
 	
 	/*@GET

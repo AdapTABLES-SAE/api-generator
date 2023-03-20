@@ -10,6 +10,19 @@ import generator.ResultsByTask;
 
 public class Shuffle {
 	
+	public static List<Integer> shufflePropositions(List<Integer> eList){
+		Random rand = new Random();
+		List<Integer> shuffledElem = new ArrayList<>();
+		int number = eList.size();
+		int j;
+		while (shuffledElem.size() != number) {
+			j = rand.nextInt(eList.size()); 
+			shuffledElem.add(eList.get(j));
+			eList.remove(j);
+		}
+		return shuffledElem;
+	}
+	
 	public static List<AbstractFact> shuffle(List<AbstractFact> eList){
 		Random rand = new Random();
 		List<AbstractFact> shuffledElem = new ArrayList<>();

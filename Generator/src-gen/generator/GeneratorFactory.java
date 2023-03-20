@@ -418,22 +418,22 @@ public interface GeneratorFactory extends EFactory {
 	CurrentGameLevel createCurrentGameLevel();
 
 	/**
-	 * Returns a new object of class '<em>Game Elements</em>'.
+	 * Returns a new object of class '<em>Element Types</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Game Elements</em>'.
+	 * @return a new object of class '<em>Element Types</em>'.
 	 * @generated
 	 */
-	GameElements createGameElements();
+	ElementTypes createElementTypes();
 
 	/**
-	 * Returns a new object of class '<em>Core GP Elements</em>'.
+	 * Returns a new object of class '<em>Core Elements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Core GP Elements</em>'.
+	 * @return a new object of class '<em>Core Elements</em>'.
 	 * @generated
 	 */
-	CoreGPElements createCoreGPElements();
+	CoreElements createCoreElements();
 
 	/**
 	 * Returns a new object of class '<em>Equipments</em>'.
@@ -445,6 +445,15 @@ public interface GeneratorFactory extends EFactory {
 	Equipments createEquipments();
 
 	/**
+	 * Returns a new object of class '<em>Core Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Core Element</em>'.
+	 * @generated
+	 */
+	CoreElement createCoreElement();
+
+	/**
 	 * Returns a new object of class '<em>Equipment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -452,42 +461,6 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	Equipment createEquipment();
-
-	/**
-	 * Returns a new object of class '<em>Answer Elements</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Answer Elements</em>'.
-	 * @generated
-	 */
-	AnswerElements createAnswerElements();
-
-	/**
-	 * Returns a new object of class '<em>Unique Answer Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Unique Answer Element</em>'.
-	 * @generated
-	 */
-	UniqueAnswerElement createUniqueAnswerElement();
-
-	/**
-	 * Returns a new object of class '<em>Many Answer Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Many Answer Element</em>'.
-	 * @generated
-	 */
-	ManyAnswerElement createManyAnswerElement();
-
-	/**
-	 * Returns a new object of class '<em>Non Answer Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Non Answer Element</em>'.
-	 * @generated
-	 */
-	NonAnswerElement createNonAnswerElement();
 
 	/**
 	 * Returns a new object of class '<em>Gameplay</em>'.
@@ -499,13 +472,13 @@ public interface GeneratorFactory extends EFactory {
 	Gameplay createGameplay();
 
 	/**
-	 * Returns a new object of class '<em>Quantified Elements By Ability</em>'.
+	 * Returns a new object of class '<em>Quantified Elements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Quantified Elements By Ability</em>'.
+	 * @return a new object of class '<em>Quantified Elements</em>'.
 	 * @generated
 	 */
-	QuantifiedElementsByAbility createQuantifiedElementsByAbility();
+	QuantifiedElements createQuantifiedElements();
 
 	/**
 	 * Returns a new object of class '<em>Positioned Element</em>'.
@@ -515,6 +488,42 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	PositionedElement createPositionedElement();
+
+	/**
+	 * Returns a new object of class '<em>Display</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Display</em>'.
+	 * @generated
+	 */
+	Display createDisplay();
+
+	/**
+	 * Returns a new object of class '<em>Correctness</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Correctness</em>'.
+	 * @generated
+	 */
+	Correctness createCorrectness();
+
+	/**
+	 * Returns a new object of class '<em>Structure Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Structure Element</em>'.
+	 * @generated
+	 */
+	StructureElement createStructureElement();
+
+	/**
+	 * Returns a new object of class '<em>Wanted Answer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Wanted Answer</em>'.
+	 * @generated
+	 */
+	WantedAnswer createWantedAnswer();
 
 	/**
 	 * Returns a new object of class '<em>Gameplays</em>'.
@@ -533,6 +542,51 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	QuestionableFactResult createQuestionableFactResult();
+
+	/**
+	 * Returns a new object of class '<em>Ability</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ability</em>'.
+	 * @generated
+	 */
+	Ability createAbility();
+
+	/**
+	 * Returns a new object of class '<em>Abilities</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Abilities</em>'.
+	 * @generated
+	 */
+	Abilities createAbilities();
+
+	/**
+	 * Returns a new object of class '<em>Structure Position</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Structure Position</em>'.
+	 * @generated
+	 */
+	StructurePosition createStructurePosition();
+
+	/**
+	 * Returns a new object of class '<em>Statement Position</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Statement Position</em>'.
+	 * @generated
+	 */
+	StatementPosition createStatementPosition();
+
+	/**
+	 * Returns a new object of class '<em>Questioned Fact Statement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Questioned Fact Statement</em>'.
+	 * @generated
+	 */
+	QuestionedFactStatement createQuestionedFactStatement();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -16,7 +16,9 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generator.RoomType#getName <em>Name</em>}</li>
- *   <li>{@link generator.RoomType#getPositions <em>Positions</em>}</li>
+ *   <li>{@link generator.RoomType#getElementPositions <em>Element Positions</em>}</li>
+ *   <li>{@link generator.RoomType#getStructurePositions <em>Structure Positions</em>}</li>
+ *   <li>{@link generator.RoomType#getStatementPositions <em>Statement Positions</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getRoomType()
@@ -47,16 +49,40 @@ public interface RoomType extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Positions</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Element Positions</b></em>' containment reference list.
 	 * The list contents are of type {@link generator.Position}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Positions</em>' containment reference list.
-	 * @see generator.GeneratorPackage#getRoomType_Positions()
+	 * @return the value of the '<em>Element Positions</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getRoomType_ElementPositions()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Position> getPositions();
+	EList<Position> getElementPositions();
+
+	/**
+	 * Returns the value of the '<em><b>Structure Positions</b></em>' containment reference list.
+	 * The list contents are of type {@link generator.StructurePosition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Structure Positions</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getRoomType_StructurePositions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<StructurePosition> getStructurePositions();
+
+	/**
+	 * Returns the value of the '<em><b>Statement Positions</b></em>' containment reference list.
+	 * The list contents are of type {@link generator.StatementPosition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Statement Positions</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getRoomType_StatementPositions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<StatementPosition> getStatementPositions();
 
 	/**
 	 * <!-- begin-user-doc -->

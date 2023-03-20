@@ -15,6 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.GameDescription#getRoomtypes <em>Roomtypes</em>}</li>
  *   <li>{@link generator.GameDescription#getLevelsDifficultyProgress <em>Levels Difficulty Progress</em>}</li>
+ *   <li>{@link generator.GameDescription#getGameplays <em>Gameplays</em>}</li>
+ *   <li>{@link generator.GameDescription#getElements <em>Elements</em>}</li>
+ *   <li>{@link generator.GameDescription#getAbilities <em>Abilities</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getGameDescription()
@@ -65,5 +68,71 @@ public interface GameDescription extends EObject {
 	 * @generated
 	 */
 	void setLevelsDifficultyProgress(LevelsDifficultyProgress value);
+
+	/**
+	 * Returns the value of the '<em><b>Gameplays</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Gameplays</em>' containment reference.
+	 * @see #setGameplays(Gameplays)
+	 * @see generator.GeneratorPackage#getGameDescription_Gameplays()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Gameplays getGameplays();
+
+	/**
+	 * Sets the value of the '{@link generator.GameDescription#getGameplays <em>Gameplays</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Gameplays</em>' containment reference.
+	 * @see #getGameplays()
+	 * @generated
+	 */
+	void setGameplays(Gameplays value);
+
+	/**
+	 * Returns the value of the '<em><b>Elements</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Elements</em>' containment reference.
+	 * @see #setElements(ElementTypes)
+	 * @see generator.GeneratorPackage#getGameDescription_Elements()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ElementTypes getElements();
+
+	/**
+	 * Sets the value of the '{@link generator.GameDescription#getElements <em>Elements</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Elements</em>' containment reference.
+	 * @see #getElements()
+	 * @generated
+	 */
+	void setElements(ElementTypes value);
+
+	/**
+	 * Returns the value of the '<em><b>Abilities</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Abilities</em>' containment reference.
+	 * @see #setAbilities(Abilities)
+	 * @see generator.GeneratorPackage#getGameDescription_Abilities()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Abilities getAbilities();
+
+	/**
+	 * Sets the value of the '{@link generator.GameDescription#getAbilities <em>Abilities</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Abilities</em>' containment reference.
+	 * @see #getAbilities()
+	 * @generated
+	 */
+	void setAbilities(Abilities value);
 
 } // GameDescription

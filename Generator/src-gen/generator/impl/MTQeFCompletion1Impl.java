@@ -2,17 +2,16 @@
  */
 package generator.impl;
 
-import generator.GeneratorPackage;
-import generator.MTQeFCompletion1;
-
 import java.util.Collection;
 import java.util.Objects;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.util.EDataTypeEList;
+
+import generator.GeneratorPackage;
+import generator.MTQFCompletion1;
+import generator.MTQeFCompletion1;
 
 /**
  * <!-- begin-user-doc -->
@@ -179,16 +178,13 @@ public class MTQeFCompletion1Impl extends QuestionedFactImpl implements MTQeFCom
 	}
 
 	@Override
-	public void setQuestionText() {
-		if (propositions != null) {
-			String choices = " | choices = {";
-			for (Integer integer : propositions) {
-				choices += integer + (propositions.get(propositions.size() - 1).equals(integer) ? "}" : ",");
-			}
-			questionText = getQuestionablefact().getQuestionableFact() + choices;
-		} else {
-			questionText = getQuestionablefact().getQuestionableFact() + " | enter response";
-		}
+	public void setCompleteFact() {
+		String fact = "";
+		MTQFCompletion1 qfact = ((MTQFCompletion1) questionablefact);
+		fact = qfact.getLeftOperand() == -1 ? qfact.getSoluce() + " x " : qfact.getLeftOperand() + " x ";
+		fact += qfact.getRightOperand() == -1 ? qfact.getSoluce() + "" : qfact.getRightOperand() + "";
+		String res = qfact.getResult() == -1 ? qfact.getSoluce() + "" : qfact.getResult() + "";
+		completeFact = qfact.isResultOnRight() ? fact + " = " + res : res + " = " + fact;
 	}
 
 } //MTQeFCompletion1Impl
