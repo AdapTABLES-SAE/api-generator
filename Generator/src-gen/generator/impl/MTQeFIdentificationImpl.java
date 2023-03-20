@@ -33,5 +33,5 @@ public class MTQeFIdentificationImpl extends QuestionedFactImpl implements MTQeF
 	protected EClass eStaticClass() {
 		return GeneratorPackage.Literals.MT_QE_FIDENTIFICATION;
 	}
-
+	
 } //MTQeFIdentificationImpl

@@ -225,12 +225,10 @@ public abstract class QuestionedFactImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setCompleteFact() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		this.completeFact = this.questionablefact.getQuestionableFact();
 	}
 
 	/**

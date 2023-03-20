@@ -1,9 +1,9 @@
 package generators;
 
-import flattener.Main;
 import generator.Dungeon;
 import generator.LevelsDifficultyProgress;
 import generator.QuestionedFact;
+import generator.QuestionedFactStatement;
 import generator.Room;
 import generator.RoomAccess;
 import generator.impl.CurrentGameLevelImpl;
@@ -23,8 +23,8 @@ public class ALGAGenerator {
 		ALGAGenerator generator = new ALGAGenerator();
 		generator.generate();
 		generator.printDungeon();
-		generator.saveDungeon("DungeonGen.xmi");
-		Main.transformModel("outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
+		//generator.saveDungeon("DungeonGen.xmi");
+		//Main.transformModel("outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
 	}
 	
 	public ALGAGenerator() {
@@ -99,6 +99,9 @@ public class ALGAGenerator {
 				facts += qef.getCompleteFact() + (r.getQuestionedFacts().get(r.getQuestionedFacts().size()-1).equals(qef)? "}":", ");
 			}
 			System.out.println("\t Facts : "+facts);
+		}
+		for (QuestionedFactStatement statement : r.getStatements()) {
+			System.out.println("Statement : " + statement.getDisplay().getValue());
 		}
 		for (RoomAccess ra : r.getRoomaccess()) {
 			System.out.println("Access : "+ra.getDirection());

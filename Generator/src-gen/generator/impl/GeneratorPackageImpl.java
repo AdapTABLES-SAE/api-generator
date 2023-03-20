@@ -1776,6 +1776,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getATask_NbFacts() {
+		return (EAttribute) aTaskEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getATask__GetType() {
 		return aTaskEClass.getEOperations().get(0);
 	}
@@ -1850,15 +1859,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getIdentificationTask_Type() {
 		return (EAttribute) identificationTaskEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIdentificationTask_NbFacts() {
-		return (EAttribute) identificationTaskEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3544,6 +3544,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(aTaskEClass, ATASK__RESPONSE_MODALITY);
 		createEAttribute(aTaskEClass, ATASK__ID);
 		createEAttribute(aTaskEClass, ATASK__MAX_TIME);
+		createEAttribute(aTaskEClass, ATASK__NB_FACTS);
 		createEOperation(aTaskEClass, ATASK___GET_TYPE);
 
 		completion1TaskEClass = createEClass(COMPLETION1_TASK);
@@ -3557,7 +3558,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		identificationTaskEClass = createEClass(IDENTIFICATION_TASK);
 		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__TYPE);
-		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__NB_FACTS);
 
 		membershipIDTaskEClass = createEClass(MEMBERSHIP_ID_TASK);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__TYPE);
@@ -4132,6 +4132,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getATask_MaxTime(), ecorePackage.getEInt(), "maxTime", "20", 0, 1, ATask.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getATask_NbFacts(), ecorePackage.getEInt(), "nbFacts", "1", 0, 1, ATask.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getATask__GetType(), this.getETaskType(), "getType", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -4155,9 +4157,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIdentificationTask_Type(), this.getETaskType(), "type", "IDENTIFY", 0, 1,
 				IdentificationTask.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIdentificationTask_NbFacts(), ecorePackage.getEInt(), "nbFacts", "1", 0, 1,
-				IdentificationTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(membershipIDTaskEClass, MembershipIDTask.class, "MembershipIDTask", IS_ABSTRACT, !IS_INTERFACE,

@@ -219,6 +219,8 @@
         unsettable="true" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="20"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbFacts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Completion1Task" abstract="true" eSuperTypes="#//ATask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
@@ -237,8 +239,6 @@
       eSuperTypes="#//ATask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
         changeable="false" transient="true" defaultValueLiteral="IDENTIFY"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbFacts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MembershipIDTask" abstract="true" eSuperTypes="#//ATask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"

@@ -1184,13 +1184,22 @@ public interface GeneratorPackage extends EPackage {
 	int ATASK__MAX_TIME = 4;
 
 	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATASK__NB_FACTS = 5;
+
+	/**
 	 * The number of structural features of the '<em>ATask</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATASK_FEATURE_COUNT = 5;
+	int ATASK_FEATURE_COUNT = 6;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -1264,6 +1273,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPLETION1_TASK__MAX_TIME = ATASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION1_TASK__NB_FACTS = ATASK__NB_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1355,6 +1373,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_COMPLETION1__MAX_TIME = COMPLETION1_TASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION1__NB_FACTS = COMPLETION1_TASK__NB_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1962,6 +1989,15 @@ public interface GeneratorPackage extends EPackage {
 	int COMPLETION2_TASK__MAX_TIME = ATASK__MAX_TIME;
 
 	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION2_TASK__NB_FACTS = ATASK__NB_FACTS;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2051,6 +2087,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int RECONSTRUCTION_TASK__MAX_TIME = ATASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECONSTRUCTION_TASK__NB_FACTS = ATASK__NB_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2144,6 +2189,15 @@ public interface GeneratorPackage extends EPackage {
 	int IDENTIFICATION_TASK__MAX_TIME = ATASK__MAX_TIME;
 
 	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFICATION_TASK__NB_FACTS = ATASK__NB_FACTS;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2153,22 +2207,13 @@ public interface GeneratorPackage extends EPackage {
 	int IDENTIFICATION_TASK__TYPE = ATASK_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IDENTIFICATION_TASK__NB_FACTS = ATASK_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Identification Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IDENTIFICATION_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 2;
+	int IDENTIFICATION_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -2242,6 +2287,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MEMBERSHIP_ID_TASK__MAX_TIME = ATASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBERSHIP_ID_TASK__NB_FACTS = ATASK__NB_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2344,6 +2398,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_COMPLETION2__MAX_TIME = COMPLETION2_TASK__MAX_TIME;
 
 	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION2__NB_FACTS = COMPLETION2_TASK__NB_FACTS;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2444,6 +2507,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_RECONTRUCTION__MAX_TIME = RECONSTRUCTION_TASK__MAX_TIME;
 
 	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_RECONTRUCTION__NB_FACTS = RECONSTRUCTION_TASK__NB_FACTS;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2535,15 +2607,6 @@ public interface GeneratorPackage extends EPackage {
 	int MT_IDENTIFICATION__MAX_TIME = IDENTIFICATION_TASK__MAX_TIME;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_IDENTIFICATION__TYPE = IDENTIFICATION_TASK__TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2551,6 +2614,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_IDENTIFICATION__NB_FACTS = IDENTIFICATION_TASK__NB_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_IDENTIFICATION__TYPE = IDENTIFICATION_TASK__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' attribute.
@@ -2642,6 +2714,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_MEMBERSHIP__MAX_TIME = MEMBERSHIP_ID_TASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_MEMBERSHIP__NB_FACTS = MEMBERSHIP_ID_TASK__NB_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -6444,6 +6525,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getATask_MaxTime();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.ATask#getNbFacts <em>Nb Facts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Facts</em>'.
+	 * @see generator.ATask#getNbFacts()
+	 * @see #getATask()
+	 * @generated
+	 */
+	EAttribute getATask_NbFacts();
+
+	/**
 	 * Returns the meta object for the '{@link generator.ATask#getType() <em>Get Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6536,17 +6628,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getIdentificationTask_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.IdentificationTask#getNbFacts <em>Nb Facts</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nb Facts</em>'.
-	 * @see generator.IdentificationTask#getNbFacts()
-	 * @see #getIdentificationTask()
-	 * @generated
-	 */
-	EAttribute getIdentificationTask_NbFacts();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MembershipIDTask <em>Membership ID Task</em>}'.
@@ -9275,6 +9356,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute ATASK__MAX_TIME = eINSTANCE.getATask_MaxTime();
 
 		/**
+		 * The meta object literal for the '<em><b>Nb Facts</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATASK__NB_FACTS = eINSTANCE.getATask_NbFacts();
+
+		/**
 		 * The meta object literal for the '<em><b>Get Type</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9353,14 +9442,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute IDENTIFICATION_TASK__TYPE = eINSTANCE.getIdentificationTask_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Nb Facts</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IDENTIFICATION_TASK__NB_FACTS = eINSTANCE.getIdentificationTask_NbFacts();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MembershipIDTaskImpl <em>Membership ID Task</em>}' class.

@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.ATask#getResponseModality <em>Response Modality</em>}</li>
  *   <li>{@link generator.ATask#getID <em>ID</em>}</li>
  *   <li>{@link generator.ATask#getMaxTime <em>Max Time</em>}</li>
+ *   <li>{@link generator.ATask#getNbFacts <em>Nb Facts</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getATask()
@@ -162,6 +163,29 @@ public interface ATask extends EObject {
 	 * @generated
 	 */
 	void setMaxTime(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Nb Facts</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nb Facts</em>' attribute.
+	 * @see #setNbFacts(int)
+	 * @see generator.GeneratorPackage#getATask_NbFacts()
+	 * @model default="1"
+	 * @generated
+	 */
+	int getNbFacts();
+
+	/**
+	 * Sets the value of the '{@link generator.ATask#getNbFacts <em>Nb Facts</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nb Facts</em>' attribute.
+	 * @see #getNbFacts()
+	 * @generated
+	 */
+	void setNbFacts(int value);
 
 	/**
 	 * <!-- begin-user-doc -->

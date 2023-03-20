@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link generator.impl.ATaskImpl#getResponseModality <em>Response Modality</em>}</li>
  *   <li>{@link generator.impl.ATaskImpl#getID <em>ID</em>}</li>
  *   <li>{@link generator.impl.ATaskImpl#getMaxTime <em>Max Time</em>}</li>
+ *   <li>{@link generator.impl.ATaskImpl#getNbFacts <em>Nb Facts</em>}</li>
  * </ul>
  *
  * @generated
@@ -136,6 +137,26 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected int maxTime = MAX_TIME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNbFacts() <em>Nb Facts</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNbFacts()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NB_FACTS_EDEFAULT = 1;
+
+	/**
+	 * The cached value of the '{@link #getNbFacts() <em>Nb Facts</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNbFacts()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nbFacts = NB_FACTS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -324,6 +345,28 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getNbFacts() {
+		return nbFacts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNbFacts(int newNbFacts) {
+		int oldNbFacts = nbFacts;
+		nbFacts = newNbFacts;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ATASK__NB_FACTS, oldNbFacts,
+					nbFacts));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ETaskType getType() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -362,6 +405,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			return getID();
 		case GeneratorPackage.ATASK__MAX_TIME:
 			return getMaxTime();
+		case GeneratorPackage.ATASK__NB_FACTS:
+			return getNbFacts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -388,6 +433,9 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			return;
 		case GeneratorPackage.ATASK__MAX_TIME:
 			setMaxTime((Integer) newValue);
+			return;
+		case GeneratorPackage.ATASK__NB_FACTS:
+			setNbFacts((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -416,6 +464,9 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.ATASK__MAX_TIME:
 			setMaxTime(MAX_TIME_EDEFAULT);
 			return;
+		case GeneratorPackage.ATASK__NB_FACTS:
+			setNbFacts(NB_FACTS_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -438,6 +489,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			return isSetID();
 		case GeneratorPackage.ATASK__MAX_TIME:
 			return maxTime != MAX_TIME_EDEFAULT;
+		case GeneratorPackage.ATASK__NB_FACTS:
+			return nbFacts != NB_FACTS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -478,6 +531,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			result.append("<unset>");
 		result.append(", maxTime: ");
 		result.append(maxTime);
+		result.append(", nbFacts: ");
+		result.append(nbFacts);
 		result.append(')');
 		return result.toString();
 	}

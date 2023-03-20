@@ -1,4 +1,4 @@
-package factsgenerator_maths;
+package old;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -97,8 +97,7 @@ public class MTFactGenerator {
 				case MTQFMembershipImpl: 
 					createQuestionedFactForMembership(eeManager, aTask.getTask(), qf);
 					break;
-			}
-						
+			}			
 		}
 	}
 	

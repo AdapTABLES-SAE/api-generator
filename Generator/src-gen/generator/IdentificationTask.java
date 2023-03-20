@@ -12,7 +12,6 @@ package generator;
  * </p>
  * <ul>
  *   <li>{@link generator.IdentificationTask#getType <em>Type</em>}</li>
- *   <li>{@link generator.IdentificationTask#getNbFacts <em>Nb Facts</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getIdentificationTask()
@@ -33,28 +32,5 @@ public interface IdentificationTask extends ATask {
 	 * @generated
 	 */
 	ETaskType getType();
-
-	/**
-	 * Returns the value of the '<em><b>Nb Facts</b></em>' attribute.
-	 * The default value is <code>"1"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nb Facts</em>' attribute.
-	 * @see #setNbFacts(int)
-	 * @see generator.GeneratorPackage#getIdentificationTask_NbFacts()
-	 * @model default="1"
-	 * @generated
-	 */
-	int getNbFacts();
-
-	/**
-	 * Sets the value of the '{@link generator.IdentificationTask#getNbFacts <em>Nb Facts</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nb Facts</em>' attribute.
-	 * @see #getNbFacts()
-	 * @generated
-	 */
-	void setNbFacts(int value);
 
 } // IdentificationTask

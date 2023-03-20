@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import factsgenerator_maths.MTFactGenerator;
+import factgenerator_template.FactGenerator;
 import generator.ATask;
 import generator.CurrentObjectiveLevel;
 import generator.LearnerPlayer;
@@ -69,7 +69,7 @@ public class EducationalElementsGenerator {
 	 * Génère les faits questionnable
 	 */
 	private void generateQuestionnableFacts() {
-		MTFactGenerator.generateQuestionableFacts(eeManager);
+		FactGenerator.generateQuestionableFacts(eeManager);
 	}
 	
 	/**
@@ -214,8 +214,8 @@ public class EducationalElementsGenerator {
 	}
 	
 	private void generateFactsToQuestion() throws Exception {
-		List<ResultsByTask> toto = getOrderedTasks();
-		MTFactGenerator.generateQuestionedFact(eeManager, toto);
+		List<ResultsByTask> orderedTasks = getOrderedTasks();
+		FactGenerator.generateQuestionedFact(eeManager, orderedTasks);
 	}
 	
 	private List<ResultsByTask> getOrderedTasks(){ 
