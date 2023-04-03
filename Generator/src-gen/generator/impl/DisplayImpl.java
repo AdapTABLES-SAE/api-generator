@@ -4,11 +4,8 @@ package generator.impl;
 
 import generator.Display;
 import generator.GeneratorPackage;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -19,31 +16,30 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.DisplayImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link generator.impl.DisplayImpl#isInteractive <em>Interactive</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DisplayImpl extends AbstractAttributesImpl implements Display {
+public class DisplayImpl extends ParameterImpl implements Display {
 	/**
-	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The default value of the '{@link #isInteractive() <em>Interactive</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #isInteractive()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALUE_EDEFAULT = null;
-
+	protected static final boolean INTERACTIVE_EDEFAULT = false;
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #isInteractive() <em>Interactive</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #isInteractive()
 	 * @generated
 	 * @ordered
 	 */
-	protected String value = VALUE_EDEFAULT;
+	protected boolean interactive = INTERACTIVE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,8 +65,8 @@ public class DisplayImpl extends AbstractAttributesImpl implements Display {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getValue() {
-		return value;
+	public boolean isInteractive() {
+		return interactive;
 	}
 
 	/**
@@ -78,11 +74,12 @@ public class DisplayImpl extends AbstractAttributesImpl implements Display {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(String newValue) {
-		String oldValue = value;
-		value = newValue;
+	public void setInteractive(boolean newInteractive) {
+		boolean oldInteractive = interactive;
+		interactive = newInteractive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.DISPLAY__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.DISPLAY__INTERACTIVE, oldInteractive,
+					interactive));
 	}
 
 	/**
@@ -93,8 +90,8 @@ public class DisplayImpl extends AbstractAttributesImpl implements Display {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.DISPLAY__VALUE:
-			return getValue();
+		case GeneratorPackage.DISPLAY__INTERACTIVE:
+			return isInteractive();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +104,8 @@ public class DisplayImpl extends AbstractAttributesImpl implements Display {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.DISPLAY__VALUE:
-			setValue((String) newValue);
+		case GeneratorPackage.DISPLAY__INTERACTIVE:
+			setInteractive((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +119,8 @@ public class DisplayImpl extends AbstractAttributesImpl implements Display {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.DISPLAY__VALUE:
-			setValue(VALUE_EDEFAULT);
+		case GeneratorPackage.DISPLAY__INTERACTIVE:
+			setInteractive(INTERACTIVE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +134,8 @@ public class DisplayImpl extends AbstractAttributesImpl implements Display {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.DISPLAY__VALUE:
-			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+		case GeneratorPackage.DISPLAY__INTERACTIVE:
+			return interactive != INTERACTIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -154,8 +151,8 @@ public class DisplayImpl extends AbstractAttributesImpl implements Display {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (value: ");
-		result.append(value);
+		result.append(" (interactive: ");
+		result.append(interactive);
 		result.append(')');
 		return result.toString();
 	}

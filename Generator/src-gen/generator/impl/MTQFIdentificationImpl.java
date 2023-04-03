@@ -4,8 +4,8 @@ package generator.impl;
 
 import generator.GeneratorPackage;
 import generator.MTQFIdentification;
-
 import generator.TableBuild;
+
 import java.util.Objects;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -442,15 +442,15 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 	@Override
 	public String getQuestionableFact() {
 		if (resultOnRight) {
-			return getLeftOperand() + " x " + getRightOperand() + " = " + getResult(); // + " (" + soluce + ")";
+			return getLeftOperand() + " x " + getRightOperand() + " = " + getResult();
 		} else {
-			return getResult() + " = " + getLeftOperand() + " x " + getRightOperand(); // + " (" + soluce + ")";
+			return getResult() + " = " + getLeftOperand() + " x " + getRightOperand();
 		}
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(leftOperand, result, resultOnRight, rightOperand, soluce);
+		return Objects.hash(build, leftOperand, result, resultOnRight, rightOperand, soluce);
 	}
 
 	@Override
@@ -462,8 +462,8 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 		if (getClass() != obj.getClass())
 			return false;
 		MTQFIdentificationImpl other = (MTQFIdentificationImpl) obj;
-		return leftOperand == other.leftOperand && result == other.result && resultOnRight == other.resultOnRight
-				&& rightOperand == other.rightOperand && soluce == other.soluce;
+		return build == other.build && leftOperand == other.leftOperand && result == other.result
+				&& resultOnRight == other.resultOnRight && rightOperand == other.rightOperand && soluce == other.soluce;
 	}
 
 } //MTQFIdentificationImpl

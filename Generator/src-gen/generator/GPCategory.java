@@ -19,18 +19,29 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum GPCategory implements Enumerator {
 	/**
-	 * The '<em><b>POSITION</b></em>' literal object.
+	 * The '<em><b>SELECT UNIQUE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #POSITION_VALUE
+	 * @see #SELECT_UNIQUE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	POSITION(0, "POSITION", "POSITION"),
+	SELECT_UNIQUE(0, "SELECT_UNIQUE", "SELECT_UNIQUE"),
+
+	/**
+	 * The '<em><b>SELECT MULTIPLE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SELECT_MULTIPLE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SELECT_MULTIPLE(0, "SELECT_MULTIPLE", "SELECT_MULTIPLE"),
+
 	/**
 	 * The '<em><b>DIRECT RESPONSE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #DIRECT_RESPONSE_VALUE
 	 * @generated
 	 * @ordered
@@ -38,15 +49,26 @@ public enum GPCategory implements Enumerator {
 	DIRECT_RESPONSE(1, "DIRECT_RESPONSE", "DIRECT_RESPONSE");
 
 	/**
-	 * The '<em><b>POSITION</b></em>' literal value.
+	 * The '<em><b>SELECT UNIQUE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #POSITION
+	 * @see #SELECT_UNIQUE
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int POSITION_VALUE = 0;
+	public static final int SELECT_UNIQUE_VALUE = 0;
+
+	/**
+	 * The '<em><b>SELECT MULTIPLE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SELECT_MULTIPLE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SELECT_MULTIPLE_VALUE = 0;
 
 	/**
 	 * The '<em><b>DIRECT RESPONSE</b></em>' literal value.
@@ -65,7 +87,8 @@ public enum GPCategory implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final GPCategory[] VALUES_ARRAY = new GPCategory[] { POSITION, DIRECT_RESPONSE, };
+	private static final GPCategory[] VALUES_ARRAY = new GPCategory[] { SELECT_UNIQUE, SELECT_MULTIPLE,
+			DIRECT_RESPONSE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>GP Category</b></em>' enumerators.
@@ -121,8 +144,8 @@ public enum GPCategory implements Enumerator {
 	 */
 	public static GPCategory get(int value) {
 		switch (value) {
-		case POSITION_VALUE:
-			return POSITION;
+		case SELECT_UNIQUE_VALUE:
+			return SELECT_UNIQUE;
 		case DIRECT_RESPONSE_VALUE:
 			return DIRECT_RESPONSE;
 		}

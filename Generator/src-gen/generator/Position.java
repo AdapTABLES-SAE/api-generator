@@ -13,5 +13,4 @@ package generator;
  * @generated
  */
 public interface Position extends APosition {
-
 } // Position

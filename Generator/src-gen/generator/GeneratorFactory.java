@@ -346,49 +346,13 @@ public interface GeneratorFactory extends EFactory {
 	MTQFMembership createMTQFMembership();
 
 	/**
-	 * Returns a new object of class '<em>MT Qe FCompletion1</em>'.
+	 * Returns a new object of class '<em>Questioned Fact</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MT Qe FCompletion1</em>'.
+	 * @return a new object of class '<em>Questioned Fact</em>'.
 	 * @generated
 	 */
-	MTQeFCompletion1 createMTQeFCompletion1();
-
-	/**
-	 * Returns a new object of class '<em>MT Qe FCompletion2</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MT Qe FCompletion2</em>'.
-	 * @generated
-	 */
-	MTQeFCompletion2 createMTQeFCompletion2();
-
-	/**
-	 * Returns a new object of class '<em>MT Qe FRebuild</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MT Qe FRebuild</em>'.
-	 * @generated
-	 */
-	MTQeFRebuild createMTQeFRebuild();
-
-	/**
-	 * Returns a new object of class '<em>MT Qe FIdentification</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MT Qe FIdentification</em>'.
-	 * @generated
-	 */
-	MTQeFIdentification createMTQeFIdentification();
-
-	/**
-	 * Returns a new object of class '<em>MT Qe FMembership</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MT Qe FMembership</em>'.
-	 * @generated
-	 */
-	MTQeFMembership createMTQeFMembership();
+	QuestionedFact createQuestionedFact();
 
 	/**
 	 * Returns a new object of class '<em>Completion Criteria</em>'.
@@ -418,22 +382,22 @@ public interface GeneratorFactory extends EFactory {
 	CurrentGameLevel createCurrentGameLevel();
 
 	/**
-	 * Returns a new object of class '<em>Element Types</em>'.
+	 * Returns a new object of class '<em>Game Element Types</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Element Types</em>'.
+	 * @return a new object of class '<em>Game Element Types</em>'.
 	 * @generated
 	 */
-	ElementTypes createElementTypes();
+	GameElementTypes createGameElementTypes();
 
 	/**
-	 * Returns a new object of class '<em>Core Elements</em>'.
+	 * Returns a new object of class '<em>GP Elements Types</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Core Elements</em>'.
+	 * @return a new object of class '<em>GP Elements Types</em>'.
 	 * @generated
 	 */
-	CoreElements createCoreElements();
+	GPElementsTypes createGPElementsTypes();
 
 	/**
 	 * Returns a new object of class '<em>Equipments</em>'.
@@ -445,13 +409,13 @@ public interface GeneratorFactory extends EFactory {
 	Equipments createEquipments();
 
 	/**
-	 * Returns a new object of class '<em>Core Element</em>'.
+	 * Returns a new object of class '<em>Element Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Core Element</em>'.
+	 * @return a new object of class '<em>Element Type</em>'.
 	 * @generated
 	 */
-	CoreElement createCoreElement();
+	ElementType createElementType();
 
 	/**
 	 * Returns a new object of class '<em>Equipment</em>'.
@@ -470,60 +434,6 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	Gameplay createGameplay();
-
-	/**
-	 * Returns a new object of class '<em>Quantified Elements</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Quantified Elements</em>'.
-	 * @generated
-	 */
-	QuantifiedElements createQuantifiedElements();
-
-	/**
-	 * Returns a new object of class '<em>Positioned Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Positioned Element</em>'.
-	 * @generated
-	 */
-	PositionedElement createPositionedElement();
-
-	/**
-	 * Returns a new object of class '<em>Display</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Display</em>'.
-	 * @generated
-	 */
-	Display createDisplay();
-
-	/**
-	 * Returns a new object of class '<em>Correctness</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Correctness</em>'.
-	 * @generated
-	 */
-	Correctness createCorrectness();
-
-	/**
-	 * Returns a new object of class '<em>Structure Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Structure Element</em>'.
-	 * @generated
-	 */
-	StructureElement createStructureElement();
-
-	/**
-	 * Returns a new object of class '<em>Wanted Answer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Wanted Answer</em>'.
-	 * @generated
-	 */
-	WantedAnswer createWantedAnswer();
 
 	/**
 	 * Returns a new object of class '<em>Gameplays</em>'.
@@ -571,22 +481,157 @@ public interface GeneratorFactory extends EFactory {
 	StructurePosition createStructurePosition();
 
 	/**
-	 * Returns a new object of class '<em>Statement Position</em>'.
+	 * Returns a new object of class '<em>Positioned Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Statement Position</em>'.
+	 * @return a new object of class '<em>Positioned Element</em>'.
 	 * @generated
 	 */
-	StatementPosition createStatementPosition();
+	PositionedElement createPositionedElement();
 
 	/**
-	 * Returns a new object of class '<em>Questioned Fact Statement</em>'.
+	 * Returns a new object of class '<em>Question Param</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Questioned Fact Statement</em>'.
+	 * @return a new object of class '<em>Question Param</em>'.
 	 * @generated
 	 */
-	QuestionedFactStatement createQuestionedFactStatement();
+	QuestionParam createQuestionParam();
+
+	/**
+	 * Returns a new object of class '<em>Proposition Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Proposition Param</em>'.
+	 * @generated
+	 */
+	PropositionParam createPropositionParam();
+
+	/**
+	 * Returns a new object of class '<em>Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Value</em>'.
+	 * @generated
+	 */
+	Value createValue();
+
+	/**
+	 * Returns a new object of class '<em>Correctness</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Correctness</em>'.
+	 * @generated
+	 */
+	Correctness createCorrectness();
+
+	/**
+	 * Returns a new object of class '<em>Entry Soluce Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Entry Soluce Param</em>'.
+	 * @generated
+	 */
+	EntrySoluceParam createEntrySoluceParam();
+
+	/**
+	 * Returns a new object of class '<em>Structure Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Structure Type</em>'.
+	 * @generated
+	 */
+	StructureType createStructureType();
+
+	/**
+	 * Returns a new object of class '<em>Display</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Display</em>'.
+	 * @generated
+	 */
+	Display createDisplay();
+
+	/**
+	 * Returns a new object of class '<em>Structure</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Structure</em>'.
+	 * @generated
+	 */
+	Structure createStructure();
+
+	/**
+	 * Returns a new object of class '<em>Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component</em>'.
+	 * @generated
+	 */
+	Component createComponent();
+
+	/**
+	 * Returns a new object of class '<em>Quantity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Quantity</em>'.
+	 * @generated
+	 */
+	Quantity createQuantity();
+
+	/**
+	 * Returns a new object of class '<em>Wanted Answers Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Wanted Answers Param</em>'.
+	 * @generated
+	 */
+	WantedAnswersParam createWantedAnswersParam();
+
+	/**
+	 * Returns a new object of class '<em>Priority</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Priority</em>'.
+	 * @generated
+	 */
+	Priority createPriority();
+
+	/**
+	 * Returns a new object of class '<em>Expected Answer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Expected Answer</em>'.
+	 * @generated
+	 */
+	ExpectedAnswer createExpectedAnswer();
+
+	/**
+	 * Returns a new object of class '<em>Correctness Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Correctness Value</em>'.
+	 * @generated
+	 */
+	CorrectnessValue createCorrectnessValue();
+
+	/**
+	 * Returns a new object of class '<em>AValue</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>AValue</em>'.
+	 * @generated
+	 */
+	AValue createAValue();
+
+	/**
+	 * Returns a new object of class '<em>Positioned Structure Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Positioned Structure Element</em>'.
+	 * @generated
+	 */
+	PositionedStructureElement createPositionedStructureElement();
 
 	/**
 	 * Returns the package supported by this factory.

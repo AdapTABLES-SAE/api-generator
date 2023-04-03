@@ -147,4 +147,9 @@ public class MTCompletion2Impl extends Completion2TaskImpl implements MTCompleti
 		return result.toString();
 	}
 
+	@Override
+	public boolean validationOnLearnerAction() {
+		return checkLearnerAction;
+	}
+
 } //MTCompletion2Impl

@@ -126,7 +126,7 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int MAX_TIME_EDEFAULT = 20;
+	protected static final double MAX_TIME_EDEFAULT = 20.0;
 
 	/**
 	 * The cached value of the '{@link #getMaxTime() <em>Max Time</em>}' attribute.
@@ -136,7 +136,7 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected int maxTime = MAX_TIME_EDEFAULT;
+	protected double maxTime = MAX_TIME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getNbFacts() <em>Nb Facts</em>}' attribute.
@@ -323,7 +323,7 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getMaxTime() {
+	public double getMaxTime() {
 		return maxTime;
 	}
 
@@ -332,8 +332,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMaxTime(int newMaxTime) {
-		int oldMaxTime = maxTime;
+	public void setMaxTime(double newMaxTime) {
+		double oldMaxTime = maxTime;
 		maxTime = newMaxTime;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ATASK__MAX_TIME, oldMaxTime,
@@ -372,6 +372,13 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public abstract boolean validationOnLearnerAction();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -432,7 +439,7 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			setID((String) newValue);
 			return;
 		case GeneratorPackage.ATASK__MAX_TIME:
-			setMaxTime((Integer) newValue);
+			setMaxTime((Double) newValue);
 			return;
 		case GeneratorPackage.ATASK__NB_FACTS:
 			setNbFacts((Integer) newValue);
@@ -505,6 +512,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 		switch (operationID) {
 		case GeneratorPackage.ATASK___GET_TYPE:
 			return getType();
+		case GeneratorPackage.ATASK___VALIDATION_ON_LEARNER_ACTION:
+			return validationOnLearnerAction();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

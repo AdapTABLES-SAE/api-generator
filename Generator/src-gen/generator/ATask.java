@@ -143,16 +143,16 @@ public interface ATask extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Max Time</b></em>' attribute.
-	 * The default value is <code>"20"</code>.
+	 * The default value is <code>"20.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max Time</em>' attribute.
-	 * @see #setMaxTime(int)
+	 * @see #setMaxTime(double)
 	 * @see generator.GeneratorPackage#getATask_MaxTime()
-	 * @model default="20"
+	 * @model default="20.0"
 	 * @generated
 	 */
-	int getMaxTime();
+	double getMaxTime();
 
 	/**
 	 * Sets the value of the '{@link generator.ATask#getMaxTime <em>Max Time</em>}' attribute.
@@ -162,7 +162,7 @@ public interface ATask extends EObject {
 	 * @see #getMaxTime()
 	 * @generated
 	 */
-	void setMaxTime(int value);
+	void setMaxTime(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Nb Facts</b></em>' attribute.
@@ -194,5 +194,13 @@ public interface ATask extends EObject {
 	 * @generated
 	 */
 	ETaskType getType();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean validationOnLearnerAction();
 
 } // ATask

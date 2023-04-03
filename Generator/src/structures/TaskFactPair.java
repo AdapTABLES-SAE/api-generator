@@ -23,6 +23,10 @@ public class TaskFactPair {
 		return values;
 	}
 	
+	public void addFact(QuestionedFact qeFact) {
+		this.values.add(qeFact);
+	}
+	
 	public int getNumberOfFacts() {
 		return values.size();
 	}

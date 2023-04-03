@@ -1,30 +1,31 @@
 package factsgenerator_maths;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+import java.util.stream.Collectors;
 
-import factgenerator_template.TaskFactGeneratorTemplate;
+import factgenerator_template.FactGeneratorTemplate;
 import generator.ATask;
 import generator.AbstractFact;
+import generator.ECorrectness;
 import generator.ESeveralTarget;
 import generator.MTCompletion2;
 import generator.MTFact;
 import generator.MTLevel;
 import generator.MTQFCompletion2;
-import generator.MTQeFCompletion2;
 import generator.MultipleChoice;
 import generator.QuestionableFact;
-import generator.QuestionedFact;
 import generator.ResultPosition;
 import generator.TableBuild;
 import generator.impl.MTQFCompletion2Impl;
-import generator.impl.MTQeFCompletion2Impl;
 import managers.EducationElementsManager;
 
-public class MTFactGeneratorCOMP2 extends TaskFactGeneratorTemplate {
+public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 
 	public MTFactGeneratorCOMP2(EducationElementsManager eeManager) {
 		super(eeManager);
@@ -106,33 +107,44 @@ public class MTFactGeneratorCOMP2 extends TaskFactGeneratorTemplate {
 	}
 
 	@Override
-	protected QuestionedFact initializeQuestionedFact() {
-		return new MTQeFCompletion2Impl();
+	protected int correctnessToReach(ATask task) {
+		return 2;
 	}
 
 	@Override
-	protected void manageChoices(MultipleChoice mc, QuestionableFact qaf, QuestionedFact qef) {
-		MTQFCompletion2 qfact = (MTQFCompletion2) qaf;
-		List<Integer> propositions = new ArrayList<>();
-		boolean left = qfact.getLeftOperand() == -1; 
-		boolean right = qfact.getRightOperand() == -1;
-		boolean res = qfact.getResult() == -1;
-		if(left) {propositions.add(qfact.getSoluceLeft());} 
-		if(right) {propositions.add(qfact.getSoluceRight());}
-		if(res) {propositions.add(qfact.getSoluceRes());}
+	protected List<String> getListOfGoodSolutions(QuestionableFact qFact) {
+		List<String> solutions = new ArrayList<>();
+		MTQFCompletion2 fact = (MTQFCompletion2) qFact;
+		if(fact.getLeftOperand() == -1) solutions.add(fact.getSoluceLeft()+"");
+		if(fact.getRightOperand() == -1) solutions.add(fact.getSoluceRight()+"");
+		if(fact.getResult() == -1) solutions.add(fact.getSoluceRes()+"");
+		return solutions;
+	}
+
+	@Override
+	protected Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact) {
+		Map<ECorrectness, List<String>> propositions = new HashMap<>();
+		MTQFCompletion2 qfact = (MTQFCompletion2) qFact;
+		
+		List<Integer> propositions_temp = new ArrayList<>();
+		List<Integer> solutions = getListOfGoodSolutions(qFact).stream().map(Integer::valueOf).collect(Collectors.toList());
 		
 		int range = qfact.getSoluceLeft() + qfact.getSoluceRight() + qfact.getSoluceRes() + 5;
-		while(propositions.size() < mc.getNbBadChoices() + 2) {
+		while(propositions_temp.size() < mc.getNbBadChoices()) {
 			int number = new Random().nextInt(range);
-			if(!propositions.contains(number)) {
-				propositions.add(number);
+			if(!propositions_temp.contains(number) && !solutions.contains(number)) {
+				propositions_temp.add(number);
 			}
 		}
-		((MTQeFCompletion2) qef).getPropositions().addAll(propositions);	
-	}
-
-	@Override
-	protected int correctnessToReach(ATask aTask) {
-		return 2 * aTask.getNbFacts();
+		
+		propositions.put(ECorrectness.CORRECT, solutions.stream().map(String::valueOf).collect(Collectors.toList()));
+		propositions.put(ECorrectness.INCORRECT, propositions_temp.stream().map(String::valueOf).collect(Collectors.toList()));
+		
+		return propositions;
 	}	
+	
+	@Override
+	protected boolean isQuestionInteractive() {
+		return true;
+	}
 }

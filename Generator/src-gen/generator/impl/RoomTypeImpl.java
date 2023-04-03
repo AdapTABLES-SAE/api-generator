@@ -6,9 +6,8 @@ import generator.Directions;
 import generator.GeneratorPackage;
 import generator.Position;
 import generator.RoomType;
-
-import generator.StatementPosition;
 import generator.StructurePosition;
+
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -38,7 +37,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.RoomTypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link generator.impl.RoomTypeImpl#getElementPositions <em>Element Positions</em>}</li>
  *   <li>{@link generator.impl.RoomTypeImpl#getStructurePositions <em>Structure Positions</em>}</li>
- *   <li>{@link generator.impl.RoomTypeImpl#getStatementPositions <em>Statement Positions</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,16 +81,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected EList<StructurePosition> structurePositions;
-
-	/**
-	 * The cached value of the '{@link #getStatementPositions() <em>Statement Positions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStatementPositions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<StatementPosition> statementPositions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -165,19 +153,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<StatementPosition> getStatementPositions() {
-		if (statementPositions == null) {
-			statementPositions = new EObjectContainmentEList<StatementPosition>(StatementPosition.class, this,
-					GeneratorPackage.ROOM_TYPE__STATEMENT_POSITIONS);
-		}
-		return statementPositions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Directions> getDirections() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -196,8 +171,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 			return ((InternalEList<?>) getElementPositions()).basicRemove(otherEnd, msgs);
 		case GeneratorPackage.ROOM_TYPE__STRUCTURE_POSITIONS:
 			return ((InternalEList<?>) getStructurePositions()).basicRemove(otherEnd, msgs);
-		case GeneratorPackage.ROOM_TYPE__STATEMENT_POSITIONS:
-			return ((InternalEList<?>) getStatementPositions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -216,8 +189,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 			return getElementPositions();
 		case GeneratorPackage.ROOM_TYPE__STRUCTURE_POSITIONS:
 			return getStructurePositions();
-		case GeneratorPackage.ROOM_TYPE__STATEMENT_POSITIONS:
-			return getStatementPositions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -242,10 +213,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 			getStructurePositions().clear();
 			getStructurePositions().addAll((Collection<? extends StructurePosition>) newValue);
 			return;
-		case GeneratorPackage.ROOM_TYPE__STATEMENT_POSITIONS:
-			getStatementPositions().clear();
-			getStatementPositions().addAll((Collection<? extends StatementPosition>) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -267,9 +234,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.ROOM_TYPE__STRUCTURE_POSITIONS:
 			getStructurePositions().clear();
 			return;
-		case GeneratorPackage.ROOM_TYPE__STATEMENT_POSITIONS:
-			getStatementPositions().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -288,8 +252,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 			return elementPositions != null && !elementPositions.isEmpty();
 		case GeneratorPackage.ROOM_TYPE__STRUCTURE_POSITIONS:
 			return structurePositions != null && !structurePositions.isEmpty();
-		case GeneratorPackage.ROOM_TYPE__STATEMENT_POSITIONS:
-			return statementPositions != null && !statementPositions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

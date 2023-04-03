@@ -2,13 +2,10 @@
  */
 package generator.impl;
 
+import generator.AComponent;
 import generator.GPCategory;
-import generator.GPType;
 import generator.Gameplay;
 import generator.GeneratorPackage;
-import generator.QuantifiedElements;
-import generator.StatementType;
-import generator.StructureElement;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -21,8 +18,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -34,27 +29,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.GameplayImpl#getQuantifiedElements <em>Quantified Elements</em>}</li>
  *   <li>{@link generator.impl.GameplayImpl#getName <em>Name</em>}</li>
- *   <li>{@link generator.impl.GameplayImpl#getAllowedStatements <em>Allowed Statements</em>}</li>
  *   <li>{@link generator.impl.GameplayImpl#getCategory <em>Category</em>}</li>
- *   <li>{@link generator.impl.GameplayImpl#getType <em>Type</em>}</li>
- *   <li>{@link generator.impl.GameplayImpl#getStructures <em>Structures</em>}</li>
+ *   <li>{@link generator.impl.GameplayImpl#getComponents <em>Components</em>}</li>
+ *   <li>{@link generator.impl.GameplayImpl#isHasIntegratedPropositions <em>Has Integrated Propositions</em>}</li>
+ *   <li>{@link generator.impl.GameplayImpl#isOptionalValidator <em>Optional Validator</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class GameplayImpl extends MinimalEObjectImpl.Container implements Gameplay {
-	/**
-	 * The cached value of the '{@link #getQuantifiedElements() <em>Quantified Elements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getQuantifiedElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<QuantifiedElements> quantifiedElements;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -76,16 +60,6 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getAllowedStatements() <em>Allowed Statements</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAllowedStatements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<StatementType> allowedStatements;
-
-	/**
 	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,7 +67,7 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GPCategory CATEGORY_EDEFAULT = GPCategory.POSITION;
+	protected static final GPCategory CATEGORY_EDEFAULT = GPCategory.SELECT_UNIQUE;
 
 	/**
 	 * The cached value of the '{@link #getCategory() <em>Category</em>}' attribute.
@@ -106,34 +80,54 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	protected GPCategory category = CATEGORY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * The cached value of the '{@link #getComponents() <em>Components</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType()
+	 * @see #getComponents()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GPType TYPE_EDEFAULT = GPType.UNIQUE;
+	protected EList<AComponent> components;
 
 	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * The default value of the '{@link #isHasIntegratedPropositions() <em>Has Integrated Propositions</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType()
+	 * @see #isHasIntegratedPropositions()
 	 * @generated
 	 * @ordered
 	 */
-	protected GPType type = TYPE_EDEFAULT;
+	protected static final boolean HAS_INTEGRATED_PROPOSITIONS_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getStructures() <em>Structures</em>}' containment reference list.
+	 * The cached value of the '{@link #isHasIntegratedPropositions() <em>Has Integrated Propositions</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStructures()
+	 * @see #isHasIntegratedPropositions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<StructureElement> structures;
+	protected boolean hasIntegratedPropositions = HAS_INTEGRATED_PROPOSITIONS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isOptionalValidator() <em>Optional Validator</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isOptionalValidator()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean OPTIONAL_VALIDATOR_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isOptionalValidator() <em>Optional Validator</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isOptionalValidator()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean optionalValidator = OPTIONAL_VALIDATOR_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,19 +153,6 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<QuantifiedElements> getQuantifiedElements() {
-		if (quantifiedElements == null) {
-			quantifiedElements = new EObjectContainmentEList<QuantifiedElements>(QuantifiedElements.class, this,
-					GeneratorPackage.GAMEPLAY__QUANTIFIED_ELEMENTS);
-		}
-		return quantifiedElements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -186,19 +167,6 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAMEPLAY__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<StatementType> getAllowedStatements() {
-		if (allowedStatements == null) {
-			allowedStatements = new EDataTypeUniqueEList<StatementType>(StatementType.class, this,
-					GeneratorPackage.GAMEPLAY__ALLOWED_STATEMENTS);
-		}
-		return allowedStatements;
 	}
 
 	/**
@@ -228,33 +196,57 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GPType getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(GPType newType) {
-		GPType oldType = type;
-		type = newType == null ? TYPE_EDEFAULT : newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAMEPLAY__TYPE, oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<StructureElement> getStructures() {
-		if (structures == null) {
-			structures = new EObjectContainmentEList<StructureElement>(StructureElement.class, this,
-					GeneratorPackage.GAMEPLAY__STRUCTURES);
+	public EList<AComponent> getComponents() {
+		if (components == null) {
+			components = new EObjectContainmentEList<AComponent>(AComponent.class, this,
+					GeneratorPackage.GAMEPLAY__COMPONENTS);
 		}
-		return structures;
+		return components;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isHasIntegratedPropositions() {
+		return hasIntegratedPropositions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHasIntegratedPropositions(boolean newHasIntegratedPropositions) {
+		boolean oldHasIntegratedPropositions = hasIntegratedPropositions;
+		hasIntegratedPropositions = newHasIntegratedPropositions;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS, oldHasIntegratedPropositions,
+					hasIntegratedPropositions));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isOptionalValidator() {
+		return optionalValidator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOptionalValidator(boolean newOptionalValidator) {
+		boolean oldOptionalValidator = optionalValidator;
+		optionalValidator = newOptionalValidator;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAMEPLAY__OPTIONAL_VALIDATOR,
+					oldOptionalValidator, optionalValidator));
 	}
 
 	/**
@@ -265,10 +257,8 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.GAMEPLAY__QUANTIFIED_ELEMENTS:
-			return ((InternalEList<?>) getQuantifiedElements()).basicRemove(otherEnd, msgs);
-		case GeneratorPackage.GAMEPLAY__STRUCTURES:
-			return ((InternalEList<?>) getStructures()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.GAMEPLAY__COMPONENTS:
+			return ((InternalEList<?>) getComponents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -281,18 +271,16 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.GAMEPLAY__QUANTIFIED_ELEMENTS:
-			return getQuantifiedElements();
 		case GeneratorPackage.GAMEPLAY__NAME:
 			return getName();
-		case GeneratorPackage.GAMEPLAY__ALLOWED_STATEMENTS:
-			return getAllowedStatements();
 		case GeneratorPackage.GAMEPLAY__CATEGORY:
 			return getCategory();
-		case GeneratorPackage.GAMEPLAY__TYPE:
-			return getType();
-		case GeneratorPackage.GAMEPLAY__STRUCTURES:
-			return getStructures();
+		case GeneratorPackage.GAMEPLAY__COMPONENTS:
+			return getComponents();
+		case GeneratorPackage.GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS:
+			return isHasIntegratedPropositions();
+		case GeneratorPackage.GAMEPLAY__OPTIONAL_VALIDATOR:
+			return isOptionalValidator();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -306,26 +294,21 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.GAMEPLAY__QUANTIFIED_ELEMENTS:
-			getQuantifiedElements().clear();
-			getQuantifiedElements().addAll((Collection<? extends QuantifiedElements>) newValue);
-			return;
 		case GeneratorPackage.GAMEPLAY__NAME:
 			setName((String) newValue);
-			return;
-		case GeneratorPackage.GAMEPLAY__ALLOWED_STATEMENTS:
-			getAllowedStatements().clear();
-			getAllowedStatements().addAll((Collection<? extends StatementType>) newValue);
 			return;
 		case GeneratorPackage.GAMEPLAY__CATEGORY:
 			setCategory((GPCategory) newValue);
 			return;
-		case GeneratorPackage.GAMEPLAY__TYPE:
-			setType((GPType) newValue);
+		case GeneratorPackage.GAMEPLAY__COMPONENTS:
+			getComponents().clear();
+			getComponents().addAll((Collection<? extends AComponent>) newValue);
 			return;
-		case GeneratorPackage.GAMEPLAY__STRUCTURES:
-			getStructures().clear();
-			getStructures().addAll((Collection<? extends StructureElement>) newValue);
+		case GeneratorPackage.GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS:
+			setHasIntegratedPropositions((Boolean) newValue);
+			return;
+		case GeneratorPackage.GAMEPLAY__OPTIONAL_VALIDATOR:
+			setOptionalValidator((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -339,23 +322,20 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GAMEPLAY__QUANTIFIED_ELEMENTS:
-			getQuantifiedElements().clear();
-			return;
 		case GeneratorPackage.GAMEPLAY__NAME:
 			setName(NAME_EDEFAULT);
-			return;
-		case GeneratorPackage.GAMEPLAY__ALLOWED_STATEMENTS:
-			getAllowedStatements().clear();
 			return;
 		case GeneratorPackage.GAMEPLAY__CATEGORY:
 			setCategory(CATEGORY_EDEFAULT);
 			return;
-		case GeneratorPackage.GAMEPLAY__TYPE:
-			setType(TYPE_EDEFAULT);
+		case GeneratorPackage.GAMEPLAY__COMPONENTS:
+			getComponents().clear();
 			return;
-		case GeneratorPackage.GAMEPLAY__STRUCTURES:
-			getStructures().clear();
+		case GeneratorPackage.GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS:
+			setHasIntegratedPropositions(HAS_INTEGRATED_PROPOSITIONS_EDEFAULT);
+			return;
+		case GeneratorPackage.GAMEPLAY__OPTIONAL_VALIDATOR:
+			setOptionalValidator(OPTIONAL_VALIDATOR_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -369,18 +349,16 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GAMEPLAY__QUANTIFIED_ELEMENTS:
-			return quantifiedElements != null && !quantifiedElements.isEmpty();
 		case GeneratorPackage.GAMEPLAY__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case GeneratorPackage.GAMEPLAY__ALLOWED_STATEMENTS:
-			return allowedStatements != null && !allowedStatements.isEmpty();
 		case GeneratorPackage.GAMEPLAY__CATEGORY:
 			return category != CATEGORY_EDEFAULT;
-		case GeneratorPackage.GAMEPLAY__TYPE:
-			return type != TYPE_EDEFAULT;
-		case GeneratorPackage.GAMEPLAY__STRUCTURES:
-			return structures != null && !structures.isEmpty();
+		case GeneratorPackage.GAMEPLAY__COMPONENTS:
+			return components != null && !components.isEmpty();
+		case GeneratorPackage.GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS:
+			return hasIntegratedPropositions != HAS_INTEGRATED_PROPOSITIONS_EDEFAULT;
+		case GeneratorPackage.GAMEPLAY__OPTIONAL_VALIDATOR:
+			return optionalValidator != OPTIONAL_VALIDATOR_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -398,12 +376,12 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", allowedStatements: ");
-		result.append(allowedStatements);
 		result.append(", category: ");
 		result.append(category);
-		result.append(", type: ");
-		result.append(type);
+		result.append(", hasIntegratedPropositions: ");
+		result.append(hasIntegratedPropositions);
+		result.append(", optionalValidator: ");
+		result.append(optionalValidator);
 		result.append(')');
 		return result.toString();
 	}

@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.Room#getRoomtype <em>Roomtype</em>}</li>
  *   <li>{@link generator.Room#getQuestionedFacts <em>Questioned Facts</em>}</li>
  *   <li>{@link generator.Room#getTask <em>Task</em>}</li>
- *   <li>{@link generator.Room#getStatements <em>Statements</em>}</li>
  *   <li>{@link generator.Room#getPositionedElement <em>Positioned Element</em>}</li>
  *   <li>{@link generator.Room#getGameplay <em>Gameplay</em>}</li>
  * </ul>
@@ -142,18 +141,6 @@ public interface Room extends EObject {
 	 * @generated
 	 */
 	void setTask(ATask value);
-
-	/**
-	 * Returns the value of the '<em><b>Statements</b></em>' containment reference list.
-	 * The list contents are of type {@link generator.QuestionedFactStatement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Statements</em>' containment reference list.
-	 * @see generator.GeneratorPackage#getRoom_Statements()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<QuestionedFactStatement> getStatements();
 
 	/**
 	 * Returns the value of the '<em><b>Positioned Element</b></em>' containment reference list.

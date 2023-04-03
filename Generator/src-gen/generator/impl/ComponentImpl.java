@@ -1,0 +1,498 @@
+/**
+ */
+package generator.impl;
+
+import generator.Component;
+import generator.Correctness;
+import generator.Display;
+import generator.ElementType;
+import generator.GeneratorPackage;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Component</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link generator.impl.ComponentImpl#getElementType <em>Element Type</em>}</li>
+ *   <li>{@link generator.impl.ComponentImpl#getDisplayValue <em>Display Value</em>}</li>
+ *   <li>{@link generator.impl.ComponentImpl#isWearChoices <em>Wear Choices</em>}</li>
+ *   <li>{@link generator.impl.ComponentImpl#getDefaultCorrectness <em>Default Correctness</em>}</li>
+ *   <li>{@link generator.impl.ComponentImpl#isWearStatement <em>Wear Statement</em>}</li>
+ *   <li>{@link generator.impl.ComponentImpl#isInputEntry <em>Input Entry</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class ComponentImpl extends AComponentImpl implements Component {
+	/**
+	 * The cached value of the '{@link #getElementType() <em>Element Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElementType()
+	 * @generated
+	 * @ordered
+	 */
+	protected ElementType elementType;
+
+	/**
+	 * The cached value of the '{@link #getDisplayValue() <em>Display Value</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDisplayValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected Display displayValue;
+
+	/**
+	 * The default value of the '{@link #isWearChoices() <em>Wear Choices</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isWearChoices()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean WEAR_CHOICES_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isWearChoices() <em>Wear Choices</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isWearChoices()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean wearChoices = WEAR_CHOICES_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getDefaultCorrectness() <em>Default Correctness</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCorrectness()
+	 * @generated
+	 * @ordered
+	 */
+	protected Correctness defaultCorrectness;
+
+	/**
+	 * The default value of the '{@link #isWearStatement() <em>Wear Statement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isWearStatement()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean WEAR_STATEMENT_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isWearStatement() <em>Wear Statement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isWearStatement()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean wearStatement = WEAR_STATEMENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isInputEntry() <em>Input Entry</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isInputEntry()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean INPUT_ENTRY_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isInputEntry() <em>Input Entry</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isInputEntry()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean inputEntry = INPUT_ENTRY_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComponentImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return GeneratorPackage.Literals.COMPONENT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ElementType getElementType() {
+		if (elementType != null && elementType.eIsProxy()) {
+			InternalEObject oldElementType = (InternalEObject) elementType;
+			elementType = (ElementType) eResolveProxy(oldElementType);
+			if (elementType != oldElementType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.COMPONENT__ELEMENT_TYPE,
+							oldElementType, elementType));
+			}
+		}
+		return elementType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ElementType basicGetElementType() {
+		return elementType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setElementType(ElementType newElementType) {
+		ElementType oldElementType = elementType;
+		elementType = newElementType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.COMPONENT__ELEMENT_TYPE,
+					oldElementType, elementType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Display getDisplayValue() {
+		return displayValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDisplayValue(Display newDisplayValue, NotificationChain msgs) {
+		Display oldDisplayValue = displayValue;
+		displayValue = newDisplayValue;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.COMPONENT__DISPLAY_VALUE, oldDisplayValue, newDisplayValue);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDisplayValue(Display newDisplayValue) {
+		if (newDisplayValue != displayValue) {
+			NotificationChain msgs = null;
+			if (displayValue != null)
+				msgs = ((InternalEObject) displayValue).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.COMPONENT__DISPLAY_VALUE, null, msgs);
+			if (newDisplayValue != null)
+				msgs = ((InternalEObject) newDisplayValue).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.COMPONENT__DISPLAY_VALUE, null, msgs);
+			msgs = basicSetDisplayValue(newDisplayValue, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.COMPONENT__DISPLAY_VALUE,
+					newDisplayValue, newDisplayValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isWearChoices() {
+		return wearChoices;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWearChoices(boolean newWearChoices) {
+		boolean oldWearChoices = wearChoices;
+		wearChoices = newWearChoices;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.COMPONENT__WEAR_CHOICES,
+					oldWearChoices, wearChoices));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Correctness getDefaultCorrectness() {
+		return defaultCorrectness;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDefaultCorrectness(Correctness newDefaultCorrectness, NotificationChain msgs) {
+		Correctness oldDefaultCorrectness = defaultCorrectness;
+		defaultCorrectness = newDefaultCorrectness;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS, oldDefaultCorrectness, newDefaultCorrectness);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDefaultCorrectness(Correctness newDefaultCorrectness) {
+		if (newDefaultCorrectness != defaultCorrectness) {
+			NotificationChain msgs = null;
+			if (defaultCorrectness != null)
+				msgs = ((InternalEObject) defaultCorrectness).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS, null, msgs);
+			if (newDefaultCorrectness != null)
+				msgs = ((InternalEObject) newDefaultCorrectness).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS, null, msgs);
+			msgs = basicSetDefaultCorrectness(newDefaultCorrectness, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS,
+					newDefaultCorrectness, newDefaultCorrectness));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isWearStatement() {
+		return wearStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWearStatement(boolean newWearStatement) {
+		boolean oldWearStatement = wearStatement;
+		wearStatement = newWearStatement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.COMPONENT__WEAR_STATEMENT,
+					oldWearStatement, wearStatement));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isInputEntry() {
+		return inputEntry;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInputEntry(boolean newInputEntry) {
+		boolean oldInputEntry = inputEntry;
+		inputEntry = newInputEntry;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.COMPONENT__INPUT_ENTRY,
+					oldInputEntry, inputEntry));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case GeneratorPackage.COMPONENT__DISPLAY_VALUE:
+			return basicSetDisplayValue(null, msgs);
+		case GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS:
+			return basicSetDefaultCorrectness(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case GeneratorPackage.COMPONENT__ELEMENT_TYPE:
+			if (resolve)
+				return getElementType();
+			return basicGetElementType();
+		case GeneratorPackage.COMPONENT__DISPLAY_VALUE:
+			return getDisplayValue();
+		case GeneratorPackage.COMPONENT__WEAR_CHOICES:
+			return isWearChoices();
+		case GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS:
+			return getDefaultCorrectness();
+		case GeneratorPackage.COMPONENT__WEAR_STATEMENT:
+			return isWearStatement();
+		case GeneratorPackage.COMPONENT__INPUT_ENTRY:
+			return isInputEntry();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case GeneratorPackage.COMPONENT__ELEMENT_TYPE:
+			setElementType((ElementType) newValue);
+			return;
+		case GeneratorPackage.COMPONENT__DISPLAY_VALUE:
+			setDisplayValue((Display) newValue);
+			return;
+		case GeneratorPackage.COMPONENT__WEAR_CHOICES:
+			setWearChoices((Boolean) newValue);
+			return;
+		case GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS:
+			setDefaultCorrectness((Correctness) newValue);
+			return;
+		case GeneratorPackage.COMPONENT__WEAR_STATEMENT:
+			setWearStatement((Boolean) newValue);
+			return;
+		case GeneratorPackage.COMPONENT__INPUT_ENTRY:
+			setInputEntry((Boolean) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case GeneratorPackage.COMPONENT__ELEMENT_TYPE:
+			setElementType((ElementType) null);
+			return;
+		case GeneratorPackage.COMPONENT__DISPLAY_VALUE:
+			setDisplayValue((Display) null);
+			return;
+		case GeneratorPackage.COMPONENT__WEAR_CHOICES:
+			setWearChoices(WEAR_CHOICES_EDEFAULT);
+			return;
+		case GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS:
+			setDefaultCorrectness((Correctness) null);
+			return;
+		case GeneratorPackage.COMPONENT__WEAR_STATEMENT:
+			setWearStatement(WEAR_STATEMENT_EDEFAULT);
+			return;
+		case GeneratorPackage.COMPONENT__INPUT_ENTRY:
+			setInputEntry(INPUT_ENTRY_EDEFAULT);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case GeneratorPackage.COMPONENT__ELEMENT_TYPE:
+			return elementType != null;
+		case GeneratorPackage.COMPONENT__DISPLAY_VALUE:
+			return displayValue != null;
+		case GeneratorPackage.COMPONENT__WEAR_CHOICES:
+			return wearChoices != WEAR_CHOICES_EDEFAULT;
+		case GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS:
+			return defaultCorrectness != null;
+		case GeneratorPackage.COMPONENT__WEAR_STATEMENT:
+			return wearStatement != WEAR_STATEMENT_EDEFAULT;
+		case GeneratorPackage.COMPONENT__INPUT_ENTRY:
+			return inputEntry != INPUT_ENTRY_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (wearChoices: ");
+		result.append(wearChoices);
+		result.append(", wearStatement: ");
+		result.append(wearStatement);
+		result.append(", inputEntry: ");
+		result.append(inputEntry);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ComponentImpl

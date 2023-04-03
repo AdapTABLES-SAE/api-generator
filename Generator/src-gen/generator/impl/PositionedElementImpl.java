@@ -3,19 +3,19 @@
 package generator.impl;
 
 import generator.APosition;
-import generator.CoreElement;
 import generator.Correctness;
 import generator.Display;
+import generator.ExpectedAnswer;
+import generator.GPElementType;
 import generator.GeneratorPackage;
 import generator.PositionedElement;
-
-import generator.StructureElement;
-import generator.WantedAnswer;
+import generator.Priority;
+import generator.QuestionedFact;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -28,12 +28,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.PositionedElementImpl#getID <em>ID</em>}</li>
- *   <li>{@link generator.impl.PositionedElementImpl#getDisplay <em>Display</em>}</li>
- *   <li>{@link generator.impl.PositionedElementImpl#getElement <em>Element</em>}</li>
  *   <li>{@link generator.impl.PositionedElementImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link generator.impl.PositionedElementImpl#getCorrectness <em>Correctness</em>}</li>
- *   <li>{@link generator.impl.PositionedElementImpl#getWantedAnswer <em>Wanted Answer</em>}</li>
- *   <li>{@link generator.impl.PositionedElementImpl#getStructure <em>Structure</em>}</li>
+ *   <li>{@link generator.impl.PositionedElementImpl#getDisplay <em>Display</em>}</li>
+ *   <li>{@link generator.impl.PositionedElementImpl#getElementType <em>Element Type</em>}</li>
+ *   <li>{@link generator.impl.PositionedElementImpl#getExpectedAnswer <em>Expected Answer</em>}</li>
+ *   <li>{@link generator.impl.PositionedElementImpl#getPriority <em>Priority</em>}</li>
+ *   <li>{@link generator.impl.PositionedElementImpl#getFact <em>Fact</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,6 +49,7 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected static final String ID_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getID() <em>ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -57,24 +59,6 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getDisplay() <em>Display</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDisplay()
-	 * @generated
-	 * @ordered
-	 */
-	protected Display display;
-	/**
-	 * The cached value of the '{@link #getElement() <em>Element</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getElement()
-	 * @generated
-	 * @ordered
-	 */
-	protected CoreElement element;
 
 	/**
 	 * The cached value of the '{@link #getPosition() <em>Position</em>}' reference.
@@ -85,6 +69,7 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected APosition position;
+
 	/**
 	 * The cached value of the '{@link #getCorrectness() <em>Correctness</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -96,24 +81,54 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	protected Correctness correctness;
 
 	/**
-	 * The cached value of the '{@link #getWantedAnswer() <em>Wanted Answer</em>}' containment reference.
+	 * The cached value of the '{@link #getDisplay() <em>Display</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWantedAnswer()
+	 * @see #getDisplay()
 	 * @generated
 	 * @ordered
 	 */
-	protected WantedAnswer wantedAnswer;
+	protected Display display;
 
 	/**
-	 * The cached value of the '{@link #getStructure() <em>Structure</em>}' reference.
+	 * The cached value of the '{@link #getElementType() <em>Element Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStructure()
+	 * @see #getElementType()
 	 * @generated
 	 * @ordered
 	 */
-	protected StructureElement structure;
+	protected GPElementType elementType;
+
+	/**
+	 * The cached value of the '{@link #getExpectedAnswer() <em>Expected Answer</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExpectedAnswer()
+	 * @generated
+	 * @ordered
+	 */
+	protected ExpectedAnswer expectedAnswer;
+
+	/**
+	 * The cached value of the '{@link #getPriority() <em>Priority</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPriority()
+	 * @generated
+	 * @ordered
+	 */
+	protected Priority priority;
+
+	/**
+	 * The cached value of the '{@link #getFact() <em>Fact</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFact()
+	 * @generated
+	 * @ordered
+	 */
+	protected QuestionedFact fact;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,6 +225,226 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GPElementType getElementType() {
+		if (elementType != null && elementType.eIsProxy()) {
+			InternalEObject oldElementType = (InternalEObject) elementType;
+			elementType = (GPElementType) eResolveProxy(oldElementType);
+			if (elementType != oldElementType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE, oldElementType, elementType));
+			}
+		}
+		return elementType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GPElementType basicGetElementType() {
+		return elementType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setElementType(GPElementType newElementType) {
+		GPElementType oldElementType = elementType;
+		elementType = newElementType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE,
+					oldElementType, elementType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExpectedAnswer getExpectedAnswer() {
+		return expectedAnswer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetExpectedAnswer(ExpectedAnswer newExpectedAnswer, NotificationChain msgs) {
+		ExpectedAnswer oldExpectedAnswer = expectedAnswer;
+		expectedAnswer = newExpectedAnswer;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER, oldExpectedAnswer, newExpectedAnswer);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExpectedAnswer(ExpectedAnswer newExpectedAnswer) {
+		if (newExpectedAnswer != expectedAnswer) {
+			NotificationChain msgs = null;
+			if (expectedAnswer != null)
+				msgs = ((InternalEObject) expectedAnswer).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER, null, msgs);
+			if (newExpectedAnswer != null)
+				msgs = ((InternalEObject) newExpectedAnswer).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER, null, msgs);
+			msgs = basicSetExpectedAnswer(newExpectedAnswer, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER,
+					newExpectedAnswer, newExpectedAnswer));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Priority getPriority() {
+		return priority;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPriority(Priority newPriority, NotificationChain msgs) {
+		Priority oldPriority = priority;
+		priority = newPriority;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.POSITIONED_ELEMENT__PRIORITY, oldPriority, newPriority);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPriority(Priority newPriority) {
+		if (newPriority != priority) {
+			NotificationChain msgs = null;
+			if (priority != null)
+				msgs = ((InternalEObject) priority).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.POSITIONED_ELEMENT__PRIORITY, null, msgs);
+			if (newPriority != null)
+				msgs = ((InternalEObject) newPriority).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.POSITIONED_ELEMENT__PRIORITY, null, msgs);
+			msgs = basicSetPriority(newPriority, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__PRIORITY,
+					newPriority, newPriority));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QuestionedFact getFact() {
+		if (fact != null && fact.eIsProxy()) {
+			InternalEObject oldFact = (InternalEObject) fact;
+			fact = (QuestionedFact) eResolveProxy(oldFact);
+			if (fact != oldFact) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.POSITIONED_ELEMENT__FACT,
+							oldFact, fact));
+			}
+		}
+		return fact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QuestionedFact basicGetFact() {
+		return fact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFact(QuestionedFact newFact) {
+		QuestionedFact oldFact = fact;
+		fact = newFact;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__FACT, oldFact,
+					fact));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public APosition getPosition() {
+		if (position != null && position.eIsProxy()) {
+			InternalEObject oldPosition = (InternalEObject) position;
+			position = (APosition) eResolveProxy(oldPosition);
+			if (position != oldPosition) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							GeneratorPackage.POSITIONED_ELEMENT__POSITION, oldPosition, position));
+			}
+		}
+		return position;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public APosition basicGetPosition() {
+		return position;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPosition(APosition newPosition) {
+		APosition oldPosition = position;
+		position = newPosition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__POSITION,
+					oldPosition, position));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Correctness getCorrectness() {
 		return correctness;
 	}
@@ -260,185 +495,17 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WantedAnswer getWantedAnswer() {
-		return wantedAnswer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetWantedAnswer(WantedAnswer newWantedAnswer, NotificationChain msgs) {
-		WantedAnswer oldWantedAnswer = wantedAnswer;
-		wantedAnswer = newWantedAnswer;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.POSITIONED_ELEMENT__WANTED_ANSWER, oldWantedAnswer, newWantedAnswer);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWantedAnswer(WantedAnswer newWantedAnswer) {
-		if (newWantedAnswer != wantedAnswer) {
-			NotificationChain msgs = null;
-			if (wantedAnswer != null)
-				msgs = ((InternalEObject) wantedAnswer).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.POSITIONED_ELEMENT__WANTED_ANSWER, null, msgs);
-			if (newWantedAnswer != null)
-				msgs = ((InternalEObject) newWantedAnswer).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.POSITIONED_ELEMENT__WANTED_ANSWER, null, msgs);
-			msgs = basicSetWantedAnswer(newWantedAnswer, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__WANTED_ANSWER,
-					newWantedAnswer, newWantedAnswer));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StructureElement getStructure() {
-		if (structure != null && structure.eIsProxy()) {
-			InternalEObject oldStructure = (InternalEObject) structure;
-			structure = (StructureElement) eResolveProxy(oldStructure);
-			if (structure != oldStructure) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.POSITIONED_ELEMENT__STRUCTURE, oldStructure, structure));
-			}
-		}
-		return structure;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StructureElement basicGetStructure() {
-		return structure;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStructure(StructureElement newStructure) {
-		StructureElement oldStructure = structure;
-		structure = newStructure;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__STRUCTURE,
-					oldStructure, structure));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CoreElement getElement() {
-		if (element != null && element.eIsProxy()) {
-			InternalEObject oldElement = (InternalEObject) element;
-			element = (CoreElement) eResolveProxy(oldElement);
-			if (element != oldElement) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.POSITIONED_ELEMENT__ELEMENT, oldElement, element));
-			}
-		}
-		return element;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CoreElement basicGetElement() {
-		return element;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setElement(CoreElement newElement) {
-		CoreElement oldElement = element;
-		element = newElement;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__ELEMENT,
-					oldElement, element));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public APosition getPosition() {
-		if (position != null && position.eIsProxy()) {
-			InternalEObject oldPosition = (InternalEObject) position;
-			position = (APosition) eResolveProxy(oldPosition);
-			if (position != oldPosition) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.POSITIONED_ELEMENT__POSITION, oldPosition, position));
-			}
-		}
-		return position;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public APosition basicGetPosition() {
-		return position;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPosition(APosition newPosition) {
-		APosition oldPosition = position;
-		position = newPosition;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__POSITION,
-					oldPosition, position));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.POSITIONED_ELEMENT__DISPLAY:
-			return basicSetDisplay(null, msgs);
 		case GeneratorPackage.POSITIONED_ELEMENT__CORRECTNESS:
 			return basicSetCorrectness(null, msgs);
-		case GeneratorPackage.POSITIONED_ELEMENT__WANTED_ANSWER:
-			return basicSetWantedAnswer(null, msgs);
+		case GeneratorPackage.POSITIONED_ELEMENT__DISPLAY:
+			return basicSetDisplay(null, msgs);
+		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
+			return basicSetExpectedAnswer(null, msgs);
+		case GeneratorPackage.POSITIONED_ELEMENT__PRIORITY:
+			return basicSetPriority(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -453,24 +520,26 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 		case GeneratorPackage.POSITIONED_ELEMENT__ID:
 			return getID();
-		case GeneratorPackage.POSITIONED_ELEMENT__DISPLAY:
-			return getDisplay();
-		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT:
-			if (resolve)
-				return getElement();
-			return basicGetElement();
 		case GeneratorPackage.POSITIONED_ELEMENT__POSITION:
 			if (resolve)
 				return getPosition();
 			return basicGetPosition();
 		case GeneratorPackage.POSITIONED_ELEMENT__CORRECTNESS:
 			return getCorrectness();
-		case GeneratorPackage.POSITIONED_ELEMENT__WANTED_ANSWER:
-			return getWantedAnswer();
-		case GeneratorPackage.POSITIONED_ELEMENT__STRUCTURE:
+		case GeneratorPackage.POSITIONED_ELEMENT__DISPLAY:
+			return getDisplay();
+		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
 			if (resolve)
-				return getStructure();
-			return basicGetStructure();
+				return getElementType();
+			return basicGetElementType();
+		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
+			return getExpectedAnswer();
+		case GeneratorPackage.POSITIONED_ELEMENT__PRIORITY:
+			return getPriority();
+		case GeneratorPackage.POSITIONED_ELEMENT__FACT:
+			if (resolve)
+				return getFact();
+			return basicGetFact();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -480,17 +549,12 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case GeneratorPackage.POSITIONED_ELEMENT__ID:
 			setID((String) newValue);
-			return;
-		case GeneratorPackage.POSITIONED_ELEMENT__DISPLAY:
-			setDisplay((Display) newValue);
-			return;
-		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT:
-			setElement((CoreElement) newValue);
 			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__POSITION:
 			setPosition((APosition) newValue);
@@ -498,11 +562,20 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.POSITIONED_ELEMENT__CORRECTNESS:
 			setCorrectness((Correctness) newValue);
 			return;
-		case GeneratorPackage.POSITIONED_ELEMENT__WANTED_ANSWER:
-			setWantedAnswer((WantedAnswer) newValue);
+		case GeneratorPackage.POSITIONED_ELEMENT__DISPLAY:
+			setDisplay((Display) newValue);
 			return;
-		case GeneratorPackage.POSITIONED_ELEMENT__STRUCTURE:
-			setStructure((StructureElement) newValue);
+		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
+			setElementType((GPElementType) newValue);
+			return;
+		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
+			setExpectedAnswer((ExpectedAnswer) newValue);
+			return;
+		case GeneratorPackage.POSITIONED_ELEMENT__PRIORITY:
+			setPriority((Priority) newValue);
+			return;
+		case GeneratorPackage.POSITIONED_ELEMENT__FACT:
+			setFact((QuestionedFact) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -519,23 +592,26 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.POSITIONED_ELEMENT__ID:
 			setID(ID_EDEFAULT);
 			return;
-		case GeneratorPackage.POSITIONED_ELEMENT__DISPLAY:
-			setDisplay((Display) null);
-			return;
-		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT:
-			setElement((CoreElement) null);
-			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__POSITION:
 			setPosition((APosition) null);
 			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__CORRECTNESS:
 			setCorrectness((Correctness) null);
 			return;
-		case GeneratorPackage.POSITIONED_ELEMENT__WANTED_ANSWER:
-			setWantedAnswer((WantedAnswer) null);
+		case GeneratorPackage.POSITIONED_ELEMENT__DISPLAY:
+			setDisplay((Display) null);
 			return;
-		case GeneratorPackage.POSITIONED_ELEMENT__STRUCTURE:
-			setStructure((StructureElement) null);
+		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
+			setElementType((GPElementType) null);
+			return;
+		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
+			setExpectedAnswer((ExpectedAnswer) null);
+			return;
+		case GeneratorPackage.POSITIONED_ELEMENT__PRIORITY:
+			setPriority((Priority) null);
+			return;
+		case GeneratorPackage.POSITIONED_ELEMENT__FACT:
+			setFact((QuestionedFact) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -551,18 +627,20 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 		case GeneratorPackage.POSITIONED_ELEMENT__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-		case GeneratorPackage.POSITIONED_ELEMENT__DISPLAY:
-			return display != null;
-		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT:
-			return element != null;
 		case GeneratorPackage.POSITIONED_ELEMENT__POSITION:
 			return position != null;
 		case GeneratorPackage.POSITIONED_ELEMENT__CORRECTNESS:
 			return correctness != null;
-		case GeneratorPackage.POSITIONED_ELEMENT__WANTED_ANSWER:
-			return wantedAnswer != null;
-		case GeneratorPackage.POSITIONED_ELEMENT__STRUCTURE:
-			return structure != null;
+		case GeneratorPackage.POSITIONED_ELEMENT__DISPLAY:
+			return display != null;
+		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
+			return elementType != null;
+		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
+			return expectedAnswer != null;
+		case GeneratorPackage.POSITIONED_ELEMENT__PRIORITY:
+			return priority != null;
+		case GeneratorPackage.POSITIONED_ELEMENT__FACT:
+			return fact != null;
 		}
 		return super.eIsSet(featureID);
 	}

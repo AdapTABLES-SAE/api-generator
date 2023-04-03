@@ -458,51 +458,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.MT_QE_FCOMPLETION1: {
-			MTQeFCompletion1 mtQeFCompletion1 = (MTQeFCompletion1) theEObject;
-			T result = caseMTQeFCompletion1(mtQeFCompletion1);
-			if (result == null)
-				result = caseQuestionedFact(mtQeFCompletion1);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.MT_QE_FCOMPLETION2: {
-			MTQeFCompletion2 mtQeFCompletion2 = (MTQeFCompletion2) theEObject;
-			T result = caseMTQeFCompletion2(mtQeFCompletion2);
-			if (result == null)
-				result = caseQuestionedFact(mtQeFCompletion2);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.MT_QE_FREBUILD: {
-			MTQeFRebuild mtQeFRebuild = (MTQeFRebuild) theEObject;
-			T result = caseMTQeFRebuild(mtQeFRebuild);
-			if (result == null)
-				result = caseQuestionedFact(mtQeFRebuild);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.MT_QE_FIDENTIFICATION: {
-			MTQeFIdentification mtQeFIdentification = (MTQeFIdentification) theEObject;
-			T result = caseMTQeFIdentification(mtQeFIdentification);
-			if (result == null)
-				result = caseQuestionedFact(mtQeFIdentification);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.MT_QE_FMEMBERSHIP: {
-			MTQeFMembership mtQeFMembership = (MTQeFMembership) theEObject;
-			T result = caseMTQeFMembership(mtQeFMembership);
-			if (result == null)
-				result = caseQuestionedFact(mtQeFMembership);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case GeneratorPackage.COMPLETION_CRITERIA: {
 			CompletionCriteria completionCriteria = (CompletionCriteria) theEObject;
 			T result = caseCompletionCriteria(completionCriteria);
@@ -524,16 +479,16 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.ELEMENT_TYPES: {
-			ElementTypes elementTypes = (ElementTypes) theEObject;
-			T result = caseElementTypes(elementTypes);
+		case GeneratorPackage.GAME_ELEMENT_TYPES: {
+			GameElementTypes gameElementTypes = (GameElementTypes) theEObject;
+			T result = caseGameElementTypes(gameElementTypes);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.CORE_ELEMENTS: {
-			CoreElements coreElements = (CoreElements) theEObject;
-			T result = caseCoreElements(coreElements);
+		case GeneratorPackage.GP_ELEMENTS_TYPES: {
+			GPElementsTypes gpElementsTypes = (GPElementsTypes) theEObject;
+			T result = caseGPElementsTypes(gpElementsTypes);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -545,9 +500,11 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.CORE_ELEMENT: {
-			CoreElement coreElement = (CoreElement) theEObject;
-			T result = caseCoreElement(coreElement);
+		case GeneratorPackage.ELEMENT_TYPE: {
+			ElementType elementType = (ElementType) theEObject;
+			T result = caseElementType(elementType);
+			if (result == null)
+				result = caseGPElementType(elementType);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -562,13 +519,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		case GeneratorPackage.GAMEPLAY: {
 			Gameplay gameplay = (Gameplay) theEObject;
 			T result = caseGameplay(gameplay);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.QUANTIFIED_ELEMENTS: {
-			QuantifiedElements quantifiedElements = (QuantifiedElements) theEObject;
-			T result = caseQuantifiedElements(quantifiedElements);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -617,22 +567,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.STATEMENT_POSITION: {
-			StatementPosition statementPosition = (StatementPosition) theEObject;
-			T result = caseStatementPosition(statementPosition);
-			if (result == null)
-				result = caseAPosition(statementPosition);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.QUESTIONED_FACT_STATEMENT: {
-			QuestionedFactStatement questionedFactStatement = (QuestionedFactStatement) theEObject;
-			T result = caseQuestionedFactStatement(questionedFactStatement);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case GeneratorPackage.POSITIONED_ELEMENT: {
 			PositionedElement positionedElement = (PositionedElement) theEObject;
 			T result = casePositionedElement(positionedElement);
@@ -640,18 +574,36 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.DISPLAY: {
-			Display display = (Display) theEObject;
-			T result = caseDisplay(display);
-			if (result == null)
-				result = caseAbstractAttributes(display);
+		case GeneratorPackage.PARAMETER: {
+			Parameter parameter = (Parameter) theEObject;
+			T result = caseParameter(parameter);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.ABSTRACT_ATTRIBUTES: {
-			AbstractAttributes abstractAttributes = (AbstractAttributes) theEObject;
-			T result = caseAbstractAttributes(abstractAttributes);
+		case GeneratorPackage.QUESTION_PARAM: {
+			QuestionParam questionParam = (QuestionParam) theEObject;
+			T result = caseQuestionParam(questionParam);
+			if (result == null)
+				result = caseParameter(questionParam);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.PROPOSITION_PARAM: {
+			PropositionParam propositionParam = (PropositionParam) theEObject;
+			T result = casePropositionParam(propositionParam);
+			if (result == null)
+				result = caseParameter(propositionParam);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.VALUE: {
+			Value value = (Value) theEObject;
+			T result = caseValue(value);
+			if (result == null)
+				result = caseAValue(value);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -660,23 +612,127 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			Correctness correctness = (Correctness) theEObject;
 			T result = caseCorrectness(correctness);
 			if (result == null)
-				result = caseAbstractAttributes(correctness);
+				result = caseParameter(correctness);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.STRUCTURE_ELEMENT: {
-			StructureElement structureElement = (StructureElement) theEObject;
-			T result = caseStructureElement(structureElement);
+		case GeneratorPackage.ENTRY_SOLUCE_PARAM: {
+			EntrySoluceParam entrySoluceParam = (EntrySoluceParam) theEObject;
+			T result = caseEntrySoluceParam(entrySoluceParam);
+			if (result == null)
+				result = caseParameter(entrySoluceParam);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.WANTED_ANSWER: {
-			WantedAnswer wantedAnswer = (WantedAnswer) theEObject;
-			T result = caseWantedAnswer(wantedAnswer);
+		case GeneratorPackage.STRUCTURE_TYPE: {
+			StructureType structureType = (StructureType) theEObject;
+			T result = caseStructureType(structureType);
 			if (result == null)
-				result = caseAbstractAttributes(wantedAnswer);
+				result = caseGPElementType(structureType);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.GP_ELEMENT_TYPE: {
+			GPElementType gpElementType = (GPElementType) theEObject;
+			T result = caseGPElementType(gpElementType);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.DISPLAY: {
+			Display display = (Display) theEObject;
+			T result = caseDisplay(display);
+			if (result == null)
+				result = caseParameter(display);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.ACOMPONENT: {
+			AComponent aComponent = (AComponent) theEObject;
+			T result = caseAComponent(aComponent);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.STRUCTURE: {
+			Structure structure = (Structure) theEObject;
+			T result = caseStructure(structure);
+			if (result == null)
+				result = caseAComponent(structure);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.COMPONENT: {
+			Component component = (Component) theEObject;
+			T result = caseComponent(component);
+			if (result == null)
+				result = caseAComponent(component);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.QUANTITY: {
+			Quantity quantity = (Quantity) theEObject;
+			T result = caseQuantity(quantity);
+			if (result == null)
+				result = caseParameter(quantity);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.WANTED_ANSWERS_PARAM: {
+			WantedAnswersParam wantedAnswersParam = (WantedAnswersParam) theEObject;
+			T result = caseWantedAnswersParam(wantedAnswersParam);
+			if (result == null)
+				result = caseParameter(wantedAnswersParam);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.PRIORITY: {
+			Priority priority = (Priority) theEObject;
+			T result = casePriority(priority);
+			if (result == null)
+				result = caseParameter(priority);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.EXPECTED_ANSWER: {
+			ExpectedAnswer expectedAnswer = (ExpectedAnswer) theEObject;
+			T result = caseExpectedAnswer(expectedAnswer);
+			if (result == null)
+				result = caseParameter(expectedAnswer);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.CORRECTNESS_VALUE: {
+			CorrectnessValue correctnessValue = (CorrectnessValue) theEObject;
+			T result = caseCorrectnessValue(correctnessValue);
+			if (result == null)
+				result = caseAValue(correctnessValue);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.AVALUE: {
+			AValue aValue = (AValue) theEObject;
+			T result = caseAValue(aValue);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.POSITIONED_STRUCTURE_ELEMENT: {
+			PositionedStructureElement positionedStructureElement = (PositionedStructureElement) theEObject;
+			T result = casePositionedStructureElement(positionedStructureElement);
+			if (result == null)
+				result = casePositionedElement(positionedStructureElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1407,81 +1463,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MT Qe FCompletion1</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MT Qe FCompletion1</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMTQeFCompletion1(MTQeFCompletion1 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MT Qe FCompletion2</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MT Qe FCompletion2</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMTQeFCompletion2(MTQeFCompletion2 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MT Qe FRebuild</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MT Qe FRebuild</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMTQeFRebuild(MTQeFRebuild object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MT Qe FIdentification</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MT Qe FIdentification</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMTQeFIdentification(MTQeFIdentification object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MT Qe FMembership</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MT Qe FMembership</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMTQeFMembership(MTQeFMembership object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Completion Criteria</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1527,32 +1508,32 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element Types</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Game Element Types</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element Types</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Game Element Types</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElementTypes(ElementTypes object) {
+	public T caseGameElementTypes(GameElementTypes object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Core Elements</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>GP Elements Types</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Core Elements</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>GP Elements Types</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCoreElements(CoreElements object) {
+	public T caseGPElementsTypes(GPElementsTypes object) {
 		return null;
 	}
 
@@ -1572,17 +1553,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Core Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Element Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Core Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Element Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCoreElement(CoreElement object) {
+	public T caseElementType(ElementType object) {
 		return null;
 	}
 
@@ -1613,111 +1594,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGameplay(Gameplay object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Quantified Elements</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Quantified Elements</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseQuantifiedElements(QuantifiedElements object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Positioned Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Positioned Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePositionedElement(PositionedElement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Display</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Display</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDisplay(Display object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstract Attributes</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstract Attributes</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAbstractAttributes(AbstractAttributes object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Correctness</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Correctness</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCorrectness(Correctness object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Structure Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Structure Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseStructureElement(StructureElement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Wanted Answer</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Wanted Answer</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseWantedAnswer(WantedAnswer object) {
 		return null;
 	}
 
@@ -1812,32 +1688,302 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Statement Position</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Positioned Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Statement Position</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Positioned Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStatementPosition(StatementPosition object) {
+	public T casePositionedElement(PositionedElement object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Questioned Fact Statement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Display</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Questioned Fact Statement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Display</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseQuestionedFactStatement(QuestionedFactStatement object) {
+	public T caseDisplay(Display object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>AComponent</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>AComponent</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAComponent(AComponent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Structure</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Structure</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStructure(Structure object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Component</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComponent(Component object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Quantity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Quantity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQuantity(Quantity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Wanted Answers Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Wanted Answers Param</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWantedAnswersParam(WantedAnswersParam object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Priority</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Priority</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePriority(Priority object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Expected Answer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Expected Answer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExpectedAnswer(ExpectedAnswer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Correctness Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Correctness Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCorrectnessValue(CorrectnessValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>AValue</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>AValue</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAValue(AValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Positioned Structure Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Positioned Structure Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePositionedStructureElement(PositionedStructureElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Correctness</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Correctness</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCorrectness(Correctness object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseParameter(Parameter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Question Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Question Param</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQuestionParam(QuestionParam object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Proposition Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Proposition Param</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePropositionParam(PropositionParam object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseValue(Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Entry Soluce Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Entry Soluce Param</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEntrySoluceParam(EntrySoluceParam object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Structure Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Structure Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStructureType(StructureType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GP Element Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GP Element Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGPElementType(GPElementType object) {
 		return null;
 	}
 

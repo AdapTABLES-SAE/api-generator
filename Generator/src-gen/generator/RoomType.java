@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.RoomType#getName <em>Name</em>}</li>
  *   <li>{@link generator.RoomType#getElementPositions <em>Element Positions</em>}</li>
  *   <li>{@link generator.RoomType#getStructurePositions <em>Structure Positions</em>}</li>
- *   <li>{@link generator.RoomType#getStatementPositions <em>Statement Positions</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getRoomType()
@@ -71,18 +70,6 @@ public interface RoomType extends EObject {
 	 * @generated
 	 */
 	EList<StructurePosition> getStructurePositions();
-
-	/**
-	 * Returns the value of the '<em><b>Statement Positions</b></em>' containment reference list.
-	 * The list contents are of type {@link generator.StatementPosition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Statement Positions</em>' containment reference list.
-	 * @see generator.GeneratorPackage#getRoomType_StatementPositions()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<StatementPosition> getStatementPositions();
 
 	/**
 	 * <!-- begin-user-doc -->

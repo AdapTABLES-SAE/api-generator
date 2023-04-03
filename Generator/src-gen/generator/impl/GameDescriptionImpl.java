@@ -3,14 +3,16 @@
 package generator.impl;
 
 import generator.Abilities;
-import generator.ElementTypes;
 import generator.GameDescription;
+import generator.GameElementTypes;
 import generator.Gameplays;
 import generator.GeneratorPackage;
 import generator.LevelsDifficultyProgress;
 import generator.RoomTypes;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -73,7 +75,7 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected ElementTypes elements;
+	protected GameElementTypes elements;
 
 	/**
 	 * The cached value of the '{@link #getAbilities() <em>Abilities</em>}' containment reference.
@@ -264,7 +266,7 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ElementTypes getElements() {
+	public GameElementTypes getElements() {
 		return elements;
 	}
 
@@ -273,8 +275,8 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetElements(ElementTypes newElements, NotificationChain msgs) {
-		ElementTypes oldElements = elements;
+	public NotificationChain basicSetElements(GameElementTypes newElements, NotificationChain msgs) {
+		GameElementTypes oldElements = elements;
 		elements = newElements;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -292,7 +294,7 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElements(ElementTypes newElements) {
+	public void setElements(GameElementTypes newElements) {
 		if (newElements != elements) {
 			NotificationChain msgs = null;
 			if (elements != null)
@@ -408,7 +410,6 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -422,7 +423,7 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 			setGameplays((Gameplays) newValue);
 			return;
 		case GeneratorPackage.GAME_DESCRIPTION__ELEMENTS:
-			setElements((ElementTypes) newValue);
+			setElements((GameElementTypes) newValue);
 			return;
 		case GeneratorPackage.GAME_DESCRIPTION__ABILITIES:
 			setAbilities((Abilities) newValue);
@@ -449,7 +450,7 @@ public class GameDescriptionImpl extends MinimalEObjectImpl.Container implements
 			setGameplays((Gameplays) null);
 			return;
 		case GeneratorPackage.GAME_DESCRIPTION__ELEMENTS:
-			setElements((ElementTypes) null);
+			setElements((GameElementTypes) null);
 			return;
 		case GeneratorPackage.GAME_DESCRIPTION__ABILITIES:
 			setAbilities((Abilities) null);

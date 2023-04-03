@@ -15,12 +15,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.Gameplay#getQuantifiedElements <em>Quantified Elements</em>}</li>
  *   <li>{@link generator.Gameplay#getName <em>Name</em>}</li>
- *   <li>{@link generator.Gameplay#getAllowedStatements <em>Allowed Statements</em>}</li>
  *   <li>{@link generator.Gameplay#getCategory <em>Category</em>}</li>
- *   <li>{@link generator.Gameplay#getType <em>Type</em>}</li>
- *   <li>{@link generator.Gameplay#getStructures <em>Structures</em>}</li>
+ *   <li>{@link generator.Gameplay#getComponents <em>Components</em>}</li>
+ *   <li>{@link generator.Gameplay#isHasIntegratedPropositions <em>Has Integrated Propositions</em>}</li>
+ *   <li>{@link generator.Gameplay#isOptionalValidator <em>Optional Validator</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getGameplay()
@@ -28,18 +27,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Gameplay extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Quantified Elements</b></em>' containment reference list.
-	 * The list contents are of type {@link generator.QuantifiedElements}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Quantified Elements</em>' containment reference list.
-	 * @see generator.GeneratorPackage#getGameplay_QuantifiedElements()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<QuantifiedElements> getQuantifiedElements();
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -61,20 +48,6 @@ public interface Gameplay extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Allowed Statements</b></em>' attribute list.
-	 * The list contents are of type {@link generator.StatementType}.
-	 * The literals are from the enumeration {@link generator.StatementType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Allowed Statements</em>' attribute list.
-	 * @see generator.StatementType
-	 * @see generator.GeneratorPackage#getGameplay_AllowedStatements()
-	 * @model
-	 * @generated
-	 */
-	EList<StatementType> getAllowedStatements();
 
 	/**
 	 * Returns the value of the '<em><b>Category</b></em>' attribute.
@@ -102,40 +75,60 @@ public interface Gameplay extends EObject {
 	void setCategory(GPCategory value);
 
 	/**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link generator.GPType}.
+	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
+	 * The list contents are of type {@link generator.AComponent}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see generator.GPType
-	 * @see #setType(GPType)
-	 * @see generator.GeneratorPackage#getGameplay_Type()
-	 * @model
-	 * @generated
-	 */
-	GPType getType();
-
-	/**
-	 * Sets the value of the '{@link generator.Gameplay#getType <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see generator.GPType
-	 * @see #getType()
-	 * @generated
-	 */
-	void setType(GPType value);
-
-	/**
-	 * Returns the value of the '<em><b>Structures</b></em>' containment reference list.
-	 * The list contents are of type {@link generator.StructureElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Structures</em>' containment reference list.
-	 * @see generator.GeneratorPackage#getGameplay_Structures()
+	 * @return the value of the '<em>Components</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getGameplay_Components()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<StructureElement> getStructures();
+	EList<AComponent> getComponents();
+
+	/**
+	 * Returns the value of the '<em><b>Has Integrated Propositions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Has Integrated Propositions</em>' attribute.
+	 * @see #setHasIntegratedPropositions(boolean)
+	 * @see generator.GeneratorPackage#getGameplay_HasIntegratedPropositions()
+	 * @model
+	 * @generated
+	 */
+	boolean isHasIntegratedPropositions();
+
+	/**
+	 * Sets the value of the '{@link generator.Gameplay#isHasIntegratedPropositions <em>Has Integrated Propositions</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Has Integrated Propositions</em>' attribute.
+	 * @see #isHasIntegratedPropositions()
+	 * @generated
+	 */
+	void setHasIntegratedPropositions(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Optional Validator</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Optional Validator</em>' attribute.
+	 * @see #setOptionalValidator(boolean)
+	 * @see generator.GeneratorPackage#getGameplay_OptionalValidator()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isOptionalValidator();
+
+	/**
+	 * Sets the value of the '{@link generator.Gameplay#isOptionalValidator <em>Optional Validator</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Optional Validator</em>' attribute.
+	 * @see #isOptionalValidator()
+	 * @generated
+	 */
+	void setOptionalValidator(boolean value);
 
 } // Gameplay

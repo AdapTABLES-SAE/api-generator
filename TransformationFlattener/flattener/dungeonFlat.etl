@@ -23,7 +23,12 @@ rule Room2Room
         roomOut.y = roomIn.y;
         roomOut.id = "Room[" + roomIn.x + "/" + roomIn.y + "]";
         roomOut.roomTypeName = roomIn.roomtype.name;
-
+        
+        if(roomIn.task.isDefined()){
+        	roomOut.idTask = roomIn.task.id;
+        	roomOut.time = roomIn.task.maxTime;
+        }
+              
         if (roomIn.roomtype.isTypeOf(SmallRoomType)) {
             "\tsmall".println();
             roomOut.size = OUT!RoomType#SMALL;
@@ -33,26 +38,25 @@ rule Room2Room
         }
         
         if(not roomIn.questionedFacts.isEmpty()){
-        	"On est ici".println();
+        	
         	var facts: new OUT!Facts;
         	
         	for (fact in roomIn.questionedFacts) { 
         	var factOUT: new OUT!Fact;
-				factOUT.id = fact.questionablefact.id;
-			    "On cree les faits".println();
-			    factOUT.complete = fact.completeFact;
+				factOUT.id = fact.questionablefact.id; 
+			    factOUT.complete = fact.question.value.value;
 			    if(fact.correctnessToReach.isDefined()){
-			    	factOUT.correctnessToReach = fact.correctnessToReach+"";
+			    	factOUT.correctnessToReach = fact.correctnessToReach.value.value;
 			    }
 			    facts.fact.add(factOUT);         	
         	}
-	
-        	
+	        	
 			roomOut.facts = facts;
+			"\t\t\tFacts created".println();
 			//roomOut.facts.facts ::= roomIn.questionedFacts;	        
         }
         
-        if(roomIn.statements.isDefined()){
+        /*if(roomIn.statements.isDefined()){
         	for(statement in roomIn.statements){
         		var statementOut: new OUT!Statement;
         		statementOut.id = statement.id+"";
@@ -66,7 +70,7 @@ rule Room2Room
         		statementOut.pos = statement.position.ID;
         		roomOut.statement.add(statementOut);
         	}
-        }
+        }*/
         
         
         if(not roomIn.positionedElement.isEmpty()){
@@ -82,7 +86,7 @@ rule Room2Room
         roomOut.roomaccesses.roomaccess ::= roomIn.roomaccess;
 }
 
-rule Facts2Facts 
+/*rule Facts2Facts 
 	transform factIn : IN!QuestionedFact
 	to factOut : OUT!Fact {
 		factOUT.id = fact.questionablefact.id;
@@ -99,24 +103,40 @@ rule Facts2Facts
 	    if(fact.isTypeOf(MTQeFRebuild)){
 	    	factOUT.correctnessToReach = 3;
 	    }	       	
-}
+}*/
 
 rule Elements2Elements 
 	transform element : IN!PositionedElement
 	to elementOut : OUT!Element {
+	"\t\t\tElements creation".println();
 	elementOut.id = element.id;
-	elementOut.type = element.element.type;
+	
 	if(element.display.isDefined()){
-		elementOut.displayValue = element.display.value;
+		elementOut.displayValue = element.display.value.value;
 	}
+	
+	
+	if(element.display.isDefined() and element.display.interactive){
+		elementOut.type = "InteractiveStatement";
+	} else {
+		elementOut.type = element.elementType.type;
+	}
+	
 	if(element.correctness.isDefined()){
-		elementOut.correctness = element.correctness.value.toString();
+		elementOut.correctness = element.correctness.value.value.getName();
 	}
-	if(element.wantedAnswer.isDefined()){
-		elementOut.correctAnswer = element.wantedAnswer.value;
+	
+	if(element.expectedAnswer.isDefined()){
+		elementOut.correctAnswer = element.expectedAnswer.value.value;
 	}
-	elementOut.ability = element.element.ability.name+"";
+	
+	elementOut.ability = element.elementType.ability.name+"";
 	elementOut.pos = element.position.id;	
+
+	if(element.fact.isDefined()){
+		elementOut.idFact = element.fact.questionablefact.id;
+	}
+	
 }
 
 rule RoomAccess2RoomAccess

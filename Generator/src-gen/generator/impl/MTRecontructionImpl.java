@@ -34,4 +34,9 @@ public class MTRecontructionImpl extends ReconstructionTaskImpl implements MTRec
 		return GeneratorPackage.Literals.MT_RECONTRUCTION;
 	}
 
+	@Override
+	public boolean validationOnLearnerAction() {
+		return checkLearnerAction;
+	}
+
 } //MTRecontructionImpl

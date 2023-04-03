@@ -53,6 +53,8 @@ public class EducationalElementsGenerator {
 		}*/
 		defineDungeonRooms2Tasks();
 		generateFactsToQuestion();
+		System.out.println(" DEBUG FACT QUESTIONED *********************");
+		eeManager.printFactsToQuestion();
 		eeManager.createDungeonQAndNQRoomOrder();
 		return eeManager;
 	}

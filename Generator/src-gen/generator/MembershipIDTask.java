@@ -13,6 +13,7 @@ package generator;
  * <ul>
  *   <li>{@link generator.MembershipIDTask#getType <em>Type</em>}</li>
  *   <li>{@link generator.MembershipIDTask#isCheckIsTrue <em>Check Is True</em>}</li>
+ *   <li>{@link generator.MembershipIDTask#isCheckLearnerAction <em>Check Learner Action</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getMembershipIDTask()
@@ -56,5 +57,28 @@ public interface MembershipIDTask extends ATask {
 	 * @generated
 	 */
 	void setCheckIsTrue(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Check Learner Action</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Check Learner Action</em>' attribute.
+	 * @see #setCheckLearnerAction(boolean)
+	 * @see generator.GeneratorPackage#getMembershipIDTask_CheckLearnerAction()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isCheckLearnerAction();
+
+	/**
+	 * Sets the value of the '{@link generator.MembershipIDTask#isCheckLearnerAction <em>Check Learner Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Check Learner Action</em>' attribute.
+	 * @see #isCheckLearnerAction()
+	 * @generated
+	 */
+	void setCheckLearnerAction(boolean value);
 
 } // MembershipIDTask

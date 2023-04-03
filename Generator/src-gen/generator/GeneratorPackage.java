@@ -316,22 +316,13 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM__TASK = 5;
 
 	/**
-	 * The feature id for the '<em><b>Statements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM__STATEMENTS = 6;
-
-	/**
 	 * The feature id for the '<em><b>Positioned Element</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM__POSITIONED_ELEMENT = 7;
+	int ROOM__POSITIONED_ELEMENT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Gameplay</b></em>' reference.
@@ -340,7 +331,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM__GAMEPLAY = 8;
+	int ROOM__GAMEPLAY = 7;
 
 	/**
 	 * The number of structural features of the '<em>Room</em>' class.
@@ -349,7 +340,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_FEATURE_COUNT = 9;
+	int ROOM_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Room</em>' class.
@@ -471,22 +462,13 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM_TYPE__STRUCTURE_POSITIONS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Statement Positions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_TYPE__STATEMENT_POSITIONS = 3;
-
-	/**
 	 * The number of structural features of the '<em>Room Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_FEATURE_COUNT = 4;
+	int ROOM_TYPE_FEATURE_COUNT = 3;
 
 	/**
 	 * The operation id for the '<em>Get Directions</em>' operation.
@@ -542,15 +524,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int SMALL_ROOM_TYPE__STRUCTURE_POSITIONS = ROOM_TYPE__STRUCTURE_POSITIONS;
-
-	/**
-	 * The feature id for the '<em><b>Statement Positions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SMALL_ROOM_TYPE__STATEMENT_POSITIONS = ROOM_TYPE__STATEMENT_POSITIONS;
 
 	/**
 	 * The feature id for the '<em><b>Directions</b></em>' attribute list.
@@ -624,15 +597,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int LARGE_ROOM_TYPE__STRUCTURE_POSITIONS = ROOM_TYPE__STRUCTURE_POSITIONS;
-
-	/**
-	 * The feature id for the '<em><b>Statement Positions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LARGE_ROOM_TYPE__STATEMENT_POSITIONS = ROOM_TYPE__STATEMENT_POSITIONS;
 
 	/**
 	 * The feature id for the '<em><b>Directions</b></em>' attribute list.
@@ -1211,13 +1175,22 @@ public interface GeneratorPackage extends EPackage {
 	int ATASK___GET_TYPE = 0;
 
 	/**
+	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATASK___VALIDATION_ON_LEARNER_ACTION = 1;
+
+	/**
 	 * The number of operations of the '<em>ATask</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATASK_OPERATION_COUNT = 1;
+	int ATASK_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.Completion1TaskImpl <em>Completion1 Task</em>}' class.
@@ -1293,13 +1266,22 @@ public interface GeneratorPackage extends EPackage {
 	int COMPLETION1_TASK__TYPE = ATASK_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION1_TASK__CHECK_LEARNER_ACTION = ATASK_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Completion1 Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION1_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 1;
+	int COMPLETION1_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -1309,6 +1291,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPLETION1_TASK___GET_TYPE = ATASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION1_TASK___VALIDATION_ON_LEARNER_ACTION = ATASK___VALIDATION_ON_LEARNER_ACTION;
 
 	/**
 	 * The number of operations of the '<em>Completion1 Task</em>' class.
@@ -1393,6 +1384,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_COMPLETION1__TYPE = COMPLETION1_TASK__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION1__CHECK_LEARNER_ACTION = COMPLETION1_TASK__CHECK_LEARNER_ACTION;
+
+	/**
 	 * The feature id for the '<em><b>Targets</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1418,6 +1418,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_COMPLETION1___GET_TYPE = COMPLETION1_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION1___VALIDATION_ON_LEARNER_ACTION = COMPLETION1_TASK___VALIDATION_ON_LEARNER_ACTION;
 
 	/**
 	 * The number of operations of the '<em>MT Completion1</em>' class.
@@ -1674,7 +1683,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAPosition()
 	 * @generated
 	 */
-	int APOSITION = 67;
+	int APOSITION = 61;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -2007,13 +2016,22 @@ public interface GeneratorPackage extends EPackage {
 	int COMPLETION2_TASK__TYPE = ATASK_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION2_TASK__CHECK_LEARNER_ACTION = ATASK_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Completion2 Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION2_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 1;
+	int COMPLETION2_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -2023,6 +2041,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPLETION2_TASK___GET_TYPE = ATASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION2_TASK___VALIDATION_ON_LEARNER_ACTION = ATASK___VALIDATION_ON_LEARNER_ACTION;
 
 	/**
 	 * The number of operations of the '<em>Completion2 Task</em>' class.
@@ -2107,13 +2134,22 @@ public interface GeneratorPackage extends EPackage {
 	int RECONSTRUCTION_TASK__TYPE = ATASK_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECONSTRUCTION_TASK__CHECK_LEARNER_ACTION = ATASK_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Reconstruction Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECONSTRUCTION_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 1;
+	int RECONSTRUCTION_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -2123,6 +2159,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int RECONSTRUCTION_TASK___GET_TYPE = ATASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECONSTRUCTION_TASK___VALIDATION_ON_LEARNER_ACTION = ATASK___VALIDATION_ON_LEARNER_ACTION;
 
 	/**
 	 * The number of operations of the '<em>Reconstruction Task</em>' class.
@@ -2207,13 +2252,22 @@ public interface GeneratorPackage extends EPackage {
 	int IDENTIFICATION_TASK__TYPE = ATASK_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFICATION_TASK__CHECK_LEARNER_ACTION = ATASK_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Identification Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IDENTIFICATION_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 1;
+	int IDENTIFICATION_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -2223,6 +2277,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int IDENTIFICATION_TASK___GET_TYPE = ATASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFICATION_TASK___VALIDATION_ON_LEARNER_ACTION = ATASK___VALIDATION_ON_LEARNER_ACTION;
 
 	/**
 	 * The number of operations of the '<em>Identification Task</em>' class.
@@ -2316,13 +2379,22 @@ public interface GeneratorPackage extends EPackage {
 	int MEMBERSHIP_ID_TASK__CHECK_IS_TRUE = ATASK_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION = ATASK_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Membership ID Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEMBERSHIP_ID_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 2;
+	int MEMBERSHIP_ID_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -2332,6 +2404,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MEMBERSHIP_ID_TASK___GET_TYPE = ATASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBERSHIP_ID_TASK___VALIDATION_ON_LEARNER_ACTION = ATASK___VALIDATION_ON_LEARNER_ACTION;
 
 	/**
 	 * The number of operations of the '<em>Membership ID Task</em>' class.
@@ -2416,6 +2497,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_COMPLETION2__TYPE = COMPLETION2_TASK__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION2__CHECK_LEARNER_ACTION = COMPLETION2_TASK__CHECK_LEARNER_ACTION;
+
+	/**
 	 * The feature id for the '<em><b>Targets</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2441,6 +2531,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_COMPLETION2___GET_TYPE = COMPLETION2_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION2___VALIDATION_ON_LEARNER_ACTION = COMPLETION2_TASK___VALIDATION_ON_LEARNER_ACTION;
 
 	/**
 	 * The number of operations of the '<em>MT Completion2</em>' class.
@@ -2525,6 +2624,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_RECONTRUCTION__TYPE = RECONSTRUCTION_TASK__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_RECONTRUCTION__CHECK_LEARNER_ACTION = RECONSTRUCTION_TASK__CHECK_LEARNER_ACTION;
+
+	/**
 	 * The number of structural features of the '<em>MT Recontruction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2541,6 +2649,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_RECONTRUCTION___GET_TYPE = RECONSTRUCTION_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_RECONTRUCTION___VALIDATION_ON_LEARNER_ACTION = RECONSTRUCTION_TASK___VALIDATION_ON_LEARNER_ACTION;
 
 	/**
 	 * The number of operations of the '<em>MT Recontruction</em>' class.
@@ -2625,6 +2742,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_IDENTIFICATION__TYPE = IDENTIFICATION_TASK__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_IDENTIFICATION__CHECK_LEARNER_ACTION = IDENTIFICATION_TASK__CHECK_LEARNER_ACTION;
+
+	/**
 	 * The feature id for the '<em><b>Target</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2650,6 +2776,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_IDENTIFICATION___GET_TYPE = IDENTIFICATION_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_IDENTIFICATION___VALIDATION_ON_LEARNER_ACTION = IDENTIFICATION_TASK___VALIDATION_ON_LEARNER_ACTION;
 
 	/**
 	 * The number of operations of the '<em>MT Identification</em>' class.
@@ -2743,6 +2878,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_MEMBERSHIP__CHECK_IS_TRUE = MEMBERSHIP_ID_TASK__CHECK_IS_TRUE;
 
 	/**
+	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_MEMBERSHIP__CHECK_LEARNER_ACTION = MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION;
+
+	/**
 	 * The number of structural features of the '<em>MT Membership</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2759,6 +2903,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_MEMBERSHIP___GET_TYPE = MEMBERSHIP_ID_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_MEMBERSHIP___VALIDATION_ON_LEARNER_ACTION = MEMBERSHIP_ID_TASK___VALIDATION_ON_LEARNER_ACTION;
 
 	/**
 	 * The number of operations of the '<em>MT Membership</em>' class.
@@ -3645,22 +3798,49 @@ public interface GeneratorPackage extends EPackage {
 	int QUESTIONED_FACT__QUESTIONABLEFACT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Complete Fact</b></em>' attribute.
+	 * The feature id for the '<em><b>Question</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONED_FACT__COMPLETE_FACT = 1;
+	int QUESTIONED_FACT__QUESTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Correctness To Reach</b></em>' attribute.
+	 * The feature id for the '<em><b>Propositions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONED_FACT__CORRECTNESS_TO_REACH = 2;
+	int QUESTIONED_FACT__PROPOSITIONS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Entrys</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONED_FACT__ENTRYS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Correctness To Reach</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONED_FACT__CORRECTNESS_TO_REACH = 4;
+
+	/**
+	 * The feature id for the '<em><b>Learner Validation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONED_FACT__LEARNER_VALIDATION = 5;
 
 	/**
 	 * The number of structural features of the '<em>Questioned Fact</em>' class.
@@ -3669,16 +3849,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONED_FACT_FEATURE_COUNT = 3;
-
-	/**
-	 * The operation id for the '<em>Set Complete Fact</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTIONED_FACT___SET_COMPLETE_FACT = 0;
+	int QUESTIONED_FACT_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Questioned Fact</em>' class.
@@ -3687,363 +3858,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONED_FACT_OPERATION_COUNT = 1;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.MTQeFCompletion1Impl <em>MT Qe FCompletion1</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.MTQeFCompletion1Impl
-	 * @see generator.impl.GeneratorPackageImpl#getMTQeFCompletion1()
-	 * @generated
-	 */
-	int MT_QE_FCOMPLETION1 = 48;
-
-	/**
-	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION1__QUESTIONABLEFACT = QUESTIONED_FACT__QUESTIONABLEFACT;
-
-	/**
-	 * The feature id for the '<em><b>Complete Fact</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION1__COMPLETE_FACT = QUESTIONED_FACT__COMPLETE_FACT;
-
-	/**
-	 * The feature id for the '<em><b>Correctness To Reach</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION1__CORRECTNESS_TO_REACH = QUESTIONED_FACT__CORRECTNESS_TO_REACH;
-
-	/**
-	 * The feature id for the '<em><b>Propositions</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION1__PROPOSITIONS = QUESTIONED_FACT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>MT Qe FCompletion1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION1_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Set Complete Fact</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION1___SET_COMPLETE_FACT = QUESTIONED_FACT___SET_COMPLETE_FACT;
-
-	/**
-	 * The number of operations of the '<em>MT Qe FCompletion1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION1_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.MTQeFCompletion2Impl <em>MT Qe FCompletion2</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.MTQeFCompletion2Impl
-	 * @see generator.impl.GeneratorPackageImpl#getMTQeFCompletion2()
-	 * @generated
-	 */
-	int MT_QE_FCOMPLETION2 = 49;
-
-	/**
-	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION2__QUESTIONABLEFACT = QUESTIONED_FACT__QUESTIONABLEFACT;
-
-	/**
-	 * The feature id for the '<em><b>Complete Fact</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION2__COMPLETE_FACT = QUESTIONED_FACT__COMPLETE_FACT;
-
-	/**
-	 * The feature id for the '<em><b>Correctness To Reach</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION2__CORRECTNESS_TO_REACH = QUESTIONED_FACT__CORRECTNESS_TO_REACH;
-
-	/**
-	 * The feature id for the '<em><b>Propositions</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION2__PROPOSITIONS = QUESTIONED_FACT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>MT Qe FCompletion2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION2_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Set Complete Fact</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION2___SET_COMPLETE_FACT = QUESTIONED_FACT___SET_COMPLETE_FACT;
-
-	/**
-	 * The number of operations of the '<em>MT Qe FCompletion2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FCOMPLETION2_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.MTQeFRebuildImpl <em>MT Qe FRebuild</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.MTQeFRebuildImpl
-	 * @see generator.impl.GeneratorPackageImpl#getMTQeFRebuild()
-	 * @generated
-	 */
-	int MT_QE_FREBUILD = 50;
-
-	/**
-	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FREBUILD__QUESTIONABLEFACT = QUESTIONED_FACT__QUESTIONABLEFACT;
-
-	/**
-	 * The feature id for the '<em><b>Complete Fact</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FREBUILD__COMPLETE_FACT = QUESTIONED_FACT__COMPLETE_FACT;
-
-	/**
-	 * The feature id for the '<em><b>Correctness To Reach</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FREBUILD__CORRECTNESS_TO_REACH = QUESTIONED_FACT__CORRECTNESS_TO_REACH;
-
-	/**
-	 * The feature id for the '<em><b>Propositions</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FREBUILD__PROPOSITIONS = QUESTIONED_FACT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>MT Qe FRebuild</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FREBUILD_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Set Complete Fact</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FREBUILD___SET_COMPLETE_FACT = QUESTIONED_FACT___SET_COMPLETE_FACT;
-
-	/**
-	 * The number of operations of the '<em>MT Qe FRebuild</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FREBUILD_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.MTQeFIdentificationImpl <em>MT Qe FIdentification</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.MTQeFIdentificationImpl
-	 * @see generator.impl.GeneratorPackageImpl#getMTQeFIdentification()
-	 * @generated
-	 */
-	int MT_QE_FIDENTIFICATION = 51;
-
-	/**
-	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FIDENTIFICATION__QUESTIONABLEFACT = QUESTIONED_FACT__QUESTIONABLEFACT;
-
-	/**
-	 * The feature id for the '<em><b>Complete Fact</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FIDENTIFICATION__COMPLETE_FACT = QUESTIONED_FACT__COMPLETE_FACT;
-
-	/**
-	 * The feature id for the '<em><b>Correctness To Reach</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FIDENTIFICATION__CORRECTNESS_TO_REACH = QUESTIONED_FACT__CORRECTNESS_TO_REACH;
-
-	/**
-	 * The number of structural features of the '<em>MT Qe FIdentification</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FIDENTIFICATION_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Set Complete Fact</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FIDENTIFICATION___SET_COMPLETE_FACT = QUESTIONED_FACT___SET_COMPLETE_FACT;
-
-	/**
-	 * The number of operations of the '<em>MT Qe FIdentification</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FIDENTIFICATION_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.MTQeFMembershipImpl <em>MT Qe FMembership</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.MTQeFMembershipImpl
-	 * @see generator.impl.GeneratorPackageImpl#getMTQeFMembership()
-	 * @generated
-	 */
-	int MT_QE_FMEMBERSHIP = 52;
-
-	/**
-	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FMEMBERSHIP__QUESTIONABLEFACT = QUESTIONED_FACT__QUESTIONABLEFACT;
-
-	/**
-	 * The feature id for the '<em><b>Complete Fact</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FMEMBERSHIP__COMPLETE_FACT = QUESTIONED_FACT__COMPLETE_FACT;
-
-	/**
-	 * The feature id for the '<em><b>Correctness To Reach</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FMEMBERSHIP__CORRECTNESS_TO_REACH = QUESTIONED_FACT__CORRECTNESS_TO_REACH;
-
-	/**
-	 * The feature id for the '<em><b>Bad Propositions</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FMEMBERSHIP__BAD_PROPOSITIONS = QUESTIONED_FACT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>MT Qe FMembership</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FMEMBERSHIP_FEATURE_COUNT = QUESTIONED_FACT_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Set Complete Fact</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FMEMBERSHIP___SET_COMPLETE_FACT = QUESTIONED_FACT___SET_COMPLETE_FACT;
-
-	/**
-	 * The number of operations of the '<em>MT Qe FMembership</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_QE_FMEMBERSHIP_OPERATION_COUNT = QUESTIONED_FACT_OPERATION_COUNT + 0;
+	int QUESTIONED_FACT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.CompletionCriteriaImpl <em>Completion Criteria</em>}' class.
@@ -4053,7 +3868,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCompletionCriteria()
 	 * @generated
 	 */
-	int COMPLETION_CRITERIA = 53;
+	int COMPLETION_CRITERIA = 48;
 
 	/**
 	 * The feature id for the '<em><b>Succes Percent</b></em>' attribute.
@@ -4099,7 +3914,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLevelsDifficultyProgress()
 	 * @generated
 	 */
-	int LEVELS_DIFFICULTY_PROGRESS = 54;
+	int LEVELS_DIFFICULTY_PROGRESS = 49;
 
 	/**
 	 * The feature id for the '<em><b>Nb QRoom Increase</b></em>' attribute.
@@ -4163,7 +3978,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCurrentGameLevel()
 	 * @generated
 	 */
-	int CURRENT_GAME_LEVEL = 55;
+	int CURRENT_GAME_LEVEL = 50;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -4193,14 +4008,14 @@ public interface GeneratorPackage extends EPackage {
 	int CURRENT_GAME_LEVEL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.ElementTypesImpl <em>Element Types</em>}' class.
+	 * The meta object id for the '{@link generator.impl.GameElementTypesImpl <em>Game Element Types</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.ElementTypesImpl
-	 * @see generator.impl.GeneratorPackageImpl#getElementTypes()
+	 * @see generator.impl.GameElementTypesImpl
+	 * @see generator.impl.GeneratorPackageImpl#getGameElementTypes()
 	 * @generated
 	 */
-	int ELEMENT_TYPES = 56;
+	int GAME_ELEMENT_TYPES = 51;
 
 	/**
 	 * The feature id for the '<em><b>Equipments</b></em>' containment reference.
@@ -4209,44 +4024,44 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_TYPES__EQUIPMENTS = 0;
+	int GAME_ELEMENT_TYPES__EQUIPMENTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Gameplay Elements</b></em>' containment reference.
+	 * The feature id for the '<em><b>Gp Elements</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_TYPES__GAMEPLAY_ELEMENTS = 1;
+	int GAME_ELEMENT_TYPES__GP_ELEMENTS = 1;
 
 	/**
-	 * The number of structural features of the '<em>Element Types</em>' class.
+	 * The number of structural features of the '<em>Game Element Types</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_TYPES_FEATURE_COUNT = 2;
+	int GAME_ELEMENT_TYPES_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Element Types</em>' class.
+	 * The number of operations of the '<em>Game Element Types</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_TYPES_OPERATION_COUNT = 0;
+	int GAME_ELEMENT_TYPES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.CoreElementsImpl <em>Core Elements</em>}' class.
+	 * The meta object id for the '{@link generator.impl.GPElementsTypesImpl <em>GP Elements Types</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.CoreElementsImpl
-	 * @see generator.impl.GeneratorPackageImpl#getCoreElements()
+	 * @see generator.impl.GPElementsTypesImpl
+	 * @see generator.impl.GeneratorPackageImpl#getGPElementsTypes()
 	 * @generated
 	 */
-	int CORE_ELEMENTS = 57;
+	int GP_ELEMENTS_TYPES = 52;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -4255,34 +4070,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORE_ELEMENTS__ELEMENTS = 0;
+	int GP_ELEMENTS_TYPES__ELEMENTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Structures</b></em>' containment reference list.
+	 * The number of structural features of the '<em>GP Elements Types</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CORE_ELEMENTS__STRUCTURES = 1;
+	int GP_ELEMENTS_TYPES_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of structural features of the '<em>Core Elements</em>' class.
+	 * The number of operations of the '<em>GP Elements Types</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CORE_ELEMENTS_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Core Elements</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CORE_ELEMENTS_OPERATION_COUNT = 0;
+	int GP_ELEMENTS_TYPES_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.EquipmentsImpl <em>Equipments</em>}' class.
@@ -4292,7 +4098,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEquipments()
 	 * @generated
 	 */
-	int EQUIPMENTS = 58;
+	int EQUIPMENTS = 53;
 
 	/**
 	 * The feature id for the '<em><b>Equipments</b></em>' containment reference list.
@@ -4322,41 +4128,14 @@ public interface GeneratorPackage extends EPackage {
 	int EQUIPMENTS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.CoreElementImpl <em>Core Element</em>}' class.
+	 * The meta object id for the '{@link generator.impl.GPElementTypeImpl <em>GP Element Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.CoreElementImpl
-	 * @see generator.impl.GeneratorPackageImpl#getCoreElement()
+	 * @see generator.impl.GPElementTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getGPElementType()
 	 * @generated
 	 */
-	int CORE_ELEMENT = 59;
-
-	/**
-	 * The feature id for the '<em><b>ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CORE_ELEMENT__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CORE_ELEMENT__TYPE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Ability</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CORE_ELEMENT__ABILITY = 2;
+	int GP_ELEMENT_TYPE = 71;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -4365,43 +4144,107 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORE_ELEMENT__SIZE = 3;
+	int GP_ELEMENT_TYPE__SIZE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CORE_ELEMENT__CATEGORY = 4;
+	int GP_ELEMENT_TYPE__ID = 1;
 
 	/**
-	 * The feature id for the '<em><b>Display</b></em>' containment reference.
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CORE_ELEMENT__DISPLAY = 5;
+	int GP_ELEMENT_TYPE__TYPE = 2;
 
 	/**
-	 * The number of structural features of the '<em>Core Element</em>' class.
+	 * The number of structural features of the '<em>GP Element Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CORE_ELEMENT_FEATURE_COUNT = 6;
+	int GP_ELEMENT_TYPE_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Core Element</em>' class.
+	 * The number of operations of the '<em>GP Element Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CORE_ELEMENT_OPERATION_COUNT = 0;
+	int GP_ELEMENT_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ElementTypeImpl <em>Element Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ElementTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getElementType()
+	 * @generated
+	 */
+	int ELEMENT_TYPE = 54;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE__SIZE = GP_ELEMENT_TYPE__SIZE;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE__ID = GP_ELEMENT_TYPE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE__TYPE = GP_ELEMENT_TYPE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Ability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE__ABILITY = GP_ELEMENT_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Element Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE_FEATURE_COUNT = GP_ELEMENT_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Element Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE_OPERATION_COUNT = GP_ELEMENT_TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.EquipmentImpl <em>Equipment</em>}' class.
@@ -4411,7 +4254,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEquipment()
 	 * @generated
 	 */
-	int EQUIPMENT = 60;
+	int EQUIPMENT = 55;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -4459,16 +4302,6 @@ public interface GeneratorPackage extends EPackage {
 	int EQUIPMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.PositionedElementImpl <em>Positioned Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.PositionedElementImpl
-	 * @see generator.impl.GeneratorPackageImpl#getPositionedElement()
-	 * @generated
-	 */
-	int POSITIONED_ELEMENT = 71;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.GameplayImpl <em>Gameplay</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4476,16 +4309,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameplay()
 	 * @generated
 	 */
-	int GAMEPLAY = 61;
-
-	/**
-	 * The feature id for the '<em><b>Quantified Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAMEPLAY__QUANTIFIED_ELEMENTS = 0;
+	int GAMEPLAY = 56;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4494,16 +4318,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GAMEPLAY__NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Allowed Statements</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAMEPLAY__ALLOWED_STATEMENTS = 2;
+	int GAMEPLAY__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' attribute.
@@ -4512,25 +4327,34 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GAMEPLAY__CATEGORY = 3;
+	int GAMEPLAY__CATEGORY = 1;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GAMEPLAY__TYPE = 4;
+	int GAMEPLAY__COMPONENTS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Structures</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Has Integrated Propositions</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GAMEPLAY__STRUCTURES = 5;
+	int GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Optional Validator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAY__OPTIONAL_VALIDATOR = 4;
 
 	/**
 	 * The number of structural features of the '<em>Gameplay</em>' class.
@@ -4539,7 +4363,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GAMEPLAY_FEATURE_COUNT = 6;
+	int GAMEPLAY_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Gameplay</em>' class.
@@ -4551,91 +4375,6 @@ public interface GeneratorPackage extends EPackage {
 	int GAMEPLAY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.QuantifiedElementsImpl <em>Quantified Elements</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.QuantifiedElementsImpl
-	 * @see generator.impl.GeneratorPackageImpl#getQuantifiedElements()
-	 * @generated
-	 */
-	int QUANTIFIED_ELEMENTS = 62;
-
-	/**
-	 * The feature id for the '<em><b>Min</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTIFIED_ELEMENTS__MIN = 0;
-
-	/**
-	 * The feature id for the '<em><b>Ability</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTIFIED_ELEMENTS__ABILITY = 1;
-
-	/**
-	 * The feature id for the '<em><b>Max</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTIFIED_ELEMENTS__MAX = 2;
-
-	/**
-	 * The number of structural features of the '<em>Quantified Elements</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTIFIED_ELEMENTS_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Quantified Elements</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTIFIED_ELEMENTS_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.AbstractAttributesImpl <em>Abstract Attributes</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.AbstractAttributesImpl
-	 * @see generator.impl.GeneratorPackageImpl#getAbstractAttributes()
-	 * @generated
-	 */
-	int ABSTRACT_ATTRIBUTES = 73;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.DisplayImpl <em>Display</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.DisplayImpl
-	 * @see generator.impl.GeneratorPackageImpl#getDisplay()
-	 * @generated
-	 */
-	int DISPLAY = 72;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.CorrectnessImpl <em>Correctness</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.CorrectnessImpl
-	 * @see generator.impl.GeneratorPackageImpl#getCorrectness()
-	 * @generated
-	 */
-	int CORRECTNESS = 74;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.GameplaysImpl <em>Gameplays</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4643,7 +4382,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameplays()
 	 * @generated
 	 */
-	int GAMEPLAYS = 63;
+	int GAMEPLAYS = 57;
 
 	/**
 	 * The feature id for the '<em><b>Gameplays</b></em>' containment reference list.
@@ -4680,7 +4419,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuestionableFactResult()
 	 * @generated
 	 */
-	int QUESTIONABLE_FACT_RESULT = 64;
+	int QUESTIONABLE_FACT_RESULT = 58;
 
 	/**
 	 * The feature id for the '<em><b>Response Time</b></em>' attribute.
@@ -4728,146 +4467,6 @@ public interface GeneratorPackage extends EPackage {
 	int QUESTIONABLE_FACT_RESULT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.Directions
-	 * @see generator.impl.GeneratorPackageImpl#getDirections()
-	 * @generated
-	 */
-	int DIRECTIONS = 77;
-
-	/**
-	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.DungeonMode
-	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
-	 * @generated
-	 */
-	int DUNGEON_MODE = 78;
-
-	/**
-	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.TableBuild
-	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
-	 * @generated
-	 */
-	int TABLE_BUILD = 79;
-
-	/**
-	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.ResultPosition
-	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
-	 * @generated
-	 */
-	int RESULT_POSITION = 80;
-
-	/**
-	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.ESingleTarget
-	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
-	 * @generated
-	 */
-	int ESINGLE_TARGET = 81;
-
-	/**
-	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.ETaskType
-	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
-	 * @generated
-	 */
-	int ETASK_TYPE = 82;
-
-	/**
-	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.EModality
-	 * @see generator.impl.GeneratorPackageImpl#getEModality()
-	 * @generated
-	 */
-	int EMODALITY = 83;
-
-	/**
-	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.ESeveralTarget
-	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
-	 * @generated
-	 */
-	int ESEVERAL_TARGET = 84;
-
-	/**
-	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.ElementSize
-	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
-	 * @generated
-	 */
-	int ELEMENT_SIZE = 85;
-
-	/**
-	 * The meta object id for the '{@link generator.ElementCategory <em>Element Category</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.ElementCategory
-	 * @see generator.impl.GeneratorPackageImpl#getElementCategory()
-	 * @generated
-	 */
-	int ELEMENT_CATEGORY = 86;
-
-	/**
-	 * The meta object id for the '{@link generator.StatementType <em>Statement Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.StatementType
-	 * @see generator.impl.GeneratorPackageImpl#getStatementType()
-	 * @generated
-	 */
-	int STATEMENT_TYPE = 87;
-
-	/**
-	 * The meta object id for the '{@link generator.VerificationValues <em>Verification Values</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.VerificationValues
-	 * @see generator.impl.GeneratorPackageImpl#getVerificationValues()
-	 * @generated
-	 */
-	int VERIFICATION_VALUES = 88;
-
-	/**
-	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.GPCategory
-	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
-	 * @generated
-	 */
-	int GP_CATEGORY = 89;
-
-	/**
-	 * The meta object id for the '{@link generator.GPType <em>GP Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.GPType
-	 * @see generator.impl.GeneratorPackageImpl#getGPType()
-	 * @generated
-	 */
-	int GP_TYPE = 90;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.AbilityImpl <em>Ability</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4875,7 +4474,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAbility()
 	 * @generated
 	 */
-	int ABILITY = 65;
+	int ABILITY = 59;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4887,13 +4486,13 @@ public interface GeneratorPackage extends EPackage {
 	int ABILITY__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * The feature id for the '<em><b>Number Of Displays</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABILITY__CATEGORY = 1;
+	int ABILITY__NUMBER_OF_DISPLAYS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Ability</em>' class.
@@ -4905,13 +4504,22 @@ public interface GeneratorPackage extends EPackage {
 	int ABILITY_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>Is Element Displayable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABILITY___IS_ELEMENT_DISPLAYABLE = 0;
+
+	/**
 	 * The number of operations of the '<em>Ability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABILITY_OPERATION_COUNT = 0;
+	int ABILITY_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.AbilitiesImpl <em>Abilities</em>}' class.
@@ -4921,7 +4529,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAbilities()
 	 * @generated
 	 */
-	int ABILITIES = 66;
+	int ABILITIES = 60;
 
 	/**
 	 * The feature id for the '<em><b>Abilities</b></em>' containment reference list.
@@ -4958,7 +4566,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStructurePosition()
 	 * @generated
 	 */
-	int STRUCTURE_POSITION = 68;
+	int STRUCTURE_POSITION = 62;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -5006,132 +4614,14 @@ public interface GeneratorPackage extends EPackage {
 	int STRUCTURE_POSITION_OPERATION_COUNT = APOSITION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.StatementPositionImpl <em>Statement Position</em>}' class.
+	 * The meta object id for the '{@link generator.impl.PositionedElementImpl <em>Positioned Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.StatementPositionImpl
-	 * @see generator.impl.GeneratorPackageImpl#getStatementPosition()
+	 * @see generator.impl.PositionedElementImpl
+	 * @see generator.impl.GeneratorPackageImpl#getPositionedElement()
 	 * @generated
 	 */
-	int STATEMENT_POSITION = 69;
-
-	/**
-	 * The feature id for the '<em><b>Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATEMENT_POSITION__SIZE = APOSITION__SIZE;
-
-	/**
-	 * The feature id for the '<em><b>Restricted To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATEMENT_POSITION__RESTRICTED_TO = APOSITION__RESTRICTED_TO;
-
-	/**
-	 * The feature id for the '<em><b>ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATEMENT_POSITION__ID = APOSITION__ID;
-
-	/**
-	 * The number of structural features of the '<em>Statement Position</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATEMENT_POSITION_FEATURE_COUNT = APOSITION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Statement Position</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATEMENT_POSITION_OPERATION_COUNT = APOSITION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.QuestionedFactStatementImpl <em>Questioned Fact Statement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.QuestionedFactStatementImpl
-	 * @see generator.impl.GeneratorPackageImpl#getQuestionedFactStatement()
-	 * @generated
-	 */
-	int QUESTIONED_FACT_STATEMENT = 70;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTIONED_FACT_STATEMENT__TYPE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Questioned Fact</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTIONED_FACT_STATEMENT__QUESTIONED_FACT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Display</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTIONED_FACT_STATEMENT__DISPLAY = 2;
-
-	/**
-	 * The feature id for the '<em><b>Position</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTIONED_FACT_STATEMENT__POSITION = 3;
-
-	/**
-	 * The feature id for the '<em><b>ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTIONED_FACT_STATEMENT__ID = 4;
-
-	/**
-	 * The number of structural features of the '<em>Questioned Fact Statement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTIONED_FACT_STATEMENT_FEATURE_COUNT = 5;
-
-	/**
-	 * The number of operations of the '<em>Questioned Fact Statement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTIONED_FACT_STATEMENT_OPERATION_COUNT = 0;
+	int POSITIONED_ELEMENT = 63;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -5143,31 +4633,13 @@ public interface GeneratorPackage extends EPackage {
 	int POSITIONED_ELEMENT__ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Display</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITIONED_ELEMENT__DISPLAY = 1;
-
-	/**
-	 * The feature id for the '<em><b>Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITIONED_ELEMENT__ELEMENT = 2;
-
-	/**
 	 * The feature id for the '<em><b>Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_ELEMENT__POSITION = 3;
+	int POSITIONED_ELEMENT__POSITION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Correctness</b></em>' containment reference.
@@ -5176,25 +4648,52 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_ELEMENT__CORRECTNESS = 4;
+	int POSITIONED_ELEMENT__CORRECTNESS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Wanted Answer</b></em>' containment reference.
+	 * The feature id for the '<em><b>Display</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_ELEMENT__WANTED_ANSWER = 5;
+	int POSITIONED_ELEMENT__DISPLAY = 3;
 
 	/**
-	 * The feature id for the '<em><b>Structure</b></em>' reference.
+	 * The feature id for the '<em><b>Element Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_ELEMENT__STRUCTURE = 6;
+	int POSITIONED_ELEMENT__ELEMENT_TYPE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Expected Answer</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_ELEMENT__EXPECTED_ANSWER = 5;
+
+	/**
+	 * The feature id for the '<em><b>Priority</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_ELEMENT__PRIORITY = 6;
+
+	/**
+	 * The feature id for the '<em><b>Fact</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_ELEMENT__FACT = 7;
 
 	/**
 	 * The number of structural features of the '<em>Positioned Element</em>' class.
@@ -5203,7 +4702,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_ELEMENT_FEATURE_COUNT = 7;
+	int POSITIONED_ELEMENT_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Positioned Element</em>' class.
@@ -5215,22 +4714,171 @@ public interface GeneratorPackage extends EPackage {
 	int POSITIONED_ELEMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of structural features of the '<em>Abstract Attributes</em>' class.
+	 * The meta object id for the '{@link generator.impl.ParameterImpl <em>Parameter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see generator.impl.ParameterImpl
+	 * @see generator.impl.GeneratorPackageImpl#getParameter()
 	 * @generated
-	 * @ordered
 	 */
-	int ABSTRACT_ATTRIBUTES_FEATURE_COUNT = 0;
+	int PARAMETER = 64;
 
 	/**
-	 * The number of operations of the '<em>Abstract Attributes</em>' class.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ATTRIBUTES_OPERATION_COUNT = 0;
+	int PARAMETER__VALUE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.QuestionParamImpl <em>Question Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.QuestionParamImpl
+	 * @see generator.impl.GeneratorPackageImpl#getQuestionParam()
+	 * @generated
+	 */
+	int QUESTION_PARAM = 65;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION_PARAM__VALUE = PARAMETER__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Interactive</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION_PARAM__INTERACTIVE = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Question Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Question Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION_PARAM_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.PropositionParamImpl <em>Proposition Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.PropositionParamImpl
+	 * @see generator.impl.GeneratorPackageImpl#getPropositionParam()
+	 * @generated
+	 */
+	int PROPOSITION_PARAM = 66;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPOSITION_PARAM__VALUE = PARAMETER__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>State</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPOSITION_PARAM__STATE = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Proposition Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPOSITION_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Proposition Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPOSITION_PARAM_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.AValueImpl <em>AValue</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.AValueImpl
+	 * @see generator.impl.GeneratorPackageImpl#getAValue()
+	 * @generated
+	 */
+	int AVALUE = 81;
+
+	/**
+	 * The number of structural features of the '<em>AValue</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AVALUE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>AValue</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AVALUE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ValueImpl <em>Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ValueImpl
+	 * @see generator.impl.GeneratorPackageImpl#getValue()
+	 * @generated
+	 */
+	int VALUE = 67;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -5239,34 +4887,44 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISPLAY__VALUE = ABSTRACT_ATTRIBUTES_FEATURE_COUNT + 0;
+	int VALUE__VALUE = AVALUE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Display</em>' class.
+	 * The number of structural features of the '<em>Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISPLAY_FEATURE_COUNT = ABSTRACT_ATTRIBUTES_FEATURE_COUNT + 1;
+	int VALUE_FEATURE_COUNT = AVALUE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Display</em>' class.
+	 * The number of operations of the '<em>Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISPLAY_OPERATION_COUNT = ABSTRACT_ATTRIBUTES_OPERATION_COUNT + 0;
+	int VALUE_OPERATION_COUNT = AVALUE_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The meta object id for the '{@link generator.impl.CorrectnessImpl <em>Correctness</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.CorrectnessImpl
+	 * @see generator.impl.GeneratorPackageImpl#getCorrectness()
+	 * @generated
+	 */
+	int CORRECTNESS = 68;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CORRECTNESS__VALUE = ABSTRACT_ATTRIBUTES_FEATURE_COUNT + 0;
+	int CORRECTNESS__VALUE = PARAMETER__VALUE;
 
 	/**
 	 * The number of structural features of the '<em>Correctness</em>' class.
@@ -5275,7 +4933,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORRECTNESS_FEATURE_COUNT = ABSTRACT_ATTRIBUTES_FEATURE_COUNT + 1;
+	int CORRECTNESS_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Correctness</em>' class.
@@ -5284,35 +4942,72 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORRECTNESS_OPERATION_COUNT = ABSTRACT_ATTRIBUTES_OPERATION_COUNT + 0;
+	int CORRECTNESS_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.StructureElementImpl <em>Structure Element</em>}' class.
+	 * The meta object id for the '{@link generator.impl.EntrySoluceParamImpl <em>Entry Soluce Param</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.StructureElementImpl
-	 * @see generator.impl.GeneratorPackageImpl#getStructureElement()
+	 * @see generator.impl.EntrySoluceParamImpl
+	 * @see generator.impl.GeneratorPackageImpl#getEntrySoluceParam()
 	 * @generated
 	 */
-	int STRUCTURE_ELEMENT = 75;
+	int ENTRY_SOLUCE_PARAM = 69;
 
 	/**
-	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRUCTURE_ELEMENT__ELEMENTS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_ELEMENT__TYPE = 1;
+	int ENTRY_SOLUCE_PARAM__VALUE = PARAMETER__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>State</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTRY_SOLUCE_PARAM__STATE = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Entry Soluce Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTRY_SOLUCE_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Entry Soluce Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTRY_SOLUCE_PARAM_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.StructureTypeImpl <em>Structure Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.StructureTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getStructureType()
+	 * @generated
+	 */
+	int STRUCTURE_TYPE = 70;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_TYPE__SIZE = GP_ELEMENT_TYPE__SIZE;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -5321,44 +5016,430 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_ELEMENT__ID = 2;
+	int STRUCTURE_TYPE__ID = GP_ELEMENT_TYPE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Structures</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_ELEMENT__STRUCTURES = 3;
+	int STRUCTURE_TYPE__TYPE = GP_ELEMENT_TYPE__TYPE;
 
 	/**
-	 * The number of structural features of the '<em>Structure Element</em>' class.
+	 * The number of structural features of the '<em>Structure Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_ELEMENT_FEATURE_COUNT = 4;
+	int STRUCTURE_TYPE_FEATURE_COUNT = GP_ELEMENT_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Structure Element</em>' class.
+	 * The number of operations of the '<em>Structure Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_ELEMENT_OPERATION_COUNT = 0;
+	int STRUCTURE_TYPE_OPERATION_COUNT = GP_ELEMENT_TYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.WantedAnswerImpl <em>Wanted Answer</em>}' class.
+	 * The meta object id for the '{@link generator.impl.DisplayImpl <em>Display</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.WantedAnswerImpl
-	 * @see generator.impl.GeneratorPackageImpl#getWantedAnswer()
+	 * @see generator.impl.DisplayImpl
+	 * @see generator.impl.GeneratorPackageImpl#getDisplay()
 	 * @generated
 	 */
-	int WANTED_ANSWER = 76;
+	int DISPLAY = 72;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISPLAY__VALUE = PARAMETER__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Interactive</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISPLAY__INTERACTIVE = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Display</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISPLAY_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Display</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISPLAY_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.AComponentImpl <em>AComponent</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.AComponentImpl
+	 * @see generator.impl.GeneratorPackageImpl#getAComponent()
+	 * @generated
+	 */
+	int ACOMPONENT = 73;
+
+	/**
+	 * The feature id for the '<em><b>Priority</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACOMPONENT__PRIORITY = 0;
+
+	/**
+	 * The number of structural features of the '<em>AComponent</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACOMPONENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>AComponent</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACOMPONENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.StructureImpl <em>Structure</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.StructureImpl
+	 * @see generator.impl.GeneratorPackageImpl#getStructure()
+	 * @generated
+	 */
+	int STRUCTURE = 74;
+
+	/**
+	 * The feature id for the '<em><b>Priority</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__PRIORITY = ACOMPONENT__PRIORITY;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__COMPONENTS = ACOMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Structure Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__STRUCTURE_TYPE = ACOMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Is Per Fact</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__IS_PER_FACT = ACOMPONENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Structure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_FEATURE_COUNT = ACOMPONENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Structure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_OPERATION_COUNT = ACOMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ComponentImpl <em>Component</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ComponentImpl
+	 * @see generator.impl.GeneratorPackageImpl#getComponent()
+	 * @generated
+	 */
+	int COMPONENT = 75;
+
+	/**
+	 * The feature id for the '<em><b>Priority</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__PRIORITY = ACOMPONENT__PRIORITY;
+
+	/**
+	 * The feature id for the '<em><b>Element Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__ELEMENT_TYPE = ACOMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Display Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__DISPLAY_VALUE = ACOMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Wear Choices</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__WEAR_CHOICES = ACOMPONENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Default Correctness</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__DEFAULT_CORRECTNESS = ACOMPONENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Wear Statement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__WEAR_STATEMENT = ACOMPONENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Input Entry</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__INPUT_ENTRY = ACOMPONENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_FEATURE_COUNT = ACOMPONENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_OPERATION_COUNT = ACOMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.QuantityImpl <em>Quantity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.QuantityImpl
+	 * @see generator.impl.GeneratorPackageImpl#getQuantity()
+	 * @generated
+	 */
+	int QUANTITY = 76;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUANTITY__VALUE = PARAMETER__VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Quantity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUANTITY_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Quantity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUANTITY_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.WantedAnswersParamImpl <em>Wanted Answers Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.WantedAnswersParamImpl
+	 * @see generator.impl.GeneratorPackageImpl#getWantedAnswersParam()
+	 * @generated
+	 */
+	int WANTED_ANSWERS_PARAM = 77;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WANTED_ANSWERS_PARAM__VALUE = PARAMETER__VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Wanted Answers Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WANTED_ANSWERS_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Wanted Answers Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WANTED_ANSWERS_PARAM_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.PriorityImpl <em>Priority</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.PriorityImpl
+	 * @see generator.impl.GeneratorPackageImpl#getPriority()
+	 * @generated
+	 */
+	int PRIORITY = 78;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIORITY__VALUE = PARAMETER__VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Priority</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIORITY_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Priority</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIORITY_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ExpectedAnswerImpl <em>Expected Answer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ExpectedAnswerImpl
+	 * @see generator.impl.GeneratorPackageImpl#getExpectedAnswer()
+	 * @generated
+	 */
+	int EXPECTED_ANSWER = 79;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPECTED_ANSWER__VALUE = PARAMETER__VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Expected Answer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPECTED_ANSWER_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Expected Answer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPECTED_ANSWER_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.CorrectnessValueImpl <em>Correctness Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.CorrectnessValueImpl
+	 * @see generator.impl.GeneratorPackageImpl#getCorrectnessValue()
+	 * @generated
+	 */
+	int CORRECTNESS_VALUE = 80;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -5367,25 +5448,254 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WANTED_ANSWER__VALUE = ABSTRACT_ATTRIBUTES_FEATURE_COUNT + 0;
+	int CORRECTNESS_VALUE__VALUE = AVALUE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Wanted Answer</em>' class.
+	 * The number of structural features of the '<em>Correctness Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WANTED_ANSWER_FEATURE_COUNT = ABSTRACT_ATTRIBUTES_FEATURE_COUNT + 1;
+	int CORRECTNESS_VALUE_FEATURE_COUNT = AVALUE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Wanted Answer</em>' class.
+	 * The number of operations of the '<em>Correctness Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WANTED_ANSWER_OPERATION_COUNT = ABSTRACT_ATTRIBUTES_OPERATION_COUNT + 0;
+	int CORRECTNESS_VALUE_OPERATION_COUNT = AVALUE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.PositionedStructureElementImpl <em>Positioned Structure Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.PositionedStructureElementImpl
+	 * @see generator.impl.GeneratorPackageImpl#getPositionedStructureElement()
+	 * @generated
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT = 82;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT__ID = POSITIONED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT__POSITION = POSITIONED_ELEMENT__POSITION;
+
+	/**
+	 * The feature id for the '<em><b>Correctness</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT__CORRECTNESS = POSITIONED_ELEMENT__CORRECTNESS;
+
+	/**
+	 * The feature id for the '<em><b>Display</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT__DISPLAY = POSITIONED_ELEMENT__DISPLAY;
+
+	/**
+	 * The feature id for the '<em><b>Element Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT__ELEMENT_TYPE = POSITIONED_ELEMENT__ELEMENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Expected Answer</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT__EXPECTED_ANSWER = POSITIONED_ELEMENT__EXPECTED_ANSWER;
+
+	/**
+	 * The feature id for the '<em><b>Priority</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT__PRIORITY = POSITIONED_ELEMENT__PRIORITY;
+
+	/**
+	 * The feature id for the '<em><b>Fact</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT__FACT = POSITIONED_ELEMENT__FACT;
+
+	/**
+	 * The feature id for the '<em><b>Created Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT__CREATED_POSITION = POSITIONED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Positioned Structure Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT_FEATURE_COUNT = POSITIONED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Positioned Structure Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT_OPERATION_COUNT = POSITIONED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.Directions
+	 * @see generator.impl.GeneratorPackageImpl#getDirections()
+	 * @generated
+	 */
+	int DIRECTIONS = 83;
+
+	/**
+	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.DungeonMode
+	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
+	 * @generated
+	 */
+	int DUNGEON_MODE = 84;
+
+	/**
+	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.TableBuild
+	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
+	 * @generated
+	 */
+	int TABLE_BUILD = 85;
+
+	/**
+	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.ResultPosition
+	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
+	 * @generated
+	 */
+	int RESULT_POSITION = 86;
+
+	/**
+	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.ESingleTarget
+	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
+	 * @generated
+	 */
+	int ESINGLE_TARGET = 87;
+
+	/**
+	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.ETaskType
+	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
+	 * @generated
+	 */
+	int ETASK_TYPE = 88;
+
+	/**
+	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.EModality
+	 * @see generator.impl.GeneratorPackageImpl#getEModality()
+	 * @generated
+	 */
+	int EMODALITY = 89;
+
+	/**
+	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.ESeveralTarget
+	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
+	 * @generated
+	 */
+	int ESEVERAL_TARGET = 90;
+
+	/**
+	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.ElementSize
+	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
+	 * @generated
+	 */
+	int ELEMENT_SIZE = 91;
+
+	/**
+	 * The meta object id for the '{@link generator.StatementType <em>Statement Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.StatementType
+	 * @see generator.impl.GeneratorPackageImpl#getStatementType()
+	 * @generated
+	 */
+	int STATEMENT_TYPE = 92;
+
+	/**
+	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.GPCategory
+	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
+	 * @generated
+	 */
+	int GP_CATEGORY = 93;
+
+	/**
+	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.ECorrectness
+	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
+	 * @generated
+	 */
+	int ECORRECTNESS = 94;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -5603,17 +5913,6 @@ public interface GeneratorPackage extends EPackage {
 	EReference getRoom_Task();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generator.Room#getStatements <em>Statements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Statements</em>'.
-	 * @see generator.Room#getStatements()
-	 * @see #getRoom()
-	 * @generated
-	 */
-	EReference getRoom_Statements();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link generator.Room#getPositionedElement <em>Positioned Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5742,17 +6041,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRoomType_StructurePositions();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.RoomType#getStatementPositions <em>Statement Positions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Statement Positions</em>'.
-	 * @see generator.RoomType#getStatementPositions()
-	 * @see #getRoomType()
-	 * @generated
-	 */
-	EReference getRoomType_StatementPositions();
 
 	/**
 	 * Returns the meta object for the '{@link generator.RoomType#getDirections() <em>Get Directions</em>}' operation.
@@ -6546,6 +6834,16 @@ public interface GeneratorPackage extends EPackage {
 	EOperation getATask__GetType();
 
 	/**
+	 * Returns the meta object for the '{@link generator.ATask#validationOnLearnerAction() <em>Validation On Learner Action</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Validation On Learner Action</em>' operation.
+	 * @see generator.ATask#validationOnLearnerAction()
+	 * @generated
+	 */
+	EOperation getATask__ValidationOnLearnerAction();
+
+	/**
 	 * Returns the meta object for class '{@link generator.Completion1Task <em>Completion1 Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6565,6 +6863,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCompletion1Task_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Completion1Task#isCheckLearnerAction <em>Check Learner Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check Learner Action</em>'.
+	 * @see generator.Completion1Task#isCheckLearnerAction()
+	 * @see #getCompletion1Task()
+	 * @generated
+	 */
+	EAttribute getCompletion1Task_CheckLearnerAction();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Completion2Task <em>Completion2 Task</em>}'.
@@ -6588,6 +6897,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getCompletion2Task_Type();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.Completion2Task#isCheckLearnerAction <em>Check Learner Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check Learner Action</em>'.
+	 * @see generator.Completion2Task#isCheckLearnerAction()
+	 * @see #getCompletion2Task()
+	 * @generated
+	 */
+	EAttribute getCompletion2Task_CheckLearnerAction();
+
+	/**
 	 * Returns the meta object for class '{@link generator.ReconstructionTask <em>Reconstruction Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6609,6 +6929,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getReconstructionTask_Type();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.ReconstructionTask#isCheckLearnerAction <em>Check Learner Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check Learner Action</em>'.
+	 * @see generator.ReconstructionTask#isCheckLearnerAction()
+	 * @see #getReconstructionTask()
+	 * @generated
+	 */
+	EAttribute getReconstructionTask_CheckLearnerAction();
+
+	/**
 	 * Returns the meta object for class '{@link generator.IdentificationTask <em>Identification Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6628,6 +6959,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getIdentificationTask_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.IdentificationTask#isCheckLearnerAction <em>Check Learner Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check Learner Action</em>'.
+	 * @see generator.IdentificationTask#isCheckLearnerAction()
+	 * @see #getIdentificationTask()
+	 * @generated
+	 */
+	EAttribute getIdentificationTask_CheckLearnerAction();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MembershipIDTask <em>Membership ID Task</em>}'.
@@ -6660,6 +7002,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMembershipIDTask_CheckIsTrue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MembershipIDTask#isCheckLearnerAction <em>Check Learner Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check Learner Action</em>'.
+	 * @see generator.MembershipIDTask#isCheckLearnerAction()
+	 * @see #getMembershipIDTask()
+	 * @generated
+	 */
+	EAttribute getMembershipIDTask_CheckLearnerAction();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MTCompletion2 <em>MT Completion2</em>}'.
@@ -7273,130 +7626,59 @@ public interface GeneratorPackage extends EPackage {
 	EReference getQuestionedFact_Questionablefact();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.QuestionedFact#getCompleteFact <em>Complete Fact</em>}'.
+	 * Returns the meta object for the containment reference '{@link generator.QuestionedFact#getQuestion <em>Question</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Complete Fact</em>'.
-	 * @see generator.QuestionedFact#getCompleteFact()
+	 * @return the meta object for the containment reference '<em>Question</em>'.
+	 * @see generator.QuestionedFact#getQuestion()
 	 * @see #getQuestionedFact()
 	 * @generated
 	 */
-	EAttribute getQuestionedFact_CompleteFact();
+	EReference getQuestionedFact_Question();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.QuestionedFact#getCorrectnessToReach <em>Correctness To Reach</em>}'.
+	 * Returns the meta object for the containment reference list '{@link generator.QuestionedFact#getPropositions <em>Propositions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Correctness To Reach</em>'.
+	 * @return the meta object for the containment reference list '<em>Propositions</em>'.
+	 * @see generator.QuestionedFact#getPropositions()
+	 * @see #getQuestionedFact()
+	 * @generated
+	 */
+	EReference getQuestionedFact_Propositions();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.QuestionedFact#getEntrys <em>Entrys</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Entrys</em>'.
+	 * @see generator.QuestionedFact#getEntrys()
+	 * @see #getQuestionedFact()
+	 * @generated
+	 */
+	EReference getQuestionedFact_Entrys();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.QuestionedFact#getCorrectnessToReach <em>Correctness To Reach</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Correctness To Reach</em>'.
 	 * @see generator.QuestionedFact#getCorrectnessToReach()
 	 * @see #getQuestionedFact()
 	 * @generated
 	 */
-	EAttribute getQuestionedFact_CorrectnessToReach();
+	EReference getQuestionedFact_CorrectnessToReach();
 
 	/**
-	 * Returns the meta object for the '{@link generator.QuestionedFact#setCompleteFact() <em>Set Complete Fact</em>}' operation.
+	 * Returns the meta object for the attribute '{@link generator.QuestionedFact#isLearnerValidation <em>Learner Validation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Complete Fact</em>' operation.
-	 * @see generator.QuestionedFact#setCompleteFact()
+	 * @return the meta object for the attribute '<em>Learner Validation</em>'.
+	 * @see generator.QuestionedFact#isLearnerValidation()
+	 * @see #getQuestionedFact()
 	 * @generated
 	 */
-	EOperation getQuestionedFact__SetCompleteFact();
-
-	/**
-	 * Returns the meta object for class '{@link generator.MTQeFCompletion1 <em>MT Qe FCompletion1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MT Qe FCompletion1</em>'.
-	 * @see generator.MTQeFCompletion1
-	 * @generated
-	 */
-	EClass getMTQeFCompletion1();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link generator.MTQeFCompletion1#getPropositions <em>Propositions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Propositions</em>'.
-	 * @see generator.MTQeFCompletion1#getPropositions()
-	 * @see #getMTQeFCompletion1()
-	 * @generated
-	 */
-	EAttribute getMTQeFCompletion1_Propositions();
-
-	/**
-	 * Returns the meta object for class '{@link generator.MTQeFCompletion2 <em>MT Qe FCompletion2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MT Qe FCompletion2</em>'.
-	 * @see generator.MTQeFCompletion2
-	 * @generated
-	 */
-	EClass getMTQeFCompletion2();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link generator.MTQeFCompletion2#getPropositions <em>Propositions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Propositions</em>'.
-	 * @see generator.MTQeFCompletion2#getPropositions()
-	 * @see #getMTQeFCompletion2()
-	 * @generated
-	 */
-	EAttribute getMTQeFCompletion2_Propositions();
-
-	/**
-	 * Returns the meta object for class '{@link generator.MTQeFRebuild <em>MT Qe FRebuild</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MT Qe FRebuild</em>'.
-	 * @see generator.MTQeFRebuild
-	 * @generated
-	 */
-	EClass getMTQeFRebuild();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link generator.MTQeFRebuild#getPropositions <em>Propositions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Propositions</em>'.
-	 * @see generator.MTQeFRebuild#getPropositions()
-	 * @see #getMTQeFRebuild()
-	 * @generated
-	 */
-	EAttribute getMTQeFRebuild_Propositions();
-
-	/**
-	 * Returns the meta object for class '{@link generator.MTQeFIdentification <em>MT Qe FIdentification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MT Qe FIdentification</em>'.
-	 * @see generator.MTQeFIdentification
-	 * @generated
-	 */
-	EClass getMTQeFIdentification();
-
-	/**
-	 * Returns the meta object for class '{@link generator.MTQeFMembership <em>MT Qe FMembership</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MT Qe FMembership</em>'.
-	 * @see generator.MTQeFMembership
-	 * @generated
-	 */
-	EClass getMTQeFMembership();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link generator.MTQeFMembership#getBadPropositions <em>Bad Propositions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Bad Propositions</em>'.
-	 * @see generator.MTQeFMembership#getBadPropositions()
-	 * @see #getMTQeFMembership()
-	 * @generated
-	 */
-	EAttribute getMTQeFMembership_BadPropositions();
+	EAttribute getQuestionedFact_LearnerValidation();
 
 	/**
 	 * Returns the meta object for class '{@link generator.CompletionCriteria <em>Completion Criteria</em>}'.
@@ -7506,68 +7788,57 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getCurrentGameLevel_Level();
 
 	/**
-	 * Returns the meta object for class '{@link generator.ElementTypes <em>Element Types</em>}'.
+	 * Returns the meta object for class '{@link generator.GameElementTypes <em>Game Element Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Element Types</em>'.
-	 * @see generator.ElementTypes
+	 * @return the meta object for class '<em>Game Element Types</em>'.
+	 * @see generator.GameElementTypes
 	 * @generated
 	 */
-	EClass getElementTypes();
+	EClass getGameElementTypes();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.ElementTypes#getEquipments <em>Equipments</em>}'.
+	 * Returns the meta object for the containment reference '{@link generator.GameElementTypes#getEquipments <em>Equipments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Equipments</em>'.
-	 * @see generator.ElementTypes#getEquipments()
-	 * @see #getElementTypes()
+	 * @see generator.GameElementTypes#getEquipments()
+	 * @see #getGameElementTypes()
 	 * @generated
 	 */
-	EReference getElementTypes_Equipments();
+	EReference getGameElementTypes_Equipments();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.ElementTypes#getGameplayElements <em>Gameplay Elements</em>}'.
+	 * Returns the meta object for the containment reference '{@link generator.GameElementTypes#getGpElements <em>Gp Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Gameplay Elements</em>'.
-	 * @see generator.ElementTypes#getGameplayElements()
-	 * @see #getElementTypes()
+	 * @return the meta object for the containment reference '<em>Gp Elements</em>'.
+	 * @see generator.GameElementTypes#getGpElements()
+	 * @see #getGameElementTypes()
 	 * @generated
 	 */
-	EReference getElementTypes_GameplayElements();
+	EReference getGameElementTypes_GpElements();
 
 	/**
-	 * Returns the meta object for class '{@link generator.CoreElements <em>Core Elements</em>}'.
+	 * Returns the meta object for class '{@link generator.GPElementsTypes <em>GP Elements Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Core Elements</em>'.
-	 * @see generator.CoreElements
+	 * @return the meta object for class '<em>GP Elements Types</em>'.
+	 * @see generator.GPElementsTypes
 	 * @generated
 	 */
-	EClass getCoreElements();
+	EClass getGPElementsTypes();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generator.CoreElements#getElements <em>Elements</em>}'.
+	 * Returns the meta object for the containment reference list '{@link generator.GPElementsTypes#getElements <em>Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Elements</em>'.
-	 * @see generator.CoreElements#getElements()
-	 * @see #getCoreElements()
+	 * @see generator.GPElementsTypes#getElements()
+	 * @see #getGPElementsTypes()
 	 * @generated
 	 */
-	EReference getCoreElements_Elements();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.CoreElements#getStructures <em>Structures</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Structures</em>'.
-	 * @see generator.CoreElements#getStructures()
-	 * @see #getCoreElements()
-	 * @generated
-	 */
-	EReference getCoreElements_Structures();
+	EReference getGPElementsTypes_Elements();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Equipments <em>Equipments</em>}'.
@@ -7591,80 +7862,25 @@ public interface GeneratorPackage extends EPackage {
 	EReference getEquipments_Equipments();
 
 	/**
-	 * Returns the meta object for class '{@link generator.CoreElement <em>Core Element</em>}'.
+	 * Returns the meta object for class '{@link generator.ElementType <em>Element Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Core Element</em>'.
-	 * @see generator.CoreElement
+	 * @return the meta object for class '<em>Element Type</em>'.
+	 * @see generator.ElementType
 	 * @generated
 	 */
-	EClass getCoreElement();
+	EClass getElementType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.CoreElement#getID <em>ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>ID</em>'.
-	 * @see generator.CoreElement#getID()
-	 * @see #getCoreElement()
-	 * @generated
-	 */
-	EAttribute getCoreElement_ID();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.CoreElement#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.CoreElement#getType()
-	 * @see #getCoreElement()
-	 * @generated
-	 */
-	EAttribute getCoreElement_Type();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.CoreElement#getAbility <em>Ability</em>}'.
+	 * Returns the meta object for the reference '{@link generator.ElementType#getAbility <em>Ability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Ability</em>'.
-	 * @see generator.CoreElement#getAbility()
-	 * @see #getCoreElement()
+	 * @see generator.ElementType#getAbility()
+	 * @see #getElementType()
 	 * @generated
 	 */
-	EReference getCoreElement_Ability();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.CoreElement#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see generator.CoreElement#getSize()
-	 * @see #getCoreElement()
-	 * @generated
-	 */
-	EAttribute getCoreElement_Size();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.CoreElement#getCategory <em>Category</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Category</em>'.
-	 * @see generator.CoreElement#getCategory()
-	 * @see #getCoreElement()
-	 * @generated
-	 */
-	EAttribute getCoreElement_Category();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.CoreElement#getDisplay <em>Display</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Display</em>'.
-	 * @see generator.CoreElement#getDisplay()
-	 * @see #getCoreElement()
-	 * @generated
-	 */
-	EReference getCoreElement_Display();
+	EReference getElementType_Ability();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Equipment <em>Equipment</em>}'.
@@ -7720,17 +7936,6 @@ public interface GeneratorPackage extends EPackage {
 	EClass getGameplay();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generator.Gameplay#getQuantifiedElements <em>Quantified Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Quantified Elements</em>'.
-	 * @see generator.Gameplay#getQuantifiedElements()
-	 * @see #getGameplay()
-	 * @generated
-	 */
-	EReference getGameplay_QuantifiedElements();
-
-	/**
 	 * Returns the meta object for the attribute '{@link generator.Gameplay#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7740,17 +7945,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGameplay_Name();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link generator.Gameplay#getAllowedStatements <em>Allowed Statements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Allowed Statements</em>'.
-	 * @see generator.Gameplay#getAllowedStatements()
-	 * @see #getGameplay()
-	 * @generated
-	 */
-	EAttribute getGameplay_AllowedStatements();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.Gameplay#getCategory <em>Category</em>}'.
@@ -7764,283 +7958,37 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getGameplay_Category();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.Gameplay#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference list '{@link generator.Gameplay#getComponents <em>Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.Gameplay#getType()
+	 * @return the meta object for the containment reference list '<em>Components</em>'.
+	 * @see generator.Gameplay#getComponents()
 	 * @see #getGameplay()
 	 * @generated
 	 */
-	EAttribute getGameplay_Type();
+	EReference getGameplay_Components();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generator.Gameplay#getStructures <em>Structures</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.Gameplay#isHasIntegratedPropositions <em>Has Integrated Propositions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Structures</em>'.
-	 * @see generator.Gameplay#getStructures()
+	 * @return the meta object for the attribute '<em>Has Integrated Propositions</em>'.
+	 * @see generator.Gameplay#isHasIntegratedPropositions()
 	 * @see #getGameplay()
 	 * @generated
 	 */
-	EReference getGameplay_Structures();
+	EAttribute getGameplay_HasIntegratedPropositions();
 
 	/**
-	 * Returns the meta object for class '{@link generator.QuantifiedElements <em>Quantified Elements</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.Gameplay#isOptionalValidator <em>Optional Validator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Quantified Elements</em>'.
-	 * @see generator.QuantifiedElements
+	 * @return the meta object for the attribute '<em>Optional Validator</em>'.
+	 * @see generator.Gameplay#isOptionalValidator()
+	 * @see #getGameplay()
 	 * @generated
 	 */
-	EClass getQuantifiedElements();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.QuantifiedElements#getMin <em>Min</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Min</em>'.
-	 * @see generator.QuantifiedElements#getMin()
-	 * @see #getQuantifiedElements()
-	 * @generated
-	 */
-	EAttribute getQuantifiedElements_Min();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.QuantifiedElements#getAbility <em>Ability</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Ability</em>'.
-	 * @see generator.QuantifiedElements#getAbility()
-	 * @see #getQuantifiedElements()
-	 * @generated
-	 */
-	EReference getQuantifiedElements_Ability();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.QuantifiedElements#getMax <em>Max</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Max</em>'.
-	 * @see generator.QuantifiedElements#getMax()
-	 * @see #getQuantifiedElements()
-	 * @generated
-	 */
-	EAttribute getQuantifiedElements_Max();
-
-	/**
-	 * Returns the meta object for class '{@link generator.PositionedElement <em>Positioned Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Positioned Element</em>'.
-	 * @see generator.PositionedElement
-	 * @generated
-	 */
-	EClass getPositionedElement();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.PositionedElement#getID <em>ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>ID</em>'.
-	 * @see generator.PositionedElement#getID()
-	 * @see #getPositionedElement()
-	 * @generated
-	 */
-	EAttribute getPositionedElement_ID();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.PositionedElement#getDisplay <em>Display</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Display</em>'.
-	 * @see generator.PositionedElement#getDisplay()
-	 * @see #getPositionedElement()
-	 * @generated
-	 */
-	EReference getPositionedElement_Display();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.PositionedElement#getCorrectness <em>Correctness</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Correctness</em>'.
-	 * @see generator.PositionedElement#getCorrectness()
-	 * @see #getPositionedElement()
-	 * @generated
-	 */
-	EReference getPositionedElement_Correctness();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.PositionedElement#getWantedAnswer <em>Wanted Answer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Wanted Answer</em>'.
-	 * @see generator.PositionedElement#getWantedAnswer()
-	 * @see #getPositionedElement()
-	 * @generated
-	 */
-	EReference getPositionedElement_WantedAnswer();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.PositionedElement#getStructure <em>Structure</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Structure</em>'.
-	 * @see generator.PositionedElement#getStructure()
-	 * @see #getPositionedElement()
-	 * @generated
-	 */
-	EReference getPositionedElement_Structure();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.PositionedElement#getElement <em>Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Element</em>'.
-	 * @see generator.PositionedElement#getElement()
-	 * @see #getPositionedElement()
-	 * @generated
-	 */
-	EReference getPositionedElement_Element();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.PositionedElement#getPosition <em>Position</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Position</em>'.
-	 * @see generator.PositionedElement#getPosition()
-	 * @see #getPositionedElement()
-	 * @generated
-	 */
-	EReference getPositionedElement_Position();
-
-	/**
-	 * Returns the meta object for class '{@link generator.Display <em>Display</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Display</em>'.
-	 * @see generator.Display
-	 * @generated
-	 */
-	EClass getDisplay();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.Display#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see generator.Display#getValue()
-	 * @see #getDisplay()
-	 * @generated
-	 */
-	EAttribute getDisplay_Value();
-
-	/**
-	 * Returns the meta object for class '{@link generator.AbstractAttributes <em>Abstract Attributes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Abstract Attributes</em>'.
-	 * @see generator.AbstractAttributes
-	 * @generated
-	 */
-	EClass getAbstractAttributes();
-
-	/**
-	 * Returns the meta object for class '{@link generator.Correctness <em>Correctness</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Correctness</em>'.
-	 * @see generator.Correctness
-	 * @generated
-	 */
-	EClass getCorrectness();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.Correctness#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see generator.Correctness#getValue()
-	 * @see #getCorrectness()
-	 * @generated
-	 */
-	EAttribute getCorrectness_Value();
-
-	/**
-	 * Returns the meta object for class '{@link generator.StructureElement <em>Structure Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Structure Element</em>'.
-	 * @see generator.StructureElement
-	 * @generated
-	 */
-	EClass getStructureElement();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.StructureElement#getElements <em>Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Elements</em>'.
-	 * @see generator.StructureElement#getElements()
-	 * @see #getStructureElement()
-	 * @generated
-	 */
-	EReference getStructureElement_Elements();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.StructureElement#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.StructureElement#getType()
-	 * @see #getStructureElement()
-	 * @generated
-	 */
-	EAttribute getStructureElement_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.StructureElement#getID <em>ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>ID</em>'.
-	 * @see generator.StructureElement#getID()
-	 * @see #getStructureElement()
-	 * @generated
-	 */
-	EAttribute getStructureElement_ID();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.StructureElement#getStructures <em>Structures</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Structures</em>'.
-	 * @see generator.StructureElement#getStructures()
-	 * @see #getStructureElement()
-	 * @generated
-	 */
-	EReference getStructureElement_Structures();
-
-	/**
-	 * Returns the meta object for class '{@link generator.WantedAnswer <em>Wanted Answer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Wanted Answer</em>'.
-	 * @see generator.WantedAnswer
-	 * @generated
-	 */
-	EClass getWantedAnswer();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.WantedAnswer#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see generator.WantedAnswer#getValue()
-	 * @see #getWantedAnswer()
-	 * @generated
-	 */
-	EAttribute getWantedAnswer_Value();
+	EAttribute getGameplay_OptionalValidator();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Gameplays <em>Gameplays</em>}'.
@@ -8105,6 +8053,641 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getQuestionableFactResult_GivenAnswers();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Ability <em>Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ability</em>'.
+	 * @see generator.Ability
+	 * @generated
+	 */
+	EClass getAbility();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Ability#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.Ability#getName()
+	 * @see #getAbility()
+	 * @generated
+	 */
+	EAttribute getAbility_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Ability#getNumberOfDisplays <em>Number Of Displays</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Of Displays</em>'.
+	 * @see generator.Ability#getNumberOfDisplays()
+	 * @see #getAbility()
+	 * @generated
+	 */
+	EAttribute getAbility_NumberOfDisplays();
+
+	/**
+	 * Returns the meta object for the '{@link generator.Ability#isElementDisplayable() <em>Is Element Displayable</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Element Displayable</em>' operation.
+	 * @see generator.Ability#isElementDisplayable()
+	 * @generated
+	 */
+	EOperation getAbility__IsElementDisplayable();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Abilities <em>Abilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abilities</em>'.
+	 * @see generator.Abilities
+	 * @generated
+	 */
+	EClass getAbilities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.Abilities#getAbilities <em>Abilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Abilities</em>'.
+	 * @see generator.Abilities#getAbilities()
+	 * @see #getAbilities()
+	 * @generated
+	 */
+	EReference getAbilities_Abilities();
+
+	/**
+	 * Returns the meta object for class '{@link generator.APosition <em>APosition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>APosition</em>'.
+	 * @see generator.APosition
+	 * @generated
+	 */
+	EClass getAPosition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.APosition#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see generator.APosition#getSize()
+	 * @see #getAPosition()
+	 * @generated
+	 */
+	EAttribute getAPosition_Size();
+
+	/**
+	 * Returns the meta object for the reference list '{@link generator.APosition#getRestrictedTo <em>Restricted To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Restricted To</em>'.
+	 * @see generator.APosition#getRestrictedTo()
+	 * @see #getAPosition()
+	 * @generated
+	 */
+	EReference getAPosition_RestrictedTo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.APosition#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see generator.APosition#getID()
+	 * @see #getAPosition()
+	 * @generated
+	 */
+	EAttribute getAPosition_ID();
+
+	/**
+	 * Returns the meta object for class '{@link generator.StructurePosition <em>Structure Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Structure Position</em>'.
+	 * @see generator.StructurePosition
+	 * @generated
+	 */
+	EClass getStructurePosition();
+
+	/**
+	 * Returns the meta object for class '{@link generator.PositionedElement <em>Positioned Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Positioned Element</em>'.
+	 * @see generator.PositionedElement
+	 * @generated
+	 */
+	EClass getPositionedElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.PositionedElement#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see generator.PositionedElement#getID()
+	 * @see #getPositionedElement()
+	 * @generated
+	 */
+	EAttribute getPositionedElement_ID();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.PositionedElement#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Position</em>'.
+	 * @see generator.PositionedElement#getPosition()
+	 * @see #getPositionedElement()
+	 * @generated
+	 */
+	EReference getPositionedElement_Position();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.PositionedElement#getCorrectness <em>Correctness</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Correctness</em>'.
+	 * @see generator.PositionedElement#getCorrectness()
+	 * @see #getPositionedElement()
+	 * @generated
+	 */
+	EReference getPositionedElement_Correctness();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.PositionedElement#getDisplay <em>Display</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Display</em>'.
+	 * @see generator.PositionedElement#getDisplay()
+	 * @see #getPositionedElement()
+	 * @generated
+	 */
+	EReference getPositionedElement_Display();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.PositionedElement#getElementType <em>Element Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Element Type</em>'.
+	 * @see generator.PositionedElement#getElementType()
+	 * @see #getPositionedElement()
+	 * @generated
+	 */
+	EReference getPositionedElement_ElementType();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.PositionedElement#getExpectedAnswer <em>Expected Answer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expected Answer</em>'.
+	 * @see generator.PositionedElement#getExpectedAnswer()
+	 * @see #getPositionedElement()
+	 * @generated
+	 */
+	EReference getPositionedElement_ExpectedAnswer();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.PositionedElement#getPriority <em>Priority</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Priority</em>'.
+	 * @see generator.PositionedElement#getPriority()
+	 * @see #getPositionedElement()
+	 * @generated
+	 */
+	EReference getPositionedElement_Priority();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.PositionedElement#getFact <em>Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Fact</em>'.
+	 * @see generator.PositionedElement#getFact()
+	 * @see #getPositionedElement()
+	 * @generated
+	 */
+	EReference getPositionedElement_Fact();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter</em>'.
+	 * @see generator.Parameter
+	 * @generated
+	 */
+	EClass getParameter();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.Parameter#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see generator.Parameter#getValue()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EReference getParameter_Value();
+
+	/**
+	 * Returns the meta object for class '{@link generator.QuestionParam <em>Question Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Question Param</em>'.
+	 * @see generator.QuestionParam
+	 * @generated
+	 */
+	EClass getQuestionParam();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.QuestionParam#isInteractive <em>Interactive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interactive</em>'.
+	 * @see generator.QuestionParam#isInteractive()
+	 * @see #getQuestionParam()
+	 * @generated
+	 */
+	EAttribute getQuestionParam_Interactive();
+
+	/**
+	 * Returns the meta object for class '{@link generator.PropositionParam <em>Proposition Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Proposition Param</em>'.
+	 * @see generator.PropositionParam
+	 * @generated
+	 */
+	EClass getPropositionParam();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.PropositionParam#getState <em>State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>State</em>'.
+	 * @see generator.PropositionParam#getState()
+	 * @see #getPropositionParam()
+	 * @generated
+	 */
+	EReference getPropositionParam_State();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Value <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Value</em>'.
+	 * @see generator.Value
+	 * @generated
+	 */
+	EClass getValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Value#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see generator.Value#getValue()
+	 * @see #getValue()
+	 * @generated
+	 */
+	EAttribute getValue_Value();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Correctness <em>Correctness</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Correctness</em>'.
+	 * @see generator.Correctness
+	 * @generated
+	 */
+	EClass getCorrectness();
+
+	/**
+	 * Returns the meta object for class '{@link generator.EntrySoluceParam <em>Entry Soluce Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Entry Soluce Param</em>'.
+	 * @see generator.EntrySoluceParam
+	 * @generated
+	 */
+	EClass getEntrySoluceParam();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.EntrySoluceParam#getState <em>State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>State</em>'.
+	 * @see generator.EntrySoluceParam#getState()
+	 * @see #getEntrySoluceParam()
+	 * @generated
+	 */
+	EAttribute getEntrySoluceParam_State();
+
+	/**
+	 * Returns the meta object for class '{@link generator.StructureType <em>Structure Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Structure Type</em>'.
+	 * @see generator.StructureType
+	 * @generated
+	 */
+	EClass getStructureType();
+
+	/**
+	 * Returns the meta object for class '{@link generator.GPElementType <em>GP Element Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GP Element Type</em>'.
+	 * @see generator.GPElementType
+	 * @generated
+	 */
+	EClass getGPElementType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.GPElementType#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see generator.GPElementType#getSize()
+	 * @see #getGPElementType()
+	 * @generated
+	 */
+	EAttribute getGPElementType_Size();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.GPElementType#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see generator.GPElementType#getID()
+	 * @see #getGPElementType()
+	 * @generated
+	 */
+	EAttribute getGPElementType_ID();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.GPElementType#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see generator.GPElementType#getType()
+	 * @see #getGPElementType()
+	 * @generated
+	 */
+	EAttribute getGPElementType_Type();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Display <em>Display</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Display</em>'.
+	 * @see generator.Display
+	 * @generated
+	 */
+	EClass getDisplay();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Display#isInteractive <em>Interactive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interactive</em>'.
+	 * @see generator.Display#isInteractive()
+	 * @see #getDisplay()
+	 * @generated
+	 */
+	EAttribute getDisplay_Interactive();
+
+	/**
+	 * Returns the meta object for class '{@link generator.AComponent <em>AComponent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>AComponent</em>'.
+	 * @see generator.AComponent
+	 * @generated
+	 */
+	EClass getAComponent();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.AComponent#getPriority <em>Priority</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Priority</em>'.
+	 * @see generator.AComponent#getPriority()
+	 * @see #getAComponent()
+	 * @generated
+	 */
+	EReference getAComponent_Priority();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Structure <em>Structure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Structure</em>'.
+	 * @see generator.Structure
+	 * @generated
+	 */
+	EClass getStructure();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.Structure#getComponents <em>Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Components</em>'.
+	 * @see generator.Structure#getComponents()
+	 * @see #getStructure()
+	 * @generated
+	 */
+	EReference getStructure_Components();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.Structure#getStructureType <em>Structure Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Structure Type</em>'.
+	 * @see generator.Structure#getStructureType()
+	 * @see #getStructure()
+	 * @generated
+	 */
+	EReference getStructure_StructureType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Structure#isIsPerFact <em>Is Per Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Per Fact</em>'.
+	 * @see generator.Structure#isIsPerFact()
+	 * @see #getStructure()
+	 * @generated
+	 */
+	EAttribute getStructure_IsPerFact();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Component <em>Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Component</em>'.
+	 * @see generator.Component
+	 * @generated
+	 */
+	EClass getComponent();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.Component#getElementType <em>Element Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Element Type</em>'.
+	 * @see generator.Component#getElementType()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EReference getComponent_ElementType();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.Component#getDisplayValue <em>Display Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Display Value</em>'.
+	 * @see generator.Component#getDisplayValue()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EReference getComponent_DisplayValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Component#isWearChoices <em>Wear Choices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wear Choices</em>'.
+	 * @see generator.Component#isWearChoices()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EAttribute getComponent_WearChoices();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.Component#getDefaultCorrectness <em>Default Correctness</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Default Correctness</em>'.
+	 * @see generator.Component#getDefaultCorrectness()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EReference getComponent_DefaultCorrectness();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Component#isWearStatement <em>Wear Statement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wear Statement</em>'.
+	 * @see generator.Component#isWearStatement()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EAttribute getComponent_WearStatement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Component#isInputEntry <em>Input Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Input Entry</em>'.
+	 * @see generator.Component#isInputEntry()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EAttribute getComponent_InputEntry();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Quantity <em>Quantity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Quantity</em>'.
+	 * @see generator.Quantity
+	 * @generated
+	 */
+	EClass getQuantity();
+
+	/**
+	 * Returns the meta object for class '{@link generator.WantedAnswersParam <em>Wanted Answers Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Wanted Answers Param</em>'.
+	 * @see generator.WantedAnswersParam
+	 * @generated
+	 */
+	EClass getWantedAnswersParam();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Priority <em>Priority</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Priority</em>'.
+	 * @see generator.Priority
+	 * @generated
+	 */
+	EClass getPriority();
+
+	/**
+	 * Returns the meta object for class '{@link generator.ExpectedAnswer <em>Expected Answer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Expected Answer</em>'.
+	 * @see generator.ExpectedAnswer
+	 * @generated
+	 */
+	EClass getExpectedAnswer();
+
+	/**
+	 * Returns the meta object for class '{@link generator.CorrectnessValue <em>Correctness Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Correctness Value</em>'.
+	 * @see generator.CorrectnessValue
+	 * @generated
+	 */
+	EClass getCorrectnessValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.CorrectnessValue#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see generator.CorrectnessValue#getValue()
+	 * @see #getCorrectnessValue()
+	 * @generated
+	 */
+	EAttribute getCorrectnessValue_Value();
+
+	/**
+	 * Returns the meta object for class '{@link generator.AValue <em>AValue</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>AValue</em>'.
+	 * @see generator.AValue
+	 * @generated
+	 */
+	EClass getAValue();
+
+	/**
+	 * Returns the meta object for class '{@link generator.PositionedStructureElement <em>Positioned Structure Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Positioned Structure Element</em>'.
+	 * @see generator.PositionedStructureElement
+	 * @generated
+	 */
+	EClass getPositionedStructureElement();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.PositionedStructureElement#getCreatedPosition <em>Created Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Created Position</em>'.
+	 * @see generator.PositionedStructureElement#getCreatedPosition()
+	 * @see #getPositionedStructureElement()
+	 * @generated
+	 */
+	EReference getPositionedStructureElement_CreatedPosition();
 
 	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
@@ -8197,16 +8780,6 @@ public interface GeneratorPackage extends EPackage {
 	EEnum getElementSize();
 
 	/**
-	 * Returns the meta object for enum '{@link generator.ElementCategory <em>Element Category</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Element Category</em>'.
-	 * @see generator.ElementCategory
-	 * @generated
-	 */
-	EEnum getElementCategory();
-
-	/**
 	 * Returns the meta object for enum '{@link generator.StatementType <em>Statement Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8215,16 +8788,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getStatementType();
-
-	/**
-	 * Returns the meta object for enum '{@link generator.VerificationValues <em>Verification Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Verification Values</em>'.
-	 * @see generator.VerificationValues
-	 * @generated
-	 */
-	EEnum getVerificationValues();
 
 	/**
 	 * Returns the meta object for enum '{@link generator.GPCategory <em>GP Category</em>}'.
@@ -8237,195 +8800,14 @@ public interface GeneratorPackage extends EPackage {
 	EEnum getGPCategory();
 
 	/**
-	 * Returns the meta object for enum '{@link generator.GPType <em>GP Type</em>}'.
+	 * Returns the meta object for enum '{@link generator.ECorrectness <em>ECorrectness</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GP Type</em>'.
-	 * @see generator.GPType
+	 * @return the meta object for enum '<em>ECorrectness</em>'.
+	 * @see generator.ECorrectness
 	 * @generated
 	 */
-	EEnum getGPType();
-
-	/**
-	 * Returns the meta object for class '{@link generator.Ability <em>Ability</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ability</em>'.
-	 * @see generator.Ability
-	 * @generated
-	 */
-	EClass getAbility();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.Ability#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see generator.Ability#getName()
-	 * @see #getAbility()
-	 * @generated
-	 */
-	EAttribute getAbility_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.Ability#getCategory <em>Category</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Category</em>'.
-	 * @see generator.Ability#getCategory()
-	 * @see #getAbility()
-	 * @generated
-	 */
-	EAttribute getAbility_Category();
-
-	/**
-	 * Returns the meta object for class '{@link generator.Abilities <em>Abilities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Abilities</em>'.
-	 * @see generator.Abilities
-	 * @generated
-	 */
-	EClass getAbilities();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.Abilities#getAbilities <em>Abilities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Abilities</em>'.
-	 * @see generator.Abilities#getAbilities()
-	 * @see #getAbilities()
-	 * @generated
-	 */
-	EReference getAbilities_Abilities();
-
-	/**
-	 * Returns the meta object for class '{@link generator.APosition <em>APosition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>APosition</em>'.
-	 * @see generator.APosition
-	 * @generated
-	 */
-	EClass getAPosition();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.APosition#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see generator.APosition#getSize()
-	 * @see #getAPosition()
-	 * @generated
-	 */
-	EAttribute getAPosition_Size();
-
-	/**
-	 * Returns the meta object for the reference list '{@link generator.APosition#getRestrictedTo <em>Restricted To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Restricted To</em>'.
-	 * @see generator.APosition#getRestrictedTo()
-	 * @see #getAPosition()
-	 * @generated
-	 */
-	EReference getAPosition_RestrictedTo();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.APosition#getID <em>ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>ID</em>'.
-	 * @see generator.APosition#getID()
-	 * @see #getAPosition()
-	 * @generated
-	 */
-	EAttribute getAPosition_ID();
-
-	/**
-	 * Returns the meta object for class '{@link generator.StructurePosition <em>Structure Position</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Structure Position</em>'.
-	 * @see generator.StructurePosition
-	 * @generated
-	 */
-	EClass getStructurePosition();
-
-	/**
-	 * Returns the meta object for class '{@link generator.StatementPosition <em>Statement Position</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Statement Position</em>'.
-	 * @see generator.StatementPosition
-	 * @generated
-	 */
-	EClass getStatementPosition();
-
-	/**
-	 * Returns the meta object for class '{@link generator.QuestionedFactStatement <em>Questioned Fact Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Questioned Fact Statement</em>'.
-	 * @see generator.QuestionedFactStatement
-	 * @generated
-	 */
-	EClass getQuestionedFactStatement();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.QuestionedFactStatement#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.QuestionedFactStatement#getType()
-	 * @see #getQuestionedFactStatement()
-	 * @generated
-	 */
-	EAttribute getQuestionedFactStatement_Type();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.QuestionedFactStatement#getQuestionedFact <em>Questioned Fact</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Questioned Fact</em>'.
-	 * @see generator.QuestionedFactStatement#getQuestionedFact()
-	 * @see #getQuestionedFactStatement()
-	 * @generated
-	 */
-	EReference getQuestionedFactStatement_QuestionedFact();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.QuestionedFactStatement#getDisplay <em>Display</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Display</em>'.
-	 * @see generator.QuestionedFactStatement#getDisplay()
-	 * @see #getQuestionedFactStatement()
-	 * @generated
-	 */
-	EReference getQuestionedFactStatement_Display();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.QuestionedFactStatement#getPosition <em>Position</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Position</em>'.
-	 * @see generator.QuestionedFactStatement#getPosition()
-	 * @see #getQuestionedFactStatement()
-	 * @generated
-	 */
-	EReference getQuestionedFactStatement_Position();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.QuestionedFactStatement#getID <em>ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>ID</em>'.
-	 * @see generator.QuestionedFactStatement#getID()
-	 * @see #getQuestionedFactStatement()
-	 * @generated
-	 */
-	EAttribute getQuestionedFactStatement_ID();
+	EEnum getECorrectness();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -8621,14 +9003,6 @@ public interface GeneratorPackage extends EPackage {
 		EReference ROOM__TASK = eINSTANCE.getRoom_Task();
 
 		/**
-		 * The meta object literal for the '<em><b>Statements</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM__STATEMENTS = eINSTANCE.getRoom_Statements();
-
-		/**
 		 * The meta object literal for the '<em><b>Positioned Element</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8728,14 +9102,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROOM_TYPE__STRUCTURE_POSITIONS = eINSTANCE.getRoomType_StructurePositions();
-
-		/**
-		 * The meta object literal for the '<em><b>Statement Positions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM_TYPE__STATEMENT_POSITIONS = eINSTANCE.getRoomType_StatementPositions();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Directions</b></em>' operation.
@@ -9372,6 +9738,14 @@ public interface GeneratorPackage extends EPackage {
 		EOperation ATASK___GET_TYPE = eINSTANCE.getATask__GetType();
 
 		/**
+		 * The meta object literal for the '<em><b>Validation On Learner Action</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ATASK___VALIDATION_ON_LEARNER_ACTION = eINSTANCE.getATask__ValidationOnLearnerAction();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.Completion1TaskImpl <em>Completion1 Task</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9388,6 +9762,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COMPLETION1_TASK__TYPE = eINSTANCE.getCompletion1Task_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Learner Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPLETION1_TASK__CHECK_LEARNER_ACTION = eINSTANCE.getCompletion1Task_CheckLearnerAction();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.Completion2TaskImpl <em>Completion2 Task</em>}' class.
@@ -9408,6 +9790,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute COMPLETION2_TASK__TYPE = eINSTANCE.getCompletion2Task_Type();
 
 		/**
+		 * The meta object literal for the '<em><b>Check Learner Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPLETION2_TASK__CHECK_LEARNER_ACTION = eINSTANCE.getCompletion2Task_CheckLearnerAction();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.ReconstructionTaskImpl <em>Reconstruction Task</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9426,6 +9816,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute RECONSTRUCTION_TASK__TYPE = eINSTANCE.getReconstructionTask_Type();
 
 		/**
+		 * The meta object literal for the '<em><b>Check Learner Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECONSTRUCTION_TASK__CHECK_LEARNER_ACTION = eINSTANCE.getReconstructionTask_CheckLearnerAction();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.IdentificationTaskImpl <em>Identification Task</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9442,6 +9840,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute IDENTIFICATION_TASK__TYPE = eINSTANCE.getIdentificationTask_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Learner Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IDENTIFICATION_TASK__CHECK_LEARNER_ACTION = eINSTANCE.getIdentificationTask_CheckLearnerAction();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MembershipIDTaskImpl <em>Membership ID Task</em>}' class.
@@ -9468,6 +9874,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MEMBERSHIP_ID_TASK__CHECK_IS_TRUE = eINSTANCE.getMembershipIDTask_CheckIsTrue();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Learner Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION = eINSTANCE.getMembershipIDTask_CheckLearnerAction();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTCompletion2Impl <em>MT Completion2</em>}' class.
@@ -9956,110 +10370,44 @@ public interface GeneratorPackage extends EPackage {
 		EReference QUESTIONED_FACT__QUESTIONABLEFACT = eINSTANCE.getQuestionedFact_Questionablefact();
 
 		/**
-		 * The meta object literal for the '<em><b>Complete Fact</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Question</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute QUESTIONED_FACT__COMPLETE_FACT = eINSTANCE.getQuestionedFact_CompleteFact();
+		EReference QUESTIONED_FACT__QUESTION = eINSTANCE.getQuestionedFact_Question();
 
 		/**
-		 * The meta object literal for the '<em><b>Correctness To Reach</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Propositions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute QUESTIONED_FACT__CORRECTNESS_TO_REACH = eINSTANCE.getQuestionedFact_CorrectnessToReach();
+		EReference QUESTIONED_FACT__PROPOSITIONS = eINSTANCE.getQuestionedFact_Propositions();
 
 		/**
-		 * The meta object literal for the '<em><b>Set Complete Fact</b></em>' operation.
+		 * The meta object literal for the '<em><b>Entrys</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation QUESTIONED_FACT___SET_COMPLETE_FACT = eINSTANCE.getQuestionedFact__SetCompleteFact();
+		EReference QUESTIONED_FACT__ENTRYS = eINSTANCE.getQuestionedFact_Entrys();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.MTQeFCompletion1Impl <em>MT Qe FCompletion1</em>}' class.
+		 * The meta object literal for the '<em><b>Correctness To Reach</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.MTQeFCompletion1Impl
-		 * @see generator.impl.GeneratorPackageImpl#getMTQeFCompletion1()
 		 * @generated
 		 */
-		EClass MT_QE_FCOMPLETION1 = eINSTANCE.getMTQeFCompletion1();
+		EReference QUESTIONED_FACT__CORRECTNESS_TO_REACH = eINSTANCE.getQuestionedFact_CorrectnessToReach();
 
 		/**
-		 * The meta object literal for the '<em><b>Propositions</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Learner Validation</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MT_QE_FCOMPLETION1__PROPOSITIONS = eINSTANCE.getMTQeFCompletion1_Propositions();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.MTQeFCompletion2Impl <em>MT Qe FCompletion2</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.MTQeFCompletion2Impl
-		 * @see generator.impl.GeneratorPackageImpl#getMTQeFCompletion2()
-		 * @generated
-		 */
-		EClass MT_QE_FCOMPLETION2 = eINSTANCE.getMTQeFCompletion2();
-
-		/**
-		 * The meta object literal for the '<em><b>Propositions</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MT_QE_FCOMPLETION2__PROPOSITIONS = eINSTANCE.getMTQeFCompletion2_Propositions();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.MTQeFRebuildImpl <em>MT Qe FRebuild</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.MTQeFRebuildImpl
-		 * @see generator.impl.GeneratorPackageImpl#getMTQeFRebuild()
-		 * @generated
-		 */
-		EClass MT_QE_FREBUILD = eINSTANCE.getMTQeFRebuild();
-
-		/**
-		 * The meta object literal for the '<em><b>Propositions</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MT_QE_FREBUILD__PROPOSITIONS = eINSTANCE.getMTQeFRebuild_Propositions();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.MTQeFIdentificationImpl <em>MT Qe FIdentification</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.MTQeFIdentificationImpl
-		 * @see generator.impl.GeneratorPackageImpl#getMTQeFIdentification()
-		 * @generated
-		 */
-		EClass MT_QE_FIDENTIFICATION = eINSTANCE.getMTQeFIdentification();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.MTQeFMembershipImpl <em>MT Qe FMembership</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.MTQeFMembershipImpl
-		 * @see generator.impl.GeneratorPackageImpl#getMTQeFMembership()
-		 * @generated
-		 */
-		EClass MT_QE_FMEMBERSHIP = eINSTANCE.getMTQeFMembership();
-
-		/**
-		 * The meta object literal for the '<em><b>Bad Propositions</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MT_QE_FMEMBERSHIP__BAD_PROPOSITIONS = eINSTANCE.getMTQeFMembership_BadPropositions();
+		EAttribute QUESTIONED_FACT__LEARNER_VALIDATION = eINSTANCE.getQuestionedFact_LearnerValidation();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.CompletionCriteriaImpl <em>Completion Criteria</em>}' class.
@@ -10150,14 +10498,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute CURRENT_GAME_LEVEL__LEVEL = eINSTANCE.getCurrentGameLevel_Level();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.ElementTypesImpl <em>Element Types</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.GameElementTypesImpl <em>Game Element Types</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.ElementTypesImpl
-		 * @see generator.impl.GeneratorPackageImpl#getElementTypes()
+		 * @see generator.impl.GameElementTypesImpl
+		 * @see generator.impl.GeneratorPackageImpl#getGameElementTypes()
 		 * @generated
 		 */
-		EClass ELEMENT_TYPES = eINSTANCE.getElementTypes();
+		EClass GAME_ELEMENT_TYPES = eINSTANCE.getGameElementTypes();
 
 		/**
 		 * The meta object literal for the '<em><b>Equipments</b></em>' containment reference feature.
@@ -10165,25 +10513,25 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ELEMENT_TYPES__EQUIPMENTS = eINSTANCE.getElementTypes_Equipments();
+		EReference GAME_ELEMENT_TYPES__EQUIPMENTS = eINSTANCE.getGameElementTypes_Equipments();
 
 		/**
-		 * The meta object literal for the '<em><b>Gameplay Elements</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Gp Elements</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ELEMENT_TYPES__GAMEPLAY_ELEMENTS = eINSTANCE.getElementTypes_GameplayElements();
+		EReference GAME_ELEMENT_TYPES__GP_ELEMENTS = eINSTANCE.getGameElementTypes_GpElements();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.CoreElementsImpl <em>Core Elements</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.GPElementsTypesImpl <em>GP Elements Types</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.CoreElementsImpl
-		 * @see generator.impl.GeneratorPackageImpl#getCoreElements()
+		 * @see generator.impl.GPElementsTypesImpl
+		 * @see generator.impl.GeneratorPackageImpl#getGPElementsTypes()
 		 * @generated
 		 */
-		EClass CORE_ELEMENTS = eINSTANCE.getCoreElements();
+		EClass GP_ELEMENTS_TYPES = eINSTANCE.getGPElementsTypes();
 
 		/**
 		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
@@ -10191,15 +10539,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CORE_ELEMENTS__ELEMENTS = eINSTANCE.getCoreElements_Elements();
-
-		/**
-		 * The meta object literal for the '<em><b>Structures</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CORE_ELEMENTS__STRUCTURES = eINSTANCE.getCoreElements_Structures();
+		EReference GP_ELEMENTS_TYPES__ELEMENTS = eINSTANCE.getGPElementsTypes_Elements();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.EquipmentsImpl <em>Equipments</em>}' class.
@@ -10220,30 +10560,14 @@ public interface GeneratorPackage extends EPackage {
 		EReference EQUIPMENTS__EQUIPMENTS = eINSTANCE.getEquipments_Equipments();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.CoreElementImpl <em>Core Element</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.ElementTypeImpl <em>Element Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.CoreElementImpl
-		 * @see generator.impl.GeneratorPackageImpl#getCoreElement()
+		 * @see generator.impl.ElementTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getElementType()
 		 * @generated
 		 */
-		EClass CORE_ELEMENT = eINSTANCE.getCoreElement();
-
-		/**
-		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CORE_ELEMENT__ID = eINSTANCE.getCoreElement_ID();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CORE_ELEMENT__TYPE = eINSTANCE.getCoreElement_Type();
+		EClass ELEMENT_TYPE = eINSTANCE.getElementType();
 
 		/**
 		 * The meta object literal for the '<em><b>Ability</b></em>' reference feature.
@@ -10251,31 +10575,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CORE_ELEMENT__ABILITY = eINSTANCE.getCoreElement_Ability();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CORE_ELEMENT__SIZE = eINSTANCE.getCoreElement_Size();
-
-		/**
-		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CORE_ELEMENT__CATEGORY = eINSTANCE.getCoreElement_Category();
-
-		/**
-		 * The meta object literal for the '<em><b>Display</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CORE_ELEMENT__DISPLAY = eINSTANCE.getCoreElement_Display();
+		EReference ELEMENT_TYPE__ABILITY = eINSTANCE.getElementType_Ability();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.EquipmentImpl <em>Equipment</em>}' class.
@@ -10322,28 +10622,12 @@ public interface GeneratorPackage extends EPackage {
 		EClass GAMEPLAY = eINSTANCE.getGameplay();
 
 		/**
-		 * The meta object literal for the '<em><b>Quantified Elements</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GAMEPLAY__QUANTIFIED_ELEMENTS = eINSTANCE.getGameplay_QuantifiedElements();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute GAMEPLAY__NAME = eINSTANCE.getGameplay_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Allowed Statements</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GAMEPLAY__ALLOWED_STATEMENTS = eINSTANCE.getGameplay_AllowedStatements();
 
 		/**
 		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
@@ -10354,226 +10638,28 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute GAMEPLAY__CATEGORY = eINSTANCE.getGameplay_Category();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GAMEPLAY__TYPE = eINSTANCE.getGameplay_Type();
+		EReference GAMEPLAY__COMPONENTS = eINSTANCE.getGameplay_Components();
 
 		/**
-		 * The meta object literal for the '<em><b>Structures</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Has Integrated Propositions</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GAMEPLAY__STRUCTURES = eINSTANCE.getGameplay_Structures();
+		EAttribute GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS = eINSTANCE.getGameplay_HasIntegratedPropositions();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.QuantifiedElementsImpl <em>Quantified Elements</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.QuantifiedElementsImpl
-		 * @see generator.impl.GeneratorPackageImpl#getQuantifiedElements()
-		 * @generated
-		 */
-		EClass QUANTIFIED_ELEMENTS = eINSTANCE.getQuantifiedElements();
-
-		/**
-		 * The meta object literal for the '<em><b>Min</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Optional Validator</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute QUANTIFIED_ELEMENTS__MIN = eINSTANCE.getQuantifiedElements_Min();
-
-		/**
-		 * The meta object literal for the '<em><b>Ability</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUANTIFIED_ELEMENTS__ABILITY = eINSTANCE.getQuantifiedElements_Ability();
-
-		/**
-		 * The meta object literal for the '<em><b>Max</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute QUANTIFIED_ELEMENTS__MAX = eINSTANCE.getQuantifiedElements_Max();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.PositionedElementImpl <em>Positioned Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.PositionedElementImpl
-		 * @see generator.impl.GeneratorPackageImpl#getPositionedElement()
-		 * @generated
-		 */
-		EClass POSITIONED_ELEMENT = eINSTANCE.getPositionedElement();
-
-		/**
-		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute POSITIONED_ELEMENT__ID = eINSTANCE.getPositionedElement_ID();
-
-		/**
-		 * The meta object literal for the '<em><b>Display</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference POSITIONED_ELEMENT__DISPLAY = eINSTANCE.getPositionedElement_Display();
-
-		/**
-		 * The meta object literal for the '<em><b>Correctness</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference POSITIONED_ELEMENT__CORRECTNESS = eINSTANCE.getPositionedElement_Correctness();
-
-		/**
-		 * The meta object literal for the '<em><b>Wanted Answer</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference POSITIONED_ELEMENT__WANTED_ANSWER = eINSTANCE.getPositionedElement_WantedAnswer();
-
-		/**
-		 * The meta object literal for the '<em><b>Structure</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference POSITIONED_ELEMENT__STRUCTURE = eINSTANCE.getPositionedElement_Structure();
-
-		/**
-		 * The meta object literal for the '<em><b>Element</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference POSITIONED_ELEMENT__ELEMENT = eINSTANCE.getPositionedElement_Element();
-
-		/**
-		 * The meta object literal for the '<em><b>Position</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference POSITIONED_ELEMENT__POSITION = eINSTANCE.getPositionedElement_Position();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.DisplayImpl <em>Display</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.DisplayImpl
-		 * @see generator.impl.GeneratorPackageImpl#getDisplay()
-		 * @generated
-		 */
-		EClass DISPLAY = eINSTANCE.getDisplay();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DISPLAY__VALUE = eINSTANCE.getDisplay_Value();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.AbstractAttributesImpl <em>Abstract Attributes</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.AbstractAttributesImpl
-		 * @see generator.impl.GeneratorPackageImpl#getAbstractAttributes()
-		 * @generated
-		 */
-		EClass ABSTRACT_ATTRIBUTES = eINSTANCE.getAbstractAttributes();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.CorrectnessImpl <em>Correctness</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.CorrectnessImpl
-		 * @see generator.impl.GeneratorPackageImpl#getCorrectness()
-		 * @generated
-		 */
-		EClass CORRECTNESS = eINSTANCE.getCorrectness();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CORRECTNESS__VALUE = eINSTANCE.getCorrectness_Value();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.StructureElementImpl <em>Structure Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.StructureElementImpl
-		 * @see generator.impl.GeneratorPackageImpl#getStructureElement()
-		 * @generated
-		 */
-		EClass STRUCTURE_ELEMENT = eINSTANCE.getStructureElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STRUCTURE_ELEMENT__ELEMENTS = eINSTANCE.getStructureElement_Elements();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STRUCTURE_ELEMENT__TYPE = eINSTANCE.getStructureElement_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STRUCTURE_ELEMENT__ID = eINSTANCE.getStructureElement_ID();
-
-		/**
-		 * The meta object literal for the '<em><b>Structures</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STRUCTURE_ELEMENT__STRUCTURES = eINSTANCE.getStructureElement_Structures();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.WantedAnswerImpl <em>Wanted Answer</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.WantedAnswerImpl
-		 * @see generator.impl.GeneratorPackageImpl#getWantedAnswer()
-		 * @generated
-		 */
-		EClass WANTED_ANSWER = eINSTANCE.getWantedAnswer();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WANTED_ANSWER__VALUE = eINSTANCE.getWantedAnswer_Value();
+		EAttribute GAMEPLAY__OPTIONAL_VALIDATOR = eINSTANCE.getGameplay_OptionalValidator();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.GameplaysImpl <em>Gameplays</em>}' class.
@@ -10626,6 +10712,535 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute QUESTIONABLE_FACT_RESULT__GIVEN_ANSWERS = eINSTANCE.getQuestionableFactResult_GivenAnswers();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.AbilityImpl <em>Ability</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.AbilityImpl
+		 * @see generator.impl.GeneratorPackageImpl#getAbility()
+		 * @generated
+		 */
+		EClass ABILITY = eINSTANCE.getAbility();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABILITY__NAME = eINSTANCE.getAbility_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Number Of Displays</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABILITY__NUMBER_OF_DISPLAYS = eINSTANCE.getAbility_NumberOfDisplays();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Element Displayable</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABILITY___IS_ELEMENT_DISPLAYABLE = eINSTANCE.getAbility__IsElementDisplayable();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.AbilitiesImpl <em>Abilities</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.AbilitiesImpl
+		 * @see generator.impl.GeneratorPackageImpl#getAbilities()
+		 * @generated
+		 */
+		EClass ABILITIES = eINSTANCE.getAbilities();
+
+		/**
+		 * The meta object literal for the '<em><b>Abilities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABILITIES__ABILITIES = eINSTANCE.getAbilities_Abilities();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.APositionImpl <em>APosition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.APositionImpl
+		 * @see generator.impl.GeneratorPackageImpl#getAPosition()
+		 * @generated
+		 */
+		EClass APOSITION = eINSTANCE.getAPosition();
+
+		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APOSITION__SIZE = eINSTANCE.getAPosition_Size();
+
+		/**
+		 * The meta object literal for the '<em><b>Restricted To</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APOSITION__RESTRICTED_TO = eINSTANCE.getAPosition_RestrictedTo();
+
+		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APOSITION__ID = eINSTANCE.getAPosition_ID();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.StructurePositionImpl <em>Structure Position</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.StructurePositionImpl
+		 * @see generator.impl.GeneratorPackageImpl#getStructurePosition()
+		 * @generated
+		 */
+		EClass STRUCTURE_POSITION = eINSTANCE.getStructurePosition();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.PositionedElementImpl <em>Positioned Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.PositionedElementImpl
+		 * @see generator.impl.GeneratorPackageImpl#getPositionedElement()
+		 * @generated
+		 */
+		EClass POSITIONED_ELEMENT = eINSTANCE.getPositionedElement();
+
+		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute POSITIONED_ELEMENT__ID = eINSTANCE.getPositionedElement_ID();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POSITIONED_ELEMENT__POSITION = eINSTANCE.getPositionedElement_Position();
+
+		/**
+		 * The meta object literal for the '<em><b>Correctness</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POSITIONED_ELEMENT__CORRECTNESS = eINSTANCE.getPositionedElement_Correctness();
+
+		/**
+		 * The meta object literal for the '<em><b>Display</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POSITIONED_ELEMENT__DISPLAY = eINSTANCE.getPositionedElement_Display();
+
+		/**
+		 * The meta object literal for the '<em><b>Element Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POSITIONED_ELEMENT__ELEMENT_TYPE = eINSTANCE.getPositionedElement_ElementType();
+
+		/**
+		 * The meta object literal for the '<em><b>Expected Answer</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POSITIONED_ELEMENT__EXPECTED_ANSWER = eINSTANCE.getPositionedElement_ExpectedAnswer();
+
+		/**
+		 * The meta object literal for the '<em><b>Priority</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POSITIONED_ELEMENT__PRIORITY = eINSTANCE.getPositionedElement_Priority();
+
+		/**
+		 * The meta object literal for the '<em><b>Fact</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POSITIONED_ELEMENT__FACT = eINSTANCE.getPositionedElement_Fact();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ParameterImpl <em>Parameter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ParameterImpl
+		 * @see generator.impl.GeneratorPackageImpl#getParameter()
+		 * @generated
+		 */
+		EClass PARAMETER = eINSTANCE.getParameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARAMETER__VALUE = eINSTANCE.getParameter_Value();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.QuestionParamImpl <em>Question Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.QuestionParamImpl
+		 * @see generator.impl.GeneratorPackageImpl#getQuestionParam()
+		 * @generated
+		 */
+		EClass QUESTION_PARAM = eINSTANCE.getQuestionParam();
+
+		/**
+		 * The meta object literal for the '<em><b>Interactive</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTION_PARAM__INTERACTIVE = eINSTANCE.getQuestionParam_Interactive();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.PropositionParamImpl <em>Proposition Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.PropositionParamImpl
+		 * @see generator.impl.GeneratorPackageImpl#getPropositionParam()
+		 * @generated
+		 */
+		EClass PROPOSITION_PARAM = eINSTANCE.getPropositionParam();
+
+		/**
+		 * The meta object literal for the '<em><b>State</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROPOSITION_PARAM__STATE = eINSTANCE.getPropositionParam_State();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ValueImpl <em>Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ValueImpl
+		 * @see generator.impl.GeneratorPackageImpl#getValue()
+		 * @generated
+		 */
+		EClass VALUE = eINSTANCE.getValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VALUE__VALUE = eINSTANCE.getValue_Value();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.CorrectnessImpl <em>Correctness</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.CorrectnessImpl
+		 * @see generator.impl.GeneratorPackageImpl#getCorrectness()
+		 * @generated
+		 */
+		EClass CORRECTNESS = eINSTANCE.getCorrectness();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.EntrySoluceParamImpl <em>Entry Soluce Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.EntrySoluceParamImpl
+		 * @see generator.impl.GeneratorPackageImpl#getEntrySoluceParam()
+		 * @generated
+		 */
+		EClass ENTRY_SOLUCE_PARAM = eINSTANCE.getEntrySoluceParam();
+
+		/**
+		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENTRY_SOLUCE_PARAM__STATE = eINSTANCE.getEntrySoluceParam_State();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.StructureTypeImpl <em>Structure Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.StructureTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getStructureType()
+		 * @generated
+		 */
+		EClass STRUCTURE_TYPE = eINSTANCE.getStructureType();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.GPElementTypeImpl <em>GP Element Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.GPElementTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getGPElementType()
+		 * @generated
+		 */
+		EClass GP_ELEMENT_TYPE = eINSTANCE.getGPElementType();
+
+		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GP_ELEMENT_TYPE__SIZE = eINSTANCE.getGPElementType_Size();
+
+		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GP_ELEMENT_TYPE__ID = eINSTANCE.getGPElementType_ID();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GP_ELEMENT_TYPE__TYPE = eINSTANCE.getGPElementType_Type();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.DisplayImpl <em>Display</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.DisplayImpl
+		 * @see generator.impl.GeneratorPackageImpl#getDisplay()
+		 * @generated
+		 */
+		EClass DISPLAY = eINSTANCE.getDisplay();
+
+		/**
+		 * The meta object literal for the '<em><b>Interactive</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DISPLAY__INTERACTIVE = eINSTANCE.getDisplay_Interactive();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.AComponentImpl <em>AComponent</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.AComponentImpl
+		 * @see generator.impl.GeneratorPackageImpl#getAComponent()
+		 * @generated
+		 */
+		EClass ACOMPONENT = eINSTANCE.getAComponent();
+
+		/**
+		 * The meta object literal for the '<em><b>Priority</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACOMPONENT__PRIORITY = eINSTANCE.getAComponent_Priority();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.StructureImpl <em>Structure</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.StructureImpl
+		 * @see generator.impl.GeneratorPackageImpl#getStructure()
+		 * @generated
+		 */
+		EClass STRUCTURE = eINSTANCE.getStructure();
+
+		/**
+		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUCTURE__COMPONENTS = eINSTANCE.getStructure_Components();
+
+		/**
+		 * The meta object literal for the '<em><b>Structure Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUCTURE__STRUCTURE_TYPE = eINSTANCE.getStructure_StructureType();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Per Fact</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRUCTURE__IS_PER_FACT = eINSTANCE.getStructure_IsPerFact();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ComponentImpl <em>Component</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ComponentImpl
+		 * @see generator.impl.GeneratorPackageImpl#getComponent()
+		 * @generated
+		 */
+		EClass COMPONENT = eINSTANCE.getComponent();
+
+		/**
+		 * The meta object literal for the '<em><b>Element Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT__ELEMENT_TYPE = eINSTANCE.getComponent_ElementType();
+
+		/**
+		 * The meta object literal for the '<em><b>Display Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT__DISPLAY_VALUE = eINSTANCE.getComponent_DisplayValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Wear Choices</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPONENT__WEAR_CHOICES = eINSTANCE.getComponent_WearChoices();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Correctness</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT__DEFAULT_CORRECTNESS = eINSTANCE.getComponent_DefaultCorrectness();
+
+		/**
+		 * The meta object literal for the '<em><b>Wear Statement</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPONENT__WEAR_STATEMENT = eINSTANCE.getComponent_WearStatement();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Entry</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPONENT__INPUT_ENTRY = eINSTANCE.getComponent_InputEntry();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.QuantityImpl <em>Quantity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.QuantityImpl
+		 * @see generator.impl.GeneratorPackageImpl#getQuantity()
+		 * @generated
+		 */
+		EClass QUANTITY = eINSTANCE.getQuantity();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.WantedAnswersParamImpl <em>Wanted Answers Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.WantedAnswersParamImpl
+		 * @see generator.impl.GeneratorPackageImpl#getWantedAnswersParam()
+		 * @generated
+		 */
+		EClass WANTED_ANSWERS_PARAM = eINSTANCE.getWantedAnswersParam();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.PriorityImpl <em>Priority</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.PriorityImpl
+		 * @see generator.impl.GeneratorPackageImpl#getPriority()
+		 * @generated
+		 */
+		EClass PRIORITY = eINSTANCE.getPriority();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ExpectedAnswerImpl <em>Expected Answer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ExpectedAnswerImpl
+		 * @see generator.impl.GeneratorPackageImpl#getExpectedAnswer()
+		 * @generated
+		 */
+		EClass EXPECTED_ANSWER = eINSTANCE.getExpectedAnswer();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.CorrectnessValueImpl <em>Correctness Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.CorrectnessValueImpl
+		 * @see generator.impl.GeneratorPackageImpl#getCorrectnessValue()
+		 * @generated
+		 */
+		EClass CORRECTNESS_VALUE = eINSTANCE.getCorrectnessValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CORRECTNESS_VALUE__VALUE = eINSTANCE.getCorrectnessValue_Value();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.AValueImpl <em>AValue</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.AValueImpl
+		 * @see generator.impl.GeneratorPackageImpl#getAValue()
+		 * @generated
+		 */
+		EClass AVALUE = eINSTANCE.getAValue();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.PositionedStructureElementImpl <em>Positioned Structure Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.PositionedStructureElementImpl
+		 * @see generator.impl.GeneratorPackageImpl#getPositionedStructureElement()
+		 * @generated
+		 */
+		EClass POSITIONED_STRUCTURE_ELEMENT = eINSTANCE.getPositionedStructureElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Created Position</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POSITIONED_STRUCTURE_ELEMENT__CREATED_POSITION = eINSTANCE
+				.getPositionedStructureElement_CreatedPosition();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.
@@ -10718,16 +11333,6 @@ public interface GeneratorPackage extends EPackage {
 		EEnum ELEMENT_SIZE = eINSTANCE.getElementSize();
 
 		/**
-		 * The meta object literal for the '{@link generator.ElementCategory <em>Element Category</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.ElementCategory
-		 * @see generator.impl.GeneratorPackageImpl#getElementCategory()
-		 * @generated
-		 */
-		EEnum ELEMENT_CATEGORY = eINSTANCE.getElementCategory();
-
-		/**
 		 * The meta object literal for the '{@link generator.StatementType <em>Statement Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10736,16 +11341,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum STATEMENT_TYPE = eINSTANCE.getStatementType();
-
-		/**
-		 * The meta object literal for the '{@link generator.VerificationValues <em>Verification Values</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.VerificationValues
-		 * @see generator.impl.GeneratorPackageImpl#getVerificationValues()
-		 * @generated
-		 */
-		EEnum VERIFICATION_VALUES = eINSTANCE.getVerificationValues();
 
 		/**
 		 * The meta object literal for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -10758,162 +11353,14 @@ public interface GeneratorPackage extends EPackage {
 		EEnum GP_CATEGORY = eINSTANCE.getGPCategory();
 
 		/**
-		 * The meta object literal for the '{@link generator.GPType <em>GP Type</em>}' enum.
+		 * The meta object literal for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.GPType
-		 * @see generator.impl.GeneratorPackageImpl#getGPType()
+		 * @see generator.ECorrectness
+		 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 		 * @generated
 		 */
-		EEnum GP_TYPE = eINSTANCE.getGPType();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.AbilityImpl <em>Ability</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.AbilityImpl
-		 * @see generator.impl.GeneratorPackageImpl#getAbility()
-		 * @generated
-		 */
-		EClass ABILITY = eINSTANCE.getAbility();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ABILITY__NAME = eINSTANCE.getAbility_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ABILITY__CATEGORY = eINSTANCE.getAbility_Category();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.AbilitiesImpl <em>Abilities</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.AbilitiesImpl
-		 * @see generator.impl.GeneratorPackageImpl#getAbilities()
-		 * @generated
-		 */
-		EClass ABILITIES = eINSTANCE.getAbilities();
-
-		/**
-		 * The meta object literal for the '<em><b>Abilities</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABILITIES__ABILITIES = eINSTANCE.getAbilities_Abilities();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.APositionImpl <em>APosition</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.APositionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getAPosition()
-		 * @generated
-		 */
-		EClass APOSITION = eINSTANCE.getAPosition();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute APOSITION__SIZE = eINSTANCE.getAPosition_Size();
-
-		/**
-		 * The meta object literal for the '<em><b>Restricted To</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APOSITION__RESTRICTED_TO = eINSTANCE.getAPosition_RestrictedTo();
-
-		/**
-		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute APOSITION__ID = eINSTANCE.getAPosition_ID();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.StructurePositionImpl <em>Structure Position</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.StructurePositionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getStructurePosition()
-		 * @generated
-		 */
-		EClass STRUCTURE_POSITION = eINSTANCE.getStructurePosition();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.StatementPositionImpl <em>Statement Position</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.StatementPositionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getStatementPosition()
-		 * @generated
-		 */
-		EClass STATEMENT_POSITION = eINSTANCE.getStatementPosition();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.QuestionedFactStatementImpl <em>Questioned Fact Statement</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.QuestionedFactStatementImpl
-		 * @see generator.impl.GeneratorPackageImpl#getQuestionedFactStatement()
-		 * @generated
-		 */
-		EClass QUESTIONED_FACT_STATEMENT = eINSTANCE.getQuestionedFactStatement();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute QUESTIONED_FACT_STATEMENT__TYPE = eINSTANCE.getQuestionedFactStatement_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Questioned Fact</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUESTIONED_FACT_STATEMENT__QUESTIONED_FACT = eINSTANCE.getQuestionedFactStatement_QuestionedFact();
-
-		/**
-		 * The meta object literal for the '<em><b>Display</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUESTIONED_FACT_STATEMENT__DISPLAY = eINSTANCE.getQuestionedFactStatement_Display();
-
-		/**
-		 * The meta object literal for the '<em><b>Position</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUESTIONED_FACT_STATEMENT__POSITION = eINSTANCE.getQuestionedFactStatement_Position();
-
-		/**
-		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute QUESTIONED_FACT_STATEMENT__ID = eINSTANCE.getQuestionedFactStatement_ID();
+		EEnum ECORRECTNESS = eINSTANCE.getECorrectness();
 
 	}
 

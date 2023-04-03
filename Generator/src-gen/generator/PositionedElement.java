@@ -14,12 +14,13 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generator.PositionedElement#getID <em>ID</em>}</li>
- *   <li>{@link generator.PositionedElement#getDisplay <em>Display</em>}</li>
- *   <li>{@link generator.PositionedElement#getElement <em>Element</em>}</li>
  *   <li>{@link generator.PositionedElement#getPosition <em>Position</em>}</li>
  *   <li>{@link generator.PositionedElement#getCorrectness <em>Correctness</em>}</li>
- *   <li>{@link generator.PositionedElement#getWantedAnswer <em>Wanted Answer</em>}</li>
- *   <li>{@link generator.PositionedElement#getStructure <em>Structure</em>}</li>
+ *   <li>{@link generator.PositionedElement#getDisplay <em>Display</em>}</li>
+ *   <li>{@link generator.PositionedElement#getElementType <em>Element Type</em>}</li>
+ *   <li>{@link generator.PositionedElement#getExpectedAnswer <em>Expected Answer</em>}</li>
+ *   <li>{@link generator.PositionedElement#getPriority <em>Priority</em>}</li>
+ *   <li>{@link generator.PositionedElement#getFact <em>Fact</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getPositionedElement()
@@ -27,7 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface PositionedElement extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,26 +51,26 @@ public interface PositionedElement extends EObject {
 	void setID(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Display</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Display</em>' containment reference.
-	 * @see #setDisplay(Display)
-	 * @see generator.GeneratorPackage#getPositionedElement_Display()
-	 * @model containment="true"
+	 * @return the value of the '<em>Position</em>' reference.
+	 * @see #setPosition(APosition)
+	 * @see generator.GeneratorPackage#getPositionedElement_Position()
+	 * @model
 	 * @generated
 	 */
-	Display getDisplay();
+	APosition getPosition();
 
 	/**
-	 * Sets the value of the '{@link generator.PositionedElement#getDisplay <em>Display</em>}' containment reference.
+	 * Sets the value of the '{@link generator.PositionedElement#getPosition <em>Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Display</em>' containment reference.
-	 * @see #getDisplay()
+	 * @param value the new value of the '<em>Position</em>' reference.
+	 * @see #getPosition()
 	 * @generated
 	 */
-	void setDisplay(Display value);
+	void setPosition(APosition value);
 
 	/**
 	 * Returns the value of the '<em><b>Correctness</b></em>' containment reference.
@@ -95,90 +95,113 @@ public interface PositionedElement extends EObject {
 	void setCorrectness(Correctness value);
 
 	/**
-	 * Returns the value of the '<em><b>Wanted Answer</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Display</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Wanted Answer</em>' containment reference.
-	 * @see #setWantedAnswer(WantedAnswer)
-	 * @see generator.GeneratorPackage#getPositionedElement_WantedAnswer()
+	 * @return the value of the '<em>Display</em>' containment reference.
+	 * @see #setDisplay(Display)
+	 * @see generator.GeneratorPackage#getPositionedElement_Display()
 	 * @model containment="true"
 	 * @generated
 	 */
-	WantedAnswer getWantedAnswer();
+	Display getDisplay();
 
 	/**
-	 * Sets the value of the '{@link generator.PositionedElement#getWantedAnswer <em>Wanted Answer</em>}' containment reference.
+	 * Sets the value of the '{@link generator.PositionedElement#getDisplay <em>Display</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wanted Answer</em>' containment reference.
-	 * @see #getWantedAnswer()
+	 * @param value the new value of the '<em>Display</em>' containment reference.
+	 * @see #getDisplay()
 	 * @generated
 	 */
-	void setWantedAnswer(WantedAnswer value);
+	void setDisplay(Display value);
 
 	/**
-	 * Returns the value of the '<em><b>Structure</b></em>' reference.
+	 * Returns the value of the '<em><b>Element Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Structure</em>' reference.
-	 * @see #setStructure(StructureElement)
-	 * @see generator.GeneratorPackage#getPositionedElement_Structure()
+	 * @return the value of the '<em>Element Type</em>' reference.
+	 * @see #setElementType(GPElementType)
+	 * @see generator.GeneratorPackage#getPositionedElement_ElementType()
+	 * @model required="true"
+	 * @generated
+	 */
+	GPElementType getElementType();
+
+	/**
+	 * Sets the value of the '{@link generator.PositionedElement#getElementType <em>Element Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Element Type</em>' reference.
+	 * @see #getElementType()
+	 * @generated
+	 */
+	void setElementType(GPElementType value);
+
+	/**
+	 * Returns the value of the '<em><b>Expected Answer</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Expected Answer</em>' containment reference.
+	 * @see #setExpectedAnswer(ExpectedAnswer)
+	 * @see generator.GeneratorPackage#getPositionedElement_ExpectedAnswer()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ExpectedAnswer getExpectedAnswer();
+
+	/**
+	 * Sets the value of the '{@link generator.PositionedElement#getExpectedAnswer <em>Expected Answer</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Expected Answer</em>' containment reference.
+	 * @see #getExpectedAnswer()
+	 * @generated
+	 */
+	void setExpectedAnswer(ExpectedAnswer value);
+
+	/**
+	 * Returns the value of the '<em><b>Priority</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Priority</em>' containment reference.
+	 * @see #setPriority(Priority)
+	 * @see generator.GeneratorPackage#getPositionedElement_Priority()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Priority getPriority();
+
+	/**
+	 * Sets the value of the '{@link generator.PositionedElement#getPriority <em>Priority</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Priority</em>' containment reference.
+	 * @see #getPriority()
+	 * @generated
+	 */
+	void setPriority(Priority value);
+
+	/**
+	 * Returns the value of the '<em><b>Fact</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fact</em>' reference.
+	 * @see #setFact(QuestionedFact)
+	 * @see generator.GeneratorPackage#getPositionedElement_Fact()
 	 * @model
 	 * @generated
 	 */
-	StructureElement getStructure();
+	QuestionedFact getFact();
 
 	/**
-	 * Sets the value of the '{@link generator.PositionedElement#getStructure <em>Structure</em>}' reference.
+	 * Sets the value of the '{@link generator.PositionedElement#getFact <em>Fact</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Structure</em>' reference.
-	 * @see #getStructure()
+	 * @param value the new value of the '<em>Fact</em>' reference.
+	 * @see #getFact()
 	 * @generated
 	 */
-	void setStructure(StructureElement value);
+	void setFact(QuestionedFact value);
 
-	/**
-	 * Returns the value of the '<em><b>Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Element</em>' reference.
-	 * @see #setElement(CoreElement)
-	 * @see generator.GeneratorPackage#getPositionedElement_Element()
-	 * @model
-	 * @generated
-	 */
-	CoreElement getElement();
-
-	/**
-	 * Sets the value of the '{@link generator.PositionedElement#getElement <em>Element</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Element</em>' reference.
-	 * @see #getElement()
-	 * @generated
-	 */
-	void setElement(CoreElement value);
-
-	/**
-	 * Returns the value of the '<em><b>Position</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Position</em>' reference.
-	 * @see #setPosition(APosition)
-	 * @see generator.GeneratorPackage#getPositionedElement_Position()
-	 * @model
-	 * @generated
-	 */
-	APosition getPosition();
-
-	/**
-	 * Sets the value of the '{@link generator.PositionedElement#getPosition <em>Position</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Position</em>' reference.
-	 * @see #getPosition()
-	 * @generated
-	 */
-	void setPosition(APosition value);
 } // PositionedElement

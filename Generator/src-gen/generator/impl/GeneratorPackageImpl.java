@@ -2,38 +2,43 @@
  */
 package generator.impl;
 
+import generator.AComponent;
 import generator.APosition;
 import generator.ATask;
+import generator.AValue;
 import generator.Abilities;
 import generator.Ability;
-import generator.AbstractAttributes;
 import generator.AbstractFact;
 import generator.Completion1Task;
 import generator.Completion2Task;
 import generator.CompletionCriteria;
-import generator.CoreElement;
-import generator.CoreElements;
+import generator.Component;
 import generator.Correctness;
+import generator.CorrectnessValue;
 import generator.CurrentGameLevel;
 import generator.CurrentObjectiveLevel;
 import generator.Directions;
 import generator.Display;
 import generator.Dungeon;
 import generator.DungeonMode;
+import generator.ECorrectness;
 import generator.EModality;
 import generator.ESeveralTarget;
 import generator.ESingleTarget;
 import generator.ETaskType;
-import generator.ElementCategory;
 import generator.ElementSize;
-import generator.ElementTypes;
+import generator.ElementType;
 import generator.EnterResponse;
+import generator.EntrySoluceParam;
 import generator.Equipment;
 import generator.Equipments;
+import generator.ExpectedAnswer;
 import generator.GPCategory;
-import generator.GPType;
+import generator.GPElementType;
+import generator.GPElementsTypes;
 import generator.GameContext;
 import generator.GameDescription;
+import generator.GameElementTypes;
 import generator.Gameplay;
 import generator.Gameplays;
 import generator.GenerationContext;
@@ -58,25 +63,24 @@ import generator.MTQFCompletion2;
 import generator.MTQFIdentification;
 import generator.MTQFMembership;
 import generator.MTQFRebuild;
-import generator.MTQeFCompletion1;
-import generator.MTQeFCompletion2;
-import generator.MTQeFIdentification;
-import generator.MTQeFMembership;
-import generator.MTQeFRebuild;
 import generator.MTRecontruction;
 import generator.MTResultFact;
 import generator.MembershipIDTask;
 import generator.MultipleChoice;
 import generator.Objective;
+import generator.Parameter;
 import generator.Position;
 import generator.PositionedElement;
+import generator.PositionedStructureElement;
 import generator.Prerequisite;
+import generator.Priority;
 import generator.Progression;
-import generator.QuantifiedElements;
+import generator.PropositionParam;
+import generator.Quantity;
+import generator.QuestionParam;
 import generator.QuestionableFact;
 import generator.QuestionableFactResult;
 import generator.QuestionedFact;
-import generator.QuestionedFactStatement;
 import generator.ReconstructionTask;
 import generator.ResponseModality;
 import generator.ResultPosition;
@@ -88,13 +92,13 @@ import generator.RoomType;
 import generator.RoomTypes;
 import generator.SetOfFacts;
 import generator.SmallRoomType;
-import generator.StatementPosition;
 import generator.StatementType;
-import generator.StructureElement;
+import generator.Structure;
 import generator.StructurePosition;
+import generator.StructureType;
 import generator.TableBuild;
-import generator.VerificationValues;
-import generator.WantedAnswer;
+import generator.Value;
+import generator.WantedAnswersParam;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -454,41 +458,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mtQeFCompletion1EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass mtQeFCompletion2EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass mtQeFRebuildEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass mtQeFIdentificationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass mtQeFMembershipEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass completionCriteriaEClass = null;
 
 	/**
@@ -510,14 +479,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass elementTypesEClass = null;
+	private EClass gameElementTypesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass coreElementsEClass = null;
+	private EClass gpElementsTypesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -531,7 +500,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass coreElementEClass = null;
+	private EClass elementTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -546,55 +515,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass gameplayEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass quantifiedElementsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass positionedElementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass displayEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass abstractAttributesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass correctnessEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass structureElementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass wantedAnswerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -643,14 +563,140 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass statementPositionEClass = null;
+	private EClass positionedElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass questionedFactStatementEClass = null;
+	private EClass displayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass aComponentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass structureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass componentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass quantityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass wantedAnswersParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass priorityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass expectedAnswerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass correctnessValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass aValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass positionedStructureElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass correctnessEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass parameterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass questionParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass propositionParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass valueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass entrySoluceParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass structureTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gpElementTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -720,21 +766,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum elementCategoryEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EEnum statementTypeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum verificationValuesEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -748,7 +780,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum gpTypeEEnum = null;
+	private EEnum eCorrectnessEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1002,7 +1034,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRoom_Statements() {
+	public EReference getRoom_PositionedElement() {
 		return (EReference) roomEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -1011,17 +1043,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRoom_PositionedElement() {
-		return (EReference) roomEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getRoom_Gameplay() {
-		return (EReference) roomEClass.getEStructuralFeatures().get(8);
+		return (EReference) roomEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1112,15 +1135,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EReference getRoomType_StructurePositions() {
 		return (EReference) roomTypeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRoomType_StatementPositions() {
-		return (EReference) roomTypeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1794,6 +1808,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getATask__ValidationOnLearnerAction() {
+		return aTaskEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCompletion1Task() {
 		return completion1TaskEClass;
 	}
@@ -1805,6 +1828,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getCompletion1Task_Type() {
 		return (EAttribute) completion1TaskEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCompletion1Task_CheckLearnerAction() {
+		return (EAttribute) completion1TaskEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1830,6 +1862,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCompletion2Task_CheckLearnerAction() {
+		return (EAttribute) completion2TaskEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getReconstructionTask() {
 		return reconstructionTaskEClass;
 	}
@@ -1848,6 +1889,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getReconstructionTask_CheckLearnerAction() {
+		return (EAttribute) reconstructionTaskEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIdentificationTask() {
 		return identificationTaskEClass;
 	}
@@ -1859,6 +1909,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getIdentificationTask_Type() {
 		return (EAttribute) identificationTaskEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIdentificationTask_CheckLearnerAction() {
+		return (EAttribute) identificationTaskEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1886,6 +1945,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getMembershipIDTask_CheckIsTrue() {
 		return (EAttribute) membershipIDTaskEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMembershipIDTask_CheckLearnerAction() {
+		return (EAttribute) membershipIDTaskEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2406,8 +2474,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getQuestionedFact_CompleteFact() {
-		return (EAttribute) questionedFactEClass.getEStructuralFeatures().get(1);
+	public EReference getQuestionedFact_Question() {
+		return (EReference) questionedFactEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2415,8 +2483,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getQuestionedFact_CorrectnessToReach() {
-		return (EAttribute) questionedFactEClass.getEStructuralFeatures().get(2);
+	public EReference getQuestionedFact_Propositions() {
+		return (EReference) questionedFactEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2424,8 +2492,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getQuestionedFact__SetCompleteFact() {
-		return questionedFactEClass.getEOperations().get(0);
+	public EReference getQuestionedFact_Entrys() {
+		return (EReference) questionedFactEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2433,8 +2501,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMTQeFCompletion1() {
-		return mtQeFCompletion1EClass;
+	public EReference getQuestionedFact_CorrectnessToReach() {
+		return (EReference) questionedFactEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2442,71 +2510,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMTQeFCompletion1_Propositions() {
-		return (EAttribute) mtQeFCompletion1EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMTQeFCompletion2() {
-		return mtQeFCompletion2EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMTQeFCompletion2_Propositions() {
-		return (EAttribute) mtQeFCompletion2EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMTQeFRebuild() {
-		return mtQeFRebuildEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMTQeFRebuild_Propositions() {
-		return (EAttribute) mtQeFRebuildEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMTQeFIdentification() {
-		return mtQeFIdentificationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMTQeFMembership() {
-		return mtQeFMembershipEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMTQeFMembership_BadPropositions() {
-		return (EAttribute) mtQeFMembershipEClass.getEStructuralFeatures().get(0);
+	public EAttribute getQuestionedFact_LearnerValidation() {
+		return (EAttribute) questionedFactEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2604,8 +2609,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getElementTypes() {
-		return elementTypesEClass;
+	public EClass getGameElementTypes() {
+		return gameElementTypesEClass;
 	}
 
 	/**
@@ -2613,8 +2618,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElementTypes_Equipments() {
-		return (EReference) elementTypesEClass.getEStructuralFeatures().get(0);
+	public EReference getGameElementTypes_Equipments() {
+		return (EReference) gameElementTypesEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2622,8 +2627,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElementTypes_GameplayElements() {
-		return (EReference) elementTypesEClass.getEStructuralFeatures().get(1);
+	public EReference getGameElementTypes_GpElements() {
+		return (EReference) gameElementTypesEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2631,8 +2636,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCoreElements() {
-		return coreElementsEClass;
+	public EClass getGPElementsTypes() {
+		return gpElementsTypesEClass;
 	}
 
 	/**
@@ -2640,17 +2645,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCoreElements_Elements() {
-		return (EReference) coreElementsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCoreElements_Structures() {
-		return (EReference) coreElementsEClass.getEStructuralFeatures().get(1);
+	public EReference getGPElementsTypes_Elements() {
+		return (EReference) gpElementsTypesEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2676,8 +2672,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCoreElement() {
-		return coreElementEClass;
+	public EClass getElementType() {
+		return elementTypeEClass;
 	}
 
 	/**
@@ -2685,53 +2681,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCoreElement_ID() {
-		return (EAttribute) coreElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCoreElement_Type() {
-		return (EAttribute) coreElementEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCoreElement_Ability() {
-		return (EReference) coreElementEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCoreElement_Size() {
-		return (EAttribute) coreElementEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCoreElement_Category() {
-		return (EAttribute) coreElementEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCoreElement_Display() {
-		return (EReference) coreElementEClass.getEStructuralFeatures().get(5);
+	public EReference getElementType_Ability() {
+		return (EReference) elementTypeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2784,26 +2735,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGameplay_QuantifiedElements() {
-		return (EReference) gameplayEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getGameplay_Name() {
-		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGameplay_AllowedStatements() {
-		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2812,6 +2745,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EAttribute getGameplay_Category() {
+		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameplay_Components() {
+		return (EReference) gameplayEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGameplay_HasIntegratedPropositions() {
 		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2820,233 +2771,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGameplay_Type() {
+	public EAttribute getGameplay_OptionalValidator() {
 		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGameplay_Structures() {
-		return (EReference) gameplayEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getQuantifiedElements() {
-		return quantifiedElementsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getQuantifiedElements_Min() {
-		return (EAttribute) quantifiedElementsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQuantifiedElements_Ability() {
-		return (EReference) quantifiedElementsEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getQuantifiedElements_Max() {
-		return (EAttribute) quantifiedElementsEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPositionedElement() {
-		return positionedElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPositionedElement_ID() {
-		return (EAttribute) positionedElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPositionedElement_Display() {
-		return (EReference) positionedElementEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPositionedElement_Correctness() {
-		return (EReference) positionedElementEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPositionedElement_WantedAnswer() {
-		return (EReference) positionedElementEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPositionedElement_Structure() {
-		return (EReference) positionedElementEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPositionedElement_Element() {
-		return (EReference) positionedElementEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPositionedElement_Position() {
-		return (EReference) positionedElementEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDisplay() {
-		return displayEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDisplay_Value() {
-		return (EAttribute) displayEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAbstractAttributes() {
-		return abstractAttributesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCorrectness() {
-		return correctnessEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCorrectness_Value() {
-		return (EAttribute) correctnessEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getStructureElement() {
-		return structureElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getStructureElement_Elements() {
-		return (EReference) structureElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStructureElement_Type() {
-		return (EAttribute) structureElementEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStructureElement_ID() {
-		return (EAttribute) structureElementEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getStructureElement_Structures() {
-		return (EReference) structureElementEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getWantedAnswer() {
-		return wantedAnswerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getWantedAnswer_Value() {
-		return (EAttribute) wantedAnswerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3101,6 +2827,546 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getQuestionableFactResult_GivenAnswers() {
 		return (EAttribute) questionableFactResultEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAbility() {
+		return abilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbility_Name() {
+		return (EAttribute) abilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbility_NumberOfDisplays() {
+		return (EAttribute) abilityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbility__IsElementDisplayable() {
+		return abilityEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAbilities() {
+		return abilitiesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbilities_Abilities() {
+		return (EReference) abilitiesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAPosition() {
+		return aPositionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAPosition_Size() {
+		return (EAttribute) aPositionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAPosition_RestrictedTo() {
+		return (EReference) aPositionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAPosition_ID() {
+		return (EAttribute) aPositionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStructurePosition() {
+		return structurePositionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPositionedElement() {
+		return positionedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPositionedElement_ID() {
+		return (EAttribute) positionedElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPositionedElement_Display() {
+		return (EReference) positionedElementEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPositionedElement_ElementType() {
+		return (EReference) positionedElementEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPositionedElement_ExpectedAnswer() {
+		return (EReference) positionedElementEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPositionedElement_Priority() {
+		return (EReference) positionedElementEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPositionedElement_Fact() {
+		return (EReference) positionedElementEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPositionedElement_Position() {
+		return (EReference) positionedElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPositionedElement_Correctness() {
+		return (EReference) positionedElementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDisplay() {
+		return displayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDisplay_Interactive() {
+		return (EAttribute) displayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAComponent() {
+		return aComponentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAComponent_Priority() {
+		return (EReference) aComponentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStructure() {
+		return structureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStructure_Components() {
+		return (EReference) structureEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStructure_StructureType() {
+		return (EReference) structureEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStructure_IsPerFact() {
+		return (EAttribute) structureEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getComponent() {
+		return componentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponent_ElementType() {
+		return (EReference) componentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponent_DisplayValue() {
+		return (EReference) componentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getComponent_WearChoices() {
+		return (EAttribute) componentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponent_DefaultCorrectness() {
+		return (EReference) componentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getComponent_WearStatement() {
+		return (EAttribute) componentEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getComponent_InputEntry() {
+		return (EAttribute) componentEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getQuantity() {
+		return quantityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWantedAnswersParam() {
+		return wantedAnswersParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPriority() {
+		return priorityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExpectedAnswer() {
+		return expectedAnswerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCorrectnessValue() {
+		return correctnessValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCorrectnessValue_Value() {
+		return (EAttribute) correctnessValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAValue() {
+		return aValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPositionedStructureElement() {
+		return positionedStructureElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPositionedStructureElement_CreatedPosition() {
+		return (EReference) positionedStructureElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCorrectness() {
+		return correctnessEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getParameter() {
+		return parameterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParameter_Value() {
+		return (EReference) parameterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getQuestionParam() {
+		return questionParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestionParam_Interactive() {
+		return (EAttribute) questionParamEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPropositionParam() {
+		return propositionParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPropositionParam_State() {
+		return (EReference) propositionParamEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getValue() {
+		return valueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getValue_Value() {
+		return (EAttribute) valueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEntrySoluceParam() {
+		return entrySoluceParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEntrySoluceParam_State() {
+		return (EAttribute) entrySoluceParamEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStructureType() {
+		return structureTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGPElementType() {
+		return gpElementTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGPElementType_Size() {
+		return (EAttribute) gpElementTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGPElementType_ID() {
+		return (EAttribute) gpElementTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGPElementType_Type() {
+		return (EAttribute) gpElementTypeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3189,26 +3455,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getElementCategory() {
-		return elementCategoryEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getStatementType() {
 		return statementTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getVerificationValues() {
-		return verificationValuesEEnum;
 	}
 
 	/**
@@ -3225,161 +3473,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getGPType() {
-		return gpTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAbility() {
-		return abilityEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAbility_Name() {
-		return (EAttribute) abilityEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAbility_Category() {
-		return (EAttribute) abilityEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAbilities() {
-		return abilitiesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAbilities_Abilities() {
-		return (EReference) abilitiesEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAPosition() {
-		return aPositionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAPosition_Size() {
-		return (EAttribute) aPositionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAPosition_RestrictedTo() {
-		return (EReference) aPositionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAPosition_ID() {
-		return (EAttribute) aPositionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getStructurePosition() {
-		return structurePositionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getStatementPosition() {
-		return statementPositionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getQuestionedFactStatement() {
-		return questionedFactStatementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getQuestionedFactStatement_Type() {
-		return (EAttribute) questionedFactStatementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQuestionedFactStatement_QuestionedFact() {
-		return (EReference) questionedFactStatementEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQuestionedFactStatement_Display() {
-		return (EReference) questionedFactStatementEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQuestionedFactStatement_Position() {
-		return (EReference) questionedFactStatementEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getQuestionedFactStatement_ID() {
-		return (EAttribute) questionedFactStatementEClass.getEStructuralFeatures().get(4);
+	public EEnum getECorrectness() {
+		return eCorrectnessEEnum;
 	}
 
 	/**
@@ -3435,7 +3530,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(roomEClass, ROOM__ROOMTYPE);
 		createEReference(roomEClass, ROOM__QUESTIONED_FACTS);
 		createEReference(roomEClass, ROOM__TASK);
-		createEReference(roomEClass, ROOM__STATEMENTS);
 		createEReference(roomEClass, ROOM__POSITIONED_ELEMENT);
 		createEReference(roomEClass, ROOM__GAMEPLAY);
 
@@ -3450,7 +3544,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(roomTypeEClass, ROOM_TYPE__NAME);
 		createEReference(roomTypeEClass, ROOM_TYPE__ELEMENT_POSITIONS);
 		createEReference(roomTypeEClass, ROOM_TYPE__STRUCTURE_POSITIONS);
-		createEReference(roomTypeEClass, ROOM_TYPE__STATEMENT_POSITIONS);
 		createEOperation(roomTypeEClass, ROOM_TYPE___GET_DIRECTIONS);
 
 		smallRoomTypeEClass = createEClass(SMALL_ROOM_TYPE);
@@ -3546,22 +3639,28 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(aTaskEClass, ATASK__MAX_TIME);
 		createEAttribute(aTaskEClass, ATASK__NB_FACTS);
 		createEOperation(aTaskEClass, ATASK___GET_TYPE);
+		createEOperation(aTaskEClass, ATASK___VALIDATION_ON_LEARNER_ACTION);
 
 		completion1TaskEClass = createEClass(COMPLETION1_TASK);
 		createEAttribute(completion1TaskEClass, COMPLETION1_TASK__TYPE);
+		createEAttribute(completion1TaskEClass, COMPLETION1_TASK__CHECK_LEARNER_ACTION);
 
 		completion2TaskEClass = createEClass(COMPLETION2_TASK);
 		createEAttribute(completion2TaskEClass, COMPLETION2_TASK__TYPE);
+		createEAttribute(completion2TaskEClass, COMPLETION2_TASK__CHECK_LEARNER_ACTION);
 
 		reconstructionTaskEClass = createEClass(RECONSTRUCTION_TASK);
 		createEAttribute(reconstructionTaskEClass, RECONSTRUCTION_TASK__TYPE);
+		createEAttribute(reconstructionTaskEClass, RECONSTRUCTION_TASK__CHECK_LEARNER_ACTION);
 
 		identificationTaskEClass = createEClass(IDENTIFICATION_TASK);
 		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__TYPE);
+		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__CHECK_LEARNER_ACTION);
 
 		membershipIDTaskEClass = createEClass(MEMBERSHIP_ID_TASK);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__TYPE);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__CHECK_IS_TRUE);
+		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION);
 
 		mtCompletion2EClass = createEClass(MT_COMPLETION2);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__TARGETS);
@@ -3634,23 +3733,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		questionedFactEClass = createEClass(QUESTIONED_FACT);
 		createEReference(questionedFactEClass, QUESTIONED_FACT__QUESTIONABLEFACT);
-		createEAttribute(questionedFactEClass, QUESTIONED_FACT__COMPLETE_FACT);
-		createEAttribute(questionedFactEClass, QUESTIONED_FACT__CORRECTNESS_TO_REACH);
-		createEOperation(questionedFactEClass, QUESTIONED_FACT___SET_COMPLETE_FACT);
-
-		mtQeFCompletion1EClass = createEClass(MT_QE_FCOMPLETION1);
-		createEAttribute(mtQeFCompletion1EClass, MT_QE_FCOMPLETION1__PROPOSITIONS);
-
-		mtQeFCompletion2EClass = createEClass(MT_QE_FCOMPLETION2);
-		createEAttribute(mtQeFCompletion2EClass, MT_QE_FCOMPLETION2__PROPOSITIONS);
-
-		mtQeFRebuildEClass = createEClass(MT_QE_FREBUILD);
-		createEAttribute(mtQeFRebuildEClass, MT_QE_FREBUILD__PROPOSITIONS);
-
-		mtQeFIdentificationEClass = createEClass(MT_QE_FIDENTIFICATION);
-
-		mtQeFMembershipEClass = createEClass(MT_QE_FMEMBERSHIP);
-		createEAttribute(mtQeFMembershipEClass, MT_QE_FMEMBERSHIP__BAD_PROPOSITIONS);
+		createEReference(questionedFactEClass, QUESTIONED_FACT__QUESTION);
+		createEReference(questionedFactEClass, QUESTIONED_FACT__PROPOSITIONS);
+		createEReference(questionedFactEClass, QUESTIONED_FACT__ENTRYS);
+		createEReference(questionedFactEClass, QUESTIONED_FACT__CORRECTNESS_TO_REACH);
+		createEAttribute(questionedFactEClass, QUESTIONED_FACT__LEARNER_VALIDATION);
 
 		completionCriteriaEClass = createEClass(COMPLETION_CRITERIA);
 		createEAttribute(completionCriteriaEClass, COMPLETION_CRITERIA__SUCCES_PERCENT);
@@ -3665,24 +3752,18 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		currentGameLevelEClass = createEClass(CURRENT_GAME_LEVEL);
 		createEAttribute(currentGameLevelEClass, CURRENT_GAME_LEVEL__LEVEL);
 
-		elementTypesEClass = createEClass(ELEMENT_TYPES);
-		createEReference(elementTypesEClass, ELEMENT_TYPES__EQUIPMENTS);
-		createEReference(elementTypesEClass, ELEMENT_TYPES__GAMEPLAY_ELEMENTS);
+		gameElementTypesEClass = createEClass(GAME_ELEMENT_TYPES);
+		createEReference(gameElementTypesEClass, GAME_ELEMENT_TYPES__EQUIPMENTS);
+		createEReference(gameElementTypesEClass, GAME_ELEMENT_TYPES__GP_ELEMENTS);
 
-		coreElementsEClass = createEClass(CORE_ELEMENTS);
-		createEReference(coreElementsEClass, CORE_ELEMENTS__ELEMENTS);
-		createEReference(coreElementsEClass, CORE_ELEMENTS__STRUCTURES);
+		gpElementsTypesEClass = createEClass(GP_ELEMENTS_TYPES);
+		createEReference(gpElementsTypesEClass, GP_ELEMENTS_TYPES__ELEMENTS);
 
 		equipmentsEClass = createEClass(EQUIPMENTS);
 		createEReference(equipmentsEClass, EQUIPMENTS__EQUIPMENTS);
 
-		coreElementEClass = createEClass(CORE_ELEMENT);
-		createEAttribute(coreElementEClass, CORE_ELEMENT__ID);
-		createEAttribute(coreElementEClass, CORE_ELEMENT__TYPE);
-		createEReference(coreElementEClass, CORE_ELEMENT__ABILITY);
-		createEAttribute(coreElementEClass, CORE_ELEMENT__SIZE);
-		createEAttribute(coreElementEClass, CORE_ELEMENT__CATEGORY);
-		createEReference(coreElementEClass, CORE_ELEMENT__DISPLAY);
+		elementTypeEClass = createEClass(ELEMENT_TYPE);
+		createEReference(elementTypeEClass, ELEMENT_TYPE__ABILITY);
 
 		equipmentEClass = createEClass(EQUIPMENT);
 		createEAttribute(equipmentEClass, EQUIPMENT__ID);
@@ -3690,17 +3771,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(equipmentEClass, EQUIPMENT__ACTIVATED);
 
 		gameplayEClass = createEClass(GAMEPLAY);
-		createEReference(gameplayEClass, GAMEPLAY__QUANTIFIED_ELEMENTS);
 		createEAttribute(gameplayEClass, GAMEPLAY__NAME);
-		createEAttribute(gameplayEClass, GAMEPLAY__ALLOWED_STATEMENTS);
 		createEAttribute(gameplayEClass, GAMEPLAY__CATEGORY);
-		createEAttribute(gameplayEClass, GAMEPLAY__TYPE);
-		createEReference(gameplayEClass, GAMEPLAY__STRUCTURES);
-
-		quantifiedElementsEClass = createEClass(QUANTIFIED_ELEMENTS);
-		createEAttribute(quantifiedElementsEClass, QUANTIFIED_ELEMENTS__MIN);
-		createEReference(quantifiedElementsEClass, QUANTIFIED_ELEMENTS__ABILITY);
-		createEAttribute(quantifiedElementsEClass, QUANTIFIED_ELEMENTS__MAX);
+		createEReference(gameplayEClass, GAMEPLAY__COMPONENTS);
+		createEAttribute(gameplayEClass, GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS);
+		createEAttribute(gameplayEClass, GAMEPLAY__OPTIONAL_VALIDATOR);
 
 		gameplaysEClass = createEClass(GAMEPLAYS);
 		createEReference(gameplaysEClass, GAMEPLAYS__GAMEPLAYS);
@@ -3712,7 +3787,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		abilityEClass = createEClass(ABILITY);
 		createEAttribute(abilityEClass, ABILITY__NAME);
-		createEAttribute(abilityEClass, ABILITY__CATEGORY);
+		createEAttribute(abilityEClass, ABILITY__NUMBER_OF_DISPLAYS);
+		createEOperation(abilityEClass, ABILITY___IS_ELEMENT_DISPLAYABLE);
 
 		abilitiesEClass = createEClass(ABILITIES);
 		createEReference(abilitiesEClass, ABILITIES__ABILITIES);
@@ -3724,40 +3800,74 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		structurePositionEClass = createEClass(STRUCTURE_POSITION);
 
-		statementPositionEClass = createEClass(STATEMENT_POSITION);
-
-		questionedFactStatementEClass = createEClass(QUESTIONED_FACT_STATEMENT);
-		createEAttribute(questionedFactStatementEClass, QUESTIONED_FACT_STATEMENT__TYPE);
-		createEReference(questionedFactStatementEClass, QUESTIONED_FACT_STATEMENT__QUESTIONED_FACT);
-		createEReference(questionedFactStatementEClass, QUESTIONED_FACT_STATEMENT__DISPLAY);
-		createEReference(questionedFactStatementEClass, QUESTIONED_FACT_STATEMENT__POSITION);
-		createEAttribute(questionedFactStatementEClass, QUESTIONED_FACT_STATEMENT__ID);
-
 		positionedElementEClass = createEClass(POSITIONED_ELEMENT);
 		createEAttribute(positionedElementEClass, POSITIONED_ELEMENT__ID);
-		createEReference(positionedElementEClass, POSITIONED_ELEMENT__DISPLAY);
-		createEReference(positionedElementEClass, POSITIONED_ELEMENT__ELEMENT);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__POSITION);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__CORRECTNESS);
-		createEReference(positionedElementEClass, POSITIONED_ELEMENT__WANTED_ANSWER);
-		createEReference(positionedElementEClass, POSITIONED_ELEMENT__STRUCTURE);
+		createEReference(positionedElementEClass, POSITIONED_ELEMENT__DISPLAY);
+		createEReference(positionedElementEClass, POSITIONED_ELEMENT__ELEMENT_TYPE);
+		createEReference(positionedElementEClass, POSITIONED_ELEMENT__EXPECTED_ANSWER);
+		createEReference(positionedElementEClass, POSITIONED_ELEMENT__PRIORITY);
+		createEReference(positionedElementEClass, POSITIONED_ELEMENT__FACT);
 
-		displayEClass = createEClass(DISPLAY);
-		createEAttribute(displayEClass, DISPLAY__VALUE);
+		parameterEClass = createEClass(PARAMETER);
+		createEReference(parameterEClass, PARAMETER__VALUE);
 
-		abstractAttributesEClass = createEClass(ABSTRACT_ATTRIBUTES);
+		questionParamEClass = createEClass(QUESTION_PARAM);
+		createEAttribute(questionParamEClass, QUESTION_PARAM__INTERACTIVE);
+
+		propositionParamEClass = createEClass(PROPOSITION_PARAM);
+		createEReference(propositionParamEClass, PROPOSITION_PARAM__STATE);
+
+		valueEClass = createEClass(VALUE);
+		createEAttribute(valueEClass, VALUE__VALUE);
 
 		correctnessEClass = createEClass(CORRECTNESS);
-		createEAttribute(correctnessEClass, CORRECTNESS__VALUE);
 
-		structureElementEClass = createEClass(STRUCTURE_ELEMENT);
-		createEReference(structureElementEClass, STRUCTURE_ELEMENT__ELEMENTS);
-		createEAttribute(structureElementEClass, STRUCTURE_ELEMENT__TYPE);
-		createEAttribute(structureElementEClass, STRUCTURE_ELEMENT__ID);
-		createEReference(structureElementEClass, STRUCTURE_ELEMENT__STRUCTURES);
+		entrySoluceParamEClass = createEClass(ENTRY_SOLUCE_PARAM);
+		createEAttribute(entrySoluceParamEClass, ENTRY_SOLUCE_PARAM__STATE);
 
-		wantedAnswerEClass = createEClass(WANTED_ANSWER);
-		createEAttribute(wantedAnswerEClass, WANTED_ANSWER__VALUE);
+		structureTypeEClass = createEClass(STRUCTURE_TYPE);
+
+		gpElementTypeEClass = createEClass(GP_ELEMENT_TYPE);
+		createEAttribute(gpElementTypeEClass, GP_ELEMENT_TYPE__SIZE);
+		createEAttribute(gpElementTypeEClass, GP_ELEMENT_TYPE__ID);
+		createEAttribute(gpElementTypeEClass, GP_ELEMENT_TYPE__TYPE);
+
+		displayEClass = createEClass(DISPLAY);
+		createEAttribute(displayEClass, DISPLAY__INTERACTIVE);
+
+		aComponentEClass = createEClass(ACOMPONENT);
+		createEReference(aComponentEClass, ACOMPONENT__PRIORITY);
+
+		structureEClass = createEClass(STRUCTURE);
+		createEReference(structureEClass, STRUCTURE__COMPONENTS);
+		createEReference(structureEClass, STRUCTURE__STRUCTURE_TYPE);
+		createEAttribute(structureEClass, STRUCTURE__IS_PER_FACT);
+
+		componentEClass = createEClass(COMPONENT);
+		createEReference(componentEClass, COMPONENT__ELEMENT_TYPE);
+		createEReference(componentEClass, COMPONENT__DISPLAY_VALUE);
+		createEAttribute(componentEClass, COMPONENT__WEAR_CHOICES);
+		createEReference(componentEClass, COMPONENT__DEFAULT_CORRECTNESS);
+		createEAttribute(componentEClass, COMPONENT__WEAR_STATEMENT);
+		createEAttribute(componentEClass, COMPONENT__INPUT_ENTRY);
+
+		quantityEClass = createEClass(QUANTITY);
+
+		wantedAnswersParamEClass = createEClass(WANTED_ANSWERS_PARAM);
+
+		priorityEClass = createEClass(PRIORITY);
+
+		expectedAnswerEClass = createEClass(EXPECTED_ANSWER);
+
+		correctnessValueEClass = createEClass(CORRECTNESS_VALUE);
+		createEAttribute(correctnessValueEClass, CORRECTNESS_VALUE__VALUE);
+
+		aValueEClass = createEClass(AVALUE);
+
+		positionedStructureElementEClass = createEClass(POSITIONED_STRUCTURE_ELEMENT);
+		createEReference(positionedStructureElementEClass, POSITIONED_STRUCTURE_ELEMENT__CREATED_POSITION);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -3769,11 +3879,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		eModalityEEnum = createEEnum(EMODALITY);
 		eSeveralTargetEEnum = createEEnum(ESEVERAL_TARGET);
 		elementSizeEEnum = createEEnum(ELEMENT_SIZE);
-		elementCategoryEEnum = createEEnum(ELEMENT_CATEGORY);
 		statementTypeEEnum = createEEnum(STATEMENT_TYPE);
-		verificationValuesEEnum = createEEnum(VERIFICATION_VALUES);
 		gpCategoryEEnum = createEEnum(GP_CATEGORY);
-		gpTypeEEnum = createEEnum(GP_TYPE);
+		eCorrectnessEEnum = createEEnum(ECORRECTNESS);
 	}
 
 	/**
@@ -3832,16 +3940,23 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtqfRebuildEClass.getESuperTypes().add(this.getQuestionableFact());
 		mtqfIdentificationEClass.getESuperTypes().add(this.getQuestionableFact());
 		mtqfMembershipEClass.getESuperTypes().add(this.getQuestionableFact());
-		mtQeFCompletion1EClass.getESuperTypes().add(this.getQuestionedFact());
-		mtQeFCompletion2EClass.getESuperTypes().add(this.getQuestionedFact());
-		mtQeFRebuildEClass.getESuperTypes().add(this.getQuestionedFact());
-		mtQeFIdentificationEClass.getESuperTypes().add(this.getQuestionedFact());
-		mtQeFMembershipEClass.getESuperTypes().add(this.getQuestionedFact());
+		elementTypeEClass.getESuperTypes().add(this.getGPElementType());
 		structurePositionEClass.getESuperTypes().add(this.getAPosition());
-		statementPositionEClass.getESuperTypes().add(this.getAPosition());
-		displayEClass.getESuperTypes().add(this.getAbstractAttributes());
-		correctnessEClass.getESuperTypes().add(this.getAbstractAttributes());
-		wantedAnswerEClass.getESuperTypes().add(this.getAbstractAttributes());
+		questionParamEClass.getESuperTypes().add(this.getParameter());
+		propositionParamEClass.getESuperTypes().add(this.getParameter());
+		valueEClass.getESuperTypes().add(this.getAValue());
+		correctnessEClass.getESuperTypes().add(this.getParameter());
+		entrySoluceParamEClass.getESuperTypes().add(this.getParameter());
+		structureTypeEClass.getESuperTypes().add(this.getGPElementType());
+		displayEClass.getESuperTypes().add(this.getParameter());
+		structureEClass.getESuperTypes().add(this.getAComponent());
+		componentEClass.getESuperTypes().add(this.getAComponent());
+		quantityEClass.getESuperTypes().add(this.getParameter());
+		wantedAnswersParamEClass.getESuperTypes().add(this.getParameter());
+		priorityEClass.getESuperTypes().add(this.getParameter());
+		expectedAnswerEClass.getESuperTypes().add(this.getParameter());
+		correctnessValueEClass.getESuperTypes().add(this.getAValue());
+		positionedStructureElementEClass.getESuperTypes().add(this.getPositionedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -3896,9 +4011,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getRoom_Task(), this.getATask(), null, "task", null, 0, 1, Room.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getRoom_Statements(), this.getQuestionedFactStatement(), null, "statements", null, 0, -1,
-				Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRoom_PositionedElement(), this.getPositionedElement(), null, "positionedElement", null, 0, -1,
 				Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3917,7 +4029,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getGameDescription_Gameplays(), this.getGameplays(), null, "gameplays", null, 0, 1,
 				GameDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGameDescription_Elements(), this.getElementTypes(), null, "elements", null, 0, 1,
+		initEReference(getGameDescription_Elements(), this.getGameElementTypes(), null, "elements", null, 0, 1,
 				GameDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGameDescription_Abilities(), this.getAbilities(), null, "abilities", null, 0, 1,
@@ -3931,9 +4043,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRoomType_StructurePositions(), this.getStructurePosition(), null, "structurePositions", null,
-				0, -1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRoomType_StatementPositions(), this.getStatementPosition(), null, "statementPositions", null,
 				0, -1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -4130,34 +4239,49 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getATask_ID(), theXMLTypePackage.getString(), "ID", null, 0, 1, ATask.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getATask_MaxTime(), ecorePackage.getEInt(), "maxTime", "20", 0, 1, ATask.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getATask_MaxTime(), ecorePackage.getEDouble(), "maxTime", "20.0", 0, 1, ATask.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getATask_NbFacts(), ecorePackage.getEInt(), "nbFacts", "1", 0, 1, ATask.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getATask__GetType(), this.getETaskType(), "getType", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		initEOperation(getATask__ValidationOnLearnerAction(), ecorePackage.getEBoolean(), "validationOnLearnerAction",
+				0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(completion1TaskEClass, Completion1Task.class, "Completion1Task", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCompletion1Task_Type(), this.getETaskType(), "type", "COMPLETE1", 0, 1, Completion1Task.class,
 				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCompletion1Task_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", null,
+				0, 1, Completion1Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(completion2TaskEClass, Completion2Task.class, "Completion2Task", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCompletion2Task_Type(), this.getETaskType(), "type", "COMPLETE2", 0, 1, Completion2Task.class,
 				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCompletion2Task_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
+				"true", 0, 1, Completion2Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(reconstructionTaskEClass, ReconstructionTask.class, "ReconstructionTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getReconstructionTask_Type(), this.getETaskType(), "type", "REBUILD", 0, 1,
 				ReconstructionTask.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReconstructionTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
+				"true", 0, 1, ReconstructionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(identificationTaskEClass, IdentificationTask.class, "IdentificationTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIdentificationTask_Type(), this.getETaskType(), "type", "IDENTIFY", 0, 1,
 				IdentificationTask.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIdentificationTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
+				"true", 0, 1, IdentificationTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(membershipIDTaskEClass, MembershipIDTask.class, "MembershipIDTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4167,6 +4291,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMembershipIDTask_CheckIsTrue(), ecorePackage.getEBoolean(), "checkIsTrue", "true", 0, 1,
 				MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMembershipIDTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
+				"false", 0, 1, MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtCompletion2EClass, MTCompletion2.class, "MTCompletion2", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4319,45 +4446,25 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTQFMembership_Table(), ecorePackage.getEInt(), "table", null, 0, 1, MTQFMembership.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(questionedFactEClass, QuestionedFact.class, "QuestionedFact", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(questionedFactEClass, QuestionedFact.class, "QuestionedFact", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQuestionedFact_Questionablefact(), this.getQuestionableFact(), null, "questionablefact", null,
 				1, 1, QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getQuestionedFact_CompleteFact(), ecorePackage.getEString(), "completeFact", "", 0, 1,
-				QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getQuestionedFact_CorrectnessToReach(), ecorePackage.getEInt(), "correctnessToReach", null, 0, 1,
-				QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getQuestionedFact__SetCompleteFact(), null, "setCompleteFact", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(mtQeFCompletion1EClass, MTQeFCompletion1.class, "MTQeFCompletion1", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMTQeFCompletion1_Propositions(), ecorePackage.getEInt(), "propositions", null, 0, -1,
-				MTQeFCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-
-		initEClass(mtQeFCompletion2EClass, MTQeFCompletion2.class, "MTQeFCompletion2", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMTQeFCompletion2_Propositions(), ecorePackage.getEInt(), "propositions", null, 0, -1,
-				MTQeFCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-
-		initEClass(mtQeFRebuildEClass, MTQeFRebuild.class, "MTQeFRebuild", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMTQeFRebuild_Propositions(), ecorePackage.getEInt(), "propositions", null, 3, -1,
-				MTQeFRebuild.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-
-		initEClass(mtQeFIdentificationEClass, MTQeFIdentification.class, "MTQeFIdentification", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(mtQeFMembershipEClass, MTQeFMembership.class, "MTQeFMembership", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMTQeFMembership_BadPropositions(), ecorePackage.getEInt(), "badPropositions", null, 0, -1,
-				MTQeFMembership.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEReference(getQuestionedFact_Question(), this.getQuestionParam(), null, "question", null, 0, 1,
+				QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQuestionedFact_Propositions(), this.getPropositionParam(), null, "propositions", null, 0, -1,
+				QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQuestionedFact_Entrys(), this.getEntrySoluceParam(), null, "entrys", null, 0, -1,
+				QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQuestionedFact_CorrectnessToReach(), this.getWantedAnswersParam(), null, "correctnessToReach",
+				null, 0, 1, QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestionedFact_LearnerValidation(), ecorePackage.getEBoolean(), "learnerValidation", null, 0,
+				1, QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(completionCriteriaEClass, CompletionCriteria.class, "CompletionCriteria", !IS_ABSTRACT,
@@ -4389,22 +4496,19 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getCurrentGameLevel_Level(), ecorePackage.getEInt(), "level", "1", 0, 1, CurrentGameLevel.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(elementTypesEClass, ElementTypes.class, "ElementTypes", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(gameElementTypesEClass, GameElementTypes.class, "GameElementTypes", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getElementTypes_Equipments(), this.getEquipments(), null, "equipments", null, 0, 1,
-				ElementTypes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getGameElementTypes_Equipments(), this.getEquipments(), null, "equipments", null, 0, 1,
+				GameElementTypes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElementTypes_GameplayElements(), this.getCoreElements(), null, "gameplayElements", null, 0, 1,
-				ElementTypes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getGameElementTypes_GpElements(), this.getGPElementsTypes(), null, "gpElements", null, 0, 1,
+				GameElementTypes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(coreElementsEClass, CoreElements.class, "CoreElements", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(gpElementsTypesEClass, GPElementsTypes.class, "GPElementsTypes", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCoreElements_Elements(), this.getCoreElement(), null, "elements", null, 0, -1,
-				CoreElements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCoreElements_Structures(), this.getStructureElement(), null, "structures", null, 0, -1,
-				CoreElements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getGPElementsTypes_Elements(), this.getGPElementType(), null, "elements", null, 0, -1,
+				GPElementsTypes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(equipmentsEClass, Equipments.class, "Equipments", !IS_ABSTRACT, !IS_INTERFACE,
@@ -4413,21 +4517,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				Equipments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(coreElementEClass, CoreElement.class, "CoreElement", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(elementTypeEClass, ElementType.class, "ElementType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCoreElement_ID(), ecorePackage.getEString(), "ID", null, 0, 1, CoreElement.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCoreElement_Type(), ecorePackage.getEString(), "type", "", 0, 1, CoreElement.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCoreElement_Ability(), this.getAbility(), null, "ability", null, 0, 1, CoreElement.class,
+		initEReference(getElementType_Ability(), this.getAbility(), null, "ability", null, 1, 1, ElementType.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCoreElement_Size(), this.getElementSize(), "size", null, 0, 1, CoreElement.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCoreElement_Category(), this.getElementCategory(), "category", null, 0, 1, CoreElement.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCoreElement_Display(), this.getDisplay(), null, "display", null, 0, 1, CoreElement.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(equipmentEClass, Equipment.class, "Equipment", !IS_ABSTRACT, !IS_INTERFACE,
@@ -4441,31 +4534,19 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(gameplayEClass, Gameplay.class, "Gameplay", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGameplay_QuantifiedElements(), this.getQuantifiedElements(), null, "quantifiedElements", null,
-				0, -1, Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGameplay_Name(), ecorePackage.getEString(), "name", null, 0, 1, Gameplay.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGameplay_AllowedStatements(), this.getStatementType(), "allowedStatements", null, 0, -1,
-				Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGameplay_Category(), this.getGPCategory(), "category", null, 0, 1, Gameplay.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGameplay_Type(), this.getGPType(), "type", null, 0, 1, Gameplay.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGameplay_Structures(), this.getStructureElement(), null, "structures", null, 0, -1,
-				Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(quantifiedElementsEClass, QuantifiedElements.class, "QuantifiedElements", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getQuantifiedElements_Min(), ecorePackage.getEInt(), "min", "1", 0, 1, QuantifiedElements.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuantifiedElements_Ability(), this.getAbility(), null, "ability", null, 0, 1,
-				QuantifiedElements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getQuantifiedElements_Max(), ecorePackage.getEInt(), "max", "1", 0, 1, QuantifiedElements.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGameplay_Components(), this.getAComponent(), null, "components", null, 0, -1, Gameplay.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGameplay_HasIntegratedPropositions(), ecorePackage.getEBoolean(), "hasIntegratedPropositions",
+				null, 0, 1, Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGameplay_OptionalValidator(), ecorePackage.getEBoolean(), "optionalValidator", "false", 0, 1,
+				Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(gameplaysEClass, Gameplays.class, "Gameplays", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4488,8 +4569,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(abilityEClass, Ability.class, "Ability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbility_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ability.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAbility_Category(), this.getElementCategory(), "category", null, 0, 1, Ability.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbility_NumberOfDisplays(), ecorePackage.getEInt(), "numberOfDisplays", null, 0, 1,
+				Ability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getAbility__IsElementDisplayable(), ecorePackage.getEBoolean(), "isElementDisplayable", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(abilitiesEClass, Abilities.class, "Abilities", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4510,79 +4595,141 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(structurePositionEClass, StructurePosition.class, "StructurePosition", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(statementPositionEClass, StatementPosition.class, "StatementPosition", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(questionedFactStatementEClass, QuestionedFactStatement.class, "QuestionedFactStatement",
-				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getQuestionedFactStatement_Type(), this.getStatementType(), "type", null, 0, 1,
-				QuestionedFactStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuestionedFactStatement_QuestionedFact(), this.getQuestionedFact(), null, "questionedFact",
-				null, 1, 1, QuestionedFactStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuestionedFactStatement_Display(), this.getDisplay(), null, "display", null, 0, 1,
-				QuestionedFactStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuestionedFactStatement_Position(), this.getAPosition(), null, "position", null, 0, 1,
-				QuestionedFactStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getQuestionedFactStatement_ID(), ecorePackage.getEString(), "ID", null, 0, 1,
-				QuestionedFactStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(positionedElementEClass, PositionedElement.class, "PositionedElement", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPositionedElement_ID(), ecorePackage.getEString(), "ID", null, 0, 1, PositionedElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPositionedElement_Display(), this.getDisplay(), null, "display", null, 0, 1,
-				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPositionedElement_Element(), this.getCoreElement(), null, "element", null, 0, 1,
-				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPositionedElement_Position(), this.getAPosition(), null, "position", null, 0, 1,
 				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPositionedElement_Correctness(), this.getCorrectness(), null, "correctness", null, 0, 1,
 				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPositionedElement_WantedAnswer(), this.getWantedAnswer(), null, "wantedAnswer", null, 0, 1,
+		initEReference(getPositionedElement_Display(), this.getDisplay(), null, "display", null, 0, 1,
 				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPositionedElement_Structure(), this.getStructureElement(), null, "structure", null, 0, 1,
+		initEReference(getPositionedElement_ElementType(), this.getGPElementType(), null, "elementType", null, 1, 1,
+				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPositionedElement_ExpectedAnswer(), this.getExpectedAnswer(), null, "expectedAnswer", null, 0,
+				1, PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPositionedElement_Priority(), this.getPriority(), null, "priority", null, 0, 1,
+				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPositionedElement_Fact(), this.getQuestionedFact(), null, "fact", null, 0, 1,
 				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(displayEClass, Display.class, "Display", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDisplay_Value(), ecorePackage.getEString(), "value", null, 0, 1, Display.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(abstractAttributesEClass, AbstractAttributes.class, "AbstractAttributes", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(parameterEClass, Parameter.class, "Parameter", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getParameter_Value(), this.getAValue(), null, "value", null, 0, 1, Parameter.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(questionParamEClass, QuestionParam.class, "QuestionParam", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getQuestionParam_Interactive(), ecorePackage.getEBoolean(), "interactive", null, 0, 1,
+				QuestionParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(propositionParamEClass, PropositionParam.class, "PropositionParam", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPropositionParam_State(), this.getCorrectness(), null, "state", null, 0, 1,
+				PropositionParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getValue_Value(), ecorePackage.getEString(), "value", null, 0, 1, Value.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(correctnessEClass, Correctness.class, "Correctness", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCorrectness_Value(), this.getVerificationValues(), "value", null, 0, 1, Correctness.class,
+
+		initEClass(entrySoluceParamEClass, EntrySoluceParam.class, "EntrySoluceParam", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEntrySoluceParam_State(), this.getECorrectness(), "state", null, 0, 1, EntrySoluceParam.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(structureElementEClass, StructureElement.class, "StructureElement", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(structureTypeEClass, StructureType.class, "StructureType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStructureElement_Elements(), this.getCoreElement(), null, "elements", null, 0, -1,
-				StructureElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStructureElement_Type(), ecorePackage.getEString(), "type", "", 0, 1, StructureElement.class,
+
+		initEClass(gpElementTypeEClass, GPElementType.class, "GPElementType", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGPElementType_Size(), this.getElementSize(), "size", null, 0, 1, GPElementType.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStructureElement_ID(), ecorePackage.getEString(), "ID", null, 0, 1, StructureElement.class,
+		initEAttribute(getGPElementType_ID(), ecorePackage.getEString(), "ID", null, 0, 1, GPElementType.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStructureElement_Structures(), this.getStructureElement(), null, "structures", null, 0, -1,
-				StructureElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(wantedAnswerEClass, WantedAnswer.class, "WantedAnswer", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getWantedAnswer_Value(), ecorePackage.getEString(), "value", null, 0, 1, WantedAnswer.class,
+		initEAttribute(getGPElementType_Type(), ecorePackage.getEString(), "type", "", 0, 1, GPElementType.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(displayEClass, Display.class, "Display", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDisplay_Interactive(), ecorePackage.getEBoolean(), "interactive", null, 0, 1, Display.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(aComponentEClass, AComponent.class, "AComponent", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAComponent_Priority(), this.getPriority(), null, "priority", null, 0, 1, AComponent.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(structureEClass, Structure.class, "Structure", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStructure_Components(), this.getAComponent(), null, "components", null, 0, -1,
+				Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStructure_StructureType(), this.getStructureType(), null, "structureType", null, 0, 1,
+				Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStructure_IsPerFact(), ecorePackage.getEBoolean(), "isPerFact", "false", 0, 1,
+				Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComponent_ElementType(), this.getElementType(), null, "elementType", null, 0, 1,
+				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponent_DisplayValue(), this.getDisplay(), null, "displayValue", null, 0, 1,
+				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComponent_WearChoices(), ecorePackage.getEBoolean(), "wearChoices", "false", 0, 1,
+				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getComponent_DefaultCorrectness(), this.getCorrectness(), null, "defaultCorrectness", null, 0, 1,
+				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComponent_WearStatement(), ecorePackage.getEBoolean(), "wearStatement", "false", 0, 1,
+				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComponent_InputEntry(), ecorePackage.getEBoolean(), "inputEntry", "false", 0, 1,
+				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(quantityEClass, Quantity.class, "Quantity", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(wantedAnswersParamEClass, WantedAnswersParam.class, "WantedAnswersParam", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(priorityEClass, Priority.class, "Priority", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(expectedAnswerEClass, ExpectedAnswer.class, "ExpectedAnswer", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(correctnessValueEClass, CorrectnessValue.class, "CorrectnessValue", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCorrectnessValue_Value(), this.getECorrectness(), "value", null, 0, 1, CorrectnessValue.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(aValueEClass, AValue.class, "AValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(positionedStructureElementEClass, PositionedStructureElement.class, "PositionedStructureElement",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPositionedStructureElement_CreatedPosition(), this.getAPosition(), null, "createdPosition",
+				null, 0, 1, PositionedStructureElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");
@@ -4640,29 +4787,23 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(elementSizeEEnum, ElementSize.MEDIUM);
 		addEEnumLiteral(elementSizeEEnum, ElementSize.LARGE);
 
-		initEEnum(elementCategoryEEnum, ElementCategory.class, "ElementCategory");
-		addEEnumLiteral(elementCategoryEEnum, ElementCategory.DECORATIVE);
-		addEEnumLiteral(elementCategoryEEnum, ElementCategory.SINGLE_ANSWER);
-		addEEnumLiteral(elementCategoryEEnum, ElementCategory.MULTIPLE_ANSWER);
-
 		initEEnum(statementTypeEEnum, StatementType.class, "StatementType");
 		addEEnumLiteral(statementTypeEEnum, StatementType.TEXTUAL);
-		addEEnumLiteral(statementTypeEEnum, StatementType.GRAPHIC);
-		addEEnumLiteral(statementTypeEEnum, StatementType.TO_FILL_IN);
-		addEEnumLiteral(statementTypeEEnum, StatementType.NONE);
 		addEEnumLiteral(statementTypeEEnum, StatementType.TEXTUAL_INTERACTIVE);
-
-		initEEnum(verificationValuesEEnum, VerificationValues.class, "VerificationValues");
-		addEEnumLiteral(verificationValuesEEnum, VerificationValues.CORRECT);
-		addEEnumLiteral(verificationValuesEEnum, VerificationValues.INCORRECT);
+		addEEnumLiteral(statementTypeEEnum, StatementType.GRAPHIC);
+		addEEnumLiteral(statementTypeEEnum, StatementType.NONE);
+		addEEnumLiteral(statementTypeEEnum, StatementType.TO_FILL_IN);
 
 		initEEnum(gpCategoryEEnum, GPCategory.class, "GPCategory");
-		addEEnumLiteral(gpCategoryEEnum, GPCategory.POSITION);
+		addEEnumLiteral(gpCategoryEEnum, GPCategory.SELECT_UNIQUE);
+		addEEnumLiteral(gpCategoryEEnum, GPCategory.SELECT_MULTIPLE);
 		addEEnumLiteral(gpCategoryEEnum, GPCategory.DIRECT_RESPONSE);
 
-		initEEnum(gpTypeEEnum, GPType.class, "GPType");
-		addEEnumLiteral(gpTypeEEnum, GPType.UNIQUE);
-		addEEnumLiteral(gpTypeEEnum, GPType.MULTIPLE);
+		initEEnum(eCorrectnessEEnum, ECorrectness.class, "ECorrectness");
+		addEEnumLiteral(eCorrectnessEEnum, ECorrectness.CORRECT);
+		addEEnumLiteral(eCorrectnessEEnum, ECorrectness.INCORRECT);
+		addEEnumLiteral(eCorrectnessEEnum, ECorrectness.FACT_CORRECTNESS);
+		addEEnumLiteral(eCorrectnessEEnum, ECorrectness.NOT_FACT_CORRECTNESS);
 
 		// Create resource
 		createResource(eNS_URI);

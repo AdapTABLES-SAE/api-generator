@@ -660,7 +660,7 @@
         <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="REB">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES"/>
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES" nbFacts="2"/>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="MEMB">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
@@ -699,7 +699,7 @@
         <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="REB">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES"/>
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES" nbFacts="2"/>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="MEMB">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>

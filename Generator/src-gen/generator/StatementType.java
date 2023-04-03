@@ -29,6 +29,16 @@ public enum StatementType implements Enumerator {
 	TEXTUAL(0, "TEXTUAL", "TEXTUAL"),
 
 	/**
+	 * The '<em><b>TEXTUAL INTERACTIVE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #TEXTUAL_INTERACTIVE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	TEXTUAL_INTERACTIVE(0, "TEXTUAL_INTERACTIVE", "TEXTUAL_INTERACTIVE"),
+
+	/**
 	 * The '<em><b>GRAPHIC</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -39,16 +49,6 @@ public enum StatementType implements Enumerator {
 	GRAPHIC(1, "GRAPHIC", "GRAPHIC"),
 
 	/**
-	 * The '<em><b>TO FILL IN</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TO_FILL_IN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TO_FILL_IN(2, "TO_FILL_IN", "TO_FILL_IN"),
-
-	/**
 	 * The '<em><b>NONE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -57,15 +57,16 @@ public enum StatementType implements Enumerator {
 	 * @ordered
 	 */
 	NONE(3, "NONE", "NONE"),
+
 	/**
-	 * The '<em><b>TEXTUAL INTERACTIVE</b></em>' literal object.
+	 * The '<em><b>TO FILL IN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	 * @see #TEXTUAL_INTERACTIVE_VALUE
+	 * <!-- end-user-doc -->
+	 * @see #TO_FILL_IN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	TEXTUAL_INTERACTIVE(0, "TEXTUAL_INTERACTIVE", "TEXTUAL_INTERACTIVE");
+	TO_FILL_IN(2, "TO_FILL_IN", "TO_FILL_IN");
 
 	/**
 	 * The '<em><b>TEXTUAL</b></em>' literal value.
@@ -79,6 +80,17 @@ public enum StatementType implements Enumerator {
 	public static final int TEXTUAL_VALUE = 0;
 
 	/**
+	 * The '<em><b>TEXTUAL INTERACTIVE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #TEXTUAL_INTERACTIVE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TEXTUAL_INTERACTIVE_VALUE = 0;
+
+	/**
 	 * The '<em><b>GRAPHIC</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -88,17 +100,6 @@ public enum StatementType implements Enumerator {
 	 * @ordered
 	 */
 	public static final int GRAPHIC_VALUE = 1;
-
-	/**
-	 * The '<em><b>TO FILL IN</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TO_FILL_IN
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int TO_FILL_IN_VALUE = 2;
 
 	/**
 	 * The '<em><b>NONE</b></em>' literal value.
@@ -112,15 +113,15 @@ public enum StatementType implements Enumerator {
 	public static final int NONE_VALUE = 3;
 
 	/**
-	 * The '<em><b>TEXTUAL INTERACTIVE</b></em>' literal value.
+	 * The '<em><b>TO FILL IN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #TEXTUAL_INTERACTIVE
+	 * @see #TO_FILL_IN
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TEXTUAL_INTERACTIVE_VALUE = 0;
+	public static final int TO_FILL_IN_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>Statement Type</b></em>' enumerators.
@@ -128,8 +129,8 @@ public enum StatementType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final StatementType[] VALUES_ARRAY = new StatementType[] { TEXTUAL, GRAPHIC, TO_FILL_IN, NONE,
-			TEXTUAL_INTERACTIVE, };
+	private static final StatementType[] VALUES_ARRAY = new StatementType[] { TEXTUAL, TEXTUAL_INTERACTIVE, GRAPHIC,
+			NONE, TO_FILL_IN, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Statement Type</b></em>' enumerators.
@@ -189,10 +190,10 @@ public enum StatementType implements Enumerator {
 			return TEXTUAL;
 		case GRAPHIC_VALUE:
 			return GRAPHIC;
-		case TO_FILL_IN_VALUE:
-			return TO_FILL_IN;
 		case NONE_VALUE:
 			return NONE;
+		case TO_FILL_IN_VALUE:
+			return TO_FILL_IN;
 		}
 		return null;
 	}

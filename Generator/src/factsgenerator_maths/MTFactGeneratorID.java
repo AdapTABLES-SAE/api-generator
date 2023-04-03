@@ -1,14 +1,17 @@
 package factsgenerator_maths;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
-import factgenerator_template.TaskFactGeneratorTemplate;
+import factgenerator_template.FactGeneratorTemplate;
 import generator.ATask;
 import generator.AbstractFact;
+import generator.ECorrectness;
 import generator.ESingleTarget;
 import generator.MTFact;
 import generator.MTIdentification;
@@ -16,14 +19,12 @@ import generator.MTLevel;
 import generator.MTQFIdentification;
 import generator.MultipleChoice;
 import generator.QuestionableFact;
-import generator.QuestionedFact;
 import generator.ResultPosition;
 import generator.TableBuild;
 import generator.impl.MTQFIdentificationImpl;
-import generator.impl.MTQeFIdentificationImpl;
 import managers.EducationElementsManager;
 
-public class MTFactGeneratorID extends TaskFactGeneratorTemplate {
+public class MTFactGeneratorID extends FactGeneratorTemplate {
 
 	private final int[] buildFalseInteraval = {5,5};
 	private List<Integer> alreadyUsed; 
@@ -149,19 +150,37 @@ public class MTFactGeneratorID extends TaskFactGeneratorTemplate {
 	}
 
 	@Override
-	protected QuestionedFact initializeQuestionedFact() {
-		return new MTQeFIdentificationImpl();
+	protected int correctnessToReach(ATask task) {
+		return 1;
 	}
 
 	@Override
-	protected void manageChoices(MultipleChoice mc, QuestionableFact qaf, QuestionedFact qef) {
-		// TODO Auto-generated method stub	
+	protected List<String> getListOfGoodSolutions(QuestionableFact qFact) {
+		List<String> solutions = new ArrayList<>();
+		if(((MTQFIdentification) qFact).isSoluce()) {
+			solutions.add(qFact.toString());
+		}else {
+			solutions.add("");
+		}
+		return solutions;
 	}
 
 	@Override
-	protected int correctnessToReach(ATask aTask) {
-		return aTask.getNbFacts();
+	protected Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact) {
+		Map<ECorrectness, List<String>> propositions = new HashMap<>();
+		List<String> propositions_temp = new ArrayList<>();
+		if(!((MTQFIdentification) qFact).isSoluce()) {
+			propositions_temp.add(qFact.toString());
+		} else {
+			propositions_temp.add("");
+		}
+		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
+		propositions.put(ECorrectness.INCORRECT, propositions_temp);		
+		return propositions;
 	}
 
-	
+	@Override
+	protected boolean isQuestionInteractive() {
+		return false;
+	}
 }

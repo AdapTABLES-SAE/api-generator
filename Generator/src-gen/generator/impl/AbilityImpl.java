@@ -3,12 +3,13 @@
 package generator.impl;
 
 import generator.Ability;
-import generator.ElementCategory;
 import generator.GeneratorPackage;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -21,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.AbilityImpl#getName <em>Name</em>}</li>
- *   <li>{@link generator.impl.AbilityImpl#getCategory <em>Category</em>}</li>
+ *   <li>{@link generator.impl.AbilityImpl#getNumberOfDisplays <em>Number Of Displays</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,24 +49,24 @@ public class AbilityImpl extends MinimalEObjectImpl.Container implements Ability
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
+	 * The default value of the '{@link #getNumberOfDisplays() <em>Number Of Displays</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCategory()
+	 * @see #getNumberOfDisplays()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ElementCategory CATEGORY_EDEFAULT = ElementCategory.DECORATIVE;
+	protected static final int NUMBER_OF_DISPLAYS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getCategory() <em>Category</em>}' attribute.
+	 * The cached value of the '{@link #getNumberOfDisplays() <em>Number Of Displays</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCategory()
+	 * @see #getNumberOfDisplays()
 	 * @generated
 	 * @ordered
 	 */
-	protected ElementCategory category = CATEGORY_EDEFAULT;
+	protected int numberOfDisplays = NUMBER_OF_DISPLAYS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,8 +113,8 @@ public class AbilityImpl extends MinimalEObjectImpl.Container implements Ability
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ElementCategory getCategory() {
-		return category;
+	public int getNumberOfDisplays() {
+		return numberOfDisplays;
 	}
 
 	/**
@@ -121,12 +122,21 @@ public class AbilityImpl extends MinimalEObjectImpl.Container implements Ability
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCategory(ElementCategory newCategory) {
-		ElementCategory oldCategory = category;
-		category = newCategory == null ? CATEGORY_EDEFAULT : newCategory;
+	public void setNumberOfDisplays(int newNumberOfDisplays) {
+		int oldNumberOfDisplays = numberOfDisplays;
+		numberOfDisplays = newNumberOfDisplays;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ABILITY__CATEGORY, oldCategory,
-					category));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ABILITY__NUMBER_OF_DISPLAYS,
+					oldNumberOfDisplays, numberOfDisplays));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isElementDisplayable() {
+		return this.numberOfDisplays != 0;
 	}
 
 	/**
@@ -139,8 +149,8 @@ public class AbilityImpl extends MinimalEObjectImpl.Container implements Ability
 		switch (featureID) {
 		case GeneratorPackage.ABILITY__NAME:
 			return getName();
-		case GeneratorPackage.ABILITY__CATEGORY:
-			return getCategory();
+		case GeneratorPackage.ABILITY__NUMBER_OF_DISPLAYS:
+			return getNumberOfDisplays();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -150,14 +160,15 @@ public class AbilityImpl extends MinimalEObjectImpl.Container implements Ability
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case GeneratorPackage.ABILITY__NAME:
 			setName((String) newValue);
 			return;
-		case GeneratorPackage.ABILITY__CATEGORY:
-			setCategory((ElementCategory) newValue);
+		case GeneratorPackage.ABILITY__NUMBER_OF_DISPLAYS:
+			setNumberOfDisplays((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -174,8 +185,8 @@ public class AbilityImpl extends MinimalEObjectImpl.Container implements Ability
 		case GeneratorPackage.ABILITY__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case GeneratorPackage.ABILITY__CATEGORY:
-			setCategory(CATEGORY_EDEFAULT);
+		case GeneratorPackage.ABILITY__NUMBER_OF_DISPLAYS:
+			setNumberOfDisplays(NUMBER_OF_DISPLAYS_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -191,10 +202,24 @@ public class AbilityImpl extends MinimalEObjectImpl.Container implements Ability
 		switch (featureID) {
 		case GeneratorPackage.ABILITY__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case GeneratorPackage.ABILITY__CATEGORY:
-			return category != CATEGORY_EDEFAULT;
+		case GeneratorPackage.ABILITY__NUMBER_OF_DISPLAYS:
+			return numberOfDisplays != NUMBER_OF_DISPLAYS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case GeneratorPackage.ABILITY___IS_ELEMENT_DISPLAYABLE:
+			return isElementDisplayable();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -210,8 +235,8 @@ public class AbilityImpl extends MinimalEObjectImpl.Container implements Ability
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", category: ");
-		result.append(category);
+		result.append(", numberOfDisplays: ");
+		result.append(numberOfDisplays);
 		result.append(')');
 		return result.toString();
 	}

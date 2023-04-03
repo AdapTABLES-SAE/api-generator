@@ -42,7 +42,9 @@
           ID="POS6"/>
       <elementPositions
           ID="POS7"/>
-      <statementPositions
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
           ID="POSQ1"/>
       <directions>SOUTH</directions>
       <directions>EAST</directions>
@@ -53,47 +55,201 @@
   <levelsDifficultyProgress/>
   <gameplays>
     <gameplays
-        name="Interrupteur Unique">
-      <quantifiedElements
-          min="2"
-          ability="TOUCHABLE"
-          max="10"/>
-      <quantifiedElements
-          ability="VERIFICATOR"/>
-      <allowedStatements>TEXTUAL</allowedStatements>
+        name="SELECT UNIQUE"
+        optionalValidator="true">
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEM_TYPE1_INTERRUPT"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEM_TYPE3_SWITCH"/>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEM_TYPE4_DISPLAY"
+          wearStatement="true"/>
     </gameplays>
     <gameplays
-        name="GAMEPLAY SAISIE"
+        name="SELECT MULTIPLE "
+        category="SELECT_MULTIPLE"
+        hasIntegratedPropositions="true"
+        optionalValidator="true">
+      <components
+          xsi:type="generator:Structure"
+          structureType="STRUCT_H">
+        <components
+            xsi:type="generator:Component"
+            elementType="ELEM_TYPE4_DISPLAY">
+          <displayValue>
+            <value
+                xsi:type="generator:Value"
+                value="FALSE"/>
+          </displayValue>
+        </components>
+        <components
+            xsi:type="generator:Structure"
+            structureType="STRUCT_V">
+          <components
+              xsi:type="generator:Structure"
+              structureType="STRUCT_H"
+              isPerFact="true">
+            <components
+                xsi:type="generator:Component"
+                elementType="ELEM_TYPE1_INTERRUPT"
+                wearChoices="true">
+              <defaultCorrectness>
+                <value
+                    xsi:type="generator:CorrectnessValue"
+                    value="NOT_FACT_CORRECTNESS"/>
+              </defaultCorrectness>
+            </components>
+            <components
+                xsi:type="generator:Component"
+                elementType="ELEM_TYPE4_DISPLAY"
+                wearStatement="true"/>
+            <components
+                xsi:type="generator:Component"
+                elementType="ELEM_TYPE1_INTERRUPT"
+                wearChoices="true">
+              <defaultCorrectness>
+                <value
+                    xsi:type="generator:CorrectnessValue"
+                    value="FACT_CORRECTNESS"/>
+              </defaultCorrectness>
+            </components>
+          </components>
+        </components>
+        <components
+            xsi:type="generator:Component"
+            elementType="ELEM_TYPE4_DISPLAY">
+          <displayValue>
+            <value
+                xsi:type="generator:Value"
+                value="TRUE"/>
+          </displayValue>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEM_TYPE3_SWITCH"/>
+    </gameplays>
+    <gameplays
+        name="DIRECT RESPONSE"
         category="DIRECT_RESPONSE">
-      <quantifiedElements
-          ability="TYPABLE"/>
-      <allowedStatements>TEXTUAL</allowedStatements>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEM_TYPE2_KEYBOARD"
+          inputEntry="true"/>
+    </gameplays>
+    <gameplays
+        name="SELECT MULTIPLE BIS"
+        category="SELECT_MULTIPLE">
+      <components
+          xsi:type="generator:Structure"
+          structureType="STRUCT_H">
+        <components
+            xsi:type="generator:Component"
+            elementType="ELEM_TYPE4_DISPLAY">
+          <displayValue>
+            <value
+                xsi:type="generator:Value"
+                value="FALSE"/>
+          </displayValue>
+        </components>
+        <components
+            xsi:type="generator:Structure"
+            structureType="STRUCT_V">
+          <components
+              xsi:type="generator:Structure"
+              structureType="STRUCT_H"
+              isPerFact="true">
+            <components
+                xsi:type="generator:Component"
+                elementType="ELEM_TYPE1_INTERRUPT"
+                wearChoices="true">
+              <defaultCorrectness>
+                <value
+                    xsi:type="generator:CorrectnessValue"
+                    value="NOT_FACT_CORRECTNESS"/>
+              </defaultCorrectness>
+            </components>
+            <components
+                xsi:type="generator:Component"
+                elementType="ELEM_TYPE4_DISPLAY"
+                wearStatement="true"/>
+            <components
+                xsi:type="generator:Component"
+                elementType="ELEM_TYPE1_INTERRUPT"
+                wearChoices="true">
+              <defaultCorrectness>
+                <value
+                    xsi:type="generator:CorrectnessValue"
+                    value="FACT_CORRECTNESS"/>
+              </defaultCorrectness>
+            </components>
+          </components>
+        </components>
+        <components
+            xsi:type="generator:Component"
+            elementType="ELEM_TYPE4_DISPLAY">
+          <displayValue>
+            <value
+                xsi:type="generator:Value"
+                value="TRUE"/>
+          </displayValue>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEM_TYPE3_SWITCH"/>
     </gameplays>
   </gameplays>
   <elements>
-    <gameplayElements>
+    <gpElements>
       <elements
-          ID="ELEM1"
+          xsi:type="generator:StructureType"
+          ID="STRUCT_H"
+          type="HorizontalStructure"/>
+      <elements
+          xsi:type="generator:StructureType"
+          ID="STRUCT_V"
+          type="VerticalStructure"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEM_TYPE1_INTERRUPT"
           type="FloorInterrupt"
-          ability="TOUCHABLE"
-          category="SINGLE_ANSWER"/>
+          ability="TOUCHABLE"/>
       <elements
-          ID="ELEM2"
+          xsi:type="generator:ElementType"
+          ID="ELEM_TYPE2_KEYBOARD"
+          type="KeyBoard"
+          ability="TYPABLE"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEM_TYPE3_SWITCH"
           type="Switch"
           ability="VERIFICATOR"/>
       <elements
-          ID="ELEM3"
-          type="KeyBoard"
-          ability="TYPABLE"/>
-    </gameplayElements>
+          xsi:type="generator:ElementType"
+          size="LARGE"
+          ID="ELEM_TYPE4_DISPLAY"
+          type="Info"
+          ability="DISPLAY"/>
+    </gpElements>
   </elements>
   <abilities>
     <abilities
         name="TOUCHABLE"
-        category="SINGLE_ANSWER"/>
+        numberOfDisplays="1"/>
+    <abilities
+        name="TYPABLE"/>
     <abilities
         name="VERIFICATOR"/>
     <abilities
-        name="TYPABLE"/>
+        name="DISPLAY"
+        numberOfDisplays="1"/>
+    <abilities
+        name="ROTABLE"
+        numberOfDisplays="4"/>
   </abilities>
 </generator:GameDescription>

@@ -34,4 +34,9 @@ public class MTMembershipImpl extends MembershipIDTaskImpl implements MTMembersh
 		return GeneratorPackage.Literals.MT_MEMBERSHIP;
 	}
 
+	@Override
+	public boolean validationOnLearnerAction() {
+		return checkLearnerAction;
+	}
+
 } //MTMembershipImpl

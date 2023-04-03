@@ -96,12 +96,12 @@ public interface GameDescription extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Elements</em>' containment reference.
-	 * @see #setElements(ElementTypes)
+	 * @see #setElements(GameElementTypes)
 	 * @see generator.GeneratorPackage#getGameDescription_Elements()
 	 * @model containment="true"
 	 * @generated
 	 */
-	ElementTypes getElements();
+	GameElementTypes getElements();
 
 	/**
 	 * Sets the value of the '{@link generator.GameDescription#getElements <em>Elements</em>}' containment reference.
@@ -111,7 +111,7 @@ public interface GameDescription extends EObject {
 	 * @see #getElements()
 	 * @generated
 	 */
-	void setElements(ElementTypes value);
+	void setElements(GameElementTypes value);
 
 	/**
 	 * Returns the value of the '<em><b>Abilities</b></em>' containment reference.

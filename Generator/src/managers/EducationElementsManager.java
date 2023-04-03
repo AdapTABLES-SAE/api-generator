@@ -1,7 +1,6 @@
 package managers;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,6 +11,7 @@ import generator.LearnerPlayer;
 import generator.LearningPath;
 import generator.Level;
 import generator.Objective;
+import generator.PropositionParam;
 import generator.QuestionedFact;
 import generator.ResultsByTask;
 import generator.impl.ResultsByTaskImpl;
@@ -182,11 +182,6 @@ public class EducationElementsManager {
 		modelAccess.saveContextModel();
 	}
 	
-	public void addFactToQuestion(ATask task, List<QuestionedFact> qEfacts) {
-		this.factsToQuestionPerRoom.add(new TaskFactPair(task, qEfacts));
-	}
-	
-	
 	/**
 	 * Create the order of training task rooms and pure game rooms of the dungeon
 	 */
@@ -198,9 +193,38 @@ public class EducationElementsManager {
 	}
 	
 	public void addFactToQuestion(ATask task, QuestionedFact qEfact) {
-		this.factsToQuestionPerRoom.add(new TaskFactPair(task, Arrays.asList(qEfact)));
+		int tfpIndex = containsTaskFactPairWith(task);
+		if(tfpIndex != -1) {
+			this.factsToQuestionPerRoom.get(tfpIndex).addFact(qEfact);
+		} else {
+			List<QuestionedFact> oneElementList = new ArrayList<>();
+			oneElementList.add(qEfact);
+			this.factsToQuestionPerRoom.add(new TaskFactPair(task, oneElementList));
+		}
 	}
 	
+	
+	private int containsTaskFactPairWith(ATask task) {
+		for (int i = 0; i < factsToQuestionPerRoom.size(); i++) {
+			if(factsToQuestionPerRoom.get(i).getTask().equals(task)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	public void printFactsToQuestion() {
+		for (TaskFactPair taskFactPair : factsToQuestionPerRoom) {
+			System.out.println(taskFactPair.getTask().getID()+" : ");
+			for (QuestionedFact qF : taskFactPair.getFacts()) {
+				System.out.print("\t Entries: "+qF.getEntrys()+" correctness2reach: "+qF.getCorrectnessToReach().getValue()+" Propositions:");
+				for (PropositionParam prop : qF.getPropositions()) {					
+					System.out.print(prop.getValue()+ " " + prop.getState().getValue()+"|");
+				}
+				System.out.println();
+			}
+		}
+	}
 	
 	@Override
 	public String toString() {

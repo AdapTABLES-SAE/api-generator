@@ -12,6 +12,7 @@ package generator;
  * </p>
  * <ul>
  *   <li>{@link generator.IdentificationTask#getType <em>Type</em>}</li>
+ *   <li>{@link generator.IdentificationTask#isCheckLearnerAction <em>Check Learner Action</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getIdentificationTask()
@@ -32,5 +33,28 @@ public interface IdentificationTask extends ATask {
 	 * @generated
 	 */
 	ETaskType getType();
+
+	/**
+	 * Returns the value of the '<em><b>Check Learner Action</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Check Learner Action</em>' attribute.
+	 * @see #setCheckLearnerAction(boolean)
+	 * @see generator.GeneratorPackage#getIdentificationTask_CheckLearnerAction()
+	 * @model default="true"
+	 * @generated
+	 */
+	boolean isCheckLearnerAction();
+
+	/**
+	 * Sets the value of the '{@link generator.IdentificationTask#isCheckLearnerAction <em>Check Learner Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Check Learner Action</em>' attribute.
+	 * @see #isCheckLearnerAction()
+	 * @generated
+	 */
+	void setCheckLearnerAction(boolean value);
 
 } // IdentificationTask

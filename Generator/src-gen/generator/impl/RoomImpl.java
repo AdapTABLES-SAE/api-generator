@@ -7,7 +7,6 @@ import generator.Gameplay;
 import generator.GeneratorPackage;
 import generator.PositionedElement;
 import generator.QuestionedFact;
-import generator.QuestionedFactStatement;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
@@ -42,7 +41,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.RoomImpl#getRoomtype <em>Roomtype</em>}</li>
  *   <li>{@link generator.impl.RoomImpl#getQuestionedFacts <em>Questioned Facts</em>}</li>
  *   <li>{@link generator.impl.RoomImpl#getTask <em>Task</em>}</li>
- *   <li>{@link generator.impl.RoomImpl#getStatements <em>Statements</em>}</li>
  *   <li>{@link generator.impl.RoomImpl#getPositionedElement <em>Positioned Element</em>}</li>
  *   <li>{@link generator.impl.RoomImpl#getGameplay <em>Gameplay</em>}</li>
  * </ul>
@@ -129,16 +127,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * @ordered
 	 */
 	protected ATask task;
-
-	/**
-	 * The cached value of the '{@link #getStatements() <em>Statements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStatements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<QuestionedFactStatement> statements;
 
 	/**
 	 * The cached value of the '{@link #getPositionedElement() <em>Positioned Element</em>}' containment reference list.
@@ -331,19 +319,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<QuestionedFactStatement> getStatements() {
-		if (statements == null) {
-			statements = new EObjectContainmentEList<QuestionedFactStatement>(QuestionedFactStatement.class, this,
-					GeneratorPackage.ROOM__STATEMENTS);
-		}
-		return statements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<PositionedElement> getPositionedElement() {
 		if (positionedElement == null) {
 			positionedElement = new EObjectContainmentEList<PositionedElement>(PositionedElement.class, this,
@@ -404,8 +379,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			return ((InternalEList<?>) getRoomaccess()).basicRemove(otherEnd, msgs);
 		case GeneratorPackage.ROOM__QUESTIONED_FACTS:
 			return ((InternalEList<?>) getQuestionedFacts()).basicRemove(otherEnd, msgs);
-		case GeneratorPackage.ROOM__STATEMENTS:
-			return ((InternalEList<?>) getStatements()).basicRemove(otherEnd, msgs);
 		case GeneratorPackage.ROOM__POSITIONED_ELEMENT:
 			return ((InternalEList<?>) getPositionedElement()).basicRemove(otherEnd, msgs);
 		}
@@ -436,8 +409,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			if (resolve)
 				return getTask();
 			return basicGetTask();
-		case GeneratorPackage.ROOM__STATEMENTS:
-			return getStatements();
 		case GeneratorPackage.ROOM__POSITIONED_ELEMENT:
 			return getPositionedElement();
 		case GeneratorPackage.ROOM__GAMEPLAY:
@@ -477,10 +448,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		case GeneratorPackage.ROOM__TASK:
 			setTask((ATask) newValue);
 			return;
-		case GeneratorPackage.ROOM__STATEMENTS:
-			getStatements().clear();
-			getStatements().addAll((Collection<? extends QuestionedFactStatement>) newValue);
-			return;
 		case GeneratorPackage.ROOM__POSITIONED_ELEMENT:
 			getPositionedElement().clear();
 			getPositionedElement().addAll((Collection<? extends PositionedElement>) newValue);
@@ -518,9 +485,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		case GeneratorPackage.ROOM__TASK:
 			setTask((ATask) null);
 			return;
-		case GeneratorPackage.ROOM__STATEMENTS:
-			getStatements().clear();
-			return;
 		case GeneratorPackage.ROOM__POSITIONED_ELEMENT:
 			getPositionedElement().clear();
 			return;
@@ -551,8 +515,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			return questionedFacts != null && !questionedFacts.isEmpty();
 		case GeneratorPackage.ROOM__TASK:
 			return task != null;
-		case GeneratorPackage.ROOM__STATEMENTS:
-			return statements != null && !statements.isEmpty();
 		case GeneratorPackage.ROOM__POSITIONED_ELEMENT:
 			return positionedElement != null && !positionedElement.isEmpty();
 		case GeneratorPackage.ROOM__GAMEPLAY:

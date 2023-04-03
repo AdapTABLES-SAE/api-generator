@@ -1,9 +1,9 @@
 package generators;
 
+import flattener.Main;
 import generator.Dungeon;
 import generator.LevelsDifficultyProgress;
 import generator.QuestionedFact;
-import generator.QuestionedFactStatement;
 import generator.Room;
 import generator.RoomAccess;
 import generator.impl.CurrentGameLevelImpl;
@@ -23,8 +23,8 @@ public class ALGAGenerator {
 		ALGAGenerator generator = new ALGAGenerator();
 		generator.generate();
 		generator.printDungeon();
-		//generator.saveDungeon("DungeonGen.xmi");
-		//Main.transformModel("outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
+		generator.saveDungeon("DungeonGen.xmi");
+		Main.transformModel("outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
 	}
 	
 	public ALGAGenerator() {
@@ -70,7 +70,7 @@ public class ALGAGenerator {
 			eeManager = eduGeneration.generateEE();
 			gameGeneration = new GameElementsGenerator(modelAccess.gameDescription, eeManager);
 			gameGeneration.generateGPandCurses();
-			this.geManager = gameGeneration.getGameElementManager(); // TODO : debug à remove
+			geManager = gameGeneration.getGameElementManager(); 
 			dungeonGeneration = new DungeonGenerator(modelAccess, eeManager, gameGeneration.getGameElementManager(), nbNQRooms+nbQRooms);
 			generatedDungeon = dungeonGeneration.generateDungeon();
 			generatedDungeon = gameGeneration.generateRoomContent(generatedDungeon);
@@ -96,12 +96,9 @@ public class ALGAGenerator {
 		if(r.getQuestionedFacts() != null && !r.getQuestionedFacts().isEmpty()) {
 			String facts = "{";
 			for (QuestionedFact qef : r.getQuestionedFacts()) {
-				facts += qef.getCompleteFact() + (r.getQuestionedFacts().get(r.getQuestionedFacts().size()-1).equals(qef)? "}":", ");
+				facts += qef.getQuestion().getValue() + (r.getQuestionedFacts().get(r.getQuestionedFacts().size()-1).equals(qef)? "}":", ");
 			}
 			System.out.println("\t Facts : "+facts);
-		}
-		for (QuestionedFactStatement statement : r.getStatements()) {
-			System.out.println("Statement : " + statement.getDisplay().getValue());
 		}
 		for (RoomAccess ra : r.getRoomaccess()) {
 			System.out.println("Access : "+ra.getDirection());
@@ -118,9 +115,8 @@ public class ALGAGenerator {
 		System.out.println("---- Dungeon -----");
 		System.out.println("Objective : "+generatedDungeon.getLearningobjective());
 		System.out.println("Level : "+generatedDungeon.getLevel());
-		int i = 0; 
 		System.out.println("Number of room without entry "+(generatedDungeon.getRooms().size()-1));
-		System.out.println("Number of gameplay selected "+ (geManager.size()));
+		//System.out.println("Number of gameplay selected "+ (geManager.size()));
 		for (Room r : generatedDungeon.getRooms()) {
 			printRoom(r);
 			

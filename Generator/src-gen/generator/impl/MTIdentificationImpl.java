@@ -162,4 +162,9 @@ public class MTIdentificationImpl extends IdentificationTaskImpl implements MTId
 		return result.toString();
 	}
 
+	@Override
+	public boolean validationOnLearnerAction() {
+		return checkLearnerAction;
+	}
+
 } //MTIdentificationImpl

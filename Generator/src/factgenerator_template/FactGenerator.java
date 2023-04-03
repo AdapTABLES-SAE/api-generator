@@ -27,7 +27,7 @@ public class FactGenerator {
 	}
 
 	private static void  generateQuestionableFactsByTask(EducationElementsManager eeManager, ResultsByTask resBytask) {  
-		TaskFactGeneratorTemplate factGenerator; 
+		FactGeneratorTemplate factGenerator; 
 		switch(resBytask.getTask().getType()) {
 		case COMPLETE1: 
 			factGenerator = new MTFactGeneratorCOMP1(eeManager);
@@ -49,7 +49,7 @@ public class FactGenerator {
 	}
 	
 	public static void generateQuestionedFact(EducationElementsManager eeManager, List<ResultsByTask> tasks) throws Exception {
-		TaskFactGeneratorTemplate factGenerator; 
+		FactGeneratorTemplate factGenerator = null; 
 		for (ResultsByTask aTask : tasks) {
 			switch(aTask.getTask().getType()) {
 			case COMPLETE1: 
@@ -68,7 +68,7 @@ public class FactGenerator {
 				factGenerator = new MTFactGeneratorMEMB(eeManager);
 				break;
 			}	
-			factGenerator.generateQuestionedFact(eeManager, aTask);
+			if(factGenerator != null) factGenerator.generateQuestionedFact(eeManager, aTask);
 		}
 	}
 }

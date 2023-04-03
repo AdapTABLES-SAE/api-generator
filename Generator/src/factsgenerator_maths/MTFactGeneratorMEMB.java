@@ -1,29 +1,30 @@
 package factsgenerator_maths;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+import java.util.stream.Collectors;
 
-import factgenerator_template.TaskFactGeneratorTemplate;
+import factgenerator_template.FactGeneratorTemplate;
 import generator.ATask;
 import generator.AbstractFact;
+import generator.ECorrectness;
 import generator.MTLevel;
 import generator.MTMembership;
 import generator.MTQFMembership;
-import generator.MTQeFMembership;
 import generator.MTResultFact;
 import generator.MultipleChoice;
 import generator.QuestionableFact;
-import generator.QuestionedFact;
 import generator.SetOfFacts;
 import generator.impl.MTQFMembershipImpl;
-import generator.impl.MTQeFMembershipImpl;
 import managers.EducationElementsManager;
 import structures.Shuffle;
 
-public class MTFactGeneratorMEMB extends TaskFactGeneratorTemplate {
+public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 
 	public MTFactGeneratorMEMB(EducationElementsManager eeManager) {
 		super(eeManager);
@@ -82,39 +83,50 @@ public class MTFactGeneratorMEMB extends TaskFactGeneratorTemplate {
 		qf.setTable(facts.get(0).getTable());
 		return qf;
 	}
-	
-	@Override
-	protected QuestionedFact initializeQuestionedFact() {
-		return new MTQeFMembershipImpl();
-	}
 
 	@Override
-	protected void manageChoices(MultipleChoice mc, QuestionableFact qaf, QuestionedFact qef) {
-		MTQFMembership qfact = (MTQFMembership) qaf;
-		List<Integer> notAllowed = new ArrayList<>();
-		for (int i = 0; i < 12; i++) {
-			notAllowed.add(qfact.getTable() * i);
+	protected List<String> getListOfGoodSolutions(QuestionableFact qFact) {
+		List<String> solutions = new ArrayList<>();
+		for (Integer prop : ((MTQFMembership) qFact).getGoodResults()) {
+			solutions.add(prop+"");
+		}
+		return solutions;
+	}
+
+
+	@Override
+	protected Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact) {
+		Map<ECorrectness, List<String>> propositions = new HashMap<>();
+		MTQFMembership qfact = (MTQFMembership) qFact;
+		List<Integer> notallowed = new ArrayList<>();
+		for (int i = 0; i < 13; i++) {
+			notallowed.add(qfact.getTable() * i);
 		}
 		
-		List<Integer> propositions = new ArrayList<>();
-		while(propositions.size() < mc.getNbBadChoices()) {
-			int number = new Random().nextInt(qfact.getTable() * 12) + 1;
-			if(!notAllowed.contains(number) && !propositions.contains(number)) {
-				propositions.add(number);
+		List<Integer> propositions_temp = new ArrayList<>();
+		while(propositions_temp.size() < mc.getNbBadChoices()) {
+			int number = qfact.getTable() == 1? new Random().nextInt(qfact.getTable() * 12) + 12
+					: new Random().nextInt(qfact.getTable() * 12) + 1;
+			if(!notallowed.contains(number) && !propositions_temp.contains(number)) {
+				propositions_temp.add(number);
 			}
 		}
-		((MTQeFMembership) qef).getBadPropositions().addAll(propositions);
+		
+		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
+		propositions.put(ECorrectness.INCORRECT, propositions_temp.stream().map(String::valueOf).collect(Collectors.toList()));
+		
+		return propositions;
 	}
 
 
 	@Override
-	protected Set<QuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
-		return null;
-	}
-
-	@Override
-	protected int correctnessToReach(ATask aTask) {
-		return ((MultipleChoice)((MTMembership) aTask).getResponseModality()).getNbChoices() - 
-				((MultipleChoice)((MTMembership) aTask).getResponseModality()).getNbBadChoices();
+	protected int correctnessToReach(ATask task) {
+		MultipleChoice mc =  (MultipleChoice)((MTMembership) task).getResponseModality();
+		return mc.getNbChoices() - mc.getNbBadChoices();
 	}	
+	
+	@Override
+	protected boolean isQuestionInteractive() {
+		return false;
+	}
 }

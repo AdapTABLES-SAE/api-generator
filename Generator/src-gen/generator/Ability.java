@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generator.Ability#getName <em>Name</em>}</li>
- *   <li>{@link generator.Ability#getCategory <em>Category</em>}</li>
+ *   <li>{@link generator.Ability#getNumberOfDisplays <em>Number Of Displays</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getAbility()
@@ -45,28 +45,33 @@ public interface Ability extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Category</b></em>' attribute.
-	 * The literals are from the enumeration {@link generator.ElementCategory}.
+	 * Returns the value of the '<em><b>Number Of Displays</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Category</em>' attribute.
-	 * @see generator.ElementCategory
-	 * @see #setCategory(ElementCategory)
-	 * @see generator.GeneratorPackage#getAbility_Category()
+	 * @return the value of the '<em>Number Of Displays</em>' attribute.
+	 * @see #setNumberOfDisplays(int)
+	 * @see generator.GeneratorPackage#getAbility_NumberOfDisplays()
 	 * @model
 	 * @generated
 	 */
-	ElementCategory getCategory();
+	int getNumberOfDisplays();
 
 	/**
-	 * Sets the value of the '{@link generator.Ability#getCategory <em>Category</em>}' attribute.
+	 * Sets the value of the '{@link generator.Ability#getNumberOfDisplays <em>Number Of Displays</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Category</em>' attribute.
-	 * @see generator.ElementCategory
-	 * @see #getCategory()
+	 * @param value the new value of the '<em>Number Of Displays</em>' attribute.
+	 * @see #getNumberOfDisplays()
 	 * @generated
 	 */
-	void setCategory(ElementCategory value);
+	void setNumberOfDisplays(int value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	boolean isElementDisplayable();
 
 } // Ability
