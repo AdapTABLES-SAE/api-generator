@@ -2,6 +2,8 @@
  */
 package generator;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Question Param</b></em>'.
@@ -12,6 +14,7 @@ package generator;
  * </p>
  * <ul>
  *   <li>{@link generator.QuestionParam#isInteractive <em>Interactive</em>}</li>
+ *   <li>{@link generator.QuestionParam#getSolutions <em>Solutions</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getQuestionParam()
@@ -41,4 +44,16 @@ public interface QuestionParam extends Parameter {
 	 * @generated
 	 */
 	void setInteractive(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Solutions</b></em>' containment reference list.
+	 * The list contents are of type {@link generator.FactSolutionParam}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Solutions</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getQuestionParam_Solutions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<FactSolutionParam> getSolutions();
 } // QuestionParam

@@ -457,11 +457,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter casePriority(Priority object) {
-			return createPriorityAdapter();
-		}
-
-		@Override
 		public Adapter caseExpectedAnswer(ExpectedAnswer object) {
 			return createExpectedAnswerAdapter();
 		}
@@ -479,6 +474,11 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter casePositionedStructureElement(PositionedStructureElement object) {
 			return createPositionedStructureElementAdapter();
+		}
+
+		@Override
+		public Adapter caseFactSolutionParam(FactSolutionParam object) {
+			return createFactSolutionParamAdapter();
 		}
 
 		@Override
@@ -1481,20 +1481,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.Priority <em>Priority</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.Priority
-	 * @generated
-	 */
-	public Adapter createPriorityAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link generator.ExpectedAnswer <em>Expected Answer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1547,6 +1533,20 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPositionedStructureElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.FactSolutionParam <em>Fact Solution Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.FactSolutionParam
+	 * @generated
+	 */
+	public Adapter createFactSolutionParamAdapter() {
 		return null;
 	}
 

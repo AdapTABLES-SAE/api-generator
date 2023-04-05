@@ -589,15 +589,6 @@ public interface GeneratorFactory extends EFactory {
 	WantedAnswersParam createWantedAnswersParam();
 
 	/**
-	 * Returns a new object of class '<em>Priority</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Priority</em>'.
-	 * @generated
-	 */
-	Priority createPriority();
-
-	/**
 	 * Returns a new object of class '<em>Expected Answer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -632,6 +623,15 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	PositionedStructureElement createPositionedStructureElement();
+
+	/**
+	 * Returns a new object of class '<em>Fact Solution Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fact Solution Param</em>'.
+	 * @generated
+	 */
+	FactSolutionParam createFactSolutionParam();
 
 	/**
 	 * Returns the package supported by this factory.

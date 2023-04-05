@@ -379,14 +379,15 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedElement/display"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedElement/elementType"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedElement/expectedAnswer"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedElement/priority"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedElement/fact"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedElement/acceptedFacts"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Parameter">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Parameter/value"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//QuestionParam">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionParam/interactive"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionParam/solutions"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//PropositionParam">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PropositionParam/state"/>
@@ -407,9 +408,7 @@
     <genClasses ecoreClass="generator.ecore#//Display">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Display/interactive"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//AComponent">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//AComponent/priority"/>
-    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//AComponent"/>
     <genClasses ecoreClass="generator.ecore#//Structure">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Structure/components"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Structure/structureType"/>
@@ -425,7 +424,6 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Quantity"/>
     <genClasses ecoreClass="generator.ecore#//WantedAnswersParam"/>
-    <genClasses ecoreClass="generator.ecore#//Priority"/>
     <genClasses ecoreClass="generator.ecore#//ExpectedAnswer"/>
     <genClasses ecoreClass="generator.ecore#//CorrectnessValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CorrectnessValue/value"/>
@@ -434,5 +432,6 @@
     <genClasses ecoreClass="generator.ecore#//PositionedStructureElement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedStructureElement/createdPosition"/>
     </genClasses>
+    <genClasses ecoreClass="generator.ecore#//FactSolutionParam"/>
   </genPackages>
 </genmodel:GenModel>

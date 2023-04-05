@@ -144,6 +144,20 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 	}	
 	
 	@Override
+	protected List<String> factSolutionsToString(QuestionableFact qFact) {
+		List<String> solutions = new ArrayList<>();
+		MTQFCompletion2 qfact = (MTQFCompletion2) qFact;
+		if(qfact.isResultOnRight()) {
+			solutions.add(qfact.getLeftOperand() + " x " + qfact.getRightOperand() + " = " + qfact.getResult());
+			solutions.add(qfact.getRightOperand() + " x " + qfact.getLeftOperand() + " = " + qfact.getResult());
+		} else {
+			solutions.add(qfact.getResult() + " = " + qfact.getLeftOperand() + " x " + qfact.getRightOperand());
+			solutions.add(qfact.getResult() + " = " + qfact.getRightOperand() + " x " + qfact.getLeftOperand());
+		}
+		return solutions;
+	}
+	
+	@Override
 	protected boolean isQuestionInteractive() {
 		return true;
 	}

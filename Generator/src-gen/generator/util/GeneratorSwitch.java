@@ -694,15 +694,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.PRIORITY: {
-			Priority priority = (Priority) theEObject;
-			T result = casePriority(priority);
-			if (result == null)
-				result = caseParameter(priority);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case GeneratorPackage.EXPECTED_ANSWER: {
 			ExpectedAnswer expectedAnswer = (ExpectedAnswer) theEObject;
 			T result = caseExpectedAnswer(expectedAnswer);
@@ -733,6 +724,15 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			T result = casePositionedStructureElement(positionedStructureElement);
 			if (result == null)
 				result = casePositionedElement(positionedStructureElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.FACT_SOLUTION_PARAM: {
+			FactSolutionParam factSolutionParam = (FactSolutionParam) theEObject;
+			T result = caseFactSolutionParam(factSolutionParam);
+			if (result == null)
+				result = caseParameter(factSolutionParam);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1793,21 +1793,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Priority</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Priority</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePriority(Priority object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Expected Answer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1864,6 +1849,21 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePositionedStructureElement(PositionedStructureElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Fact Solution Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Fact Solution Param</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFactSolutionParam(FactSolutionParam object) {
 		return null;
 	}
 

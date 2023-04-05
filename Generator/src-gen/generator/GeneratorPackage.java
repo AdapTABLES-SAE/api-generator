@@ -4678,22 +4678,22 @@ public interface GeneratorPackage extends EPackage {
 	int POSITIONED_ELEMENT__EXPECTED_ANSWER = 5;
 
 	/**
-	 * The feature id for the '<em><b>Priority</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITIONED_ELEMENT__PRIORITY = 6;
-
-	/**
 	 * The feature id for the '<em><b>Fact</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_ELEMENT__FACT = 7;
+	int POSITIONED_ELEMENT__FACT = 6;
+
+	/**
+	 * The feature id for the '<em><b>Accepted Facts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_ELEMENT__ACCEPTED_FACTS = 7;
 
 	/**
 	 * The number of structural features of the '<em>Positioned Element</em>' class.
@@ -4779,13 +4779,22 @@ public interface GeneratorPackage extends EPackage {
 	int QUESTION_PARAM__INTERACTIVE = PARAMETER_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Solutions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION_PARAM__SOLUTIONS = PARAMETER_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Question Param</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 1;
+	int QUESTION_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Question Param</em>' class.
@@ -4850,7 +4859,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAValue()
 	 * @generated
 	 */
-	int AVALUE = 81;
+	int AVALUE = 80;
 
 	/**
 	 * The number of structural features of the '<em>AValue</em>' class.
@@ -5102,22 +5111,13 @@ public interface GeneratorPackage extends EPackage {
 	int ACOMPONENT = 73;
 
 	/**
-	 * The feature id for the '<em><b>Priority</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACOMPONENT__PRIORITY = 0;
-
-	/**
 	 * The number of structural features of the '<em>AComponent</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACOMPONENT_FEATURE_COUNT = 1;
+	int ACOMPONENT_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>AComponent</em>' class.
@@ -5137,15 +5137,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	int STRUCTURE = 74;
-
-	/**
-	 * The feature id for the '<em><b>Priority</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRUCTURE__PRIORITY = ACOMPONENT__PRIORITY;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -5201,15 +5192,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	int COMPONENT = 75;
-
-	/**
-	 * The feature id for the '<em><b>Priority</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENT__PRIORITY = ACOMPONENT__PRIORITY;
 
 	/**
 	 * The feature id for the '<em><b>Element Type</b></em>' reference.
@@ -5358,43 +5340,6 @@ public interface GeneratorPackage extends EPackage {
 	int WANTED_ANSWERS_PARAM_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.PriorityImpl <em>Priority</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.PriorityImpl
-	 * @see generator.impl.GeneratorPackageImpl#getPriority()
-	 * @generated
-	 */
-	int PRIORITY = 78;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRIORITY__VALUE = PARAMETER__VALUE;
-
-	/**
-	 * The number of structural features of the '<em>Priority</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRIORITY_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Priority</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRIORITY_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.ExpectedAnswerImpl <em>Expected Answer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5402,7 +5347,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getExpectedAnswer()
 	 * @generated
 	 */
-	int EXPECTED_ANSWER = 79;
+	int EXPECTED_ANSWER = 78;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5439,7 +5384,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCorrectnessValue()
 	 * @generated
 	 */
-	int CORRECTNESS_VALUE = 80;
+	int CORRECTNESS_VALUE = 79;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -5476,7 +5421,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPositionedStructureElement()
 	 * @generated
 	 */
-	int POSITIONED_STRUCTURE_ELEMENT = 82;
+	int POSITIONED_STRUCTURE_ELEMENT = 81;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -5533,15 +5478,6 @@ public interface GeneratorPackage extends EPackage {
 	int POSITIONED_STRUCTURE_ELEMENT__EXPECTED_ANSWER = POSITIONED_ELEMENT__EXPECTED_ANSWER;
 
 	/**
-	 * The feature id for the '<em><b>Priority</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITIONED_STRUCTURE_ELEMENT__PRIORITY = POSITIONED_ELEMENT__PRIORITY;
-
-	/**
 	 * The feature id for the '<em><b>Fact</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5549,6 +5485,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int POSITIONED_STRUCTURE_ELEMENT__FACT = POSITIONED_ELEMENT__FACT;
+
+	/**
+	 * The feature id for the '<em><b>Accepted Facts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT__ACCEPTED_FACTS = POSITIONED_ELEMENT__ACCEPTED_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Created Position</b></em>' containment reference.
@@ -5576,6 +5521,43 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int POSITIONED_STRUCTURE_ELEMENT_OPERATION_COUNT = POSITIONED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.FactSolutionParamImpl <em>Fact Solution Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.FactSolutionParamImpl
+	 * @see generator.impl.GeneratorPackageImpl#getFactSolutionParam()
+	 * @generated
+	 */
+	int FACT_SOLUTION_PARAM = 82;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACT_SOLUTION_PARAM__VALUE = PARAMETER__VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Fact Solution Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACT_SOLUTION_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Fact Solution Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACT_SOLUTION_PARAM_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
@@ -8247,17 +8229,6 @@ public interface GeneratorPackage extends EPackage {
 	EReference getPositionedElement_ExpectedAnswer();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.PositionedElement#getPriority <em>Priority</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Priority</em>'.
-	 * @see generator.PositionedElement#getPriority()
-	 * @see #getPositionedElement()
-	 * @generated
-	 */
-	EReference getPositionedElement_Priority();
-
-	/**
 	 * Returns the meta object for the reference '{@link generator.PositionedElement#getFact <em>Fact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8267,6 +8238,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPositionedElement_Fact();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.PositionedElement#getAcceptedFacts <em>Accepted Facts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Accepted Facts</em>'.
+	 * @see generator.PositionedElement#getAcceptedFacts()
+	 * @see #getPositionedElement()
+	 * @generated
+	 */
+	EReference getPositionedElement_AcceptedFacts();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Parameter <em>Parameter</em>}'.
@@ -8309,6 +8291,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getQuestionParam_Interactive();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.QuestionParam#getSolutions <em>Solutions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Solutions</em>'.
+	 * @see generator.QuestionParam#getSolutions()
+	 * @see #getQuestionParam()
+	 * @generated
+	 */
+	EReference getQuestionParam_Solutions();
 
 	/**
 	 * Returns the meta object for class '{@link generator.PropositionParam <em>Proposition Param</em>}'.
@@ -8468,17 +8461,6 @@ public interface GeneratorPackage extends EPackage {
 	EClass getAComponent();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.AComponent#getPriority <em>Priority</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Priority</em>'.
-	 * @see generator.AComponent#getPriority()
-	 * @see #getAComponent()
-	 * @generated
-	 */
-	EReference getAComponent_Priority();
-
-	/**
 	 * Returns the meta object for class '{@link generator.Structure <em>Structure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8618,16 +8600,6 @@ public interface GeneratorPackage extends EPackage {
 	EClass getWantedAnswersParam();
 
 	/**
-	 * Returns the meta object for class '{@link generator.Priority <em>Priority</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Priority</em>'.
-	 * @see generator.Priority
-	 * @generated
-	 */
-	EClass getPriority();
-
-	/**
 	 * Returns the meta object for class '{@link generator.ExpectedAnswer <em>Expected Answer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8688,6 +8660,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPositionedStructureElement_CreatedPosition();
+
+	/**
+	 * Returns the meta object for class '{@link generator.FactSolutionParam <em>Fact Solution Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fact Solution Param</em>'.
+	 * @see generator.FactSolutionParam
+	 * @generated
+	 */
+	EClass getFactSolutionParam();
 
 	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
@@ -10868,20 +10850,20 @@ public interface GeneratorPackage extends EPackage {
 		EReference POSITIONED_ELEMENT__EXPECTED_ANSWER = eINSTANCE.getPositionedElement_ExpectedAnswer();
 
 		/**
-		 * The meta object literal for the '<em><b>Priority</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference POSITIONED_ELEMENT__PRIORITY = eINSTANCE.getPositionedElement_Priority();
-
-		/**
 		 * The meta object literal for the '<em><b>Fact</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference POSITIONED_ELEMENT__FACT = eINSTANCE.getPositionedElement_Fact();
+
+		/**
+		 * The meta object literal for the '<em><b>Accepted Facts</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POSITIONED_ELEMENT__ACCEPTED_FACTS = eINSTANCE.getPositionedElement_AcceptedFacts();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ParameterImpl <em>Parameter</em>}' class.
@@ -10918,6 +10900,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute QUESTION_PARAM__INTERACTIVE = eINSTANCE.getQuestionParam_Interactive();
+
+		/**
+		 * The meta object literal for the '<em><b>Solutions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QUESTION_PARAM__SOLUTIONS = eINSTANCE.getQuestionParam_Solutions();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.PropositionParamImpl <em>Proposition Param</em>}' class.
@@ -11056,14 +11046,6 @@ public interface GeneratorPackage extends EPackage {
 		EClass ACOMPONENT = eINSTANCE.getAComponent();
 
 		/**
-		 * The meta object literal for the '<em><b>Priority</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACOMPONENT__PRIORITY = eINSTANCE.getAComponent_Priority();
-
-		/**
 		 * The meta object literal for the '{@link generator.impl.StructureImpl <em>Structure</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11176,16 +11158,6 @@ public interface GeneratorPackage extends EPackage {
 		EClass WANTED_ANSWERS_PARAM = eINSTANCE.getWantedAnswersParam();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.PriorityImpl <em>Priority</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.PriorityImpl
-		 * @see generator.impl.GeneratorPackageImpl#getPriority()
-		 * @generated
-		 */
-		EClass PRIORITY = eINSTANCE.getPriority();
-
-		/**
 		 * The meta object literal for the '{@link generator.impl.ExpectedAnswerImpl <em>Expected Answer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11241,6 +11213,16 @@ public interface GeneratorPackage extends EPackage {
 		 */
 		EReference POSITIONED_STRUCTURE_ELEMENT__CREATED_POSITION = eINSTANCE
 				.getPositionedStructureElement_CreatedPosition();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.FactSolutionParamImpl <em>Fact Solution Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.FactSolutionParamImpl
+		 * @see generator.impl.GeneratorPackageImpl#getFactSolutionParam()
+		 * @generated
+		 */
+		EClass FACT_SOLUTION_PARAM = eINSTANCE.getFactSolutionParam();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.

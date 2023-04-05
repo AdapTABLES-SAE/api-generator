@@ -2,6 +2,7 @@
  */
 package generator;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -19,8 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.PositionedElement#getDisplay <em>Display</em>}</li>
  *   <li>{@link generator.PositionedElement#getElementType <em>Element Type</em>}</li>
  *   <li>{@link generator.PositionedElement#getExpectedAnswer <em>Expected Answer</em>}</li>
- *   <li>{@link generator.PositionedElement#getPriority <em>Priority</em>}</li>
  *   <li>{@link generator.PositionedElement#getFact <em>Fact</em>}</li>
+ *   <li>{@link generator.PositionedElement#getAcceptedFacts <em>Accepted Facts</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getPositionedElement()
@@ -161,28 +162,6 @@ public interface PositionedElement extends EObject {
 	void setExpectedAnswer(ExpectedAnswer value);
 
 	/**
-	 * Returns the value of the '<em><b>Priority</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Priority</em>' containment reference.
-	 * @see #setPriority(Priority)
-	 * @see generator.GeneratorPackage#getPositionedElement_Priority()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Priority getPriority();
-
-	/**
-	 * Sets the value of the '{@link generator.PositionedElement#getPriority <em>Priority</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Priority</em>' containment reference.
-	 * @see #getPriority()
-	 * @generated
-	 */
-	void setPriority(Priority value);
-
-	/**
 	 * Returns the value of the '<em><b>Fact</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -203,5 +182,17 @@ public interface PositionedElement extends EObject {
 	 * @generated
 	 */
 	void setFact(QuestionedFact value);
+
+	/**
+	 * Returns the value of the '<em><b>Accepted Facts</b></em>' containment reference list.
+	 * The list contents are of type {@link generator.FactSolutionParam}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Accepted Facts</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getPositionedElement_AcceptedFacts()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<FactSolutionParam> getAcceptedFacts();
 
 } // PositionedElement

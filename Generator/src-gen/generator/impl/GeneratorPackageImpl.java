@@ -33,6 +33,7 @@ import generator.EntrySoluceParam;
 import generator.Equipment;
 import generator.Equipments;
 import generator.ExpectedAnswer;
+import generator.FactSolutionParam;
 import generator.GPCategory;
 import generator.GPElementType;
 import generator.GPElementsTypes;
@@ -73,7 +74,6 @@ import generator.Position;
 import generator.PositionedElement;
 import generator.PositionedStructureElement;
 import generator.Prerequisite;
-import generator.Priority;
 import generator.Progression;
 import generator.PropositionParam;
 import generator.Quantity;
@@ -612,13 +612,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass priorityEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass expectedAnswerEClass = null;
 
 	/**
@@ -641,6 +634,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass positionedStructureElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass factSolutionParamEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2978,7 +2978,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionedElement_Priority() {
+	public EReference getPositionedElement_Fact() {
 		return (EReference) positionedElementEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -2987,7 +2987,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionedElement_Fact() {
+	public EReference getPositionedElement_AcceptedFacts() {
 		return (EReference) positionedElementEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -3034,15 +3034,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EClass getAComponent() {
 		return aComponentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAComponent_Priority() {
-		return (EReference) aComponentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3167,15 +3158,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPriority() {
-		return priorityEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getExpectedAnswer() {
 		return expectedAnswerEClass;
 	}
@@ -3230,6 +3212,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFactSolutionParam() {
+		return factSolutionParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCorrectness() {
 		return correctnessEClass;
 	}
@@ -3268,6 +3259,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getQuestionParam_Interactive() {
 		return (EAttribute) questionParamEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQuestionParam_Solutions() {
+		return (EReference) questionParamEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3807,14 +3807,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__DISPLAY);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__ELEMENT_TYPE);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__EXPECTED_ANSWER);
-		createEReference(positionedElementEClass, POSITIONED_ELEMENT__PRIORITY);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__FACT);
+		createEReference(positionedElementEClass, POSITIONED_ELEMENT__ACCEPTED_FACTS);
 
 		parameterEClass = createEClass(PARAMETER);
 		createEReference(parameterEClass, PARAMETER__VALUE);
 
 		questionParamEClass = createEClass(QUESTION_PARAM);
 		createEAttribute(questionParamEClass, QUESTION_PARAM__INTERACTIVE);
+		createEReference(questionParamEClass, QUESTION_PARAM__SOLUTIONS);
 
 		propositionParamEClass = createEClass(PROPOSITION_PARAM);
 		createEReference(propositionParamEClass, PROPOSITION_PARAM__STATE);
@@ -3838,7 +3839,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(displayEClass, DISPLAY__INTERACTIVE);
 
 		aComponentEClass = createEClass(ACOMPONENT);
-		createEReference(aComponentEClass, ACOMPONENT__PRIORITY);
 
 		structureEClass = createEClass(STRUCTURE);
 		createEReference(structureEClass, STRUCTURE__COMPONENTS);
@@ -3857,8 +3857,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		wantedAnswersParamEClass = createEClass(WANTED_ANSWERS_PARAM);
 
-		priorityEClass = createEClass(PRIORITY);
-
 		expectedAnswerEClass = createEClass(EXPECTED_ANSWER);
 
 		correctnessValueEClass = createEClass(CORRECTNESS_VALUE);
@@ -3868,6 +3866,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		positionedStructureElementEClass = createEClass(POSITIONED_STRUCTURE_ELEMENT);
 		createEReference(positionedStructureElementEClass, POSITIONED_STRUCTURE_ELEMENT__CREATED_POSITION);
+
+		factSolutionParamEClass = createEClass(FACT_SOLUTION_PARAM);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -3953,10 +3953,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		componentEClass.getESuperTypes().add(this.getAComponent());
 		quantityEClass.getESuperTypes().add(this.getParameter());
 		wantedAnswersParamEClass.getESuperTypes().add(this.getParameter());
-		priorityEClass.getESuperTypes().add(this.getParameter());
 		expectedAnswerEClass.getESuperTypes().add(this.getParameter());
 		correctnessValueEClass.getESuperTypes().add(this.getAValue());
 		positionedStructureElementEClass.getESuperTypes().add(this.getPositionedElement());
+		factSolutionParamEClass.getESuperTypes().add(this.getParameter());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -4519,7 +4519,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(elementTypeEClass, ElementType.class, "ElementType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getElementType_Ability(), this.getAbility(), null, "ability", null, 1, 1, ElementType.class,
+		initEReference(getElementType_Ability(), this.getAbility(), null, "ability", null, 0, 1, ElementType.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -4614,12 +4614,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getPositionedElement_ExpectedAnswer(), this.getExpectedAnswer(), null, "expectedAnswer", null, 0,
 				1, PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPositionedElement_Priority(), this.getPriority(), null, "priority", null, 0, 1,
-				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPositionedElement_Fact(), this.getQuestionedFact(), null, "fact", null, 0, 1,
 				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPositionedElement_AcceptedFacts(), this.getFactSolutionParam(), null, "acceptedFacts", null,
+				0, -1, PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parameterEClass, Parameter.class, "Parameter", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4632,6 +4632,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getQuestionParam_Interactive(), ecorePackage.getEBoolean(), "interactive", null, 0, 1,
 				QuestionParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getQuestionParam_Solutions(), this.getFactSolutionParam(), null, "solutions", null, 0, -1,
+				QuestionParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(propositionParamEClass, PropositionParam.class, "PropositionParam", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4669,9 +4672,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(aComponentEClass, AComponent.class, "AComponent", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAComponent_Priority(), this.getPriority(), null, "priority", null, 0, 1, AComponent.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(structureEClass, Structure.class, "Structure", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4712,9 +4712,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(wantedAnswersParamEClass, WantedAnswersParam.class, "WantedAnswersParam", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(priorityEClass, Priority.class, "Priority", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(expectedAnswerEClass, ExpectedAnswer.class, "ExpectedAnswer", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
@@ -4730,6 +4727,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getPositionedStructureElement_CreatedPosition(), this.getAPosition(), null, "createdPosition",
 				null, 0, 1, PositionedStructureElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(factSolutionParamEClass, FactSolutionParam.class, "FactSolutionParam", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

@@ -15,6 +15,7 @@ import generator.CorrectnessValue;
 import generator.ECorrectness;
 import generator.EnterResponse;
 import generator.EntrySoluceParam;
+import generator.FactSolutionParam;
 import generator.MultipleChoice;
 import generator.PropositionParam;
 import generator.QuestionParam;
@@ -27,6 +28,7 @@ import generator.WantedAnswersParam;
 import generator.impl.CorrectnessImpl;
 import generator.impl.CorrectnessValueImpl;
 import generator.impl.EntrySoluceParamImpl;
+import generator.impl.FactSolutionParamImpl;
 import generator.impl.PropositionParamImpl;
 import generator.impl.QuestionParamImpl;
 import generator.impl.QuestionedFactImpl;
@@ -102,6 +104,7 @@ public abstract class FactGeneratorTemplate {
 		value.setValue(qFact.getQuestionableFact());
 		question.setValue(value);
 		question.setInteractive(isQuestionInteractive());
+		question.getSolutions().addAll(fullFactsSolution(qFact));
 		qef.setQuestion(question);
 		
 		WantedAnswersParam correctness = new WantedAnswersParamImpl();
@@ -114,6 +117,25 @@ public abstract class FactGeneratorTemplate {
 		qef.setLearnerValidation(task.validationOnLearnerAction());
 		
 		eeManager.addFactToQuestion(task, qef); 
+	}
+	
+	private List<FactSolutionParam> fullFactsSolution(QuestionableFact qFact){
+		List<String> stringSolutions = factSolutionsToString(qFact);
+		List<FactSolutionParam> solutions = new ArrayList<>();
+		if(!stringSolutions.isEmpty()) {
+			for (String sol : stringSolutions) {
+				FactSolutionParam factSol = new FactSolutionParamImpl();
+				Value solValue = new ValueImpl();
+				solValue.setValue(sol);
+				factSol.setValue(solValue);
+				solutions.add(factSol);
+			}
+		}		
+		return solutions;
+	}
+	
+	protected List<String> factSolutionsToString(QuestionableFact qFact){
+		return new ArrayList<>();
 	}
 	
 	protected abstract List<String> getListOfGoodSolutions(QuestionableFact qFact);

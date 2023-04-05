@@ -469,9 +469,9 @@
         eType="#//GPElementType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expectedAnswer" eType="#//ExpectedAnswer"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="priority" eType="#//Priority"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fact" eType="#//QuestionedFact"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="acceptedFacts" upperBound="-1"
+        eType="#//FactSolutionParam" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GPCategory">
     <eLiterals name="SELECT_UNIQUE"/>
@@ -484,6 +484,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QuestionParam" eSuperTypes="#//Parameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interactive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="solutions" upperBound="-1"
+        eType="#//FactSolutionParam" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PropositionParam" eSuperTypes="#//Parameter">
     <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//Correctness"
@@ -513,10 +515,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Display" eSuperTypes="#//Parameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interactive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AComponent" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="priority" eType="#//Priority"
-        containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AComponent" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Structure" eSuperTypes="#//AComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
         eType="#//AComponent" containment="true"/>
@@ -539,7 +538,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Quantity" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="WantedAnswersParam" eSuperTypes="#//Parameter"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Priority" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExpectedAnswer" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="CorrectnessValue" eSuperTypes="#//AValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//ECorrectness"/>
@@ -549,4 +547,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="createdPosition" eType="#//APosition"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FactSolutionParam" eSuperTypes="#//Parameter"/>
 </ecore:EPackage>

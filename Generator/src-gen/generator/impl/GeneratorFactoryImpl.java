@@ -183,8 +183,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createQuantity();
 		case GeneratorPackage.WANTED_ANSWERS_PARAM:
 			return createWantedAnswersParam();
-		case GeneratorPackage.PRIORITY:
-			return createPriority();
 		case GeneratorPackage.EXPECTED_ANSWER:
 			return createExpectedAnswer();
 		case GeneratorPackage.CORRECTNESS_VALUE:
@@ -193,6 +191,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createAValue();
 		case GeneratorPackage.POSITIONED_STRUCTURE_ELEMENT:
 			return createPositionedStructureElement();
+		case GeneratorPackage.FACT_SOLUTION_PARAM:
+			return createFactSolutionParam();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -847,16 +847,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Priority createPriority() {
-		PriorityImpl priority = new PriorityImpl();
-		return priority;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ExpectedAnswer createExpectedAnswer() {
 		ExpectedAnswerImpl expectedAnswer = new ExpectedAnswerImpl();
 		return expectedAnswer;
@@ -890,6 +880,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public PositionedStructureElement createPositionedStructureElement() {
 		PositionedStructureElementImpl positionedStructureElement = new PositionedStructureElementImpl();
 		return positionedStructureElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactSolutionParam createFactSolutionParam() {
+		FactSolutionParamImpl factSolutionParam = new FactSolutionParamImpl();
+		return factSolutionParam;
 	}
 
 	/**

@@ -6,18 +6,22 @@ import generator.APosition;
 import generator.Correctness;
 import generator.Display;
 import generator.ExpectedAnswer;
+import generator.FactSolutionParam;
 import generator.GPElementType;
 import generator.GeneratorPackage;
 import generator.PositionedElement;
-import generator.Priority;
 import generator.QuestionedFact;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,8 +37,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link generator.impl.PositionedElementImpl#getDisplay <em>Display</em>}</li>
  *   <li>{@link generator.impl.PositionedElementImpl#getElementType <em>Element Type</em>}</li>
  *   <li>{@link generator.impl.PositionedElementImpl#getExpectedAnswer <em>Expected Answer</em>}</li>
- *   <li>{@link generator.impl.PositionedElementImpl#getPriority <em>Priority</em>}</li>
  *   <li>{@link generator.impl.PositionedElementImpl#getFact <em>Fact</em>}</li>
+ *   <li>{@link generator.impl.PositionedElementImpl#getAcceptedFacts <em>Accepted Facts</em>}</li>
  * </ul>
  *
  * @generated
@@ -111,16 +115,6 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	protected ExpectedAnswer expectedAnswer;
 
 	/**
-	 * The cached value of the '{@link #getPriority() <em>Priority</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPriority()
-	 * @generated
-	 * @ordered
-	 */
-	protected Priority priority;
-
-	/**
 	 * The cached value of the '{@link #getFact() <em>Fact</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,6 +123,16 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected QuestionedFact fact;
+
+	/**
+	 * The cached value of the '{@link #getAcceptedFacts() <em>Accepted Facts</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAcceptedFacts()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FactSolutionParam> acceptedFacts;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -315,56 +319,6 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Priority getPriority() {
-		return priority;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetPriority(Priority newPriority, NotificationChain msgs) {
-		Priority oldPriority = priority;
-		priority = newPriority;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.POSITIONED_ELEMENT__PRIORITY, oldPriority, newPriority);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPriority(Priority newPriority) {
-		if (newPriority != priority) {
-			NotificationChain msgs = null;
-			if (priority != null)
-				msgs = ((InternalEObject) priority).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.POSITIONED_ELEMENT__PRIORITY, null, msgs);
-			if (newPriority != null)
-				msgs = ((InternalEObject) newPriority).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.POSITIONED_ELEMENT__PRIORITY, null, msgs);
-			msgs = basicSetPriority(newPriority, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__PRIORITY,
-					newPriority, newPriority));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public QuestionedFact getFact() {
 		if (fact != null && fact.eIsProxy()) {
 			InternalEObject oldFact = (InternalEObject) fact;
@@ -398,6 +352,19 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__FACT, oldFact,
 					fact));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<FactSolutionParam> getAcceptedFacts() {
+		if (acceptedFacts == null) {
+			acceptedFacts = new EObjectContainmentEList<FactSolutionParam>(FactSolutionParam.class, this,
+					GeneratorPackage.POSITIONED_ELEMENT__ACCEPTED_FACTS);
+		}
+		return acceptedFacts;
 	}
 
 	/**
@@ -504,8 +471,8 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 			return basicSetDisplay(null, msgs);
 		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
 			return basicSetExpectedAnswer(null, msgs);
-		case GeneratorPackage.POSITIONED_ELEMENT__PRIORITY:
-			return basicSetPriority(null, msgs);
+		case GeneratorPackage.POSITIONED_ELEMENT__ACCEPTED_FACTS:
+			return ((InternalEList<?>) getAcceptedFacts()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -534,12 +501,12 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 			return basicGetElementType();
 		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
 			return getExpectedAnswer();
-		case GeneratorPackage.POSITIONED_ELEMENT__PRIORITY:
-			return getPriority();
 		case GeneratorPackage.POSITIONED_ELEMENT__FACT:
 			if (resolve)
 				return getFact();
 			return basicGetFact();
+		case GeneratorPackage.POSITIONED_ELEMENT__ACCEPTED_FACTS:
+			return getAcceptedFacts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -571,11 +538,12 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
 			setExpectedAnswer((ExpectedAnswer) newValue);
 			return;
-		case GeneratorPackage.POSITIONED_ELEMENT__PRIORITY:
-			setPriority((Priority) newValue);
-			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__FACT:
 			setFact((QuestionedFact) newValue);
+			return;
+		case GeneratorPackage.POSITIONED_ELEMENT__ACCEPTED_FACTS:
+			getAcceptedFacts().clear();
+			getAcceptedFacts().addAll((Collection<? extends FactSolutionParam>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -607,11 +575,11 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
 			setExpectedAnswer((ExpectedAnswer) null);
 			return;
-		case GeneratorPackage.POSITIONED_ELEMENT__PRIORITY:
-			setPriority((Priority) null);
-			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__FACT:
 			setFact((QuestionedFact) null);
+			return;
+		case GeneratorPackage.POSITIONED_ELEMENT__ACCEPTED_FACTS:
+			getAcceptedFacts().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -637,10 +605,10 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 			return elementType != null;
 		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
 			return expectedAnswer != null;
-		case GeneratorPackage.POSITIONED_ELEMENT__PRIORITY:
-			return priority != null;
 		case GeneratorPackage.POSITIONED_ELEMENT__FACT:
 			return fact != null;
+		case GeneratorPackage.POSITIONED_ELEMENT__ACCEPTED_FACTS:
+			return acceptedFacts != null && !acceptedFacts.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

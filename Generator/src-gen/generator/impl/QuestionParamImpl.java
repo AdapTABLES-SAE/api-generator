@@ -2,12 +2,19 @@
  */
 package generator.impl;
 
+import generator.FactSolutionParam;
 import generator.GeneratorPackage;
 import generator.QuestionParam;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.QuestionParamImpl#isInteractive <em>Interactive</em>}</li>
+ *   <li>{@link generator.impl.QuestionParamImpl#getSolutions <em>Solutions</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,6 +49,16 @@ public class QuestionParamImpl extends ParameterImpl implements QuestionParam {
 	 * @ordered
 	 */
 	protected boolean interactive = INTERACTIVE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getSolutions() <em>Solutions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSolutions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FactSolutionParam> solutions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -88,11 +106,40 @@ public class QuestionParamImpl extends ParameterImpl implements QuestionParam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<FactSolutionParam> getSolutions() {
+		if (solutions == null) {
+			solutions = new EObjectContainmentEList<FactSolutionParam>(FactSolutionParam.class, this,
+					GeneratorPackage.QUESTION_PARAM__SOLUTIONS);
+		}
+		return solutions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case GeneratorPackage.QUESTION_PARAM__SOLUTIONS:
+			return ((InternalEList<?>) getSolutions()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case GeneratorPackage.QUESTION_PARAM__INTERACTIVE:
 			return isInteractive();
+		case GeneratorPackage.QUESTION_PARAM__SOLUTIONS:
+			return getSolutions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -102,11 +149,16 @@ public class QuestionParamImpl extends ParameterImpl implements QuestionParam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case GeneratorPackage.QUESTION_PARAM__INTERACTIVE:
 			setInteractive((Boolean) newValue);
+			return;
+		case GeneratorPackage.QUESTION_PARAM__SOLUTIONS:
+			getSolutions().clear();
+			getSolutions().addAll((Collection<? extends FactSolutionParam>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,6 +175,9 @@ public class QuestionParamImpl extends ParameterImpl implements QuestionParam {
 		case GeneratorPackage.QUESTION_PARAM__INTERACTIVE:
 			setInteractive(INTERACTIVE_EDEFAULT);
 			return;
+		case GeneratorPackage.QUESTION_PARAM__SOLUTIONS:
+			getSolutions().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -137,6 +192,8 @@ public class QuestionParamImpl extends ParameterImpl implements QuestionParam {
 		switch (featureID) {
 		case GeneratorPackage.QUESTION_PARAM__INTERACTIVE:
 			return interactive != INTERACTIVE_EDEFAULT;
+		case GeneratorPackage.QUESTION_PARAM__SOLUTIONS:
+			return solutions != null && !solutions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

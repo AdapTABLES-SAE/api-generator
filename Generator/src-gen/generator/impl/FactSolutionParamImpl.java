@@ -2,25 +2,25 @@
  */
 package generator.impl;
 
+import generator.FactSolutionParam;
 import generator.GeneratorPackage;
-import generator.Priority;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Priority</b></em>'.
+ * An implementation of the model object '<em><b>Fact Solution Param</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class PriorityImpl extends ParameterImpl implements Priority {
+public class FactSolutionParamImpl extends ParameterImpl implements FactSolutionParam {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PriorityImpl() {
+	public FactSolutionParamImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class PriorityImpl extends ParameterImpl implements Priority {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.PRIORITY;
+		return GeneratorPackage.Literals.FACT_SOLUTION_PARAM;
 	}
 
-} //PriorityImpl
+} //FactSolutionParamImpl

@@ -13,6 +13,7 @@ import generator.Display;
 import generator.ECorrectness;
 import generator.ElementType;
 import generator.ExpectedAnswer;
+import generator.FactSolutionParam;
 import generator.GPElementType;
 import generator.Gameplay;
 import generator.PositionedElement;
@@ -26,6 +27,7 @@ import generator.impl.CorrectnessImpl;
 import generator.impl.CorrectnessValueImpl;
 import generator.impl.DisplayImpl;
 import generator.impl.ExpectedAnswerImpl;
+import generator.impl.FactSolutionParamImpl;
 import generator.impl.PositionImpl;
 import generator.impl.PositionedElementImpl;
 import generator.impl.PositionedStructureElementImpl;
@@ -123,7 +125,6 @@ public class GameplayGenerator {
 		comp.setElementType(component.getElementType());
 		comp.setPosition(position);
 		comp.setID("ELEM" + nbPositionedElement++);
-		comp.setPriority(component.getPriority());
 		comp.setFact(fact);
 		
 		if(component.isInputEntry()) {
@@ -143,6 +144,16 @@ public class GameplayGenerator {
 			statement.setValue(display);
 			statement.setInteractive(fact.getQuestion().isInteractive());
 			comp.setDisplay(statement);			
+			
+			if(!fact.getQuestion().getSolutions().isEmpty()) {
+				for (FactSolutionParam factSol: fact.getQuestion().getSolutions()) {
+					FactSolutionParam sol = new FactSolutionParamImpl();
+					Value solValue = new ValueImpl();
+					solValue.setValue(((Value) factSol.getValue()).getValue());
+					sol.setValue(solValue);
+					comp.getAcceptedFacts().add(sol);
+				}
+			}
 		}
 		
 		if(component.isWearChoices()) {
@@ -253,17 +264,22 @@ public class GameplayGenerator {
 				struct = buildStructure(comp, positionFromParent);
 				elements.add(struct);
 				for (AComponent aComp : comp.getComponents()) {
-					elements.addAll(buildStructureHierarchy(aComp, struct.getCreatedPosition(), elements, facts, roomtype, hasIntegratedChoices, factIndex, propositionIndex));
+					elements.addAll(buildStructureHierarchy(aComp, struct.getCreatedPosition(), elements, facts, roomtype, hasIntegratedChoices, /*factIndex*/ -1, propositionIndex));
 				}
 			}			
 		} else {
 			//System.out.println("\tComp is component with pos to parent "+positionFromParent);
 			Component comp = (Component) component;
-			if(comp.isWearChoices()) {
-				elements.add(buildComponent(comp, facts.get(factIndex), propositionIndex, positionFromParent, hasIntegratedChoices));
+			if(factIndex != -1) {
+				if(comp.isWearChoices()) {
+					elements.add(buildComponent(comp, facts.get(factIndex), propositionIndex, positionFromParent, hasIntegratedChoices));
+				} else {
+					elements.add(buildComponent(comp, facts.get(factIndex), positionFromParent));
+				}
 			} else {
-				elements.add(buildComponent(comp, facts.get(factIndex), positionFromParent));
+				elements.add(buildComponent(comp, positionFromParent));
 			}
+
 		}
 		
 		return elements;

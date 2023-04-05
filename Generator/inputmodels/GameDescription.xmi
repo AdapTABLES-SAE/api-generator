@@ -44,7 +44,6 @@
           ID="POS7"/>
       <elementPositions
           size="LARGE"
-          restrictedTo="DISPLAY"
           ID="POSQ1"/>
       <directions>SOUTH</directions>
       <directions>EAST</directions>
@@ -66,7 +65,7 @@
           elementType="ELEM_TYPE3_SWITCH"/>
       <components
           xsi:type="generator:Component"
-          elementType="ELEM_TYPE4_DISPLAY"
+          elementType="ELEM_TYPE4_STATEMENT_DISPLAY"
           wearStatement="true"/>
     </gameplays>
     <gameplays
@@ -140,6 +139,10 @@
           xsi:type="generator:Component"
           elementType="ELEM_TYPE2_KEYBOARD"
           inputEntry="true"/>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEM_TYPE4_STATEMENT_DISPLAY"
+          wearStatement="true"/>
     </gameplays>
     <gameplays
         name="SELECT MULTIPLE BIS"
@@ -233,8 +236,12 @@
           xsi:type="generator:ElementType"
           size="LARGE"
           ID="ELEM_TYPE4_DISPLAY"
-          type="Info"
-          ability="DISPLAY"/>
+          type="Info"/>
+      <elements
+          xsi:type="generator:ElementType"
+          size="LARGE"
+          ID="ELEM_TYPE4_STATEMENT_DISPLAY"
+          type="Statement"/>
     </gpElements>
   </elements>
   <abilities>
@@ -245,9 +252,6 @@
         name="TYPABLE"/>
     <abilities
         name="VERIFICATOR"/>
-    <abilities
-        name="DISPLAY"
-        numberOfDisplays="1"/>
     <abilities
         name="ROTABLE"
         numberOfDisplays="4"/>

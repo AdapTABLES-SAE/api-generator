@@ -105,22 +105,32 @@ rule Room2Room
 	    }	       	
 }*/
 
+rule Structures2Elements 
+	transform element : IN!PositionedStructureElement
+	to elementOut : OUT!Element {
+	"\t\t\tStrucutres creation".println();
+	
+	elementOut.id = element.id;		
+	elementOut.pos = element.position.id;	
+	elementOut.type = element.elementType.type;
+}
+
 rule Elements2Elements 
 	transform element : IN!PositionedElement
 	to elementOut : OUT!Element {
 	"\t\t\tElements creation".println();
+		
 	elementOut.id = element.id;
 	
 	if(element.display.isDefined()){
 		elementOut.displayValue = element.display.value.value;
 	}
 	
+	elementOut.type = element.elementType.type;
 	
-	if(element.display.isDefined() and element.display.interactive){
-		elementOut.type = "InteractiveStatement";
-	} else {
-		elementOut.type = element.elementType.type;
-	}
+	if(element.display.isDefined()){
+		elementOut.interactive = element.display.interactive;
+	} 
 	
 	if(element.correctness.isDefined()){
 		elementOut.correctness = element.correctness.value.value.getName();
@@ -130,14 +140,18 @@ rule Elements2Elements
 		elementOut.correctAnswer = element.expectedAnswer.value.value;
 	}
 	
-	elementOut.ability = element.elementType.ability.name+"";
+	if(element.elementType.ability.isDefined()){
+		elementOut.ability = element.elementType.ability.name+"";
+	}
+	
 	elementOut.pos = element.position.id;	
 
 	if(element.fact.isDefined()){
 		elementOut.idFact = element.fact.questionablefact.id;
 	}
-	
 }
+
+
 
 rule RoomAccess2RoomAccess
     transform access: IN!RoomAccess

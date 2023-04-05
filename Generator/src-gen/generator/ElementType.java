@@ -26,7 +26,7 @@ public interface ElementType extends GPElementType {
 	 * @return the value of the '<em>Ability</em>' reference.
 	 * @see #setAbility(Ability)
 	 * @see generator.GeneratorPackage#getElementType_Ability()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	Ability getAbility();
