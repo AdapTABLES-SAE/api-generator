@@ -44,9 +44,8 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ESingleTarget/OPERAND"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//ETaskType">
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETaskType/COMPLETE1"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETaskType/COMPLETE2"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETaskType/REBUILD"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETaskType/COMPLETE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETaskType/ORDER"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETaskType/IDENTIFY"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETaskType/MEMBERSHIP"/>
     </genEnums>
@@ -168,6 +167,7 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTCompletion1">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/targets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/nbMissingElements"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//GenerationContext">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GenerationContext/gamecontext"/>
@@ -211,21 +211,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/ID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/maxTime"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/nbFacts"/>
-      <genOperations ecoreOperation="generator.ecore#//ATask/getType"/>
       <genOperations ecoreOperation="generator.ecore#//ATask/validationOnLearnerAction"
           body="return checkLearnerAction;"/>
+      <genOperations ecoreOperation="generator.ecore#//ATask/getType"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Completion1Task">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Completion1Task/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Completion1Task/checkLearnerAction"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Completion2Task">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Completion2Task/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Completion2Task/checkLearnerAction"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//ReconstructionTask">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ReconstructionTask/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ReconstructionTask/checkLearnerAction"/>
+    <genClasses ecoreClass="generator.ecore#//CompletionTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionTask/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionTask/checkLearnerAction"/>
+      <genOperations ecoreOperation="generator.ecore#//CompletionTask/getNbMissingElements"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//IdentificationTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentificationTask/type"/>
@@ -233,13 +226,16 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MembershipIDTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/checkIsTrue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/identifySharedProperty"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/checkLearnerAction"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTCompletion2">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/targets"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/nbMissingElements"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//MTRecontruction"/>
+    <genClasses ecoreClass="generator.ecore#//MTRecontruction">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTRecontruction/nbMissingElements"/>
+    </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTIdentification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTIdentification/target"/>
     </genClasses>
@@ -433,5 +429,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedStructureElement/createdPosition"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//FactSolutionParam"/>
+    <genClasses ecoreClass="generator.ecore#//OrderingTask">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/checkLearnerAction"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

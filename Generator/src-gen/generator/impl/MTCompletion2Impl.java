@@ -23,11 +23,12 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.MTCompletion2Impl#getTargets <em>Targets</em>}</li>
+ *   <li>{@link generator.impl.MTCompletion2Impl#getNbMissingElements <em>Nb Missing Elements</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MTCompletion2Impl extends Completion2TaskImpl implements MTCompletion2 {
+public class MTCompletion2Impl extends CompletionTaskImpl implements MTCompletion2 {
 	/**
 	 * The cached value of the '{@link #getTargets() <em>Targets</em>}' attribute list.
 	 * <!-- begin-user-doc -->
@@ -37,6 +38,33 @@ public class MTCompletion2Impl extends Completion2TaskImpl implements MTCompleti
 	 * @ordered
 	 */
 	protected EList<ESeveralTarget> targets;
+
+	/**
+	 * The default value of the '{@link #getNbMissingElements() <em>Nb Missing Elements</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNbMissingElements()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NB_MISSING_ELEMENTS_EDEFAULT = 2;
+	/**
+	 * The cached value of the '{@link #getNbMissingElements() <em>Nb Missing Elements</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNbMissingElements()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nbMissingElements = NB_MISSING_ELEMENTS_EDEFAULT;
+	/**
+	 * This is true if the Nb Missing Elements attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean nbMissingElementsESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -75,11 +103,31 @@ public class MTCompletion2Impl extends Completion2TaskImpl implements MTCompleti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getNbMissingElements() {
+		return nbMissingElements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetNbMissingElements() {
+		return nbMissingElementsESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case GeneratorPackage.MT_COMPLETION2__TARGETS:
 			return getTargets();
+		case GeneratorPackage.MT_COMPLETION2__NB_MISSING_ELEMENTS:
+			return getNbMissingElements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -126,6 +174,8 @@ public class MTCompletion2Impl extends Completion2TaskImpl implements MTCompleti
 		switch (featureID) {
 		case GeneratorPackage.MT_COMPLETION2__TARGETS:
 			return targets != null && !targets.isEmpty();
+		case GeneratorPackage.MT_COMPLETION2__NB_MISSING_ELEMENTS:
+			return isSetNbMissingElements();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -143,6 +193,11 @@ public class MTCompletion2Impl extends Completion2TaskImpl implements MTCompleti
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (targets: ");
 		result.append(targets);
+		result.append(", nbMissingElements: ");
+		if (nbMissingElementsESet)
+			result.append(nbMissingElements);
+		else
+			result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

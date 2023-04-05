@@ -19,7 +19,6 @@ package generator;
  * @generated
  */
 public interface Display extends Parameter {
-
 	/**
 	 * Returns the value of the '<em><b>Interactive</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -41,4 +40,5 @@ public interface Display extends Parameter {
 	 * @generated
 	 */
 	void setInteractive(boolean value);
+
 } // Display

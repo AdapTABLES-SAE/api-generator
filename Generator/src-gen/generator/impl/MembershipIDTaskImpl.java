@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.MembershipIDTaskImpl#getType <em>Type</em>}</li>
- *   <li>{@link generator.impl.MembershipIDTaskImpl#isCheckIsTrue <em>Check Is True</em>}</li>
+ *   <li>{@link generator.impl.MembershipIDTaskImpl#isIdentifySharedProperty <em>Identify Shared Property</em>}</li>
  *   <li>{@link generator.impl.MembershipIDTaskImpl#isCheckLearnerAction <em>Check Learner Action</em>}</li>
  * </ul>
  *
@@ -49,24 +49,24 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 	protected ETaskType type = TYPE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isCheckIsTrue() <em>Check Is True</em>}' attribute.
+	 * The default value of the '{@link #isIdentifySharedProperty() <em>Identify Shared Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isCheckIsTrue()
+	 * @see #isIdentifySharedProperty()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean CHECK_IS_TRUE_EDEFAULT = true;
+	protected static final boolean IDENTIFY_SHARED_PROPERTY_EDEFAULT = true;
 
 	/**
-	 * The cached value of the '{@link #isCheckIsTrue() <em>Check Is True</em>}' attribute.
+	 * The cached value of the '{@link #isIdentifySharedProperty() <em>Identify Shared Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isCheckIsTrue()
+	 * @see #isIdentifySharedProperty()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean checkIsTrue = CHECK_IS_TRUE_EDEFAULT;
+	protected boolean identifySharedProperty = IDENTIFY_SHARED_PROPERTY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isCheckLearnerAction() <em>Check Learner Action</em>}' attribute.
@@ -121,8 +121,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isCheckIsTrue() {
-		return checkIsTrue;
+	public boolean isIdentifySharedProperty() {
+		return identifySharedProperty;
 	}
 
 	/**
@@ -130,12 +130,13 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCheckIsTrue(boolean newCheckIsTrue) {
-		boolean oldCheckIsTrue = checkIsTrue;
-		checkIsTrue = newCheckIsTrue;
+	public void setIdentifySharedProperty(boolean newIdentifySharedProperty) {
+		boolean oldIdentifySharedProperty = identifySharedProperty;
+		identifySharedProperty = newIdentifySharedProperty;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_IS_TRUE,
-					oldCheckIsTrue, checkIsTrue));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY, oldIdentifySharedProperty,
+					identifySharedProperty));
 	}
 
 	/**
@@ -171,8 +172,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 		switch (featureID) {
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__TYPE:
 			return getType();
-		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_IS_TRUE:
-			return isCheckIsTrue();
+		case GeneratorPackage.MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY:
+			return isIdentifySharedProperty();
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION:
 			return isCheckLearnerAction();
 		}
@@ -187,8 +188,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_IS_TRUE:
-			setCheckIsTrue((Boolean) newValue);
+		case GeneratorPackage.MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY:
+			setIdentifySharedProperty((Boolean) newValue);
 			return;
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION:
 			setCheckLearnerAction((Boolean) newValue);
@@ -205,8 +206,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_IS_TRUE:
-			setCheckIsTrue(CHECK_IS_TRUE_EDEFAULT);
+		case GeneratorPackage.MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY:
+			setIdentifySharedProperty(IDENTIFY_SHARED_PROPERTY_EDEFAULT);
 			return;
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION:
 			setCheckLearnerAction(CHECK_LEARNER_ACTION_EDEFAULT);
@@ -225,8 +226,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 		switch (featureID) {
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__TYPE:
 			return type != TYPE_EDEFAULT;
-		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_IS_TRUE:
-			return checkIsTrue != CHECK_IS_TRUE_EDEFAULT;
+		case GeneratorPackage.MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY:
+			return identifySharedProperty != IDENTIFY_SHARED_PROPERTY_EDEFAULT;
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION:
 			return checkLearnerAction != CHECK_LEARNER_ACTION_EDEFAULT;
 		}
@@ -246,8 +247,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (type: ");
 		result.append(type);
-		result.append(", checkIsTrue: ");
-		result.append(checkIsTrue);
+		result.append(", identifySharedProperty: ");
+		result.append(identifySharedProperty);
 		result.append(", checkLearnerAction: ");
 		result.append(checkLearnerAction);
 		result.append(')');

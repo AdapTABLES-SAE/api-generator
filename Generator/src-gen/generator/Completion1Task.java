@@ -22,14 +22,14 @@ package generator;
 public interface Completion1Task extends ATask {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The default value is <code>"COMPLETE1"</code>.
+	 * The default value is <code>"COMPLETE"</code>.
 	 * The literals are from the enumeration {@link generator.ETaskType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see generator.ETaskType
 	 * @see generator.GeneratorPackage#getCompletion1Task_Type()
-	 * @model default="COMPLETE1" transient="true" changeable="false"
+	 * @model default="COMPLETE" transient="true" changeable="false"
 	 * @generated
 	 */
 	ETaskType getType();
@@ -55,5 +55,13 @@ public interface Completion1Task extends ATask {
 	 * @generated
 	 */
 	void setCheckLearnerAction(boolean value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	int getNbMissingElements();
 
 } // Completion1Task

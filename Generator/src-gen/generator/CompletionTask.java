@@ -4,51 +4,50 @@ package generator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Reconstruction Task</b></em>'.
+ * A representation of the model object '<em><b>Completion Task</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.ReconstructionTask#getType <em>Type</em>}</li>
- *   <li>{@link generator.ReconstructionTask#isCheckLearnerAction <em>Check Learner Action</em>}</li>
+ *   <li>{@link generator.CompletionTask#getType <em>Type</em>}</li>
+ *   <li>{@link generator.CompletionTask#isCheckLearnerAction <em>Check Learner Action</em>}</li>
  * </ul>
  *
- * @see generator.GeneratorPackage#getReconstructionTask()
+ * @see generator.GeneratorPackage#getCompletionTask()
  * @model abstract="true"
  * @generated
  */
-public interface ReconstructionTask extends ATask {
+public interface CompletionTask extends ATask {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The default value is <code>"REBUILD"</code>.
+	 * The default value is <code>"COMPLETE"</code>.
 	 * The literals are from the enumeration {@link generator.ETaskType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see generator.ETaskType
-	 * @see generator.GeneratorPackage#getReconstructionTask_Type()
-	 * @model default="REBUILD" transient="true" changeable="false"
+	 * @see generator.GeneratorPackage#getCompletionTask_Type()
+	 * @model default="COMPLETE" transient="true" changeable="false"
 	 * @generated
 	 */
 	ETaskType getType();
 
 	/**
 	 * Returns the value of the '<em><b>Check Learner Action</b></em>' attribute.
-	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Check Learner Action</em>' attribute.
 	 * @see #setCheckLearnerAction(boolean)
-	 * @see generator.GeneratorPackage#getReconstructionTask_CheckLearnerAction()
-	 * @model default="true"
+	 * @see generator.GeneratorPackage#getCompletionTask_CheckLearnerAction()
+	 * @model
 	 * @generated
 	 */
 	boolean isCheckLearnerAction();
 
 	/**
-	 * Sets the value of the '{@link generator.ReconstructionTask#isCheckLearnerAction <em>Check Learner Action</em>}' attribute.
+	 * Sets the value of the '{@link generator.CompletionTask#isCheckLearnerAction <em>Check Learner Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Check Learner Action</em>' attribute.
@@ -57,4 +56,12 @@ public interface ReconstructionTask extends ATask {
 	 */
 	void setCheckLearnerAction(boolean value);
 
-} // ReconstructionTask
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	int getNbMissingElements();
+
+} // CompletionTask

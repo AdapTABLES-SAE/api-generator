@@ -2,29 +2,31 @@
  */
 package generator.impl;
 
-import generator.Completion2Task;
 import generator.ETaskType;
 import generator.GeneratorPackage;
+import generator.OrderingTask;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Completion2 Task</b></em>'.
+ * An implementation of the model object '<em><b>Ordering Task</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.Completion2TaskImpl#getType <em>Type</em>}</li>
- *   <li>{@link generator.impl.Completion2TaskImpl#isCheckLearnerAction <em>Check Learner Action</em>}</li>
+ *   <li>{@link generator.impl.OrderingTaskImpl#getType <em>Type</em>}</li>
+ *   <li>{@link generator.impl.OrderingTaskImpl#isCheckLearnerAction <em>Check Learner Action</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class Completion2TaskImpl extends ATaskImpl implements Completion2Task {
+public abstract class OrderingTaskImpl extends ATaskImpl implements OrderingTask {
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,7 +35,7 @@ public abstract class Completion2TaskImpl extends ATaskImpl implements Completio
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ETaskType TYPE_EDEFAULT = ETaskType.COMPLETE2;
+	protected static final ETaskType TYPE_EDEFAULT = ETaskType.ORDER;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -70,7 +72,7 @@ public abstract class Completion2TaskImpl extends ATaskImpl implements Completio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Completion2TaskImpl() {
+	public OrderingTaskImpl() {
 		super();
 	}
 
@@ -81,7 +83,7 @@ public abstract class Completion2TaskImpl extends ATaskImpl implements Completio
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.COMPLETION2_TASK;
+		return GeneratorPackage.Literals.ORDERING_TASK;
 	}
 
 	/**
@@ -111,9 +113,8 @@ public abstract class Completion2TaskImpl extends ATaskImpl implements Completio
 		boolean oldCheckLearnerAction = checkLearnerAction;
 		checkLearnerAction = newCheckLearnerAction;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.COMPLETION2_TASK__CHECK_LEARNER_ACTION, oldCheckLearnerAction,
-					checkLearnerAction));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ORDERING_TASK__CHECK_LEARNER_ACTION,
+					oldCheckLearnerAction, checkLearnerAction));
 	}
 
 	/**
@@ -124,9 +125,9 @@ public abstract class Completion2TaskImpl extends ATaskImpl implements Completio
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.COMPLETION2_TASK__TYPE:
+		case GeneratorPackage.ORDERING_TASK__TYPE:
 			return getType();
-		case GeneratorPackage.COMPLETION2_TASK__CHECK_LEARNER_ACTION:
+		case GeneratorPackage.ORDERING_TASK__CHECK_LEARNER_ACTION:
 			return isCheckLearnerAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -140,7 +141,7 @@ public abstract class Completion2TaskImpl extends ATaskImpl implements Completio
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.COMPLETION2_TASK__CHECK_LEARNER_ACTION:
+		case GeneratorPackage.ORDERING_TASK__CHECK_LEARNER_ACTION:
 			setCheckLearnerAction((Boolean) newValue);
 			return;
 		}
@@ -155,7 +156,7 @@ public abstract class Completion2TaskImpl extends ATaskImpl implements Completio
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.COMPLETION2_TASK__CHECK_LEARNER_ACTION:
+		case GeneratorPackage.ORDERING_TASK__CHECK_LEARNER_ACTION:
 			setCheckLearnerAction(CHECK_LEARNER_ACTION_EDEFAULT);
 			return;
 		}
@@ -170,9 +171,9 @@ public abstract class Completion2TaskImpl extends ATaskImpl implements Completio
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.COMPLETION2_TASK__TYPE:
+		case GeneratorPackage.ORDERING_TASK__TYPE:
 			return type != TYPE_EDEFAULT;
-		case GeneratorPackage.COMPLETION2_TASK__CHECK_LEARNER_ACTION:
+		case GeneratorPackage.ORDERING_TASK__CHECK_LEARNER_ACTION:
 			return checkLearnerAction != CHECK_LEARNER_ACTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -197,4 +198,4 @@ public abstract class Completion2TaskImpl extends ATaskImpl implements Completio
 		return result.toString();
 	}
 
-} //Completion2TaskImpl
+} //OrderingTaskImpl

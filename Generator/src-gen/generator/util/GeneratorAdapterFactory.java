@@ -207,18 +207,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseCompletion1Task(Completion1Task object) {
-			return createCompletion1TaskAdapter();
-		}
-
-		@Override
-		public Adapter caseCompletion2Task(Completion2Task object) {
-			return createCompletion2TaskAdapter();
-		}
-
-		@Override
-		public Adapter caseReconstructionTask(ReconstructionTask object) {
-			return createReconstructionTaskAdapter();
+		public Adapter caseCompletionTask(CompletionTask object) {
+			return createCompletionTaskAdapter();
 		}
 
 		@Override
@@ -479,6 +469,11 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseFactSolutionParam(FactSolutionParam object) {
 			return createFactSolutionParamAdapter();
+		}
+
+		@Override
+		public Adapter caseOrderingTask(OrderingTask object) {
+			return createOrderingTaskAdapter();
 		}
 
 		@Override
@@ -893,44 +888,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.Completion1Task <em>Completion1 Task</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.CompletionTask <em>Completion Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.Completion1Task
+	 * @see generator.CompletionTask
 	 * @generated
 	 */
-	public Adapter createCompletion1TaskAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.Completion2Task <em>Completion2 Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.Completion2Task
-	 * @generated
-	 */
-	public Adapter createCompletion2TaskAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.ReconstructionTask <em>Reconstruction Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.ReconstructionTask
-	 * @generated
-	 */
-	public Adapter createReconstructionTaskAdapter() {
+	public Adapter createCompletionTaskAdapter() {
 		return null;
 	}
 
@@ -1547,6 +1514,20 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFactSolutionParamAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.OrderingTask <em>Ordering Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.OrderingTask
+	 * @generated
+	 */
+	public Adapter createOrderingTaskAdapter() {
 		return null;
 	}
 

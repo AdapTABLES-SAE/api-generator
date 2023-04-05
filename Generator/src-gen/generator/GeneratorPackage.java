@@ -1166,22 +1166,22 @@ public interface GeneratorPackage extends EPackage {
 	int ATASK_FEATURE_COUNT = 6;
 
 	/**
-	 * The operation id for the '<em>Get Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATASK___GET_TYPE = 0;
-
-	/**
 	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATASK___VALIDATION_ON_LEARNER_ACTION = 1;
+	int ATASK___VALIDATION_ON_LEARNER_ACTION = 0;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATASK___GET_TYPE = 1;
 
 	/**
 	 * The number of operations of the '<em>ATask</em>' class.
@@ -1193,14 +1193,14 @@ public interface GeneratorPackage extends EPackage {
 	int ATASK_OPERATION_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.Completion1TaskImpl <em>Completion1 Task</em>}' class.
+	 * The meta object id for the '{@link generator.impl.CompletionTaskImpl <em>Completion Task</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.Completion1TaskImpl
-	 * @see generator.impl.GeneratorPackageImpl#getCompletion1Task()
+	 * @see generator.impl.CompletionTaskImpl
+	 * @see generator.impl.GeneratorPackageImpl#getCompletionTask()
 	 * @generated
 	 */
-	int COMPLETION1_TASK = 28;
+	int COMPLETION_TASK = 28;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -1209,7 +1209,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION1_TASK__PERCENT_OF_APPARITION = ATASK__PERCENT_OF_APPARITION;
+	int COMPLETION_TASK__PERCENT_OF_APPARITION = ATASK__PERCENT_OF_APPARITION;
 
 	/**
 	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
@@ -1218,7 +1218,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION1_TASK__NB_CONSECUTIVE_SUCCESS = ATASK__NB_CONSECUTIVE_SUCCESS;
+	int COMPLETION_TASK__NB_CONSECUTIVE_SUCCESS = ATASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
 	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
@@ -1227,7 +1227,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION1_TASK__RESPONSE_MODALITY = ATASK__RESPONSE_MODALITY;
+	int COMPLETION_TASK__RESPONSE_MODALITY = ATASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -1236,7 +1236,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION1_TASK__ID = ATASK__ID;
+	int COMPLETION_TASK__ID = ATASK__ID;
 
 	/**
 	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
@@ -1245,7 +1245,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION1_TASK__MAX_TIME = ATASK__MAX_TIME;
+	int COMPLETION_TASK__MAX_TIME = ATASK__MAX_TIME;
 
 	/**
 	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
@@ -1254,7 +1254,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION1_TASK__NB_FACTS = ATASK__NB_FACTS;
+	int COMPLETION_TASK__NB_FACTS = ATASK__NB_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1263,7 +1263,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION1_TASK__TYPE = ATASK_FEATURE_COUNT + 0;
+	int COMPLETION_TASK__TYPE = ATASK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
@@ -1272,25 +1272,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION1_TASK__CHECK_LEARNER_ACTION = ATASK_FEATURE_COUNT + 1;
+	int COMPLETION_TASK__CHECK_LEARNER_ACTION = ATASK_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Completion1 Task</em>' class.
+	 * The number of structural features of the '<em>Completion Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION1_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Get Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPLETION1_TASK___GET_TYPE = ATASK___GET_TYPE;
+	int COMPLETION_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
@@ -1299,16 +1290,34 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION1_TASK___VALIDATION_ON_LEARNER_ACTION = ATASK___VALIDATION_ON_LEARNER_ACTION;
+	int COMPLETION_TASK___VALIDATION_ON_LEARNER_ACTION = ATASK___VALIDATION_ON_LEARNER_ACTION;
 
 	/**
-	 * The number of operations of the '<em>Completion1 Task</em>' class.
+	 * The operation id for the '<em>Get Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION1_TASK_OPERATION_COUNT = ATASK_OPERATION_COUNT + 0;
+	int COMPLETION_TASK___GET_TYPE = ATASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Nb Missing Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION_TASK___GET_NB_MISSING_ELEMENTS = ATASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Completion Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETION_TASK_OPERATION_COUNT = ATASK_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MTCompletion1Impl <em>MT Completion1</em>}' class.
@@ -1327,7 +1336,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1__PERCENT_OF_APPARITION = COMPLETION1_TASK__PERCENT_OF_APPARITION;
+	int MT_COMPLETION1__PERCENT_OF_APPARITION = COMPLETION_TASK__PERCENT_OF_APPARITION;
 
 	/**
 	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
@@ -1336,7 +1345,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1__NB_CONSECUTIVE_SUCCESS = COMPLETION1_TASK__NB_CONSECUTIVE_SUCCESS;
+	int MT_COMPLETION1__NB_CONSECUTIVE_SUCCESS = COMPLETION_TASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
 	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
@@ -1345,7 +1354,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1__RESPONSE_MODALITY = COMPLETION1_TASK__RESPONSE_MODALITY;
+	int MT_COMPLETION1__RESPONSE_MODALITY = COMPLETION_TASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -1354,7 +1363,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1__ID = COMPLETION1_TASK__ID;
+	int MT_COMPLETION1__ID = COMPLETION_TASK__ID;
 
 	/**
 	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
@@ -1363,7 +1372,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1__MAX_TIME = COMPLETION1_TASK__MAX_TIME;
+	int MT_COMPLETION1__MAX_TIME = COMPLETION_TASK__MAX_TIME;
 
 	/**
 	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
@@ -1372,7 +1381,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1__NB_FACTS = COMPLETION1_TASK__NB_FACTS;
+	int MT_COMPLETION1__NB_FACTS = COMPLETION_TASK__NB_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1381,7 +1390,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1__TYPE = COMPLETION1_TASK__TYPE;
+	int MT_COMPLETION1__TYPE = COMPLETION_TASK__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
@@ -1390,7 +1399,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1__CHECK_LEARNER_ACTION = COMPLETION1_TASK__CHECK_LEARNER_ACTION;
+	int MT_COMPLETION1__CHECK_LEARNER_ACTION = COMPLETION_TASK__CHECK_LEARNER_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Targets</b></em>' attribute list.
@@ -1399,7 +1408,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1__TARGETS = COMPLETION1_TASK_FEATURE_COUNT + 0;
+	int MT_COMPLETION1__TARGETS = COMPLETION_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION1__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>MT Completion1</em>' class.
@@ -1408,16 +1426,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1_FEATURE_COUNT = COMPLETION1_TASK_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_COMPLETION1___GET_TYPE = COMPLETION1_TASK___GET_TYPE;
+	int MT_COMPLETION1_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
@@ -1426,7 +1435,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1___VALIDATION_ON_LEARNER_ACTION = COMPLETION1_TASK___VALIDATION_ON_LEARNER_ACTION;
+	int MT_COMPLETION1___VALIDATION_ON_LEARNER_ACTION = COMPLETION_TASK___VALIDATION_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION1___GET_TYPE = COMPLETION_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Nb Missing Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION1___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
 
 	/**
 	 * The number of operations of the '<em>MT Completion1</em>' class.
@@ -1435,7 +1462,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1_OPERATION_COUNT = COMPLETION1_TASK_OPERATION_COUNT + 0;
+	int MT_COMPLETION1_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.GenerationContextImpl <em>Generation Context</em>}' class.
@@ -1683,7 +1710,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAPosition()
 	 * @generated
 	 */
-	int APOSITION = 61;
+	int APOSITION = 59;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -1943,242 +1970,6 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM_TYPES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.Completion2TaskImpl <em>Completion2 Task</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.Completion2TaskImpl
-	 * @see generator.impl.GeneratorPackageImpl#getCompletion2Task()
-	 * @generated
-	 */
-	int COMPLETION2_TASK = 29;
-
-	/**
-	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPLETION2_TASK__PERCENT_OF_APPARITION = ATASK__PERCENT_OF_APPARITION;
-
-	/**
-	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPLETION2_TASK__NB_CONSECUTIVE_SUCCESS = ATASK__NB_CONSECUTIVE_SUCCESS;
-
-	/**
-	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPLETION2_TASK__RESPONSE_MODALITY = ATASK__RESPONSE_MODALITY;
-
-	/**
-	 * The feature id for the '<em><b>ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPLETION2_TASK__ID = ATASK__ID;
-
-	/**
-	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPLETION2_TASK__MAX_TIME = ATASK__MAX_TIME;
-
-	/**
-	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPLETION2_TASK__NB_FACTS = ATASK__NB_FACTS;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPLETION2_TASK__TYPE = ATASK_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPLETION2_TASK__CHECK_LEARNER_ACTION = ATASK_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Completion2 Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPLETION2_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Get Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPLETION2_TASK___GET_TYPE = ATASK___GET_TYPE;
-
-	/**
-	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPLETION2_TASK___VALIDATION_ON_LEARNER_ACTION = ATASK___VALIDATION_ON_LEARNER_ACTION;
-
-	/**
-	 * The number of operations of the '<em>Completion2 Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPLETION2_TASK_OPERATION_COUNT = ATASK_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.ReconstructionTaskImpl <em>Reconstruction Task</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.ReconstructionTaskImpl
-	 * @see generator.impl.GeneratorPackageImpl#getReconstructionTask()
-	 * @generated
-	 */
-	int RECONSTRUCTION_TASK = 30;
-
-	/**
-	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECONSTRUCTION_TASK__PERCENT_OF_APPARITION = ATASK__PERCENT_OF_APPARITION;
-
-	/**
-	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECONSTRUCTION_TASK__NB_CONSECUTIVE_SUCCESS = ATASK__NB_CONSECUTIVE_SUCCESS;
-
-	/**
-	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECONSTRUCTION_TASK__RESPONSE_MODALITY = ATASK__RESPONSE_MODALITY;
-
-	/**
-	 * The feature id for the '<em><b>ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECONSTRUCTION_TASK__ID = ATASK__ID;
-
-	/**
-	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECONSTRUCTION_TASK__MAX_TIME = ATASK__MAX_TIME;
-
-	/**
-	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECONSTRUCTION_TASK__NB_FACTS = ATASK__NB_FACTS;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECONSTRUCTION_TASK__TYPE = ATASK_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECONSTRUCTION_TASK__CHECK_LEARNER_ACTION = ATASK_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Reconstruction Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECONSTRUCTION_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Get Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECONSTRUCTION_TASK___GET_TYPE = ATASK___GET_TYPE;
-
-	/**
-	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECONSTRUCTION_TASK___VALIDATION_ON_LEARNER_ACTION = ATASK___VALIDATION_ON_LEARNER_ACTION;
-
-	/**
-	 * The number of operations of the '<em>Reconstruction Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECONSTRUCTION_TASK_OPERATION_COUNT = ATASK_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.IdentificationTaskImpl <em>Identification Task</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2186,7 +1977,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getIdentificationTask()
 	 * @generated
 	 */
-	int IDENTIFICATION_TASK = 31;
+	int IDENTIFICATION_TASK = 29;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2270,15 +2061,6 @@ public interface GeneratorPackage extends EPackage {
 	int IDENTIFICATION_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Get Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IDENTIFICATION_TASK___GET_TYPE = ATASK___GET_TYPE;
-
-	/**
 	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2286,6 +2068,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int IDENTIFICATION_TASK___VALIDATION_ON_LEARNER_ACTION = ATASK___VALIDATION_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFICATION_TASK___GET_TYPE = ATASK___GET_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Identification Task</em>' class.
@@ -2304,7 +2095,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMembershipIDTask()
 	 * @generated
 	 */
-	int MEMBERSHIP_ID_TASK = 32;
+	int MEMBERSHIP_ID_TASK = 30;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2370,13 +2161,13 @@ public interface GeneratorPackage extends EPackage {
 	int MEMBERSHIP_ID_TASK__TYPE = ATASK_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Check Is True</b></em>' attribute.
+	 * The feature id for the '<em><b>Identify Shared Property</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEMBERSHIP_ID_TASK__CHECK_IS_TRUE = ATASK_FEATURE_COUNT + 1;
+	int MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY = ATASK_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
@@ -2397,15 +2188,6 @@ public interface GeneratorPackage extends EPackage {
 	int MEMBERSHIP_ID_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Get Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEMBERSHIP_ID_TASK___GET_TYPE = ATASK___GET_TYPE;
-
-	/**
 	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2413,6 +2195,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MEMBERSHIP_ID_TASK___VALIDATION_ON_LEARNER_ACTION = ATASK___VALIDATION_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBERSHIP_ID_TASK___GET_TYPE = ATASK___GET_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Membership ID Task</em>' class.
@@ -2431,7 +2222,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTCompletion2()
 	 * @generated
 	 */
-	int MT_COMPLETION2 = 33;
+	int MT_COMPLETION2 = 31;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2440,7 +2231,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2__PERCENT_OF_APPARITION = COMPLETION2_TASK__PERCENT_OF_APPARITION;
+	int MT_COMPLETION2__PERCENT_OF_APPARITION = COMPLETION_TASK__PERCENT_OF_APPARITION;
 
 	/**
 	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
@@ -2449,7 +2240,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2__NB_CONSECUTIVE_SUCCESS = COMPLETION2_TASK__NB_CONSECUTIVE_SUCCESS;
+	int MT_COMPLETION2__NB_CONSECUTIVE_SUCCESS = COMPLETION_TASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
 	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
@@ -2458,7 +2249,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2__RESPONSE_MODALITY = COMPLETION2_TASK__RESPONSE_MODALITY;
+	int MT_COMPLETION2__RESPONSE_MODALITY = COMPLETION_TASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -2467,7 +2258,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2__ID = COMPLETION2_TASK__ID;
+	int MT_COMPLETION2__ID = COMPLETION_TASK__ID;
 
 	/**
 	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
@@ -2476,7 +2267,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2__MAX_TIME = COMPLETION2_TASK__MAX_TIME;
+	int MT_COMPLETION2__MAX_TIME = COMPLETION_TASK__MAX_TIME;
 
 	/**
 	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
@@ -2485,7 +2276,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2__NB_FACTS = COMPLETION2_TASK__NB_FACTS;
+	int MT_COMPLETION2__NB_FACTS = COMPLETION_TASK__NB_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2494,7 +2285,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2__TYPE = COMPLETION2_TASK__TYPE;
+	int MT_COMPLETION2__TYPE = COMPLETION_TASK__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
@@ -2503,7 +2294,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2__CHECK_LEARNER_ACTION = COMPLETION2_TASK__CHECK_LEARNER_ACTION;
+	int MT_COMPLETION2__CHECK_LEARNER_ACTION = COMPLETION_TASK__CHECK_LEARNER_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Targets</b></em>' attribute list.
@@ -2512,7 +2303,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2__TARGETS = COMPLETION2_TASK_FEATURE_COUNT + 0;
+	int MT_COMPLETION2__TARGETS = COMPLETION_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION2__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>MT Completion2</em>' class.
@@ -2521,16 +2321,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2_FEATURE_COUNT = COMPLETION2_TASK_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_COMPLETION2___GET_TYPE = COMPLETION2_TASK___GET_TYPE;
+	int MT_COMPLETION2_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
@@ -2539,7 +2330,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2___VALIDATION_ON_LEARNER_ACTION = COMPLETION2_TASK___VALIDATION_ON_LEARNER_ACTION;
+	int MT_COMPLETION2___VALIDATION_ON_LEARNER_ACTION = COMPLETION_TASK___VALIDATION_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION2___GET_TYPE = COMPLETION_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Nb Missing Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_COMPLETION2___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
 
 	/**
 	 * The number of operations of the '<em>MT Completion2</em>' class.
@@ -2548,7 +2357,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2_OPERATION_COUNT = COMPLETION2_TASK_OPERATION_COUNT + 0;
+	int MT_COMPLETION2_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MTRecontructionImpl <em>MT Recontruction</em>}' class.
@@ -2558,7 +2367,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTRecontruction()
 	 * @generated
 	 */
-	int MT_RECONTRUCTION = 34;
+	int MT_RECONTRUCTION = 32;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2567,7 +2376,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__PERCENT_OF_APPARITION = RECONSTRUCTION_TASK__PERCENT_OF_APPARITION;
+	int MT_RECONTRUCTION__PERCENT_OF_APPARITION = COMPLETION_TASK__PERCENT_OF_APPARITION;
 
 	/**
 	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
@@ -2576,7 +2385,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__NB_CONSECUTIVE_SUCCESS = RECONSTRUCTION_TASK__NB_CONSECUTIVE_SUCCESS;
+	int MT_RECONTRUCTION__NB_CONSECUTIVE_SUCCESS = COMPLETION_TASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
 	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
@@ -2585,7 +2394,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__RESPONSE_MODALITY = RECONSTRUCTION_TASK__RESPONSE_MODALITY;
+	int MT_RECONTRUCTION__RESPONSE_MODALITY = COMPLETION_TASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -2594,7 +2403,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__ID = RECONSTRUCTION_TASK__ID;
+	int MT_RECONTRUCTION__ID = COMPLETION_TASK__ID;
 
 	/**
 	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
@@ -2603,7 +2412,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__MAX_TIME = RECONSTRUCTION_TASK__MAX_TIME;
+	int MT_RECONTRUCTION__MAX_TIME = COMPLETION_TASK__MAX_TIME;
 
 	/**
 	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
@@ -2612,7 +2421,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__NB_FACTS = RECONSTRUCTION_TASK__NB_FACTS;
+	int MT_RECONTRUCTION__NB_FACTS = COMPLETION_TASK__NB_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2621,7 +2430,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__TYPE = RECONSTRUCTION_TASK__TYPE;
+	int MT_RECONTRUCTION__TYPE = COMPLETION_TASK__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
@@ -2630,7 +2439,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__CHECK_LEARNER_ACTION = RECONSTRUCTION_TASK__CHECK_LEARNER_ACTION;
+	int MT_RECONTRUCTION__CHECK_LEARNER_ACTION = COMPLETION_TASK__CHECK_LEARNER_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_RECONTRUCTION__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>MT Recontruction</em>' class.
@@ -2639,16 +2457,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION_FEATURE_COUNT = RECONSTRUCTION_TASK_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_RECONTRUCTION___GET_TYPE = RECONSTRUCTION_TASK___GET_TYPE;
+	int MT_RECONTRUCTION_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
@@ -2657,7 +2466,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION___VALIDATION_ON_LEARNER_ACTION = RECONSTRUCTION_TASK___VALIDATION_ON_LEARNER_ACTION;
+	int MT_RECONTRUCTION___VALIDATION_ON_LEARNER_ACTION = COMPLETION_TASK___VALIDATION_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_RECONTRUCTION___GET_TYPE = COMPLETION_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Nb Missing Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_RECONTRUCTION___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
 
 	/**
 	 * The number of operations of the '<em>MT Recontruction</em>' class.
@@ -2666,7 +2493,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION_OPERATION_COUNT = RECONSTRUCTION_TASK_OPERATION_COUNT + 0;
+	int MT_RECONTRUCTION_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MTIdentificationImpl <em>MT Identification</em>}' class.
@@ -2676,7 +2503,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTIdentification()
 	 * @generated
 	 */
-	int MT_IDENTIFICATION = 35;
+	int MT_IDENTIFICATION = 33;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2769,15 +2596,6 @@ public interface GeneratorPackage extends EPackage {
 	int MT_IDENTIFICATION_FEATURE_COUNT = IDENTIFICATION_TASK_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_IDENTIFICATION___GET_TYPE = IDENTIFICATION_TASK___GET_TYPE;
-
-	/**
 	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2785,6 +2603,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_IDENTIFICATION___VALIDATION_ON_LEARNER_ACTION = IDENTIFICATION_TASK___VALIDATION_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_IDENTIFICATION___GET_TYPE = IDENTIFICATION_TASK___GET_TYPE;
 
 	/**
 	 * The number of operations of the '<em>MT Identification</em>' class.
@@ -2803,7 +2630,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTMembership()
 	 * @generated
 	 */
-	int MT_MEMBERSHIP = 36;
+	int MT_MEMBERSHIP = 34;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2869,13 +2696,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_MEMBERSHIP__TYPE = MEMBERSHIP_ID_TASK__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Check Is True</b></em>' attribute.
+	 * The feature id for the '<em><b>Identify Shared Property</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_MEMBERSHIP__CHECK_IS_TRUE = MEMBERSHIP_ID_TASK__CHECK_IS_TRUE;
+	int MT_MEMBERSHIP__IDENTIFY_SHARED_PROPERTY = MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
@@ -2896,15 +2723,6 @@ public interface GeneratorPackage extends EPackage {
 	int MT_MEMBERSHIP_FEATURE_COUNT = MEMBERSHIP_ID_TASK_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Get Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MT_MEMBERSHIP___GET_TYPE = MEMBERSHIP_ID_TASK___GET_TYPE;
-
-	/**
 	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2912,6 +2730,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_MEMBERSHIP___VALIDATION_ON_LEARNER_ACTION = MEMBERSHIP_ID_TASK___VALIDATION_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_MEMBERSHIP___GET_TYPE = MEMBERSHIP_ID_TASK___GET_TYPE;
 
 	/**
 	 * The number of operations of the '<em>MT Membership</em>' class.
@@ -2930,7 +2757,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResults()
 	 * @generated
 	 */
-	int RESULTS = 37;
+	int RESULTS = 35;
 
 	/**
 	 * The feature id for the '<em><b>Resultsbytask</b></em>' containment reference list.
@@ -2967,7 +2794,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultsByTask()
 	 * @generated
 	 */
-	int RESULTS_BY_TASK = 38;
+	int RESULTS_BY_TASK = 36;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -3031,7 +2858,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTFact()
 	 * @generated
 	 */
-	int MT_FACT = 39;
+	int MT_FACT = 37;
 
 	/**
 	 * The feature id for the '<em><b>Table</b></em>' attribute.
@@ -3086,7 +2913,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTResultFact()
 	 * @generated
 	 */
-	int MT_RESULT_FACT = 40;
+	int MT_RESULT_FACT = 38;
 
 	/**
 	 * The feature id for the '<em><b>Table</b></em>' attribute.
@@ -3132,7 +2959,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuestionableFact()
 	 * @generated
 	 */
-	int QUESTIONABLE_FACT = 41;
+	int QUESTIONABLE_FACT = 39;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -3205,7 +3032,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFCompletion1()
 	 * @generated
 	 */
-	int MTQF_COMPLETION1 = 42;
+	int MTQF_COMPLETION1 = 40;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -3323,7 +3150,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFCompletion2()
 	 * @generated
 	 */
-	int MTQF_COMPLETION2 = 43;
+	int MTQF_COMPLETION2 = 41;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -3459,7 +3286,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFRebuild()
 	 * @generated
 	 */
-	int MTQF_REBUILD = 44;
+	int MTQF_REBUILD = 42;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -3568,7 +3395,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFIdentification()
 	 * @generated
 	 */
-	int MTQF_IDENTIFICATION = 45;
+	int MTQF_IDENTIFICATION = 43;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -3695,7 +3522,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFMembership()
 	 * @generated
 	 */
-	int MTQF_MEMBERSHIP = 46;
+	int MTQF_MEMBERSHIP = 44;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -3786,7 +3613,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuestionedFact()
 	 * @generated
 	 */
-	int QUESTIONED_FACT = 47;
+	int QUESTIONED_FACT = 45;
 
 	/**
 	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
@@ -3868,7 +3695,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCompletionCriteria()
 	 * @generated
 	 */
-	int COMPLETION_CRITERIA = 48;
+	int COMPLETION_CRITERIA = 46;
 
 	/**
 	 * The feature id for the '<em><b>Succes Percent</b></em>' attribute.
@@ -3914,7 +3741,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLevelsDifficultyProgress()
 	 * @generated
 	 */
-	int LEVELS_DIFFICULTY_PROGRESS = 49;
+	int LEVELS_DIFFICULTY_PROGRESS = 47;
 
 	/**
 	 * The feature id for the '<em><b>Nb QRoom Increase</b></em>' attribute.
@@ -3978,7 +3805,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCurrentGameLevel()
 	 * @generated
 	 */
-	int CURRENT_GAME_LEVEL = 50;
+	int CURRENT_GAME_LEVEL = 48;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -4015,7 +3842,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameElementTypes()
 	 * @generated
 	 */
-	int GAME_ELEMENT_TYPES = 51;
+	int GAME_ELEMENT_TYPES = 49;
 
 	/**
 	 * The feature id for the '<em><b>Equipments</b></em>' containment reference.
@@ -4061,7 +3888,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPElementsTypes()
 	 * @generated
 	 */
-	int GP_ELEMENTS_TYPES = 52;
+	int GP_ELEMENTS_TYPES = 50;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -4098,7 +3925,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEquipments()
 	 * @generated
 	 */
-	int EQUIPMENTS = 53;
+	int EQUIPMENTS = 51;
 
 	/**
 	 * The feature id for the '<em><b>Equipments</b></em>' containment reference list.
@@ -4135,7 +3962,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPElementType()
 	 * @generated
 	 */
-	int GP_ELEMENT_TYPE = 71;
+	int GP_ELEMENT_TYPE = 69;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -4190,7 +4017,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementType()
 	 * @generated
 	 */
-	int ELEMENT_TYPE = 54;
+	int ELEMENT_TYPE = 52;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -4254,7 +4081,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEquipment()
 	 * @generated
 	 */
-	int EQUIPMENT = 55;
+	int EQUIPMENT = 53;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -4309,7 +4136,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameplay()
 	 * @generated
 	 */
-	int GAMEPLAY = 56;
+	int GAMEPLAY = 54;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4382,7 +4209,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameplays()
 	 * @generated
 	 */
-	int GAMEPLAYS = 57;
+	int GAMEPLAYS = 55;
 
 	/**
 	 * The feature id for the '<em><b>Gameplays</b></em>' containment reference list.
@@ -4419,7 +4246,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuestionableFactResult()
 	 * @generated
 	 */
-	int QUESTIONABLE_FACT_RESULT = 58;
+	int QUESTIONABLE_FACT_RESULT = 56;
 
 	/**
 	 * The feature id for the '<em><b>Response Time</b></em>' attribute.
@@ -4474,7 +4301,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAbility()
 	 * @generated
 	 */
-	int ABILITY = 59;
+	int ABILITY = 57;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4529,7 +4356,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAbilities()
 	 * @generated
 	 */
-	int ABILITIES = 60;
+	int ABILITIES = 58;
 
 	/**
 	 * The feature id for the '<em><b>Abilities</b></em>' containment reference list.
@@ -4566,7 +4393,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStructurePosition()
 	 * @generated
 	 */
-	int STRUCTURE_POSITION = 62;
+	int STRUCTURE_POSITION = 60;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -4621,7 +4448,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPositionedElement()
 	 * @generated
 	 */
-	int POSITIONED_ELEMENT = 63;
+	int POSITIONED_ELEMENT = 61;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -4721,7 +4548,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getParameter()
 	 * @generated
 	 */
-	int PARAMETER = 64;
+	int PARAMETER = 62;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -4758,7 +4585,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuestionParam()
 	 * @generated
 	 */
-	int QUESTION_PARAM = 65;
+	int QUESTION_PARAM = 63;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -4813,7 +4640,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPropositionParam()
 	 * @generated
 	 */
-	int PROPOSITION_PARAM = 66;
+	int PROPOSITION_PARAM = 64;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -4859,7 +4686,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAValue()
 	 * @generated
 	 */
-	int AVALUE = 80;
+	int AVALUE = 78;
 
 	/**
 	 * The number of structural features of the '<em>AValue</em>' class.
@@ -4887,7 +4714,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getValue()
 	 * @generated
 	 */
-	int VALUE = 67;
+	int VALUE = 65;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -4924,7 +4751,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCorrectness()
 	 * @generated
 	 */
-	int CORRECTNESS = 68;
+	int CORRECTNESS = 66;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -4961,7 +4788,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEntrySoluceParam()
 	 * @generated
 	 */
-	int ENTRY_SOLUCE_PARAM = 69;
+	int ENTRY_SOLUCE_PARAM = 67;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5007,7 +4834,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStructureType()
 	 * @generated
 	 */
-	int STRUCTURE_TYPE = 70;
+	int STRUCTURE_TYPE = 68;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -5062,7 +4889,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDisplay()
 	 * @generated
 	 */
-	int DISPLAY = 72;
+	int DISPLAY = 70;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5108,7 +4935,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAComponent()
 	 * @generated
 	 */
-	int ACOMPONENT = 73;
+	int ACOMPONENT = 71;
 
 	/**
 	 * The number of structural features of the '<em>AComponent</em>' class.
@@ -5136,7 +4963,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStructure()
 	 * @generated
 	 */
-	int STRUCTURE = 74;
+	int STRUCTURE = 72;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -5191,7 +5018,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getComponent()
 	 * @generated
 	 */
-	int COMPONENT = 75;
+	int COMPONENT = 73;
 
 	/**
 	 * The feature id for the '<em><b>Element Type</b></em>' reference.
@@ -5273,7 +5100,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuantity()
 	 * @generated
 	 */
-	int QUANTITY = 76;
+	int QUANTITY = 74;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5310,7 +5137,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getWantedAnswersParam()
 	 * @generated
 	 */
-	int WANTED_ANSWERS_PARAM = 77;
+	int WANTED_ANSWERS_PARAM = 75;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5347,7 +5174,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getExpectedAnswer()
 	 * @generated
 	 */
-	int EXPECTED_ANSWER = 78;
+	int EXPECTED_ANSWER = 76;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5384,7 +5211,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCorrectnessValue()
 	 * @generated
 	 */
-	int CORRECTNESS_VALUE = 79;
+	int CORRECTNESS_VALUE = 77;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -5421,7 +5248,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPositionedStructureElement()
 	 * @generated
 	 */
-	int POSITIONED_STRUCTURE_ELEMENT = 81;
+	int POSITIONED_STRUCTURE_ELEMENT = 79;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -5530,7 +5357,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getFactSolutionParam()
 	 * @generated
 	 */
-	int FACT_SOLUTION_PARAM = 82;
+	int FACT_SOLUTION_PARAM = 80;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5560,6 +5387,124 @@ public interface GeneratorPackage extends EPackage {
 	int FACT_SOLUTION_PARAM_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.OrderingTaskImpl <em>Ordering Task</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.OrderingTaskImpl
+	 * @see generator.impl.GeneratorPackageImpl#getOrderingTask()
+	 * @generated
+	 */
+	int ORDERING_TASK = 81;
+
+	/**
+	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK__PERCENT_OF_APPARITION = ATASK__PERCENT_OF_APPARITION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK__NB_CONSECUTIVE_SUCCESS = ATASK__NB_CONSECUTIVE_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK__RESPONSE_MODALITY = ATASK__RESPONSE_MODALITY;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK__ID = ATASK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK__MAX_TIME = ATASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK__NB_FACTS = ATASK__NB_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK__TYPE = ATASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK__CHECK_LEARNER_ACTION = ATASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Ordering Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Validation On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK___VALIDATION_ON_LEARNER_ACTION = ATASK___VALIDATION_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK___GET_TYPE = ATASK___GET_TYPE;
+
+	/**
+	 * The number of operations of the '<em>Ordering Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK_OPERATION_COUNT = ATASK_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5567,7 +5512,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 83;
+	int DIRECTIONS = 82;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -5577,7 +5522,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 84;
+	int DUNGEON_MODE = 83;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -5587,7 +5532,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 85;
+	int TABLE_BUILD = 84;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -5597,7 +5542,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 86;
+	int RESULT_POSITION = 85;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -5607,7 +5552,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 87;
+	int ESINGLE_TARGET = 86;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -5617,7 +5562,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 88;
+	int ETASK_TYPE = 87;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -5627,7 +5572,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 89;
+	int EMODALITY = 88;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -5637,7 +5582,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 90;
+	int ESEVERAL_TARGET = 89;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -5647,7 +5592,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 91;
+	int ELEMENT_SIZE = 90;
 
 	/**
 	 * The meta object id for the '{@link generator.StatementType <em>Statement Type</em>}' enum.
@@ -5657,7 +5602,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStatementType()
 	 * @generated
 	 */
-	int STATEMENT_TYPE = 92;
+	int STATEMENT_TYPE = 91;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -5667,7 +5612,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 93;
+	int GP_CATEGORY = 92;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -5677,7 +5622,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 94;
+	int ECORRECTNESS = 93;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -6431,6 +6376,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTCompletion1_Targets();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.MTCompletion1#getNbMissingElements <em>Nb Missing Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
+	 * @see generator.MTCompletion1#getNbMissingElements()
+	 * @see #getMTCompletion1()
+	 * @generated
+	 */
+	EAttribute getMTCompletion1_NbMissingElements();
+
+	/**
 	 * Returns the meta object for class '{@link generator.GenerationContext <em>Generation Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6806,16 +6762,6 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getATask_NbFacts();
 
 	/**
-	 * Returns the meta object for the '{@link generator.ATask#getType() <em>Get Type</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Type</em>' operation.
-	 * @see generator.ATask#getType()
-	 * @generated
-	 */
-	EOperation getATask__GetType();
-
-	/**
 	 * Returns the meta object for the '{@link generator.ATask#validationOnLearnerAction() <em>Validation On Learner Action</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6826,100 +6772,56 @@ public interface GeneratorPackage extends EPackage {
 	EOperation getATask__ValidationOnLearnerAction();
 
 	/**
-	 * Returns the meta object for class '{@link generator.Completion1Task <em>Completion1 Task</em>}'.
+	 * Returns the meta object for the '{@link generator.ATask#getType() <em>Get Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Completion1 Task</em>'.
-	 * @see generator.Completion1Task
+	 * @return the meta object for the '<em>Get Type</em>' operation.
+	 * @see generator.ATask#getType()
 	 * @generated
 	 */
-	EClass getCompletion1Task();
+	EOperation getATask__GetType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.Completion1Task#getType <em>Type</em>}'.
+	 * Returns the meta object for class '{@link generator.CompletionTask <em>Completion Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Completion Task</em>'.
+	 * @see generator.CompletionTask
+	 * @generated
+	 */
+	EClass getCompletionTask();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.CompletionTask#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.Completion1Task#getType()
-	 * @see #getCompletion1Task()
+	 * @see generator.CompletionTask#getType()
+	 * @see #getCompletionTask()
 	 * @generated
 	 */
-	EAttribute getCompletion1Task_Type();
+	EAttribute getCompletionTask_Type();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.Completion1Task#isCheckLearnerAction <em>Check Learner Action</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.CompletionTask#isCheckLearnerAction <em>Check Learner Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Check Learner Action</em>'.
-	 * @see generator.Completion1Task#isCheckLearnerAction()
-	 * @see #getCompletion1Task()
+	 * @see generator.CompletionTask#isCheckLearnerAction()
+	 * @see #getCompletionTask()
 	 * @generated
 	 */
-	EAttribute getCompletion1Task_CheckLearnerAction();
+	EAttribute getCompletionTask_CheckLearnerAction();
 
 	/**
-	 * Returns the meta object for class '{@link generator.Completion2Task <em>Completion2 Task</em>}'.
+	 * Returns the meta object for the '{@link generator.CompletionTask#getNbMissingElements() <em>Get Nb Missing Elements</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Completion2 Task</em>'.
-	 * @see generator.Completion2Task
+	 * @return the meta object for the '<em>Get Nb Missing Elements</em>' operation.
+	 * @see generator.CompletionTask#getNbMissingElements()
 	 * @generated
 	 */
-	EClass getCompletion2Task();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.Completion2Task#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.Completion2Task#getType()
-	 * @see #getCompletion2Task()
-	 * @generated
-	 */
-	EAttribute getCompletion2Task_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.Completion2Task#isCheckLearnerAction <em>Check Learner Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Check Learner Action</em>'.
-	 * @see generator.Completion2Task#isCheckLearnerAction()
-	 * @see #getCompletion2Task()
-	 * @generated
-	 */
-	EAttribute getCompletion2Task_CheckLearnerAction();
-
-	/**
-	 * Returns the meta object for class '{@link generator.ReconstructionTask <em>Reconstruction Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Reconstruction Task</em>'.
-	 * @see generator.ReconstructionTask
-	 * @generated
-	 */
-	EClass getReconstructionTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.ReconstructionTask#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.ReconstructionTask#getType()
-	 * @see #getReconstructionTask()
-	 * @generated
-	 */
-	EAttribute getReconstructionTask_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.ReconstructionTask#isCheckLearnerAction <em>Check Learner Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Check Learner Action</em>'.
-	 * @see generator.ReconstructionTask#isCheckLearnerAction()
-	 * @see #getReconstructionTask()
-	 * @generated
-	 */
-	EAttribute getReconstructionTask_CheckLearnerAction();
+	EOperation getCompletionTask__GetNbMissingElements();
 
 	/**
 	 * Returns the meta object for class '{@link generator.IdentificationTask <em>Identification Task</em>}'.
@@ -6975,15 +6877,15 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMembershipIDTask_Type();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.MembershipIDTask#isCheckIsTrue <em>Check Is True</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.MembershipIDTask#isIdentifySharedProperty <em>Identify Shared Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Check Is True</em>'.
-	 * @see generator.MembershipIDTask#isCheckIsTrue()
+	 * @return the meta object for the attribute '<em>Identify Shared Property</em>'.
+	 * @see generator.MembershipIDTask#isIdentifySharedProperty()
 	 * @see #getMembershipIDTask()
 	 * @generated
 	 */
-	EAttribute getMembershipIDTask_CheckIsTrue();
+	EAttribute getMembershipIDTask_IdentifySharedProperty();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.MembershipIDTask#isCheckLearnerAction <em>Check Learner Action</em>}'.
@@ -7018,6 +6920,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTCompletion2_Targets();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.MTCompletion2#getNbMissingElements <em>Nb Missing Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
+	 * @see generator.MTCompletion2#getNbMissingElements()
+	 * @see #getMTCompletion2()
+	 * @generated
+	 */
+	EAttribute getMTCompletion2_NbMissingElements();
+
+	/**
 	 * Returns the meta object for class '{@link generator.MTRecontruction <em>MT Recontruction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7026,6 +6939,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMTRecontruction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTRecontruction#getNbMissingElements <em>Nb Missing Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
+	 * @see generator.MTRecontruction#getNbMissingElements()
+	 * @see #getMTRecontruction()
+	 * @generated
+	 */
+	EAttribute getMTRecontruction_NbMissingElements();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MTIdentification <em>MT Identification</em>}'.
@@ -8672,6 +8596,38 @@ public interface GeneratorPackage extends EPackage {
 	EClass getFactSolutionParam();
 
 	/**
+	 * Returns the meta object for class '{@link generator.OrderingTask <em>Ordering Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ordering Task</em>'.
+	 * @see generator.OrderingTask
+	 * @generated
+	 */
+	EClass getOrderingTask();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.OrderingTask#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see generator.OrderingTask#getType()
+	 * @see #getOrderingTask()
+	 * @generated
+	 */
+	EAttribute getOrderingTask_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.OrderingTask#isCheckLearnerAction <em>Check Learner Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check Learner Action</em>'.
+	 * @see generator.OrderingTask#isCheckLearnerAction()
+	 * @see #getOrderingTask()
+	 * @generated
+	 */
+	EAttribute getOrderingTask_CheckLearnerAction();
+
+	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9412,6 +9368,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MT_COMPLETION1__TARGETS = eINSTANCE.getMTCompletion1_Targets();
 
 		/**
+		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_COMPLETION1__NB_MISSING_ELEMENTS = eINSTANCE.getMTCompletion1_NbMissingElements();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.GenerationContextImpl <em>Generation Context</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9712,14 +9676,6 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute ATASK__NB_FACTS = eINSTANCE.getATask_NbFacts();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Type</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ATASK___GET_TYPE = eINSTANCE.getATask__GetType();
-
-		/**
 		 * The meta object literal for the '<em><b>Validation On Learner Action</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9728,14 +9684,22 @@ public interface GeneratorPackage extends EPackage {
 		EOperation ATASK___VALIDATION_ON_LEARNER_ACTION = eINSTANCE.getATask__ValidationOnLearnerAction();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.Completion1TaskImpl <em>Completion1 Task</em>}' class.
+		 * The meta object literal for the '<em><b>Get Type</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.Completion1TaskImpl
-		 * @see generator.impl.GeneratorPackageImpl#getCompletion1Task()
 		 * @generated
 		 */
-		EClass COMPLETION1_TASK = eINSTANCE.getCompletion1Task();
+		EOperation ATASK___GET_TYPE = eINSTANCE.getATask__GetType();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.CompletionTaskImpl <em>Completion Task</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.CompletionTaskImpl
+		 * @see generator.impl.GeneratorPackageImpl#getCompletionTask()
+		 * @generated
+		 */
+		EClass COMPLETION_TASK = eINSTANCE.getCompletionTask();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -9743,7 +9707,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMPLETION1_TASK__TYPE = eINSTANCE.getCompletion1Task_Type();
+		EAttribute COMPLETION_TASK__TYPE = eINSTANCE.getCompletionTask_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Learner Action</b></em>' attribute feature.
@@ -9751,59 +9715,15 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMPLETION1_TASK__CHECK_LEARNER_ACTION = eINSTANCE.getCompletion1Task_CheckLearnerAction();
+		EAttribute COMPLETION_TASK__CHECK_LEARNER_ACTION = eINSTANCE.getCompletionTask_CheckLearnerAction();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.Completion2TaskImpl <em>Completion2 Task</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.Completion2TaskImpl
-		 * @see generator.impl.GeneratorPackageImpl#getCompletion2Task()
-		 * @generated
-		 */
-		EClass COMPLETION2_TASK = eINSTANCE.getCompletion2Task();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Get Nb Missing Elements</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMPLETION2_TASK__TYPE = eINSTANCE.getCompletion2Task_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Check Learner Action</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMPLETION2_TASK__CHECK_LEARNER_ACTION = eINSTANCE.getCompletion2Task_CheckLearnerAction();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.ReconstructionTaskImpl <em>Reconstruction Task</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.ReconstructionTaskImpl
-		 * @see generator.impl.GeneratorPackageImpl#getReconstructionTask()
-		 * @generated
-		 */
-		EClass RECONSTRUCTION_TASK = eINSTANCE.getReconstructionTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RECONSTRUCTION_TASK__TYPE = eINSTANCE.getReconstructionTask_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Check Learner Action</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RECONSTRUCTION_TASK__CHECK_LEARNER_ACTION = eINSTANCE.getReconstructionTask_CheckLearnerAction();
+		EOperation COMPLETION_TASK___GET_NB_MISSING_ELEMENTS = eINSTANCE.getCompletionTask__GetNbMissingElements();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.IdentificationTaskImpl <em>Identification Task</em>}' class.
@@ -9850,12 +9770,13 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MEMBERSHIP_ID_TASK__TYPE = eINSTANCE.getMembershipIDTask_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Check Is True</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Identify Shared Property</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MEMBERSHIP_ID_TASK__CHECK_IS_TRUE = eINSTANCE.getMembershipIDTask_CheckIsTrue();
+		EAttribute MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY = eINSTANCE
+				.getMembershipIDTask_IdentifySharedProperty();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Learner Action</b></em>' attribute feature.
@@ -9884,6 +9805,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MT_COMPLETION2__TARGETS = eINSTANCE.getMTCompletion2_Targets();
 
 		/**
+		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_COMPLETION2__NB_MISSING_ELEMENTS = eINSTANCE.getMTCompletion2_NbMissingElements();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.MTRecontructionImpl <em>MT Recontruction</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9892,6 +9821,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MT_RECONTRUCTION = eINSTANCE.getMTRecontruction();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MT_RECONTRUCTION__NB_MISSING_ELEMENTS = eINSTANCE.getMTRecontruction_NbMissingElements();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTIdentificationImpl <em>MT Identification</em>}' class.
@@ -11223,6 +11160,32 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FACT_SOLUTION_PARAM = eINSTANCE.getFactSolutionParam();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.OrderingTaskImpl <em>Ordering Task</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.OrderingTaskImpl
+		 * @see generator.impl.GeneratorPackageImpl#getOrderingTask()
+		 * @generated
+		 */
+		EClass ORDERING_TASK = eINSTANCE.getOrderingTask();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORDERING_TASK__TYPE = eINSTANCE.getOrderingTask_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Learner Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORDERING_TASK__CHECK_LEARNER_ACTION = eINSTANCE.getOrderingTask_CheckLearnerAction();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.

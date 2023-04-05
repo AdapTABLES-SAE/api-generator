@@ -12,7 +12,7 @@ package generator;
  * </p>
  * <ul>
  *   <li>{@link generator.MembershipIDTask#getType <em>Type</em>}</li>
- *   <li>{@link generator.MembershipIDTask#isCheckIsTrue <em>Check Is True</em>}</li>
+ *   <li>{@link generator.MembershipIDTask#isIdentifySharedProperty <em>Identify Shared Property</em>}</li>
  *   <li>{@link generator.MembershipIDTask#isCheckLearnerAction <em>Check Learner Action</em>}</li>
  * </ul>
  *
@@ -36,27 +36,27 @@ public interface MembershipIDTask extends ATask {
 	ETaskType getType();
 
 	/**
-	 * Returns the value of the '<em><b>Check Is True</b></em>' attribute.
+	 * Returns the value of the '<em><b>Identify Shared Property</b></em>' attribute.
 	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Check Is True</em>' attribute.
-	 * @see #setCheckIsTrue(boolean)
-	 * @see generator.GeneratorPackage#getMembershipIDTask_CheckIsTrue()
+	 * @return the value of the '<em>Identify Shared Property</em>' attribute.
+	 * @see #setIdentifySharedProperty(boolean)
+	 * @see generator.GeneratorPackage#getMembershipIDTask_IdentifySharedProperty()
 	 * @model default="true"
 	 * @generated
 	 */
-	boolean isCheckIsTrue();
+	boolean isIdentifySharedProperty();
 
 	/**
-	 * Sets the value of the '{@link generator.MembershipIDTask#isCheckIsTrue <em>Check Is True</em>}' attribute.
+	 * Sets the value of the '{@link generator.MembershipIDTask#isIdentifySharedProperty <em>Identify Shared Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Check Is True</em>' attribute.
-	 * @see #isCheckIsTrue()
+	 * @param value the new value of the '<em>Identify Shared Property</em>' attribute.
+	 * @see #isIdentifySharedProperty()
 	 * @generated
 	 */
-	void setCheckIsTrue(boolean value);
+	void setIdentifySharedProperty(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Check Learner Action</b></em>' attribute.

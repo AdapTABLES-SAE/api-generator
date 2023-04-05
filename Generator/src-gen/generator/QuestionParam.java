@@ -22,7 +22,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface QuestionParam extends Parameter {
-
 	/**
 	 * Returns the value of the '<em><b>Interactive</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -56,4 +55,5 @@ public interface QuestionParam extends Parameter {
 	 * @generated
 	 */
 	EList<FactSolutionParam> getSolutions();
+
 } // QuestionParam

@@ -6,8 +6,14 @@ import generator.Completion1Task;
 import generator.ETaskType;
 import generator.GeneratorPackage;
 
+import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -33,7 +39,7 @@ public abstract class Completion1TaskImpl extends ATaskImpl implements Completio
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ETaskType TYPE_EDEFAULT = ETaskType.COMPLETE1;
+	protected static final ETaskType TYPE_EDEFAULT = ETaskType.COMPLETE;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -121,6 +127,17 @@ public abstract class Completion1TaskImpl extends ATaskImpl implements Completio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getNbMissingElements() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -176,6 +193,20 @@ public abstract class Completion1TaskImpl extends ATaskImpl implements Completio
 			return checkLearnerAction != CHECK_LEARNER_ACTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case GeneratorPackage.COMPLETION1_TASK___GET_NB_MISSING_ELEMENTS:
+			return getNbMissingElements();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

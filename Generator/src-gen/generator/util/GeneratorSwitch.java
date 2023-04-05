@@ -195,7 +195,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			MTCompletion1 mtCompletion1 = (MTCompletion1) theEObject;
 			T result = caseMTCompletion1(mtCompletion1);
 			if (result == null)
-				result = caseCompletion1Task(mtCompletion1);
+				result = caseCompletionTask(mtCompletion1);
 			if (result == null)
 				result = caseATask(mtCompletion1);
 			if (result == null)
@@ -278,29 +278,11 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.COMPLETION1_TASK: {
-			Completion1Task completion1Task = (Completion1Task) theEObject;
-			T result = caseCompletion1Task(completion1Task);
+		case GeneratorPackage.COMPLETION_TASK: {
+			CompletionTask completionTask = (CompletionTask) theEObject;
+			T result = caseCompletionTask(completionTask);
 			if (result == null)
-				result = caseATask(completion1Task);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.COMPLETION2_TASK: {
-			Completion2Task completion2Task = (Completion2Task) theEObject;
-			T result = caseCompletion2Task(completion2Task);
-			if (result == null)
-				result = caseATask(completion2Task);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.RECONSTRUCTION_TASK: {
-			ReconstructionTask reconstructionTask = (ReconstructionTask) theEObject;
-			T result = caseReconstructionTask(reconstructionTask);
-			if (result == null)
-				result = caseATask(reconstructionTask);
+				result = caseATask(completionTask);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -327,7 +309,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			MTCompletion2 mtCompletion2 = (MTCompletion2) theEObject;
 			T result = caseMTCompletion2(mtCompletion2);
 			if (result == null)
-				result = caseCompletion2Task(mtCompletion2);
+				result = caseCompletionTask(mtCompletion2);
 			if (result == null)
 				result = caseATask(mtCompletion2);
 			if (result == null)
@@ -338,7 +320,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			MTRecontruction mtRecontruction = (MTRecontruction) theEObject;
 			T result = caseMTRecontruction(mtRecontruction);
 			if (result == null)
-				result = caseReconstructionTask(mtRecontruction);
+				result = caseCompletionTask(mtRecontruction);
 			if (result == null)
 				result = caseATask(mtRecontruction);
 			if (result == null)
@@ -733,6 +715,15 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			T result = caseFactSolutionParam(factSolutionParam);
 			if (result == null)
 				result = caseParameter(factSolutionParam);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.ORDERING_TASK: {
+			OrderingTask orderingTask = (OrderingTask) theEObject;
+			T result = caseOrderingTask(orderingTask);
+			if (result == null)
+				result = caseATask(orderingTask);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1163,47 +1154,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Completion1 Task</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Completion Task</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Completion1 Task</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Completion Task</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCompletion1Task(Completion1Task object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Completion2 Task</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Completion2 Task</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCompletion2Task(Completion2Task object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reconstruction Task</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reconstruction Task</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseReconstructionTask(ReconstructionTask object) {
+	public T caseCompletionTask(CompletionTask object) {
 		return null;
 	}
 
@@ -1864,6 +1825,21 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFactSolutionParam(FactSolutionParam object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ordering Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ordering Task</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOrderingTask(OrderingTask object) {
 		return null;
 	}
 

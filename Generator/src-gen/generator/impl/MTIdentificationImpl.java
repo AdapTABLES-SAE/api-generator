@@ -3,6 +3,7 @@
 package generator.impl;
 
 import generator.ESingleTarget;
+import generator.ETaskType;
 import generator.GeneratorPackage;
 import generator.MTIdentification;
 
@@ -165,6 +166,11 @@ public class MTIdentificationImpl extends IdentificationTaskImpl implements MTId
 	@Override
 	public boolean validationOnLearnerAction() {
 		return checkLearnerAction;
+	}
+
+	@Override
+	public ETaskType getType() {
+		return this.type;
 	}
 
 } //MTIdentificationImpl

@@ -9,9 +9,8 @@ import generator.AValue;
 import generator.Abilities;
 import generator.Ability;
 import generator.AbstractFact;
-import generator.Completion1Task;
-import generator.Completion2Task;
 import generator.CompletionCriteria;
+import generator.CompletionTask;
 import generator.Component;
 import generator.Correctness;
 import generator.CorrectnessValue;
@@ -69,6 +68,7 @@ import generator.MTResultFact;
 import generator.MembershipIDTask;
 import generator.MultipleChoice;
 import generator.Objective;
+import generator.OrderingTask;
 import generator.Parameter;
 import generator.Position;
 import generator.PositionedElement;
@@ -81,7 +81,6 @@ import generator.QuestionParam;
 import generator.QuestionableFact;
 import generator.QuestionableFactResult;
 import generator.QuestionedFact;
-import generator.ReconstructionTask;
 import generator.ResponseModality;
 import generator.ResultPosition;
 import generator.Results;
@@ -318,21 +317,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass completion1TaskEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass completion2TaskEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass reconstructionTaskEClass = null;
+	private EClass completionTaskEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -641,6 +626,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass factSolutionParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass orderingTaskEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1484,6 +1476,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMTCompletion1_NbMissingElements() {
+		return (EAttribute) mtCompletion1EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGenerationContext() {
 		return generationContextEClass;
 	}
@@ -1799,7 +1800,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getATask__GetType() {
+	public EOperation getATask__ValidationOnLearnerAction() {
 		return aTaskEClass.getEOperations().get(0);
 	}
 
@@ -1808,7 +1809,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getATask__ValidationOnLearnerAction() {
+	public EOperation getATask__GetType() {
 		return aTaskEClass.getEOperations().get(1);
 	}
 
@@ -1817,8 +1818,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCompletion1Task() {
-		return completion1TaskEClass;
+	public EClass getCompletionTask() {
+		return completionTaskEClass;
 	}
 
 	/**
@@ -1826,8 +1827,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCompletion1Task_Type() {
-		return (EAttribute) completion1TaskEClass.getEStructuralFeatures().get(0);
+	public EAttribute getCompletionTask_Type() {
+		return (EAttribute) completionTaskEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1835,8 +1836,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCompletion1Task_CheckLearnerAction() {
-		return (EAttribute) completion1TaskEClass.getEStructuralFeatures().get(1);
+	public EAttribute getCompletionTask_CheckLearnerAction() {
+		return (EAttribute) completionTaskEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1844,53 +1845,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCompletion2Task() {
-		return completion2TaskEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCompletion2Task_Type() {
-		return (EAttribute) completion2TaskEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCompletion2Task_CheckLearnerAction() {
-		return (EAttribute) completion2TaskEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getReconstructionTask() {
-		return reconstructionTaskEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getReconstructionTask_Type() {
-		return (EAttribute) reconstructionTaskEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getReconstructionTask_CheckLearnerAction() {
-		return (EAttribute) reconstructionTaskEClass.getEStructuralFeatures().get(1);
+	public EOperation getCompletionTask__GetNbMissingElements() {
+		return completionTaskEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1943,7 +1899,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMembershipIDTask_CheckIsTrue() {
+	public EAttribute getMembershipIDTask_IdentifySharedProperty() {
 		return (EAttribute) membershipIDTaskEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1979,8 +1935,26 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMTCompletion2_NbMissingElements() {
+		return (EAttribute) mtCompletion2EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMTRecontruction() {
 		return mtRecontructionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTRecontruction_NbMissingElements() {
+		return (EAttribute) mtRecontructionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3221,6 +3195,33 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getOrderingTask() {
+		return orderingTaskEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOrderingTask_Type() {
+		return (EAttribute) orderingTaskEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOrderingTask_CheckLearnerAction() {
+		return (EAttribute) orderingTaskEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCorrectness() {
 		return correctnessEClass;
 	}
@@ -3593,6 +3594,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		mtCompletion1EClass = createEClass(MT_COMPLETION1);
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__TARGETS);
+		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__NB_MISSING_ELEMENTS);
 
 		generationContextEClass = createEClass(GENERATION_CONTEXT);
 		createEReference(generationContextEClass, GENERATION_CONTEXT__GAMECONTEXT);
@@ -3638,20 +3640,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(aTaskEClass, ATASK__ID);
 		createEAttribute(aTaskEClass, ATASK__MAX_TIME);
 		createEAttribute(aTaskEClass, ATASK__NB_FACTS);
-		createEOperation(aTaskEClass, ATASK___GET_TYPE);
 		createEOperation(aTaskEClass, ATASK___VALIDATION_ON_LEARNER_ACTION);
+		createEOperation(aTaskEClass, ATASK___GET_TYPE);
 
-		completion1TaskEClass = createEClass(COMPLETION1_TASK);
-		createEAttribute(completion1TaskEClass, COMPLETION1_TASK__TYPE);
-		createEAttribute(completion1TaskEClass, COMPLETION1_TASK__CHECK_LEARNER_ACTION);
-
-		completion2TaskEClass = createEClass(COMPLETION2_TASK);
-		createEAttribute(completion2TaskEClass, COMPLETION2_TASK__TYPE);
-		createEAttribute(completion2TaskEClass, COMPLETION2_TASK__CHECK_LEARNER_ACTION);
-
-		reconstructionTaskEClass = createEClass(RECONSTRUCTION_TASK);
-		createEAttribute(reconstructionTaskEClass, RECONSTRUCTION_TASK__TYPE);
-		createEAttribute(reconstructionTaskEClass, RECONSTRUCTION_TASK__CHECK_LEARNER_ACTION);
+		completionTaskEClass = createEClass(COMPLETION_TASK);
+		createEAttribute(completionTaskEClass, COMPLETION_TASK__TYPE);
+		createEAttribute(completionTaskEClass, COMPLETION_TASK__CHECK_LEARNER_ACTION);
+		createEOperation(completionTaskEClass, COMPLETION_TASK___GET_NB_MISSING_ELEMENTS);
 
 		identificationTaskEClass = createEClass(IDENTIFICATION_TASK);
 		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__TYPE);
@@ -3659,13 +3654,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		membershipIDTaskEClass = createEClass(MEMBERSHIP_ID_TASK);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__TYPE);
-		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__CHECK_IS_TRUE);
+		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION);
 
 		mtCompletion2EClass = createEClass(MT_COMPLETION2);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__TARGETS);
+		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__NB_MISSING_ELEMENTS);
 
 		mtRecontructionEClass = createEClass(MT_RECONTRUCTION);
+		createEAttribute(mtRecontructionEClass, MT_RECONTRUCTION__NB_MISSING_ELEMENTS);
 
 		mtIdentificationEClass = createEClass(MT_IDENTIFICATION);
 		createEAttribute(mtIdentificationEClass, MT_IDENTIFICATION__TARGET);
@@ -3869,6 +3866,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		factSolutionParamEClass = createEClass(FACT_SOLUTION_PARAM);
 
+		orderingTaskEClass = createEClass(ORDERING_TASK);
+		createEAttribute(orderingTaskEClass, ORDERING_TASK__TYPE);
+		createEAttribute(orderingTaskEClass, ORDERING_TASK__CHECK_LEARNER_ACTION);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -3920,17 +3921,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		smallRoomTypeEClass.getESuperTypes().add(this.getRoomType());
 		largeRoomTypeEClass.getESuperTypes().add(this.getRoomType());
 		mtLevelEClass.getESuperTypes().add(this.getLevel());
-		mtCompletion1EClass.getESuperTypes().add(this.getCompletion1Task());
+		mtCompletion1EClass.getESuperTypes().add(this.getCompletionTask());
 		positionEClass.getESuperTypes().add(this.getAPosition());
 		multipleChoiceEClass.getESuperTypes().add(this.getResponseModality());
 		enterResponseEClass.getESuperTypes().add(this.getResponseModality());
-		completion1TaskEClass.getESuperTypes().add(this.getATask());
-		completion2TaskEClass.getESuperTypes().add(this.getATask());
-		reconstructionTaskEClass.getESuperTypes().add(this.getATask());
+		completionTaskEClass.getESuperTypes().add(this.getATask());
 		identificationTaskEClass.getESuperTypes().add(this.getATask());
 		membershipIDTaskEClass.getESuperTypes().add(this.getATask());
-		mtCompletion2EClass.getESuperTypes().add(this.getCompletion2Task());
-		mtRecontructionEClass.getESuperTypes().add(this.getReconstructionTask());
+		mtCompletion2EClass.getESuperTypes().add(this.getCompletionTask());
+		mtRecontructionEClass.getESuperTypes().add(this.getCompletionTask());
 		mtIdentificationEClass.getESuperTypes().add(this.getIdentificationTask());
 		mtMembershipEClass.getESuperTypes().add(this.getMembershipIDTask());
 		mtFactEClass.getESuperTypes().add(this.getAbstractFact());
@@ -3957,6 +3956,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		correctnessValueEClass.getESuperTypes().add(this.getAValue());
 		positionedStructureElementEClass.getESuperTypes().add(this.getPositionedElement());
 		factSolutionParamEClass.getESuperTypes().add(this.getParameter());
+		orderingTaskEClass.getESuperTypes().add(this.getATask());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -4146,6 +4146,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMTCompletion1_Targets(), this.getESingleTarget(), "targets", null, 1, -1, MTCompletion1.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTCompletion1_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
+				MTCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(generationContextEClass, GenerationContext.class, "GenerationContext", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4244,35 +4247,21 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getATask_NbFacts(), ecorePackage.getEInt(), "nbFacts", "1", 0, 1, ATask.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getATask__GetType(), this.getETaskType(), "getType", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEOperation(getATask__ValidationOnLearnerAction(), ecorePackage.getEBoolean(), "validationOnLearnerAction",
 				0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(completion1TaskEClass, Completion1Task.class, "Completion1Task", IS_ABSTRACT, !IS_INTERFACE,
+		initEOperation(getATask__GetType(), this.getETaskType(), "getType", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(completionTaskEClass, CompletionTask.class, "CompletionTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCompletion1Task_Type(), this.getETaskType(), "type", "COMPLETE1", 0, 1, Completion1Task.class,
+		initEAttribute(getCompletionTask_Type(), this.getETaskType(), "type", "COMPLETE", 0, 1, CompletionTask.class,
 				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCompletion1Task_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", null,
-				0, 1, Completion1Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+		initEAttribute(getCompletionTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", null,
+				0, 1, CompletionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(completion2TaskEClass, Completion2Task.class, "Completion2Task", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCompletion2Task_Type(), this.getETaskType(), "type", "COMPLETE2", 0, 1, Completion2Task.class,
-				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCompletion2Task_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
-				"true", 0, 1, Completion2Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(reconstructionTaskEClass, ReconstructionTask.class, "ReconstructionTask", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getReconstructionTask_Type(), this.getETaskType(), "type", "REBUILD", 0, 1,
-				ReconstructionTask.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getReconstructionTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
-				"true", 0, 1, ReconstructionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
-				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEOperation(getCompletionTask__GetNbMissingElements(), ecorePackage.getEInt(), "getNbMissingElements", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(identificationTaskEClass, IdentificationTask.class, "IdentificationTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4288,9 +4277,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMembershipIDTask_Type(), this.getETaskType(), "type", "MEMBERSHIP", 0, 1,
 				MembershipIDTask.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMembershipIDTask_CheckIsTrue(), ecorePackage.getEBoolean(), "checkIsTrue", "true", 0, 1,
-				MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMembershipIDTask_IdentifySharedProperty(), ecorePackage.getEBoolean(),
+				"identifySharedProperty", "true", 0, 1, MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMembershipIDTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
 				"false", 0, 1, MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4300,9 +4289,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTCompletion2_Targets(), this.getESeveralTarget(), "targets", null, 2, -1,
 				MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTCompletion2_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "2", 0, 1,
+				MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtRecontructionEClass, MTRecontruction.class, "MTRecontruction", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMTRecontruction_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "3", 0, 1,
+				MTRecontruction.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtIdentificationEClass, MTIdentification.class, "MTIdentification", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4731,6 +4726,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(factSolutionParamEClass, FactSolutionParam.class, "FactSolutionParam", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(orderingTaskEClass, OrderingTask.class, "OrderingTask", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOrderingTask_Type(), this.getETaskType(), "type", "ORDER", 0, 1, OrderingTask.class,
+				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOrderingTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", "true",
+				0, 1, OrderingTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");
 		addEEnumLiteral(directionsEEnum, Directions.SOUTH);
@@ -4767,9 +4770,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(eSingleTargetEEnum, ESingleTarget.OPERAND);
 
 		initEEnum(eTaskTypeEEnum, ETaskType.class, "ETaskType");
-		addEEnumLiteral(eTaskTypeEEnum, ETaskType.COMPLETE1);
-		addEEnumLiteral(eTaskTypeEEnum, ETaskType.COMPLETE2);
-		addEEnumLiteral(eTaskTypeEEnum, ETaskType.REBUILD);
+		addEEnumLiteral(eTaskTypeEEnum, ETaskType.COMPLETE);
+		addEEnumLiteral(eTaskTypeEEnum, ETaskType.ORDER);
 		addEEnumLiteral(eTaskTypeEEnum, ETaskType.IDENTIFY);
 		addEEnumLiteral(eTaskTypeEEnum, ETaskType.MEMBERSHIP);
 

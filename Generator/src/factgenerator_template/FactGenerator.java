@@ -7,6 +7,7 @@ import factsgenerator_maths.MTFactGeneratorCOMP2;
 import factsgenerator_maths.MTFactGeneratorID;
 import factsgenerator_maths.MTFactGeneratorMEMB;
 import factsgenerator_maths.MTFactGeneratorREB;
+import generator.CompletionTask;
 import generator.ResultsByTask;
 import managers.EducationElementsManager;
 
@@ -29,14 +30,18 @@ public class FactGenerator {
 	private static void  generateQuestionableFactsByTask(EducationElementsManager eeManager, ResultsByTask resBytask) {  
 		FactGeneratorTemplate factGenerator; 
 		switch(resBytask.getTask().getType()) {
-		case COMPLETE1: 
-			factGenerator = new MTFactGeneratorCOMP1(eeManager);
-			break;
-		case COMPLETE2: 
-			factGenerator = new MTFactGeneratorCOMP2(eeManager);
-			break;
-		case REBUILD: 
-			factGenerator = new MTFactGeneratorREB(eeManager);
+		case COMPLETE: 
+			switch (((CompletionTask) resBytask.getTask()).getNbMissingElements()) {
+			case 1:
+				factGenerator = new MTFactGeneratorCOMP1(eeManager);
+				break;
+			case 2:
+				factGenerator = new MTFactGeneratorCOMP2(eeManager);		
+				break;
+			default: // 3
+				factGenerator = new MTFactGeneratorREB(eeManager);
+				break;
+			}
 			break;
 		case IDENTIFY: 
 			factGenerator = new MTFactGeneratorID(eeManager);
@@ -52,14 +57,18 @@ public class FactGenerator {
 		FactGeneratorTemplate factGenerator = null; 
 		for (ResultsByTask aTask : tasks) {
 			switch(aTask.getTask().getType()) {
-			case COMPLETE1: 
-				factGenerator = new MTFactGeneratorCOMP1(eeManager);
-				break;
-			case COMPLETE2: 
-				factGenerator = new MTFactGeneratorCOMP2(eeManager);
-				break;
-			case REBUILD: 
-				factGenerator = new MTFactGeneratorREB(eeManager);
+			case COMPLETE: 
+				switch (((CompletionTask) aTask.getTask()).getNbMissingElements()) {
+				case 1:
+					factGenerator = new MTFactGeneratorCOMP1(eeManager);
+					break;
+				case 2:
+					factGenerator = new MTFactGeneratorCOMP2(eeManager);		
+					break;
+				default: // 3
+					factGenerator = new MTFactGeneratorREB(eeManager);
+					break;
+				}
 				break;
 			case IDENTIFY: 
 				factGenerator = new MTFactGeneratorID(eeManager);

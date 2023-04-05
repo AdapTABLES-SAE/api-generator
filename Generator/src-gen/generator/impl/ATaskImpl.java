@@ -365,20 +365,16 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public ETaskType getType() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+	public abstract boolean validationOnLearnerAction();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public abstract boolean validationOnLearnerAction();
+	public abstract ETaskType getType();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -510,10 +506,10 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case GeneratorPackage.ATASK___GET_TYPE:
-			return getType();
 		case GeneratorPackage.ATASK___VALIDATION_ON_LEARNER_ACTION:
 			return validationOnLearnerAction();
+		case GeneratorPackage.ATASK___GET_TYPE:
+			return getType();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

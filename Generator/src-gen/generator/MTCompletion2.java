@@ -14,13 +14,14 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link generator.MTCompletion2#getTargets <em>Targets</em>}</li>
+ *   <li>{@link generator.MTCompletion2#getNbMissingElements <em>Nb Missing Elements</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getMTCompletion2()
  * @model
  * @generated
  */
-public interface MTCompletion2 extends Completion2Task {
+public interface MTCompletion2 extends CompletionTask {
 	/**
 	 * Returns the value of the '<em><b>Targets</b></em>' attribute list.
 	 * The list contents are of type {@link generator.ESeveralTarget}.
@@ -34,5 +35,28 @@ public interface MTCompletion2 extends Completion2Task {
 	 * @generated
 	 */
 	EList<ESeveralTarget> getTargets();
+
+	/**
+	 * Returns the value of the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * The default value is <code>"2"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nb Missing Elements</em>' attribute.
+	 * @see #isSetNbMissingElements()
+	 * @see generator.GeneratorPackage#getMTCompletion2_NbMissingElements()
+	 * @model default="2" unsettable="true" changeable="false"
+	 * @generated
+	 */
+	int getNbMissingElements();
+
+	/**
+	 * Returns whether the value of the '{@link generator.MTCompletion2#getNbMissingElements <em>Nb Missing Elements</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Nb Missing Elements</em>' attribute is set.
+	 * @see #getNbMissingElements()
+	 * @generated
+	 */
+	boolean isSetNbMissingElements();
 
 } // MTCompletion2

@@ -19,34 +19,24 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ETaskType implements Enumerator {
 	/**
-	 * The '<em><b>COMPLETE1</b></em>' literal object.
+	 * The '<em><b>COMPLETE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #COMPLETE1_VALUE
+	 * @see #COMPLETE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	COMPLETE1(0, "COMPLETE1", "COMPLETE1"),
+	COMPLETE(0, "COMPLETE", "COMPLETE"),
 
 	/**
-	 * The '<em><b>COMPLETE2</b></em>' literal object.
+	 * The '<em><b>ORDER</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #COMPLETE2_VALUE
+	 * @see #ORDER_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	COMPLETE2(1, "COMPLETE2", "COMPLETE2"),
-
-	/**
-	 * The '<em><b>REBUILD</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #REBUILD_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	REBUILD(2, "REBUILD", "REBUILD"),
+	ORDER(1, "ORDER", "ORDER"),
 
 	/**
 	 * The '<em><b>IDENTIFY</b></em>' literal object.
@@ -69,37 +59,26 @@ public enum ETaskType implements Enumerator {
 	MEMBERSHIP(4, "MEMBERSHIP", "MEMBERSHIP");
 
 	/**
-	 * The '<em><b>COMPLETE1</b></em>' literal value.
+	 * The '<em><b>COMPLETE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #COMPLETE1
+	 * @see #COMPLETE
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int COMPLETE1_VALUE = 0;
+	public static final int COMPLETE_VALUE = 0;
 
 	/**
-	 * The '<em><b>COMPLETE2</b></em>' literal value.
+	 * The '<em><b>ORDER</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #COMPLETE2
+	 * @see #ORDER
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int COMPLETE2_VALUE = 1;
-
-	/**
-	 * The '<em><b>REBUILD</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #REBUILD
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int REBUILD_VALUE = 2;
+	public static final int ORDER_VALUE = 1;
 
 	/**
 	 * The '<em><b>IDENTIFY</b></em>' literal value.
@@ -129,8 +108,7 @@ public enum ETaskType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final ETaskType[] VALUES_ARRAY = new ETaskType[] { COMPLETE1, COMPLETE2, REBUILD, IDENTIFY,
-			MEMBERSHIP, };
+	private static final ETaskType[] VALUES_ARRAY = new ETaskType[] { COMPLETE, ORDER, IDENTIFY, MEMBERSHIP, };
 
 	/**
 	 * A public read-only list of all the '<em><b>ETask Type</b></em>' enumerators.
@@ -186,12 +164,10 @@ public enum ETaskType implements Enumerator {
 	 */
 	public static ETaskType get(int value) {
 		switch (value) {
-		case COMPLETE1_VALUE:
-			return COMPLETE1;
-		case COMPLETE2_VALUE:
-			return COMPLETE2;
-		case REBUILD_VALUE:
-			return REBUILD;
+		case COMPLETE_VALUE:
+			return COMPLETE;
+		case ORDER_VALUE:
+			return ORDER;
 		case IDENTIFY_VALUE:
 			return IDENTIFY;
 		case MEMBERSHIP_VALUE:

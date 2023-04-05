@@ -249,9 +249,9 @@ public class LearningPathManagerResource {
 		task.setNbConsecutiveSuccess((int)(long)jtask.get("successiveSuccessesToReach"));
 		
 		if(((String) jtask.get("target")).equals("CORRECT")) {
-			task.setCheckIsTrue(true);
+			task.setIdentifySharedProperty(true);
 		} else {
-			task.setCheckIsTrue(false);
+			task.setIdentifySharedProperty(false);
 		}
 				
 		MultipleChoice modality = new MultipleChoiceImpl();

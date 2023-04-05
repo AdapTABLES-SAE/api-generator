@@ -2,29 +2,35 @@
  */
 package generator.impl;
 
+import generator.CompletionTask;
 import generator.ETaskType;
 import generator.GeneratorPackage;
-import generator.ReconstructionTask;
+
+import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Reconstruction Task</b></em>'.
+ * An implementation of the model object '<em><b>Completion Task</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.ReconstructionTaskImpl#getType <em>Type</em>}</li>
- *   <li>{@link generator.impl.ReconstructionTaskImpl#isCheckLearnerAction <em>Check Learner Action</em>}</li>
+ *   <li>{@link generator.impl.CompletionTaskImpl#getType <em>Type</em>}</li>
+ *   <li>{@link generator.impl.CompletionTaskImpl#isCheckLearnerAction <em>Check Learner Action</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class ReconstructionTaskImpl extends ATaskImpl implements ReconstructionTask {
+public abstract class CompletionTaskImpl extends ATaskImpl implements CompletionTask {
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,7 +39,7 @@ public abstract class ReconstructionTaskImpl extends ATaskImpl implements Recons
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ETaskType TYPE_EDEFAULT = ETaskType.REBUILD;
+	protected static final ETaskType TYPE_EDEFAULT = ETaskType.COMPLETE;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -53,7 +59,7 @@ public abstract class ReconstructionTaskImpl extends ATaskImpl implements Recons
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean CHECK_LEARNER_ACTION_EDEFAULT = true;
+	protected static final boolean CHECK_LEARNER_ACTION_EDEFAULT = false;
 
 	/**
 	 * The cached value of the '{@link #isCheckLearnerAction() <em>Check Learner Action</em>}' attribute.
@@ -70,7 +76,7 @@ public abstract class ReconstructionTaskImpl extends ATaskImpl implements Recons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ReconstructionTaskImpl() {
+	public CompletionTaskImpl() {
 		super();
 	}
 
@@ -81,7 +87,7 @@ public abstract class ReconstructionTaskImpl extends ATaskImpl implements Recons
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.RECONSTRUCTION_TASK;
+		return GeneratorPackage.Literals.COMPLETION_TASK;
 	}
 
 	/**
@@ -112,8 +118,18 @@ public abstract class ReconstructionTaskImpl extends ATaskImpl implements Recons
 		checkLearnerAction = newCheckLearnerAction;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.RECONSTRUCTION_TASK__CHECK_LEARNER_ACTION, oldCheckLearnerAction,
-					checkLearnerAction));
+					GeneratorPackage.COMPLETION_TASK__CHECK_LEARNER_ACTION, oldCheckLearnerAction, checkLearnerAction));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getNbMissingElements() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -124,9 +140,9 @@ public abstract class ReconstructionTaskImpl extends ATaskImpl implements Recons
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.RECONSTRUCTION_TASK__TYPE:
+		case GeneratorPackage.COMPLETION_TASK__TYPE:
 			return getType();
-		case GeneratorPackage.RECONSTRUCTION_TASK__CHECK_LEARNER_ACTION:
+		case GeneratorPackage.COMPLETION_TASK__CHECK_LEARNER_ACTION:
 			return isCheckLearnerAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -140,7 +156,7 @@ public abstract class ReconstructionTaskImpl extends ATaskImpl implements Recons
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.RECONSTRUCTION_TASK__CHECK_LEARNER_ACTION:
+		case GeneratorPackage.COMPLETION_TASK__CHECK_LEARNER_ACTION:
 			setCheckLearnerAction((Boolean) newValue);
 			return;
 		}
@@ -155,7 +171,7 @@ public abstract class ReconstructionTaskImpl extends ATaskImpl implements Recons
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.RECONSTRUCTION_TASK__CHECK_LEARNER_ACTION:
+		case GeneratorPackage.COMPLETION_TASK__CHECK_LEARNER_ACTION:
 			setCheckLearnerAction(CHECK_LEARNER_ACTION_EDEFAULT);
 			return;
 		}
@@ -170,12 +186,26 @@ public abstract class ReconstructionTaskImpl extends ATaskImpl implements Recons
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.RECONSTRUCTION_TASK__TYPE:
+		case GeneratorPackage.COMPLETION_TASK__TYPE:
 			return type != TYPE_EDEFAULT;
-		case GeneratorPackage.RECONSTRUCTION_TASK__CHECK_LEARNER_ACTION:
+		case GeneratorPackage.COMPLETION_TASK__CHECK_LEARNER_ACTION:
 			return checkLearnerAction != CHECK_LEARNER_ACTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case GeneratorPackage.COMPLETION_TASK___GET_NB_MISSING_ELEMENTS:
+			return getNbMissingElements();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -197,4 +227,4 @@ public abstract class ReconstructionTaskImpl extends ATaskImpl implements Recons
 		return result.toString();
 	}
 
-} //ReconstructionTaskImpl
+} //CompletionTaskImpl
