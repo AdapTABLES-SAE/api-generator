@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.QuestionedFact#getEntrys <em>Entrys</em>}</li>
  *   <li>{@link generator.QuestionedFact#getCorrectnessToReach <em>Correctness To Reach</em>}</li>
  *   <li>{@link generator.QuestionedFact#isLearnerValidation <em>Learner Validation</em>}</li>
+ *   <li>{@link generator.QuestionedFact#getCompleteFact <em>Complete Fact</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getQuestionedFact()
@@ -139,5 +140,27 @@ public interface QuestionedFact extends EObject {
 	 * @generated
 	 */
 	void setLearnerValidation(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Complete Fact</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Complete Fact</em>' attribute.
+	 * @see #setCompleteFact(String)
+	 * @see generator.GeneratorPackage#getQuestionedFact_CompleteFact()
+	 * @model
+	 * @generated
+	 */
+	String getCompleteFact();
+
+	/**
+	 * Sets the value of the '{@link generator.QuestionedFact#getCompleteFact <em>Complete Fact</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Complete Fact</em>' attribute.
+	 * @see #getCompleteFact()
+	 * @generated
+	 */
+	void setCompleteFact(String value);
 
 } // QuestionedFact

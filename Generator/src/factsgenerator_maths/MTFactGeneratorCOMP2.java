@@ -148,11 +148,11 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 		List<String> solutions = new ArrayList<>();
 		MTQFCompletion2 qfact = (MTQFCompletion2) qFact;
 		if(qfact.isResultOnRight()) {
-			solutions.add(qfact.getLeftOperand() + " x " + qfact.getRightOperand() + " = " + qfact.getResult());
-			solutions.add(qfact.getRightOperand() + " x " + qfact.getLeftOperand() + " = " + qfact.getResult());
+			solutions.add(qfact.getSoluceLeft() + " x " + qfact.getSoluceRight() + " = " + qfact.getSoluceRes());
+			solutions.add(qfact.getSoluceRight() + " x " + qfact.getSoluceLeft() + " = " + qfact.getSoluceRes());
 		} else {
-			solutions.add(qfact.getResult() + " = " + qfact.getLeftOperand() + " x " + qfact.getRightOperand());
-			solutions.add(qfact.getResult() + " = " + qfact.getRightOperand() + " x " + qfact.getLeftOperand());
+			solutions.add(qfact.getSoluceRes() + " = " + qfact.getSoluceLeft() + " x " + qfact.getSoluceRight());
+			solutions.add(qfact.getSoluceRes() + " = " + qfact.getSoluceRight() + " x " + qfact.getSoluceLeft());
 		}
 		return solutions;
 	}

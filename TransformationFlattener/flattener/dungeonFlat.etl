@@ -44,7 +44,7 @@ rule Room2Room
         	for (fact in roomIn.questionedFacts) { 
         	var factOUT: new OUT!Fact;
 				factOUT.id = fact.questionablefact.id; 
-			    factOUT.complete = fact.question.value.value;
+			    factOUT.complete = fact.completeFact;
 			    if(fact.correctnessToReach.isDefined()){
 			    	factOUT.correctnessToReach = fact.correctnessToReach.value.value;
 			    }
@@ -54,6 +54,10 @@ rule Room2Room
 			roomOut.facts = facts;
 			"\t\t\tFacts created".println();
 			//roomOut.facts.facts ::= roomIn.questionedFacts;	        
+        }
+        
+        if(roomIn.gameplay.isDefined() and roomIn.gameplay.prompt.isDefined()){
+        	roomOut.prompt = roomIn.gameplay.prompt.prompt;
         }
         
         /*if(roomIn.statements.isDefined()){
@@ -148,6 +152,12 @@ rule Elements2Elements
 
 	if(element.fact.isDefined()){
 		elementOut.idFact = element.fact.questionablefact.id;
+	}
+	
+	if(element.acceptedFacts.isDefined()){
+		for (soluce in element.acceptedFacts) { 
+			elementOut.acceptedFacts += soluce.value.value + ";";
+		}		
 	}
 }
 

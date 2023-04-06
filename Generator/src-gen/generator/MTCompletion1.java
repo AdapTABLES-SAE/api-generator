@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link generator.MTCompletion1#getTargets <em>Targets</em>}</li>
  *   <li>{@link generator.MTCompletion1#getNbMissingElements <em>Nb Missing Elements</em>}</li>
+ *   <li>{@link generator.MTCompletion1#isCheckLearnerAction <em>Check Learner Action</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getMTCompletion1()
@@ -58,5 +59,27 @@ public interface MTCompletion1 extends CompletionTask {
 	 * @generated
 	 */
 	boolean isSetNbMissingElements();
+
+	/**
+	 * Returns the value of the '<em><b>Check Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Check Learner Action</em>' attribute.
+	 * @see #setCheckLearnerAction(boolean)
+	 * @see generator.GeneratorPackage#getMTCompletion1_CheckLearnerAction()
+	 * @model
+	 * @generated
+	 */
+	boolean isCheckLearnerAction();
+
+	/**
+	 * Sets the value of the '{@link generator.MTCompletion1#isCheckLearnerAction <em>Check Learner Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Check Learner Action</em>' attribute.
+	 * @see #isCheckLearnerAction()
+	 * @generated
+	 */
+	void setCheckLearnerAction(boolean value);
 
 } // MTCompletion1

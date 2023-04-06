@@ -193,6 +193,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createPositionedStructureElement();
 		case GeneratorPackage.FACT_SOLUTION_PARAM:
 			return createFactSolutionParam();
+		case GeneratorPackage.PROMPT:
+			return createPrompt();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -890,6 +892,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public FactSolutionParam createFactSolutionParam() {
 		FactSolutionParamImpl factSolutionParam = new FactSolutionParamImpl();
 		return factSolutionParam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Prompt createPrompt() {
+		PromptImpl prompt = new PromptImpl();
+		return prompt;
 	}
 
 	/**

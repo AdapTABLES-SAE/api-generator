@@ -4,7 +4,7 @@
     <semanticResources>FlattenDungeon.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_ZvPtQMT_Ee2B8vZiQySjjA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aJpxUMT_Ee2B8vZiQySjjA" name=" class diagram" repPath="#_aJmG8MT_Ee2B8vZiQySjjA" changeId="e49d3bbd-2ab5-4bde-8744-a02d3cb74997">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aJpxUMT_Ee2B8vZiQySjjA" name=" class diagram" repPath="#_aJmG8MT_Ee2B8vZiQySjjA" changeId="1a5ed8a9-3469-42a9-8417-a87c408d8320">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="FlattenDungeon.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -74,6 +74,10 @@
             <children xmi:type="notation:Node" xmi:id="_rCJAQNIXEe2zi4XkNvkUsQ" type="3010" element="_rB_2UNIXEe2zi4XkNvkUsQ">
               <styles xmi:type="notation:FontStyle" xmi:id="_rCJAQdIXEe2zi4XkNvkUsQ" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_rCJAQtIXEe2zi4XkNvkUsQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_rcSDkNRREe2esK80cjWs_Q" type="3010" element="_rcMkANRREe2esK80cjWs_Q">
+              <styles xmi:type="notation:FontStyle" xmi:id="_rcSDkdRREe2esK80cjWs_Q" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_rcSDktRREe2esK80cjWs_Q"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_b3XQVcT_Ee2B8vZiQySjjA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_b3XQVsT_Ee2B8vZiQySjjA"/>
@@ -167,11 +171,15 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_3NhTsdOmEe2WLJ_Mkr-UVA" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_3NhTstOmEe2WLJ_Mkr-UVA"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_2lYKENOwEe2esK80cjWs_Q" type="3010" element="_2lA9sNOwEe2esK80cjWs_Q">
+              <styles xmi:type="notation:FontStyle" xmi:id="_2lYKEdOwEe2esK80cjWs_Q" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_2lYKEtOwEe2esK80cjWs_Q"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_b3YeecT_Ee2B8vZiQySjjA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_b3YeesT_Ee2B8vZiQySjjA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_b3YedcT_Ee2B8vZiQySjjA" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b3YedsT_Ee2B8vZiQySjjA" x="690" y="108" width="255" height="233"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b3YedsT_Ee2B8vZiQySjjA" x="690" y="70" width="255" height="271"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_njPooMT_Ee2B8vZiQySjjA" type="2003" element="_njHs0MT_Ee2B8vZiQySjjA">
           <children xmi:type="notation:Node" xmi:id="_njPoo8T_Ee2B8vZiQySjjA" type="5007"/>
@@ -382,7 +390,7 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_b3GKksT_Ee2B8vZiQySjjA" name="Room" tooltipText="" outgoingEdges="_b3Tl88T_Ee2B8vZiQySjjA _-_pBssT_Ee2B8vZiQySjjA _Dt2dTsUAEe2B8vZiQySjjA" incomingEdges="_b3SX2cT_Ee2B8vZiQySjjA" width="12" height="10">
       <target xmi:type="ecore:EClass" href="FlattenDungeon.ecore#//Room"/>
       <semanticElements xmi:type="ecore:EClass" href="FlattenDungeon.ecore#//Room"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_v8I1FdIXEe2zi4XkNvkUsQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tXpkFNRREe2esK80cjWs_Q" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
@@ -426,7 +434,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_J3UzcNISEe2NxNgstC9d9g" name="time : EDouble = 0.0" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_J3UzcNISEe2NxNgstC9d9g" name="time : EInt" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Room/time"/>
         <semanticElements xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Room/time"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_LGLMSdISEe2NxNgstC9d9g" labelAlignment="LEFT">
@@ -438,6 +446,14 @@
         <target xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Room/idTask"/>
         <semanticElements xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Room/idTask"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_v8L4YtIXEe2zi4XkNvkUsQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_rcMkANRREe2esK80cjWs_Q" name="prompt : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Room/prompt"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Room/prompt"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_tXpkK9RREe2esK80cjWs_Q" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
@@ -513,7 +529,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_6QtX69OmEe2WLJ_Mkr-UVA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_48aS49OwEe2esK80cjWs_Q" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
@@ -585,6 +601,14 @@
         <target xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Element/interactive"/>
         <semanticElements xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Element/interactive"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_6QvNGdOmEe2WLJ_Mkr-UVA" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_2lA9sNOwEe2esK80cjWs_Q" name="acceptedFacts : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Element/acceptedFacts"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Element/acceptedFacts"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_48d9QdOwEe2esK80cjWs_Q" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>

@@ -466,4 +466,13 @@ public class MTQFIdentificationImpl extends QuestionableFactImpl implements MTQF
 				&& resultOnRight == other.resultOnRight && rightOperand == other.rightOperand && soluce == other.soluce;
 	}
 
+	@Override
+	public String getCompleteFact() {
+		if (resultOnRight) {
+			return getLeftOperand() + " x " + getRightOperand() + " = " + getResult();
+		} else {
+			return getResult() + " = " + getLeftOperand() + " x " + getRightOperand();
+		}
+	}
+
 } //MTQFIdentificationImpl

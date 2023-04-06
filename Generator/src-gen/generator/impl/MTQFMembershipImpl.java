@@ -228,4 +228,9 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 		return Objects.equals(goodResults, other.goodResults) && table == other.table;
 	}
 
+	@Override
+	public String getCompleteFact() {
+		return "Resultats table de " + getTable();
+	}
+
 } //MTQFMembershipImpl

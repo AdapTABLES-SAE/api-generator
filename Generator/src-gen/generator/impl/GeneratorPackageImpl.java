@@ -75,6 +75,7 @@ import generator.PositionedElement;
 import generator.PositionedStructureElement;
 import generator.Prerequisite;
 import generator.Progression;
+import generator.Prompt;
 import generator.PropositionParam;
 import generator.Quantity;
 import generator.QuestionParam;
@@ -633,6 +634,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass orderingTaskEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass promptEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1485,6 +1493,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMTCompletion1_CheckLearnerAction() {
+		return (EAttribute) mtCompletion1EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGenerationContext() {
 		return generationContextEClass;
 	}
@@ -1818,6 +1835,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getATask__IsCheckOnLearnerAction() {
+		return aTaskEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCompletionTask() {
 		return completionTaskEClass;
 	}
@@ -1829,15 +1855,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getCompletionTask_Type() {
 		return (EAttribute) completionTaskEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCompletionTask_CheckLearnerAction() {
-		return (EAttribute) completionTaskEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1944,6 +1961,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMTCompletion2_CheckLearnerAction() {
+		return (EAttribute) mtCompletion2EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMTRecontruction() {
 		return mtRecontructionEClass;
 	}
@@ -1955,6 +1981,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getMTRecontruction_NbMissingElements() {
 		return (EAttribute) mtRecontructionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTRecontruction_CheckLearnerAction() {
+		return (EAttribute) mtRecontructionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2162,6 +2197,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EOperation getQuestionableFact__GetQuestionableFact() {
 		return questionableFactEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getQuestionableFact__GetCompleteFact() {
+		return questionableFactEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -2493,6 +2537,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getQuestionedFact_CompleteFact() {
+		return (EAttribute) questionedFactEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCompletionCriteria() {
 		return completionCriteriaEClass;
 	}
@@ -2745,8 +2798,26 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGameplay_OptionalValidator() {
+	public EAttribute getGameplay_ManualValidation() {
 		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameplay_Prompt() {
+		return (EReference) gameplayEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGameplay_RestrictedTo() {
+		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -3222,6 +3293,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPrompt() {
+		return promptEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPrompt_Prompt() {
+		return (EAttribute) promptEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCorrectness() {
 		return correctnessEClass;
 	}
@@ -3595,6 +3684,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtCompletion1EClass = createEClass(MT_COMPLETION1);
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__TARGETS);
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__NB_MISSING_ELEMENTS);
+		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__CHECK_LEARNER_ACTION);
 
 		generationContextEClass = createEClass(GENERATION_CONTEXT);
 		createEReference(generationContextEClass, GENERATION_CONTEXT__GAMECONTEXT);
@@ -3642,10 +3732,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(aTaskEClass, ATASK__NB_FACTS);
 		createEOperation(aTaskEClass, ATASK___VALIDATION_ON_LEARNER_ACTION);
 		createEOperation(aTaskEClass, ATASK___GET_TYPE);
+		createEOperation(aTaskEClass, ATASK___IS_CHECK_ON_LEARNER_ACTION);
 
 		completionTaskEClass = createEClass(COMPLETION_TASK);
 		createEAttribute(completionTaskEClass, COMPLETION_TASK__TYPE);
-		createEAttribute(completionTaskEClass, COMPLETION_TASK__CHECK_LEARNER_ACTION);
 		createEOperation(completionTaskEClass, COMPLETION_TASK___GET_NB_MISSING_ELEMENTS);
 
 		identificationTaskEClass = createEClass(IDENTIFICATION_TASK);
@@ -3660,9 +3750,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtCompletion2EClass = createEClass(MT_COMPLETION2);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__TARGETS);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__NB_MISSING_ELEMENTS);
+		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__CHECK_LEARNER_ACTION);
 
 		mtRecontructionEClass = createEClass(MT_RECONTRUCTION);
 		createEAttribute(mtRecontructionEClass, MT_RECONTRUCTION__NB_MISSING_ELEMENTS);
+		createEAttribute(mtRecontructionEClass, MT_RECONTRUCTION__CHECK_LEARNER_ACTION);
 
 		mtIdentificationEClass = createEClass(MT_IDENTIFICATION);
 		createEAttribute(mtIdentificationEClass, MT_IDENTIFICATION__TARGET);
@@ -3693,6 +3785,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(questionableFactEClass, QUESTIONABLE_FACT__ID);
 		createEReference(questionableFactEClass, QUESTIONABLE_FACT__RESULTS);
 		createEOperation(questionableFactEClass, QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT);
+		createEOperation(questionableFactEClass, QUESTIONABLE_FACT___GET_COMPLETE_FACT);
 
 		mtqfCompletion1EClass = createEClass(MTQF_COMPLETION1);
 		createEAttribute(mtqfCompletion1EClass, MTQF_COMPLETION1__LEFT_OPERAND);
@@ -3735,6 +3828,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(questionedFactEClass, QUESTIONED_FACT__ENTRYS);
 		createEReference(questionedFactEClass, QUESTIONED_FACT__CORRECTNESS_TO_REACH);
 		createEAttribute(questionedFactEClass, QUESTIONED_FACT__LEARNER_VALIDATION);
+		createEAttribute(questionedFactEClass, QUESTIONED_FACT__COMPLETE_FACT);
 
 		completionCriteriaEClass = createEClass(COMPLETION_CRITERIA);
 		createEAttribute(completionCriteriaEClass, COMPLETION_CRITERIA__SUCCES_PERCENT);
@@ -3772,7 +3866,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(gameplayEClass, GAMEPLAY__CATEGORY);
 		createEReference(gameplayEClass, GAMEPLAY__COMPONENTS);
 		createEAttribute(gameplayEClass, GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS);
-		createEAttribute(gameplayEClass, GAMEPLAY__OPTIONAL_VALIDATOR);
+		createEAttribute(gameplayEClass, GAMEPLAY__MANUAL_VALIDATION);
+		createEReference(gameplayEClass, GAMEPLAY__PROMPT);
+		createEAttribute(gameplayEClass, GAMEPLAY__RESTRICTED_TO);
 
 		gameplaysEClass = createEClass(GAMEPLAYS);
 		createEReference(gameplaysEClass, GAMEPLAYS__GAMEPLAYS);
@@ -3869,6 +3965,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		orderingTaskEClass = createEClass(ORDERING_TASK);
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__TYPE);
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__CHECK_LEARNER_ACTION);
+
+		promptEClass = createEClass(PROMPT);
+		createEAttribute(promptEClass, PROMPT__PROMPT);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -4149,6 +4248,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTCompletion1_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
 				MTCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTCompletion1_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", null, 0,
+				1, MTCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(generationContextEClass, GenerationContext.class, "GenerationContext", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4242,8 +4344,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getATask_ID(), theXMLTypePackage.getString(), "ID", null, 0, 1, ATask.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getATask_MaxTime(), ecorePackage.getEDouble(), "maxTime", "20.0", 0, 1, ATask.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getATask_MaxTime(), ecorePackage.getEInt(), "maxTime", "20", 0, 1, ATask.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getATask_NbFacts(), ecorePackage.getEInt(), "nbFacts", "1", 0, 1, ATask.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -4252,13 +4354,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEOperation(getATask__GetType(), this.getETaskType(), "getType", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		initEOperation(getATask__IsCheckOnLearnerAction(), ecorePackage.getEBoolean(), "isCheckOnLearnerAction", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+
 		initEClass(completionTaskEClass, CompletionTask.class, "CompletionTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCompletionTask_Type(), this.getETaskType(), "type", "COMPLETE", 0, 1, CompletionTask.class,
 				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCompletionTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", null,
-				0, 1, CompletionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getCompletionTask__GetNbMissingElements(), ecorePackage.getEInt(), "getNbMissingElements", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
@@ -4292,12 +4394,18 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTCompletion2_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "2", 0, 1,
 				MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTCompletion2_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", "true",
+				0, 1, MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtRecontructionEClass, MTRecontruction.class, "MTRecontruction", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMTRecontruction_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "3", 0, 1,
 				MTRecontruction.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTRecontruction_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
+				"true", 0, 1, MTRecontruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtIdentificationEClass, MTIdentification.class, "MTIdentification", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4359,6 +4467,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEOperation(getQuestionableFact__GetQuestionableFact(), ecorePackage.getEString(), "getQuestionableFact", 0,
 				1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getQuestionableFact__GetCompleteFact(), ecorePackage.getEString(), "getCompleteFact", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mtqfCompletion1EClass, MTQFCompletion1.class, "MTQFCompletion1", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4461,6 +4572,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getQuestionedFact_LearnerValidation(), ecorePackage.getEBoolean(), "learnerValidation", null, 0,
 				1, QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestionedFact_CompleteFact(), ecorePackage.getEString(), "completeFact", null, 0, 1,
+				QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(completionCriteriaEClass, CompletionCriteria.class, "CompletionCriteria", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4539,9 +4653,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getGameplay_HasIntegratedPropositions(), ecorePackage.getEBoolean(), "hasIntegratedPropositions",
 				null, 0, 1, Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGameplay_OptionalValidator(), ecorePackage.getEBoolean(), "optionalValidator", "false", 0, 1,
+		initEAttribute(getGameplay_ManualValidation(), ecorePackage.getEBoolean(), "manualValidation", "false", 0, 1,
 				Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getGameplay_Prompt(), this.getPrompt(), null, "prompt", null, 0, 1, Gameplay.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGameplay_RestrictedTo(), this.getETaskType(), "restrictedTo", null, 0, -1, Gameplay.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gameplaysEClass, Gameplays.class, "Gameplays", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4733,6 +4852,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getOrderingTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", "true",
 				0, 1, OrderingTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(promptEClass, Prompt.class, "Prompt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPrompt_Prompt(), ecorePackage.getEString(), "prompt", null, 0, 1, Prompt.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

@@ -45,6 +45,8 @@
       <elementPositions
           size="LARGE"
           ID="POSQ1"/>
+      <structurePositions
+          ID="POSQ1"/>
       <directions>SOUTH</directions>
       <directions>EAST</directions>
       <directions>NORTH</directions>
@@ -54,8 +56,9 @@
   <levelsDifficultyProgress/>
   <gameplays>
     <gameplays
-        name="SELECT UNIQUE"
-        optionalValidator="true">
+        name="SELECT MULTIPLE sans struct"
+        category="SELECT_MULTIPLE"
+        manualValidation="true">
       <components
           xsi:type="generator:Component"
           elementType="ELEM_TYPE1_INTERRUPT"
@@ -67,12 +70,14 @@
           xsi:type="generator:Component"
           elementType="ELEM_TYPE4_STATEMENT_DISPLAY"
           wearStatement="true"/>
+      <prompt
+          prompt="Touche les bons interrupteurs puis active le levier"/>
     </gameplays>
     <gameplays
         name="SELECT MULTIPLE "
         category="SELECT_MULTIPLE"
         hasIntegratedPropositions="true"
-        optionalValidator="true">
+        manualValidation="true">
       <components
           xsi:type="generator:Structure"
           structureType="STRUCT_H">
@@ -104,7 +109,7 @@
             </components>
             <components
                 xsi:type="generator:Component"
-                elementType="ELEM_TYPE4_DISPLAY"
+                elementType="ELEM_TYPE4_STATEMENT_DISPLAY"
                 wearStatement="true"/>
             <components
                 xsi:type="generator:Component"
@@ -131,6 +136,9 @@
       <components
           xsi:type="generator:Component"
           elementType="ELEM_TYPE3_SWITCH"/>
+      <prompt
+          prompt="Touche les bons interrupteurs"/>
+      <restrictedTo>IDENTIFY</restrictedTo>
     </gameplays>
     <gameplays
         name="DIRECT RESPONSE"
@@ -143,22 +151,16 @@
           xsi:type="generator:Component"
           elementType="ELEM_TYPE4_STATEMENT_DISPLAY"
           wearStatement="true"/>
+      <prompt
+          prompt="Saisie la réponse"/>
     </gameplays>
     <gameplays
         name="SELECT MULTIPLE BIS"
-        category="SELECT_MULTIPLE">
+        category="SELECT_MULTIPLE"
+        hasIntegratedPropositions="true">
       <components
           xsi:type="generator:Structure"
           structureType="STRUCT_H">
-        <components
-            xsi:type="generator:Component"
-            elementType="ELEM_TYPE4_DISPLAY">
-          <displayValue>
-            <value
-                xsi:type="generator:Value"
-                value="FALSE"/>
-          </displayValue>
-        </components>
         <components
             xsi:type="generator:Structure"
             structureType="STRUCT_V">
@@ -170,6 +172,11 @@
                 xsi:type="generator:Component"
                 elementType="ELEM_TYPE1_INTERRUPT"
                 wearChoices="true">
+              <displayValue>
+                <value
+                    xsi:type="generator:Value"
+                    value="Faux"/>
+              </displayValue>
               <defaultCorrectness>
                 <value
                     xsi:type="generator:CorrectnessValue"
@@ -178,12 +185,17 @@
             </components>
             <components
                 xsi:type="generator:Component"
-                elementType="ELEM_TYPE4_DISPLAY"
+                elementType="ELEM_TYPE4_STATEMENT_DISPLAY"
                 wearStatement="true"/>
             <components
                 xsi:type="generator:Component"
                 elementType="ELEM_TYPE1_INTERRUPT"
                 wearChoices="true">
+              <displayValue>
+                <value
+                    xsi:type="generator:Value"
+                    value="Vrai"/>
+              </displayValue>
               <defaultCorrectness>
                 <value
                     xsi:type="generator:CorrectnessValue"
@@ -192,19 +204,26 @@
             </components>
           </components>
         </components>
-        <components
-            xsi:type="generator:Component"
-            elementType="ELEM_TYPE4_DISPLAY">
-          <displayValue>
-            <value
-                xsi:type="generator:Value"
-                value="TRUE"/>
-          </displayValue>
-        </components>
       </components>
       <components
           xsi:type="generator:Component"
           elementType="ELEM_TYPE3_SWITCH"/>
+      <prompt
+          prompt="Touche les bons interrupteurs"/>
+      <restrictedTo>IDENTIFY</restrictedTo>
+    </gameplays>
+    <gameplays
+        name="SELECT UNIQUE">
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEM_TYPE1_INTERRUPT"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEM_TYPE4_STATEMENT_DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Touche le bon interrupteur"/>
     </gameplays>
   </gameplays>
   <elements>

@@ -168,6 +168,7 @@
     <genClasses ecoreClass="generator.ecore#//MTCompletion1">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/targets"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/nbMissingElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/checkLearnerAction"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//GenerationContext">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GenerationContext/gamecontext"/>
@@ -214,10 +215,10 @@
       <genOperations ecoreOperation="generator.ecore#//ATask/validationOnLearnerAction"
           body="return checkLearnerAction;"/>
       <genOperations ecoreOperation="generator.ecore#//ATask/getType"/>
+      <genOperations ecoreOperation="generator.ecore#//ATask/isCheckOnLearnerAction"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//CompletionTask">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionTask/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionTask/checkLearnerAction"/>
       <genOperations ecoreOperation="generator.ecore#//CompletionTask/getNbMissingElements"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//IdentificationTask">
@@ -232,9 +233,11 @@
     <genClasses ecoreClass="generator.ecore#//MTCompletion2">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/targets"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/nbMissingElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/checkLearnerAction"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTRecontruction">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTRecontruction/nbMissingElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTRecontruction/checkLearnerAction"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTIdentification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTIdentification/target"/>
@@ -264,6 +267,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFact/ID"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionableFact/results"/>
       <genOperations ecoreOperation="generator.ecore#//QuestionableFact/getQuestionableFact"/>
+      <genOperations ecoreOperation="generator.ecore#//QuestionableFact/getCompleteFact"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTQFCompletion1">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFCompletion1/leftOperand"/>
@@ -306,6 +310,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionedFact/entrys"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionedFact/correctnessToReach"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionedFact/learnerValidation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionedFact/completeFact"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//CompletionCriteria">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionCriteria/succesPercent"/>
@@ -343,7 +348,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/category"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplay/components"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/hasIntegratedPropositions"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/optionalValidator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/manualValidation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplay/prompt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/restrictedTo"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Gameplays">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplays/gameplays"/>
@@ -432,6 +439,9 @@
     <genClasses ecoreClass="generator.ecore#//OrderingTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/checkLearnerAction"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Prompt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Prompt/prompt"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

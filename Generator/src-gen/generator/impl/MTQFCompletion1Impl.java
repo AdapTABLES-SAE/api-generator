@@ -414,4 +414,17 @@ public class MTQFCompletion1Impl extends QuestionableFactImpl implements MTQFCom
 				&& rightOperand == other.rightOperand && soluce == other.soluce;
 	}
 
+	@Override
+	public String getCompleteFact() {
+		String left = getLeftOperand() == -1 ? getSoluce() + "" : getLeftOperand() + "";
+		String right = getRightOperand() == -1 ? getSoluce() + "" : getRightOperand() + "";
+		String res = getResult() == -1 ? getSoluce() + "" : getResult() + "";
+
+		if (resultOnRight) {
+			return left + " x " + right + " = " + res;
+		} else {
+			return res + " = " + left + " x " + right;
+		}
+	}
+
 } //MTQFCompletion1Impl

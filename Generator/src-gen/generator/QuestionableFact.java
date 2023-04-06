@@ -141,4 +141,12 @@ public interface QuestionableFact extends EObject {
 	 */
 	String getQuestionableFact();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	String getCompleteFact();
+
 } // QuestionableFact

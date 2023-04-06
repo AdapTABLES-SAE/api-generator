@@ -355,4 +355,13 @@ public class MTQFRebuildImpl extends QuestionableFactImpl implements MTQFRebuild
 				&& soluceRight == other.soluceRight;
 	}
 
+	@Override
+	public String getCompleteFact() {
+		if (resultOnRight) {
+			return getSoluceLeft() + " x " + getSoluceRight() + " = " + getSoluceRes();
+		} else {
+			return getSoluceRes() + " = " + getSoluceLeft() + " x " + getSoluceRight();
+		}
+	}
+
 } //MTQFRebuildImpl

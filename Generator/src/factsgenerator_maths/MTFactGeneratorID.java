@@ -158,9 +158,9 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 	protected List<String> getListOfGoodSolutions(QuestionableFact qFact) {
 		List<String> solutions = new ArrayList<>();
 		if(((MTQFIdentification) qFact).isSoluce()) {
-			solutions.add(qFact.toString());
+			solutions.add(true+"");
 		}else {
-			solutions.add("");
+			solutions.add(false+"");
 		}
 		return solutions;
 	}
@@ -170,9 +170,11 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 		Map<ECorrectness, List<String>> propositions = new HashMap<>();
 		List<String> propositions_temp = new ArrayList<>();
 		if(!((MTQFIdentification) qFact).isSoluce()) {
-			propositions_temp.add(qFact.toString());
+			//propositions_temp.add(qFact.toString());
+			
+			propositions_temp.add(true+"");
 		} else {
-			propositions_temp.add("");
+			propositions_temp.add(false+"");
 		}
 		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
 		propositions.put(ECorrectness.INCORRECT, propositions_temp);		

@@ -40,6 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.QuestionedFactImpl#getEntrys <em>Entrys</em>}</li>
  *   <li>{@link generator.impl.QuestionedFactImpl#getCorrectnessToReach <em>Correctness To Reach</em>}</li>
  *   <li>{@link generator.impl.QuestionedFactImpl#isLearnerValidation <em>Learner Validation</em>}</li>
+ *   <li>{@link generator.impl.QuestionedFactImpl#getCompleteFact <em>Complete Fact</em>}</li>
  * </ul>
  *
  * @generated
@@ -114,6 +115,26 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected boolean learnerValidation = LEARNER_VALIDATION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCompleteFact() <em>Complete Fact</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCompleteFact()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String COMPLETE_FACT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCompleteFact() <em>Complete Fact</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCompleteFact()
+	 * @generated
+	 * @ordered
+	 */
+	protected String completeFact = COMPLETE_FACT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -330,6 +351,28 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCompleteFact() {
+		return completeFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCompleteFact(String newCompleteFact) {
+		String oldCompleteFact = completeFact;
+		completeFact = newCompleteFact;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT,
+					oldCompleteFact, completeFact));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -367,6 +410,8 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 			return getCorrectnessToReach();
 		case GeneratorPackage.QUESTIONED_FACT__LEARNER_VALIDATION:
 			return isLearnerValidation();
+		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
+			return getCompleteFact();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -400,6 +445,9 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.QUESTIONED_FACT__LEARNER_VALIDATION:
 			setLearnerValidation((Boolean) newValue);
 			return;
+		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
+			setCompleteFact((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -430,6 +478,9 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.QUESTIONED_FACT__LEARNER_VALIDATION:
 			setLearnerValidation(LEARNER_VALIDATION_EDEFAULT);
 			return;
+		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
+			setCompleteFact(COMPLETE_FACT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -454,6 +505,8 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 			return correctnessToReach != null;
 		case GeneratorPackage.QUESTIONED_FACT__LEARNER_VALIDATION:
 			return learnerValidation != LEARNER_VALIDATION_EDEFAULT;
+		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
+			return COMPLETE_FACT_EDEFAULT == null ? completeFact != null : !COMPLETE_FACT_EDEFAULT.equals(completeFact);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -471,6 +524,8 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (learnerValidation: ");
 		result.append(learnerValidation);
+		result.append(", completeFact: ");
+		result.append(completeFact);
 		result.append(')');
 		return result.toString();
 	}

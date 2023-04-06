@@ -115,6 +115,7 @@ public abstract class FactGeneratorTemplate {
 		
 		
 		qef.setLearnerValidation(task.validationOnLearnerAction());
+		qef.setCompleteFact(qFact.getCompleteFact());
 		
 		eeManager.addFactToQuestion(task, qef); 
 	}

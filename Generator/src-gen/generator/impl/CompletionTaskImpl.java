@@ -7,14 +7,9 @@ import generator.ETaskType;
 import generator.GeneratorPackage;
 
 import java.lang.reflect.InvocationTargetException;
-
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +20,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.CompletionTaskImpl#getType <em>Type</em>}</li>
- *   <li>{@link generator.impl.CompletionTaskImpl#isCheckLearnerAction <em>Check Learner Action</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,26 +44,6 @@ public abstract class CompletionTaskImpl extends ATaskImpl implements Completion
 	 * @ordered
 	 */
 	protected ETaskType type = TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isCheckLearnerAction() <em>Check Learner Action</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isCheckLearnerAction()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean CHECK_LEARNER_ACTION_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isCheckLearnerAction() <em>Check Learner Action</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isCheckLearnerAction()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean checkLearnerAction = CHECK_LEARNER_ACTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,28 +78,6 @@ public abstract class CompletionTaskImpl extends ATaskImpl implements Completion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isCheckLearnerAction() {
-		return checkLearnerAction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCheckLearnerAction(boolean newCheckLearnerAction) {
-		boolean oldCheckLearnerAction = checkLearnerAction;
-		checkLearnerAction = newCheckLearnerAction;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.COMPLETION_TASK__CHECK_LEARNER_ACTION, oldCheckLearnerAction, checkLearnerAction));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getNbMissingElements() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -142,40 +94,8 @@ public abstract class CompletionTaskImpl extends ATaskImpl implements Completion
 		switch (featureID) {
 		case GeneratorPackage.COMPLETION_TASK__TYPE:
 			return getType();
-		case GeneratorPackage.COMPLETION_TASK__CHECK_LEARNER_ACTION:
-			return isCheckLearnerAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case GeneratorPackage.COMPLETION_TASK__CHECK_LEARNER_ACTION:
-			setCheckLearnerAction((Boolean) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case GeneratorPackage.COMPLETION_TASK__CHECK_LEARNER_ACTION:
-			setCheckLearnerAction(CHECK_LEARNER_ACTION_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
 	}
 
 	/**
@@ -188,8 +108,6 @@ public abstract class CompletionTaskImpl extends ATaskImpl implements Completion
 		switch (featureID) {
 		case GeneratorPackage.COMPLETION_TASK__TYPE:
 			return type != TYPE_EDEFAULT;
-		case GeneratorPackage.COMPLETION_TASK__CHECK_LEARNER_ACTION:
-			return checkLearnerAction != CHECK_LEARNER_ACTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -221,8 +139,6 @@ public abstract class CompletionTaskImpl extends ATaskImpl implements Completion
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (type: ");
 		result.append(type);
-		result.append(", checkLearnerAction: ");
-		result.append(checkLearnerAction);
 		result.append(')');
 		return result.toString();
 	}

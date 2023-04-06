@@ -254,6 +254,13 @@ public abstract class QuestionableFactImpl extends MinimalEObjectImpl.Container 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public abstract String getCompleteFact();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -365,6 +372,8 @@ public abstract class QuestionableFactImpl extends MinimalEObjectImpl.Container 
 		switch (operationID) {
 		case GeneratorPackage.QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT:
 			return getQuestionableFact();
+		case GeneratorPackage.QUESTIONABLE_FACT___GET_COMPLETE_FACT:
+			return getCompleteFact();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

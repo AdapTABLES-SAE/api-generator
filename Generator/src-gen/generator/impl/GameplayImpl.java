@@ -3,9 +3,11 @@
 package generator.impl;
 
 import generator.AComponent;
+import generator.ETaskType;
 import generator.GPCategory;
 import generator.Gameplay;
 import generator.GeneratorPackage;
+import generator.Prompt;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -18,6 +20,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -33,7 +36,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.GameplayImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link generator.impl.GameplayImpl#getComponents <em>Components</em>}</li>
  *   <li>{@link generator.impl.GameplayImpl#isHasIntegratedPropositions <em>Has Integrated Propositions</em>}</li>
- *   <li>{@link generator.impl.GameplayImpl#isOptionalValidator <em>Optional Validator</em>}</li>
+ *   <li>{@link generator.impl.GameplayImpl#isManualValidation <em>Manual Validation</em>}</li>
+ *   <li>{@link generator.impl.GameplayImpl#getPrompt <em>Prompt</em>}</li>
+ *   <li>{@link generator.impl.GameplayImpl#getRestrictedTo <em>Restricted To</em>}</li>
  * </ul>
  *
  * @generated
@@ -110,24 +115,44 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	protected boolean hasIntegratedPropositions = HAS_INTEGRATED_PROPOSITIONS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isOptionalValidator() <em>Optional Validator</em>}' attribute.
+	 * The default value of the '{@link #isManualValidation() <em>Manual Validation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isOptionalValidator()
+	 * @see #isManualValidation()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean OPTIONAL_VALIDATOR_EDEFAULT = false;
+	protected static final boolean MANUAL_VALIDATION_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isOptionalValidator() <em>Optional Validator</em>}' attribute.
+	 * The cached value of the '{@link #isManualValidation() <em>Manual Validation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isOptionalValidator()
+	 * @see #isManualValidation()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean optionalValidator = OPTIONAL_VALIDATOR_EDEFAULT;
+	protected boolean manualValidation = MANUAL_VALIDATION_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPrompt() <em>Prompt</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrompt()
+	 * @generated
+	 * @ordered
+	 */
+	protected Prompt prompt;
+
+	/**
+	 * The cached value of the '{@link #getRestrictedTo() <em>Restricted To</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRestrictedTo()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ETaskType> restrictedTo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -232,8 +257,8 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isOptionalValidator() {
-		return optionalValidator;
+	public boolean isManualValidation() {
+		return manualValidation;
 	}
 
 	/**
@@ -241,12 +266,75 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOptionalValidator(boolean newOptionalValidator) {
-		boolean oldOptionalValidator = optionalValidator;
-		optionalValidator = newOptionalValidator;
+	public void setManualValidation(boolean newManualValidation) {
+		boolean oldManualValidation = manualValidation;
+		manualValidation = newManualValidation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAMEPLAY__OPTIONAL_VALIDATOR,
-					oldOptionalValidator, optionalValidator));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAMEPLAY__MANUAL_VALIDATION,
+					oldManualValidation, manualValidation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Prompt getPrompt() {
+		return prompt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPrompt(Prompt newPrompt, NotificationChain msgs) {
+		Prompt oldPrompt = prompt;
+		prompt = newPrompt;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.GAMEPLAY__PROMPT, oldPrompt, newPrompt);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrompt(Prompt newPrompt) {
+		if (newPrompt != prompt) {
+			NotificationChain msgs = null;
+			if (prompt != null)
+				msgs = ((InternalEObject) prompt).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GAMEPLAY__PROMPT, null, msgs);
+			if (newPrompt != null)
+				msgs = ((InternalEObject) newPrompt).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GAMEPLAY__PROMPT, null, msgs);
+			msgs = basicSetPrompt(newPrompt, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAMEPLAY__PROMPT, newPrompt,
+					newPrompt));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ETaskType> getRestrictedTo() {
+		if (restrictedTo == null) {
+			restrictedTo = new EDataTypeUniqueEList<ETaskType>(ETaskType.class, this,
+					GeneratorPackage.GAMEPLAY__RESTRICTED_TO);
+		}
+		return restrictedTo;
 	}
 
 	/**
@@ -259,6 +347,8 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 		switch (featureID) {
 		case GeneratorPackage.GAMEPLAY__COMPONENTS:
 			return ((InternalEList<?>) getComponents()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.GAMEPLAY__PROMPT:
+			return basicSetPrompt(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -279,8 +369,12 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 			return getComponents();
 		case GeneratorPackage.GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS:
 			return isHasIntegratedPropositions();
-		case GeneratorPackage.GAMEPLAY__OPTIONAL_VALIDATOR:
-			return isOptionalValidator();
+		case GeneratorPackage.GAMEPLAY__MANUAL_VALIDATION:
+			return isManualValidation();
+		case GeneratorPackage.GAMEPLAY__PROMPT:
+			return getPrompt();
+		case GeneratorPackage.GAMEPLAY__RESTRICTED_TO:
+			return getRestrictedTo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -307,8 +401,15 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 		case GeneratorPackage.GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS:
 			setHasIntegratedPropositions((Boolean) newValue);
 			return;
-		case GeneratorPackage.GAMEPLAY__OPTIONAL_VALIDATOR:
-			setOptionalValidator((Boolean) newValue);
+		case GeneratorPackage.GAMEPLAY__MANUAL_VALIDATION:
+			setManualValidation((Boolean) newValue);
+			return;
+		case GeneratorPackage.GAMEPLAY__PROMPT:
+			setPrompt((Prompt) newValue);
+			return;
+		case GeneratorPackage.GAMEPLAY__RESTRICTED_TO:
+			getRestrictedTo().clear();
+			getRestrictedTo().addAll((Collection<? extends ETaskType>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -334,8 +435,14 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 		case GeneratorPackage.GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS:
 			setHasIntegratedPropositions(HAS_INTEGRATED_PROPOSITIONS_EDEFAULT);
 			return;
-		case GeneratorPackage.GAMEPLAY__OPTIONAL_VALIDATOR:
-			setOptionalValidator(OPTIONAL_VALIDATOR_EDEFAULT);
+		case GeneratorPackage.GAMEPLAY__MANUAL_VALIDATION:
+			setManualValidation(MANUAL_VALIDATION_EDEFAULT);
+			return;
+		case GeneratorPackage.GAMEPLAY__PROMPT:
+			setPrompt((Prompt) null);
+			return;
+		case GeneratorPackage.GAMEPLAY__RESTRICTED_TO:
+			getRestrictedTo().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -357,8 +464,12 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 			return components != null && !components.isEmpty();
 		case GeneratorPackage.GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS:
 			return hasIntegratedPropositions != HAS_INTEGRATED_PROPOSITIONS_EDEFAULT;
-		case GeneratorPackage.GAMEPLAY__OPTIONAL_VALIDATOR:
-			return optionalValidator != OPTIONAL_VALIDATOR_EDEFAULT;
+		case GeneratorPackage.GAMEPLAY__MANUAL_VALIDATION:
+			return manualValidation != MANUAL_VALIDATION_EDEFAULT;
+		case GeneratorPackage.GAMEPLAY__PROMPT:
+			return prompt != null;
+		case GeneratorPackage.GAMEPLAY__RESTRICTED_TO:
+			return restrictedTo != null && !restrictedTo.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -380,8 +491,10 @@ public class GameplayImpl extends MinimalEObjectImpl.Container implements Gamepl
 		result.append(category);
 		result.append(", hasIntegratedPropositions: ");
 		result.append(hasIntegratedPropositions);
-		result.append(", optionalValidator: ");
-		result.append(optionalValidator);
+		result.append(", manualValidation: ");
+		result.append(manualValidation);
+		result.append(", restrictedTo: ");
+		result.append(restrictedTo);
 		result.append(')');
 		return result.toString();
 	}

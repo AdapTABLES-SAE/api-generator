@@ -82,21 +82,23 @@ public class GameplayGenerator {
 		List<PositionedElement> elements = new ArrayList<>();
 
 		if(component.isWearStatement()) {
-			elements.add(buildComponent(component, fact, getAvailablePosition(roomtype, component.getElementType())));			
+			elements.add(buildComponent(component, fact, getAvailablePosition(roomtype, component.getElementType(), false)));			
 		} else if (component.isWearChoices()) {
 			for (int i = 0; i < fact.getPropositions().size(); i++) {
-				elements.add(buildComponent(component, fact, i, getAvailablePosition(roomtype, component.getElementType()), hasIntegratedChoices));
+				elements.add(buildComponent(component, fact, i, getAvailablePosition(roomtype, component.getElementType(), false), hasIntegratedChoices));
 			}
 		} else if (component.isInputEntry()) {
 			for (int i = 0; i < fact.getEntrys().size(); i++) {
-				elements.add(buildComponent(component, fact, i, getAvailablePosition(roomtype, component.getElementType())));
+				elements.add(buildComponent(component, fact, i, getAvailablePosition(roomtype, component.getElementType(), false)));
 			}
 		} else {
-			if(component.getElementType().getAbility().getName().equals("VERIFICATOR") && fact != null && fact.isLearnerValidation()) {
+			/*if(component.getElementType().getAbility().getName().equals("VERIFICATOR") && fact != null && fact.isLearnerValidation()) {
 				elements.add(buildComponent(component, getAvailablePosition(roomtype, component.getElementType())));
 			} else if(!component.getElementType().getAbility().getName().equals("VERIFICATOR")) {
 				elements.add(buildComponent(component, getAvailablePosition(roomtype, component.getElementType())));
-			}
+			}*/
+			
+			elements.add(buildComponent(component, getAvailablePosition(roomtype, component.getElementType(), false)));
 		}
 		return elements;
 	}
@@ -183,7 +185,7 @@ public class GameplayGenerator {
 	}
 	
 	private boolean isFactCorrect(String propositionValue, ECorrectness propositionCorrectness) {
-		if(!propositionValue.isEmpty()) {
+		if(!propositionValue.equals(false+"")) {
 			return propositionCorrectness.equals(ECorrectness.CORRECT)? true: false;
 		} else {
 			return propositionCorrectness.equals(ECorrectness.CORRECT)? false: true;
@@ -235,9 +237,9 @@ public class GameplayGenerator {
 		//System.out.println("BuildStructureHierarchy");
 		if(positionFromParent == null) {
 			if(component instanceof Component) {
-				positionFromParent = getAvailablePosition(roomtype, ((Component) component).getElementType());
+				positionFromParent = getAvailablePosition(roomtype, ((Component) component).getElementType(), false);
 			} else {
-				positionFromParent = getAvailablePosition(roomtype, ((Structure) component).getStructureType());
+				positionFromParent = getAvailablePosition(roomtype, ((Structure) component).getStructureType(), true);
 			}
 		}
 		
@@ -285,16 +287,26 @@ public class GameplayGenerator {
 		return elements;
 	}
 	
-	private APosition getAvailablePosition(RoomType roomType, GPElementType elementType) {
+	private APosition getAvailablePosition(RoomType roomType, GPElementType elementType, boolean isStructure) {
 		List<APosition> allowed = new ArrayList<>();
-		for (APosition aPosition : roomType.getElementPositions()) {
-			if(!occupiedPositions.contains(aPosition) && aPosition.getSize().equals(elementType.getSize()) 
-					&& (aPosition.getRestrictedTo().isEmpty() || aPosition.getRestrictedTo().contains(((ElementType) elementType).getAbility()))) {
-				allowed.add(aPosition);
+		if(!isStructure) {
+			for (APosition aPosition : roomType.getElementPositions()) {
+				if(!occupiedPositions.contains(aPosition) && aPosition.getSize().equals(elementType.getSize()) 
+						&& (aPosition.getRestrictedTo().isEmpty() || aPosition.getRestrictedTo().contains(((ElementType) elementType).getAbility()))) {
+					allowed.add(aPosition);
+				}
+			}
+			
+		} else {
+			for (APosition aPosition : roomType.getStructurePositions()) {
+				if(!occupiedPositions.contains(aPosition) && aPosition.getSize().equals(elementType.getSize())) {
+					allowed.add(aPosition);
+				}
 			}
 		}
-		if(allowed.isEmpty()) return null;
 		
+		
+		if(allowed.isEmpty()) return null;
 		int number = new Random().nextInt(allowed.size());
 		occupiedPositions.add(allowed.get(number));
 		return allowed.get(number);

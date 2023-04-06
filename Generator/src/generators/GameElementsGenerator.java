@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Random;
 
 import gameplaygenerator_maths.GameplayGenerator;
+import generator.ATask;
+import generator.CompletionTask;
 import generator.Dungeon;
 import generator.EnterResponse;
 import generator.GPCategory;
@@ -50,28 +52,54 @@ public class GameElementsGenerator {
 		List<Gameplay> gameplays;
 		for (TaskFactPair tfp: eeManager.getFactsToQuestion()) {
 			// normalement on devrait se baser sur le modèle de relations pour choisir
-			GPCategory chosenCategory;
-			if(tfp.getTask().getResponseModality() instanceof EnterResponse) { // TODO : a changer ensuite
-				chosenCategory = GPCategory.DIRECT_RESPONSE;
-			} else {
-				System.err.println("Number of facts "+tfp.getNumberOfFacts()+" -- task : "+tfp.getTask().getID());
-				chosenCategory = tfp.getNumberOfFacts() == 1? GPCategory.SELECT_UNIQUE: GPCategory.SELECT_MULTIPLE;
-			}
-			gameplays = getGameplayOfCategorieAndType(chosenCategory);
-			
+			GPCategory chosenCategory = chooseValidCategory(tfp.getTask());
+			System.out.println(chosenCategory);
+			gameplays = getGameplayOfCategorieAndType(chosenCategory, tfp.getTask());
+			System.out.println(gameplays);
 			Gameplay gp = gameplays.get(random.nextInt(gameplays.size()));
 			gameElementManager.add(gp, tfp);
 		}
 	}
 	
-	private List<Gameplay> getGameplayOfCategorieAndType(GPCategory category){
+	private GPCategory chooseValidCategory(ATask task) {
+		// TODO : based on relation MM 
+		
+		if(task.getResponseModality() instanceof EnterResponse) {
+			return GPCategory.DIRECT_RESPONSE;
+		}
+		if(task.getNbFacts() > 1 || (task instanceof CompletionTask && ((CompletionTask) task).getNbMissingElements() > 1)) {
+			return GPCategory.SELECT_MULTIPLE;
+		}
+		return GPCategory.SELECT_UNIQUE;
+		
+	}
+	
+	private List<Gameplay> getGameplayOfCategorieAndType(GPCategory category, ATask task){
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
+		//System.out.println(task.getID()+" "+task.validationOnLearnerAction()+ " "+ task.getType());
 		for (Gameplay gp : this.gameDescription.getGameplays().getGameplays()) {
-			if(gp.getCategory().equals(category)) {
+			/*System.out.println("\t"+gp.getCategory()+" "+gp.isHasIntegratedPropositions() + " " +gp.getRestrictedTo());
+			System.out.println("\t cat"+gp.getCategory().equals(category));
+			System.out.println("\t"+respectValidationMethod(gp, task));
+			System.out.println("\t"+respectGameplayTaskTypeRestriction(gp, task));*/
+
+			if(gp.getCategory().equals(category) && respectValidationMethod(gp, task) && respectGameplayTaskTypeRestriction(gp, task)) {
 				compatibleGameplays.add(gp);
 			}
 		}
 		return compatibleGameplays;
+	}
+	
+	private boolean respectValidationMethod(Gameplay gameplay, ATask task) {
+		return task.validationOnLearnerAction() == gameplay.isManualValidation();
+	}
+	
+	private boolean respectGameplayTaskTypeRestriction(Gameplay gameplay, ATask task) {
+		if(gameplay.getRestrictedTo().isEmpty()) {
+			return true;
+		} else {
+			return gameplay.getRestrictedTo().contains(task.getType());
+		}
 	}
 
 	public GameElementsManager getGameElementManager() {
