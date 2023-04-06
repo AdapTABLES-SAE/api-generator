@@ -56,9 +56,9 @@ public class GameplayGenerator {
 			} else {
 				QuestionedFact qef = null; 
 				if(!hasStructure) {
-					if (facts.size() > 1) {
+					/*if (facts.size() > 1) {
 						System.err.println("Multiple facts can not be questioned through a gameplay without structure");
-					} 
+					} */
 					qef = facts.get(0);
 				}	
 				elements.addAll(buildSimpleGameplayHierarchy((Component) aComp, qef, roomtype, gameplay.isHasIntegratedPropositions())); 
@@ -92,12 +92,6 @@ public class GameplayGenerator {
 				elements.add(buildComponent(component, fact, i, getAvailablePosition(roomtype, component.getElementType(), false)));
 			}
 		} else {
-			/*if(component.getElementType().getAbility().getName().equals("VERIFICATOR") && fact != null && fact.isLearnerValidation()) {
-				elements.add(buildComponent(component, getAvailablePosition(roomtype, component.getElementType())));
-			} else if(!component.getElementType().getAbility().getName().equals("VERIFICATOR")) {
-				elements.add(buildComponent(component, getAvailablePosition(roomtype, component.getElementType())));
-			}*/
-			
 			elements.add(buildComponent(component, getAvailablePosition(roomtype, component.getElementType(), false)));
 		}
 		return elements;
@@ -202,11 +196,11 @@ public class GameplayGenerator {
 			//System.err.println(proposition.getValue()+" "+proposition.getState().getValue());
 			//System.err.println(gameplayComponentToComputeCorrectness+" - "+propositionCorrectness);
 			
-			if((gameplayComponentToComputeCorrectness.equals(ECorrectness.FACT_CORRECTNESS) && isFactCorrect(propositionValue, propositionCorrectness)) 
-					|| (gameplayComponentToComputeCorrectness.equals(ECorrectness.NOT_FACT_CORRECTNESS) && !isFactCorrect(propositionValue, propositionCorrectness))) {
+			if((gameplayComponentToComputeCorrectness.equals(ECorrectness.NOT_FACT_CORRECTNESS) && isFactCorrect(propositionValue, propositionCorrectness)) 
+					|| (gameplayComponentToComputeCorrectness.equals(ECorrectness.FACT_CORRECTNESS) && !isFactCorrect(propositionValue, propositionCorrectness))) {
 				value.setValue(ECorrectness.INCORRECT);
-			} else if((gameplayComponentToComputeCorrectness.equals(ECorrectness.FACT_CORRECTNESS) && !isFactCorrect(propositionValue, propositionCorrectness)) 
-					|| (gameplayComponentToComputeCorrectness.equals(ECorrectness.NOT_FACT_CORRECTNESS) && isFactCorrect(propositionValue, propositionCorrectness))) {
+			} else if((gameplayComponentToComputeCorrectness.equals(ECorrectness.NOT_FACT_CORRECTNESS) && !isFactCorrect(propositionValue, propositionCorrectness)) 
+					|| (gameplayComponentToComputeCorrectness.equals(ECorrectness.FACT_CORRECTNESS) && isFactCorrect(propositionValue, propositionCorrectness))) {
 				value.setValue(ECorrectness.CORRECT);
 			}
 		

@@ -53,7 +53,7 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean CHECK_LEARNER_ACTION_EDEFAULT = true;
+	protected static final boolean CHECK_LEARNER_ACTION_EDEFAULT = false;
 
 	/**
 	 * The cached value of the '{@link #isCheckLearnerAction() <em>Check Learner Action</em>}' attribute.

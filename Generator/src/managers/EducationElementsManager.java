@@ -133,7 +133,7 @@ public class EducationElementsManager {
 		/*if(learnerPlayer.getProgression() == null) {
 			learnerPlayer.setProgression(new ProgressionImpl());
 		}*/
-		System.out.println("chosen OBJLVL "+ chosenObjectiveLevel.getLevel().getID()+" "+chosenObjectiveLevel.getObjective().getID());
+		System.err.println("chosen OBJLVL "+ chosenObjectiveLevel.getLevel().getID()+" "+chosenObjectiveLevel.getObjective().getID());
 		if(!learnerPlayer.getProgression().getCurrentobjectivelevels().contains(chosenObjectiveLevel)) {
 			learnerPlayer.getProgression().getCurrentobjectivelevels().add(this.chosenObjectiveLevel);
 		}

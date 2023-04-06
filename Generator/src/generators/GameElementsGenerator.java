@@ -51,13 +51,17 @@ public class GameElementsGenerator {
 	private void selectCorrespondingGameplays() {
 		List<Gameplay> gameplays;
 		for (TaskFactPair tfp: eeManager.getFactsToQuestion()) {
-			// normalement on devrait se baser sur le modèle de relations pour choisir
-			GPCategory chosenCategory = chooseValidCategory(tfp.getTask());
-			System.out.println(chosenCategory);
-			gameplays = getGameplayOfCategorieAndType(chosenCategory, tfp.getTask());
-			System.out.println(gameplays);
-			Gameplay gp = gameplays.get(random.nextInt(gameplays.size()));
-			gameElementManager.add(gp, tfp);
+			if(tfp != null) {
+				// normalement on devrait se baser sur le modèle de relations pour choisir
+				GPCategory chosenCategory = chooseValidCategory(tfp.getTask());
+				System.out.println(chosenCategory);
+				gameplays = getGameplayOfCategorieAndType(chosenCategory, tfp.getTask());
+				System.out.println(gameplays);
+				Gameplay gp = gameplays.get(random.nextInt(gameplays.size()));
+				gameElementManager.add(gp, tfp);	
+			} else {
+				gameElementManager.add(null, tfp);
+			}
 		}
 	}
 	
@@ -76,12 +80,12 @@ public class GameElementsGenerator {
 	
 	private List<Gameplay> getGameplayOfCategorieAndType(GPCategory category, ATask task){
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
-		//System.out.println(task.getID()+" "+task.validationOnLearnerAction()+ " "+ task.getType());
+		System.out.println(task.getID()+" "+task.validationOnLearnerAction()+ " "+ task.getType());
 		for (Gameplay gp : this.gameDescription.getGameplays().getGameplays()) {
-			/*System.out.println("\t"+gp.getCategory()+" "+gp.isHasIntegratedPropositions() + " " +gp.getRestrictedTo());
+			System.out.println("\t"+gp.getCategory()+" "+gp.isHasIntegratedPropositions() + " " +gp.getRestrictedTo());
 			System.out.println("\t cat"+gp.getCategory().equals(category));
-			System.out.println("\t"+respectValidationMethod(gp, task));
-			System.out.println("\t"+respectGameplayTaskTypeRestriction(gp, task));*/
+			System.out.println("\t"+gp.isManualValidation());
+			System.out.println("\t"+respectGameplayTaskTypeRestriction(gp, task));
 
 			if(gp.getCategory().equals(category) && respectValidationMethod(gp, task) && respectGameplayTaskTypeRestriction(gp, task)) {
 				compatibleGameplays.add(gp);
@@ -91,6 +95,7 @@ public class GameElementsGenerator {
 	}
 	
 	private boolean respectValidationMethod(Gameplay gameplay, ATask task) {
+		System.err.println(task.validationOnLearnerAction()+" "+gameplay.isManualValidation());
 		return task.validationOnLearnerAction() == gameplay.isManualValidation();
 	}
 	

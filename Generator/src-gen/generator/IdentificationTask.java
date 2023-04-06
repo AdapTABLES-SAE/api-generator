@@ -36,13 +36,13 @@ public interface IdentificationTask extends ATask {
 
 	/**
 	 * Returns the value of the '<em><b>Check Learner Action</b></em>' attribute.
-	 * The default value is <code>"true"</code>.
+	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Check Learner Action</em>' attribute.
 	 * @see #setCheckLearnerAction(boolean)
 	 * @see generator.GeneratorPackage#getIdentificationTask_CheckLearnerAction()
-	 * @model default="true"
+	 * @model default="false"
 	 * @generated
 	 */
 	boolean isCheckLearnerAction();

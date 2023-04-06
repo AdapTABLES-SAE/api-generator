@@ -125,13 +125,26 @@ public class EducationalElementsGenerator {
 		for (Objective objective : eligible_objective) {
 			System.out.println("Eligible "+objective.getID());
 			if(!hasLearnerBeginObjective(objective)) {
-				CurrentObjectiveLevel col = new CurrentObjectiveLevelImpl();
-				col.setAchieved(false);
-				col.setObjective(objective);
-				col.setLevel(getAvailableLevelForObjective(objective));
-				eeManager.addLearnerNewCurrentObjectifLevel(col);
+				Level level = getAvailableLevelForObjective(objective);
+				
+				if(!currentObjectiveLevelExist(objective, level)) {
+					CurrentObjectiveLevel col = new CurrentObjectiveLevelImpl();
+					col.setAchieved(false);
+					col.setObjective(objective);
+					col.setLevel(level);
+					eeManager.addLearnerNewCurrentObjectifLevel(col);
+				}
 			}
 		}
+	}
+	
+	private boolean currentObjectiveLevelExist(Objective o, Level l) {
+		for (CurrentObjectiveLevel col : this.learnerPlayer.getProgression().getCurrentobjectivelevels()) {
+			if(col.getObjective().equals(o) && col.getObjective().equals(l)) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	private Level getAvailableLevelForObjective(Objective o) {

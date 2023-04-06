@@ -77,7 +77,8 @@ public class DungeonGenerator {
 		dungeonRooms.add(new LabyrinthineRoom(originRoom));
 		
 		//List<TaskFactPair> factsToQuestion = eeManager.getFactsToQuestion();
-				
+		//System.err.println("Nb rooms "+nbRooms+" | NbGPTaskPair "+geManager.size());
+		
 		while(dungeonRooms.size() < nbRooms + 1) {
 			LabyrinthineRoom randomStartingRoom = chooseEntryRoomForNewPathIn(dungeonRooms);
 			LabyrinthineRoom aRoom = createNewRoomFrom(randomStartingRoom, geManager.get(dungeonRooms.size() - 1));
@@ -119,7 +120,11 @@ public class DungeonGenerator {
 		Directions entry = null;
 		while(roomType == null && !allowedDirections.isEmpty()) {
 			entry = chooseEntryDirection(allowedDirections);
-			roomType = getCompatibleRoomType(entry, factsToQuestionByRoom == null? 0 : factsToQuestionByRoom.getTask2facts().getNumberOfFacts()); 
+			if(factsToQuestionByRoom != null && factsToQuestionByRoom.getTask2facts() != null) {
+				roomType = getCompatibleRoomType(entry, factsToQuestionByRoom.getTask2facts().getNumberOfFacts()); 
+			} else {
+				roomType = getCompatibleRoomType(entry, 0);
+			}
 			if(roomType == null) {
 				allowedDirections.remove(entry);
 			}

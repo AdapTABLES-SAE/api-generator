@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import generator.Gameplay;
-import generator.PropositionParam;
-import generator.QuestionedFact;
 import structures.GameplayTaskFactPair;
 import structures.TaskFactPair;
 
@@ -19,7 +17,11 @@ public class GameElementsManager {
 	}
 	
 	public void add(Gameplay gameplay, TaskFactPair taskFactPair) {
-		gameplay2facts.add(new GameplayTaskFactPair(gameplay, taskFactPair));
+		if(gameplay == null && taskFactPair == null) {
+			gameplay2facts.add(null);
+		} else {
+			gameplay2facts.add(new GameplayTaskFactPair(gameplay, taskFactPair));
+		}
 	}
 	
 	public GameplayTaskFactPair get(int i) {

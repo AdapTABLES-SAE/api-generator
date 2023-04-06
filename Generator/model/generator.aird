@@ -28,6 +28,7 @@
     <semanticResources>platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign</semanticResources>
     <semanticResources>environment:/viewpoint</semanticResources>
     <semanticResources>file:/C:/blemoine/TheseGenerator/gen1/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi</semanticResources>
+    <semanticResources>platform:/resource/FrameworkAPI/models/inputmodels/MultiplicationTables.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_-oGdkAnBEe25_Pq4ehy-Rg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_-pEG4AnBEe25_Pq4ehy-Rg" name="generalView" repPath="#_-o2rgAnBEe25_Pq4ehy-Rg" changeId="1c9dd499-3f85-4756-a855-296bc935cbd6">
@@ -50,11 +51,11 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Og-RsCg1Ee2OYdly36BzFQ" name="educationalDomain" repPath="#_Og7OYCg1Ee2OYdly36BzFQ" changeId="393c8d4a-58f5-424b-aaf3-a9175c7aa784">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Og-RsCg1Ee2OYdly36BzFQ" name="educationalDomain" repPath="#_Og7OYCg1Ee2OYdly36BzFQ" changeId="65796f65-0191-4239-94b3-d63419d45b23">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Jed5wCg4Ee2OYdly36BzFQ" name="mathExtension" repPath="#_JedSsCg4Ee2OYdly36BzFQ" changeId="8d5ea621-48ce-412f-8c7e-001edbf556ce">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Jed5wCg4Ee2OYdly36BzFQ" name="mathExtension" repPath="#_JedSsCg4Ee2OYdly36BzFQ" changeId="b83b649c-eae7-4dd8-9bb1-ebc374f80a7b">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -7895,7 +7896,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_f8Rlpc_TEe2GGs5TCq07mg" name="checkLearnerAction : EBoolean = true" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_f8Rlpc_TEe2GGs5TCq07mg" name="checkLearnerAction : EBoolean = false" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="generator.ecore#//IdentificationTask/checkLearnerAction"/>
         <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//IdentificationTask/checkLearnerAction"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_f8Rlps_TEe2GGs5TCq07mg" labelAlignment="LEFT">
@@ -9370,7 +9371,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_f8avuM_TEe2GGs5TCq07mg" name="checkLearnerAction : EBoolean = true" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_f8avuM_TEe2GGs5TCq07mg" name="checkLearnerAction : EBoolean = false" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="generator.ecore#//IdentificationTask/checkLearnerAction"/>
         <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//IdentificationTask/checkLearnerAction"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_f8bWoM_TEe2GGs5TCq07mg" labelAlignment="LEFT">

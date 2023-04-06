@@ -76,8 +76,7 @@
     <gameplays
         name="SELECT MULTIPLE "
         category="SELECT_MULTIPLE"
-        hasIntegratedPropositions="true"
-        manualValidation="true">
+        hasIntegratedPropositions="true">
       <components
           xsi:type="generator:Structure"
           structureType="STRUCT_H">
@@ -152,7 +151,7 @@
           elementType="ELEM_TYPE4_STATEMENT_DISPLAY"
           wearStatement="true"/>
       <prompt
-          prompt="Saisie la réponse"/>
+          prompt="Saisie la reponse"/>
     </gameplays>
     <gameplays
         name="SELECT MULTIPLE BIS"
