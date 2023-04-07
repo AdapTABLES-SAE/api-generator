@@ -317,11 +317,11 @@
             xsi:type="generator:Component"
             elementType="ELEMTYPE_STATEMENT_DISPLAY"
             wearStatement="true"/>
-        <components
-            xsi:type="generator:Component"
-            elementType="ELEMTYPE_POT"
-            wearChoices="true"/>
       </components>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_POT"
+          wearChoices="true"/>
       <prompt
           prompt="Deplace les bons pots sur les zones"/>
       <restrictedTo>IDENTIFY</restrictedTo>

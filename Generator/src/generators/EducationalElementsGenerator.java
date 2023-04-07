@@ -54,7 +54,7 @@ public class EducationalElementsGenerator {
 		defineDungeonRooms2Tasks();
 		generateFactsToQuestion();
 		System.out.println(" DEBUG FACT QUESTIONED *********************");
-		eeManager.printFactsToQuestion();
+		//eeManager.printFactsToQuestion();
 		eeManager.createDungeonQAndNQRoomOrder();
 		return eeManager;
 	}
@@ -140,7 +140,7 @@ public class EducationalElementsGenerator {
 	
 	private boolean currentObjectiveLevelExist(Objective o, Level l) {
 		for (CurrentObjectiveLevel col : this.learnerPlayer.getProgression().getCurrentobjectivelevels()) {
-			if(col.getObjective().equals(o) && col.getObjective().equals(l)) {
+			if(col.getObjective().getID().equals(o.getID()) && col.getLevel().getID().equals(l.getID())) {
 				return true;
 			}
 		}

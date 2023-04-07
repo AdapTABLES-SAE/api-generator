@@ -43,7 +43,6 @@ public class GameElementsGenerator {
 	public Dungeon generateRoomContent(Dungeon generatedDungeon) {
 		for (Room r : generatedDungeon.getRooms()) {
 			if(r.getTask() != null) {
-				System.err.println(r.getQuestionedFacts());
 				r.getPositionedElement().addAll(gameplayGenerator.buildPositionedElements(r.getGameplay(), r.getQuestionedFacts(), r.getRoomtype()));
 			}
 		}
@@ -57,9 +56,9 @@ public class GameElementsGenerator {
 			if(tfp != null) {
 				// normalement on devrait se baser sur le modèle de relations pour choisir
 				GPCategory chosenCategory = chooseValidCategory(tfp.getTask());
-				System.out.println(chosenCategory);
+				//System.out.println(chosenCategory);
 				gameplays = getGameplayOfCategorieAndType(chosenCategory, tfp.getTask());
-				System.out.println(gameplays);
+				//System.out.println(gameplays);
 				Gameplay gp = gameplays.get(random.nextInt(gameplays.size()));
 				gameElementManager.add(gp, tfp);	
 			} else {
@@ -91,18 +90,18 @@ public class GameElementsGenerator {
 	
 	private List<Gameplay> getGameplayOfCategorieAndType(GPCategory category, ATask task){
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
-		System.out.println(task.getID()+" "+task.validationOnLearnerAction()+ " "+ task.getType());
+		//System.out.println(task.getID()+" "+task.validationOnLearnerAction()+ " "+ task.getType());
 		for (Gameplay gp : this.gameDescription.getGameplays().getGameplays()) {
-			System.out.println("\t"+gp.getCategory()+" "+gp.isHasIntegratedPropositions() + " " +gp.getRestrictedTo());
+			/*System.out.println("\t"+gp.getCategory()+" "+gp.isHasIntegratedPropositions() + " " +gp.getRestrictedTo());
 			System.out.println("\t cat"+gp.getCategory().equals(category));
 			System.out.println("\t"+gp.isManualValidation());
-			System.out.println("\t"+respectGameplayTaskTypeRestriction(gp, task));
+			System.out.println("\t"+respectGameplayTaskTypeRestriction(gp, task));*/
 
 			if(gp.getCategory().equals(category) && respectValidationMethod(gp, task) && respectGameplayTaskTypeRestriction(gp, task)) {
 				compatibleGameplays.add(gp);
-			} else {
+			}/* else {
 				System.out.println("NOT ADDED");
-			}
+			}*/
 		}
 		return compatibleGameplays;
 	}

@@ -160,8 +160,6 @@ public abstract class FactGeneratorTemplate {
 	
 	public void generateQuestionedFact(int roomIndex, EducationElementsManager eeManager, ResultsByTask aTask) {
 		for (int i = 0; i < aTask.getTask().getNbFacts(); i++) {
-			
-			System.err.println(aTask.getTask().getNbFacts()+" "+aTask.getTask().getClass());
 			QuestionableFact qf = null;
 			try {
 				qf = getAvailableFact(aTask);
@@ -169,7 +167,6 @@ public abstract class FactGeneratorTemplate {
 			} catch (Exception e) {
 				e.printStackTrace();
 			} 
-			
 		}	
 	}
 	
