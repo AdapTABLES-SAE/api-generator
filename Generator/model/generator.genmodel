@@ -74,6 +74,8 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/SELECT_UNIQUE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/SELECT_MULTIPLE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/DIRECT_RESPONSE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/MOVE_UNIQUE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/MOVE_MULTIPLE"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//ECorrectness">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ECorrectness/CORRECT"/>
@@ -311,6 +313,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionedFact/correctnessToReach"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionedFact/learnerValidation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionedFact/completeFact"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionedFact/factCorrectness"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//CompletionCriteria">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionCriteria/succesPercent"/>
@@ -424,8 +427,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Component/defaultCorrectness"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Component/wearStatement"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Component/inputEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Component/quantity"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Quantity"/>
+    <genClasses ecoreClass="generator.ecore#//Quantity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Quantity/factNbAnswers"/>
+    </genClasses>
     <genClasses ecoreClass="generator.ecore#//WantedAnswersParam"/>
     <genClasses ecoreClass="generator.ecore#//ExpectedAnswer"/>
     <genClasses ecoreClass="generator.ecore#//CorrectnessValue">
@@ -443,5 +449,6 @@
     <genClasses ecoreClass="generator.ecore#//Prompt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Prompt/prompt"/>
     </genClasses>
+    <genClasses ecoreClass="generator.ecore#//FactCorrectnessParam"/>
   </genPackages>
 </genmodel:GenModel>

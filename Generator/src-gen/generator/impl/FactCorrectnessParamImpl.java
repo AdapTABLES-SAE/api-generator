@@ -2,27 +2,25 @@
  */
 package generator.impl;
 
-import generator.AValue;
+import generator.FactCorrectnessParam;
 import generator.GeneratorPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>AValue</b></em>'.
+ * An implementation of the model object '<em><b>Fact Correctness Param</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public abstract class AValueImpl extends MinimalEObjectImpl.Container implements AValue {
+public class FactCorrectnessParamImpl extends ParameterImpl implements FactCorrectnessParam {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AValueImpl() {
+	public FactCorrectnessParamImpl() {
 		super();
 	}
 
@@ -33,7 +31,7 @@ public abstract class AValueImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.AVALUE;
+		return GeneratorPackage.Literals.FACT_CORRECTNESS_PARAM;
 	}
 
-} //AValueImpl
+} //FactCorrectnessParamImpl

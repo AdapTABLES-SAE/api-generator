@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.QuestionedFact#getCorrectnessToReach <em>Correctness To Reach</em>}</li>
  *   <li>{@link generator.QuestionedFact#isLearnerValidation <em>Learner Validation</em>}</li>
  *   <li>{@link generator.QuestionedFact#getCompleteFact <em>Complete Fact</em>}</li>
+ *   <li>{@link generator.QuestionedFact#getFactCorrectness <em>Fact Correctness</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getQuestionedFact()
@@ -162,5 +163,27 @@ public interface QuestionedFact extends EObject {
 	 * @generated
 	 */
 	void setCompleteFact(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Fact Correctness</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fact Correctness</em>' containment reference.
+	 * @see #setFactCorrectness(FactCorrectnessParam)
+	 * @see generator.GeneratorPackage#getQuestionedFact_FactCorrectness()
+	 * @model containment="true"
+	 * @generated
+	 */
+	FactCorrectnessParam getFactCorrectness();
+
+	/**
+	 * Sets the value of the '{@link generator.QuestionedFact#getFactCorrectness <em>Fact Correctness</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fact Correctness</em>' containment reference.
+	 * @see #getFactCorrectness()
+	 * @generated
+	 */
+	void setFactCorrectness(FactCorrectnessParam value);
 
 } // QuestionedFact

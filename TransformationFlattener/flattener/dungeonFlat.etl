@@ -48,6 +48,10 @@ rule Room2Room
 			    if(fact.correctnessToReach.isDefined()){
 			    	factOUT.correctnessToReach = fact.correctnessToReach.value.value;
 			    }
+			    
+			    if(fact.factCorrectness.isDefined()){
+			    	factOUT.correctness = fact.factCorrectness.value.value+"";
+			    }
 			    facts.fact.add(factOUT);         	
         	}
 	        	
@@ -59,22 +63,6 @@ rule Room2Room
         if(roomIn.gameplay.isDefined() and roomIn.gameplay.prompt.isDefined()){
         	roomOut.prompt = roomIn.gameplay.prompt.prompt;
         }
-        
-        /*if(roomIn.statements.isDefined()){
-        	for(statement in roomIn.statements){
-        		var statementOut: new OUT!Statement;
-        		statementOut.id = statement.id+"";
-        		if(statement.type.equals(StatementType#TEXTUAL_INTERACTIVE)){
-        			statementOut.type = "InteractiveStatement";
-        		} else {
-        			statementOut.type = "Statement";
-        		}
-        		statementOut.displayValue = statement.display.value;
-        		statementOut.fact = statement.questionedFact.questionablefact.id+"";
-        		statementOut.pos = statement.position.ID;
-        		roomOut.statement.add(statementOut);
-        	}
-        }*/
         
         
         if(not roomIn.positionedElement.isEmpty()){
@@ -89,25 +77,6 @@ rule Room2Room
         roomOut.roomaccesses = accesses;
         roomOut.roomaccesses.roomaccess ::= roomIn.roomaccess;
 }
-
-/*rule Facts2Facts 
-	transform factIn : IN!QuestionedFact
-	to factOut : OUT!Fact {
-		factOUT.id = fact.questionablefact.id;
-		
-		if(not fact.completeFact.isEmpty()){
-			factOUT.complete = fact.completeFact;
-		}
-	    if(fact.isTypeOf(MTQeFCompletion1)){
-	    	factOUT.correctnessToReach = 1;
-	    }
-	    if(fact.isTypeOf(MTQeFCompletion2)){
-	    	factOUT.correctnessToReach = 2;
-	    }
-	    if(fact.isTypeOf(MTQeFRebuild)){
-	    	factOUT.correctnessToReach = 3;
-	    }	       	
-}*/
 
 rule Structures2Elements 
 	transform element : IN!PositionedStructureElement

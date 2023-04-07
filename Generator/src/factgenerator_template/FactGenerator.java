@@ -55,6 +55,7 @@ public class FactGenerator {
 	
 	public static void generateQuestionedFact(EducationElementsManager eeManager, List<ResultsByTask> tasks) throws Exception {
 		FactGeneratorTemplate factGenerator = null; 
+		int roomOrder = 0;
 		for (ResultsByTask aTask : tasks) {
 			switch(aTask.getTask().getType()) {
 			case COMPLETE: 
@@ -77,7 +78,8 @@ public class FactGenerator {
 				factGenerator = new MTFactGeneratorMEMB(eeManager);
 				break;
 			}	
-			if(factGenerator != null) factGenerator.generateQuestionedFact(eeManager, aTask);
+			if(factGenerator != null) factGenerator.generateQuestionedFact(roomOrder, eeManager, aTask);
+			roomOrder++;
 		}
 	}
 }

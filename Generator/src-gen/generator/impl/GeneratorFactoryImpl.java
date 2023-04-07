@@ -187,14 +187,14 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createExpectedAnswer();
 		case GeneratorPackage.CORRECTNESS_VALUE:
 			return createCorrectnessValue();
-		case GeneratorPackage.AVALUE:
-			return createAValue();
 		case GeneratorPackage.POSITIONED_STRUCTURE_ELEMENT:
 			return createPositionedStructureElement();
 		case GeneratorPackage.FACT_SOLUTION_PARAM:
 			return createFactSolutionParam();
 		case GeneratorPackage.PROMPT:
 			return createPrompt();
+		case GeneratorPackage.FACT_CORRECTNESS_PARAM:
+			return createFactCorrectnessParam();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -869,16 +869,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AValue createAValue() {
-		AValueImpl aValue = new AValueImpl();
-		return aValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public PositionedStructureElement createPositionedStructureElement() {
 		PositionedStructureElementImpl positionedStructureElement = new PositionedStructureElementImpl();
 		return positionedStructureElement;
@@ -902,6 +892,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public Prompt createPrompt() {
 		PromptImpl prompt = new PromptImpl();
 		return prompt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactCorrectnessParam createFactCorrectnessParam() {
+		FactCorrectnessParamImpl factCorrectnessParam = new FactCorrectnessParamImpl();
+		return factCorrectnessParam;
 	}
 
 	/**

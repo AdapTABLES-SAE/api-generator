@@ -7,6 +7,7 @@ import generator.Correctness;
 import generator.Display;
 import generator.ElementType;
 import generator.GeneratorPackage;
+import generator.Quantity;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link generator.impl.ComponentImpl#getDefaultCorrectness <em>Default Correctness</em>}</li>
  *   <li>{@link generator.impl.ComponentImpl#isWearStatement <em>Wear Statement</em>}</li>
  *   <li>{@link generator.impl.ComponentImpl#isInputEntry <em>Input Entry</em>}</li>
+ *   <li>{@link generator.impl.ComponentImpl#getQuantity <em>Quantity</em>}</li>
  * </ul>
  *
  * @generated
@@ -122,6 +124,16 @@ public class ComponentImpl extends AComponentImpl implements Component {
 	 * @ordered
 	 */
 	protected boolean inputEntry = INPUT_ENTRY_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getQuantity() <em>Quantity</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuantity()
+	 * @generated
+	 * @ordered
+	 */
+	protected Quantity quantity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -353,6 +365,56 @@ public class ComponentImpl extends AComponentImpl implements Component {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Quantity getQuantity() {
+		return quantity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetQuantity(Quantity newQuantity, NotificationChain msgs) {
+		Quantity oldQuantity = quantity;
+		quantity = newQuantity;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.COMPONENT__QUANTITY, oldQuantity, newQuantity);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setQuantity(Quantity newQuantity) {
+		if (newQuantity != quantity) {
+			NotificationChain msgs = null;
+			if (quantity != null)
+				msgs = ((InternalEObject) quantity).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.COMPONENT__QUANTITY, null, msgs);
+			if (newQuantity != null)
+				msgs = ((InternalEObject) newQuantity).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.COMPONENT__QUANTITY, null, msgs);
+			msgs = basicSetQuantity(newQuantity, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.COMPONENT__QUANTITY, newQuantity,
+					newQuantity));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -360,6 +422,8 @@ public class ComponentImpl extends AComponentImpl implements Component {
 			return basicSetDisplayValue(null, msgs);
 		case GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS:
 			return basicSetDefaultCorrectness(null, msgs);
+		case GeneratorPackage.COMPONENT__QUANTITY:
+			return basicSetQuantity(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -386,6 +450,8 @@ public class ComponentImpl extends AComponentImpl implements Component {
 			return isWearStatement();
 		case GeneratorPackage.COMPONENT__INPUT_ENTRY:
 			return isInputEntry();
+		case GeneratorPackage.COMPONENT__QUANTITY:
+			return getQuantity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -417,6 +483,9 @@ public class ComponentImpl extends AComponentImpl implements Component {
 		case GeneratorPackage.COMPONENT__INPUT_ENTRY:
 			setInputEntry((Boolean) newValue);
 			return;
+		case GeneratorPackage.COMPONENT__QUANTITY:
+			setQuantity((Quantity) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -447,6 +516,9 @@ public class ComponentImpl extends AComponentImpl implements Component {
 		case GeneratorPackage.COMPONENT__INPUT_ENTRY:
 			setInputEntry(INPUT_ENTRY_EDEFAULT);
 			return;
+		case GeneratorPackage.COMPONENT__QUANTITY:
+			setQuantity((Quantity) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -471,6 +543,8 @@ public class ComponentImpl extends AComponentImpl implements Component {
 			return wearStatement != WEAR_STATEMENT_EDEFAULT;
 		case GeneratorPackage.COMPONENT__INPUT_ENTRY:
 			return inputEntry != INPUT_ENTRY_EDEFAULT;
+		case GeneratorPackage.COMPONENT__QUANTITY:
+			return quantity != null;
 		}
 		return super.eIsSet(featureID);
 	}

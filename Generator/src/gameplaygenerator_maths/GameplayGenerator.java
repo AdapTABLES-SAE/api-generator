@@ -49,25 +49,20 @@ public class GameplayGenerator {
 	
 	public List<PositionedElement> buildPositionedElements(Gameplay gameplay, List<QuestionedFact> facts, RoomType roomtype){
 		List<PositionedElement> elements = new ArrayList<>();
-		boolean hasStructure = gameplayHasStructures(gameplay);
 		for (AComponent aComp : gameplay.getComponents()) {
 			if(aComp instanceof Structure) {
 				elements.addAll(buildStructureHierarchy(aComp, facts, roomtype, gameplay.isHasIntegratedPropositions()));
 			} else {
-				QuestionedFact qef = null; 
-				if(!hasStructure) {
-					/*if (facts.size() > 1) {
-						System.err.println("Multiple facts can not be questioned through a gameplay without structure");
-					} */
-					qef = facts.get(0);
-				}	
-				elements.addAll(buildSimpleGameplayHierarchy((Component) aComp, qef, roomtype, gameplay.isHasIntegratedPropositions())); 
+				for (QuestionedFact qef : facts) {
+					elements.addAll(buildSimpleGameplayHierarchy((Component) aComp, qef, roomtype, gameplay.isHasIntegratedPropositions())); 
+				}
 			}
 		}
 		occupiedPositions = new ArrayList<>();
 		return elements;
 	}
 	
+	@Deprecated
 	private boolean gameplayHasStructures(Gameplay gameplay) {
 		for (AComponent aComp : gameplay.getComponents()) {
 			if(aComp instanceof Structure) {
@@ -92,7 +87,20 @@ public class GameplayGenerator {
 				elements.add(buildComponent(component, fact, i, getAvailablePosition(roomtype, component.getElementType(), false)));
 			}
 		} else {
-			elements.add(buildComponent(component, getAvailablePosition(roomtype, component.getElementType(), false)));
+			if(component.getQuantity() != null) {
+				int nbOfElements;
+				if(component.getQuantity().isFactNbAnswers()) {
+					nbOfElements = Integer.valueOf(((Value) fact.getCorrectnessToReach().getValue()).getValue());
+				} else {
+					nbOfElements = Integer.valueOf(((Value) component.getQuantity().getValue()).getValue());
+				}
+				
+				for (int i = 0; i < nbOfElements; i++) {
+					elements.add(buildComponent(component, fact, getAvailablePosition(roomtype, component.getElementType(), false)));
+				}
+			} else {
+				elements.add(buildComponent(component, getAvailablePosition(roomtype, component.getElementType(), false)));
+			}
 		}
 		return elements;
 	}
@@ -131,16 +139,17 @@ public class GameplayGenerator {
 			answer.setValue(expectedAnswer);
 			comp.setExpectedAnswer(answer);
 		}
-		
+				
 		if(component.isWearStatement()) {	
 			//System.out.println("\tComponent to build is wear statement");
 			Display statement = new DisplayImpl();
 			Value display = new ValueImpl();
+			//System.out.println("TOTO "+( fact.getQuestion().getValue()));
 			display.setValue(((Value) fact.getQuestion().getValue()).getValue());
 			statement.setValue(display);
 			statement.setInteractive(fact.getQuestion().isInteractive());
 			comp.setDisplay(statement);			
-			
+					
 			if(!fact.getQuestion().getSolutions().isEmpty()) {
 				for (FactSolutionParam factSol: fact.getQuestion().getSolutions()) {
 					FactSolutionParam sol = new FactSolutionParamImpl();
@@ -151,11 +160,11 @@ public class GameplayGenerator {
 				}
 			}
 		}
-		
+			
 		if(component.isWearChoices()) {
 			//System.out.println("\tComponent to build is wear choices");
-			comp.setCorrectness(computeCorrectness(component, fact.getPropositions().get(propositionIndex)));
-			
+			comp.setCorrectness(computeCorrectness(component, fact, fact.getPropositions().get(propositionIndex)));
+				
 			if(!hasIntegratedChoices) {
 				//System.out.println("\t++++ display");
 				Display proposition = new DisplayImpl(); //
@@ -165,7 +174,7 @@ public class GameplayGenerator {
 				comp.setDisplay(proposition);
 			}
 		}
-		
+				
 		if(component.getDisplayValue() != null) {
 			//System.out.println("\tComponent has defaults display value");
 			Display defaultDisplay = new DisplayImpl();
@@ -174,35 +183,47 @@ public class GameplayGenerator {
 			defaultDisplay.setValue(displayValue);
 			comp.setDisplay(defaultDisplay);
 		}
-		
+				
 		return comp;
 	}
 	
-	private boolean isFactCorrect(String propositionValue, ECorrectness propositionCorrectness) {
+	/*private boolean isFactCorrect(String propositionValue, ECorrectness propositionCorrectness) {
 		if(!propositionValue.equals(false+"")) {
 			return propositionCorrectness.equals(ECorrectness.CORRECT)? true: false;
 		} else {
 			return propositionCorrectness.equals(ECorrectness.CORRECT)? false: true;
 		}	
-	}
+	}*/
 	
-	private Correctness computeCorrectness(Component component, PropositionParam proposition) {
+	/*private Correctness computeCorrectness(Component component, PropositionParam proposition) {
+		return computeCorrectness(component, null, proposition);
+	}*/
+	
+	private Correctness computeCorrectness(Component component, QuestionedFact qeFact, PropositionParam proposition) {
 		Correctness correctness = new CorrectnessImpl();
 		if(component.getDefaultCorrectness() != null) {
 			ECorrectness gameplayComponentToComputeCorrectness = ((CorrectnessValue) component.getDefaultCorrectness().getValue()).getValue();
-			ECorrectness propositionCorrectness = ((CorrectnessValue) proposition.getState().getValue()).getValue(); 
-			String propositionValue = ((Value) proposition.getValue()).getValue();
+			/*ECorrectness propositionCorrectness = ((CorrectnessValue) proposition.getState().getValue()).getValue(); 
+			String propositionValue = ((Value) proposition.getValue()).getValue();*/
 			CorrectnessValue value = new CorrectnessValueImpl();
 			//System.err.println(proposition.getValue()+" "+proposition.getState().getValue());
 			//System.err.println(gameplayComponentToComputeCorrectness+" - "+propositionCorrectness);
 			
-			if((gameplayComponentToComputeCorrectness.equals(ECorrectness.NOT_FACT_CORRECTNESS) && isFactCorrect(propositionValue, propositionCorrectness)) 
+			/*if((gameplayComponentToComputeCorrectness.equals(ECorrectness.NOT_FACT_CORRECTNESS) && isFactCorrect(propositionValue, propositionCorrectness)) 
 					|| (gameplayComponentToComputeCorrectness.equals(ECorrectness.FACT_CORRECTNESS) && !isFactCorrect(propositionValue, propositionCorrectness))) {
 				value.setValue(ECorrectness.INCORRECT);
 			} else if((gameplayComponentToComputeCorrectness.equals(ECorrectness.NOT_FACT_CORRECTNESS) && !isFactCorrect(propositionValue, propositionCorrectness)) 
 					|| (gameplayComponentToComputeCorrectness.equals(ECorrectness.FACT_CORRECTNESS) && isFactCorrect(propositionValue, propositionCorrectness))) {
 				value.setValue(ECorrectness.CORRECT);
+			}*/
+			ECorrectness factCorrectness = ((CorrectnessValue) qeFact.getFactCorrectness().getValue()).getValue();
+			
+			if(gameplayComponentToComputeCorrectness.equals(ECorrectness.NOT_FACT_CORRECTNESS)) {
+				value.setValue(factCorrectness.equals(ECorrectness.CORRECT)? ECorrectness.INCORRECT: ECorrectness.CORRECT);
+			} else {
+				value.setValue(factCorrectness);
 			}
+			
 		
 			correctness.setValue(value);
 		} else { // On est pas dans une structure on prends la valeur de correctness de la proposition du fait 
@@ -213,8 +234,7 @@ public class GameplayGenerator {
 		
 		return correctness;
 	}
-	
-	
+		
 	private PositionedStructureElement buildStructure(Structure structure, APosition position) {
 		//System.out.println("\tBuild a Structure");
 		PositionedStructureElement structP = new PositionedStructureElementImpl();
@@ -260,12 +280,17 @@ public class GameplayGenerator {
 				struct = buildStructure(comp, positionFromParent);
 				elements.add(struct);
 				for (AComponent aComp : comp.getComponents()) {
-					elements.addAll(buildStructureHierarchy(aComp, struct.getCreatedPosition(), elements, facts, roomtype, hasIntegratedChoices, /*factIndex*/ -1, propositionIndex));
+					if(aComp instanceof Component && ((Component) aComp).isWearStatement()) {
+						elements.addAll(buildStructureHierarchy(aComp, struct.getCreatedPosition(), elements, facts, roomtype, hasIntegratedChoices, factIndex, propositionIndex));
+					} else {
+						elements.addAll(buildStructureHierarchy(aComp, struct.getCreatedPosition(), elements, facts, roomtype, hasIntegratedChoices, /*factIndex*/ -1, propositionIndex));
+					}
 				}
 			}			
 		} else {
 			//System.out.println("\tComp is component with pos to parent "+positionFromParent);
 			Component comp = (Component) component;
+			// Les objets avec des quantites n'ont pas de sens dans le cas des structures et ne sont donc pas geres 
 			if(factIndex != -1) {
 				if(comp.isWearChoices()) {
 					elements.add(buildComponent(comp, facts.get(factIndex), propositionIndex, positionFromParent, hasIntegratedChoices));

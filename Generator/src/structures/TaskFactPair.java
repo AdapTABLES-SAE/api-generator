@@ -7,14 +7,20 @@ import generator.QuestionedFact;
 
 public class TaskFactPair {
 
+	private int roomIndex;
 	private ATask key; 
 	private List<QuestionedFact> values;
 	
-	public TaskFactPair(ATask task, List<QuestionedFact> facts) {
+	public TaskFactPair(int roomIndex, ATask task, List<QuestionedFact> facts) {
+		this.roomIndex = roomIndex;
 		this.key = task; 
 		this.values = facts;
 	}
 
+	public int getRoomIndex() {
+		return roomIndex;
+	}
+	
 	public ATask getTask() {
 		return key;
 	}

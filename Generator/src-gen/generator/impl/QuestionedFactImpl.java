@@ -3,6 +3,7 @@
 package generator.impl;
 
 import generator.EntrySoluceParam;
+import generator.FactCorrectnessParam;
 import generator.GeneratorPackage;
 import generator.PropositionParam;
 import generator.QuestionParam;
@@ -41,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.QuestionedFactImpl#getCorrectnessToReach <em>Correctness To Reach</em>}</li>
  *   <li>{@link generator.impl.QuestionedFactImpl#isLearnerValidation <em>Learner Validation</em>}</li>
  *   <li>{@link generator.impl.QuestionedFactImpl#getCompleteFact <em>Complete Fact</em>}</li>
+ *   <li>{@link generator.impl.QuestionedFactImpl#getFactCorrectness <em>Fact Correctness</em>}</li>
  * </ul>
  *
  * @generated
@@ -135,6 +137,16 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String completeFact = COMPLETE_FACT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getFactCorrectness() <em>Fact Correctness</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFactCorrectness()
+	 * @generated
+	 * @ordered
+	 */
+	protected FactCorrectnessParam factCorrectness;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -373,6 +385,56 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public FactCorrectnessParam getFactCorrectness() {
+		return factCorrectness;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFactCorrectness(FactCorrectnessParam newFactCorrectness, NotificationChain msgs) {
+		FactCorrectnessParam oldFactCorrectness = factCorrectness;
+		factCorrectness = newFactCorrectness;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.QUESTIONED_FACT__FACT_CORRECTNESS, oldFactCorrectness, newFactCorrectness);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFactCorrectness(FactCorrectnessParam newFactCorrectness) {
+		if (newFactCorrectness != factCorrectness) {
+			NotificationChain msgs = null;
+			if (factCorrectness != null)
+				msgs = ((InternalEObject) factCorrectness).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.QUESTIONED_FACT__FACT_CORRECTNESS, null, msgs);
+			if (newFactCorrectness != null)
+				msgs = ((InternalEObject) newFactCorrectness).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.QUESTIONED_FACT__FACT_CORRECTNESS, null, msgs);
+			msgs = basicSetFactCorrectness(newFactCorrectness, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.QUESTIONED_FACT__FACT_CORRECTNESS,
+					newFactCorrectness, newFactCorrectness));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -384,6 +446,8 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 			return ((InternalEList<?>) getEntrys()).basicRemove(otherEnd, msgs);
 		case GeneratorPackage.QUESTIONED_FACT__CORRECTNESS_TO_REACH:
 			return basicSetCorrectnessToReach(null, msgs);
+		case GeneratorPackage.QUESTIONED_FACT__FACT_CORRECTNESS:
+			return basicSetFactCorrectness(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -412,6 +476,8 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 			return isLearnerValidation();
 		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
 			return getCompleteFact();
+		case GeneratorPackage.QUESTIONED_FACT__FACT_CORRECTNESS:
+			return getFactCorrectness();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -448,6 +514,9 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
 			setCompleteFact((String) newValue);
 			return;
+		case GeneratorPackage.QUESTIONED_FACT__FACT_CORRECTNESS:
+			setFactCorrectness((FactCorrectnessParam) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -481,6 +550,9 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
 			setCompleteFact(COMPLETE_FACT_EDEFAULT);
 			return;
+		case GeneratorPackage.QUESTIONED_FACT__FACT_CORRECTNESS:
+			setFactCorrectness((FactCorrectnessParam) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -507,6 +579,8 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 			return learnerValidation != LEARNER_VALIDATION_EDEFAULT;
 		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
 			return COMPLETE_FACT_EDEFAULT == null ? completeFact != null : !COMPLETE_FACT_EDEFAULT.equals(completeFact);
+		case GeneratorPackage.QUESTIONED_FACT__FACT_CORRECTNESS:
+			return factCorrectness != null;
 		}
 		return super.eIsSet(featureID);
 	}

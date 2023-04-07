@@ -607,15 +607,6 @@ public interface GeneratorFactory extends EFactory {
 	CorrectnessValue createCorrectnessValue();
 
 	/**
-	 * Returns a new object of class '<em>AValue</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>AValue</em>'.
-	 * @generated
-	 */
-	AValue createAValue();
-
-	/**
 	 * Returns a new object of class '<em>Positioned Structure Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -641,6 +632,15 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	Prompt createPrompt();
+
+	/**
+	 * Returns a new object of class '<em>Fact Correctness Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fact Correctness Param</em>'.
+	 * @generated
+	 */
+	FactCorrectnessParam createFactCorrectnessParam();
 
 	/**
 	 * Returns the package supported by this factory.

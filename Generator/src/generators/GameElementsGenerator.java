@@ -12,6 +12,8 @@ import generator.EnterResponse;
 import generator.GPCategory;
 import generator.GameDescription;
 import generator.Gameplay;
+import generator.IdentificationTask;
+import generator.MembershipIDTask;
 import generator.Room;
 import managers.EducationElementsManager;
 import managers.GameElementsManager;
@@ -41,6 +43,7 @@ public class GameElementsGenerator {
 	public Dungeon generateRoomContent(Dungeon generatedDungeon) {
 		for (Room r : generatedDungeon.getRooms()) {
 			if(r.getTask() != null) {
+				System.err.println(r.getQuestionedFacts());
 				r.getPositionedElement().addAll(gameplayGenerator.buildPositionedElements(r.getGameplay(), r.getQuestionedFacts(), r.getRoomtype()));
 			}
 		}
@@ -71,10 +74,18 @@ public class GameElementsGenerator {
 		if(task.getResponseModality() instanceof EnterResponse) {
 			return GPCategory.DIRECT_RESPONSE;
 		}
-		if(task.getNbFacts() > 1 || (task instanceof CompletionTask && ((CompletionTask) task).getNbMissingElements() > 1)) {
-			return GPCategory.SELECT_MULTIPLE;
+		if(task.getNbFacts() > 1 || (task instanceof CompletionTask && ((CompletionTask) task).getNbMissingElements() > 1) || task instanceof MembershipIDTask) {
+			List<GPCategory> gpc = new ArrayList<>();
+			gpc.add(GPCategory.SELECT_MULTIPLE);
+			if(!(task instanceof IdentificationTask)) { gpc.add(GPCategory.MOVE_MULTIPLE);}
+			
+			return gpc.get(random.nextInt(gpc.size()));
 		}
-		return GPCategory.SELECT_UNIQUE;
+		
+		List<GPCategory> gpc = new ArrayList<>();
+		gpc.add(GPCategory.SELECT_UNIQUE);
+		gpc.add(GPCategory.MOVE_UNIQUE);
+		return gpc.get(random.nextInt(gpc.size()));
 		
 	}
 	
@@ -89,13 +100,15 @@ public class GameElementsGenerator {
 
 			if(gp.getCategory().equals(category) && respectValidationMethod(gp, task) && respectGameplayTaskTypeRestriction(gp, task)) {
 				compatibleGameplays.add(gp);
+			} else {
+				System.out.println("NOT ADDED");
 			}
 		}
 		return compatibleGameplays;
 	}
 	
 	private boolean respectValidationMethod(Gameplay gameplay, ATask task) {
-		System.err.println(task.validationOnLearnerAction()+" "+gameplay.isManualValidation());
+//		System.err.println(task.validationOnLearnerAction()+" "+gameplay.isManualValidation());
 		return task.validationOnLearnerAction() == gameplay.isManualValidation();
 	}
 	

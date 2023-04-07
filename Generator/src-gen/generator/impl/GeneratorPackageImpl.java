@@ -32,6 +32,7 @@ import generator.EntrySoluceParam;
 import generator.Equipment;
 import generator.Equipments;
 import generator.ExpectedAnswer;
+import generator.FactCorrectnessParam;
 import generator.FactSolutionParam;
 import generator.GPCategory;
 import generator.GPElementType;
@@ -641,6 +642,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass promptEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass factCorrectnessParamEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2546,6 +2554,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getQuestionedFact_FactCorrectness() {
+		return (EReference) questionedFactEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCompletionCriteria() {
 		return completionCriteriaEClass;
 	}
@@ -3185,8 +3202,26 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getComponent_Quantity() {
+		return (EReference) componentEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getQuantity() {
 		return quantityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuantity_FactNbAnswers() {
+		return (EAttribute) quantityEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3304,6 +3339,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getPrompt_Prompt() {
 		return (EAttribute) promptEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFactCorrectnessParam() {
+		return factCorrectnessParamEClass;
 	}
 
 	/**
@@ -3829,6 +3873,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(questionedFactEClass, QUESTIONED_FACT__CORRECTNESS_TO_REACH);
 		createEAttribute(questionedFactEClass, QUESTIONED_FACT__LEARNER_VALIDATION);
 		createEAttribute(questionedFactEClass, QUESTIONED_FACT__COMPLETE_FACT);
+		createEReference(questionedFactEClass, QUESTIONED_FACT__FACT_CORRECTNESS);
 
 		completionCriteriaEClass = createEClass(COMPLETION_CRITERIA);
 		createEAttribute(completionCriteriaEClass, COMPLETION_CRITERIA__SUCCES_PERCENT);
@@ -3945,8 +3990,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(componentEClass, COMPONENT__DEFAULT_CORRECTNESS);
 		createEAttribute(componentEClass, COMPONENT__WEAR_STATEMENT);
 		createEAttribute(componentEClass, COMPONENT__INPUT_ENTRY);
+		createEReference(componentEClass, COMPONENT__QUANTITY);
 
 		quantityEClass = createEClass(QUANTITY);
+		createEAttribute(quantityEClass, QUANTITY__FACT_NB_ANSWERS);
 
 		wantedAnswersParamEClass = createEClass(WANTED_ANSWERS_PARAM);
 
@@ -3968,6 +4015,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		promptEClass = createEClass(PROMPT);
 		createEAttribute(promptEClass, PROMPT__PROMPT);
+
+		factCorrectnessParamEClass = createEClass(FACT_CORRECTNESS_PARAM);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -4056,6 +4105,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		positionedStructureElementEClass.getESuperTypes().add(this.getPositionedElement());
 		factSolutionParamEClass.getESuperTypes().add(this.getParameter());
 		orderingTaskEClass.getESuperTypes().add(this.getATask());
+		factCorrectnessParamEClass.getESuperTypes().add(this.getParameter());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -4575,6 +4625,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getQuestionedFact_CompleteFact(), ecorePackage.getEString(), "completeFact", null, 0, 1,
 				QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getQuestionedFact_FactCorrectness(), this.getFactCorrectnessParam(), null, "factCorrectness",
+				null, 0, 1, QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(completionCriteriaEClass, CompletionCriteria.class, "CompletionCriteria", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4819,9 +4872,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getComponent_InputEntry(), ecorePackage.getEBoolean(), "inputEntry", "false", 0, 1,
 				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getComponent_Quantity(), this.getQuantity(), null, "quantity", null, 0, 1, Component.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(quantityEClass, Quantity.class, "Quantity", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getQuantity_FactNbAnswers(), ecorePackage.getEBoolean(), "factNbAnswers", "false", 0, 1,
+				Quantity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(wantedAnswersParamEClass, WantedAnswersParam.class, "WantedAnswersParam", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4834,7 +4893,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getCorrectnessValue_Value(), this.getECorrectness(), "value", null, 0, 1, CorrectnessValue.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(aValueEClass, AValue.class, "AValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(aValueEClass, AValue.class, "AValue", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(positionedStructureElementEClass, PositionedStructureElement.class, "PositionedStructureElement",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4856,6 +4915,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(promptEClass, Prompt.class, "Prompt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrompt_Prompt(), ecorePackage.getEString(), "prompt", null, 0, 1, Prompt.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(factCorrectnessParamEClass, FactCorrectnessParam.class, "FactCorrectnessParam", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");
@@ -4923,6 +4985,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(gpCategoryEEnum, GPCategory.SELECT_UNIQUE);
 		addEEnumLiteral(gpCategoryEEnum, GPCategory.SELECT_MULTIPLE);
 		addEEnumLiteral(gpCategoryEEnum, GPCategory.DIRECT_RESPONSE);
+		addEEnumLiteral(gpCategoryEEnum, GPCategory.MOVE_UNIQUE);
+		addEEnumLiteral(gpCategoryEEnum, GPCategory.MOVE_MULTIPLE);
 
 		initEEnum(eCorrectnessEEnum, ECorrectness.class, "ECorrectness");
 		addEEnumLiteral(eCorrectnessEEnum, ECorrectness.CORRECT);

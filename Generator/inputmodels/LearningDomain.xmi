@@ -706,7 +706,15 @@
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
         </tasks>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.0"/>
+      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.5"/>
+      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.6"/>
+      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.7"/>
+      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.8"/>
+      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
     <knowledge href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#/"/>
   </learningpaths>

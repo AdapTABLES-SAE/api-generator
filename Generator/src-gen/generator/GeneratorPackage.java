@@ -3805,13 +3805,22 @@ public interface GeneratorPackage extends EPackage {
 	int QUESTIONED_FACT__COMPLETE_FACT = 6;
 
 	/**
+	 * The feature id for the '<em><b>Fact Correctness</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONED_FACT__FACT_CORRECTNESS = 7;
+
+	/**
 	 * The number of structural features of the '<em>Questioned Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONED_FACT_FEATURE_COUNT = 7;
+	int QUESTIONED_FACT_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Questioned Fact</em>' class.
@@ -5228,13 +5237,22 @@ public interface GeneratorPackage extends EPackage {
 	int COMPONENT__INPUT_ENTRY = ACOMPONENT_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Quantity</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__QUANTITY = ACOMPONENT_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = ACOMPONENT_FEATURE_COUNT + 6;
+	int COMPONENT_FEATURE_COUNT = ACOMPONENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -5265,13 +5283,22 @@ public interface GeneratorPackage extends EPackage {
 	int QUANTITY__VALUE = PARAMETER__VALUE;
 
 	/**
+	 * The feature id for the '<em><b>Fact Nb Answers</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUANTITY__FACT_NB_ANSWERS = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Quantity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUANTITY_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
+	int QUANTITY_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Quantity</em>' class.
@@ -5704,6 +5731,43 @@ public interface GeneratorPackage extends EPackage {
 	int PROMPT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.FactCorrectnessParamImpl <em>Fact Correctness Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.FactCorrectnessParamImpl
+	 * @see generator.impl.GeneratorPackageImpl#getFactCorrectnessParam()
+	 * @generated
+	 */
+	int FACT_CORRECTNESS_PARAM = 83;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACT_CORRECTNESS_PARAM__VALUE = PARAMETER__VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Fact Correctness Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACT_CORRECTNESS_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Fact Correctness Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACT_CORRECTNESS_PARAM_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5711,7 +5775,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 83;
+	int DIRECTIONS = 84;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -5721,7 +5785,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 84;
+	int DUNGEON_MODE = 85;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -5731,7 +5795,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 85;
+	int TABLE_BUILD = 86;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -5741,7 +5805,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 86;
+	int RESULT_POSITION = 87;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -5751,7 +5815,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 87;
+	int ESINGLE_TARGET = 88;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -5761,7 +5825,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 88;
+	int ETASK_TYPE = 89;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -5771,7 +5835,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 89;
+	int EMODALITY = 90;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -5781,7 +5845,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 90;
+	int ESEVERAL_TARGET = 91;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -5791,7 +5855,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 91;
+	int ELEMENT_SIZE = 92;
 
 	/**
 	 * The meta object id for the '{@link generator.StatementType <em>Statement Type</em>}' enum.
@@ -5801,7 +5865,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStatementType()
 	 * @generated
 	 */
-	int STATEMENT_TYPE = 92;
+	int STATEMENT_TYPE = 93;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -5811,7 +5875,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 93;
+	int GP_CATEGORY = 94;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -5821,7 +5885,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 94;
+	int ECORRECTNESS = 95;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -7839,6 +7903,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getQuestionedFact_CompleteFact();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link generator.QuestionedFact#getFactCorrectness <em>Fact Correctness</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Fact Correctness</em>'.
+	 * @see generator.QuestionedFact#getFactCorrectness()
+	 * @see #getQuestionedFact()
+	 * @generated
+	 */
+	EReference getQuestionedFact_FactCorrectness();
+
+	/**
 	 * Returns the meta object for class '{@link generator.CompletionCriteria <em>Completion Criteria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8778,6 +8853,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getComponent_InputEntry();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link generator.Component#getQuantity <em>Quantity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Quantity</em>'.
+	 * @see generator.Component#getQuantity()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EReference getComponent_Quantity();
+
+	/**
 	 * Returns the meta object for class '{@link generator.Quantity <em>Quantity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8786,6 +8872,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getQuantity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Quantity#isFactNbAnswers <em>Fact Nb Answers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fact Nb Answers</em>'.
+	 * @see generator.Quantity#isFactNbAnswers()
+	 * @see #getQuantity()
+	 * @generated
+	 */
+	EAttribute getQuantity_FactNbAnswers();
 
 	/**
 	 * Returns the meta object for class '{@link generator.WantedAnswersParam <em>Wanted Answers Param</em>}'.
@@ -8921,6 +9018,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPrompt_Prompt();
+
+	/**
+	 * Returns the meta object for class '{@link generator.FactCorrectnessParam <em>Fact Correctness Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fact Correctness Param</em>'.
+	 * @see generator.FactCorrectnessParam
+	 * @generated
+	 */
+	EClass getFactCorrectnessParam();
 
 	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
@@ -10664,6 +10771,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute QUESTIONED_FACT__COMPLETE_FACT = eINSTANCE.getQuestionedFact_CompleteFact();
 
 		/**
+		 * The meta object literal for the '<em><b>Fact Correctness</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QUESTIONED_FACT__FACT_CORRECTNESS = eINSTANCE.getQuestionedFact_FactCorrectness();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.CompletionCriteriaImpl <em>Completion Criteria</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11426,6 +11541,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute COMPONENT__INPUT_ENTRY = eINSTANCE.getComponent_InputEntry();
 
 		/**
+		 * The meta object literal for the '<em><b>Quantity</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT__QUANTITY = eINSTANCE.getComponent_Quantity();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.QuantityImpl <em>Quantity</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11434,6 +11557,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EClass QUANTITY = eINSTANCE.getQuantity();
+
+		/**
+		 * The meta object literal for the '<em><b>Fact Nb Answers</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUANTITY__FACT_NB_ANSWERS = eINSTANCE.getQuantity_FactNbAnswers();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.WantedAnswersParamImpl <em>Wanted Answers Param</em>}' class.
@@ -11555,6 +11686,16 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PROMPT__PROMPT = eINSTANCE.getPrompt_Prompt();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.FactCorrectnessParamImpl <em>Fact Correctness Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.FactCorrectnessParamImpl
+		 * @see generator.impl.GeneratorPackageImpl#getFactCorrectnessParam()
+		 * @generated
+		 */
+		EClass FACT_CORRECTNESS_PARAM = eINSTANCE.getFactCorrectnessParam();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.

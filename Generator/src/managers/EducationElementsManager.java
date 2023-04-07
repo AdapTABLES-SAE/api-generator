@@ -192,21 +192,21 @@ public class EducationElementsManager {
 		factsToQuestionPerRoom = Shuffle.shuffleRoomFacts(factsToQuestionPerRoom);
 	}
 	
-	public void addFactToQuestion(ATask task, QuestionedFact qEfact) {
-		int tfpIndex = containsTaskFactPairWith(task);
+	public void addFactToQuestion(int roomIndex, ATask task, QuestionedFact qEfact) {
+		int tfpIndex = containsTaskFactPairWith(roomIndex, task);
 		if(tfpIndex != -1) {
 			this.factsToQuestionPerRoom.get(tfpIndex).addFact(qEfact);
 		} else {
 			List<QuestionedFact> oneElementList = new ArrayList<>();
 			oneElementList.add(qEfact);
-			this.factsToQuestionPerRoom.add(new TaskFactPair(task, oneElementList));
+			this.factsToQuestionPerRoom.add(new TaskFactPair(roomIndex, task, oneElementList));
 		}
 	}
 	
 	
-	private int containsTaskFactPairWith(ATask task) {
+	private int containsTaskFactPairWith(int roomIndex, ATask task) {
 		for (int i = 0; i < factsToQuestionPerRoom.size(); i++) {
-			if(factsToQuestionPerRoom.get(i).getTask().equals(task)) {
+			if(factsToQuestionPerRoom.get(i).getTask().equals(task) && factsToQuestionPerRoom.get(i).getRoomIndex() == roomIndex) {
 				return i;
 			}
 		}

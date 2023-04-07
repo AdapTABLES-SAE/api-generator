@@ -363,6 +363,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="learnerValidation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="completeFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="factCorrectness" eType="#//FactCorrectnessParam"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CompletionCriteria">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="succesPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
@@ -481,6 +483,8 @@
     <eLiterals name="SELECT_UNIQUE"/>
     <eLiterals name="SELECT_MULTIPLE"/>
     <eLiterals name="DIRECT_RESPONSE" value="1"/>
+    <eLiterals name="MOVE_UNIQUE" value="7"/>
+    <eLiterals name="MOVE_MULTIPLE" value="8"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parameter" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//AValue"
@@ -539,14 +543,19 @@
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputEntry" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quantity" eType="#//Quantity"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Quantity" eSuperTypes="#//Parameter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Quantity" eSuperTypes="#//Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="factNbAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WantedAnswersParam" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExpectedAnswer" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="CorrectnessValue" eSuperTypes="#//AValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//ECorrectness"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AValue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AValue" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="PositionedStructureElement" eSuperTypes="#//PositionedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="createdPosition" eType="#//APosition"
         containment="true"/>
@@ -561,4 +570,5 @@
   <eClassifiers xsi:type="ecore:EClass" name="Prompt">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="prompt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FactCorrectnessParam" eSuperTypes="#//Parameter"/>
 </ecore:EPackage>

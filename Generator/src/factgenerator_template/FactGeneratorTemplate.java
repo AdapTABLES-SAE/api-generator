@@ -15,6 +15,7 @@ import generator.CorrectnessValue;
 import generator.ECorrectness;
 import generator.EnterResponse;
 import generator.EntrySoluceParam;
+import generator.FactCorrectnessParam;
 import generator.FactSolutionParam;
 import generator.MultipleChoice;
 import generator.PropositionParam;
@@ -28,6 +29,7 @@ import generator.WantedAnswersParam;
 import generator.impl.CorrectnessImpl;
 import generator.impl.CorrectnessValueImpl;
 import generator.impl.EntrySoluceParamImpl;
+import generator.impl.FactCorrectnessParamImpl;
 import generator.impl.FactSolutionParamImpl;
 import generator.impl.PropositionParamImpl;
 import generator.impl.QuestionParamImpl;
@@ -65,7 +67,7 @@ public abstract class FactGeneratorTemplate {
 	
 	protected Set<QuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact){ return null; }
 		
-	protected void createAQuestionedFactFrom(ATask task, QuestionableFact qFact, int correctnessToReach) {
+	protected void createAQuestionedFactFrom(int roomIndex, ATask task, QuestionableFact qFact, int correctnessToReach) {
 		QuestionedFact qef = new QuestionedFactImpl(); 
 		qef.setQuestionablefact(qFact);
 		
@@ -117,7 +119,20 @@ public abstract class FactGeneratorTemplate {
 		qef.setLearnerValidation(task.validationOnLearnerAction());
 		qef.setCompleteFact(qFact.getCompleteFact());
 		
-		eeManager.addFactToQuestion(task, qef); 
+		ECorrectness factCorrectness = getFactCorrectness(qFact);
+		if(factCorrectness != null) {
+			FactCorrectnessParam param = new FactCorrectnessParamImpl();
+			CorrectnessValue cValue = new CorrectnessValueImpl();
+			cValue.setValue(factCorrectness);
+			param.setValue(cValue);
+			qef.setFactCorrectness(param);
+		}
+		
+		eeManager.addFactToQuestion(roomIndex,task, qef); 
+	}
+	
+	protected ECorrectness getFactCorrectness(QuestionableFact qFact) {
+		return null;
 	}
 	
 	private List<FactSolutionParam> fullFactsSolution(QuestionableFact qFact){
@@ -143,12 +158,14 @@ public abstract class FactGeneratorTemplate {
 	protected abstract Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact);
 	protected abstract boolean isQuestionInteractive();
 	
-	public void generateQuestionedFact(EducationElementsManager eeManager, ResultsByTask aTask) {
+	public void generateQuestionedFact(int roomIndex, EducationElementsManager eeManager, ResultsByTask aTask) {
 		for (int i = 0; i < aTask.getTask().getNbFacts(); i++) {
+			
+			System.err.println(aTask.getTask().getNbFacts()+" "+aTask.getTask().getClass());
 			QuestionableFact qf = null;
 			try {
 				qf = getAvailableFact(aTask);
-				createAQuestionedFactFrom(aTask.getTask(), qf, correctnessToReach(aTask.getTask()));
+				createAQuestionedFactFrom(roomIndex, aTask.getTask(), qf, correctnessToReach(aTask.getTask()));
 			} catch (Exception e) {
 				e.printStackTrace();
 			} 

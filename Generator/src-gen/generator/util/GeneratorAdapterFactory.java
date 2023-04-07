@@ -482,6 +482,11 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseFactCorrectnessParam(FactCorrectnessParam object) {
+			return createFactCorrectnessParamAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1547,6 +1552,20 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPromptAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.FactCorrectnessParam <em>Fact Correctness Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.FactCorrectnessParam
+	 * @generated
+	 */
+	public Adapter createFactCorrectnessParamAdapter() {
 		return null;
 	}
 

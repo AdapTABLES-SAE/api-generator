@@ -180,6 +180,12 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 		propositions.put(ECorrectness.INCORRECT, propositions_temp);		
 		return propositions;
 	}
+	
+	@Override
+	protected ECorrectness getFactCorrectness(QuestionableFact qFact) {
+		// TODO Auto-generated method stub
+		return ((MTQFIdentification) qFact).isSoluce()? ECorrectness.CORRECT : ECorrectness.INCORRECT;
+	}
 
 	@Override
 	protected boolean isQuestionInteractive() {

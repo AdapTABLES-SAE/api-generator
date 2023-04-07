@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see generator.GeneratorPackage#getAValue()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface AValue extends EObject {

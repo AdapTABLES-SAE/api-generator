@@ -17,6 +17,7 @@ package generator;
  *   <li>{@link generator.Component#getDefaultCorrectness <em>Default Correctness</em>}</li>
  *   <li>{@link generator.Component#isWearStatement <em>Wear Statement</em>}</li>
  *   <li>{@link generator.Component#isInputEntry <em>Input Entry</em>}</li>
+ *   <li>{@link generator.Component#getQuantity <em>Quantity</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getComponent()
@@ -158,5 +159,27 @@ public interface Component extends AComponent {
 	 * @generated
 	 */
 	void setInputEntry(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Quantity</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Quantity</em>' containment reference.
+	 * @see #setQuantity(Quantity)
+	 * @see generator.GeneratorPackage#getComponent_Quantity()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Quantity getQuantity();
+
+	/**
+	 * Sets the value of the '{@link generator.Component#getQuantity <em>Quantity</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Quantity</em>' containment reference.
+	 * @see #getQuantity()
+	 * @generated
+	 */
+	void setQuantity(Quantity value);
 
 } // Component

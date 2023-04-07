@@ -45,6 +45,14 @@
       <elementPositions
           size="LARGE"
           ID="POSQ1"/>
+      <elementPositions
+          ID="POS8"/>
+      <elementPositions
+          ID="POS9"/>
+      <elementPositions
+          ID="POS10"/>
+      <elementPositions
+          ID="POS11"/>
       <structurePositions
           ID="POSQ1"/>
       <directions>SOUTH</directions>
@@ -61,14 +69,14 @@
         manualValidation="true">
       <components
           xsi:type="generator:Component"
-          elementType="ELEM_TYPE1_INTERRUPT"
+          elementType="ELEMTYPE_INTERRUPTOR"
           wearChoices="true"/>
       <components
           xsi:type="generator:Component"
-          elementType="ELEM_TYPE3_SWITCH"/>
+          elementType="ELEMTYPE_SWITCH"/>
       <components
           xsi:type="generator:Component"
-          elementType="ELEM_TYPE4_STATEMENT_DISPLAY"
+          elementType="ELEMTYPE_STATEMENT_DISPLAY"
           wearStatement="true"/>
       <prompt
           prompt="Touche les bons interrupteurs puis active le levier"/>
@@ -82,7 +90,7 @@
           structureType="STRUCT_H">
         <components
             xsi:type="generator:Component"
-            elementType="ELEM_TYPE4_DISPLAY">
+            elementType="ELEMTYPE_DISPLAY">
           <displayValue>
             <value
                 xsi:type="generator:Value"
@@ -98,7 +106,7 @@
               isPerFact="true">
             <components
                 xsi:type="generator:Component"
-                elementType="ELEM_TYPE1_INTERRUPT"
+                elementType="ELEMTYPE_INTERRUPTOR"
                 wearChoices="true">
               <defaultCorrectness>
                 <value
@@ -108,11 +116,11 @@
             </components>
             <components
                 xsi:type="generator:Component"
-                elementType="ELEM_TYPE4_STATEMENT_DISPLAY"
+                elementType="ELEMTYPE_STATEMENT_CORRECTNESS"
                 wearStatement="true"/>
             <components
                 xsi:type="generator:Component"
-                elementType="ELEM_TYPE1_INTERRUPT"
+                elementType="ELEMTYPE_INTERRUPTOR"
                 wearChoices="true">
               <defaultCorrectness>
                 <value
@@ -124,7 +132,7 @@
         </components>
         <components
             xsi:type="generator:Component"
-            elementType="ELEM_TYPE4_DISPLAY">
+            elementType="ELEMTYPE_DISPLAY">
           <displayValue>
             <value
                 xsi:type="generator:Value"
@@ -132,9 +140,6 @@
           </displayValue>
         </components>
       </components>
-      <components
-          xsi:type="generator:Component"
-          elementType="ELEM_TYPE3_SWITCH"/>
       <prompt
           prompt="Touche les bons interrupteurs"/>
       <restrictedTo>IDENTIFY</restrictedTo>
@@ -144,11 +149,11 @@
         category="DIRECT_RESPONSE">
       <components
           xsi:type="generator:Component"
-          elementType="ELEM_TYPE2_KEYBOARD"
+          elementType="ELEMTYPE_KEYBOARD"
           inputEntry="true"/>
       <components
           xsi:type="generator:Component"
-          elementType="ELEM_TYPE4_STATEMENT_DISPLAY"
+          elementType="ELEMTYPE_STATEMENT_DISPLAY"
           wearStatement="true"/>
       <prompt
           prompt="Saisie la reponse"/>
@@ -169,7 +174,7 @@
               isPerFact="true">
             <components
                 xsi:type="generator:Component"
-                elementType="ELEM_TYPE1_INTERRUPT"
+                elementType="ELEMTYPE_INTERRUPTOR"
                 wearChoices="true">
               <displayValue>
                 <value
@@ -184,11 +189,11 @@
             </components>
             <components
                 xsi:type="generator:Component"
-                elementType="ELEM_TYPE4_STATEMENT_DISPLAY"
+                elementType="ELEMTYPE_STATEMENT_CORRECTNESS"
                 wearStatement="true"/>
             <components
                 xsi:type="generator:Component"
-                elementType="ELEM_TYPE1_INTERRUPT"
+                elementType="ELEMTYPE_INTERRUPTOR"
                 wearChoices="true">
               <displayValue>
                 <value
@@ -206,7 +211,7 @@
       </components>
       <components
           xsi:type="generator:Component"
-          elementType="ELEM_TYPE3_SWITCH"/>
+          elementType="ELEMTYPE_SWITCH"/>
       <prompt
           prompt="Touche les bons interrupteurs"/>
       <restrictedTo>IDENTIFY</restrictedTo>
@@ -215,17 +220,116 @@
         name="SELECT UNIQUE">
       <components
           xsi:type="generator:Component"
-          elementType="ELEM_TYPE1_INTERRUPT"
+          elementType="ELEMTYPE_INTERRUPTOR"
           wearChoices="true"/>
       <components
           xsi:type="generator:Component"
-          elementType="ELEM_TYPE4_STATEMENT_DISPLAY"
+          elementType="ELEMTYPE_STATEMENT_DISPLAY"
           wearStatement="true"/>
       <prompt
           prompt="Touche le bon interrupteur"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>ORDER</restrictedTo>
+      <restrictedTo>IDENTIFY</restrictedTo>
+    </gameplays>
+    <gameplays
+        name="MOVE POT"
+        category="MOVE_UNIQUE">
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_POT"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_DETECTOR"/>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_STATEMENT_DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Deplace le bon pot sur la zone"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>ORDER</restrictedTo>
+      <restrictedTo>IDENTIFY</restrictedTo>
+    </gameplays>
+    <gameplays
+        name="MOVE POT MULT"
+        category="MOVE_MULTIPLE"
+        manualValidation="true">
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_POT"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_DETECTOR">
+        <quantity
+            factNbAnswers="true"/>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_STATEMENT_DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Deplace les bons pots sur les zones"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>ORDER</restrictedTo>
+    </gameplays>
+    <gameplays
+        name="SELECT UNIQUE CHEST">
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_CHEST"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_STATEMENT_DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Ouvre le bon coffre"/>
+    </gameplays>
+    <gameplays
+        name="SELECT MULTIPLE CHEST"
+        category="SELECT_MULTIPLE">
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_CHEST"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_STATEMENT_DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Ouvre les bons coffres"/>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
+    </gameplays>
+    <gameplays
+        name="MOVE POT MULT BIS"
+        category="MOVE_MULTIPLE">
+      <components
+          xsi:type="generator:Structure"
+          structureType="STRUCT_V"
+          isPerFact="true">
+        <components
+            xsi:type="generator:Component"
+            elementType="ELEMTYPE_LARGE_DETECTOR"/>
+        <components
+            xsi:type="generator:Component"
+            elementType="ELEMTYPE_STATEMENT_DISPLAY"
+            wearStatement="true"/>
+        <components
+            xsi:type="generator:Component"
+            elementType="ELEMTYPE_POT"
+            wearChoices="true"/>
+      </components>
+      <prompt
+          prompt="Deplace les bons pots sur les zones"/>
+      <restrictedTo>IDENTIFY</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
   </gameplays>
   <elements>
+    <equipments/>
     <gpElements>
       <elements
           xsi:type="generator:StructureType"
@@ -237,29 +341,54 @@
           type="VerticalStructure"/>
       <elements
           xsi:type="generator:ElementType"
-          ID="ELEM_TYPE1_INTERRUPT"
+          ID="ELEMTYPE_INTERRUPTOR"
           type="FloorInterrupt"
           ability="TOUCHABLE"/>
       <elements
           xsi:type="generator:ElementType"
-          ID="ELEM_TYPE2_KEYBOARD"
+          ID="ELEMTYPE_KEYBOARD"
           type="KeyBoard"
           ability="TYPABLE"/>
       <elements
           xsi:type="generator:ElementType"
-          ID="ELEM_TYPE3_SWITCH"
+          ID="ELEMTYPE_SWITCH"
           type="Switch"
           ability="VERIFICATOR"/>
       <elements
           xsi:type="generator:ElementType"
           size="LARGE"
-          ID="ELEM_TYPE4_DISPLAY"
+          ID="ELEMTYPE_DISPLAY"
           type="Info"/>
       <elements
           xsi:type="generator:ElementType"
           size="LARGE"
-          ID="ELEM_TYPE4_STATEMENT_DISPLAY"
+          ID="ELEMTYPE_STATEMENT_DISPLAY"
           type="Statement"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMTYPE_POT"
+          type="Pot"
+          ability="MOVABLE"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMTYPE_DETECTOR"
+          type="ObjectDetector"
+          ability="DETECTORV2"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMTYPE_CHEST"
+          type="Chest"
+          ability="OPENABLE"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMTYPE_STATEMENT_CORRECTNESS"
+          type="StatementFact"/>
+      <elements
+          xsi:type="generator:ElementType"
+          size="LARGE"
+          ID="ELEMTYPE_LARGE_DETECTOR"
+          type="LargeNewObjectDetector"
+          ability="DETECTORV2"/>
     </gpElements>
   </elements>
   <abilities>
@@ -273,5 +402,13 @@
     <abilities
         name="ROTABLE"
         numberOfDisplays="4"/>
+    <abilities
+        name="MOVABLE"
+        numberOfDisplays="1"/>
+    <abilities
+        name="DETECTORV2"/>
+    <abilities
+        name="OPENABLE"
+        numberOfDisplays="1"/>
   </abilities>
 </generator:GameDescription>

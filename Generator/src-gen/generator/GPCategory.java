@@ -46,7 +46,27 @@ public enum GPCategory implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DIRECT_RESPONSE(1, "DIRECT_RESPONSE", "DIRECT_RESPONSE");
+	DIRECT_RESPONSE(1, "DIRECT_RESPONSE", "DIRECT_RESPONSE"),
+
+	/**
+	 * The '<em><b>MOVE UNIQUE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MOVE_UNIQUE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MOVE_UNIQUE(7, "MOVE_UNIQUE", "MOVE_UNIQUE"),
+
+	/**
+	 * The '<em><b>MOVE MULTIPLE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MOVE_MULTIPLE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MOVE_MULTIPLE(8, "MOVE_MULTIPLE", "MOVE_MULTIPLE");
 
 	/**
 	 * The '<em><b>SELECT UNIQUE</b></em>' literal value.
@@ -82,13 +102,35 @@ public enum GPCategory implements Enumerator {
 	public static final int DIRECT_RESPONSE_VALUE = 1;
 
 	/**
+	 * The '<em><b>MOVE UNIQUE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MOVE_UNIQUE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MOVE_UNIQUE_VALUE = 7;
+
+	/**
+	 * The '<em><b>MOVE MULTIPLE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MOVE_MULTIPLE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MOVE_MULTIPLE_VALUE = 8;
+
+	/**
 	 * An array of all the '<em><b>GP Category</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final GPCategory[] VALUES_ARRAY = new GPCategory[] { SELECT_UNIQUE, SELECT_MULTIPLE,
-			DIRECT_RESPONSE, };
+	private static final GPCategory[] VALUES_ARRAY = new GPCategory[] { SELECT_UNIQUE, SELECT_MULTIPLE, DIRECT_RESPONSE,
+			MOVE_UNIQUE, MOVE_MULTIPLE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>GP Category</b></em>' enumerators.
@@ -148,6 +190,10 @@ public enum GPCategory implements Enumerator {
 			return SELECT_UNIQUE;
 		case DIRECT_RESPONSE_VALUE:
 			return DIRECT_RESPONSE;
+		case MOVE_UNIQUE_VALUE:
+			return MOVE_UNIQUE;
+		case MOVE_MULTIPLE_VALUE:
+			return MOVE_MULTIPLE;
 		}
 		return null;
 	}
