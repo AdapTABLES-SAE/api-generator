@@ -24,7 +24,7 @@ public class ALGAGenerator {
 		generator.generate();
 		generator.printDungeon();
 		generator.saveDungeon("DungeonGen.xmi");
-		//Main.transformModel("outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
+		Main.transformModel("outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
 	}
 	
 	public ALGAGenerator() {

@@ -82,32 +82,42 @@ public class GameElementsGenerator {
 		}
 		
 		List<GPCategory> gpc = new ArrayList<>();
-		gpc.add(GPCategory.SELECT_UNIQUE);
-		gpc.add(GPCategory.MOVE_UNIQUE);
+		//gpc.add(GPCategory.SELECT_UNIQUE);
+		//gpc.add(GPCategory.MOVE_UNIQUE);
+		gpc.add(GPCategory.ORIENT_UNIQUE);
 		return gpc.get(random.nextInt(gpc.size()));
 		
 	}
 	
 	private List<Gameplay> getGameplayOfCategorieAndType(GPCategory category, ATask task){
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
-		//System.out.println(task.getID()+" "+task.validationOnLearnerAction()+ " "+ task.getType());
+		
 		for (Gameplay gp : this.gameDescription.getGameplays().getGameplays()) {
-			/*System.out.println("\t"+gp.getCategory()+" "+gp.isHasIntegratedPropositions() + " " +gp.getRestrictedTo());
-			System.out.println("\t cat"+gp.getCategory().equals(category));
-			System.out.println("\t"+gp.isManualValidation());
-			System.out.println("\t"+respectGameplayTaskTypeRestriction(gp, task));*/
+			if(gp.getCategory().equals(GPCategory.ORIENT_UNIQUE)) {
+				System.out.println(task.getID()+" "+task.validationOnLearnerAction()+ " "+ task.getType());
+				System.out.println("\t"+gp.getCategory()+" "+gp.isHasIntegratedPropositions() + " " +gp.getRestrictedTo());
+				System.out.println("\t cat"+gp.getCategory().equals(category));
+				System.out.println("\t"+respectValidationMethod(gp, task));
+				System.out.println("\t"+respectGameplayTaskTypeRestriction(gp, task));
+			}
+			
 
 			if(gp.getCategory().equals(category) && respectValidationMethod(gp, task) && respectGameplayTaskTypeRestriction(gp, task)) {
+				System.out.println("ADDED");
 				compatibleGameplays.add(gp);
 			}/* else {
 				System.out.println("NOT ADDED");
 			}*/
+			System.out.println("finished");
 		}
 		return compatibleGameplays;
 	}
 	
 	private boolean respectValidationMethod(Gameplay gameplay, ATask task) {
-//		System.err.println(task.validationOnLearnerAction()+" "+gameplay.isManualValidation());
+		//System.err.println(task.validationOnLearnerAction()+" "+gameplay.isManualValidation());
+		if(!task.validationOnLearnerAction()) {
+			return true;
+		}
 		return task.validationOnLearnerAction() == gameplay.isManualValidation();
 	}
 	

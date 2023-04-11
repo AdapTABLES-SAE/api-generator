@@ -46,12 +46,14 @@
           size="LARGE"
           ID="POSQ1"/>
       <elementPositions
+          size="LARGE"
           ID="POS8"/>
       <elementPositions
           ID="POS9"/>
       <elementPositions
           ID="POS10"/>
       <elementPositions
+          size="LARGE"
           ID="POS11"/>
       <structurePositions
           ID="POSQ1"/>
@@ -80,6 +82,9 @@
           wearStatement="true"/>
       <prompt
           prompt="Touche les bons interrupteurs puis active le levier"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>ORDER</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         name="SELECT MULTIPLE "
@@ -209,9 +214,6 @@
           </components>
         </components>
       </components>
-      <components
-          xsi:type="generator:Component"
-          elementType="ELEMTYPE_SWITCH"/>
       <prompt
           prompt="Touche les bons interrupteurs"/>
       <restrictedTo>IDENTIFY</restrictedTo>
@@ -327,6 +329,23 @@
       <restrictedTo>IDENTIFY</restrictedTo>
       <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
+    <gameplays
+        name="ROTATE STATUE"
+        category="ORIENT_UNIQUE"
+        manualValidation="true">
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_STATUE_ROTABLE"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_SWITCH"/>
+      <components
+          xsi:type="generator:Component"
+          elementType="ELEMTYPE_STATEMENT_DISPLAY"
+          wearStatement="true"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+    </gameplays>
   </gameplays>
   <elements>
     <equipments/>
@@ -389,6 +408,12 @@
           ID="ELEMTYPE_LARGE_DETECTOR"
           type="LargeNewObjectDetector"
           ability="DETECTORV2"/>
+      <elements
+          xsi:type="generator:ElementType"
+          size="LARGE"
+          ID="ELEMTYPE_STATUE_ROTABLE"
+          type="Statue"
+          ability="ROTABLE"/>
     </gpElements>
   </elements>
   <abilities>
@@ -401,7 +426,7 @@
         name="VERIFICATOR"/>
     <abilities
         name="ROTABLE"
-        numberOfDisplays="4"/>
+        numberOfDisplays="3"/>
     <abilities
         name="MOVABLE"
         numberOfDisplays="1"/>

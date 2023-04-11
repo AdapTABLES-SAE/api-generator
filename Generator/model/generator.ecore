@@ -469,12 +469,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//APosition"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="correctness" eType="#//Correctness"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="display" eType="#//Display"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="displays" upperBound="-1"
+        eType="#//Display" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elementType" lowerBound="1"
         eType="#//GPElementType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expectedAnswer" eType="#//ExpectedAnswer"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expectedAnswer" upperBound="-1"
+        eType="#//ExpectedAnswer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fact" eType="#//QuestionedFact"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="acceptedFacts" upperBound="-1"
         eType="#//FactSolutionParam" containment="true"/>
@@ -485,6 +485,7 @@
     <eLiterals name="DIRECT_RESPONSE" value="1"/>
     <eLiterals name="MOVE_UNIQUE" value="7"/>
     <eLiterals name="MOVE_MULTIPLE" value="8"/>
+    <eLiterals name="ORIENT_UNIQUE" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parameter" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//AValue"
@@ -522,6 +523,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Display" eSuperTypes="#//Parameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interactive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="correctness" eType="#//Correctness"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AComponent" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Structure" eSuperTypes="#//AComponent">

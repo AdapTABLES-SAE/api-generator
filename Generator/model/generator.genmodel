@@ -76,6 +76,7 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/DIRECT_RESPONSE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/MOVE_UNIQUE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/MOVE_MULTIPLE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/ORIENT_UNIQUE"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//ECorrectness">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ECorrectness/CORRECT"/>
@@ -382,7 +383,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//PositionedElement/ID"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedElement/position"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedElement/correctness"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedElement/display"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedElement/displays"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedElement/elementType"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedElement/expectedAnswer"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedElement/fact"/>
@@ -413,6 +414,7 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Display">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Display/interactive"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Display/correctness"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//AComponent"/>
     <genClasses ecoreClass="generator.ecore#//Structure">

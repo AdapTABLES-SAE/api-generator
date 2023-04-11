@@ -1,6 +1,10 @@
-/gameplaygenerator_maths/
+/generator/
 /generators/
-/factgenerator_template/
 /managers/
 /structures/
-/generator/
+/edu_elements_tests/
+/exceptions/
+/factgenerator_template/
+/factsgenerator_maths/
+/gameplaygenerator_maths/
+/tests/

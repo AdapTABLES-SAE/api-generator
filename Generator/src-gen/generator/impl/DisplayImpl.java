@@ -2,10 +2,13 @@
  */
 package generator.impl;
 
+import generator.Correctness;
 import generator.Display;
 import generator.GeneratorPackage;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -17,6 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.DisplayImpl#isInteractive <em>Interactive</em>}</li>
+ *   <li>{@link generator.impl.DisplayImpl#getCorrectness <em>Correctness</em>}</li>
  * </ul>
  *
  * @generated
@@ -40,6 +44,16 @@ public class DisplayImpl extends ParameterImpl implements Display {
 	 * @ordered
 	 */
 	protected boolean interactive = INTERACTIVE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getCorrectness() <em>Correctness</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCorrectness()
+	 * @generated
+	 * @ordered
+	 */
+	protected Correctness correctness;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -87,11 +101,77 @@ public class DisplayImpl extends ParameterImpl implements Display {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Correctness getCorrectness() {
+		return correctness;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCorrectness(Correctness newCorrectness, NotificationChain msgs) {
+		Correctness oldCorrectness = correctness;
+		correctness = newCorrectness;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.DISPLAY__CORRECTNESS, oldCorrectness, newCorrectness);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCorrectness(Correctness newCorrectness) {
+		if (newCorrectness != correctness) {
+			NotificationChain msgs = null;
+			if (correctness != null)
+				msgs = ((InternalEObject) correctness).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.DISPLAY__CORRECTNESS, null, msgs);
+			if (newCorrectness != null)
+				msgs = ((InternalEObject) newCorrectness).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.DISPLAY__CORRECTNESS, null, msgs);
+			msgs = basicSetCorrectness(newCorrectness, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.DISPLAY__CORRECTNESS, newCorrectness,
+					newCorrectness));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case GeneratorPackage.DISPLAY__CORRECTNESS:
+			return basicSetCorrectness(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case GeneratorPackage.DISPLAY__INTERACTIVE:
 			return isInteractive();
+		case GeneratorPackage.DISPLAY__CORRECTNESS:
+			return getCorrectness();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -106,6 +186,9 @@ public class DisplayImpl extends ParameterImpl implements Display {
 		switch (featureID) {
 		case GeneratorPackage.DISPLAY__INTERACTIVE:
 			setInteractive((Boolean) newValue);
+			return;
+		case GeneratorPackage.DISPLAY__CORRECTNESS:
+			setCorrectness((Correctness) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,6 +205,9 @@ public class DisplayImpl extends ParameterImpl implements Display {
 		case GeneratorPackage.DISPLAY__INTERACTIVE:
 			setInteractive(INTERACTIVE_EDEFAULT);
 			return;
+		case GeneratorPackage.DISPLAY__CORRECTNESS:
+			setCorrectness((Correctness) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -136,6 +222,8 @@ public class DisplayImpl extends ParameterImpl implements Display {
 		switch (featureID) {
 		case GeneratorPackage.DISPLAY__INTERACTIVE:
 			return interactive != INTERACTIVE_EDEFAULT;
+		case GeneratorPackage.DISPLAY__CORRECTNESS:
+			return correctness != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -4640,13 +4640,13 @@ public interface GeneratorPackage extends EPackage {
 	int POSITIONED_ELEMENT__CORRECTNESS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Display</b></em>' containment reference.
+	 * The feature id for the '<em><b>Displays</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_ELEMENT__DISPLAY = 3;
+	int POSITIONED_ELEMENT__DISPLAYS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Element Type</b></em>' reference.
@@ -4658,7 +4658,7 @@ public interface GeneratorPackage extends EPackage {
 	int POSITIONED_ELEMENT__ELEMENT_TYPE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Expected Answer</b></em>' containment reference.
+	 * The feature id for the '<em><b>Expected Answer</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5072,13 +5072,22 @@ public interface GeneratorPackage extends EPackage {
 	int DISPLAY__INTERACTIVE = PARAMETER_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Correctness</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISPLAY__CORRECTNESS = PARAMETER_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Display</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISPLAY_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 1;
+	int DISPLAY_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Display</em>' class.
@@ -5458,13 +5467,13 @@ public interface GeneratorPackage extends EPackage {
 	int POSITIONED_STRUCTURE_ELEMENT__CORRECTNESS = POSITIONED_ELEMENT__CORRECTNESS;
 
 	/**
-	 * The feature id for the '<em><b>Display</b></em>' containment reference.
+	 * The feature id for the '<em><b>Displays</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_STRUCTURE_ELEMENT__DISPLAY = POSITIONED_ELEMENT__DISPLAY;
+	int POSITIONED_STRUCTURE_ELEMENT__DISPLAYS = POSITIONED_ELEMENT__DISPLAYS;
 
 	/**
 	 * The feature id for the '<em><b>Element Type</b></em>' reference.
@@ -5476,7 +5485,7 @@ public interface GeneratorPackage extends EPackage {
 	int POSITIONED_STRUCTURE_ELEMENT__ELEMENT_TYPE = POSITIONED_ELEMENT__ELEMENT_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Expected Answer</b></em>' containment reference.
+	 * The feature id for the '<em><b>Expected Answer</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8469,15 +8478,15 @@ public interface GeneratorPackage extends EPackage {
 	EReference getPositionedElement_Correctness();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.PositionedElement#getDisplay <em>Display</em>}'.
+	 * Returns the meta object for the containment reference list '{@link generator.PositionedElement#getDisplays <em>Displays</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Display</em>'.
-	 * @see generator.PositionedElement#getDisplay()
+	 * @return the meta object for the containment reference list '<em>Displays</em>'.
+	 * @see generator.PositionedElement#getDisplays()
 	 * @see #getPositionedElement()
 	 * @generated
 	 */
-	EReference getPositionedElement_Display();
+	EReference getPositionedElement_Displays();
 
 	/**
 	 * Returns the meta object for the reference '{@link generator.PositionedElement#getElementType <em>Element Type</em>}'.
@@ -8491,10 +8500,10 @@ public interface GeneratorPackage extends EPackage {
 	EReference getPositionedElement_ElementType();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.PositionedElement#getExpectedAnswer <em>Expected Answer</em>}'.
+	 * Returns the meta object for the containment reference list '{@link generator.PositionedElement#getExpectedAnswer <em>Expected Answer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Expected Answer</em>'.
+	 * @return the meta object for the containment reference list '<em>Expected Answer</em>'.
 	 * @see generator.PositionedElement#getExpectedAnswer()
 	 * @see #getPositionedElement()
 	 * @generated
@@ -8722,6 +8731,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDisplay_Interactive();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.Display#getCorrectness <em>Correctness</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Correctness</em>'.
+	 * @see generator.Display#getCorrectness()
+	 * @see #getDisplay()
+	 * @generated
+	 */
+	EReference getDisplay_Correctness();
 
 	/**
 	 * Returns the meta object for class '{@link generator.AComponent <em>AComponent</em>}'.
@@ -11229,12 +11249,12 @@ public interface GeneratorPackage extends EPackage {
 		EReference POSITIONED_ELEMENT__CORRECTNESS = eINSTANCE.getPositionedElement_Correctness();
 
 		/**
-		 * The meta object literal for the '<em><b>Display</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Displays</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference POSITIONED_ELEMENT__DISPLAY = eINSTANCE.getPositionedElement_Display();
+		EReference POSITIONED_ELEMENT__DISPLAYS = eINSTANCE.getPositionedElement_Displays();
 
 		/**
 		 * The meta object literal for the '<em><b>Element Type</b></em>' reference feature.
@@ -11245,7 +11265,7 @@ public interface GeneratorPackage extends EPackage {
 		EReference POSITIONED_ELEMENT__ELEMENT_TYPE = eINSTANCE.getPositionedElement_ElementType();
 
 		/**
-		 * The meta object literal for the '<em><b>Expected Answer</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Expected Answer</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -11437,6 +11457,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DISPLAY__INTERACTIVE = eINSTANCE.getDisplay_Interactive();
+
+		/**
+		 * The meta object literal for the '<em><b>Correctness</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DISPLAY__CORRECTNESS = eINSTANCE.getDisplay_Correctness();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.AComponentImpl <em>AComponent</em>}' class.

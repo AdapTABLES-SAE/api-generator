@@ -95,34 +95,47 @@ rule Elements2Elements
 		
 	elementOut.id = element.id;
 	
-	if(element.display.isDefined()){
-		elementOut.displayValue = element.display.value.value;
-	}
-	
 	elementOut.type = element.elementType.type;
-	
-	if(element.display.isDefined()){
-		elementOut.interactive = element.display.interactive;
+	if(element.displays.isDefined()){
+		if(element.displays.size() == 1){
+			element.displays.get(0).value.value.println();
+			elementOut.displayValue = element.displays.get(0).value.value + "";
+		}
+		if(element.displays.size() > 1){
+			for (display in element.displays) { 
+				elementOut.interactive = display.interactive;
+				display.println();
+				if(display.correctness.value.value == ECorrectness#CORRECT){
+				"TOTO3".println();
+					elementOut.displayValue = elementOut.displayValue + "[" + display.value.value + "];";
+				} else {
+					elementOut.displayValue = elementOut.displayValue + display.value.value + ";";
+				}
+			}
+		}
 	} 
 	
 	if(element.correctness.isDefined()){
 		elementOut.correctness = element.correctness.value.value.getName();
 	}
-	
+
 	if(element.expectedAnswer.isDefined()){
-		elementOut.correctAnswer = element.expectedAnswer.value.value;
+		for (answer in element.expectedAnswer) { 
+			elementOut.correctAnswer = answer.value.value + ";";
+		}
+		
 	}
-	
+
 	if(element.elementType.ability.isDefined()){
 		elementOut.ability = element.elementType.ability.name+"";
 	}
-	
+
 	elementOut.pos = element.position.id;	
 
 	if(element.fact.isDefined()){
 		elementOut.idFact = element.fact.questionablefact.id;
 	}
-	
+
 	if(element.acceptedFacts.isDefined()){
 		for (soluce in element.acceptedFacts) { 
 			elementOut.acceptedFacts += soluce.value.value + ";";

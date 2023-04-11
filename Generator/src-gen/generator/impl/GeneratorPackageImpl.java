@@ -3013,15 +3013,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionedElement_Display() {
-		return (EReference) positionedElementEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getPositionedElement_ElementType() {
 		return (EReference) positionedElementEClass.getEStructuralFeatures().get(4);
 	}
@@ -3076,6 +3067,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPositionedElement_Displays() {
+		return (EReference) positionedElementEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDisplay() {
 		return displayEClass;
 	}
@@ -3087,6 +3087,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getDisplay_Interactive() {
 		return (EAttribute) displayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDisplay_Correctness() {
+		return (EReference) displayEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3942,7 +3951,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(positionedElementEClass, POSITIONED_ELEMENT__ID);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__POSITION);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__CORRECTNESS);
-		createEReference(positionedElementEClass, POSITIONED_ELEMENT__DISPLAY);
+		createEReference(positionedElementEClass, POSITIONED_ELEMENT__DISPLAYS);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__ELEMENT_TYPE);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__EXPECTED_ANSWER);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__FACT);
@@ -3975,6 +3984,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		displayEClass = createEClass(DISPLAY);
 		createEAttribute(displayEClass, DISPLAY__INTERACTIVE);
+		createEReference(displayEClass, DISPLAY__CORRECTNESS);
 
 		aComponentEClass = createEClass(ACOMPONENT);
 
@@ -4772,14 +4782,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getPositionedElement_Correctness(), this.getCorrectness(), null, "correctness", null, 0, 1,
 				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPositionedElement_Display(), this.getDisplay(), null, "display", null, 0, 1,
+		initEReference(getPositionedElement_Displays(), this.getDisplay(), null, "displays", null, 0, -1,
 				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPositionedElement_ElementType(), this.getGPElementType(), null, "elementType", null, 1, 1,
 				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPositionedElement_ExpectedAnswer(), this.getExpectedAnswer(), null, "expectedAnswer", null, 0,
-				1, PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				-1, PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPositionedElement_Fact(), this.getQuestionedFact(), null, "fact", null, 0, 1,
 				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
@@ -4836,6 +4846,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(displayEClass, Display.class, "Display", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDisplay_Interactive(), ecorePackage.getEBoolean(), "interactive", null, 0, 1, Display.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDisplay_Correctness(), this.getCorrectness(), null, "correctness", null, 0, 1, Display.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(aComponentEClass, AComponent.class, "AComponent", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4987,6 +5000,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(gpCategoryEEnum, GPCategory.DIRECT_RESPONSE);
 		addEEnumLiteral(gpCategoryEEnum, GPCategory.MOVE_UNIQUE);
 		addEEnumLiteral(gpCategoryEEnum, GPCategory.MOVE_MULTIPLE);
+		addEEnumLiteral(gpCategoryEEnum, GPCategory.ORIENT_UNIQUE);
 
 		initEEnum(eCorrectnessEEnum, ECorrectness.class, "ECorrectness");
 		addEEnumLiteral(eCorrectnessEEnum, ECorrectness.CORRECT);

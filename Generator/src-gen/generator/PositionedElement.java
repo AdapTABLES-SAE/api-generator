@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.PositionedElement#getID <em>ID</em>}</li>
  *   <li>{@link generator.PositionedElement#getPosition <em>Position</em>}</li>
  *   <li>{@link generator.PositionedElement#getCorrectness <em>Correctness</em>}</li>
- *   <li>{@link generator.PositionedElement#getDisplay <em>Display</em>}</li>
+ *   <li>{@link generator.PositionedElement#getDisplays <em>Displays</em>}</li>
  *   <li>{@link generator.PositionedElement#getElementType <em>Element Type</em>}</li>
  *   <li>{@link generator.PositionedElement#getExpectedAnswer <em>Expected Answer</em>}</li>
  *   <li>{@link generator.PositionedElement#getFact <em>Fact</em>}</li>
@@ -97,26 +97,16 @@ public interface PositionedElement extends EObject {
 	void setCorrectness(Correctness value);
 
 	/**
-	 * Returns the value of the '<em><b>Display</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Displays</b></em>' containment reference list.
+	 * The list contents are of type {@link generator.Display}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Display</em>' containment reference.
-	 * @see #setDisplay(Display)
-	 * @see generator.GeneratorPackage#getPositionedElement_Display()
+	 * @return the value of the '<em>Displays</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getPositionedElement_Displays()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Display getDisplay();
-
-	/**
-	 * Sets the value of the '{@link generator.PositionedElement#getDisplay <em>Display</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Display</em>' containment reference.
-	 * @see #getDisplay()
-	 * @generated
-	 */
-	void setDisplay(Display value);
+	EList<Display> getDisplays();
 
 	/**
 	 * Returns the value of the '<em><b>Element Type</b></em>' reference.
@@ -141,26 +131,16 @@ public interface PositionedElement extends EObject {
 	void setElementType(GPElementType value);
 
 	/**
-	 * Returns the value of the '<em><b>Expected Answer</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Expected Answer</b></em>' containment reference list.
+	 * The list contents are of type {@link generator.ExpectedAnswer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expected Answer</em>' containment reference.
-	 * @see #setExpectedAnswer(ExpectedAnswer)
+	 * @return the value of the '<em>Expected Answer</em>' containment reference list.
 	 * @see generator.GeneratorPackage#getPositionedElement_ExpectedAnswer()
 	 * @model containment="true"
 	 * @generated
 	 */
-	ExpectedAnswer getExpectedAnswer();
-
-	/**
-	 * Sets the value of the '{@link generator.PositionedElement#getExpectedAnswer <em>Expected Answer</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Expected Answer</em>' containment reference.
-	 * @see #getExpectedAnswer()
-	 * @generated
-	 */
-	void setExpectedAnswer(ExpectedAnswer value);
+	EList<ExpectedAnswer> getExpectedAnswer();
 
 	/**
 	 * Returns the value of the '<em><b>Fact</b></em>' reference.

@@ -66,7 +66,16 @@ public enum GPCategory implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MOVE_MULTIPLE(8, "MOVE_MULTIPLE", "MOVE_MULTIPLE");
+	MOVE_MULTIPLE(8, "MOVE_MULTIPLE", "MOVE_MULTIPLE"),
+	/**
+	 * The '<em><b>ORIENT UNIQUE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #ORIENT_UNIQUE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ORIENT_UNIQUE(5, "ORIENT_UNIQUE", "ORIENT_UNIQUE");
 
 	/**
 	 * The '<em><b>SELECT UNIQUE</b></em>' literal value.
@@ -124,13 +133,24 @@ public enum GPCategory implements Enumerator {
 	public static final int MOVE_MULTIPLE_VALUE = 8;
 
 	/**
+	 * The '<em><b>ORIENT UNIQUE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ORIENT_UNIQUE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ORIENT_UNIQUE_VALUE = 5;
+
+	/**
 	 * An array of all the '<em><b>GP Category</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static final GPCategory[] VALUES_ARRAY = new GPCategory[] { SELECT_UNIQUE, SELECT_MULTIPLE, DIRECT_RESPONSE,
-			MOVE_UNIQUE, MOVE_MULTIPLE, };
+			MOVE_UNIQUE, MOVE_MULTIPLE, ORIENT_UNIQUE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>GP Category</b></em>' enumerators.
@@ -194,6 +214,8 @@ public enum GPCategory implements Enumerator {
 			return MOVE_UNIQUE;
 		case MOVE_MULTIPLE_VALUE:
 			return MOVE_MULTIPLE;
+		case ORIENT_UNIQUE_VALUE:
+			return ORIENT_UNIQUE;
 		}
 		return null;
 	}
