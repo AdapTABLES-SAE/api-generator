@@ -53,7 +53,7 @@ public class GenerationResource {
 		System.out.println(Paths.PROJECT_PATH);
 		ALGAGenerator generator = new ALGAGenerator(Paths.INPUT_MODELS_PATH, Paths.OUTPUT_MODELS_PATH, Paths.CONTEXTS_FILES_SHORT_PATHS + learnerPlayerID + ".xmi", true);
 		generator.generate();
-		generator.printDungeon();
+		//generator.printDungeon();
 		generator.saveDungeon("DungeonGen_"+ learnerPlayerID +".xmi");
 		Main.transformModel(Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xmi", Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xml");
 	}

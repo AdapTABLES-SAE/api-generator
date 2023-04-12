@@ -51,15 +51,23 @@ public class GameElementsGenerator {
 	
 
 	private void selectCorrespondingGameplays() {
-		List<Gameplay> gameplays;
+		List<Gameplay> gameplays = new ArrayList<>();
 		for (TaskFactPair tfp: eeManager.getFactsToQuestion()) {
 			if(tfp != null) {
 				// normalement on devrait se baser sur le modèle de relations pour choisir
-				GPCategory chosenCategory = chooseValidCategory(tfp.getTask());
-				//System.out.println(chosenCategory);
-				gameplays = getGameplayOfCategorieAndType(chosenCategory, tfp.getTask());
+				List<GPCategory> chosenCategories = getValidCategories(tfp.getTask());
+				//System.err.println(chosenCategories);
+				do {
+				GPCategory aCategorie = chosenCategories.get(random.nextInt(chosenCategories.size()));
+				gameplays = getGameplayOfCategorieAndType(aCategorie, tfp.getTask());
+				//System.err.println("Random : "+aCategorie);
+				//System.err.println("GPs : "+gameplays);
+				chosenCategories.remove(aCategorie);
+				} while(gameplays.isEmpty());
+
 				//System.out.println(gameplays);
 				Gameplay gp = gameplays.get(random.nextInt(gameplays.size()));
+			//	System.out.println("Chosen gp "+gp.getName()+" "+gp.getCategory());
 				gameElementManager.add(gp, tfp);	
 			} else {
 				gameElementManager.add(null, tfp);
@@ -67,58 +75,57 @@ public class GameElementsGenerator {
 		}
 	}
 	
-	private GPCategory chooseValidCategory(ATask task) {
-		// TODO : based on relation MM 
-		
+	private List<GPCategory> getValidCategories(ATask task) {
+		// TODO : based on relation MM
+		//System.err.println(task.getID());
+		List<GPCategory> categories = new ArrayList<>();
 		if(task.getResponseModality() instanceof EnterResponse) {
-			return GPCategory.DIRECT_RESPONSE;
-		}
+			categories.add(GPCategory.DIRECT_RESPONSE);
+			//return new ArrayList<GPCategory>(GPCategory.DIRECT_RESPONSE);
+		} else 
 		if(task.getNbFacts() > 1 || (task instanceof CompletionTask && ((CompletionTask) task).getNbMissingElements() > 1) || task instanceof MembershipIDTask) {
-			List<GPCategory> gpc = new ArrayList<>();
-			gpc.add(GPCategory.SELECT_MULTIPLE);
-			if(!(task instanceof IdentificationTask)) { gpc.add(GPCategory.MOVE_MULTIPLE);}
+			categories.add(GPCategory.SELECT_MULTIPLE);
+			if(!(task instanceof IdentificationTask)) { categories.add(GPCategory.MOVE_MULTIPLE);}
 			
-			return gpc.get(random.nextInt(gpc.size()));
+		} else {
+			//if((task instanceof CompletionTask && ((CompletionTask) task).getNbMissingElements() < 2)) categories.add(GPCategory.SELECT_UNIQUE);
+			//categories.add(GPCategory.MOVE_UNIQUE);
+			categories.add(GPCategory.ORIENT_UNIQUE);
 		}
 		
-		List<GPCategory> gpc = new ArrayList<>();
-		//gpc.add(GPCategory.SELECT_UNIQUE);
-		//gpc.add(GPCategory.MOVE_UNIQUE);
-		gpc.add(GPCategory.ORIENT_UNIQUE);
-		return gpc.get(random.nextInt(gpc.size()));
+		
+		return categories; //.get(random.nextInt(gpc.size()));
 		
 	}
 	
 	private List<Gameplay> getGameplayOfCategorieAndType(GPCategory category, ATask task){
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
-		
 		for (Gameplay gp : this.gameDescription.getGameplays().getGameplays()) {
-			if(gp.getCategory().equals(GPCategory.ORIENT_UNIQUE)) {
+		/*	if(gp.getCategory().equals(GPCategory.ORIENT_UNIQUE)) {
 				System.out.println(task.getID()+" "+task.validationOnLearnerAction()+ " "+ task.getType());
 				System.out.println("\t"+gp.getCategory()+" "+gp.isHasIntegratedPropositions() + " " +gp.getRestrictedTo());
 				System.out.println("\t cat"+gp.getCategory().equals(category));
 				System.out.println("\t"+respectValidationMethod(gp, task));
 				System.out.println("\t"+respectGameplayTaskTypeRestriction(gp, task));
-			}
+			}*/
 			
 
 			if(gp.getCategory().equals(category) && respectValidationMethod(gp, task) && respectGameplayTaskTypeRestriction(gp, task)) {
-				System.out.println("ADDED");
 				compatibleGameplays.add(gp);
 			}/* else {
 				System.out.println("NOT ADDED");
 			}*/
-			System.out.println("finished");
+			//System.out.println("finished");
 		}
 		return compatibleGameplays;
 	}
 	
 	private boolean respectValidationMethod(Gameplay gameplay, ATask task) {
 		//System.err.println(task.validationOnLearnerAction()+" "+gameplay.isManualValidation());
-		if(!task.validationOnLearnerAction()) {
+		/*if(task.validationOnLearnerAction()) {
 			return true;
-		}
-		return task.validationOnLearnerAction() == gameplay.isManualValidation();
+		}*/
+		return (task.validationOnLearnerAction() == gameplay.isManualValidation()) || (!task.validationOnLearnerAction() && gameplay.isManualValidation());
 	}
 	
 	private boolean respectGameplayTaskTypeRestriction(Gameplay gameplay, ATask task) {

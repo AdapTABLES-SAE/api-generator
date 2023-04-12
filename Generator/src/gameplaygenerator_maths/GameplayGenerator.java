@@ -71,7 +71,6 @@ public class GameplayGenerator {
 
 		if(component.isWearStatement()) {
 			elements.add(buildStatementComponent(component, fact, getAvailablePosition(roomtype, component.getElementType(), false)));
-			//elements.add(buildComponent(component, fact, getAvailablePosition(roomtype, component.getElementType(), false)));			
 		} 
 		else if(component.isInputEntry()) { elements.add(buildInputEntryElement(component, fact, getAvailablePosition(roomtype, component.getElementType(), false))); }
 		else if(component.isWearChoices()) {
@@ -91,25 +90,6 @@ public class GameplayGenerator {
 				elements.add(buildNonSpecificElement(component, getAvailablePosition(roomtype, component.getElementType(), false)));
 			}
 		}
-		
-		
-		/*else if (component.isWearChoices()) {
-			for (int i = 0; i < fact.getPropositions().size(); i++) {
-				elements.add(buildComponent(component, fact, i, getAvailablePosition(roomtype, component.getElementType(), false), hasIntegratedChoices));
-			}
-		} else if (component.isInputEntry()) {
-			for (int i = 0; i < fact.getEntrys().size(); i++) {
-				elements.add(buildComponent(component, fact, i, getAvailablePosition(roomtype, component.getElementType(), false)));
-			}
-		} else {
-			if(component.getQuantity() != null) {
-				for (int i = 0; i < getElementQuantity(component, fact); i++) {
-					elements.add(buildNonSpecificElement(component, fact, getAvailablePosition(roomtype, component.getElementType(), false)));
-				}
-			} else {
-				elements.add(buildNonSpecificElement(component, getAvailablePosition(roomtype, component.getElementType(), false)));
-			}
-		}*/
 		return elements;
 	}
 	
@@ -122,25 +102,10 @@ public class GameplayGenerator {
 		}
 		return nbOfElements;
 	}
-	
-	
-	
+		
 	private List<PositionedElement> buildStructureHierarchy(AComponent component, List<QuestionedFact> facts, RoomType roomtype, boolean hasIntegratedChoices){
 		return buildStructureHierarchy(component, null, new ArrayList<>(), facts, roomtype, hasIntegratedChoices, 0, -1);
 	}
-	
-/*	private PositionedElement buildComponent(Component component, QuestionedFact questionedFact, APosition position) {
-		return buildComponent(component, questionedFact, 0, position, false);
-	}
-	
-	private PositionedElement buildComponent(Component component, APosition position) {
-		return buildComponent(component, null, 0, position, false);
-	}
-	
-	private PositionedElement buildComponent(Component component, QuestionedFact questionedFact, int propositionIndex, APosition position) {
-		return buildComponent(component, questionedFact, propositionIndex, position, false);
-	}*/
-
 
 	private PositionedElement buildStatementComponent(Component component, QuestionedFact fact, APosition position) {
 		PositionedElement comp = initializePositionedElement(component, fact, position);
@@ -172,12 +137,14 @@ public class GameplayGenerator {
 			expectedAnswer.setValue(((Value) fact.getEntrys().get(i).getValue()).getValue());
 			answer.setValue(expectedAnswer);
 			comp.getExpectedAnswer().add(answer);
-			//comp.setExpectedAnswer(answer);
 		}		
 		return comp;
 	}
 	
 	private PositionedElement buildNonSpecificElement(Component component, QuestionedFact fact, APosition position) {
+		if(component.getElementType().getType().equals("LargeNewObjectDetector")) {
+			System.out.println("ON LE CREE");
+		}
 		PositionedElement comp = initializePositionedElement(component, fact, position);
 		if(component.getDisplayValue() != null) {
 			Display defaultDisplay = new DisplayImpl();
@@ -220,15 +187,11 @@ public class GameplayGenerator {
 			int propIndex, nbIndexFaux = 1;
 			for (int choix = 0; choix < getNumberOfChoicesWornBy(component); choix++) {
 				if(randomPositionOfCorrect == choix) {
-					System.out.println("CHOIX CORRECT");
 					propIndex = getIndexOfCorrectAnswerNumber(fact, 1);
 				} else {
-					System.out.println("CHOIX INCORRECT");
 					propIndex = getIndexOfIncorrectAnswerNumber(fact, nbIndexFaux);
 					nbIndexFaux++;
 				}				
-				//int propIndex = (choix == randomPositionOfCorrect)? : getIndexOfIncorrectAnswerNumber(fact, choix);
-				System.out.println("index : " + propIndex);
 								
 				if(propIndex < fact.getPropositions().size()) {
 					Display proposition = new DisplayImpl();
@@ -294,107 +257,13 @@ public class GameplayGenerator {
 		if(fact != null) comp.setFact(fact);
 		return comp;
 	}
-
-	
-	/*private PositionedElement buildComponent(Component component, QuestionedFact fact, int propositionIndex, APosition position, boolean hasIntegratedChoices){ 
-		//System.out.println("Build A Component");
-		PositionedElement comp = new PositionedElementImpl();
-		comp.setElementType(component.getElementType());
-		comp.setPosition(position);
-		comp.setID("ELEM" + nbPositionedElement++);
-		comp.setFact(fact);
-		
-		if(component.isInputEntry()) {
-			//System.out.println("\tComponent to build is input");
-			ExpectedAnswer answer = new ExpectedAnswerImpl();
-			Value expectedAnswer = new ValueImpl();
-			expectedAnswer.setValue(((Value) fact.getEntrys().get(propositionIndex).getValue()).getValue());
-			answer.setValue(expectedAnswer);
-			comp.setExpectedAnswer(answer);
-		}
-				
-		if(component.isWearStatement()) {	
-			//System.out.println("\tComponent to build is wear statement");
-			Display statement = new DisplayImpl();
-			Value display = new ValueImpl();
-			//System.out.println("TOTO "+( fact.getQuestion().getValue()));
-			display.setValue(((Value) fact.getQuestion().getValue()).getValue());
-			statement.setValue(display);
-			statement.setInteractive(fact.getQuestion().isInteractive());
-			comp.getDisplay().add(statement);
-			//comp.setDisplay(statement);			
-					
-			if(!fact.getQuestion().getSolutions().isEmpty()) {
-				for (FactSolutionParam factSol: fact.getQuestion().getSolutions()) {
-					FactSolutionParam sol = new FactSolutionParamImpl();
-					Value solValue = new ValueImpl();
-					solValue.setValue(((Value) factSol.getValue()).getValue());
-					sol.setValue(solValue);
-					comp.getAcceptedFacts().add(sol);
-				}
-			}
-		}
-			
-		if(component.isWearChoices()) {
-			//System.out.println("\tComponent to build is wear choices");
-			//for (int i = 0; i < getNumberOfChoicesWornBy(component); i++) {
-				comp.setCorrectness(computeCorrectness(component, fact, fact.getPropositions().get(propositionIndex)));
-				
-				if(!hasIntegratedChoices) {
-					//System.out.println("\t++++ display");
-					Display proposition = new DisplayImpl(); //
-					Value propValue = new ValueImpl();
-					propValue.setValue(((Value) fact.getPropositions().get(propositionIndex).getValue()).getValue());
-					proposition.setValue(propValue);
-					comp.getDisplay().add(proposition);
-					//propositionIndex++;
-					//comp.setDisplay(proposition);
-				}
-			//}
-		}
-				
-		if(component.getDisplayValue() != null) {
-			//System.out.println("\tComponent has defaults display value");
-			Display defaultDisplay = new DisplayImpl();
-			Value displayValue = new ValueImpl();
-			displayValue.setValue(((Value) component.getDisplayValue().getValue()).getValue());
-			defaultDisplay.setValue(displayValue);
-			comp.getDisplay().add(defaultDisplay);
-			// comp.setDisplay(defaultDisplay);
-		}
-				
-		return comp;
-	}*/
-	
-	/*private boolean isFactCorrect(String propositionValue, ECorrectness propositionCorrectness) {
-		if(!propositionValue.equals(false+"")) {
-			return propositionCorrectness.equals(ECorrectness.CORRECT)? true: false;
-		} else {
-			return propositionCorrectness.equals(ECorrectness.CORRECT)? false: true;
-		}	
-	}*/
-	
-	/*private Correctness computeCorrectness(Component component, PropositionParam proposition) {
-		return computeCorrectness(component, null, proposition);
-	}*/
 	
 	private Correctness computeCorrectness(Component component, QuestionedFact qeFact, PropositionParam proposition) {
 		Correctness correctness = new CorrectnessImpl();
 		if(component.getDefaultCorrectness() != null) {
 			ECorrectness gameplayComponentToComputeCorrectness = ((CorrectnessValue) component.getDefaultCorrectness().getValue()).getValue();
-			/*ECorrectness propositionCorrectness = ((CorrectnessValue) proposition.getState().getValue()).getValue(); 
-			String propositionValue = ((Value) proposition.getValue()).getValue();*/
+
 			CorrectnessValue value = new CorrectnessValueImpl();
-			//System.err.println(proposition.getValue()+" "+proposition.getState().getValue());
-			//System.err.println(gameplayComponentToComputeCorrectness+" - "+propositionCorrectness);
-			
-			/*if((gameplayComponentToComputeCorrectness.equals(ECorrectness.NOT_FACT_CORRECTNESS) && isFactCorrect(propositionValue, propositionCorrectness)) 
-					|| (gameplayComponentToComputeCorrectness.equals(ECorrectness.FACT_CORRECTNESS) && !isFactCorrect(propositionValue, propositionCorrectness))) {
-				value.setValue(ECorrectness.INCORRECT);
-			} else if((gameplayComponentToComputeCorrectness.equals(ECorrectness.NOT_FACT_CORRECTNESS) && !isFactCorrect(propositionValue, propositionCorrectness)) 
-					|| (gameplayComponentToComputeCorrectness.equals(ECorrectness.FACT_CORRECTNESS) && isFactCorrect(propositionValue, propositionCorrectness))) {
-				value.setValue(ECorrectness.CORRECT);
-			}*/
 			ECorrectness factCorrectness = ((CorrectnessValue) qeFact.getFactCorrectness().getValue()).getValue();
 			
 			if(gameplayComponentToComputeCorrectness.equals(ECorrectness.NOT_FACT_CORRECTNESS)) {
@@ -402,8 +271,7 @@ public class GameplayGenerator {
 			} else {
 				value.setValue(factCorrectness);
 			}
-			
-		
+
 			correctness.setValue(value);
 		} else { // On est pas dans une structure on prends la valeur de correctness de la proposition du fait 
 			CorrectnessValue value = new CorrectnessValueImpl();
@@ -415,7 +283,6 @@ public class GameplayGenerator {
 	}
 		
 	private PositionedStructureElement buildStructure(Structure structure, APosition position) {
-		//System.out.println("\tBuild a Structure");
 		PositionedStructureElement structP = new PositionedStructureElementImpl();
 		structP.setElementType(structure.getStructureType());
 		structP.setID("STRUCT" + nbPositionedElement++); 
@@ -449,7 +316,6 @@ public class GameplayGenerator {
 	}
 	
 	private List<PositionedElement> buildStructureHierarchy(AComponent component, APosition positionFromParent, List<PositionedElement> elements, List<QuestionedFact> facts, RoomType roomtype, boolean hasIntegratedChoices, int factIndex, int propositionIndex){
-		//System.out.println("BuildStructureHierarchy");
 		if(positionFromParent == null) {
 			if(component instanceof Component) {
 				positionFromParent = getAvailablePosition(roomtype, ((Component) component).getElementType(), false);
@@ -457,13 +323,11 @@ public class GameplayGenerator {
 				positionFromParent = getAvailablePosition(roomtype, ((Structure) component).getStructureType(), true);
 			}
 		}
-		
+			
 		if(component instanceof Structure) {
-			//System.out.println("\tComp is structure with pos to parent "+positionFromParent);
 			Structure comp = (Structure) component;
 			PositionedStructureElement struct;
 			if(comp.isIsPerFact()) {
-				//System.out.println("\t\tStructure is per fact");
 				for (int i = 0; i < facts.size(); i++) {
 					int propIndex = -1;
 					struct = buildStructure(comp, positionFromParent);
@@ -474,9 +338,7 @@ public class GameplayGenerator {
 						if(isComponentWearChoices(aComp)) { propIndex += getNumberOfChoicesWornBy(aComp); }
 					} 
 				}
-				//System.out.println("--");
 			} else {
-				//System.out.println("\t\tStructure is NOT per fact");
 				struct = buildStructure(comp, positionFromParent);
 				elements.add(struct);
 				for (AComponent aComp : comp.getComponents()) {
@@ -488,29 +350,20 @@ public class GameplayGenerator {
 				}
 			}			
 		} else {
-			//System.out.println("\tComp is component with pos to parent "+positionFromParent);
 			Component comp = (Component) component;
 			// Les objets avec des quantites n'ont pas de sens dans le cas des structures et ne sont donc pas geres 
 			if(factIndex != -1) {
 				if(comp.isWearStatement()) { elements.add(buildStatementComponent(comp, facts.get(factIndex), positionFromParent)); }
-				if(comp.isInputEntry()) { elements.add(buildInputEntryElement(comp, facts.get(factIndex), positionFromParent)); }
-				if(comp.isWearChoices()) {
+				else if(comp.isInputEntry()) { elements.add(buildInputEntryElement(comp, facts.get(factIndex), positionFromParent)); }
+				else if(comp.isWearChoices()) {
 					if(getNumberOfChoicesWornBy((Component) comp) == 1) { elements.add(buildSimpleWearChoiceElement(comp, facts.get(factIndex), propositionIndex, positionFromParent, hasIntegratedChoices)); }
 					else { elements.addAll(buildComplexWearChoicesElement(comp, facts.get(factIndex), positionFromParent, roomtype)); }
-				}
-				/*if(comp.isWearChoices()) {
-					if(getNumberOfChoicesWornBy(comp) == 1) {
-						elements.add(buildComponent(comp, facts.get(factIndex), propositionIndex, positionFromParent, hasIntegratedChoices));
-					} else {
-						elements.addAll(buildWearChoicesComp())
-					}
 				} else {
-					elements.add(buildComponent(comp, facts.get(factIndex), positionFromParent));
-				}*/
+					elements.add(buildNonSpecificElement(comp, positionFromParent));
+				}
 			} else {
 				elements.add(buildNonSpecificElement(comp, positionFromParent));
 			}
-
 		}
 		
 		return elements;
@@ -518,9 +371,7 @@ public class GameplayGenerator {
 	
 	private APosition getAvailablePosition(RoomType roomType, GPElementType elementType, boolean isStructure) {
 		List<APosition> allowed = new ArrayList<>();
-		System.err.println(elementType.getType()+" "+isStructure);
 		if(!isStructure) {
-			System.out.println(occupiedPositions);
 			for (APosition aPosition : roomType.getElementPositions()) {
 				if(!occupiedPositions.contains(aPosition) && aPosition.getSize().equals(elementType.getSize()) 
 						&& (aPosition.getRestrictedTo().isEmpty() || aPosition.getRestrictedTo().contains(((ElementType) elementType).getAbility()))) {
@@ -536,7 +387,7 @@ public class GameplayGenerator {
 			}
 		}
 		
-		if(allowed.isEmpty()) { System.err.println("Position null"); return null; }
+		if(allowed.isEmpty()) { return null; }
 		int number = new Random().nextInt(allowed.size());
 		occupiedPositions.add(allowed.get(number));
 		return allowed.get(number);

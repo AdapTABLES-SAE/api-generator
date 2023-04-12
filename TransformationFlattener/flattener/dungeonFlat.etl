@@ -30,10 +30,10 @@ rule Room2Room
         }
               
         if (roomIn.roomtype.isTypeOf(SmallRoomType)) {
-            "\tsmall".println();
+            //"\tsmall".println();
             roomOut.size = OUT!RoomType#SMALL;
         } else {
-            "\tlarge".println();
+            //"\tlarge".println();
             roomOut.size = OUT!RoomType#LARGE;
         }
         
@@ -81,7 +81,7 @@ rule Room2Room
 rule Structures2Elements 
 	transform element : IN!PositionedStructureElement
 	to elementOut : OUT!Element {
-	"\t\t\tStrucutres creation".println();
+	//"\t\t\tStrucutres creation".println();
 	
 	elementOut.id = element.id;		
 	elementOut.pos = element.position.id;	
@@ -91,22 +91,20 @@ rule Structures2Elements
 rule Elements2Elements 
 	transform element : IN!PositionedElement
 	to elementOut : OUT!Element {
-	"\t\t\tElements creation".println();
+	//"\t\t\tElements creation".println();
 		
 	elementOut.id = element.id;
 	
 	elementOut.type = element.elementType.type;
 	if(element.displays.isDefined()){
 		if(element.displays.size() == 1){
-			element.displays.get(0).value.value.println();
 			elementOut.displayValue = element.displays.get(0).value.value + "";
+			elementOut.interactive = element.displays.get(0).interactive;
 		}
 		if(element.displays.size() > 1){
 			for (display in element.displays) { 
 				elementOut.interactive = display.interactive;
-				display.println();
 				if(display.correctness.value.value == ECorrectness#CORRECT){
-				"TOTO3".println();
 					elementOut.displayValue = elementOut.displayValue + "[" + display.value.value + "];";
 				} else {
 					elementOut.displayValue = elementOut.displayValue + display.value.value + ";";
@@ -121,7 +119,6 @@ rule Elements2Elements
 
 	if(element.expectedAnswer.isDefined()){
 		for (answer in element.expectedAnswer) {
-		"AQUI".println(); 
 			elementOut.correctAnswer = answer.value.value + ";";
 		}
 		
