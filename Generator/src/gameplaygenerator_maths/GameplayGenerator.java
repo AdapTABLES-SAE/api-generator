@@ -166,7 +166,7 @@ public class GameplayGenerator {
 	
 	private PositionedElement buildInputEntryElement(Component component, QuestionedFact fact, APosition position) {
 		PositionedElement comp = initializePositionedElement(component, fact, position);
-		for (int i = 0; i < fact.getPropositions().size(); i++) {
+		for (int i = 0; i < fact.getEntrys().size(); i++) {
 			ExpectedAnswer answer = new ExpectedAnswerImpl();
 			Value expectedAnswer = new ValueImpl();
 			expectedAnswer.setValue(((Value) fact.getEntrys().get(i).getValue()).getValue());

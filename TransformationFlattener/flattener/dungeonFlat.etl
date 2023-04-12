@@ -120,7 +120,8 @@ rule Elements2Elements
 	}
 
 	if(element.expectedAnswer.isDefined()){
-		for (answer in element.expectedAnswer) { 
+		for (answer in element.expectedAnswer) {
+		"AQUI".println(); 
 			elementOut.correctAnswer = answer.value.value + ";";
 		}
 		
