@@ -164,13 +164,16 @@ public class GameplayGenerator {
 		PositionedElement comp = initializePositionedElement(component, fact, position);
 		comp.setCorrectness(computeCorrectness(component, fact, fact.getPropositions().get(propositionIndex)));
 		
+	
+		Display proposition = new DisplayImpl();
+		Value propValue = new ValueImpl();
 		if(!hasIntegratedChoices) {
-			Display proposition = new DisplayImpl();
-			Value propValue = new ValueImpl();
 			propValue.setValue(((Value) fact.getPropositions().get(propositionIndex).getValue()).getValue());
-			proposition.setValue(propValue);
-			comp.getDisplays().add(proposition);
+		} else {
+			propValue.setValue(((Value) component.getDisplayValue().getValue()).getValue());	
 		}
+		proposition.setValue(propValue);
+		comp.getDisplays().add(proposition);
 		
 		return comp;
 	}
