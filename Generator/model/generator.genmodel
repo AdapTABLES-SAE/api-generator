@@ -76,13 +76,20 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/DIRECT_RESPONSE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/MOVE_UNIQUE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/MOVE_MULTIPLE"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/ORIENT_UNIQUE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/ORIENT"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/POSITION_UNIQUE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/POSITION_MULTIPLE"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//ECorrectness">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ECorrectness/CORRECT"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ECorrectness/INCORRECT"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ECorrectness/FACT_CORRECTNESS"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ECorrectness/NOT_FACT_CORRECTNESS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EBoundary">
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EBoundary/ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EBoundary/SUP_ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EBoundary/SUP_EQ_ONE"/>
     </genEnums>
     <genClasses image="false" ecoreClass="generator.ecore#//AbstractFact"/>
     <genClasses ecoreClass="generator.ecore#//SetOfFacts">
@@ -215,10 +222,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/ID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/maxTime"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/nbFacts"/>
-      <genOperations ecoreOperation="generator.ecore#//ATask/validationOnLearnerAction"
-          body="return checkLearnerAction;"/>
       <genOperations ecoreOperation="generator.ecore#//ATask/getType"/>
       <genOperations ecoreOperation="generator.ecore#//ATask/isCheckOnLearnerAction"/>
+      <genOperations ecoreOperation="generator.ecore#//ATask/nbExpectedAnswers" body="return 1;"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//CompletionTask">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionTask/type"/>
@@ -452,5 +458,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Prompt/prompt"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//FactCorrectnessParam"/>
+    <genClasses ecoreClass="generator.ecore#//GameplayTaskRelations">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameplayTaskRelations/relations"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Relation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Relation/task"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Relation/gameplay"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Relation/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Condition/nbFacts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Condition/nbExpectedAnswers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Condition/answerModality"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

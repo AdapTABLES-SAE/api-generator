@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import generator.Dungeon;
 import generator.GameDescription;
+import generator.GameplayTaskRelations;
 import generator.GenerationContext;
 import generator.GeneratorPackage;
 import generator.Knowledge;
@@ -24,24 +25,24 @@ import generator.LearningDomain;
 public class ModelsManager {
 	
 	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+	private ResourceSet resourceSet;
+	private boolean lauchedFromAPI = false;
+	
 	private static String INPUT_MODELS_PATH = "inputmodels/";
 	private static String OUTPUT_MODELS_PATH = "outputmodels/";
-	private boolean lauchedFromAPI = false;
-	private static String[] INPUT_MODELS_PATHS = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi"};
-
-	private ResourceSet resourceSet;
+	private static String[] INPUT_MODELS_NAMES = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi", "Relations.xmi"};
 	
-	
-	public GenerationContext context; 
-	public GameDescription gameDescription; 
-	public Knowledge multiplicationTables;
-	public LearningDomain learningPath;
+	private GenerationContext context; 
+	private GameDescription gameDescription; 
+	private Knowledge multiplicationTables;
+	private LearningDomain learningPath;
+	private GameplayTaskRelations relations;
 	
 
 	public ModelsManager(String contextFileName) {
 		resourceSet = new ResourceSetImpl();
 		if(!contextFileName.isEmpty()) {
-			INPUT_MODELS_PATHS[0] = contextFileName;
+			INPUT_MODELS_NAMES[0] = contextFileName;
 		}
 		loadInputModels();
 	}
@@ -61,7 +62,7 @@ public class ModelsManager {
 		OUTPUT_MODELS_PATH = outputPath;
 		this.lauchedFromAPI = lauchedFromAPI;
 		if(!contextFilePath.isEmpty()) {
-			INPUT_MODELS_PATHS[0] = contextFilePath;
+			INPUT_MODELS_NAMES[0] = contextFilePath;
 		}
 		resourceSet = new ResourceSetImpl();
 		loadInputModels();
@@ -98,17 +99,17 @@ public class ModelsManager {
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
 		//map.put(XMLResource.OPTION_ENCODING, "UTF-8");
 		String filePathComplement = lauchedFromAPI? "file:///": "";
-		Resource resource = resourceSet.createResource(URI.createURI(filePathComplement + INPUT_MODELS_PATH + INPUT_MODELS_PATHS[3]));
+		Resource resource = resourceSet.createResource(URI.createURI(filePathComplement + INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]));
 
 		resource.getContents().add(learningPaths);
 		try {
 			resource.save(map);
 		}catch (IOException e) {
-			LOGGER.severe("Error while saving : " + INPUT_MODELS_PATH + INPUT_MODELS_PATHS[3]);
+			LOGGER.severe("Error while saving : " + INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]);
 			e.printStackTrace();
 		}
 		
-		LOGGER.info("Saving '"+INPUT_MODELS_PATHS[3]+"' file : OK");
+		LOGGER.info("Saving '"+INPUT_MODELS_NAMES[3]+"' file : OK");
 	}
 	
 	public LearningDomain loadDomainModel() {
@@ -118,7 +119,7 @@ public class ModelsManager {
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		map.put("xmi", new XMIResourceFactoryImpl());
 		
-		File learningPaths = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[3]);
+		File learningPaths = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]);
 		Resource resource = resourceSet.createResource(URI.createFileURI(learningPaths.getAbsolutePath()));
 
 		try {
@@ -139,7 +140,7 @@ public class ModelsManager {
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		map.put("xmi", new XMIResourceFactoryImpl());
 		
-		File knowledge = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[2]);
+		File knowledge = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[2]);
 		Resource resource = resourceSet.createResource(URI.createFileURI(knowledge.getAbsolutePath()));
 
 		try {
@@ -159,19 +160,19 @@ public class ModelsManager {
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
 		//map.put(XMLResource.OPTION_ENCODING, "UTF-8");
-		System.out.println(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]);
+		System.out.println(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
 		
 		String filePathComplement = lauchedFromAPI? "file:///": "";
-		Resource resource = resourceSet.createResource(URI.createURI(filePathComplement + INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]));
+		Resource resource = resourceSet.createResource(URI.createURI(filePathComplement + INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]));
 		resource.getContents().add(context);
 		try {
 			resource.save(map);
 		}catch (IOException e) {
-			LOGGER.severe("Error while saving : " + INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]);
+			LOGGER.severe("Error while saving : " + INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
 			e.printStackTrace();
 		}
 		
-		LOGGER.info("Saving '"+INPUT_MODELS_PATHS[0]+"' file : OK");
+		LOGGER.info("Saving '"+INPUT_MODELS_NAMES[0]+"' file : OK");
 	}
 		
 	private void loadInputModels() {
@@ -180,22 +181,24 @@ public class ModelsManager {
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		map.put("xmi", new XMIResourceFactoryImpl());
 		
-		File contexte = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[0]);
-		File gamedescription = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[1]);
-		File multiplicationTables = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[2]);
-		File learningPaths = new File(INPUT_MODELS_PATH + INPUT_MODELS_PATHS[3]);
+		File contexte = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
+		File gamedescription = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[1]);
+		File multiplicationTables = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[2]);
+		File learningPaths = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]);
+		File relations = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[4]);
 
 		Resource resource1 = resourceSet.createResource(URI.createFileURI(contexte.getAbsolutePath()));
 		Resource resource2 = resourceSet.createResource(URI.createFileURI(gamedescription.getAbsolutePath()));
 		Resource resource3 = resourceSet.createResource(URI.createFileURI(multiplicationTables.getAbsolutePath()));
 		Resource resource4 = resourceSet.createResource(URI.createFileURI(learningPaths.getAbsolutePath()));
-
+		Resource resource5 = resourceSet.createResource(URI.createFileURI(relations.getAbsolutePath()));
 
 		try {
 			resource1.load(null);
 			resource2.load(null);
 			resource3.load(null);
 			resource4.load(null);
+			resource5.load(null);
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -205,7 +208,40 @@ public class ModelsManager {
 		this.gameDescription = (GameDescription) resource2.getContents().get(0);
 		this.multiplicationTables = (Knowledge) resource3.getContents().get(0);
 		this.learningPath = (LearningDomain) resource4.getContents().get(0);
+		this.relations = (GameplayTaskRelations) resource5.getContents().get(0);
 		
 		LOGGER.info("Loading input models : OK");
+	}
+
+	public GenerationContext getContextModel() {
+		return context;
+	}
+
+	public void setContextModel(GenerationContext context) {
+		this.context = context;
+	}
+
+	public GameDescription getGameDescriptionModel() {
+		return gameDescription;
+	}
+
+	public void setGameDescription(GameDescription gameDescription) {
+		this.gameDescription = gameDescription;
+	}
+
+	public Knowledge getMultiplicationTablesModel() {
+		return multiplicationTables;
+	}
+
+	public LearningDomain getLearningPathModel() {
+		return learningPath;
+	}
+
+	public void setLearningPathModel(LearningDomain learningPath) {
+		this.learningPath = learningPath;
+	}
+
+	public GameplayTaskRelations getRelationsModel() {
+		return relations;
 	}
 }

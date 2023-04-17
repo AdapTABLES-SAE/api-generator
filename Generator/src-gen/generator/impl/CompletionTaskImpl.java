@@ -84,6 +84,11 @@ public abstract class CompletionTaskImpl extends ATaskImpl implements Completion
 		throw new UnsupportedOperationException();
 	}
 
+	@Override
+	public int nbExpectedAnswers() {
+		return getNbMissingElements();
+	}
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

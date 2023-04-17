@@ -1,4 +1,4 @@
-package gameplaygenerator_maths;
+package generators;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +11,7 @@ import generator.Correctness;
 import generator.CorrectnessValue;
 import generator.Display;
 import generator.ECorrectness;
+import generator.ElementSize;
 import generator.ElementType;
 import generator.ExpectedAnswer;
 import generator.FactSolutionParam;
@@ -33,7 +34,7 @@ import generator.impl.PositionedElementImpl;
 import generator.impl.PositionedStructureElementImpl;
 import generator.impl.ValueImpl;
 
-public class GameplayGenerator {
+public class ConcreteGameplayGenerator {
 	
 	/**
 	 * Generate the positioned game elements of the rooms and associate the fact values accordingly. 
@@ -42,7 +43,7 @@ public class GameplayGenerator {
 	private int nbPositionedElement;
 	List<APosition> occupiedPositions;
 	
-	public GameplayGenerator() {
+	public ConcreteGameplayGenerator() {
 		this.nbPositionedElement = 1;
 		this.occupiedPositions = new ArrayList<>();
 	}
@@ -142,9 +143,6 @@ public class GameplayGenerator {
 	}
 	
 	private PositionedElement buildNonSpecificElement(Component component, QuestionedFact fact, APosition position) {
-		if(component.getElementType().getType().equals("LargeNewObjectDetector")) {
-			System.out.println("ON LE CREE");
-		}
 		PositionedElement comp = initializePositionedElement(component, fact, position);
 		if(component.getDisplayValue() != null) {
 			Display defaultDisplay = new DisplayImpl();
@@ -170,7 +168,9 @@ public class GameplayGenerator {
 		if(!hasIntegratedChoices) {
 			propValue.setValue(((Value) fact.getPropositions().get(propositionIndex).getValue()).getValue());
 		} else {
-			propValue.setValue(((Value) component.getDisplayValue().getValue()).getValue());	
+			if(component.getDisplayValue() != null) {
+				propValue.setValue(((Value) component.getDisplayValue().getValue()).getValue());	
+			}
 		}
 		proposition.setValue(propValue);
 		comp.getDisplays().add(proposition);
@@ -179,24 +179,30 @@ public class GameplayGenerator {
 	}
 	
 	private List<PositionedElement> buildComplexWearChoicesElement(Component component, QuestionedFact fact, APosition position, RoomType roomtype){
-		int numberOfObjectsToInstanciate = fact.getPropositions().size() / getNumberOfChoicesWornBy(component);
+		int numberOfObjectsToInstanciate = Integer.valueOf(((Value) fact.getCorrectnessToReach().getValue()).getValue());
 		boolean computesPositionEachTime = position == null;
 		
+		int numberOfChoicePerElement = fact.getPropositions().size() / numberOfObjectsToInstanciate;
+		if(numberOfChoicePerElement > getNumberOfChoicesWornBy(component)) {
+			System.err.println("The number of choice is to high for this component");
+		}
+		int propIndex, nbIndexFaux = 1;
 		List<PositionedElement> elements = new ArrayList<>();
 		for (int i = 0; i < numberOfObjectsToInstanciate; i++) {
 			position = computesPositionEachTime? getAvailablePosition(roomtype, component.getElementType(), false): position;
 			PositionedElement comp = initializePositionedElement(component, fact, position);
-			int randomPositionOfCorrect = new Random().nextInt(getNumberOfChoicesWornBy(component));
-			int propIndex, nbIndexFaux = 1;
-			for (int choix = 0; choix < getNumberOfChoicesWornBy(component); choix++) {
+			int randomPositionOfCorrect = new Random().nextInt(numberOfChoicePerElement);
+			for (int choix = 0; choix < numberOfChoicePerElement; choix++) {
 				if(randomPositionOfCorrect == choix) {
-					propIndex = getIndexOfCorrectAnswerNumber(fact, 1);
+					//System.out.println("dans le if");
+					propIndex = getIndexOfCorrectAnswerNumber(fact, i+1);
 				} else {
+					//System.out.println("dans le else");
 					propIndex = getIndexOfIncorrectAnswerNumber(fact, nbIndexFaux);
 					nbIndexFaux++;
 				}				
-								
-				if(propIndex < fact.getPropositions().size()) {
+				//System.out.println(propIndex);				
+				if(propIndex != -1 && propIndex < fact.getPropositions().size()) {
 					Display proposition = new DisplayImpl();
 					Value propValue = new ValueImpl();
 					propValue.setValue(((Value) fact.getPropositions().get(propIndex).getValue()).getValue());
@@ -372,11 +378,17 @@ public class GameplayGenerator {
 		return elements;
 	}
 	
+	private boolean elementSizeIsAccepted(APosition aPosition, GPElementType elementType) {
+		if(aPosition.getSize().equals(ElementSize.LARGE)) { return true; }
+		if(aPosition.getSize().equals(ElementSize.MEDIUM) && !elementType.getSize().equals(ElementSize.LARGE)) { return true; }
+		return elementType.getSize() == aPosition.getSize();
+	}
+	
 	private APosition getAvailablePosition(RoomType roomType, GPElementType elementType, boolean isStructure) {
 		List<APosition> allowed = new ArrayList<>();
 		if(!isStructure) {
 			for (APosition aPosition : roomType.getElementPositions()) {
-				if(!occupiedPositions.contains(aPosition) && aPosition.getSize().equals(elementType.getSize()) 
+				if(!occupiedPositions.contains(aPosition) && elementSizeIsAccepted(aPosition, elementType) 
 						&& (aPosition.getRestrictedTo().isEmpty() || aPosition.getRestrictedTo().contains(((ElementType) elementType).getAbility()))) {
 					allowed.add(aPosition);
 				}

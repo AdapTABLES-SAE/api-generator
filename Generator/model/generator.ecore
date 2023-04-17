@@ -209,9 +209,9 @@
         upperBound="-1" eType="#//RoomType" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ATask" abstract="true">
-    <eOperations name="validationOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eOperations name="getType" eType="#//ETaskType"/>
     <eOperations name="isCheckOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="nbExpectedAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentOfApparition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="responseModality" eType="#//ResponseModality"
@@ -485,7 +485,9 @@
     <eLiterals name="DIRECT_RESPONSE" value="1"/>
     <eLiterals name="MOVE_UNIQUE" value="7"/>
     <eLiterals name="MOVE_MULTIPLE" value="8"/>
-    <eLiterals name="ORIENT_UNIQUE" value="5"/>
+    <eLiterals name="ORIENT" value="5" literal="ORIENT"/>
+    <eLiterals name="POSITION_UNIQUE" value="6"/>
+    <eLiterals name="POSITION_MULTIPLE" value="7"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parameter" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//AValue"
@@ -574,4 +576,24 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="prompt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FactCorrectnessParam" eSuperTypes="#//Parameter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GameplayTaskRelations">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relations" upperBound="-1"
+        eType="#//Relation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="task" eType="#//ETaskType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gameplay" eType="#//GPCategory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
+        eType="#//Condition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Condition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbFacts" eType="#//EBoundary"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbExpectedAnswers" eType="#//EBoundary"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="answerModality" eType="#//EModality"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EBoundary">
+    <eLiterals name="ONE"/>
+    <eLiterals name="SUP_ONE" value="1"/>
+    <eLiterals name="SUP_EQ_ONE" value="2"/>
+  </eClassifiers>
 </ecore:EPackage>

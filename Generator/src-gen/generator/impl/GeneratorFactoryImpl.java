@@ -195,6 +195,12 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createPrompt();
 		case GeneratorPackage.FACT_CORRECTNESS_PARAM:
 			return createFactCorrectnessParam();
+		case GeneratorPackage.GAMEPLAY_TASK_RELATIONS:
+			return createGameplayTaskRelations();
+		case GeneratorPackage.RELATION:
+			return createRelation();
+		case GeneratorPackage.CONDITION:
+			return createCondition();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -232,6 +238,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createGPCategoryFromString(eDataType, initialValue);
 		case GeneratorPackage.ECORRECTNESS:
 			return createECorrectnessFromString(eDataType, initialValue);
+		case GeneratorPackage.EBOUNDARY:
+			return createEBoundaryFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -269,6 +277,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return convertGPCategoryToString(eDataType, instanceValue);
 		case GeneratorPackage.ECORRECTNESS:
 			return convertECorrectnessToString(eDataType, instanceValue);
+		case GeneratorPackage.EBOUNDARY:
+			return convertEBoundaryToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -909,6 +919,36 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GameplayTaskRelations createGameplayTaskRelations() {
+		GameplayTaskRelationsImpl gameplayTaskRelations = new GameplayTaskRelationsImpl();
+		return gameplayTaskRelations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Relation createRelation() {
+		RelationImpl relation = new RelationImpl();
+		return relation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Condition createCondition() {
+		ConditionImpl condition = new ConditionImpl();
+		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Correctness createCorrectness() {
 		CorrectnessImpl correctness = new CorrectnessImpl();
 		return correctness;
@@ -1225,6 +1265,28 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * @generated
 	 */
 	public String convertECorrectnessToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EBoundary createEBoundaryFromString(EDataType eDataType, String initialValue) {
+		EBoundary result = EBoundary.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEBoundaryToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

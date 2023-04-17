@@ -643,6 +643,33 @@ public interface GeneratorFactory extends EFactory {
 	FactCorrectnessParam createFactCorrectnessParam();
 
 	/**
+	 * Returns a new object of class '<em>Gameplay Task Relations</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Gameplay Task Relations</em>'.
+	 * @generated
+	 */
+	GameplayTaskRelations createGameplayTaskRelations();
+
+	/**
+	 * Returns a new object of class '<em>Relation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Relation</em>'.
+	 * @generated
+	 */
+	Relation createRelation();
+
+	/**
+	 * Returns a new object of class '<em>Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Condition</em>'.
+	 * @generated
+	 */
+	Condition createCondition();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

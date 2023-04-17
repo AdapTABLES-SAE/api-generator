@@ -111,12 +111,12 @@ public abstract class FactGeneratorTemplate {
 		
 		WantedAnswersParam correctness = new WantedAnswersParamImpl();
 		Value correctnessValue = new ValueImpl();
-		correctnessValue.setValue(correctnessToReach(task)+"");
+		correctnessValue.setValue(task.nbExpectedAnswers()+"");//correctnessToReach(task)+"");
 		correctness.setValue(correctnessValue);
 		qef.setCorrectnessToReach(correctness);
 		
 		
-		qef.setLearnerValidation(task.validationOnLearnerAction());
+		qef.setLearnerValidation(task.isCheckOnLearnerAction());
 		qef.setCompleteFact(qFact.getCompleteFact());
 		
 		ECorrectness factCorrectness = getFactCorrectness(qFact);

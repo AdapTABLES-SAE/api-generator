@@ -260,7 +260,7 @@ public class MTCompletion1Impl extends CompletionTaskImpl implements MTCompletio
 	}
 
 	@Override
-	public boolean validationOnLearnerAction() {
+	public boolean isCheckOnLearnerAction() {
 		return checkLearnerAction;
 	}
 

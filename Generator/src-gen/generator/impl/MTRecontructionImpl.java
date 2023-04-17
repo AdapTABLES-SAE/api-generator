@@ -215,7 +215,7 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 	}
 
 	@Override
-	public boolean validationOnLearnerAction() {
+	public boolean isCheckOnLearnerAction() {
 		return checkLearnerAction;
 	}
 

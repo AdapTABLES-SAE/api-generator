@@ -1,43 +1,49 @@
 package generators;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
-import gameplaygenerator_maths.GameplayGenerator;
 import generator.ATask;
 import generator.CompletionTask;
 import generator.Dungeon;
+import generator.EBoundary;
+import generator.EModality;
 import generator.EnterResponse;
 import generator.GPCategory;
-import generator.GameDescription;
 import generator.Gameplay;
 import generator.IdentificationTask;
 import generator.MembershipIDTask;
+import generator.MultipleChoice;
+import generator.Relation;
 import generator.Room;
 import managers.EducationElementsManager;
 import managers.GameElementsManager;
+import managers.ModelsManager;
 import structures.TaskFactPair;
 
 public class GameElementsGenerator {
 
 	private Random random;
 	private EducationElementsManager eeManager;
-	private GameDescription gameDescription; 
+	private ModelsManager modelAccess; 
 	
 	private GameElementsManager gameElementManager;
-	private GameplayGenerator gameplayGenerator;
+	private ConcreteGameplayGenerator gameplayGenerator;
 	
-	public GameElementsGenerator(GameDescription gameDescription, EducationElementsManager eeManager) {
+	public GameElementsGenerator(ModelsManager modelAccess, EducationElementsManager eeManager) {
 		this.eeManager = eeManager;
-		this.gameDescription = gameDescription;
+		this.modelAccess = modelAccess;
 		this.gameElementManager = new GameElementsManager();
-		this.gameplayGenerator = new GameplayGenerator();
+		this.gameplayGenerator = new ConcreteGameplayGenerator();
 		random = new Random();
 	}
 	
 	public void generateGPandCurses() {
-		selectCorrespondingGameplays(); 
+		//selectCorrespondingGameplays();
+		selectCompatibleGameplays();
 	}
 	
 	public Dungeon generateRoomContent(Dungeon generatedDungeon) {
@@ -49,7 +55,74 @@ public class GameElementsGenerator {
 		return generatedDungeon;
 	}
 	
+	private Set<GPCategory> getValidCategoriesFromRelations(ATask task){
+		Set<GPCategory> allowedCategories = new HashSet<>(); 
+		//System.out.println("TASK "+task.getType());
+		
+		for (Relation relation : modelAccess.getRelationsModel().getRelations()) {
+			if(relation.getTask().equals(task.getType())) {
+				//System.out.println("REL task "+ relation.getTask());
+				//System.out.println(relation.getCondition().getAnswerModality()+" "+task.getResponseModality());
+				//System.out.println(relation.getCondition().getNbFacts()+" "+task.getNbFacts());
+				//System.out.println(relation.getCondition().getNbExpectedAnswers()+" "+task.nbExpectedAnswers());
+				boolean factCompatible;
+				if(relation.getCondition().getNbFacts().equals(EBoundary.ONE)) {
+					factCompatible = task.getNbFacts() == 1;
+				} else if (relation.getCondition().getNbFacts().equals(EBoundary.SUP_ONE)) {
+					factCompatible = task.getNbFacts() > 1;
+				} else {
+					factCompatible = task.getNbFacts() >= 1;
+				}
 
+				boolean expectedAnswerCompatible;
+				if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.ONE)) {
+					expectedAnswerCompatible = task.nbExpectedAnswers() == 1;
+				} else if (relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_ONE)) {
+					expectedAnswerCompatible = task.nbExpectedAnswers() > 1;
+				} else {
+					expectedAnswerCompatible = task.nbExpectedAnswers() >= 1;
+				}
+
+				boolean modalityCompatible;
+				if(relation.getCondition().getAnswerModality().equals(EModality.CHOICE)) {
+					modalityCompatible = (task.getResponseModality() != null)? task.getResponseModality() instanceof MultipleChoice: true;
+				} else {
+					modalityCompatible = (task.getResponseModality() != null)? task.getResponseModality() instanceof EnterResponse: false;
+				}
+				//System.out.println("\t factC "+factCompatible);
+				//System.out.println("\t expectedC "+expectedAnswerCompatible);
+				//System.out.println("\t modality "+modalityCompatible);
+				if(factCompatible && expectedAnswerCompatible && modalityCompatible) {
+					//System.out.println("On ajoute");
+					allowedCategories.add(relation.getGameplay());
+				}
+			}
+		}
+		
+		return allowedCategories; 
+	}
+	
+	private void selectCompatibleGameplays() {
+		List<Gameplay> gameplays = new ArrayList<>();
+		for (TaskFactPair tfp: eeManager.getFactsToQuestion()) {
+			if(tfp != null) {
+				List<GPCategory> validCategories = new ArrayList<>(getValidCategoriesFromRelations(tfp.getTask()));
+			
+				do {
+					GPCategory aCategorie = validCategories.get(random.nextInt(validCategories.size()));
+					gameplays = getGameplayOfCategorieAndType(aCategorie, tfp.getTask());
+					validCategories.remove(aCategorie);
+				} while(gameplays.isEmpty());
+				Gameplay gp = gameplays.get(random.nextInt(gameplays.size()));
+				//	System.out.println("Chosen gp "+gp.getName()+" "+gp.getCategory());
+				gameElementManager.add(gp, tfp);	
+			} else {
+				gameElementManager.add(null, tfp);
+			}
+		}
+	}
+
+	@Deprecated
 	private void selectCorrespondingGameplays() {
 		List<Gameplay> gameplays = new ArrayList<>();
 		for (TaskFactPair tfp: eeManager.getFactsToQuestion()) {
@@ -90,7 +163,7 @@ public class GameElementsGenerator {
 		} else {
 			//if((task instanceof CompletionTask && ((CompletionTask) task).getNbMissingElements() < 2)) categories.add(GPCategory.SELECT_UNIQUE);
 			//categories.add(GPCategory.MOVE_UNIQUE);
-			categories.add(GPCategory.ORIENT_UNIQUE);
+			categories.add(GPCategory.ORIENT);
 		}
 		
 		
@@ -100,7 +173,7 @@ public class GameElementsGenerator {
 	
 	private List<Gameplay> getGameplayOfCategorieAndType(GPCategory category, ATask task){
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
-		for (Gameplay gp : this.gameDescription.getGameplays().getGameplays()) {
+		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 		/*	if(gp.getCategory().equals(GPCategory.ORIENT_UNIQUE)) {
 				System.out.println(task.getID()+" "+task.validationOnLearnerAction()+ " "+ task.getType());
 				System.out.println("\t"+gp.getCategory()+" "+gp.isHasIntegratedPropositions() + " " +gp.getRestrictedTo());
@@ -125,7 +198,7 @@ public class GameElementsGenerator {
 		/*if(task.validationOnLearnerAction()) {
 			return true;
 		}*/
-		return (task.validationOnLearnerAction() == gameplay.isManualValidation()) || (!task.validationOnLearnerAction() && gameplay.isManualValidation());
+		return (task.isCheckOnLearnerAction() == gameplay.isManualValidation()) || (!task.isCheckOnLearnerAction() && gameplay.isManualValidation());
 	}
 	
 	private boolean respectGameplayTaskTypeRestriction(Gameplay gameplay, ATask task) {

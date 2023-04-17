@@ -190,14 +190,6 @@ public interface ATask extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	boolean validationOnLearnerAction();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model kind="operation"
 	 * @generated
 	 */
@@ -210,5 +202,13 @@ public interface ATask extends EObject {
 	 * @generated
 	 */
 	boolean isCheckOnLearnerAction();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	int nbExpectedAnswers();
 
 } // ATask

@@ -57,7 +57,7 @@ public class DungeonGenerator {
 	}
 	
 	public Dungeon generateDungeon() {
-		if(modelAccess.context.getGamecontext().getMode().equals(DungeonMode.LINEAR)) {
+		if(modelAccess.getContextModel().getGamecontext().getMode().equals(DungeonMode.LINEAR)) {
 			generateLinearDungeon();
 		}else {
 			generateLabyrinthineDungeon();
@@ -277,7 +277,7 @@ public class DungeonGenerator {
 	 * @return Valid RoomType
 	 */
 	private RoomType getCompatibleRoomType(Directions entry, Directions exit, int numberOfFact) {
-		List<RoomType> roomTypes = new ArrayList<>(modelAccess.gameDescription.getRoomtypes().getRoomtypes());
+		List<RoomType> roomTypes = new ArrayList<>(modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes());
 		roomTypes = roomTypes.stream().filter(e -> e.getDirections().size() > 1).collect(Collectors.toList());
 		
 		for (RoomType roomType : new ArrayList<>(roomTypes)) {
@@ -339,7 +339,7 @@ public class DungeonGenerator {
 	 */
 	private List<RoomType> roomsWithOneDirection() {
 		List<RoomType> rts = new ArrayList<>();
-		for (RoomType rt : modelAccess.gameDescription.getRoomtypes().getRoomtypes()) {
+		for (RoomType rt : modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes()) {
 			if(rt.getDirections().size() == 1) {
 				rts.add(rt);
 			}

@@ -2,15 +2,14 @@
  */
 package generator.impl;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import generator.ETaskType;
 import generator.GeneratorPackage;
 import generator.MembershipIDTask;
-
-import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import generator.MultipleChoice;
 
 /**
  * <!-- begin-user-doc -->
@@ -160,6 +159,12 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION, oldCheckLearnerAction,
 					checkLearnerAction));
+	}
+
+	@Override
+	public int nbExpectedAnswers() {
+		return ((MultipleChoice) getResponseModality()).getNbChoices()
+				- ((MultipleChoice) getResponseModality()).getNbBadChoices();
 	}
 
 	/**

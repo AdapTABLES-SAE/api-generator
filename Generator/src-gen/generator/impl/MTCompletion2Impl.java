@@ -260,8 +260,9 @@ public class MTCompletion2Impl extends CompletionTaskImpl implements MTCompletio
 	}
 
 	@Override
-	public boolean validationOnLearnerAction() {
-		return checkLearnerAction;
+	public boolean isCheckOnLearnerAction() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 } //MTCompletion2Impl

@@ -22,7 +22,7 @@ public class DirectionManager {
 	private Set<Directions> complexDirections;
 		
 	public boolean isSmallRoomTypes() {
-		List<RoomType> roomtypes = modelAccess.gameDescription.getRoomtypes().getRoomtypes();
+		List<RoomType> roomtypes = modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes();
 		boolean smallRT = false;
 		int i = 0;
 		while(i < roomtypes.size() && !smallRT ) {
@@ -33,7 +33,7 @@ public class DirectionManager {
 	}
 	
 	public boolean isLargeRoomTypes() {
-		List<RoomType> roomtypes = modelAccess.gameDescription.getRoomtypes().getRoomtypes();
+		List<RoomType> roomtypes = modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes();
 		boolean largeRT = false;
 		int i = 0;
 		while(i < roomtypes.size() && !largeRT) {

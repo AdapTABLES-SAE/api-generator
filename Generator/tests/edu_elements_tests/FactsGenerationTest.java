@@ -17,7 +17,7 @@ class FactsGenerationTest {
 	void numberOfQuestionableFactsGeneratedAllTablesTest() {
 		generator = new ALGAGenerator("learnerProfils/LP_FIC_Init.xmi");
 		generator.generate();
-		List<ResultsByTask> learnerResultsByTask = generator.getModelsManager().context.getLearnerplayer().getProgression().getCurrentobjectivelevels().get(0).getResults().getResultsbytask();
+		List<ResultsByTask> learnerResultsByTask = generator.getModelsManager().getContextModel().getLearnerplayer().getProgression().getCurrentobjectivelevels().get(0).getResults().getResultsbytask();
 		for (ResultsByTask resultsByTask : learnerResultsByTask) {
 			switch (resultsByTask.getTask().getID()) {
 			case "C1-RES":
@@ -48,7 +48,7 @@ class FactsGenerationTest {
 	void numberOfQuestionableFactsGeneratedOneTableTest() {
 		generator = new ALGAGenerator("learnerProfils/LP_FIC_FactInitTest.xmi");
 		generator.generate();
-		List<ResultsByTask> learnerResultsByTask = generator.getModelsManager().context.getLearnerplayer().getProgression().getCurrentobjectivelevels().get(0).getResults().getResultsbytask();
+		List<ResultsByTask> learnerResultsByTask = generator.getModelsManager().getContextModel().getLearnerplayer().getProgression().getCurrentobjectivelevels().get(0).getResults().getResultsbytask();
 		for (ResultsByTask resultsByTask : learnerResultsByTask) {
 			System.out.println(resultsByTask.getQuestionableFacts().size());
 			switch (resultsByTask.getTask().getID()) {
@@ -80,7 +80,7 @@ class FactsGenerationTest {
 	void numberOfQuestionableFactsGenerated4TablesTest() {
 		generator = new ALGAGenerator("learnerProfils/LP_FIC_FactInitTest2.xmi");
 		generator.generate();
-		List<ResultsByTask> learnerResultsByTask = generator.getModelsManager().context.getLearnerplayer().getProgression().getCurrentobjectivelevels().get(0).getResults().getResultsbytask();
+		List<ResultsByTask> learnerResultsByTask = generator.getModelsManager().getContextModel().getLearnerplayer().getProgression().getCurrentobjectivelevels().get(0).getResults().getResultsbytask();
 		for (ResultsByTask resultsByTask : learnerResultsByTask) {
 			System.out.println(resultsByTask.getQuestionableFacts().size());
 			switch (resultsByTask.getTask().getID()) {
@@ -112,7 +112,7 @@ class FactsGenerationTest {
 	void numberOfQuestionableFactsGenerated4TablesMinMax35Test() {
 		generator = new ALGAGenerator("learnerProfils/LP_FIC_FactInitTest3.xmi");
 		generator.generate();
-		List<ResultsByTask> learnerResultsByTask = generator.getModelsManager().context.getLearnerplayer().getProgression().getCurrentobjectivelevels().get(0).getResults().getResultsbytask();
+		List<ResultsByTask> learnerResultsByTask = generator.getModelsManager().getContextModel().getLearnerplayer().getProgression().getCurrentobjectivelevels().get(0).getResults().getResultsbytask();
 		for (ResultsByTask resultsByTask : learnerResultsByTask) {
 			System.out.println(resultsByTask.getQuestionableFacts().size());
 			switch (resultsByTask.getTask().getID()) {

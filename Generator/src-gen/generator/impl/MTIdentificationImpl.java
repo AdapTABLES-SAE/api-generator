@@ -164,13 +164,13 @@ public class MTIdentificationImpl extends IdentificationTaskImpl implements MTId
 	}
 
 	@Override
-	public boolean validationOnLearnerAction() {
-		return checkLearnerAction;
+	public ETaskType getType() {
+		return this.type;
 	}
 
 	@Override
-	public ETaskType getType() {
-		return this.type;
+	public boolean isCheckOnLearnerAction() {
+		return checkLearnerAction;
 	}
 
 } //MTIdentificationImpl

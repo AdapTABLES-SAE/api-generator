@@ -29,7 +29,7 @@ public class EducationalElementsGenerator {
 
 
 	public EducationalElementsGenerator(ModelsManager modelAccess, double nbQuestionRooms, double nbNonQuestionRooms) {
-		this.learnerPlayer = modelAccess.context.getLearnerplayer();
+		this.learnerPlayer = modelAccess.getContextModel().getLearnerplayer();
 		random = new Random();
 		eeManager = new EducationElementsManager(modelAccess, nbQuestionRooms, nbNonQuestionRooms);
 	}
@@ -38,22 +38,9 @@ public class EducationalElementsGenerator {
 		selectObjectiveLevel();	
 		System.out.println("Selected Objective/Level "+eeManager.getObjective().getName()+" "+eeManager.getLevel().getID());
 		generateQuestionnableFacts();
-		
-		/*int i = 0;
-		for (int j = 0; j < learnerPlayer.getProgression().getCurrentobjectivelevels().size(); j++) {
-			if(learnerPlayer.getProgression().getCurrentobjectivelevels().get(j).equals(eeManager.chosenObjectiveLevel)) {
-				i = j;
-			}
-		}*/
-		
-		//System.out.println(learnerPlayer.getProgression().getCurrentobjectivelevels().get(i).getResults().getResultsbytask().size());
-		
-		/*for (ResultsByTask r : eeManager.chosenObjectiveLevel.getResults().getResultsbytask()) {
-			System.out.println("Are null "+r.getTask().getType()+" "+r.getQuestionableFacts().get(0));
-		}*/
 		defineDungeonRooms2Tasks();
 		generateFactsToQuestion();
-		System.out.println(" DEBUG FACT QUESTIONED *********************");
+		//System.out.println(" DEBUG FACT QUESTIONED *********************");
 		//eeManager.printFactsToQuestion();
 		eeManager.createDungeonQAndNQRoomOrder();
 		return eeManager;

@@ -34,7 +34,7 @@ public class EducationElementsManager {
 	
 	public EducationElementsManager(ModelsManager modelAccess, double nbQuestionRooms, double nbNonQuestionRooms) {
 		this.modelAccess = modelAccess;
-		this.learnerPlayer = this.modelAccess.context.getLearnerplayer();
+		this.learnerPlayer = this.modelAccess.getContextModel().getLearnerplayer();
 		this.nbQRooms = nbQuestionRooms;
 		this.nbNQRooms = nbNonQuestionRooms;
 		this.nbRoomsToTask = new HashMap<>();
@@ -178,7 +178,7 @@ public class EducationElementsManager {
 	}
 	
 	public void saveLearnerModel() {
-		modelAccess.context.setLearnerplayer(learnerPlayer);
+		modelAccess.getContextModel().setLearnerplayer(learnerPlayer);
 		modelAccess.saveContextModel();
 	}
 	

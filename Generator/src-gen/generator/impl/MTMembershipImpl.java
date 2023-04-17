@@ -35,7 +35,7 @@ public class MTMembershipImpl extends MembershipIDTaskImpl implements MTMembersh
 	}
 
 	@Override
-	public boolean validationOnLearnerAction() {
+	public boolean isCheckOnLearnerAction() {
 		return checkLearnerAction;
 	}
 
