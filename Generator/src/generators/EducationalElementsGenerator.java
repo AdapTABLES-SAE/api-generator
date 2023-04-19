@@ -1,7 +1,9 @@
 package generators;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 import factgenerator_template.FactGenerator;
@@ -13,8 +15,11 @@ import generator.Objective;
 import generator.Prerequisite;
 import generator.ResultsByTask;
 import generator.impl.CurrentObjectiveLevelImpl;
-import managers.EducationElementsManager;
+import generator.impl.ResultsByTaskImpl;
+import generator.impl.ResultsImpl;
 import managers.ModelsManager;
+import structures.DungeonElements;
+import structures.RoomElements;
 
 /**
  * Cette classe permet de générer / choisir, l'objectif d'entrainement visée ainsi que le niveau de difficulté. 
@@ -24,61 +29,133 @@ public class EducationalElementsGenerator {
 	
 	private Random random;
 	
-	private EducationElementsManager eeManager;
+	//private EducationElementsManager eeManager;
+	private DungeonElements dungeonElements;
+	private Map<ResultsByTask, Double> nbRoomsToTask; 
+	private ModelsManager modelAccess;
+	
 	private LearnerPlayer learnerPlayer;
 
 
-	public EducationalElementsGenerator(ModelsManager modelAccess, double nbQuestionRooms, double nbNonQuestionRooms) {
+	public EducationalElementsGenerator(ModelsManager modelAccess, DungeonElements dungeonElements) {
 		this.learnerPlayer = modelAccess.getContextModel().getLearnerplayer();
 		random = new Random();
-		eeManager = new EducationElementsManager(modelAccess, nbQuestionRooms, nbNonQuestionRooms);
+		this.dungeonElements = dungeonElements;
+		this.modelAccess = modelAccess;
+		this.nbRoomsToTask = new HashMap<>();
+		//eeManager = new EducationElementsManager(modelAccess, nbQuestionRooms, nbNonQuestionRooms);
 	}
 	
-	public EducationElementsManager generateEE() throws Exception {
+	public DungeonElements generateEE() throws Exception {
 		selectObjectiveLevel();	
-		System.out.println("Selected Objective/Level "+eeManager.getObjective().getName()+" "+eeManager.getLevel().getID());
+		System.out.println("Selected Objective/Level "+dungeonElements.getChosenObjective().getName()+" "+dungeonElements.getChosenLevel().getID());
 		generateQuestionnableFacts();
-		defineDungeonRooms2Tasks();
+		defineNumberOfRoomPerTaskNecessary();
 		generateFactsToQuestion();
 		//System.out.println(" DEBUG FACT QUESTIONED *********************");
 		//eeManager.printFactsToQuestion();
-		eeManager.createDungeonQAndNQRoomOrder();
-		return eeManager;
+		//createDungeonQAndNQRoomOrder();
+		dungeonElements.buildNumberOfNonQuestionRooms();
+		return dungeonElements;
 	}
 	
-	public Level getChosenLevel() {
+	/*public Level getChosenLevel() {
 		return eeManager.getLevel();
 	}
 	
 	public Objective getChosenObjective() {
 		return eeManager.getObjective();
-	}
+	}*/
 	
 	/**
 	 * Génère les faits questionnable
 	 */
 	private void generateQuestionnableFacts() {
-		FactGenerator.generateQuestionableFacts(eeManager);
+		instanciateQFbyTasks();
+		boolean wasGenerated = false;
+		for (ResultsByTask resBytask : dungeonElements.getLearnerResultsByTasks()) {
+			FactGenerator.generateQuestionableFactsByTask(dungeonElements, resBytask);
+		}
+		if(wasGenerated) {
+			saveLearnerModel();
+		}
+	}
+
+	
+	public void saveLearnerModel() {
+		modelAccess.getContextModel().setLearnerplayer(learnerPlayer);
+		modelAccess.saveContextModel();
+	}
+	
+	
+	public void instanciateQFbyTasks() {
+		System.err.println("chosen OBJLVL "+ dungeonElements.getChosenLevel().getID()+" "+dungeonElements.getChosenObjective().getID());
+		if(!learnerPlayer.getProgression().getCurrentobjectivelevels().contains(dungeonElements.getCurrentObjectiveLevel())) {
+			learnerPlayer.getProgression().getCurrentobjectivelevels().add(dungeonElements.getCurrentObjectiveLevel());
+		}
+		if(dungeonElements.getCurrentObjectiveLevel().getResults() == null) {
+			dungeonElements.getCurrentObjectiveLevel().setResults(new ResultsImpl());
+			for(ATask task: dungeonElements.getChosenLevel().getTasks()) {
+				ResultsByTask rbt = new ResultsByTaskImpl();
+				rbt.setTask(task);
+				dungeonElements.getCurrentObjectiveLevel().getResults().getResultsbytask().add(rbt);
+			}
+		}
+		
+		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
+			if(col.getResults() == null) {
+				col.setResults(new ResultsImpl());
+			}
+			addResultByTasks(col);
+		}
+	}
+	
+	private void addResultByTasks(CurrentObjectiveLevel currentObjectiveLevel) {
+		for(ATask task: currentObjectiveLevel.getLevel().getTasks()) {
+			if(!containsResultBytask(currentObjectiveLevel, task)) {
+				ResultsByTask rbt = new ResultsByTaskImpl();
+				rbt.setTask(task);
+				currentObjectiveLevel.getResults().getResultsbytask().add(rbt);
+			}
+		}
+	}
+	
+	private boolean containsResultBytask(CurrentObjectiveLevel currentObjectiveLevel, ATask task) {
+		for (ResultsByTask rbt : currentObjectiveLevel.getResults().getResultsbytask()) {
+			if(rbt.getTask().equals(task)) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	/**
 	 * Défini le nombre de salle du donjon pour chaque tâche
 	 * @throws Exception 
 	 */
-	private void defineDungeonRooms2Tasks() throws Exception {
-		if(eeManager.getObjective() != null && eeManager.getLevel() != null) {
+	private void defineNumberOfRoomPerTaskNecessary() throws Exception {
+		if(dungeonElements.getChosenObjective() != null && dungeonElements.getChosenLevel() != null) {
 			double coeff = computesCoeffApparition();	
-			for (ResultsByTask rbt : eeManager.getLearnerResultsByTasks()) {
+			for (ResultsByTask rbt : dungeonElements.getLearnerResultsByTasks()) {
 				if(!isTaskAchieved(rbt.getTask())) {
-					eeManager.addRoom2Task(rbt, coeff);
+					addRoom2Task(rbt, coeff);
 				}
 			}
 		}
 	}
 	
+	private void addRoom2Task(ResultsByTask rbt, double coeffAdditional) throws Exception {
+		if(nbRoomsToTask.containsKey(rbt)) {
+			nbRoomsToTask.put(rbt, (double) Math.round(nbRoomsToTask.get(rbt) +
+					((rbt.getTask().getPercentOfApparition()*coeffAdditional)*dungeonElements.getNbQRooms())/100));
+		}else {
+			nbRoomsToTask.put(rbt, (double) Math.round(((rbt.getTask().getPercentOfApparition()*coeffAdditional)*dungeonElements.getNbQRooms())/100));
+		}
+	}
+	
 	private double computesCoeffApparition() {
 		double somme = 0; 
-		for (ATask task : eeManager.getTasks()) {
+		for (ATask task : dungeonElements.getChosenLevel().getTasks()) {
 			if(!isTaskAchieved(task)) {
 				somme += task.getPercentOfApparition();
 			}
@@ -87,13 +164,36 @@ public class EducationalElementsGenerator {
 	}
 	
 	private boolean isTaskAchieved(ATask task) {
-		return eeManager.successPercentageByTask(task) == 100 && 
-				eeManager.encounterPercentageByTask(task) == 100;
+		return successPercentageByTask(task) == 100 && 
+				encounterPercentageByTask(task) == 100;
+	}
+	
+	public double successPercentageByTask(ATask task) {
+		if(dungeonElements.getCurrentObjectiveLevel().getResults() != null) {
+			for (ResultsByTask resBytask : dungeonElements.getCurrentObjectiveLevel().getResults().getResultsbytask()) {
+				if(resBytask.getTask().equals(task)) {
+					return resBytask.getSucessPercent();
+				}
+			}
+		}
+		return 0;
+	}
+	
+	public double encounterPercentageByTask(ATask task) {
+		if(dungeonElements.getCurrentObjectiveLevel().getResults() != null) {
+			for (ResultsByTask resBytask : dungeonElements.getCurrentObjectiveLevel().getResults().getResultsbytask()) {
+				if(resBytask.getTask().equals(task)) {
+					return resBytask.getEncountersPercent();
+				}
+			}
+		}
+		return 0;
 	}
 	
 	private void selectObjectiveLevel() {
 		List<CurrentObjectiveLevel> allowed = eligibleObjectiveLevels(); 
-		eeManager.setChosenObjectiveLevel(allowed.get(random.nextInt(allowed.size())));
+		// eeManager.setChosenObjectiveLevel(allowed.get(random.nextInt(allowed.size())));
+		dungeonElements.setCurrentObjectiveLevel(allowed.get(random.nextInt(allowed.size())));
 	}
 	
 	private List<CurrentObjectiveLevel> eligibleObjectiveLevels(){
@@ -119,9 +219,15 @@ public class EducationalElementsGenerator {
 					col.setAchieved(false);
 					col.setObjective(objective);
 					col.setLevel(level);
-					eeManager.addLearnerNewCurrentObjectifLevel(col);
+					addLearnerNewCurrentObjectifLevel(col);
 				}
 			}
+		}
+	}
+	
+	public void addLearnerNewCurrentObjectifLevel(CurrentObjectiveLevel currentObjectiveLevel) {
+		if(!learnerPlayer.getProgression().getCurrentobjectivelevels().contains(currentObjectiveLevel)) {
+			learnerPlayer.getProgression().getCurrentobjectivelevels().add(currentObjectiveLevel);
 		}
 	}
 	
@@ -209,31 +315,31 @@ public class EducationalElementsGenerator {
 		int i = 0; 
 		boolean trouver = false;
 		while(i < achieved.size() && !trouver) {
-			trouver = achieved.get(i).getLevel().equals(level) &&  achieved.get(i).isAchieved();
+			trouver = achieved.get(i).getLevel().equals(level) && achieved.get(i).isAchieved();
 			i++;
 		}
 		return trouver;
 	}
 	
 	private void generateFactsToQuestion() throws Exception {
-		List<ResultsByTask> orderedTasks = getOrderedTasks();
-		FactGenerator.generateQuestionedFact(eeManager, orderedTasks);
+		buildTaskRoomElements();
+		FactGenerator.generateQuestionedFact(dungeonElements);
 	}
 	
-	private List<ResultsByTask> getOrderedTasks(){ 
-		List<ResultsByTask> tasks = new ArrayList<>(); 
-		for (ResultsByTask rbt : eeManager.getResultsByTasksForRooms()) {
-			for (int i = 0; i <  eeManager.getNbRoomFor(rbt); i++) {
-				tasks.add(rbt);
+	private void buildTaskRoomElements() {
+		for (ResultsByTask resultsByTask : nbRoomsToTask.keySet()) {
+			for (int i = 0; i < nbRoomsToTask.get(resultsByTask); i++) {
+				this.dungeonElements.addRoomsElements(new RoomElements(this.modelAccess.getGameDescriptionModel(), resultsByTask.getTask()));
 			}
 		}
-		return tasks; 
+	}
+	
+	public double getNbRoomFor(ResultsByTask rbt) {
+		if(nbRoomsToTask.containsKey(rbt)) {
+			return nbRoomsToTask.get(rbt);
+		}else {
+			return -1.;
+		}
 	}
 
-	
-	
-	public void printGeneration() {
-		System.out.println(eeManager.toString());
-	}
-	
 }

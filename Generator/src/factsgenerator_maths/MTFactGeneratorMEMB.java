@@ -21,13 +21,13 @@ import generator.MultipleChoice;
 import generator.QuestionableFact;
 import generator.SetOfFacts;
 import generator.impl.MTQFMembershipImpl;
-import managers.EducationElementsManager;
+import structures.DungeonElements;
 import structures.Shuffle;
 
 public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 
-	public MTFactGeneratorMEMB(EducationElementsManager eeManager) {
-		super(eeManager);
+	public MTFactGeneratorMEMB(DungeonElements dungeonElements) {
+		super(dungeonElements);
 	}
 
 
@@ -36,13 +36,13 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 		Set<QuestionableFact> questionableFacts = new HashSet<>();
 		taskID = task.getID();
 		
-		int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
-		int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
+		int min = ((MTLevel) dungeonElements.getChosenLevel()).getMinInterval();
+		int max = ((MTLevel) dungeonElements.getChosenLevel()).getMaxInterval();
 		
 		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
 		int nbByFact = mc.getNbChoices() - mc.getNbBadChoices();
 		
-		for (SetOfFacts setoffact : eeManager.getObjective().getSetoffacts()) {
+		for (SetOfFacts setoffact : dungeonElements.getChosenObjective().getSetoffacts()) {
 			List<MTResultFact> facts = new ArrayList<>();
 			for (AbstractFact f : Shuffle.shuffle(setoffact.getFacts())) { 
 				if(f instanceof MTResultFact) {

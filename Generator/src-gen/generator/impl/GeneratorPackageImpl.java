@@ -49,6 +49,7 @@ import generator.GenerationContext;
 import generator.GeneratorFactory;
 import generator.GeneratorPackage;
 import generator.IdentificationTask;
+import generator.InteractiveStatement;
 import generator.Knowledge;
 import generator.LargeRoomType;
 import generator.LearnerPlayer;
@@ -71,6 +72,7 @@ import generator.MTRecontruction;
 import generator.MTResultFact;
 import generator.MembershipIDTask;
 import generator.MultipleChoice;
+import generator.NoQuestionGameplay;
 import generator.Objective;
 import generator.OrderingTask;
 import generator.Parameter;
@@ -82,6 +84,7 @@ import generator.Progression;
 import generator.Prompt;
 import generator.PropositionParam;
 import generator.Quantity;
+import generator.QuestionGameplay;
 import generator.QuestionParam;
 import generator.QuestionableFact;
 import generator.QuestionableFactResult;
@@ -96,10 +99,12 @@ import generator.RoomAccess;
 import generator.RoomType;
 import generator.RoomTypes;
 import generator.SetOfFacts;
+import generator.Size;
 import generator.SmallRoomType;
 import generator.StatementType;
 import generator.Structure;
 import generator.StructurePosition;
+import generator.StructureStatement;
 import generator.StructureType;
 import generator.TableBuild;
 import generator.Value;
@@ -674,6 +679,41 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass conditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass questionGameplayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass noQuestionGameplayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass interactiveStatementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass structureStatementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sizeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2766,6 +2806,42 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getElementType_NumberOfDisplays() {
+		return (EAttribute) elementTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementType_InsideStructureStatement() {
+		return (EReference) elementTypeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementType_InteractiveStatement() {
+		return (EReference) elementTypeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getElementType__IsElementDisplayable() {
+		return elementTypeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEquipment() {
 		return equipmentEClass;
 	}
@@ -2820,35 +2896,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGameplay_Category() {
-		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getGameplay_Components() {
-		return (EReference) gameplayEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGameplay_HasIntegratedPropositions() {
-		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGameplay_ManualValidation() {
-		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(4);
+		return (EReference) gameplayEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2857,16 +2906,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EReference getGameplay_Prompt() {
-		return (EReference) gameplayEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGameplay_RestrictedTo() {
-		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(6);
+		return (EReference) gameplayEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2939,24 +2979,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getAbility_Name() {
 		return (EAttribute) abilityEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAbility_NumberOfDisplays() {
-		return (EAttribute) abilityEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAbility__IsElementDisplayable() {
-		return abilityEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -3189,7 +3211,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComponent_ElementType() {
+	public EReference getComponent_AllowedAbility() {
 		return (EReference) componentEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3245,6 +3267,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EReference getComponent_Quantity() {
 		return (EReference) componentEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponent_ExpectedSize() {
+		return (EReference) componentEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -3479,6 +3510,87 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getCondition_AnswerModality() {
 		return (EAttribute) conditionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getQuestionGameplay() {
+		return questionGameplayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestionGameplay_ManualValidation() {
+		return (EAttribute) questionGameplayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestionGameplay_Category() {
+		return (EAttribute) questionGameplayEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestionGameplay_HasIntegratedPropositions() {
+		return (EAttribute) questionGameplayEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestionGameplay_RestrictedTo() {
+		return (EAttribute) questionGameplayEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNoQuestionGameplay() {
+		return noQuestionGameplayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInteractiveStatement() {
+		return interactiveStatementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStructureStatement() {
+		return structureStatementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSize() {
+		return sizeEClass;
 	}
 
 	/**
@@ -4040,6 +4152,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		elementTypeEClass = createEClass(ELEMENT_TYPE);
 		createEReference(elementTypeEClass, ELEMENT_TYPE__ABILITY);
+		createEAttribute(elementTypeEClass, ELEMENT_TYPE__NUMBER_OF_DISPLAYS);
+		createEReference(elementTypeEClass, ELEMENT_TYPE__INSIDE_STRUCTURE_STATEMENT);
+		createEReference(elementTypeEClass, ELEMENT_TYPE__INTERACTIVE_STATEMENT);
+		createEOperation(elementTypeEClass, ELEMENT_TYPE___IS_ELEMENT_DISPLAYABLE);
 
 		equipmentEClass = createEClass(EQUIPMENT);
 		createEAttribute(equipmentEClass, EQUIPMENT__ID);
@@ -4048,12 +4164,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		gameplayEClass = createEClass(GAMEPLAY);
 		createEAttribute(gameplayEClass, GAMEPLAY__NAME);
-		createEAttribute(gameplayEClass, GAMEPLAY__CATEGORY);
 		createEReference(gameplayEClass, GAMEPLAY__COMPONENTS);
-		createEAttribute(gameplayEClass, GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS);
-		createEAttribute(gameplayEClass, GAMEPLAY__MANUAL_VALIDATION);
 		createEReference(gameplayEClass, GAMEPLAY__PROMPT);
-		createEAttribute(gameplayEClass, GAMEPLAY__RESTRICTED_TO);
 
 		gameplaysEClass = createEClass(GAMEPLAYS);
 		createEReference(gameplaysEClass, GAMEPLAYS__GAMEPLAYS);
@@ -4065,8 +4177,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		abilityEClass = createEClass(ABILITY);
 		createEAttribute(abilityEClass, ABILITY__NAME);
-		createEAttribute(abilityEClass, ABILITY__NUMBER_OF_DISPLAYS);
-		createEOperation(abilityEClass, ABILITY___IS_ELEMENT_DISPLAYABLE);
 
 		abilitiesEClass = createEClass(ABILITIES);
 		createEReference(abilitiesEClass, ABILITIES__ABILITIES);
@@ -4125,13 +4235,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(structureEClass, STRUCTURE__IS_PER_FACT);
 
 		componentEClass = createEClass(COMPONENT);
-		createEReference(componentEClass, COMPONENT__ELEMENT_TYPE);
+		createEReference(componentEClass, COMPONENT__ALLOWED_ABILITY);
 		createEReference(componentEClass, COMPONENT__DISPLAY_VALUE);
 		createEAttribute(componentEClass, COMPONENT__WEAR_CHOICES);
 		createEReference(componentEClass, COMPONENT__DEFAULT_CORRECTNESS);
 		createEAttribute(componentEClass, COMPONENT__WEAR_STATEMENT);
 		createEAttribute(componentEClass, COMPONENT__INPUT_ENTRY);
 		createEReference(componentEClass, COMPONENT__QUANTITY);
+		createEReference(componentEClass, COMPONENT__EXPECTED_SIZE);
 
 		quantityEClass = createEClass(QUANTITY);
 		createEAttribute(quantityEClass, QUANTITY__FACT_NB_ANSWERS);
@@ -4171,6 +4282,20 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(conditionEClass, CONDITION__NB_FACTS);
 		createEAttribute(conditionEClass, CONDITION__NB_EXPECTED_ANSWERS);
 		createEAttribute(conditionEClass, CONDITION__ANSWER_MODALITY);
+
+		questionGameplayEClass = createEClass(QUESTION_GAMEPLAY);
+		createEAttribute(questionGameplayEClass, QUESTION_GAMEPLAY__MANUAL_VALIDATION);
+		createEAttribute(questionGameplayEClass, QUESTION_GAMEPLAY__CATEGORY);
+		createEAttribute(questionGameplayEClass, QUESTION_GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS);
+		createEAttribute(questionGameplayEClass, QUESTION_GAMEPLAY__RESTRICTED_TO);
+
+		noQuestionGameplayEClass = createEClass(NO_QUESTION_GAMEPLAY);
+
+		interactiveStatementEClass = createEClass(INTERACTIVE_STATEMENT);
+
+		structureStatementEClass = createEClass(STRUCTURE_STATEMENT);
+
+		sizeEClass = createEClass(SIZE);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -4261,6 +4386,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		factSolutionParamEClass.getESuperTypes().add(this.getParameter());
 		orderingTaskEClass.getESuperTypes().add(this.getATask());
 		factCorrectnessParamEClass.getESuperTypes().add(this.getParameter());
+		questionGameplayEClass.getESuperTypes().add(this.getGameplay());
+		noQuestionGameplayEClass.getESuperTypes().add(this.getGameplay());
+		interactiveStatementEClass.getESuperTypes().add(this.getParameter());
+		structureStatementEClass.getESuperTypes().add(this.getParameter());
+		sizeEClass.getESuperTypes().add(this.getParameter());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -4839,6 +4969,18 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getElementType_Ability(), this.getAbility(), null, "ability", null, 0, 1, ElementType.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementType_NumberOfDisplays(), ecorePackage.getEInt(), "numberOfDisplays", null, 0, 1,
+				ElementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getElementType_InsideStructureStatement(), this.getStructureStatement(), null,
+				"insideStructureStatement", null, 0, -1, ElementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElementType_InteractiveStatement(), this.getInteractiveStatement(), null,
+				"interactiveStatement", null, 0, -1, ElementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getElementType__IsElementDisplayable(), ecorePackage.getEBoolean(), "isElementDisplayable", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(equipmentEClass, Equipment.class, "Equipment", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4849,26 +4991,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getEquipment_Activated(), ecorePackage.getEBoolean(), "activated", null, 0, 1, Equipment.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(gameplayEClass, Gameplay.class, "Gameplay", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
+		initEClass(gameplayEClass, Gameplay.class, "Gameplay", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGameplay_Name(), ecorePackage.getEString(), "name", null, 0, 1, Gameplay.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGameplay_Category(), this.getGPCategory(), "category", null, 0, 1, Gameplay.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGameplay_Components(), this.getAComponent(), null, "components", null, 0, -1, Gameplay.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGameplay_HasIntegratedPropositions(), ecorePackage.getEBoolean(), "hasIntegratedPropositions",
-				null, 0, 1, Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGameplay_ManualValidation(), ecorePackage.getEBoolean(), "manualValidation", "false", 0, 1,
-				Gameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 		initEReference(getGameplay_Prompt(), this.getPrompt(), null, "prompt", null, 0, 1, Gameplay.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGameplay_RestrictedTo(), this.getETaskType(), "restrictedTo", null, 0, -1, Gameplay.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gameplaysEClass, Gameplays.class, "Gameplays", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4891,12 +5022,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(abilityEClass, Ability.class, "Ability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbility_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ability.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAbility_NumberOfDisplays(), ecorePackage.getEInt(), "numberOfDisplays", null, 0, 1,
-				Ability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getAbility__IsElementDisplayable(), ecorePackage.getEBoolean(), "isElementDisplayable", 0, 1,
-				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(abilitiesEClass, Abilities.class, "Abilities", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5012,7 +5137,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComponent_ElementType(), this.getElementType(), null, "elementType", null, 0, 1,
+		initEReference(getComponent_AllowedAbility(), this.getAbility(), null, "allowedAbility", null, 0, 1,
 				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponent_DisplayValue(), this.getDisplay(), null, "displayValue", null, 0, 1,
@@ -5031,6 +5156,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEReference(getComponent_Quantity(), this.getQuantity(), null, "quantity", null, 0, 1, Component.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponent_ExpectedSize(), this.getSize(), null, "expectedSize", null, 0, 1, Component.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -5103,6 +5231,32 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getCondition_AnswerModality(), this.getEModality(), "answerModality", null, 0, 1,
 				Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(questionGameplayEClass, QuestionGameplay.class, "QuestionGameplay", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getQuestionGameplay_ManualValidation(), ecorePackage.getEBoolean(), "manualValidation", "false",
+				0, 1, QuestionGameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestionGameplay_Category(), this.getGPCategory(), "category", null, 0, 1,
+				QuestionGameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestionGameplay_HasIntegratedPropositions(), ecorePackage.getEBoolean(),
+				"hasIntegratedPropositions", null, 0, 1, QuestionGameplay.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestionGameplay_RestrictedTo(), this.getETaskType(), "restrictedTo", null, 0, -1,
+				QuestionGameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(noQuestionGameplayEClass, NoQuestionGameplay.class, "NoQuestionGameplay", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(interactiveStatementEClass, InteractiveStatement.class, "InteractiveStatement", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(structureStatementEClass, StructureStatement.class, "StructureStatement", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(sizeEClass, Size.class, "Size", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

@@ -7,37 +7,33 @@ import java.util.Random;
 import java.util.Set;
 
 import generator.ATask;
-import generator.CompletionTask;
 import generator.Dungeon;
 import generator.EBoundary;
 import generator.EModality;
 import generator.EnterResponse;
 import generator.GPCategory;
 import generator.Gameplay;
-import generator.IdentificationTask;
-import generator.MembershipIDTask;
 import generator.MultipleChoice;
+import generator.QuestionGameplay;
 import generator.Relation;
-import generator.Room;
-import managers.EducationElementsManager;
-import managers.GameElementsManager;
 import managers.ModelsManager;
-import structures.TaskFactPair;
+import structures.DungeonElements;
+import structures.RoomElements;
 
 public class GameElementsGenerator {
 
 	private Random random;
-	private EducationElementsManager eeManager;
+	private DungeonElements dungeonElements;
 	private ModelsManager modelAccess; 
 	
-	private GameElementsManager gameElementManager;
-	private ConcreteGameplayGenerator gameplayGenerator;
+	//private GameElementsManager gameElementManager;
+	//private ConcreteGameplayGenerator gameplayGenerator;
 	
-	public GameElementsGenerator(ModelsManager modelAccess, EducationElementsManager eeManager) {
-		this.eeManager = eeManager;
+	public GameElementsGenerator(ModelsManager modelAccess,  DungeonElements dungeonElements) {
+		this.dungeonElements = dungeonElements;
 		this.modelAccess = modelAccess;
-		this.gameElementManager = new GameElementsManager();
-		this.gameplayGenerator = new ConcreteGameplayGenerator();
+		//this.gameElementManager = new GameElementsManager();
+		//this.gameplayGenerator = new ConcreteGameplayGenerator(modelAccess);
 		random = new Random();
 	}
 	
@@ -47,11 +43,19 @@ public class GameElementsGenerator {
 	}
 	
 	public Dungeon generateRoomContent(Dungeon generatedDungeon) {
-		for (Room r : generatedDungeon.getRooms()) {
+		ConcreteGameplayGenerator gameplayGenerator = new ConcreteGameplayGenerator(modelAccess);
+		/*for (Room r : generatedDungeon.getRooms()) {
 			if(r.getTask() != null) {
-				r.getPositionedElement().addAll(gameplayGenerator.buildPositionedElements(r.getGameplay(), r.getQuestionedFacts(), r.getRoomtype()));
+				r.getPositionedElement().addAll(gameplayGenerator.buildPositionedElements((QuestionGameplay) r.getGameplay(), r.getQuestionedFacts(), r.getRoomtype()));
 			}
+		}*/
+		
+		for (RoomElements roomElements : dungeonElements.getRoomsElements()) {
+			if(roomElements.getGameplay() != null) {
+				roomElements.setRoomPositionedElements(gameplayGenerator.buildPositionedElements(roomElements));
+			} 
 		}
+		
 		return generatedDungeon;
 	}
 	
@@ -102,9 +106,9 @@ public class GameElementsGenerator {
 		return allowedCategories; 
 	}
 	
-	private void selectCompatibleGameplays() {
+	/*private void selectCompatibleGameplays() {
 		List<Gameplay> gameplays = new ArrayList<>();
-		for (TaskFactPair tfp: eeManager.getFactsToQuestion()) {
+		for (TaskFactPair tfp: dungeonElements.getFactsToQuestion()) {
 			if(tfp != null) {
 				List<GPCategory> validCategories = new ArrayList<>(getValidCategoriesFromRelations(tfp.getTask()));
 			
@@ -120,12 +124,31 @@ public class GameElementsGenerator {
 				gameElementManager.add(null, tfp);
 			}
 		}
+	}*/
+	
+	private void selectCompatibleGameplays() {
+		List<Gameplay> gameplays = new ArrayList<>();
+		for (RoomElements room : dungeonElements.getRoomsElements()) {
+			if(room.getTask() != null) {
+				List<GPCategory> validCategories = new ArrayList<>(getValidCategoriesFromRelations(room.getTask()));
+				
+				do {
+					GPCategory aCategorie = validCategories.get(random.nextInt(validCategories.size()));
+					gameplays = getGameplayOfCategorieAndType(aCategorie, room.getTask());
+					validCategories.remove(aCategorie);
+				} while(gameplays.isEmpty());
+				
+				Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
+				room.setGameplay(gameplay);
+				//System.err.println(room.getGameplay());
+			}
+		}
 	}
 
-	@Deprecated
-	private void selectCorrespondingGameplays() {
+	
+/*	private void selectCorrespondingGameplays() {
 		List<Gameplay> gameplays = new ArrayList<>();
-		for (TaskFactPair tfp: eeManager.getFactsToQuestion()) {
+		for (TaskFactPair tfp: dungeonElements.getFactsToQuestion()) {
 			if(tfp != null) {
 				// normalement on devrait se baser sur le modèle de relations pour choisir
 				List<GPCategory> chosenCategories = getValidCategories(tfp.getTask());
@@ -169,7 +192,7 @@ public class GameElementsGenerator {
 		
 		return categories; //.get(random.nextInt(gpc.size()));
 		
-	}
+	}*/
 	
 	private List<Gameplay> getGameplayOfCategorieAndType(GPCategory category, ATask task){
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
@@ -181,11 +204,13 @@ public class GameElementsGenerator {
 				System.out.println("\t"+respectValidationMethod(gp, task));
 				System.out.println("\t"+respectGameplayTaskTypeRestriction(gp, task));
 			}*/
-			
+			if(gp instanceof QuestionGameplay) {
+				if(((QuestionGameplay) gp).getCategory().equals(category) && respectValidationMethod((QuestionGameplay) gp, task) && respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task)) {
+					compatibleGameplays.add(gp);
+				}
+			}
 
-			if(gp.getCategory().equals(category) && respectValidationMethod(gp, task) && respectGameplayTaskTypeRestriction(gp, task)) {
-				compatibleGameplays.add(gp);
-			}/* else {
+			/* else {
 				System.out.println("NOT ADDED");
 			}*/
 			//System.out.println("finished");
@@ -193,7 +218,7 @@ public class GameElementsGenerator {
 		return compatibleGameplays;
 	}
 	
-	private boolean respectValidationMethod(Gameplay gameplay, ATask task) {
+	private boolean respectValidationMethod(QuestionGameplay gameplay, ATask task) {
 		//System.err.println(task.validationOnLearnerAction()+" "+gameplay.isManualValidation());
 		/*if(task.validationOnLearnerAction()) {
 			return true;
@@ -201,7 +226,7 @@ public class GameElementsGenerator {
 		return (task.isCheckOnLearnerAction() == gameplay.isManualValidation()) || (!task.isCheckOnLearnerAction() && gameplay.isManualValidation());
 	}
 	
-	private boolean respectGameplayTaskTypeRestriction(Gameplay gameplay, ATask task) {
+	private boolean respectGameplayTaskTypeRestriction(QuestionGameplay gameplay, ATask task) {
 		if(gameplay.getRestrictedTo().isEmpty()) {
 			return true;
 		} else {
@@ -209,9 +234,5 @@ public class GameElementsGenerator {
 		}
 	}
 
-	public GameElementsManager getGameElementManager() {
-		return gameElementManager;
-	}
-	
 	
 }

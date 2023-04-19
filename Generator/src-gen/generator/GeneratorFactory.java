@@ -427,15 +427,6 @@ public interface GeneratorFactory extends EFactory {
 	Equipment createEquipment();
 
 	/**
-	 * Returns a new object of class '<em>Gameplay</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Gameplay</em>'.
-	 * @generated
-	 */
-	Gameplay createGameplay();
-
-	/**
 	 * Returns a new object of class '<em>Gameplays</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -668,6 +659,51 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	Condition createCondition();
+
+	/**
+	 * Returns a new object of class '<em>Question Gameplay</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Question Gameplay</em>'.
+	 * @generated
+	 */
+	QuestionGameplay createQuestionGameplay();
+
+	/**
+	 * Returns a new object of class '<em>No Question Gameplay</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>No Question Gameplay</em>'.
+	 * @generated
+	 */
+	NoQuestionGameplay createNoQuestionGameplay();
+
+	/**
+	 * Returns a new object of class '<em>Interactive Statement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Interactive Statement</em>'.
+	 * @generated
+	 */
+	InteractiveStatement createInteractiveStatement();
+
+	/**
+	 * Returns a new object of class '<em>Structure Statement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Structure Statement</em>'.
+	 * @generated
+	 */
+	StructureStatement createStructureStatement();
+
+	/**
+	 * Returns a new object of class '<em>Size</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Size</em>'.
+	 * @generated
+	 */
+	Size createSize();
 
 	/**
 	 * Returns the package supported by this factory.

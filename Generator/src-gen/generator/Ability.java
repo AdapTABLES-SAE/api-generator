@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generator.Ability#getName <em>Name</em>}</li>
- *   <li>{@link generator.Ability#getNumberOfDisplays <em>Number Of Displays</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getAbility()
@@ -43,35 +42,5 @@ public interface Ability extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Number Of Displays</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Number Of Displays</em>' attribute.
-	 * @see #setNumberOfDisplays(int)
-	 * @see generator.GeneratorPackage#getAbility_NumberOfDisplays()
-	 * @model
-	 * @generated
-	 */
-	int getNumberOfDisplays();
-
-	/**
-	 * Sets the value of the '{@link generator.Ability#getNumberOfDisplays <em>Number Of Displays</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Number Of Displays</em>' attribute.
-	 * @see #getNumberOfDisplays()
-	 * @generated
-	 */
-	void setNumberOfDisplays(int value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	boolean isElementDisplayable();
 
 } // Ability

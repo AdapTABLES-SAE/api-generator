@@ -23,12 +23,12 @@ import generator.QuestionableFact;
 import generator.ResultPosition;
 import generator.TableBuild;
 import generator.impl.MTQFCompletion2Impl;
-import managers.EducationElementsManager;
+import structures.DungeonElements;
 
 public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 
-	public MTFactGeneratorCOMP2(EducationElementsManager eeManager) {
-		super(eeManager);
+	public MTFactGeneratorCOMP2(DungeonElements dungeonElements) {
+		super(dungeonElements);
 	}
 
 	@Override
@@ -37,13 +37,13 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 			MTCompletion2 taskC = (MTCompletion2) task;
 			MTFact factC = (MTFact) fact;
 			
-			int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
-			int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
+			int min = ((MTLevel) dungeonElements.getChosenLevel()).getMinInterval();
+			int max = ((MTLevel) dungeonElements.getChosenLevel()).getMaxInterval();
 			if(min <= factC.getOp() && factC.getOp()<= max){
 				Set<QuestionableFact> qfs = new HashSet<>(); 
 				
-				TableBuild build = ((MTLevel) eeManager.getLevel()).getBuildSetup();
-				ResultPosition equalPos = ((MTLevel) eeManager.getLevel()).getResultPositionSetup();
+				TableBuild build = ((MTLevel) dungeonElements.getChosenLevel()).getBuildSetup();
+				ResultPosition equalPos = ((MTLevel) dungeonElements.getChosenLevel()).getResultPositionSetup();
 				
 				for (ESeveralTarget target : taskC.getTargets()) {
 					if(build.equals(TableBuild.MIX) && !target.equals(ESeveralTarget.OPERAND_TABLE)) {

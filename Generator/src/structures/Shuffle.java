@@ -10,6 +10,9 @@ import generator.ResultsByTask;
 
 public class Shuffle {
 	
+
+	
+	
 	public static List<Integer> shufflePropositions(List<Integer> eList){
 		Random rand = new Random();
 		List<Integer> shuffledElem = new ArrayList<>();
@@ -48,6 +51,20 @@ public class Shuffle {
 		}
 		return factsShuffled;
 	}
+	
+	public static List<RoomElements> shuffleRoomElements(List<RoomElements> roomsElements){
+		Random rand = new Random();
+		List<RoomElements> roomsElementsShuffled = new ArrayList<>();
+		int number = roomsElements.size();
+		int j;
+		while (roomsElementsShuffled.size() != number) {
+			j = rand.nextInt(roomsElements.size()); 
+			roomsElementsShuffled.add(roomsElements.get(j));
+			roomsElements.remove(j);
+		}
+		return roomsElementsShuffled;
+	}
+	
 	
 	public static List<ResultsByTask> shuffleTask(List<ResultsByTask> tasks){
 		Random rand = new Random();

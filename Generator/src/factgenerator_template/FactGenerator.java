@@ -1,7 +1,5 @@
 package factgenerator_template;
 
-import java.util.List;
-
 import factsgenerator_maths.MTFactGeneratorCOMP1;
 import factsgenerator_maths.MTFactGeneratorCOMP2;
 import factsgenerator_maths.MTFactGeneratorID;
@@ -9,77 +7,83 @@ import factsgenerator_maths.MTFactGeneratorMEMB;
 import factsgenerator_maths.MTFactGeneratorREB;
 import generator.CompletionTask;
 import generator.ResultsByTask;
-import managers.EducationElementsManager;
+import structures.DungeonElements;
+import structures.RoomElements;
 
 public class FactGenerator {
 	
-	public static void generateQuestionableFacts(EducationElementsManager eeManager) {
-		eeManager.instanciateQFbyTasks();
+	/*public static void generateQuestionableFacts(DungeonElements dungeonElements) {
+		dungeonElements.instanciateQFbyTasks();
 		boolean wasGenerated = false;
-		for (ResultsByTask resBytask : eeManager.getLearnerResultsByTasks()) {
+		for (ResultsByTask resBytask : dungeonElements.getLearnerResultsByTasks()) {
 			if(resBytask.getQuestionableFacts().isEmpty()) {
-				generateQuestionableFactsByTask(eeManager, resBytask);
+				generateQuestionableFactsByTask(dungeonElements, resBytask);
 				wasGenerated = true;
 			}
 		}
 		if(wasGenerated) {
-			eeManager.saveLearnerModel();
+			dungeonElements.saveLearnerModel();
 		}
-	}
+	}*/
 
-	private static void  generateQuestionableFactsByTask(EducationElementsManager eeManager, ResultsByTask resBytask) {  
+	public static void  generateQuestionableFactsByTask(DungeonElements dungeonElements, ResultsByTask resBytask) {  
 		FactGeneratorTemplate factGenerator; 
 		switch(resBytask.getTask().getType()) {
 		case COMPLETE: 
 			switch (((CompletionTask) resBytask.getTask()).getNbMissingElements()) {
 			case 1:
-				factGenerator = new MTFactGeneratorCOMP1(eeManager);
+				factGenerator = new MTFactGeneratorCOMP1(dungeonElements);
 				break;
 			case 2:
-				factGenerator = new MTFactGeneratorCOMP2(eeManager);		
+				factGenerator = new MTFactGeneratorCOMP2(dungeonElements);		
 				break;
 			default: // 3
-				factGenerator = new MTFactGeneratorREB(eeManager);
+				factGenerator = new MTFactGeneratorREB(dungeonElements);
 				break;
 			}
 			break;
 		case IDENTIFY: 
-			factGenerator = new MTFactGeneratorID(eeManager);
+			factGenerator = new MTFactGeneratorID(dungeonElements);
 			break;
 		default: 
-			factGenerator = new MTFactGeneratorMEMB(eeManager);
+			factGenerator = new MTFactGeneratorMEMB(dungeonElements);
 			break;
 		}
 		resBytask.getQuestionableFacts().addAll(factGenerator.generateQuestionableFacts(resBytask.getTask()));
 	}
 	
-	public static void generateQuestionedFact(EducationElementsManager eeManager, List<ResultsByTask> tasks) throws Exception {
+	public static void generateQuestionedFact(DungeonElements dungeonElements) throws Exception {
 		FactGeneratorTemplate factGenerator = null; 
-		int roomOrder = 0;
-		for (ResultsByTask aTask : tasks) {
-			switch(aTask.getTask().getType()) {
+		//int roomOrder = 0;
+		//System.out.println("Number of rooms with tasks "+tasks.size());
+		for (RoomElements roomElements : dungeonElements.getRoomsElements()) {
+			//ResultsByTask aTask = roomElements.getCorrespondingResultByTask(dungeonElements.getCurrentObjectiveLevel());
+			//System.out.println(aTask.getTask().getID()+" __");
+			switch(roomElements.getTask().getType()) {
 			case COMPLETE: 
-				switch (((CompletionTask) aTask.getTask()).getNbMissingElements()) {
+				switch (((CompletionTask) roomElements.getTask()).getNbMissingElements()) {
 				case 1:
-					factGenerator = new MTFactGeneratorCOMP1(eeManager);
+					factGenerator = new MTFactGeneratorCOMP1(dungeonElements);
 					break;
 				case 2:
-					factGenerator = new MTFactGeneratorCOMP2(eeManager);		
+					factGenerator = new MTFactGeneratorCOMP2(dungeonElements);		
 					break;
 				default: // 3
-					factGenerator = new MTFactGeneratorREB(eeManager);
+					factGenerator = new MTFactGeneratorREB(dungeonElements);
 					break;
 				}
 				break;
 			case IDENTIFY: 
-				factGenerator = new MTFactGeneratorID(eeManager);
+				factGenerator = new MTFactGeneratorID(dungeonElements);
 				break;
 			default: 
-				factGenerator = new MTFactGeneratorMEMB(eeManager);
+				factGenerator = new MTFactGeneratorMEMB(dungeonElements);
 				break;
 			}	
-			if(factGenerator != null) factGenerator.generateQuestionedFact(roomOrder, eeManager, aTask);
-			roomOrder++;
+			if(factGenerator != null) factGenerator.generateQuestionedFact(roomElements);
+			//roomOrder++;
 		}
+		
+		dungeonElements.shuffleRoomsOrder();
 	}
 }

@@ -147,8 +147,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createElementType();
 		case GeneratorPackage.EQUIPMENT:
 			return createEquipment();
-		case GeneratorPackage.GAMEPLAY:
-			return createGameplay();
 		case GeneratorPackage.GAMEPLAYS:
 			return createGameplays();
 		case GeneratorPackage.QUESTIONABLE_FACT_RESULT:
@@ -201,6 +199,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createRelation();
 		case GeneratorPackage.CONDITION:
 			return createCondition();
+		case GeneratorPackage.QUESTION_GAMEPLAY:
+			return createQuestionGameplay();
+		case GeneratorPackage.NO_QUESTION_GAMEPLAY:
+			return createNoQuestionGameplay();
+		case GeneratorPackage.INTERACTIVE_STATEMENT:
+			return createInteractiveStatement();
+		case GeneratorPackage.STRUCTURE_STATEMENT:
+			return createStructureStatement();
+		case GeneratorPackage.SIZE:
+			return createSize();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -739,16 +747,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Gameplay createGameplay() {
-		GameplayImpl gameplay = new GameplayImpl();
-		return gameplay;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Gameplays createGameplays() {
 		GameplaysImpl gameplays = new GameplaysImpl();
 		return gameplays;
@@ -942,6 +940,56 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public Condition createCondition() {
 		ConditionImpl condition = new ConditionImpl();
 		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QuestionGameplay createQuestionGameplay() {
+		QuestionGameplayImpl questionGameplay = new QuestionGameplayImpl();
+		return questionGameplay;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NoQuestionGameplay createNoQuestionGameplay() {
+		NoQuestionGameplayImpl noQuestionGameplay = new NoQuestionGameplayImpl();
+		return noQuestionGameplay;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InteractiveStatement createInteractiveStatement() {
+		InteractiveStatementImpl interactiveStatement = new InteractiveStatementImpl();
+		return interactiveStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StructureStatement createStructureStatement() {
+		StructureStatementImpl structureStatement = new StructureStatementImpl();
+		return structureStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Size createSize() {
+		SizeImpl size = new SizeImpl();
+		return size;
 	}
 
 	/**

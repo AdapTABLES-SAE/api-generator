@@ -347,6 +347,10 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//ElementType">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//ElementType/ability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ElementType/numberOfDisplays"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//ElementType/insideStructureStatement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//ElementType/interactiveStatement"/>
+      <genOperations ecoreOperation="generator.ecore#//ElementType/isElementDisplayable"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Equipment">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Equipment/ID"/>
@@ -355,12 +359,8 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Gameplay">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/category"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplay/components"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/hasIntegratedPropositions"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/manualValidation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplay/prompt"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/restrictedTo"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Gameplays">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplays/gameplays"/>
@@ -372,9 +372,6 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Ability">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Ability/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Ability/numberOfDisplays"/>
-      <genOperations ecoreOperation="generator.ecore#//Ability/isElementDisplayable"
-          body="return this.numberOfDisplays != 0;"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Abilities">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Abilities/abilities"/>
@@ -429,13 +426,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Structure/isPerFact"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Component">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Component/elementType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Component/allowedAbility"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Component/displayValue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Component/wearChoices"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Component/defaultCorrectness"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Component/wearStatement"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Component/inputEntry"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Component/quantity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Component/expectedSize"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Quantity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Quantity/factNbAnswers"/>
@@ -471,5 +469,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Condition/nbExpectedAnswers"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Condition/answerModality"/>
     </genClasses>
+    <genClasses ecoreClass="generator.ecore#//QuestionGameplay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionGameplay/manualValidation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionGameplay/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionGameplay/hasIntegratedPropositions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionGameplay/restrictedTo"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//NoQuestionGameplay"/>
+    <genClasses ecoreClass="generator.ecore#//InteractiveStatement"/>
+    <genClasses ecoreClass="generator.ecore#//StructureStatement"/>
+    <genClasses ecoreClass="generator.ecore#//Size"/>
   </genPackages>
 </genmodel:GenModel>

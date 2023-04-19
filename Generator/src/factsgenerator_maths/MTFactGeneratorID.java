@@ -22,7 +22,7 @@ import generator.QuestionableFact;
 import generator.ResultPosition;
 import generator.TableBuild;
 import generator.impl.MTQFIdentificationImpl;
-import managers.EducationElementsManager;
+import structures.DungeonElements;
 
 public class MTFactGeneratorID extends FactGeneratorTemplate {
 
@@ -30,8 +30,8 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 	private List<Integer> alreadyUsed; 
 	private Random rand;
 	
-	public MTFactGeneratorID(EducationElementsManager eeManager) {
-		super(eeManager);
+	public MTFactGeneratorID(DungeonElements dungeonElements) {
+		super(dungeonElements);
 		this.alreadyUsed = new ArrayList<>();
 		this.rand = new Random();
 	}
@@ -40,13 +40,13 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 	protected Set<QuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
 		if(fact instanceof MTFact) {
 			MTFact factC = (MTFact) fact;
-			int min = ((MTLevel) eeManager.getLevel()).getMinInterval();
-			int max = ((MTLevel) eeManager.getLevel()).getMaxInterval();
+			int min = ((MTLevel) dungeonElements.getChosenLevel()).getMinInterval();
+			int max = ((MTLevel) dungeonElements.getChosenLevel()).getMaxInterval();
 			if(min <= factC.getOp() && factC.getOp()<= max){
 				Set<QuestionableFact> qfs = new HashSet<>(); 
 				
-				TableBuild build = ((MTLevel) eeManager.getLevel()).getBuildSetup();
-				ResultPosition equalPos = ((MTLevel) eeManager.getLevel()).getResultPositionSetup();
+				TableBuild build = ((MTLevel) dungeonElements.getChosenLevel()).getBuildSetup();
+				ResultPosition equalPos = ((MTLevel) dungeonElements.getChosenLevel()).getResultPositionSetup();
 				
 				if(build.equals(TableBuild.MIX)) {
 					if(equalPos.equals(ResultPosition.MIX)) {

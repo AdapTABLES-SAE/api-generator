@@ -8,15 +8,15 @@ import generator.Room;
 import generator.RoomAccess;
 import generator.impl.CurrentGameLevelImpl;
 import generator.impl.ProgressionImpl;
-import managers.EducationElementsManager;
-import managers.GameElementsManager;
 import managers.ModelsManager;
+import structures.DungeonElements;
 
 public class ALGAGenerator {
 	
 	private ModelsManager modelAccess;
 	private Dungeon generatedDungeon;
-	private GameElementsManager geManager;
+	//private GameElementsManager geManager;
+	private DungeonElements dungeonElements;
 
 	public static void main(String[] args) {
 		
@@ -24,7 +24,7 @@ public class ALGAGenerator {
 		generator.generate();
 		generator.printDungeon();
 		generator.saveDungeon("DungeonGen.xmi");
-		Main.transformModel("outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
+		//Main.transformModel("outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
 	}
 	
 	public ALGAGenerator() {
@@ -59,19 +59,25 @@ public class ALGAGenerator {
 
 		checkLearnerPlayerSetProgression();
 		
+		
+		
 		double nbQRooms = gameDifficulty.getInitNbQRoom() + gameDifficulty.getNbQRoomIncrease() * (modelAccess.getContextModel().getLearnerplayer().getProgression().getCurrentGameLevel().getLevel() - 1);
 		double nbNQRooms = gameDifficulty.getInitNbNQRoom() + gameDifficulty.getNbNQRoomIncrease() * (modelAccess.getContextModel().getLearnerplayer().getProgression().getCurrentGameLevel().getLevel() - 1);
 		
-		EducationalElementsGenerator eduGeneration = new EducationalElementsGenerator(modelAccess, nbQRooms, nbNQRooms);
-		EducationElementsManager eeManager;
+		dungeonElements = new DungeonElements(modelAccess.getGameDescriptionModel(), nbQRooms, nbNQRooms);
+		
+		EducationalElementsGenerator eduGeneration = new EducationalElementsGenerator(modelAccess, dungeonElements);
 		GameElementsGenerator gameGeneration;
 		DungeonGenerator dungeonGeneration;
 		try {
-			eeManager = eduGeneration.generateEE();
-			gameGeneration = new GameElementsGenerator(modelAccess, eeManager);
+			dungeonElements = eduGeneration.generateEE();
+			//dungeonElements.print();
+			gameGeneration = new GameElementsGenerator(modelAccess, dungeonElements);
+			
 			gameGeneration.generateGPandCurses();
-			geManager = gameGeneration.getGameElementManager(); 
-			dungeonGeneration = new DungeonGenerator(modelAccess, eeManager, gameGeneration.getGameElementManager(), nbNQRooms+nbQRooms);
+			dungeonElements.print();
+			//geManager = gameGeneration.getGameElementManager(); 
+			dungeonGeneration = new DungeonGenerator(modelAccess, dungeonElements, nbNQRooms+nbQRooms);
 			generatedDungeon = dungeonGeneration.generateDungeon();
 			generatedDungeon = gameGeneration.generateRoomContent(generatedDungeon);
 		} catch (Exception e) {

@@ -36,7 +36,8 @@ import generator.impl.QuestionParamImpl;
 import generator.impl.QuestionedFactImpl;
 import generator.impl.ValueImpl;
 import generator.impl.WantedAnswersParamImpl;
-import managers.EducationElementsManager;
+import structures.DungeonElements;
+import structures.RoomElements;
 
 public abstract class FactGeneratorTemplate {
 	
@@ -45,19 +46,19 @@ public abstract class FactGeneratorTemplate {
 	 * This template changes a little for membership facts. 
 	 */
 
-	protected EducationElementsManager eeManager;
+	protected DungeonElements dungeonElements;
 	protected String taskID;
 	protected int factsCounter; 
 	
-	public FactGeneratorTemplate(EducationElementsManager eeManager) {
-		this.eeManager = eeManager;
+	public FactGeneratorTemplate(DungeonElements dungeonElements) {
+		this.dungeonElements = dungeonElements;
 		this.factsCounter = 0;
 	}
 	
 	public Set<QuestionableFact> generateQuestionableFacts(ATask task){
 		Set<QuestionableFact> questionableFacts = new HashSet<>();
 		taskID = task.getID();
-		for (SetOfFacts setoffact : eeManager.getObjective().getSetoffacts()) {
+		for (SetOfFacts setoffact : dungeonElements.getChosenObjective().getSetoffacts()) {
 			for (AbstractFact f : setoffact.getFacts()) { 
 				questionableFacts.addAll(generateQuestionableFactsOf(task, f));
 			}
@@ -67,11 +68,11 @@ public abstract class FactGeneratorTemplate {
 	
 	protected Set<QuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact){ return null; }
 		
-	protected void createAQuestionedFactFrom(int roomIndex, ATask task, QuestionableFact qFact, int correctnessToReach) {
+	protected void createAQuestionedFactFrom(RoomElements roomElement, QuestionableFact qFact, int correctnessToReach) {
 		QuestionedFact qef = new QuestionedFactImpl(); 
 		qef.setQuestionablefact(qFact);
 		
-		if(task.getResponseModality() instanceof EnterResponse) {
+		if(roomElement.getTask().getResponseModality() instanceof EnterResponse) {
 			List<String> solutions = getListOfGoodSolutions(qFact);
 			for (String sol : solutions) {
 				EntrySoluceParam soluceParam = new EntrySoluceParamImpl(); 
@@ -81,7 +82,7 @@ public abstract class FactGeneratorTemplate {
 				qef.getEntrys().add(soluceParam);
 			}
 		} else {
-			Map<ECorrectness, List<String>> propositions = getListOfPropositions((MultipleChoice) task.getResponseModality(), qFact);
+			Map<ECorrectness, List<String>> propositions = getListOfPropositions((MultipleChoice) roomElement.getTask().getResponseModality(), qFact);
 			for (Entry<ECorrectness, List<String>> propState : propositions.entrySet()) {
 				for (String prop : propState.getValue()) {
 					PropositionParam propositionParam = new PropositionParamImpl();
@@ -111,12 +112,12 @@ public abstract class FactGeneratorTemplate {
 		
 		WantedAnswersParam correctness = new WantedAnswersParamImpl();
 		Value correctnessValue = new ValueImpl();
-		correctnessValue.setValue(task.nbExpectedAnswers()+"");//correctnessToReach(task)+"");
+		correctnessValue.setValue(roomElement.getTask().nbExpectedAnswers()+"");//correctnessToReach(task)+"");
 		correctness.setValue(correctnessValue);
 		qef.setCorrectnessToReach(correctness);
 		
 		
-		qef.setLearnerValidation(task.isCheckOnLearnerAction());
+		qef.setLearnerValidation(roomElement.getTask().isCheckOnLearnerAction());
 		qef.setCompleteFact(qFact.getCompleteFact());
 		
 		ECorrectness factCorrectness = getFactCorrectness(qFact);
@@ -128,7 +129,9 @@ public abstract class FactGeneratorTemplate {
 			qef.setFactCorrectness(param);
 		}
 		
-		eeManager.addFactToQuestion(roomIndex,task, qef); 
+		roomElement.addQuestionedFact(qef);
+		//dungeonElements.createOrAddRoomWithFacts(roomIndex, task, qef);
+		//dungeonElements.addFactToQuestion(roomIndex,task, qef); 
 	}
 	
 	protected ECorrectness getFactCorrectness(QuestionableFact qFact) {
@@ -158,12 +161,12 @@ public abstract class FactGeneratorTemplate {
 	protected abstract Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact);
 	protected abstract boolean isQuestionInteractive();
 	
-	public void generateQuestionedFact(int roomIndex, EducationElementsManager eeManager, ResultsByTask aTask) {
-		for (int i = 0; i < aTask.getTask().getNbFacts(); i++) {
+	public void generateQuestionedFact(RoomElements roomElements) {
+		for (int i = 0; i < roomElements.getTask().getNbFacts(); i++) {
 			QuestionableFact qf = null;
 			try {
-				qf = getAvailableFact(aTask);
-				createAQuestionedFactFrom(roomIndex, aTask.getTask(), qf, correctnessToReach(aTask.getTask()));
+				qf = getAvailableFact(roomElements.getCorrespondingResultByTask(dungeonElements.getCurrentObjectiveLevel()));
+				createAQuestionedFactFrom(roomElements, qf, correctnessToReach(roomElements.getTask()));
 			} catch (Exception e) {
 				e.printStackTrace();
 			} 

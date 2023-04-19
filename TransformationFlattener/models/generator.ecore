@@ -209,9 +209,9 @@
         upperBound="-1" eType="#//RoomType" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ATask" abstract="true">
-    <eOperations name="validationOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eOperations name="getType" eType="#//ETaskType"/>
     <eOperations name="isCheckOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="nbExpectedAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentOfApparition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="responseModality" eType="#//ResponseModality"
@@ -401,7 +401,13 @@
         eType="#//Equipment" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElementType" eSuperTypes="#//GPElementType">
+    <eOperations name="isElementDisplayable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ability" eType="#//Ability"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfDisplays" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="insideStructureStatement"
+        upperBound="-1" eType="#//StructureStatement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interactiveStatement" upperBound="-1"
+        eType="#//InteractiveStatement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Equipment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -409,19 +415,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bought" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="activated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Gameplay">
+  <eClassifiers xsi:type="ecore:EClass" name="Gameplay" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="#//GPCategory"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
         eType="#//AComponent" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasIntegratedPropositions"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="manualValidation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prompt" eType="#//Prompt"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="restrictedTo" upperBound="-1"
-        eType="#//ETaskType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Gameplays">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gameplays" upperBound="-1"
@@ -434,10 +433,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ability">
-    <eOperations name="isElementDisplayable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfDisplays" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ElementSize">
     <eLiterals name="SMALL"/>
@@ -485,7 +482,9 @@
     <eLiterals name="DIRECT_RESPONSE" value="1"/>
     <eLiterals name="MOVE_UNIQUE" value="7"/>
     <eLiterals name="MOVE_MULTIPLE" value="8"/>
-    <eLiterals name="ORIENT_UNIQUE" value="5"/>
+    <eLiterals name="ORIENT" value="5" literal="ORIENT"/>
+    <eLiterals name="POSITION_UNIQUE" value="6"/>
+    <eLiterals name="POSITION_MULTIPLE" value="7"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parameter" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//AValue"
@@ -535,7 +534,7 @@
         defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//AComponent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elementType" eType="#//ElementType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allowedAbility" eType="#//Ability"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayValue" eType="#//Display"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="wearChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
@@ -547,6 +546,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputEntry" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="quantity" eType="#//Quantity"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expectedSize" eType="#//Size"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Quantity" eSuperTypes="#//Parameter">
@@ -574,4 +575,37 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="prompt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FactCorrectnessParam" eSuperTypes="#//Parameter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GameplayTaskRelations">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relations" upperBound="-1"
+        eType="#//Relation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="task" eType="#//ETaskType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gameplay" eType="#//GPCategory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
+        eType="#//Condition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Condition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbFacts" eType="#//EBoundary"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbExpectedAnswers" eType="#//EBoundary"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="answerModality" eType="#//EModality"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EBoundary">
+    <eLiterals name="ONE"/>
+    <eLiterals name="SUP_ONE" value="1"/>
+    <eLiterals name="SUP_EQ_ONE" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionGameplay" eSuperTypes="#//Gameplay">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="manualValidation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="#//GPCategory"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasIntegratedPropositions"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="restrictedTo" upperBound="-1"
+        eType="#//ETaskType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NoQuestionGameplay" eSuperTypes="#//Gameplay"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InteractiveStatement" eSuperTypes="#//Parameter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StructureStatement" eSuperTypes="#//Parameter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Size" eSuperTypes="#//Parameter"/>
 </ecore:EPackage>
