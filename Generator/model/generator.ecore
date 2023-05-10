@@ -20,6 +20,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//Level"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjective" lowerBound="1"
         eType="#//Objective"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exit" eType="#//Room"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Room">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -54,6 +55,10 @@
         eType="#//Position" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="structurePositions" upperBound="-1"
         eType="#//StructurePosition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forEntry" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forExit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SmallRoomType" eSuperTypes="#//RoomType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="directions" lowerBound="1"

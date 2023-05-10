@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.RoomType#getName <em>Name</em>}</li>
  *   <li>{@link generator.RoomType#getElementPositions <em>Element Positions</em>}</li>
  *   <li>{@link generator.RoomType#getStructurePositions <em>Structure Positions</em>}</li>
+ *   <li>{@link generator.RoomType#isForEntry <em>For Entry</em>}</li>
+ *   <li>{@link generator.RoomType#isForExit <em>For Exit</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getRoomType()
@@ -70,6 +72,52 @@ public interface RoomType extends EObject {
 	 * @generated
 	 */
 	EList<StructurePosition> getStructurePositions();
+
+	/**
+	 * Returns the value of the '<em><b>For Entry</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>For Entry</em>' attribute.
+	 * @see #setForEntry(boolean)
+	 * @see generator.GeneratorPackage#getRoomType_ForEntry()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isForEntry();
+
+	/**
+	 * Sets the value of the '{@link generator.RoomType#isForEntry <em>For Entry</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>For Entry</em>' attribute.
+	 * @see #isForEntry()
+	 * @generated
+	 */
+	void setForEntry(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>For Exit</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>For Exit</em>' attribute.
+	 * @see #setForExit(boolean)
+	 * @see generator.GeneratorPackage#getRoomType_ForExit()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isForExit();
+
+	/**
+	 * Sets the value of the '{@link generator.RoomType#isForExit <em>For Exit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>For Exit</em>' attribute.
+	 * @see #isForExit()
+	 * @generated
+	 */
+	void setForExit(boolean value);
 
 	/**
 	 * <!-- begin-user-doc -->

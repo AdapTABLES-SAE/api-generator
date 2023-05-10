@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.Dungeon#getEntry <em>Entry</em>}</li>
  *   <li>{@link generator.Dungeon#getLevel <em>Level</em>}</li>
  *   <li>{@link generator.Dungeon#getLearningobjective <em>Learningobjective</em>}</li>
+ *   <li>{@link generator.Dungeon#getExit <em>Exit</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getDungeon()
@@ -129,5 +130,27 @@ public interface Dungeon extends EObject {
 	 * @generated
 	 */
 	void setLearningobjective(Objective value);
+
+	/**
+	 * Returns the value of the '<em><b>Exit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Exit</em>' reference.
+	 * @see #setExit(Room)
+	 * @see generator.GeneratorPackage#getDungeon_Exit()
+	 * @model
+	 * @generated
+	 */
+	Room getExit();
+
+	/**
+	 * Sets the value of the '{@link generator.Dungeon#getExit <em>Exit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Exit</em>' reference.
+	 * @see #getExit()
+	 * @generated
+	 */
+	void setExit(Room value);
 
 } // Dungeon

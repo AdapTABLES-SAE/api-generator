@@ -38,6 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.DungeonImpl#getEntry <em>Entry</em>}</li>
  *   <li>{@link generator.impl.DungeonImpl#getLevel <em>Level</em>}</li>
  *   <li>{@link generator.impl.DungeonImpl#getLearningobjective <em>Learningobjective</em>}</li>
+ *   <li>{@link generator.impl.DungeonImpl#getExit <em>Exit</em>}</li>
  * </ul>
  *
  * @generated
@@ -102,6 +103,16 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * @ordered
 	 */
 	protected Objective learningobjective;
+
+	/**
+	 * The cached value of the '{@link #getExit() <em>Exit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExit()
+	 * @generated
+	 * @ordered
+	 */
+	protected Room exit;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -278,6 +289,45 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Room getExit() {
+		if (exit != null && exit.eIsProxy()) {
+			InternalEObject oldExit = (InternalEObject) exit;
+			exit = (Room) eResolveProxy(oldExit);
+			if (exit != oldExit) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.DUNGEON__EXIT, oldExit,
+							exit));
+			}
+		}
+		return exit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Room basicGetExit() {
+		return exit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExit(Room newExit) {
+		Room oldExit = exit;
+		exit = newExit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.DUNGEON__EXIT, oldExit, exit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -311,6 +361,10 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 			if (resolve)
 				return getLearningobjective();
 			return basicGetLearningobjective();
+		case GeneratorPackage.DUNGEON__EXIT:
+			if (resolve)
+				return getExit();
+			return basicGetExit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -340,6 +394,9 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 		case GeneratorPackage.DUNGEON__LEARNINGOBJECTIVE:
 			setLearningobjective((Objective) newValue);
 			return;
+		case GeneratorPackage.DUNGEON__EXIT:
+			setExit((Room) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -367,6 +424,9 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 		case GeneratorPackage.DUNGEON__LEARNINGOBJECTIVE:
 			setLearningobjective((Objective) null);
 			return;
+		case GeneratorPackage.DUNGEON__EXIT:
+			setExit((Room) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -389,6 +449,8 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 			return level != null;
 		case GeneratorPackage.DUNGEON__LEARNINGOBJECTIVE:
 			return learningobjective != null;
+		case GeneratorPackage.DUNGEON__EXIT:
+			return exit != null;
 		}
 		return super.eIsSet(featureID);
 	}

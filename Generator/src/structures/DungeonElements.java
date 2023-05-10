@@ -102,10 +102,11 @@ public class DungeonElements {
 	}
 	
 	public void buildNumberOfNonQuestionRooms() {
-		while(roomsElements.size() < (nbNQRooms + nbQRooms)) {
+		while(roomsElements.size() < (nbNQRooms + nbQRooms)) { // + 1 = la sortie
 			roomsElements.add(new RoomElements(gameDescriptionModel));
 		}
 		roomsElements = Shuffle.shuffleRoomElements(roomsElements);
+		roomsElements.add(new RoomElements(gameDescriptionModel)); //exit
 	}
 	
 	public void print() {

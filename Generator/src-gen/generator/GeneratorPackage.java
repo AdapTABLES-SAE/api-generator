@@ -234,13 +234,22 @@ public interface GeneratorPackage extends EPackage {
 	int DUNGEON__LEARNINGOBJECTIVE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Exit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUNGEON__EXIT = 5;
+
+	/**
 	 * The number of structural features of the '<em>Dungeon</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DUNGEON_FEATURE_COUNT = 5;
+	int DUNGEON_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Dungeon</em>' class.
@@ -462,13 +471,31 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM_TYPE__STRUCTURE_POSITIONS = 2;
 
 	/**
+	 * The feature id for the '<em><b>For Entry</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE__FOR_ENTRY = 3;
+
+	/**
+	 * The feature id for the '<em><b>For Exit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE__FOR_EXIT = 4;
+
+	/**
 	 * The number of structural features of the '<em>Room Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_FEATURE_COUNT = 3;
+	int ROOM_TYPE_FEATURE_COUNT = 5;
 
 	/**
 	 * The operation id for the '<em>Get Directions</em>' operation.
@@ -524,6 +551,24 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int SMALL_ROOM_TYPE__STRUCTURE_POSITIONS = ROOM_TYPE__STRUCTURE_POSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>For Entry</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMALL_ROOM_TYPE__FOR_ENTRY = ROOM_TYPE__FOR_ENTRY;
+
+	/**
+	 * The feature id for the '<em><b>For Exit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMALL_ROOM_TYPE__FOR_EXIT = ROOM_TYPE__FOR_EXIT;
 
 	/**
 	 * The feature id for the '<em><b>Directions</b></em>' attribute list.
@@ -597,6 +642,24 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int LARGE_ROOM_TYPE__STRUCTURE_POSITIONS = ROOM_TYPE__STRUCTURE_POSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>For Entry</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LARGE_ROOM_TYPE__FOR_ENTRY = ROOM_TYPE__FOR_ENTRY;
+
+	/**
+	 * The feature id for the '<em><b>For Exit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LARGE_ROOM_TYPE__FOR_EXIT = ROOM_TYPE__FOR_EXIT;
 
 	/**
 	 * The feature id for the '<em><b>Directions</b></em>' attribute list.
@@ -6468,6 +6531,17 @@ public interface GeneratorPackage extends EPackage {
 	EReference getDungeon_Learningobjective();
 
 	/**
+	 * Returns the meta object for the reference '{@link generator.Dungeon#getExit <em>Exit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Exit</em>'.
+	 * @see generator.Dungeon#getExit()
+	 * @see #getDungeon()
+	 * @generated
+	 */
+	EReference getDungeon_Exit();
+
+	/**
 	 * Returns the meta object for class '{@link generator.Room <em>Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6672,6 +6746,28 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRoomType_StructurePositions();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.RoomType#isForEntry <em>For Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>For Entry</em>'.
+	 * @see generator.RoomType#isForEntry()
+	 * @see #getRoomType()
+	 * @generated
+	 */
+	EAttribute getRoomType_ForEntry();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.RoomType#isForExit <em>For Exit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>For Exit</em>'.
+	 * @see generator.RoomType#isForExit()
+	 * @see #getRoomType()
+	 * @generated
+	 */
+	EAttribute getRoomType_ForExit();
 
 	/**
 	 * Returns the meta object for the '{@link generator.RoomType#getDirections() <em>Get Directions</em>}' operation.
@@ -9948,6 +10044,14 @@ public interface GeneratorPackage extends EPackage {
 		EReference DUNGEON__LEARNINGOBJECTIVE = eINSTANCE.getDungeon_Learningobjective();
 
 		/**
+		 * The meta object literal for the '<em><b>Exit</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DUNGEON__EXIT = eINSTANCE.getDungeon_Exit();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.RoomImpl <em>Room</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10105,6 +10209,22 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROOM_TYPE__STRUCTURE_POSITIONS = eINSTANCE.getRoomType_StructurePositions();
+
+		/**
+		 * The meta object literal for the '<em><b>For Entry</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOM_TYPE__FOR_ENTRY = eINSTANCE.getRoomType_ForEntry();
+
+		/**
+		 * The meta object literal for the '<em><b>For Exit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOM_TYPE__FOR_EXIT = eINSTANCE.getRoomType_ForExit();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Directions</b></em>' operation.

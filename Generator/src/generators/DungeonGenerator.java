@@ -90,7 +90,7 @@ public class DungeonGenerator {
 		
 		while(dungeonRooms.size() < nbRooms + 1) {
 			LabyrinthineRoom randomStartingRoom = chooseEntryRoomForNewPathIn(dungeonRooms);
-			LabyrinthineRoom aRoom = createNewRoomFrom(randomStartingRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1));
+			LabyrinthineRoom aRoom = createNewRoomFrom(randomStartingRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), false);
 			if(aRoom != null) {
 				dungeonRooms.add(aRoom);
 			} else {
@@ -98,10 +98,42 @@ public class DungeonGenerator {
 			}
 		}	
 		
+		dungeonRooms.add(createAnExit(dungeonRooms));
+		
 		for (LabyrinthineRoom aEntry : dungeonRooms) {
 			generatedDungeon.getRooms().add(aEntry.getRoom());
 		}
 		generatedDungeon.setEntry(originRoom);
+	}
+	
+	private LabyrinthineRoom createAnExit(List<LabyrinthineRoom> dungeonRooms) {
+		List<LabyrinthineRoom> dungeonRoomTemps = new ArrayList<>(dungeonRooms);
+		LabyrinthineRoom exit = null;
+		while (exit == null) {
+			LabyrinthineRoom furthest = findFurthestFromEntryRoomEuclidianDistanceWith(dungeonRoomTemps);
+			exit = createNewRoomFrom(furthest, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), true);
+			dungeonRoomTemps.remove(furthest);
+		}
+		return exit;
+	}
+	
+	private LabyrinthineRoom findFurthestFromEntryRoomEuclidianDistanceWith(List<LabyrinthineRoom> eligibleRooms) {
+		Map<LabyrinthineRoom, Double> distances = new HashMap<>(); 
+		
+		double value = 0.0;
+		
+		for (LabyrinthineRoom labyrinthineRoom : eligibleRooms) {
+			value = Math.sqrt(labyrinthineRoom.getRoom().getX()*labyrinthineRoom.getRoom().getX() + labyrinthineRoom.getRoom().getY()*labyrinthineRoom.getRoom().getY());
+			distances.put(labyrinthineRoom, value);
+		}
+		
+		LabyrinthineRoom furthest = eligibleRooms.get(0);
+		for (LabyrinthineRoom labyrinthineRoom : distances.keySet()) {
+			if(distances.get(labyrinthineRoom) > distances.get(furthest)) {
+				furthest = labyrinthineRoom;
+			}
+		}
+		return furthest;
 	}
 	
 	private void createNewPath(LabyrinthineRoom originRoom, Room dungeonEntry) {
@@ -121,7 +153,7 @@ public class DungeonGenerator {
 		}
 	}
 	
-	private LabyrinthineRoom createNewRoomFrom(LabyrinthineRoom originRoom, RoomElements roomElements) {
+	private LabyrinthineRoom createNewRoomFrom(LabyrinthineRoom originRoom, RoomElements roomElements, boolean isExitRoom) {
 		Directions originRoomAvailableDirection = originRoom.getAvailableExit(gridManager);
 		if(originRoomAvailableDirection.equals(Directions.NONE)) { return null; }
 		Coordinate nextPosition = gridManager.getNextCoord(originRoom.getRoom(), originRoomAvailableDirection);
@@ -135,7 +167,7 @@ public class DungeonGenerator {
 			} else {
 				roomType = getCompatibleRoomType(entry, 0);
 			}*/
-			roomType = getCompatibleRoomType(entry, roomElements); 
+			roomType = getCompatibleRoomType(entry, roomElements, isExitRoom); 
 			if(roomType == null) {
 				allowedDirections.remove(entry);
 			}
@@ -176,12 +208,12 @@ public class DungeonGenerator {
 	 * @param entry
 	 * @return Valid RoomType
 	 */
-	private RoomType getCompatibleRoomType(Directions entry, RoomElements roomElements) {
-		return getCompatibleRoomType(entry, Directions.NONE, roomElements);
+	private RoomType getCompatibleRoomType(Directions entry, RoomElements roomElements, boolean isExitRoom) {
+		return getCompatibleRoomType(entry, Directions.NONE, roomElements, isExitRoom);
 	}
 	
 	private Room createEntryRoomLabyrinthine() {
-		List<RoomType> rts = roomsWithOneDirection();
+		List<RoomType> rts = getRoomTypesForEntry();
 		RoomType rt = rts.get(random.nextInt(rts.size()));		
 		return createRoom(0, 0, rt, null, null, null, Directions.NONE);
 	}
@@ -204,69 +236,43 @@ public class DungeonGenerator {
 	
 		boolean backtrack = false;
 		Coordinate nextPosition = null;	
-		//List<TaskFactPair> factsToQuestion = eeManager.getFactsToQuestion();
 		StructureChosenRT structureRT = new StructureChosenRT(null, null, null);
 				
+		boolean isExitRoomCreation = false;
 	
-		while(dungeonRooms.size() < nbRooms + 1) {
+		while(dungeonRooms.size() < nbRooms + 2) {
 			//System.out.println("Loop "+dungeonRooms.size());
 			nextPosition = gridManager.getNextCoord(dungeonRooms.lastElement().getRoom(), dungeonRooms.lastElement().getExit());
 			if(!backtrack) {
 				eligibleRoomsOrientations.add(gridManager.getAllowedDirections(nextPosition, dungeonRooms.lastElement().getExit())); 
 			}
 			if(!eligibleRoomsOrientations.lastElement().hasEligibleOrientation() /*|| structureRT.isNull()*/) {
-				
-				/*if(dungeonRooms.size() == 1) {
-					System.out.println("\t Backtrack Restart"); // NOT WORKING
-					backtrack = false;
-					dungeonElements.shuffleRoomsOrder();
-					eligibleRoomsOrientations = new Stack<>();
-				} else {*/
-					//System.out.println("\t Backtrack");
-					backtrack = true;
-					eligibleRoomsOrientations.pop();
-					LinearRoom r = dungeonRooms.pop();
-					eligibleRoomsOrientations.lastElement().removeExitForEntry(r.getEntry(), r.getExit());
-				//}
-				
-				
+				backtrack = true;
+				eligibleRoomsOrientations.pop();
+				LinearRoom r = dungeonRooms.pop();
+				eligibleRoomsOrientations.lastElement().removeExitForEntry(r.getEntry(), r.getExit());
 			} else {
 				backtrack = false;
-				structureRT = chooseRoomType(eligibleRoomsOrientations.lastElement(), dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), dungeonRooms.size() == nbRooms);
+				if(dungeonRooms.size() == nbRooms + 1) { 
+					structureRT = chooseRoomType(eligibleRoomsOrientations.lastElement(), dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), true);
 
-				LinearRoom aRoom = createNewRoomFrom( nextPosition, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), 
-						dungeonRooms.lastElement().getLastRoomAccess(), structureRT);
+				} else {
+					structureRT = chooseRoomType(eligibleRoomsOrientations.lastElement(), dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), false);
+
+				}
+				
+				
+
+
+				LinearRoom aRoom = createNewRoomFrom(nextPosition, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), 
+						dungeonRooms.lastElement().getExitRoomAccess(), structureRT);
 				dungeonRooms.add(aRoom);
-				/*if(!structure.isNull()) {
-					
-					backtrack = false;
-					LinearRoom aRoom = createNewRoomFrom( nextPosition, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), 
-							dungeonRooms.lastElement().getLastRoomAccess(), structure);
-					dungeonRooms.add(aRoom);
-				} else {
-					System.err.println("PROBLEM");
-					backtrack = true; 
-					//eligibleRoomsOrientations.lastElement().removeAllOrientations();
-				}*/
-				
-			/*	if(structure.isNull()) {
-					backtrack = true;
-					eligibleRoomsOrientations.pop();
-					System.out.println(eligibleRoomsOrientations.isEmpty());
-					System.out.println(eligibleRoomsOrientations.lastElement());
-					eligibleRoomsOrientations.lastElement().removeExitForEntry(structure.entry, structure.exit);
-				} else {
-					backtrack = false;
-					LinearRoom aRoom = createNewRoomFrom( nextPosition, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), 
-							dungeonRooms.lastElement().getLastRoomAccess(), structure);
-					dungeonRooms.add(aRoom);
-				}*/
-				
-				
-				
-				
 			}
 		}
+		
+		
+		//Room exitRoom = createExitRoomLinear(dungeonRooms.lastElement());
+		//dungeonRooms.add(new LinearRoom(exitRoom, Directions.NONE));
 		
 		for (LinearRoom aEntry : dungeonRooms) {
 			generatedDungeon.getRooms().add(aEntry.getRoom());
@@ -274,6 +280,15 @@ public class DungeonGenerator {
 		generatedDungeon.setEntry(originRoom);
 	}
 	
+	/*private Room createExitRoomLinear(LinearRoom exitOrigin) {
+		Coordinate roomPosition = gridManager.getNextCoord(exitOrigin.getRoom(), exitOrigin.getExit());
+		Directions entryOfExit = gridManager
+		List<RoomType> rts = getRoomTypesForExit();
+		RoomType rt = rts.get(random.nextInt(rts.size()));	
+		int x, int y, RoomType roomT, RoomElements roomElements, RoomAccess previousRoomExitAccess,  Directions entryDirection, Directions exitDirection
+		return createRoom(roomPosition.getX(), roomPosition.getY(), rt, null, exitOrigin.getExitRoomAccess(), null, rt.getDirections().get(0));		
+	}*/
+
 	private class StructureChosenRT {
 		public Directions entry; 
 		public Directions exit;
@@ -290,7 +305,7 @@ public class DungeonGenerator {
 		}
 	}
 	
-	private StructureChosenRT chooseRoomType(LinearRoomOrientations eligibleRoomOrientations, RoomElements roomElements, boolean isLastRoom) {
+	private StructureChosenRT chooseRoomType(LinearRoomOrientations eligibleRoomOrientations, RoomElements roomElements, boolean isExitRoom) {
 		List<Directions> chosenEntries = new ArrayList<>(); // There is a problem here 
 		Directions entry = null; 
 		Directions exit = null;
@@ -302,13 +317,13 @@ public class DungeonGenerator {
 			//System.out.println("Entry "+entry);
 			if(entry != null) { 
 				chosenEntries.add(entry);
-				if(!isLastRoom) {
+				if(!isExitRoom) {
 					exit = chooseExitDirection(eligibleRoomOrientations, entry);
 				}else {
 					exit = Directions.NONE;
 				}
 				//System.out.println(entry+" "+exit+" "+roomElements.getGameplay());
-				roomType = getCompatibleRoomType(entry, exit, roomElements); 
+				roomType = getCompatibleRoomType(entry, exit, roomElements, isExitRoom); 
 			}
 			//i++;
 		}
@@ -350,7 +365,7 @@ public class DungeonGenerator {
 	 * @return an entry Room
 	 */
 	private Room createEntryRoomLinear() {
-		List<RoomType> rts = roomsWithOneDirection();
+		List<RoomType> rts = getRoomTypesForEntry();
 		RoomType rt = rts.get(random.nextInt(rts.size()));		
 		return createRoom(0, 0, rt, null, null, null, rt.getDirections().get(0));
 	}
@@ -374,8 +389,14 @@ public class DungeonGenerator {
 	 * @param exit
 	 * @return Valid RoomType
 	 */
-	private RoomType getCompatibleRoomType(Directions entry, Directions exit, RoomElements roomElements) { // TODO à corriger probleme avec les statues mauvais roomType choisi 
-		List<RoomType> roomTypes = new ArrayList<>(modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes());
+	private RoomType getCompatibleRoomType(Directions entry, Directions exit, RoomElements roomElements, boolean isExitRoom) { // TODO à corriger probleme avec les statues mauvais roomType choisi 
+		List<RoomType> roomTypes; 
+		if(!isExitRoom) {
+			roomTypes = new ArrayList<>(modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes());
+		} else {
+			roomTypes = getRoomTypesForExit();
+		}
+		
 		roomTypes = roomTypes.stream().filter(e -> e.getDirections().size() > 1).collect(Collectors.toList());
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { // TODO
 		/*	System.out.println(roomType.getName());
@@ -532,10 +553,20 @@ public class DungeonGenerator {
 	 * Get the RoomTypes with one access/direction only
 	 * @return valid RoomTypes
 	 */
-	private List<RoomType> roomsWithOneDirection() {
+	private List<RoomType> getRoomTypesForEntry() {
 		List<RoomType> rts = new ArrayList<>();
 		for (RoomType rt : modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes()) {
-			if(rt.getDirections().size() == 1) {
+			if(rt.isForEntry()) {
+				rts.add(rt);
+			}
+		}
+		return rts;
+	}
+	
+	private List<RoomType> getRoomTypesForExit() {
+		List<RoomType> rts = new ArrayList<>();
+		for (RoomType rt : modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes()) {
+			if(rt.isForExit()) {
 				rts.add(rt);
 			}
 		}

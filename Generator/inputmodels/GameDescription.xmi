@@ -7,22 +7,26 @@
   <roomtypes>
     <roomtypes
         xsi:type="generator:SmallRoomType"
-        name="RegularRoomS">
+        name="RegularRoomS"
+        forEntry="true">
       <directions>SOUTH</directions>
     </roomtypes>
     <roomtypes
         xsi:type="generator:SmallRoomType"
-        name="RegularRoomN">
+        name="RegularRoomN"
+        forEntry="true">
       <directions>NORTH</directions>
     </roomtypes>
     <roomtypes
         xsi:type="generator:SmallRoomType"
-        name="RegularRoomE">
+        name="RegularRoomE"
+        forEntry="true">
       <directions>EAST</directions>
     </roomtypes>
     <roomtypes
         xsi:type="generator:SmallRoomType"
-        name="RegularRoomW">
+        name="RegularRoomW"
+        forEntry="true">
       <directions>WEST</directions>
     </roomtypes>
     <roomtypes
@@ -164,6 +168,15 @@
       <elementPositions
           size="MEDIUM"
           ID="POSM3"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="ExitRoom1"
+        forExit="true">
       <directions>SOUTH</directions>
       <directions>EAST</directions>
       <directions>NORTH</directions>

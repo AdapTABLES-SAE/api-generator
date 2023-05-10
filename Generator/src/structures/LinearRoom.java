@@ -42,7 +42,16 @@ public class LinearRoom {
 		return entry;
 	}
 	
-	public RoomAccess getLastRoomAccess() {
-		return room.getRoomaccess().get(room.getRoomaccess().size() - 1);
+	public RoomAccess getExitRoomAccess() {
+		for (RoomAccess access : room.getRoomaccess()) {
+			if(access.getDirection().equals(exit)) {
+				return access;
+			}
+		}
+		return null;
 	}
+	
+	/*public RoomAccess getLastRoomAccess() {
+		return room.getRoomaccess().get(room.getRoomaccess().size() - 1);
+	}*/
 }

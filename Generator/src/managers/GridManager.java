@@ -256,6 +256,10 @@ public class GridManager {
 		return position;
 	}
 	
+	public Set<Directions> getOppositeDirectionsOf(Directions origin){
+		return directionManager.getOppositeDirections().get(origin);
+	}
+	
 	/**
 	 * For each possible entry entryDirections (in theory), it verifies if the entry is really an option then select its possible exits
 	 * @param actualCoordinates
