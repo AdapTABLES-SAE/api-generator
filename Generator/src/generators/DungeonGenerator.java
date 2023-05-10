@@ -1,14 +1,16 @@
 package generators;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.Stack;
 import java.util.stream.Collectors;
 
 import generator.APosition;
-import generator.Component;
+import generator.Ability;
 import generator.Directions;
 import generator.Dungeon;
 import generator.DungeonMode;
@@ -18,6 +20,7 @@ import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
 import generator.Structure;
+import generator.StructureType;
 import generator.impl.DungeonImpl;
 import generator.impl.RoomAccessImpl;
 import generator.impl.RoomImpl;
@@ -56,6 +59,7 @@ public class DungeonGenerator {
 		this(modelAccess); 		
 		generatedDungeon.setLearningobjective(dungeonElements.getChosenObjective());
 		generatedDungeon.setLevel(dungeonElements.getChosenLevel());
+		generatedDungeon.setMode(dungeonElements.getDungeonMode());
 		//this.geManager = geManager;
 		this.dungeonElements = dungeonElements;
 		this.nbRooms = nbRooms;
@@ -89,7 +93,8 @@ public class DungeonGenerator {
 			LabyrinthineRoom aRoom = createNewRoomFrom(randomStartingRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1));
 			if(aRoom != null) {
 				dungeonRooms.add(aRoom);
-				createNewPath(randomStartingRoom);
+			} else {
+				createNewPath(randomStartingRoom, originRoom);
 			}
 		}	
 		
@@ -99,10 +104,10 @@ public class DungeonGenerator {
 		generatedDungeon.setEntry(originRoom);
 	}
 	
-	private void createNewPath(LabyrinthineRoom originRoom) {
+	private void createNewPath(LabyrinthineRoom originRoom, Room dungeonEntry) {
 		List<NeighborAccess> neighbors = gridManager.getNeighbors(originRoom.getRoomCoordinates(), originRoom.isRoomTypeSmall());
 		for (NeighborAccess neighbor : neighbors) {
-			if(!originRoom.hasRoomAccessWith(neighbor.getRoom())) {
+			if(!originRoom.hasRoomAccessWith(neighbor.getRoom()) && !neighbor.getRoom().equals(dungeonEntry)) {
 				RoomAccess raOrigin = new RoomAccessImpl();
 				raOrigin.setDirection(neighbor.getAccessDirectionToNeighbor());
 				RoomAccess raOther = new RoomAccessImpl();
@@ -200,23 +205,66 @@ public class DungeonGenerator {
 		boolean backtrack = false;
 		Coordinate nextPosition = null;	
 		//List<TaskFactPair> factsToQuestion = eeManager.getFactsToQuestion();
+		StructureChosenRT structureRT = new StructureChosenRT(null, null, null);
+				
 	
 		while(dungeonRooms.size() < nbRooms + 1) {
+			//System.out.println("Loop "+dungeonRooms.size());
 			nextPosition = gridManager.getNextCoord(dungeonRooms.lastElement().getRoom(), dungeonRooms.lastElement().getExit());
 			if(!backtrack) {
 				eligibleRoomsOrientations.add(gridManager.getAllowedDirections(nextPosition, dungeonRooms.lastElement().getExit())); 
 			}
-			if(!eligibleRoomsOrientations.lastElement().hasEligibleOrientation()) {
-				System.out.println("\t Backtrack");
-				backtrack = true;
-				eligibleRoomsOrientations.pop();
-				LinearRoom r = dungeonRooms.pop();
-				eligibleRoomsOrientations.lastElement().removeExitForEntry(r.getEntry(), r.getExit());
-			}else {
+			if(!eligibleRoomsOrientations.lastElement().hasEligibleOrientation() /*|| structureRT.isNull()*/) {
+				
+				/*if(dungeonRooms.size() == 1) {
+					System.out.println("\t Backtrack Restart"); // NOT WORKING
+					backtrack = false;
+					dungeonElements.shuffleRoomsOrder();
+					eligibleRoomsOrientations = new Stack<>();
+				} else {*/
+					//System.out.println("\t Backtrack");
+					backtrack = true;
+					eligibleRoomsOrientations.pop();
+					LinearRoom r = dungeonRooms.pop();
+					eligibleRoomsOrientations.lastElement().removeExitForEntry(r.getEntry(), r.getExit());
+				//}
+				
+				
+			} else {
 				backtrack = false;
-				LinearRoom aRoom = createNewRoomFrom(eligibleRoomsOrientations.lastElement(), nextPosition, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), 
-						dungeonRooms.lastElement().getLastRoomAccess(), dungeonRooms.size() == nbRooms);
+				structureRT = chooseRoomType(eligibleRoomsOrientations.lastElement(), dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), dungeonRooms.size() == nbRooms);
+
+				LinearRoom aRoom = createNewRoomFrom( nextPosition, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), 
+						dungeonRooms.lastElement().getLastRoomAccess(), structureRT);
 				dungeonRooms.add(aRoom);
+				/*if(!structure.isNull()) {
+					
+					backtrack = false;
+					LinearRoom aRoom = createNewRoomFrom( nextPosition, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), 
+							dungeonRooms.lastElement().getLastRoomAccess(), structure);
+					dungeonRooms.add(aRoom);
+				} else {
+					System.err.println("PROBLEM");
+					backtrack = true; 
+					//eligibleRoomsOrientations.lastElement().removeAllOrientations();
+				}*/
+				
+			/*	if(structure.isNull()) {
+					backtrack = true;
+					eligibleRoomsOrientations.pop();
+					System.out.println(eligibleRoomsOrientations.isEmpty());
+					System.out.println(eligibleRoomsOrientations.lastElement());
+					eligibleRoomsOrientations.lastElement().removeExitForEntry(structure.entry, structure.exit);
+				} else {
+					backtrack = false;
+					LinearRoom aRoom = createNewRoomFrom( nextPosition, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), 
+							dungeonRooms.lastElement().getLastRoomAccess(), structure);
+					dungeonRooms.add(aRoom);
+				}*/
+				
+				
+				
+				
 			}
 		}
 		
@@ -226,23 +274,55 @@ public class DungeonGenerator {
 		generatedDungeon.setEntry(originRoom);
 	}
 	
-	private LinearRoom createNewRoomFrom(LinearRoomOrientations eligibleRoomOrientations, Coordinate nextPosition, RoomElements roomElements, RoomAccess originRoomAccess, boolean isLastRoom) {
+	private class StructureChosenRT {
+		public Directions entry; 
+		public Directions exit;
+		public RoomType roomType;
+		
+		public StructureChosenRT(Directions entry, Directions exit, RoomType roomType) {
+			this.entry = entry;
+			this.exit = exit;
+			this.roomType = roomType;
+		}
+		
+		public boolean isNull() {
+			return roomType == null;
+		}
+	}
+	
+	private StructureChosenRT chooseRoomType(LinearRoomOrientations eligibleRoomOrientations, RoomElements roomElements, boolean isLastRoom) {
+		List<Directions> chosenEntries = new ArrayList<>(); // There is a problem here 
 		Directions entry = null; 
 		Directions exit = null;
 		RoomType roomType = null;
-		while(roomType == null) { // TODO : RoomSizeChoice
-			entry = chooseEntryDirection(eligibleRoomOrientations);
-			if(!isLastRoom) {
-				exit = chooseExitDirection(eligibleRoomOrientations, entry);
-			}else {
-				exit = Directions.NONE;
+		//int i = 0;
+		while(roomType == null /*&& i <= eligibleRoomOrientations.eligibleEntries().size()*/) { 
+			//System.out.println(eligibleRoomOrientations.eligibleEntries());
+			entry = chooseEntryDirection(eligibleRoomOrientations, chosenEntries);
+			//System.out.println("Entry "+entry);
+			if(entry != null) { 
+				chosenEntries.add(entry);
+				if(!isLastRoom) {
+					exit = chooseExitDirection(eligibleRoomOrientations, entry);
+				}else {
+					exit = Directions.NONE;
+				}
+				//System.out.println(entry+" "+exit+" "+roomElements.getGameplay());
+				roomType = getCompatibleRoomType(entry, exit, roomElements); 
 			}
-			
-			roomType = getCompatibleRoomType(entry, exit, roomElements); 
+			//i++;
 		}
-		Coordinate validCoord = gridManager.getValidCoordinates(entry, nextPosition);
-		Room room = createRoom(validCoord.getX(), validCoord.getY(), roomType, roomElements, originRoomAccess, entry, exit);
-		return new LinearRoom(room, entry, exit);
+		
+		//System.err.println("Room type empty?"+roomType);
+		
+		return new StructureChosenRT(entry, exit, roomType);
+	}
+	
+	private LinearRoom createNewRoomFrom(Coordinate nextPosition, RoomElements roomElements, RoomAccess originRoomAccess, StructureChosenRT structure) {
+		//System.err.println("Create new room");
+		Coordinate validCoord = gridManager.getValidCoordinates(structure.entry, nextPosition);
+		Room room = createRoom(validCoord.getX(), validCoord.getY(), structure.roomType, roomElements, originRoomAccess, structure.entry, structure.exit);
+		return new LinearRoom(room, structure.entry, structure.exit);
 	}
 	
 	private Directions chooseExitDirection(LinearRoomOrientations roomAllowedOrientations, Directions entry) {
@@ -258,8 +338,10 @@ public class DungeonGenerator {
 	 * @param roomAllowedOrientations
 	 * @return the chosen entry direction 
 	 */
-	private Directions chooseEntryDirection(LinearRoomOrientations roomAllowedOrientations) {
-		List<Directions> possibleEntries = roomAllowedOrientations.eligibleEntries();
+	private Directions chooseEntryDirection(LinearRoomOrientations roomAllowedOrientations, List<Directions> chosenEntries) {
+		List<Directions> possibleEntries = new ArrayList<>(roomAllowedOrientations.eligibleEntries());
+		possibleEntries.removeAll(chosenEntries);
+		if(possibleEntries.isEmpty()) { return null; }
 		return possibleEntries.get(random.nextInt(possibleEntries.size()));
 	}
 		
@@ -295,36 +377,118 @@ public class DungeonGenerator {
 	private RoomType getCompatibleRoomType(Directions entry, Directions exit, RoomElements roomElements) { // TODO à corriger probleme avec les statues mauvais roomType choisi 
 		List<RoomType> roomTypes = new ArrayList<>(modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes());
 		roomTypes = roomTypes.stream().filter(e -> e.getDirections().size() > 1).collect(Collectors.toList());
-		
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { // TODO
+		/*	System.out.println(roomType.getName());
 			if(!roomType.getDirections().contains(entry) || (!exit.equals(Directions.NONE) && !roomType.getDirections().contains(exit))) { // || (roomType.getStatementPositions ().size() < numberOfFact)
 				for (GPElementType elem : roomElements.getElementsToQuantity().keySet()) {
 					if(roomElements.getElementsToQuantity().get(elem) != -1) {
 						for (GPElementType elementType : roomElements.getElementsToQuantity().keySet()) {
-							if(elementType instanceof Structure && roomType.getStructurePositions().size() < roomElements.getElementsToQuantity().get(elementType)) {
+							System.out.println(elementType.getID() +" "+roomElements.getElementsToQuantity().get(elementType));
+							if(elementType instanceof StructureType && roomType.getStructurePositions().size() < roomElements.getElementsToQuantity().get(elementType)) {
 								roomTypes.remove(roomType);
 							}
-							if(elementType instanceof Component && getRoomTypePositionsOfSize(roomType, elementType.getSize()).size() < roomElements.getElementsToQuantity().get(elementType)) {
+							if(elementType instanceof ElementType && getRoomTypePositionsOfSize(roomType, elementType.getSize()).size() < roomElements.getElementsToQuantity().get(elementType)) {
 								roomTypes.remove(roomType);
 							}
 						}
 					}
 				}
-				
+			}*/
+			/*System.out.println(roomType.getName());
+			System.out.println(!roomTypeHasCompatibleAccesses(entry, exit, roomType)+" "+entry+" "+exit);
+			System.out.println(!roomTypeHasCompatiblePositions(roomType, roomElements));*/
+			
+			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {
+				roomTypes.remove(roomType);
+			}
+			
+		}
+		//System.out.println(roomTypes);
+		if(roomTypes.isEmpty()) { /*System.err.println("NO room type");*/ return null;}
+		RoomType rt = roomTypes.get(random.nextInt(roomTypes.size()));
+		
+		//System.err.println();
+		return rt; 
+	}
+	
+	private boolean roomTypeHasCompatibleAccesses(Directions entry, Directions exit, RoomType roomType) {
+		return roomType.getDirections().contains(entry) || (!exit.equals(Directions.NONE) && roomType.getDirections().contains(exit));
+	}
+	
+	private List<APosition> getCompatiblesRoomTypePositions(RoomType roomtype, ElementSize size, Ability ability) {
+		List<APosition> positions = new ArrayList<>();
+		for (APosition position : roomtype.getElementPositions()) {
+			if(position.getSize().equals(size)) {
+				if(position.getRestrictedTo().isEmpty() || (position.getRestrictedTo().contains(ability))) {
+					positions.add(position);
+				}
 			}
 		}
-		if(roomTypes.isEmpty()) { System.err.println("NO room type"); ;return null;}
+		return positions;
+	}
+	
+	private boolean roomTypeHasCompatiblePositions(RoomType roomtype, RoomElements roomElements) { // TODO : CHECK THIS ONE  
+		boolean compatible = true;
 		
-		return roomTypes.get(random.nextInt(roomTypes.size())); 
+		Map<ElementSize, Integer> numberOfElementsPerSize = computesNumberOfElementsPerSize(roomElements);
+		
+		for (ElementSize size : numberOfElementsPerSize.keySet()) {
+			List<APosition> roomPositionOfSize = getRoomTypePositionsOfSize(roomtype, size);
+			if(numberOfElementsPerSize.get(size) > roomPositionOfSize.size()) {
+				compatible = false;
+			}
+		}
+		//System.err.println("COMPATIBLE POSITIONS ?");
+		for (GPElementType gpElem : roomElements.getElementsToQuantity().keySet()) {
+			int quantity = roomElements.getElementsToQuantity().get(gpElem);
+			//System.err.println("DANS LA BBOUCLE" + gpElem.getClass().getSimpleName()+" "+quantity);
+			if(quantity != -1 && gpElem instanceof StructureType) {
+				System.err.println("DNS LE IF");
+				if(roomtype.getStructurePositions().size() < quantity) {
+					//System.err.println("ON EST LA");
+					compatible = false;
+				}
+			}
+		}
+		
+		/*for (GPElementType gpElem : roomElements.getElementsToQuantity().keySet()) {
+			int quantity = roomElements.getElementsToQuantity().get(gpElem);
+			if(quantity != -1) {
+				if(gpElem instanceof StructureType && roomtype.getStructurePositions().size() < quantity) {
+					compatible = false;
+				} else if(gpElem instanceof ElementType && getCompatiblesRoomTypePositions(roomtype, gpElem.getSize(), ((ElementType) gpElem).getAbility()).size() < quantity) {
+					compatible = false;
+				}
+			}
+		}*/
+		
+		return compatible;
+	}
+	
+	private Map<ElementSize, Integer> computesNumberOfElementsPerSize(RoomElements roomElements){
+		Map<ElementSize, Integer> numberOfElementsPerSize = new HashMap<>();
+		for (GPElementType gpElem : roomElements.getElementsToQuantity().keySet()) {
+			int quantity = roomElements.getElementsToQuantity().get(gpElem);
+			if(quantity != -1 && !(gpElem instanceof Structure)) {
+				if(numberOfElementsPerSize.containsKey(gpElem.getSize())) {
+					numberOfElementsPerSize.put(gpElem.getSize(), numberOfElementsPerSize.get(gpElem.getSize()) + quantity);
+				} else {
+					numberOfElementsPerSize.put(gpElem.getSize(), quantity);
+				}
+			}
+		}
+		return numberOfElementsPerSize;
 	}
 	
 	private List<APosition> getRoomTypePositionsOfSize(RoomType roomtype, ElementSize size){
+		//System.out.println(roomtype+" "+size);
 		List<APosition> positions = new ArrayList<>(); 
 		for (APosition pos : roomtype.getElementPositions()) {
 			if(pos.getSize().equals(size)) {
 				positions.add(pos);
 			}
 		}
+		//System.out.println("number of pos = "+positions.size());
 		return positions;
 	}
 

@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.Gameplay#getName <em>Name</em>}</li>
  *   <li>{@link generator.Gameplay#getComponents <em>Components</em>}</li>
  *   <li>{@link generator.Gameplay#getPrompt <em>Prompt</em>}</li>
+ *   <li>{@link generator.Gameplay#isUndoable <em>Undoable</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getGameplay()
@@ -80,5 +81,27 @@ public interface Gameplay extends EObject {
 	 * @generated
 	 */
 	void setPrompt(Prompt value);
+
+	/**
+	 * Returns the value of the '<em><b>Undoable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Undoable</em>' attribute.
+	 * @see #setUndoable(boolean)
+	 * @see generator.GeneratorPackage#getGameplay_Undoable()
+	 * @model
+	 * @generated
+	 */
+	boolean isUndoable();
+
+	/**
+	 * Sets the value of the '{@link generator.Gameplay#isUndoable <em>Undoable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Undoable</em>' attribute.
+	 * @see #isUndoable()
+	 * @generated
+	 */
+	void setUndoable(boolean value);
 
 } // Gameplay

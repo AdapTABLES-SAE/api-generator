@@ -2914,6 +2914,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getGameplay_Undoable() {
+		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGameplays() {
 		return gameplaysEClass;
 	}
@@ -4166,6 +4175,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(gameplayEClass, GAMEPLAY__NAME);
 		createEReference(gameplayEClass, GAMEPLAY__COMPONENTS);
 		createEReference(gameplayEClass, GAMEPLAY__PROMPT);
+		createEAttribute(gameplayEClass, GAMEPLAY__UNDOABLE);
 
 		gameplaysEClass = createEClass(GAMEPLAYS);
 		createEReference(gameplaysEClass, GAMEPLAYS__GAMEPLAYS);
@@ -5000,6 +5010,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getGameplay_Prompt(), this.getPrompt(), null, "prompt", null, 0, 1, Gameplay.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGameplay_Undoable(), ecorePackage.getEBoolean(), "undoable", null, 0, 1, Gameplay.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gameplaysEClass, Gameplays.class, "Gameplays", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

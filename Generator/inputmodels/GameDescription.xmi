@@ -106,7 +106,7 @@
           size="MEDIUM"
           ID="POSM1"/>
       <structurePositions
-          size="MEDIUM"
+          size="LARGE"
           ID="POSS1"/>
       <directions>SOUTH</directions>
       <directions>EAST</directions>
@@ -175,6 +175,7 @@
     <gameplays
         xsi:type="generator:QuestionGameplay"
         name="SELECT MULTIPLE sans struct"
+        undoable="true"
         manualValidation="true"
         category="SELECT_MULTIPLE">
       <components
@@ -353,7 +354,13 @@
           wearChoices="true"/>
       <components
           xsi:type="generator:Component"
-          allowedAbility="DETECTOR"/>
+          allowedAbility="DETECTOR">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="SMALL"/>
+        </expectedSize>
+      </components>
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
@@ -387,6 +394,8 @@
           wearStatement="true"/>
       <prompt
           prompt="Deplace les bons pots sur les zones"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -404,6 +413,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
+        name="DONT KNOW"
         category="SELECT_MULTIPLE">
       <components
           xsi:type="generator:Component"
@@ -420,6 +430,7 @@
     <gameplays
         xsi:type="generator:QuestionGameplay"
         name="MOVE POT MULT BIS"
+        undoable="true"
         category="MOVE_MULTIPLE">
       <components
           xsi:type="generator:Structure"
@@ -445,12 +456,12 @@
           wearChoices="true"/>
       <prompt
           prompt="Deplace les bons pots sur les zones"/>
-      <restrictedTo>IDENTIFY</restrictedTo>
       <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
         name="ROTATE STATUE"
+        undoable="true"
         manualValidation="true"
         category="ORIENT">
       <components
@@ -464,6 +475,8 @@
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
           wearStatement="true"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
   </gameplays>
   <elements>

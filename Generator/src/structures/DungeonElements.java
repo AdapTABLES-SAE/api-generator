@@ -5,6 +5,7 @@ import java.util.List;
 
 import generator.ATask;
 import generator.CurrentObjectiveLevel;
+import generator.DungeonMode;
 import generator.GameDescription;
 import generator.Level;
 import generator.Objective;
@@ -15,6 +16,7 @@ public class DungeonElements {
 
 	private CurrentObjectiveLevel currentObjectiveLevel; 
 	private List<RoomElements> roomsElements;
+	private DungeonMode mode;
 	
 	private GameDescription gameDescriptionModel;
 	
@@ -30,6 +32,14 @@ public class DungeonElements {
 	
 	public List<RoomElements> getRoomsElements() {
 		return roomsElements;
+	}
+	
+	public void setDungeonMode(DungeonMode mode) {
+		this.mode = mode;
+	}
+	
+	public DungeonMode getDungeonMode() {
+		return mode;
 	}
 	
 	public void setCurrentObjectiveLevel(CurrentObjectiveLevel currentObjectiveLevel) {
@@ -57,16 +67,16 @@ public class DungeonElements {
 	}
 	
 	public void createOrAddRoomWithFacts(int roomIndex, ATask task, QuestionedFact qEfact) {
-		System.err.println("ADDING ROOM ELEMENTS with "+task.getID()+" index="+roomIndex);
+		//System.err.println("ADDING ROOM ELEMENTS with "+task.getID()+" index="+roomIndex);
 		RoomElements roomElems = ifExistsGetRoomElements(roomIndex, task);
 		if(roomElems != null) {
-			System.out.println("dans le if "+roomElems.getFacts().size());
+			//System.out.println("dans le if "+roomElems.getFacts().size());
 			roomElems.addQuestionedFact(qEfact);
 		} else {
 			
 			roomElems = new RoomElements(this.gameDescriptionModel, task);
 			roomElems.addQuestionedFact(qEfact);
-			System.out.println("dans le else "+roomElems.getFacts().size());
+			//System.out.println("dans le else "+roomElems.getFacts().size());
 		}
 		this.roomsElements.add(roomElems);
 	}
@@ -108,5 +118,11 @@ public class DungeonElements {
 	
 	public void shuffleRoomsOrder() {
 		this.roomsElements = Shuffle.shuffleRoomElements(roomsElements);
+	}
+	
+	public void shuffleOneElement(int i) {
+		RoomElements roomE = this.roomsElements.get(i);
+		this.roomsElements.remove(i);
+		this.roomsElements.add(roomE);
 	}
 }

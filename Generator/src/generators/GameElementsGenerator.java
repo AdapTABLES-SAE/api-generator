@@ -39,7 +39,12 @@ public class GameElementsGenerator {
 	
 	public void generateGPandCurses() {
 		//selectCorrespondingGameplays();
+		setDungeonMode();
 		selectCompatibleGameplays();
+	}
+	
+	private void setDungeonMode(){
+		dungeonElements.setDungeonMode(modelAccess.getContextModel().getGamecontext().getMode());
 	}
 	
 	public Dungeon generateRoomContent(Dungeon generatedDungeon) {

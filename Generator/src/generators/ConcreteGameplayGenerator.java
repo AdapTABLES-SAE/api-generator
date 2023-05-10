@@ -54,6 +54,8 @@ public class ConcreteGameplayGenerator {
 	
 	public List<PositionedElement> buildPositionedElements(RoomElements roomElements){
 		List<PositionedElement> elements = new ArrayList<>();
+		//if(roomElements.getGameplay() != null)		
+			//System.out.println(roomElements.getGameplay().getName()+" "+roomElements.getRoomTypeOfRoom());
 		for (AComponent aComp : roomElements.getGameplay().getComponents()) {
 			if(aComp instanceof Structure) {
 				elements.addAll(buildStructureHierarchy(aComp, roomElements));
@@ -397,7 +399,7 @@ public class ConcreteGameplayGenerator {
 		} else {
 			Component comp = (Component) component;
 			elementType = roomElements.getElementTypeFor(component);
-			System.err.println(elementType == null);
+			//System.err.println(elementType == null);
 			
 			boolean hasIntegratedChoices = ((QuestionGameplay) roomElements.getGameplay()).isHasIntegratedPropositions();
 			// Les objets avec des quantites n'ont pas de sens dans le cas des structures et ne sont donc pas geres 
@@ -423,30 +425,38 @@ public class ConcreteGameplayGenerator {
 	}
 	
 	private boolean elementSizeIsAccepted(APosition aPosition, GPElementType elementType) {
-		if(aPosition.getSize().equals(ElementSize.LARGE)) { return true; }
-		if(aPosition.getSize().equals(ElementSize.MEDIUM) && !elementType.getSize().equals(ElementSize.LARGE)) { return true; }
+		/*if(aPosition.getSize().equals(ElementSize.LARGE)) { return true; }
+		if(aPosition.getSize().equals(ElementSize.MEDIUM) && !elementType.getSize().equals(ElementSize.LARGE)) { return true; }*/
 		return elementType.getSize() == aPosition.getSize();
 	}
 	
 	private APosition getAvailablePosition(RoomType roomType, GPElementType elementType, boolean isStructure) {
 		List<APosition> allowed = new ArrayList<>();
+		
 		if(!isStructure) {
 			for (APosition aPosition : roomType.getElementPositions()) {
+				/*System.out.println("Occupied "+occupiedPositions.contains(aPosition));
+				System.out.println(aPosition.getSize());
+				System.out.println(elementType.getSize());*/
 				if(!occupiedPositions.contains(aPosition) && elementSizeIsAccepted(aPosition, elementType) 
 						&& (aPosition.getRestrictedTo().isEmpty() || aPosition.getRestrictedTo().contains(((ElementType) elementType).getAbility()))) {
+					//System.out.println("aqui");
 					allowed.add(aPosition);
 				}
 			}
 			
 		} else {
+			//System.out.println("Strucutre pos in roomtype " + roomType.getStructurePositions().isEmpty());
+			
 			for (APosition aPosition : roomType.getStructurePositions()) {
+				//System.out.println("occupied struct pos : "+occupiedPositions.contains(aPosition));
 				if(!occupiedPositions.contains(aPosition) && aPosition.getSize().equals(elementType.getSize())) {
 					allowed.add(aPosition);
 				}
 			}
 		}
 		
-		if(allowed.isEmpty()) { return null; }
+		if(allowed.isEmpty()) { /*System.out.println("EMPTY pos");*/ return null; }
 		int number = new Random().nextInt(allowed.size());
 		occupiedPositions.add(allowed.get(number));
 		return allowed.get(number);

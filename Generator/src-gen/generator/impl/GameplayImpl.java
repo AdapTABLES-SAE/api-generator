@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.GameplayImpl#getName <em>Name</em>}</li>
  *   <li>{@link generator.impl.GameplayImpl#getComponents <em>Components</em>}</li>
  *   <li>{@link generator.impl.GameplayImpl#getPrompt <em>Prompt</em>}</li>
+ *   <li>{@link generator.impl.GameplayImpl#isUndoable <em>Undoable</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,6 +77,26 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected Prompt prompt;
+
+	/**
+	 * The default value of the '{@link #isUndoable() <em>Undoable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUndoable()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean UNDOABLE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUndoable() <em>Undoable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUndoable()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean undoable = UNDOABLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -185,6 +206,28 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isUndoable() {
+		return undoable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUndoable(boolean newUndoable) {
+		boolean oldUndoable = undoable;
+		undoable = newUndoable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAMEPLAY__UNDOABLE, oldUndoable,
+					undoable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -210,6 +253,8 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 			return getComponents();
 		case GeneratorPackage.GAMEPLAY__PROMPT:
 			return getPrompt();
+		case GeneratorPackage.GAMEPLAY__UNDOABLE:
+			return isUndoable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -233,6 +278,9 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.GAMEPLAY__PROMPT:
 			setPrompt((Prompt) newValue);
 			return;
+		case GeneratorPackage.GAMEPLAY__UNDOABLE:
+			setUndoable((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -254,6 +302,9 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.GAMEPLAY__PROMPT:
 			setPrompt((Prompt) null);
 			return;
+		case GeneratorPackage.GAMEPLAY__UNDOABLE:
+			setUndoable(UNDOABLE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -272,6 +323,8 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 			return components != null && !components.isEmpty();
 		case GeneratorPackage.GAMEPLAY__PROMPT:
 			return prompt != null;
+		case GeneratorPackage.GAMEPLAY__UNDOABLE:
+			return undoable != UNDOABLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -289,6 +342,8 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", undoable: ");
+		result.append(undoable);
 		result.append(')');
 		return result.toString();
 	}

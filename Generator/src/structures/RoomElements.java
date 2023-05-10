@@ -98,30 +98,42 @@ public class RoomElements {
 	}
 	
 	private void selectElementType() {
-		selectElementType(gameplay.getComponents());
+		selectElementType(gameplay.getComponents(), false);
 	}
 	
 	public Gameplay getGameplay() {
 		return gameplay;
 	}
 	
-	private void selectElementType(List<AComponent> components) {
+	private void selectElementType(List<AComponent> components, boolean isStructureComponents) {
 		for (AComponent aComponent : components) {
 			if(aComponent instanceof Structure) {
-				if(((Structure) aComponent).isIsPerFact()) {
-					if(elementsToQuantity.containsKey(((Structure) aComponent).getStructureType())) {
-						elementsToQuantity.put(((Structure) aComponent).getStructureType(), facts.size() + elementsToQuantity.get(((Structure) aComponent).getStructureType()));
-					} else {
+				if(!isStructureComponents) {
+					if(((Structure) aComponent).isIsPerFact()) {
+						/*if(elementsToQuantity.containsKey(((Structure) aComponent).getStructureType())) {
+							elementsToQuantity.put(((Structure) aComponent).getStructureType(), facts.size() + elementsToQuantity.get(((Structure) aComponent).getStructureType()));
+						} else {
+							elementsToQuantity.put(((Structure) aComponent).getStructureType(), facts.size());
+						}*/
+						// il y en aura autant que de faits 
 						elementsToQuantity.put(((Structure) aComponent).getStructureType(), facts.size());
+					} else {
+						elementsToQuantity.put(((Structure) aComponent).getStructureType(), 1);
 					}
-					
 				} else {
-					elementsToQuantity.put(((Structure) aComponent).getStructureType(), -1);
+					if(!elementsToQuantity.containsKey(((Structure) aComponent).getStructureType())) {
+						elementsToQuantity.put(((Structure) aComponent).getStructureType(), -1);
+					}
 				}
-				selectElementType(((Structure) aComponent).getComponents());
+				selectElementType(((Structure) aComponent).getComponents(), true);
 			} else {
 				ElementType elementType = getCompatibleElementType((Component) aComponent); 
-				elementsToQuantity.put(elementType, (int) Math.ceil(computesNumberofElements((Component) aComponent, elementType)));
+				if(isStructureComponents) {
+					elementsToQuantity.put(elementType, -1);
+				} else {
+					elementsToQuantity.put(elementType, (int) Math.ceil(computesNumberofElements((Component) aComponent, elementType)));
+				}
+				
 			}
 		}
 	}
@@ -180,7 +192,12 @@ public class RoomElements {
 	
 	@Override
 	public String toString() {
-		return (this.gameplay != null? this.gameplay.getName(): "null")+' '+(this.getTask() == null? "null": this.getTask().getID())+" facts="+facts.size();
+		String s = (this.gameplay != null? this.gameplay.getName(): "null")+' '+
+				(this.getTask() == null? "null": this.getTask().getID())+" facts="+facts.size()+"\n";
+		for (GPElementType elem : elementsToQuantity.keySet()) {
+			s += "\t"+elem.getType()+" -- "+elementsToQuantity.get(elem)+"\n";
+		}
+		return s;
 	}
 	
 	public void printElementTypes() {

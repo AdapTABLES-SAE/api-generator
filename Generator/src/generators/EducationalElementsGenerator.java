@@ -74,7 +74,10 @@ public class EducationalElementsGenerator {
 		instanciateQFbyTasks();
 		boolean wasGenerated = false;
 		for (ResultsByTask resBytask : dungeonElements.getLearnerResultsByTasks()) {
-			FactGenerator.generateQuestionableFactsByTask(dungeonElements, resBytask);
+			if(resBytask.getQuestionableFacts().isEmpty()) {
+				FactGenerator.generateQuestionableFactsByTask(dungeonElements, resBytask);
+				wasGenerated = true;
+			}
 		}
 		if(wasGenerated) {
 			saveLearnerModel();

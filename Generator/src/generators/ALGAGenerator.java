@@ -7,6 +7,7 @@ import generator.QuestionedFact;
 import generator.Room;
 import generator.RoomAccess;
 import generator.impl.CurrentGameLevelImpl;
+import generator.impl.DungeonImpl;
 import generator.impl.ProgressionImpl;
 import managers.ModelsManager;
 import structures.DungeonElements;
@@ -24,11 +25,11 @@ public class ALGAGenerator {
 		generator.generate();
 		generator.printDungeon();
 		generator.saveDungeon("DungeonGen.xmi");
-		//Main.transformModel("outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
+		Main.transformModel("outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
 	}
 	
 	public ALGAGenerator() {
-		this("");
+		modelAccess = new ModelsManager();
 	}
 	
 	public ALGAGenerator(String fileContext) {
@@ -71,23 +72,34 @@ public class ALGAGenerator {
 		DungeonGenerator dungeonGeneration;
 		try {
 			dungeonElements = eduGeneration.generateEE();
-			//dungeonElements.print();
 			gameGeneration = new GameElementsGenerator(modelAccess, dungeonElements);
 			
 			gameGeneration.generateGPandCurses();
 			dungeonElements.print();
-			//geManager = gameGeneration.getGameElementManager(); 
 			dungeonGeneration = new DungeonGenerator(modelAccess, dungeonElements, nbNQRooms+nbQRooms);
 			generatedDungeon = dungeonGeneration.generateDungeon();
+			
+			System.out.println("TOUT LE BORDEL");
+			for (int i = 0; i < dungeonElements.getRoomsElements().size(); i++) {
+				if(dungeonElements.getRoomsElements().get(i).getGameplay() != null) {
+					System.out.print(dungeonElements.getRoomsElements().get(i).getGameplay().getName());
+				}
+				System.out.println(" -- "+generatedDungeon.getRooms().get(i+1).getRoomtype().getName());
+			}
+			
+			// TODO : print roomtype and elements to see if coherent
 			generatedDungeon = gameGeneration.generateRoomContent(generatedDungeon);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
+		System.out.println(dungeonElements .getChosenObjective());
+		System.out.println(generatedDungeon == null);
 		
+		//generatedDungeon = new DungeonImpl();
 		
-		//generatedDungeon.setLearningobjective(eduGeneration.getChosenObjective());
-		//generatedDungeon.setLevel(eduGeneration.getChosenLevel());
+		generatedDungeon.setLearningobjective(dungeonElements.getChosenObjective());
+		generatedDungeon.setLevel(dungeonElements.getChosenLevel());
 		
 		if(generatedDungeon.getLevel() == null || generatedDungeon.getLearningobjective() == null) {
 			System.err.println("Dungeon objective and/or level are not set properly, possible mistake may appear");

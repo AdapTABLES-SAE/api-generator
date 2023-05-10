@@ -1,6 +1,7 @@
 package structures;
 
 import java.util.EnumMap;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -55,11 +56,17 @@ public class LinearRoomOrientations {
 	 */
 	public void removeExitForEntry(Directions entry, Directions exit) {
 		if(entriesToExists.containsKey(entry)) {
-			entriesToExists.get(entry).remove(exit);
+			if(entriesToExists.get(entry).contains(exit)) {
+				entriesToExists.get(entry).remove(exit);
+			}
+			if(entriesToExists.get(entry).isEmpty()) {
+				entriesToExists.remove(entry);
+			}
 		}
-		if(entriesToExists.get(entry).isEmpty()) {
-			entriesToExists.remove(entry);
-		}
+	}
+	
+	public void removeAllOrientations() {
+		this.entriesToExists = new HashMap<>();
 	}
 	
 	public List<Directions> eligibleEntries(){

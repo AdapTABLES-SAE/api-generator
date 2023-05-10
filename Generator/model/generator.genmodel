@@ -361,6 +361,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplay/components"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplay/prompt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/undoable"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Gameplays">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplays/gameplays"/>

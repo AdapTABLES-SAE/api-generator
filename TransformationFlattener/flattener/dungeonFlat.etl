@@ -62,6 +62,7 @@ rule Room2Room
         
         if(roomIn.gameplay.isDefined() and roomIn.gameplay.prompt.isDefined()){
         	roomOut.prompt = roomIn.gameplay.prompt.prompt;
+        	roomOut.gameplayWithUndo = roomIn.gameplay.undoable;
         }
         
         
@@ -124,7 +125,7 @@ rule Elements2Elements
 		
 	}
 
-	if(element.elementType.ability.isDefined()){
+	if(element.elementType.ability.isDefined() and not(element.elementType.ability.name == "DISPLAY")){
 		elementOut.ability = element.elementType.ability.name+"";
 	}
 

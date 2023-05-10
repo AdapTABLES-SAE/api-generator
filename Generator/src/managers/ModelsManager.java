@@ -46,6 +46,10 @@ public class ModelsManager {
 		}
 		loadInputModels();
 	}
+
+	public ModelsManager() {
+		this("");
+	}
 	
 	public ModelsManager(String inputPath, String outputPath, boolean lauchedFromAPI) {
 		System.out.println(INPUT_MODELS_PATH);

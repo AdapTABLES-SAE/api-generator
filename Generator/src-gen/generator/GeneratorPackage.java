@@ -4346,13 +4346,22 @@ public interface GeneratorPackage extends EPackage {
 	int GAMEPLAY__PROMPT = 2;
 
 	/**
+	 * The feature id for the '<em><b>Undoable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMEPLAY__UNDOABLE = 3;
+
+	/**
 	 * The number of structural features of the '<em>Gameplay</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GAMEPLAY_FEATURE_COUNT = 3;
+	int GAMEPLAY_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Gameplay</em>' class.
@@ -5952,6 +5961,15 @@ public interface GeneratorPackage extends EPackage {
 	int QUESTION_GAMEPLAY__PROMPT = GAMEPLAY__PROMPT;
 
 	/**
+	 * The feature id for the '<em><b>Undoable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION_GAMEPLAY__UNDOABLE = GAMEPLAY__UNDOABLE;
+
+	/**
 	 * The feature id for the '<em><b>Manual Validation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6041,6 +6059,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int NO_QUESTION_GAMEPLAY__PROMPT = GAMEPLAY__PROMPT;
+
+	/**
+	 * The feature id for the '<em><b>Undoable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NO_QUESTION_GAMEPLAY__UNDOABLE = GAMEPLAY__UNDOABLE;
 
 	/**
 	 * The number of structural features of the '<em>No Question Gameplay</em>' class.
@@ -8657,6 +8684,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGameplay_Prompt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Gameplay#isUndoable <em>Undoable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Undoable</em>'.
+	 * @see generator.Gameplay#isUndoable()
+	 * @see #getGameplay()
+	 * @generated
+	 */
+	EAttribute getGameplay_Undoable();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Gameplays <em>Gameplays</em>}'.
@@ -11670,6 +11708,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GAMEPLAY__PROMPT = eINSTANCE.getGameplay_Prompt();
+
+		/**
+		 * The meta object literal for the '<em><b>Undoable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GAMEPLAY__UNDOABLE = eINSTANCE.getGameplay_Undoable();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.GameplaysImpl <em>Gameplays</em>}' class.
