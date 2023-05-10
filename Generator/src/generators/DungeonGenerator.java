@@ -394,17 +394,17 @@ public class DungeonGenerator {
 					}
 				}
 			}*/
-			/*System.out.println(roomType.getName());
+			System.out.println(roomType.getName());
 			System.out.println(!roomTypeHasCompatibleAccesses(entry, exit, roomType)+" "+entry+" "+exit);
-			System.out.println(!roomTypeHasCompatiblePositions(roomType, roomElements));*/
-			
+			System.out.println(!roomTypeHasCompatiblePositions(roomType, roomElements));
 			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {
+				
 				roomTypes.remove(roomType);
 			}
 			
 		}
 		//System.out.println(roomTypes);
-		if(roomTypes.isEmpty()) { /*System.err.println("NO room type");*/ return null;}
+		if(roomTypes.isEmpty()) { System.err.println("NO room type"); return null;}
 		RoomType rt = roomTypes.get(random.nextInt(roomTypes.size()));
 		
 		//System.err.println();
@@ -412,9 +412,13 @@ public class DungeonGenerator {
 	}
 	
 	private boolean roomTypeHasCompatibleAccesses(Directions entry, Directions exit, RoomType roomType) {
-		return roomType.getDirections().contains(entry) || (!exit.equals(Directions.NONE) && roomType.getDirections().contains(exit));
+		/*if(roomType.getName().equals("RegularRoom3")) {
+			System.out.println("RT3 has entry : "+roomType.getDirections().contains(entry)+" (entry "+entry+")");
+		}*/
+		return roomType.getDirections().contains(entry) && (exit.equals(Directions.NONE) || roomType.getDirections().contains(exit));
 	}
 	
+	@Deprecated
 	private List<APosition> getCompatiblesRoomTypePositions(RoomType roomtype, ElementSize size, Ability ability) {
 		List<APosition> positions = new ArrayList<>();
 		for (APosition position : roomtype.getElementPositions()) {
@@ -450,18 +454,6 @@ public class DungeonGenerator {
 				}
 			}
 		}
-		
-		/*for (GPElementType gpElem : roomElements.getElementsToQuantity().keySet()) {
-			int quantity = roomElements.getElementsToQuantity().get(gpElem);
-			if(quantity != -1) {
-				if(gpElem instanceof StructureType && roomtype.getStructurePositions().size() < quantity) {
-					compatible = false;
-				} else if(gpElem instanceof ElementType && getCompatiblesRoomTypePositions(roomtype, gpElem.getSize(), ((ElementType) gpElem).getAbility()).size() < quantity) {
-					compatible = false;
-				}
-			}
-		}*/
-		
 		return compatible;
 	}
 	

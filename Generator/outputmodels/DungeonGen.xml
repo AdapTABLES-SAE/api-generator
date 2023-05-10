@@ -6,282 +6,273 @@
         <roomaccess id="a2" direction="EAST" accessRef="a3"/>
       </roomaccesses>
     </room>
-    <room id="Room[1/0]" x="1" roomTypeName="RegularRoom4" time="20" idTask="C1-RES" prompt="Saisie la reponse">
+    <room id="Room[1/0]" x="1" roomTypeName="RegularRoom2" time="20" idTask="ID-RES" prompt="Touche les bons interrupteurs">
       <roomaccesses>
         <roomaccess id="a3" direction="WEST" accessRef="a2"/>
-        <roomaccess id="a4" direction="SOUTH" accessRef="a5"/>
-        <roomaccess id="a6" direction="EAST" accessRef="a7"/>
-        <roomaccess id="a8" direction="NORTH" accessRef="a9"/>
-      </roomaccesses>
-      <facts>
-        <fact id="C1-RES-QAFACT27" complete="2 x 7 = 14" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="ELEM1" type="KeyBoard" pos="POS1" correctAnswer="14;" ability="TYPABLE" idFact="C1-RES-QAFACT27"/>
-        <element id="ELEM2" type="StatementFact" displayValue="2 x 7 = ?" pos="POSQ1" idFact="C1-RES-QAFACT27" interactive="true"/>
-      </elements>
-    </room>
-    <room id="Room[1/-1]" x="1" y="-1" roomTypeName="RegularRoom2" time="20" idTask="C1-RES" prompt="Saisie la reponse">
-      <roomaccesses>
-        <roomaccess id="a5" direction="NORTH" accessRef="a4"/>
-        <roomaccess id="a10" direction="WEST" accessRef="a11"/>
-        <roomaccess id="a12" direction="SOUTH" accessRef="a13"/>
-        <roomaccess id="a14" direction="EAST" accessRef="a15"/>
-      </roomaccesses>
-      <facts>
-        <fact id="C1-RES-QAFACT176" complete="45 = 9 x 5" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="ELEM3" type="KeyBoard" pos="POS5" correctAnswer="45;" ability="TYPABLE" idFact="C1-RES-QAFACT176"/>
-        <element id="ELEM4" type="Statement" displayValue="? = 9 x 5" pos="POSQ1" idFact="C1-RES-QAFACT176" interactive="true"/>
-      </elements>
-    </room>
-    <room id="Room[2/0]" x="2" roomTypeName="RegularRoom2" time="20" idTask="ID-RES" prompt="Touche les bons interrupteurs">
-      <roomaccesses>
-        <roomaccess id="a7" direction="WEST" accessRef="a6"/>
-        <roomaccess id="a16" direction="SOUTH" accessRef="a17"/>
-        <roomaccess id="a18" direction="EAST" accessRef="a19"/>
-      </roomaccesses>
-      <facts>
-        <fact id="ID-RES-QAFACT318" complete="22 = 4 x 5" correctnessToReach="1" correctness="INCORRECT"/>
-        <fact id="ID-RES-QAFACT67" complete="2 x 9 = 18" correctnessToReach="1" correctness="CORRECT"/>
-      </facts>
-      <elements>
-        <element id="STRUCT5" type="HorizontalStructure" pos="POSS1"/>
-        <element id="ELEM6" type="Statement" displayValue="FALSE" pos="id/STRUCT5"/>
-        <element id="STRUCT7" type="VerticalStructure" pos="id/STRUCT5"/>
-        <element id="STRUCT8" type="HorizontalStructure" pos="id/STRUCT7"/>
-        <element id="ELEM9" type="FloorInterrupt" displayValue="" correctness="CORRECT" pos="id/STRUCT8" ability="TOUCHABLE" idFact="ID-RES-QAFACT318"/>
-        <element id="ELEM10" type="Statement" displayValue="22 = 4 x 5" pos="id/STRUCT8" idFact="ID-RES-QAFACT318"/>
-        <element id="ELEM11" type="FloorInterrupt" displayValue="" correctness="INCORRECT" pos="id/STRUCT8" ability="TOUCHABLE" idFact="ID-RES-QAFACT318"/>
-        <element id="STRUCT12" type="HorizontalStructure" pos="id/STRUCT7"/>
-        <element id="ELEM13" type="FloorInterrupt" displayValue="" correctness="INCORRECT" pos="id/STRUCT12" ability="TOUCHABLE" idFact="ID-RES-QAFACT67"/>
-        <element id="ELEM14" type="Statement" displayValue="2 x 9 = 18" pos="id/STRUCT12" idFact="ID-RES-QAFACT67"/>
-        <element id="ELEM15" type="FloorInterrupt" displayValue="" correctness="CORRECT" pos="id/STRUCT12" ability="TOUCHABLE" idFact="ID-RES-QAFACT67"/>
-        <element id="ELEM16" type="Statement" displayValue="TRUE" pos="id/STRUCT5"/>
-      </elements>
-    </room>
-    <room id="Room[2/-1]" x="2" y="-1" roomTypeName="RegularRoom3" time="20" idTask="REB" prompt="Touche les bons interrupteurs puis active le levier" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a17" direction="NORTH" accessRef="a16"/>
-        <roomaccess id="a15" direction="WEST" accessRef="a14"/>
-      </roomaccesses>
-      <facts>
-        <fact id="REB-QAFACT14" complete="16 = 8 x 2" correctnessToReach="3"/>
-      </facts>
-      <elements>
-        <element id="ELEM17" type="FloorInterrupt" displayValue="34" correctness="INCORRECT" pos="POS6" ability="TOUCHABLE" idFact="REB-QAFACT14"/>
-        <element id="ELEM18" type="FloorInterrupt" displayValue="13" correctness="INCORRECT" pos="POS1" ability="TOUCHABLE" idFact="REB-QAFACT14"/>
-        <element id="ELEM19" type="FloorInterrupt" displayValue="33" correctness="INCORRECT" pos="POS7" ability="TOUCHABLE" idFact="REB-QAFACT14"/>
-        <element id="ELEM20" type="FloorInterrupt" displayValue="8" correctness="CORRECT" pos="POS2" ability="TOUCHABLE" idFact="REB-QAFACT14"/>
-        <element id="ELEM21" type="FloorInterrupt" displayValue="2" correctness="CORRECT" pos="POS4" ability="TOUCHABLE" idFact="REB-QAFACT14"/>
-        <element id="ELEM22" type="FloorInterrupt" displayValue="16" correctness="CORRECT" pos="POS8" ability="TOUCHABLE" idFact="REB-QAFACT14"/>
-        <element id="ELEM23" type="Switch" pos="POS3" ability="VERIFICATOR"/>
-        <element id="ELEM24" type="Info" displayValue="? = ? x ?" pos="POS5" idFact="REB-QAFACT14" interactive="true" acceptedFacts="16 = 8 x 2;16 = 2 x 8;"/>
-      </elements>
-    </room>
-    <room id="Room[0/-1]" y="-1" roomTypeName="RegularRoom4">
-      <roomaccesses>
-        <roomaccess id="a11" direction="EAST" accessRef="a10"/>
-        <roomaccess id="a20" direction="WEST" accessRef="a21"/>
-        <roomaccess id="a22" direction="SOUTH" accessRef="a23"/>
-      </roomaccesses>
-    </room>
-    <room id="Room[-1/-1]" x="-1" y="-1" roomTypeName="RegularRoom2" time="20" idTask="C1-RES" prompt="Saisie la reponse">
-      <roomaccesses>
-        <roomaccess id="a21" direction="EAST" accessRef="a20"/>
-        <roomaccess id="a24" direction="NORTH" accessRef="a25"/>
-        <roomaccess id="a26" direction="SOUTH" accessRef="a27"/>
-      </roomaccesses>
-      <facts>
-        <fact id="C1-RES-QAFACT227" complete="6 x 9 = 54" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="ELEM25" type="KeyBoard" pos="POS1" correctAnswer="54;" ability="TYPABLE" idFact="C1-RES-QAFACT227"/>
-        <element id="ELEM26" type="Info" displayValue="6 x 9 = ?" pos="POS4" idFact="C1-RES-QAFACT227" interactive="true"/>
-      </elements>
-    </room>
-    <room id="Room[1/-2]" x="1" y="-2" roomTypeName="RegularRoom3" time="20" idTask="C2-OPTABLE" prompt="Touche les bons interrupteurs puis active le levier" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a13" direction="NORTH" accessRef="a12"/>
-        <roomaccess id="a28" direction="SOUTH" accessRef="a29"/>
-        <roomaccess id="a30" direction="EAST" accessRef="a31"/>
-        <roomaccess id="a32" direction="WEST" accessRef="a33"/>
-      </roomaccesses>
-      <facts>
-        <fact id="C2-OPTABLE-QAFACT154" complete="48 = 6 x 8" correctnessToReach="2"/>
-      </facts>
-      <elements>
-        <element id="ELEM27" type="FloorInterrupt" displayValue="50" correctness="INCORRECT" pos="POS6" ability="TOUCHABLE" idFact="C2-OPTABLE-QAFACT154"/>
-        <element id="ELEM28" type="FloorInterrupt" displayValue="9" correctness="INCORRECT" pos="POS7" ability="TOUCHABLE" idFact="C2-OPTABLE-QAFACT154"/>
-        <element id="ELEM29" type="FloorInterrupt" displayValue="6" correctness="CORRECT" pos="POS5" ability="TOUCHABLE" idFact="C2-OPTABLE-QAFACT154"/>
-        <element id="ELEM30" type="FloorInterrupt" displayValue="8" correctness="CORRECT" pos="POS8" ability="TOUCHABLE" idFact="C2-OPTABLE-QAFACT154"/>
-        <element id="ELEM31" type="Switch" pos="POS2" ability="VERIFICATOR"/>
-        <element id="ELEM32" type="Statement" displayValue="48 = ? x ?" pos="POSQ1" idFact="C2-OPTABLE-QAFACT154" interactive="true" acceptedFacts="48 = 6 x 8;48 = 8 x 6;"/>
-      </elements>
-    </room>
-    <room id="Room[3/0]" x="3" roomTypeName="RegularRoom2" time="20" idTask="ID-RES" prompt="Touche les bons interrupteurs">
-      <roomaccesses>
-        <roomaccess id="a19" direction="WEST" accessRef="a18"/>
-        <roomaccess id="a34" direction="SOUTH" accessRef="a35"/>
+        <roomaccess id="a4" direction="EAST" accessRef="a5"/>
       </roomaccesses>
       <facts>
         <fact id="ID-RES-QAFACT341" complete="7 x 5 = 37" correctnessToReach="1" correctness="INCORRECT"/>
-        <fact id="ID-RES-QAFACT640" complete="72 = 9 x 8" correctnessToReach="1" correctness="CORRECT"/>
+        <fact id="ID-RES-QAFACT498" complete="3 x 7 = 21" correctnessToReach="1" correctness="CORRECT"/>
       </facts>
       <elements>
-        <element id="STRUCT33" type="HorizontalStructure" pos="POSS1"/>
-        <element id="STRUCT34" type="VerticalStructure" pos="id/STRUCT33"/>
-        <element id="STRUCT35" type="HorizontalStructure" pos="id/STRUCT34"/>
-        <element id="ELEM36" type="FloorInterrupt" displayValue="Faux" correctness="CORRECT" pos="id/STRUCT35" ability="TOUCHABLE" idFact="ID-RES-QAFACT341"/>
-        <element id="ELEM37" type="StatementFact" displayValue="7 x 5 = 37" pos="id/STRUCT35" idFact="ID-RES-QAFACT341"/>
-        <element id="ELEM38" type="FloorInterrupt" displayValue="Vrai" correctness="INCORRECT" pos="id/STRUCT35" ability="TOUCHABLE" idFact="ID-RES-QAFACT341"/>
-        <element id="STRUCT39" type="HorizontalStructure" pos="id/STRUCT34"/>
-        <element id="ELEM40" type="FloorInterrupt" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT39" ability="TOUCHABLE" idFact="ID-RES-QAFACT640"/>
-        <element id="ELEM41" type="StatementFact" displayValue="72 = 9 x 8" pos="id/STRUCT39" idFact="ID-RES-QAFACT640"/>
-        <element id="ELEM42" type="FloorInterrupt" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT39" ability="TOUCHABLE" idFact="ID-RES-QAFACT640"/>
+        <element id="STRUCT1" type="HorizontalStructure" pos="POSS1"/>
+        <element id="ELEM2" type="Statement" displayValue="FALSE" pos="id/STRUCT1"/>
+        <element id="STRUCT3" type="VerticalStructure" pos="id/STRUCT1"/>
+        <element id="STRUCT4" type="HorizontalStructure" pos="id/STRUCT3"/>
+        <element id="ELEM5" type="FloorInterrupt" displayValue="" correctness="CORRECT" pos="id/STRUCT4" ability="TOUCHABLE" idFact="ID-RES-QAFACT341"/>
+        <element id="ELEM6" type="Statement" displayValue="7 x 5 = 37" pos="id/STRUCT4" idFact="ID-RES-QAFACT341"/>
+        <element id="ELEM7" type="FloorInterrupt" displayValue="" correctness="INCORRECT" pos="id/STRUCT4" ability="TOUCHABLE" idFact="ID-RES-QAFACT341"/>
+        <element id="STRUCT8" type="HorizontalStructure" pos="id/STRUCT3"/>
+        <element id="ELEM9" type="FloorInterrupt" displayValue="" correctness="INCORRECT" pos="id/STRUCT8" ability="TOUCHABLE" idFact="ID-RES-QAFACT498"/>
+        <element id="ELEM10" type="Statement" displayValue="3 x 7 = 21" pos="id/STRUCT8" idFact="ID-RES-QAFACT498"/>
+        <element id="ELEM11" type="FloorInterrupt" displayValue="" correctness="CORRECT" pos="id/STRUCT8" ability="TOUCHABLE" idFact="ID-RES-QAFACT498"/>
+        <element id="ELEM12" type="Statement" displayValue="TRUE" pos="id/STRUCT1"/>
       </elements>
     </room>
-    <room id="Room[0/-2]" y="-2" roomTypeName="RegularRoom2" time="20" idTask="ID-RES" prompt="Touche les bons interrupteurs">
+    <room id="Room[2/0]" x="2" roomTypeName="RegularRoom2" time="20" idTask="C1-RES" prompt="Saisie la reponse">
+      <roomaccesses>
+        <roomaccess id="a5" direction="WEST" accessRef="a4"/>
+        <roomaccess id="a6" direction="NORTH" accessRef="a7"/>
+      </roomaccesses>
+      <facts>
+        <fact id="C1-RES-QAFACT427" complete="10 x 11 = 110" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="ELEM13" type="KeyBoard" pos="POS1" correctAnswer="110;" ability="TYPABLE" idFact="C1-RES-QAFACT427"/>
+        <element id="ELEM14" type="Statement" displayValue="10 x 11 = ?" pos="POSQ1" idFact="C1-RES-QAFACT427" interactive="true"/>
+      </elements>
+    </room>
+    <room id="Room[2/1]" x="2" y="1" roomTypeName="RegularRoom4" time="20" idTask="C1-TABOP">
+      <roomaccesses>
+        <roomaccess id="a7" direction="SOUTH" accessRef="a6"/>
+        <roomaccess id="a8" direction="WEST" accessRef="a9"/>
+      </roomaccesses>
+      <facts>
+        <fact id="C1-TABOP-QAFACT769" complete="1 x 10 = 10" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="ELEM15" type="Statue" displayValue="[10];11;19;" pos="POSM2" ability="ROTABLE" idFact="C1-TABOP-QAFACT769"/>
+        <element id="ELEM16" type="Switch" pos="POS2" ability="VERIFICATOR"/>
+        <element id="ELEM17" type="Statement" displayValue="1 x ? = 10" pos="POSQ1" idFact="C1-TABOP-QAFACT769" interactive="true"/>
+      </elements>
+    </room>
+    <room id="Room[1/1]" x="1" y="1" roomTypeName="RegularRoom2">
+      <roomaccesses>
+        <roomaccess id="a9" direction="EAST" accessRef="a8"/>
+        <roomaccess id="a10" direction="NORTH" accessRef="a11"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[1/2]" x="1" y="2" roomTypeName="RegularRoom1" time="20" idTask="REB" prompt="Touche les bons interrupteurs puis active le levier" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a11" direction="SOUTH" accessRef="a10"/>
+        <roomaccess id="a12" direction="WEST" accessRef="a13"/>
+      </roomaccesses>
+      <facts>
+        <fact id="REB-QAFACT175" complete="4 x 9 = 36" correctnessToReach="3"/>
+      </facts>
+      <elements>
+        <element id="ELEM18" type="FloorInterrupt" displayValue="24" correctness="INCORRECT" pos="POS2" ability="TOUCHABLE" idFact="REB-QAFACT175"/>
+        <element id="ELEM19" type="FloorInterrupt" displayValue="35" correctness="INCORRECT" pos="POS6" ability="TOUCHABLE" idFact="REB-QAFACT175"/>
+        <element id="ELEM20" type="FloorInterrupt" displayValue="45" correctness="INCORRECT" pos="POS4" ability="TOUCHABLE" idFact="REB-QAFACT175"/>
+        <element id="ELEM21" type="FloorInterrupt" displayValue="4" correctness="CORRECT" pos="POS1" ability="TOUCHABLE" idFact="REB-QAFACT175"/>
+        <element id="ELEM22" type="FloorInterrupt" displayValue="9" correctness="CORRECT" pos="POS8" ability="TOUCHABLE" idFact="REB-QAFACT175"/>
+        <element id="ELEM23" type="FloorInterrupt" displayValue="36" correctness="CORRECT" pos="POS10" ability="TOUCHABLE" idFact="REB-QAFACT175"/>
+        <element id="ELEM24" type="Switch" pos="POS5" ability="VERIFICATOR"/>
+        <element id="ELEM25" type="Info" displayValue="? x ? = ?" pos="POS7" idFact="REB-QAFACT175" interactive="true" acceptedFacts="4 x 9 = 36;9 x 4 = 36;"/>
+      </elements>
+    </room>
+    <room id="Room[0/2]" y="2" roomTypeName="RegularRoom4" time="20" idTask="REB">
+      <roomaccesses>
+        <roomaccess id="a13" direction="EAST" accessRef="a12"/>
+        <roomaccess id="a14" direction="WEST" accessRef="a15"/>
+      </roomaccesses>
+      <facts>
+        <fact id="REB-QAFACT82" complete="30 = 6 x 5" correctnessToReach="3"/>
+      </facts>
+      <elements>
+        <element id="ELEM26" type="Statue" displayValue="32;[6];" pos="POSM3" ability="ROTABLE" idFact="REB-QAFACT82"/>
+        <element id="ELEM27" type="Statue" displayValue="46;[5];" pos="POSM1" ability="ROTABLE" idFact="REB-QAFACT82"/>
+        <element id="ELEM28" type="Statue" displayValue="[30];17;" pos="POSM2" ability="ROTABLE" idFact="REB-QAFACT82"/>
+        <element id="ELEM29" type="Switch" pos="POS2" ability="VERIFICATOR"/>
+        <element id="ELEM30" type="Statement" displayValue="? = ? x ?" pos="POSQ1" idFact="REB-QAFACT82" interactive="true" acceptedFacts="30 = 6 x 5;30 = 5 x 6;"/>
+      </elements>
+    </room>
+    <room id="Room[-1/2]" x="-1" y="2" roomTypeName="RegularRoom2" time="20" idTask="MEMB" prompt="Ouvre les bons coffres">
+      <roomaccesses>
+        <roomaccess id="a15" direction="EAST" accessRef="a14"/>
+        <roomaccess id="a16" direction="WEST" accessRef="a17"/>
+      </roomaccesses>
+      <facts>
+        <fact id="MEMB-QAFACT3" complete="Resultats table de 2" correctnessToReach="3"/>
+      </facts>
+      <elements>
+        <element id="ELEM31" type="Chest" displayValue="7" correctness="INCORRECT" pos="POS6" ability="OPENABLE" idFact="MEMB-QAFACT3"/>
+        <element id="ELEM32" type="Chest" displayValue="19" correctness="INCORRECT" pos="POS4" ability="OPENABLE" idFact="MEMB-QAFACT3"/>
+        <element id="ELEM33" type="Chest" displayValue="2" correctness="CORRECT" pos="POS1" ability="OPENABLE" idFact="MEMB-QAFACT3"/>
+        <element id="ELEM34" type="Chest" displayValue="22" correctness="CORRECT" pos="POS2" ability="OPENABLE" idFact="MEMB-QAFACT3"/>
+        <element id="ELEM35" type="Chest" displayValue="8" correctness="CORRECT" pos="POS5" ability="OPENABLE" idFact="MEMB-QAFACT3"/>
+        <element id="ELEM36" type="Statement" displayValue="Resultats table de 2" pos="POSQ1" idFact="MEMB-QAFACT3"/>
+      </elements>
+    </room>
+    <room id="Room[-2/2]" x="-2" y="2" roomTypeName="RegularRoom1" time="20" idTask="C1-RES" prompt="Saisie la reponse">
+      <roomaccesses>
+        <roomaccess id="a17" direction="EAST" accessRef="a16"/>
+        <roomaccess id="a18" direction="SOUTH" accessRef="a19"/>
+      </roomaccesses>
+      <facts>
+        <fact id="C1-RES-QAFACT40" complete="22 = 11 x 2" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="ELEM37" type="KeyBoard" pos="POS9" correctAnswer="22;" ability="TYPABLE" idFact="C1-RES-QAFACT40"/>
+        <element id="ELEM38" type="StatementFact" displayValue="? = 11 x 2" pos="POSQ4" idFact="C1-RES-QAFACT40" interactive="true"/>
+      </elements>
+    </room>
+    <room id="Room[-2/1]" x="-2" y="1" roomTypeName="RegularRoom4" time="20" idTask="C1-RES" prompt="Saisie la reponse">
+      <roomaccesses>
+        <roomaccess id="a19" direction="NORTH" accessRef="a18"/>
+        <roomaccess id="a20" direction="EAST" accessRef="a21"/>
+      </roomaccesses>
+      <facts>
+        <fact id="C1-RES-QAFACT45" complete="12 x 2 = 24" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="ELEM39" type="KeyBoard" pos="POS2" correctAnswer="24;" ability="TYPABLE" idFact="C1-RES-QAFACT45"/>
+        <element id="ELEM40" type="StatementFact" displayValue="12 x 2 = ?" pos="POSQ1" idFact="C1-RES-QAFACT45" interactive="true"/>
+      </elements>
+    </room>
+    <room id="Room[-1/1]" x="-1" y="1" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a21" direction="WEST" accessRef="a20"/>
+        <roomaccess id="a22" direction="SOUTH" accessRef="a23"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[-1/0]" x="-1" roomTypeName="RegularRoom2" time="20" idTask="ID-RES" prompt="Touche les bons interrupteurs">
       <roomaccesses>
         <roomaccess id="a23" direction="NORTH" accessRef="a22"/>
-        <roomaccess id="a36" direction="SOUTH" accessRef="a37"/>
-        <roomaccess id="a33" direction="EAST" accessRef="a32"/>
+        <roomaccess id="a24" direction="WEST" accessRef="a25"/>
       </roomaccesses>
       <facts>
-        <fact id="ID-RES-QAFACT840" complete="100 = 10 x 10" correctnessToReach="1" correctness="CORRECT"/>
-        <fact id="ID-RES-QAFACT315" complete="5 x 4 = 20" correctnessToReach="1" correctness="CORRECT"/>
+        <fact id="ID-RES-QAFACT156" complete="8 x 3 = 29" correctnessToReach="1" correctness="INCORRECT"/>
+        <fact id="ID-RES-QAFACT136" complete="18 = 6 x 3" correctnessToReach="1" correctness="CORRECT"/>
       </facts>
       <elements>
-        <element id="STRUCT43" type="HorizontalStructure" pos="POSS1"/>
-        <element id="ELEM44" type="Statement" displayValue="FALSE" pos="id/STRUCT43"/>
-        <element id="STRUCT45" type="VerticalStructure" pos="id/STRUCT43"/>
-        <element id="STRUCT46" type="HorizontalStructure" pos="id/STRUCT45"/>
-        <element id="ELEM47" type="FloorInterrupt" displayValue="" correctness="INCORRECT" pos="id/STRUCT46" ability="TOUCHABLE" idFact="ID-RES-QAFACT840"/>
-        <element id="ELEM48" type="Statement" displayValue="100 = 10 x 10" pos="id/STRUCT46" idFact="ID-RES-QAFACT840"/>
-        <element id="ELEM49" type="FloorInterrupt" displayValue="" correctness="CORRECT" pos="id/STRUCT46" ability="TOUCHABLE" idFact="ID-RES-QAFACT840"/>
-        <element id="STRUCT50" type="HorizontalStructure" pos="id/STRUCT45"/>
-        <element id="ELEM51" type="FloorInterrupt" displayValue="" correctness="INCORRECT" pos="id/STRUCT50" ability="TOUCHABLE" idFact="ID-RES-QAFACT315"/>
-        <element id="ELEM52" type="Statement" displayValue="5 x 4 = 20" pos="id/STRUCT50" idFact="ID-RES-QAFACT315"/>
-        <element id="ELEM53" type="FloorInterrupt" displayValue="" correctness="CORRECT" pos="id/STRUCT50" ability="TOUCHABLE" idFact="ID-RES-QAFACT315"/>
-        <element id="ELEM54" type="Statement" displayValue="TRUE" pos="id/STRUCT43"/>
+        <element id="STRUCT41" type="HorizontalStructure" pos="POSS1"/>
+        <element id="STRUCT42" type="VerticalStructure" pos="id/STRUCT41"/>
+        <element id="STRUCT43" type="HorizontalStructure" pos="id/STRUCT42"/>
+        <element id="ELEM44" type="FloorInterrupt" displayValue="Faux" correctness="CORRECT" pos="id/STRUCT43" ability="TOUCHABLE" idFact="ID-RES-QAFACT156"/>
+        <element id="ELEM45" type="StatementFact" displayValue="8 x 3 = 29" pos="id/STRUCT43" idFact="ID-RES-QAFACT156"/>
+        <element id="ELEM46" type="FloorInterrupt" displayValue="Vrai" correctness="INCORRECT" pos="id/STRUCT43" ability="TOUCHABLE" idFact="ID-RES-QAFACT156"/>
+        <element id="STRUCT47" type="HorizontalStructure" pos="id/STRUCT42"/>
+        <element id="ELEM48" type="FloorInterrupt" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT47" ability="TOUCHABLE" idFact="ID-RES-QAFACT136"/>
+        <element id="ELEM49" type="StatementFact" displayValue="18 = 6 x 3" pos="id/STRUCT47" idFact="ID-RES-QAFACT136"/>
+        <element id="ELEM50" type="FloorInterrupt" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT47" ability="TOUCHABLE" idFact="ID-RES-QAFACT136"/>
       </elements>
     </room>
-    <room id="Room[0/-3]" y="-3" roomTypeName="RegularRoom4" time="20" idTask="REB">
+    <room id="Room[-2/0]" x="-2" roomTypeName="RegularRoom3" time="20" idTask="C2-OPTABLE" prompt="Deplace les bons pots sur les zones">
       <roomaccesses>
-        <roomaccess id="a37" direction="NORTH" accessRef="a36"/>
-        <roomaccess id="a38" direction="WEST" accessRef="a39"/>
+        <roomaccess id="a25" direction="EAST" accessRef="a24"/>
+        <roomaccess id="a26" direction="SOUTH" accessRef="a27"/>
       </roomaccesses>
       <facts>
-        <fact id="REB-QAFACT94" complete="60 = 12 x 5" correctnessToReach="3"/>
+        <fact id="C2-OPTABLE-QAFACT166" complete="96 = 12 x 8" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="ELEM55" type="Statue" displayValue="[12];70;" pos="POSM3" ability="ROTABLE" idFact="REB-QAFACT94"/>
-        <element id="ELEM56" type="Statue" displayValue="38;[5];" pos="POSM2" ability="ROTABLE" idFact="REB-QAFACT94"/>
-        <element id="ELEM57" type="Statue" displayValue="[60];62;" pos="POSM1" ability="ROTABLE" idFact="REB-QAFACT94"/>
-        <element id="ELEM58" type="Switch" pos="POS1" ability="VERIFICATOR"/>
-        <element id="ELEM59" type="StatementFact" displayValue="? = ? x ?" pos="POSQ1" idFact="REB-QAFACT94" interactive="true" acceptedFacts="60 = 12 x 5;60 = 5 x 12;"/>
+        <element id="ELEM51" type="Pot" displayValue="79" correctness="INCORRECT" pos="POS6" ability="MOVABLE" idFact="C2-OPTABLE-QAFACT166"/>
+        <element id="ELEM52" type="Pot" displayValue="101" correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="C2-OPTABLE-QAFACT166"/>
+        <element id="ELEM53" type="Pot" displayValue="12" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="C2-OPTABLE-QAFACT166"/>
+        <element id="ELEM54" type="Pot" displayValue="8" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="C2-OPTABLE-QAFACT166"/>
+        <element id="ELEM55" type="ObjectDetector" pos="POS2" ability="DETECTOR" idFact="C2-OPTABLE-QAFACT166"/>
+        <element id="ELEM56" type="ObjectDetector" pos="POS1" ability="DETECTOR" idFact="C2-OPTABLE-QAFACT166"/>
+        <element id="ELEM57" type="Statement" displayValue="96 = ? x ?" pos="POSQ1" idFact="C2-OPTABLE-QAFACT166" interactive="true" acceptedFacts="96 = 12 x 8;96 = 8 x 12;"/>
       </elements>
     </room>
-    <room id="Room[1/-3]" x="1" y="-3" roomTypeName="RegularRoom1" time="20" idTask="C1-TABOP" prompt="Deplace le bon pot sur la zone">
-      <roomaccesses>
-        <roomaccess id="a29" direction="NORTH" accessRef="a28"/>
-      </roomaccesses>
-      <facts>
-        <fact id="C1-TABOP-QAFACT765" complete="12 x 9 = 108" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="ELEM60" type="Pot" displayValue="19" correctness="INCORRECT" pos="POS6" ability="MOVABLE" idFact="C1-TABOP-QAFACT765"/>
-        <element id="ELEM61" type="Pot" displayValue="14" correctness="INCORRECT" pos="POS7" ability="MOVABLE" idFact="C1-TABOP-QAFACT765"/>
-        <element id="ELEM62" type="Pot" displayValue="12" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="C1-TABOP-QAFACT765"/>
-        <element id="ELEM63" type="ObjectDetector" pos="POS13" ability="DETECTOR"/>
-        <element id="ELEM64" type="Statement" displayValue="? x 9 = 108" pos="POSQ3" idFact="C1-TABOP-QAFACT765" interactive="true"/>
-      </elements>
-    </room>
-    <room id="Room[2/-2]" x="2" y="-2" roomTypeName="RegularRoom1" time="20" idTask="C2-OPTABLE" prompt="Touche les bons interrupteurs puis active le levier" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a31" direction="WEST" accessRef="a30"/>
-      </roomaccesses>
-      <facts>
-        <fact id="C2-OPTABLE-QAFACT157" complete="7 x 8 = 56" correctnessToReach="2"/>
-      </facts>
-      <elements>
-        <element id="ELEM65" type="FloorInterrupt" displayValue="19" correctness="INCORRECT" pos="POS8" ability="TOUCHABLE" idFact="C2-OPTABLE-QAFACT157"/>
-        <element id="ELEM66" type="FloorInterrupt" displayValue="40" correctness="INCORRECT" pos="POS11" ability="TOUCHABLE" idFact="C2-OPTABLE-QAFACT157"/>
-        <element id="ELEM67" type="FloorInterrupt" displayValue="7" correctness="CORRECT" pos="POS1" ability="TOUCHABLE" idFact="C2-OPTABLE-QAFACT157"/>
-        <element id="ELEM68" type="FloorInterrupt" displayValue="8" correctness="CORRECT" pos="POS4" ability="TOUCHABLE" idFact="C2-OPTABLE-QAFACT157"/>
-        <element id="ELEM69" type="Switch" pos="POS12" ability="VERIFICATOR"/>
-        <element id="ELEM70" type="Info" displayValue="? x ? = 56" pos="POS10" idFact="C2-OPTABLE-QAFACT157" interactive="true" acceptedFacts="7 x 8 = 56;8 x 7 = 56;"/>
-      </elements>
-    </room>
-    <room id="Room[3/-1]" x="3" y="-1" roomTypeName="RegularRoom4" time="20" idTask="MEMB">
-      <roomaccesses>
-        <roomaccess id="a35" direction="NORTH" accessRef="a34"/>
-        <roomaccess id="a40" direction="EAST" accessRef="a41"/>
-      </roomaccesses>
-      <facts>
-        <fact id="MEMB-QAFACT30" complete="Resultats table de 9" correctnessToReach="3"/>
-      </facts>
-      <elements>
-        <element id="ELEM71" type="Statue" displayValue="99" pos="POSM1" ability="ROTABLE" idFact="MEMB-QAFACT30"/>
-        <element id="ELEM72" type="Statue" displayValue="72" pos="POSM2" ability="ROTABLE" idFact="MEMB-QAFACT30"/>
-        <element id="ELEM73" type="Statue" displayValue="108" pos="POSM3" ability="ROTABLE" idFact="MEMB-QAFACT30"/>
-        <element id="ELEM74" type="Switch" pos="POS2" ability="VERIFICATOR"/>
-        <element id="ELEM75" type="Statement" displayValue="Resultats table de 9" pos="POSQ1" idFact="MEMB-QAFACT30"/>
-      </elements>
-    </room>
-    <room id="Room[1/1]" x="1" y="1" roomTypeName="RegularRoom3">
-      <roomaccesses>
-        <roomaccess id="a9" direction="SOUTH" accessRef="a8"/>
-      </roomaccesses>
-    </room>
-    <room id="Room[-1/-3]" x="-1" y="-3" roomTypeName="RegularRoom2">
-      <roomaccesses>
-        <roomaccess id="a39" direction="EAST" accessRef="a38"/>
-      </roomaccesses>
-    </room>
-    <room id="Room[-1/0]" x="-1" roomTypeName="RegularRoom2" time="20" idTask="MEMB" prompt="Deplace les bons pots sur les zones" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a25" direction="SOUTH" accessRef="a24"/>
-      </roomaccesses>
-      <facts>
-        <fact id="MEMB-QAFACT25" complete="Resultats table de 8" correctnessToReach="3"/>
-      </facts>
-      <elements>
-        <element id="STRUCT76" type="VerticalStructure" pos="POSS1"/>
-        <element id="ELEM77" type="LargeNewObjectDetector" pos="id/STRUCT76" ability="DETECTOR"/>
-        <element id="ELEM78" type="StatementFact" displayValue="Resultats table de 8" pos="id/STRUCT76" idFact="MEMB-QAFACT25"/>
-        <element id="ELEM79" type="Pot" displayValue="50" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="MEMB-QAFACT25"/>
-        <element id="ELEM80" type="Pot" displayValue="59" correctness="INCORRECT" pos="POS1" ability="MOVABLE" idFact="MEMB-QAFACT25"/>
-        <element id="ELEM81" type="Pot" displayValue="56" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="MEMB-QAFACT25"/>
-        <element id="ELEM82" type="Pot" displayValue="64" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="MEMB-QAFACT25"/>
-        <element id="ELEM83" type="Pot" displayValue="96" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="MEMB-QAFACT25"/>
-      </elements>
-    </room>
-    <room id="Room[4/-1]" x="4" y="-1" roomTypeName="RegularRoom1" time="20" idTask="REB" prompt="Deplace les bons pots sur les zones">
-      <roomaccesses>
-        <roomaccess id="a41" direction="WEST" accessRef="a40"/>
-      </roomaccesses>
-      <facts>
-        <fact id="REB-QAFACT5" complete="3 x 2 = 6" correctnessToReach="3"/>
-      </facts>
-      <elements>
-        <element id="ELEM84" type="Pot" displayValue="16" correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="REB-QAFACT5"/>
-        <element id="ELEM85" type="Pot" displayValue="20" correctness="INCORRECT" pos="POS8" ability="MOVABLE" idFact="REB-QAFACT5"/>
-        <element id="ELEM86" type="Pot" displayValue="15" correctness="INCORRECT" pos="POS9" ability="MOVABLE" idFact="REB-QAFACT5"/>
-        <element id="ELEM87" type="Pot" displayValue="3" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="REB-QAFACT5"/>
-        <element id="ELEM88" type="Pot" displayValue="2" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="REB-QAFACT5"/>
-        <element id="ELEM89" type="Pot" displayValue="6" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="REB-QAFACT5"/>
-        <element id="ELEM90" type="ObjectDetector" pos="POS7" ability="DETECTOR" idFact="REB-QAFACT5"/>
-        <element id="ELEM91" type="ObjectDetector" pos="POS4" ability="DETECTOR" idFact="REB-QAFACT5"/>
-        <element id="ELEM92" type="ObjectDetector" pos="POS6" ability="DETECTOR" idFact="REB-QAFACT5"/>
-        <element id="ELEM93" type="Statement" displayValue="? x ? = ?" pos="POSQ3" idFact="REB-QAFACT5" interactive="true" acceptedFacts="3 x 2 = 6;2 x 3 = 6;"/>
-      </elements>
-    </room>
-    <room id="Room[-1/-2]" x="-1" y="-2" roomTypeName="RegularRoom3">
+    <room id="Room[-2/-1]" x="-2" y="-1" roomTypeName="RegularRoom4" time="20" idTask="C2-OPTABLE">
       <roomaccesses>
         <roomaccess id="a27" direction="NORTH" accessRef="a26"/>
+        <roomaccess id="a28" direction="SOUTH" accessRef="a29"/>
       </roomaccesses>
+      <facts>
+        <fact id="C2-OPTABLE-QAFACT98" complete="12 = 2 x 6" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="ELEM58" type="Statue" displayValue="19;[2];" pos="POSM2" ability="ROTABLE" idFact="C2-OPTABLE-QAFACT98"/>
+        <element id="ELEM59" type="Statue" displayValue="[6];3;" pos="POSM1" ability="ROTABLE" idFact="C2-OPTABLE-QAFACT98"/>
+        <element id="ELEM60" type="Switch" pos="POS1" ability="VERIFICATOR"/>
+        <element id="ELEM61" type="StatementFact" displayValue="12 = ? x ?" pos="POSQ1" idFact="C2-OPTABLE-QAFACT98" interactive="true" acceptedFacts="12 = 2 x 6;12 = 6 x 2;"/>
+      </elements>
+    </room>
+    <room id="Room[-2/-2]" x="-2" y="-2" roomTypeName="RegularRoom3">
+      <roomaccesses>
+        <roomaccess id="a29" direction="NORTH" accessRef="a28"/>
+        <roomaccess id="a30" direction="WEST" accessRef="a31"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[-3/-2]" x="-3" y="-2" roomTypeName="RegularRoom1" time="20" idTask="MEMB" prompt="Touche les bons interrupteurs puis active le levier" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a31" direction="EAST" accessRef="a30"/>
+        <roomaccess id="a32" direction="WEST" accessRef="a33"/>
+      </roomaccesses>
+      <facts>
+        <fact id="MEMB-QAFACT23" complete="Resultats table de 7" correctnessToReach="3"/>
+      </facts>
+      <elements>
+        <element id="ELEM62" type="FloorInterrupt" displayValue="15" correctness="INCORRECT" pos="POS2" ability="TOUCHABLE" idFact="MEMB-QAFACT23"/>
+        <element id="ELEM63" type="FloorInterrupt" displayValue="9" correctness="INCORRECT" pos="POS12" ability="TOUCHABLE" idFact="MEMB-QAFACT23"/>
+        <element id="ELEM64" type="FloorInterrupt" displayValue="28" correctness="CORRECT" pos="POS4" ability="TOUCHABLE" idFact="MEMB-QAFACT23"/>
+        <element id="ELEM65" type="FloorInterrupt" displayValue="49" correctness="CORRECT" pos="POS10" ability="TOUCHABLE" idFact="MEMB-QAFACT23"/>
+        <element id="ELEM66" type="FloorInterrupt" displayValue="14" correctness="CORRECT" pos="POS13" ability="TOUCHABLE" idFact="MEMB-QAFACT23"/>
+        <element id="ELEM67" type="Switch" pos="POS3" ability="VERIFICATOR"/>
+        <element id="ELEM68" type="Info" displayValue="Resultats table de 7" pos="POS8" idFact="MEMB-QAFACT23"/>
+      </elements>
+    </room>
+    <room id="Room[-4/-2]" x="-4" y="-2" roomTypeName="RegularRoom1">
+      <roomaccesses>
+        <roomaccess id="a33" direction="EAST" accessRef="a32"/>
+        <roomaccess id="a34" direction="WEST" accessRef="a35"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[-5/-2]" x="-5" y="-2" roomTypeName="RegularRoom3" time="20" idTask="REB" prompt="Touche les bons interrupteurs puis active le levier" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a35" direction="EAST" accessRef="a34"/>
+        <roomaccess id="a36" direction="WEST" accessRef="a37"/>
+      </roomaccesses>
+      <facts>
+        <fact id="REB-QAFACT207" complete="8 x 10 = 80" correctnessToReach="3"/>
+      </facts>
+      <elements>
+        <element id="ELEM69" type="FloorInterrupt" displayValue="53" correctness="INCORRECT" pos="POS7" ability="TOUCHABLE" idFact="REB-QAFACT207"/>
+        <element id="ELEM70" type="FloorInterrupt" displayValue="7" correctness="INCORRECT" pos="POS4" ability="TOUCHABLE" idFact="REB-QAFACT207"/>
+        <element id="ELEM71" type="FloorInterrupt" displayValue="50" correctness="INCORRECT" pos="POS2" ability="TOUCHABLE" idFact="REB-QAFACT207"/>
+        <element id="ELEM72" type="FloorInterrupt" displayValue="8" correctness="CORRECT" pos="POS1" ability="TOUCHABLE" idFact="REB-QAFACT207"/>
+        <element id="ELEM73" type="FloorInterrupt" displayValue="10" correctness="CORRECT" pos="POS5" ability="TOUCHABLE" idFact="REB-QAFACT207"/>
+        <element id="ELEM74" type="FloorInterrupt" displayValue="80" correctness="CORRECT" pos="POS8" ability="TOUCHABLE" idFact="REB-QAFACT207"/>
+        <element id="ELEM75" type="Switch" pos="POS3" ability="VERIFICATOR"/>
+        <element id="ELEM76" type="StatementFact" displayValue="? x ? = ?" pos="POSQ1" idFact="REB-QAFACT207" interactive="true" acceptedFacts="8 x 10 = 80;10 x 8 = 80;"/>
+      </elements>
+    </room>
+    <room id="Room[-6/-2]" x="-6" y="-2" roomTypeName="RegularRoom2" time="20" idTask="ID-RES" prompt="Touche les bons interrupteurs">
+      <roomaccesses>
+        <roomaccess id="a37" direction="EAST" accessRef="a36"/>
+      </roomaccesses>
+      <facts>
+        <fact id="ID-RES-QAFACT216" complete="16 = 4 x 4" correctnessToReach="1" correctness="CORRECT"/>
+        <fact id="ID-RES-QAFACT569" complete="84 = 7 x 12" correctnessToReach="1" correctness="CORRECT"/>
+      </facts>
+      <elements>
+        <element id="STRUCT77" type="HorizontalStructure" pos="POSS1"/>
+        <element id="ELEM78" type="Statement" displayValue="FALSE" pos="id/STRUCT77"/>
+        <element id="STRUCT79" type="VerticalStructure" pos="id/STRUCT77"/>
+        <element id="STRUCT80" type="HorizontalStructure" pos="id/STRUCT79"/>
+        <element id="ELEM81" type="FloorInterrupt" displayValue="" correctness="INCORRECT" pos="id/STRUCT80" ability="TOUCHABLE" idFact="ID-RES-QAFACT216"/>
+        <element id="ELEM82" type="Statement" displayValue="16 = 4 x 4" pos="id/STRUCT80" idFact="ID-RES-QAFACT216"/>
+        <element id="ELEM83" type="FloorInterrupt" displayValue="" correctness="CORRECT" pos="id/STRUCT80" ability="TOUCHABLE" idFact="ID-RES-QAFACT216"/>
+        <element id="STRUCT84" type="HorizontalStructure" pos="id/STRUCT79"/>
+        <element id="ELEM85" type="FloorInterrupt" displayValue="" correctness="INCORRECT" pos="id/STRUCT84" ability="TOUCHABLE" idFact="ID-RES-QAFACT569"/>
+        <element id="ELEM86" type="Statement" displayValue="84 = 7 x 12" pos="id/STRUCT84" idFact="ID-RES-QAFACT569"/>
+        <element id="ELEM87" type="FloorInterrupt" displayValue="" correctness="CORRECT" pos="id/STRUCT84" ability="TOUCHABLE" idFact="ID-RES-QAFACT569"/>
+        <element id="ELEM88" type="Statement" displayValue="TRUE" pos="id/STRUCT77"/>
+      </elements>
     </room>
   </rooms>
 </Dungeon>

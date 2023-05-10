@@ -25,7 +25,7 @@ public class ALGAGenerator {
 		generator.generate();
 		generator.printDungeon();
 		generator.saveDungeon("DungeonGen.xmi");
-		Main.transformModel("outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
+		//Main.transformModel("outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
 	}
 	
 	public ALGAGenerator() {
@@ -111,6 +111,7 @@ public class ALGAGenerator {
 	private void printRoom(Room r) {
 		System.out.println("****");//
 		System.out.println(r.getRoomtype().getClass().getName() + " ("+r.getX()+","+r.getY()+")");
+		System.out.println("RoomType : "+r.getRoomtype().getName());
 		if(r.getQuestionedFacts() != null && !r.getQuestionedFacts().isEmpty()) {
 			String facts = "{";
 			for (QuestionedFact qef : r.getQuestionedFacts()) {
@@ -134,6 +135,7 @@ public class ALGAGenerator {
 		System.out.println("Objective : "+generatedDungeon.getLearningobjective());
 		System.out.println("Level : "+generatedDungeon.getLevel());
 		System.out.println("Number of room without entry "+(generatedDungeon.getRooms().size()-1));
+		
 		//System.out.println("Number of gameplay selected "+ (geManager.size()));
 		for (Room r : generatedDungeon.getRooms()) {
 			printRoom(r);

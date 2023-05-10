@@ -4,8 +4,7 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:generator="http://www.example.org/generator">
-  <gamecontext
-      mode="LABYRINTHINE"/>
+  <gamecontext/>
   <learnerplayer
       name="Learner FICTIF"
       ID="learnerFic">
