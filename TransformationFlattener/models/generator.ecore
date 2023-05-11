@@ -20,6 +20,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//Level"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjective" lowerBound="1"
         eType="#//Objective"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exit" eType="#//Room"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Room">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -54,6 +55,10 @@
         eType="#//Position" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="structurePositions" upperBound="-1"
         eType="#//StructurePosition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forEntry" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forExit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SmallRoomType" eSuperTypes="#//RoomType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="directions" lowerBound="1"
@@ -404,10 +409,6 @@
     <eOperations name="isElementDisplayable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ability" eType="#//Ability"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfDisplays" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="insideStructureStatement"
-        upperBound="-1" eType="#//StructureStatement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="interactiveStatement" upperBound="-1"
-        eType="#//InteractiveStatement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Equipment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -606,7 +607,8 @@
         eType="#//ETaskType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NoQuestionGameplay" eSuperTypes="#//Gameplay"/>
-  <eClassifiers xsi:type="ecore:EClass" name="InteractiveStatement" eSuperTypes="#//Parameter"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StructureStatement" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="Size" eSuperTypes="#//Parameter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StatementElementType" eSuperTypes="#//ElementType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forStructure" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
 </ecore:EPackage>

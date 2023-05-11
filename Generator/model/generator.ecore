@@ -409,10 +409,6 @@
     <eOperations name="isElementDisplayable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ability" eType="#//Ability"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfDisplays" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="insideStructureStatement"
-        upperBound="-1" eType="#//StructureStatement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="interactiveStatement" upperBound="-1"
-        eType="#//InteractiveStatement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Equipment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -611,7 +607,8 @@
         eType="#//ETaskType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NoQuestionGameplay" eSuperTypes="#//Gameplay"/>
-  <eClassifiers xsi:type="ecore:EClass" name="InteractiveStatement" eSuperTypes="#//Parameter"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StructureStatement" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="Size" eSuperTypes="#//Parameter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StatementElementType" eSuperTypes="#//ElementType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forStructure" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
 </ecore:EPackage>

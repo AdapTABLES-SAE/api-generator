@@ -4272,31 +4272,13 @@ public interface GeneratorPackage extends EPackage {
 	int ELEMENT_TYPE__NUMBER_OF_DISPLAYS = GP_ELEMENT_TYPE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Inside Structure Statement</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE__INSIDE_STRUCTURE_STATEMENT = GP_ELEMENT_TYPE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Interactive Statement</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE__INTERACTIVE_STATEMENT = GP_ELEMENT_TYPE_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Element Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_TYPE_FEATURE_COUNT = GP_ELEMENT_TYPE_FEATURE_COUNT + 4;
+	int ELEMENT_TYPE_FEATURE_COUNT = GP_ELEMENT_TYPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Is Element Displayable</em>' operation.
@@ -6151,80 +6133,6 @@ public interface GeneratorPackage extends EPackage {
 	int NO_QUESTION_GAMEPLAY_OPERATION_COUNT = GAMEPLAY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.InteractiveStatementImpl <em>Interactive Statement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.InteractiveStatementImpl
-	 * @see generator.impl.GeneratorPackageImpl#getInteractiveStatement()
-	 * @generated
-	 */
-	int INTERACTIVE_STATEMENT = 89;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERACTIVE_STATEMENT__VALUE = PARAMETER__VALUE;
-
-	/**
-	 * The number of structural features of the '<em>Interactive Statement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERACTIVE_STATEMENT_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Interactive Statement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERACTIVE_STATEMENT_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link generator.impl.StructureStatementImpl <em>Structure Statement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.StructureStatementImpl
-	 * @see generator.impl.GeneratorPackageImpl#getStructureStatement()
-	 * @generated
-	 */
-	int STRUCTURE_STATEMENT = 90;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRUCTURE_STATEMENT__VALUE = PARAMETER__VALUE;
-
-	/**
-	 * The number of structural features of the '<em>Structure Statement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRUCTURE_STATEMENT_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Structure Statement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRUCTURE_STATEMENT_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.SizeImpl <em>Size</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6232,7 +6140,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 91;
+	int SIZE = 89;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -6262,6 +6170,97 @@ public interface GeneratorPackage extends EPackage {
 	int SIZE_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.StatementElementTypeImpl <em>Statement Element Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.StatementElementTypeImpl
+	 * @see generator.impl.GeneratorPackageImpl#getStatementElementType()
+	 * @generated
+	 */
+	int STATEMENT_ELEMENT_TYPE = 90;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATEMENT_ELEMENT_TYPE__SIZE = ELEMENT_TYPE__SIZE;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATEMENT_ELEMENT_TYPE__ID = ELEMENT_TYPE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATEMENT_ELEMENT_TYPE__TYPE = ELEMENT_TYPE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Ability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATEMENT_ELEMENT_TYPE__ABILITY = ELEMENT_TYPE__ABILITY;
+
+	/**
+	 * The feature id for the '<em><b>Number Of Displays</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATEMENT_ELEMENT_TYPE__NUMBER_OF_DISPLAYS = ELEMENT_TYPE__NUMBER_OF_DISPLAYS;
+
+	/**
+	 * The feature id for the '<em><b>For Structure</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATEMENT_ELEMENT_TYPE__FOR_STRUCTURE = ELEMENT_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Statement Element Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATEMENT_ELEMENT_TYPE_FEATURE_COUNT = ELEMENT_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Is Element Displayable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATEMENT_ELEMENT_TYPE___IS_ELEMENT_DISPLAYABLE = ELEMENT_TYPE___IS_ELEMENT_DISPLAYABLE;
+
+	/**
+	 * The number of operations of the '<em>Statement Element Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATEMENT_ELEMENT_TYPE_OPERATION_COUNT = ELEMENT_TYPE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6269,7 +6268,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 92;
+	int DIRECTIONS = 91;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -6279,7 +6278,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 93;
+	int DUNGEON_MODE = 92;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -6289,7 +6288,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 94;
+	int TABLE_BUILD = 93;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -6299,7 +6298,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 95;
+	int RESULT_POSITION = 94;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -6309,7 +6308,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 96;
+	int ESINGLE_TARGET = 95;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -6319,7 +6318,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 97;
+	int ETASK_TYPE = 96;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -6329,7 +6328,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 98;
+	int EMODALITY = 97;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -6339,7 +6338,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 99;
+	int ESEVERAL_TARGET = 98;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -6349,7 +6348,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 100;
+	int ELEMENT_SIZE = 99;
 
 	/**
 	 * The meta object id for the '{@link generator.StatementType <em>Statement Type</em>}' enum.
@@ -6359,7 +6358,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStatementType()
 	 * @generated
 	 */
-	int STATEMENT_TYPE = 101;
+	int STATEMENT_TYPE = 100;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -6369,7 +6368,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 102;
+	int GP_CATEGORY = 101;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -6379,7 +6378,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 103;
+	int ECORRECTNESS = 102;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -6389,7 +6388,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 104;
+	int EBOUNDARY = 103;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -8664,28 +8663,6 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getElementType_NumberOfDisplays();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generator.ElementType#getInsideStructureStatement <em>Inside Structure Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Inside Structure Statement</em>'.
-	 * @see generator.ElementType#getInsideStructureStatement()
-	 * @see #getElementType()
-	 * @generated
-	 */
-	EReference getElementType_InsideStructureStatement();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.ElementType#getInteractiveStatement <em>Interactive Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Interactive Statement</em>'.
-	 * @see generator.ElementType#getInteractiveStatement()
-	 * @see #getElementType()
-	 * @generated
-	 */
-	EReference getElementType_InteractiveStatement();
-
-	/**
 	 * Returns the meta object for the '{@link generator.ElementType#isElementDisplayable() <em>Is Element Displayable</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9749,26 +9726,6 @@ public interface GeneratorPackage extends EPackage {
 	EClass getNoQuestionGameplay();
 
 	/**
-	 * Returns the meta object for class '{@link generator.InteractiveStatement <em>Interactive Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Interactive Statement</em>'.
-	 * @see generator.InteractiveStatement
-	 * @generated
-	 */
-	EClass getInteractiveStatement();
-
-	/**
-	 * Returns the meta object for class '{@link generator.StructureStatement <em>Structure Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Structure Statement</em>'.
-	 * @see generator.StructureStatement
-	 * @generated
-	 */
-	EClass getStructureStatement();
-
-	/**
 	 * Returns the meta object for class '{@link generator.Size <em>Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9777,6 +9734,27 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSize();
+
+	/**
+	 * Returns the meta object for class '{@link generator.StatementElementType <em>Statement Element Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Statement Element Type</em>'.
+	 * @see generator.StatementElementType
+	 * @generated
+	 */
+	EClass getStatementElementType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.StatementElementType#isForStructure <em>For Structure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>For Structure</em>'.
+	 * @see generator.StatementElementType#isForStructure()
+	 * @see #getStatementElementType()
+	 * @generated
+	 */
+	EAttribute getStatementElementType_ForStructure();
 
 	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
@@ -11738,22 +11716,6 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute ELEMENT_TYPE__NUMBER_OF_DISPLAYS = eINSTANCE.getElementType_NumberOfDisplays();
 
 		/**
-		 * The meta object literal for the '<em><b>Inside Structure Statement</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ELEMENT_TYPE__INSIDE_STRUCTURE_STATEMENT = eINSTANCE.getElementType_InsideStructureStatement();
-
-		/**
-		 * The meta object literal for the '<em><b>Interactive Statement</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ELEMENT_TYPE__INTERACTIVE_STATEMENT = eINSTANCE.getElementType_InteractiveStatement();
-
-		/**
 		 * The meta object literal for the '<em><b>Is Element Displayable</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12628,26 +12590,6 @@ public interface GeneratorPackage extends EPackage {
 		EClass NO_QUESTION_GAMEPLAY = eINSTANCE.getNoQuestionGameplay();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.InteractiveStatementImpl <em>Interactive Statement</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.InteractiveStatementImpl
-		 * @see generator.impl.GeneratorPackageImpl#getInteractiveStatement()
-		 * @generated
-		 */
-		EClass INTERACTIVE_STATEMENT = eINSTANCE.getInteractiveStatement();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.StructureStatementImpl <em>Structure Statement</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.StructureStatementImpl
-		 * @see generator.impl.GeneratorPackageImpl#getStructureStatement()
-		 * @generated
-		 */
-		EClass STRUCTURE_STATEMENT = eINSTANCE.getStructureStatement();
-
-		/**
 		 * The meta object literal for the '{@link generator.impl.SizeImpl <em>Size</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12656,6 +12598,24 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SIZE = eINSTANCE.getSize();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.StatementElementTypeImpl <em>Statement Element Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.StatementElementTypeImpl
+		 * @see generator.impl.GeneratorPackageImpl#getStatementElementType()
+		 * @generated
+		 */
+		EClass STATEMENT_ELEMENT_TYPE = eINSTANCE.getStatementElementType();
+
+		/**
+		 * The meta object literal for the '<em><b>For Structure</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATEMENT_ELEMENT_TYPE__FOR_STRUCTURE = eINSTANCE.getStatementElementType_ForStructure();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.

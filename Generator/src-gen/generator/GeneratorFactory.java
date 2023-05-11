@@ -679,24 +679,6 @@ public interface GeneratorFactory extends EFactory {
 	NoQuestionGameplay createNoQuestionGameplay();
 
 	/**
-	 * Returns a new object of class '<em>Interactive Statement</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Interactive Statement</em>'.
-	 * @generated
-	 */
-	InteractiveStatement createInteractiveStatement();
-
-	/**
-	 * Returns a new object of class '<em>Structure Statement</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Structure Statement</em>'.
-	 * @generated
-	 */
-	StructureStatement createStructureStatement();
-
-	/**
 	 * Returns a new object of class '<em>Size</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -704,6 +686,15 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	Size createSize();
+
+	/**
+	 * Returns a new object of class '<em>Statement Element Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Statement Element Type</em>'.
+	 * @generated
+	 */
+	StatementElementType createStatementElementType();
 
 	/**
 	 * Returns the package supported by this factory.

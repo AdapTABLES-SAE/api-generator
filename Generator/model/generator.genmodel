@@ -351,8 +351,6 @@
     <genClasses ecoreClass="generator.ecore#//ElementType">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//ElementType/ability"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ElementType/numberOfDisplays"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//ElementType/insideStructureStatement"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//ElementType/interactiveStatement"/>
       <genOperations ecoreOperation="generator.ecore#//ElementType/isElementDisplayable"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Equipment">
@@ -480,8 +478,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionGameplay/restrictedTo"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//NoQuestionGameplay"/>
-    <genClasses ecoreClass="generator.ecore#//InteractiveStatement"/>
-    <genClasses ecoreClass="generator.ecore#//StructureStatement"/>
     <genClasses ecoreClass="generator.ecore#//Size"/>
+    <genClasses ecoreClass="generator.ecore#//StatementElementType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//StatementElementType/forStructure"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

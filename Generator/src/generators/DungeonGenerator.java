@@ -384,7 +384,7 @@ public class DungeonGenerator {
 		List<RoomType> roomtypes = new ArrayList<>();
 		
 		for (RoomType roomType : modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes()) {
-			if(!roomType.isForEntry() || !roomType.isForExit()) {
+			if(!roomType.isForEntry() && !roomType.isForExit()) {
 				roomtypes.add(roomType);
 			}
 		}
@@ -397,7 +397,7 @@ public class DungeonGenerator {
 	 * @param exit
 	 * @return Valid RoomType
 	 */
-	private RoomType getCompatibleRoomType(Directions entry, Directions exit, RoomElements roomElements, boolean isExitRoom) { // TODO à corriger probleme avec les statues mauvais roomType choisi 
+	private RoomType getCompatibleRoomType(Directions entry, Directions exit, RoomElements roomElements, boolean isExitRoom) {
 		List<RoomType> roomTypes; 
 		if(!isExitRoom) {
 			roomTypes = getRoomTypesForNormalRooms();
@@ -406,27 +406,8 @@ public class DungeonGenerator {
 		}
 		
 		roomTypes = roomTypes.stream().filter(e -> e.getDirections().size() > 1).collect(Collectors.toList());
-		for (RoomType roomType : new ArrayList<>(roomTypes)) { // TODO
-		/*	System.out.println(roomType.getName());
-			if(!roomType.getDirections().contains(entry) || (!exit.equals(Directions.NONE) && !roomType.getDirections().contains(exit))) { // || (roomType.getStatementPositions ().size() < numberOfFact)
-				for (GPElementType elem : roomElements.getElementsToQuantity().keySet()) {
-					if(roomElements.getElementsToQuantity().get(elem) != -1) {
-						for (GPElementType elementType : roomElements.getElementsToQuantity().keySet()) {
-							System.out.println(elementType.getID() +" "+roomElements.getElementsToQuantity().get(elementType));
-							if(elementType instanceof StructureType && roomType.getStructurePositions().size() < roomElements.getElementsToQuantity().get(elementType)) {
-								roomTypes.remove(roomType);
-							}
-							if(elementType instanceof ElementType && getRoomTypePositionsOfSize(roomType, elementType.getSize()).size() < roomElements.getElementsToQuantity().get(elementType)) {
-								roomTypes.remove(roomType);
-							}
-						}
-					}
-				}
-			}*/
-			/*System.out.println(!roomTypeHasCompatibleAccesses(entry, exit, roomType)+" "+entry+" "+exit);
-			System.out.println(!roomTypeHasCompatiblePositions(roomType, roomElements));*/
-			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {
-				
+		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
+			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {				
 				roomTypes.remove(roomType);
 			}
 			
@@ -459,7 +440,7 @@ public class DungeonGenerator {
 		return positions;
 	}
 	
-	private boolean roomTypeHasCompatiblePositions(RoomType roomtype, RoomElements roomElements) { // TODO : CHECK THIS ONE  
+	private boolean roomTypeHasCompatiblePositions(RoomType roomtype, RoomElements roomElements) { 
 		boolean compatible = true;
 		
 		Map<ElementSize, Integer> numberOfElementsPerSize = computesNumberOfElementsPerSize(roomElements);
@@ -521,7 +502,7 @@ public class DungeonGenerator {
 	 * @param entryDirection
 	 * @param exitDirection
 	 * @return a Room
-	 */ // TODO : S'occuper des positions des QUESTIONS 
+	 */
 	private Room createRoom(int x, int y, RoomType roomT, RoomElements roomElements, RoomAccess previousRoomExitAccess,  Directions entryDirection, Directions exitDirection) {
 		Room r = new RoomImpl();
 		r.setRoomtype(roomT);
@@ -529,10 +510,6 @@ public class DungeonGenerator {
 		r.setY(y);
 		
 		if(roomElements != null) {
-			/*for (QuestionedFact questionedFact : factsToQuestion.getFacts()) {
-				Position p = null;
-				questionedFact.setPosition(p);
-			}*/
 			r.getQuestionedFacts().addAll(roomElements.getFacts());
 			r.setTask(roomElements.getTask());
 			r.setGameplay(roomElements.getGameplay());

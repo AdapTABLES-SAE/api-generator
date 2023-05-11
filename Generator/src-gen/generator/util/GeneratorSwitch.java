@@ -783,29 +783,22 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.INTERACTIVE_STATEMENT: {
-			InteractiveStatement interactiveStatement = (InteractiveStatement) theEObject;
-			T result = caseInteractiveStatement(interactiveStatement);
-			if (result == null)
-				result = caseParameter(interactiveStatement);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.STRUCTURE_STATEMENT: {
-			StructureStatement structureStatement = (StructureStatement) theEObject;
-			T result = caseStructureStatement(structureStatement);
-			if (result == null)
-				result = caseParameter(structureStatement);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case GeneratorPackage.SIZE: {
 			Size size = (Size) theEObject;
 			T result = caseSize(size);
 			if (result == null)
 				result = caseParameter(size);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.STATEMENT_ELEMENT_TYPE: {
+			StatementElementType statementElementType = (StatementElementType) theEObject;
+			T result = caseStatementElementType(statementElementType);
+			if (result == null)
+				result = caseElementType(statementElementType);
+			if (result == null)
+				result = caseGPElementType(statementElementType);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -2031,36 +2024,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Interactive Statement</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Interactive Statement</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInteractiveStatement(InteractiveStatement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Structure Statement</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Structure Statement</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseStructureStatement(StructureStatement object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Size</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2072,6 +2035,21 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSize(Size object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Statement Element Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Statement Element Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStatementElementType(StatementElementType object) {
 		return null;
 	}
 

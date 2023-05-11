@@ -19,6 +19,7 @@ import generator.QuestionedFact;
 import generator.ResultsByTask;
 import generator.Room;
 import generator.RoomType;
+import generator.StatementElementType;
 import generator.Structure;
 import generator.Value;
 
@@ -127,7 +128,7 @@ public class RoomElements {
 				}
 				selectElementType(((Structure) aComponent).getComponents(), true);
 			} else {
-				ElementType elementType = getCompatibleElementType((Component) aComponent); 
+				ElementType elementType = getCompatibleElementType((Component) aComponent, isStructureComponents); 
 				if(isStructureComponents) {
 					elementsToQuantity.put(elementType, -1);
 				} else {
@@ -158,12 +159,19 @@ public class RoomElements {
 		}
 	}
 	
-	private ElementType getCompatibleElementType(Component component) { // TODO : Deal with statements 
+	private ElementType getCompatibleElementType(Component component, boolean isStructureComponent) { // TODO : Deal with statements 
 		List<ElementType> compatibleTypes = new ArrayList<>();
 		for (GPElementType elementType : gameDescriptionModel.getElements().getGpElements().getElements()) {
-			if(elementType instanceof ElementType && ((ElementType) elementType).getAbility().equals(component.getAllowedAbility())) {
-				if(component.getExpectedSize() == null || 
-						(((Value) component.getExpectedSize().getValue()).getValue().equals(((ElementType) elementType).getSize().getName()))) {
+			if(component.isWearStatement()) {
+				/*System.out.println("au bon endroid");
+				System.out.println("Statement element "+(elementType instanceof StatementElementType));
+				System.out.println("For struct"+isStructureComponent);*/
+				if(elementType instanceof StatementElementType && hasValidStatementConditions(elementType, isStructureComponent)) {
+					compatibleTypes.add((StatementElementType) elementType);
+				}  
+			} else {
+				if(elementType instanceof ElementType && ((ElementType) elementType).getAbility().equals(component.getAllowedAbility())
+						&& hasExpectedSizeRequierements((ElementType) elementType, component)) {
 					compatibleTypes.add((ElementType) elementType);
 				}
 			}
@@ -171,6 +179,16 @@ public class RoomElements {
 		return compatibleTypes.get(new Random().nextInt(compatibleTypes.size()));
 	}
 	
+	private boolean hasValidStatementConditions(GPElementType elementType, boolean isStructureComponent) {
+		return (((StatementElementType) elementType).isForStructure() && isStructureComponent) 
+				|| (!((StatementElementType) elementType).isForStructure() && !isStructureComponent);
+	}
+	
+	private boolean hasExpectedSizeRequierements(ElementType elementType, Component component) {
+		return component.getExpectedSize() == null || 
+				(((Value) component.getExpectedSize().getValue()).getValue().equals(((ElementType) elementType).getSize().getName()));
+	}
+
 	public GPElementType getElementTypeFor(AComponent component) {
 		for (GPElementType elementType : elementsToQuantity.keySet()) {
 			if(elementType instanceof ElementType) {

@@ -49,7 +49,6 @@ import generator.GenerationContext;
 import generator.GeneratorFactory;
 import generator.GeneratorPackage;
 import generator.IdentificationTask;
-import generator.InteractiveStatement;
 import generator.Knowledge;
 import generator.LargeRoomType;
 import generator.LearnerPlayer;
@@ -101,14 +100,15 @@ import generator.RoomTypes;
 import generator.SetOfFacts;
 import generator.Size;
 import generator.SmallRoomType;
+import generator.StatementElementType;
 import generator.StatementType;
 import generator.Structure;
 import generator.StructurePosition;
-import generator.StructureStatement;
 import generator.StructureType;
 import generator.TableBuild;
 import generator.Value;
 import generator.WantedAnswersParam;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -566,6 +566,62 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass parameterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass questionParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass propositionParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass valueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass correctnessEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass entrySoluceParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass structureTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gpElementTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass displayEClass = null;
 
 	/**
@@ -699,20 +755,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass interactiveStatementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass structureStatementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass sizeEClass = null;
 
 	/**
@@ -720,56 +762,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass correctnessEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass parameterEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass questionParamEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass propositionParamEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass valueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass entrySoluceParamEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass structureTypeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gpElementTypeEClass = null;
+	private EClass statementElementTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2842,24 +2835,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElementType_InsideStructureStatement() {
-		return (EReference) elementTypeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getElementType_InteractiveStatement() {
-		return (EReference) elementTypeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getElementType__IsElementDisplayable() {
 		return elementTypeEClass.getEOperations().get(0);
 	}
@@ -3103,6 +3078,33 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPositionedElement_Position() {
+		return (EReference) positionedElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPositionedElement_Correctness() {
+		return (EReference) positionedElementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPositionedElement_Displays() {
+		return (EReference) positionedElementEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getPositionedElement_ElementType() {
 		return (EReference) positionedElementEClass.getEStructuralFeatures().get(4);
 	}
@@ -3139,8 +3141,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionedElement_Position() {
-		return (EReference) positionedElementEClass.getEStructuralFeatures().get(1);
+	public EClass getParameter() {
+		return parameterEClass;
 	}
 
 	/**
@@ -3148,8 +3150,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionedElement_Correctness() {
-		return (EReference) positionedElementEClass.getEStructuralFeatures().get(2);
+	public EReference getParameter_Value() {
+		return (EReference) parameterEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3157,8 +3159,134 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionedElement_Displays() {
-		return (EReference) positionedElementEClass.getEStructuralFeatures().get(3);
+	public EClass getQuestionParam() {
+		return questionParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestionParam_Interactive() {
+		return (EAttribute) questionParamEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQuestionParam_Solutions() {
+		return (EReference) questionParamEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPropositionParam() {
+		return propositionParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPropositionParam_State() {
+		return (EReference) propositionParamEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getValue() {
+		return valueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getValue_Value() {
+		return (EAttribute) valueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCorrectness() {
+		return correctnessEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEntrySoluceParam() {
+		return entrySoluceParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEntrySoluceParam_State() {
+		return (EAttribute) entrySoluceParamEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStructureType() {
+		return structureTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGPElementType() {
+		return gpElementTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGPElementType_Size() {
+		return (EAttribute) gpElementTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGPElementType_ID() {
+		return (EAttribute) gpElementTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGPElementType_Type() {
+		return (EAttribute) gpElementTypeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3607,24 +3735,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInteractiveStatement() {
-		return interactiveStatementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getStructureStatement() {
-		return structureStatementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSize() {
 		return sizeEClass;
 	}
@@ -3634,8 +3744,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCorrectness() {
-		return correctnessEClass;
+	public EClass getStatementElementType() {
+		return statementElementTypeEClass;
 	}
 
 	/**
@@ -3643,143 +3753,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getParameter() {
-		return parameterEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getParameter_Value() {
-		return (EReference) parameterEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getQuestionParam() {
-		return questionParamEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getQuestionParam_Interactive() {
-		return (EAttribute) questionParamEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQuestionParam_Solutions() {
-		return (EReference) questionParamEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPropositionParam() {
-		return propositionParamEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPropositionParam_State() {
-		return (EReference) propositionParamEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getValue() {
-		return valueEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getValue_Value() {
-		return (EAttribute) valueEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getEntrySoluceParam() {
-		return entrySoluceParamEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEntrySoluceParam_State() {
-		return (EAttribute) entrySoluceParamEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getStructureType() {
-		return structureTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGPElementType() {
-		return gpElementTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGPElementType_Size() {
-		return (EAttribute) gpElementTypeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGPElementType_ID() {
-		return (EAttribute) gpElementTypeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGPElementType_Type() {
-		return (EAttribute) gpElementTypeEClass.getEStructuralFeatures().get(2);
+	public EAttribute getStatementElementType_ForStructure() {
+		return (EAttribute) statementElementTypeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4192,8 +4167,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		elementTypeEClass = createEClass(ELEMENT_TYPE);
 		createEReference(elementTypeEClass, ELEMENT_TYPE__ABILITY);
 		createEAttribute(elementTypeEClass, ELEMENT_TYPE__NUMBER_OF_DISPLAYS);
-		createEReference(elementTypeEClass, ELEMENT_TYPE__INSIDE_STRUCTURE_STATEMENT);
-		createEReference(elementTypeEClass, ELEMENT_TYPE__INTERACTIVE_STATEMENT);
 		createEOperation(elementTypeEClass, ELEMENT_TYPE___IS_ELEMENT_DISPLAYABLE);
 
 		equipmentEClass = createEClass(EQUIPMENT);
@@ -4331,11 +4304,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		noQuestionGameplayEClass = createEClass(NO_QUESTION_GAMEPLAY);
 
-		interactiveStatementEClass = createEClass(INTERACTIVE_STATEMENT);
-
-		structureStatementEClass = createEClass(STRUCTURE_STATEMENT);
-
 		sizeEClass = createEClass(SIZE);
+
+		statementElementTypeEClass = createEClass(STATEMENT_ELEMENT_TYPE);
+		createEAttribute(statementElementTypeEClass, STATEMENT_ELEMENT_TYPE__FOR_STRUCTURE);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -4428,9 +4400,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		factCorrectnessParamEClass.getESuperTypes().add(this.getParameter());
 		questionGameplayEClass.getESuperTypes().add(this.getGameplay());
 		noQuestionGameplayEClass.getESuperTypes().add(this.getGameplay());
-		interactiveStatementEClass.getESuperTypes().add(this.getParameter());
-		structureStatementEClass.getESuperTypes().add(this.getParameter());
 		sizeEClass.getESuperTypes().add(this.getParameter());
+		statementElementTypeEClass.getESuperTypes().add(this.getElementType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -5019,12 +4990,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getElementType_NumberOfDisplays(), ecorePackage.getEInt(), "numberOfDisplays", null, 0, 1,
 				ElementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getElementType_InsideStructureStatement(), this.getStructureStatement(), null,
-				"insideStructureStatement", null, 0, -1, ElementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElementType_InteractiveStatement(), this.getInteractiveStatement(), null,
-				"interactiveStatement", null, 0, -1, ElementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getElementType__IsElementDisplayable(), ecorePackage.getEBoolean(), "isElementDisplayable", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
@@ -5299,13 +5264,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(noQuestionGameplayEClass, NoQuestionGameplay.class, "NoQuestionGameplay", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(interactiveStatementEClass, InteractiveStatement.class, "InteractiveStatement", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(structureStatementEClass, StructureStatement.class, "StructureStatement", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(sizeEClass, Size.class, "Size", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(statementElementTypeEClass, StatementElementType.class, "StatementElementType", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStatementElementType_ForStructure(), ecorePackage.getEBoolean(), "forStructure", null, 0, 1,
+				StatementElementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

@@ -67,6 +67,7 @@ public enum GPCategory implements Enumerator {
 	 * @ordered
 	 */
 	MOVE_MULTIPLE(8, "MOVE_MULTIPLE", "MOVE_MULTIPLE"),
+
 	/**
 	 * The '<em><b>ORIENT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -76,19 +77,21 @@ public enum GPCategory implements Enumerator {
 	 * @ordered
 	 */
 	ORIENT(5, "ORIENT", "ORIENT"),
+
 	/**
 	 * The '<em><b>POSITION UNIQUE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #POSITION_UNIQUE_VALUE
 	 * @generated
 	 * @ordered
 	 */
 	POSITION_UNIQUE(6, "POSITION_UNIQUE", "POSITION_UNIQUE"),
+
 	/**
 	 * The '<em><b>POSITION MULTIPLE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #POSITION_MULTIPLE_VALUE
 	 * @generated
 	 * @ordered

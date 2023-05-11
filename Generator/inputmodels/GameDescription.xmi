@@ -529,19 +529,6 @@
           numberOfDisplays="1"/>
       <elements
           xsi:type="generator:ElementType"
-          size="LARGE"
-          ID="ELEMTYPE_STATEMENT_DISPLAY"
-          type="Statement"
-          ability="DISPLAY"
-          numberOfDisplays="1">
-        <interactiveStatement>
-          <value
-              xsi:type="generator:Value"
-              value="true"/>
-        </interactiveStatement>
-      </elements>
-      <elements
-          xsi:type="generator:ElementType"
           ID="ELEMTYPE_POT"
           type="Pot"
           ability="MOVABLE"
@@ -561,19 +548,6 @@
       <elements
           xsi:type="generator:ElementType"
           size="LARGE"
-          ID="ELEMTYPE_STATEMENT_CORRECTNESS"
-          type="StatementFact"
-          ability="DISPLAY"
-          numberOfDisplays="1">
-        <insideStructureStatement>
-          <value
-              xsi:type="generator:Value"
-              value="true"/>
-        </insideStructureStatement>
-      </elements>
-      <elements
-          xsi:type="generator:ElementType"
-          size="LARGE"
           ID="ELEMTYPE_LARGE_DETECTOR"
           type="LargeNewObjectDetector"
           ability="DETECTOR"/>
@@ -584,6 +558,21 @@
           type="Statue"
           ability="ROTABLE"
           numberOfDisplays="3"/>
+      <elements
+          xsi:type="generator:StatementElementType"
+          size="LARGE"
+          ID="ELEMTYPE_STATEMENT_CORRECTNESS"
+          type="StatementFact"
+          ability="DISPLAY"
+          numberOfDisplays="1"
+          forStructure="true"/>
+      <elements
+          xsi:type="generator:StatementElementType"
+          size="LARGE"
+          ID="ELEMTYPE_STATEMENT_DISPLAY"
+          type="Statement"
+          ability="DISPLAY"
+          numberOfDisplays="1"/>
     </gpElements>
   </elements>
   <abilities>

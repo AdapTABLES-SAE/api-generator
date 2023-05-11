@@ -19,7 +19,6 @@ package generator;
  * @generated
  */
 public interface Quantity extends Parameter {
-
 	/**
 	 * Returns the value of the '<em><b>Fact Nb Answers</b></em>' attribute.
 	 * The default value is <code>"false"</code>.
@@ -42,4 +41,5 @@ public interface Quantity extends Parameter {
 	 * @generated
 	 */
 	void setFactNbAnswers(boolean value);
+
 } // Quantity

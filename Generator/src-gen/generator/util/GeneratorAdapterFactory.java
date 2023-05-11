@@ -512,18 +512,13 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseInteractiveStatement(InteractiveStatement object) {
-			return createInteractiveStatementAdapter();
-		}
-
-		@Override
-		public Adapter caseStructureStatement(StructureStatement object) {
-			return createStructureStatementAdapter();
-		}
-
-		@Override
 		public Adapter caseSize(Size object) {
 			return createSizeAdapter();
+		}
+
+		@Override
+		public Adapter caseStatementElementType(StatementElementType object) {
+			return createStatementElementTypeAdapter();
 		}
 
 		@Override
@@ -1680,34 +1675,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.InteractiveStatement <em>Interactive Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.InteractiveStatement
-	 * @generated
-	 */
-	public Adapter createInteractiveStatementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.StructureStatement <em>Structure Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.StructureStatement
-	 * @generated
-	 */
-	public Adapter createStructureStatementAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link generator.Size <em>Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1718,6 +1685,20 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSizeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.StatementElementType <em>Statement Element Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.StatementElementType
+	 * @generated
+	 */
+	public Adapter createStatementElementTypeAdapter() {
 		return null;
 	}
 

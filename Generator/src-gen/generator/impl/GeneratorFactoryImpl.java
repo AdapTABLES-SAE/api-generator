@@ -203,12 +203,10 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createQuestionGameplay();
 		case GeneratorPackage.NO_QUESTION_GAMEPLAY:
 			return createNoQuestionGameplay();
-		case GeneratorPackage.INTERACTIVE_STATEMENT:
-			return createInteractiveStatement();
-		case GeneratorPackage.STRUCTURE_STATEMENT:
-			return createStructureStatement();
 		case GeneratorPackage.SIZE:
 			return createSize();
+		case GeneratorPackage.STATEMENT_ELEMENT_TYPE:
+			return createStatementElementType();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -967,29 +965,19 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InteractiveStatement createInteractiveStatement() {
-		InteractiveStatementImpl interactiveStatement = new InteractiveStatementImpl();
-		return interactiveStatement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StructureStatement createStructureStatement() {
-		StructureStatementImpl structureStatement = new StructureStatementImpl();
-		return structureStatement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Size createSize() {
 		SizeImpl size = new SizeImpl();
 		return size;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StatementElementType createStatementElementType() {
+		StatementElementTypeImpl statementElementType = new StatementElementTypeImpl();
+		return statementElementType;
 	}
 
 	/**
