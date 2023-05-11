@@ -194,18 +194,20 @@ public class ConcreteGameplayGenerator {
 		int numberOfObjectsToInstanciate = Integer.valueOf(((Value) fact.getCorrectnessToReach().getValue()).getValue());
 		boolean computesPositionEachTime = position == null;
 		
-		int numberOfChoicePerElement = fact.getPropositions().size() / numberOfObjectsToInstanciate;
+		int numberOfChoicePerElement = (int) Math.ceil((double) fact.getPropositions().size() / (double) numberOfObjectsToInstanciate);
 		if(numberOfChoicePerElement > getNumberOfChoicesWornBy((ElementType) elementType)) {
 			System.err.println("The number of choice is to high for this component");
 		}
 				
 		int propIndex, nbIndexFaux = 1;
+		int instanciatedSolution = 0;
 		List<PositionedElement> elements = new ArrayList<>();
 		for (int i = 0; i < numberOfObjectsToInstanciate; i++) {
 			position = computesPositionEachTime? getAvailablePosition(roomtype, elementType, false): position;
 			PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
 			int randomPositionOfCorrect = new Random().nextInt(numberOfChoicePerElement);
 			for (int choix = 0; choix < numberOfChoicePerElement; choix++) {
+				if(instanciatedSolution == fact.getPropositions().size()) { break; }
 				if(randomPositionOfCorrect == choix) {
 					//System.out.println("dans le if");
 					propIndex = getIndexOfCorrectAnswerNumber(fact, i+1);
@@ -230,6 +232,7 @@ public class ConcreteGameplayGenerator {
 					
 					propIndex++;
 				}
+				instanciatedSolution++;
 			}
 			
 			elements.add(comp);
