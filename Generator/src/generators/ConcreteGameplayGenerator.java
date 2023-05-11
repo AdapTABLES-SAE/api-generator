@@ -356,18 +356,7 @@ public class ConcreteGameplayGenerator {
 					struct = buildStructure(comp, positionFromParent);
 					elements.add(struct);
 					for (AComponent aComp : comp.getComponents()) {
-						/*if(aComp instanceof Component) {
-							if(((Component) aComp).isWearStatement()) {
-								elementType = getCompatibleElementType((Component) aComp, roomElements.getRoomTypeOfRoom(), true, roomElements.getFacts().get(i).getQuestion().isInteractive());
-							} else {
-								elementType = getCompatibleElementType((Component) aComp, roomElements.getRoomTypeOfRoom(), true);	
-							}
-						} else {
-							elementType = ((Structure) aComp).getStructureType();
-						}*/
-						
-						elementType = roomElements.getElementTypeFor(aComp);
-					
+						elementType = roomElements.getElementTypeFor(aComp);		
 						if(isComponentWearChoice(aComp)) { propIndex++; } 
 						elements.addAll(buildStructureHierarchy(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, i, propIndex));
 						if(elementType instanceof ElementType && isComponentWearChoices(aComp, (ElementType) elementType)) { 
@@ -379,19 +368,11 @@ public class ConcreteGameplayGenerator {
 				struct = buildStructure(comp, positionFromParent);
 				elements.add(struct);
 				
-				
 				for (AComponent aComp : comp.getComponents()) {
-					elementType = roomElements.getElementTypeFor(aComp);
-					//if() {
-						
-						if(aComp instanceof Component && ((Component) aComp).isWearStatement()) {
-							//elementType = getCompatibleElementType((Component) aComp, roomtype, true, facts.get(factIndex).getQuestion().isInteractive());
-							elements.addAll(buildStructureHierarchy(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, factIndex, propositionIndex));	
-						} /*else {
-							//elementType = getCompatibleElementType((Component) aComp, roomtype, true);
-							elements.addAll(buildStructureHierarchy(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, -1, propositionIndex));
-						}*/
-					 else {
+					elementType = roomElements.getElementTypeFor(aComp);				
+					if(aComp instanceof Component && ((Component) aComp).isWearStatement()) {
+						elements.addAll(buildStructureHierarchy(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, factIndex, propositionIndex));	
+					} else {
 						elements.addAll(buildStructureHierarchy(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, -1, propositionIndex));
 					}
 				}
@@ -399,14 +380,11 @@ public class ConcreteGameplayGenerator {
 		} else {
 			Component comp = (Component) component;
 			elementType = roomElements.getElementTypeFor(component);
-			//System.err.println(elementType == null);
 			
 			boolean hasIntegratedChoices = ((QuestionGameplay) roomElements.getGameplay()).isHasIntegratedPropositions();
 			// Les objets avec des quantites n'ont pas de sens dans le cas des structures et ne sont donc pas geres 
 			if(factIndex != -1) {
-				//elementType = getCompatibleElementType(comp, roomtype, true);
 				if(comp.isWearStatement()) { 
-				//	elementType = getCompatibleElementType(comp, roomtype, true, facts.get(factIndex).getQuestion().isInteractive());
 					elements.add(buildStatementComponent(comp, elementType, roomElements.getFacts().get(factIndex), positionFromParent)); 
 				}
 				else if(comp.isInputEntry()) { elements.add(buildInputEntryElement(comp, elementType,  roomElements.getFacts().get(factIndex), positionFromParent)); }
@@ -425,8 +403,6 @@ public class ConcreteGameplayGenerator {
 	}
 	
 	private boolean elementSizeIsAccepted(APosition aPosition, GPElementType elementType) {
-		/*if(aPosition.getSize().equals(ElementSize.LARGE)) { return true; }
-		if(aPosition.getSize().equals(ElementSize.MEDIUM) && !elementType.getSize().equals(ElementSize.LARGE)) { return true; }*/
 		return elementType.getSize() == aPosition.getSize();
 	}
 	

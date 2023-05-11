@@ -74,6 +74,18 @@ public class GridManager {
 		return !occupiedCoordinates.containsKey(coord);
 	}
 	
+	private boolean roomTypeofRoomAsPossibleAccess(Coordinate roomCoord, Directions direction) {
+		Set<Directions> oppositeDirections = directionManager.getOppositeDirections(direction);
+		
+		for (Directions directionOp : oppositeDirections) {
+			if(occupiedCoordinates.get(roomCoord).getRoomtype().getDirections().contains(directionOp)) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
 	public List<NeighborAccess> getNeighbors(Coordinate roomCoord, boolean isSimpleRoom){
 		List<NeighborAccess> neighbors = new ArrayList<>();
 		
@@ -84,8 +96,8 @@ public class GridManager {
 		if(isSimpleRoom) {
 			Coordinate v1 = new Coordinate(roomCoord.getX(), roomCoord.getY() + 1);
 			Coordinate v4 = new Coordinate(roomCoord.getX() + 1, roomCoord.getY());
-			if(occupiedCoordinates.keySet().contains(v1)) {neighbors.add(createNeighborWithAccesses(true, roomCoord, occupiedCoordinates.get(v1), Directions.NORTH));}
-			if(occupiedCoordinates.keySet().contains(v4)) {neighbors.add(createNeighborWithAccesses(true, roomCoord, occupiedCoordinates.get(v4), Directions.EAST));}
+			if(occupiedCoordinates.keySet().contains(v1) && roomTypeofRoomAsPossibleAccess(v1, Directions.NORTH)) {neighbors.add(createNeighborWithAccesses(true, roomCoord, occupiedCoordinates.get(v1), Directions.NORTH));}
+			if(occupiedCoordinates.keySet().contains(v4)&& roomTypeofRoomAsPossibleAccess(v4, Directions.EAST)) {neighbors.add(createNeighborWithAccesses(true, roomCoord, occupiedCoordinates.get(v4), Directions.EAST));}
 			dirV2 = Directions.SOUTH;
 			dirV3 = Directions.WEST;
 		}else {
@@ -96,18 +108,18 @@ public class GridManager {
 			Coordinate v9 = new Coordinate(roomCoord.getX() + 2, roomCoord.getY());
 			Coordinate v10 = new Coordinate(roomCoord.getX() + 1, roomCoord.getY() - 1);
 			
-			if(occupiedCoordinates.keySet().contains(v5)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v5), Directions.WEST_NORTH));}
-			if(occupiedCoordinates.keySet().contains(v6)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v6), Directions.NORTH_WEST));}
-			if(occupiedCoordinates.keySet().contains(v7)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v7), Directions.NORTH_EAST));}
-			if(occupiedCoordinates.keySet().contains(v8)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v8), Directions.EAST_NORTH));}
-			if(occupiedCoordinates.keySet().contains(v9)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v9), Directions.EAST_SOUTH));}
-			if(occupiedCoordinates.keySet().contains(v10)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v10), Directions.SOUTH_EAST));}
+			if(occupiedCoordinates.keySet().contains(v5) && roomTypeofRoomAsPossibleAccess(v5, Directions.WEST_NORTH)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v5), Directions.WEST_NORTH));}
+			if(occupiedCoordinates.keySet().contains(v6) && roomTypeofRoomAsPossibleAccess(v6, Directions.NORTH_WEST)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v6), Directions.NORTH_WEST));}
+			if(occupiedCoordinates.keySet().contains(v7) && roomTypeofRoomAsPossibleAccess(v7, Directions.NORTH_EAST)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v7), Directions.NORTH_EAST));}
+			if(occupiedCoordinates.keySet().contains(v8) && roomTypeofRoomAsPossibleAccess(v8, Directions.EAST_NORTH)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v8), Directions.EAST_NORTH));}
+			if(occupiedCoordinates.keySet().contains(v9) && roomTypeofRoomAsPossibleAccess(v9, Directions.EAST_SOUTH)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v9), Directions.EAST_SOUTH));}
+			if(occupiedCoordinates.keySet().contains(v10) && roomTypeofRoomAsPossibleAccess(v10, Directions.SOUTH_EAST)) {neighbors.add(createNeighborWithAccesses(false, roomCoord, occupiedCoordinates.get(v10), Directions.SOUTH_EAST));}
 			dirV2 = Directions.SOUTH_WEST;
 			dirV3 = Directions.WEST_SOUTH;
 		}
 		
-		if(occupiedCoordinates.keySet().contains(v2)) {neighbors.add(createNeighborWithAccesses(isSimpleRoom, roomCoord, occupiedCoordinates.get(v2), dirV2));}
-		if(occupiedCoordinates.keySet().contains(v3)) {neighbors.add(createNeighborWithAccesses(isSimpleRoom, roomCoord, occupiedCoordinates.get(v3), dirV3));}
+		if(occupiedCoordinates.keySet().contains(v2) && roomTypeofRoomAsPossibleAccess(v2, dirV2)) {neighbors.add(createNeighborWithAccesses(isSimpleRoom, roomCoord, occupiedCoordinates.get(v2), dirV2));}
+		if(occupiedCoordinates.keySet().contains(v3) && roomTypeofRoomAsPossibleAccess(v3, dirV3)) {neighbors.add(createNeighborWithAccesses(isSimpleRoom, roomCoord, occupiedCoordinates.get(v3), dirV3));}
 		
 		return neighbors;
 	}

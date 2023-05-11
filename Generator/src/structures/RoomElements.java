@@ -158,7 +158,7 @@ public class RoomElements {
 		}
 	}
 	
-	private ElementType getCompatibleElementType(Component component) {
+	private ElementType getCompatibleElementType(Component component) { // TODO : Deal with statements 
 		List<ElementType> compatibleTypes = new ArrayList<>();
 		for (GPElementType elementType : gameDescriptionModel.getElements().getGpElements().getElements()) {
 			if(elementType instanceof ElementType && ((ElementType) elementType).getAbility().equals(component.getAllowedAbility())) {

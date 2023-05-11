@@ -118,6 +118,10 @@ public class DirectionManager {
 		return oppositeDirections;
 	}	
 	
+	public Set<Directions> getOppositeDirections(Directions direction){
+		return oppositeDirections.get(direction);
+	}
+	
 	public boolean isSimpleDirection(Directions direction) {
 		return simpleDirections.contains(direction);
 	}

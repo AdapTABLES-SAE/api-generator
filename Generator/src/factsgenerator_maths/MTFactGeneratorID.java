@@ -86,32 +86,36 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 		return allFacts;
 	}
 	
+	private boolean isDifferentThanFactSolutions(MTQFIdentification fact, int chosenFalseProp) {
+		return chosenFalseProp != fact.getLeftOperand() && chosenFalseProp != fact.getRightOperand() && chosenFalseProp != fact.getResult();
+	}
+	
 	private MTQFIdentification buildBadQF(MTQFIdentification goodFact, ESingleTarget target) { 
 		MTQFIdentification qf = new MTQFIdentificationImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		
 		int min, max, chosenFalse = -1;
-		int solution = -1;
+		//int solution = -1;
 		if(target.equals(ESingleTarget.RESULT)) { 
 			min = goodFact.getResult() - buildFalseInteraval[0] >= 0? goodFact.getResult() - buildFalseInteraval[0]: 0;
 			max = goodFact.getResult() + buildFalseInteraval[1];
-			solution = goodFact.getResult();
+			//solution = goodFact.getResult();
 		}else {
 			if(goodFact.getBuild().equals(TableBuild.OPERAND_TABLE)) {
 				min = goodFact.getLeftOperand() - buildFalseInteraval[0] >= 0? goodFact.getLeftOperand() - buildFalseInteraval[0]: 0;
 				max = goodFact.getLeftOperand() + buildFalseInteraval[1];
-				solution = goodFact.getLeftOperand();
+				//solution = goodFact.getLeftOperand();
 			}else {
 				min = goodFact.getRightOperand() - buildFalseInteraval[0] >= 0? goodFact.getRightOperand() - buildFalseInteraval[0]: 0;
 				max = goodFact.getRightOperand() + buildFalseInteraval[1];
-				solution = goodFact.getRightOperand();
+				//solution = goodFact.getRightOperand();
 			}
 			
 		}
 			
 		while(chosenFalse == -1) {
 			chosenFalse = rand.nextInt((max - min) + 1) + min;
-			if(alreadyUsed.contains(chosenFalse) && !(chosenFalse == solution)) {
+			if(alreadyUsed.contains(chosenFalse) && isDifferentThanFactSolutions(goodFact, chosenFalse)) {
 				chosenFalse = -1;
 			}
 		}

@@ -238,7 +238,7 @@ public class DungeonGenerator {
 		Coordinate nextPosition = null;	
 		StructureChosenRT structureRT = new StructureChosenRT(null, null, null);
 				
-		boolean isExitRoomCreation = false;
+		//boolean isExitRoomCreation = false;
 	
 		while(dungeonRooms.size() < nbRooms + 2) {
 			//System.out.println("Loop "+dungeonRooms.size());
@@ -253,12 +253,10 @@ public class DungeonGenerator {
 				eligibleRoomsOrientations.lastElement().removeExitForEntry(r.getEntry(), r.getExit());
 			} else {
 				backtrack = false;
-				if(dungeonRooms.size() == nbRooms + 1) { 
+				if(dungeonRooms.size() == (nbRooms + 1)) { 
 					structureRT = chooseRoomType(eligibleRoomsOrientations.lastElement(), dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), true);
-
 				} else {
 					structureRT = chooseRoomType(eligibleRoomsOrientations.lastElement(), dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1), false);
-
 				}
 				
 				
@@ -382,6 +380,16 @@ public class DungeonGenerator {
 		return false;
 	}*/
 	
+	private List<RoomType> getRoomTypesForNormalRooms(){
+		List<RoomType> roomtypes = new ArrayList<>();
+		
+		for (RoomType roomType : modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes()) {
+			if(!roomType.isForEntry() || !roomType.isForExit()) {
+				roomtypes.add(roomType);
+			}
+		}
+		return roomtypes;
+	}
 	
 	/**
 	 * Selection of a RoomType that at least possess the entry and exit directions/access.
@@ -392,7 +400,7 @@ public class DungeonGenerator {
 	private RoomType getCompatibleRoomType(Directions entry, Directions exit, RoomElements roomElements, boolean isExitRoom) { // TODO à corriger probleme avec les statues mauvais roomType choisi 
 		List<RoomType> roomTypes; 
 		if(!isExitRoom) {
-			roomTypes = new ArrayList<>(modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes());
+			roomTypes = getRoomTypesForNormalRooms();
 		} else {
 			roomTypes = getRoomTypesForExit();
 		}
@@ -415,9 +423,8 @@ public class DungeonGenerator {
 					}
 				}
 			}*/
-			System.out.println(roomType.getName());
-			System.out.println(!roomTypeHasCompatibleAccesses(entry, exit, roomType)+" "+entry+" "+exit);
-			System.out.println(!roomTypeHasCompatiblePositions(roomType, roomElements));
+			/*System.out.println(!roomTypeHasCompatibleAccesses(entry, exit, roomType)+" "+entry+" "+exit);
+			System.out.println(!roomTypeHasCompatiblePositions(roomType, roomElements));*/
 			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {
 				
 				roomTypes.remove(roomType);
