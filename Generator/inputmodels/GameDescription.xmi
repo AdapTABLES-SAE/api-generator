@@ -183,7 +183,8 @@
       <directions>WEST</directions>
     </roomtypes>
   </roomtypes>
-  <levelsDifficultyProgress/>
+  <levelsDifficultyProgress
+      nbQRoomIncrease="1"/>
   <gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"

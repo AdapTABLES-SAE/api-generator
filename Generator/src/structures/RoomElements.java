@@ -166,11 +166,12 @@ public class RoomElements {
 				/*System.out.println("au bon endroid");
 				System.out.println("Statement element "+(elementType instanceof StatementElementType));
 				System.out.println("For struct"+isStructureComponent);*/
+				
 				if(elementType instanceof StatementElementType && hasValidStatementConditions(elementType, isStructureComponent)) {
 					compatibleTypes.add((StatementElementType) elementType);
 				}  
 			} else {
-				if(elementType instanceof ElementType && ((ElementType) elementType).getAbility().equals(component.getAllowedAbility())
+				if(elementType instanceof ElementType && !(elementType instanceof StatementElementType) && ((ElementType) elementType).getAbility().equals(component.getAllowedAbility())
 						&& hasExpectedSizeRequierements((ElementType) elementType, component)) {
 					compatibleTypes.add((ElementType) elementType);
 				}
@@ -193,7 +194,9 @@ public class RoomElements {
 		for (GPElementType elementType : elementsToQuantity.keySet()) {
 			if(elementType instanceof ElementType) {
 				if(component instanceof Component) {
-					if(((ElementType) elementType).getAbility().equals(((Component) component).getAllowedAbility())) {
+					if(((Component) component).isWearStatement()){
+						if(elementType instanceof StatementElementType){ return elementType; }
+					} else if(!(elementType instanceof StatementElementType) && ((ElementType) elementType).getAbility().equals(((Component) component).getAllowedAbility())) {
 						return elementType;
 					}
 				}
