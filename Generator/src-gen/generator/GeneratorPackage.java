@@ -6351,16 +6351,6 @@ public interface GeneratorPackage extends EPackage {
 	int ELEMENT_SIZE = 99;
 
 	/**
-	 * The meta object id for the '{@link generator.StatementType <em>Statement Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.StatementType
-	 * @see generator.impl.GeneratorPackageImpl#getStatementType()
-	 * @generated
-	 */
-	int STATEMENT_TYPE = 100;
-
-	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6368,7 +6358,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 101;
+	int GP_CATEGORY = 100;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -6378,7 +6368,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 102;
+	int ECORRECTNESS = 101;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -6388,7 +6378,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 103;
+	int EBOUNDARY = 102;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -9847,16 +9837,6 @@ public interface GeneratorPackage extends EPackage {
 	EEnum getElementSize();
 
 	/**
-	 * Returns the meta object for enum '{@link generator.StatementType <em>Statement Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Statement Type</em>'.
-	 * @see generator.StatementType
-	 * @generated
-	 */
-	EEnum getStatementType();
-
-	/**
 	 * Returns the meta object for enum '{@link generator.GPCategory <em>GP Category</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12706,16 +12686,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ELEMENT_SIZE = eINSTANCE.getElementSize();
-
-		/**
-		 * The meta object literal for the '{@link generator.StatementType <em>Statement Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.StatementType
-		 * @see generator.impl.GeneratorPackageImpl#getStatementType()
-		 * @generated
-		 */
-		EEnum STATEMENT_TYPE = eINSTANCE.getStatementType();
 
 		/**
 		 * The meta object literal for the '{@link generator.GPCategory <em>GP Category</em>}' enum.

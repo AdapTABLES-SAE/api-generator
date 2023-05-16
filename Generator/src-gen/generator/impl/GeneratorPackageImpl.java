@@ -2,113 +2,7 @@
  */
 package generator.impl;
 
-import generator.AComponent;
-import generator.APosition;
-import generator.ATask;
-import generator.AValue;
-import generator.Abilities;
-import generator.Ability;
-import generator.AbstractFact;
-import generator.CompletionCriteria;
-import generator.CompletionTask;
-import generator.Component;
-import generator.Condition;
-import generator.Correctness;
-import generator.CorrectnessValue;
-import generator.CurrentGameLevel;
-import generator.CurrentObjectiveLevel;
-import generator.Directions;
-import generator.Display;
-import generator.Dungeon;
-import generator.DungeonMode;
-import generator.EBoundary;
-import generator.ECorrectness;
-import generator.EModality;
-import generator.ESeveralTarget;
-import generator.ESingleTarget;
-import generator.ETaskType;
-import generator.ElementSize;
-import generator.ElementType;
-import generator.EnterResponse;
-import generator.EntrySoluceParam;
-import generator.Equipment;
-import generator.Equipments;
-import generator.ExpectedAnswer;
-import generator.FactCorrectnessParam;
-import generator.FactSolutionParam;
-import generator.GPCategory;
-import generator.GPElementType;
-import generator.GPElementsTypes;
-import generator.GameContext;
-import generator.GameDescription;
-import generator.GameElementTypes;
-import generator.Gameplay;
-import generator.GameplayTaskRelations;
-import generator.Gameplays;
-import generator.GenerationContext;
-import generator.GeneratorFactory;
-import generator.GeneratorPackage;
-import generator.IdentificationTask;
-import generator.Knowledge;
-import generator.LargeRoomType;
-import generator.LearnerPlayer;
-import generator.LearningDomain;
-import generator.LearningPath;
-import generator.Level;
-import generator.LevelsDifficultyProgress;
-import generator.MTCompletion1;
-import generator.MTCompletion2;
-import generator.MTFact;
-import generator.MTIdentification;
-import generator.MTLevel;
-import generator.MTMembership;
-import generator.MTQFCompletion1;
-import generator.MTQFCompletion2;
-import generator.MTQFIdentification;
-import generator.MTQFMembership;
-import generator.MTQFRebuild;
-import generator.MTRecontruction;
-import generator.MTResultFact;
-import generator.MembershipIDTask;
-import generator.MultipleChoice;
-import generator.NoQuestionGameplay;
-import generator.Objective;
-import generator.OrderingTask;
-import generator.Parameter;
-import generator.Position;
-import generator.PositionedElement;
-import generator.PositionedStructureElement;
-import generator.Prerequisite;
-import generator.Progression;
-import generator.Prompt;
-import generator.PropositionParam;
-import generator.Quantity;
-import generator.QuestionGameplay;
-import generator.QuestionParam;
-import generator.QuestionableFact;
-import generator.QuestionableFactResult;
-import generator.QuestionedFact;
-import generator.Relation;
-import generator.ResponseModality;
-import generator.ResultPosition;
-import generator.Results;
-import generator.ResultsByTask;
-import generator.Room;
-import generator.RoomAccess;
-import generator.RoomType;
-import generator.RoomTypes;
-import generator.SetOfFacts;
-import generator.Size;
-import generator.SmallRoomType;
-import generator.StatementElementType;
-import generator.StatementType;
-import generator.Structure;
-import generator.StructurePosition;
-import generator.StructureType;
-import generator.TableBuild;
-import generator.Value;
-import generator.WantedAnswersParam;
-
+import generator.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -826,13 +720,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EEnum elementSizeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum statementTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -3843,15 +3730,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getStatementType() {
-		return statementTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getGPCategory() {
 		return gpCategoryEEnum;
 	}
@@ -4319,7 +4197,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		eModalityEEnum = createEEnum(EMODALITY);
 		eSeveralTargetEEnum = createEEnum(ESEVERAL_TARGET);
 		elementSizeEEnum = createEEnum(ELEMENT_SIZE);
-		statementTypeEEnum = createEEnum(STATEMENT_TYPE);
 		gpCategoryEEnum = createEEnum(GP_CATEGORY);
 		eCorrectnessEEnum = createEEnum(ECORRECTNESS);
 		eBoundaryEEnum = createEEnum(EBOUNDARY);
@@ -4943,7 +4820,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(levelsDifficultyProgressEClass, LevelsDifficultyProgress.class, "LevelsDifficultyProgress",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLevelsDifficultyProgress_NbQRoomIncrease(), ecorePackage.getEInt(), "nbQRoomIncrease", "2", 0,
+		initEAttribute(getLevelsDifficultyProgress_NbQRoomIncrease(), ecorePackage.getEInt(), "nbQRoomIncrease", "1", 0,
 				1, LevelsDifficultyProgress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLevelsDifficultyProgress_NbNQRoomIncrease(), ecorePackage.getEInt(), "nbNQRoomIncrease", "1",
@@ -5326,13 +5203,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(elementSizeEEnum, ElementSize.SMALL);
 		addEEnumLiteral(elementSizeEEnum, ElementSize.MEDIUM);
 		addEEnumLiteral(elementSizeEEnum, ElementSize.LARGE);
-
-		initEEnum(statementTypeEEnum, StatementType.class, "StatementType");
-		addEEnumLiteral(statementTypeEEnum, StatementType.TEXTUAL);
-		addEEnumLiteral(statementTypeEEnum, StatementType.TEXTUAL_INTERACTIVE);
-		addEEnumLiteral(statementTypeEEnum, StatementType.GRAPHIC);
-		addEEnumLiteral(statementTypeEEnum, StatementType.NONE);
-		addEEnumLiteral(statementTypeEEnum, StatementType.TO_FILL_IN);
 
 		initEEnum(gpCategoryEEnum, GPCategory.class, "GPCategory");
 		addEEnumLiteral(gpCategoryEEnum, GPCategory.SELECT_UNIQUE);

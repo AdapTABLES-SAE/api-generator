@@ -124,8 +124,8 @@ public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 		List<Integer> propositions_temp = new ArrayList<>();
 		
 		
-		int min = qfact.getSoluce()-10 >= 0? qfact.getSoluce()-10: 0;
-		int max = qfact.getSoluce()+10;
+		int min = qfact.getSoluce()-5 >= 0? qfact.getSoluce()-5: 0;
+		int max = qfact.getSoluce()+5;
 		
 		while(propositions_temp.size() < mc.getNbBadChoices()) {
 			int number = new Random().nextInt(max - min) + min;

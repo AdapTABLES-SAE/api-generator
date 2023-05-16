@@ -28,7 +28,7 @@ public class RoomElements {
 	private Gameplay gameplay;
 	private ATask task;
 	private List<QuestionedFact> facts;
-	
+	private boolean exit;
 	
 	private Room associatedRoom;
 	
@@ -36,12 +36,21 @@ public class RoomElements {
 	
 	private Map<GPElementType, Integer> elementsToQuantity; // integer = -1 when element is inside structure
 	
+	public boolean isExit() {
+		return this.exit;
+	}
+	
 	public RoomElements(GameDescription gameDescriptionModel, ATask task) {
+		this(gameDescriptionModel, task, false);
+	}
+	
+	public RoomElements(GameDescription gameDescriptionModel, ATask task, boolean isExit) {
 		this.gameDescriptionModel = gameDescriptionModel;
 		this.elementsToQuantity = new HashMap<>();
 		this.facts = new ArrayList<>();
 		this.task = task;
 		this.associatedRoom = null;
+		this.exit = isExit;
 	}
 	
 	public RoomType getRoomTypeOfRoom() {
@@ -67,6 +76,10 @@ public class RoomElements {
 			}
 		}
 		return null;
+	}
+	
+	public RoomElements(GameDescription gameDescriptionModel, boolean isExit) {
+		this(gameDescriptionModel, null, isExit);
 	}
 	
 	public RoomElements(GameDescription gameDescriptionModel) {
@@ -142,7 +155,9 @@ public class RoomElements {
 	private double computesNumberofElements(Component component, ElementType elementType) {  
 		if(component.isWearChoices()) {
 			if(elementType.getNumberOfDisplays() > 1) {
-				return (double) (facts.get(0).getPropositions().size() * facts.size()) / (double) elementType.getNumberOfDisplays(); 
+				int factCorrectnessToReach = Integer.valueOf(((Value) facts.get(0).getCorrectnessToReach().getValue()).getValue());
+				double numberofToDisplayPerElement = (double) (facts.get(0).getPropositions().size() * facts.size()) / (double) elementType.getNumberOfDisplays();
+				return numberofToDisplayPerElement > factCorrectnessToReach? numberofToDisplayPerElement: factCorrectnessToReach; 
 			} else {
 				return facts.size() * facts.get(0).getPropositions().size();
 			}

@@ -182,9 +182,290 @@
       <directions>NORTH</directions>
       <directions>WEST</directions>
     </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoom5">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ2"/>
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          ID="POS3"/>
+      <elementPositions
+          ID="POS4"/>
+      <elementPositions
+          ID="POS5"/>
+      <elementPositions
+          ID="POS6"/>
+      <elementPositions
+          ID="POS7"/>
+      <elementPositions
+          ID="POS8"/>
+      <elementPositions
+          ID="POS9"/>
+      <elementPositions
+          size="LARGE"
+          ID="POSL1"/>
+      <elementPositions
+          size="LARGE"
+          ID="POSL2"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoom6">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ2"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ3"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ4"/>
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM1"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoom7">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          ID="POS3"/>
+      <elementPositions
+          ID="POS4"/>
+      <elementPositions
+          ID="POS5"/>
+      <elementPositions
+          ID="POS6"/>
+      <elementPositions
+          size="LARGE"
+          ID="POSL1"/>
+      <elementPositions
+          size="LARGE"
+          ID="POSL2"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoom8">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ2"/>
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          ID="POS3"/>
+      <elementPositions
+          ID="POS4"/>
+      <elementPositions
+          ID="POS5"/>
+      <elementPositions
+          ID="POS6"/>
+      <elementPositions
+          ID="POS7"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM1"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM2"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="TwoWaysRoom1">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ2"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ3"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ4"/>
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          ID="POS3"/>
+      <elementPositions
+          ID="POS4"/>
+      <elementPositions
+          ID="POS5"/>
+      <directions>EAST</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="TwoWaysRoom2">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ2"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ3"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ4"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM1"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM2"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM3"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM4"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM5"/>
+      <directions>EAST</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="BridgeRoom1">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ2"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ3"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ4"/>
+      <elementPositions
+          size="MEDIUM"
+          restrictedTo="CROSSABLE"
+          ID="POSM1"/>
+      <elementPositions
+          size="MEDIUM"
+          restrictedTo="CROSSABLE"
+          ID="POSM2"/>
+      <elementPositions
+          size="MEDIUM"
+          restrictedTo="CROSSABLE"
+          ID="POSM3"/>
+      <directions>SOUTH</directions>
+      <directions>NORTH</directions>
+    </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="TrapRoom2">
+      <elementPositions
+          restrictedTo="INEVITABLE"
+          ID="POS1"/>
+      <elementPositions
+          restrictedTo="INEVITABLE"
+          ID="POS2"/>
+      <elementPositions
+          restrictedTo="INEVITABLE"
+          ID="POS3"/>
+      <elementPositions
+          restrictedTo="INEVITABLE"
+          ID="POS4"/>
+      <elementPositions
+          restrictedTo="INEVITABLE"
+          ID="POS5"/>
+      <elementPositions
+          restrictedTo="INEVITABLE"
+          ID="POS6"/>
+      <elementPositions
+          size="MEDIUM"
+          restrictedTo="INEVITABLE"
+          ID="POSM1"/>
+      <elementPositions
+          size="MEDIUM"
+          restrictedTo="INEVITABLE"
+          ID="POSM2"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="INEVITABLE"
+          ID="POSL1"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="INEVITABLE"
+          ID="POSL2"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
   </roomtypes>
-  <levelsDifficultyProgress
-      nbQRoomIncrease="1"/>
+  <levelsDifficultyProgress/>
   <gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -427,7 +708,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="DONT KNOW"
+        name="SELECT MULTIPLE CHEST"
         category="SELECT_MULTIPLE">
       <components
           xsi:type="generator:Component"
@@ -492,6 +773,74 @@
       <restrictedTo>COMPLETE</restrictedTo>
       <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="SELECT UNIQUE RABBIT">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="CATCHABLE"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Attrape le bon lapin"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>IDENTIFY</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="SELECT UNIQUE RABBIT"
+        category="SELECT_MULTIPLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="CATCHABLE"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Attrape les bons lapins"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:NoQuestionGameplay"
+        name="ONE TYPES - 5 SMALL TRAP EVITABLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="EVITABLE">
+        <quantity>
+          <value
+              xsi:type="generator:Value"
+              value="5"/>
+        </quantity>
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="SMALL"/>
+        </expectedSize>
+      </components>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:NoQuestionGameplay"
+        name="ONE TYPES - 3 SMALL TRAP INEVITABLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="INEVITABLE">
+        <quantity>
+          <value
+              xsi:type="generator:Value"
+              value="3"/>
+        </quantity>
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="SMALL"/>
+        </expectedSize>
+      </components>
+    </gameplays>
   </gameplays>
   <elements>
     <equipments/>
@@ -500,12 +849,12 @@
           xsi:type="generator:StructureType"
           size="LARGE"
           ID="STRUCT_H"
-          type="HorizontalStructure"/>
+          type="HStructL"/>
       <elements
           xsi:type="generator:StructureType"
           size="LARGE"
           ID="STRUCT_V"
-          type="VerticalStructure"/>
+          type="HStructL"/>
       <elements
           xsi:type="generator:ElementType"
           ID="ELEMTYPE_INTERRUPTOR"
@@ -574,6 +923,94 @@
           type="Statement"
           ability="DISPLAY"
           numberOfDisplays="1"/>
+      <elements
+          xsi:type="generator:StructureType"
+          size="MEDIUM"
+          ID="STRUCT_H_MEDIUM"
+          type="HStructM"/>
+      <elements
+          xsi:type="generator:StructureType"
+          size="MEDIUM"
+          ID="STRUCT_V_MEDIUM"
+          type="VStructM"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMENT_TYPE_BEAR-TRAP"
+          type="BearTrap"
+          ability="INEVITABLE"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMENT_TYPE_SPIKE-TRAP"
+          type="SpikeTrap"
+          ability="EVITABLE"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMENT_TYPE_FIRE-TRAP"
+          type="FireTrap"
+          ability="EVITABLE"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMENT_TYPE_WAIT-SPIKE-TRAP"
+          type="WaitSpikeTrap"
+          ability="EVITABLE"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMENT_TYPE_WAIT-FIRE-TRAP"
+          type="WaitFireTrap"
+          ability="EVITABLE"/>
+      <elements
+          xsi:type="generator:ElementType"
+          size="MEDIUM"
+          ID="ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"
+          type="MediumWaitSpikeTrap"
+          ability="EVITABLE"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMENT_TYPE_HOLE-TRAP"
+          type="HoleTrap"
+          ability="INEVITABLE"/>
+      <elements
+          xsi:type="generator:ElementType"
+          size="MEDIUM"
+          ID="ELEMENT_TYPE_HOLE-TRAP_MEDIUM"
+          type="MediumHoleTrap"
+          ability="INEVITABLE"/>
+      <elements
+          xsi:type="generator:ElementType"
+          size="LARGE"
+          ID="ELEMENT_TYPE_HOLE-TRAP_LARGE"
+          type="LargeHoleTrap"
+          ability="INEVITABLE"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMENT_TYPE_REGULAR-SLIME"
+          type="RegularSlime"
+          ability="INEVITABLE"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMENT_TYPE_BLOCK"
+          type="Block"
+          ability="PUSHABLE"
+          numberOfDisplays="1"/>
+      <elements
+          xsi:type="generator:ElementType"
+          size="LARGE"
+          ID="ELEMENT_TYPE_BRIDGE"
+          type="BridgeV"
+          ability="CROSSABLE"
+          numberOfDisplays="1"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMENT_TYPE_KEY"
+          type="Key"
+          ability="FOLLOWABLE"
+          numberOfDisplays="1"/>
+      <elements
+          xsi:type="generator:ElementType"
+          ID="ELEMENT_TYPE_RABBIT"
+          type="Rabbit"
+          ability="CATCHABLE"
+          numberOfDisplays="1"/>
     </gpElements>
   </elements>
   <abilities>
@@ -593,5 +1030,17 @@
         name="OPENABLE"/>
     <abilities
         name="DISPLAY"/>
+    <abilities
+        name="CATCHABLE"/>
+    <abilities
+        name="INEVITABLE"/>
+    <abilities
+        name="EVITABLE"/>
+    <abilities
+        name="PUSHABLE"/>
+    <abilities
+        name="CROSSABLE"/>
+    <abilities
+        name="FOLLOWABLE"/>
   </abilities>
 </generator:GameDescription>

@@ -26,13 +26,13 @@ import org.eclipse.emf.ecore.EObject;
 public interface LevelsDifficultyProgress extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Nb QRoom Increase</b></em>' attribute.
-	 * The default value is <code>"2"</code>.
+	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nb QRoom Increase</em>' attribute.
 	 * @see #setNbQRoomIncrease(int)
 	 * @see generator.GeneratorPackage#getLevelsDifficultyProgress_NbQRoomIncrease()
-	 * @model default="2"
+	 * @model default="1"
 	 * @generated
 	 */
 	int getNbQRoomIncrease();

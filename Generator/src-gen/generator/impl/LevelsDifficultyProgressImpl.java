@@ -37,7 +37,7 @@ public class LevelsDifficultyProgressImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NB_QROOM_INCREASE_EDEFAULT = 2;
+	protected static final int NB_QROOM_INCREASE_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getNbQRoomIncrease() <em>Nb QRoom Increase</em>}' attribute.

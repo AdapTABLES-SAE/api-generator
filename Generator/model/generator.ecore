@@ -379,7 +379,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LevelsDifficultyProgress">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbQRoomIncrease" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="2"/>
+        defaultValueLiteral="1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbNQRoomIncrease" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initNbQRoom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -455,13 +455,6 @@
         iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StructurePosition" eSuperTypes="#//APosition"/>
-  <eClassifiers xsi:type="ecore:EEnum" name="StatementType">
-    <eLiterals name="TEXTUAL"/>
-    <eLiterals name="TEXTUAL_INTERACTIVE"/>
-    <eLiterals name="GRAPHIC" value="1"/>
-    <eLiterals name="NONE" value="3"/>
-    <eLiterals name="TO_FILL_IN" value="2"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PositionedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>

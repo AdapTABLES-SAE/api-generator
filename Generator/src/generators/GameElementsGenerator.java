@@ -14,6 +14,7 @@ import generator.EnterResponse;
 import generator.GPCategory;
 import generator.Gameplay;
 import generator.MultipleChoice;
+import generator.NoQuestionGameplay;
 import generator.QuestionGameplay;
 import generator.Relation;
 import managers.ModelsManager;
@@ -132,21 +133,30 @@ public class GameElementsGenerator {
 	}*/
 	
 	private void selectCompatibleGameplays() {
+		System.out.println("Gameplays selection");
 		List<Gameplay> gameplays = new ArrayList<>();
 		for (RoomElements room : dungeonElements.getRoomsElements()) {
+			System.err.println("Is exit "+room.isExit());
 			if(room.getTask() != null) {
 				List<GPCategory> validCategories = new ArrayList<>(getValidCategoriesFromRelations(room.getTask()));
 				
 				do {
+					System.out.println("In do while");
 					GPCategory aCategorie = validCategories.get(random.nextInt(validCategories.size()));
-					gameplays = getGameplayOfCategorieAndType(aCategorie, room.getTask());
+					gameplays = getQuestionGameplayForCategorieType(aCategorie, room.getTask());
 					validCategories.remove(aCategorie);
 				} while(gameplays.isEmpty());
 				
 				Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
 				room.setGameplay(gameplay);
 				//System.err.println(room.getGameplay());
+			} else if(!room.isExit()) {
+				gameplays = getNoQuestionRoomGameplay();
+				Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
+				room.setGameplay(gameplay);
 			}
+			
+			
 		}
 	}
 
@@ -199,7 +209,17 @@ public class GameElementsGenerator {
 		
 	}*/
 	
-	private List<Gameplay> getGameplayOfCategorieAndType(GPCategory category, ATask task){
+	private List<Gameplay> getNoQuestionRoomGameplay(){
+		List<Gameplay> compatibleGameplays = new ArrayList<>();
+		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
+			if(gp instanceof NoQuestionGameplay) {
+				compatibleGameplays.add(gp);
+			}
+		}
+		return compatibleGameplays;
+	}
+	
+	private List<Gameplay> getQuestionGameplayForCategorieType(GPCategory category, ATask task){
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
 		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 		/*	if(gp.getCategory().equals(GPCategory.ORIENT_UNIQUE)) {

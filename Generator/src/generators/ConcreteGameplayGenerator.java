@@ -16,6 +16,7 @@ import generator.ElementType;
 import generator.ExpectedAnswer;
 import generator.FactSolutionParam;
 import generator.GPElementType;
+import generator.NoQuestionGameplay;
 import generator.PositionedElement;
 import generator.PositionedStructureElement;
 import generator.PropositionParam;
@@ -56,13 +57,22 @@ public class ConcreteGameplayGenerator {
 		List<PositionedElement> elements = new ArrayList<>();
 		//if(roomElements.getGameplay() != null)		
 			//System.out.println(roomElements.getGameplay().getName()+" "+roomElements.getRoomTypeOfRoom());
+		System.err.println(roomElements.getGameplay() instanceof NoQuestionGameplay);
 		for (AComponent aComp : roomElements.getGameplay().getComponents()) {
 			if(aComp instanceof Structure) {
 				elements.addAll(buildStructureHierarchy(aComp, roomElements));
 			} else {
-				for (int i = 0; i < roomElements.getFacts().size(); i++) {
-					elements.addAll(buildSimpleGameplayHierarchy((Component) aComp, roomElements, i)); 
+				if(roomElements.getGameplay() instanceof QuestionGameplay) {
+					for (int i = 0; i < roomElements.getFacts().size(); i++) {
+						System.out.println("in loop");
+						elements.addAll(buildSimpleGameplayHierarchy((Component) aComp, roomElements, i)); 
+					}
+				} else {
+					elements.addAll(buildNoQuestionGameplay((Component) aComp, roomElements));
 				}
+				
+				
+				
 			}
 		}
 		occupiedPositions = new ArrayList<>();
@@ -71,6 +81,18 @@ public class ConcreteGameplayGenerator {
 	
 	private boolean isSingleChoiceComponent(Component component, ElementType elementType) {
 		return component.isWearChoices() && elementType.getNumberOfDisplays() == 1;
+	}
+	
+	private List<PositionedElement> buildNoQuestionGameplay(Component component, RoomElements roomElements){
+		List<PositionedElement> elements = new ArrayList<>();
+		if(component.getQuantity() != null) {
+			int quantity =  Integer.valueOf(((Value) component.getQuantity().getValue()).getValue());
+			GPElementType elementType = roomElements.getElementTypeFor(component);
+			for (int i = 0; i < quantity; i++) {
+				elements.add(buildNonSpecificElement(component, elementType, getAvailablePosition(roomElements.getRoomTypeOfRoom(), elementType, false)));
+			}
+		}
+		return elements;
 	}
 	
 	private List<PositionedElement> buildSimpleGameplayHierarchy(Component component, RoomElements roomElements, int factIndex){

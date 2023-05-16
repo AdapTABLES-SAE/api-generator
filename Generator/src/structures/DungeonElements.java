@@ -106,7 +106,7 @@ public class DungeonElements {
 			roomsElements.add(new RoomElements(gameDescriptionModel));
 		}
 		roomsElements = Shuffle.shuffleRoomElements(roomsElements);
-		roomsElements.add(new RoomElements(gameDescriptionModel)); //exit
+		roomsElements.add(new RoomElements(gameDescriptionModel, true)); //exit
 	}
 	
 	public void print() {

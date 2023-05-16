@@ -79,13 +79,12 @@ public class ALGAGenerator {
 			dungeonGeneration = new DungeonGenerator(modelAccess, dungeonElements, nbNQRooms+nbQRooms);
 			generatedDungeon = dungeonGeneration.generateDungeon();
 			
-			System.out.println("TOUT LE BORDEL");
+			/*System.out.println("TOUT LE BORDEL");
 			for (int i = 0; i < dungeonElements.getRoomsElements().size(); i++) {
-				if(dungeonElements.getRoomsElements().get(i).getGameplay() != null) {
-					System.out.print(dungeonElements.getRoomsElements().get(i).getGameplay().getName());
-				}
-				System.out.println(" -- "+generatedDungeon.getRooms().get(i+1).getRoomtype().getName());
-			}
+
+				System.out.println(dungeonElements.getRoomsElements().get(i));
+				dungeonElements.getRoomsElements().get(i).printElementTypes();
+			}*/
 			
 			// TODO : print roomtype and elements to see if coherent
 			generatedDungeon = gameGeneration.generateRoomContent(generatedDungeon);

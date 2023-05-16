@@ -238,8 +238,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createESeveralTargetFromString(eDataType, initialValue);
 		case GeneratorPackage.ELEMENT_SIZE:
 			return createElementSizeFromString(eDataType, initialValue);
-		case GeneratorPackage.STATEMENT_TYPE:
-			return createStatementTypeFromString(eDataType, initialValue);
 		case GeneratorPackage.GP_CATEGORY:
 			return createGPCategoryFromString(eDataType, initialValue);
 		case GeneratorPackage.ECORRECTNESS:
@@ -277,8 +275,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return convertESeveralTargetToString(eDataType, instanceValue);
 		case GeneratorPackage.ELEMENT_SIZE:
 			return convertElementSizeToString(eDataType, instanceValue);
-		case GeneratorPackage.STATEMENT_TYPE:
-			return convertStatementTypeToString(eDataType, instanceValue);
 		case GeneratorPackage.GP_CATEGORY:
 			return convertGPCategoryToString(eDataType, instanceValue);
 		case GeneratorPackage.ECORRECTNESS:
@@ -1235,28 +1231,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * @generated
 	 */
 	public String convertElementSizeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StatementType createStatementTypeFromString(EDataType eDataType, String initialValue) {
-		StatementType result = StatementType.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertStatementTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

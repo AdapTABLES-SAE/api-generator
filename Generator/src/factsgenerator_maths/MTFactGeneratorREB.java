@@ -117,9 +117,24 @@ public class MTFactGeneratorREB extends FactGeneratorTemplate {
 		List<Integer> propositions_temp = new ArrayList<>();
 		
 		
-		int range = qfact.getSoluceRight() + qfact.getSoluceLeft() + qfact.getSoluceRes() + 10;
+		int min1 = qfact.getSoluceLeft()-8 >= 0? qfact.getSoluceLeft()-8: 1;
+		int min2 = qfact.getSoluceRight()-8 >= 0? qfact.getSoluceRight()-8: 1;
+		int min3 = qfact.getSoluceRes()-8 >= 0? qfact.getSoluceRes()-8: 1; 
+		int max1 = qfact.getSoluceLeft()+8;
+		int max2 = qfact.getSoluceRight()+8;
+		int max3 = qfact.getSoluceRes()+8; 
+		int number;
 		while(propositions_temp.size() < mc.getNbBadChoices()) {
-			int number = new Random().nextInt(range) + 1;
+			switch(propositions_temp.size()) {
+			case 1:
+				number = new Random().nextInt(max1 - min1) + min1;
+				break;
+			case 2:
+				number = new Random().nextInt(max2 - min2) + min2;
+				break;
+			default:
+				number = new Random().nextInt(max3 - min3) + min3;
+			}
 			if(!propositions_temp.contains(number) && !createsOtherSolution(qfact, propositions_temp, number)) {
 				propositions_temp.add(number);
 			}

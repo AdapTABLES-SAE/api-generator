@@ -50,8 +50,11 @@ public class EducationalElementsGenerator {
 		selectObjectiveLevel();	
 		System.out.println("Selected Objective/Level "+dungeonElements.getChosenObjective().getName()+" "+dungeonElements.getChosenLevel().getID());
 		generateQuestionnableFacts();
+		System.out.println("Faits questionnables générés ");
 		defineNumberOfRoomPerTaskNecessary();
+		System.out.println("Room per task defini");
 		generateFactsToQuestion();
+		System.out.println("Faits questionnés générés ");
 		//System.out.println(" DEBUG FACT QUESTIONED *********************");
 		//eeManager.printFactsToQuestion();
 		//createDungeonQAndNQRoomOrder();

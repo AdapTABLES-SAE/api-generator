@@ -2,6 +2,7 @@ package generators;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -15,6 +16,7 @@ import generator.Directions;
 import generator.Dungeon;
 import generator.DungeonMode;
 import generator.ElementSize;
+import generator.ElementType;
 import generator.GPElementType;
 import generator.Room;
 import generator.RoomAccess;
@@ -32,6 +34,7 @@ import structures.LabyrinthineRoom;
 import structures.LinearRoom;
 import structures.LinearRoomOrientations;
 import structures.NeighborAccess;
+import structures.Pair;
 import structures.RoomElements;
 
 public class DungeonGenerator {
@@ -298,9 +301,9 @@ public class DungeonGenerator {
 			this.roomType = roomType;
 		}
 		
-		public boolean isNull() {
+		/*public boolean isNull() {
 			return roomType == null;
-		}
+		}*/
 	}
 	
 	private StructureChosenRT chooseRoomType(LinearRoomOrientations eligibleRoomOrientations, RoomElements roomElements, boolean isExitRoom) {
@@ -405,7 +408,7 @@ public class DungeonGenerator {
 			roomTypes = getRoomTypesForExit();
 		}
 		
-		roomTypes = roomTypes.stream().filter(e -> e.getDirections().size() > 1).collect(Collectors.toList());
+		//roomTypes = roomTypes.stream().filter(e -> e.getDirections().size() > 1).collect(Collectors.toList());
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
 			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {				
 				roomTypes.remove(roomType);
@@ -440,23 +443,38 @@ public class DungeonGenerator {
 		return positions;
 	}
 	
+	private int sumOfElementOfSize(Map<Ability, Integer> numberOfElementPerAbility) {
+		int quantity = 0;
+		for (Ability ability : numberOfElementPerAbility.keySet()) {
+			quantity += numberOfElementPerAbility.get(ability);
+		}
+		return quantity;
+	}
+	
 	private boolean roomTypeHasCompatiblePositions(RoomType roomtype, RoomElements roomElements) { 
 		boolean compatible = true;
 		
-		Map<ElementSize, Integer> numberOfElementsPerSize = computesNumberOfElementsPerSize(roomElements);
+		Map<ElementSize, Map<Ability, Integer>> numberOfElementsPerSize = computesNumberOfElementsPerSize(roomElements);
 		
+		//System.err.println(roomtype.getName()+" "+roomElements.getGameplay().getName());
 		for (ElementSize size : numberOfElementsPerSize.keySet()) {
 			List<APosition> roomPositionOfSize = getRoomTypePositionsOfSize(roomtype, size);
-			if(numberOfElementsPerSize.get(size) > roomPositionOfSize.size()) {
-				compatible = false;
+			if(roomPositionOfSize.size() < sumOfElementOfSize(numberOfElementsPerSize.get(size))) {
+				compatible = false; break;
+			} else {
+				for (Ability ability : numberOfElementsPerSize.get(size).keySet()) {
+					List<APosition> roomPositionOfSize_Ability = getRoomTypePositionsOfSizeForAbility(roomtype, size, ability);
+					if(numberOfElementsPerSize.get(size).get(ability) > roomPositionOfSize_Ability.size()) {
+						compatible = false;
+					}
+				}
 			}
 		}
-		//System.err.println("COMPATIBLE POSITIONS ?");
+		//System.err.println("COMPATIBLE POSITIONS ?"+compatible);
 		for (GPElementType gpElem : roomElements.getElementsToQuantity().keySet()) {
 			int quantity = roomElements.getElementsToQuantity().get(gpElem);
 			//System.err.println("DANS LA BBOUCLE" + gpElem.getClass().getSimpleName()+" "+quantity);
 			if(quantity != -1 && gpElem instanceof StructureType) {
-				System.err.println("DNS LE IF");
 				if(roomtype.getStructurePositions().size() < quantity) {
 					//System.err.println("ON EST LA");
 					compatible = false;
@@ -466,19 +484,40 @@ public class DungeonGenerator {
 		return compatible;
 	}
 	
-	private Map<ElementSize, Integer> computesNumberOfElementsPerSize(RoomElements roomElements){
-		Map<ElementSize, Integer> numberOfElementsPerSize = new HashMap<>();
+	private Map<ElementSize,  Map<Ability, Integer>> computesNumberOfElementsPerSize(RoomElements roomElements){
+		Map<ElementSize, Map<Ability, Integer>> numberOfElementsPerSize = new HashMap<>();
 		for (GPElementType gpElem : roomElements.getElementsToQuantity().keySet()) {
 			int quantity = roomElements.getElementsToQuantity().get(gpElem);
-			if(quantity != -1 && !(gpElem instanceof Structure)) {
+			if(quantity != -1 && !(gpElem instanceof StructureType)) {
+				Ability ability = ((ElementType) gpElem).getAbility();
+				
 				if(numberOfElementsPerSize.containsKey(gpElem.getSize())) {
-					numberOfElementsPerSize.put(gpElem.getSize(), numberOfElementsPerSize.get(gpElem.getSize()) + quantity);
+					if(numberOfElementsPerSize.get(gpElem.getSize()).containsKey(ability)) {
+						quantity += numberOfElementsPerSize.get(gpElem.getSize()).get(ability);
+					} else {
+						numberOfElementsPerSize.get(gpElem.getSize()).put(ability, quantity);
+					}
 				} else {
-					numberOfElementsPerSize.put(gpElem.getSize(), quantity);
+					numberOfElementsPerSize.put(gpElem.getSize(), new HashMap<>()); 
+					numberOfElementsPerSize.get(gpElem.getSize()).put(ability, quantity);
 				}
+				//numberOfElementsPerSize.put(gpElem.getSize(), new Pair<Integer, List<Ability>>(quantity, abilities));
+				
 			}
 		}
 		return numberOfElementsPerSize;
+	}
+	
+	private List<APosition> getRoomTypePositionsOfSizeForAbility(RoomType roomtype, ElementSize size, Ability ability){
+		//System.out.println(roomtype+" "+size);
+		List<APosition> positions = new ArrayList<>(); 
+		for (APosition pos : roomtype.getElementPositions()) {
+			if(pos.getSize().equals(size) && (pos.getRestrictedTo().isEmpty() || pos.getRestrictedTo().contains(ability))) {
+				positions.add(pos);
+			}
+		}
+		//System.out.println("number of pos = "+positions.size());
+		return positions;
 	}
 	
 	private List<APosition> getRoomTypePositionsOfSize(RoomType roomtype, ElementSize size){

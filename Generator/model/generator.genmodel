@@ -63,13 +63,6 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ElementSize/MEDIUM"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ElementSize/LARGE"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//StatementType">
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//StatementType/TEXTUAL"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//StatementType/TEXTUAL_INTERACTIVE"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//StatementType/GRAPHIC"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//StatementType/NONE"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//StatementType/TO_FILL_IN"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//GPCategory">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/SELECT_UNIQUE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/SELECT_MULTIPLE"/>
