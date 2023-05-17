@@ -2,8 +2,8 @@
  */
 package generator.impl;
 
-import generator.APosition;
 import generator.GeneratorPackage;
+import generator.Position;
 import generator.PositionedStructureElement;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -36,7 +36,7 @@ public class PositionedStructureElementImpl extends PositionedElementImpl implem
 	 * @generated
 	 * @ordered
 	 */
-	protected APosition createdPosition;
+	protected Position createdPosition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,7 +62,7 @@ public class PositionedStructureElementImpl extends PositionedElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public APosition getCreatedPosition() {
+	public Position getCreatedPosition() {
 		return createdPosition;
 	}
 
@@ -71,8 +71,8 @@ public class PositionedStructureElementImpl extends PositionedElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCreatedPosition(APosition newCreatedPosition, NotificationChain msgs) {
-		APosition oldCreatedPosition = createdPosition;
+	public NotificationChain basicSetCreatedPosition(Position newCreatedPosition, NotificationChain msgs) {
+		Position oldCreatedPosition = createdPosition;
 		createdPosition = newCreatedPosition;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -91,7 +91,7 @@ public class PositionedStructureElementImpl extends PositionedElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCreatedPosition(APosition newCreatedPosition) {
+	public void setCreatedPosition(Position newCreatedPosition) {
 		if (newCreatedPosition != createdPosition) {
 			NotificationChain msgs = null;
 			if (createdPosition != null)
@@ -148,7 +148,7 @@ public class PositionedStructureElementImpl extends PositionedElementImpl implem
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case GeneratorPackage.POSITIONED_STRUCTURE_ELEMENT__CREATED_POSITION:
-			setCreatedPosition((APosition) newValue);
+			setCreatedPosition((Position) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -163,7 +163,7 @@ public class PositionedStructureElementImpl extends PositionedElementImpl implem
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case GeneratorPackage.POSITIONED_STRUCTURE_ELEMENT__CREATED_POSITION:
-			setCreatedPosition((APosition) null);
+			setCreatedPosition((Position) null);
 			return;
 		}
 		super.eUnset(featureID);

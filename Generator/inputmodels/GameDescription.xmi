@@ -109,9 +109,9 @@
       <elementPositions
           size="MEDIUM"
           ID="POSM1"/>
-      <structurePositions
+      <elementPositions
           size="LARGE"
-          ID="POSS1"/>
+          ID="POSL1"/>
       <directions>SOUTH</directions>
       <directions>EAST</directions>
       <directions>NORTH</directions>
@@ -464,12 +464,42 @@
       <directions>NORTH</directions>
       <directions>WEST</directions>
     </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoom9">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM1"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM2"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM3"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM4"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM5"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM6"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
   </roomtypes>
   <levelsDifficultyProgress/>
   <gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="SELECT MULTIPLE sans struct"
+        name="GP_MULTIPLE-TOUCHABLE"
         undoable="true"
         manualValidation="true"
         category="SELECT_MULTIPLE">
@@ -485,14 +515,14 @@
           allowedAbility="DISPLAY"
           wearStatement="true"/>
       <prompt
-          prompt="Touche les bons interrupteurs puis active le levier"/>
+          prompt="Touche les bons element puis active le levier"/>
       <restrictedTo>COMPLETE</restrictedTo>
       <restrictedTo>ORDER</restrictedTo>
       <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="SELECT MULTIPLE "
+        name="GP_MULTIPLE-TOUCHABLE_STRUCT"
         category="SELECT_MULTIPLE"
         hasIntegratedPropositions="true">
       <components
@@ -513,7 +543,7 @@
           <components
               xsi:type="generator:Structure"
               structureType="STRUCT_H"
-              isPerFact="true">
+              perFactOrPropositions="true">
             <components
                 xsi:type="generator:Component"
                 allowedAbility="TOUCHABLE"
@@ -551,12 +581,12 @@
         </components>
       </components>
       <prompt
-          prompt="Touche les bons interrupteurs"/>
+          prompt="Touche les bons elements"/>
       <restrictedTo>IDENTIFY</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="Direct response"
+        name="GP_DIRECT-RESPONSE"
         category="DIRECT_RESPONSE">
       <components
           xsi:type="generator:Component"
@@ -571,7 +601,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="SELECT MULTIPLE BIS"
+        name="GP_MULTIPLE-TOUCHABLE_STRUCT-INTEGRATED-PROPs"
         category="SELECT_MULTIPLE"
         hasIntegratedPropositions="true">
       <components
@@ -583,7 +613,7 @@
           <components
               xsi:type="generator:Structure"
               structureType="STRUCT_H"
-              isPerFact="true">
+              perFactOrPropositions="true">
             <components
                 xsi:type="generator:Component"
                 allowedAbility="TOUCHABLE"
@@ -622,12 +652,12 @@
         </components>
       </components>
       <prompt
-          prompt="Touche les bons interrupteurs"/>
+          prompt="Touche les bons elements"/>
       <restrictedTo>IDENTIFY</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="SELECT UNIQUE">
+        name="GP_UNIQUE-TOUCHABLE">
       <components
           xsi:type="generator:Component"
           allowedAbility="TOUCHABLE"
@@ -637,11 +667,11 @@
           allowedAbility="DISPLAY"
           wearStatement="true"/>
       <prompt
-          prompt="Touche le bon interrupteur"/>
+          prompt="Touche le bon element"/>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="MOVE POT"
+        name="GP_UNIQUE-MOVE"
         category="MOVE_UNIQUE">
       <components
           xsi:type="generator:Component"
@@ -661,11 +691,11 @@
           allowedAbility="DISPLAY"
           wearStatement="true"/>
       <prompt
-          prompt="Deplace le bon pot sur la zone"/>
+          prompt="Deplace le bon elements sur la zone"/>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="MOVE POT MULT"
+        name="GP_MULTIPLE-MOVE"
         manualValidation="true"
         category="MOVE_MULTIPLE">
       <components
@@ -688,13 +718,13 @@
           allowedAbility="DISPLAY"
           wearStatement="true"/>
       <prompt
-          prompt="Deplace les bons pots sur les zones"/>
+          prompt="Deplace les bons elements sur les zones"/>
       <restrictedTo>COMPLETE</restrictedTo>
       <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="SELECT UNIQUE CHEST">
+        name="GP_UNIQUE-OPENABLE">
       <components
           xsi:type="generator:Component"
           allowedAbility="OPENABLE"
@@ -704,11 +734,11 @@
           allowedAbility="DISPLAY"
           wearStatement="true"/>
       <prompt
-          prompt="Ouvre le bon coffre"/>
+          prompt="Ouvre le bon element"/>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="SELECT MULTIPLE CHEST"
+        name="GP_MULTIPLE-OPENABLE"
         category="SELECT_MULTIPLE">
       <components
           xsi:type="generator:Component"
@@ -719,18 +749,18 @@
           allowedAbility="DISPLAY"
           wearStatement="true"/>
       <prompt
-          prompt="Ouvre les bons coffres"/>
+          prompt="Ouvre les bons elements"/>
       <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="MOVE POT MULT BIS"
+        name="GP_MULTIPLE-MOVE_STRUCT"
         undoable="true"
         category="MOVE_MULTIPLE">
       <components
           xsi:type="generator:Structure"
           structureType="STRUCT_V"
-          isPerFact="true">
+          perFactOrPropositions="true">
         <components
             xsi:type="generator:Component"
             allowedAbility="DETECTOR">
@@ -750,12 +780,12 @@
           allowedAbility="MOVABLE"
           wearChoices="true"/>
       <prompt
-          prompt="Deplace les bons pots sur les zones"/>
+          prompt="Deplace les bons elements sur la zone"/>
       <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="ROTATE STATUE"
+        name="GP_ROTABLE"
         undoable="true"
         manualValidation="true"
         category="ORIENT">
@@ -770,12 +800,14 @@
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
           wearStatement="true"/>
+      <prompt
+          prompt="Oriente correctement l(es) element(s)"/>
       <restrictedTo>COMPLETE</restrictedTo>
       <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="SELECT UNIQUE RABBIT">
+        name="GP_UNIQUE-CATCHABLE">
       <components
           xsi:type="generator:Component"
           allowedAbility="CATCHABLE"
@@ -785,13 +817,13 @@
           allowedAbility="DISPLAY"
           wearStatement="true"/>
       <prompt
-          prompt="Attrape le bon lapin"/>
+          prompt="Attrape le bon element"/>
       <restrictedTo>COMPLETE</restrictedTo>
       <restrictedTo>IDENTIFY</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="SELECT UNIQUE RABBIT"
+        name="GP_MULTIPLE-CATCHABLE"
         category="SELECT_MULTIPLE">
       <components
           xsi:type="generator:Component"
@@ -802,7 +834,7 @@
           allowedAbility="DISPLAY"
           wearStatement="true"/>
       <prompt
-          prompt="Attrape les bons lapins"/>
+          prompt="Attrape les bons elements"/>
       <restrictedTo>COMPLETE</restrictedTo>
     </gameplays>
     <gameplays
@@ -840,6 +872,52 @@
               value="SMALL"/>
         </expectedSize>
       </components>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_UNIQUE-PUSH"
+        category="MOVE_UNIQUE">
+      <components
+          xsi:type="generator:Structure"
+          structureType="STRUCT_H_MEDIUM"
+          perFactOrPropositions="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="PUSHABLE"
+            wearChoices="true"/>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR"/>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Pousse le bon element"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE-PUSH"
+        category="MOVE_MULTIPLE">
+      <components
+          xsi:type="generator:Structure"
+          structureType="STRUCT_H_MEDIUM"
+          perFactOrPropositions="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="PUSHABLE"
+            wearChoices="true"/>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR"/>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Pousse les bons elements"/>
     </gameplays>
   </gameplays>
   <elements>

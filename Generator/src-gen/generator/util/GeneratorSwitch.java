@@ -230,15 +230,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.POSITION: {
-			Position position = (Position) theEObject;
-			T result = casePosition(position);
-			if (result == null)
-				result = caseAPosition(position);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case GeneratorPackage.RESPONSE_MODALITY: {
 			ResponseModality responseModality = (ResponseModality) theEObject;
 			T result = caseResponseModality(responseModality);
@@ -533,18 +524,9 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.APOSITION: {
-			APosition aPosition = (APosition) theEObject;
-			T result = caseAPosition(aPosition);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.STRUCTURE_POSITION: {
-			StructurePosition structurePosition = (StructurePosition) theEObject;
-			T result = caseStructurePosition(structurePosition);
-			if (result == null)
-				result = caseAPosition(structurePosition);
+		case GeneratorPackage.POSITION: {
+			Position position = (Position) theEObject;
+			T result = casePosition(position);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1690,36 +1672,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAbilities(Abilities object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>APosition</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>APosition</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAPosition(APosition object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Structure Position</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Structure Position</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseStructurePosition(StructurePosition object) {
 		return null;
 	}
 

@@ -463,15 +463,6 @@ public interface GeneratorFactory extends EFactory {
 	Abilities createAbilities();
 
 	/**
-	 * Returns a new object of class '<em>Structure Position</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Structure Position</em>'.
-	 * @generated
-	 */
-	StructurePosition createStructurePosition();
-
-	/**
 	 * Returns a new object of class '<em>Positioned Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

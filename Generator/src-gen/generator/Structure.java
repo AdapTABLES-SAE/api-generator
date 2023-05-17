@@ -15,7 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link generator.Structure#getComponents <em>Components</em>}</li>
  *   <li>{@link generator.Structure#getStructureType <em>Structure Type</em>}</li>
- *   <li>{@link generator.Structure#isIsPerFact <em>Is Per Fact</em>}</li>
+ *   <li>{@link generator.Structure#isPerFactOrPropositions <em>Per Fact Or Propositions</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getStructure()
@@ -58,26 +58,26 @@ public interface Structure extends AComponent {
 	void setStructureType(StructureType value);
 
 	/**
-	 * Returns the value of the '<em><b>Is Per Fact</b></em>' attribute.
+	 * Returns the value of the '<em><b>Per Fact Or Propositions</b></em>' attribute.
 	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Per Fact</em>' attribute.
-	 * @see #setIsPerFact(boolean)
-	 * @see generator.GeneratorPackage#getStructure_IsPerFact()
+	 * @return the value of the '<em>Per Fact Or Propositions</em>' attribute.
+	 * @see #setPerFactOrPropositions(boolean)
+	 * @see generator.GeneratorPackage#getStructure_PerFactOrPropositions()
 	 * @model default="false"
 	 * @generated
 	 */
-	boolean isIsPerFact();
+	boolean isPerFactOrPropositions();
 
 	/**
-	 * Sets the value of the '{@link generator.Structure#isIsPerFact <em>Is Per Fact</em>}' attribute.
+	 * Sets the value of the '{@link generator.Structure#isPerFactOrPropositions <em>Per Fact Or Propositions</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Per Fact</em>' attribute.
-	 * @see #isIsPerFact()
+	 * @param value the new value of the '<em>Per Fact Or Propositions</em>' attribute.
+	 * @see #isPerFactOrPropositions()
 	 * @generated
 	 */
-	void setIsPerFact(boolean value);
+	void setPerFactOrPropositions(boolean value);
 
 } // Structure

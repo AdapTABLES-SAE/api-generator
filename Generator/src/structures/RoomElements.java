@@ -119,18 +119,34 @@ public class RoomElements {
 		return gameplay;
 	}
 	
+	private boolean structureHasWearPropositions(Structure aStructure) {
+		for (AComponent component : aStructure.getComponents()) {
+			if(component instanceof Component && ((Component) component).isWearChoices()) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	private void selectElementType(List<AComponent> components, boolean isStructureComponents) {
 		for (AComponent aComponent : components) {
 			if(aComponent instanceof Structure) {
 				if(!isStructureComponents) {
-					if(((Structure) aComponent).isIsPerFact()) {
+					if(((Structure) aComponent).isPerFactOrPropositions()) {
+						if(this.facts.size() > 1) {
+							elementsToQuantity.put(((Structure) aComponent).getStructureType(), facts.size());
+						} else if(structureHasWearPropositions(((Structure) aComponent))){
+							elementsToQuantity.put(((Structure) aComponent).getStructureType(), facts.get(0).getPropositions().size());
+						} else {
+							elementsToQuantity.put(((Structure) aComponent).getStructureType(), 1);
+						}
 						/*if(elementsToQuantity.containsKey(((Structure) aComponent).getStructureType())) {
 							elementsToQuantity.put(((Structure) aComponent).getStructureType(), facts.size() + elementsToQuantity.get(((Structure) aComponent).getStructureType()));
 						} else {
 							elementsToQuantity.put(((Structure) aComponent).getStructureType(), facts.size());
 						}*/
 						// il y en aura autant que de faits 
-						elementsToQuantity.put(((Structure) aComponent).getStructureType(), facts.size());
+						
 					} else {
 						elementsToQuantity.put(((Structure) aComponent).getStructureType(), 1);
 					}

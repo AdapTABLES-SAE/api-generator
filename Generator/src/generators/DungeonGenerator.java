@@ -10,7 +10,7 @@ import java.util.Set;
 import java.util.Stack;
 import java.util.stream.Collectors;
 
-import generator.APosition;
+import generator.Position;
 import generator.Ability;
 import generator.Directions;
 import generator.Dungeon;
@@ -431,9 +431,9 @@ public class DungeonGenerator {
 	}
 	
 	@Deprecated
-	private List<APosition> getCompatiblesRoomTypePositions(RoomType roomtype, ElementSize size, Ability ability) {
-		List<APosition> positions = new ArrayList<>();
-		for (APosition position : roomtype.getElementPositions()) {
+	private List<Position> getCompatiblesRoomTypePositions(RoomType roomtype, ElementSize size, Ability ability) {
+		List<Position> positions = new ArrayList<>();
+		for (Position position : roomtype.getElementPositions()) {
 			if(position.getSize().equals(size)) {
 				if(position.getRestrictedTo().isEmpty() || (position.getRestrictedTo().contains(ability))) {
 					positions.add(position);
@@ -458,20 +458,23 @@ public class DungeonGenerator {
 		
 		//System.err.println(roomtype.getName()+" "+roomElements.getGameplay().getName());
 		for (ElementSize size : numberOfElementsPerSize.keySet()) {
-			List<APosition> roomPositionOfSize = getRoomTypePositionsOfSize(roomtype, size);
+			List<Position> roomPositionOfSize = getRoomTypePositionsOfSize(roomtype, size);
 			if(roomPositionOfSize.size() < sumOfElementOfSize(numberOfElementsPerSize.get(size))) {
 				compatible = false; break;
 			} else {
 				for (Ability ability : numberOfElementsPerSize.get(size).keySet()) {
-					List<APosition> roomPositionOfSize_Ability = getRoomTypePositionsOfSizeForAbility(roomtype, size, ability);
-					if(numberOfElementsPerSize.get(size).get(ability) > roomPositionOfSize_Ability.size()) {
-						compatible = false;
+					if(ability != null) {
+						List<Position> roomPositionOfSize_Ability = getRoomTypePositionsOfSizeForAbility(roomtype, size, ability);
+						if(numberOfElementsPerSize.get(size).get(ability) > roomPositionOfSize_Ability.size()) {
+							compatible = false;
+						}
 					}
+					
 				}
 			}
 		}
 		//System.err.println("COMPATIBLE POSITIONS ?"+compatible);
-		for (GPElementType gpElem : roomElements.getElementsToQuantity().keySet()) {
+		/*for (GPElementType gpElem : roomElements.getElementsToQuantity().keySet()) {
 			int quantity = roomElements.getElementsToQuantity().get(gpElem);
 			//System.err.println("DANS LA BBOUCLE" + gpElem.getClass().getSimpleName()+" "+quantity);
 			if(quantity != -1 && gpElem instanceof StructureType) {
@@ -480,7 +483,7 @@ public class DungeonGenerator {
 					compatible = false;
 				}
 			}
-		}
+		}*/
 		return compatible;
 	}
 	
@@ -503,15 +506,27 @@ public class DungeonGenerator {
 				}
 				//numberOfElementsPerSize.put(gpElem.getSize(), new Pair<Integer, List<Ability>>(quantity, abilities));
 				
+			} else if(gpElem instanceof StructureType) {
+				if(numberOfElementsPerSize.containsKey(gpElem.getSize())) {
+					if(numberOfElementsPerSize.get(gpElem.getSize()).containsKey(null)) {
+						quantity += numberOfElementsPerSize.get(gpElem.getSize()).get(null);
+					} else {
+						numberOfElementsPerSize.get(gpElem.getSize()).put(null, quantity);
+					}
+					
+				} else {
+					numberOfElementsPerSize.put(gpElem.getSize(), new HashMap<>()); 
+					numberOfElementsPerSize.get(gpElem.getSize()).put(null, quantity);
+				}
 			}
 		}
 		return numberOfElementsPerSize;
 	}
 	
-	private List<APosition> getRoomTypePositionsOfSizeForAbility(RoomType roomtype, ElementSize size, Ability ability){
+	private List<Position> getRoomTypePositionsOfSizeForAbility(RoomType roomtype, ElementSize size, Ability ability){
 		//System.out.println(roomtype+" "+size);
-		List<APosition> positions = new ArrayList<>(); 
-		for (APosition pos : roomtype.getElementPositions()) {
+		List<Position> positions = new ArrayList<>(); 
+		for (Position pos : roomtype.getElementPositions()) {
 			if(pos.getSize().equals(size) && (pos.getRestrictedTo().isEmpty() || pos.getRestrictedTo().contains(ability))) {
 				positions.add(pos);
 			}
@@ -520,10 +535,10 @@ public class DungeonGenerator {
 		return positions;
 	}
 	
-	private List<APosition> getRoomTypePositionsOfSize(RoomType roomtype, ElementSize size){
+	private List<Position> getRoomTypePositionsOfSize(RoomType roomtype, ElementSize size){
 		//System.out.println(roomtype+" "+size);
-		List<APosition> positions = new ArrayList<>(); 
-		for (APosition pos : roomtype.getElementPositions()) {
+		List<Position> positions = new ArrayList<>(); 
+		for (Position pos : roomtype.getElementPositions()) {
 			if(pos.getSize().equals(size)) {
 				positions.add(pos);
 			}

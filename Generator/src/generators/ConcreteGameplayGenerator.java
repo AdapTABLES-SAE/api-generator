@@ -5,18 +5,18 @@ import java.util.List;
 import java.util.Random;
 
 import generator.AComponent;
-import generator.APosition;
+import generator.Position;
 import generator.Component;
 import generator.Correctness;
 import generator.CorrectnessValue;
 import generator.Display;
 import generator.ECorrectness;
-import generator.ElementSize;
 import generator.ElementType;
 import generator.ExpectedAnswer;
 import generator.FactSolutionParam;
 import generator.GPElementType;
 import generator.NoQuestionGameplay;
+import generator.Position;
 import generator.PositionedElement;
 import generator.PositionedStructureElement;
 import generator.PropositionParam;
@@ -24,6 +24,7 @@ import generator.QuestionGameplay;
 import generator.QuestionedFact;
 import generator.RoomType;
 import generator.Structure;
+import generator.StructureType;
 import generator.Value;
 import generator.impl.CorrectnessImpl;
 import generator.impl.CorrectnessValueImpl;
@@ -45,7 +46,7 @@ public class ConcreteGameplayGenerator {
 
 	//private ModelsManager modelAccess;
 	private int nbPositionedElement;
-	List<APosition> occupiedPositions;
+	List<Position> occupiedPositions;
 	
 	public ConcreteGameplayGenerator(ModelsManager modelAccess) {
 		this.nbPositionedElement = 1;
@@ -89,7 +90,7 @@ public class ConcreteGameplayGenerator {
 			int quantity =  Integer.valueOf(((Value) component.getQuantity().getValue()).getValue());
 			GPElementType elementType = roomElements.getElementTypeFor(component);
 			for (int i = 0; i < quantity; i++) {
-				elements.add(buildNonSpecificElement(component, elementType, getAvailablePosition(roomElements.getRoomTypeOfRoom(), elementType, false)));
+				elements.add(buildNonSpecificElement(component, elementType, getAvailablePosition(roomElements.getRoomTypeOfRoom(), elementType)));
 			}
 		}
 		return elements;
@@ -105,13 +106,13 @@ public class ConcreteGameplayGenerator {
 		boolean hasIntegratedChoice = ((QuestionGameplay) roomElements.getGameplay()).isHasIntegratedPropositions();
 		
 		if(component.isWearStatement()) {
-			elements.add(buildStatementComponent(component, elementType, fact, getAvailablePosition(roomtype, elementType, false)));
+			elements.add(buildStatementComponent(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
 		} 
-		else if(component.isInputEntry()) { elements.add(buildInputEntryElement(component, elementType, fact, getAvailablePosition(roomtype, elementType, false))); }
+		else if(component.isInputEntry()) { elements.add(buildInputEntryElement(component, elementType, fact, getAvailablePosition(roomtype, elementType))); }
 		else if(component.isWearChoices()) {
 			if(isSingleChoiceComponent(component, (ElementType) elementType)) {
 				for (int i = 0; i < fact.getPropositions().size(); i++) {
-					elements.add(buildSimpleWearChoiceElement(component, elementType, fact, i, getAvailablePosition(roomtype, elementType, false), hasIntegratedChoice));
+					elements.add(buildSimpleWearChoiceElement(component, elementType, fact, i, getAvailablePosition(roomtype, elementType), hasIntegratedChoice));
 				}
 			} else {
 				elements.addAll(buildComplexWearChoicesElement(component, elementType, fact, roomtype));
@@ -119,10 +120,10 @@ public class ConcreteGameplayGenerator {
 		} else {
 			if(component.getQuantity() != null) {
 				for (int i = 0; i < getElementQuantity(component, fact); i++) {
-					elements.add(buildNonSpecificElement(component, elementType, fact, getAvailablePosition(roomtype, elementType, false)));
+					elements.add(buildNonSpecificElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
 				}
 			} else {
-				elements.add(buildNonSpecificElement(component, elementType, getAvailablePosition(roomtype, elementType, false)));
+				elements.add(buildNonSpecificElement(component, elementType, getAvailablePosition(roomtype, elementType)));
 			}
 		}
 		return elements;
@@ -142,7 +143,7 @@ public class ConcreteGameplayGenerator {
 		return buildStructureHierarchy(component, null, null, new ArrayList<>(), roomElements, 0, -1);
 	}
 
-	private PositionedElement buildStatementComponent(Component component, GPElementType elementType, QuestionedFact fact, APosition position) { //QuestionedFact fact, APosition position) {
+	private PositionedElement buildStatementComponent(Component component, GPElementType elementType, QuestionedFact fact, Position position) { //QuestionedFact fact, Position position) {
 		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
 		
 		Display statement = new DisplayImpl();
@@ -164,7 +165,7 @@ public class ConcreteGameplayGenerator {
 		return comp;
 	}
 	
-	private PositionedElement buildInputEntryElement(Component component, GPElementType elementType, QuestionedFact fact, APosition position) {
+	private PositionedElement buildInputEntryElement(Component component, GPElementType elementType, QuestionedFact fact, Position position) {
 		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
 		for (int i = 0; i < fact.getEntrys().size(); i++) {
 			ExpectedAnswer answer = new ExpectedAnswerImpl();
@@ -176,7 +177,7 @@ public class ConcreteGameplayGenerator {
 		return comp;
 	}
 	
-	private PositionedElement buildNonSpecificElement(Component component, GPElementType elementType, QuestionedFact fact, APosition position) {
+	private PositionedElement buildNonSpecificElement(Component component, GPElementType elementType, QuestionedFact fact, Position position) {
 		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
 		if(component.getDisplayValue() != null) {
 			Display defaultDisplay = new DisplayImpl();
@@ -188,11 +189,11 @@ public class ConcreteGameplayGenerator {
 		return comp;
 	}
 	
-	private PositionedElement buildNonSpecificElement(Component component, GPElementType elementType, APosition position) {
+	private PositionedElement buildNonSpecificElement(Component component, GPElementType elementType, Position position) {
 		return buildNonSpecificElement(component, elementType, null, position);
 	}
 	
-	private PositionedElement buildSimpleWearChoiceElement(Component component, GPElementType elementType, QuestionedFact fact, int propositionIndex, APosition position, boolean hasIntegratedChoices) {
+	private PositionedElement buildSimpleWearChoiceElement(Component component, GPElementType elementType, QuestionedFact fact, int propositionIndex, Position position, boolean hasIntegratedChoices) {
 		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
 		comp.setCorrectness(computeCorrectness(component, fact, fact.getPropositions().get(propositionIndex)));
 		
@@ -212,7 +213,7 @@ public class ConcreteGameplayGenerator {
 		return comp;
 	}
 	
-	private List<PositionedElement> buildComplexWearChoicesElement(Component component, GPElementType elementType, QuestionedFact fact, APosition position, RoomType roomtype){
+	private List<PositionedElement> buildComplexWearChoicesElement(Component component, GPElementType elementType, QuestionedFact fact, Position position, RoomType roomtype){
 		int correctnessToReach = Integer.valueOf(((Value) fact.getCorrectnessToReach().getValue()).getValue());
 		int numberOfObjectsToInstanciate = correctnessToReach;
 		boolean computesPositionEachTime = position == null;
@@ -230,7 +231,7 @@ public class ConcreteGameplayGenerator {
 		int instanciatedSolution = 0;
 		List<PositionedElement> elements = new ArrayList<>();
 		for (int i = 0; i < numberOfObjectsToInstanciate; i++) {
-			position = computesPositionEachTime? getAvailablePosition(roomtype, elementType, false): position;
+			position = computesPositionEachTime? getAvailablePosition(roomtype, elementType): position;
 			PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
 			int randomPositionOfCorrect = new Random().nextInt(numberOfChoicePerElement);
 			for (int choix = 0; choix < numberOfChoicePerElement; choix++) {
@@ -301,7 +302,7 @@ public class ConcreteGameplayGenerator {
 		return buildComplexWearChoicesElement(component, elementType, fact, null, roomtype);
 	}
 	
-	private PositionedElement initializePositionedElement(Component component, GPElementType elementType, QuestionedFact fact, APosition position) {
+	private PositionedElement initializePositionedElement(Component component, GPElementType elementType, QuestionedFact fact, Position position) {
 		PositionedElement comp = new PositionedElementImpl();
 		comp.setElementType(elementType);
 		comp.setPosition(position);
@@ -334,12 +335,12 @@ public class ConcreteGameplayGenerator {
 		return correctness;
 	}
 		
-	private PositionedStructureElement buildStructure(Structure structure, APosition position) {
+	private PositionedStructureElement buildStructure(Structure structure, Position position) {
 		PositionedStructureElement structP = new PositionedStructureElementImpl();
 		structP.setElementType(structure.getStructureType());
 		structP.setID("STRUCT" + nbPositionedElement++); 
 		structP.setPosition(position);
-		APosition pos = new PositionImpl();
+		Position pos = new PositionImpl();
 		pos.setID("id/" + structP.getID());
 		structP.setCreatedPosition(pos);
 		return structP;
@@ -367,32 +368,64 @@ public class ConcreteGameplayGenerator {
 		return elementType.getNumberOfDisplays();
 	}
 	
-	private List<PositionedElement> buildStructureHierarchy(AComponent component, GPElementType elementType, APosition positionFromParent, List<PositionedElement> elements, RoomElements roomElements, int factIndex, int propositionIndex){
+	private boolean structureHasWearPropositions(Structure aStructure) {
+		for (AComponent component : aStructure.getComponents()) {
+			if(component instanceof Component && ((Component) component).isWearChoices()) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private List<PositionedElement> buildStructureHierarchy(AComponent component, GPElementType elementType, Position positionFromParent, List<PositionedElement> elements, RoomElements roomElements, int factIndex, int propositionIndex){
 		if(positionFromParent == null) {
 			if(component instanceof Component) {
 				//elementType = getCompatibleElementType((Component) component);
-				positionFromParent = getAvailablePosition(roomElements.getRoomTypeOfRoom(), elementType, false);
+				positionFromParent = getAvailablePosition(roomElements.getRoomTypeOfRoom(), elementType);
 			} else {
-				positionFromParent = getAvailablePosition(roomElements.getRoomTypeOfRoom(), ((Structure) component).getStructureType(), true);
+				positionFromParent = getAvailablePosition(roomElements.getRoomTypeOfRoom(), ((Structure) component).getStructureType());
 			}
 		}
 			
 		if(component instanceof Structure) {
 			Structure comp = (Structure) component;
 			PositionedStructureElement struct;
-			if(comp.isIsPerFact()) {
-				for (int i = 0; i < roomElements.getFacts().size(); i++) {
-					int propIndex = -1;
-					struct = buildStructure(comp, positionFromParent);
-					elements.add(struct);
-					for (AComponent aComp : comp.getComponents()) {
-						elementType = roomElements.getElementTypeFor(aComp);		
-						if(isComponentWearChoice(aComp)) { propIndex++; } 
-						elements.addAll(buildStructureHierarchy(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, i, propIndex));
-						if(elementType instanceof ElementType && isComponentWearChoices(aComp, (ElementType) elementType)) { 
-							propIndex += getNumberOfChoicesWornBy((ElementType) elementType); 
+			if(comp.isPerFactOrPropositions()) {
+				if(roomElements.getFacts().size() > 1) {
+					for (int i = 0; i < roomElements.getFacts().size(); i++) {
+						int propIndex = -1;
+						struct = buildStructure(comp, positionFromParent);
+						elements.add(struct);
+						for (AComponent aComp : comp.getComponents()) {
+							elementType = roomElements.getElementTypeFor(aComp);		
+							if(isComponentWearChoice(aComp)) { propIndex++; } 
+							elements.addAll(buildStructureHierarchy(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, i, propIndex));
+							if(elementType instanceof ElementType && isComponentWearChoices(aComp, (ElementType) elementType)) { 
+								propIndex += getNumberOfChoicesWornBy((ElementType) elementType); 
+							}
+						} 
+					}
+				} else {
+					if(structureHasWearPropositions(comp)) {
+						for (int i = 0; i < roomElements.getFacts().get(0).getPropositions().size(); i++) {
+							struct = buildStructure(comp, positionFromParent);
+							elements.add(struct);
+							for (AComponent aComp : comp.getComponents()) {
+								elementType = roomElements.getElementTypeFor(aComp);
+								if(isComponentWearChoice(aComp)) {
+									elements.addAll(buildStructureHierarchy(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, 0, i));
+								} else {
+									elements.addAll(buildStructureHierarchy(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, 0, -1));
+								}
+							} 
 						}
-					} 
+					} else {
+						struct = buildStructure(comp, positionFromParent);
+						elements.add(struct);
+						for (AComponent aComp : comp.getComponents()) {
+							elements.addAll(buildStructureHierarchy(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, 0, -1));
+						}
+					}
 				}
 			} else {
 				struct = buildStructure(comp, positionFromParent);
@@ -432,35 +465,38 @@ public class ConcreteGameplayGenerator {
 		return elements;
 	}
 	
-	private boolean elementSizeIsAccepted(APosition aPosition, GPElementType elementType) {
-		return elementType.getSize() == aPosition.getSize();
+	private boolean elementSizeIsAccepted(Position Position, GPElementType elementType) {
+		return elementType.getSize() == Position.getSize();
 	}
 	
-	private APosition getAvailablePosition(RoomType roomType, GPElementType elementType, boolean isStructure) {
-		List<APosition> allowed = new ArrayList<>();
+	private Position getAvailablePosition(RoomType roomType, GPElementType elementType) { // TODO : corriger quand plusieurs structures la positions est la même 
+		List<Position> allowed = new ArrayList<>();
 		
-		if(!isStructure) {
-			for (APosition aPosition : roomType.getElementPositions()) {
-				/*System.out.println("Occupied "+occupiedPositions.contains(aPosition));
-				System.out.println(aPosition.getSize());
+		//if(!isStructure) {
+			for (Position position : roomType.getElementPositions()) {
+				/*System.out.println("Occupied "+occupiedPositions.contains(Position));
+				System.out.println(Position.getSize());
 				System.out.println(elementType.getSize());*/
-				if(!occupiedPositions.contains(aPosition) && elementSizeIsAccepted(aPosition, elementType) 
-						&& (aPosition.getRestrictedTo().isEmpty() || aPosition.getRestrictedTo().contains(((ElementType) elementType).getAbility()))) {
-					//System.out.println("aqui");
-					allowed.add(aPosition);
+				if(!occupiedPositions.contains(position) && elementSizeIsAccepted(position, elementType) 
+						) {
+					if(elementType instanceof StructureType || 
+							(position.getRestrictedTo().isEmpty() || position.getRestrictedTo().contains(((ElementType) elementType).getAbility()))) {
+						allowed.add(position);
+					} 					//System.out.println("aqui");
+					
 				}
 			}
 			
-		} else {
+		/*} else {
 			//System.out.println("Strucutre pos in roomtype " + roomType.getStructurePositions().isEmpty());
 			
-			for (APosition aPosition : roomType.getStructurePositions()) {
-				//System.out.println("occupied struct pos : "+occupiedPositions.contains(aPosition));
-				if(!occupiedPositions.contains(aPosition) && aPosition.getSize().equals(elementType.getSize())) {
-					allowed.add(aPosition);
+			for (Position Position : roomType.getStructurePositions()) {
+				//System.out.println("occupied struct pos : "+occupiedPositions.contains(Position));
+				if(!occupiedPositions.contains(Position) && Position.getSize().equals(elementType.getSize())) {
+					allowed.add(Position);
 				}
 			}
-		}
+		}*/
 		
 		if(allowed.isEmpty()) { /*System.out.println("EMPTY pos");*/ return null; }
 		int number = new Random().nextInt(allowed.size());

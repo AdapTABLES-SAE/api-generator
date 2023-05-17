@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link generator.impl.StructureImpl#getComponents <em>Components</em>}</li>
  *   <li>{@link generator.impl.StructureImpl#getStructureType <em>Structure Type</em>}</li>
- *   <li>{@link generator.impl.StructureImpl#isIsPerFact <em>Is Per Fact</em>}</li>
+ *   <li>{@link generator.impl.StructureImpl#isPerFactOrPropositions <em>Per Fact Or Propositions</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,24 +59,24 @@ public class StructureImpl extends AComponentImpl implements Structure {
 	protected StructureType structureType;
 
 	/**
-	 * The default value of the '{@link #isIsPerFact() <em>Is Per Fact</em>}' attribute.
+	 * The default value of the '{@link #isPerFactOrPropositions() <em>Per Fact Or Propositions</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsPerFact()
+	 * @see #isPerFactOrPropositions()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean IS_PER_FACT_EDEFAULT = false;
+	protected static final boolean PER_FACT_OR_PROPOSITIONS_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isIsPerFact() <em>Is Per Fact</em>}' attribute.
+	 * The cached value of the '{@link #isPerFactOrPropositions() <em>Per Fact Or Propositions</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsPerFact()
+	 * @see #isPerFactOrPropositions()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean isPerFact = IS_PER_FACT_EDEFAULT;
+	protected boolean perFactOrPropositions = PER_FACT_OR_PROPOSITIONS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,8 +155,8 @@ public class StructureImpl extends AComponentImpl implements Structure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIsPerFact() {
-		return isPerFact;
+	public boolean isPerFactOrPropositions() {
+		return perFactOrPropositions;
 	}
 
 	/**
@@ -164,12 +164,12 @@ public class StructureImpl extends AComponentImpl implements Structure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsPerFact(boolean newIsPerFact) {
-		boolean oldIsPerFact = isPerFact;
-		isPerFact = newIsPerFact;
+	public void setPerFactOrPropositions(boolean newPerFactOrPropositions) {
+		boolean oldPerFactOrPropositions = perFactOrPropositions;
+		perFactOrPropositions = newPerFactOrPropositions;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.STRUCTURE__IS_PER_FACT, oldIsPerFact,
-					isPerFact));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.STRUCTURE__PER_FACT_OR_PROPOSITIONS,
+					oldPerFactOrPropositions, perFactOrPropositions));
 	}
 
 	/**
@@ -200,8 +200,8 @@ public class StructureImpl extends AComponentImpl implements Structure {
 			if (resolve)
 				return getStructureType();
 			return basicGetStructureType();
-		case GeneratorPackage.STRUCTURE__IS_PER_FACT:
-			return isIsPerFact();
+		case GeneratorPackage.STRUCTURE__PER_FACT_OR_PROPOSITIONS:
+			return isPerFactOrPropositions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -222,8 +222,8 @@ public class StructureImpl extends AComponentImpl implements Structure {
 		case GeneratorPackage.STRUCTURE__STRUCTURE_TYPE:
 			setStructureType((StructureType) newValue);
 			return;
-		case GeneratorPackage.STRUCTURE__IS_PER_FACT:
-			setIsPerFact((Boolean) newValue);
+		case GeneratorPackage.STRUCTURE__PER_FACT_OR_PROPOSITIONS:
+			setPerFactOrPropositions((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -243,8 +243,8 @@ public class StructureImpl extends AComponentImpl implements Structure {
 		case GeneratorPackage.STRUCTURE__STRUCTURE_TYPE:
 			setStructureType((StructureType) null);
 			return;
-		case GeneratorPackage.STRUCTURE__IS_PER_FACT:
-			setIsPerFact(IS_PER_FACT_EDEFAULT);
+		case GeneratorPackage.STRUCTURE__PER_FACT_OR_PROPOSITIONS:
+			setPerFactOrPropositions(PER_FACT_OR_PROPOSITIONS_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -262,8 +262,8 @@ public class StructureImpl extends AComponentImpl implements Structure {
 			return components != null && !components.isEmpty();
 		case GeneratorPackage.STRUCTURE__STRUCTURE_TYPE:
 			return structureType != null;
-		case GeneratorPackage.STRUCTURE__IS_PER_FACT:
-			return isPerFact != IS_PER_FACT_EDEFAULT;
+		case GeneratorPackage.STRUCTURE__PER_FACT_OR_PROPOSITIONS:
+			return perFactOrPropositions != PER_FACT_OR_PROPOSITIONS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -279,8 +279,8 @@ public class StructureImpl extends AComponentImpl implements Structure {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (isPerFact: ");
-		result.append(isPerFact);
+		result.append(" (perFactOrPropositions: ");
+		result.append(perFactOrPropositions);
 		result.append(')');
 		return result.toString();
 	}

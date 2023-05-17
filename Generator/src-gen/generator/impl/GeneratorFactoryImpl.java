@@ -95,8 +95,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createProgression();
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL:
 			return createCurrentObjectiveLevel();
-		case GeneratorPackage.POSITION:
-			return createPosition();
 		case GeneratorPackage.MULTIPLE_CHOICE:
 			return createMultipleChoice();
 		case GeneratorPackage.ENTER_RESPONSE:
@@ -155,8 +153,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createAbility();
 		case GeneratorPackage.ABILITIES:
 			return createAbilities();
-		case GeneratorPackage.STRUCTURE_POSITION:
-			return createStructurePosition();
+		case GeneratorPackage.POSITION:
+			return createPosition();
 		case GeneratorPackage.POSITIONED_ELEMENT:
 			return createPositionedElement();
 		case GeneratorPackage.QUESTION_PARAM:
@@ -774,16 +772,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public Abilities createAbilities() {
 		AbilitiesImpl abilities = new AbilitiesImpl();
 		return abilities;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StructurePosition createStructurePosition() {
-		StructurePositionImpl structurePosition = new StructurePositionImpl();
-		return structurePosition;
 	}
 
 	/**

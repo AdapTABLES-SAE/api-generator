@@ -177,11 +177,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter casePosition(Position object) {
-			return createPositionAdapter();
-		}
-
-		@Override
 		public Adapter caseResponseModality(ResponseModality object) {
 			return createResponseModalityAdapter();
 		}
@@ -362,13 +357,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseAPosition(APosition object) {
-			return createAPositionAdapter();
-		}
-
-		@Override
-		public Adapter caseStructurePosition(StructurePosition object) {
-			return createStructurePositionAdapter();
+		public Adapter casePosition(Position object) {
+			return createPositionAdapter();
 		}
 
 		@Override
@@ -1363,34 +1353,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAbilitiesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.APosition <em>APosition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.APosition
-	 * @generated
-	 */
-	public Adapter createAPositionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.StructurePosition <em>Structure Position</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.StructurePosition
-	 * @generated
-	 */
-	public Adapter createStructurePositionAdapter() {
 		return null;
 	}
 

@@ -24,12 +24,12 @@ public interface PositionedStructureElement extends PositionedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Created Position</em>' containment reference.
-	 * @see #setCreatedPosition(APosition)
+	 * @see #setCreatedPosition(Position)
 	 * @see generator.GeneratorPackage#getPositionedStructureElement_CreatedPosition()
 	 * @model containment="true"
 	 * @generated
 	 */
-	APosition getCreatedPosition();
+	Position getCreatedPosition();
 
 	/**
 	 * Sets the value of the '{@link generator.PositionedStructureElement#getCreatedPosition <em>Created Position</em>}' containment reference.
@@ -39,6 +39,6 @@ public interface PositionedStructureElement extends PositionedElement {
 	 * @see #getCreatedPosition()
 	 * @generated
 	 */
-	void setCreatedPosition(APosition value);
+	void setCreatedPosition(Position value);
 
 } // PositionedStructureElement

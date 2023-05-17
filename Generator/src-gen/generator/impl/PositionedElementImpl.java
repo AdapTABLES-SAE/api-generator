@@ -2,13 +2,13 @@
  */
 package generator.impl;
 
-import generator.APosition;
 import generator.Correctness;
 import generator.Display;
 import generator.ExpectedAnswer;
 import generator.FactSolutionParam;
 import generator.GPElementType;
 import generator.GeneratorPackage;
+import generator.Position;
 import generator.PositionedElement;
 import generator.QuestionedFact;
 import java.util.Collection;
@@ -72,7 +72,7 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected APosition position;
+	protected Position position;
 
 	/**
 	 * The cached value of the '{@link #getCorrectness() <em>Correctness</em>}' containment reference.
@@ -285,10 +285,10 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public APosition getPosition() {
+	public Position getPosition() {
 		if (position != null && position.eIsProxy()) {
 			InternalEObject oldPosition = (InternalEObject) position;
-			position = (APosition) eResolveProxy(oldPosition);
+			position = (Position) eResolveProxy(oldPosition);
 			if (position != oldPosition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
@@ -303,7 +303,7 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public APosition basicGetPosition() {
+	public Position basicGetPosition() {
 		return position;
 	}
 
@@ -312,8 +312,8 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPosition(APosition newPosition) {
-		APosition oldPosition = position;
+	public void setPosition(Position newPosition) {
+		Position oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__POSITION,
@@ -450,7 +450,7 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 			setID((String) newValue);
 			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__POSITION:
-			setPosition((APosition) newValue);
+			setPosition((Position) newValue);
 			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__CORRECTNESS:
 			setCorrectness((Correctness) newValue);
@@ -489,7 +489,7 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 			setID(ID_EDEFAULT);
 			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__POSITION:
-			setPosition((APosition) null);
+			setPosition((Position) null);
 			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__CORRECTNESS:
 			setCorrectness((Correctness) null);

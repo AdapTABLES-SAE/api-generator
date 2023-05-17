@@ -439,20 +439,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass aPositionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass structurePositionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass positionedElementEClass = null;
 
 	/**
@@ -1102,17 +1088,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRoomType_StructurePositions() {
-		return (EReference) roomTypeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getRoomType_ForEntry() {
-		return (EAttribute) roomTypeEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) roomTypeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1121,7 +1098,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EAttribute getRoomType_ForExit() {
-		return (EAttribute) roomTypeEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) roomTypeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1653,6 +1630,33 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EClass getPosition() {
 		return positionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPosition_Size() {
+		return (EAttribute) positionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPosition_RestrictedTo() {
+		return (EReference) positionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPosition_ID() {
+		return (EAttribute) positionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2902,51 +2906,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAPosition() {
-		return aPositionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAPosition_Size() {
-		return (EAttribute) aPositionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAPosition_RestrictedTo() {
-		return (EReference) aPositionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAPosition_ID() {
-		return (EAttribute) aPositionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getStructurePosition() {
-		return structurePositionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPositionedElement() {
 		return positionedElementEClass;
 	}
@@ -3244,7 +3203,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getStructure_IsPerFact() {
+	public EAttribute getStructure_PerFactOrPropositions() {
 		return (EAttribute) structureEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3819,7 +3778,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		roomTypeEClass = createEClass(ROOM_TYPE);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__NAME);
 		createEReference(roomTypeEClass, ROOM_TYPE__ELEMENT_POSITIONS);
-		createEReference(roomTypeEClass, ROOM_TYPE__STRUCTURE_POSITIONS);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__FOR_ENTRY);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__FOR_EXIT);
 		createEOperation(roomTypeEClass, ROOM_TYPE___GET_DIRECTIONS);
@@ -3895,8 +3853,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__RESULTS);
 		createEAttribute(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__ENCOUNTERS_PERCENT);
 		createEAttribute(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__SUCESS_PERCENT);
-
-		positionEClass = createEClass(POSITION);
 
 		responseModalityEClass = createEClass(RESPONSE_MODALITY);
 
@@ -4072,12 +4028,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		abilitiesEClass = createEClass(ABILITIES);
 		createEReference(abilitiesEClass, ABILITIES__ABILITIES);
 
-		aPositionEClass = createEClass(APOSITION);
-		createEAttribute(aPositionEClass, APOSITION__SIZE);
-		createEReference(aPositionEClass, APOSITION__RESTRICTED_TO);
-		createEAttribute(aPositionEClass, APOSITION__ID);
-
-		structurePositionEClass = createEClass(STRUCTURE_POSITION);
+		positionEClass = createEClass(POSITION);
+		createEAttribute(positionEClass, POSITION__SIZE);
+		createEReference(positionEClass, POSITION__RESTRICTED_TO);
+		createEAttribute(positionEClass, POSITION__ID);
 
 		positionedElementEClass = createEClass(POSITIONED_ELEMENT);
 		createEAttribute(positionedElementEClass, POSITIONED_ELEMENT__ID);
@@ -4123,7 +4077,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		structureEClass = createEClass(STRUCTURE);
 		createEReference(structureEClass, STRUCTURE__COMPONENTS);
 		createEReference(structureEClass, STRUCTURE__STRUCTURE_TYPE);
-		createEAttribute(structureEClass, STRUCTURE__IS_PER_FACT);
+		createEAttribute(structureEClass, STRUCTURE__PER_FACT_OR_PROPOSITIONS);
 
 		componentEClass = createEClass(COMPONENT);
 		createEReference(componentEClass, COMPONENT__ALLOWED_ABILITY);
@@ -4239,7 +4193,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		largeRoomTypeEClass.getESuperTypes().add(this.getRoomType());
 		mtLevelEClass.getESuperTypes().add(this.getLevel());
 		mtCompletion1EClass.getESuperTypes().add(this.getCompletionTask());
-		positionEClass.getESuperTypes().add(this.getAPosition());
 		multipleChoiceEClass.getESuperTypes().add(this.getResponseModality());
 		enterResponseEClass.getESuperTypes().add(this.getResponseModality());
 		completionTaskEClass.getESuperTypes().add(this.getATask());
@@ -4257,7 +4210,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtqfIdentificationEClass.getESuperTypes().add(this.getQuestionableFact());
 		mtqfMembershipEClass.getESuperTypes().add(this.getQuestionableFact());
 		elementTypeEClass.getESuperTypes().add(this.getGPElementType());
-		structurePositionEClass.getESuperTypes().add(this.getAPosition());
 		questionParamEClass.getESuperTypes().add(this.getParameter());
 		propositionParamEClass.getESuperTypes().add(this.getParameter());
 		valueEClass.getESuperTypes().add(this.getAValue());
@@ -4366,9 +4318,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRoomType_ElementPositions(), this.getPosition(), null, "elementPositions", null, 0, -1,
 				RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRoomType_StructurePositions(), this.getStructurePosition(), null, "structurePositions", null,
-				0, -1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRoomType_ForEntry(), ecorePackage.getEBoolean(), "forEntry", "false", 0, 1, RoomType.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4533,9 +4482,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getCurrentObjectiveLevel_SucessPercent(), ecorePackage.getEDouble(), "sucessPercent", null, 0, 1,
 				CurrentObjectiveLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		initEClass(positionEClass, Position.class, "Position", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(responseModalityEClass, ResponseModality.class, "ResponseModality", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4920,24 +4866,21 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(aPositionEClass, APosition.class, "APosition", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(positionEClass, Position.class, "Position", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAPosition_Size(), this.getElementSize(), "size", null, 0, 1, APosition.class, !IS_TRANSIENT,
+		initEAttribute(getPosition_Size(), this.getElementSize(), "size", null, 0, 1, Position.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAPosition_RestrictedTo(), this.getAbility(), null, "restrictedTo", null, 0, -1,
-				APosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAPosition_ID(), ecorePackage.getEString(), "ID", null, 0, 1, APosition.class, !IS_TRANSIENT,
+		initEReference(getPosition_RestrictedTo(), this.getAbility(), null, "restrictedTo", null, 0, -1, Position.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPosition_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Position.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(structurePositionEClass, StructurePosition.class, "StructurePosition", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(positionedElementEClass, PositionedElement.class, "PositionedElement", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPositionedElement_ID(), ecorePackage.getEString(), "ID", null, 0, 1, PositionedElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPositionedElement_Position(), this.getAPosition(), null, "position", null, 0, 1,
+		initEReference(getPositionedElement_Position(), this.getPosition(), null, "position", null, 0, 1,
 				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPositionedElement_Correctness(), this.getCorrectness(), null, "correctness", null, 0, 1,
@@ -5022,9 +4965,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getStructure_StructureType(), this.getStructureType(), null, "structureType", null, 0, 1,
 				Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStructure_IsPerFact(), ecorePackage.getEBoolean(), "isPerFact", "false", 0, 1,
-				Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStructure_PerFactOrPropositions(), ecorePackage.getEBoolean(), "perFactOrPropositions",
+				"false", 0, 1, Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5074,7 +5017,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(positionedStructureElementEClass, PositionedStructureElement.class, "PositionedStructureElement",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPositionedStructureElement_CreatedPosition(), this.getAPosition(), null, "createdPosition",
+		initEReference(getPositionedStructureElement_CreatedPosition(), this.getPosition(), null, "createdPosition",
 				null, 0, 1, PositionedStructureElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

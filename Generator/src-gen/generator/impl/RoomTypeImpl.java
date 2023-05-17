@@ -6,8 +6,6 @@ import generator.Directions;
 import generator.GeneratorPackage;
 import generator.Position;
 import generator.RoomType;
-import generator.StructurePosition;
-
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -36,7 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link generator.impl.RoomTypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link generator.impl.RoomTypeImpl#getElementPositions <em>Element Positions</em>}</li>
- *   <li>{@link generator.impl.RoomTypeImpl#getStructurePositions <em>Structure Positions</em>}</li>
  *   <li>{@link generator.impl.RoomTypeImpl#isForEntry <em>For Entry</em>}</li>
  *   <li>{@link generator.impl.RoomTypeImpl#isForExit <em>For Exit</em>}</li>
  * </ul>
@@ -73,16 +70,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected EList<Position> elementPositions;
-
-	/**
-	 * The cached value of the '{@link #getStructurePositions() <em>Structure Positions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStructurePositions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<StructurePosition> structurePositions;
 
 	/**
 	 * The default value of the '{@link #isForEntry() <em>For Entry</em>}' attribute.
@@ -182,19 +169,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<StructurePosition> getStructurePositions() {
-		if (structurePositions == null) {
-			structurePositions = new EObjectContainmentEList<StructurePosition>(StructurePosition.class, this,
-					GeneratorPackage.ROOM_TYPE__STRUCTURE_POSITIONS);
-		}
-		return structurePositions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean isForEntry() {
 		return forEntry;
 	}
@@ -255,8 +229,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 		case GeneratorPackage.ROOM_TYPE__ELEMENT_POSITIONS:
 			return ((InternalEList<?>) getElementPositions()).basicRemove(otherEnd, msgs);
-		case GeneratorPackage.ROOM_TYPE__STRUCTURE_POSITIONS:
-			return ((InternalEList<?>) getStructurePositions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -273,8 +245,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 			return getName();
 		case GeneratorPackage.ROOM_TYPE__ELEMENT_POSITIONS:
 			return getElementPositions();
-		case GeneratorPackage.ROOM_TYPE__STRUCTURE_POSITIONS:
-			return getStructurePositions();
 		case GeneratorPackage.ROOM_TYPE__FOR_ENTRY:
 			return isForEntry();
 		case GeneratorPackage.ROOM_TYPE__FOR_EXIT:
@@ -298,10 +268,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.ROOM_TYPE__ELEMENT_POSITIONS:
 			getElementPositions().clear();
 			getElementPositions().addAll((Collection<? extends Position>) newValue);
-			return;
-		case GeneratorPackage.ROOM_TYPE__STRUCTURE_POSITIONS:
-			getStructurePositions().clear();
-			getStructurePositions().addAll((Collection<? extends StructurePosition>) newValue);
 			return;
 		case GeneratorPackage.ROOM_TYPE__FOR_ENTRY:
 			setForEntry((Boolean) newValue);
@@ -327,9 +293,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.ROOM_TYPE__ELEMENT_POSITIONS:
 			getElementPositions().clear();
 			return;
-		case GeneratorPackage.ROOM_TYPE__STRUCTURE_POSITIONS:
-			getStructurePositions().clear();
-			return;
 		case GeneratorPackage.ROOM_TYPE__FOR_ENTRY:
 			setForEntry(FOR_ENTRY_EDEFAULT);
 			return;
@@ -352,8 +315,6 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case GeneratorPackage.ROOM_TYPE__ELEMENT_POSITIONS:
 			return elementPositions != null && !elementPositions.isEmpty();
-		case GeneratorPackage.ROOM_TYPE__STRUCTURE_POSITIONS:
-			return structurePositions != null && !structurePositions.isEmpty();
 		case GeneratorPackage.ROOM_TYPE__FOR_ENTRY:
 			return forEntry != FOR_ENTRY_EDEFAULT;
 		case GeneratorPackage.ROOM_TYPE__FOR_EXIT:

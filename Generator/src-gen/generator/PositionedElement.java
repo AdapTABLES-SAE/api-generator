@@ -57,12 +57,12 @@ public interface PositionedElement extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position</em>' reference.
-	 * @see #setPosition(APosition)
+	 * @see #setPosition(Position)
 	 * @see generator.GeneratorPackage#getPositionedElement_Position()
 	 * @model
 	 * @generated
 	 */
-	APosition getPosition();
+	Position getPosition();
 
 	/**
 	 * Sets the value of the '{@link generator.PositionedElement#getPosition <em>Position</em>}' reference.
@@ -72,7 +72,7 @@ public interface PositionedElement extends EObject {
 	 * @see #getPosition()
 	 * @generated
 	 */
-	void setPosition(APosition value);
+	void setPosition(Position value);
 
 	/**
 	 * Returns the value of the '<em><b>Correctness</b></em>' containment reference.

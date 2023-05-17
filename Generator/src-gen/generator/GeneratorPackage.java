@@ -462,22 +462,13 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM_TYPE__ELEMENT_POSITIONS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Structure Positions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_TYPE__STRUCTURE_POSITIONS = 2;
-
-	/**
 	 * The feature id for the '<em><b>For Entry</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE__FOR_ENTRY = 3;
+	int ROOM_TYPE__FOR_ENTRY = 2;
 
 	/**
 	 * The feature id for the '<em><b>For Exit</b></em>' attribute.
@@ -486,7 +477,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE__FOR_EXIT = 4;
+	int ROOM_TYPE__FOR_EXIT = 3;
 
 	/**
 	 * The number of structural features of the '<em>Room Type</em>' class.
@@ -495,7 +486,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_FEATURE_COUNT = 5;
+	int ROOM_TYPE_FEATURE_COUNT = 4;
 
 	/**
 	 * The operation id for the '<em>Get Directions</em>' operation.
@@ -542,15 +533,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int SMALL_ROOM_TYPE__ELEMENT_POSITIONS = ROOM_TYPE__ELEMENT_POSITIONS;
-
-	/**
-	 * The feature id for the '<em><b>Structure Positions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SMALL_ROOM_TYPE__STRUCTURE_POSITIONS = ROOM_TYPE__STRUCTURE_POSITIONS;
 
 	/**
 	 * The feature id for the '<em><b>For Entry</b></em>' attribute.
@@ -633,15 +615,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int LARGE_ROOM_TYPE__ELEMENT_POSITIONS = ROOM_TYPE__ELEMENT_POSITIONS;
-
-	/**
-	 * The feature id for the '<em><b>Structure Positions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LARGE_ROOM_TYPE__STRUCTURE_POSITIONS = ROOM_TYPE__STRUCTURE_POSITIONS;
 
 	/**
 	 * The feature id for the '<em><b>For Entry</b></em>' attribute.
@@ -1163,7 +1136,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getATask()
 	 * @generated
 	 */
-	int ATASK = 27;
+	int ATASK = 26;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -1272,7 +1245,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCompletionTask()
 	 * @generated
 	 */
-	int COMPLETION_TASK = 28;
+	int COMPLETION_TASK = 27;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -1784,61 +1757,6 @@ public interface GeneratorPackage extends EPackage {
 	int CURRENT_OBJECTIVE_LEVEL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.APositionImpl <em>APosition</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.APositionImpl
-	 * @see generator.impl.GeneratorPackageImpl#getAPosition()
-	 * @generated
-	 */
-	int APOSITION = 59;
-
-	/**
-	 * The feature id for the '<em><b>Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOSITION__SIZE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Restricted To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOSITION__RESTRICTED_TO = 1;
-
-	/**
-	 * The feature id for the '<em><b>ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOSITION__ID = 2;
-
-	/**
-	 * The number of structural features of the '<em>APosition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOSITION_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>APosition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOSITION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.PositionImpl <em>Position</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1846,52 +1764,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPosition()
 	 * @generated
 	 */
-	int POSITION = 22;
-
-	/**
-	 * The feature id for the '<em><b>Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION__SIZE = APOSITION__SIZE;
-
-	/**
-	 * The feature id for the '<em><b>Restricted To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION__RESTRICTED_TO = APOSITION__RESTRICTED_TO;
-
-	/**
-	 * The feature id for the '<em><b>ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION__ID = APOSITION__ID;
-
-	/**
-	 * The number of structural features of the '<em>Position</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_FEATURE_COUNT = APOSITION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Position</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_OPERATION_COUNT = APOSITION_OPERATION_COUNT + 0;
+	int POSITION = 58;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.ResponseModalityImpl <em>Response Modality</em>}' class.
@@ -1901,7 +1774,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResponseModality()
 	 * @generated
 	 */
-	int RESPONSE_MODALITY = 23;
+	int RESPONSE_MODALITY = 22;
 
 	/**
 	 * The number of structural features of the '<em>Response Modality</em>' class.
@@ -1929,7 +1802,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMultipleChoice()
 	 * @generated
 	 */
-	int MULTIPLE_CHOICE = 24;
+	int MULTIPLE_CHOICE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1984,7 +1857,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEnterResponse()
 	 * @generated
 	 */
-	int ENTER_RESPONSE = 25;
+	int ENTER_RESPONSE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2021,7 +1894,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRoomTypes()
 	 * @generated
 	 */
-	int ROOM_TYPES = 26;
+	int ROOM_TYPES = 25;
 
 	/**
 	 * The feature id for the '<em><b>Roomtypes</b></em>' containment reference list.
@@ -2058,7 +1931,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getIdentificationTask()
 	 * @generated
 	 */
-	int IDENTIFICATION_TASK = 29;
+	int IDENTIFICATION_TASK = 28;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2185,7 +2058,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMembershipIDTask()
 	 * @generated
 	 */
-	int MEMBERSHIP_ID_TASK = 30;
+	int MEMBERSHIP_ID_TASK = 29;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2321,7 +2194,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTCompletion2()
 	 * @generated
 	 */
-	int MT_COMPLETION2 = 31;
+	int MT_COMPLETION2 = 30;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2475,7 +2348,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTRecontruction()
 	 * @generated
 	 */
-	int MT_RECONTRUCTION = 32;
+	int MT_RECONTRUCTION = 31;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2620,7 +2493,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTIdentification()
 	 * @generated
 	 */
-	int MT_IDENTIFICATION = 33;
+	int MT_IDENTIFICATION = 32;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2756,7 +2629,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTMembership()
 	 * @generated
 	 */
-	int MT_MEMBERSHIP = 34;
+	int MT_MEMBERSHIP = 33;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2892,7 +2765,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResults()
 	 * @generated
 	 */
-	int RESULTS = 35;
+	int RESULTS = 34;
 
 	/**
 	 * The feature id for the '<em><b>Resultsbytask</b></em>' containment reference list.
@@ -2929,7 +2802,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultsByTask()
 	 * @generated
 	 */
-	int RESULTS_BY_TASK = 36;
+	int RESULTS_BY_TASK = 35;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -2993,7 +2866,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTFact()
 	 * @generated
 	 */
-	int MT_FACT = 37;
+	int MT_FACT = 36;
 
 	/**
 	 * The feature id for the '<em><b>Table</b></em>' attribute.
@@ -3048,7 +2921,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTResultFact()
 	 * @generated
 	 */
-	int MT_RESULT_FACT = 38;
+	int MT_RESULT_FACT = 37;
 
 	/**
 	 * The feature id for the '<em><b>Table</b></em>' attribute.
@@ -3094,7 +2967,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuestionableFact()
 	 * @generated
 	 */
-	int QUESTIONABLE_FACT = 39;
+	int QUESTIONABLE_FACT = 38;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -3176,7 +3049,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFCompletion1()
 	 * @generated
 	 */
-	int MTQF_COMPLETION1 = 40;
+	int MTQF_COMPLETION1 = 39;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -3303,7 +3176,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFCompletion2()
 	 * @generated
 	 */
-	int MTQF_COMPLETION2 = 41;
+	int MTQF_COMPLETION2 = 40;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -3448,7 +3321,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFRebuild()
 	 * @generated
 	 */
-	int MTQF_REBUILD = 42;
+	int MTQF_REBUILD = 41;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -3566,7 +3439,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFIdentification()
 	 * @generated
 	 */
-	int MTQF_IDENTIFICATION = 43;
+	int MTQF_IDENTIFICATION = 42;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -3702,7 +3575,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMTQFMembership()
 	 * @generated
 	 */
-	int MTQF_MEMBERSHIP = 44;
+	int MTQF_MEMBERSHIP = 43;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -3802,7 +3675,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuestionedFact()
 	 * @generated
 	 */
-	int QUESTIONED_FACT = 45;
+	int QUESTIONED_FACT = 44;
 
 	/**
 	 * The feature id for the '<em><b>Questionablefact</b></em>' reference.
@@ -3902,7 +3775,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCompletionCriteria()
 	 * @generated
 	 */
-	int COMPLETION_CRITERIA = 46;
+	int COMPLETION_CRITERIA = 45;
 
 	/**
 	 * The feature id for the '<em><b>Succes Percent</b></em>' attribute.
@@ -3948,7 +3821,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLevelsDifficultyProgress()
 	 * @generated
 	 */
-	int LEVELS_DIFFICULTY_PROGRESS = 47;
+	int LEVELS_DIFFICULTY_PROGRESS = 46;
 
 	/**
 	 * The feature id for the '<em><b>Nb QRoom Increase</b></em>' attribute.
@@ -4012,7 +3885,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCurrentGameLevel()
 	 * @generated
 	 */
-	int CURRENT_GAME_LEVEL = 48;
+	int CURRENT_GAME_LEVEL = 47;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -4049,7 +3922,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameElementTypes()
 	 * @generated
 	 */
-	int GAME_ELEMENT_TYPES = 49;
+	int GAME_ELEMENT_TYPES = 48;
 
 	/**
 	 * The feature id for the '<em><b>Equipments</b></em>' containment reference.
@@ -4095,7 +3968,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPElementsTypes()
 	 * @generated
 	 */
-	int GP_ELEMENTS_TYPES = 50;
+	int GP_ELEMENTS_TYPES = 49;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -4132,7 +4005,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEquipments()
 	 * @generated
 	 */
-	int EQUIPMENTS = 51;
+	int EQUIPMENTS = 50;
 
 	/**
 	 * The feature id for the '<em><b>Equipments</b></em>' containment reference list.
@@ -4169,7 +4042,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPElementType()
 	 * @generated
 	 */
-	int GP_ELEMENT_TYPE = 69;
+	int GP_ELEMENT_TYPE = 67;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -4224,7 +4097,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementType()
 	 * @generated
 	 */
-	int ELEMENT_TYPE = 52;
+	int ELEMENT_TYPE = 51;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -4306,7 +4179,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEquipment()
 	 * @generated
 	 */
-	int EQUIPMENT = 53;
+	int EQUIPMENT = 52;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -4361,7 +4234,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameplay()
 	 * @generated
 	 */
-	int GAMEPLAY = 54;
+	int GAMEPLAY = 53;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4425,7 +4298,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameplays()
 	 * @generated
 	 */
-	int GAMEPLAYS = 55;
+	int GAMEPLAYS = 54;
 
 	/**
 	 * The feature id for the '<em><b>Gameplays</b></em>' containment reference list.
@@ -4462,7 +4335,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuestionableFactResult()
 	 * @generated
 	 */
-	int QUESTIONABLE_FACT_RESULT = 56;
+	int QUESTIONABLE_FACT_RESULT = 55;
 
 	/**
 	 * The feature id for the '<em><b>Response Time</b></em>' attribute.
@@ -4517,7 +4390,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAbility()
 	 * @generated
 	 */
-	int ABILITY = 57;
+	int ABILITY = 56;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4554,7 +4427,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAbilities()
 	 * @generated
 	 */
-	int ABILITIES = 58;
+	int ABILITIES = 57;
 
 	/**
 	 * The feature id for the '<em><b>Abilities</b></em>' containment reference list.
@@ -4584,23 +4457,13 @@ public interface GeneratorPackage extends EPackage {
 	int ABILITIES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.StructurePositionImpl <em>Structure Position</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.StructurePositionImpl
-	 * @see generator.impl.GeneratorPackageImpl#getStructurePosition()
-	 * @generated
-	 */
-	int STRUCTURE_POSITION = 60;
-
-	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_POSITION__SIZE = APOSITION__SIZE;
+	int POSITION__SIZE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Restricted To</b></em>' reference list.
@@ -4609,7 +4472,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_POSITION__RESTRICTED_TO = APOSITION__RESTRICTED_TO;
+	int POSITION__RESTRICTED_TO = 1;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -4618,25 +4481,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_POSITION__ID = APOSITION__ID;
+	int POSITION__ID = 2;
 
 	/**
-	 * The number of structural features of the '<em>Structure Position</em>' class.
+	 * The number of structural features of the '<em>Position</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_POSITION_FEATURE_COUNT = APOSITION_FEATURE_COUNT + 0;
+	int POSITION_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Structure Position</em>' class.
+	 * The number of operations of the '<em>Position</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_POSITION_OPERATION_COUNT = APOSITION_OPERATION_COUNT + 0;
+	int POSITION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.PositionedElementImpl <em>Positioned Element</em>}' class.
@@ -4646,7 +4509,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPositionedElement()
 	 * @generated
 	 */
-	int POSITIONED_ELEMENT = 61;
+	int POSITIONED_ELEMENT = 59;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -4746,7 +4609,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getParameter()
 	 * @generated
 	 */
-	int PARAMETER = 62;
+	int PARAMETER = 60;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -4783,7 +4646,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuestionParam()
 	 * @generated
 	 */
-	int QUESTION_PARAM = 63;
+	int QUESTION_PARAM = 61;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -4838,7 +4701,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPropositionParam()
 	 * @generated
 	 */
-	int PROPOSITION_PARAM = 64;
+	int PROPOSITION_PARAM = 62;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -4884,7 +4747,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAValue()
 	 * @generated
 	 */
-	int AVALUE = 78;
+	int AVALUE = 76;
 
 	/**
 	 * The number of structural features of the '<em>AValue</em>' class.
@@ -4912,7 +4775,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getValue()
 	 * @generated
 	 */
-	int VALUE = 65;
+	int VALUE = 63;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -4949,7 +4812,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCorrectness()
 	 * @generated
 	 */
-	int CORRECTNESS = 66;
+	int CORRECTNESS = 64;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -4986,7 +4849,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEntrySoluceParam()
 	 * @generated
 	 */
-	int ENTRY_SOLUCE_PARAM = 67;
+	int ENTRY_SOLUCE_PARAM = 65;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5032,7 +4895,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStructureType()
 	 * @generated
 	 */
-	int STRUCTURE_TYPE = 68;
+	int STRUCTURE_TYPE = 66;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -5087,7 +4950,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDisplay()
 	 * @generated
 	 */
-	int DISPLAY = 70;
+	int DISPLAY = 68;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5142,7 +5005,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAComponent()
 	 * @generated
 	 */
-	int ACOMPONENT = 71;
+	int ACOMPONENT = 69;
 
 	/**
 	 * The number of structural features of the '<em>AComponent</em>' class.
@@ -5170,7 +5033,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStructure()
 	 * @generated
 	 */
-	int STRUCTURE = 72;
+	int STRUCTURE = 70;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -5191,13 +5054,13 @@ public interface GeneratorPackage extends EPackage {
 	int STRUCTURE__STRUCTURE_TYPE = ACOMPONENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Is Per Fact</b></em>' attribute.
+	 * The feature id for the '<em><b>Per Fact Or Propositions</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__IS_PER_FACT = ACOMPONENT_FEATURE_COUNT + 2;
+	int STRUCTURE__PER_FACT_OR_PROPOSITIONS = ACOMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Structure</em>' class.
@@ -5225,7 +5088,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getComponent()
 	 * @generated
 	 */
-	int COMPONENT = 73;
+	int COMPONENT = 71;
 
 	/**
 	 * The feature id for the '<em><b>Allowed Ability</b></em>' reference.
@@ -5325,7 +5188,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuantity()
 	 * @generated
 	 */
-	int QUANTITY = 74;
+	int QUANTITY = 72;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5371,7 +5234,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getWantedAnswersParam()
 	 * @generated
 	 */
-	int WANTED_ANSWERS_PARAM = 75;
+	int WANTED_ANSWERS_PARAM = 73;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5408,7 +5271,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getExpectedAnswer()
 	 * @generated
 	 */
-	int EXPECTED_ANSWER = 76;
+	int EXPECTED_ANSWER = 74;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5445,7 +5308,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCorrectnessValue()
 	 * @generated
 	 */
-	int CORRECTNESS_VALUE = 77;
+	int CORRECTNESS_VALUE = 75;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -5482,7 +5345,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPositionedStructureElement()
 	 * @generated
 	 */
-	int POSITIONED_STRUCTURE_ELEMENT = 79;
+	int POSITIONED_STRUCTURE_ELEMENT = 77;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -5591,7 +5454,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getFactSolutionParam()
 	 * @generated
 	 */
-	int FACT_SOLUTION_PARAM = 80;
+	int FACT_SOLUTION_PARAM = 78;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5628,7 +5491,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getOrderingTask()
 	 * @generated
 	 */
-	int ORDERING_TASK = 81;
+	int ORDERING_TASK = 79;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -5755,7 +5618,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPrompt()
 	 * @generated
 	 */
-	int PROMPT = 82;
+	int PROMPT = 80;
 
 	/**
 	 * The feature id for the '<em><b>Prompt</b></em>' attribute.
@@ -5792,7 +5655,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getFactCorrectnessParam()
 	 * @generated
 	 */
-	int FACT_CORRECTNESS_PARAM = 83;
+	int FACT_CORRECTNESS_PARAM = 81;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5829,7 +5692,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameplayTaskRelations()
 	 * @generated
 	 */
-	int GAMEPLAY_TASK_RELATIONS = 84;
+	int GAMEPLAY_TASK_RELATIONS = 82;
 
 	/**
 	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
@@ -5866,7 +5729,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRelation()
 	 * @generated
 	 */
-	int RELATION = 85;
+	int RELATION = 83;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' attribute.
@@ -5921,7 +5784,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCondition()
 	 * @generated
 	 */
-	int CONDITION = 86;
+	int CONDITION = 84;
 
 	/**
 	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
@@ -5976,7 +5839,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuestionGameplay()
 	 * @generated
 	 */
-	int QUESTION_GAMEPLAY = 87;
+	int QUESTION_GAMEPLAY = 85;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6076,7 +5939,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getNoQuestionGameplay()
 	 * @generated
 	 */
-	int NO_QUESTION_GAMEPLAY = 88;
+	int NO_QUESTION_GAMEPLAY = 86;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6140,7 +6003,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 89;
+	int SIZE = 87;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -6177,7 +6040,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStatementElementType()
 	 * @generated
 	 */
-	int STATEMENT_ELEMENT_TYPE = 90;
+	int STATEMENT_ELEMENT_TYPE = 88;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -6268,7 +6131,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 91;
+	int DIRECTIONS = 89;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -6278,7 +6141,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 92;
+	int DUNGEON_MODE = 90;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -6288,7 +6151,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 93;
+	int TABLE_BUILD = 91;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -6298,7 +6161,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 94;
+	int RESULT_POSITION = 92;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -6308,7 +6171,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 95;
+	int ESINGLE_TARGET = 93;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -6318,7 +6181,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 96;
+	int ETASK_TYPE = 94;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -6328,7 +6191,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 97;
+	int EMODALITY = 95;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -6338,7 +6201,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 98;
+	int ESEVERAL_TARGET = 96;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -6348,7 +6211,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 99;
+	int ELEMENT_SIZE = 97;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -6358,7 +6221,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 100;
+	int GP_CATEGORY = 98;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -6368,7 +6231,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 101;
+	int ECORRECTNESS = 99;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -6378,7 +6241,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 102;
+	int EBOUNDARY = 100;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -6724,17 +6587,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRoomType_ElementPositions();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.RoomType#getStructurePositions <em>Structure Positions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Structure Positions</em>'.
-	 * @see generator.RoomType#getStructurePositions()
-	 * @see #getRoomType()
-	 * @generated
-	 */
-	EReference getRoomType_StructurePositions();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.RoomType#isForEntry <em>For Entry</em>}'.
@@ -7389,6 +7241,39 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPosition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Position#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see generator.Position#getSize()
+	 * @see #getPosition()
+	 * @generated
+	 */
+	EAttribute getPosition_Size();
+
+	/**
+	 * Returns the meta object for the reference list '{@link generator.Position#getRestrictedTo <em>Restricted To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Restricted To</em>'.
+	 * @see generator.Position#getRestrictedTo()
+	 * @see #getPosition()
+	 * @generated
+	 */
+	EReference getPosition_RestrictedTo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Position#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see generator.Position#getID()
+	 * @see #getPosition()
+	 * @generated
+	 */
+	EAttribute getPosition_ID();
 
 	/**
 	 * Returns the meta object for class '{@link generator.ResponseModality <em>Response Modality</em>}'.
@@ -8866,59 +8751,6 @@ public interface GeneratorPackage extends EPackage {
 	EReference getAbilities_Abilities();
 
 	/**
-	 * Returns the meta object for class '{@link generator.APosition <em>APosition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>APosition</em>'.
-	 * @see generator.APosition
-	 * @generated
-	 */
-	EClass getAPosition();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.APosition#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see generator.APosition#getSize()
-	 * @see #getAPosition()
-	 * @generated
-	 */
-	EAttribute getAPosition_Size();
-
-	/**
-	 * Returns the meta object for the reference list '{@link generator.APosition#getRestrictedTo <em>Restricted To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Restricted To</em>'.
-	 * @see generator.APosition#getRestrictedTo()
-	 * @see #getAPosition()
-	 * @generated
-	 */
-	EReference getAPosition_RestrictedTo();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.APosition#getID <em>ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>ID</em>'.
-	 * @see generator.APosition#getID()
-	 * @see #getAPosition()
-	 * @generated
-	 */
-	EAttribute getAPosition_ID();
-
-	/**
-	 * Returns the meta object for class '{@link generator.StructurePosition <em>Structure Position</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Structure Position</em>'.
-	 * @see generator.StructurePosition
-	 * @generated
-	 */
-	EClass getStructurePosition();
-
-	/**
 	 * Returns the meta object for class '{@link generator.PositionedElement <em>Positioned Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9270,15 +9102,15 @@ public interface GeneratorPackage extends EPackage {
 	EReference getStructure_StructureType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.Structure#isIsPerFact <em>Is Per Fact</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.Structure#isPerFactOrPropositions <em>Per Fact Or Propositions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Per Fact</em>'.
-	 * @see generator.Structure#isIsPerFact()
+	 * @return the meta object for the attribute '<em>Per Fact Or Propositions</em>'.
+	 * @see generator.Structure#isPerFactOrPropositions()
 	 * @see #getStructure()
 	 * @generated
 	 */
-	EAttribute getStructure_IsPerFact();
+	EAttribute getStructure_PerFactOrPropositions();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Component <em>Component</em>}'.
@@ -10161,14 +9993,6 @@ public interface GeneratorPackage extends EPackage {
 		EReference ROOM_TYPE__ELEMENT_POSITIONS = eINSTANCE.getRoomType_ElementPositions();
 
 		/**
-		 * The meta object literal for the '<em><b>Structure Positions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM_TYPE__STRUCTURE_POSITIONS = eINSTANCE.getRoomType_StructurePositions();
-
-		/**
 		 * The meta object literal for the '<em><b>For Entry</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10687,6 +10511,30 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EClass POSITION = eINSTANCE.getPosition();
+
+		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute POSITION__SIZE = eINSTANCE.getPosition_Size();
+
+		/**
+		 * The meta object literal for the '<em><b>Restricted To</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POSITION__RESTRICTED_TO = eINSTANCE.getPosition_RestrictedTo();
+
+		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute POSITION__ID = eINSTANCE.getPosition_ID();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ResponseModalityImpl <em>Response Modality</em>}' class.
@@ -11868,50 +11716,6 @@ public interface GeneratorPackage extends EPackage {
 		EReference ABILITIES__ABILITIES = eINSTANCE.getAbilities_Abilities();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.APositionImpl <em>APosition</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.APositionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getAPosition()
-		 * @generated
-		 */
-		EClass APOSITION = eINSTANCE.getAPosition();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute APOSITION__SIZE = eINSTANCE.getAPosition_Size();
-
-		/**
-		 * The meta object literal for the '<em><b>Restricted To</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APOSITION__RESTRICTED_TO = eINSTANCE.getAPosition_RestrictedTo();
-
-		/**
-		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute APOSITION__ID = eINSTANCE.getAPosition_ID();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.StructurePositionImpl <em>Structure Position</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.StructurePositionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getStructurePosition()
-		 * @generated
-		 */
-		EClass STRUCTURE_POSITION = eINSTANCE.getStructurePosition();
-
-		/**
 		 * The meta object literal for the '{@link generator.impl.PositionedElementImpl <em>Positioned Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12200,12 +12004,12 @@ public interface GeneratorPackage extends EPackage {
 		EReference STRUCTURE__STRUCTURE_TYPE = eINSTANCE.getStructure_StructureType();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Per Fact</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Per Fact Or Propositions</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STRUCTURE__IS_PER_FACT = eINSTANCE.getStructure_IsPerFact();
+		EAttribute STRUCTURE__PER_FACT_OR_PROPOSITIONS = eINSTANCE.getStructure_PerFactOrPropositions();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ComponentImpl <em>Component</em>}' class.
