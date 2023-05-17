@@ -19,7 +19,7 @@
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
     </objectives>
     <objectives ID="ICM-O2" name="D&#xe9;couverte Table 10">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O1-N3" encountersPercent="80.0"/>
@@ -40,7 +40,7 @@
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
     <objectives ID="ICM-O3" name="Automatisation Table 2">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O2-N3" encountersPercent="80.0"/>
@@ -70,7 +70,7 @@
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
     </objectives>
     <objectives ID="ICM-O11" name="Maitrise Table 2,3,4,5,10">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O10-N3" encountersPercent="80.0"/>
@@ -100,11 +100,11 @@
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
     <objectives ID="ICM-O4" name="D&#xe9;couverte Table 5">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O2-N3" encountersPercent="80.0"/>
@@ -125,7 +125,7 @@
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
     </objectives>
     <objectives ID="ICM-O5" name="D&#xe9;couverte Table 3">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O3-N3" encountersPercent="80.0"/>
@@ -146,7 +146,7 @@
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
     </objectives>
     <objectives ID="ICM-O6" name="D&#xe9;couverte Table 4">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O5-N3" encountersPercent="80.0"/>
@@ -167,7 +167,7 @@
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
     </objectives>
     <objectives ID="ICM-O7" name="Automatisation Tables 2 + 10">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O3-N3" encountersPercent="80.0"/>
@@ -197,8 +197,8 @@
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
     </objectives>
     <objectives ID="ICM-O8" name="Automatisation Table 2 + 5 + 10">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O5-N3" encountersPercent="80.0"/>
@@ -228,9 +228,9 @@
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
     <objectives ID="ICM-O9" name="Automatisation Tables 2 + 3 + 5 + 10">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O6-N3" encountersPercent="80.0"/>
@@ -260,10 +260,10 @@
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
     <objectives ID="ICM-10" name="Automatisation Tables 2 + 3 + 4 + 5 + 10 ">
       <prerequisites succesPercent="80.0" requiredLevel="ICM-O6-N3" encountersPercent="80.0"/>
@@ -293,13 +293,13 @@
         </tasks>
         <completionCriteria succesPercent="100.0"/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
-    <knowledge href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#/"/>
+    <knowledge href="MultiplicationTables.xmi#/"/>
   </learningpaths>
   <learningpaths name="Rozenn | CE2 -- En cours" ID="PATH2">
     <objectives ID="REC-O1" name="R&#xe9;vision table travaill&#xe9;e en CE1">
@@ -337,11 +337,11 @@
         </tasks>
         <completionCriteria/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
     <objectives ID="REC-O2" name="Apprentissage Table 6">
       <prerequisites succesPercent="80.0" requiredLevel="REC-O1-N1"/>
@@ -402,7 +402,7 @@
         </tasks>
         <completionCriteria/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.5"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.5"/>
     </objectives>
     <objectives ID="REC-O3" name="Apprentissage Table 7">
       <prerequisites succesPercent="80.0" requiredLevel="REC-O1-N1"/>
@@ -463,7 +463,7 @@
         </tasks>
         <completionCriteria/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.6"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.6"/>
     </objectives>
     <objectives ID="REC-O4" name="Apprentissage Table 8">
       <prerequisites succesPercent="80.0" requiredLevel="REC-O1-N1"/>
@@ -524,7 +524,7 @@
         </tasks>
         <completionCriteria/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.7"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.7"/>
     </objectives>
     <objectives ID="REC-O5" name="Apprentissage Table 9">
       <prerequisites succesPercent="80.0" requiredLevel="REC-O1-N1"/>
@@ -585,7 +585,7 @@
         </tasks>
         <completionCriteria/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.8"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.8"/>
     </objectives>
     <objectives ID="REC-O6" name="ALL IN">
       <prerequisites succesPercent="70.0" requiredLevel="REC-O2-N3"/>
@@ -628,153 +628,17 @@
         </tasks>
         <completionCriteria succesPercent="100.0"/>
       </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.0"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.5"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.6"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.7"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.8"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.0"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.5"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.6"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.7"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.8"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
-    <knowledge href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#/"/>
-  </learningpaths>
-  <learningpaths name="EIAH TEST TRAINING PATH" ID="PATH3">
-    <objectives ID="O1" name="FICTIF SINGLE OBJECTIVE">
-      <levels xsi:type="generator:MTLevel" ID="O1_N1" buildSetup="MIX" resultPositionSetup="MIX" maxInterval="12">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" nbConsecutiveSuccess="1" ID="C1-RES">
-          <responseModality xsi:type="generator:EnterResponse"/>
-          <targets>RESULT</targets>
-        </tasks>
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="10" nbConsecutiveSuccess="1" ID="C1-TABOP">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
-          <targets>TABLE</targets>
-          <targets>OPERAND</targets>
-        </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" nbConsecutiveSuccess="1" ID="C2-OPTABLE">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
-          <targets>OPERAND_TABLE</targets>
-        </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="REB">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
-        </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES" nbFacts="2"/>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="MEMB">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
-        </tasks>
-      </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.0"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.5"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.6"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.7"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.8"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.10"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.11"/>
-    </objectives>
-    <knowledge href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#/"/>
-  </learningpaths>
-  <learningpaths name="EIAH TEST TRAINING PATH 2" ID="PATH4">
-    <objectives ID="O1" name="FICTIF SINGLE OBJECTIVE">
-      <levels xsi:type="generator:MTLevel" ID="O1_N1" buildSetup="MIX" resultPositionSetup="MIX" maxInterval="12">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" nbConsecutiveSuccess="1" ID="C1-RES">
-          <responseModality xsi:type="generator:EnterResponse"/>
-          <targets>RESULT</targets>
-        </tasks>
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="10" nbConsecutiveSuccess="1" ID="C1-TABOP">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
-          <targets>TABLE</targets>
-          <targets>OPERAND</targets>
-        </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" nbConsecutiveSuccess="1" ID="C2-OPTABLE">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
-          <targets>OPERAND_TABLE</targets>
-        </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="REB">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
-        </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES" nbFacts="2">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
-        </tasks>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="MEMB">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
-        </tasks>
-      </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.5"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.6"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.7"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.8"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.9"/>
-    </objectives>
-    <knowledge href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#/"/>
-  </learningpaths>
-  <learningpaths name="EIAH TEST TRAINING PATH 3" ID="PATH5">
-    <objectives ID="O1" name="FICTIF SINGLE OBJECTIVE">
-      <levels xsi:type="generator:MTLevel" ID="O1_N1" buildSetup="MIX" resultPositionSetup="MIX" minInterval="3" maxInterval="5">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" nbConsecutiveSuccess="1" ID="C1-RES">
-          <responseModality xsi:type="generator:EnterResponse"/>
-          <targets>RESULT</targets>
-        </tasks>
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="10" nbConsecutiveSuccess="1" ID="C1-TABOP">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
-          <targets>TABLE</targets>
-          <targets>OPERAND</targets>
-        </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" nbConsecutiveSuccess="1" ID="C2-OPTABLE">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
-          <targets>OPERAND_TABLE</targets>
-        </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="REB">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
-        </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="ID-RES" nbFacts="2"/>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="MEMB">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
-        </tasks>
-      </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.7"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.10"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.2"/>
-    </objectives>
-    <knowledge href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#/"/>
-  </learningpaths>
-  <learningpaths name="Just another test" ID="PATH404">
-    <objectives ID="PATH404-O1" name="PATH404-O1">
-      <levels xsi:type="generator:MTLevel" ID="PATH404-O1-L1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T1" maxTime="30">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
-          <targets>RESULT</targets>
-          <targets>OPERAND</targets>
-        </tasks>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="15" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T2" maxTime="30">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
-          <targets>OPERAND_RESULT</targets>
-          <targets>OPERAND_TABLE</targets>
-        </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="15" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T3" maxTime="30">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
-        </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="10" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T4" maxTime="30" nbFacts="2">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
-        </tasks>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T5" maxTime="30">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
-        </tasks>
-      </levels>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#//@knowledgefacts.11"/>
-    </objectives>
-    <knowledge href="../../FrameworkAPI/models/inputmodels/MultiplicationTables.xmi#/"/>
+    <knowledge href="MultiplicationTables.xmi#/"/>
   </learningpaths>
 </generator:LearningDomain>

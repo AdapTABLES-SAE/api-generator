@@ -854,7 +854,7 @@
           xsi:type="generator:StructureType"
           size="LARGE"
           ID="STRUCT_V"
-          type="HStructL"/>
+          type="VStructL"/>
       <elements
           xsi:type="generator:ElementType"
           ID="ELEMTYPE_INTERRUPTOR"

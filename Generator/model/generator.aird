@@ -8,20 +8,11 @@
     <semanticResources>../inputmodels/LearningDomainTest.xmi</semanticResources>
     <semanticResources>../outputmodels/GameDescription2.xmi</semanticResources>
     <semanticResources>../inputmodels/GameDescription2.xmi</semanticResources>
-    <semanticResources>../inputmodels/LearningDomain.xmi</semanticResources>
     <semanticResources>../inputmodels/MultiplicationTables.xmi</semanticResources>
     <semanticResources>file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi</semanticResources>
     <semanticResources>file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/MultiplicationTables.xmi</semanticResources>
     <semanticResources>../inputmodels/Context.xmi</semanticResources>
     <semanticResources>../inputmodels/learnerProfils/LearningDomain.xmi</semanticResources>
-    <semanticResources>../inputmodels/learnerProfils/LP_FIC_Case1.xmi</semanticResources>
-    <semanticResources>../inputmodels/learnerProfils/LP_FIC_Case2.xmi</semanticResources>
-    <semanticResources>../inputmodels/learnerProfils/LP_FIC_Case3.xmi</semanticResources>
-    <semanticResources>../inputmodels/learnerProfils/LP_FIC_Init.xmi</semanticResources>
-    <semanticResources>../inputmodels/learnerProfils/LP_IM_Init.xmi</semanticResources>
-    <semanticResources>../inputmodels/learnerProfils/LP_RM_Init.xmi</semanticResources>
-    <semanticResources>../inputmodels/learnerProfils/LP_FIC_FactInitTest.xmi</semanticResources>
-    <semanticResources>../inputmodels/learnerProfils/LP_FIC_FactInitTest2.xmi</semanticResources>
     <semanticResources>GameElementsTest.xmi</semanticResources>
     <semanticResources>Gameplays.xmi</semanticResources>
     <semanticResources>platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign</semanticResources>
