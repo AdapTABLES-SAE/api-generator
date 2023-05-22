@@ -110,8 +110,8 @@
           size="MEDIUM"
           ID="POSM1"/>
       <elementPositions
-          size="LARGE"
-          ID="POSL1"/>
+          size="XLARGE"
+          ID="POSXL1"/>
       <directions>SOUTH</directions>
       <directions>EAST</directions>
       <directions>NORTH</directions>
@@ -426,38 +426,38 @@
         xsi:type="generator:SmallRoomType"
         name="TrapRoom2">
       <elementPositions
-          restrictedTo="INEVITABLE"
+          restrictedTo="NONAVOIDABLE"
           ID="POS1"/>
       <elementPositions
-          restrictedTo="INEVITABLE"
+          restrictedTo="NONAVOIDABLE"
           ID="POS2"/>
       <elementPositions
-          restrictedTo="INEVITABLE"
+          restrictedTo="NONAVOIDABLE"
           ID="POS3"/>
       <elementPositions
-          restrictedTo="INEVITABLE"
+          restrictedTo="NONAVOIDABLE"
           ID="POS4"/>
       <elementPositions
-          restrictedTo="INEVITABLE"
+          restrictedTo="NONAVOIDABLE"
           ID="POS5"/>
       <elementPositions
-          restrictedTo="INEVITABLE"
+          restrictedTo="NONAVOIDABLE"
           ID="POS6"/>
       <elementPositions
           size="MEDIUM"
-          restrictedTo="INEVITABLE"
+          restrictedTo="NONAVOIDABLE"
           ID="POSM1"/>
       <elementPositions
           size="MEDIUM"
-          restrictedTo="INEVITABLE"
+          restrictedTo="NONAVOIDABLE"
           ID="POSM2"/>
       <elementPositions
           size="LARGE"
-          restrictedTo="INEVITABLE"
+          restrictedTo="NONAVOIDABLE"
           ID="POSL1"/>
       <elementPositions
           size="LARGE"
-          restrictedTo="INEVITABLE"
+          restrictedTo="NONAVOIDABLE"
           ID="POSL2"/>
       <directions>SOUTH</directions>
       <directions>EAST</directions>
@@ -842,7 +842,7 @@
         name="ONE TYPES - 5 SMALL TRAP EVITABLE">
       <components
           xsi:type="generator:Component"
-          allowedAbility="EVITABLE">
+          allowedAbility="AVOIDABLE">
         <quantity>
           <value
               xsi:type="generator:Value"
@@ -860,7 +860,7 @@
         name="ONE TYPES - 3 SMALL TRAP INEVITABLE">
       <components
           xsi:type="generator:Component"
-          allowedAbility="INEVITABLE">
+          allowedAbility="NONAVOIDABLE">
         <quantity>
           <value
               xsi:type="generator:Value"
@@ -1029,55 +1029,55 @@
           xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_BEAR-TRAP"
           type="BearTrap"
-          ability="INEVITABLE"/>
+          ability="NONAVOIDABLE"/>
       <elements
           xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_SPIKE-TRAP"
           type="SpikeTrap"
-          ability="EVITABLE"/>
+          ability="AVOIDABLE"/>
       <elements
           xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_FIRE-TRAP"
           type="FireTrap"
-          ability="EVITABLE"/>
+          ability="AVOIDABLE"/>
       <elements
           xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_WAIT-SPIKE-TRAP"
           type="WaitSpikeTrap"
-          ability="EVITABLE"/>
+          ability="AVOIDABLE"/>
       <elements
           xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_WAIT-FIRE-TRAP"
           type="WaitFireTrap"
-          ability="EVITABLE"/>
+          ability="AVOIDABLE"/>
       <elements
           xsi:type="generator:ElementType"
           size="MEDIUM"
           ID="ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"
           type="MediumWaitSpikeTrap"
-          ability="EVITABLE"/>
+          ability="AVOIDABLE"/>
       <elements
           xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_HOLE-TRAP"
           type="HoleTrap"
-          ability="INEVITABLE"/>
+          ability="NONAVOIDABLE"/>
       <elements
           xsi:type="generator:ElementType"
           size="MEDIUM"
           ID="ELEMENT_TYPE_HOLE-TRAP_MEDIUM"
           type="MediumHoleTrap"
-          ability="INEVITABLE"/>
+          ability="NONAVOIDABLE"/>
       <elements
           xsi:type="generator:ElementType"
           size="LARGE"
           ID="ELEMENT_TYPE_HOLE-TRAP_LARGE"
           type="LargeHoleTrap"
-          ability="INEVITABLE"/>
+          ability="NONAVOIDABLE"/>
       <elements
           xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_REGULAR-SLIME"
           type="RegularSlime"
-          ability="INEVITABLE"/>
+          ability="NONAVOIDABLE"/>
       <elements
           xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_BLOCK"
@@ -1086,7 +1086,7 @@
           numberOfDisplays="1"/>
       <elements
           xsi:type="generator:ElementType"
-          size="LARGE"
+          size="XLARGE"
           ID="ELEMENT_TYPE_BRIDGE"
           type="CentralBridges"
           ability="CROSSABLE"
@@ -1125,9 +1125,9 @@
     <abilities
         name="CATCHABLE"/>
     <abilities
-        name="INEVITABLE"/>
+        name="NONAVOIDABLE"/>
     <abilities
-        name="EVITABLE"/>
+        name="AVOIDABLE"/>
     <abilities
         name="PUSHABLE"/>
     <abilities

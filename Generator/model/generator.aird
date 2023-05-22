@@ -38,7 +38,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_pGi0ACCTEe2pjb8HURi2ww" name="gameStructureDesc" repPath="#_pGfwsCCTEe2pjb8HURi2ww" changeId="4dfa0b04-806a-458e-b162-5852e21270d4">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_pGi0ACCTEe2pjb8HURi2ww" name="gameStructureDesc" repPath="#_pGfwsCCTEe2pjb8HURi2ww" changeId="aaf18890-d5fa-4209-9d4f-6854a806176c">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -5029,11 +5029,15 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_FWFDYbv5Ee2acvqMSYjqcQ" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_FWFDYrv5Ee2acvqMSYjqcQ"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_QNflYPigEe29sPMm6dw4nw" type="3010" element="_QM8y0PigEe29sPMm6dw4nw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_QNflYfigEe29sPMm6dw4nw" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_QNflYvigEe29sPMm6dw4nw"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_Wpux8rv4Ee2acvqMSYjqcQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_Wpux87v4Ee2acvqMSYjqcQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_WpuK4bv4Ee2acvqMSYjqcQ" fontName="Segoe UI" fontHeight="8" fillColor="10265827"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WpuK4rv4Ee2acvqMSYjqcQ" x="917" y="-123" width="120" height="100"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WpuK4rv4Ee2acvqMSYjqcQ" x="917" y="-140" width="120" height="117"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_AxI3kLwEEe2acvqMSYjqcQ" type="2003" element="_Aw_toLwEEe2acvqMSYjqcQ">
           <children xmi:type="notation:Node" xmi:id="_AxJeoLwEEe2acvqMSYjqcQ" type="5007"/>
@@ -6509,6 +6513,14 @@
         <target xmi:type="ecore:EEnumLiteral" href="generator.ecore#//ElementSize/LARGE"/>
         <semanticElements xmi:type="ecore:EEnumLiteral" href="generator.ecore#//ElementSize/LARGE"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_FWAK4bv5Ee2acvqMSYjqcQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_QM8y0PigEe29sPMm6dw4nw" name="XLARGE" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="generator.ecore#//ElementSize/XLARGE"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="generator.ecore#//ElementSize/XLARGE"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_QM-A8PigEe29sPMm6dw4nw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>

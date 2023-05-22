@@ -62,6 +62,7 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ElementSize/SMALL"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ElementSize/MEDIUM"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ElementSize/LARGE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ElementSize/XLARGE"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//GPCategory">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/SELECT_UNIQUE"/>
