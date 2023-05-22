@@ -162,9 +162,9 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 	protected List<String> getListOfGoodSolutions(QuestionableFact qFact) {
 		List<String> solutions = new ArrayList<>();
 		if(((MTQFIdentification) qFact).isSoluce()) {
-			solutions.add(true+"");
+			solutions.add("Vrai");
 		}else {
-			solutions.add(false+"");
+			solutions.add("Faux");
 		}
 		return solutions;
 	}
@@ -176,9 +176,9 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 		if(!((MTQFIdentification) qFact).isSoluce()) {
 			//propositions_temp.add(qFact.toString());
 			
-			propositions_temp.add(true+"");
+			propositions_temp.add("Vrai");
 		} else {
-			propositions_temp.add(false+"");
+			propositions_temp.add("Faux");
 		}
 		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
 		propositions.put(ECorrectness.INCORRECT, propositions_temp);		
@@ -187,7 +187,6 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 	
 	@Override
 	protected ECorrectness getFactCorrectness(QuestionableFact qFact) {
-		// TODO Auto-generated method stub
 		return ((MTQFIdentification) qFact).isSoluce()? ECorrectness.CORRECT : ECorrectness.INCORRECT;
 	}
 
