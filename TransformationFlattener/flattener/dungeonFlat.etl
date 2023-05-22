@@ -60,8 +60,10 @@ rule Room2Room
 			//roomOut.facts.facts ::= roomIn.questionedFacts;	        
         }
         
-        if(roomIn.gameplay.isDefined() and roomIn.gameplay.prompt.isDefined()){
-        	roomOut.prompt = roomIn.gameplay.prompt.prompt;
+        if(roomIn.gameplay.isDefined()){
+        	if(roomIn.gameplay.prompt.isDefined()){
+				roomOut.prompt = roomIn.gameplay.prompt.prompt;
+            }
         	roomOut.gameplayWithUndo = roomIn.gameplay.undoable;
         }
         

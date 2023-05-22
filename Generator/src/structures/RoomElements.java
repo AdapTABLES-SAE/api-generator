@@ -140,13 +140,6 @@ public class RoomElements {
 						} else {
 							elementsToQuantity.put(((Structure) aComponent).getStructureType(), 1);
 						}
-						/*if(elementsToQuantity.containsKey(((Structure) aComponent).getStructureType())) {
-							elementsToQuantity.put(((Structure) aComponent).getStructureType(), facts.size() + elementsToQuantity.get(((Structure) aComponent).getStructureType()));
-						} else {
-							elementsToQuantity.put(((Structure) aComponent).getStructureType(), facts.size());
-						}*/
-						// il y en aura autant que de faits 
-						
 					} else {
 						elementsToQuantity.put(((Structure) aComponent).getStructureType(), 1);
 					}

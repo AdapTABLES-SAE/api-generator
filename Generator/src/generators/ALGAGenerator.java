@@ -7,7 +7,6 @@ import generator.QuestionedFact;
 import generator.Room;
 import generator.RoomAccess;
 import generator.impl.CurrentGameLevelImpl;
-import generator.impl.DungeonImpl;
 import generator.impl.ProgressionImpl;
 import managers.ModelsManager;
 import structures.DungeonElements;

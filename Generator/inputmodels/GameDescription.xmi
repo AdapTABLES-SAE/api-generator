@@ -919,6 +919,20 @@
       <prompt
           prompt="Pousse les bons elements"/>
     </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_UNIQUE_CROSSABLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="CROSSABLE"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Traverse le bon element"/>
+    </gameplays>
   </gameplays>
   <elements>
     <equipments/>
@@ -1074,9 +1088,9 @@
           xsi:type="generator:ElementType"
           size="LARGE"
           ID="ELEMENT_TYPE_BRIDGE"
-          type="BridgeV"
+          type="CentralBridges"
           ability="CROSSABLE"
-          numberOfDisplays="1"/>
+          numberOfDisplays="6"/>
       <elements
           xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_KEY"
