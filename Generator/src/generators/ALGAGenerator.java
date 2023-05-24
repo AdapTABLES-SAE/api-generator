@@ -24,7 +24,7 @@ public class ALGAGenerator {
 		generator.generate();
 		generator.printDungeon();
 		generator.saveDungeon("DungeonGen.xmi");
-		Main.transformModel("outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
+		Main.transformModel("outputmodels/", "DungeonGen.xmi", "DungeonGen.xml");
 	}
 	
 	public ALGAGenerator() {
@@ -33,6 +33,10 @@ public class ALGAGenerator {
 	
 	public ALGAGenerator(String fileContext) {
 		modelAccess = new ModelsManager(fileContext);
+	}
+	
+	public ALGAGenerator(boolean forTest) {
+		modelAccess = new ModelsManager(forTest);
 	}
 	
 	public ALGAGenerator(String inputPath, String outputPath, String contextFileName, boolean lauchedFromAPI) {
@@ -74,7 +78,7 @@ public class ALGAGenerator {
 			gameGeneration = new GameElementsGenerator(modelAccess, dungeonElements);
 			
 			gameGeneration.generateGPandCurses();
-			dungeonElements.print();
+			//dungeonElements.print();
 			dungeonGeneration = new DungeonGenerator(modelAccess, dungeonElements, nbNQRooms+nbQRooms);
 			generatedDungeon = dungeonGeneration.generateDungeon();
 			

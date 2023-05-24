@@ -136,12 +136,12 @@ public class GameElementsGenerator {
 		System.out.println("Gameplays selection");
 		List<Gameplay> gameplays = new ArrayList<>();
 		for (RoomElements room : dungeonElements.getRoomsElements()) {
-			System.err.println("Is exit "+room.isExit());
+			//System.err.println("Is exit "+room.isExit());
 			if(room.getTask() != null) {
 				List<GPCategory> validCategories = new ArrayList<>(getValidCategoriesFromRelations(room.getTask()));
 				
 				do {
-					System.out.println("In do while");
+					//System.out.println("In do while");
 					GPCategory aCategorie = validCategories.get(random.nextInt(validCategories.size()));
 					gameplays = getQuestionGameplayForCategorieType(aCategorie, room.getTask());
 					validCategories.remove(aCategorie);

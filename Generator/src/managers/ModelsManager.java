@@ -29,6 +29,7 @@ public class ModelsManager {
 	private boolean lauchedFromAPI = false;
 	
 	private static String INPUT_MODELS_PATH = "inputmodels/";
+	private static String INPUT_MODELS_PATH_TEST = "tests/modelsForTests/";
 	private static String OUTPUT_MODELS_PATH = "outputmodels/";
 	private static String[] INPUT_MODELS_NAMES = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi", "Relations.xmi"};
 	
@@ -38,6 +39,25 @@ public class ModelsManager {
 	private LearningDomain learningPath;
 	private GameplayTaskRelations relations;
 	
+	
+/*	public ModelsManager(String inputModelsPath, String contextFileName, String gameDescriptionFileName, String knowledgeFileName, String learningDomainFileName, String relationsFileName) {
+		resourceSet = new ResourceSetImpl();
+		INPUT_MODELS_PATH = inputModelsPath;
+		INPUT_MODELS_NAMES[0] = contextFileName;
+		INPUT_MODELS_NAMES[1] = gameDescriptionFileName;
+		INPUT_MODELS_NAMES[2] = knowledgeFileName;
+		INPUT_MODELS_NAMES[3] = learningDomainFileName; 
+		INPUT_MODELS_NAMES[4] = relationsFileName;
+		loadInputModels();
+	}*/
+	
+	public ModelsManager(boolean isForTest) {
+		resourceSet = new ResourceSetImpl();
+		if(isForTest) {
+			INPUT_MODELS_PATH = INPUT_MODELS_PATH_TEST;
+		}
+		loadInputModels();
+	}
 
 	public ModelsManager(String contextFileName) {
 		resourceSet = new ResourceSetImpl();
@@ -87,7 +107,7 @@ public class ModelsManager {
 		try {
 			resource.save(map);
 		}catch (IOException e) {
-			LOGGER.severe("Error while saving : " + INPUT_MODELS_PATH + outFileName);
+			LOGGER.severe("Error while saving : " + OUTPUT_MODELS_PATH + outFileName);
 			e.printStackTrace();
 		}
 		
@@ -102,9 +122,12 @@ public class ModelsManager {
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
 		//map.put(XMLResource.OPTION_ENCODING, "UTF-8");
-		String filePathComplement = lauchedFromAPI? "file:///": "";
-		Resource resource = resourceSet.createResource(URI.createURI(filePathComplement + INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]));
-
+		//String filePathComplement = lauchedFromAPI? "file:///": "";
+		//Resource resource = resourceSet.createResource(URI.createURI(filePathComplement + INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]));
+		File domainModel = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]);
+		
+		//String filePathComplement = lauchedFromAPI? "file:///": "";
+		Resource resource = resourceSet.createResource(URI.createFileURI(domainModel.getAbsolutePath()));
 		resource.getContents().add(learningPaths);
 		try {
 			resource.save(map);
@@ -163,11 +186,16 @@ public class ModelsManager {
 		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
+		//map.put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
+		//map.put(XMLResource.OPTION_LINE_WIDTH, 80);
+		//map.put(XMLResource.OPTION_URI_HANDLER, new URIHandlerImpl.PlatformSchemeAware());
 		//map.put(XMLResource.OPTION_ENCODING, "UTF-8");
 		System.out.println(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
 		
-		String filePathComplement = lauchedFromAPI? "file:///": "";
-		Resource resource = resourceSet.createResource(URI.createURI(filePathComplement + INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]));
+		File contexte = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
+		
+		//String filePathComplement = lauchedFromAPI? "file:///": "";
+		Resource resource = resourceSet.createResource(URI.createFileURI(contexte.getAbsolutePath()));
 		resource.getContents().add(context);
 		try {
 			resource.save(map);

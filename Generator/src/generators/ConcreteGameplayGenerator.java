@@ -58,14 +58,14 @@ public class ConcreteGameplayGenerator {
 		List<PositionedElement> elements = new ArrayList<>();
 		//if(roomElements.getGameplay() != null)		
 			//System.out.println(roomElements.getGameplay().getName()+" "+roomElements.getRoomTypeOfRoom());
-		System.err.println(roomElements.getGameplay() instanceof NoQuestionGameplay);
+		//System.err.println(roomElements.getGameplay() instanceof NoQuestionGameplay);
 		for (AComponent aComp : roomElements.getGameplay().getComponents()) {
 			if(aComp instanceof Structure) {
 				elements.addAll(buildStructureHierarchy(aComp, roomElements));
 			} else {
 				if(roomElements.getGameplay() instanceof QuestionGameplay) {
 					for (int i = 0; i < roomElements.getFacts().size(); i++) {
-						System.out.println("in loop");
+						//System.out.println("in loop");
 						elements.addAll(buildSimpleGameplayHierarchy((Component) aComp, roomElements, i)); 
 					}
 				} else {

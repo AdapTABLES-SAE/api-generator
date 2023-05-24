@@ -36,6 +36,18 @@ public class Main {
 		System.out.println("end "+modelIN+" => "+modelOUT);
 	}
 	
+	public static void transformModel(String modelPath, String modelIN, String modelOUT) {
+		System.out.println("begin "+modelPath+modelIN+" => "+modelOUT);
+		try {
+			new Util().generateFlateScenario(modelPath+modelIN, 
+					"C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\generator.ecore", 
+					modelPath+modelOUT, "C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\FlattenDungeon.ecore");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("end "+modelPath+modelIN+" => "+modelOUT);
+	}
+	
 	/**
 	 * 
 	 * @param mmPathIN

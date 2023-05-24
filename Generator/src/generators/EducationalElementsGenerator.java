@@ -75,16 +75,16 @@ public class EducationalElementsGenerator {
 	 */
 	private void generateQuestionnableFacts() {
 		instanciateQFbyTasks();
-		boolean wasGenerated = false;
+		//boolean wasGenerated = false;
 		for (ResultsByTask resBytask : dungeonElements.getLearnerResultsByTasks()) {
 			if(resBytask.getQuestionableFacts().isEmpty()) {
 				FactGenerator.generateQuestionableFactsByTask(dungeonElements, resBytask);
-				wasGenerated = true;
+			//wasGenerated = true;
 			}
 		}
-		if(wasGenerated) {
+		//if(wasGenerated) {
 			saveLearnerModel();
-		}
+		//}
 	}
 
 	
@@ -96,9 +96,7 @@ public class EducationalElementsGenerator {
 	
 	public void instanciateQFbyTasks() {
 		System.err.println("chosen OBJLVL "+ dungeonElements.getChosenLevel().getID()+" "+dungeonElements.getChosenObjective().getID());
-		if(!learnerPlayer.getProgression().getCurrentobjectivelevels().contains(dungeonElements.getCurrentObjectiveLevel())) {
-			learnerPlayer.getProgression().getCurrentobjectivelevels().add(dungeonElements.getCurrentObjectiveLevel());
-		}
+		
 		if(dungeonElements.getCurrentObjectiveLevel().getResults() == null) {
 			dungeonElements.getCurrentObjectiveLevel().setResults(new ResultsImpl());
 			for(ATask task: dungeonElements.getChosenLevel().getTasks()) {
@@ -108,12 +106,17 @@ public class EducationalElementsGenerator {
 			}
 		}
 		
+		if(!learnerPlayer.getProgression().getCurrentobjectivelevels().contains(dungeonElements.getCurrentObjectiveLevel())) {
+			learnerPlayer.getProgression().getCurrentobjectivelevels().add(dungeonElements.getCurrentObjectiveLevel());
+		}
+		
 		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
 			if(col.getResults() == null) {
 				col.setResults(new ResultsImpl());
 			}
 			addResultByTasks(col);
 		}
+		//modelAccess.saveContextModel();
 	}
 	
 	private void addResultByTasks(CurrentObjectiveLevel currentObjectiveLevel) {
@@ -221,6 +224,7 @@ public class EducationalElementsGenerator {
 				Level level = getAvailableLevelForObjective(objective);
 				
 				if(!currentObjectiveLevelExist(objective, level)) {
+					System.err.println("AJOUT");
 					CurrentObjectiveLevel col = new CurrentObjectiveLevelImpl();
 					col.setAchieved(false);
 					col.setObjective(objective);
@@ -235,6 +239,7 @@ public class EducationalElementsGenerator {
 		if(!learnerPlayer.getProgression().getCurrentobjectivelevels().contains(currentObjectiveLevel)) {
 			learnerPlayer.getProgression().getCurrentobjectivelevels().add(currentObjectiveLevel);
 		}
+		//modelAccess.saveContextModel();
 	}
 	
 	private boolean currentObjectiveLevelExist(Objective o, Level l) {
@@ -283,6 +288,73 @@ public class EducationalElementsGenerator {
 		return false;
 	}
 	
+	private boolean isObjectiveAchieved(Objective objective) {
+		int numberOfLevelsCompleted = 0;
+		for (Level level : objective.getLevels()) {
+			for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
+				if(col.getObjective().equals(objective) && col.getLevel().equals(level) && col.isAchieved()) {
+					numberOfLevelsCompleted++;
+				}
+			}
+		}
+		return objective.getLevels().size() == numberOfLevelsCompleted;
+	}
+	
+	private boolean isPreRequisiteReached(Prerequisite prerequisite) {
+		 //Objective prerequisiteObjective = getCorrespondingObjectiveOfLevel(prerequisite.getRequiredLevel());
+		 CurrentObjectiveLevel currentOL = getCorrespondingCurrentObjectiveLevel(prerequisite.getRequiredLevel());
+		 return currentOL != null && (currentOL.isAchieved() || isPreRequisitePercentageAchieved(currentOL, prerequisite));
+	}
+	
+	private boolean isPreRequisitePercentageAchieved(CurrentObjectiveLevel currentOL, Prerequisite prerequisite) {
+		return currentOL.getSucessPercent() >= prerequisite.getSuccesPercent() && currentOL.getEncountersPercent() >= prerequisite.getEncountersPercent();
+	}
+	
+	private CurrentObjectiveLevel getCorrespondingCurrentObjectiveLevel(Level level) {
+		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
+			if(col.getLevel().equals(level)) {
+				return col;
+			}
+		}
+		return null;
+	}
+	
+	/*private Objective getCorrespondingObjectiveOfLevel(Level level) {
+		for (Objective objective : learnerPlayer.getLearningpath().getObjectives()) {
+			for (Level aLevel : objective.getLevels()) {
+				if(aLevel.equals(level)) {
+					return objective;
+				}
+			}
+		}
+		return null;
+	}
+	
+	private int computePercentageOfSuccess(Objective objective) {
+		int numberOfLevelsDoneOrStarted = 0;
+		int sumOfSuccessPercent = 0;
+		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
+			if(col.getObjective().equals(objective)) {
+				numberOfLevelsDoneOrStarted++;
+				sumOfSuccessPercent += col.getSucessPercent();
+			}
+		}
+		return sumOfSuccessPercent / numberOfLevelsDoneOrStarted;
+	}
+	
+	private int computePercentageOfEncounteredFacts(Objective objective) {
+		int numberOfLevelsDoneOrStarted = 0;
+		int sumOfEncounteredPercent = 0;
+		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
+			if(col.getObjective().equals(objective)) {
+				numberOfLevelsDoneOrStarted++;
+				sumOfEncounteredPercent += col.getEncountersPercent();
+			}
+		}
+		return sumOfEncounteredPercent / numberOfLevelsDoneOrStarted;
+	}*/
+	
+	@Deprecated
 	private boolean isObjectiveFinished(Objective o) {
 		Level lastLevel = o.getLevels().get(o.getLevels().size() - 1);
 		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
@@ -293,7 +365,27 @@ public class EducationalElementsGenerator {
 		return false;
 	}
 	
-	private List<Objective> getEligibleObjectives(){
+	/*private List<Objective> getEligibleObjectives() {
+		List<Objective> eligibleObjective = new ArrayList<>();
+		boolean allPrerequisiteAchied;
+		for (Objective obj : learnerPlayer.getLearningpath().getObjectives()) {
+			if(!isObjectiveAchieved(obj)) {
+				allPrerequisiteAchied = true;
+				for (Prerequisite prerequisite : obj.getPrerequisites()) {
+					allPrerequisiteAchied = isPreRequisiteReached(prerequisite);
+				}
+				if(allPrerequisiteAchied) { eligibleObjective.add(obj); }
+			}
+		}
+		return eligibleObjective;
+	}*/
+	
+	private List<Objective> getEligibleObjectives() { // TODO : prendre en compte le calcul de pourcentage du prérequis 
+		/*
+		 * Un objectif est eligible lorsque tous ces niveaux ne sont pas acquis 
+		 * Lorsque tous ses pre-requis sont atteint (niveau visés sont deverouilles) + 
+		 * La somme des pourcentages des niveaux entamés de l'objectif divisé par le nombre de niveau est > ou égale au pourcentage de pre-requis
+		 * */
 		List<Objective> eligibleObjective = new ArrayList<>();
 		for (Objective obj : learnerPlayer.getLearningpath().getObjectives()) {
 			boolean eligible = true;
