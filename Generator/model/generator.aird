@@ -23,7 +23,6 @@
     <semanticResources>../tests/modelsForTests/LearningDomain.xmi</semanticResources>
     <semanticResources>../tests/modelsForTests/MultiplicationTables.xmi</semanticResources>
     <semanticResources>../inputmodels/LearningDomain.xmi</semanticResources>
-    <semanticResources>../tests/modelsForTests/ContextForTaskTest_1.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_-oGdkAnBEe25_Pq4ehy-Rg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_-pEG4AnBEe25_Pq4ehy-Rg" name="generalView" repPath="#_-o2rgAnBEe25_Pq4ehy-Rg" changeId="225088ba-da55-4952-90a0-0601ea9b95b3">

@@ -49,12 +49,27 @@
   <learningpaths name="PATH_FOR_TASKS_TEST_1" ID="PATH_FOR_TASKS_TEST_1">
     <objectives ID="TASK-TEST-1_O1" name="O1">
       <levels xsi:type="generator:MTLevel" ID="TASK-TEST-1-O1_L1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="5"/>
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="10"/>
-        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="25"/>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20"/>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="30"/>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="10"/>
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="5" nbConsecutiveSuccess="1" ID="TASK-C1_1">
+          <responseModality xsi:type="generator:EnterResponse"/>
+          <targets>RESULT</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="10" nbConsecutiveSuccess="1" ID="TASK-C1_2">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="3" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="25" nbConsecutiveSuccess="1" ID="TASK-C2">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
+          <targets>OPERAND_TABLE</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="TASK-REB">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
+        </tasks>
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="30" ID="TASK-ID">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
+        </tasks>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK-MEMB">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
+        </tasks>
       </levels>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.0"/>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
