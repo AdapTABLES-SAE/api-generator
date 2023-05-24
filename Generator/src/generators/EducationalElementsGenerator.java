@@ -29,7 +29,6 @@ public class EducationalElementsGenerator {
 	
 	private Random random;
 	
-	//private EducationElementsManager eeManager;
 	private DungeonElements dungeonElements;
 	private Map<ResultsByTask, Double> nbRoomsToTask; 
 	private ModelsManager modelAccess;
@@ -43,7 +42,6 @@ public class EducationalElementsGenerator {
 		this.dungeonElements = dungeonElements;
 		this.modelAccess = modelAccess;
 		this.nbRoomsToTask = new HashMap<>();
-		//eeManager = new EducationElementsManager(modelAccess, nbQuestionRooms, nbNonQuestionRooms);
 	}
 	
 	public DungeonElements generateEE() throws Exception {
@@ -62,29 +60,17 @@ public class EducationalElementsGenerator {
 		return dungeonElements;
 	}
 	
-	/*public Level getChosenLevel() {
-		return eeManager.getLevel();
-	}
-	
-	public Objective getChosenObjective() {
-		return eeManager.getObjective();
-	}*/
-	
 	/**
 	 * Génère les faits questionnable
 	 */
 	private void generateQuestionnableFacts() {
 		instanciateQFbyTasks();
-		//boolean wasGenerated = false;
 		for (ResultsByTask resBytask : dungeonElements.getLearnerResultsByTasks()) {
 			if(resBytask.getQuestionableFacts().isEmpty()) {
 				FactGenerator.generateQuestionableFactsByTask(dungeonElements, resBytask);
-			//wasGenerated = true;
 			}
 		}
-		//if(wasGenerated) {
-			saveLearnerModel();
-		//}
+		saveLearnerModel();
 	}
 
 	
@@ -116,7 +102,6 @@ public class EducationalElementsGenerator {
 			}
 			addResultByTasks(col);
 		}
-		//modelAccess.saveContextModel();
 	}
 	
 	private void addResultByTasks(CurrentObjectiveLevel currentObjectiveLevel) {
@@ -201,30 +186,45 @@ public class EducationalElementsGenerator {
 	
 	private void selectObjectiveLevel() {
 		List<CurrentObjectiveLevel> allowed = eligibleObjectiveLevels(); 
-		// eeManager.setChosenObjectiveLevel(allowed.get(random.nextInt(allowed.size())));
 		dungeonElements.setCurrentObjectiveLevel(allowed.get(random.nextInt(allowed.size())));
 	}
 	
 	private List<CurrentObjectiveLevel> eligibleObjectiveLevels(){
-		addNewCurrentObjectiveLevelToLearnerPlayer(getEligibleObjectives());
+		List<Objective> eligibleObjectives = getEligibleObjectives();
+		boolean allObjectiveAreReached = eligibleObjectives.isEmpty();
+		boolean allIObjectiveLevelAreAt100Percent = allObjectiveAreReached && everyObjectiveLevelReached100Percent();
+		if(!allObjectiveAreReached) {
+			addNewCurrentObjectiveLevelToLearnerPlayer(eligibleObjectives);
+		}
 		
 		List<CurrentObjectiveLevel> cols = new ArrayList<>();
 		for (CurrentObjectiveLevel currentObjectiveLevel : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
-			if(!currentObjectiveLevel.isAchieved()) {
+			if(!currentObjectiveLevel.isAchieved() || (allObjectiveAreReached && !levelThresholdsAreAt100Percent(currentObjectiveLevel)) || allIObjectiveLevelAreAt100Percent) {
 				cols.add(currentObjectiveLevel);
 			}
 		}
 		return cols;
 	}
 	
+	private boolean everyObjectiveLevelReached100Percent() {
+		for (CurrentObjectiveLevel currentObjectiveLevel : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
+			if(!(currentObjectiveLevel.getEncountersPercent() >= 100.0 && currentObjectiveLevel.getSucessPercent() >= 100.0)) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	private boolean levelThresholdsAreAt100Percent(CurrentObjectiveLevel currentOL) {
+		return currentOL.getEncountersPercent() == 100.0 && currentOL.getSucessPercent() == 100.0;
+	}
+	
 	private void addNewCurrentObjectiveLevelToLearnerPlayer(List<Objective> eligible_objective) {
 		for (Objective objective : eligible_objective) {
-			System.out.println("Eligible "+objective.getID());
 			if(!hasLearnerBeginObjective(objective)) {
 				Level level = getAvailableLevelForObjective(objective);
 				
 				if(!currentObjectiveLevelExist(objective, level)) {
-					System.err.println("AJOUT");
 					CurrentObjectiveLevel col = new CurrentObjectiveLevelImpl();
 					col.setAchieved(false);
 					col.setObjective(objective);
@@ -239,7 +239,6 @@ public class EducationalElementsGenerator {
 		if(!learnerPlayer.getProgression().getCurrentobjectivelevels().contains(currentObjectiveLevel)) {
 			learnerPlayer.getProgression().getCurrentobjectivelevels().add(currentObjectiveLevel);
 		}
-		//modelAccess.saveContextModel();
 	}
 	
 	private boolean currentObjectiveLevelExist(Objective o, Level l) {
@@ -301,7 +300,6 @@ public class EducationalElementsGenerator {
 	}
 	
 	private boolean isPreRequisiteReached(Prerequisite prerequisite) {
-		 //Objective prerequisiteObjective = getCorrespondingObjectiveOfLevel(prerequisite.getRequiredLevel());
 		 CurrentObjectiveLevel currentOL = getCorrespondingCurrentObjectiveLevel(prerequisite.getRequiredLevel());
 		 return currentOL != null && (currentOL.isAchieved() || isPreRequisitePercentageAchieved(currentOL, prerequisite));
 	}
@@ -319,53 +317,7 @@ public class EducationalElementsGenerator {
 		return null;
 	}
 	
-	/*private Objective getCorrespondingObjectiveOfLevel(Level level) {
-		for (Objective objective : learnerPlayer.getLearningpath().getObjectives()) {
-			for (Level aLevel : objective.getLevels()) {
-				if(aLevel.equals(level)) {
-					return objective;
-				}
-			}
-		}
-		return null;
-	}
-	
-	private int computePercentageOfSuccess(Objective objective) {
-		int numberOfLevelsDoneOrStarted = 0;
-		int sumOfSuccessPercent = 0;
-		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
-			if(col.getObjective().equals(objective)) {
-				numberOfLevelsDoneOrStarted++;
-				sumOfSuccessPercent += col.getSucessPercent();
-			}
-		}
-		return sumOfSuccessPercent / numberOfLevelsDoneOrStarted;
-	}
-	
-	private int computePercentageOfEncounteredFacts(Objective objective) {
-		int numberOfLevelsDoneOrStarted = 0;
-		int sumOfEncounteredPercent = 0;
-		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
-			if(col.getObjective().equals(objective)) {
-				numberOfLevelsDoneOrStarted++;
-				sumOfEncounteredPercent += col.getEncountersPercent();
-			}
-		}
-		return sumOfEncounteredPercent / numberOfLevelsDoneOrStarted;
-	}*/
-	
-	@Deprecated
-	private boolean isObjectiveFinished(Objective o) {
-		Level lastLevel = o.getLevels().get(o.getLevels().size() - 1);
-		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
-			if(col.getObjective().equals(o) && col.getLevel().equals(lastLevel) && col.isAchieved()) {
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	/*private List<Objective> getEligibleObjectives() {
+	private List<Objective> getEligibleObjectives() {
 		List<Objective> eligibleObjective = new ArrayList<>();
 		boolean allPrerequisiteAchied;
 		for (Objective obj : learnerPlayer.getLearningpath().getObjectives()) {
@@ -378,45 +330,6 @@ public class EducationalElementsGenerator {
 			}
 		}
 		return eligibleObjective;
-	}*/
-	
-	private List<Objective> getEligibleObjectives() { // TODO : prendre en compte le calcul de pourcentage du prérequis 
-		/*
-		 * Un objectif est eligible lorsque tous ces niveaux ne sont pas acquis 
-		 * Lorsque tous ses pre-requis sont atteint (niveau visés sont deverouilles) + 
-		 * La somme des pourcentages des niveaux entamés de l'objectif divisé par le nombre de niveau est > ou égale au pourcentage de pre-requis
-		 * */
-		List<Objective> eligibleObjective = new ArrayList<>();
-		for (Objective obj : learnerPlayer.getLearningpath().getObjectives()) {
-			boolean eligible = true;
-			if(isObjectiveFinished(obj)) {eligible = false;}
-			else {
-				if(!obj.getPrerequisites().isEmpty()) {
-					for (Prerequisite prerequisite : obj.getPrerequisites()) {
-						if(!achievedLevel(prerequisite.getRequiredLevel())) {
-							eligible = false;
-						}
-					}
-				}
-			}
-						
-			if(eligible) {
-				eligibleObjective.add(obj);
-			}
-		}
-		return eligibleObjective;
-	}
-	
-	private boolean achievedLevel(Level level) {
-		if(learnerPlayer.getProgression() == null) { return false; }
-		List<CurrentObjectiveLevel> achieved = learnerPlayer.getProgression().getCurrentobjectivelevels();
-		int i = 0; 
-		boolean trouver = false;
-		while(i < achieved.size() && !trouver) {
-			trouver = achieved.get(i).getLevel().equals(level) && achieved.get(i).isAchieved();
-			i++;
-		}
-		return trouver;
 	}
 	
 	private void generateFactsToQuestion() throws Exception {

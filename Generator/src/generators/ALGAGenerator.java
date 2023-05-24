@@ -35,8 +35,8 @@ public class ALGAGenerator {
 		modelAccess = new ModelsManager(fileContext);
 	}
 	
-	public ALGAGenerator(boolean forTest) {
-		modelAccess = new ModelsManager(forTest);
+	public ALGAGenerator(boolean forTest, String contextFileName) {
+		modelAccess = new ModelsManager(forTest, contextFileName);
 	}
 	
 	public ALGAGenerator(String inputPath, String outputPath, String contextFileName, boolean lauchedFromAPI) {

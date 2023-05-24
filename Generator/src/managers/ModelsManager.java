@@ -51,11 +51,10 @@ public class ModelsManager {
 		loadInputModels();
 	}*/
 	
-	public ModelsManager(boolean isForTest) {
+	public ModelsManager(boolean isForTest, String contextFileName) {
 		resourceSet = new ResourceSetImpl();
-		if(isForTest) {
-			INPUT_MODELS_PATH = INPUT_MODELS_PATH_TEST;
-		}
+		if(isForTest) { INPUT_MODELS_PATH = INPUT_MODELS_PATH_TEST;	}
+		if(!contextFileName.isEmpty()) { INPUT_MODELS_NAMES[0] = contextFileName; }
 		loadInputModels();
 	}
 

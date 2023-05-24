@@ -22,7 +22,7 @@
       </levels>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
     </objectives>
-    <objectives ID="OBJ-LVL_O1" name="O3">
+    <objectives ID="OBJ-LVL_O3" name="O3">
       <prerequisites succesPercent="80.0" requiredLevel="OBJ-LVL-O2_L2" encountersPercent="70.0"/>
       <levels xsi:type="generator:MTLevel" ID="OBJ-LVL-O3_L1">
         <completionCriteria succesPercent="50.0" encountersPercent="50.0"/>
@@ -43,6 +43,55 @@
         <completionCriteria encountersPercent="70.0"/>
       </levels>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+    </objectives>
+    <knowledge href="MultiplicationTables.xmi#/"/>
+  </learningpaths>
+  <learningpaths name="PATH_FOR_TASKS_TEST_1" ID="PATH_FOR_TASKS_TEST_1">
+    <objectives ID="TASK-TEST-1_O1" name="O1">
+      <levels xsi:type="generator:MTLevel" ID="TASK-TEST-1-O1_L1">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="5"/>
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="10"/>
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="25"/>
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20"/>
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="30"/>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="10"/>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.0"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.5"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.6"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.7"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.8"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.10"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.11"/>
+    </objectives>
+    <knowledge href="MultiplicationTables.xmi#/"/>
+  </learningpaths>
+  <learningpaths name="PATH_FOR_TASKS_TEST_2" ID="PATH_FOR_TASKS_TEST_2">
+    <objectives ID="TASK-TEST-2_O1" name="O1">
+      <levels xsi:type="generator:MTLevel" ID="TASK-TEST-1-O2_L1">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20"/>
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="20"/>
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20"/>
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20"/>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="20"/>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.0"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.5"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.6"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.7"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.8"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.10"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.11"/>
     </objectives>
     <knowledge href="MultiplicationTables.xmi#/"/>
   </learningpaths>
