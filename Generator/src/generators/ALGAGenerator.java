@@ -15,7 +15,6 @@ public class ALGAGenerator {
 	
 	private ModelsManager modelAccess;
 	private Dungeon generatedDungeon;
-	//private GameElementsManager geManager;
 	private DungeonElements dungeonElements;
 
 	public static void main(String[] args) {
