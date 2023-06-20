@@ -2,109 +2,6 @@
  */
 package generator.impl;
 
-import generator.AComponent;
-import generator.ATask;
-import generator.AValue;
-import generator.Abilities;
-import generator.Ability;
-import generator.AbstractFact;
-import generator.CompletionCriteria;
-import generator.CompletionTask;
-import generator.Component;
-import generator.Condition;
-import generator.Correctness;
-import generator.CorrectnessValue;
-import generator.CurrentGameLevel;
-import generator.CurrentObjectiveLevel;
-import generator.Directions;
-import generator.Display;
-import generator.Dungeon;
-import generator.DungeonMode;
-import generator.EBoundary;
-import generator.ECorrectness;
-import generator.EModality;
-import generator.ESeveralTarget;
-import generator.ESingleTarget;
-import generator.ETaskType;
-import generator.ElementSize;
-import generator.ElementType;
-import generator.EnterResponse;
-import generator.EntrySoluceParam;
-import generator.Equipment;
-import generator.Equipments;
-import generator.ExpectedAnswer;
-import generator.FactCorrectnessParam;
-import generator.FactSolutionParam;
-import generator.GPCategory;
-import generator.GPElementType;
-import generator.GPElementsTypes;
-import generator.GameContext;
-import generator.GameDescription;
-import generator.GameElementTypes;
-import generator.Gameplay;
-import generator.GameplayTaskRelations;
-import generator.Gameplays;
-import generator.GenerationContext;
-import generator.GeneratorFactory;
-import generator.GeneratorPackage;
-import generator.IdentificationTask;
-import generator.Knowledge;
-import generator.LargeRoomType;
-import generator.LearnerPlayer;
-import generator.LearningDomain;
-import generator.LearningPath;
-import generator.Level;
-import generator.LevelsDifficultyProgress;
-import generator.MTCompletion1;
-import generator.MTCompletion2;
-import generator.MTFact;
-import generator.MTIdentification;
-import generator.MTLevel;
-import generator.MTMembership;
-import generator.MTQFCompletion1;
-import generator.MTQFCompletion2;
-import generator.MTQFIdentification;
-import generator.MTQFMembership;
-import generator.MTQFRebuild;
-import generator.MTRecontruction;
-import generator.MTResultFact;
-import generator.MembershipIDTask;
-import generator.MultipleChoice;
-import generator.NoQuestionGameplay;
-import generator.Objective;
-import generator.OrderingTask;
-import generator.Parameter;
-import generator.Position;
-import generator.PositionedElement;
-import generator.PositionedStructureElement;
-import generator.Prerequisite;
-import generator.Progression;
-import generator.Prompt;
-import generator.PropositionParam;
-import generator.Quantity;
-import generator.QuestionGameplay;
-import generator.QuestionParam;
-import generator.QuestionableFact;
-import generator.QuestionableFactResult;
-import generator.QuestionedFact;
-import generator.Relation;
-import generator.ResponseModality;
-import generator.ResultPosition;
-import generator.Results;
-import generator.ResultsByTask;
-import generator.Room;
-import generator.RoomAccess;
-import generator.RoomType;
-import generator.RoomTypes;
-import generator.SetOfFacts;
-import generator.Size;
-import generator.SmallRoomType;
-import generator.StatementElementType;
-import generator.Structure;
-import generator.StructureType;
-import generator.TableBuild;
-import generator.Value;
-import generator.WantedAnswersParam;
 import generator.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -479,7 +376,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gpElementsTypesEClass = null;
+	private EClass elementsTypesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -585,20 +482,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass entrySoluceParamEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass structureTypeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gpElementTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2757,7 +2640,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGameElementTypes_GpElements() {
+	public EReference getGameElementTypes_ElementTypes() {
 		return (EReference) gameElementTypesEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2766,8 +2649,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGPElementsTypes() {
-		return gpElementsTypesEClass;
+	public EClass getElementsTypes() {
+		return elementsTypesEClass;
 	}
 
 	/**
@@ -2775,8 +2658,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGPElementsTypes_Elements() {
-		return (EReference) gpElementsTypesEClass.getEStructuralFeatures().get(0);
+	public EReference getElementsTypes_Elements() {
+		return (EReference) elementsTypesEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2811,8 +2694,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElementType_Ability() {
-		return (EReference) elementTypeEClass.getEStructuralFeatures().get(0);
+	public EAttribute getElementType_Size() {
+		return (EAttribute) elementTypeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2820,7 +2703,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElementType_NumberOfDisplays() {
+	public EAttribute getElementType_ID() {
 		return (EAttribute) elementTypeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2829,7 +2712,34 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getElementType__IsElementDisplayable() {
+	public EAttribute getElementType_Type() {
+		return (EAttribute) elementTypeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementType_Ability() {
+		return (EReference) elementTypeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getElementType_NbDisplays() {
+		return (EAttribute) elementTypeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getElementType__IsDisplayableElement() {
 		return elementTypeEClass.getEOperations().get(0);
 	}
 
@@ -3198,51 +3108,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStructureType() {
-		return structureTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGPElementType() {
-		return gpElementTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGPElementType_Size() {
-		return (EAttribute) gpElementTypeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGPElementType_ID() {
-		return (EAttribute) gpElementTypeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGPElementType_Type() {
-		return (EAttribute) gpElementTypeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getDisplay() {
 		return displayEClass;
 	}
@@ -3279,6 +3144,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAComponent_AllowedAbility() {
+		return (EReference) aComponentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAComponent_ExpectedSize() {
+		return (EReference) aComponentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStructure() {
 		return structureEClass;
 	}
@@ -3297,17 +3180,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStructure_StructureType() {
-		return (EReference) structureEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getStructure_PerFactOrPropositions() {
-		return (EAttribute) structureEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) structureEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3324,7 +3198,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComponent_AllowedAbility() {
+	public EReference getComponent_DisplayValue() {
 		return (EReference) componentEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3333,17 +3207,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComponent_DisplayValue() {
-		return (EReference) componentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getComponent_WearChoices() {
-		return (EAttribute) componentEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) componentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3352,7 +3217,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EReference getComponent_DefaultCorrectness() {
-		return (EReference) componentEClass.getEStructuralFeatures().get(3);
+		return (EReference) componentEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3361,7 +3226,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EAttribute getComponent_WearStatement() {
-		return (EAttribute) componentEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) componentEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3370,7 +3235,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EAttribute getComponent_InputEntry() {
-		return (EAttribute) componentEClass.getEStructuralFeatures().get(5);
+		return (EAttribute) componentEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -3379,16 +3244,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EReference getComponent_Quantity() {
-		return (EReference) componentEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getComponent_ExpectedSize() {
-		return (EReference) componentEClass.getEStructuralFeatures().get(7);
+		return (EReference) componentEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -4093,18 +3949,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		gameElementTypesEClass = createEClass(GAME_ELEMENT_TYPES);
 		createEReference(gameElementTypesEClass, GAME_ELEMENT_TYPES__EQUIPMENTS);
-		createEReference(gameElementTypesEClass, GAME_ELEMENT_TYPES__GP_ELEMENTS);
+		createEReference(gameElementTypesEClass, GAME_ELEMENT_TYPES__ELEMENT_TYPES);
 
-		gpElementsTypesEClass = createEClass(GP_ELEMENTS_TYPES);
-		createEReference(gpElementsTypesEClass, GP_ELEMENTS_TYPES__ELEMENTS);
+		elementsTypesEClass = createEClass(ELEMENTS_TYPES);
+		createEReference(elementsTypesEClass, ELEMENTS_TYPES__ELEMENTS);
 
 		equipmentsEClass = createEClass(EQUIPMENTS);
 		createEReference(equipmentsEClass, EQUIPMENTS__EQUIPMENTS);
-
-		elementTypeEClass = createEClass(ELEMENT_TYPE);
-		createEReference(elementTypeEClass, ELEMENT_TYPE__ABILITY);
-		createEAttribute(elementTypeEClass, ELEMENT_TYPE__NUMBER_OF_DISPLAYS);
-		createEOperation(elementTypeEClass, ELEMENT_TYPE___IS_ELEMENT_DISPLAYABLE);
 
 		equipmentEClass = createEClass(EQUIPMENT);
 		createEAttribute(equipmentEClass, EQUIPMENT__ID);
@@ -4164,33 +4015,33 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		entrySoluceParamEClass = createEClass(ENTRY_SOLUCE_PARAM);
 		createEAttribute(entrySoluceParamEClass, ENTRY_SOLUCE_PARAM__STATE);
 
-		structureTypeEClass = createEClass(STRUCTURE_TYPE);
-
-		gpElementTypeEClass = createEClass(GP_ELEMENT_TYPE);
-		createEAttribute(gpElementTypeEClass, GP_ELEMENT_TYPE__SIZE);
-		createEAttribute(gpElementTypeEClass, GP_ELEMENT_TYPE__ID);
-		createEAttribute(gpElementTypeEClass, GP_ELEMENT_TYPE__TYPE);
+		elementTypeEClass = createEClass(ELEMENT_TYPE);
+		createEAttribute(elementTypeEClass, ELEMENT_TYPE__SIZE);
+		createEAttribute(elementTypeEClass, ELEMENT_TYPE__ID);
+		createEAttribute(elementTypeEClass, ELEMENT_TYPE__TYPE);
+		createEReference(elementTypeEClass, ELEMENT_TYPE__ABILITY);
+		createEAttribute(elementTypeEClass, ELEMENT_TYPE__NB_DISPLAYS);
+		createEOperation(elementTypeEClass, ELEMENT_TYPE___IS_DISPLAYABLE_ELEMENT);
 
 		displayEClass = createEClass(DISPLAY);
 		createEAttribute(displayEClass, DISPLAY__INTERACTIVE);
 		createEReference(displayEClass, DISPLAY__CORRECTNESS);
 
 		aComponentEClass = createEClass(ACOMPONENT);
+		createEReference(aComponentEClass, ACOMPONENT__ALLOWED_ABILITY);
+		createEReference(aComponentEClass, ACOMPONENT__EXPECTED_SIZE);
 
 		structureEClass = createEClass(STRUCTURE);
 		createEReference(structureEClass, STRUCTURE__COMPONENTS);
-		createEReference(structureEClass, STRUCTURE__STRUCTURE_TYPE);
 		createEAttribute(structureEClass, STRUCTURE__PER_FACT_OR_PROPOSITIONS);
 
 		componentEClass = createEClass(COMPONENT);
-		createEReference(componentEClass, COMPONENT__ALLOWED_ABILITY);
 		createEReference(componentEClass, COMPONENT__DISPLAY_VALUE);
 		createEAttribute(componentEClass, COMPONENT__WEAR_CHOICES);
 		createEReference(componentEClass, COMPONENT__DEFAULT_CORRECTNESS);
 		createEAttribute(componentEClass, COMPONENT__WEAR_STATEMENT);
 		createEAttribute(componentEClass, COMPONENT__INPUT_ENTRY);
 		createEReference(componentEClass, COMPONENT__QUANTITY);
-		createEReference(componentEClass, COMPONENT__EXPECTED_SIZE);
 
 		quantityEClass = createEClass(QUANTITY);
 		createEAttribute(quantityEClass, QUANTITY__FACT_NB_ANSWERS);
@@ -4312,13 +4163,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtqfRebuildEClass.getESuperTypes().add(this.getQuestionableFact());
 		mtqfIdentificationEClass.getESuperTypes().add(this.getQuestionableFact());
 		mtqfMembershipEClass.getESuperTypes().add(this.getQuestionableFact());
-		elementTypeEClass.getESuperTypes().add(this.getGPElementType());
 		questionParamEClass.getESuperTypes().add(this.getParameter());
 		propositionParamEClass.getESuperTypes().add(this.getParameter());
 		valueEClass.getESuperTypes().add(this.getAValue());
 		correctnessEClass.getESuperTypes().add(this.getParameter());
 		entrySoluceParamEClass.getESuperTypes().add(this.getParameter());
-		structureTypeEClass.getESuperTypes().add(this.getGPElementType());
 		displayEClass.getESuperTypes().add(this.getParameter());
 		structureEClass.getESuperTypes().add(this.getAComponent());
 		componentEClass.getESuperTypes().add(this.getAComponent());
@@ -4892,14 +4741,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getGameElementTypes_Equipments(), this.getEquipments(), null, "equipments", null, 0, 1,
 				GameElementTypes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGameElementTypes_GpElements(), this.getGPElementsTypes(), null, "gpElements", null, 0, 1,
+		initEReference(getGameElementTypes_ElementTypes(), this.getElementsTypes(), null, "elementTypes", null, 0, 1,
 				GameElementTypes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(gpElementsTypesEClass, GPElementsTypes.class, "GPElementsTypes", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(elementsTypesEClass, ElementsTypes.class, "ElementsTypes", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGPElementsTypes_Elements(), this.getGPElementType(), null, "elements", null, 0, -1,
-				GPElementsTypes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getElementsTypes_Elements(), this.getElementType(), null, "elements", null, 0, -1,
+				ElementsTypes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(equipmentsEClass, Equipments.class, "Equipments", !IS_ABSTRACT, !IS_INTERFACE,
@@ -4907,18 +4756,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getEquipments_Equipments(), this.getEquipment(), null, "equipments", null, 0, -1,
 				Equipments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(elementTypeEClass, ElementType.class, "ElementType", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getElementType_Ability(), this.getAbility(), null, "ability", null, 0, 1, ElementType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElementType_NumberOfDisplays(), ecorePackage.getEInt(), "numberOfDisplays", null, 0, 1,
-				ElementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getElementType__IsElementDisplayable(), ecorePackage.getEBoolean(), "isElementDisplayable", 0, 1,
-				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(equipmentEClass, Equipment.class, "Equipment", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4992,7 +4829,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getPositionedElement_Displays(), this.getDisplay(), null, "displays", null, 0, -1,
 				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPositionedElement_ElementType(), this.getGPElementType(), null, "elementType", null, 1, 1,
+		initEReference(getPositionedElement_ElementType(), this.getElementType(), null, "elementType", null, 1, 1,
 				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPositionedElement_ExpectedAnswer(), this.getExpectedAnswer(), null, "expectedAnswer", null, 0,
@@ -5038,17 +4875,22 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getEntrySoluceParam_State(), this.getECorrectness(), "state", null, 0, 1, EntrySoluceParam.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(structureTypeEClass, StructureType.class, "StructureType", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(elementTypeEClass, ElementType.class, "ElementType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(gpElementTypeEClass, GPElementType.class, "GPElementType", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGPElementType_Size(), this.getElementSize(), "size", null, 0, 1, GPElementType.class,
+		initEAttribute(getElementType_Size(), this.getElementSize(), "size", null, 0, 1, ElementType.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGPElementType_ID(), ecorePackage.getEString(), "ID", null, 0, 1, GPElementType.class,
+		initEAttribute(getElementType_ID(), ecorePackage.getEString(), "ID", null, 0, 1, ElementType.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGPElementType_Type(), ecorePackage.getEString(), "type", "", 0, 1, GPElementType.class,
+		initEAttribute(getElementType_Type(), ecorePackage.getEString(), "type", "", 0, 1, ElementType.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElementType_Ability(), this.getAbility(), null, "ability", null, 0, 1, ElementType.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementType_NbDisplays(), ecorePackage.getEInt(), "nbDisplays", null, 0, 1, ElementType.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getElementType__IsDisplayableElement(), ecorePackage.getEBoolean(), "isDisplayableElement", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(displayEClass, Display.class, "Display", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDisplay_Interactive(), ecorePackage.getEBoolean(), "interactive", null, 0, 1, Display.class,
@@ -5059,14 +4901,17 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(aComponentEClass, AComponent.class, "AComponent", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAComponent_AllowedAbility(), this.getAbility(), null, "allowedAbility", null, 0, 1,
+				AComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAComponent_ExpectedSize(), this.getSize(), null, "expectedSize", null, 0, 1, AComponent.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(structureEClass, Structure.class, "Structure", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStructure_Components(), this.getAComponent(), null, "components", null, 0, -1,
 				Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStructure_StructureType(), this.getStructureType(), null, "structureType", null, 0, 1,
-				Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStructure_PerFactOrPropositions(), ecorePackage.getEBoolean(), "perFactOrPropositions",
 				"false", 0, 1, Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
@@ -5074,9 +4919,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComponent_AllowedAbility(), this.getAbility(), null, "allowedAbility", null, 0, 1,
-				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponent_DisplayValue(), this.getDisplay(), null, "displayValue", null, 0, 1,
 				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5093,9 +4935,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEReference(getComponent_Quantity(), this.getQuantity(), null, "quantity", null, 0, 1, Component.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponent_ExpectedSize(), this.getSize(), null, "expectedSize", null, 0, 1, Component.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

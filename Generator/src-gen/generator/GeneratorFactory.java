@@ -391,13 +391,13 @@ public interface GeneratorFactory extends EFactory {
 	GameElementTypes createGameElementTypes();
 
 	/**
-	 * Returns a new object of class '<em>GP Elements Types</em>'.
+	 * Returns a new object of class '<em>Elements Types</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GP Elements Types</em>'.
+	 * @return a new object of class '<em>Elements Types</em>'.
 	 * @generated
 	 */
-	GPElementsTypes createGPElementsTypes();
+	ElementsTypes createElementsTypes();
 
 	/**
 	 * Returns a new object of class '<em>Equipments</em>'.
@@ -515,15 +515,6 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	EntrySoluceParam createEntrySoluceParam();
-
-	/**
-	 * Returns a new object of class '<em>Structure Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Structure Type</em>'.
-	 * @generated
-	 */
-	StructureType createStructureType();
 
 	/**
 	 * Returns a new object of class '<em>Display</em>'.

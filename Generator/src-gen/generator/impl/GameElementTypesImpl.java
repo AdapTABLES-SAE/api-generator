@@ -2,8 +2,8 @@
  */
 package generator.impl;
 
+import generator.ElementsTypes;
 import generator.Equipments;
-import generator.GPElementsTypes;
 import generator.GameElementTypes;
 import generator.GeneratorPackage;
 
@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.GameElementTypesImpl#getEquipments <em>Equipments</em>}</li>
- *   <li>{@link generator.impl.GameElementTypesImpl#getGpElements <em>Gp Elements</em>}</li>
+ *   <li>{@link generator.impl.GameElementTypesImpl#getElementTypes <em>Element Types</em>}</li>
  * </ul>
  *
  * @generated
@@ -42,14 +42,14 @@ public class GameElementTypesImpl extends MinimalEObjectImpl.Container implement
 	protected Equipments equipments;
 
 	/**
-	 * The cached value of the '{@link #getGpElements() <em>Gp Elements</em>}' containment reference.
+	 * The cached value of the '{@link #getElementTypes() <em>Element Types</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGpElements()
+	 * @see #getElementTypes()
 	 * @generated
 	 * @ordered
 	 */
-	protected GPElementsTypes gpElements;
+	protected ElementsTypes elementTypes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,8 +125,8 @@ public class GameElementTypesImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GPElementsTypes getGpElements() {
-		return gpElements;
+	public ElementsTypes getElementTypes() {
+		return elementTypes;
 	}
 
 	/**
@@ -134,12 +134,12 @@ public class GameElementTypesImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetGpElements(GPElementsTypes newGpElements, NotificationChain msgs) {
-		GPElementsTypes oldGpElements = gpElements;
-		gpElements = newGpElements;
+	public NotificationChain basicSetElementTypes(ElementsTypes newElementTypes, NotificationChain msgs) {
+		ElementsTypes oldElementTypes = elementTypes;
+		elementTypes = newElementTypes;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.GAME_ELEMENT_TYPES__GP_ELEMENTS, oldGpElements, newGpElements);
+					GeneratorPackage.GAME_ELEMENT_TYPES__ELEMENT_TYPES, oldElementTypes, newElementTypes);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -153,21 +153,21 @@ public class GameElementTypesImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGpElements(GPElementsTypes newGpElements) {
-		if (newGpElements != gpElements) {
+	public void setElementTypes(ElementsTypes newElementTypes) {
+		if (newElementTypes != elementTypes) {
 			NotificationChain msgs = null;
-			if (gpElements != null)
-				msgs = ((InternalEObject) gpElements).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GAME_ELEMENT_TYPES__GP_ELEMENTS, null, msgs);
-			if (newGpElements != null)
-				msgs = ((InternalEObject) newGpElements).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GAME_ELEMENT_TYPES__GP_ELEMENTS, null, msgs);
-			msgs = basicSetGpElements(newGpElements, msgs);
+			if (elementTypes != null)
+				msgs = ((InternalEObject) elementTypes).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GAME_ELEMENT_TYPES__ELEMENT_TYPES, null, msgs);
+			if (newElementTypes != null)
+				msgs = ((InternalEObject) newElementTypes).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GAME_ELEMENT_TYPES__ELEMENT_TYPES, null, msgs);
+			msgs = basicSetElementTypes(newElementTypes, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAME_ELEMENT_TYPES__GP_ELEMENTS,
-					newGpElements, newGpElements));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAME_ELEMENT_TYPES__ELEMENT_TYPES,
+					newElementTypes, newElementTypes));
 	}
 
 	/**
@@ -180,8 +180,8 @@ public class GameElementTypesImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 		case GeneratorPackage.GAME_ELEMENT_TYPES__EQUIPMENTS:
 			return basicSetEquipments(null, msgs);
-		case GeneratorPackage.GAME_ELEMENT_TYPES__GP_ELEMENTS:
-			return basicSetGpElements(null, msgs);
+		case GeneratorPackage.GAME_ELEMENT_TYPES__ELEMENT_TYPES:
+			return basicSetElementTypes(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -196,8 +196,8 @@ public class GameElementTypesImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 		case GeneratorPackage.GAME_ELEMENT_TYPES__EQUIPMENTS:
 			return getEquipments();
-		case GeneratorPackage.GAME_ELEMENT_TYPES__GP_ELEMENTS:
-			return getGpElements();
+		case GeneratorPackage.GAME_ELEMENT_TYPES__ELEMENT_TYPES:
+			return getElementTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -213,8 +213,8 @@ public class GameElementTypesImpl extends MinimalEObjectImpl.Container implement
 		case GeneratorPackage.GAME_ELEMENT_TYPES__EQUIPMENTS:
 			setEquipments((Equipments) newValue);
 			return;
-		case GeneratorPackage.GAME_ELEMENT_TYPES__GP_ELEMENTS:
-			setGpElements((GPElementsTypes) newValue);
+		case GeneratorPackage.GAME_ELEMENT_TYPES__ELEMENT_TYPES:
+			setElementTypes((ElementsTypes) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -231,8 +231,8 @@ public class GameElementTypesImpl extends MinimalEObjectImpl.Container implement
 		case GeneratorPackage.GAME_ELEMENT_TYPES__EQUIPMENTS:
 			setEquipments((Equipments) null);
 			return;
-		case GeneratorPackage.GAME_ELEMENT_TYPES__GP_ELEMENTS:
-			setGpElements((GPElementsTypes) null);
+		case GeneratorPackage.GAME_ELEMENT_TYPES__ELEMENT_TYPES:
+			setElementTypes((ElementsTypes) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -248,8 +248,8 @@ public class GameElementTypesImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 		case GeneratorPackage.GAME_ELEMENT_TYPES__EQUIPMENTS:
 			return equipments != null;
-		case GeneratorPackage.GAME_ELEMENT_TYPES__GP_ELEMENTS:
-			return gpElements != null;
+		case GeneratorPackage.GAME_ELEMENT_TYPES__ELEMENT_TYPES:
+			return elementTypes != null;
 		}
 		return super.eIsSet(featureID);
 	}

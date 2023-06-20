@@ -137,12 +137,10 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createCurrentGameLevel();
 		case GeneratorPackage.GAME_ELEMENT_TYPES:
 			return createGameElementTypes();
-		case GeneratorPackage.GP_ELEMENTS_TYPES:
-			return createGPElementsTypes();
+		case GeneratorPackage.ELEMENTS_TYPES:
+			return createElementsTypes();
 		case GeneratorPackage.EQUIPMENTS:
 			return createEquipments();
-		case GeneratorPackage.ELEMENT_TYPE:
-			return createElementType();
 		case GeneratorPackage.EQUIPMENT:
 			return createEquipment();
 		case GeneratorPackage.GAMEPLAYS:
@@ -167,8 +165,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createCorrectness();
 		case GeneratorPackage.ENTRY_SOLUCE_PARAM:
 			return createEntrySoluceParam();
-		case GeneratorPackage.STRUCTURE_TYPE:
-			return createStructureType();
+		case GeneratorPackage.ELEMENT_TYPE:
+			return createElementType();
 		case GeneratorPackage.DISPLAY:
 			return createDisplay();
 		case GeneratorPackage.STRUCTURE:
@@ -699,9 +697,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GPElementsTypes createGPElementsTypes() {
-		GPElementsTypesImpl gpElementsTypes = new GPElementsTypesImpl();
-		return gpElementsTypes;
+	public ElementsTypes createElementsTypes() {
+		ElementsTypesImpl elementsTypes = new ElementsTypesImpl();
+		return elementsTypes;
 	}
 
 	/**
@@ -1012,16 +1010,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public EntrySoluceParam createEntrySoluceParam() {
 		EntrySoluceParamImpl entrySoluceParam = new EntrySoluceParamImpl();
 		return entrySoluceParam;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StructureType createStructureType() {
-		StructureTypeImpl structureType = new StructureTypeImpl();
-		return structureType;
 	}
 
 	/**

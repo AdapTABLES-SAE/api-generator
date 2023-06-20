@@ -113,12 +113,12 @@ public interface PositionedElement extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Element Type</em>' reference.
-	 * @see #setElementType(GPElementType)
+	 * @see #setElementType(ElementType)
 	 * @see generator.GeneratorPackage#getPositionedElement_ElementType()
 	 * @model required="true"
 	 * @generated
 	 */
-	GPElementType getElementType();
+	ElementType getElementType();
 
 	/**
 	 * Sets the value of the '{@link generator.PositionedElement#getElementType <em>Element Type</em>}' reference.
@@ -128,7 +128,7 @@ public interface PositionedElement extends EObject {
 	 * @see #getElementType()
 	 * @generated
 	 */
-	void setElementType(GPElementType value);
+	void setElementType(ElementType value);
 
 	/**
 	 * Returns the value of the '<em><b>Expected Answer</b></em>' containment reference list.

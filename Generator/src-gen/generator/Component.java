@@ -11,14 +11,12 @@ package generator;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.Component#getAllowedAbility <em>Allowed Ability</em>}</li>
  *   <li>{@link generator.Component#getDisplayValue <em>Display Value</em>}</li>
  *   <li>{@link generator.Component#isWearChoices <em>Wear Choices</em>}</li>
  *   <li>{@link generator.Component#getDefaultCorrectness <em>Default Correctness</em>}</li>
  *   <li>{@link generator.Component#isWearStatement <em>Wear Statement</em>}</li>
  *   <li>{@link generator.Component#isInputEntry <em>Input Entry</em>}</li>
  *   <li>{@link generator.Component#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link generator.Component#getExpectedSize <em>Expected Size</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getComponent()
@@ -26,28 +24,6 @@ package generator;
  * @generated
  */
 public interface Component extends AComponent {
-	/**
-	 * Returns the value of the '<em><b>Allowed Ability</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Allowed Ability</em>' reference.
-	 * @see #setAllowedAbility(Ability)
-	 * @see generator.GeneratorPackage#getComponent_AllowedAbility()
-	 * @model
-	 * @generated
-	 */
-	Ability getAllowedAbility();
-
-	/**
-	 * Sets the value of the '{@link generator.Component#getAllowedAbility <em>Allowed Ability</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Allowed Ability</em>' reference.
-	 * @see #getAllowedAbility()
-	 * @generated
-	 */
-	void setAllowedAbility(Ability value);
-
 	/**
 	 * Returns the value of the '<em><b>Display Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -182,27 +158,5 @@ public interface Component extends AComponent {
 	 * @generated
 	 */
 	void setQuantity(Quantity value);
-
-	/**
-	 * Returns the value of the '<em><b>Expected Size</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expected Size</em>' containment reference.
-	 * @see #setExpectedSize(Size)
-	 * @see generator.GeneratorPackage#getComponent_ExpectedSize()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Size getExpectedSize();
-
-	/**
-	 * Sets the value of the '{@link generator.Component#getExpectedSize <em>Expected Size</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Expected Size</em>' containment reference.
-	 * @see #getExpectedSize()
-	 * @generated
-	 */
-	void setExpectedSize(Size value);
 
 } // Component

@@ -8,31 +8,31 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>GP Elements Types</b></em>'.
+ * A representation of the model object '<em><b>Elements Types</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.GPElementsTypes#getElements <em>Elements</em>}</li>
+ *   <li>{@link generator.ElementsTypes#getElements <em>Elements</em>}</li>
  * </ul>
  *
- * @see generator.GeneratorPackage#getGPElementsTypes()
+ * @see generator.GeneratorPackage#getElementsTypes()
  * @model
  * @generated
  */
-public interface GPElementsTypes extends EObject {
+public interface ElementsTypes extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
-	 * The list contents are of type {@link generator.GPElementType}.
+	 * The list contents are of type {@link generator.ElementType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Elements</em>' containment reference list.
-	 * @see generator.GeneratorPackage#getGPElementsTypes_Elements()
+	 * @see generator.GeneratorPackage#getElementsTypes_Elements()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<GPElementType> getElements();
+	EList<ElementType> getElements();
 
-} // GPElementsTypes
+} // ElementsTypes

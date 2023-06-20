@@ -312,18 +312,13 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseGPElementsTypes(GPElementsTypes object) {
-			return createGPElementsTypesAdapter();
+		public Adapter caseElementsTypes(ElementsTypes object) {
+			return createElementsTypesAdapter();
 		}
 
 		@Override
 		public Adapter caseEquipments(Equipments object) {
 			return createEquipmentsAdapter();
-		}
-
-		@Override
-		public Adapter caseElementType(ElementType object) {
-			return createElementTypeAdapter();
 		}
 
 		@Override
@@ -397,13 +392,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseStructureType(StructureType object) {
-			return createStructureTypeAdapter();
-		}
-
-		@Override
-		public Adapter caseGPElementType(GPElementType object) {
-			return createGPElementTypeAdapter();
+		public Adapter caseElementType(ElementType object) {
+			return createElementTypeAdapter();
 		}
 
 		@Override
@@ -1231,16 +1221,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.GPElementsTypes <em>GP Elements Types</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.ElementsTypes <em>Elements Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.GPElementsTypes
+	 * @see generator.ElementsTypes
 	 * @generated
 	 */
-	public Adapter createGPElementsTypesAdapter() {
+	public Adapter createElementsTypesAdapter() {
 		return null;
 	}
 
@@ -1745,34 +1735,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEntrySoluceParamAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.StructureType <em>Structure Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.StructureType
-	 * @generated
-	 */
-	public Adapter createStructureTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.GPElementType <em>GP Element Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.GPElementType
-	 * @generated
-	 */
-	public Adapter createGPElementTypeAdapter() {
 		return null;
 	}
 

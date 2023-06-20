@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generator.GameElementTypes#getEquipments <em>Equipments</em>}</li>
- *   <li>{@link generator.GameElementTypes#getGpElements <em>Gp Elements</em>}</li>
+ *   <li>{@link generator.GameElementTypes#getElementTypes <em>Element Types</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getGameElementTypes()
@@ -45,25 +45,25 @@ public interface GameElementTypes extends EObject {
 	void setEquipments(Equipments value);
 
 	/**
-	 * Returns the value of the '<em><b>Gp Elements</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Element Types</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Gp Elements</em>' containment reference.
-	 * @see #setGpElements(GPElementsTypes)
-	 * @see generator.GeneratorPackage#getGameElementTypes_GpElements()
+	 * @return the value of the '<em>Element Types</em>' containment reference.
+	 * @see #setElementTypes(ElementsTypes)
+	 * @see generator.GeneratorPackage#getGameElementTypes_ElementTypes()
 	 * @model containment="true"
 	 * @generated
 	 */
-	GPElementsTypes getGpElements();
+	ElementsTypes getElementTypes();
 
 	/**
-	 * Sets the value of the '{@link generator.GameElementTypes#getGpElements <em>Gp Elements</em>}' containment reference.
+	 * Sets the value of the '{@link generator.GameElementTypes#getElementTypes <em>Element Types</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Gp Elements</em>' containment reference.
-	 * @see #getGpElements()
+	 * @param value the new value of the '<em>Element Types</em>' containment reference.
+	 * @see #getElementTypes()
 	 * @generated
 	 */
-	void setGpElements(GPElementsTypes value);
+	void setElementTypes(ElementsTypes value);
 
 } // GameElementTypes

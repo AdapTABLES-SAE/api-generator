@@ -5,8 +5,6 @@ package generator.impl;
 import generator.AComponent;
 import generator.GeneratorPackage;
 import generator.Structure;
-import generator.StructureType;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -31,7 +29,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.StructureImpl#getComponents <em>Components</em>}</li>
- *   <li>{@link generator.impl.StructureImpl#getStructureType <em>Structure Type</em>}</li>
  *   <li>{@link generator.impl.StructureImpl#isPerFactOrPropositions <em>Per Fact Or Propositions</em>}</li>
  * </ul>
  *
@@ -47,16 +44,6 @@ public class StructureImpl extends AComponentImpl implements Structure {
 	 * @ordered
 	 */
 	protected EList<AComponent> components;
-
-	/**
-	 * The cached value of the '{@link #getStructureType() <em>Structure Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStructureType()
-	 * @generated
-	 * @ordered
-	 */
-	protected StructureType structureType;
 
 	/**
 	 * The default value of the '{@link #isPerFactOrPropositions() <em>Per Fact Or Propositions</em>}' attribute.
@@ -115,46 +102,6 @@ public class StructureImpl extends AComponentImpl implements Structure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StructureType getStructureType() {
-		if (structureType != null && structureType.eIsProxy()) {
-			InternalEObject oldStructureType = (InternalEObject) structureType;
-			structureType = (StructureType) eResolveProxy(oldStructureType);
-			if (structureType != oldStructureType) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.STRUCTURE__STRUCTURE_TYPE, oldStructureType, structureType));
-			}
-		}
-		return structureType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StructureType basicGetStructureType() {
-		return structureType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStructureType(StructureType newStructureType) {
-		StructureType oldStructureType = structureType;
-		structureType = newStructureType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.STRUCTURE__STRUCTURE_TYPE,
-					oldStructureType, structureType));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean isPerFactOrPropositions() {
 		return perFactOrPropositions;
 	}
@@ -196,10 +143,6 @@ public class StructureImpl extends AComponentImpl implements Structure {
 		switch (featureID) {
 		case GeneratorPackage.STRUCTURE__COMPONENTS:
 			return getComponents();
-		case GeneratorPackage.STRUCTURE__STRUCTURE_TYPE:
-			if (resolve)
-				return getStructureType();
-			return basicGetStructureType();
 		case GeneratorPackage.STRUCTURE__PER_FACT_OR_PROPOSITIONS:
 			return isPerFactOrPropositions();
 		}
@@ -219,9 +162,6 @@ public class StructureImpl extends AComponentImpl implements Structure {
 			getComponents().clear();
 			getComponents().addAll((Collection<? extends AComponent>) newValue);
 			return;
-		case GeneratorPackage.STRUCTURE__STRUCTURE_TYPE:
-			setStructureType((StructureType) newValue);
-			return;
 		case GeneratorPackage.STRUCTURE__PER_FACT_OR_PROPOSITIONS:
 			setPerFactOrPropositions((Boolean) newValue);
 			return;
@@ -240,9 +180,6 @@ public class StructureImpl extends AComponentImpl implements Structure {
 		case GeneratorPackage.STRUCTURE__COMPONENTS:
 			getComponents().clear();
 			return;
-		case GeneratorPackage.STRUCTURE__STRUCTURE_TYPE:
-			setStructureType((StructureType) null);
-			return;
 		case GeneratorPackage.STRUCTURE__PER_FACT_OR_PROPOSITIONS:
 			setPerFactOrPropositions(PER_FACT_OR_PROPOSITIONS_EDEFAULT);
 			return;
@@ -260,8 +197,6 @@ public class StructureImpl extends AComponentImpl implements Structure {
 		switch (featureID) {
 		case GeneratorPackage.STRUCTURE__COMPONENTS:
 			return components != null && !components.isEmpty();
-		case GeneratorPackage.STRUCTURE__STRUCTURE_TYPE:
-			return structureType != null;
 		case GeneratorPackage.STRUCTURE__PER_FACT_OR_PROPOSITIONS:
 			return perFactOrPropositions != PER_FACT_OR_PROPOSITIONS_EDEFAULT;
 		}

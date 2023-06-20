@@ -4,9 +4,9 @@ package generator.impl;
 
 import generator.Correctness;
 import generator.Display;
+import generator.ElementType;
 import generator.ExpectedAnswer;
 import generator.FactSolutionParam;
-import generator.GPElementType;
 import generator.GeneratorPackage;
 import generator.Position;
 import generator.PositionedElement;
@@ -102,7 +102,7 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected GPElementType elementType;
+	protected ElementType elementType;
 
 	/**
 	 * The cached value of the '{@link #getExpectedAnswer() <em>Expected Answer</em>}' containment reference list.
@@ -179,10 +179,10 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GPElementType getElementType() {
+	public ElementType getElementType() {
 		if (elementType != null && elementType.eIsProxy()) {
 			InternalEObject oldElementType = (InternalEObject) elementType;
-			elementType = (GPElementType) eResolveProxy(oldElementType);
+			elementType = (ElementType) eResolveProxy(oldElementType);
 			if (elementType != oldElementType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
@@ -197,7 +197,7 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GPElementType basicGetElementType() {
+	public ElementType basicGetElementType() {
 		return elementType;
 	}
 
@@ -206,8 +206,8 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElementType(GPElementType newElementType) {
-		GPElementType oldElementType = elementType;
+	public void setElementType(ElementType newElementType) {
+		ElementType oldElementType = elementType;
 		elementType = newElementType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE,
@@ -460,7 +460,7 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 			getDisplays().addAll((Collection<? extends Display>) newValue);
 			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
-			setElementType((GPElementType) newValue);
+			setElementType((ElementType) newValue);
 			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
 			getExpectedAnswer().clear();
@@ -498,7 +498,7 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 			getDisplays().clear();
 			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
-			setElementType((GPElementType) null);
+			setElementType((ElementType) null);
 			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
 			getExpectedAnswer().clear();

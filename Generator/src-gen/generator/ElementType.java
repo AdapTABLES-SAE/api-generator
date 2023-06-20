@@ -2,6 +2,8 @@
  */
 package generator;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Element Type</b></em>'.
@@ -11,15 +13,88 @@ package generator;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link generator.ElementType#getSize <em>Size</em>}</li>
+ *   <li>{@link generator.ElementType#getID <em>ID</em>}</li>
+ *   <li>{@link generator.ElementType#getType <em>Type</em>}</li>
  *   <li>{@link generator.ElementType#getAbility <em>Ability</em>}</li>
- *   <li>{@link generator.ElementType#getNumberOfDisplays <em>Number Of Displays</em>}</li>
+ *   <li>{@link generator.ElementType#getNbDisplays <em>Nb Displays</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getElementType()
  * @model
  * @generated
  */
-public interface ElementType extends GPElementType {
+public interface ElementType extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Size</b></em>' attribute.
+	 * The literals are from the enumeration {@link generator.ElementSize}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Size</em>' attribute.
+	 * @see generator.ElementSize
+	 * @see #setSize(ElementSize)
+	 * @see generator.GeneratorPackage#getElementType_Size()
+	 * @model
+	 * @generated
+	 */
+	ElementSize getSize();
+
+	/**
+	 * Sets the value of the '{@link generator.ElementType#getSize <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Size</em>' attribute.
+	 * @see generator.ElementSize
+	 * @see #getSize()
+	 * @generated
+	 */
+	void setSize(ElementSize value);
+
+	/**
+	 * Returns the value of the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>ID</em>' attribute.
+	 * @see #setID(String)
+	 * @see generator.GeneratorPackage#getElementType_ID()
+	 * @model id="true"
+	 * @generated
+	 */
+	String getID();
+
+	/**
+	 * Sets the value of the '{@link generator.ElementType#getID <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ID</em>' attribute.
+	 * @see #getID()
+	 * @generated
+	 */
+	void setID(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see #setType(String)
+	 * @see generator.GeneratorPackage#getElementType_Type()
+	 * @model default=""
+	 * @generated
+	 */
+	String getType();
+
+	/**
+	 * Sets the value of the '{@link generator.ElementType#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Ability</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -43,26 +118,26 @@ public interface ElementType extends GPElementType {
 	void setAbility(Ability value);
 
 	/**
-	 * Returns the value of the '<em><b>Number Of Displays</b></em>' attribute.
+	 * Returns the value of the '<em><b>Nb Displays</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Number Of Displays</em>' attribute.
-	 * @see #setNumberOfDisplays(int)
-	 * @see generator.GeneratorPackage#getElementType_NumberOfDisplays()
+	 * @return the value of the '<em>Nb Displays</em>' attribute.
+	 * @see #setNbDisplays(int)
+	 * @see generator.GeneratorPackage#getElementType_NbDisplays()
 	 * @model
 	 * @generated
 	 */
-	int getNumberOfDisplays();
+	int getNbDisplays();
 
 	/**
-	 * Sets the value of the '{@link generator.ElementType#getNumberOfDisplays <em>Number Of Displays</em>}' attribute.
+	 * Sets the value of the '{@link generator.ElementType#getNbDisplays <em>Nb Displays</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Number Of Displays</em>' attribute.
-	 * @see #getNumberOfDisplays()
+	 * @param value the new value of the '<em>Nb Displays</em>' attribute.
+	 * @see #getNbDisplays()
 	 * @generated
 	 */
-	void setNumberOfDisplays(int value);
+	void setNbDisplays(int value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,6 +145,6 @@ public interface ElementType extends GPElementType {
 	 * @model kind="operation"
 	 * @generated
 	 */
-	boolean isElementDisplayable();
+	boolean isDisplayableElement();
 
 } // ElementType

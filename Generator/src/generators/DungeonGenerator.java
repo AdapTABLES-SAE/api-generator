@@ -15,12 +15,10 @@ import generator.Dungeon;
 import generator.DungeonMode;
 import generator.ElementSize;
 import generator.ElementType;
-import generator.GPElementType;
 import generator.Position;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
-import generator.StructureType;
 import generator.impl.DungeonImpl;
 import generator.impl.RoomAccessImpl;
 import generator.impl.RoomImpl;
@@ -372,6 +370,8 @@ public class DungeonGenerator {
 		}
 		
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
+			System.out.println("entry: "+entry+" exit: "+exit+" roomtype: "+roomType.getName()+" "+roomElements);
+			
 			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {				
 				roomTypes.remove(roomType);
 			}
@@ -421,35 +421,23 @@ public class DungeonGenerator {
 	
 	private Map<ElementSize,  Map<Ability, Integer>> computesNumberOfElementsPerSize(RoomElements roomElements){
 		Map<ElementSize, Map<Ability, Integer>> numberOfElementsPerSize = new HashMap<>();
-		for (GPElementType gpElem : roomElements.getElementsToQuantity().keySet()) {
+		for (ElementType gpElem : roomElements.getElementsToQuantity().keySet()) {
 			int quantity = roomElements.getElementsToQuantity().get(gpElem);
-			if(quantity != -1 && !(gpElem instanceof StructureType)) {
-				Ability ability = ((ElementType) gpElem).getAbility();
+			//if(quantity != -1) {
+			Ability ability = ((ElementType) gpElem).getAbility();
 				
-				if(numberOfElementsPerSize.containsKey(gpElem.getSize())) {
-					if(numberOfElementsPerSize.get(gpElem.getSize()).containsKey(ability)) {
-						quantity += numberOfElementsPerSize.get(gpElem.getSize()).get(ability);
-					} else {
-						numberOfElementsPerSize.get(gpElem.getSize()).put(ability, quantity);
-					}
+			if(numberOfElementsPerSize.containsKey(gpElem.getSize())) {
+				if(numberOfElementsPerSize.get(gpElem.getSize()).containsKey(ability)) {
+					quantity += numberOfElementsPerSize.get(gpElem.getSize()).get(ability);
 				} else {
-					numberOfElementsPerSize.put(gpElem.getSize(), new HashMap<>()); 
 					numberOfElementsPerSize.get(gpElem.getSize()).put(ability, quantity);
 				}
-				
-			} else if(gpElem instanceof StructureType) {
-				if(numberOfElementsPerSize.containsKey(gpElem.getSize())) {
-					if(numberOfElementsPerSize.get(gpElem.getSize()).containsKey(null)) {
-						quantity += numberOfElementsPerSize.get(gpElem.getSize()).get(null);
-					} else {
-						numberOfElementsPerSize.get(gpElem.getSize()).put(null, quantity);
-					}
-					
-				} else {
-					numberOfElementsPerSize.put(gpElem.getSize(), new HashMap<>()); 
-					numberOfElementsPerSize.get(gpElem.getSize()).put(null, quantity);
-				}
+			} else {
+				numberOfElementsPerSize.put(gpElem.getSize(), new HashMap<>()); 
+				numberOfElementsPerSize.get(gpElem.getSize()).put(ability, quantity);
 			}
+				
+			//} 
 		}
 		return numberOfElementsPerSize;
 	}

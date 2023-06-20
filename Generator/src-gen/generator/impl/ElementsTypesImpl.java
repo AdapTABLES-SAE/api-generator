@@ -2,8 +2,8 @@
  */
 package generator.impl;
 
-import generator.GPElementType;
-import generator.GPElementsTypes;
+import generator.ElementType;
+import generator.ElementsTypes;
 import generator.GeneratorPackage;
 
 import java.util.Collection;
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GP Elements Types</b></em>'.
+ * An implementation of the model object '<em><b>Elements Types</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.GPElementsTypesImpl#getElements <em>Elements</em>}</li>
+ *   <li>{@link generator.impl.ElementsTypesImpl#getElements <em>Elements</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GPElementsTypesImpl extends MinimalEObjectImpl.Container implements GPElementsTypes {
+public class ElementsTypesImpl extends MinimalEObjectImpl.Container implements ElementsTypes {
 	/**
 	 * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -42,14 +42,14 @@ public class GPElementsTypesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GPElementType> elements;
+	protected EList<ElementType> elements;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GPElementsTypesImpl() {
+	public ElementsTypesImpl() {
 		super();
 	}
 
@@ -60,7 +60,7 @@ public class GPElementsTypesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.GP_ELEMENTS_TYPES;
+		return GeneratorPackage.Literals.ELEMENTS_TYPES;
 	}
 
 	/**
@@ -68,10 +68,10 @@ public class GPElementsTypesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GPElementType> getElements() {
+	public EList<ElementType> getElements() {
 		if (elements == null) {
-			elements = new EObjectContainmentEList<GPElementType>(GPElementType.class, this,
-					GeneratorPackage.GP_ELEMENTS_TYPES__ELEMENTS);
+			elements = new EObjectContainmentEList<ElementType>(ElementType.class, this,
+					GeneratorPackage.ELEMENTS_TYPES__ELEMENTS);
 		}
 		return elements;
 	}
@@ -84,7 +84,7 @@ public class GPElementsTypesImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.GP_ELEMENTS_TYPES__ELEMENTS:
+		case GeneratorPackage.ELEMENTS_TYPES__ELEMENTS:
 			return ((InternalEList<?>) getElements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -98,7 +98,7 @@ public class GPElementsTypesImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.GP_ELEMENTS_TYPES__ELEMENTS:
+		case GeneratorPackage.ELEMENTS_TYPES__ELEMENTS:
 			return getElements();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,9 +113,9 @@ public class GPElementsTypesImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.GP_ELEMENTS_TYPES__ELEMENTS:
+		case GeneratorPackage.ELEMENTS_TYPES__ELEMENTS:
 			getElements().clear();
-			getElements().addAll((Collection<? extends GPElementType>) newValue);
+			getElements().addAll((Collection<? extends ElementType>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -129,7 +129,7 @@ public class GPElementsTypesImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GP_ELEMENTS_TYPES__ELEMENTS:
+		case GeneratorPackage.ELEMENTS_TYPES__ELEMENTS:
 			getElements().clear();
 			return;
 		}
@@ -144,10 +144,10 @@ public class GPElementsTypesImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GP_ELEMENTS_TYPES__ELEMENTS:
+		case GeneratorPackage.ELEMENTS_TYPES__ELEMENTS:
 			return elements != null && !elements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //GPElementsTypesImpl
+} //ElementsTypesImpl

@@ -14,7 +14,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link generator.Structure#getComponents <em>Components</em>}</li>
- *   <li>{@link generator.Structure#getStructureType <em>Structure Type</em>}</li>
  *   <li>{@link generator.Structure#isPerFactOrPropositions <em>Per Fact Or Propositions</em>}</li>
  * </ul>
  *
@@ -34,28 +33,6 @@ public interface Structure extends AComponent {
 	 * @generated
 	 */
 	EList<AComponent> getComponents();
-
-	/**
-	 * Returns the value of the '<em><b>Structure Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Structure Type</em>' reference.
-	 * @see #setStructureType(StructureType)
-	 * @see generator.GeneratorPackage#getStructure_StructureType()
-	 * @model
-	 * @generated
-	 */
-	StructureType getStructureType();
-
-	/**
-	 * Sets the value of the '{@link generator.Structure#getStructureType <em>Structure Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Structure Type</em>' reference.
-	 * @see #getStructureType()
-	 * @generated
-	 */
-	void setStructureType(StructureType value);
 
 	/**
 	 * Returns the value of the '<em><b>Per Fact Or Propositions</b></em>' attribute.

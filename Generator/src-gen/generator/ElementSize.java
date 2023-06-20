@@ -48,13 +48,13 @@ public enum ElementSize implements Enumerator {
 	 */
 	LARGE(2, "LARGE", "LARGE"),
 	/**
-	* The '<em><b>XLARGE</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>XLARGE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #XLARGE_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #XLARGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	XLARGE(3, "XLARGE", "XLARGE");
 
 	/**
