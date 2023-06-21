@@ -98,7 +98,7 @@ public class LearnerPlayerManagerResource {
 	}
 	
 	private CurrentObjectiveLevel getCorrespondingCOL(String objectiveID, String levelID) {
-		for (CurrentObjectiveLevel col : modelsManager.context.getLearnerplayer().getProgression().getCurrentobjectivelevels()) {
+		for (CurrentObjectiveLevel col : modelsManager.getContextModel().getLearnerplayer().getProgression().getCurrentobjectivelevels()) {
 			System.out.println(col.getObjective().getID()+" "+col.getLevel().getID());
 			System.out.println(col.getObjective().getID().equals(objectiveID));
 			System.out.println(col.getLevel().getID().equals(levelID));

@@ -100,8 +100,11 @@ public class ModelsManager {
 		
 		String filePathComplement = lauchedFromAPI? "file:///": "";
 		
+		System.out.println(URI.createURI(filePathComplement + OUTPUT_MODELS_PATH + outFileName));
+		System.out.println(OUTPUT_MODELS_PATH + outFileName);
+		
 		Resource resource = resourceSet.createResource(URI.createURI(filePathComplement + OUTPUT_MODELS_PATH + outFileName));
-
+		System.out.println(resource);
 		resource.getContents().add(generatedDungeon);
 		try {
 			resource.save(map);

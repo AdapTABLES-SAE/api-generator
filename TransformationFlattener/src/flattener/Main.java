@@ -1,23 +1,27 @@
 package flattener;
 
+import java.nio.file.FileSystems;
+
 public class Main {
 
+	private static String PROJECT_PATH = FileSystems.getDefault().getPath("").toAbsolutePath().getParent().toString() + "/TransformationFlattener/";
+	
 	public static void main(String[] args) {
 
-		String mmPathIN = "models/generator.ecore";
+		/*String mmPathIN = "models/generator.ecore";
 		String mmPathOUT = "models/FlattenDungeon.ecore";
 		String modelIN = "models2transform/";
 		String modelOUT = "transformedModels/"; 
 		
 		transformModel(mmPathIN, mmPathOUT, modelIN+"DungeonTESTSL.xmi", modelOUT+"DungeonTESTSL.xml");
-		transformModel(mmPathIN, mmPathOUT, modelIN+"DungeonTESTS.xmi", modelOUT+"DungeonTESTS.xml");
+		transformModel(mmPathIN, mmPathOUT, modelIN+"DungeonTESTS.xmi", modelOUT+"DungeonTESTS.xml");*/
 		//transformModels(mmPathIN, mmPathOUT, modelIN+"GeneratedDungeon", modelOUT+"DungeonFlat", 0, 10);
 	}
 		
 	public static void transformModel(String mmPathIN, String mmPathOUT, String modelIN, String modelOUT) {
 		System.out.println("begin "+modelIN+" => "+modelOUT);
 		try {
-			new Util().generateFlateScenario(modelIN, mmPathIN, modelOUT, mmPathOUT);
+			new Util().generateFlateScenario(PROJECT_PATH, modelIN, mmPathIN, modelOUT, mmPathOUT);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -27,9 +31,9 @@ public class Main {
 	public static void transformModel(String modelIN, String modelOUT) {
 		System.out.println("begin "+modelIN+" => "+modelOUT);
 		try {
-			new Util().generateFlateScenario(modelIN, 
-					"C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\generator.ecore", 
-					modelOUT, "C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\FlattenDungeon.ecore");
+			new Util().generateFlateScenario(PROJECT_PATH, modelIN, 
+					PROJECT_PATH + "models\\generator.ecore", 
+					modelOUT, PROJECT_PATH + "models\\FlattenDungeon.ecore");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -39,9 +43,9 @@ public class Main {
 	public static void transformModel(String modelPath, String modelIN, String modelOUT) {
 		System.out.println("begin "+modelPath+modelIN+" => "+modelOUT);
 		try {
-			new Util().generateFlateScenario(modelPath+modelIN, 
-					"C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\generator.ecore", 
-					modelPath+modelOUT, "C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\FlattenDungeon.ecore");
+			new Util().generateFlateScenario(PROJECT_PATH, modelPath+modelIN, 
+					PROJECT_PATH + "models\\generator.ecore", 
+					modelPath+modelOUT, PROJECT_PATH + "models\\FlattenDungeon.ecore");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
