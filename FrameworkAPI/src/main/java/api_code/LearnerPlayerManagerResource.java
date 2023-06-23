@@ -10,10 +10,12 @@ import generator.QuestionableFact;
 import generator.QuestionableFactResult;
 import generator.ResultsByTask;
 import generator.impl.QuestionableFactResultImpl;
+import jakarta.servlet.ServletContext;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 import managers.ModelsManager;
 
@@ -25,7 +27,8 @@ public class LearnerPlayerManagerResource {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public String addingLearnerPlayerResults(String jsonContent) { 
+	public String addingLearnerPlayerResults(String jsonContent, @Context ServletContext app) { 
+		Paths.PROJECT_PATH = app.getRealPath("");
 		JSONObject obj = new JSONObject();
 		try {
 			obj = (JSONObject) new JSONParser().parse(jsonContent);
@@ -33,7 +36,9 @@ public class LearnerPlayerManagerResource {
 			e.printStackTrace();
 		}
 		
-		modelsManager = new ModelsManager(Paths.INPUT_MODELS_PATH, Paths.OUTPUT_MODELS_PATH, Paths.CONTEXTS_FILES_SHORT_PATHS + obj.get("learnerID") + ".xmi", true);
+		modelsManager = new ModelsManager(Paths.PROJECT_PATH + Paths.INPUT_MODELS_PATH, 
+				Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH, 
+				Paths.CONTEXTS_FILES_SHORT_PATHS + obj.get("learnerID") + ".xmi", true);
 				
 		CurrentObjectiveLevel col = getCorrespondingCOL((String) obj.get("objectiveID"), (String) obj.get("levelID"));
 		if(col != null) {

@@ -35,10 +35,12 @@ import generator.impl.MTMembershipImpl;
 import generator.impl.MTRecontructionImpl;
 import generator.impl.MultipleChoiceImpl;
 import generator.impl.ObjectiveImpl;
+import jakarta.servlet.ServletContext;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 import managers.ModelsManager;
 
@@ -50,9 +52,10 @@ public class LearningPathManagerResource {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public String addObjectiveLevel(String jsonContent) { // https://waytolearnx.com/2020/03/lire-un-fichier-json-avec-java.html
+	public String addObjectiveLevel(String jsonContent, @Context ServletContext app) { // https://waytolearnx.com/2020/03/lire-un-fichier-json-avec-java.html
+		Paths.PROJECT_PATH = app.getRealPath("");		
 		JSONObject obj = new JSONObject();
-		modelsManager = new ModelsManager(Paths.INPUT_MODELS_PATH, Paths.OUTPUT_MODELS_PATH, true);
+		modelsManager = new ModelsManager(Paths.PROJECT_PATH + Paths.INPUT_MODELS_PATH, Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH, true);
 		try {
 			obj = (JSONObject) new JSONParser().parse(jsonContent);
 		} catch (ParseException e) {

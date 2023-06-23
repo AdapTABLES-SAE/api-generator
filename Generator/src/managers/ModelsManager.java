@@ -76,7 +76,7 @@ public class ModelsManager {
 		OUTPUT_MODELS_PATH = outputPath;
 		this.lauchedFromAPI = lauchedFromAPI;
 		resourceSet = new ResourceSetImpl();
-		loadInputModels();
+		loadDomainModel();
 	}
 	
 	public ModelsManager(String inputPath, String outputPath, String contextFilePath, boolean lauchedFromAPI) {
@@ -199,6 +199,8 @@ public class ModelsManager {
 		//String filePathComplement = lauchedFromAPI? "file:///": "";
 		Resource resource = resourceSet.createResource(URI.createFileURI(contexte.getAbsolutePath()));
 		resource.getContents().add(context);
+		System.out.println("facts : "+context.getLearnerplayer().getProgression().getCurrentobjectivelevels().get(0).getResults().getResultsbytask().get(0).getQuestionableFacts());
+		
 		try {
 			resource.save(map);
 		}catch (IOException e) {
@@ -206,7 +208,7 @@ public class ModelsManager {
 			e.printStackTrace();
 		}
 		
-		LOGGER.info("Saving '"+INPUT_MODELS_NAMES[0]+"' file : OK");
+		LOGGER.info("Saving '"+ INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]+"' file : OK");
 	}
 		
 	private void loadInputModels() {

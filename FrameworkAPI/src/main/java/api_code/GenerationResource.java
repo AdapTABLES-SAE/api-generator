@@ -15,7 +15,6 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.UriInfo;
 
 /**
  * Path : http://localhost:8080/FrameworkAPI/rest/generator?ID=blemoine
@@ -25,10 +24,14 @@ import jakarta.ws.rs.core.UriInfo;
 @Path("/generator")
 public class GenerationResource {
 	
+	/*
+	 * Deployed File Path : C:\blemoine\TheseGenerator\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\FrameworkAPI
+	 * Warning ! Models are modified on the deployed repository and not in the eclipse one !  
+	 */
 		
 	@GET
 	@Produces(MediaType.TEXT_XML)
-	public String generate(@QueryParam("ID") String learnerID, @Context ServletContext app) { // 
+	public String generate(@QueryParam("ID") String learnerID, @Context ServletContext app) {  
 	
 		//app.log(app.getContextPath());
 		Paths.PROJECT_PATH = app.getRealPath("");
@@ -59,12 +62,10 @@ public class GenerationResource {
 	/***********************************/
 	
 	private void generateDungeon(String learnerPlayerID) {
-		//System.out.println(Paths.PROJECT_PATH);
 		ALGAGenerator generator = new ALGAGenerator(Paths.PROJECT_PATH + Paths.INPUT_MODELS_PATH, 
 				Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH, 
 				Paths.CONTEXTS_FILES_SHORT_PATHS + learnerPlayerID + ".xmi", true);
 		generator.generate();
-		//generator.printDungeon();
 		generator.saveDungeon("DungeonGen_"+ learnerPlayerID +".xmi");
 		Main.transformModel(Paths.PROJECT_PATH + Paths.ECORE_PATH, Paths.PROJECT_PATH + Paths.FLATNER_PATH, Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xmi", Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xml");
 	}
