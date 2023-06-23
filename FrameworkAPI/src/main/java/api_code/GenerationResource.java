@@ -8,11 +8,14 @@ import java.io.Reader;
 
 import flattener.Main;
 import generators.ALGAGenerator;
+import jakarta.servlet.ServletContext;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
+import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.UriInfo;
 
 /**
  * Path : http://localhost:8080/FrameworkAPI/rest/generator?ID=blemoine
@@ -21,15 +24,21 @@ import jakarta.ws.rs.core.MediaType;
 
 @Path("/generator")
 public class GenerationResource {
+	
 		
 	@GET
 	@Produces(MediaType.TEXT_XML)
-	public String generate(@QueryParam("ID") String learnerID) { // 
+	public String generate(@QueryParam("ID") String learnerID, @Context ServletContext app) { // 
+	
+		//app.log(app.getContextPath());
+		Paths.PROJECT_PATH = app.getRealPath("");
+		System.out.println("Project : "+Paths.PROJECT_PATH);
+		
 		generateDungeon(learnerID);
-		File xmlFile = new File(Paths.OUTPUT_MODELS_PATH + "/DungeonGen_"+ learnerID +".xml");
+		File xmlFile = new File(Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH + "/DungeonGen_"+ learnerID +".xml");
 		Reader fileReader;
 		StringBuilder sb = new StringBuilder();
-		System.out.println(xmlFile.getAbsolutePath());
+		System.out.println("Dungeon XML : "+xmlFile.getAbsolutePath());
 		try {
 			fileReader = new FileReader(xmlFile);
 			BufferedReader bufReader = new BufferedReader(fileReader);
@@ -50,12 +59,14 @@ public class GenerationResource {
 	/***********************************/
 	
 	private void generateDungeon(String learnerPlayerID) {
-		System.out.println(Paths.PROJECT_PATH);
-		ALGAGenerator generator = new ALGAGenerator(Paths.INPUT_MODELS_PATH, Paths.OUTPUT_MODELS_PATH, Paths.CONTEXTS_FILES_SHORT_PATHS + learnerPlayerID + ".xmi", true);
+		//System.out.println(Paths.PROJECT_PATH);
+		ALGAGenerator generator = new ALGAGenerator(Paths.PROJECT_PATH + Paths.INPUT_MODELS_PATH, 
+				Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH, 
+				Paths.CONTEXTS_FILES_SHORT_PATHS + learnerPlayerID + ".xmi", true);
 		generator.generate();
 		//generator.printDungeon();
 		generator.saveDungeon("DungeonGen_"+ learnerPlayerID +".xmi");
-		Main.transformModel(Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xmi", Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xml");
+		Main.transformModel(Paths.PROJECT_PATH + Paths.ECORE_PATH, Paths.PROJECT_PATH + Paths.FLATNER_PATH, Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xmi", Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xml");
 	}
 	
 	/*@GET

@@ -46,7 +46,7 @@ public class EducationalElementsGenerator {
 	
 	public DungeonElements generateEE() throws Exception {
 		selectObjectiveLevel();	
-		System.out.println("Selected Objective/Level "+dungeonElements.getChosenObjective().getName()+" "+dungeonElements.getChosenLevel().getID());
+		System.out.println("Selected Objective/Level "+dungeonElements.getChosenObjective().getID()+" "+dungeonElements.getChosenLevel().getID());
 		generateQuestionnableFacts();
 		System.out.println("Faits questionnables générés ");
 		defineNumberOfRoomPerTaskNecessary();
@@ -186,7 +186,9 @@ public class EducationalElementsGenerator {
 	
 	private void selectObjectiveLevel() {
 		List<CurrentObjectiveLevel> allowed = eligibleObjectiveLevels(); 
+		System.out.println(allowed);
 		dungeonElements.setCurrentObjectiveLevel(allowed.get(random.nextInt(allowed.size())));
+		System.out.println(dungeonElements.getChosenLevel().getID());
 	}
 	
 	private List<CurrentObjectiveLevel> eligibleObjectiveLevels(){
@@ -320,6 +322,7 @@ public class EducationalElementsGenerator {
 	private List<Objective> getEligibleObjectives() {
 		List<Objective> eligibleObjective = new ArrayList<>();
 		boolean allPrerequisiteAchied;
+		System.out.println("Paths Objectives "+learnerPlayer.getLearningpath().getObjectives());
 		for (Objective obj : learnerPlayer.getLearningpath().getObjectives()) {
 			if(!isObjectiveAchieved(obj)) {
 				allPrerequisiteAchied = true;
@@ -329,6 +332,7 @@ public class EducationalElementsGenerator {
 				if(allPrerequisiteAchied) { eligibleObjective.add(obj); }
 			}
 		}
+		System.out.println("Objectives "+eligibleObjective);
 		return eligibleObjective;
 	}
 	

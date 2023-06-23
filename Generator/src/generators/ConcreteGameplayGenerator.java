@@ -57,7 +57,7 @@ public class ConcreteGameplayGenerator {
 	public List<PositionedElement> buildPositionedElements(RoomElements roomElements){
 		List<PositionedElement> elements = new ArrayList<>();
 		for (AComponent aComp : roomElements.getGameplay().getComponents()) {
-			System.out.println(roomElements);
+			//System.out.println(roomElements);
 			if(aComp instanceof Structure) {
 				elements.addAll(buildStructuredGameplay(aComp, roomElements));
 			} else {

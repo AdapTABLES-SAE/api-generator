@@ -4,7 +4,7 @@ import java.nio.file.FileSystems;
 
 public class Main {
 
-	private static String PROJECT_PATH = FileSystems.getDefault().getPath("").toAbsolutePath().getParent().toString() + "/TransformationFlattener/";
+	//private static String PROJECT_PATH = FileSystems.getDefault().getPath("").toAbsolutePath().getParent().toString() + "/TransformationFlattener/";
 	
 	public static void main(String[] args) {
 
@@ -18,7 +18,7 @@ public class Main {
 		//transformModels(mmPathIN, mmPathOUT, modelIN+"GeneratedDungeon", modelOUT+"DungeonFlat", 0, 10);
 	}
 		
-	public static void transformModel(String mmPathIN, String mmPathOUT, String modelIN, String modelOUT) {
+	/*public static void transformModel(String PROJECT_PATH, String mmPathIN, String mmPathOUT, String modelIN, String modelOUT) {
 		System.out.println("begin "+modelIN+" => "+modelOUT);
 		try {
 			new Util().generateFlateScenario(PROJECT_PATH, modelIN, mmPathIN, modelOUT, mmPathOUT);
@@ -26,31 +26,31 @@ public class Main {
 			e.printStackTrace();
 		}
 		System.out.println("end "+modelIN+" => "+modelOUT);
-	}
+	}*/
 	
-	public static void transformModel(String modelIN, String modelOUT) {
+	public static void transformModel(String ECORE_PATH, String FLATNER_PATH, String modelIN, String modelOUT) {
 		System.out.println("begin "+modelIN+" => "+modelOUT);
 		try {
-			new Util().generateFlateScenario(PROJECT_PATH, modelIN, 
-					PROJECT_PATH + "models\\generator.ecore", 
-					modelOUT, PROJECT_PATH + "models\\FlattenDungeon.ecore");
+			new Util().generateFlateScenario(FLATNER_PATH, modelIN, 
+					ECORE_PATH + "generator.ecore", 
+					modelOUT, ECORE_PATH + "FlattenDungeon.ecore");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		System.out.println("end "+modelIN+" => "+modelOUT);
 	}
 	
-	public static void transformModel(String modelPath, String modelIN, String modelOUT) {
+	/*public static void transformModel(String ECORE_PATH, String FLATNER_PATH, String modelPath, String modelIN, String modelOUT) {
 		System.out.println("begin "+modelPath+modelIN+" => "+modelOUT);
 		try {
-			new Util().generateFlateScenario(PROJECT_PATH, modelPath+modelIN, 
-					PROJECT_PATH + "models\\generator.ecore", 
-					modelPath+modelOUT, PROJECT_PATH + "models\\FlattenDungeon.ecore");
+			new Util().generateFlateScenario(FLATNER_PATH, modelPath+modelIN, 
+					ECORE_PATH + "generator.ecore", 
+					modelPath+modelOUT, ECORE_PATH + "FlattenDungeon.ecore");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		System.out.println("end "+modelPath+modelIN+" => "+modelOUT);
-	}
+	}*/
 	
 	/**
 	 * 
@@ -61,10 +61,10 @@ public class Main {
 	 * @param min
 	 * @param max
 	 */
-	public static void transformModels(String mmPathIN, String mmPathOUT, String modelIN, String modelOUT, int min, int max) {
+	/*public static void transformModels(String mmPathIN, String mmPathOUT, String modelIN, String modelOUT, int min, int max) {
 		for(int i = min; i < max; i++) {
 			transformModel(mmPathIN, mmPathOUT, modelIN+i+".xmi", modelOUT+i+".xml");
 		}	
-	}
+	}*/
 
 }

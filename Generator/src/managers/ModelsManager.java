@@ -221,6 +221,8 @@ public class ModelsManager {
 		File learningPaths = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]);
 		File relations = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[4]);
 
+		
+		
 		Resource resource1 = resourceSet.createResource(URI.createFileURI(contexte.getAbsolutePath()));
 		Resource resource2 = resourceSet.createResource(URI.createFileURI(gamedescription.getAbsolutePath()));
 		Resource resource3 = resourceSet.createResource(URI.createFileURI(multiplicationTables.getAbsolutePath()));
@@ -243,6 +245,9 @@ public class ModelsManager {
 		this.multiplicationTables = (Knowledge) resource3.getContents().get(0);
 		this.learningPath = (LearningDomain) resource4.getContents().get(0);
 		this.relations = (GameplayTaskRelations) resource5.getContents().get(0);
+		
+		System.out.println("Learner Paht "+context.getLearnerplayer().getLearningpath());
+		System.out.println("Learner Paht "+context.getLearnerplayer().getLearningpath().getID());
 		
 		LOGGER.info("Loading input models : OK");
 	}

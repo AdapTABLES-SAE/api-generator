@@ -11,13 +11,13 @@ import org.eclipse.epsilon.etl.EtlModule;
 
 public class Util {
 
-	public void generateFlateScenario(String PROJECT_PATH, String modelIN, String mmPathIN, String modelOUT, String mmPathOUT)
+	public void generateFlateScenario(String FLATNER_PATH, String modelIN, String mmPathIN, String modelOUT, String mmPathOUT)
 			throws Exception {
 		EtlModule etl = new EtlModule();
 		EmfModel source = createEmfModel("IN", modelIN, mmPathIN, true, false);
 		EmfModel target = createEmfModel("OUT", modelOUT, mmPathOUT, false, true);
 
-		etl.parse(new File(PROJECT_PATH + "flattener\\dungeonFlat.etl"));
+		etl.parse(new File(FLATNER_PATH + "dungeonFlat.etl"));
 		if (etl.getParseProblems().size() > 0) {
 			System.err.println("Parse errors occured...");
 			for (ParseProblem problem : etl.getParseProblems()) {
