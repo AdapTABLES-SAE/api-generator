@@ -45,7 +45,7 @@ public interface MTCompletion1 extends CompletionTask {
 	 * @return the value of the '<em>Nb Missing Elements</em>' attribute.
 	 * @see #isSetNbMissingElements()
 	 * @see generator.GeneratorPackage#getMTCompletion1_NbMissingElements()
-	 * @model default="1" unsettable="true" changeable="false"
+	 * @model default="1" unsettable="true" transient="true" changeable="false"
 	 * @generated
 	 */
 	int getNbMissingElements();

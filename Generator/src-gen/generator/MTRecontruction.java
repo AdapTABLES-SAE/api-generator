@@ -28,7 +28,7 @@ public interface MTRecontruction extends CompletionTask {
 	 * @return the value of the '<em>Nb Missing Elements</em>' attribute.
 	 * @see #isSetNbMissingElements()
 	 * @see generator.GeneratorPackage#getMTRecontruction_NbMissingElements()
-	 * @model default="3" unsettable="true" changeable="false"
+	 * @model default="3" unsettable="true" transient="true" changeable="false"
 	 * @generated
 	 */
 	int getNbMissingElements();

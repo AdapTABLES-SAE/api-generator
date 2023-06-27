@@ -4377,7 +4377,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTCompletion1_Targets(), this.getESingleTarget(), "targets", null, 1, -1, MTCompletion1.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMTCompletion1_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
-				MTCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				MTCompletion1.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMTCompletion1_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", null, 0,
 				1, MTCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
@@ -4520,7 +4520,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMTCompletion2_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "2", 0, 1,
-				MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				MTCompletion2.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMTCompletion2_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", "true",
 				0, 1, MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
@@ -4529,7 +4529,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(mtRecontructionEClass, MTRecontruction.class, "MTRecontruction", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMTRecontruction_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "3", 0, 1,
-				MTRecontruction.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				MTRecontruction.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMTRecontruction_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
 				"true", 0, 1, MTRecontruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,

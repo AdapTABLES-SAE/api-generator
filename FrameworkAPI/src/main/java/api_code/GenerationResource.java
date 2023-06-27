@@ -6,8 +6,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 
+
 import flattener.Main;
 import generators.ALGAGenerator;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiResponse;
 import jakarta.servlet.ServletContext;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -22,6 +25,7 @@ import jakarta.ws.rs.core.MediaType;
  */
 
 @Path("/generator")
+@Api(value="/generator")
 public class GenerationResource {
 	
 	/*
@@ -31,6 +35,7 @@ public class GenerationResource {
 		
 	@GET
 	@Produces(MediaType.TEXT_XML)
+	@ApiResponse(code = 200, message = "An XML file describing a dungeon")
 	public String generate(@QueryParam("ID") String learnerID, @Context ServletContext app) {  
 	
 		//app.log(app.getContextPath());
@@ -64,7 +69,7 @@ public class GenerationResource {
 	private void generateDungeon(String learnerPlayerID) {
 		ALGAGenerator generator = new ALGAGenerator(Paths.PROJECT_PATH + Paths.INPUT_MODELS_PATH, 
 				Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH, 
-				Paths.CONTEXTS_FILES_SHORT_PATHS + learnerPlayerID + ".xmi", true);
+				Paths.CONTEXTS_FILES_PATH + Paths.CONTEXTS_FILES_SHORT_NAME + learnerPlayerID + ".xmi", true);
 		generator.generate();
 		generator.saveDungeon("DungeonGen_"+ learnerPlayerID +".xmi");
 		Main.transformModel(Paths.PROJECT_PATH + Paths.ECORE_PATH, Paths.PROJECT_PATH + Paths.FLATNER_PATH, Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xmi", Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xml");

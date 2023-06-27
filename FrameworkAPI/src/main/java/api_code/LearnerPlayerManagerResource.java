@@ -38,7 +38,7 @@ public class LearnerPlayerManagerResource {
 		
 		modelsManager = new ModelsManager(Paths.PROJECT_PATH + Paths.INPUT_MODELS_PATH, 
 				Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH, 
-				Paths.CONTEXTS_FILES_SHORT_PATHS + obj.get("learnerID") + ".xmi", true);
+				Paths.CONTEXTS_FILES_PATH + Paths.CONTEXTS_FILES_SHORT_NAME + obj.get("learnerID") + ".xmi", true);
 				
 		CurrentObjectiveLevel col = getCorrespondingCOL((String) obj.get("objectiveID"), (String) obj.get("levelID"));
 		if(col != null) {

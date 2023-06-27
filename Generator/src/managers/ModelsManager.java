@@ -123,6 +123,7 @@ public class ModelsManager {
 		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
+		//map.put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
 		//map.put(XMLResource.OPTION_ENCODING, "UTF-8");
 		//String filePathComplement = lauchedFromAPI? "file:///": "";
 		//Resource resource = resourceSet.createResource(URI.createURI(filePathComplement + INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]));
