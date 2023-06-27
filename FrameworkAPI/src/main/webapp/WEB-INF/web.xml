@@ -8,15 +8,14 @@
       <init-param>
         <param-name>jersey.config.server.provider.packages</param-name>
         <param-value>
-            io.swagger.jaxrs.listing.ApiListingResource,
-            io.swagger.jaxrs.listing.SwaggerSerializers,
+            io.swagger.jaxrs.listing,
             api_code
         </param-value>
       </init-param>
       <load-on-startup>1</load-on-startup>
   </servlet>
 
-   <servlet>
+   <!--   servlet>
     <servlet-name>Jersey2Config</servlet-name>
     <servlet-class>io.swagger.jersey.config.JerseyJaxrsConfig</servlet-class>
     <init-param>
@@ -28,7 +27,7 @@
         <param-value>http://localhost:8080/FrameworkAPI</param-value>
     </init-param>
     <load-on-startup>2</load-on-startup>
-	</servlet>
+	</servlet>-->
 
   <servlet-mapping>
   	<servlet-name>JAVA API</servlet-name>

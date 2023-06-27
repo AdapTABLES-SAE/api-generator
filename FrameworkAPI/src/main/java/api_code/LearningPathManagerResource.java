@@ -35,7 +35,6 @@ import generator.impl.MTMembershipImpl;
 import generator.impl.MTRecontructionImpl;
 import generator.impl.MultipleChoiceImpl;
 import generator.impl.ObjectiveImpl;
-import io.swagger.annotations.Api;
 import jakarta.servlet.ServletContext;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;

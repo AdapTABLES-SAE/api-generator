@@ -9,8 +9,8 @@ import java.io.Reader;
 
 import flattener.Main;
 import generators.ALGAGenerator;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiResponse;
+//import io.swagger.annotations.Api;
+//import io.swagger.annotations.ApiResponse;
 import jakarta.servlet.ServletContext;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -25,7 +25,7 @@ import jakarta.ws.rs.core.MediaType;
  */
 
 @Path("/generator")
-@Api(value="/generator")
+//@Api(value="/generator")
 public class GenerationResource {
 	
 	/*
@@ -35,7 +35,7 @@ public class GenerationResource {
 		
 	@GET
 	@Produces(MediaType.TEXT_XML)
-	@ApiResponse(code = 200, message = "An XML file describing a dungeon")
+	//@ApiResponse(code = 200, message = "An XML file describing a dungeon")
 	public String generate(@QueryParam("ID") String learnerID, @Context ServletContext app) {  
 	
 		//app.log(app.getContextPath());
