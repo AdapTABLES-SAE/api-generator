@@ -44,12 +44,12 @@ import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 import managers.ModelsManager;
 
-@Path("/learningPathManager")
+@Path("/pathsManager")
 public class LearningPathManagerResource {
 	
 	private ModelsManager modelsManager;
 	
-	@POST // @PATCH ?
+	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public String addObjectiveLevel(String jsonContent, @Context ServletContext app) { // https://waytolearnx.com/2020/03/lire-un-fichier-json-avec-java.html
