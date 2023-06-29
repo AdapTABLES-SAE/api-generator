@@ -6,9 +6,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 
-
 import flattener.Main;
 import generators.ALGAGenerator;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.SwaggerDefinition;
+import io.swagger.annotations.Tag;
 //import io.swagger.annotations.Api;
 //import io.swagger.annotations.ApiResponse;
 import jakarta.servlet.ServletContext;
@@ -25,7 +27,8 @@ import jakarta.ws.rs.core.MediaType;
  */
 
 @Path("/generator")
-//@Api(value="/generator")
+@Api(value="/Generator")
+@SwaggerDefinition(tags= {@Tag(name="Generator", description="REST end point generator")})
 public class GenerationResource {
 	
 	/*
