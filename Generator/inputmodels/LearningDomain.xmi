@@ -641,4 +641,20 @@
     </objectives>
     <knowledge href="MultiplicationTables.xmi#/"/>
   </learningpaths>
+  <learningpaths name="TEST" ID="TEST">
+    <objectives ID="TESTO1" name="TESTO1">
+      <levels xsi:type="generator:MTLevel" ID="TESTO1L1" buildSetup="MIX" resultPositionSetup="MIX">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="50" ID="TESTT1">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
+        </tasks>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="50" ID="TESTT2">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="7" nbBadChoices="4"/>
+        </tasks>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+    </objectives>
+    <knowledge href="MultiplicationTables.xmi#/"/>
+  </learningpaths>
 </generator:LearningDomain>

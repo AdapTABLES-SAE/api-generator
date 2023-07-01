@@ -92,15 +92,15 @@ public class EducationalElementsGenerator {
 			}
 		}
 		
-		if(!learnerPlayer.getProgression().getCurrentobjectivelevels().contains(dungeonElements.getCurrentObjectiveLevel())) {
-			learnerPlayer.getProgression().getCurrentobjectivelevels().add(dungeonElements.getCurrentObjectiveLevel());
-		}
-		
 		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getCurrentobjectivelevels()) {
 			if(col.getResults() == null) {
 				col.setResults(new ResultsImpl());
 			}
 			addResultByTasks(col);
+		}
+		
+		if(!learnerPlayer.getProgression().getCurrentobjectivelevels().contains(dungeonElements.getCurrentObjectiveLevel())) {
+			learnerPlayer.getProgression().getCurrentobjectivelevels().add(dungeonElements.getCurrentObjectiveLevel());
 		}
 	}
 	

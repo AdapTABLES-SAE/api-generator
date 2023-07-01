@@ -1,11 +1,14 @@
 package factgenerator_template;
 
+import java.util.Set;
+
 import factsgenerator_maths.MTFactGeneratorCOMP1;
 import factsgenerator_maths.MTFactGeneratorCOMP2;
 import factsgenerator_maths.MTFactGeneratorID;
 import factsgenerator_maths.MTFactGeneratorMEMB;
 import factsgenerator_maths.MTFactGeneratorREB;
 import generator.CompletionTask;
+import generator.QuestionableFact;
 import generator.ResultsByTask;
 import structures.DungeonElements;
 import structures.RoomElements;
@@ -49,11 +52,14 @@ public class FactGenerator {
 			factGenerator = new MTFactGeneratorMEMB(dungeonElements);
 			break;
 		}
-		resBytask.getQuestionableFacts().addAll(factGenerator.generateQuestionableFacts(resBytask.getTask()));
+		System.err.println("On appel le generateur");
+		Set<QuestionableFact> facts = factGenerator.generateQuestionableFacts(resBytask.getTask());
+		System.err.println("Facts "+facts);
+		resBytask.getQuestionableFacts().addAll(facts);
 	}
 	
 	public static void generateQuestionedFact(DungeonElements dungeonElements) throws Exception {
-		//System.out.println("Generate Questioned Facts");
+		System.out.println("Generate Questioned Facts");
 		FactGeneratorTemplate factGenerator = null; 
 		//int roomOrder = 0;
 		//System.out.println("Number of rooms with tasks "+tasks.size());
@@ -86,6 +92,6 @@ public class FactGenerator {
 		}
 		
 		dungeonElements.shuffleRoomsOrder();
-		//System.out.println("End Generate Question Facts");
+		System.out.println("End Generate Question Facts");
 	}
 }

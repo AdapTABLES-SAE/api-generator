@@ -56,9 +56,11 @@ public abstract class FactGeneratorTemplate {
 	}
 	
 	public Set<QuestionableFact> generateQuestionableFacts(ATask task){
+		System.out.println("Generation de faits questionnables ");
 		Set<QuestionableFact> questionableFacts = new HashSet<>();
 		taskID = task.getID();
 		for (SetOfFacts setoffact : dungeonElements.getChosenObjective().getSetoffacts()) {
+			System.err.println("Setoffact to generate facts from");
 			for (AbstractFact f : setoffact.getFacts()) { 
 				questionableFacts.addAll(generateQuestionableFactsOf(task, f));
 			}

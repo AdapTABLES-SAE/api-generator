@@ -99,7 +99,11 @@ public class ConcreteGameplayGenerator {
 		
 		boolean hasIntegratedChoice = ((QuestionGameplay) roomElements.getGameplay()).isHasIntegratedPropositions();
 		
-		if(component.isWearStatement()) {
+		if(component.isWearChoices() && component.isWearStatement()) {
+			for (int i = 0; i < fact.getPropositions().size(); i++) {
+				elements.add(buildStatementAsChoicesElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
+			}
+		} else if(component.isWearStatement()) {
 			elements.add(buildStatementElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
 		} 
 		else if(component.isInputEntry()) { elements.add(buildInputEntryElement(component, elementType, fact, getAvailablePosition(roomtype, elementType))); }
@@ -135,6 +139,20 @@ public class ConcreteGameplayGenerator {
 		
 	private List<PositionedElement> buildStructuredGameplay(AComponent component, RoomElements roomElements){
 		return buildStructuredGameplay(component, null, null, new ArrayList<>(), roomElements, 0, -1);
+	}
+	
+	private PositionedElement buildStatementAsChoicesElement(Component component, ElementType elementType, QuestionedFact fact, Position position) {
+		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
+		Correctness correctness = new CorrectnessImpl();
+		correctness.setValue(fact.getFactCorrectness().getValue());
+		comp.setCorrectness(correctness);
+	
+		Display proposition = new DisplayImpl();
+		Value propValue = new ValueImpl();
+		propValue.setValue(((Value) fact.getQuestion().getValue()).getValue());
+		proposition.setValue(propValue);
+		comp.getDisplays().add(proposition);
+		return comp;
 	}
 
 	private PositionedElement buildStatementElement(Component component, ElementType elementType, QuestionedFact fact, Position position) { //QuestionedFact fact, Position position) {

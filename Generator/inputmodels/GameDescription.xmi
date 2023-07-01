@@ -494,6 +494,42 @@
       <directions>NORTH</directions>
       <directions>WEST</directions>
     </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoom10">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM1"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM2"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM3"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM4"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM5"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM6"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM7"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM8"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
   </roomtypes>
   <levelsDifficultyProgress/>
   <gameplays>
@@ -924,7 +960,13 @@
         <components
             xsi:type="generator:Component"
             allowedAbility="PUSHABLE"
-            wearChoices="true"/>
+            wearChoices="true">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
         <components
             xsi:type="generator:Component"
             allowedAbility="DETECTOR">
@@ -958,10 +1000,22 @@
         <components
             xsi:type="generator:Component"
             allowedAbility="PUSHABLE"
-            wearChoices="true"/>
+            wearChoices="true">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
         <components
             xsi:type="generator:Component"
-            allowedAbility="DETECTOR"/>
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
       </components>
       <components
           xsi:type="generator:Component"
@@ -983,6 +1037,145 @@
           wearStatement="true"/>
       <prompt
           prompt="Traverse le bon element"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_UNIQUE-PUSH-LEFT"
+        category="MOVE_UNIQUE">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="HORIZONTAL_DISPLAY"
+          perFactOrPropositions="true">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="MEDIUM"/>
+        </expectedSize>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="PUSHABLE"
+            wearChoices="true">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Pousse le bon element"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE-PUSH-LEFT"
+        category="MOVE_MULTIPLE">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="HORIZONTAL_DISPLAY"
+          perFactOrPropositions="true">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="MEDIUM"/>
+        </expectedSize>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="PUSHABLE"
+            wearChoices="true">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Pousse les bons elements"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_UNIQUE-BREAK">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="BREAKABLE"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Casse le bon element"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE-BREAK"
+        category="SELECT_MULTIPLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="BREAKABLE"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Casse les bons elements"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE-BREAK-FOR-ID"
+        category="SELECT_MULTIPLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="BREAKABLE"
+          wearChoices="true"
+          wearStatement="true"/>
+      <prompt
+          prompt="Casse les bons elements"/>
+      <restrictedTo>IDENTIFY</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_UNIQUE_FOLLOWABLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="FOLLOWABLE_DETECTOR"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="FOLLOWABLE"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Attrape le bon element"/>
     </gameplays>
   </gameplays>
   <elements>
@@ -1131,6 +1324,21 @@
           type="Rabbit"
           ability="CATCHABLE"
           nbDisplays="1"/>
+      <elements
+          ID="ELEMTYPE_BREAKABLE_POT"
+          type="BreakablePot"
+          ability="BREAKABLE"
+          nbDisplays="1"/>
+      <elements
+          ID="ELEMENT_TYPE_FOLLOWABLE_KEY"
+          type="Key"
+          ability="FOLLOWABLE"
+          nbDisplays="1"/>
+      <elements
+          size="MEDIUM"
+          ID="ELEMENT_TYPE_CHEST_DETECTOR"
+          type="BigChest"
+          ability="FOLLOWABLE_DETECTOR"/>
     </elementTypes>
   </elements>
   <abilities>
@@ -1166,5 +1374,9 @@
         name="HORIZONTAL_DISPLAY"/>
     <abilities
         name="VERTICAL_DISPLAY"/>
+    <abilities
+        name="BREAKABLE"/>
+    <abilities
+        name="FOLLOWABLE_DETECTOR"/>
   </abilities>
 </generator:GameDescription>

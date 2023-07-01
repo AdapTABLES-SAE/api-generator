@@ -42,9 +42,11 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
 		int nbByFact = mc.getNbChoices() - mc.getNbBadChoices();
 		
-		for (SetOfFacts setoffact : dungeonElements.getChosenObjective().getSetoffacts()) {
+		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
 			List<MTResultFact> facts = new ArrayList<>();
-			for (AbstractFact f : Shuffle.shuffle(setoffact.getFacts())) { 
+			System.err.println("setoffact "+setoffact.getFacts());
+			for (AbstractFact f : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
+				System.err.println("after shuffle");
 				if(f instanceof MTResultFact) {
 					MTResultFact fact = (MTResultFact) f;
 					if(min <= (fact.getRes()/fact.getTable()) && (fact.getRes()/fact.getTable()) <= max){
@@ -60,7 +62,7 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 	
 	protected Set<QuestionableFact> generateQuestionableFactsOf(ATask task, List<MTResultFact> facts, int nbByFact) {
 		Set<QuestionableFact> qfs = new HashSet<>(); 
-		
+		System.err.println("fact size in gen "+facts.size());
 		int k = 0;
 		for (int i = 0; i < (facts.size() / nbByFact); i++) {
 			List<MTResultFact> factres = new ArrayList<>(); 

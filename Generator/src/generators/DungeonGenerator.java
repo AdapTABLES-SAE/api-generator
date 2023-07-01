@@ -370,7 +370,7 @@ public class DungeonGenerator {
 		}
 		
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
-			//System.out.println("entry: "+entry+" exit: "+exit+" roomtype: "+roomType.getName()+" "+roomElements);
+			System.out.println("entry: "+entry+" exit: "+exit+" roomtype: "+roomType.getName()+" "+roomElements);
 			
 			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {				
 				roomTypes.remove(roomType);
