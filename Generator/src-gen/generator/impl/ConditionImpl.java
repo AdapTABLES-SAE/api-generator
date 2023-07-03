@@ -5,14 +5,18 @@ package generator.impl;
 import generator.Condition;
 import generator.EBoundary;
 import generator.EModality;
+import generator.EStatementType;
 import generator.GeneratorPackage;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,14 +26,25 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link generator.impl.ConditionImpl#getStatementTypes <em>Statement Types</em>}</li>
  *   <li>{@link generator.impl.ConditionImpl#getNbFacts <em>Nb Facts</em>}</li>
- *   <li>{@link generator.impl.ConditionImpl#getNbExpectedAnswers <em>Nb Expected Answers</em>}</li>
  *   <li>{@link generator.impl.ConditionImpl#getAnswerModality <em>Answer Modality</em>}</li>
+ *   <li>{@link generator.impl.ConditionImpl#getNbExpectedAnswers <em>Nb Expected Answers</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ConditionImpl extends MinimalEObjectImpl.Container implements Condition {
+	/**
+	 * The cached value of the '{@link #getStatementTypes() <em>Statement Types</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatementTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EStatementType> statementTypes;
+
 	/**
 	 * The default value of the '{@link #getNbFacts() <em>Nb Facts</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -49,26 +64,6 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * @ordered
 	 */
 	protected EBoundary nbFacts = NB_FACTS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getNbExpectedAnswers() <em>Nb Expected Answers</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNbExpectedAnswers()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EBoundary NB_EXPECTED_ANSWERS_EDEFAULT = EBoundary.ONE;
-
-	/**
-	 * The cached value of the '{@link #getNbExpectedAnswers() <em>Nb Expected Answers</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNbExpectedAnswers()
-	 * @generated
-	 * @ordered
-	 */
-	protected EBoundary nbExpectedAnswers = NB_EXPECTED_ANSWERS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getAnswerModality() <em>Answer Modality</em>}' attribute.
@@ -91,6 +86,26 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	protected EModality answerModality = ANSWER_MODALITY_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getNbExpectedAnswers() <em>Nb Expected Answers</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNbExpectedAnswers()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EBoundary NB_EXPECTED_ANSWERS_EDEFAULT = EBoundary.ONE;
+
+	/**
+	 * The cached value of the '{@link #getNbExpectedAnswers() <em>Nb Expected Answers</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNbExpectedAnswers()
+	 * @generated
+	 * @ordered
+	 */
+	protected EBoundary nbExpectedAnswers = NB_EXPECTED_ANSWERS_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -107,6 +122,19 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	@Override
 	protected EClass eStaticClass() {
 		return GeneratorPackage.Literals.CONDITION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<EStatementType> getStatementTypes() {
+		if (statementTypes == null) {
+			statementTypes = new EDataTypeUniqueEList<EStatementType>(EStatementType.class, this,
+					GeneratorPackage.CONDITION__STATEMENT_TYPES);
+		}
+		return statementTypes;
 	}
 
 	/**
@@ -183,12 +211,14 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case GeneratorPackage.CONDITION__STATEMENT_TYPES:
+			return getStatementTypes();
 		case GeneratorPackage.CONDITION__NB_FACTS:
 			return getNbFacts();
-		case GeneratorPackage.CONDITION__NB_EXPECTED_ANSWERS:
-			return getNbExpectedAnswers();
 		case GeneratorPackage.CONDITION__ANSWER_MODALITY:
 			return getAnswerModality();
+		case GeneratorPackage.CONDITION__NB_EXPECTED_ANSWERS:
+			return getNbExpectedAnswers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -198,17 +228,22 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case GeneratorPackage.CONDITION__STATEMENT_TYPES:
+			getStatementTypes().clear();
+			getStatementTypes().addAll((Collection<? extends EStatementType>) newValue);
+			return;
 		case GeneratorPackage.CONDITION__NB_FACTS:
 			setNbFacts((EBoundary) newValue);
 			return;
-		case GeneratorPackage.CONDITION__NB_EXPECTED_ANSWERS:
-			setNbExpectedAnswers((EBoundary) newValue);
-			return;
 		case GeneratorPackage.CONDITION__ANSWER_MODALITY:
 			setAnswerModality((EModality) newValue);
+			return;
+		case GeneratorPackage.CONDITION__NB_EXPECTED_ANSWERS:
+			setNbExpectedAnswers((EBoundary) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -222,14 +257,17 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case GeneratorPackage.CONDITION__STATEMENT_TYPES:
+			getStatementTypes().clear();
+			return;
 		case GeneratorPackage.CONDITION__NB_FACTS:
 			setNbFacts(NB_FACTS_EDEFAULT);
 			return;
-		case GeneratorPackage.CONDITION__NB_EXPECTED_ANSWERS:
-			setNbExpectedAnswers(NB_EXPECTED_ANSWERS_EDEFAULT);
-			return;
 		case GeneratorPackage.CONDITION__ANSWER_MODALITY:
 			setAnswerModality(ANSWER_MODALITY_EDEFAULT);
+			return;
+		case GeneratorPackage.CONDITION__NB_EXPECTED_ANSWERS:
+			setNbExpectedAnswers(NB_EXPECTED_ANSWERS_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -243,12 +281,14 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case GeneratorPackage.CONDITION__STATEMENT_TYPES:
+			return statementTypes != null && !statementTypes.isEmpty();
 		case GeneratorPackage.CONDITION__NB_FACTS:
 			return nbFacts != NB_FACTS_EDEFAULT;
-		case GeneratorPackage.CONDITION__NB_EXPECTED_ANSWERS:
-			return nbExpectedAnswers != NB_EXPECTED_ANSWERS_EDEFAULT;
 		case GeneratorPackage.CONDITION__ANSWER_MODALITY:
 			return answerModality != ANSWER_MODALITY_EDEFAULT;
+		case GeneratorPackage.CONDITION__NB_EXPECTED_ANSWERS:
+			return nbExpectedAnswers != NB_EXPECTED_ANSWERS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -264,12 +304,14 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (nbFacts: ");
+		result.append(" (statementTypes: ");
+		result.append(statementTypes);
+		result.append(", nbFacts: ");
 		result.append(nbFacts);
-		result.append(", nbExpectedAnswers: ");
-		result.append(nbExpectedAnswers);
 		result.append(", answerModality: ");
 		result.append(answerModality);
+		result.append(", nbExpectedAnswers: ");
+		result.append(nbExpectedAnswers);
 		result.append(')');
 		return result.toString();
 	}

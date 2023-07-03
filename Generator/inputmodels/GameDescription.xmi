@@ -856,10 +856,10 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_ROTABLE"
+        name="GP_ROTABLE_UNIQUE"
         undoable="true"
         manualValidation="true"
-        category="ORIENT">
+        category="ORIENT_UNIQUE">
       <components
           xsi:type="generator:Component"
           allowedAbility="ROTABLE"
@@ -873,8 +873,6 @@
           wearStatement="true"/>
       <prompt
           prompt="Oriente correctement l(es) element(s)"/>
-      <restrictedTo>COMPLETE</restrictedTo>
-      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -1176,6 +1174,26 @@
           wearStatement="true"/>
       <prompt
           prompt="Attrape le bon element"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_ROTABLE_MULTIPLE"
+        undoable="true"
+        manualValidation="true"
+        category="ORIENT_MULTIPLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="ROTABLE"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="VERIFICATOR"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Oriente correctement l(es) element(s)"/>
     </gameplays>
   </gameplays>
   <elements>

@@ -5658,7 +5658,7 @@ public interface GeneratorPackage extends EPackage {
 	int RELATION__TASK = 0;
 
 	/**
-	 * The feature id for the '<em><b>Gameplay</b></em>' attribute.
+	 * The feature id for the '<em><b>Gameplay</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5704,22 +5704,22 @@ public interface GeneratorPackage extends EPackage {
 	int CONDITION = 82;
 
 	/**
+	 * The feature id for the '<em><b>Statement Types</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__STATEMENT_TYPES = 0;
+
+	/**
 	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITION__NB_FACTS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Nb Expected Answers</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION__NB_EXPECTED_ANSWERS = 1;
+	int CONDITION__NB_FACTS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Answer Modality</b></em>' attribute.
@@ -5731,13 +5731,22 @@ public interface GeneratorPackage extends EPackage {
 	int CONDITION__ANSWER_MODALITY = 2;
 
 	/**
+	 * The feature id for the '<em><b>Nb Expected Answers</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__NB_EXPECTED_ANSWERS = 3;
+
+	/**
 	 * The number of structural features of the '<em>Condition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITION_FEATURE_COUNT = 3;
+	int CONDITION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Condition</em>' class.
@@ -6159,6 +6168,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	int EBOUNDARY = 98;
+
+	/**
+	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.EStatementType
+	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
+	 * @generated
+	 */
+	int ESTATEMENT_TYPE = 99;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -9305,10 +9324,10 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getRelation_Task();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.Relation#getGameplay <em>Gameplay</em>}'.
+	 * Returns the meta object for the attribute list '{@link generator.Relation#getGameplay <em>Gameplay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Gameplay</em>'.
+	 * @return the meta object for the attribute list '<em>Gameplay</em>'.
 	 * @see generator.Relation#getGameplay()
 	 * @see #getRelation()
 	 * @generated
@@ -9335,6 +9354,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCondition();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link generator.Condition#getStatementTypes <em>Statement Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Statement Types</em>'.
+	 * @see generator.Condition#getStatementTypes()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EAttribute getCondition_StatementTypes();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.Condition#getNbFacts <em>Nb Facts</em>}'.
@@ -9583,6 +9613,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getEBoundary();
+
+	/**
+	 * Returns the meta object for enum '{@link generator.EStatementType <em>EStatement Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>EStatement Type</em>'.
+	 * @see generator.EStatementType
+	 * @generated
+	 */
+	EEnum getEStatementType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -12129,7 +12169,7 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute RELATION__TASK = eINSTANCE.getRelation_Task();
 
 		/**
-		 * The meta object literal for the '<em><b>Gameplay</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Gameplay</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -12153,6 +12193,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONDITION = eINSTANCE.getCondition();
+
+		/**
+		 * The meta object literal for the '<em><b>Statement Types</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONDITION__STATEMENT_TYPES = eINSTANCE.getCondition_StatementTypes();
 
 		/**
 		 * The meta object literal for the '<em><b>Nb Facts</b></em>' attribute feature.
@@ -12378,6 +12426,16 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum EBOUNDARY = eINSTANCE.getEBoundary();
+
+		/**
+		 * The meta object literal for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.EStatementType
+		 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
+		 * @generated
+		 */
+		EEnum ESTATEMENT_TYPE = eINSTANCE.getEStatementType();
 
 	}
 

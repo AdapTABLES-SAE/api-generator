@@ -70,7 +70,8 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/DIRECT_RESPONSE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/MOVE_UNIQUE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/MOVE_MULTIPLE"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/ORIENT"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/ORIENT_UNIQUE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/ORIENT_MULTIPLE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/POSITION_UNIQUE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//GPCategory/POSITION_MULTIPLE"/>
     </genEnums>
@@ -84,6 +85,13 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EBoundary/ONE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EBoundary/SUP_ONE"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EBoundary/SUP_EQ_ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EBoundary/EQ_NB_FACTS"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EBoundary/SUP_NB_FACTS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EStatementType">
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EStatementType/CLASSIC"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EStatementType/GRAPHIC"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EStatementType/TO_FILL_IN"/>
     </genEnums>
     <genClasses image="false" ecoreClass="generator.ecore#//AbstractFact"/>
     <genClasses ecoreClass="generator.ecore#//SetOfFacts">
@@ -456,9 +464,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Relation/condition"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Condition/statementTypes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Condition/nbFacts"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Condition/nbExpectedAnswers"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Condition/answerModality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Condition/nbExpectedAnswers"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//QuestionGameplay">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionGameplay/manualValidation"/>

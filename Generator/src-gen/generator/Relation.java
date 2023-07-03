@@ -2,6 +2,7 @@
  */
 package generator;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -49,29 +50,18 @@ public interface Relation extends EObject {
 	void setTask(ETaskType value);
 
 	/**
-	 * Returns the value of the '<em><b>Gameplay</b></em>' attribute.
+	 * Returns the value of the '<em><b>Gameplay</b></em>' attribute list.
+	 * The list contents are of type {@link generator.GPCategory}.
 	 * The literals are from the enumeration {@link generator.GPCategory}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Gameplay</em>' attribute.
+	 * @return the value of the '<em>Gameplay</em>' attribute list.
 	 * @see generator.GPCategory
-	 * @see #setGameplay(GPCategory)
 	 * @see generator.GeneratorPackage#getRelation_Gameplay()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	GPCategory getGameplay();
-
-	/**
-	 * Sets the value of the '{@link generator.Relation#getGameplay <em>Gameplay</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Gameplay</em>' attribute.
-	 * @see generator.GPCategory
-	 * @see #getGameplay()
-	 * @generated
-	 */
-	void setGameplay(GPCategory value);
+	EList<GPCategory> getGameplay();
 
 	/**
 	 * Returns the value of the '<em><b>Condition</b></em>' containment reference.

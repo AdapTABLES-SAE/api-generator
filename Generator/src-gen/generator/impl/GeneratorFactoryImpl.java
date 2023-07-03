@@ -240,6 +240,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createECorrectnessFromString(eDataType, initialValue);
 		case GeneratorPackage.EBOUNDARY:
 			return createEBoundaryFromString(eDataType, initialValue);
+		case GeneratorPackage.ESTATEMENT_TYPE:
+			return createEStatementTypeFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -277,6 +279,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return convertECorrectnessToString(eDataType, instanceValue);
 		case GeneratorPackage.EBOUNDARY:
 			return convertEBoundaryToString(eDataType, instanceValue);
+		case GeneratorPackage.ESTATEMENT_TYPE:
+			return convertEStatementTypeToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -1273,6 +1277,28 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * @generated
 	 */
 	public String convertEBoundaryToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EStatementType createEStatementTypeFromString(EDataType eDataType, String initialValue) {
+		EStatementType result = EStatementType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEStatementTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

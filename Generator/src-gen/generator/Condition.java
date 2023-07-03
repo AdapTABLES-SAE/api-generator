@@ -2,6 +2,7 @@
  */
 package generator;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,9 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link generator.Condition#getStatementTypes <em>Statement Types</em>}</li>
  *   <li>{@link generator.Condition#getNbFacts <em>Nb Facts</em>}</li>
- *   <li>{@link generator.Condition#getNbExpectedAnswers <em>Nb Expected Answers</em>}</li>
  *   <li>{@link generator.Condition#getAnswerModality <em>Answer Modality</em>}</li>
+ *   <li>{@link generator.Condition#getNbExpectedAnswers <em>Nb Expected Answers</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getCondition()
@@ -23,6 +25,20 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Condition extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Statement Types</b></em>' attribute list.
+	 * The list contents are of type {@link generator.EStatementType}.
+	 * The literals are from the enumeration {@link generator.EStatementType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Statement Types</em>' attribute list.
+	 * @see generator.EStatementType
+	 * @see generator.GeneratorPackage#getCondition_StatementTypes()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<EStatementType> getStatementTypes();
+
 	/**
 	 * Returns the value of the '<em><b>Nb Facts</b></em>' attribute.
 	 * The literals are from the enumeration {@link generator.EBoundary}.

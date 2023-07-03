@@ -8,14 +8,17 @@ import generator.GPCategory;
 import generator.GeneratorPackage;
 import generator.Relation;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,24 +57,14 @@ public class RelationImpl extends MinimalEObjectImpl.Container implements Relati
 	protected ETaskType task = TASK_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getGameplay() <em>Gameplay</em>}' attribute.
+	 * The cached value of the '{@link #getGameplay() <em>Gameplay</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGameplay()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GPCategory GAMEPLAY_EDEFAULT = GPCategory.SELECT_UNIQUE;
-
-	/**
-	 * The cached value of the '{@link #getGameplay() <em>Gameplay</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGameplay()
-	 * @generated
-	 * @ordered
-	 */
-	protected GPCategory gameplay = GAMEPLAY_EDEFAULT;
+	protected EList<GPCategory> gameplay;
 
 	/**
 	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
@@ -128,21 +121,12 @@ public class RelationImpl extends MinimalEObjectImpl.Container implements Relati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GPCategory getGameplay() {
+	public EList<GPCategory> getGameplay() {
+		if (gameplay == null) {
+			gameplay = new EDataTypeUniqueEList<GPCategory>(GPCategory.class, this,
+					GeneratorPackage.RELATION__GAMEPLAY);
+		}
 		return gameplay;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setGameplay(GPCategory newGameplay) {
-		GPCategory oldGameplay = gameplay;
-		gameplay = newGameplay == null ? GAMEPLAY_EDEFAULT : newGameplay;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.RELATION__GAMEPLAY, oldGameplay,
-					gameplay));
 	}
 
 	/**
@@ -232,6 +216,7 @@ public class RelationImpl extends MinimalEObjectImpl.Container implements Relati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -239,7 +224,8 @@ public class RelationImpl extends MinimalEObjectImpl.Container implements Relati
 			setTask((ETaskType) newValue);
 			return;
 		case GeneratorPackage.RELATION__GAMEPLAY:
-			setGameplay((GPCategory) newValue);
+			getGameplay().clear();
+			getGameplay().addAll((Collection<? extends GPCategory>) newValue);
 			return;
 		case GeneratorPackage.RELATION__CONDITION:
 			setCondition((Condition) newValue);
@@ -260,7 +246,7 @@ public class RelationImpl extends MinimalEObjectImpl.Container implements Relati
 			setTask(TASK_EDEFAULT);
 			return;
 		case GeneratorPackage.RELATION__GAMEPLAY:
-			setGameplay(GAMEPLAY_EDEFAULT);
+			getGameplay().clear();
 			return;
 		case GeneratorPackage.RELATION__CONDITION:
 			setCondition((Condition) null);
@@ -280,7 +266,7 @@ public class RelationImpl extends MinimalEObjectImpl.Container implements Relati
 		case GeneratorPackage.RELATION__TASK:
 			return task != TASK_EDEFAULT;
 		case GeneratorPackage.RELATION__GAMEPLAY:
-			return gameplay != GAMEPLAY_EDEFAULT;
+			return gameplay != null && !gameplay.isEmpty();
 		case GeneratorPackage.RELATION__CONDITION:
 			return condition != null;
 		}

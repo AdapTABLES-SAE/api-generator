@@ -67,9 +67,10 @@ public class GameElementsGenerator {
 	
 	private Set<GPCategory> getValidCategoriesFromRelations(ATask task){
 		Set<GPCategory> allowedCategories = new HashSet<>(); 
-		//System.out.println("TASK "+task.getType());
+		System.out.println("TASK "+task.getType());
+		System.out.println("rels "+modelAccess.getRelationsModel().getRelations());
 		
-		for (Relation relation : modelAccess.getRelationsModel().getRelations()) {
+		for (Relation relation : new ArrayList<>(modelAccess.getRelationsModel().getRelations())) {
 			if(relation.getTask().equals(task.getType())) {
 				//System.out.println("REL task "+ relation.getTask());
 				//System.out.println(relation.getCondition().getAnswerModality()+" "+task.getResponseModality());
@@ -84,11 +85,19 @@ public class GameElementsGenerator {
 					factCompatible = task.getNbFacts() >= 1;
 				}
 
+			System.out.println("Cond "+relation.getCondition().getNbExpectedAnswers().getLiteral());
+			System.out.println("Expected answers "+task.nbExpectedAnswers());
+			System.out.println("Nb Facts "+task.getNbFacts());
+				
 				boolean expectedAnswerCompatible;
 				if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.ONE)) {
 					expectedAnswerCompatible = task.nbExpectedAnswers() == 1;
 				} else if (relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_ONE)) {
 					expectedAnswerCompatible = task.nbExpectedAnswers() > 1;
+				} else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.EQ_NB_FACTS)) {
+					expectedAnswerCompatible = task.nbExpectedAnswers() == task.getNbFacts();
+				} else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_NB_FACTS)) {
+					expectedAnswerCompatible = task.nbExpectedAnswers() > task.getNbFacts();
 				} else {
 					expectedAnswerCompatible = task.nbExpectedAnswers() >= 1;
 				}
@@ -99,12 +108,12 @@ public class GameElementsGenerator {
 				} else {
 					modalityCompatible = (task.getResponseModality() != null)? task.getResponseModality() instanceof EnterResponse: false;
 				}
-				//System.out.println("\t factC "+factCompatible);
-				//System.out.println("\t expectedC "+expectedAnswerCompatible);
-				//System.out.println("\t modality "+modalityCompatible);
+				System.err.println("\t factC "+factCompatible);
+				System.err.println("\t expectedC "+expectedAnswerCompatible);
+				System.err.println("\t modality "+modalityCompatible);
 				if(factCompatible && expectedAnswerCompatible && modalityCompatible) {
-					//System.out.println("On ajoute");
-					allowedCategories.add(relation.getGameplay());
+					System.err.println("On ajoute");
+					allowedCategories.addAll(relation.getGameplay());
 				}
 			}
 		}

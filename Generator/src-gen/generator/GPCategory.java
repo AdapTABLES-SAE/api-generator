@@ -69,23 +69,31 @@ public enum GPCategory implements Enumerator {
 	MOVE_MULTIPLE(8, "MOVE_MULTIPLE", "MOVE_MULTIPLE"),
 
 	/**
-	 * The '<em><b>ORIENT</b></em>' literal object.
+	 * The '<em><b>ORIENT UNIQUE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ORIENT_VALUE
+	 * @see #ORIENT_UNIQUE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ORIENT(5, "ORIENT", "ORIENT"),
-
+	ORIENT_UNIQUE(5, "ORIENT_UNIQUE", "ORIENT_UNIQUE"),
 	/**
-	 * The '<em><b>POSITION UNIQUE</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #POSITION_UNIQUE_VALUE
-	 * @generated
-	 * @ordered
-	 */
+	* The '<em><b>ORIENT MULTIPLE</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #ORIENT_MULTIPLE_VALUE
+	* @generated
+	* @ordered
+	*/
+	ORIENT_MULTIPLE(5, "ORIENT_MULTIPLE", "ORIENT_MULTIPLE"),
+	/**
+	* The '<em><b>POSITION UNIQUE</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #POSITION_UNIQUE_VALUE
+	* @generated
+	* @ordered
+	*/
 	POSITION_UNIQUE(6, "POSITION_UNIQUE", "POSITION_UNIQUE"),
 
 	/**
@@ -154,15 +162,26 @@ public enum GPCategory implements Enumerator {
 	public static final int MOVE_MULTIPLE_VALUE = 8;
 
 	/**
-	 * The '<em><b>ORIENT</b></em>' literal value.
+	 * The '<em><b>ORIENT UNIQUE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ORIENT
+	 * @see #ORIENT_UNIQUE
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ORIENT_VALUE = 5;
+	public static final int ORIENT_UNIQUE_VALUE = 5;
+
+	/**
+	 * The '<em><b>ORIENT MULTIPLE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ORIENT_MULTIPLE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ORIENT_MULTIPLE_VALUE = 5;
 
 	/**
 	 * The '<em><b>POSITION UNIQUE</b></em>' literal value.
@@ -193,7 +212,7 @@ public enum GPCategory implements Enumerator {
 	 * @generated
 	 */
 	private static final GPCategory[] VALUES_ARRAY = new GPCategory[] { SELECT_UNIQUE, SELECT_MULTIPLE, DIRECT_RESPONSE,
-			MOVE_UNIQUE, MOVE_MULTIPLE, ORIENT, POSITION_UNIQUE, POSITION_MULTIPLE, };
+			MOVE_UNIQUE, MOVE_MULTIPLE, ORIENT_UNIQUE, ORIENT_MULTIPLE, POSITION_UNIQUE, POSITION_MULTIPLE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>GP Category</b></em>' enumerators.
@@ -257,8 +276,8 @@ public enum GPCategory implements Enumerator {
 			return MOVE_UNIQUE;
 		case MOVE_MULTIPLE_VALUE:
 			return MOVE_MULTIPLE;
-		case ORIENT_VALUE:
-			return ORIENT;
+		case ORIENT_UNIQUE_VALUE:
+			return ORIENT_UNIQUE;
 		case POSITION_UNIQUE_VALUE:
 			return POSITION_UNIQUE;
 		}

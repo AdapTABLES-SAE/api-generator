@@ -10,145 +10,104 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>EBoundary</b></em>',
+ * A representation of the literals of the enumeration '<em><b>EStatement Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see generator.GeneratorPackage#getEBoundary()
+ * @see generator.GeneratorPackage#getEStatementType()
  * @model
  * @generated
  */
-public enum EBoundary implements Enumerator {
+public enum EStatementType implements Enumerator {
 	/**
-	 * The '<em><b>ONE</b></em>' literal object.
+	 * The '<em><b>CLASSIC</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ONE_VALUE
+	 * @see #CLASSIC_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ONE(0, "ONE", "ONE"),
+	CLASSIC(0, "CLASSIC", "CLASSIC"),
 
 	/**
-	 * The '<em><b>SUP ONE</b></em>' literal object.
+	 * The '<em><b>GRAPHIC</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SUP_ONE_VALUE
+	 * @see #GRAPHIC_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	SUP_ONE(1, "SUP_ONE", "SUP_ONE"),
+	GRAPHIC(1, "GRAPHIC", "GRAPHIC"),
 
 	/**
-	 * The '<em><b>SUP EQ ONE</b></em>' literal object.
+	 * The '<em><b>TO FILL IN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SUP_EQ_ONE_VALUE
+	 * @see #TO_FILL_IN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	SUP_EQ_ONE(2, "SUP_EQ_ONE", "SUP_EQ_ONE"),
-	/**
-	 * The '<em><b>EQ NB FACTS</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	 * @see #EQ_NB_FACTS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	EQ_NB_FACTS(3, "EQ_NB_FACTS", "EQ_NB_FACTS"),
-	/**
-	 * The '<em><b>SUP NB FACTS</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	 * @see #SUP_NB_FACTS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	SUP_NB_FACTS(3, "SUP_NB_FACTS", "SUP_NB_FACTS");
+	TO_FILL_IN(2, "TO_FILL_IN", "TO_FILL_IN");
 
 	/**
-	 * The '<em><b>ONE</b></em>' literal value.
+	 * The '<em><b>CLASSIC</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ONE
+	 * @see #CLASSIC
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ONE_VALUE = 0;
+	public static final int CLASSIC_VALUE = 0;
 
 	/**
-	 * The '<em><b>SUP ONE</b></em>' literal value.
+	 * The '<em><b>GRAPHIC</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SUP_ONE
+	 * @see #GRAPHIC
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SUP_ONE_VALUE = 1;
+	public static final int GRAPHIC_VALUE = 1;
 
 	/**
-	 * The '<em><b>SUP EQ ONE</b></em>' literal value.
+	 * The '<em><b>TO FILL IN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SUP_EQ_ONE
+	 * @see #TO_FILL_IN
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SUP_EQ_ONE_VALUE = 2;
+	public static final int TO_FILL_IN_VALUE = 2;
 
 	/**
-	 * The '<em><b>EQ NB FACTS</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #EQ_NB_FACTS
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int EQ_NB_FACTS_VALUE = 3;
-
-	/**
-	 * The '<em><b>SUP NB FACTS</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #SUP_NB_FACTS
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int SUP_NB_FACTS_VALUE = 3;
-
-	/**
-	 * An array of all the '<em><b>EBoundary</b></em>' enumerators.
+	 * An array of all the '<em><b>EStatement Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final EBoundary[] VALUES_ARRAY = new EBoundary[] { ONE, SUP_ONE, SUP_EQ_ONE, EQ_NB_FACTS,
-			SUP_NB_FACTS, };
+	private static final EStatementType[] VALUES_ARRAY = new EStatementType[] { CLASSIC, GRAPHIC, TO_FILL_IN, };
 
 	/**
-	 * A public read-only list of all the '<em><b>EBoundary</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>EStatement Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<EBoundary> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<EStatementType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>EBoundary</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>EStatement Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static EBoundary get(String literal) {
+	public static EStatementType get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			EBoundary result = VALUES_ARRAY[i];
+			EStatementType result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -157,16 +116,16 @@ public enum EBoundary implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>EBoundary</b></em>' literal with the specified name.
+	 * Returns the '<em><b>EStatement Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static EBoundary getByName(String name) {
+	public static EStatementType getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			EBoundary result = VALUES_ARRAY[i];
+			EStatementType result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -175,23 +134,21 @@ public enum EBoundary implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>EBoundary</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>EStatement Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static EBoundary get(int value) {
+	public static EStatementType get(int value) {
 		switch (value) {
-		case ONE_VALUE:
-			return ONE;
-		case SUP_ONE_VALUE:
-			return SUP_ONE;
-		case SUP_EQ_ONE_VALUE:
-			return SUP_EQ_ONE;
-		case EQ_NB_FACTS_VALUE:
-			return EQ_NB_FACTS;
+		case CLASSIC_VALUE:
+			return CLASSIC;
+		case GRAPHIC_VALUE:
+			return GRAPHIC;
+		case TO_FILL_IN_VALUE:
+			return TO_FILL_IN;
 		}
 		return null;
 	}
@@ -223,7 +180,7 @@ public enum EBoundary implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EBoundary(int value, String name, String literal) {
+	private EStatementType(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -267,4 +224,4 @@ public enum EBoundary implements Enumerator {
 		return literal;
 	}
 
-} //EBoundary
+} //EStatementType

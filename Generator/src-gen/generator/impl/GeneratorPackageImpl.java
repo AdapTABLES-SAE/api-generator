@@ -2,6 +2,108 @@
  */
 package generator.impl;
 
+import generator.AComponent;
+import generator.ATask;
+import generator.AValue;
+import generator.Abilities;
+import generator.Ability;
+import generator.AbstractFact;
+import generator.CompletionCriteria;
+import generator.CompletionTask;
+import generator.Component;
+import generator.Condition;
+import generator.Correctness;
+import generator.CorrectnessValue;
+import generator.CurrentGameLevel;
+import generator.CurrentObjectiveLevel;
+import generator.Directions;
+import generator.Display;
+import generator.Dungeon;
+import generator.DungeonMode;
+import generator.EBoundary;
+import generator.ECorrectness;
+import generator.EModality;
+import generator.ESeveralTarget;
+import generator.ESingleTarget;
+import generator.EStatementType;
+import generator.ETaskType;
+import generator.ElementSize;
+import generator.ElementType;
+import generator.ElementsTypes;
+import generator.EnterResponse;
+import generator.EntrySoluceParam;
+import generator.Equipment;
+import generator.Equipments;
+import generator.ExpectedAnswer;
+import generator.FactCorrectnessParam;
+import generator.FactSolutionParam;
+import generator.GPCategory;
+import generator.GameContext;
+import generator.GameDescription;
+import generator.GameElementTypes;
+import generator.Gameplay;
+import generator.GameplayTaskRelations;
+import generator.Gameplays;
+import generator.GenerationContext;
+import generator.GeneratorFactory;
+import generator.GeneratorPackage;
+import generator.IdentificationTask;
+import generator.Knowledge;
+import generator.LargeRoomType;
+import generator.LearnerPlayer;
+import generator.LearningDomain;
+import generator.LearningPath;
+import generator.Level;
+import generator.LevelsDifficultyProgress;
+import generator.MTCompletion1;
+import generator.MTCompletion2;
+import generator.MTFact;
+import generator.MTIdentification;
+import generator.MTLevel;
+import generator.MTMembership;
+import generator.MTQFCompletion1;
+import generator.MTQFCompletion2;
+import generator.MTQFIdentification;
+import generator.MTQFMembership;
+import generator.MTQFRebuild;
+import generator.MTRecontruction;
+import generator.MTResultFact;
+import generator.MembershipIDTask;
+import generator.MultipleChoice;
+import generator.NoQuestionGameplay;
+import generator.Objective;
+import generator.OrderingTask;
+import generator.Parameter;
+import generator.Position;
+import generator.PositionedElement;
+import generator.PositionedStructureElement;
+import generator.Prerequisite;
+import generator.Progression;
+import generator.Prompt;
+import generator.PropositionParam;
+import generator.Quantity;
+import generator.QuestionGameplay;
+import generator.QuestionParam;
+import generator.QuestionableFact;
+import generator.QuestionableFactResult;
+import generator.QuestionedFact;
+import generator.Relation;
+import generator.ResponseModality;
+import generator.ResultPosition;
+import generator.Results;
+import generator.ResultsByTask;
+import generator.Room;
+import generator.RoomAccess;
+import generator.RoomType;
+import generator.RoomTypes;
+import generator.SetOfFacts;
+import generator.Size;
+import generator.SmallRoomType;
+import generator.StatementElementType;
+import generator.Structure;
+import generator.TableBuild;
+import generator.Value;
+import generator.WantedAnswersParam;
 import generator.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -713,6 +815,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EEnum eBoundaryEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eStatementTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -3459,7 +3568,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCondition_NbFacts() {
+	public EAttribute getCondition_StatementTypes() {
 		return (EAttribute) conditionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3468,8 +3577,17 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCondition_NbExpectedAnswers() {
+	public EAttribute getCondition_NbFacts() {
 		return (EAttribute) conditionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCondition_NbExpectedAnswers() {
+		return (EAttribute) conditionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3668,6 +3786,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EEnum getEBoundary() {
 		return eBoundaryEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getEStatementType() {
+		return eStatementTypeEEnum;
 	}
 
 	/**
@@ -4078,9 +4205,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(relationEClass, RELATION__CONDITION);
 
 		conditionEClass = createEClass(CONDITION);
+		createEAttribute(conditionEClass, CONDITION__STATEMENT_TYPES);
 		createEAttribute(conditionEClass, CONDITION__NB_FACTS);
-		createEAttribute(conditionEClass, CONDITION__NB_EXPECTED_ANSWERS);
 		createEAttribute(conditionEClass, CONDITION__ANSWER_MODALITY);
+		createEAttribute(conditionEClass, CONDITION__NB_EXPECTED_ANSWERS);
 
 		questionGameplayEClass = createEClass(QUESTION_GAMEPLAY);
 		createEAttribute(questionGameplayEClass, QUESTION_GAMEPLAY__MANUAL_VALIDATION);
@@ -4108,6 +4236,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		gpCategoryEEnum = createEEnum(GP_CATEGORY);
 		eCorrectnessEEnum = createEEnum(ECORRECTNESS);
 		eBoundaryEEnum = createEEnum(EBOUNDARY);
+		eStatementTypeEEnum = createEEnum(ESTATEMENT_TYPE);
 	}
 
 	/**
@@ -4991,7 +5120,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRelation_Task(), this.getETaskType(), "task", null, 0, 1, Relation.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRelation_Gameplay(), this.getGPCategory(), "gameplay", null, 0, 1, Relation.class,
+		initEAttribute(getRelation_Gameplay(), this.getGPCategory(), "gameplay", null, 1, -1, Relation.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRelation_Condition(), this.getCondition(), null, "condition", null, 1, 1, Relation.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
@@ -4999,12 +5128,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCondition_NbFacts(), this.getEBoundary(), "nbFacts", null, 0, 1, Condition.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCondition_NbExpectedAnswers(), this.getEBoundary(), "nbExpectedAnswers", null, 0, 1,
+		initEAttribute(getCondition_StatementTypes(), this.getEStatementType(), "statementTypes", null, 1, -1,
 				Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCondition_NbFacts(), this.getEBoundary(), "nbFacts", null, 0, 1, Condition.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCondition_AnswerModality(), this.getEModality(), "answerModality", null, 0, 1,
+				Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCondition_NbExpectedAnswers(), this.getEBoundary(), "nbExpectedAnswers", null, 0, 1,
 				Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
@@ -5096,7 +5228,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(gpCategoryEEnum, GPCategory.DIRECT_RESPONSE);
 		addEEnumLiteral(gpCategoryEEnum, GPCategory.MOVE_UNIQUE);
 		addEEnumLiteral(gpCategoryEEnum, GPCategory.MOVE_MULTIPLE);
-		addEEnumLiteral(gpCategoryEEnum, GPCategory.ORIENT);
+		addEEnumLiteral(gpCategoryEEnum, GPCategory.ORIENT_UNIQUE);
+		addEEnumLiteral(gpCategoryEEnum, GPCategory.ORIENT_MULTIPLE);
 		addEEnumLiteral(gpCategoryEEnum, GPCategory.POSITION_UNIQUE);
 		addEEnumLiteral(gpCategoryEEnum, GPCategory.POSITION_MULTIPLE);
 
@@ -5110,6 +5243,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(eBoundaryEEnum, EBoundary.ONE);
 		addEEnumLiteral(eBoundaryEEnum, EBoundary.SUP_ONE);
 		addEEnumLiteral(eBoundaryEEnum, EBoundary.SUP_EQ_ONE);
+		addEEnumLiteral(eBoundaryEEnum, EBoundary.EQ_NB_FACTS);
+		addEEnumLiteral(eBoundaryEEnum, EBoundary.SUP_NB_FACTS);
+
+		initEEnum(eStatementTypeEEnum, EStatementType.class, "EStatementType");
+		addEEnumLiteral(eStatementTypeEEnum, EStatementType.CLASSIC);
+		addEEnumLiteral(eStatementTypeEEnum, EStatementType.GRAPHIC);
+		addEEnumLiteral(eStatementTypeEEnum, EStatementType.TO_FILL_IN);
 
 		// Create resource
 		createResource(eNS_URI);
