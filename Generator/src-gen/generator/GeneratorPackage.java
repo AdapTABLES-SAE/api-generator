@@ -5658,13 +5658,13 @@ public interface GeneratorPackage extends EPackage {
 	int RELATION__TASK = 0;
 
 	/**
-	 * The feature id for the '<em><b>Gameplay</b></em>' attribute list.
+	 * The feature id for the '<em><b>Gameplays</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION__GAMEPLAY = 1;
+	int RELATION__GAMEPLAYS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -9324,15 +9324,15 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getRelation_Task();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link generator.Relation#getGameplay <em>Gameplay</em>}'.
+	 * Returns the meta object for the attribute list '{@link generator.Relation#getGameplays <em>Gameplays</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Gameplay</em>'.
-	 * @see generator.Relation#getGameplay()
+	 * @return the meta object for the attribute list '<em>Gameplays</em>'.
+	 * @see generator.Relation#getGameplays()
 	 * @see #getRelation()
 	 * @generated
 	 */
-	EAttribute getRelation_Gameplay();
+	EAttribute getRelation_Gameplays();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link generator.Relation#getCondition <em>Condition</em>}'.
@@ -12169,12 +12169,12 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute RELATION__TASK = eINSTANCE.getRelation_Task();
 
 		/**
-		 * The meta object literal for the '<em><b>Gameplay</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Gameplays</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RELATION__GAMEPLAY = eINSTANCE.getRelation_Gameplay();
+		EAttribute RELATION__GAMEPLAYS = eINSTANCE.getRelation_Gameplays();
 
 		/**
 		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.

@@ -571,7 +571,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Relation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="task" eType="#//ETaskType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gameplay" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gameplays" lowerBound="1"
         upperBound="-1" eType="#//GPCategory"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
         eType="#//Condition" containment="true"/>

@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.RelationImpl#getTask <em>Task</em>}</li>
- *   <li>{@link generator.impl.RelationImpl#getGameplay <em>Gameplay</em>}</li>
+ *   <li>{@link generator.impl.RelationImpl#getGameplays <em>Gameplays</em>}</li>
  *   <li>{@link generator.impl.RelationImpl#getCondition <em>Condition</em>}</li>
  * </ul>
  *
@@ -57,14 +57,14 @@ public class RelationImpl extends MinimalEObjectImpl.Container implements Relati
 	protected ETaskType task = TASK_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getGameplay() <em>Gameplay</em>}' attribute list.
+	 * The cached value of the '{@link #getGameplays() <em>Gameplays</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGameplay()
+	 * @see #getGameplays()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GPCategory> gameplay;
+	protected EList<GPCategory> gameplays;
 
 	/**
 	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
@@ -121,12 +121,12 @@ public class RelationImpl extends MinimalEObjectImpl.Container implements Relati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GPCategory> getGameplay() {
-		if (gameplay == null) {
-			gameplay = new EDataTypeUniqueEList<GPCategory>(GPCategory.class, this,
-					GeneratorPackage.RELATION__GAMEPLAY);
+	public EList<GPCategory> getGameplays() {
+		if (gameplays == null) {
+			gameplays = new EDataTypeUniqueEList<GPCategory>(GPCategory.class, this,
+					GeneratorPackage.RELATION__GAMEPLAYS);
 		}
-		return gameplay;
+		return gameplays;
 	}
 
 	/**
@@ -203,8 +203,8 @@ public class RelationImpl extends MinimalEObjectImpl.Container implements Relati
 		switch (featureID) {
 		case GeneratorPackage.RELATION__TASK:
 			return getTask();
-		case GeneratorPackage.RELATION__GAMEPLAY:
-			return getGameplay();
+		case GeneratorPackage.RELATION__GAMEPLAYS:
+			return getGameplays();
 		case GeneratorPackage.RELATION__CONDITION:
 			return getCondition();
 		}
@@ -223,9 +223,9 @@ public class RelationImpl extends MinimalEObjectImpl.Container implements Relati
 		case GeneratorPackage.RELATION__TASK:
 			setTask((ETaskType) newValue);
 			return;
-		case GeneratorPackage.RELATION__GAMEPLAY:
-			getGameplay().clear();
-			getGameplay().addAll((Collection<? extends GPCategory>) newValue);
+		case GeneratorPackage.RELATION__GAMEPLAYS:
+			getGameplays().clear();
+			getGameplays().addAll((Collection<? extends GPCategory>) newValue);
 			return;
 		case GeneratorPackage.RELATION__CONDITION:
 			setCondition((Condition) newValue);
@@ -245,8 +245,8 @@ public class RelationImpl extends MinimalEObjectImpl.Container implements Relati
 		case GeneratorPackage.RELATION__TASK:
 			setTask(TASK_EDEFAULT);
 			return;
-		case GeneratorPackage.RELATION__GAMEPLAY:
-			getGameplay().clear();
+		case GeneratorPackage.RELATION__GAMEPLAYS:
+			getGameplays().clear();
 			return;
 		case GeneratorPackage.RELATION__CONDITION:
 			setCondition((Condition) null);
@@ -265,8 +265,8 @@ public class RelationImpl extends MinimalEObjectImpl.Container implements Relati
 		switch (featureID) {
 		case GeneratorPackage.RELATION__TASK:
 			return task != TASK_EDEFAULT;
-		case GeneratorPackage.RELATION__GAMEPLAY:
-			return gameplay != null && !gameplay.isEmpty();
+		case GeneratorPackage.RELATION__GAMEPLAYS:
+			return gameplays != null && !gameplays.isEmpty();
 		case GeneratorPackage.RELATION__CONDITION:
 			return condition != null;
 		}
@@ -286,8 +286,8 @@ public class RelationImpl extends MinimalEObjectImpl.Container implements Relati
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (task: ");
 		result.append(task);
-		result.append(", gameplay: ");
-		result.append(gameplay);
+		result.append(", gameplays: ");
+		result.append(gameplays);
 		result.append(')');
 		return result.toString();
 	}

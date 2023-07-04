@@ -2,108 +2,6 @@
  */
 package generator.impl;
 
-import generator.AComponent;
-import generator.ATask;
-import generator.AValue;
-import generator.Abilities;
-import generator.Ability;
-import generator.AbstractFact;
-import generator.CompletionCriteria;
-import generator.CompletionTask;
-import generator.Component;
-import generator.Condition;
-import generator.Correctness;
-import generator.CorrectnessValue;
-import generator.CurrentGameLevel;
-import generator.CurrentObjectiveLevel;
-import generator.Directions;
-import generator.Display;
-import generator.Dungeon;
-import generator.DungeonMode;
-import generator.EBoundary;
-import generator.ECorrectness;
-import generator.EModality;
-import generator.ESeveralTarget;
-import generator.ESingleTarget;
-import generator.EStatementType;
-import generator.ETaskType;
-import generator.ElementSize;
-import generator.ElementType;
-import generator.ElementsTypes;
-import generator.EnterResponse;
-import generator.EntrySoluceParam;
-import generator.Equipment;
-import generator.Equipments;
-import generator.ExpectedAnswer;
-import generator.FactCorrectnessParam;
-import generator.FactSolutionParam;
-import generator.GPCategory;
-import generator.GameContext;
-import generator.GameDescription;
-import generator.GameElementTypes;
-import generator.Gameplay;
-import generator.GameplayTaskRelations;
-import generator.Gameplays;
-import generator.GenerationContext;
-import generator.GeneratorFactory;
-import generator.GeneratorPackage;
-import generator.IdentificationTask;
-import generator.Knowledge;
-import generator.LargeRoomType;
-import generator.LearnerPlayer;
-import generator.LearningDomain;
-import generator.LearningPath;
-import generator.Level;
-import generator.LevelsDifficultyProgress;
-import generator.MTCompletion1;
-import generator.MTCompletion2;
-import generator.MTFact;
-import generator.MTIdentification;
-import generator.MTLevel;
-import generator.MTMembership;
-import generator.MTQFCompletion1;
-import generator.MTQFCompletion2;
-import generator.MTQFIdentification;
-import generator.MTQFMembership;
-import generator.MTQFRebuild;
-import generator.MTRecontruction;
-import generator.MTResultFact;
-import generator.MembershipIDTask;
-import generator.MultipleChoice;
-import generator.NoQuestionGameplay;
-import generator.Objective;
-import generator.OrderingTask;
-import generator.Parameter;
-import generator.Position;
-import generator.PositionedElement;
-import generator.PositionedStructureElement;
-import generator.Prerequisite;
-import generator.Progression;
-import generator.Prompt;
-import generator.PropositionParam;
-import generator.Quantity;
-import generator.QuestionGameplay;
-import generator.QuestionParam;
-import generator.QuestionableFact;
-import generator.QuestionableFactResult;
-import generator.QuestionedFact;
-import generator.Relation;
-import generator.ResponseModality;
-import generator.ResultPosition;
-import generator.Results;
-import generator.ResultsByTask;
-import generator.Room;
-import generator.RoomAccess;
-import generator.RoomType;
-import generator.RoomTypes;
-import generator.SetOfFacts;
-import generator.Size;
-import generator.SmallRoomType;
-import generator.StatementElementType;
-import generator.Structure;
-import generator.TableBuild;
-import generator.Value;
-import generator.WantedAnswersParam;
 import generator.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -3541,7 +3439,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRelation_Gameplay() {
+	public EAttribute getRelation_Gameplays() {
 		return (EAttribute) relationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -4201,7 +4099,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		relationEClass = createEClass(RELATION);
 		createEAttribute(relationEClass, RELATION__TASK);
-		createEAttribute(relationEClass, RELATION__GAMEPLAY);
+		createEAttribute(relationEClass, RELATION__GAMEPLAYS);
 		createEReference(relationEClass, RELATION__CONDITION);
 
 		conditionEClass = createEClass(CONDITION);
@@ -5120,7 +5018,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRelation_Task(), this.getETaskType(), "task", null, 0, 1, Relation.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRelation_Gameplay(), this.getGPCategory(), "gameplay", null, 1, -1, Relation.class,
+		initEAttribute(getRelation_Gameplays(), this.getGPCategory(), "gameplays", null, 1, -1, Relation.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRelation_Condition(), this.getCondition(), null, "condition", null, 1, 1, Relation.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,

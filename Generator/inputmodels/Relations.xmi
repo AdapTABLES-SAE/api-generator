@@ -4,8 +4,8 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:generator="http://www.example.org/generator">
   <relations>
-    <gameplay>DIRECT_RESPONSE</gameplay>
-    <gameplay>POSITION_MULTIPLE</gameplay>
+    <gameplays>DIRECT_RESPONSE</gameplays>
+    <gameplays>POSITION_MULTIPLE</gameplays>
     <condition
         answerModality="INPUT">
       <statementTypes>CLASSIC</statementTypes>
@@ -14,10 +14,10 @@
     </condition>
   </relations>
   <relations>
-    <gameplay>SELECT_UNIQUE</gameplay>
-    <gameplay>MOVE_UNIQUE</gameplay>
-    <gameplay>ORIENT_UNIQUE</gameplay>
-    <gameplay>POSITION_UNIQUE</gameplay>
+    <gameplays>SELECT_UNIQUE</gameplays>
+    <gameplays>MOVE_UNIQUE</gameplays>
+    <gameplays>ORIENT_UNIQUE</gameplays>
+    <gameplays>POSITION_UNIQUE</gameplays>
     <condition>
       <statementTypes>CLASSIC</statementTypes>
       <statementTypes>GRAPHIC</statementTypes>
@@ -25,9 +25,9 @@
     </condition>
   </relations>
   <relations>
-    <gameplay>SELECT_MULTIPLE</gameplay>
-    <gameplay>MOVE_MULTIPLE</gameplay>
-    <gameplay>ORIENT_MULTIPLE</gameplay>
+    <gameplays>SELECT_MULTIPLE</gameplays>
+    <gameplays>MOVE_MULTIPLE</gameplays>
+    <gameplays>ORIENT_MULTIPLE</gameplays>
     <condition
         nbExpectedAnswers="SUP_ONE">
       <statementTypes>CLASSIC</statementTypes>
@@ -36,7 +36,7 @@
     </condition>
   </relations>
   <relations>
-    <gameplay>POSITION_MULTIPLE</gameplay>
+    <gameplays>POSITION_MULTIPLE</gameplays>
     <condition
         nbFacts="SUP_ONE"
         answerModality="INPUT"
@@ -46,7 +46,7 @@
     </condition>
   </relations>
   <relations>
-    <gameplay>MOVE_MULTIPLE</gameplay>
+    <gameplays>MOVE_MULTIPLE</gameplays>
     <condition
         nbFacts="SUP_ONE"
         nbExpectedAnswers="EQ_NB_FACTS">
@@ -55,7 +55,7 @@
     </condition>
   </relations>
   <relations>
-    <gameplay>MOVE_MULTIPLE</gameplay>
+    <gameplays>MOVE_MULTIPLE</gameplays>
     <condition
         nbFacts="SUP_ONE"
         nbExpectedAnswers="SUP_NB_FACTS">
@@ -65,7 +65,7 @@
   </relations>
   <relations
       task="ORDER">
-    <gameplay>MOVE_MULTIPLE</gameplay>
+    <gameplays>MOVE_MULTIPLE</gameplays>
     <condition
         nbFacts="SUP_EQ_ONE"
         nbExpectedAnswers="EQ_NB_FACTS">
@@ -74,8 +74,8 @@
   </relations>
   <relations
       task="IDENTIFY">
-    <gameplay>DIRECT_RESPONSE</gameplay>
-    <gameplay>POSITION_UNIQUE</gameplay>
+    <gameplays>DIRECT_RESPONSE</gameplays>
+    <gameplays>POSITION_UNIQUE</gameplays>
     <condition
         answerModality="INPUT"
         nbExpectedAnswers="EQ_NB_FACTS">
@@ -84,10 +84,10 @@
   </relations>
   <relations
       task="IDENTIFY">
-    <gameplay>SELECT_UNIQUE</gameplay>
-    <gameplay>MOVE_UNIQUE</gameplay>
-    <gameplay>ORIENT_UNIQUE</gameplay>
-    <gameplay>POSITION_UNIQUE</gameplay>
+    <gameplays>SELECT_UNIQUE</gameplays>
+    <gameplays>MOVE_UNIQUE</gameplays>
+    <gameplays>ORIENT_UNIQUE</gameplays>
+    <gameplays>POSITION_UNIQUE</gameplays>
     <condition
         nbExpectedAnswers="EQ_NB_FACTS">
       <statementTypes>CLASSIC</statementTypes>
@@ -95,7 +95,7 @@
   </relations>
   <relations
       task="IDENTIFY">
-    <gameplay>DIRECT_RESPONSE</gameplay>
+    <gameplays>DIRECT_RESPONSE</gameplays>
     <condition
         nbFacts="SUP_ONE"
         answerModality="INPUT"
@@ -113,7 +113,7 @@
   </relations>
   <relations
       task="MEMBERSHIP">
-    <gameplay>POSITION_MULTIPLE</gameplay>
+    <gameplays>POSITION_MULTIPLE</gameplays>
     <condition
         nbFacts="SUP_EQ_ONE"
         answerModality="INPUT"
@@ -123,9 +123,9 @@
   </relations>
   <relations
       task="MEMBERSHIP">
-    <gameplay>SELECT_MULTIPLE</gameplay>
-    <gameplay>MOVE_MULTIPLE</gameplay>
-    <gameplay>ORIENT_MULTIPLE</gameplay>
+    <gameplays>SELECT_MULTIPLE</gameplays>
+    <gameplays>MOVE_MULTIPLE</gameplays>
+    <gameplays>ORIENT_MULTIPLE</gameplays>
     <condition
         nbFacts="SUP_EQ_ONE"
         nbExpectedAnswers="SUP_ONE">

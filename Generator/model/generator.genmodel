@@ -460,7 +460,7 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Relation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Relation/task"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Relation/gameplay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Relation/gameplays"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Relation/condition"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Condition">

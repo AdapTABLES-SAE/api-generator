@@ -78,22 +78,22 @@ public enum GPCategory implements Enumerator {
 	 */
 	ORIENT_UNIQUE(5, "ORIENT_UNIQUE", "ORIENT_UNIQUE"),
 	/**
-	* The '<em><b>ORIENT MULTIPLE</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>ORIENT MULTIPLE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #ORIENT_MULTIPLE_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #ORIENT_MULTIPLE_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	ORIENT_MULTIPLE(5, "ORIENT_MULTIPLE", "ORIENT_MULTIPLE"),
 	/**
-	* The '<em><b>POSITION UNIQUE</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>POSITION UNIQUE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #POSITION_UNIQUE_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #POSITION_UNIQUE_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	POSITION_UNIQUE(6, "POSITION_UNIQUE", "POSITION_UNIQUE"),
 
 	/**
