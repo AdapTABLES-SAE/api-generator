@@ -225,16 +225,19 @@ public class ConcreteGameplayGenerator {
 		return comp;
 	}
 	
+
 	private List<PositionedElement> buildMultipleChoicesElements(Component component, ElementType elementType, QuestionedFact fact, Position position, RoomType roomtype){
+		System.out.println("====================================================="+fact.getQuestionablefact().getID());
 		int correctnessToReach = Integer.valueOf(((Value) fact.getCorrectnessToReach().getValue()).getValue());
 		int numberOfObjectsToInstanciate = correctnessToReach;
 		boolean computesPositionEachTime = position == null;
+		int numberOfDisplayByType = getNumberOfChoicesWornBy((ElementType) elementType);
 		
 		int numberOfChoicePerElement = (int) Math.ceil((double) fact.getPropositions().size() / (double) numberOfObjectsToInstanciate);
 		/*if(numberOfChoicePerElement > getNumberOfChoicesWornBy((ElementType) elementType)) {
 			System.err.println("The number of choice is to high for this component");
 		}*/
-		while(numberOfChoicePerElement > getNumberOfChoicesWornBy((ElementType) elementType)) {
+		while(numberOfChoicePerElement > numberOfDisplayByType) {
 			numberOfObjectsToInstanciate++;
 			 numberOfChoicePerElement = (int) Math.ceil((double) fact.getPropositions().size() / (double) numberOfObjectsToInstanciate);
 		}
@@ -256,8 +259,9 @@ public class ConcreteGameplayGenerator {
 					propIndex = getIndexOfIncorrectAnswerNumber(fact, nbIndexFaux);
 					nbIndexFaux++;
 				}				
-				//System.out.println(propIndex);				
+				//System.err.println("Proposition "+((Value) fact.getPropositions().get(propIndex).getValue()).getValue());				
 				if(propIndex != -1 && propIndex < fact.getPropositions().size()) {
+					//System.out.println("instanciated");
 					Display proposition = new DisplayImpl();
 					Value propValue = new ValueImpl();
 					propValue.setValue(((Value) fact.getPropositions().get(propIndex).getValue()).getValue());
@@ -271,12 +275,14 @@ public class ConcreteGameplayGenerator {
 					proposition.setCorrectness(propCorrectness);
 					
 					propIndex++;
+					
 				}
 				instanciatedSolution++;
 			}
 			
 			elements.add(comp);
 		}
+		//System.out.println("=====================================================");
 		return elements;
 	}
 	

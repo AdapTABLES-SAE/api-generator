@@ -1,11 +1,15 @@
 package generators;
 
+import org.eclipse.emf.common.util.EList;
+
 import flattener.Main;
 import generator.Dungeon;
 import generator.LevelsDifficultyProgress;
+import generator.PropositionParam;
 import generator.QuestionedFact;
 import generator.Room;
 import generator.RoomAccess;
+import generator.Value;
 import generator.impl.CurrentGameLevelImpl;
 import generator.impl.ProgressionImpl;
 import managers.ModelsManager;
@@ -110,6 +114,14 @@ public class ALGAGenerator {
 		return generatedDungeon;
 	}
 	
+	private String propositionsToString(EList<PropositionParam> propositions) {
+		String s = "";
+		for (PropositionParam prop: propositions) {
+			s+= ((Value) prop.getValue()).getValue() + ",";
+		}
+		return s;
+	}
+	
 	private void printRoom(Room r) {
 		System.out.println("****");//
 		System.out.println(r.getRoomtype().getClass().getName() + " ("+r.getX()+","+r.getY()+")");
@@ -117,7 +129,8 @@ public class ALGAGenerator {
 		if(r.getQuestionedFacts() != null && !r.getQuestionedFacts().isEmpty()) {
 			String facts = "{";
 			for (QuestionedFact qef : r.getQuestionedFacts()) {
-				facts += qef.getQuestion().getValue() + (r.getQuestionedFacts().get(r.getQuestionedFacts().size()-1).equals(qef)? "}":", ");
+				facts += ((Value) qef.getQuestion().getValue()).getValue() + "[" + propositionsToString(qef.getPropositions()) + "]" + 
+						(r.getQuestionedFacts().get(r.getQuestionedFacts().size()-1).equals(qef)? "}":", ");
 			}
 			System.out.println("\t Facts : "+facts);
 		}

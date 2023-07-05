@@ -67,8 +67,8 @@ public class GameElementsGenerator {
 	
 	private Set<GPCategory> getValidCategoriesFromRelations(ATask task){
 		Set<GPCategory> allowedCategories = new HashSet<>(); 
-		System.out.println("TASK "+task.getType());
-		System.out.println("rels "+modelAccess.getRelationsModel().getRelations());
+		//System.out.println("TASK "+task.getType());
+		//System.out.println("rels "+modelAccess.getRelationsModel().getRelations());
 		
 		for (Relation relation : new ArrayList<>(modelAccess.getRelationsModel().getRelations())) {
 			if(relation.getTask().equals(task.getType())) {
@@ -85,9 +85,9 @@ public class GameElementsGenerator {
 					factCompatible = task.getNbFacts() >= 1;
 				}
 
-			System.out.println("Cond "+relation.getCondition().getNbExpectedAnswers().getLiteral());
-			System.out.println("Expected answers "+task.nbExpectedAnswers());
-			System.out.println("Nb Facts "+task.getNbFacts());
+			//System.out.println("Cond "+relation.getCondition().getNbExpectedAnswers().getLiteral());
+			//System.out.println("Expected answers "+task.nbExpectedAnswers());
+			//System.out.println("Nb Facts "+task.getNbFacts());
 				
 				boolean expectedAnswerCompatible;
 				if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.ONE)) {
@@ -108,12 +108,12 @@ public class GameElementsGenerator {
 				} else {
 					modalityCompatible = (task.getResponseModality() != null)? task.getResponseModality() instanceof EnterResponse: false;
 				}
-				System.err.println("\t factC "+factCompatible);
-				System.err.println("\t expectedC "+expectedAnswerCompatible);
-				System.err.println("\t modality "+modalityCompatible);
+				//System.err.println("\t factC "+factCompatible);
+				//System.err.println("\t expectedC "+expectedAnswerCompatible);
+				//System.err.println("\t modality "+modalityCompatible);
 				if(factCompatible && expectedAnswerCompatible && modalityCompatible) {
-					System.err.println("On ajoute");
-					allowedCategories.addAll(relation.getGameplay());
+					//System.err.println("On ajoute");
+					allowedCategories.addAll(relation.getGameplays());
 				}
 			}
 		}

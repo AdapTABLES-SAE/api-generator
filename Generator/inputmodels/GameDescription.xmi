@@ -1195,6 +1195,21 @@
       <prompt
           prompt="Oriente correctement l(es) element(s)"/>
     </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_POSITION_AVATAR"
+        category="POSITION_UNIQUE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DETECTOR_AVATAR"
+          wearChoices="true"/>
+      <prompt
+          prompt="Place-toi sur la bonne dalle"/>
+    </gameplays>
   </gameplays>
   <elements>
     <equipments/>
@@ -1357,6 +1372,11 @@
           ID="ELEMENT_TYPE_CHEST_DETECTOR"
           type="BigChest"
           ability="FOLLOWABLE_DETECTOR"/>
+      <elements
+          ID="ELEMENT_TYPE_AVATAR_DETECTOR"
+          type="AvatarDetector"
+          ability="DETECTOR_AVATAR"
+          nbDisplays="1"/>
     </elementTypes>
   </elements>
   <abilities>
@@ -1396,5 +1416,7 @@
         name="BREAKABLE"/>
     <abilities
         name="FOLLOWABLE_DETECTOR"/>
+    <abilities
+        name="DETECTOR_AVATAR"/>
   </abilities>
 </generator:GameDescription>

@@ -648,7 +648,7 @@
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="50" ID="TESTT2">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="7" nbBadChoices="4"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="8" nbBadChoices="5"/>
         </tasks>
       </levels>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
