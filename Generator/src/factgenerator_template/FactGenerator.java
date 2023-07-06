@@ -15,20 +15,6 @@ import structures.RoomElements;
 
 public class FactGenerator {
 	
-	/*public static void generateQuestionableFacts(DungeonElements dungeonElements) {
-		dungeonElements.instanciateQFbyTasks();
-		boolean wasGenerated = false;
-		for (ResultsByTask resBytask : dungeonElements.getLearnerResultsByTasks()) {
-			if(resBytask.getQuestionableFacts().isEmpty()) {
-				generateQuestionableFactsByTask(dungeonElements, resBytask);
-				wasGenerated = true;
-			}
-		}
-		if(wasGenerated) {
-			dungeonElements.saveLearnerModel();
-		}
-	}*/
-
 	public static void  generateQuestionableFactsByTask(DungeonElements dungeonElements, ResultsByTask resBytask) {  
 		FactGeneratorTemplate factGenerator; 
 		switch(resBytask.getTask().getType()) {
@@ -52,20 +38,14 @@ public class FactGenerator {
 			factGenerator = new MTFactGeneratorMEMB(dungeonElements);
 			break;
 		}
-		System.err.println("On appel le generateur");
 		Set<QuestionableFact> facts = factGenerator.generateQuestionableFacts(resBytask.getTask());
-		System.err.println("Facts "+facts);
 		resBytask.getQuestionableFacts().addAll(facts);
 	}
 	
 	public static void generateQuestionedFact(DungeonElements dungeonElements) throws Exception {
 		System.out.println("Generate Questioned Facts");
 		FactGeneratorTemplate factGenerator = null; 
-		//int roomOrder = 0;
-		//System.out.println("Number of rooms with tasks "+tasks.size());
 		for (RoomElements roomElements : dungeonElements.getRoomsElements()) {
-			//ResultsByTask aTask = roomElements.getCorrespondingResultByTask(dungeonElements.getCurrentObjectiveLevel());
-			//System.out.println(aTask.getTask().getID()+" __");
 			switch(roomElements.getTask().getType()) {
 			case COMPLETE: 
 				switch (((CompletionTask) roomElements.getTask()).getNbMissingElements()) {
@@ -88,7 +68,6 @@ public class FactGenerator {
 				break;
 			}	
 			if(factGenerator != null) factGenerator.generateQuestionedFact(roomElements);
-			//roomOrder++;
 		}
 		
 		dungeonElements.shuffleRoomsOrder();

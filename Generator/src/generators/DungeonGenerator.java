@@ -42,7 +42,6 @@ public class DungeonGenerator {
 	
 	private GridManager gridManager;
 	private DungeonElements dungeonElements;
-	//private GameElementsManager geManager;
 	
 	private double nbRooms;
 	
@@ -58,7 +57,6 @@ public class DungeonGenerator {
 		generatedDungeon.setLearningobjective(dungeonElements.getChosenObjective());
 		generatedDungeon.setLevel(dungeonElements.getChosenLevel());
 		generatedDungeon.setMode(dungeonElements.getDungeonMode());
-		//this.geManager = geManager;
 		this.dungeonElements = dungeonElements;
 		this.nbRooms = nbRooms;
 	}
@@ -87,7 +85,6 @@ public class DungeonGenerator {
 		Room originRoom = createEntryRoomLabyrinthine();
 		dungeonRooms.add(new LabyrinthineRoom(originRoom));
 		
-		//List<TaskFactPair> factsToQuestion = eeManager.getFactsToQuestion();
 		while(dungeonRooms.size() < (nbRooms + 1)) {
 			
 			LabyrinthineRoom randomStartingRoom = chooseEntryRoomForNewPathIn(dungeonRooms);
@@ -98,17 +95,10 @@ public class DungeonGenerator {
 				createNewPath(randomStartingRoom, originRoom);
 			}
 		}	
-		dungeonRooms.add(createAnExit(dungeonRooms));
-		
-		
-		for (RoomElements room: dungeonElements.getRoomsElements()) {
-			System.out.println("nbRooms "+room.getRoom());
-		}
-		
+		dungeonRooms.add(createAnExit(dungeonRooms));		
 		for (LabyrinthineRoom aEntry : dungeonRooms) {
 			generatedDungeon.getRooms().add(aEntry.getRoom());
-		}
-	
+		}	
 		generatedDungeon.setEntry(originRoom);
 	}
 	
@@ -116,7 +106,6 @@ public class DungeonGenerator {
 		List<LabyrinthineRoom> dungeonRoomTemps = new ArrayList<>(dungeonRooms);
 		LabyrinthineRoom exit = null;
 		while (exit == null) {
-			System.out.println(dungeonRoomTemps);
 			LabyrinthineRoom furthest = findFurthestFromEntryRoomEuclidianDistanceWith(dungeonRoomTemps);
 			exit = createNewRoomFrom(furthest, dungeonElements.getElementsOfRoom(dungeonRooms.size()), true);
 			dungeonRoomTemps.remove(furthest);
@@ -425,7 +414,6 @@ public class DungeonGenerator {
 		Map<ElementSize, Map<Ability, Integer>> numberOfElementsPerSize = new HashMap<>();
 		for (ElementType gpElem : roomElements.getElementsToQuantity().keySet()) {
 			int quantity = roomElements.getElementsToQuantity().get(gpElem);
-			//if(quantity != -1) {
 			Ability ability = ((ElementType) gpElem).getAbility();
 				
 			if(numberOfElementsPerSize.containsKey(gpElem.getSize())) {
@@ -437,9 +425,7 @@ public class DungeonGenerator {
 			} else {
 				numberOfElementsPerSize.put(gpElem.getSize(), new HashMap<>()); 
 				numberOfElementsPerSize.get(gpElem.getSize()).put(ability, quantity);
-			}
-				
-			//} 
+			}				
 		}
 		return numberOfElementsPerSize;
 	}
@@ -482,14 +468,11 @@ public class DungeonGenerator {
 		
 
 		if(roomElements != null) {
-			//System.out.println("Intanciation of room "+r);
 			r.getQuestionedFacts().addAll(roomElements.getFacts());
 			r.setTask(roomElements.getTask());
 			r.setGameplay(roomElements.getGameplay());
 			roomElements.setRoom(r);
-		}/*else {
-			System.err.print("RoomElem null ");
-		}*/
+		}
 				
 		RoomAccess ra = new RoomAccessImpl();
 		if(entryDirection != null) {

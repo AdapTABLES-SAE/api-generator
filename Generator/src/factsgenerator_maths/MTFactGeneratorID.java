@@ -95,20 +95,16 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		
 		int min, max, chosenFalse = -1;
-		//int solution = -1;
 		if(target.equals(ESingleTarget.RESULT)) { 
 			min = goodFact.getResult() - buildFalseInteraval[0] >= 0? goodFact.getResult() - buildFalseInteraval[0]: 0;
 			max = goodFact.getResult() + buildFalseInteraval[1];
-			//solution = goodFact.getResult();
 		}else {
 			if(goodFact.getBuild().equals(TableBuild.OPERAND_TABLE)) {
 				min = goodFact.getLeftOperand() - buildFalseInteraval[0] >= 0? goodFact.getLeftOperand() - buildFalseInteraval[0]: 0;
 				max = goodFact.getLeftOperand() + buildFalseInteraval[1];
-				//solution = goodFact.getLeftOperand();
 			}else {
 				min = goodFact.getRightOperand() - buildFalseInteraval[0] >= 0? goodFact.getRightOperand() - buildFalseInteraval[0]: 0;
 				max = goodFact.getRightOperand() + buildFalseInteraval[1];
-				//solution = goodFact.getRightOperand();
 			}
 			
 		}
@@ -173,9 +169,7 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 	protected Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact) {
 		Map<ECorrectness, List<String>> propositions = new HashMap<>();
 		List<String> propositions_temp = new ArrayList<>();
-		if(!((MTQFIdentification) qFact).isSoluce()) {
-			//propositions_temp.add(qFact.toString());
-			
+		if(!((MTQFIdentification) qFact).isSoluce()) {		
 			propositions_temp.add("Vrai");
 		} else {
 			propositions_temp.add("Faux");

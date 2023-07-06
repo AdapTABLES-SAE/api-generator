@@ -39,18 +39,6 @@ public class ModelsManager {
 	private LearningDomain learningPath;
 	private GameplayTaskRelations relations;
 	
-	
-/*	public ModelsManager(String inputModelsPath, String contextFileName, String gameDescriptionFileName, String knowledgeFileName, String learningDomainFileName, String relationsFileName) {
-		resourceSet = new ResourceSetImpl();
-		INPUT_MODELS_PATH = inputModelsPath;
-		INPUT_MODELS_NAMES[0] = contextFileName;
-		INPUT_MODELS_NAMES[1] = gameDescriptionFileName;
-		INPUT_MODELS_NAMES[2] = knowledgeFileName;
-		INPUT_MODELS_NAMES[3] = learningDomainFileName; 
-		INPUT_MODELS_NAMES[4] = relationsFileName;
-		loadInputModels();
-	}*/
-	
 	public ModelsManager(boolean isForTest, String contextFileName) {
 		resourceSet = new ResourceSetImpl();
 		if(isForTest) { INPUT_MODELS_PATH = INPUT_MODELS_PATH_TEST;	}
@@ -100,11 +88,7 @@ public class ModelsManager {
 		
 		String filePathComplement = lauchedFromAPI? "file:///": "";
 		
-		System.out.println(URI.createURI(filePathComplement + OUTPUT_MODELS_PATH + outFileName));
-		System.out.println(OUTPUT_MODELS_PATH + outFileName);
-		
 		Resource resource = resourceSet.createResource(URI.createURI(filePathComplement + OUTPUT_MODELS_PATH + outFileName));
-		System.out.println(resource);
 		resource.getContents().add(generatedDungeon);
 		try {
 			resource.save(map);
@@ -123,13 +107,8 @@ public class ModelsManager {
 		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
-		//map.put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
-		//map.put(XMLResource.OPTION_ENCODING, "UTF-8");
-		//String filePathComplement = lauchedFromAPI? "file:///": "";
-		//Resource resource = resourceSet.createResource(URI.createURI(filePathComplement + INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]));
 		File domainModel = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]);
 		
-		//String filePathComplement = lauchedFromAPI? "file:///": "";
 		Resource resource = resourceSet.createResource(URI.createFileURI(domainModel.getAbsolutePath()));
 		resource.getContents().add(learningPaths);
 		try {
@@ -189,18 +168,12 @@ public class ModelsManager {
 		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
-		//map.put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
-		//map.put(XMLResource.OPTION_LINE_WIDTH, 80);
-		//map.put(XMLResource.OPTION_URI_HANDLER, new URIHandlerImpl.PlatformSchemeAware());
-		//map.put(XMLResource.OPTION_ENCODING, "UTF-8");
 		System.out.println(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
 		
 		File contexte = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
 		
-		//String filePathComplement = lauchedFromAPI? "file:///": "";
 		Resource resource = resourceSet.createResource(URI.createFileURI(contexte.getAbsolutePath()));
 		resource.getContents().add(context);
-		System.out.println("facts : "+context.getLearnerplayer().getProgression().getCurrentobjectivelevels().get(0).getResults().getResultsbytask().get(0).getQuestionableFacts());
 		
 		try {
 			resource.save(map);
@@ -223,8 +196,6 @@ public class ModelsManager {
 		File multiplicationTables = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[2]);
 		File learningPaths = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]);
 		File relations = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[4]);
-
-		
 		
 		Resource resource1 = resourceSet.createResource(URI.createFileURI(contexte.getAbsolutePath()));
 		Resource resource2 = resourceSet.createResource(URI.createFileURI(gamedescription.getAbsolutePath()));
@@ -248,9 +219,6 @@ public class ModelsManager {
 		this.multiplicationTables = (Knowledge) resource3.getContents().get(0);
 		this.learningPath = (LearningDomain) resource4.getContents().get(0);
 		this.relations = (GameplayTaskRelations) resource5.getContents().get(0);
-		
-		System.out.println("Learner Paht "+context.getLearnerplayer().getLearningpath());
-		System.out.println("Learner Paht "+context.getLearnerplayer().getLearningpath().getID());
 		
 		LOGGER.info("Loading input models : OK");
 	}

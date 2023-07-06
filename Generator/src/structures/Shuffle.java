@@ -9,10 +9,7 @@ import generator.QuestionableFact;
 import generator.ResultsByTask;
 
 public class Shuffle {
-	
 
-	
-	
 	public static List<Integer> shufflePropositions(List<Integer> eList){
 		Random rand = new Random();
 		List<Integer> shuffledElem = new ArrayList<>();
@@ -37,19 +34,6 @@ public class Shuffle {
 			eList.remove(j);
 		}
 		return shuffledElem;
-	}
-	
-	public static List<TaskFactPair> shuffleRoomFacts(List<TaskFactPair> tasks){
-		Random rand = new Random();
-		List<TaskFactPair> factsShuffled = new ArrayList<>();
-		int number = tasks.size();
-		int j;
-		while (factsShuffled.size() != number) {
-			j = rand.nextInt(tasks.size()); 
-			factsShuffled.add(tasks.get(j));
-			tasks.remove(j);
-		}
-		return factsShuffled;
 	}
 	
 	public static List<RoomElements> shuffleRoomElements(List<RoomElements> roomsElements){

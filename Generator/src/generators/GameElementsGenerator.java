@@ -28,19 +28,13 @@ public class GameElementsGenerator {
 	private DungeonElements dungeonElements;
 	private ModelsManager modelAccess; 
 	
-	//private GameElementsManager gameElementManager;
-	//private ConcreteGameplayGenerator gameplayGenerator;
-	
 	public GameElementsGenerator(ModelsManager modelAccess,  DungeonElements dungeonElements) {
 		this.dungeonElements = dungeonElements;
 		this.modelAccess = modelAccess;
-		//this.gameElementManager = new GameElementsManager();
-		//this.gameplayGenerator = new ConcreteGameplayGenerator(modelAccess);
 		random = new Random();
 	}
 	
 	public void generateGPandCurses() {
-		//selectCorrespondingGameplays();
 		setDungeonMode();
 		selectCompatibleGameplays();
 	}
@@ -51,7 +45,7 @@ public class GameElementsGenerator {
 	
 	public Dungeon generateRoomContent(Dungeon generatedDungeon) {
 		ConcreteGameplayGenerator gameplayGenerator = new ConcreteGameplayGenerator(modelAccess);
-		System.out.println(generatedDungeon.getRooms().size()+ " " + dungeonElements.getRoomsElements().size());
+		//System.out.println(generatedDungeon.getRooms().size()+ " " + dungeonElements.getRoomsElements().size());
 		for (Room room: generatedDungeon.getRooms()) {
 			if(room.getGameplay() != null) {
 				room.getPositionedElement().addAll(gameplayGenerator.buildPositionedElements(this.getCorrespondingRoomElements(room)));
@@ -72,15 +66,9 @@ public class GameElementsGenerator {
 	
 	private Set<GPCategory> getValidCategoriesFromRelations(ATask task){
 		Set<GPCategory> allowedCategories = new HashSet<>(); 
-		//System.out.println("TASK "+task.getType());
-		//System.out.println("rels "+modelAccess.getRelationsModel().getRelations());
 		
 		for (Relation relation : new ArrayList<>(modelAccess.getRelationsModel().getRelations())) {
 			if(relation.getTask().equals(task.getType())) {
-				//System.out.println("REL task "+ relation.getTask());
-				//System.out.println(relation.getCondition().getAnswerModality()+" "+task.getResponseModality());
-				//System.out.println(relation.getCondition().getNbFacts()+" "+task.getNbFacts());
-				//System.out.println(relation.getCondition().getNbExpectedAnswers()+" "+task.nbExpectedAnswers());
 				boolean factCompatible;
 				if(relation.getCondition().getNbFacts().equals(EBoundary.ONE)) {
 					factCompatible = task.getNbFacts() == 1;
@@ -90,10 +78,6 @@ public class GameElementsGenerator {
 					factCompatible = task.getNbFacts() >= 1;
 				}
 
-			//System.out.println("Cond "+relation.getCondition().getNbExpectedAnswers().getLiteral());
-			//System.out.println("Expected answers "+task.nbExpectedAnswers());
-			//System.out.println("Nb Facts "+task.getNbFacts());
-				
 				boolean expectedAnswerCompatible;
 				if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.ONE)) {
 					expectedAnswerCompatible = task.nbExpectedAnswers() == 1;
@@ -113,11 +97,8 @@ public class GameElementsGenerator {
 				} else {
 					modalityCompatible = (task.getResponseModality() != null)? task.getResponseModality() instanceof EnterResponse: false;
 				}
-				//System.err.println("\t factC "+factCompatible);
-				//System.err.println("\t expectedC "+expectedAnswerCompatible);
-				//System.err.println("\t modality "+modalityCompatible);
+
 				if(factCompatible && expectedAnswerCompatible && modalityCompatible) {
-					//System.err.println("On ajoute");
 					allowedCategories.addAll(relation.getGameplays());
 				}
 			}
@@ -126,26 +107,6 @@ public class GameElementsGenerator {
 		return allowedCategories; 
 	}
 	
-	/*private void selectCompatibleGameplays() {
-		List<Gameplay> gameplays = new ArrayList<>();
-		for (TaskFactPair tfp: dungeonElements.getFactsToQuestion()) {
-			if(tfp != null) {
-				List<GPCategory> validCategories = new ArrayList<>(getValidCategoriesFromRelations(tfp.getTask()));
-			
-				do {
-					GPCategory aCategorie = validCategories.get(random.nextInt(validCategories.size()));
-					gameplays = getGameplayOfCategorieAndType(aCategorie, tfp.getTask());
-					validCategories.remove(aCategorie);
-				} while(gameplays.isEmpty());
-				Gameplay gp = gameplays.get(random.nextInt(gameplays.size()));
-				//	System.out.println("Chosen gp "+gp.getName()+" "+gp.getCategory());
-				gameElementManager.add(gp, tfp);	
-			} else {
-				gameElementManager.add(null, tfp);
-			}
-		}
-	}*/
-	
 	private void selectCompatibleGameplays() {
 		System.out.println("Gameplays selection");
 		List<Gameplay> gameplays = new ArrayList<>();
@@ -153,7 +114,6 @@ public class GameElementsGenerator {
 			if(room.getTask() != null) {
 				List<GPCategory> validCategories = new ArrayList<>(getValidCategoriesFromRelations(room.getTask()));
 				do {
-					//System.out.println("In do while");
 					GPCategory aCategorie = validCategories.get(random.nextInt(validCategories.size()));
 					gameplays = getQuestionGameplayForCategorieType(aCategorie, room.getTask());
 					validCategories.remove(aCategorie);
@@ -161,7 +121,6 @@ public class GameElementsGenerator {
 				
 				Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
 				room.setGameplay(gameplay);
-				//System.err.println(room.getGameplay());
 			} else if(!room.isExit() && !room.isEntry()) {
 				gameplays = getNoQuestionRoomGameplay();
 				Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
@@ -172,55 +131,6 @@ public class GameElementsGenerator {
 		}
 	}
 
-	
-/*	private void selectCorrespondingGameplays() {
-		List<Gameplay> gameplays = new ArrayList<>();
-		for (TaskFactPair tfp: dungeonElements.getFactsToQuestion()) {
-			if(tfp != null) {
-				// normalement on devrait se baser sur le mod�le de relations pour choisir
-				List<GPCategory> chosenCategories = getValidCategories(tfp.getTask());
-				//System.err.println(chosenCategories);
-				do {
-				GPCategory aCategorie = chosenCategories.get(random.nextInt(chosenCategories.size()));
-				gameplays = getGameplayOfCategorieAndType(aCategorie, tfp.getTask());
-				//System.err.println("Random : "+aCategorie);
-				//System.err.println("GPs : "+gameplays);
-				chosenCategories.remove(aCategorie);
-				} while(gameplays.isEmpty());
-
-				//System.out.println(gameplays);
-				Gameplay gp = gameplays.get(random.nextInt(gameplays.size()));
-			//	System.out.println("Chosen gp "+gp.getName()+" "+gp.getCategory());
-				gameElementManager.add(gp, tfp);	
-			} else {
-				gameElementManager.add(null, tfp);
-			}
-		}
-	}
-	
-	private List<GPCategory> getValidCategories(ATask task) {
-		// TODO : based on relation MM
-		//System.err.println(task.getID());
-		List<GPCategory> categories = new ArrayList<>();
-		if(task.getResponseModality() instanceof EnterResponse) {
-			categories.add(GPCategory.DIRECT_RESPONSE);
-			//return new ArrayList<GPCategory>(GPCategory.DIRECT_RESPONSE);
-		} else 
-		if(task.getNbFacts() > 1 || (task instanceof CompletionTask && ((CompletionTask) task).getNbMissingElements() > 1) || task instanceof MembershipIDTask) {
-			categories.add(GPCategory.SELECT_MULTIPLE);
-			if(!(task instanceof IdentificationTask)) { categories.add(GPCategory.MOVE_MULTIPLE);}
-			
-		} else {
-			//if((task instanceof CompletionTask && ((CompletionTask) task).getNbMissingElements() < 2)) categories.add(GPCategory.SELECT_UNIQUE);
-			//categories.add(GPCategory.MOVE_UNIQUE);
-			categories.add(GPCategory.ORIENT);
-		}
-		
-		
-		return categories; //.get(random.nextInt(gpc.size()));
-		
-	}*/
-	
 	private List<Gameplay> getNoQuestionRoomGameplay(){
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
 		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
@@ -234,32 +144,16 @@ public class GameElementsGenerator {
 	private List<Gameplay> getQuestionGameplayForCategorieType(GPCategory category, ATask task){
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
 		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
-		/*	if(gp.getCategory().equals(GPCategory.ORIENT_UNIQUE)) {
-				System.out.println(task.getID()+" "+task.validationOnLearnerAction()+ " "+ task.getType());
-				System.out.println("\t"+gp.getCategory()+" "+gp.isHasIntegratedPropositions() + " " +gp.getRestrictedTo());
-				System.out.println("\t cat"+gp.getCategory().equals(category));
-				System.out.println("\t"+respectValidationMethod(gp, task));
-				System.out.println("\t"+respectGameplayTaskTypeRestriction(gp, task));
-			}*/
 			if(gp instanceof QuestionGameplay) {
 				if(((QuestionGameplay) gp).getCategory().equals(category) && respectValidationMethod((QuestionGameplay) gp, task) && respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task)) {
 					compatibleGameplays.add(gp);
 				}
 			}
-
-			/* else {
-				System.out.println("NOT ADDED");
-			}*/
-			//System.out.println("finished");
 		}
 		return compatibleGameplays;
 	}
 	
 	private boolean respectValidationMethod(QuestionGameplay gameplay, ATask task) {
-		//System.err.println(task.validationOnLearnerAction()+" "+gameplay.isManualValidation());
-		/*if(task.validationOnLearnerAction()) {
-			return true;
-		}*/
 		return (task.isCheckOnLearnerAction() == gameplay.isManualValidation()) || (!task.isCheckOnLearnerAction() && gameplay.isManualValidation());
 	}
 	

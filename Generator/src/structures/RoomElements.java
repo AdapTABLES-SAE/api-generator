@@ -172,10 +172,8 @@ public class RoomElements {
 	private double computesNumberofElements(Component component, ElementType elementType) {  
 		if(component.isWearChoices()) {
 			if(elementType.getNbDisplays() > 1) {
-				//System.err.println("Memb? "+this.task.getClass().getName()+" "+this.task.getNbFacts()+" prop: "+this.facts.get(0).getPropositions().size());
 				int factCorrectnessToReach = Integer.valueOf(((Value) facts.get(0).getCorrectnessToReach().getValue()).getValue());
 				double numberofToDisplayPerElement = (double) (facts.get(0).getPropositions().size() * facts.size()) / (double) elementType.getNbDisplays();
-				//System.err.println("Nb statue requiered: "+(numberofToDisplayPerElement > factCorrectnessToReach? numberofToDisplayPerElement: factCorrectnessToReach));
 				return numberofToDisplayPerElement > factCorrectnessToReach? numberofToDisplayPerElement: factCorrectnessToReach; 
 			} else {
 				return facts.size() * facts.get(0).getPropositions().size();

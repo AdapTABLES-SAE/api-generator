@@ -57,7 +57,6 @@ public class EducationalElementsGenerator {
 		System.out.println("Faits questionnés générés ");
 		//System.out.println(" DEBUG FACT QUESTIONED *********************");
 		//eeManager.printFactsToQuestion();
-		//createDungeonQAndNQRoomOrder();
 		dungeonElements.buildNumberOfNonQuestionRooms();
 		return dungeonElements;
 	}
@@ -143,7 +142,6 @@ public class EducationalElementsGenerator {
 	}
 	
 	private void addRoom2Task(ResultsByTask rbt, double coeffAdditional) throws Exception {
-		//System.out.println(dungeonElements.getNbQRooms());
 		if(nbRoomsToTask.containsKey(rbt)) {
 			nbRoomsToTask.put(rbt, (double) Math.round(nbRoomsToTask.get(rbt) +
 					((rbt.getTask().getPercentOfApparition()*coeffAdditional)*dungeonElements.getNbQRooms())/100));
@@ -223,9 +221,7 @@ public class EducationalElementsGenerator {
 	
 	private void selectObjectiveLevel() {
 		List<CurrentObjectiveLevel> allowed = eligibleObjectiveLevels(); 
-		System.out.println(allowed);
 		dungeonElements.setCurrentObjectiveLevel(allowed.get(random.nextInt(allowed.size())));
-		System.out.println(dungeonElements.getChosenLevel().getID());
 	}
 	
 	private List<CurrentObjectiveLevel> eligibleObjectiveLevels(){
@@ -359,7 +355,6 @@ public class EducationalElementsGenerator {
 	private List<Objective> getEligibleObjectives() {
 		List<Objective> eligibleObjective = new ArrayList<>();
 		boolean allPrerequisiteAchied;
-		System.out.println("Paths Objectives "+learnerPlayer.getLearningpath().getObjectives());
 		for (Objective obj : learnerPlayer.getLearningpath().getObjectives()) {
 			if(!isObjectiveAchieved(obj)) {
 				allPrerequisiteAchied = true;
@@ -369,7 +364,6 @@ public class EducationalElementsGenerator {
 				if(allPrerequisiteAchied) { eligibleObjective.add(obj); }
 			}
 		}
-		System.out.println("Objectives "+eligibleObjective);
 		return eligibleObjective;
 	}
 	
@@ -379,13 +373,11 @@ public class EducationalElementsGenerator {
 	}
 	
 	private void buildTaskRoomElements() {
-		//System.err.println("Room2TASK "+nbRoomsToTask);
 		for (ResultsByTask resultsByTask : nbRoomsToTask.keySet()) {
 			for (int i = 0; i < nbRoomsToTask.get(resultsByTask); i++) {
 				this.dungeonElements.addRoomsElements(new RoomElements(this.modelAccess.getGameDescriptionModel(), resultsByTask.getTask()));
 			}
 		}
-		System.err.println("Should be equal "+dungeonElements.getNbQRooms()+" "+dungeonElements.getRoomsElements().size());
 	}
 	
 	public double getNbRoomFor(ResultsByTask rbt) {

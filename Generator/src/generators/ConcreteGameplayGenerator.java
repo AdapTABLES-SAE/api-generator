@@ -56,10 +56,8 @@ public class ConcreteGameplayGenerator {
 	 * @return list of PositionedElements of the room
 	 */
 	public List<PositionedElement> buildPositionedElements(RoomElements roomElements){
-		System.err.println("Build Elements");
 		List<PositionedElement> elements = new ArrayList<>();
 		for (AComponent aComp : roomElements.getGameplay().getComponents()) {
-			//System.out.println(roomElements);
 			if(aComp instanceof Structure) {
 				elements.addAll(buildStructuredGameplay(aComp, roomElements));
 			} else {
@@ -73,7 +71,6 @@ public class ConcreteGameplayGenerator {
 			}
 		}
 		occupiedPositions = new ArrayList<>();
-		System.out.println("les elemens "+elements);
 		return elements;
 	}	
 	
@@ -560,7 +557,7 @@ public class ConcreteGameplayGenerator {
 		return elementType.getSize() == Position.getSize();
 	}
 	
-	private Position getAvailablePosition(RoomType roomType, ElementType elementType) { // TODO : corriger quand plusieurs structures la positions est la m�me 
+	private Position getAvailablePosition(RoomType roomType, ElementType elementType) { 
 		List<Position> allowed = new ArrayList<>();
 
 		for (Position position : roomType.getElementPositions()) {
@@ -572,7 +569,7 @@ public class ConcreteGameplayGenerator {
 			}
 		}
 		
-		if(allowed.isEmpty()) { /*System.out.println("EMPTY pos");*/ return null; }
+		if(allowed.isEmpty()) { return null; }
 		int number = new Random().nextInt(allowed.size());
 		occupiedPositions.add(allowed.get(number));
 		return allowed.get(number);

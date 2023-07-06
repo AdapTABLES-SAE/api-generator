@@ -10,7 +10,7 @@ import generator.RoomAccess;
  * 
  * The dungeon entries are build using the room and its exits, for example: <code> new LinearRoom(new RoomImpl(), Directions.SOUTH) </code>
  * Other rooms are build, for example: <code> new LinearRoom(new RoomImpl(), Directions.NORTH, Directions.SOUTH) </code>
- * @author Bérénice LEMOINE
+ * @author Bï¿½rï¿½nice LEMOINE
  *
  */
 public class LinearRoom {
@@ -50,8 +50,4 @@ public class LinearRoom {
 		}
 		return null;
 	}
-	
-	/*public RoomAccess getLastRoomAccess() {
-		return room.getRoomaccess().get(room.getRoomaccess().size() - 1);
-	}*/
 }
