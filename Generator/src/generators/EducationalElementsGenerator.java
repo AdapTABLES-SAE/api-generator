@@ -2,9 +2,11 @@ package generators;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Set;
 
 import factgenerator_template.FactGenerator;
 import generator.ATask;
@@ -22,8 +24,8 @@ import structures.DungeonElements;
 import structures.RoomElements;
 
 /**
- * Cette classe permet de générer / choisir, l'objectif d'entrainement visée ainsi que le niveau de difficulté. 
- * @author Bérénice LEMOINE
+ * Cette classe permet de gï¿½nï¿½rer / choisir, l'objectif d'entrainement visï¿½e ainsi que le niveau de difficultï¿½. 
+ * @author Bï¿½rï¿½nice LEMOINE
  */
 public class EducationalElementsGenerator {
 	
@@ -48,11 +50,11 @@ public class EducationalElementsGenerator {
 		selectObjectiveLevel();	
 		System.out.println("Selected Objective/Level "+dungeonElements.getChosenObjective().getID()+" "+dungeonElements.getChosenLevel().getID());
 		generateQuestionnableFacts();
-		System.out.println("Faits questionnables générés ");
+		System.out.println("Faits questionnables gÃ©nÃ©rÃ©s");
 		defineNumberOfRoomPerTaskNecessary();
 		System.out.println("Room per task defini");
 		generateFactsToQuestion();
-		System.out.println("Faits questionnés générés ");
+		System.out.println("Faits questionnÃ©s gÃ©nÃ©rÃ©s ");
 		//System.out.println(" DEBUG FACT QUESTIONED *********************");
 		//eeManager.printFactsToQuestion();
 		//createDungeonQAndNQRoomOrder();
@@ -61,7 +63,7 @@ public class EducationalElementsGenerator {
 	}
 	
 	/**
-	 * Génère les faits questionnable
+	 * Gï¿½nï¿½re les faits questionnable
 	 */
 	private void generateQuestionnableFacts() {
 		instanciateQFbyTasks();
@@ -124,7 +126,7 @@ public class EducationalElementsGenerator {
 	}
 	
 	/**
-	 * Défini le nombre de salle du donjon pour chaque tâche
+	 * Dï¿½fini le nombre de salle du donjon pour chaque tï¿½che
 	 * @throws Exception 
 	 */
 	private void defineNumberOfRoomPerTaskNecessary() throws Exception {
@@ -136,15 +138,50 @@ public class EducationalElementsGenerator {
 				}
 			}
 		}
+		
+		this.cleanNumberOfComputedRooms();
 	}
 	
 	private void addRoom2Task(ResultsByTask rbt, double coeffAdditional) throws Exception {
+		//System.out.println(dungeonElements.getNbQRooms());
 		if(nbRoomsToTask.containsKey(rbt)) {
 			nbRoomsToTask.put(rbt, (double) Math.round(nbRoomsToTask.get(rbt) +
 					((rbt.getTask().getPercentOfApparition()*coeffAdditional)*dungeonElements.getNbQRooms())/100));
 		}else {
 			nbRoomsToTask.put(rbt, (double) Math.round(((rbt.getTask().getPercentOfApparition()*coeffAdditional)*dungeonElements.getNbQRooms())/100));
 		}
+	}
+	
+	private void cleanNumberOfComputedRooms() {
+		int computedNumberOfRoom = this.getNumberOfRoomsComputed();
+		if(computedNumberOfRoom != dungeonElements.getNbQRooms()) {
+			List<ResultsByTask> possibleRemoveTasks = new ArrayList<>(getTaskWithEqualNumberOfRooms());
+			for(int i = 0; i < computedNumberOfRoom - dungeonElements.getNbQRooms(); i++) {
+				int randomIndexChoice = random.nextInt(possibleRemoveTasks.size());
+				nbRoomsToTask.remove(possibleRemoveTasks.get(randomIndexChoice));
+			}
+		}
+	}
+	
+	private Set<ResultsByTask> getTaskWithEqualNumberOfRooms(){
+		Set<ResultsByTask> tasks = new HashSet<>();
+		for(ResultsByTask rbt: nbRoomsToTask.keySet()) {
+			for(ResultsByTask rbt2: nbRoomsToTask.keySet()) {
+				if(rbt != rbt2 && nbRoomsToTask.get(rbt).equals(nbRoomsToTask.get(rbt2))) {
+					tasks.add(rbt);
+				}
+			}
+		}
+		return tasks;
+	}
+	
+	private int getNumberOfRoomsComputed() {
+		int somme = 0;
+		for (ResultsByTask rbt: nbRoomsToTask.keySet()) {
+			somme += nbRoomsToTask.get(rbt);
+		}
+		
+		return somme;
 	}
 	
 	private double computesCoeffApparition() {
@@ -342,11 +379,13 @@ public class EducationalElementsGenerator {
 	}
 	
 	private void buildTaskRoomElements() {
+		//System.err.println("Room2TASK "+nbRoomsToTask);
 		for (ResultsByTask resultsByTask : nbRoomsToTask.keySet()) {
 			for (int i = 0; i < nbRoomsToTask.get(resultsByTask); i++) {
 				this.dungeonElements.addRoomsElements(new RoomElements(this.modelAccess.getGameDescriptionModel(), resultsByTask.getTask()));
 			}
 		}
+		System.err.println("Should be equal "+dungeonElements.getNbQRooms()+" "+dungeonElements.getRoomsElements().size());
 	}
 	
 	public double getNbRoomFor(ResultsByTask rbt) {

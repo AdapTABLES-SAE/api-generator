@@ -67,10 +67,11 @@ public class ALGAGenerator {
 
 		checkLearnerPlayerSetProgression();
 		
-		
-		
 		double nbQRooms = gameDifficulty.getInitNbQRoom() + gameDifficulty.getNbQRoomIncrease() * (modelAccess.getContextModel().getLearnerplayer().getProgression().getCurrentGameLevel().getLevel() - 1);
 		double nbNQRooms = gameDifficulty.getInitNbNQRoom() + gameDifficulty.getNbNQRoomIncrease() * (modelAccess.getContextModel().getLearnerplayer().getProgression().getCurrentGameLevel().getLevel() - 1);
+
+		System.out.println("Number of no question rooms "+nbNQRooms);
+		System.out.println("Number of question rooms "+nbQRooms);
 		
 		dungeonElements = new DungeonElements(modelAccess.getGameDescriptionModel(), nbQRooms, nbNQRooms);
 		
@@ -80,18 +81,15 @@ public class ALGAGenerator {
 		try {
 			dungeonElements = eduGeneration.generateEE();
 			gameGeneration = new GameElementsGenerator(modelAccess, dungeonElements);
-			
 			gameGeneration.generateGPandCurses();
 			//dungeonElements.print();
 			dungeonGeneration = new DungeonGenerator(modelAccess, dungeonElements, nbNQRooms+nbQRooms);
 			generatedDungeon = dungeonGeneration.generateDungeon();
-			
-			/*System.out.println("TOUT LE BORDEL");
+			System.out.println("TOUT LE BORDEL");
 			for (int i = 0; i < dungeonElements.getRoomsElements().size(); i++) {
-
-				System.out.println(dungeonElements.getRoomsElements().get(i));
+				System.out.println(dungeonElements.getRoomsElements().get(i).getRoom());
 				dungeonElements.getRoomsElements().get(i).printElementTypes();
-			}*/
+			}
 			
 			// TODO : print roomtype and elements to see if coherent
 			generatedDungeon = gameGeneration.generateRoomContent(generatedDungeon);

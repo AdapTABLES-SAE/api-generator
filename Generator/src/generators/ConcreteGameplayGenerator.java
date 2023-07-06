@@ -30,6 +30,7 @@ import generator.impl.FactSolutionParamImpl;
 import generator.impl.PositionImpl;
 import generator.impl.PositionedElementImpl;
 import generator.impl.PositionedStructureElementImpl;
+import generator.impl.PropositionParamImpl;
 import generator.impl.ValueImpl;
 import managers.ModelsManager;
 import structures.RoomElements;
@@ -55,6 +56,7 @@ public class ConcreteGameplayGenerator {
 	 * @return list of PositionedElements of the room
 	 */
 	public List<PositionedElement> buildPositionedElements(RoomElements roomElements){
+		System.err.println("Build Elements");
 		List<PositionedElement> elements = new ArrayList<>();
 		for (AComponent aComp : roomElements.getGameplay().getComponents()) {
 			//System.out.println(roomElements);
@@ -71,6 +73,7 @@ public class ConcreteGameplayGenerator {
 			}
 		}
 		occupiedPositions = new ArrayList<>();
+		System.out.println("les elemens "+elements);
 		return elements;
 	}	
 	
@@ -224,96 +227,108 @@ public class ConcreteGameplayGenerator {
 		
 		return comp;
 	}
-	
-
 	private List<PositionedElement> buildMultipleChoicesElements(Component component, ElementType elementType, QuestionedFact fact, Position position, RoomType roomtype){
-		System.out.println("====================================================="+fact.getQuestionablefact().getID());
+		List<PositionedElement> elements = new ArrayList<>();
 		int correctnessToReach = Integer.valueOf(((Value) fact.getCorrectnessToReach().getValue()).getValue());
 		int numberOfObjectsToInstanciate = correctnessToReach;
 		boolean computesPositionEachTime = position == null;
 		int numberOfDisplayByType = getNumberOfChoicesWornBy((ElementType) elementType);
 		
 		int numberOfChoicePerElement = (int) Math.ceil((double) fact.getPropositions().size() / (double) numberOfObjectsToInstanciate);
-		/*if(numberOfChoicePerElement > getNumberOfChoicesWornBy((ElementType) elementType)) {
-			System.err.println("The number of choice is to high for this component");
-		}*/
 		while(numberOfChoicePerElement > numberOfDisplayByType) {
 			numberOfObjectsToInstanciate++;
 			 numberOfChoicePerElement = (int) Math.ceil((double) fact.getPropositions().size() / (double) numberOfObjectsToInstanciate);
 		}
-				
-		int propIndex, nbIndexFaux = 1;
-		int instanciatedSolution = 0;
-		List<PositionedElement> elements = new ArrayList<>();
+		
+		int randomPos;
+		PropositionParam proposition;
+		List<PropositionParam> goodSoluces = this.getGoodSolutions(fact);
+		List<PropositionParam> badSoluces = this.getBadSolutions(fact);
 		for (int i = 0; i < numberOfObjectsToInstanciate; i++) {
 			position = computesPositionEachTime? getAvailablePosition(roomtype, elementType): position;
 			PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
-			int randomPositionOfCorrect = new Random().nextInt(numberOfChoicePerElement);
+			List<PropositionParam> selectedForElement = new ArrayList<>();
 			for (int choix = 0; choix < numberOfChoicePerElement; choix++) {
-				if(instanciatedSolution == fact.getPropositions().size()) { break; }
-				if(i < correctnessToReach && randomPositionOfCorrect == choix) {
-					//System.out.println("dans le if");
-					propIndex = getIndexOfCorrectAnswerNumber(fact, i+1);
-				} else {
-					//System.out.println("dans le else");
-					propIndex = getIndexOfIncorrectAnswerNumber(fact, nbIndexFaux);
-					nbIndexFaux++;
-				}				
-				//System.err.println("Proposition "+((Value) fact.getPropositions().get(propIndex).getValue()).getValue());				
-				if(propIndex != -1 && propIndex < fact.getPropositions().size()) {
-					//System.out.println("instanciated");
-					Display proposition = new DisplayImpl();
-					Value propValue = new ValueImpl();
-					propValue.setValue(((Value) fact.getPropositions().get(propIndex).getValue()).getValue());
-					proposition.setValue(propValue);
-					comp.getDisplays().add(proposition);
-					
-					Correctness propCorrectness = new CorrectnessImpl();
-					CorrectnessValue propCorrectnessValue = new CorrectnessValueImpl();
-					propCorrectnessValue.setValue(((CorrectnessValue)fact.getPropositions().get(propIndex).getState().getValue()).getValue());
-					propCorrectness.setValue(propCorrectnessValue);
-					proposition.setCorrectness(propCorrectness);
-					
-					propIndex++;
-					
+				proposition = null;
+				if(choix == 0 && !goodSoluces.isEmpty()) {
+					randomPos = new Random().nextInt(goodSoluces.size());
+					proposition = goodSoluces.get(randomPos);
+					goodSoluces.remove(randomPos);
+				} else if(!badSoluces.isEmpty()) {
+					randomPos = new Random().nextInt(badSoluces.size());
+					proposition = badSoluces.get(randomPos);
+					badSoluces.remove(randomPos);
 				}
-				instanciatedSolution++;
+				if(proposition != null) {
+					selectedForElement.add(proposition);
+				}
 			}
-			
+			comp.getDisplays().addAll(this.buildDisplay(selectedForElement));
 			elements.add(comp);
 		}
-		//System.out.println("=====================================================");
 		return elements;
 	}
 	
-	private int getIndexOfCorrectAnswerNumber(QuestionedFact fact, int correctAnswerNumber) {
-		return getIndexOfCorrectAnswerNumber(fact, correctAnswerNumber, 0);
+	private List<Display> buildDisplay(List<PropositionParam> params){
+		List<Display> displays = new ArrayList<>();
+		
+		for(PropositionParam param: params) {
+			Display proposition = new DisplayImpl();
+			Value propValue = new ValueImpl();
+			propValue.setValue(((Value) param.getValue()).getValue());
+			proposition.setValue(propValue);
+			
+			Correctness propCorrectness = new CorrectnessImpl();
+			CorrectnessValue propCorrectnessValue = new CorrectnessValueImpl();
+			propCorrectnessValue.setValue(((CorrectnessValue) param.getState().getValue()).getValue());
+			propCorrectness.setValue(propCorrectnessValue);
+			proposition.setCorrectness(propCorrectness);
+			displays.add(proposition);
+		}
+		
+		return displays;
 	}
 	
-	private int getIndexOfCorrectAnswerNumber(QuestionedFact fact, int correctAnswerNumber, int startIndex) {
-		int cpt = 0;
-		for (int i = startIndex; i < fact.getPropositions().size(); i++) {
-			if(((CorrectnessValue) fact.getPropositions().get(i).getState().getValue()).getValue().equals(ECorrectness.CORRECT)) {
-				cpt++;
-			}
-			if(cpt == correctAnswerNumber) {
-				return i;
+	private List<PropositionParam> getGoodSolutions(QuestionedFact fact){
+		List<PropositionParam> propositions = new ArrayList<>();
+		for(PropositionParam prop: fact.getPropositions()) {
+			if(((CorrectnessValue) prop.getState().getValue()).getValue().equals(ECorrectness.CORRECT)) {
+				PropositionParam propositionParam = new PropositionParamImpl();
+				
+				Correctness correctness = new CorrectnessImpl();
+				CorrectnessValue correctnessValue = new CorrectnessValueImpl();
+				correctnessValue.setValue(ECorrectness.CORRECT);
+				correctness.setValue(correctnessValue);
+				propositionParam.setState(correctness);
+				
+				Value value = new ValueImpl();
+				value.setValue(((Value) prop.getValue()).getValue());
+				propositionParam.setValue(value);
+				propositions.add(propositionParam);
 			}
 		}
-		return -1;
+		return propositions;
 	}
 	
-	private int getIndexOfIncorrectAnswerNumber(QuestionedFact fact, int correctAnswerNumber) {
-		int cpt = 0;
-		for (int i = 0; i < fact.getPropositions().size(); i++) {
-			if(((CorrectnessValue) fact.getPropositions().get(i).getState().getValue()).getValue().equals(ECorrectness.INCORRECT)) {
-				cpt++;
-			}
-			if(cpt == correctAnswerNumber) {
-				return i;
+	private List<PropositionParam> getBadSolutions(QuestionedFact fact){
+		List<PropositionParam> propositions = new ArrayList<>();
+		for(PropositionParam prop: fact.getPropositions()) {
+			if(((CorrectnessValue) prop.getState().getValue()).getValue().equals(ECorrectness.INCORRECT)) {
+				PropositionParam propositionParam = new PropositionParamImpl();
+				
+				Correctness correctness = new CorrectnessImpl();
+				CorrectnessValue correctnessValue = new CorrectnessValueImpl();
+				correctnessValue.setValue(ECorrectness.INCORRECT);
+				correctness.setValue(correctnessValue);
+				propositionParam.setState(correctness);
+				
+				Value value = new ValueImpl();
+				value.setValue(((Value) prop.getValue()).getValue());
+				propositionParam.setValue(value);
+				propositions.add(propositionParam);
 			}
 		}
-		return -1;
+		return propositions;
 	}
 	
 	private List<PositionedElement> buildMultipleChoicesElement(Component component, ElementType elementType, QuestionedFact fact, RoomType roomtype){
@@ -545,7 +560,7 @@ public class ConcreteGameplayGenerator {
 		return elementType.getSize() == Position.getSize();
 	}
 	
-	private Position getAvailablePosition(RoomType roomType, ElementType elementType) { // TODO : corriger quand plusieurs structures la positions est la même 
+	private Position getAvailablePosition(RoomType roomType, ElementType elementType) { // TODO : corriger quand plusieurs structures la positions est la mï¿½me 
 		List<Position> allowed = new ArrayList<>();
 
 		for (Position position : roomType.getElementPositions()) {

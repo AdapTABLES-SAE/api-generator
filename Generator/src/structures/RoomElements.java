@@ -21,6 +21,7 @@ import generator.RoomType;
 import generator.StatementElementType;
 import generator.Structure;
 import generator.Value;
+import generator.impl.RoomImpl;
 
 public class RoomElements {
 
@@ -28,6 +29,7 @@ public class RoomElements {
 	private ATask task;
 	private List<QuestionedFact> facts;
 	private boolean exit;
+	private boolean entry;
 	
 	private Room associatedRoom;
 	
@@ -39,17 +41,25 @@ public class RoomElements {
 		return this.exit;
 	}
 	
-	public RoomElements(GameDescription gameDescriptionModel, ATask task) {
-		this(gameDescriptionModel, task, false);
+	public boolean isEntry() {
+		return this.entry;
 	}
 	
-	public RoomElements(GameDescription gameDescriptionModel, ATask task, boolean isExit) {
+	public void setEntry(boolean entry) {
+		this.entry = entry;
+	}
+	public RoomElements(GameDescription gameDescriptionModel, ATask task) {
+		this(gameDescriptionModel, task, false, false);
+	}
+	
+	public RoomElements(GameDescription gameDescriptionModel, ATask task, boolean isEntry, boolean isExit) {
 		this.gameDescriptionModel = gameDescriptionModel;
 		this.elementsToQuantity = new HashMap<>();
 		this.facts = new ArrayList<>();
 		this.task = task;
 		this.associatedRoom = null;
 		this.exit = isExit;
+		this.entry = isEntry;
 	}
 	
 	public RoomType getRoomTypeOfRoom() {
@@ -61,7 +71,12 @@ public class RoomElements {
 	}
 	
 	public void setRoom(Room room) {
-		this.associatedRoom = room;
+		this.associatedRoom = new RoomImpl();
+		this.associatedRoom.setX(room.getX());
+		this.associatedRoom.setY(room.getY());
+		this.associatedRoom.setTask(room.getTask());
+		this.associatedRoom.setGameplay(room.getGameplay());
+		this.associatedRoom.setRoomtype(room.getRoomtype());
 	}
 	
 	public Room getRoom() {
@@ -77,8 +92,8 @@ public class RoomElements {
 		return null;
 	}
 	
-	public RoomElements(GameDescription gameDescriptionModel, boolean isExit) {
-		this(gameDescriptionModel, null, isExit);
+	public RoomElements(GameDescription gameDescriptionModel, boolean isEntry, boolean isExit) {
+		this(gameDescriptionModel, null, isEntry, isExit);
 	}
 	
 	public RoomElements(GameDescription gameDescriptionModel) {
@@ -238,6 +253,6 @@ public class RoomElements {
 		for (ElementType elem : elementsToQuantity.keySet()) {
 			System.out.println("\t"+elem.getID());
 		}
-		System.out.println("--Gameplay elements--"+gameplay.getName());
+		if(gameplay != null) System.out.println("--Gameplay elements--"+gameplay.getName());
 	}
 }

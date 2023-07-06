@@ -644,10 +644,19 @@
   <learningpaths name="TEST" ID="TEST">
     <objectives ID="TESTO1" name="TESTO1">
       <levels xsi:type="generator:MTLevel" ID="TESTO1L1" buildSetup="MIX" resultPositionSetup="MIX">
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="50" ID="TESTT1">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="20" ID="TESTT1">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
         </tasks>
-        <tasks xsi:type="generator:MTMembership" percentOfApparition="50" ID="TESTT2">
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="20" ID="TESTT2">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="8" nbBadChoices="5"/>
+        </tasks>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="20" ID="TESTT3">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
+        </tasks>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="20" ID="TESTT4">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="8" nbBadChoices="5"/>
+        </tasks>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="20" ID="TESTT5">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="8" nbBadChoices="5"/>
         </tasks>
       </levels>

@@ -17,6 +17,7 @@ import generator.MultipleChoice;
 import generator.NoQuestionGameplay;
 import generator.QuestionGameplay;
 import generator.Relation;
+import generator.Room;
 import managers.ModelsManager;
 import structures.DungeonElements;
 import structures.RoomElements;
@@ -50,19 +51,23 @@ public class GameElementsGenerator {
 	
 	public Dungeon generateRoomContent(Dungeon generatedDungeon) {
 		ConcreteGameplayGenerator gameplayGenerator = new ConcreteGameplayGenerator(modelAccess);
-		/*for (Room r : generatedDungeon.getRooms()) {
-			if(r.getTask() != null) {
-				r.getPositionedElement().addAll(gameplayGenerator.buildPositionedElements((QuestionGameplay) r.getGameplay(), r.getQuestionedFacts(), r.getRoomtype()));
-			}
-		}*/
-		
-		for (RoomElements roomElements : dungeonElements.getRoomsElements()) {
-			if(roomElements.getGameplay() != null) {
-				roomElements.setRoomPositionedElements(gameplayGenerator.buildPositionedElements(roomElements));
+		System.out.println(generatedDungeon.getRooms().size()+ " " + dungeonElements.getRoomsElements().size());
+		for (Room room: generatedDungeon.getRooms()) {
+			if(room.getGameplay() != null) {
+				room.getPositionedElement().addAll(gameplayGenerator.buildPositionedElements(this.getCorrespondingRoomElements(room)));
 			} 
 		}
 		
 		return generatedDungeon;
+	}
+	
+	private RoomElements getCorrespondingRoomElements(Room room) {
+		for (RoomElements rElem: dungeonElements.getRoomsElements()) {
+			if(room.getX() == rElem.getRoom().getX() && room.getY() == rElem.getRoom().getY()) {
+				return rElem;
+			}
+		}
+		return null;
 	}
 	
 	private Set<GPCategory> getValidCategoriesFromRelations(ATask task){
@@ -145,10 +150,8 @@ public class GameElementsGenerator {
 		System.out.println("Gameplays selection");
 		List<Gameplay> gameplays = new ArrayList<>();
 		for (RoomElements room : dungeonElements.getRoomsElements()) {
-			//System.err.println("Is exit "+room.isExit());
 			if(room.getTask() != null) {
 				List<GPCategory> validCategories = new ArrayList<>(getValidCategoriesFromRelations(room.getTask()));
-				
 				do {
 					//System.out.println("In do while");
 					GPCategory aCategorie = validCategories.get(random.nextInt(validCategories.size()));
@@ -159,7 +162,7 @@ public class GameElementsGenerator {
 				Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
 				room.setGameplay(gameplay);
 				//System.err.println(room.getGameplay());
-			} else if(!room.isExit()) {
+			} else if(!room.isExit() && !room.isEntry()) {
 				gameplays = getNoQuestionRoomGameplay();
 				Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
 				room.setGameplay(gameplay);
@@ -174,7 +177,7 @@ public class GameElementsGenerator {
 		List<Gameplay> gameplays = new ArrayList<>();
 		for (TaskFactPair tfp: dungeonElements.getFactsToQuestion()) {
 			if(tfp != null) {
-				// normalement on devrait se baser sur le modèle de relations pour choisir
+				// normalement on devrait se baser sur le modï¿½le de relations pour choisir
 				List<GPCategory> chosenCategories = getValidCategories(tfp.getTask());
 				//System.err.println(chosenCategories);
 				do {

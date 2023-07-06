@@ -3,13 +3,11 @@ package structures;
 import java.util.ArrayList;
 import java.util.List;
 
-import generator.ATask;
 import generator.CurrentObjectiveLevel;
 import generator.DungeonMode;
 import generator.GameDescription;
 import generator.Level;
 import generator.Objective;
-import generator.QuestionedFact;
 import generator.ResultsByTask;
 
 public class DungeonElements {
@@ -66,7 +64,7 @@ public class DungeonElements {
 		return this.roomsElements.get(i);
 	}
 	
-	public void createOrAddRoomWithFacts(int roomIndex, ATask task, QuestionedFact qEfact) {
+	/*public void createOrAddRoomWithFacts(int roomIndex, ATask task, QuestionedFact qEfact) {
 		//System.err.println("ADDING ROOM ELEMENTS with "+task.getID()+" index="+roomIndex);
 		RoomElements roomElems = ifExistsGetRoomElements(roomIndex, task);
 		if(roomElems != null) {
@@ -79,7 +77,7 @@ public class DungeonElements {
 			//System.out.println("dans le else "+roomElems.getFacts().size());
 		}
 		this.roomsElements.add(roomElems);
-	}
+	}*/
 	
 	public double getNbQRooms() {
 		return nbQRooms;
@@ -93,20 +91,27 @@ public class DungeonElements {
 		return currentObjectiveLevel.getResults().getResultsbytask();
 	}
 	
-	private RoomElements ifExistsGetRoomElements(int roomIndex, ATask task) {
+	/*private RoomElements ifExistsGetRoomElements(int roomIndex, ATask task) {
 		if(roomIndex < this.roomsElements.size() && roomsElements.get(roomIndex).getTask().equals(task)) {
 			return roomsElements.get(roomIndex);
 		} else {
 			return null;
 		}
 	}
-	
+	*/
 	public void buildNumberOfNonQuestionRooms() {
+		//System.out.println("RoomEleme "+(nbNQRooms + nbQRooms + 1));
 		while(roomsElements.size() < (nbNQRooms + nbQRooms)) { // + 1 = la sortie
 			roomsElements.add(new RoomElements(gameDescriptionModel));
 		}
-		roomsElements = Shuffle.shuffleRoomElements(roomsElements);
-		roomsElements.add(new RoomElements(gameDescriptionModel, true)); //exit
+		//System.out.println("RoomEleme before suffle "+roomsElements.size());
+		List<RoomElements> temporary = Shuffle.shuffleRoomElements(roomsElements);
+		roomsElements = new ArrayList<>();
+		//System.out.println("RoomEleme after suffle "+roomsElements.size());
+		roomsElements.add(new RoomElements(gameDescriptionModel, true, false)); //entry
+		roomsElements.addAll(temporary);
+		roomsElements.add(new RoomElements(gameDescriptionModel, false, true)); //exit
+		//System.out.println("RoomEleme after exit "+roomsElements.size());
 	}
 	
 	public void print() {
