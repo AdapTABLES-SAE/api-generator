@@ -1,4 +1,4 @@
-package edu_elements_tests;
+
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -9,7 +9,7 @@ import org.junit.Test;
 import generator.ResultsByTask;
 import generators.ALGAGenerator;
 
-class FactsGenerationTest {
+class FactsGenerationTestOLD {
 
 	ALGAGenerator generator;
 /*	
