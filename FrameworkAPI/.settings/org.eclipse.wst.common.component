@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-                    
+                        
+    
     
     
     
@@ -10,10 +11,26 @@
         <wb-resource deploy-path="/models/inputmodels" source-path="/models/inputmodels"/>
         <wb-resource deploy-path="/models/outputmodels" source-path="/models/outputmodels"/>
         <wb-resource deploy-path="/flattener" source-path="/flattener"/>
-                                
+        <wb-resource deploy-path="/models/inputmodels/contextsByClass" source-path="/models/inputmodels/contextsByClass"/>
+                                        
+        
         
         
         <dependent-module archiveName="TransformationFlattener.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/TransformationFlattener/TransformationFlattener">
+                                                            
+            
+            
+            
+            <dependency-type>uses</dependency-type>
+                                                        
+        
+        
+        
+        </dependent-module>
+                                
+        
+        
+        <dependent-module archiveName="Generator.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Generator/Generator">
                                                 
             
             
@@ -22,31 +39,26 @@
         
         
         </dependent-module>
-                        
+                                                
         
-        <dependent-module archiveName="Generator.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Generator/Generator">
-                                    
-            
-            <dependency-type>uses</dependency-type>
-                                
-        
-        </dependent-module>
-                                        
         
         
         
         <property name="context-root" value="FrameworkAPI"/>
-                                        
+                                                
+        
         
         
         
         <property name="java-output-path" value="/FrameworkAPI/build/classes"/>
-                                    
+                                            
+    
     
     
     
     </wb-module>
-                
+                    
+
 
 
 

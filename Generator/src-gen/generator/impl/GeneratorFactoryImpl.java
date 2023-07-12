@@ -87,8 +87,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createMTLevel();
 		case GeneratorPackage.MT_COMPLETION1:
 			return createMTCompletion1();
-		case GeneratorPackage.GENERATION_CONTEXT:
-			return createGenerationContext();
+		case GeneratorPackage.CONTEXT:
+			return createContext();
 		case GeneratorPackage.LEARNER_PLAYER:
 			return createLearnerPlayer();
 		case GeneratorPackage.PROGRESSION:
@@ -441,9 +441,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GenerationContext createGenerationContext() {
-		GenerationContextImpl generationContext = new GenerationContextImpl();
-		return generationContext;
+	public Context createContext() {
+		ContextImpl context = new ContextImpl();
+		return context;
 	}
 
 	/**

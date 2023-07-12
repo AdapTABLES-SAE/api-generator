@@ -494,6 +494,42 @@
       <directions>NORTH</directions>
       <directions>WEST</directions>
     </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoom10">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM1"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM2"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM3"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM4"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM5"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM6"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM7"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM8"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
   </roomtypes>
   <levelsDifficultyProgress/>
   <gameplays>
@@ -527,7 +563,12 @@
         hasIntegratedPropositions="true">
       <components
           xsi:type="generator:Structure"
-          structureType="STRUCT_H">
+          allowedAbility="HORIZONTAL_DISPLAY">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="LARGE"/>
+        </expectedSize>
         <components
             xsi:type="generator:Component"
             allowedAbility="DISPLAY">
@@ -539,11 +580,21 @@
         </components>
         <components
             xsi:type="generator:Structure"
-            structureType="STRUCT_V">
+            allowedAbility="VERTICAL_DISPLAY">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="LARGE"/>
+          </expectedSize>
           <components
               xsi:type="generator:Structure"
-              structureType="STRUCT_H"
+              allowedAbility="HORIZONTAL_DISPLAY"
               perFactOrPropositions="true">
+            <expectedSize>
+              <value
+                  xsi:type="generator:Value"
+                  value="LARGE"/>
+            </expectedSize>
             <components
                 xsi:type="generator:Component"
                 allowedAbility="TOUCHABLE"
@@ -606,14 +657,29 @@
         hasIntegratedPropositions="true">
       <components
           xsi:type="generator:Structure"
-          structureType="STRUCT_H">
+          allowedAbility="HORIZONTAL_DISPLAY">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="LARGE"/>
+        </expectedSize>
         <components
             xsi:type="generator:Structure"
-            structureType="STRUCT_V">
+            allowedAbility="VERTICAL_DISPLAY">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="LARGE"/>
+          </expectedSize>
           <components
               xsi:type="generator:Structure"
-              structureType="STRUCT_H"
+              allowedAbility="HORIZONTAL_DISPLAY"
               perFactOrPropositions="true">
+            <expectedSize>
+              <value
+                  xsi:type="generator:Value"
+                  value="LARGE"/>
+            </expectedSize>
             <components
                 xsi:type="generator:Component"
                 allowedAbility="TOUCHABLE"
@@ -705,13 +771,13 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="DETECTOR">
-        <quantity
-            factNbAnswers="true"/>
         <expectedSize>
           <value
               xsi:type="generator:Value"
               value="SMALL"/>
         </expectedSize>
+        <quantity
+            factNbAnswers="true"/>
       </components>
       <components
           xsi:type="generator:Component"
@@ -759,8 +825,13 @@
         category="MOVE_MULTIPLE">
       <components
           xsi:type="generator:Structure"
-          structureType="STRUCT_V"
+          allowedAbility="VERTICAL_DISPLAY"
           perFactOrPropositions="true">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="LARGE"/>
+        </expectedSize>
         <components
             xsi:type="generator:Component"
             allowedAbility="DETECTOR">
@@ -785,10 +856,10 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_ROTABLE"
+        name="GP_ROTABLE_UNIQUE"
         undoable="true"
         manualValidation="true"
-        category="ORIENT">
+        category="ORIENT_UNIQUE">
       <components
           xsi:type="generator:Component"
           allowedAbility="ROTABLE"
@@ -802,8 +873,6 @@
           wearStatement="true"/>
       <prompt
           prompt="Oriente correctement l(es) element(s)"/>
-      <restrictedTo>COMPLETE</restrictedTo>
-      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -843,16 +912,16 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="AVOIDABLE">
-        <quantity>
-          <value
-              xsi:type="generator:Value"
-              value="5"/>
-        </quantity>
         <expectedSize>
           <value
               xsi:type="generator:Value"
               value="SMALL"/>
         </expectedSize>
+        <quantity>
+          <value
+              xsi:type="generator:Value"
+              value="5"/>
+        </quantity>
       </components>
     </gameplays>
     <gameplays
@@ -861,16 +930,16 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="NONAVOIDABLE">
-        <quantity>
-          <value
-              xsi:type="generator:Value"
-              value="3"/>
-        </quantity>
         <expectedSize>
           <value
               xsi:type="generator:Value"
               value="SMALL"/>
         </expectedSize>
+        <quantity>
+          <value
+              xsi:type="generator:Value"
+              value="3"/>
+        </quantity>
       </components>
     </gameplays>
     <gameplays
@@ -879,15 +948,32 @@
         category="MOVE_UNIQUE">
       <components
           xsi:type="generator:Structure"
-          structureType="STRUCT_H_MEDIUM"
+          allowedAbility="HORIZONTAL_DISPLAY"
           perFactOrPropositions="true">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="MEDIUM"/>
+        </expectedSize>
         <components
             xsi:type="generator:Component"
             allowedAbility="PUSHABLE"
-            wearChoices="true"/>
+            wearChoices="true">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
         <components
             xsi:type="generator:Component"
-            allowedAbility="DETECTOR"/>
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
       </components>
       <components
           xsi:type="generator:Component"
@@ -902,15 +988,32 @@
         category="MOVE_MULTIPLE">
       <components
           xsi:type="generator:Structure"
-          structureType="STRUCT_H_MEDIUM"
+          allowedAbility="HORIZONTAL_DISPLAY"
           perFactOrPropositions="true">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="MEDIUM"/>
+        </expectedSize>
         <components
             xsi:type="generator:Component"
             allowedAbility="PUSHABLE"
-            wearChoices="true"/>
+            wearChoices="true">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
         <components
             xsi:type="generator:Component"
-            allowedAbility="DETECTOR"/>
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
       </components>
       <components
           xsi:type="generator:Component"
@@ -933,80 +1036,245 @@
       <prompt
           prompt="Traverse le bon element"/>
     </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_UNIQUE-PUSH-LEFT"
+        category="MOVE_UNIQUE">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="HORIZONTAL_DISPLAY"
+          perFactOrPropositions="true">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="MEDIUM"/>
+        </expectedSize>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="PUSHABLE"
+            wearChoices="true">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Pousse le bon element"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE-PUSH-LEFT"
+        category="MOVE_MULTIPLE">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="HORIZONTAL_DISPLAY"
+          perFactOrPropositions="true">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="MEDIUM"/>
+        </expectedSize>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="PUSHABLE"
+            wearChoices="true">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Pousse les bons elements"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_UNIQUE-BREAK">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="BREAKABLE"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Casse le bon element"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE-BREAK"
+        category="SELECT_MULTIPLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="BREAKABLE"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Casse les bons elements"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE-BREAK-FOR-ID"
+        category="SELECT_MULTIPLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="BREAKABLE"
+          wearChoices="true"
+          wearStatement="true"/>
+      <prompt
+          prompt="Casse les bons elements"/>
+      <restrictedTo>IDENTIFY</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_UNIQUE_FOLLOWABLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="FOLLOWABLE_DETECTOR"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="FOLLOWABLE"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Attrape le bon element"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_ROTABLE_MULTIPLE"
+        undoable="true"
+        manualValidation="true"
+        category="ORIENT_MULTIPLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="ROTABLE"
+          wearChoices="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="VERIFICATOR"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <prompt
+          prompt="Oriente correctement l(es) element(s)"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_POSITION_AVATAR"
+        category="POSITION_UNIQUE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          wearStatement="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DETECTOR_AVATAR"
+          wearChoices="true"/>
+      <prompt
+          prompt="Place-toi sur la bonne dalle"/>
+    </gameplays>
   </gameplays>
   <elements>
     <equipments/>
-    <gpElements>
+    <elementTypes>
       <elements
-          xsi:type="generator:StructureType"
           size="LARGE"
           ID="STRUCT_H"
-          type="HStructL"/>
+          type="HStructL"
+          ability="HORIZONTAL_DISPLAY"/>
       <elements
-          xsi:type="generator:StructureType"
           size="LARGE"
           ID="STRUCT_V"
-          type="VStructL"/>
+          type="VStructL"
+          ability="VERTICAL_DISPLAY"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMTYPE_INTERRUPTOR"
           type="FloorInterrupt"
           ability="TOUCHABLE"
-          numberOfDisplays="1"/>
+          nbDisplays="1"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMTYPE_KEYBOARD"
           type="KeyBoard"
           ability="TYPABLE"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMTYPE_SWITCH"
           type="Switch"
           ability="VERIFICATOR"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMTYPE_DISPLAY"
           type="Info"
           ability="DISPLAY"
-          numberOfDisplays="1"/>
+          nbDisplays="1"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMTYPE_POT"
           type="Pot"
           ability="MOVABLE"
-          numberOfDisplays="1"/>
+          nbDisplays="1"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMTYPE_DETECTOR"
           type="ObjectDetector"
           ability="DETECTOR"
-          numberOfDisplays="1"/>
+          nbDisplays="1"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMTYPE_CHEST"
           type="Chest"
           ability="OPENABLE"
-          numberOfDisplays="1"/>
+          nbDisplays="1"/>
       <elements
-          xsi:type="generator:ElementType"
           size="LARGE"
           ID="ELEMTYPE_LARGE_DETECTOR"
           type="LargeNewObjectDetector"
           ability="DETECTOR"/>
       <elements
-          xsi:type="generator:ElementType"
           size="MEDIUM"
           ID="ELEMTYPE_STATUE_ROTABLE"
           type="Statue"
           ability="ROTABLE"
-          numberOfDisplays="3"/>
+          nbDisplays="3"/>
       <elements
           xsi:type="generator:StatementElementType"
           size="LARGE"
           ID="ELEMTYPE_STATEMENT_CORRECTNESS"
           type="StatementFact"
           ability="DISPLAY"
-          numberOfDisplays="1"
+          nbDisplays="1"
           forStructure="true"/>
       <elements
           xsi:type="generator:StatementElementType"
@@ -1014,96 +1282,102 @@
           ID="ELEMTYPE_STATEMENT_DISPLAY"
           type="Statement"
           ability="DISPLAY"
-          numberOfDisplays="1"/>
+          nbDisplays="1"/>
       <elements
-          xsi:type="generator:StructureType"
           size="MEDIUM"
           ID="STRUCT_H_MEDIUM"
-          type="HStructM"/>
+          type="HStructM"
+          ability="HORIZONTAL_DISPLAY"/>
       <elements
-          xsi:type="generator:StructureType"
           size="MEDIUM"
           ID="STRUCT_V_MEDIUM"
-          type="VStructM"/>
+          type="VStructM"
+          ability="VERTICAL_DISPLAY"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_BEAR-TRAP"
           type="BearTrap"
           ability="NONAVOIDABLE"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_SPIKE-TRAP"
           type="SpikeTrap"
           ability="AVOIDABLE"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_FIRE-TRAP"
           type="FireTrap"
           ability="AVOIDABLE"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_WAIT-SPIKE-TRAP"
           type="WaitSpikeTrap"
           ability="AVOIDABLE"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_WAIT-FIRE-TRAP"
           type="WaitFireTrap"
           ability="AVOIDABLE"/>
       <elements
-          xsi:type="generator:ElementType"
           size="MEDIUM"
           ID="ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"
           type="MediumWaitSpikeTrap"
           ability="AVOIDABLE"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_HOLE-TRAP"
           type="HoleTrap"
           ability="NONAVOIDABLE"/>
       <elements
-          xsi:type="generator:ElementType"
           size="MEDIUM"
           ID="ELEMENT_TYPE_HOLE-TRAP_MEDIUM"
           type="MediumHoleTrap"
           ability="NONAVOIDABLE"/>
       <elements
-          xsi:type="generator:ElementType"
           size="LARGE"
           ID="ELEMENT_TYPE_HOLE-TRAP_LARGE"
           type="LargeHoleTrap"
           ability="NONAVOIDABLE"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_REGULAR-SLIME"
           type="RegularSlime"
           ability="NONAVOIDABLE"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_BLOCK"
           type="Block"
           ability="PUSHABLE"
-          numberOfDisplays="1"/>
+          nbDisplays="1"/>
       <elements
-          xsi:type="generator:ElementType"
           size="XLARGE"
           ID="ELEMENT_TYPE_BRIDGE"
           type="CentralBridges"
           ability="CROSSABLE"
-          numberOfDisplays="6"/>
+          nbDisplays="6"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_KEY"
           type="Key"
           ability="FOLLOWABLE"
-          numberOfDisplays="1"/>
+          nbDisplays="1"/>
       <elements
-          xsi:type="generator:ElementType"
           ID="ELEMENT_TYPE_RABBIT"
           type="Rabbit"
           ability="CATCHABLE"
-          numberOfDisplays="1"/>
-    </gpElements>
+          nbDisplays="1"/>
+      <elements
+          ID="ELEMTYPE_BREAKABLE_POT"
+          type="BreakablePot"
+          ability="BREAKABLE"
+          nbDisplays="1"/>
+      <elements
+          ID="ELEMENT_TYPE_FOLLOWABLE_KEY"
+          type="Key"
+          ability="FOLLOWABLE"
+          nbDisplays="1"/>
+      <elements
+          size="MEDIUM"
+          ID="ELEMENT_TYPE_CHEST_DETECTOR"
+          type="BigChest"
+          ability="FOLLOWABLE_DETECTOR"/>
+      <elements
+          ID="ELEMENT_TYPE_AVATAR_DETECTOR"
+          type="AvatarDetector"
+          ability="DETECTOR_AVATAR"
+          nbDisplays="1"/>
+    </elementTypes>
   </elements>
   <abilities>
     <abilities
@@ -1134,5 +1408,15 @@
         name="CROSSABLE"/>
     <abilities
         name="FOLLOWABLE"/>
+    <abilities
+        name="HORIZONTAL_DISPLAY"/>
+    <abilities
+        name="VERTICAL_DISPLAY"/>
+    <abilities
+        name="BREAKABLE"/>
+    <abilities
+        name="FOLLOWABLE_DETECTOR"/>
+    <abilities
+        name="DETECTOR_AVATAR"/>
   </abilities>
 </generator:GameDescription>

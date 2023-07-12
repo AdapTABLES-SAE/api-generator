@@ -157,13 +157,13 @@ public interface GeneratorFactory extends EFactory {
 	MTCompletion1 createMTCompletion1();
 
 	/**
-	 * Returns a new object of class '<em>Generation Context</em>'.
+	 * Returns a new object of class '<em>Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Generation Context</em>'.
+	 * @return a new object of class '<em>Context</em>'.
 	 * @generated
 	 */
-	GenerationContext createGenerationContext();
+	Context createContext();
 
 	/**
 	 * Returns a new object of class '<em>Learner Player</em>'.

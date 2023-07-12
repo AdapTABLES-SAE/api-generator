@@ -202,9 +202,9 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.GENERATION_CONTEXT: {
-			GenerationContext generationContext = (GenerationContext) theEObject;
-			T result = caseGenerationContext(generationContext);
+		case GeneratorPackage.CONTEXT: {
+			Context context = (Context) theEObject;
+			T result = caseContext(context);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1041,17 +1041,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Generation Context</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Generation Context</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Context</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGenerationContext(GenerationContext object) {
+	public T caseContext(Context object) {
 		return null;
 	}
 

@@ -6,18 +6,20 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 
+import exceptions.NonExistantLearnerPlayerException;
 import flattener.Main;
 import generators.ALGAGenerator;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.SwaggerDefinition;
-import io.swagger.annotations.Tag;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 //import io.swagger.annotations.Api;
 //import io.swagger.annotations.ApiResponse;
 import jakarta.servlet.ServletContext;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 
@@ -27,8 +29,7 @@ import jakarta.ws.rs.core.MediaType;
  */
 
 @Path("/generator")
-@Api(value="/Generator")
-@SwaggerDefinition(tags= {@Tag(name="Generator", description="REST end point generator")})
+@Produces(MediaType.TEXT_XML)
 public class GenerationResource {
 	
 	/*
@@ -37,18 +38,44 @@ public class GenerationResource {
 	 * OLD = C:\blemoine\TheseGenerator\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\FrameworkAPI
 	 * Warning ! Models are modified on the deployed repository and not in the eclipse one !  
 	 */
-		
 	@GET
+	@Path("/{learnerID}")
 	@Produces(MediaType.TEXT_XML)
-	//@ApiResponse(code = 200, message = "An XML file describing a dungeon")
-	public String generate(@QueryParam("ID") String learnerID, @Context ServletContext app) {  
+    /*@Operation(summary = "Generates a dungeon.", description = "Produce an XML dungeon for a given learner ID.")
+    @ApiResponses(value = {
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "XML File describing a dungeon.", 
+                    content = @Content(mediaType = MediaType.APPLICATION_XML)) })*/
+	public String generate(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
 	
 		//app.log(app.getContextPath());
-		Paths.PROJECT_PATH = app.getRealPath("");
-		System.out.println("Project : "+Paths.PROJECT_PATH);
+
+		return generateDungeon2String(null, learnerID, app);
+	}
+	
+	@GET
+	@Path("/{classID}/{learnerID}")
+	@Produces(MediaType.TEXT_XML)
+   /* @Operation(summary = "Generates a dungeon.", description = "Produce an XML dungeon for a given learner ID of given class.")
+    @ApiResponses(value = {
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "XML File describing a dungeon.", 
+                    content = @Content(mediaType = MediaType.APPLICATION_XML)) })*/
+	public String generate(@PathParam("classID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
 		
-		generateDungeon(learnerID);
-		File xmlFile = new File(Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH + "/DungeonGen_"+ learnerID +".xml");
+		//app.log(app.getContextPath());
+
+		return generateDungeon2String(classID, learnerID, app);
+	}
+	
+	private String generateDungeon2String(String classroomID, String learnerID, ServletContext app) throws NonExistantLearnerPlayerException {
+		Constant.PROJECT_PATH = app.getRealPath("");
+		System.out.println("Project : "+Constant.PROJECT_PATH);
+		
+		generateDungeon(classroomID, learnerID);
+		File xmlFile = new File(Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH + "/DungeonGen_"+ learnerID +".xml");
 		Reader fileReader;
 		StringBuilder sb = new StringBuilder();
 		System.out.println("Dungeon XML : "+xmlFile.getAbsolutePath());
@@ -69,15 +96,18 @@ public class GenerationResource {
 	
 	/***********************************/
 	/**          JOB METHODS          **/
-	/***********************************/
+	/**
+	 * @throws NonExistantLearnerPlayerException *********************************/
 	
-	private void generateDungeon(String learnerPlayerID) {
-		ALGAGenerator generator = new ALGAGenerator(Paths.PROJECT_PATH + Paths.INPUT_MODELS_PATH, 
-				Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH, 
-				Paths.CONTEXTS_FILES_PATH + Paths.CONTEXTS_FILES_SHORT_NAME + learnerPlayerID + ".xmi", true);
+	private void generateDungeon(String classroomID, String learnerPlayerID) throws NonExistantLearnerPlayerException {
+		String contextFile = Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + 
+				(classroomID == null? Constant.DEFAULT_CONTEXT_FILE_NAME : classroomID) + ".xmi";
+		ALGAGenerator generator = new ALGAGenerator(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
+				contextFile, learnerPlayerID, true); 
 		generator.generate();
 		generator.saveDungeon("DungeonGen_"+ learnerPlayerID +".xmi");
-		Main.transformModel(Paths.PROJECT_PATH + Paths.ECORE_PATH, Paths.PROJECT_PATH + Paths.FLATNER_PATH, Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xmi", Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xml");
+		Main.transformModel(Constant.PROJECT_PATH + Constant.ECORE_PATH, Constant.PROJECT_PATH + Constant.FLATNER_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xmi", Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xml");
 	}
 	
 	/*@GET

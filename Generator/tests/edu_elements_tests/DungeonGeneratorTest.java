@@ -21,7 +21,7 @@ public class DungeonGeneratorTest {
 			Main.transformModel(modelIN+"IM_Dungeon"+i+".xmi", modelOUT+"IM_Dungeon"+i+".xmi");
 		}*/
 		
-		ALGAGenerator generator = new ALGAGenerator();
+	/*	ALGAGenerator generator = new ALGAGenerator();
 		//ALGAGenerator generator = new ALGAGenerator();
 		generator.generate();
 		generator.printDungeon();

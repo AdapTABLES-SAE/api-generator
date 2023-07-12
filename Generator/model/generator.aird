@@ -38,7 +38,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_IfMuYCCTEe2pjb8HURi2ww" name="contextStructuration" repPath="#_IfJrECCTEe2pjb8HURi2ww" changeId="dc826f62-f97f-4575-a546-2b28eacc29b6">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_IfMuYCCTEe2pjb8HURi2ww" name="contextStructuration" repPath="#_IfJrECCTEe2pjb8HURi2ww" changeId="bd6a3b12-e17b-4690-95a8-e5426e586f30">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -1963,8 +1963,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_Fpdf0Ch0Ee2qu5IOFrnC7w" name="GenerationContext" tooltipText="" outgoingEdges="_rRTroCkIEe273IP9OAkmZg" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="generator.ecore#//GenerationContext"/>
-      <semanticElements xmi:type="ecore:EClass" href="generator.ecore#//GenerationContext"/>
+      <target xmi:type="ecore:EClass" href="generator.ecore#//Context"/>
+      <semanticElements xmi:type="ecore:EClass" href="generator.ecore#//Context"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1975,8 +1975,8 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_FpgjLCh0Ee2qu5IOFrnC7w" name=" gamecontext : GameContext" tooltipText="">
-        <target xmi:type="ecore:EReference" href="generator.ecore#//GenerationContext/gamecontext"/>
-        <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//GenerationContext/gamecontext"/>
+        <target xmi:type="ecore:EReference" href="generator.ecore#//Context/gamecontext"/>
+        <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//Context/gamecontext"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_pA-AsikIEe273IP9OAkmZg" labelAlignment="LEFT" description="_jH2SDQuMEe2my70SSL8mDA" color="114,159,207">
           <labelFormat>bold</labelFormat>
         </ownedStyle>
@@ -2013,8 +2013,8 @@
       </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_rRTroCkIEe273IP9OAkmZg" name="[1..1] learnerplayer" sourceNode="_Fpdf0Ch0Ee2qu5IOFrnC7w" targetNode="_rQ_ikCkIEe273IP9OAkmZg">
-      <target xmi:type="ecore:EReference" href="generator.ecore#//GenerationContext/learnerplayer"/>
-      <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//GenerationContext/learnerplayer"/>
+      <target xmi:type="ecore:EReference" href="generator.ecore#//Context/learnerplayers"/>
+      <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//Context/learnerplayers"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_rRUSsCkIEe273IP9OAkmZg" description="_VhQUsQnEEe25_Pq4ehy-Rg" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_rRUSsikIEe273IP9OAkmZg" showIcon="false">
           <customFeatures>labelSize</customFeatures>
@@ -4590,6 +4590,10 @@
         <children xmi:type="notation:Node" xmi:id="_G7AHkChxEe2qu5IOFrnC7w" type="2003" element="_G6bf0ChxEe2qu5IOFrnC7w">
           <children xmi:type="notation:Node" xmi:id="_G7B8wChxEe2qu5IOFrnC7w" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_G7Cj0ChxEe2qu5IOFrnC7w" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_3KELcB2yEe6uzNsGQGWtLw" type="3010" element="_3J0T0R2yEe6uzNsGQGWtLw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_3KELcR2yEe6uzNsGQGWtLw" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_3KELch2yEe6uzNsGQGWtLw"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_G7Cj0ShxEe2qu5IOFrnC7w"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_G7Cj0ihxEe2qu5IOFrnC7w"/>
           </children>
@@ -4724,9 +4728,9 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_G6bf0ChxEe2qu5IOFrnC7w" name="GenerationContext" tooltipText="" outgoingEdges="_MA0K0ChxEe2qu5IOFrnC7w _rcD_kykHEe2jvPbl2IkItw" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="generator.ecore#//GenerationContext"/>
-      <semanticElements xmi:type="ecore:EClass" href="generator.ecore#//GenerationContext"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_G6bf0ChxEe2qu5IOFrnC7w" name="Context" tooltipText="" outgoingEdges="_MA0K0ChxEe2qu5IOFrnC7w _rcD_kykHEe2jvPbl2IkItw" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="generator.ecore#//Context"/>
+      <semanticElements xmi:type="ecore:EClass" href="generator.ecore#//Context"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -4736,10 +4740,18 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_3J0T0R2yEe6uzNsGQGWtLw" name="ID : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="generator.ecore#//Context/ID"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//Context/ID"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_3J1h8B2yEe6uzNsGQGWtLw" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_MA0K0ChxEe2qu5IOFrnC7w" name="[1..1] gamecontext" sourceNode="_G6bf0ChxEe2qu5IOFrnC7w" targetNode="_ULAt4CCWEe2pjb8HURi2ww">
-      <target xmi:type="ecore:EReference" href="generator.ecore#//GenerationContext/gamecontext"/>
-      <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//GenerationContext/gamecontext"/>
+      <target xmi:type="ecore:EReference" href="generator.ecore#//Context/gamecontext"/>
+      <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//Context/gamecontext"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_kE8vcykEEe2Mu67rFJOXFg" description="_kE8vcCkEEe2Mu67rFJOXFg" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_kE8vdSkEEe2Mu67rFJOXFg" showIcon="false">
           <labelFormat>bold</labelFormat>
@@ -4793,9 +4805,9 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_rcD_kykHEe2jvPbl2IkItw" name="[1..1] learnerplayer" sourceNode="_G6bf0ChxEe2qu5IOFrnC7w" targetNode="_io3EkCkHEe2Mu67rFJOXFg">
-      <target xmi:type="ecore:EReference" href="generator.ecore#//GenerationContext/learnerplayer"/>
-      <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//GenerationContext/learnerplayer"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_rcD_kykHEe2jvPbl2IkItw" name="[1..*] learnerplayers" sourceNode="_G6bf0ChxEe2qu5IOFrnC7w" targetNode="_io3EkCkHEe2Mu67rFJOXFg">
+      <target xmi:type="ecore:EReference" href="generator.ecore#//Context/learnerplayers"/>
+      <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//Context/learnerplayers"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ud4KwCkHEe2jvPbl2IkItw" description="_kE8vcCkEEe2Mu67rFJOXFg" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ud4KwikHEe2jvPbl2IkItw" showIcon="false">
           <labelFormat>bold</labelFormat>

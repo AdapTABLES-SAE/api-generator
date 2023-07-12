@@ -14,12 +14,6 @@
       </init-param>
       <load-on-startup>1</load-on-startup>
   </servlet>
-
-  <servlet>
-    <servlet-name>Swagger Configuration</servlet-name>
-    <servlet-class>api_code.SwaggerConfigurationServlet</servlet-class>
-    <load-on-startup>2</load-on-startup>
-  </servlet>
   
       <!--servlet>
         <servlet-name>Jersey2Config</servlet-name>

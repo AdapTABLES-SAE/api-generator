@@ -152,7 +152,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass generationContextEClass = null;
+	private EClass contextEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1459,8 +1459,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGenerationContext() {
-		return generationContextEClass;
+	public EClass getContext() {
+		return contextEClass;
 	}
 
 	/**
@@ -1468,8 +1468,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGenerationContext_Gamecontext() {
-		return (EReference) generationContextEClass.getEStructuralFeatures().get(0);
+	public EReference getContext_Gamecontext() {
+		return (EReference) contextEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1477,8 +1477,17 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGenerationContext_Learnerplayer() {
-		return (EReference) generationContextEClass.getEStructuralFeatures().get(1);
+	public EReference getContext_Learnerplayers() {
+		return (EReference) contextEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getContext_ID() {
+		return (EAttribute) contextEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3816,9 +3825,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__NB_MISSING_ELEMENTS);
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__CHECK_LEARNER_ACTION);
 
-		generationContextEClass = createEClass(GENERATION_CONTEXT);
-		createEReference(generationContextEClass, GENERATION_CONTEXT__GAMECONTEXT);
-		createEReference(generationContextEClass, GENERATION_CONTEXT__LEARNERPLAYER);
+		contextEClass = createEClass(CONTEXT);
+		createEReference(contextEClass, CONTEXT__GAMECONTEXT);
+		createEReference(contextEClass, CONTEXT__LEARNERPLAYERS);
+		createEAttribute(contextEClass, CONTEXT__ID);
 
 		learnerPlayerEClass = createEClass(LEARNER_PLAYER);
 		createEReference(learnerPlayerEClass, LEARNER_PLAYER__PROGRESSION);
@@ -4410,14 +4420,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				1, MTCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
-		initEClass(generationContextEClass, GenerationContext.class, "GenerationContext", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGenerationContext_Gamecontext(), this.getGameContext(), null, "gamecontext", null, 1, 1,
-				GenerationContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEClass(contextEClass, Context.class, "Context", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getContext_Gamecontext(), this.getGameContext(), null, "gamecontext", null, 1, 1, Context.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContext_Learnerplayers(), this.getLearnerPlayer(), null, "learnerplayers", null, 1, -1,
+				Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGenerationContext_Learnerplayer(), this.getLearnerPlayer(), null, "learnerplayer", null, 1, 1,
-				GenerationContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContext_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Context.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(learnerPlayerEClass, LearnerPlayer.class, "LearnerPlayer", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

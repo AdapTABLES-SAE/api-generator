@@ -26,8 +26,8 @@ public class LoginResource {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String generate(@QueryParam("ID") String learnerID, @Context ServletContext app) {  
-		Paths.PROJECT_PATH = app.getRealPath("");
-		return isContextModelExistant(Paths.CONTEXTS_FILES_SHORT_NAME + learnerID + ".xmi")? "OK" : "KO";
+		Constant.PROJECT_PATH = app.getRealPath("");
+		return isContextModelExistant(Constant.CONTEXTS_FILES_PREFIX + learnerID + ".xmi")? "OK" : "KO";
 	}
 	
 	/***********************************/
@@ -35,7 +35,7 @@ public class LoginResource {
 	/***********************************/
 	
 	private boolean isContextModelExistant(String contextFileName) {
-		String contextsRepertory = Paths.PROJECT_PATH + Paths.INPUT_MODELS_PATH + Paths.CONTEXTS_FILES_PATH; 
+		String contextsRepertory = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CONTEXTS_FILES_PATH; 
 		File[] files = new File(contextsRepertory).listFiles();
 		
 		System.out.println(files);

@@ -34,6 +34,7 @@ import generator.impl.PropositionParamImpl;
 import generator.impl.ValueImpl;
 import managers.ModelsManager;
 import structures.RoomElements;
+import structures.Shuffle;
 
 public class ConcreteGameplayGenerator {
 	
@@ -260,6 +261,7 @@ public class ConcreteGameplayGenerator {
 					selectedForElement.add(proposition);
 				}
 			}
+			selectedForElement = Shuffle.shufflePropositions(selectedForElement);
 			comp.getDisplays().addAll(this.buildDisplay(selectedForElement));
 			elements.add(comp);
 		}

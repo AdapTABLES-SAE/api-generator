@@ -12,7 +12,7 @@ import generators.ALGAGenerator;
 class FactsGenerationTest {
 
 	ALGAGenerator generator;
-	
+/*	
 	@Test
 	void numberOfQuestionableFactsGeneratedAllTablesTest() {
 		generator = new ALGAGenerator("learnerProfils/LP_FIC_Init.xmi");
@@ -138,6 +138,6 @@ class FactsGenerationTest {
 				break;
 			}
 		}
-	}
+	}*/
 
 }

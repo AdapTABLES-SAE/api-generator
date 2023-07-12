@@ -161,11 +161,13 @@
         changeable="false" transient="true" defaultValueLiteral="1" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GenerationContext">
+  <eClassifiers xsi:type="ecore:EClass" name="Context">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gamecontext" lowerBound="1"
         eType="#//GameContext" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerplayer" lowerBound="1"
-        eType="#//LearnerPlayer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerplayers" lowerBound="1"
+        upperBound="-1" eType="#//LearnerPlayer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        unsettable="true" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LearnerPlayer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="progression" eType="#//Progression"
@@ -469,7 +471,8 @@
     <eLiterals name="DIRECT_RESPONSE" value="1"/>
     <eLiterals name="MOVE_UNIQUE" value="7"/>
     <eLiterals name="MOVE_MULTIPLE" value="8"/>
-    <eLiterals name="ORIENT" value="5" literal="ORIENT"/>
+    <eLiterals name="ORIENT_UNIQUE" value="5" literal="ORIENT_UNIQUE"/>
+    <eLiterals name="ORIENT_MULTIPLE" value="5" literal="ORIENT_MULTIPLE"/>
     <eLiterals name="POSITION_UNIQUE" value="6"/>
     <eLiterals name="POSITION_MULTIPLE" value="7"/>
   </eClassifiers>
@@ -570,19 +573,24 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Relation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="task" eType="#//ETaskType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gameplay" eType="#//GPCategory"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gameplays" lowerBound="1"
+        upperBound="-1" eType="#//GPCategory"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
         eType="#//Condition" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Condition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statementTypes" lowerBound="1"
+        upperBound="-1" eType="#//EStatementType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbFacts" eType="#//EBoundary"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbExpectedAnswers" eType="#//EBoundary"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="answerModality" eType="#//EModality"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbExpectedAnswers" eType="#//EBoundary"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EBoundary">
     <eLiterals name="ONE"/>
     <eLiterals name="SUP_ONE" value="1"/>
     <eLiterals name="SUP_EQ_ONE" value="2"/>
+    <eLiterals name="EQ_NB_FACTS" value="3"/>
+    <eLiterals name="SUP_NB_FACTS" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QuestionGameplay" eSuperTypes="#//Gameplay">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="manualValidation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
@@ -597,5 +605,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Size" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="StatementElementType" eSuperTypes="#//ElementType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="forStructure" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EStatementType">
+    <eLiterals name="CLASSIC"/>
+    <eLiterals name="GRAPHIC" value="1"/>
+    <eLiterals name="TO_FILL_IN" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

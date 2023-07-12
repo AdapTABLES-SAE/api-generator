@@ -5,6 +5,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import exceptions.NonExistantLearnerPlayerException;
 import generator.CurrentObjectiveLevel;
 import generator.QuestionableFact;
 import generator.QuestionableFactResult;
@@ -28,7 +29,7 @@ public class LearnerPlayerManagerResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public String addingLearnerPlayerResults(String jsonContent, @Context ServletContext app) { 
-		Paths.PROJECT_PATH = app.getRealPath("");
+		Constant.PROJECT_PATH = app.getRealPath("");
 		JSONObject obj = new JSONObject();
 		try {
 			obj = (JSONObject) new JSONParser().parse(jsonContent);
@@ -36,28 +37,33 @@ public class LearnerPlayerManagerResource {
 			e.printStackTrace();
 		}
 		
-		modelsManager = new ModelsManager(Paths.PROJECT_PATH + Paths.INPUT_MODELS_PATH, 
-				Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH, 
-				Paths.CONTEXTS_FILES_PATH + Paths.CONTEXTS_FILES_SHORT_NAME + obj.get("learnerID") + ".xmi", true);
+		modelsManager = new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
+				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + obj.get("learnerID") + ".xmi", true);
 				
-		CurrentObjectiveLevel col = getCorrespondingCOL((String) obj.get("objectiveID"), (String) obj.get("levelID"));
-		if(col != null) {
-			JSONArray results = (JSONArray) obj.get("resultsByTasks");
-			for (Object object : results) {
-				JSONObject taskResult = (JSONObject) object;
-				ResultsByTask rbt = getCorrespondingResultsByTask((String) taskResult.get("taskID"), col);
-				if(rbt != null) {
-					addResultsToTask(taskResult, rbt);
-				} else {
-					System.err.println("ResultsByTask not found with ID = " + (String) taskResult.get("taskID"));
+		CurrentObjectiveLevel col;
+		try {
+			col = getCorrespondingCOL((String) obj.get("objectiveID"), (String) obj.get("levelID"), (String) obj.get("learnerID"));
+			if(col != null) {
+				JSONArray results = (JSONArray) obj.get("resultsByTasks");
+				for (Object object : results) {
+					JSONObject taskResult = (JSONObject) object;
+					ResultsByTask rbt = getCorrespondingResultsByTask((String) taskResult.get("taskID"), col);
+					if(rbt != null) {
+						addResultsToTask(taskResult, rbt);
+					} else {
+						System.err.println("ResultsByTask not found with ID = " + (String) taskResult.get("taskID"));
+					}
 				}
+			} else {
+				System.err.println("CurrentObjectiveLevel not found for O/L = (" + (String) obj.get("objectiveID") + " , " + (String) obj.get("levelID") + ")");
 			}
-		} else {
-			System.err.println("CurrentObjectiveLevel not found for O/L = (" + (String) obj.get("objectiveID") + " , " + (String) obj.get("levelID") + ")");
+		} catch (NonExistantLearnerPlayerException e) {
+			e.printStackTrace();
 		}
 		
 		modelsManager.saveContextModel();
-		return "TOTO";
+		return "Success";
 	}
 
 	/***********************************/
@@ -102,8 +108,8 @@ public class LearnerPlayerManagerResource {
 		return null;
 	}
 	
-	private CurrentObjectiveLevel getCorrespondingCOL(String objectiveID, String levelID) {
-		for (CurrentObjectiveLevel col : modelsManager.getContextModel().getLearnerplayer().getProgression().getCurrentobjectivelevels()) {
+	private CurrentObjectiveLevel getCorrespondingCOL(String objectiveID, String levelID, String learnerID) throws NonExistantLearnerPlayerException {
+		for (CurrentObjectiveLevel col : modelsManager.getLearnerPlayer(learnerID).getProgression().getCurrentobjectivelevels()) {
 			System.out.println(col.getObjective().getID()+" "+col.getLevel().getID());
 			System.out.println(col.getObjective().getID().equals(objectiveID));
 			System.out.println(col.getLevel().getID().equals(levelID));

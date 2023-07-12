@@ -1,0 +1,79 @@
+{
+  "openapi" : "3.0.2",
+  "info" : {
+    "title" : "Dungeon Generator",
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "https://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version" : "1.0",
+    "x-origin" : [ {
+      "format" : "swagger",
+      "version" : "2.0",
+      "url" : "https://raw.githubusercontent.com/darklynx/swagger-api-collection/master/api/yaml/instagram.yaml"
+    } ],
+    "x-restgeninfo" : { }
+  },
+  "servers" : [ {
+    "url" : "https://localhost:8080/FrameworkAPI/"
+  } ],
+  "paths" : {
+    "/generator/{learnerID}" : {
+      "get" : {
+        "summary" : "Generate dungeon for a given learner",
+        "description" : "Generate dungeon for a given learner",
+        "operationId" : "getDungeonForLearner",
+        "parameters" : [ {
+          "name" : "learnerID",
+          "in" : "path",
+          "description" : "The ID of a learner-player.",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "XML File describing a dungeon for a learner.",
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Dungeon"
+                }
+              }
+            }
+          }
+        },
+        "callbacks" : { }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Dungeon" : {
+        "type" : "object",
+        "properties" : {
+          "entryRoom" : {
+            "type" : "string"
+          },
+          "rooms" : {
+            "type" : "array",
+            "description" : "List of rooms composing the dungeon.",
+            "items" : {
+              "$ref" : "#/components/schemas/Room"
+            }
+          }
+        },
+        "description" : "Object composed of rooms to traverse."
+      },
+      "Room" : {
+        "type" : "object"
+      }
+    },
+    "responses" : { },
+    "parameters" : { },
+    "requestBodies" : { }
+  }
+}

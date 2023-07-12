@@ -13,12 +13,14 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
+import exceptions.NonExistantLearnerPlayerException;
+import generator.Context;
 import generator.Dungeon;
 import generator.GameDescription;
 import generator.GameplayTaskRelations;
-import generator.GenerationContext;
 import generator.GeneratorPackage;
 import generator.Knowledge;
+import generator.LearnerPlayer;
 import generator.LearningDomain;
 
 
@@ -33,7 +35,7 @@ public class ModelsManager {
 	private static String OUTPUT_MODELS_PATH = "outputmodels/";
 	private static String[] INPUT_MODELS_NAMES = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi", "Relations.xmi"};
 	
-	private GenerationContext context; 
+	private Context context; 
 	private GameDescription gameDescription; 
 	private Knowledge multiplicationTables;
 	private LearningDomain learningPath;
@@ -214,7 +216,7 @@ public class ModelsManager {
 		}
 		EcoreUtil.resolveAll(resourceSet); 
 		
-		this.context = (GenerationContext) resource1.getContents().get(0);
+		this.context = (Context) resource1.getContents().get(0);
 		this.gameDescription = (GameDescription) resource2.getContents().get(0);
 		this.multiplicationTables = (Knowledge) resource3.getContents().get(0);
 		this.learningPath = (LearningDomain) resource4.getContents().get(0);
@@ -223,11 +225,11 @@ public class ModelsManager {
 		LOGGER.info("Loading input models : OK");
 	}
 
-	public GenerationContext getContextModel() {
+	public Context getContextModel() {
 		return context;
 	}
 
-	public void setContextModel(GenerationContext context) {
+	public void setContextModel(Context context) {
 		this.context = context;
 	}
 
@@ -253,5 +255,20 @@ public class ModelsManager {
 
 	public GameplayTaskRelations getRelationsModel() {
 		return relations;
+	}
+	
+	public LearnerPlayer getLearnerPlayer(String identifier) throws NonExistantLearnerPlayerException {
+		LearnerPlayer learnerPlayer = null;
+		int i = 0;
+		while(learnerPlayer == null && i < getContextModel().getLearnerplayers().size()) {
+			if(getContextModel().getLearnerplayers().get(i).getID().equals(identifier)) {
+				learnerPlayer = getContextModel().getLearnerplayers().get(i);
+			}
+			i++;
+		}
+		if(learnerPlayer == null) {
+			throw new NonExistantLearnerPlayerException(identifier);
+		}
+		return learnerPlayer;
 	}
 }

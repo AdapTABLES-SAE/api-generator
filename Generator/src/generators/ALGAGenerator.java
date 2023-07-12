@@ -2,8 +2,10 @@ package generators;
 
 import org.eclipse.emf.common.util.EList;
 
+import exceptions.NonExistantLearnerPlayerException;
 import flattener.Main;
 import generator.Dungeon;
+import generator.LearnerPlayer;
 import generator.LevelsDifficultyProgress;
 import generator.PropositionParam;
 import generator.QuestionedFact;
@@ -20,31 +22,43 @@ public class ALGAGenerator {
 	private ModelsManager modelAccess;
 	private Dungeon generatedDungeon;
 	private DungeonElements dungeonElements;
+	private LearnerPlayer learnerPlayer;
 
 	public static void main(String[] args) {
 		
-		ALGAGenerator generator = new ALGAGenerator();
-		generator.generate();
-		generator.printDungeon();
-		generator.saveDungeon("DungeonGen.xmi");
-		Main.transformModel("C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\", 
+		ALGAGenerator generator;
+		try {
+			generator = new ALGAGenerator("learnerFic");
+			generator.generate();
+			generator.printDungeon();
+			generator.saveDungeon("DungeonGen.xmi");
+			Main.transformModel("C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\", 
 				"C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\flattener\\", "outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
+		} catch (NonExistantLearnerPlayerException e) {
+			e.printStackTrace();
+		}
+		
+		
 	}
 	
-	public ALGAGenerator() {
+	public ALGAGenerator(String learnerID) throws NonExistantLearnerPlayerException {
 		modelAccess = new ModelsManager();
+		this.learnerPlayer = modelAccess.getLearnerPlayer(learnerID);
 	}
 	
-	public ALGAGenerator(String fileContext) {
+	public ALGAGenerator(String learnerID, String fileContext) throws NonExistantLearnerPlayerException {
 		modelAccess = new ModelsManager(fileContext);
+		this.learnerPlayer = modelAccess.getLearnerPlayer(learnerID);
 	}
 	
-	public ALGAGenerator(boolean forTest, String contextFileName) {
+	public ALGAGenerator(boolean forTest, String learnerID, String contextFileName) throws NonExistantLearnerPlayerException {
 		modelAccess = new ModelsManager(forTest, contextFileName);
+		this.learnerPlayer = modelAccess.getLearnerPlayer(learnerID);
 	}
 	
-	public ALGAGenerator(String inputPath, String outputPath, String contextFileName, boolean lauchedFromAPI) {
+	public ALGAGenerator(String inputPath, String outputPath, String contextFileName, String learnerID, boolean lauchedFromAPI) throws NonExistantLearnerPlayerException {
 		modelAccess = new ModelsManager(inputPath, outputPath, contextFileName, lauchedFromAPI);
+		this.learnerPlayer = modelAccess.getLearnerPlayer(learnerID);
 	}
 	
 	public void saveDungeon(String fileName) {
@@ -56,9 +70,9 @@ public class ALGAGenerator {
 	}
 	
 	private void checkLearnerPlayerSetProgression() {
-		if(modelAccess.getContextModel().getLearnerplayer().getProgression() == null) {
-			modelAccess.getContextModel().getLearnerplayer().setProgression(new ProgressionImpl());
-			modelAccess.getContextModel().getLearnerplayer().getProgression().setCurrentGameLevel(new CurrentGameLevelImpl());
+		if(learnerPlayer.getProgression() == null) {
+			learnerPlayer.setProgression(new ProgressionImpl());
+			learnerPlayer.getProgression().setCurrentGameLevel(new CurrentGameLevelImpl());
 		}
 	}
 	
@@ -67,15 +81,15 @@ public class ALGAGenerator {
 
 		checkLearnerPlayerSetProgression();
 		
-		double nbQRooms = gameDifficulty.getInitNbQRoom() + gameDifficulty.getNbQRoomIncrease() * (modelAccess.getContextModel().getLearnerplayer().getProgression().getCurrentGameLevel().getLevel() - 1);
-		double nbNQRooms = gameDifficulty.getInitNbNQRoom() + gameDifficulty.getNbNQRoomIncrease() * (modelAccess.getContextModel().getLearnerplayer().getProgression().getCurrentGameLevel().getLevel() - 1);
+		double nbQRooms = gameDifficulty.getInitNbQRoom() + gameDifficulty.getNbQRoomIncrease() * (learnerPlayer.getProgression().getCurrentGameLevel().getLevel() - 1);
+		double nbNQRooms = gameDifficulty.getInitNbNQRoom() + gameDifficulty.getNbNQRoomIncrease() * (learnerPlayer.getProgression().getCurrentGameLevel().getLevel() - 1);
 
 		System.out.println("Number of no question rooms "+nbNQRooms);
 		System.out.println("Number of question rooms "+nbQRooms);
 		
 		dungeonElements = new DungeonElements(modelAccess.getGameDescriptionModel(), nbQRooms, nbNQRooms);
 		
-		EducationalElementsGenerator eduGeneration = new EducationalElementsGenerator(modelAccess, dungeonElements);
+		EducationalElementsGenerator eduGeneration = new EducationalElementsGenerator(modelAccess, dungeonElements, learnerPlayer);
 		GameElementsGenerator gameGeneration;
 		DungeonGenerator dungeonGeneration;
 		try {

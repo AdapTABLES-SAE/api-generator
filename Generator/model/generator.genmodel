@@ -184,9 +184,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/nbMissingElements"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/checkLearnerAction"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//GenerationContext">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GenerationContext/gamecontext"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GenerationContext/learnerplayer"/>
+    <genClasses ecoreClass="generator.ecore#//Context">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Context/gamecontext"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Context/learnerplayers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Context/ID"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//LearnerPlayer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayer/progression"/>

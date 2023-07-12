@@ -1519,14 +1519,14 @@ public interface GeneratorPackage extends EPackage {
 	int MT_COMPLETION1_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.GenerationContextImpl <em>Generation Context</em>}' class.
+	 * The meta object id for the '{@link generator.impl.ContextImpl <em>Context</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.GenerationContextImpl
-	 * @see generator.impl.GeneratorPackageImpl#getGenerationContext()
+	 * @see generator.impl.ContextImpl
+	 * @see generator.impl.GeneratorPackageImpl#getContext()
 	 * @generated
 	 */
-	int GENERATION_CONTEXT = 18;
+	int CONTEXT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Gamecontext</b></em>' containment reference.
@@ -1535,34 +1535,43 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATION_CONTEXT__GAMECONTEXT = 0;
+	int CONTEXT__GAMECONTEXT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Learnerplayer</b></em>' containment reference.
+	 * The feature id for the '<em><b>Learnerplayers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATION_CONTEXT__LEARNERPLAYER = 1;
+	int CONTEXT__LEARNERPLAYERS = 1;
 
 	/**
-	 * The number of structural features of the '<em>Generation Context</em>' class.
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATION_CONTEXT_FEATURE_COUNT = 2;
+	int CONTEXT__ID = 2;
 
 	/**
-	 * The number of operations of the '<em>Generation Context</em>' class.
+	 * The number of structural features of the '<em>Context</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATION_CONTEXT_OPERATION_COUNT = 0;
+	int CONTEXT_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.LearnerPlayerImpl <em>Learner Player</em>}' class.
@@ -6975,36 +6984,47 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTCompletion1_CheckLearnerAction();
 
 	/**
-	 * Returns the meta object for class '{@link generator.GenerationContext <em>Generation Context</em>}'.
+	 * Returns the meta object for class '{@link generator.Context <em>Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Generation Context</em>'.
-	 * @see generator.GenerationContext
+	 * @return the meta object for class '<em>Context</em>'.
+	 * @see generator.Context
 	 * @generated
 	 */
-	EClass getGenerationContext();
+	EClass getContext();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.GenerationContext#getGamecontext <em>Gamecontext</em>}'.
+	 * Returns the meta object for the containment reference '{@link generator.Context#getGamecontext <em>Gamecontext</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Gamecontext</em>'.
-	 * @see generator.GenerationContext#getGamecontext()
-	 * @see #getGenerationContext()
+	 * @see generator.Context#getGamecontext()
+	 * @see #getContext()
 	 * @generated
 	 */
-	EReference getGenerationContext_Gamecontext();
+	EReference getContext_Gamecontext();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.GenerationContext#getLearnerplayer <em>Learnerplayer</em>}'.
+	 * Returns the meta object for the containment reference list '{@link generator.Context#getLearnerplayers <em>Learnerplayers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Learnerplayer</em>'.
-	 * @see generator.GenerationContext#getLearnerplayer()
-	 * @see #getGenerationContext()
+	 * @return the meta object for the containment reference list '<em>Learnerplayers</em>'.
+	 * @see generator.Context#getLearnerplayers()
+	 * @see #getContext()
 	 * @generated
 	 */
-	EReference getGenerationContext_Learnerplayer();
+	EReference getContext_Learnerplayers();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Context#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see generator.Context#getID()
+	 * @see #getContext()
+	 * @generated
+	 */
+	EAttribute getContext_ID();
 
 	/**
 	 * Returns the meta object for class '{@link generator.LearnerPlayer <em>Learner Player</em>}'.
@@ -10277,14 +10297,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MT_COMPLETION1__CHECK_LEARNER_ACTION = eINSTANCE.getMTCompletion1_CheckLearnerAction();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.GenerationContextImpl <em>Generation Context</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.ContextImpl <em>Context</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.GenerationContextImpl
-		 * @see generator.impl.GeneratorPackageImpl#getGenerationContext()
+		 * @see generator.impl.ContextImpl
+		 * @see generator.impl.GeneratorPackageImpl#getContext()
 		 * @generated
 		 */
-		EClass GENERATION_CONTEXT = eINSTANCE.getGenerationContext();
+		EClass CONTEXT = eINSTANCE.getContext();
 
 		/**
 		 * The meta object literal for the '<em><b>Gamecontext</b></em>' containment reference feature.
@@ -10292,15 +10312,23 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GENERATION_CONTEXT__GAMECONTEXT = eINSTANCE.getGenerationContext_Gamecontext();
+		EReference CONTEXT__GAMECONTEXT = eINSTANCE.getContext_Gamecontext();
 
 		/**
-		 * The meta object literal for the '<em><b>Learnerplayer</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Learnerplayers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GENERATION_CONTEXT__LEARNERPLAYER = eINSTANCE.getGenerationContext_Learnerplayer();
+		EReference CONTEXT__LEARNERPLAYERS = eINSTANCE.getContext_Learnerplayers();
+
+		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTEXT__ID = eINSTANCE.getContext_ID();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.LearnerPlayerImpl <em>Learner Player</em>}' class.

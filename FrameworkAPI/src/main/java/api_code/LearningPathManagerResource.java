@@ -53,9 +53,9 @@ public class LearningPathManagerResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public String addObjectiveLevel(String jsonContent, @Context ServletContext app) { // https://waytolearnx.com/2020/03/lire-un-fichier-json-avec-java.html
-		Paths.PROJECT_PATH = app.getRealPath("");		
+		Constant.PROJECT_PATH = app.getRealPath("");		
 		JSONObject obj = new JSONObject();
-		modelsManager = new ModelsManager(Paths.PROJECT_PATH + Paths.INPUT_MODELS_PATH, Paths.PROJECT_PATH + Paths.OUTPUT_MODELS_PATH, true);
+		modelsManager = new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, true);
 		try {
 			obj = (JSONObject) new JSONParser().parse(jsonContent);
 		} catch (ParseException e) {

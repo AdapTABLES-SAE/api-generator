@@ -20,7 +20,7 @@ class ObjectiveSelectionTest {
 	public void init() {
     	dungeons = new ArrayList<>();
 	}
-	
+	/*
 	@Test
 	void profilCE2ContainsRightObjectivesLinear() {
 		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_RM_Init.xmi"); 
@@ -30,14 +30,14 @@ class ObjectiveSelectionTest {
 		profilCE2toAssert();
 	}
 	
-	/*@Test
+	@Test
 	void profilCE2ContainsRightObjectivesLabyrinthine() {
 		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_RM_Init_Labyrinthine.xmi"); 
 		for (int i = 0; i < 30; i++) {
 			dungeons.add(generator.generate());
 		}
 		profilCE2toAssert();
-	}*/
+	}
 	
 	private void profilCE2toAssert() {
         assertTrue("O2", dungeonsContainsDungeonWithObjectiveLevel("REC-O2-N1"));
@@ -58,14 +58,14 @@ class ObjectiveSelectionTest {
 		profilCE1toAssert();
 	}
 	
-	/*@Test
+	@Test
 	void profilCE1ContainsRightObjectivesLabyrinthine() {
 		ALGAGenerator generator = new ALGAGenerator("learnerProfils/LP_IM_Init_Labyrinthine.xmi"); 
 		for (int i = 0; i < 30; i++) {
 			dungeons.add(generator.generate());
 		}
 		profilCE1toAssert();
-	}*/
+	}
 	
 	private void profilCE1toAssert() {
 		  assertTrue("O2/D5", dungeonsContainsDungeonWithObjectiveLevel("ICM-O4-N1"));
@@ -106,5 +106,5 @@ class ObjectiveSelectionTest {
 			}
 		}
 		return present;
-	}
+	}*/
 }

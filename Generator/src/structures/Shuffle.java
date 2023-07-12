@@ -5,12 +5,13 @@ import java.util.List;
 import java.util.Random;
 
 import generator.AbstractFact;
+import generator.PropositionParam;
 import generator.QuestionableFact;
 import generator.ResultsByTask;
 
 public class Shuffle {
 
-	public static List<Integer> shufflePropositions(List<Integer> eList){
+	public static List<Integer> shuffleIntegers(List<Integer> eList){
 		Random rand = new Random();
 		List<Integer> shuffledElem = new ArrayList<>();
 		int number = eList.size();
@@ -19,6 +20,19 @@ public class Shuffle {
 			j = rand.nextInt(eList.size()); 
 			shuffledElem.add(eList.get(j));
 			eList.remove(j);
+		}
+		return shuffledElem;
+	}
+	
+	public static List<PropositionParam> shufflePropositions(List<PropositionParam> propositions) {
+		Random rand = new Random();
+		List<PropositionParam> shuffledElem = new ArrayList<>();
+		int number = propositions.size();
+		int j;
+		while (shuffledElem.size() != number) {
+			j = rand.nextInt(propositions.size()); 
+			shuffledElem.add(propositions.get(j));
+			propositions.remove(j);
 		}
 		return shuffledElem;
 	}

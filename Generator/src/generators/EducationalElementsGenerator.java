@@ -37,13 +37,12 @@ public class EducationalElementsGenerator {
 	
 	private LearnerPlayer learnerPlayer;
 
-
-	public EducationalElementsGenerator(ModelsManager modelAccess, DungeonElements dungeonElements) {
-		this.learnerPlayer = modelAccess.getContextModel().getLearnerplayer();
+	public EducationalElementsGenerator(ModelsManager modelAccess, DungeonElements dungeonElements, LearnerPlayer learner) {
 		random = new Random();
 		this.dungeonElements = dungeonElements;
 		this.modelAccess = modelAccess;
 		this.nbRoomsToTask = new HashMap<>();
+		this.learnerPlayer = learner;
 	}
 	
 	public DungeonElements generateEE() throws Exception {
@@ -76,8 +75,19 @@ public class EducationalElementsGenerator {
 
 	
 	public void saveLearnerModel() {
-		modelAccess.getContextModel().setLearnerplayer(learnerPlayer);
+		this.deleteLearnerPlayer();
+		modelAccess.getContextModel().getLearnerplayers().add(this.learnerPlayer);
 		modelAccess.saveContextModel();
+	}
+	
+	private void deleteLearnerPlayer() {
+		int i = 0;
+		while(i < modelAccess.getContextModel().getLearnerplayers().size()) {
+			if(modelAccess.getContextModel().getLearnerplayers().get(i).getID().equals(this.learnerPlayer.getID())) {
+				modelAccess.getContextModel().getLearnerplayers().remove(i);
+			}
+			i++;
+		}
 	}
 	
 	
@@ -129,23 +139,29 @@ public class EducationalElementsGenerator {
 	 * @throws Exception 
 	 */
 	private void defineNumberOfRoomPerTaskNecessary() throws Exception {
+		//System.err.println(dungeonElements.getNbQRooms());
 		if(dungeonElements.getChosenObjective() != null && dungeonElements.getChosenLevel() != null) {
 			double coeff = computesCoeffApparition();	
 			for (ResultsByTask rbt : dungeonElements.getLearnerResultsByTasks()) {
+				//System.out.println(rbt.getTask().getID());
 				if(!isTaskAchieved(rbt.getTask())) {
 					addRoom2Task(rbt, coeff);
 				}
 			}
 		}
-		
+		//System.err.println("Before clean "+nbRoomsToTask);
 		this.cleanNumberOfComputedRooms();
+		//System.err.println("After clean "+nbRoomsToTask);
 	}
 	
 	private void addRoom2Task(ResultsByTask rbt, double coeffAdditional) throws Exception {
 		if(nbRoomsToTask.containsKey(rbt)) {
+			//System.out.println("nbroom "+((double) Math.round(nbRoomsToTask.get(rbt) +
+					//((rbt.getTask().getPercentOfApparition()*coeffAdditional)*dungeonElements.getNbQRooms())/100)));
 			nbRoomsToTask.put(rbt, (double) Math.round(nbRoomsToTask.get(rbt) +
 					((rbt.getTask().getPercentOfApparition()*coeffAdditional)*dungeonElements.getNbQRooms())/100));
 		}else {
+			//System.out.println("nbroom "+((double) Math.round(((rbt.getTask().getPercentOfApparition()*coeffAdditional)*dungeonElements.getNbQRooms())/100)));
 			nbRoomsToTask.put(rbt, (double) Math.round(((rbt.getTask().getPercentOfApparition()*coeffAdditional)*dungeonElements.getNbQRooms())/100));
 		}
 	}
@@ -153,7 +169,7 @@ public class EducationalElementsGenerator {
 	private void cleanNumberOfComputedRooms() {
 		int computedNumberOfRoom = this.getNumberOfRoomsComputed();
 		if(computedNumberOfRoom != dungeonElements.getNbQRooms()) {
-			List<ResultsByTask> possibleRemoveTasks = new ArrayList<>(getTaskWithEqualNumberOfRooms());
+			List<ResultsByTask> possibleRemoveTasks = new ArrayList<>(getTaskWithLowerApparitionPercentage());
 			for(int i = 0; i < computedNumberOfRoom - dungeonElements.getNbQRooms(); i++) {
 				int randomIndexChoice = random.nextInt(possibleRemoveTasks.size());
 				nbRoomsToTask.remove(possibleRemoveTasks.get(randomIndexChoice));
@@ -161,13 +177,22 @@ public class EducationalElementsGenerator {
 		}
 	}
 	
-	private Set<ResultsByTask> getTaskWithEqualNumberOfRooms(){
+	private double getLowerPercentagePresentInDungeon() {
+		double percentage = 100.;
+		for(ResultsByTask rbt: nbRoomsToTask.keySet()) {
+			if(rbt.getTask().getPercentOfApparition() < percentage && nbRoomsToTask.get(rbt) > 0.0) {
+				percentage = rbt.getTask().getPercentOfApparition();
+			}
+		}
+		return percentage;
+	}
+	
+	private Set<ResultsByTask> getTaskWithLowerApparitionPercentage(){
+		double percentage = getLowerPercentagePresentInDungeon();
 		Set<ResultsByTask> tasks = new HashSet<>();
 		for(ResultsByTask rbt: nbRoomsToTask.keySet()) {
-			for(ResultsByTask rbt2: nbRoomsToTask.keySet()) {
-				if(rbt != rbt2 && nbRoomsToTask.get(rbt).equals(nbRoomsToTask.get(rbt2))) {
-					tasks.add(rbt);
-				}
+			if(rbt.getTask().getPercentOfApparition() == percentage) {
+				tasks.add(rbt);
 			}
 		}
 		return tasks;
@@ -193,8 +218,8 @@ public class EducationalElementsGenerator {
 	}
 	
 	private boolean isTaskAchieved(ATask task) {
-		return successPercentageByTask(task) == 100 && 
-				encounterPercentageByTask(task) == 100;
+		return successPercentageByTask(task) == 100. && 
+				encounterPercentageByTask(task) == 100.;
 	}
 	
 	public double successPercentageByTask(ATask task) {

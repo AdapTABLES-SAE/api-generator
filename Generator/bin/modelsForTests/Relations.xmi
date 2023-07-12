@@ -4,133 +4,133 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:generator="http://www.example.org/generator">
   <relations>
-    <condition/>
-  </relations>
-  <relations
-      gameplay="MOVE_UNIQUE">
-    <condition/>
-  </relations>
-  <relations
-      gameplay="POSITION_UNIQUE">
-    <condition/>
-  </relations>
-  <relations
-      gameplay="ORIENT">
-    <condition/>
-  </relations>
-  <relations
-      gameplay="POSITION_UNIQUE">
+    <gameplays>DIRECT_RESPONSE</gameplays>
+    <gameplays>POSITION_MULTIPLE</gameplays>
     <condition
-        answerModality="INPUT"/>
+        answerModality="INPUT">
+      <statementTypes>CLASSIC</statementTypes>
+      <statementTypes>GRAPHIC</statementTypes>
+      <statementTypes>TO_FILL_IN</statementTypes>
+    </condition>
   </relations>
-  <relations
-      gameplay="DIRECT_RESPONSE">
+  <relations>
+    <gameplays>SELECT_UNIQUE</gameplays>
+    <gameplays>MOVE_UNIQUE</gameplays>
+    <gameplays>ORIENT_UNIQUE</gameplays>
+    <gameplays>POSITION_UNIQUE</gameplays>
+    <condition>
+      <statementTypes>CLASSIC</statementTypes>
+      <statementTypes>GRAPHIC</statementTypes>
+      <statementTypes>TO_FILL_IN</statementTypes>
+    </condition>
+  </relations>
+  <relations>
+    <gameplays>SELECT_MULTIPLE</gameplays>
+    <gameplays>MOVE_MULTIPLE</gameplays>
+    <gameplays>ORIENT_MULTIPLE</gameplays>
     <condition
-        answerModality="INPUT"/>
+        nbExpectedAnswers="SUP_ONE">
+      <statementTypes>CLASSIC</statementTypes>
+      <statementTypes>GRAPHIC</statementTypes>
+      <statementTypes>TO_FILL_IN</statementTypes>
+    </condition>
   </relations>
-  <relations
-      gameplay="MOVE_MULTIPLE">
-    <condition
-        nbExpectedAnswers="SUP_ONE"/>
-  </relations>
-  <relations
-      gameplay="ORIENT">
-    <condition
-        nbExpectedAnswers="SUP_ONE"/>
-  </relations>
-  <relations
-      gameplay="SELECT_MULTIPLE">
-    <condition
-        nbExpectedAnswers="SUP_ONE"/>
-  </relations>
-  <relations
-      gameplay="POSITION_MULTIPLE">
+  <relations>
+    <gameplays>POSITION_MULTIPLE</gameplays>
     <condition
         nbFacts="SUP_ONE"
-        answerModality="INPUT"/>
+        answerModality="INPUT"
+        nbExpectedAnswers="EQ_NB_FACTS">
+      <statementTypes>GRAPHIC</statementTypes>
+      <statementTypes>TO_FILL_IN</statementTypes>
+    </condition>
   </relations>
-  <relations
-      gameplay="MOVE_MULTIPLE">
+  <relations>
+    <gameplays>MOVE_MULTIPLE</gameplays>
     <condition
         nbFacts="SUP_ONE"
-        nbExpectedAnswers="SUP_EQ_ONE"/>
+        nbExpectedAnswers="EQ_NB_FACTS">
+      <statementTypes>GRAPHIC</statementTypes>
+      <statementTypes>TO_FILL_IN</statementTypes>
+    </condition>
   </relations>
-  <relations
-      task="IDENTIFY"
-      gameplay="POSITION_UNIQUE">
+  <relations>
+    <gameplays>MOVE_MULTIPLE</gameplays>
     <condition
-        answerModality="INPUT"/>
+        nbFacts="SUP_ONE"
+        nbExpectedAnswers="SUP_NB_FACTS">
+      <statementTypes>GRAPHIC</statementTypes>
+      <statementTypes>TO_FILL_IN</statementTypes>
+    </condition>
   </relations>
   <relations
-      task="IDENTIFY"
-      gameplay="DIRECT_RESPONSE">
+      task="ORDER">
+    <gameplays>MOVE_MULTIPLE</gameplays>
     <condition
         nbFacts="SUP_EQ_ONE"
-        answerModality="INPUT"/>
+        nbExpectedAnswers="EQ_NB_FACTS">
+      <statementTypes>CLASSIC</statementTypes>
+    </condition>
   </relations>
   <relations
       task="IDENTIFY">
-    <condition/>
-  </relations>
-  <relations
-      task="IDENTIFY"
-      gameplay="POSITION_UNIQUE">
-    <condition/>
-  </relations>
-  <relations
-      task="IDENTIFY"
-      gameplay="MOVE_UNIQUE">
-    <condition/>
-  </relations>
-  <relations
-      task="IDENTIFY"
-      gameplay="ORIENT">
+    <gameplays>DIRECT_RESPONSE</gameplays>
+    <gameplays>POSITION_UNIQUE</gameplays>
     <condition
-        nbFacts="SUP_EQ_ONE"/>
+        answerModality="INPUT"
+        nbExpectedAnswers="EQ_NB_FACTS">
+      <statementTypes>CLASSIC</statementTypes>
+    </condition>
   </relations>
   <relations
-      task="IDENTIFY"
-      gameplay="MOVE_MULTIPLE">
+      task="IDENTIFY">
+    <gameplays>SELECT_UNIQUE</gameplays>
+    <gameplays>MOVE_UNIQUE</gameplays>
+    <gameplays>ORIENT_UNIQUE</gameplays>
+    <gameplays>POSITION_UNIQUE</gameplays>
     <condition
-        nbFacts="SUP_ONE"/>
+        nbExpectedAnswers="EQ_NB_FACTS">
+      <statementTypes>CLASSIC</statementTypes>
+    </condition>
   </relations>
   <relations
-      task="IDENTIFY"
-      gameplay="SELECT_MULTIPLE">
+      task="IDENTIFY">
+    <gameplays>DIRECT_RESPONSE</gameplays>
     <condition
-        nbFacts="SUP_ONE"/>
+        nbFacts="SUP_ONE"
+        answerModality="INPUT"
+        nbExpectedAnswers="EQ_NB_FACTS">
+      <statementTypes>CLASSIC</statementTypes>
+    </condition>
   </relations>
   <relations
-      task="MEMBERSHIP"
-      gameplay="POSITION_MULTIPLE">
+      task="IDENTIFY">
     <condition
-        nbFacts="SUP_EQ_ONE"
-        answerModality="INPUT"/>
+        nbFacts="SUP_ONE"
+        nbExpectedAnswers="EQ_NB_FACTS">
+      <statementTypes>CLASSIC</statementTypes>
+    </condition>
   </relations>
   <relations
-      task="MEMBERSHIP"
-      gameplay="SELECT_MULTIPLE">
-    <condition
-        nbFacts="SUP_EQ_ONE"
-        nbExpectedAnswers="SUP_EQ_ONE"/>
-  </relations>
-  <relations
-      task="MEMBERSHIP"
-      gameplay="ORIENT">
+      task="MEMBERSHIP">
+    <gameplays>POSITION_MULTIPLE</gameplays>
     <condition
         nbFacts="SUP_EQ_ONE"
-        nbExpectedAnswers="SUP_EQ_ONE"/>
+        answerModality="INPUT"
+        nbExpectedAnswers="SUP_ONE">
+      <statementTypes>GRAPHIC</statementTypes>
+    </condition>
   </relations>
   <relations
-      task="MEMBERSHIP"
-      gameplay="MOVE_MULTIPLE">
+      task="MEMBERSHIP">
+    <gameplays>SELECT_MULTIPLE</gameplays>
+    <gameplays>MOVE_MULTIPLE</gameplays>
+    <gameplays>ORIENT_MULTIPLE</gameplays>
     <condition
         nbFacts="SUP_EQ_ONE"
-        nbExpectedAnswers="SUP_EQ_ONE"/>
-  </relations>
-  <relations
-      task="MEMBERSHIP"
-      gameplay="POSITION_UNIQUE">
-    <condition/>
+        nbExpectedAnswers="SUP_ONE">
+      <statementTypes>CLASSIC</statementTypes>
+      <statementTypes>GRAPHIC</statementTypes>
+    </condition>
   </relations>
 </generator:GameplayTaskRelations>

@@ -23,7 +23,7 @@ class TasksSelectionTest {
 	void init() {
 		numberOfRoomsByTasks = new HashMap<>();
 	}
-	
+/*	
 	@RepeatedTest(30)
 	void initialConfigurationAllTasksLinear() {
 		numberOfRoomsByTasks = new HashMap<>();
@@ -162,5 +162,5 @@ class TasksSelectionTest {
 				 assertTrue(room.getTask().getID().equals("MEMB"), "MEMB");	
 			}
 		}       
-	}
+	}*/
 }

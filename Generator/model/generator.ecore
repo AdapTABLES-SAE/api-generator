@@ -161,11 +161,13 @@
         changeable="false" transient="true" defaultValueLiteral="1" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GenerationContext">
+  <eClassifiers xsi:type="ecore:EClass" name="Context">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gamecontext" lowerBound="1"
         eType="#//GameContext" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerplayer" lowerBound="1"
-        eType="#//LearnerPlayer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerplayers" lowerBound="1"
+        upperBound="-1" eType="#//LearnerPlayer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        unsettable="true" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LearnerPlayer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="progression" eType="#//Progression"

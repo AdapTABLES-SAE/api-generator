@@ -157,8 +157,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseGenerationContext(GenerationContext object) {
-			return createGenerationContextAdapter();
+		public Adapter caseContext(Context object) {
+			return createContextAdapter();
 		}
 
 		@Override
@@ -773,16 +773,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.GenerationContext <em>Generation Context</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.Context <em>Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.GenerationContext
+	 * @see generator.Context
 	 * @generated
 	 */
-	public Adapter createGenerationContextAdapter() {
+	public Adapter createContextAdapter() {
 		return null;
 	}
 
