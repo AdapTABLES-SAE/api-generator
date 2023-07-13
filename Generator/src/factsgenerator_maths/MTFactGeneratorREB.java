@@ -81,14 +81,15 @@ public class MTFactGeneratorREB extends FactGeneratorTemplate {
 		previousRes.add(fact.getSoluceRight());
 		previousRes.add(fact.getSoluceRes());
 		
-		for (Integer integer : previousRes) {
-			int compute = number * integer;
+		for(int i = 0; i < previousRes.size() - 1; i++) {
+			int compute = number * previousRes.get(i);
 			if(previousRes.contains(compute)) {
 				return true;
-			}
-			for (Integer integer2 : previousRes) {
-				if(integer * integer2 == number) {
-					return true;
+			} else {
+				for(int j = 1; j < previousRes.size(); j++) {
+					if(previousRes.get(i) * previousRes.get(j) == number) {
+						return true;
+					}
 				}
 			}
 		}
@@ -109,35 +110,57 @@ public class MTFactGeneratorREB extends FactGeneratorTemplate {
 		solutions.add(((MTQFRebuild) qFact).getSoluceRes()+"");
 		return solutions;
 	}
+	
+	private List<Integer> generateListOfPossibleBadChoices(MTQFRebuild qfact) {
+		Set<Integer> propositions_temp = new HashSet<>();
+		
+		int min = -1;
+		int max = -1;
+		for(int i = 0; i < 3; i++) {
+			switch(i) {
+			case 0:
+				min = qfact.getSoluceLeft()-15 >= 0? qfact.getSoluceLeft()-15: 1; 
+				max = min == 1? qfact.getSoluceLeft()+15+((qfact.getSoluceLeft()-15)*-1): qfact.getSoluceLeft()+15; 
+				break;
+			case 1:
+				min = qfact.getSoluceRight()-15 >= 0? qfact.getSoluceRight()-15: 1;
+				max = min == 1? qfact.getSoluceRight()+15+((qfact.getSoluceRight()-15)*-1): qfact.getSoluceRight()+15; 
+				break;
+			default:
+				min = qfact.getSoluceRes()-15 >= 0? qfact.getSoluceRes()-15: 1;
+				max = min == 1? qfact.getSoluceRes()+15+((qfact.getSoluceRes()-15)*-1): qfact.getSoluceRes()+15; 
+				break;
+			}
+			for(int j = min; j < max; j++) {
+				propositions_temp.add(j);
+			}
+		}
+		//System.err.println(propositions_temp);
+		return new ArrayList<>(propositions_temp);
+	}
 
 	@Override
 	protected Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact) {
+		//System.out.println("REB");
 		Map<ECorrectness, List<String>> propositions = new HashMap<>();
 		MTQFRebuild qfact = (MTQFRebuild) qFact;
 		List<Integer> propositions_temp = new ArrayList<>();
-		
-		
-		int min1 = qfact.getSoluceLeft()-8 >= 0? qfact.getSoluceLeft()-8: 1;
-		int min2 = qfact.getSoluceRight()-8 >= 0? qfact.getSoluceRight()-8: 1;
-		int min3 = qfact.getSoluceRes()-8 >= 0? qfact.getSoluceRes()-8: 1; 
-		int max1 = qfact.getSoluceLeft()+8;
-		int max2 = qfact.getSoluceRight()+8;
-		int max3 = qfact.getSoluceRes()+8; 
-		int number;
-		while(propositions_temp.size() < mc.getNbBadChoices()) {
-			switch(propositions_temp.size()) {
-			case 1:
-				number = new Random().nextInt(max1 - min1) + min1;
-				break;
-			case 2:
-				number = new Random().nextInt(max2 - min2) + min2;
-				break;
-			default:
-				number = new Random().nextInt(max3 - min3) + min3;
-			}
-			if(!propositions_temp.contains(number) && !createsOtherSolution(qfact, propositions_temp, number)) {
+		List<Integer> allPossiblePropositions = generateListOfPossibleBadChoices(qfact);
+	
+		int number; int index;
+		while(propositions_temp.size() < mc.getNbBadChoices()) {// TODO : correction bug à l'infini sometimes
+			index = new Random().nextInt(allPossiblePropositions.size());
+			number = allPossiblePropositions.get(index);
+			//System.out.println("ICI"+number);
+			if(!createsOtherSolution(qfact, propositions_temp, number)) {
 				propositions_temp.add(number);
+			} else {
+				allPossiblePropositions.remove(index);
 			}
+			
+		/*	if(allPossiblePropositions.isEmpty()) {
+				System.err.println("PROBLEM");
+			}*/
 		}
 		
 		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));

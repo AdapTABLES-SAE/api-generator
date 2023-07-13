@@ -101,7 +101,6 @@ public abstract class FactGeneratorTemplate {
 				}
 			}
 		}
-		
 		QuestionParam question = new QuestionParamImpl();
 		Value value = new ValueImpl();
 		value.setValue(qFact.getQuestionableFact());
@@ -109,13 +108,11 @@ public abstract class FactGeneratorTemplate {
 		question.setInteractive(isQuestionInteractive());
 		question.getSolutions().addAll(fullFactsSolution(qFact));
 		qef.setQuestion(question);
-		
 		WantedAnswersParam correctness = new WantedAnswersParamImpl();
 		Value correctnessValue = new ValueImpl();
 		correctnessValue.setValue(roomElement.getTask().nbExpectedAnswers()+"");//correctnessToReach(task)+"");
 		correctness.setValue(correctnessValue);
 		qef.setCorrectnessToReach(correctness);
-		
 		
 		qef.setLearnerValidation(roomElement.getTask().isCheckOnLearnerAction());
 		qef.setCompleteFact(qFact.getCompleteFact());
@@ -160,6 +157,7 @@ public abstract class FactGeneratorTemplate {
 	protected abstract boolean isQuestionInteractive();
 	
 	public void generateQuestionedFact(RoomElements roomElements) {
+		System.out.println("gen facts");
 		for (int i = 0; i < roomElements.getTask().getNbFacts(); i++) {
 			QuestionableFact qf = null;
 			try {
@@ -168,12 +166,14 @@ public abstract class FactGeneratorTemplate {
 			} catch (Exception e) {
 				e.printStackTrace();
 			} 
-		}	
+		}
+		System.out.println("gen facts end");
 	}
 	
 	protected abstract int correctnessToReach(ATask task);
 	
 	private QuestionableFact getAvailableFact(ResultsByTask resByTask) throws Exception { 
+		System.out.println("get facts");
 		if(isPoolEmpty(resByTask)) {
 			resetPoolOfFacts(resByTask);
 		}	

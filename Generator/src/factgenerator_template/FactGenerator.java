@@ -43,7 +43,6 @@ public class FactGenerator {
 	}
 	
 	public static void generateQuestionedFact(DungeonElements dungeonElements) throws Exception {
-		System.out.println("Generate Questioned Facts");
 		FactGeneratorTemplate factGenerator = null; 
 		for (RoomElements roomElements : dungeonElements.getRoomsElements()) {
 			switch(roomElements.getTask().getType()) {
@@ -71,6 +70,5 @@ public class FactGenerator {
 		}
 		
 		dungeonElements.shuffleRoomsOrder();
-		System.out.println("End Generate Question Facts");
 	}
 }

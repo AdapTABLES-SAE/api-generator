@@ -81,18 +81,23 @@ public class DungeonGenerator {
 	private void generateLabyrinthineDungeon() {
 		System.out.println("Labyrinthe");
 		List<LabyrinthineRoom> dungeonRooms = new ArrayList<>();
+		List<LabyrinthineRoom> selectableRooms = new ArrayList<>();
 		
 		Room originRoom = createEntryRoomLabyrinthine();
 		dungeonRooms.add(new LabyrinthineRoom(originRoom));
 		
+		selectableRooms.add(new LabyrinthineRoom(originRoom));
+		
 		while(dungeonRooms.size() < (nbRooms + 1)) {
 			
-			LabyrinthineRoom randomStartingRoom = chooseEntryRoomForNewPathIn(dungeonRooms);
+			LabyrinthineRoom randomStartingRoom = chooseEntryRoomForNewPathIn(selectableRooms);
 			LabyrinthineRoom aRoom = createNewRoomFrom(randomStartingRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size()), false);
 			if(aRoom != null) {
 				dungeonRooms.add(aRoom);
+				selectableRooms.add(aRoom);
 			} else {
 				createNewPath(randomStartingRoom, originRoom);
+				selectableRooms.remove(randomStartingRoom);
 			}
 		}	
 		dungeonRooms.add(createAnExit(dungeonRooms));		
@@ -187,6 +192,7 @@ public class DungeonGenerator {
 	}
 	
 	private LabyrinthineRoom chooseEntryRoomForNewPathIn(List<LabyrinthineRoom> rooms){
+		System.err.println(rooms.size());
 		if(rooms.size() == 1) {
 			return rooms.get(0);
 		} else {

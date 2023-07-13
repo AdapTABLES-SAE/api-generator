@@ -26,17 +26,20 @@ public class ALGAGenerator {
 
 	public static void main(String[] args) {
 		
-		ALGAGenerator generator;
-		try {
-			generator = new ALGAGenerator("learnerFic");
-			generator.generate();
-			generator.printDungeon();
-			generator.saveDungeon("DungeonGen.xmi");
-			Main.transformModel("C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\", 
-				"C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\flattener\\", "outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
-		} catch (NonExistantLearnerPlayerException e) {
-			e.printStackTrace();
+		for(int i = 0; i < 150; i++) {
+			ALGAGenerator generator;
+			try {
+				generator = new ALGAGenerator("learnerFic");
+				generator.generate();
+				generator.printDungeon();
+				generator.saveDungeon("DungeonGen.xmi");
+				Main.transformModel("C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\", 
+					"C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\flattener\\", "outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
+			} catch (NonExistantLearnerPlayerException e) {
+				e.printStackTrace();
+			}	
 		}
+
 		
 		
 	}

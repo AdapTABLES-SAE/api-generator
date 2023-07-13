@@ -1,11 +1,10 @@
-/edu_elements_tests/
+/generator/
+/FactsGenerationTestOLD.class
 /educational_dimension/
 /exceptions/
 /factgenerator_template/
 /factsgenerator_maths/
-/generator/
 /generators/
 /managers/
 /structures/
 /modelsForTests/
-/FactsGenerationTestOLD.class

@@ -123,18 +123,19 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 
 	@Override
 	protected Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact) {
+		System.out.println("COMP2");
 		Map<ECorrectness, List<String>> propositions = new HashMap<>();
 		MTQFCompletion2 qfact = (MTQFCompletion2) qFact;
 		
 		List<Integer> propositions_temp = new ArrayList<>();
 		List<Integer> solutions = getListOfGoodSolutions(qFact).stream().map(Integer::valueOf).collect(Collectors.toList());
 		
-		int min1 = qfact.getSoluceLeft()-5 >= 0? qfact.getSoluceLeft()-5: 1;
-		int min2 = qfact.getSoluceRight()-5 >= 0? qfact.getSoluceRight()-5: 1;
-		int min3 = qfact.getSoluceRes()-5 >= 0? qfact.getSoluceRes()-5: 1; 
-		int max1 = qfact.getSoluceLeft()+5;
-		int max2 = qfact.getSoluceRight()+5;
-		int max3 = qfact.getSoluceRes()+5; 
+		int min1 = qfact.getSoluceLeft()-8 >= 0? qfact.getSoluceLeft()-8: 1;
+		int min2 = qfact.getSoluceRight()-8 >= 0? qfact.getSoluceRight()-8: 1;
+		int min3 = qfact.getSoluceRes()-8 >= 0? qfact.getSoluceRes()-8: 1; 
+		int max1 = qfact.getSoluceLeft()+8;
+		int max2 = qfact.getSoluceRight()+8;
+		int max3 = qfact.getSoluceRes()+8; 
 		int number;
 		while(propositions_temp.size() < mc.getNbBadChoices()) {
 			switch(propositions_temp.size()) {
