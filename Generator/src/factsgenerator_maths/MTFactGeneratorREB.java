@@ -76,24 +76,18 @@ public class MTFactGeneratorREB extends FactGeneratorTemplate {
 	}
 	
 	private boolean createsOtherSolution(MTQFRebuild fact, List<Integer> previousResults, int number) { // TODO : to verify
-		List<Integer> previousRes = new ArrayList<>(previousResults);
+		List<Integer> previousRes = new ArrayList<>();
 		previousRes.add(fact.getSoluceLeft());
 		previousRes.add(fact.getSoluceRight());
 		previousRes.add(fact.getSoluceRes());
-		
+		previousRes.addAll(previousResults);
+
 		for(int i = 0; i < previousRes.size() - 1; i++) {
-			int compute = number * previousRes.get(i);
-			if(previousRes.contains(compute)) {
-				return true;
-			} else {
-				for(int j = 1; j < previousRes.size(); j++) {
-					if(previousRes.get(i) * previousRes.get(j) == number) {
-						return true;
-					}
-				}
+			if(previousRes.contains(previousRes.get(i) * number)) {return true;}
+			for(int j = 1; j < previousRes.size(); j++) {
+				if((previousRes.get(i) * previousRes.get(j)) == number) {return true;}
 			}
 		}
-		
 		return false;
 	}
 	
@@ -111,7 +105,7 @@ public class MTFactGeneratorREB extends FactGeneratorTemplate {
 		return solutions;
 	}
 	
-	private List<Integer> generateListOfPossibleBadChoices(MTQFRebuild qfact) {
+	private List<Integer> generateListOfPossibleBadChoices(MTQFRebuild qfact, int boundary) {
 		Set<Integer> propositions_temp = new HashSet<>();
 		
 		int min = -1;
@@ -119,48 +113,42 @@ public class MTFactGeneratorREB extends FactGeneratorTemplate {
 		for(int i = 0; i < 3; i++) {
 			switch(i) {
 			case 0:
-				min = qfact.getSoluceLeft()-15 >= 0? qfact.getSoluceLeft()-15: 1; 
-				max = min == 1? qfact.getSoluceLeft()+15+((qfact.getSoluceLeft()-15)*-1): qfact.getSoluceLeft()+15; 
+				min = qfact.getSoluceLeft()-boundary > 0? qfact.getSoluceLeft()-boundary: 1; 
+				max = min == 1? qfact.getSoluceLeft()+boundary+((qfact.getSoluceLeft()-boundary)*-1): qfact.getSoluceLeft()+boundary; 
 				break;
 			case 1:
-				min = qfact.getSoluceRight()-15 >= 0? qfact.getSoluceRight()-15: 1;
-				max = min == 1? qfact.getSoluceRight()+15+((qfact.getSoluceRight()-15)*-1): qfact.getSoluceRight()+15; 
+				min = qfact.getSoluceRight()-boundary > 0? qfact.getSoluceRight()-boundary: 1;
+				max = min == 1? qfact.getSoluceRight()+boundary+((qfact.getSoluceRight()-boundary)*-1): qfact.getSoluceRight()+boundary; 
 				break;
 			default:
-				min = qfact.getSoluceRes()-15 >= 0? qfact.getSoluceRes()-15: 1;
-				max = min == 1? qfact.getSoluceRes()+15+((qfact.getSoluceRes()-15)*-1): qfact.getSoluceRes()+15; 
+				min = qfact.getSoluceRes()-boundary > 0? qfact.getSoluceRes()-boundary: 1;
+				max = min == 1? qfact.getSoluceRes()+boundary+((qfact.getSoluceRes()-boundary)*-1): qfact.getSoluceRes()+boundary; 
 				break;
 			}
 			for(int j = min; j < max; j++) {
 				propositions_temp.add(j);
 			}
 		}
-		//System.err.println(propositions_temp);
 		return new ArrayList<>(propositions_temp);
 	}
 
 	@Override
 	protected Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact) {
-		//System.out.println("REB");
 		Map<ECorrectness, List<String>> propositions = new HashMap<>();
 		MTQFRebuild qfact = (MTQFRebuild) qFact;
 		List<Integer> propositions_temp = new ArrayList<>();
-		List<Integer> allPossiblePropositions = generateListOfPossibleBadChoices(qfact);
+		List<Integer> allPossiblePropositions = new ArrayList<>();
 	
 		int number; int index;
+		int boundary = 8;
+		allPossiblePropositions = generateListOfPossibleBadChoices(qfact, ++boundary);
 		while(propositions_temp.size() < mc.getNbBadChoices()) {// TODO : correction bug à l'infini sometimes
 			index = new Random().nextInt(allPossiblePropositions.size());
 			number = allPossiblePropositions.get(index);
-			//System.out.println("ICI"+number);
 			if(!createsOtherSolution(qfact, propositions_temp, number)) {
 				propositions_temp.add(number);
-			} else {
-				allPossiblePropositions.remove(index);
-			}
-			
-		/*	if(allPossiblePropositions.isEmpty()) {
-				System.err.println("PROBLEM");
-			}*/
+			} 
+			allPossiblePropositions.remove(index);
 		}
 		
 		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));

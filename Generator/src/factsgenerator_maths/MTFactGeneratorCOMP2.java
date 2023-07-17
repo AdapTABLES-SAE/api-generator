@@ -123,7 +123,6 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 
 	@Override
 	protected Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact) {
-		System.out.println("COMP2");
 		Map<ECorrectness, List<String>> propositions = new HashMap<>();
 		MTQFCompletion2 qfact = (MTQFCompletion2) qFact;
 		

@@ -157,7 +157,6 @@ public abstract class FactGeneratorTemplate {
 	protected abstract boolean isQuestionInteractive();
 	
 	public void generateQuestionedFact(RoomElements roomElements) {
-		System.out.println("gen facts");
 		for (int i = 0; i < roomElements.getTask().getNbFacts(); i++) {
 			QuestionableFact qf = null;
 			try {
@@ -167,13 +166,11 @@ public abstract class FactGeneratorTemplate {
 				e.printStackTrace();
 			} 
 		}
-		System.out.println("gen facts end");
 	}
 	
 	protected abstract int correctnessToReach(ATask task);
 	
 	private QuestionableFact getAvailableFact(ResultsByTask resByTask) throws Exception { 
-		System.out.println("get facts");
 		if(isPoolEmpty(resByTask)) {
 			resetPoolOfFacts(resByTask);
 		}	

@@ -85,11 +85,8 @@ public class DungeonGenerator {
 		
 		Room originRoom = createEntryRoomLabyrinthine();
 		dungeonRooms.add(new LabyrinthineRoom(originRoom));
-		
-		selectableRooms.add(new LabyrinthineRoom(originRoom));
-		
-		while(dungeonRooms.size() < (nbRooms + 1)) {
-			
+		selectableRooms.add(new LabyrinthineRoom(originRoom));		
+		while(dungeonRooms.size() < (nbRooms + 1) && !selectableRooms.isEmpty()) {
 			LabyrinthineRoom randomStartingRoom = chooseEntryRoomForNewPathIn(selectableRooms);
 			LabyrinthineRoom aRoom = createNewRoomFrom(randomStartingRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size()), false);
 			if(aRoom != null) {
@@ -100,6 +97,7 @@ public class DungeonGenerator {
 				selectableRooms.remove(randomStartingRoom);
 			}
 		}	
+		System.err.println(dungeonRooms);
 		dungeonRooms.add(createAnExit(dungeonRooms));		
 		for (LabyrinthineRoom aEntry : dungeonRooms) {
 			generatedDungeon.getRooms().add(aEntry.getRoom());
@@ -191,13 +189,14 @@ public class DungeonGenerator {
 		return possibilities.get(random.nextInt(possibilities.size()));
 	}
 	
-	private LabyrinthineRoom chooseEntryRoomForNewPathIn(List<LabyrinthineRoom> rooms){
-		System.err.println(rooms.size());
+	private LabyrinthineRoom chooseEntryRoomForNewPathIn(List<LabyrinthineRoom> rooms) {
 		if(rooms.size() == 1) {
 			return rooms.get(0);
-		} else {
+		} else if(!rooms.isEmpty()){
 			int rand = random.nextInt(rooms.size() - 1) + 1;
 			return rooms.get(rand);
+		} else {
+			return null;
 		}
 	}
 

@@ -29,6 +29,10 @@ public class GridManager {
 		occupiedCoordinates = new HashMap<>();
 	}
 	
+	public void clearGrid() {
+		occupiedCoordinates = new HashMap<>();
+	}
+	
 	public boolean isAvailableDirection(Coordinate origin, Directions aDirection) {
 		Coordinate coord = null;
 		switch (aDirection) {
