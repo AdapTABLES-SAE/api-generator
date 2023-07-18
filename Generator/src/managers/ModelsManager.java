@@ -260,9 +260,9 @@ public class ModelsManager {
 	public LearnerPlayer getLearnerPlayer(String identifier) throws NonExistantLearnerPlayerException {
 		LearnerPlayer learnerPlayer = null;
 		int i = 0;
-		while(learnerPlayer == null && i < getContextModel().getLearnerplayers().size()) {
-			if(getContextModel().getLearnerplayers().get(i).getID().equals(identifier)) {
-				learnerPlayer = getContextModel().getLearnerplayers().get(i);
+		while(learnerPlayer == null && i < getContextModel().getLearnerPlayers().getLearnerPlayers().size()) {
+			if(getContextModel().getLearnerPlayers().getLearnerPlayers().get(i).getID().equals(identifier)) {
+				learnerPlayer = getContextModel().getLearnerPlayers().getLearnerPlayers().get(i);
 			}
 			i++;
 		}

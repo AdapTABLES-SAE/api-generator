@@ -302,11 +302,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseCurrentGameLevel(CurrentGameLevel object) {
-			return createCurrentGameLevelAdapter();
-		}
-
-		@Override
 		public Adapter caseGameElementTypes(GameElementTypes object) {
 			return createGameElementTypesAdapter();
 		}
@@ -499,6 +494,31 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseStatementElementType(StatementElementType object) {
 			return createStatementElementTypeAdapter();
+		}
+
+		@Override
+		public Adapter casePlayerProgress(PlayerProgress object) {
+			return createPlayerProgressAdapter();
+		}
+
+		@Override
+		public Adapter caseLearnerProgress(LearnerProgress object) {
+			return createLearnerProgressAdapter();
+		}
+
+		@Override
+		public Adapter caseItem(Item object) {
+			return createItemAdapter();
+		}
+
+		@Override
+		public Adapter caseItems(Items object) {
+			return createItemsAdapter();
+		}
+
+		@Override
+		public Adapter caseLearnerPlayers(LearnerPlayers object) {
+			return createLearnerPlayersAdapter();
 		}
 
 		@Override
@@ -1193,20 +1213,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.CurrentGameLevel <em>Current Game Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.CurrentGameLevel
-	 * @generated
-	 */
-	public Adapter createCurrentGameLevelAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link generator.GameElementTypes <em>Game Element Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1651,6 +1657,76 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createStatementElementTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.PlayerProgress <em>Player Progress</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.PlayerProgress
+	 * @generated
+	 */
+	public Adapter createPlayerProgressAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.LearnerProgress <em>Learner Progress</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.LearnerProgress
+	 * @generated
+	 */
+	public Adapter createLearnerProgressAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Item <em>Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Item
+	 * @generated
+	 */
+	public Adapter createItemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Items <em>Items</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Items
+	 * @generated
+	 */
+	public Adapter createItemsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.LearnerPlayers <em>Learner Players</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.LearnerPlayers
+	 * @generated
+	 */
+	public Adapter createLearnerPlayersAdapter() {
 		return null;
 	}
 

@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generator.Ability#getName <em>Name</em>}</li>
+ *   <li>{@link generator.Ability#getLockingEquipment <em>Locking Equipment</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getAbility()
@@ -42,5 +43,29 @@ public interface Ability extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Locking Equipment</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link generator.Equipment#getLockedAbility <em>Locked Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Locking Equipment</em>' reference.
+	 * @see #setLockingEquipment(Equipment)
+	 * @see generator.GeneratorPackage#getAbility_LockingEquipment()
+	 * @see generator.Equipment#getLockedAbility
+	 * @model opposite="lockedAbility"
+	 * @generated
+	 */
+	Equipment getLockingEquipment();
+
+	/**
+	 * Sets the value of the '{@link generator.Ability#getLockingEquipment <em>Locking Equipment</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Locking Equipment</em>' reference.
+	 * @see #getLockingEquipment()
+	 * @generated
+	 */
+	void setLockingEquipment(Equipment value);
 
 } // Ability

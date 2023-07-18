@@ -109,7 +109,7 @@ public class LearnerPlayerManagerResource {
 	}
 	
 	private CurrentObjectiveLevel getCorrespondingCOL(String objectiveID, String levelID, String learnerID) throws NonExistantLearnerPlayerException {
-		for (CurrentObjectiveLevel col : modelsManager.getLearnerPlayer(learnerID).getProgression().getCurrentobjectivelevels()) {
+		for (CurrentObjectiveLevel col : modelsManager.getLearnerPlayer(learnerID).getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			System.out.println(col.getObjective().getID()+" "+col.getLevel().getID());
 			System.out.println(col.getObjective().getID().equals(objectiveID));
 			System.out.println(col.getLevel().getID().equals(levelID));

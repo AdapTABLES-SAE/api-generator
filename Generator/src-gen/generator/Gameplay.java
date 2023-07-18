@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.Gameplay#getComponents <em>Components</em>}</li>
  *   <li>{@link generator.Gameplay#getPrompt <em>Prompt</em>}</li>
  *   <li>{@link generator.Gameplay#isUndoable <em>Undoable</em>}</li>
+ *   <li>{@link generator.Gameplay#isLocked <em>Locked</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getGameplay()
@@ -103,5 +104,27 @@ public interface Gameplay extends EObject {
 	 * @generated
 	 */
 	void setUndoable(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Locked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Locked</em>' attribute.
+	 * @see #setLocked(boolean)
+	 * @see generator.GeneratorPackage#getGameplay_Locked()
+	 * @model derived="true"
+	 * @generated
+	 */
+	boolean isLocked();
+
+	/**
+	 * Sets the value of the '{@link generator.Gameplay#isLocked <em>Locked</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Locked</em>' attribute.
+	 * @see #isLocked()
+	 * @generated
+	 */
+	void setLocked(boolean value);
 
 } // Gameplay

@@ -445,13 +445,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.CURRENT_GAME_LEVEL: {
-			CurrentGameLevel currentGameLevel = (CurrentGameLevel) theEObject;
-			T result = caseCurrentGameLevel(currentGameLevel);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case GeneratorPackage.GAME_ELEMENT_TYPES: {
 			GameElementTypes gameElementTypes = (GameElementTypes) theEObject;
 			T result = caseGameElementTypes(gameElementTypes);
@@ -761,6 +754,41 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			T result = caseStatementElementType(statementElementType);
 			if (result == null)
 				result = caseElementType(statementElementType);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.PLAYER_PROGRESS: {
+			PlayerProgress playerProgress = (PlayerProgress) theEObject;
+			T result = casePlayerProgress(playerProgress);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.LEARNER_PROGRESS: {
+			LearnerProgress learnerProgress = (LearnerProgress) theEObject;
+			T result = caseLearnerProgress(learnerProgress);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.ITEM: {
+			Item item = (Item) theEObject;
+			T result = caseItem(item);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.ITEMS: {
+			Items items = (Items) theEObject;
+			T result = caseItems(items);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.LEARNER_PLAYERS: {
+			LearnerPlayers learnerPlayers = (LearnerPlayers) theEObject;
+			T result = caseLearnerPlayers(learnerPlayers);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1476,21 +1504,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Current Game Level</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Current Game Level</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCurrentGameLevel(CurrentGameLevel object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Game Element Types</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2072,6 +2085,81 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseStatementElementType(StatementElementType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Player Progress</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Player Progress</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePlayerProgress(PlayerProgress object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Learner Progress</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Learner Progress</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLearnerProgress(LearnerProgress object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Item</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseItem(Item object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Items</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Items</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseItems(Items object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Learner Players</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Learner Players</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLearnerPlayers(LearnerPlayers object) {
 		return null;
 	}
 

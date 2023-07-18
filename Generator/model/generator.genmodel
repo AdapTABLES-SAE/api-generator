@@ -186,8 +186,8 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Context">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Context/gamecontext"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Context/learnerplayers"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Context/ID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Context/learnerPlayers"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//LearnerPlayer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayer/progression"/>
@@ -196,8 +196,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LearnerPlayer/ID"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Progression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Progression/currentobjectivelevels"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Progression/currentGameLevel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Progression/playerProgress"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Progression/learnerProgress"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//CurrentObjectiveLevel">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//CurrentObjectiveLevel/objective"/>
@@ -336,9 +336,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LevelsDifficultyProgress/initNbQRoom"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LevelsDifficultyProgress/initNbNQRoom"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//CurrentGameLevel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CurrentGameLevel/level"/>
-    </genClasses>
     <genClasses ecoreClass="generator.ecore#//GameElementTypes">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameElementTypes/equipments"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameElementTypes/elementTypes"/>
@@ -351,14 +348,14 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Equipment">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Equipment/ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Equipment/bought"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Equipment/activated"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Equipment/lockedAbility"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Gameplay">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplay/components"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplay/prompt"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/undoable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/locked"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Gameplays">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Gameplays/gameplays"/>
@@ -370,6 +367,7 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Ability">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Ability/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Ability/lockingEquipment"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Abilities">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Abilities/abilities"/>
@@ -480,6 +478,25 @@
     <genClasses ecoreClass="generator.ecore#//Size"/>
     <genClasses ecoreClass="generator.ecore#//StatementElementType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//StatementElementType/forStructure"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//PlayerProgress">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//PlayerProgress/currentLevel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//PlayerProgress/coins"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PlayerProgress/items"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//LearnerProgress">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerProgress/currentobjectivelevels"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Item">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Item/bought"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Item/activated"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Item/equipment"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Items">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Items/items"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//LearnerPlayers">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayers/learnerPlayers"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

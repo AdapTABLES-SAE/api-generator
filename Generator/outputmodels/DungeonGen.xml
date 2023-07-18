@@ -1,101 +1,107 @@
 <?xml version="1.0" encoding="ASCII"?>
 <Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]">
   <rooms>
-    <room id="Room[0/0]" roomTypeName="RegularRoomS">
+    <room id="Room[0/0]" roomTypeName="RegularRoomW">
       <roomaccesses>
-        <roomaccess id="a2" direction="SOUTH" accessRef="a3"/>
+        <roomaccess id="a2" direction="WEST" accessRef="a3"/>
       </roomaccesses>
     </room>
-    <room id="Room[0/-1]" y="-1" roomTypeName="RegularRoom2" time="20" idTask="TASK40" prompt="Deplace le bon elements sur la zone">
+    <room id="Room[-1/0]" x="-1" roomTypeName="RegularRoom10" time="20" idTask="TASK41" prompt="Pousse le bon element">
       <roomaccesses>
-        <roomaccess id="a3" direction="NORTH" accessRef="a2"/>
-        <roomaccess id="a4" direction="WEST" accessRef="a5"/>
-        <roomaccess id="a6" direction="EAST" accessRef="a7"/>
+        <roomaccess id="a3" direction="EAST" accessRef="a2"/>
+        <roomaccess id="a4" direction="SOUTH" accessRef="a5"/>
       </roomaccesses>
       <facts>
-        <fact id="TASK40-QAFACT39" complete="5 x 10 = 50" correctnessToReach="1"/>
+        <fact id="TASK41-QAFACT93" complete="10 x 7 = 69" correctnessToReach="1" correctness="INCORRECT"/>
       </facts>
       <elements>
-        <element id="ELEM1" type="Pot" displayValue="51" correctness="INCORRECT" pos="POS2" ability="MOVABLE" idFact="TASK40-QAFACT39"/>
-        <element id="ELEM2" type="Pot" displayValue="49" correctness="INCORRECT" pos="POS6" ability="MOVABLE" idFact="TASK40-QAFACT39"/>
-        <element id="ELEM3" type="Pot" displayValue="50" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="TASK40-QAFACT39"/>
-        <element id="ELEM4" type="ObjectDetector" pos="POS4" ability="DETECTOR"/>
-        <element id="ELEM5" type="Statement" displayValue="5 x 10 = ?" pos="POSQ2" idFact="TASK40-QAFACT39" interactive="true"/>
+        <element id="STRUCT1" type="HStructM" pos="POSM7"/>
+        <element id="ELEM2" type="Block" displayValue="Vrai" correctness="INCORRECT" pos="id/STRUCT1" ability="PUSHABLE" idFact="TASK41-QAFACT93"/>
+        <element id="ELEM3" type="ObjectDetector" pos="id/STRUCT1" ability="DETECTOR"/>
+        <element id="STRUCT4" type="HStructM" pos="POSM8"/>
+        <element id="ELEM5" type="Block" displayValue="Faux" correctness="CORRECT" pos="id/STRUCT4" ability="PUSHABLE" idFact="TASK41-QAFACT93"/>
+        <element id="ELEM6" type="ObjectDetector" pos="id/STRUCT4" ability="DETECTOR"/>
+        <element id="ELEM7" type="Statement" displayValue="10 x 7 = 69" pos="POSQ1" idFact="TASK41-QAFACT93"/>
       </elements>
     </room>
-    <room id="Room[-1/-1]" x="-1" y="-1" roomTypeName="RegularRoom4" time="20" idTask="TASK40" prompt="Oriente correctement l(es) element(s)" gameplayWithUndo="true">
+    <room id="Room[-1/-1]" x="-1" y="-1" roomTypeName="RegularRoom2" time="20" idTask="TASK40" prompt="Touche le bon element">
       <roomaccesses>
-        <roomaccess id="a5" direction="EAST" accessRef="a4"/>
+        <roomaccess id="a5" direction="NORTH" accessRef="a4"/>
+        <roomaccess id="a6" direction="WEST" accessRef="a7"/>
+      </roomaccesses>
+      <facts>
+        <fact id="TASK40-QAFACT40" complete="10 x 1 = 10" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="ELEM8" type="FloorInterrupt" displayValue="5" correctness="INCORRECT" pos="POS6" ability="TOUCHABLE" idFact="TASK40-QAFACT40"/>
+        <element id="ELEM9" type="FloorInterrupt" displayValue="7" correctness="INCORRECT" pos="POS2" ability="TOUCHABLE" idFact="TASK40-QAFACT40"/>
+        <element id="ELEM10" type="FloorInterrupt" displayValue="10" correctness="CORRECT" pos="POS5" ability="TOUCHABLE" idFact="TASK40-QAFACT40"/>
+        <element id="ELEM11" type="Statement" displayValue="10 x 1 = ?" pos="POSQ1" idFact="TASK40-QAFACT40" interactive="true"/>
+      </elements>
+    </room>
+    <room id="Room[-2/-1]" x="-2" y="-1" roomTypeName="RegularRoom2" time="20" idTask="TASK40" prompt="Attrape le bon element">
+      <roomaccesses>
+        <roomaccess id="a7" direction="EAST" accessRef="a6"/>
         <roomaccess id="a8" direction="SOUTH" accessRef="a9"/>
-        <roomaccess id="a10" direction="NORTH" accessRef="a11"/>
-        <roomaccess id="a12" direction="WEST" accessRef="a13"/>
       </roomaccesses>
       <facts>
-        <fact id="TASK40-QAFACT7" complete="2 x 8 = 16" correctnessToReach="1"/>
+        <fact id="TASK40-QAFACT1" complete="2 x 2 = 4" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="ELEM6" type="Statue" displayValue="12;14;[16];" pos="POSM1" ability="ROTABLE" idFact="TASK40-QAFACT7"/>
-        <element id="ELEM7" type="Switch" pos="POS1" ability="VERIFICATOR"/>
-        <element id="ELEM8" type="Statement" displayValue="2 x 8 = ?" pos="POSQ1" idFact="TASK40-QAFACT7" interactive="true"/>
+        <element id="ELEM12" type="BigChest" pos="POSM1" ability="FOLLOWABLE_DETECTOR"/>
+        <element id="ELEM13" type="Key" displayValue="1" correctness="INCORRECT" pos="POS5" ability="FOLLOWABLE" idFact="TASK40-QAFACT1"/>
+        <element id="ELEM14" type="Key" displayValue="2" correctness="INCORRECT" pos="POS4" ability="FOLLOWABLE" idFact="TASK40-QAFACT1"/>
+        <element id="ELEM15" type="Key" displayValue="4" correctness="CORRECT" pos="POS3" ability="FOLLOWABLE" idFact="TASK40-QAFACT1"/>
+        <element id="ELEM16" type="Statement" displayValue="2 x 2 = ?" pos="POSQ1" idFact="TASK40-QAFACT1" interactive="true"/>
       </elements>
     </room>
-    <room id="Room[-1/-2]" x="-1" y="-2" roomTypeName="RegularRoom5">
+    <room id="Room[-2/-2]" x="-2" y="-2" roomTypeName="RegularRoom8">
       <roomaccesses>
         <roomaccess id="a9" direction="NORTH" accessRef="a8"/>
+        <roomaccess id="a10" direction="EAST" accessRef="a11"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM9" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM10" type="FireTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM11" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM12" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM13" type="FireTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM17" type="WaitSpikeTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM18" type="WaitSpikeTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM19" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM20" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM21" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[-1/0]" x="-1" roomTypeName="RegularRoom8" time="20" idTask="TASK40" prompt="Oriente correctement l(es) element(s)" gameplayWithUndo="true">
+    <room id="Room[-1/-2]" x="-1" y="-2" roomTypeName="RegularRoom8" time="20" idTask="TASK40" prompt="Attrape le bon element">
       <roomaccesses>
-        <roomaccess id="a11" direction="SOUTH" accessRef="a10"/>
-      </roomaccesses>
-      <facts>
-        <fact id="TASK40-QAFACT34" complete="5 x 5 = 25" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="ELEM14" type="Statue" displayValue="[25];21;22;" pos="POSM2" ability="ROTABLE" idFact="TASK40-QAFACT34"/>
-        <element id="ELEM15" type="Switch" pos="POS2" ability="VERIFICATOR"/>
-        <element id="ELEM16" type="Statement" displayValue="5 x 5 = ?" pos="POSQ1" idFact="TASK40-QAFACT34" interactive="true"/>
-      </elements>
-    </room>
-    <room id="Room[1/-1]" x="1" y="-1" roomTypeName="RegularRoom6" time="20" idTask="TASK40" prompt="Oriente correctement l(es) element(s)" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a7" direction="WEST" accessRef="a6"/>
+        <roomaccess id="a11" direction="WEST" accessRef="a10"/>
+        <roomaccess id="a12" direction="EAST" accessRef="a13"/>
       </roomaccesses>
       <facts>
-        <fact id="TASK40-QAFACT33" complete="5 x 4 = 20" correctnessToReach="1"/>
+        <fact id="TASK40-QAFACT48" complete="10 x 9 = 90" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="ELEM17" type="Statue" displayValue="22;[20];23;" pos="POSM1" ability="ROTABLE" idFact="TASK40-QAFACT33"/>
-        <element id="ELEM18" type="Switch" pos="POS2" ability="VERIFICATOR"/>
-        <element id="ELEM19" type="Statement" displayValue="5 x 4 = ?" pos="POSQ4" idFact="TASK40-QAFACT33" interactive="true"/>
+        <element id="ELEM22" type="BigChest" pos="POSM2" ability="FOLLOWABLE_DETECTOR"/>
+        <element id="ELEM23" type="Key" displayValue="85" correctness="INCORRECT" pos="POS2" ability="FOLLOWABLE" idFact="TASK40-QAFACT48"/>
+        <element id="ELEM24" type="Key" displayValue="91" correctness="INCORRECT" pos="POS3" ability="FOLLOWABLE" idFact="TASK40-QAFACT48"/>
+        <element id="ELEM25" type="Key" displayValue="90" correctness="CORRECT" pos="POS6" ability="FOLLOWABLE" idFact="TASK40-QAFACT48"/>
+        <element id="ELEM26" type="Statement" displayValue="10 x 9 = ?" pos="POSQ2" idFact="TASK40-QAFACT48" interactive="true"/>
       </elements>
     </room>
-    <room id="Room[-2/-1]" x="-2" y="-1" roomTypeName="RegularRoom4" time="20" idTask="TASK42" prompt="Oriente correctement l(es) element(s)" gameplayWithUndo="true">
+    <room id="Room[0/-2]" y="-2" roomTypeName="RegularRoom1" time="20" idTask="TASK40" prompt="Place-toi sur la bonne dalle">
       <roomaccesses>
-        <roomaccess id="a13" direction="EAST" accessRef="a12"/>
-        <roomaccess id="a14" direction="WEST" accessRef="a15"/>
+        <roomaccess id="a13" direction="WEST" accessRef="a12"/>
+        <roomaccess id="a14" direction="SOUTH" accessRef="a15"/>
       </roomaccesses>
       <facts>
-        <fact id="TASK42-QAFACT68" complete="5 x 5 = 25" correctnessToReach="3"/>
+        <fact id="TASK40-QAFACT24" complete="4 x 5 = 20" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="ELEM20" type="Statue" displayValue="[5];6;" pos="POSM3" ability="ROTABLE" idFact="TASK42-QAFACT68"/>
-        <element id="ELEM21" type="Statue" displayValue="22;[25];" pos="POSM2" ability="ROTABLE" idFact="TASK42-QAFACT68"/>
-        <element id="ELEM22" type="Statue" displayValue="[5];8;" pos="POSM1" ability="ROTABLE" idFact="TASK42-QAFACT68"/>
-        <element id="ELEM23" type="Switch" pos="POS1" ability="VERIFICATOR"/>
-        <element id="ELEM24" type="Statement" displayValue="? x ? = ?" pos="POSQ1" idFact="TASK42-QAFACT68" interactive="true" acceptedFacts="5 x 5 = 25;5 x 5 = 25;"/>
+        <element id="ELEM27" type="Statement" displayValue="4 x 5 = ?" pos="POSQ4" idFact="TASK40-QAFACT24" interactive="true"/>
+        <element id="ELEM28" type="AvatarDetector" displayValue="17" correctness="INCORRECT" pos="POS2" ability="DETECTOR_AVATAR" idFact="TASK40-QAFACT24"/>
+        <element id="ELEM29" type="AvatarDetector" displayValue="24" correctness="INCORRECT" pos="POS4" ability="DETECTOR_AVATAR" idFact="TASK40-QAFACT24"/>
+        <element id="ELEM30" type="AvatarDetector" displayValue="20" correctness="CORRECT" pos="POS5" ability="DETECTOR_AVATAR" idFact="TASK40-QAFACT24"/>
       </elements>
     </room>
-    <room id="Room[-3/-1]" x="-3" y="-1" roomTypeName="ExitRoom1">
+    <room id="Room[0/-3]" y="-3" roomTypeName="ExitRoom1">
       <roomaccesses>
-        <roomaccess id="a15" direction="EAST" accessRef="a14"/>
+        <roomaccess id="a15" direction="NORTH" accessRef="a14"/>
       </roomaccesses>
     </room>
   </rooms>

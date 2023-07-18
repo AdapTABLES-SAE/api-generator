@@ -164,10 +164,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Context">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gamecontext" lowerBound="1"
         eType="#//GameContext" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerplayers" lowerBound="1"
-        upperBound="-1" eType="#//LearnerPlayer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         unsettable="true" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerPlayers" eType="#//LearnerPlayers"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LearnerPlayer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="progression" eType="#//Progression"
@@ -179,9 +179,9 @@
         unsettable="true" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Progression">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="currentobjectivelevels"
-        upperBound="-1" eType="#//CurrentObjectiveLevel" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="currentGameLevel" eType="#//CurrentGameLevel"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="playerProgress" eType="#//PlayerProgress"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerProgress" eType="#//LearnerProgress"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CurrentObjectiveLevel">
@@ -386,10 +386,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initNbNQRoom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CurrentGameLevel">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="1"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GameElementTypes">
     <eStructuralFeatures xsi:type="ecore:EReference" name="equipments" eType="#//Equipments"
         containment="true"/>
@@ -406,9 +402,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Equipment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        changeable="false" unsettable="true" iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bought" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lockedAbility" eType="#//Ability"
+        eOpposite="#//Ability/lockingEquipment"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Gameplay" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -417,6 +413,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="prompt" eType="#//Prompt"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="undoable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="locked" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Gameplays">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gameplays" upperBound="-1"
@@ -431,6 +429,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Ability">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lockingEquipment" eType="#//Equipment"
+        eOpposite="#//Equipment/lockedAbility"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ElementSize">
     <eLiterals name="SMALL"/>
@@ -610,5 +610,32 @@
     <eLiterals name="CLASSIC"/>
     <eLiterals name="GRAPHIC" value="1"/>
     <eLiterals name="TO_FILL_IN" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlayerProgress">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coins" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" eType="#//Items"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LearnerProgress">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentobjectivelevels"
+        upperBound="-1" eType="#//CurrentObjectiveLevel" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Item">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bought" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="equipment" eType="#//Equipment"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Items">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="#//Item" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LearnerPlayers">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerPlayers" upperBound="-1"
+        eType="#//LearnerPlayer" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

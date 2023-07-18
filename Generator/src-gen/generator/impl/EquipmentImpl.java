@@ -2,13 +2,16 @@
  */
 package generator.impl;
 
+import generator.Ability;
 import generator.Equipment;
 import generator.GeneratorPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -21,8 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.EquipmentImpl#getID <em>ID</em>}</li>
- *   <li>{@link generator.impl.EquipmentImpl#isBought <em>Bought</em>}</li>
- *   <li>{@link generator.impl.EquipmentImpl#isActivated <em>Activated</em>}</li>
+ *   <li>{@link generator.impl.EquipmentImpl#getLockedAbility <em>Locked Ability</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,53 +51,14 @@ public class EquipmentImpl extends MinimalEObjectImpl.Container implements Equip
 	protected String id = ID_EDEFAULT;
 
 	/**
-	 * This is true if the ID attribute has been set.
+	 * The cached value of the '{@link #getLockedAbility() <em>Locked Ability</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see #getLockedAbility()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean idESet;
-
-	/**
-	 * The default value of the '{@link #isBought() <em>Bought</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isBought()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean BOUGHT_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isBought() <em>Bought</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isBought()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean bought = BOUGHT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isActivated() <em>Activated</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isActivated()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean ACTIVATED_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isActivated() <em>Activated</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isActivated()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean activated = ACTIVATED_EDEFAULT;
+	protected Ability lockedAbility;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,30 +93,11 @@ public class EquipmentImpl extends MinimalEObjectImpl.Container implements Equip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isSetID() {
-		return idESet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isBought() {
-		return bought;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBought(boolean newBought) {
-		boolean oldBought = bought;
-		bought = newBought;
+	public void setID(String newID) {
+		String oldID = id;
+		id = newID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.EQUIPMENT__BOUGHT, oldBought,
-					bought));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.EQUIPMENT__ID, oldID, id));
 	}
 
 	/**
@@ -161,8 +105,17 @@ public class EquipmentImpl extends MinimalEObjectImpl.Container implements Equip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isActivated() {
-		return activated;
+	public Ability getLockedAbility() {
+		if (lockedAbility != null && lockedAbility.eIsProxy()) {
+			InternalEObject oldLockedAbility = (InternalEObject) lockedAbility;
+			lockedAbility = (Ability) eResolveProxy(oldLockedAbility);
+			if (lockedAbility != oldLockedAbility) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							GeneratorPackage.EQUIPMENT__LOCKED_ABILITY, oldLockedAbility, lockedAbility));
+			}
+		}
+		return lockedAbility;
 	}
 
 	/**
@@ -170,12 +123,80 @@ public class EquipmentImpl extends MinimalEObjectImpl.Container implements Equip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setActivated(boolean newActivated) {
-		boolean oldActivated = activated;
-		activated = newActivated;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.EQUIPMENT__ACTIVATED, oldActivated,
-					activated));
+	public Ability basicGetLockedAbility() {
+		return lockedAbility;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLockedAbility(Ability newLockedAbility, NotificationChain msgs) {
+		Ability oldLockedAbility = lockedAbility;
+		lockedAbility = newLockedAbility;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.EQUIPMENT__LOCKED_ABILITY, oldLockedAbility, newLockedAbility);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLockedAbility(Ability newLockedAbility) {
+		if (newLockedAbility != lockedAbility) {
+			NotificationChain msgs = null;
+			if (lockedAbility != null)
+				msgs = ((InternalEObject) lockedAbility).eInverseRemove(this,
+						GeneratorPackage.ABILITY__LOCKING_EQUIPMENT, Ability.class, msgs);
+			if (newLockedAbility != null)
+				msgs = ((InternalEObject) newLockedAbility).eInverseAdd(this,
+						GeneratorPackage.ABILITY__LOCKING_EQUIPMENT, Ability.class, msgs);
+			msgs = basicSetLockedAbility(newLockedAbility, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.EQUIPMENT__LOCKED_ABILITY,
+					newLockedAbility, newLockedAbility));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case GeneratorPackage.EQUIPMENT__LOCKED_ABILITY:
+			if (lockedAbility != null)
+				msgs = ((InternalEObject) lockedAbility).eInverseRemove(this,
+						GeneratorPackage.ABILITY__LOCKING_EQUIPMENT, Ability.class, msgs);
+			return basicSetLockedAbility((Ability) otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case GeneratorPackage.EQUIPMENT__LOCKED_ABILITY:
+			return basicSetLockedAbility(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -188,10 +209,10 @@ public class EquipmentImpl extends MinimalEObjectImpl.Container implements Equip
 		switch (featureID) {
 		case GeneratorPackage.EQUIPMENT__ID:
 			return getID();
-		case GeneratorPackage.EQUIPMENT__BOUGHT:
-			return isBought();
-		case GeneratorPackage.EQUIPMENT__ACTIVATED:
-			return isActivated();
+		case GeneratorPackage.EQUIPMENT__LOCKED_ABILITY:
+			if (resolve)
+				return getLockedAbility();
+			return basicGetLockedAbility();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -204,11 +225,11 @@ public class EquipmentImpl extends MinimalEObjectImpl.Container implements Equip
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.EQUIPMENT__BOUGHT:
-			setBought((Boolean) newValue);
+		case GeneratorPackage.EQUIPMENT__ID:
+			setID((String) newValue);
 			return;
-		case GeneratorPackage.EQUIPMENT__ACTIVATED:
-			setActivated((Boolean) newValue);
+		case GeneratorPackage.EQUIPMENT__LOCKED_ABILITY:
+			setLockedAbility((Ability) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -222,11 +243,11 @@ public class EquipmentImpl extends MinimalEObjectImpl.Container implements Equip
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.EQUIPMENT__BOUGHT:
-			setBought(BOUGHT_EDEFAULT);
+		case GeneratorPackage.EQUIPMENT__ID:
+			setID(ID_EDEFAULT);
 			return;
-		case GeneratorPackage.EQUIPMENT__ACTIVATED:
-			setActivated(ACTIVATED_EDEFAULT);
+		case GeneratorPackage.EQUIPMENT__LOCKED_ABILITY:
+			setLockedAbility((Ability) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -241,11 +262,9 @@ public class EquipmentImpl extends MinimalEObjectImpl.Container implements Equip
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case GeneratorPackage.EQUIPMENT__ID:
-			return isSetID();
-		case GeneratorPackage.EQUIPMENT__BOUGHT:
-			return bought != BOUGHT_EDEFAULT;
-		case GeneratorPackage.EQUIPMENT__ACTIVATED:
-			return activated != ACTIVATED_EDEFAULT;
+			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+		case GeneratorPackage.EQUIPMENT__LOCKED_ABILITY:
+			return lockedAbility != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -262,14 +281,7 @@ public class EquipmentImpl extends MinimalEObjectImpl.Container implements Equip
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (ID: ");
-		if (idESet)
-			result.append(id);
-		else
-			result.append("<unset>");
-		result.append(", bought: ");
-		result.append(bought);
-		result.append(", activated: ");
-		result.append(activated);
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

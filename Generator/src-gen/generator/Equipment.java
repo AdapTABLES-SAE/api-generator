@@ -14,8 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generator.Equipment#getID <em>ID</em>}</li>
- *   <li>{@link generator.Equipment#isBought <em>Bought</em>}</li>
- *   <li>{@link generator.Equipment#isActivated <em>Activated</em>}</li>
+ *   <li>{@link generator.Equipment#getLockedAbility <em>Locked Ability</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getEquipment()
@@ -28,65 +27,45 @@ public interface Equipment extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ID</em>' attribute.
-	 * @see #isSetID()
+	 * @see #setID(String)
 	 * @see generator.GeneratorPackage#getEquipment_ID()
-	 * @model unsettable="true" id="true" changeable="false"
+	 * @model id="true"
 	 * @generated
 	 */
 	String getID();
 
 	/**
-	 * Returns whether the value of the '{@link generator.Equipment#getID <em>ID</em>}' attribute is set.
+	 * Sets the value of the '{@link generator.Equipment#getID <em>ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>ID</em>' attribute is set.
+	 * @param value the new value of the '<em>ID</em>' attribute.
 	 * @see #getID()
 	 * @generated
 	 */
-	boolean isSetID();
+	void setID(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Bought</b></em>' attribute.
+	 * Returns the value of the '<em><b>Locked Ability</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link generator.Ability#getLockingEquipment <em>Locking Equipment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bought</em>' attribute.
-	 * @see #setBought(boolean)
-	 * @see generator.GeneratorPackage#getEquipment_Bought()
-	 * @model
+	 * @return the value of the '<em>Locked Ability</em>' reference.
+	 * @see #setLockedAbility(Ability)
+	 * @see generator.GeneratorPackage#getEquipment_LockedAbility()
+	 * @see generator.Ability#getLockingEquipment
+	 * @model opposite="lockingEquipment"
 	 * @generated
 	 */
-	boolean isBought();
+	Ability getLockedAbility();
 
 	/**
-	 * Sets the value of the '{@link generator.Equipment#isBought <em>Bought</em>}' attribute.
+	 * Sets the value of the '{@link generator.Equipment#getLockedAbility <em>Locked Ability</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bought</em>' attribute.
-	 * @see #isBought()
+	 * @param value the new value of the '<em>Locked Ability</em>' reference.
+	 * @see #getLockedAbility()
 	 * @generated
 	 */
-	void setBought(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Activated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activated</em>' attribute.
-	 * @see #setActivated(boolean)
-	 * @see generator.GeneratorPackage#getEquipment_Activated()
-	 * @model
-	 * @generated
-	 */
-	boolean isActivated();
-
-	/**
-	 * Sets the value of the '{@link generator.Equipment#isActivated <em>Activated</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Activated</em>' attribute.
-	 * @see #isActivated()
-	 * @generated
-	 */
-	void setActivated(boolean value);
+	void setLockedAbility(Ability value);
 
 } // Equipment

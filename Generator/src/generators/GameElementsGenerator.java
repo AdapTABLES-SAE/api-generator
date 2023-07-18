@@ -6,13 +6,18 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
+import generator.AComponent;
 import generator.ATask;
+import generator.Ability;
 import generator.Dungeon;
 import generator.EBoundary;
 import generator.EModality;
 import generator.EnterResponse;
+import generator.Equipment;
 import generator.GPCategory;
 import generator.Gameplay;
+import generator.Item;
+import generator.LearnerPlayer;
 import generator.MultipleChoice;
 import generator.NoQuestionGameplay;
 import generator.QuestionGameplay;
@@ -27,16 +32,63 @@ public class GameElementsGenerator {
 	private Random random;
 	private DungeonElements dungeonElements;
 	private ModelsManager modelAccess; 
+	private LearnerPlayer learnerPlayer;
 	
-	public GameElementsGenerator(ModelsManager modelAccess,  DungeonElements dungeonElements) {
+	public GameElementsGenerator(ModelsManager modelAccess,  DungeonElements dungeonElements, LearnerPlayer learnerPlayer) {
 		this.dungeonElements = dungeonElements;
 		this.modelAccess = modelAccess;
+		this.learnerPlayer = learnerPlayer;
 		random = new Random();
 	}
 	
 	public void generateGPandCurses() {
 		setDungeonMode();
+		unlockGameplays();
 		selectCompatibleGameplays();
+	}
+	
+	private void unlockGameplays() {
+		List<Ability> abilities = getCurrentlyLockedAbilities();
+		for(Gameplay gameplay: this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
+			gameplay.setLocked(hasGameplayLockedAbilities(gameplay, abilities));
+		}
+	}
+	
+	private boolean hasGameplayLockedAbilities(Gameplay gameplay, List<Ability> lockedAbilities) {
+		for(AComponent comp: gameplay.getComponents()) {
+			if(lockedAbilities.contains(comp.getAllowedAbility())) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private List<Ability> getInitallyLockedAbilities() {
+		List<Ability> abilities = new ArrayList<>();
+		for(Equipment equipment: this.modelAccess.getGameDescriptionModel().getElements().getEquipments().getEquipments()) {
+			if(equipment.getLockedAbility() != null) {
+				abilities.add(equipment.getLockedAbility());
+			}
+		}
+		return abilities;
+	}
+	
+	private List<Ability> getUnlockedAbilityByPlayer() {
+		List<Ability> abilities = new ArrayList<>();
+		if(learnerPlayer.getProgression().getPlayerProgress().getItems() != null) {
+			for(Item item: learnerPlayer.getProgression().getPlayerProgress().getItems().getItems()) {
+				if(item.isBought() && item.isActivated()) {
+					abilities.add(item.getEquipment().getLockedAbility());
+				}
+			}
+		}
+		return abilities;
+	}
+	
+	private List<Ability> getCurrentlyLockedAbilities() {
+		List<Ability> abilities = new ArrayList<>(getInitallyLockedAbilities());
+		abilities.removeAll(getUnlockedAbilityByPlayer());
+		return abilities;
 	}
 	
 	private void setDungeonMode(){
@@ -134,7 +186,7 @@ public class GameElementsGenerator {
 	private List<Gameplay> getNoQuestionRoomGameplay(){
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
 		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
-			if(gp instanceof NoQuestionGameplay) {
+			if(gp instanceof NoQuestionGameplay && !gp.isLocked()) {
 				compatibleGameplays.add(gp);
 			}
 		}
@@ -144,7 +196,7 @@ public class GameElementsGenerator {
 	private List<Gameplay> getQuestionGameplayForCategorieType(GPCategory category, ATask task){
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
 		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
-			if(gp instanceof QuestionGameplay) {
+			if(gp instanceof QuestionGameplay && !gp.isLocked()) {
 				if(((QuestionGameplay) gp).getCategory().equals(category) && respectValidationMethod((QuestionGameplay) gp, task) && respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task)) {
 					compatibleGameplays.add(gp);
 				}

@@ -2,26 +2,17 @@
  */
 package generator.impl;
 
-import generator.CurrentGameLevel;
-import generator.CurrentObjectiveLevel;
 import generator.GeneratorPackage;
+import generator.LearnerProgress;
+import generator.PlayerProgress;
 import generator.Progression;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,32 +22,32 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.ProgressionImpl#getCurrentobjectivelevels <em>Currentobjectivelevels</em>}</li>
- *   <li>{@link generator.impl.ProgressionImpl#getCurrentGameLevel <em>Current Game Level</em>}</li>
+ *   <li>{@link generator.impl.ProgressionImpl#getPlayerProgress <em>Player Progress</em>}</li>
+ *   <li>{@link generator.impl.ProgressionImpl#getLearnerProgress <em>Learner Progress</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ProgressionImpl extends MinimalEObjectImpl.Container implements Progression {
 	/**
-	 * The cached value of the '{@link #getCurrentobjectivelevels() <em>Currentobjectivelevels</em>}' containment reference list.
+	 * The cached value of the '{@link #getPlayerProgress() <em>Player Progress</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCurrentobjectivelevels()
+	 * @see #getPlayerProgress()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<CurrentObjectiveLevel> currentobjectivelevels;
+	protected PlayerProgress playerProgress;
 
 	/**
-	 * The cached value of the '{@link #getCurrentGameLevel() <em>Current Game Level</em>}' containment reference.
+	 * The cached value of the '{@link #getLearnerProgress() <em>Learner Progress</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCurrentGameLevel()
+	 * @see #getLearnerProgress()
 	 * @generated
 	 * @ordered
 	 */
-	protected CurrentGameLevel currentGameLevel;
+	protected LearnerProgress learnerProgress;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,12 +73,8 @@ public class ProgressionImpl extends MinimalEObjectImpl.Container implements Pro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<CurrentObjectiveLevel> getCurrentobjectivelevels() {
-		if (currentobjectivelevels == null) {
-			currentobjectivelevels = new EObjectContainmentEList<CurrentObjectiveLevel>(CurrentObjectiveLevel.class,
-					this, GeneratorPackage.PROGRESSION__CURRENTOBJECTIVELEVELS);
-		}
-		return currentobjectivelevels;
+	public PlayerProgress getPlayerProgress() {
+		return playerProgress;
 	}
 
 	/**
@@ -95,21 +82,12 @@ public class ProgressionImpl extends MinimalEObjectImpl.Container implements Pro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CurrentGameLevel getCurrentGameLevel() {
-		return currentGameLevel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCurrentGameLevel(CurrentGameLevel newCurrentGameLevel, NotificationChain msgs) {
-		CurrentGameLevel oldCurrentGameLevel = currentGameLevel;
-		currentGameLevel = newCurrentGameLevel;
+	public NotificationChain basicSetPlayerProgress(PlayerProgress newPlayerProgress, NotificationChain msgs) {
+		PlayerProgress oldPlayerProgress = playerProgress;
+		playerProgress = newPlayerProgress;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.PROGRESSION__CURRENT_GAME_LEVEL, oldCurrentGameLevel, newCurrentGameLevel);
+					GeneratorPackage.PROGRESSION__PLAYER_PROGRESS, oldPlayerProgress, newPlayerProgress);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -123,21 +101,71 @@ public class ProgressionImpl extends MinimalEObjectImpl.Container implements Pro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCurrentGameLevel(CurrentGameLevel newCurrentGameLevel) {
-		if (newCurrentGameLevel != currentGameLevel) {
+	public void setPlayerProgress(PlayerProgress newPlayerProgress) {
+		if (newPlayerProgress != playerProgress) {
 			NotificationChain msgs = null;
-			if (currentGameLevel != null)
-				msgs = ((InternalEObject) currentGameLevel).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.PROGRESSION__CURRENT_GAME_LEVEL, null, msgs);
-			if (newCurrentGameLevel != null)
-				msgs = ((InternalEObject) newCurrentGameLevel).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.PROGRESSION__CURRENT_GAME_LEVEL, null, msgs);
-			msgs = basicSetCurrentGameLevel(newCurrentGameLevel, msgs);
+			if (playerProgress != null)
+				msgs = ((InternalEObject) playerProgress).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.PROGRESSION__PLAYER_PROGRESS, null, msgs);
+			if (newPlayerProgress != null)
+				msgs = ((InternalEObject) newPlayerProgress).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.PROGRESSION__PLAYER_PROGRESS, null, msgs);
+			msgs = basicSetPlayerProgress(newPlayerProgress, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PROGRESSION__CURRENT_GAME_LEVEL,
-					newCurrentGameLevel, newCurrentGameLevel));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PROGRESSION__PLAYER_PROGRESS,
+					newPlayerProgress, newPlayerProgress));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LearnerProgress getLearnerProgress() {
+		return learnerProgress;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLearnerProgress(LearnerProgress newLearnerProgress, NotificationChain msgs) {
+		LearnerProgress oldLearnerProgress = learnerProgress;
+		learnerProgress = newLearnerProgress;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.PROGRESSION__LEARNER_PROGRESS, oldLearnerProgress, newLearnerProgress);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLearnerProgress(LearnerProgress newLearnerProgress) {
+		if (newLearnerProgress != learnerProgress) {
+			NotificationChain msgs = null;
+			if (learnerProgress != null)
+				msgs = ((InternalEObject) learnerProgress).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.PROGRESSION__LEARNER_PROGRESS, null, msgs);
+			if (newLearnerProgress != null)
+				msgs = ((InternalEObject) newLearnerProgress).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.PROGRESSION__LEARNER_PROGRESS, null, msgs);
+			msgs = basicSetLearnerProgress(newLearnerProgress, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PROGRESSION__LEARNER_PROGRESS,
+					newLearnerProgress, newLearnerProgress));
 	}
 
 	/**
@@ -148,10 +176,10 @@ public class ProgressionImpl extends MinimalEObjectImpl.Container implements Pro
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.PROGRESSION__CURRENTOBJECTIVELEVELS:
-			return ((InternalEList<?>) getCurrentobjectivelevels()).basicRemove(otherEnd, msgs);
-		case GeneratorPackage.PROGRESSION__CURRENT_GAME_LEVEL:
-			return basicSetCurrentGameLevel(null, msgs);
+		case GeneratorPackage.PROGRESSION__PLAYER_PROGRESS:
+			return basicSetPlayerProgress(null, msgs);
+		case GeneratorPackage.PROGRESSION__LEARNER_PROGRESS:
+			return basicSetLearnerProgress(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -164,10 +192,10 @@ public class ProgressionImpl extends MinimalEObjectImpl.Container implements Pro
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.PROGRESSION__CURRENTOBJECTIVELEVELS:
-			return getCurrentobjectivelevels();
-		case GeneratorPackage.PROGRESSION__CURRENT_GAME_LEVEL:
-			return getCurrentGameLevel();
+		case GeneratorPackage.PROGRESSION__PLAYER_PROGRESS:
+			return getPlayerProgress();
+		case GeneratorPackage.PROGRESSION__LEARNER_PROGRESS:
+			return getLearnerProgress();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -181,12 +209,11 @@ public class ProgressionImpl extends MinimalEObjectImpl.Container implements Pro
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.PROGRESSION__CURRENTOBJECTIVELEVELS:
-			getCurrentobjectivelevels().clear();
-			getCurrentobjectivelevels().addAll((Collection<? extends CurrentObjectiveLevel>) newValue);
+		case GeneratorPackage.PROGRESSION__PLAYER_PROGRESS:
+			setPlayerProgress((PlayerProgress) newValue);
 			return;
-		case GeneratorPackage.PROGRESSION__CURRENT_GAME_LEVEL:
-			setCurrentGameLevel((CurrentGameLevel) newValue);
+		case GeneratorPackage.PROGRESSION__LEARNER_PROGRESS:
+			setLearnerProgress((LearnerProgress) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -200,11 +227,11 @@ public class ProgressionImpl extends MinimalEObjectImpl.Container implements Pro
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.PROGRESSION__CURRENTOBJECTIVELEVELS:
-			getCurrentobjectivelevels().clear();
+		case GeneratorPackage.PROGRESSION__PLAYER_PROGRESS:
+			setPlayerProgress((PlayerProgress) null);
 			return;
-		case GeneratorPackage.PROGRESSION__CURRENT_GAME_LEVEL:
-			setCurrentGameLevel((CurrentGameLevel) null);
+		case GeneratorPackage.PROGRESSION__LEARNER_PROGRESS:
+			setLearnerProgress((LearnerProgress) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -218,10 +245,10 @@ public class ProgressionImpl extends MinimalEObjectImpl.Container implements Pro
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.PROGRESSION__CURRENTOBJECTIVELEVELS:
-			return currentobjectivelevels != null && !currentobjectivelevels.isEmpty();
-		case GeneratorPackage.PROGRESSION__CURRENT_GAME_LEVEL:
-			return currentGameLevel != null;
+		case GeneratorPackage.PROGRESSION__PLAYER_PROGRESS:
+			return playerProgress != null;
+		case GeneratorPackage.PROGRESSION__LEARNER_PROGRESS:
+			return learnerProgress != null;
 		}
 		return super.eIsSet(featureID);
 	}

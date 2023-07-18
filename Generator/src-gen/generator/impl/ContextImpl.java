@@ -5,23 +5,14 @@ package generator.impl;
 import generator.Context;
 import generator.GameContext;
 import generator.GeneratorPackage;
-import generator.LearnerPlayer;
-
-import java.util.Collection;
-
+import generator.LearnerPlayers;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,8 +23,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.ContextImpl#getGamecontext <em>Gamecontext</em>}</li>
- *   <li>{@link generator.impl.ContextImpl#getLearnerplayers <em>Learnerplayers</em>}</li>
  *   <li>{@link generator.impl.ContextImpl#getID <em>ID</em>}</li>
+ *   <li>{@link generator.impl.ContextImpl#getLearnerPlayers <em>Learner Players</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,16 +39,6 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 	 * @ordered
 	 */
 	protected GameContext gamecontext;
-
-	/**
-	 * The cached value of the '{@link #getLearnerplayers() <em>Learnerplayers</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLearnerplayers()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<LearnerPlayer> learnerplayers;
 
 	/**
 	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
@@ -87,6 +68,16 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 	 * @ordered
 	 */
 	protected boolean idESet;
+
+	/**
+	 * The cached value of the '{@link #getLearnerPlayers() <em>Learner Players</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLearnerPlayers()
+	 * @generated
+	 * @ordered
+	 */
+	protected LearnerPlayers learnerPlayers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,19 +153,6 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<LearnerPlayer> getLearnerplayers() {
-		if (learnerplayers == null) {
-			learnerplayers = new EObjectContainmentEList<LearnerPlayer>(LearnerPlayer.class, this,
-					GeneratorPackage.CONTEXT__LEARNERPLAYERS);
-		}
-		return learnerplayers;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getID() {
 		return id;
 	}
@@ -222,13 +200,63 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public LearnerPlayers getLearnerPlayers() {
+		return learnerPlayers;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLearnerPlayers(LearnerPlayers newLearnerPlayers, NotificationChain msgs) {
+		LearnerPlayers oldLearnerPlayers = learnerPlayers;
+		learnerPlayers = newLearnerPlayers;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.CONTEXT__LEARNER_PLAYERS, oldLearnerPlayers, newLearnerPlayers);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLearnerPlayers(LearnerPlayers newLearnerPlayers) {
+		if (newLearnerPlayers != learnerPlayers) {
+			NotificationChain msgs = null;
+			if (learnerPlayers != null)
+				msgs = ((InternalEObject) learnerPlayers).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.CONTEXT__LEARNER_PLAYERS, null, msgs);
+			if (newLearnerPlayers != null)
+				msgs = ((InternalEObject) newLearnerPlayers).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.CONTEXT__LEARNER_PLAYERS, null, msgs);
+			msgs = basicSetLearnerPlayers(newLearnerPlayers, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.CONTEXT__LEARNER_PLAYERS,
+					newLearnerPlayers, newLearnerPlayers));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case GeneratorPackage.CONTEXT__GAMECONTEXT:
 			return basicSetGamecontext(null, msgs);
-		case GeneratorPackage.CONTEXT__LEARNERPLAYERS:
-			return ((InternalEList<?>) getLearnerplayers()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.CONTEXT__LEARNER_PLAYERS:
+			return basicSetLearnerPlayers(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -243,10 +271,10 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 		switch (featureID) {
 		case GeneratorPackage.CONTEXT__GAMECONTEXT:
 			return getGamecontext();
-		case GeneratorPackage.CONTEXT__LEARNERPLAYERS:
-			return getLearnerplayers();
 		case GeneratorPackage.CONTEXT__ID:
 			return getID();
+		case GeneratorPackage.CONTEXT__LEARNER_PLAYERS:
+			return getLearnerPlayers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -263,12 +291,11 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 		case GeneratorPackage.CONTEXT__GAMECONTEXT:
 			setGamecontext((GameContext) newValue);
 			return;
-		case GeneratorPackage.CONTEXT__LEARNERPLAYERS:
-			getLearnerplayers().clear();
-			getLearnerplayers().addAll((Collection<? extends LearnerPlayer>) newValue);
-			return;
 		case GeneratorPackage.CONTEXT__ID:
 			setID((String) newValue);
+			return;
+		case GeneratorPackage.CONTEXT__LEARNER_PLAYERS:
+			setLearnerPlayers((LearnerPlayers) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -285,11 +312,11 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 		case GeneratorPackage.CONTEXT__GAMECONTEXT:
 			setGamecontext((GameContext) null);
 			return;
-		case GeneratorPackage.CONTEXT__LEARNERPLAYERS:
-			getLearnerplayers().clear();
-			return;
 		case GeneratorPackage.CONTEXT__ID:
 			unsetID();
+			return;
+		case GeneratorPackage.CONTEXT__LEARNER_PLAYERS:
+			setLearnerPlayers((LearnerPlayers) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -305,10 +332,10 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 		switch (featureID) {
 		case GeneratorPackage.CONTEXT__GAMECONTEXT:
 			return gamecontext != null;
-		case GeneratorPackage.CONTEXT__LEARNERPLAYERS:
-			return learnerplayers != null && !learnerplayers.isEmpty();
 		case GeneratorPackage.CONTEXT__ID:
 			return isSetID();
+		case GeneratorPackage.CONTEXT__LEARNER_PLAYERS:
+			return learnerPlayers != null;
 		}
 		return super.eIsSet(featureID);
 	}

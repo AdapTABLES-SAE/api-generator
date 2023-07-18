@@ -373,15 +373,6 @@ public interface GeneratorFactory extends EFactory {
 	LevelsDifficultyProgress createLevelsDifficultyProgress();
 
 	/**
-	 * Returns a new object of class '<em>Current Game Level</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Current Game Level</em>'.
-	 * @generated
-	 */
-	CurrentGameLevel createCurrentGameLevel();
-
-	/**
 	 * Returns a new object of class '<em>Game Element Types</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -677,6 +668,51 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	StatementElementType createStatementElementType();
+
+	/**
+	 * Returns a new object of class '<em>Player Progress</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Player Progress</em>'.
+	 * @generated
+	 */
+	PlayerProgress createPlayerProgress();
+
+	/**
+	 * Returns a new object of class '<em>Learner Progress</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Learner Progress</em>'.
+	 * @generated
+	 */
+	LearnerProgress createLearnerProgress();
+
+	/**
+	 * Returns a new object of class '<em>Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Item</em>'.
+	 * @generated
+	 */
+	Item createItem();
+
+	/**
+	 * Returns a new object of class '<em>Items</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Items</em>'.
+	 * @generated
+	 */
+	Items createItems();
+
+	/**
+	 * Returns a new object of class '<em>Learner Players</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Learner Players</em>'.
+	 * @generated
+	 */
+	LearnerPlayers createLearnerPlayers();
 
 	/**
 	 * Returns the package supported by this factory.

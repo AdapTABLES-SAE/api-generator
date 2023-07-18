@@ -2,8 +2,6 @@
  */
 package generator;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,8 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generator.Context#getGamecontext <em>Gamecontext</em>}</li>
- *   <li>{@link generator.Context#getLearnerplayers <em>Learnerplayers</em>}</li>
  *   <li>{@link generator.Context#getID <em>ID</em>}</li>
+ *   <li>{@link generator.Context#getLearnerPlayers <em>Learner Players</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getContext()
@@ -46,18 +44,6 @@ public interface Context extends EObject {
 	 * @generated
 	 */
 	void setGamecontext(GameContext value);
-
-	/**
-	 * Returns the value of the '<em><b>Learnerplayers</b></em>' containment reference list.
-	 * The list contents are of type {@link generator.LearnerPlayer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Learnerplayers</em>' containment reference list.
-	 * @see generator.GeneratorPackage#getContext_Learnerplayers()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	EList<LearnerPlayer> getLearnerplayers();
 
 	/**
 	 * Returns the value of the '<em><b>ID</b></em>' attribute.
@@ -107,5 +93,27 @@ public interface Context extends EObject {
 	 * @generated
 	 */
 	boolean isSetID();
+
+	/**
+	 * Returns the value of the '<em><b>Learner Players</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Learner Players</em>' containment reference.
+	 * @see #setLearnerPlayers(LearnerPlayers)
+	 * @see generator.GeneratorPackage#getContext_LearnerPlayers()
+	 * @model containment="true"
+	 * @generated
+	 */
+	LearnerPlayers getLearnerPlayers();
+
+	/**
+	 * Sets the value of the '{@link generator.Context#getLearnerPlayers <em>Learner Players</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Learner Players</em>' containment reference.
+	 * @see #getLearnerPlayers()
+	 * @generated
+	 */
+	void setLearnerPlayers(LearnerPlayers value);
 
 } // Context

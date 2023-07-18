@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.GameplayImpl#getComponents <em>Components</em>}</li>
  *   <li>{@link generator.impl.GameplayImpl#getPrompt <em>Prompt</em>}</li>
  *   <li>{@link generator.impl.GameplayImpl#isUndoable <em>Undoable</em>}</li>
+ *   <li>{@link generator.impl.GameplayImpl#isLocked <em>Locked</em>}</li>
  * </ul>
  *
  * @generated
@@ -97,6 +98,26 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected boolean undoable = UNDOABLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isLocked() <em>Locked</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isLocked()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean LOCKED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isLocked() <em>Locked</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isLocked()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean locked = LOCKED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -228,6 +249,28 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isLocked() {
+		return locked;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLocked(boolean newLocked) {
+		boolean oldLocked = locked;
+		locked = newLocked;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GAMEPLAY__LOCKED, oldLocked,
+					locked));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -255,6 +298,8 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 			return getPrompt();
 		case GeneratorPackage.GAMEPLAY__UNDOABLE:
 			return isUndoable();
+		case GeneratorPackage.GAMEPLAY__LOCKED:
+			return isLocked();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -281,6 +326,9 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.GAMEPLAY__UNDOABLE:
 			setUndoable((Boolean) newValue);
 			return;
+		case GeneratorPackage.GAMEPLAY__LOCKED:
+			setLocked((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -305,6 +353,9 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.GAMEPLAY__UNDOABLE:
 			setUndoable(UNDOABLE_EDEFAULT);
 			return;
+		case GeneratorPackage.GAMEPLAY__LOCKED:
+			setLocked(LOCKED_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -325,6 +376,8 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 			return prompt != null;
 		case GeneratorPackage.GAMEPLAY__UNDOABLE:
 			return undoable != UNDOABLE_EDEFAULT;
+		case GeneratorPackage.GAMEPLAY__LOCKED:
+			return locked != LOCKED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -344,6 +397,8 @@ public abstract class GameplayImpl extends MinimalEObjectImpl.Container implemen
 		result.append(name);
 		result.append(", undoable: ");
 		result.append(undoable);
+		result.append(", locked: ");
+		result.append(locked);
 		result.append(')');
 		return result.toString();
 	}

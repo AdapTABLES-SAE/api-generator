@@ -12,7 +12,8 @@ import generator.QuestionedFact;
 import generator.Room;
 import generator.RoomAccess;
 import generator.Value;
-import generator.impl.CurrentGameLevelImpl;
+import generator.impl.LearnerProgressImpl;
+import generator.impl.PlayerProgressImpl;
 import generator.impl.ProgressionImpl;
 import managers.ModelsManager;
 import structures.DungeonElements;
@@ -75,7 +76,9 @@ public class ALGAGenerator {
 	private void checkLearnerPlayerSetProgression() {
 		if(learnerPlayer.getProgression() == null) {
 			learnerPlayer.setProgression(new ProgressionImpl());
-			learnerPlayer.getProgression().setCurrentGameLevel(new CurrentGameLevelImpl());
+			learnerPlayer.getProgression().setLearnerProgress(new LearnerProgressImpl());
+			learnerPlayer.getProgression().setPlayerProgress(new PlayerProgressImpl());
+			//learnerPlayer.getProgression().setCurrentGameLevel(new CurrentGameLevelImpl());
 		}
 	}
 	
@@ -84,8 +87,8 @@ public class ALGAGenerator {
 
 		checkLearnerPlayerSetProgression();
 		
-		double nbQRooms = gameDifficulty.getInitNbQRoom() + gameDifficulty.getNbQRoomIncrease() * (learnerPlayer.getProgression().getCurrentGameLevel().getLevel() - 1);
-		double nbNQRooms = gameDifficulty.getInitNbNQRoom() + gameDifficulty.getNbNQRoomIncrease() * (learnerPlayer.getProgression().getCurrentGameLevel().getLevel() - 1);
+		double nbQRooms = gameDifficulty.getInitNbQRoom() + gameDifficulty.getNbQRoomIncrease() * (learnerPlayer.getProgression().getPlayerProgress().getCurrentLevel() - 1);
+		double nbNQRooms = gameDifficulty.getInitNbNQRoom() + gameDifficulty.getNbNQRoomIncrease() * (learnerPlayer.getProgression().getPlayerProgress().getCurrentLevel() - 1);
 
 		System.out.println("Number of no question rooms "+nbNQRooms);
 		System.out.println("Number of question rooms "+nbQRooms);
@@ -97,7 +100,7 @@ public class ALGAGenerator {
 		DungeonGenerator dungeonGeneration;
 		try {
 			dungeonElements = eduGeneration.generateEE();
-			gameGeneration = new GameElementsGenerator(modelAccess, dungeonElements);
+			gameGeneration = new GameElementsGenerator(modelAccess, dungeonElements, learnerPlayer);
 			gameGeneration.generateGPandCurses();
 			//dungeonElements.print();
 			dungeonGeneration = new DungeonGenerator(modelAccess, dungeonElements, nbNQRooms+nbQRooms);

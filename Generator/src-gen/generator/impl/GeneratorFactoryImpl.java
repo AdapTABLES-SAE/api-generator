@@ -133,8 +133,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createCompletionCriteria();
 		case GeneratorPackage.LEVELS_DIFFICULTY_PROGRESS:
 			return createLevelsDifficultyProgress();
-		case GeneratorPackage.CURRENT_GAME_LEVEL:
-			return createCurrentGameLevel();
 		case GeneratorPackage.GAME_ELEMENT_TYPES:
 			return createGameElementTypes();
 		case GeneratorPackage.ELEMENTS_TYPES:
@@ -203,6 +201,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createSize();
 		case GeneratorPackage.STATEMENT_ELEMENT_TYPE:
 			return createStatementElementType();
+		case GeneratorPackage.PLAYER_PROGRESS:
+			return createPlayerProgress();
+		case GeneratorPackage.LEARNER_PROGRESS:
+			return createLearnerProgress();
+		case GeneratorPackage.ITEM:
+			return createItem();
+		case GeneratorPackage.ITEMS:
+			return createItems();
+		case GeneratorPackage.LEARNER_PLAYERS:
+			return createLearnerPlayers();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -681,16 +689,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CurrentGameLevel createCurrentGameLevel() {
-		CurrentGameLevelImpl currentGameLevel = new CurrentGameLevelImpl();
-		return currentGameLevel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public GameElementTypes createGameElementTypes() {
 		GameElementTypesImpl gameElementTypes = new GameElementTypesImpl();
 		return gameElementTypes;
@@ -964,6 +962,56 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public StatementElementType createStatementElementType() {
 		StatementElementTypeImpl statementElementType = new StatementElementTypeImpl();
 		return statementElementType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PlayerProgress createPlayerProgress() {
+		PlayerProgressImpl playerProgress = new PlayerProgressImpl();
+		return playerProgress;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LearnerProgress createLearnerProgress() {
+		LearnerProgressImpl learnerProgress = new LearnerProgressImpl();
+		return learnerProgress;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Item createItem() {
+		ItemImpl item = new ItemImpl();
+		return item;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Items createItems() {
+		ItemsImpl items = new ItemsImpl();
+		return items;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LearnerPlayers createLearnerPlayers() {
+		LearnerPlayersImpl learnerPlayers = new LearnerPlayersImpl();
+		return learnerPlayers;
 	}
 
 	/**

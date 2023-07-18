@@ -362,13 +362,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass currentGameLevelEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass gameElementTypesEClass = null;
 
 	/**
@@ -629,6 +622,41 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass statementElementTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass playerProgressEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass learnerProgressEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass itemEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass itemsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass learnerPlayersEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1477,8 +1505,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContext_Learnerplayers() {
-		return (EReference) contextEClass.getEStructuralFeatures().get(1);
+	public EAttribute getContext_ID() {
+		return (EAttribute) contextEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1486,8 +1514,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getContext_ID() {
-		return (EAttribute) contextEClass.getEStructuralFeatures().get(2);
+	public EReference getContext_LearnerPlayers() {
+		return (EReference) contextEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1549,7 +1577,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProgression_Currentobjectivelevels() {
+	public EReference getProgression_PlayerProgress() {
 		return (EReference) progressionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1558,7 +1586,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProgression_CurrentGameLevel() {
+	public EReference getProgression_LearnerProgress() {
 		return (EReference) progressionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2620,24 +2648,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCurrentGameLevel() {
-		return currentGameLevelEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCurrentGameLevel_Level() {
-		return (EAttribute) currentGameLevelEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getGameElementTypes() {
 		return gameElementTypesEClass;
 	}
@@ -2782,17 +2792,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEquipment_Bought() {
-		return (EAttribute) equipmentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEquipment_Activated() {
-		return (EAttribute) equipmentEClass.getEStructuralFeatures().get(2);
+	public EReference getEquipment_LockedAbility() {
+		return (EReference) equipmentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2838,6 +2839,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getGameplay_Undoable() {
 		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGameplay_Locked() {
+		return (EAttribute) gameplayEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2910,6 +2920,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getAbility_Name() {
 		return (EAttribute) abilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbility_LockingEquipment() {
+		return (EReference) abilityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3592,6 +3611,132 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPlayerProgress() {
+		return playerProgressEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlayerProgress_CurrentLevel() {
+		return (EAttribute) playerProgressEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlayerProgress_Coins() {
+		return (EAttribute) playerProgressEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPlayerProgress_Items() {
+		return (EReference) playerProgressEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLearnerProgress() {
+		return learnerProgressEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLearnerProgress_Currentobjectivelevels() {
+		return (EReference) learnerProgressEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getItem() {
+		return itemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Bought() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Activated() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getItem_Equipment() {
+		return (EReference) itemEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getItems() {
+		return itemsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getItems_Items() {
+		return (EReference) itemsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLearnerPlayers() {
+		return learnerPlayersEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLearnerPlayers_LearnerPlayers() {
+		return (EReference) learnerPlayersEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDirections() {
 		return directionsEEnum;
 	}
@@ -3827,8 +3972,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		contextEClass = createEClass(CONTEXT);
 		createEReference(contextEClass, CONTEXT__GAMECONTEXT);
-		createEReference(contextEClass, CONTEXT__LEARNERPLAYERS);
 		createEAttribute(contextEClass, CONTEXT__ID);
+		createEReference(contextEClass, CONTEXT__LEARNER_PLAYERS);
 
 		learnerPlayerEClass = createEClass(LEARNER_PLAYER);
 		createEReference(learnerPlayerEClass, LEARNER_PLAYER__PROGRESSION);
@@ -3837,8 +3982,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(learnerPlayerEClass, LEARNER_PLAYER__ID);
 
 		progressionEClass = createEClass(PROGRESSION);
-		createEReference(progressionEClass, PROGRESSION__CURRENTOBJECTIVELEVELS);
-		createEReference(progressionEClass, PROGRESSION__CURRENT_GAME_LEVEL);
+		createEReference(progressionEClass, PROGRESSION__PLAYER_PROGRESS);
+		createEReference(progressionEClass, PROGRESSION__LEARNER_PROGRESS);
 
 		currentObjectiveLevelEClass = createEClass(CURRENT_OBJECTIVE_LEVEL);
 		createEReference(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__OBJECTIVE);
@@ -3979,9 +4124,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(levelsDifficultyProgressEClass, LEVELS_DIFFICULTY_PROGRESS__INIT_NB_QROOM);
 		createEAttribute(levelsDifficultyProgressEClass, LEVELS_DIFFICULTY_PROGRESS__INIT_NB_NQ_ROOM);
 
-		currentGameLevelEClass = createEClass(CURRENT_GAME_LEVEL);
-		createEAttribute(currentGameLevelEClass, CURRENT_GAME_LEVEL__LEVEL);
-
 		gameElementTypesEClass = createEClass(GAME_ELEMENT_TYPES);
 		createEReference(gameElementTypesEClass, GAME_ELEMENT_TYPES__EQUIPMENTS);
 		createEReference(gameElementTypesEClass, GAME_ELEMENT_TYPES__ELEMENT_TYPES);
@@ -3994,14 +4136,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		equipmentEClass = createEClass(EQUIPMENT);
 		createEAttribute(equipmentEClass, EQUIPMENT__ID);
-		createEAttribute(equipmentEClass, EQUIPMENT__BOUGHT);
-		createEAttribute(equipmentEClass, EQUIPMENT__ACTIVATED);
+		createEReference(equipmentEClass, EQUIPMENT__LOCKED_ABILITY);
 
 		gameplayEClass = createEClass(GAMEPLAY);
 		createEAttribute(gameplayEClass, GAMEPLAY__NAME);
 		createEReference(gameplayEClass, GAMEPLAY__COMPONENTS);
 		createEReference(gameplayEClass, GAMEPLAY__PROMPT);
 		createEAttribute(gameplayEClass, GAMEPLAY__UNDOABLE);
+		createEAttribute(gameplayEClass, GAMEPLAY__LOCKED);
 
 		gameplaysEClass = createEClass(GAMEPLAYS);
 		createEReference(gameplaysEClass, GAMEPLAYS__GAMEPLAYS);
@@ -4013,6 +4155,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		abilityEClass = createEClass(ABILITY);
 		createEAttribute(abilityEClass, ABILITY__NAME);
+		createEReference(abilityEClass, ABILITY__LOCKING_EQUIPMENT);
 
 		abilitiesEClass = createEClass(ABILITIES);
 		createEReference(abilitiesEClass, ABILITIES__ABILITIES);
@@ -4130,6 +4273,25 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		statementElementTypeEClass = createEClass(STATEMENT_ELEMENT_TYPE);
 		createEAttribute(statementElementTypeEClass, STATEMENT_ELEMENT_TYPE__FOR_STRUCTURE);
+
+		playerProgressEClass = createEClass(PLAYER_PROGRESS);
+		createEAttribute(playerProgressEClass, PLAYER_PROGRESS__CURRENT_LEVEL);
+		createEAttribute(playerProgressEClass, PLAYER_PROGRESS__COINS);
+		createEReference(playerProgressEClass, PLAYER_PROGRESS__ITEMS);
+
+		learnerProgressEClass = createEClass(LEARNER_PROGRESS);
+		createEReference(learnerProgressEClass, LEARNER_PROGRESS__CURRENTOBJECTIVELEVELS);
+
+		itemEClass = createEClass(ITEM);
+		createEAttribute(itemEClass, ITEM__BOUGHT);
+		createEAttribute(itemEClass, ITEM__ACTIVATED);
+		createEReference(itemEClass, ITEM__EQUIPMENT);
+
+		itemsEClass = createEClass(ITEMS);
+		createEReference(itemsEClass, ITEMS__ITEMS);
+
+		learnerPlayersEClass = createEClass(LEARNER_PLAYERS);
+		createEReference(learnerPlayersEClass, LEARNER_PLAYERS__LEARNER_PLAYERS);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -4424,11 +4586,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getContext_Gamecontext(), this.getGameContext(), null, "gamecontext", null, 1, 1, Context.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContext_Learnerplayers(), this.getLearnerPlayer(), null, "learnerplayers", null, 1, -1,
-				Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContext_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Context.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContext_LearnerPlayers(), this.getLearnerPlayers(), null, "learnerPlayers", null, 0, 1,
+				Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(learnerPlayerEClass, LearnerPlayer.class, "LearnerPlayer", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4445,11 +4607,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(progressionEClass, Progression.class, "Progression", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProgression_Currentobjectivelevels(), this.getCurrentObjectiveLevel(), null,
-				"currentobjectivelevels", null, 0, -1, Progression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProgression_CurrentGameLevel(), this.getCurrentGameLevel(), null, "currentGameLevel", null, 0,
-				1, Progression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getProgression_PlayerProgress(), this.getPlayerProgress(), null, "playerProgress", null, 0, 1,
+				Progression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProgression_LearnerProgress(), this.getLearnerProgress(), null, "learnerProgress", null, 0, 1,
+				Progression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(currentObjectiveLevelEClass, CurrentObjectiveLevel.class, "CurrentObjectiveLevel", !IS_ABSTRACT,
@@ -4769,11 +4931,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				LevelsDifficultyProgress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(currentGameLevelEClass, CurrentGameLevel.class, "CurrentGameLevel", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCurrentGameLevel_Level(), ecorePackage.getEInt(), "level", "1", 0, 1, CurrentGameLevel.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(gameElementTypesEClass, GameElementTypes.class, "GameElementTypes", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGameElementTypes_Equipments(), this.getEquipments(), null, "equipments", null, 0, 1,
@@ -4798,11 +4955,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(equipmentEClass, Equipment.class, "Equipment", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEquipment_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Equipment.class, !IS_TRANSIENT,
-				!IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEquipment_Bought(), ecorePackage.getEBoolean(), "bought", null, 0, 1, Equipment.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEquipment_Activated(), ecorePackage.getEBoolean(), "activated", null, 0, 1, Equipment.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEquipment_LockedAbility(), this.getAbility(), this.getAbility_LockingEquipment(),
+				"lockedAbility", null, 0, 1, Equipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gameplayEClass, Gameplay.class, "Gameplay", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGameplay_Name(), ecorePackage.getEString(), "name", null, 0, 1, Gameplay.class, !IS_TRANSIENT,
@@ -4815,6 +4971,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGameplay_Undoable(), ecorePackage.getEBoolean(), "undoable", null, 0, 1, Gameplay.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGameplay_Locked(), ecorePackage.getEBoolean(), "locked", null, 0, 1, Gameplay.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(gameplaysEClass, Gameplays.class, "Gameplays", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4837,6 +4995,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(abilityEClass, Ability.class, "Ability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbility_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ability.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbility_LockingEquipment(), this.getEquipment(), this.getEquipment_LockedAbility(),
+				"lockingEquipment", null, 0, 1, Ability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abilitiesEClass, Abilities.class, "Abilities", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5074,6 +5235,43 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getStatementElementType_ForStructure(), ecorePackage.getEBoolean(), "forStructure", null, 0, 1,
 				StatementElementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(playerProgressEClass, PlayerProgress.class, "PlayerProgress", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPlayerProgress_CurrentLevel(), ecorePackage.getEInt(), "currentLevel", "1", 0, 1,
+				PlayerProgress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPlayerProgress_Coins(), ecorePackage.getEInt(), "coins", "0", 0, 1, PlayerProgress.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPlayerProgress_Items(), this.getItems(), null, "items", null, 0, 1, PlayerProgress.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(learnerProgressEClass, LearnerProgress.class, "LearnerProgress", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLearnerProgress_Currentobjectivelevels(), this.getCurrentObjectiveLevel(), null,
+				"currentobjectivelevels", null, 0, -1, LearnerProgress.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getItem_Bought(), ecorePackage.getEBoolean(), "bought", "true", 0, 1, Item.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Activated(), ecorePackage.getEBoolean(), "activated", "true", 0, 1, Item.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getItem_Equipment(), this.getEquipment(), null, "equipment", null, 0, 1, Item.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(itemsEClass, Items.class, "Items", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getItems_Items(), this.getItem(), null, "items", null, 0, -1, Items.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(learnerPlayersEClass, LearnerPlayers.class, "LearnerPlayers", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLearnerPlayers_LearnerPlayers(), this.getLearnerPlayer(), null, "learnerPlayers", null, 0, -1,
+				LearnerPlayers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

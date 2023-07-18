@@ -2,8 +2,6 @@
  */
 package generator;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,8 +13,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.Progression#getCurrentobjectivelevels <em>Currentobjectivelevels</em>}</li>
- *   <li>{@link generator.Progression#getCurrentGameLevel <em>Current Game Level</em>}</li>
+ *   <li>{@link generator.Progression#getPlayerProgress <em>Player Progress</em>}</li>
+ *   <li>{@link generator.Progression#getLearnerProgress <em>Learner Progress</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getProgression()
@@ -25,37 +23,47 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Progression extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Currentobjectivelevels</b></em>' containment reference list.
-	 * The list contents are of type {@link generator.CurrentObjectiveLevel}.
+	 * Returns the value of the '<em><b>Player Progress</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Currentobjectivelevels</em>' containment reference list.
-	 * @see generator.GeneratorPackage#getProgression_Currentobjectivelevels()
+	 * @return the value of the '<em>Player Progress</em>' containment reference.
+	 * @see #setPlayerProgress(PlayerProgress)
+	 * @see generator.GeneratorPackage#getProgression_PlayerProgress()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<CurrentObjectiveLevel> getCurrentobjectivelevels();
+	PlayerProgress getPlayerProgress();
 
 	/**
-	 * Returns the value of the '<em><b>Current Game Level</b></em>' containment reference.
+	 * Sets the value of the '{@link generator.Progression#getPlayerProgress <em>Player Progress</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Current Game Level</em>' containment reference.
-	 * @see #setCurrentGameLevel(CurrentGameLevel)
-	 * @see generator.GeneratorPackage#getProgression_CurrentGameLevel()
+	 * @param value the new value of the '<em>Player Progress</em>' containment reference.
+	 * @see #getPlayerProgress()
+	 * @generated
+	 */
+	void setPlayerProgress(PlayerProgress value);
+
+	/**
+	 * Returns the value of the '<em><b>Learner Progress</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Learner Progress</em>' containment reference.
+	 * @see #setLearnerProgress(LearnerProgress)
+	 * @see generator.GeneratorPackage#getProgression_LearnerProgress()
 	 * @model containment="true"
 	 * @generated
 	 */
-	CurrentGameLevel getCurrentGameLevel();
+	LearnerProgress getLearnerProgress();
 
 	/**
-	 * Sets the value of the '{@link generator.Progression#getCurrentGameLevel <em>Current Game Level</em>}' containment reference.
+	 * Sets the value of the '{@link generator.Progression#getLearnerProgress <em>Learner Progress</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Current Game Level</em>' containment reference.
-	 * @see #getCurrentGameLevel()
+	 * @param value the new value of the '<em>Learner Progress</em>' containment reference.
+	 * @see #getLearnerProgress()
 	 * @generated
 	 */
-	void setCurrentGameLevel(CurrentGameLevel value);
+	void setLearnerProgress(LearnerProgress value);
 
 } // Progression
