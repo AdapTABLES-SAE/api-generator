@@ -387,7 +387,7 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseElementType(ElementType object) {
+		public <T> Adapter caseElementType(ElementType<T> object) {
 			return createElementTypeAdapter();
 		}
 

@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ElementType extends EObject {
+public interface ElementType<T> extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Size</b></em>' attribute.
 	 * The literals are from the enumeration {@link generator.ElementSize}.

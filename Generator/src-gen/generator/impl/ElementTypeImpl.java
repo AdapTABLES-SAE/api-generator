@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ElementTypeImpl extends MinimalEObjectImpl.Container implements ElementType {
+public class ElementTypeImpl<T> extends MinimalEObjectImpl.Container implements ElementType<T> {
 	/**
 	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
 	 * <!-- begin-user-doc -->

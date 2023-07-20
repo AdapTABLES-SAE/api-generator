@@ -719,8 +719,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ElementType createElementType() {
-		ElementTypeImpl elementType = new ElementTypeImpl();
+	public <T> ElementType<T> createElementType() {
+		ElementTypeImpl<T> elementType = new ElementTypeImpl<T>();
 		return elementType;
 	}
 

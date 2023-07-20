@@ -243,13 +243,22 @@ public interface GeneratorPackage extends EPackage {
 	int DUNGEON__EXIT = 5;
 
 	/**
+	 * The feature id for the '<em><b>Learner Player</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUNGEON__LEARNER_PLAYER = 6;
+
+	/**
 	 * The number of structural features of the '<em>Dungeon</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DUNGEON_FEATURE_COUNT = 6;
+	int DUNGEON_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Dungeon</em>' class.
@@ -6550,6 +6559,17 @@ public interface GeneratorPackage extends EPackage {
 	EReference getDungeon_Exit();
 
 	/**
+	 * Returns the meta object for the reference '{@link generator.Dungeon#getLearnerPlayer <em>Learner Player</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Learner Player</em>'.
+	 * @see generator.Dungeon#getLearnerPlayer()
+	 * @see #getDungeon()
+	 * @generated
+	 */
+	EReference getDungeon_LearnerPlayer();
+
+	/**
 	 * Returns the meta object for class '{@link generator.Room <em>Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10136,6 +10156,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DUNGEON__EXIT = eINSTANCE.getDungeon_Exit();
+
+		/**
+		 * The meta object literal for the '<em><b>Learner Player</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DUNGEON__LEARNER_PLAYER = eINSTANCE.getDungeon_LearnerPlayer();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.RoomImpl <em>Room</em>}' class.

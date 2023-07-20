@@ -947,6 +947,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDungeon_LearnerPlayer() {
+		return (EReference) dungeonEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRoom() {
 		return roomEClass;
 	}
@@ -3895,6 +3904,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(dungeonEClass, DUNGEON__LEVEL);
 		createEReference(dungeonEClass, DUNGEON__LEARNINGOBJECTIVE);
 		createEReference(dungeonEClass, DUNGEON__EXIT);
+		createEReference(dungeonEClass, DUNGEON__LEARNER_PLAYER);
 
 		roomEClass = createEClass(ROOM);
 		createEAttribute(roomEClass, ROOM__X);
@@ -4338,6 +4348,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				.getEPackage(XMLTypePackage.eNS_URI);
 
 		// Create type parameters
+		addETypeParameter(elementTypeEClass, "T");
 
 		// Set bounds for type parameters
 
@@ -4421,6 +4432,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getDungeon_Exit(), this.getRoom(), null, "exit", null, 0, 1, Dungeon.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEReference(getDungeon_LearnerPlayer(), this.getLearnerPlayer(), null, "learnerPlayer", null, 1, 1,
+				Dungeon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoom_X(), ecorePackage.getEInt(), "x", null, 0, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE,

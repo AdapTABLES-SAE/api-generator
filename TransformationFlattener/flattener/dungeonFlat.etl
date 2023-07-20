@@ -8,6 +8,10 @@ rule Dungeon2Dungeon
     to dOut: OUT!Dungeon {
         "Dungeon created".println();
         dOut.entryRoom = "Room[" + dIn.entry.x + "/" + dIn.entry.y + "]";
+		// dOut.exitRoom = "Room["+ dIn.exit.x + "/" + dIn.exit.y + "]";
+		dOut.objectiveID = dIn.learningobjective.id;
+		dOut.levelID = dIn.level.id;
+		dOut.gameLevelID = dIn.learnerPlayer.progression.playerProgress.currentLevel;
 
         // ROOMS
         var rooms: new OUT!Rooms;

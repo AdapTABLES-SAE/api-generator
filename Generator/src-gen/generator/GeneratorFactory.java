@@ -406,7 +406,7 @@ public interface GeneratorFactory extends EFactory {
 	 * @return a new object of class '<em>Element Type</em>'.
 	 * @generated
 	 */
-	ElementType createElementType();
+	<T> ElementType<T> createElementType();
 
 	/**
 	 * Returns a new object of class '<em>Equipment</em>'.

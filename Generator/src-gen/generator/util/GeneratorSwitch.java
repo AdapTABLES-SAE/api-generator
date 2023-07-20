@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.util.Switch;
  * @see generator.GeneratorPackage
  * @generated
  */
-public class GeneratorSwitch<T> extends Switch<T> {
+public class GeneratorSwitch<T1> extends Switch<T1> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -64,60 +64,60 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
+	protected T1 doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 		case GeneratorPackage.ABSTRACT_FACT: {
 			AbstractFact abstractFact = (AbstractFact) theEObject;
-			T result = caseAbstractFact(abstractFact);
+			T1 result = caseAbstractFact(abstractFact);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.SET_OF_FACTS: {
 			SetOfFacts setOfFacts = (SetOfFacts) theEObject;
-			T result = caseSetOfFacts(setOfFacts);
+			T1 result = caseSetOfFacts(setOfFacts);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.KNOWLEDGE: {
 			Knowledge knowledge = (Knowledge) theEObject;
-			T result = caseKnowledge(knowledge);
+			T1 result = caseKnowledge(knowledge);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.DUNGEON: {
 			Dungeon dungeon = (Dungeon) theEObject;
-			T result = caseDungeon(dungeon);
+			T1 result = caseDungeon(dungeon);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.ROOM: {
 			Room room = (Room) theEObject;
-			T result = caseRoom(room);
+			T1 result = caseRoom(room);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.GAME_DESCRIPTION: {
 			GameDescription gameDescription = (GameDescription) theEObject;
-			T result = caseGameDescription(gameDescription);
+			T1 result = caseGameDescription(gameDescription);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.ROOM_TYPE: {
 			RoomType roomType = (RoomType) theEObject;
-			T result = caseRoomType(roomType);
+			T1 result = caseRoomType(roomType);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.SMALL_ROOM_TYPE: {
 			SmallRoomType smallRoomType = (SmallRoomType) theEObject;
-			T result = caseSmallRoomType(smallRoomType);
+			T1 result = caseSmallRoomType(smallRoomType);
 			if (result == null)
 				result = caseRoomType(smallRoomType);
 			if (result == null)
@@ -126,7 +126,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.LARGE_ROOM_TYPE: {
 			LargeRoomType largeRoomType = (LargeRoomType) theEObject;
-			T result = caseLargeRoomType(largeRoomType);
+			T1 result = caseLargeRoomType(largeRoomType);
 			if (result == null)
 				result = caseRoomType(largeRoomType);
 			if (result == null)
@@ -135,56 +135,56 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.ROOM_ACCESS: {
 			RoomAccess roomAccess = (RoomAccess) theEObject;
-			T result = caseRoomAccess(roomAccess);
+			T1 result = caseRoomAccess(roomAccess);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.GAME_CONTEXT: {
 			GameContext gameContext = (GameContext) theEObject;
-			T result = caseGameContext(gameContext);
+			T1 result = caseGameContext(gameContext);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.LEARNING_DOMAIN: {
 			LearningDomain learningDomain = (LearningDomain) theEObject;
-			T result = caseLearningDomain(learningDomain);
+			T1 result = caseLearningDomain(learningDomain);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.LEARNING_PATH: {
 			LearningPath learningPath = (LearningPath) theEObject;
-			T result = caseLearningPath(learningPath);
+			T1 result = caseLearningPath(learningPath);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.OBJECTIVE: {
 			Objective objective = (Objective) theEObject;
-			T result = caseObjective(objective);
+			T1 result = caseObjective(objective);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.PREREQUISITE: {
 			Prerequisite prerequisite = (Prerequisite) theEObject;
-			T result = casePrerequisite(prerequisite);
+			T1 result = casePrerequisite(prerequisite);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.LEVEL: {
 			Level level = (Level) theEObject;
-			T result = caseLevel(level);
+			T1 result = caseLevel(level);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.MT_LEVEL: {
 			MTLevel mtLevel = (MTLevel) theEObject;
-			T result = caseMTLevel(mtLevel);
+			T1 result = caseMTLevel(mtLevel);
 			if (result == null)
 				result = caseLevel(mtLevel);
 			if (result == null)
@@ -193,7 +193,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.MT_COMPLETION1: {
 			MTCompletion1 mtCompletion1 = (MTCompletion1) theEObject;
-			T result = caseMTCompletion1(mtCompletion1);
+			T1 result = caseMTCompletion1(mtCompletion1);
 			if (result == null)
 				result = caseCompletionTask(mtCompletion1);
 			if (result == null)
@@ -204,42 +204,42 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.CONTEXT: {
 			Context context = (Context) theEObject;
-			T result = caseContext(context);
+			T1 result = caseContext(context);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.LEARNER_PLAYER: {
 			LearnerPlayer learnerPlayer = (LearnerPlayer) theEObject;
-			T result = caseLearnerPlayer(learnerPlayer);
+			T1 result = caseLearnerPlayer(learnerPlayer);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.PROGRESSION: {
 			Progression progression = (Progression) theEObject;
-			T result = caseProgression(progression);
+			T1 result = caseProgression(progression);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL: {
 			CurrentObjectiveLevel currentObjectiveLevel = (CurrentObjectiveLevel) theEObject;
-			T result = caseCurrentObjectiveLevel(currentObjectiveLevel);
+			T1 result = caseCurrentObjectiveLevel(currentObjectiveLevel);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.RESPONSE_MODALITY: {
 			ResponseModality responseModality = (ResponseModality) theEObject;
-			T result = caseResponseModality(responseModality);
+			T1 result = caseResponseModality(responseModality);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.MULTIPLE_CHOICE: {
 			MultipleChoice multipleChoice = (MultipleChoice) theEObject;
-			T result = caseMultipleChoice(multipleChoice);
+			T1 result = caseMultipleChoice(multipleChoice);
 			if (result == null)
 				result = caseResponseModality(multipleChoice);
 			if (result == null)
@@ -248,7 +248,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.ENTER_RESPONSE: {
 			EnterResponse enterResponse = (EnterResponse) theEObject;
-			T result = caseEnterResponse(enterResponse);
+			T1 result = caseEnterResponse(enterResponse);
 			if (result == null)
 				result = caseResponseModality(enterResponse);
 			if (result == null)
@@ -257,21 +257,21 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.ROOM_TYPES: {
 			RoomTypes roomTypes = (RoomTypes) theEObject;
-			T result = caseRoomTypes(roomTypes);
+			T1 result = caseRoomTypes(roomTypes);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.ATASK: {
 			ATask aTask = (ATask) theEObject;
-			T result = caseATask(aTask);
+			T1 result = caseATask(aTask);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.COMPLETION_TASK: {
 			CompletionTask completionTask = (CompletionTask) theEObject;
-			T result = caseCompletionTask(completionTask);
+			T1 result = caseCompletionTask(completionTask);
 			if (result == null)
 				result = caseATask(completionTask);
 			if (result == null)
@@ -280,7 +280,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.IDENTIFICATION_TASK: {
 			IdentificationTask identificationTask = (IdentificationTask) theEObject;
-			T result = caseIdentificationTask(identificationTask);
+			T1 result = caseIdentificationTask(identificationTask);
 			if (result == null)
 				result = caseATask(identificationTask);
 			if (result == null)
@@ -289,7 +289,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.MEMBERSHIP_ID_TASK: {
 			MembershipIDTask membershipIDTask = (MembershipIDTask) theEObject;
-			T result = caseMembershipIDTask(membershipIDTask);
+			T1 result = caseMembershipIDTask(membershipIDTask);
 			if (result == null)
 				result = caseATask(membershipIDTask);
 			if (result == null)
@@ -298,7 +298,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.MT_COMPLETION2: {
 			MTCompletion2 mtCompletion2 = (MTCompletion2) theEObject;
-			T result = caseMTCompletion2(mtCompletion2);
+			T1 result = caseMTCompletion2(mtCompletion2);
 			if (result == null)
 				result = caseCompletionTask(mtCompletion2);
 			if (result == null)
@@ -309,7 +309,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.MT_RECONTRUCTION: {
 			MTRecontruction mtRecontruction = (MTRecontruction) theEObject;
-			T result = caseMTRecontruction(mtRecontruction);
+			T1 result = caseMTRecontruction(mtRecontruction);
 			if (result == null)
 				result = caseCompletionTask(mtRecontruction);
 			if (result == null)
@@ -320,7 +320,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.MT_IDENTIFICATION: {
 			MTIdentification mtIdentification = (MTIdentification) theEObject;
-			T result = caseMTIdentification(mtIdentification);
+			T1 result = caseMTIdentification(mtIdentification);
 			if (result == null)
 				result = caseIdentificationTask(mtIdentification);
 			if (result == null)
@@ -331,7 +331,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.MT_MEMBERSHIP: {
 			MTMembership mtMembership = (MTMembership) theEObject;
-			T result = caseMTMembership(mtMembership);
+			T1 result = caseMTMembership(mtMembership);
 			if (result == null)
 				result = caseMembershipIDTask(mtMembership);
 			if (result == null)
@@ -342,21 +342,21 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.RESULTS: {
 			Results results = (Results) theEObject;
-			T result = caseResults(results);
+			T1 result = caseResults(results);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.RESULTS_BY_TASK: {
 			ResultsByTask resultsByTask = (ResultsByTask) theEObject;
-			T result = caseResultsByTask(resultsByTask);
+			T1 result = caseResultsByTask(resultsByTask);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.MT_FACT: {
 			MTFact mtFact = (MTFact) theEObject;
-			T result = caseMTFact(mtFact);
+			T1 result = caseMTFact(mtFact);
 			if (result == null)
 				result = caseAbstractFact(mtFact);
 			if (result == null)
@@ -365,7 +365,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.MT_RESULT_FACT: {
 			MTResultFact mtResultFact = (MTResultFact) theEObject;
-			T result = caseMTResultFact(mtResultFact);
+			T1 result = caseMTResultFact(mtResultFact);
 			if (result == null)
 				result = caseAbstractFact(mtResultFact);
 			if (result == null)
@@ -374,14 +374,14 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.QUESTIONABLE_FACT: {
 			QuestionableFact questionableFact = (QuestionableFact) theEObject;
-			T result = caseQuestionableFact(questionableFact);
+			T1 result = caseQuestionableFact(questionableFact);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.MTQF_COMPLETION1: {
 			MTQFCompletion1 mtqfCompletion1 = (MTQFCompletion1) theEObject;
-			T result = caseMTQFCompletion1(mtqfCompletion1);
+			T1 result = caseMTQFCompletion1(mtqfCompletion1);
 			if (result == null)
 				result = caseQuestionableFact(mtqfCompletion1);
 			if (result == null)
@@ -390,7 +390,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.MTQF_COMPLETION2: {
 			MTQFCompletion2 mtqfCompletion2 = (MTQFCompletion2) theEObject;
-			T result = caseMTQFCompletion2(mtqfCompletion2);
+			T1 result = caseMTQFCompletion2(mtqfCompletion2);
 			if (result == null)
 				result = caseQuestionableFact(mtqfCompletion2);
 			if (result == null)
@@ -399,7 +399,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.MTQF_REBUILD: {
 			MTQFRebuild mtqfRebuild = (MTQFRebuild) theEObject;
-			T result = caseMTQFRebuild(mtqfRebuild);
+			T1 result = caseMTQFRebuild(mtqfRebuild);
 			if (result == null)
 				result = caseQuestionableFact(mtqfRebuild);
 			if (result == null)
@@ -408,7 +408,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.MTQF_IDENTIFICATION: {
 			MTQFIdentification mtqfIdentification = (MTQFIdentification) theEObject;
-			T result = caseMTQFIdentification(mtqfIdentification);
+			T1 result = caseMTQFIdentification(mtqfIdentification);
 			if (result == null)
 				result = caseQuestionableFact(mtqfIdentification);
 			if (result == null)
@@ -417,7 +417,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.MTQF_MEMBERSHIP: {
 			MTQFMembership mtqfMembership = (MTQFMembership) theEObject;
-			T result = caseMTQFMembership(mtqfMembership);
+			T1 result = caseMTQFMembership(mtqfMembership);
 			if (result == null)
 				result = caseQuestionableFact(mtqfMembership);
 			if (result == null)
@@ -426,112 +426,112 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.QUESTIONED_FACT: {
 			QuestionedFact questionedFact = (QuestionedFact) theEObject;
-			T result = caseQuestionedFact(questionedFact);
+			T1 result = caseQuestionedFact(questionedFact);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.COMPLETION_CRITERIA: {
 			CompletionCriteria completionCriteria = (CompletionCriteria) theEObject;
-			T result = caseCompletionCriteria(completionCriteria);
+			T1 result = caseCompletionCriteria(completionCriteria);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.LEVELS_DIFFICULTY_PROGRESS: {
 			LevelsDifficultyProgress levelsDifficultyProgress = (LevelsDifficultyProgress) theEObject;
-			T result = caseLevelsDifficultyProgress(levelsDifficultyProgress);
+			T1 result = caseLevelsDifficultyProgress(levelsDifficultyProgress);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.GAME_ELEMENT_TYPES: {
 			GameElementTypes gameElementTypes = (GameElementTypes) theEObject;
-			T result = caseGameElementTypes(gameElementTypes);
+			T1 result = caseGameElementTypes(gameElementTypes);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.ELEMENTS_TYPES: {
 			ElementsTypes elementsTypes = (ElementsTypes) theEObject;
-			T result = caseElementsTypes(elementsTypes);
+			T1 result = caseElementsTypes(elementsTypes);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.EQUIPMENTS: {
 			Equipments equipments = (Equipments) theEObject;
-			T result = caseEquipments(equipments);
+			T1 result = caseEquipments(equipments);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.EQUIPMENT: {
 			Equipment equipment = (Equipment) theEObject;
-			T result = caseEquipment(equipment);
+			T1 result = caseEquipment(equipment);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.GAMEPLAY: {
 			Gameplay gameplay = (Gameplay) theEObject;
-			T result = caseGameplay(gameplay);
+			T1 result = caseGameplay(gameplay);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.GAMEPLAYS: {
 			Gameplays gameplays = (Gameplays) theEObject;
-			T result = caseGameplays(gameplays);
+			T1 result = caseGameplays(gameplays);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.QUESTIONABLE_FACT_RESULT: {
 			QuestionableFactResult questionableFactResult = (QuestionableFactResult) theEObject;
-			T result = caseQuestionableFactResult(questionableFactResult);
+			T1 result = caseQuestionableFactResult(questionableFactResult);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.ABILITY: {
 			Ability ability = (Ability) theEObject;
-			T result = caseAbility(ability);
+			T1 result = caseAbility(ability);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.ABILITIES: {
 			Abilities abilities = (Abilities) theEObject;
-			T result = caseAbilities(abilities);
+			T1 result = caseAbilities(abilities);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.POSITION: {
 			Position position = (Position) theEObject;
-			T result = casePosition(position);
+			T1 result = casePosition(position);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.POSITIONED_ELEMENT: {
 			PositionedElement positionedElement = (PositionedElement) theEObject;
-			T result = casePositionedElement(positionedElement);
+			T1 result = casePositionedElement(positionedElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.PARAMETER: {
 			Parameter parameter = (Parameter) theEObject;
-			T result = caseParameter(parameter);
+			T1 result = caseParameter(parameter);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.QUESTION_PARAM: {
 			QuestionParam questionParam = (QuestionParam) theEObject;
-			T result = caseQuestionParam(questionParam);
+			T1 result = caseQuestionParam(questionParam);
 			if (result == null)
 				result = caseParameter(questionParam);
 			if (result == null)
@@ -540,7 +540,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.PROPOSITION_PARAM: {
 			PropositionParam propositionParam = (PropositionParam) theEObject;
-			T result = casePropositionParam(propositionParam);
+			T1 result = casePropositionParam(propositionParam);
 			if (result == null)
 				result = caseParameter(propositionParam);
 			if (result == null)
@@ -549,7 +549,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.VALUE: {
 			Value value = (Value) theEObject;
-			T result = caseValue(value);
+			T1 result = caseValue(value);
 			if (result == null)
 				result = caseAValue(value);
 			if (result == null)
@@ -558,7 +558,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.CORRECTNESS: {
 			Correctness correctness = (Correctness) theEObject;
-			T result = caseCorrectness(correctness);
+			T1 result = caseCorrectness(correctness);
 			if (result == null)
 				result = caseParameter(correctness);
 			if (result == null)
@@ -567,7 +567,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.ENTRY_SOLUCE_PARAM: {
 			EntrySoluceParam entrySoluceParam = (EntrySoluceParam) theEObject;
-			T result = caseEntrySoluceParam(entrySoluceParam);
+			T1 result = caseEntrySoluceParam(entrySoluceParam);
 			if (result == null)
 				result = caseParameter(entrySoluceParam);
 			if (result == null)
@@ -575,15 +575,15 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			return result;
 		}
 		case GeneratorPackage.ELEMENT_TYPE: {
-			ElementType elementType = (ElementType) theEObject;
-			T result = caseElementType(elementType);
+			ElementType<?> elementType = (ElementType<?>) theEObject;
+			T1 result = caseElementType(elementType);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.DISPLAY: {
 			Display display = (Display) theEObject;
-			T result = caseDisplay(display);
+			T1 result = caseDisplay(display);
 			if (result == null)
 				result = caseParameter(display);
 			if (result == null)
@@ -592,14 +592,14 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.ACOMPONENT: {
 			AComponent aComponent = (AComponent) theEObject;
-			T result = caseAComponent(aComponent);
+			T1 result = caseAComponent(aComponent);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.STRUCTURE: {
 			Structure structure = (Structure) theEObject;
-			T result = caseStructure(structure);
+			T1 result = caseStructure(structure);
 			if (result == null)
 				result = caseAComponent(structure);
 			if (result == null)
@@ -608,7 +608,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.COMPONENT: {
 			Component component = (Component) theEObject;
-			T result = caseComponent(component);
+			T1 result = caseComponent(component);
 			if (result == null)
 				result = caseAComponent(component);
 			if (result == null)
@@ -617,7 +617,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.QUANTITY: {
 			Quantity quantity = (Quantity) theEObject;
-			T result = caseQuantity(quantity);
+			T1 result = caseQuantity(quantity);
 			if (result == null)
 				result = caseParameter(quantity);
 			if (result == null)
@@ -626,7 +626,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.WANTED_ANSWERS_PARAM: {
 			WantedAnswersParam wantedAnswersParam = (WantedAnswersParam) theEObject;
-			T result = caseWantedAnswersParam(wantedAnswersParam);
+			T1 result = caseWantedAnswersParam(wantedAnswersParam);
 			if (result == null)
 				result = caseParameter(wantedAnswersParam);
 			if (result == null)
@@ -635,7 +635,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.EXPECTED_ANSWER: {
 			ExpectedAnswer expectedAnswer = (ExpectedAnswer) theEObject;
-			T result = caseExpectedAnswer(expectedAnswer);
+			T1 result = caseExpectedAnswer(expectedAnswer);
 			if (result == null)
 				result = caseParameter(expectedAnswer);
 			if (result == null)
@@ -644,7 +644,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.CORRECTNESS_VALUE: {
 			CorrectnessValue correctnessValue = (CorrectnessValue) theEObject;
-			T result = caseCorrectnessValue(correctnessValue);
+			T1 result = caseCorrectnessValue(correctnessValue);
 			if (result == null)
 				result = caseAValue(correctnessValue);
 			if (result == null)
@@ -653,14 +653,14 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.AVALUE: {
 			AValue aValue = (AValue) theEObject;
-			T result = caseAValue(aValue);
+			T1 result = caseAValue(aValue);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.POSITIONED_STRUCTURE_ELEMENT: {
 			PositionedStructureElement positionedStructureElement = (PositionedStructureElement) theEObject;
-			T result = casePositionedStructureElement(positionedStructureElement);
+			T1 result = casePositionedStructureElement(positionedStructureElement);
 			if (result == null)
 				result = casePositionedElement(positionedStructureElement);
 			if (result == null)
@@ -669,7 +669,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.FACT_SOLUTION_PARAM: {
 			FactSolutionParam factSolutionParam = (FactSolutionParam) theEObject;
-			T result = caseFactSolutionParam(factSolutionParam);
+			T1 result = caseFactSolutionParam(factSolutionParam);
 			if (result == null)
 				result = caseParameter(factSolutionParam);
 			if (result == null)
@@ -678,7 +678,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.ORDERING_TASK: {
 			OrderingTask orderingTask = (OrderingTask) theEObject;
-			T result = caseOrderingTask(orderingTask);
+			T1 result = caseOrderingTask(orderingTask);
 			if (result == null)
 				result = caseATask(orderingTask);
 			if (result == null)
@@ -687,14 +687,14 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.PROMPT: {
 			Prompt prompt = (Prompt) theEObject;
-			T result = casePrompt(prompt);
+			T1 result = casePrompt(prompt);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.FACT_CORRECTNESS_PARAM: {
 			FactCorrectnessParam factCorrectnessParam = (FactCorrectnessParam) theEObject;
-			T result = caseFactCorrectnessParam(factCorrectnessParam);
+			T1 result = caseFactCorrectnessParam(factCorrectnessParam);
 			if (result == null)
 				result = caseParameter(factCorrectnessParam);
 			if (result == null)
@@ -703,28 +703,28 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.GAMEPLAY_TASK_RELATIONS: {
 			GameplayTaskRelations gameplayTaskRelations = (GameplayTaskRelations) theEObject;
-			T result = caseGameplayTaskRelations(gameplayTaskRelations);
+			T1 result = caseGameplayTaskRelations(gameplayTaskRelations);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.RELATION: {
 			Relation relation = (Relation) theEObject;
-			T result = caseRelation(relation);
+			T1 result = caseRelation(relation);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.CONDITION: {
 			Condition condition = (Condition) theEObject;
-			T result = caseCondition(condition);
+			T1 result = caseCondition(condition);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.QUESTION_GAMEPLAY: {
 			QuestionGameplay questionGameplay = (QuestionGameplay) theEObject;
-			T result = caseQuestionGameplay(questionGameplay);
+			T1 result = caseQuestionGameplay(questionGameplay);
 			if (result == null)
 				result = caseGameplay(questionGameplay);
 			if (result == null)
@@ -733,7 +733,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.NO_QUESTION_GAMEPLAY: {
 			NoQuestionGameplay noQuestionGameplay = (NoQuestionGameplay) theEObject;
-			T result = caseNoQuestionGameplay(noQuestionGameplay);
+			T1 result = caseNoQuestionGameplay(noQuestionGameplay);
 			if (result == null)
 				result = caseGameplay(noQuestionGameplay);
 			if (result == null)
@@ -742,7 +742,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.SIZE: {
 			Size size = (Size) theEObject;
-			T result = caseSize(size);
+			T1 result = caseSize(size);
 			if (result == null)
 				result = caseParameter(size);
 			if (result == null)
@@ -751,44 +751,44 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		}
 		case GeneratorPackage.STATEMENT_ELEMENT_TYPE: {
 			StatementElementType statementElementType = (StatementElementType) theEObject;
-			T result = caseStatementElementType(statementElementType);
+			T1 result = caseStatementElementType(statementElementType);
 			if (result == null)
-				result = caseElementType(statementElementType);
+				result = (T1) caseElementType(statementElementType);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.PLAYER_PROGRESS: {
 			PlayerProgress playerProgress = (PlayerProgress) theEObject;
-			T result = casePlayerProgress(playerProgress);
+			T1 result = casePlayerProgress(playerProgress);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.LEARNER_PROGRESS: {
 			LearnerProgress learnerProgress = (LearnerProgress) theEObject;
-			T result = caseLearnerProgress(learnerProgress);
+			T1 result = caseLearnerProgress(learnerProgress);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.ITEM: {
 			Item item = (Item) theEObject;
-			T result = caseItem(item);
+			T1 result = caseItem(item);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.ITEMS: {
 			Items items = (Items) theEObject;
-			T result = caseItems(items);
+			T1 result = caseItems(items);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.LEARNER_PLAYERS: {
 			LearnerPlayers learnerPlayers = (LearnerPlayers) theEObject;
-			T result = caseLearnerPlayers(learnerPlayers);
+			T1 result = caseLearnerPlayers(learnerPlayers);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -809,7 +809,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAbstractFact(AbstractFact object) {
+	public T1 caseAbstractFact(AbstractFact object) {
 		return null;
 	}
 
@@ -824,7 +824,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSetOfFacts(SetOfFacts object) {
+	public T1 caseSetOfFacts(SetOfFacts object) {
 		return null;
 	}
 
@@ -839,7 +839,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseKnowledge(Knowledge object) {
+	public T1 caseKnowledge(Knowledge object) {
 		return null;
 	}
 
@@ -854,7 +854,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDungeon(Dungeon object) {
+	public T1 caseDungeon(Dungeon object) {
 		return null;
 	}
 
@@ -869,7 +869,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRoom(Room object) {
+	public T1 caseRoom(Room object) {
 		return null;
 	}
 
@@ -884,7 +884,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGameDescription(GameDescription object) {
+	public T1 caseGameDescription(GameDescription object) {
 		return null;
 	}
 
@@ -899,7 +899,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRoomType(RoomType object) {
+	public T1 caseRoomType(RoomType object) {
 		return null;
 	}
 
@@ -914,7 +914,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSmallRoomType(SmallRoomType object) {
+	public T1 caseSmallRoomType(SmallRoomType object) {
 		return null;
 	}
 
@@ -929,7 +929,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLargeRoomType(LargeRoomType object) {
+	public T1 caseLargeRoomType(LargeRoomType object) {
 		return null;
 	}
 
@@ -944,7 +944,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRoomAccess(RoomAccess object) {
+	public T1 caseRoomAccess(RoomAccess object) {
 		return null;
 	}
 
@@ -959,7 +959,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGameContext(GameContext object) {
+	public T1 caseGameContext(GameContext object) {
 		return null;
 	}
 
@@ -974,7 +974,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLearningDomain(LearningDomain object) {
+	public T1 caseLearningDomain(LearningDomain object) {
 		return null;
 	}
 
@@ -989,7 +989,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLearningPath(LearningPath object) {
+	public T1 caseLearningPath(LearningPath object) {
 		return null;
 	}
 
@@ -1004,7 +1004,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseObjective(Objective object) {
+	public T1 caseObjective(Objective object) {
 		return null;
 	}
 
@@ -1019,7 +1019,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePrerequisite(Prerequisite object) {
+	public T1 casePrerequisite(Prerequisite object) {
 		return null;
 	}
 
@@ -1034,7 +1034,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLevel(Level object) {
+	public T1 caseLevel(Level object) {
 		return null;
 	}
 
@@ -1049,7 +1049,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTLevel(MTLevel object) {
+	public T1 caseMTLevel(MTLevel object) {
 		return null;
 	}
 
@@ -1064,7 +1064,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTCompletion1(MTCompletion1 object) {
+	public T1 caseMTCompletion1(MTCompletion1 object) {
 		return null;
 	}
 
@@ -1079,7 +1079,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseContext(Context object) {
+	public T1 caseContext(Context object) {
 		return null;
 	}
 
@@ -1094,7 +1094,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLearnerPlayer(LearnerPlayer object) {
+	public T1 caseLearnerPlayer(LearnerPlayer object) {
 		return null;
 	}
 
@@ -1109,7 +1109,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseProgression(Progression object) {
+	public T1 caseProgression(Progression object) {
 		return null;
 	}
 
@@ -1124,7 +1124,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCurrentObjectiveLevel(CurrentObjectiveLevel object) {
+	public T1 caseCurrentObjectiveLevel(CurrentObjectiveLevel object) {
 		return null;
 	}
 
@@ -1139,7 +1139,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResponseModality(ResponseModality object) {
+	public T1 caseResponseModality(ResponseModality object) {
 		return null;
 	}
 
@@ -1154,7 +1154,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMultipleChoice(MultipleChoice object) {
+	public T1 caseMultipleChoice(MultipleChoice object) {
 		return null;
 	}
 
@@ -1169,7 +1169,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEnterResponse(EnterResponse object) {
+	public T1 caseEnterResponse(EnterResponse object) {
 		return null;
 	}
 
@@ -1184,7 +1184,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRoomTypes(RoomTypes object) {
+	public T1 caseRoomTypes(RoomTypes object) {
 		return null;
 	}
 
@@ -1199,7 +1199,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseATask(ATask object) {
+	public T1 caseATask(ATask object) {
 		return null;
 	}
 
@@ -1214,7 +1214,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCompletionTask(CompletionTask object) {
+	public T1 caseCompletionTask(CompletionTask object) {
 		return null;
 	}
 
@@ -1229,7 +1229,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIdentificationTask(IdentificationTask object) {
+	public T1 caseIdentificationTask(IdentificationTask object) {
 		return null;
 	}
 
@@ -1244,7 +1244,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMembershipIDTask(MembershipIDTask object) {
+	public T1 caseMembershipIDTask(MembershipIDTask object) {
 		return null;
 	}
 
@@ -1259,7 +1259,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTCompletion2(MTCompletion2 object) {
+	public T1 caseMTCompletion2(MTCompletion2 object) {
 		return null;
 	}
 
@@ -1274,7 +1274,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTRecontruction(MTRecontruction object) {
+	public T1 caseMTRecontruction(MTRecontruction object) {
 		return null;
 	}
 
@@ -1289,7 +1289,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTIdentification(MTIdentification object) {
+	public T1 caseMTIdentification(MTIdentification object) {
 		return null;
 	}
 
@@ -1304,7 +1304,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTMembership(MTMembership object) {
+	public T1 caseMTMembership(MTMembership object) {
 		return null;
 	}
 
@@ -1319,7 +1319,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResults(Results object) {
+	public T1 caseResults(Results object) {
 		return null;
 	}
 
@@ -1334,7 +1334,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResultsByTask(ResultsByTask object) {
+	public T1 caseResultsByTask(ResultsByTask object) {
 		return null;
 	}
 
@@ -1349,7 +1349,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTFact(MTFact object) {
+	public T1 caseMTFact(MTFact object) {
 		return null;
 	}
 
@@ -1364,7 +1364,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTResultFact(MTResultFact object) {
+	public T1 caseMTResultFact(MTResultFact object) {
 		return null;
 	}
 
@@ -1379,7 +1379,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseQuestionableFact(QuestionableFact object) {
+	public T1 caseQuestionableFact(QuestionableFact object) {
 		return null;
 	}
 
@@ -1394,7 +1394,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTQFCompletion1(MTQFCompletion1 object) {
+	public T1 caseMTQFCompletion1(MTQFCompletion1 object) {
 		return null;
 	}
 
@@ -1409,7 +1409,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTQFCompletion2(MTQFCompletion2 object) {
+	public T1 caseMTQFCompletion2(MTQFCompletion2 object) {
 		return null;
 	}
 
@@ -1424,7 +1424,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTQFRebuild(MTQFRebuild object) {
+	public T1 caseMTQFRebuild(MTQFRebuild object) {
 		return null;
 	}
 
@@ -1439,7 +1439,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTQFIdentification(MTQFIdentification object) {
+	public T1 caseMTQFIdentification(MTQFIdentification object) {
 		return null;
 	}
 
@@ -1454,7 +1454,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTQFMembership(MTQFMembership object) {
+	public T1 caseMTQFMembership(MTQFMembership object) {
 		return null;
 	}
 
@@ -1469,7 +1469,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseQuestionedFact(QuestionedFact object) {
+	public T1 caseQuestionedFact(QuestionedFact object) {
 		return null;
 	}
 
@@ -1484,7 +1484,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCompletionCriteria(CompletionCriteria object) {
+	public T1 caseCompletionCriteria(CompletionCriteria object) {
 		return null;
 	}
 
@@ -1499,7 +1499,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLevelsDifficultyProgress(LevelsDifficultyProgress object) {
+	public T1 caseLevelsDifficultyProgress(LevelsDifficultyProgress object) {
 		return null;
 	}
 
@@ -1514,7 +1514,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGameElementTypes(GameElementTypes object) {
+	public T1 caseGameElementTypes(GameElementTypes object) {
 		return null;
 	}
 
@@ -1529,7 +1529,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElementsTypes(ElementsTypes object) {
+	public T1 caseElementsTypes(ElementsTypes object) {
 		return null;
 	}
 
@@ -1544,7 +1544,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEquipments(Equipments object) {
+	public T1 caseEquipments(Equipments object) {
 		return null;
 	}
 
@@ -1559,7 +1559,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEquipment(Equipment object) {
+	public T1 caseEquipment(Equipment object) {
 		return null;
 	}
 
@@ -1574,7 +1574,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGameplay(Gameplay object) {
+	public T1 caseGameplay(Gameplay object) {
 		return null;
 	}
 
@@ -1589,7 +1589,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGameplays(Gameplays object) {
+	public T1 caseGameplays(Gameplays object) {
 		return null;
 	}
 
@@ -1604,7 +1604,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseQuestionableFactResult(QuestionableFactResult object) {
+	public T1 caseQuestionableFactResult(QuestionableFactResult object) {
 		return null;
 	}
 
@@ -1619,7 +1619,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAbility(Ability object) {
+	public T1 caseAbility(Ability object) {
 		return null;
 	}
 
@@ -1634,7 +1634,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAbilities(Abilities object) {
+	public T1 caseAbilities(Abilities object) {
 		return null;
 	}
 
@@ -1649,7 +1649,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePosition(Position object) {
+	public T1 casePosition(Position object) {
 		return null;
 	}
 
@@ -1664,7 +1664,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePositionedElement(PositionedElement object) {
+	public T1 casePositionedElement(PositionedElement object) {
 		return null;
 	}
 
@@ -1679,7 +1679,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameter(Parameter object) {
+	public T1 caseParameter(Parameter object) {
 		return null;
 	}
 
@@ -1694,7 +1694,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseQuestionParam(QuestionParam object) {
+	public T1 caseQuestionParam(QuestionParam object) {
 		return null;
 	}
 
@@ -1709,7 +1709,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePropositionParam(PropositionParam object) {
+	public T1 casePropositionParam(PropositionParam object) {
 		return null;
 	}
 
@@ -1724,7 +1724,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseValue(Value object) {
+	public T1 caseValue(Value object) {
 		return null;
 	}
 
@@ -1739,7 +1739,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCorrectness(Correctness object) {
+	public T1 caseCorrectness(Correctness object) {
 		return null;
 	}
 
@@ -1754,7 +1754,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEntrySoluceParam(EntrySoluceParam object) {
+	public T1 caseEntrySoluceParam(EntrySoluceParam object) {
 		return null;
 	}
 
@@ -1769,7 +1769,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElementType(ElementType object) {
+	public <T> T1 caseElementType(ElementType<T> object) {
 		return null;
 	}
 
@@ -1784,7 +1784,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDisplay(Display object) {
+	public T1 caseDisplay(Display object) {
 		return null;
 	}
 
@@ -1799,7 +1799,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAComponent(AComponent object) {
+	public T1 caseAComponent(AComponent object) {
 		return null;
 	}
 
@@ -1814,7 +1814,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStructure(Structure object) {
+	public T1 caseStructure(Structure object) {
 		return null;
 	}
 
@@ -1829,7 +1829,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseComponent(Component object) {
+	public T1 caseComponent(Component object) {
 		return null;
 	}
 
@@ -1844,7 +1844,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseQuantity(Quantity object) {
+	public T1 caseQuantity(Quantity object) {
 		return null;
 	}
 
@@ -1859,7 +1859,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseWantedAnswersParam(WantedAnswersParam object) {
+	public T1 caseWantedAnswersParam(WantedAnswersParam object) {
 		return null;
 	}
 
@@ -1874,7 +1874,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseExpectedAnswer(ExpectedAnswer object) {
+	public T1 caseExpectedAnswer(ExpectedAnswer object) {
 		return null;
 	}
 
@@ -1889,7 +1889,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCorrectnessValue(CorrectnessValue object) {
+	public T1 caseCorrectnessValue(CorrectnessValue object) {
 		return null;
 	}
 
@@ -1904,7 +1904,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAValue(AValue object) {
+	public T1 caseAValue(AValue object) {
 		return null;
 	}
 
@@ -1919,7 +1919,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePositionedStructureElement(PositionedStructureElement object) {
+	public T1 casePositionedStructureElement(PositionedStructureElement object) {
 		return null;
 	}
 
@@ -1934,7 +1934,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFactSolutionParam(FactSolutionParam object) {
+	public T1 caseFactSolutionParam(FactSolutionParam object) {
 		return null;
 	}
 
@@ -1949,7 +1949,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOrderingTask(OrderingTask object) {
+	public T1 caseOrderingTask(OrderingTask object) {
 		return null;
 	}
 
@@ -1964,7 +1964,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePrompt(Prompt object) {
+	public T1 casePrompt(Prompt object) {
 		return null;
 	}
 
@@ -1979,7 +1979,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFactCorrectnessParam(FactCorrectnessParam object) {
+	public T1 caseFactCorrectnessParam(FactCorrectnessParam object) {
 		return null;
 	}
 
@@ -1994,7 +1994,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGameplayTaskRelations(GameplayTaskRelations object) {
+	public T1 caseGameplayTaskRelations(GameplayTaskRelations object) {
 		return null;
 	}
 
@@ -2009,7 +2009,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRelation(Relation object) {
+	public T1 caseRelation(Relation object) {
 		return null;
 	}
 
@@ -2024,7 +2024,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCondition(Condition object) {
+	public T1 caseCondition(Condition object) {
 		return null;
 	}
 
@@ -2039,7 +2039,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseQuestionGameplay(QuestionGameplay object) {
+	public T1 caseQuestionGameplay(QuestionGameplay object) {
 		return null;
 	}
 
@@ -2054,7 +2054,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNoQuestionGameplay(NoQuestionGameplay object) {
+	public T1 caseNoQuestionGameplay(NoQuestionGameplay object) {
 		return null;
 	}
 
@@ -2069,7 +2069,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSize(Size object) {
+	public T1 caseSize(Size object) {
 		return null;
 	}
 
@@ -2084,7 +2084,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStatementElementType(StatementElementType object) {
+	public T1 caseStatementElementType(StatementElementType object) {
 		return null;
 	}
 
@@ -2099,7 +2099,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePlayerProgress(PlayerProgress object) {
+	public T1 casePlayerProgress(PlayerProgress object) {
 		return null;
 	}
 
@@ -2114,7 +2114,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLearnerProgress(LearnerProgress object) {
+	public T1 caseLearnerProgress(LearnerProgress object) {
 		return null;
 	}
 
@@ -2129,7 +2129,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseItem(Item object) {
+	public T1 caseItem(Item object) {
 		return null;
 	}
 
@@ -2144,7 +2144,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseItems(Items object) {
+	public T1 caseItems(Items object) {
 		return null;
 	}
 
@@ -2159,7 +2159,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLearnerPlayers(LearnerPlayers object) {
+	public T1 caseLearnerPlayers(LearnerPlayers object) {
 		return null;
 	}
 
@@ -2175,7 +2175,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	public T defaultCase(EObject object) {
+	public T1 defaultCase(EObject object) {
 		return null;
 	}
 

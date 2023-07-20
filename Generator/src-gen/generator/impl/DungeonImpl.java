@@ -5,6 +5,7 @@ package generator.impl;
 import generator.Dungeon;
 import generator.DungeonMode;
 import generator.GeneratorPackage;
+import generator.LearnerPlayer;
 import generator.Level;
 import generator.Objective;
 import generator.Room;
@@ -39,6 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.DungeonImpl#getLevel <em>Level</em>}</li>
  *   <li>{@link generator.impl.DungeonImpl#getLearningobjective <em>Learningobjective</em>}</li>
  *   <li>{@link generator.impl.DungeonImpl#getExit <em>Exit</em>}</li>
+ *   <li>{@link generator.impl.DungeonImpl#getLearnerPlayer <em>Learner Player</em>}</li>
  * </ul>
  *
  * @generated
@@ -113,6 +115,16 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * @ordered
 	 */
 	protected Room exit;
+
+	/**
+	 * The cached value of the '{@link #getLearnerPlayer() <em>Learner Player</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLearnerPlayer()
+	 * @generated
+	 * @ordered
+	 */
+	protected LearnerPlayer learnerPlayer;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -328,6 +340,46 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public LearnerPlayer getLearnerPlayer() {
+		if (learnerPlayer != null && learnerPlayer.eIsProxy()) {
+			InternalEObject oldLearnerPlayer = (InternalEObject) learnerPlayer;
+			learnerPlayer = (LearnerPlayer) eResolveProxy(oldLearnerPlayer);
+			if (learnerPlayer != oldLearnerPlayer) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.DUNGEON__LEARNER_PLAYER,
+							oldLearnerPlayer, learnerPlayer));
+			}
+		}
+		return learnerPlayer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LearnerPlayer basicGetLearnerPlayer() {
+		return learnerPlayer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLearnerPlayer(LearnerPlayer newLearnerPlayer) {
+		LearnerPlayer oldLearnerPlayer = learnerPlayer;
+		learnerPlayer = newLearnerPlayer;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.DUNGEON__LEARNER_PLAYER,
+					oldLearnerPlayer, learnerPlayer));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -365,6 +417,10 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 			if (resolve)
 				return getExit();
 			return basicGetExit();
+		case GeneratorPackage.DUNGEON__LEARNER_PLAYER:
+			if (resolve)
+				return getLearnerPlayer();
+			return basicGetLearnerPlayer();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -397,6 +453,9 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 		case GeneratorPackage.DUNGEON__EXIT:
 			setExit((Room) newValue);
 			return;
+		case GeneratorPackage.DUNGEON__LEARNER_PLAYER:
+			setLearnerPlayer((LearnerPlayer) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -427,6 +486,9 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 		case GeneratorPackage.DUNGEON__EXIT:
 			setExit((Room) null);
 			return;
+		case GeneratorPackage.DUNGEON__LEARNER_PLAYER:
+			setLearnerPlayer((LearnerPlayer) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -451,6 +513,8 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 			return learningobjective != null;
 		case GeneratorPackage.DUNGEON__EXIT:
 			return exit != null;
+		case GeneratorPackage.DUNGEON__LEARNER_PLAYER:
+			return learnerPlayer != null;
 		}
 		return super.eIsSet(featureID);
 	}
