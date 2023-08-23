@@ -535,7 +535,7 @@
   <gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE-TOUCHABLE"
+        name="GP_MULTIPLE_TOUCHABLE"
         undoable="true"
         manualValidation="true"
         category="SELECT_MULTIPLE">
@@ -558,7 +558,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE-TOUCHABLE_STRUCT"
+        name="GP_MULTIPLE_TOUCHABLE_STRUCT"
         category="SELECT_MULTIPLE"
         hasIntegratedPropositions="true">
       <components
@@ -652,7 +652,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE-TOUCHABLE_STRUCT-INTEGRATED-PROPs"
+        name="GP_MULTIPLE-TOUCHABLE_STRUCT-PROP"
         category="SELECT_MULTIPLE"
         hasIntegratedPropositions="true">
       <components
@@ -723,7 +723,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_UNIQUE-TOUCHABLE">
+        name="GP_UNIQUE_TOUCHABLE">
       <components
           xsi:type="generator:Component"
           allowedAbility="TOUCHABLE"
@@ -737,7 +737,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_UNIQUE-MOVE"
+        name="GP_UNIQUE_MOVABLE"
         category="MOVE_UNIQUE">
       <components
           xsi:type="generator:Component"
@@ -761,7 +761,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE-MOVE"
+        name="GP_MULTIPLE_MOVABLE"
         manualValidation="true"
         category="MOVE_MULTIPLE">
       <components
@@ -790,7 +790,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_UNIQUE-OPENABLE">
+        name="GP_UNIQUE_OPENABLE">
       <components
           xsi:type="generator:Component"
           allowedAbility="OPENABLE"
@@ -804,7 +804,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE-OPENABLE"
+        name="GP_MULTIPLE_OPENABLE"
         category="SELECT_MULTIPLE">
       <components
           xsi:type="generator:Component"
@@ -820,7 +820,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE-MOVE_STRUCT"
+        name="GP_MULTIPLE_MOVABLE_STRUCT"
         undoable="true"
         category="MOVE_MULTIPLE">
       <components
@@ -856,7 +856,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_ROTABLE_UNIQUE"
+        name="GP_UNIQUE_ROTABLE"
         undoable="true"
         manualValidation="true"
         category="ORIENT_UNIQUE">
@@ -876,7 +876,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_UNIQUE-CATCHABLE">
+        name="GP_UNIQUE_CATCHABLE">
       <components
           xsi:type="generator:Component"
           allowedAbility="CATCHABLE"
@@ -892,7 +892,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE-CATCHABLE"
+        name="GP_MULTIPLE_CATCHABLE"
         category="SELECT_MULTIPLE">
       <components
           xsi:type="generator:Component"
@@ -944,7 +944,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_UNIQUE-PUSH"
+        name="GP_UNIQUE_PUSHABLE"
         category="MOVE_UNIQUE">
       <components
           xsi:type="generator:Structure"
@@ -984,7 +984,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE-PUSH"
+        name="GP_MULTIPLE_PUSHABLE"
         category="MOVE_MULTIPLE">
       <components
           xsi:type="generator:Structure"
@@ -1038,7 +1038,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_UNIQUE-PUSH-LEFT"
+        name="GP_UNIQUE_PUSHABLE-LEFT"
         category="MOVE_UNIQUE">
       <components
           xsi:type="generator:Structure"
@@ -1078,7 +1078,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE-PUSH-LEFT"
+        name="GP_MULTIPLE_PUSHABLE-LEFT"
         category="MOVE_MULTIPLE">
       <components
           xsi:type="generator:Structure"
@@ -1118,7 +1118,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_UNIQUE-BREAK">
+        name="GP_UNIQUE_BREAKABLE">
       <components
           xsi:type="generator:Component"
           allowedAbility="BREAKABLE"
@@ -1132,7 +1132,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE-BREAK"
+        name="GP_MULTIPLE-BREAKABLE"
         category="SELECT_MULTIPLE">
       <components
           xsi:type="generator:Component"
@@ -1147,7 +1147,7 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE-BREAK-FOR-ID"
+        name="GP_MULTIPLE-BREAKABLE-IDENTIFICATION"
         category="SELECT_MULTIPLE">
       <components
           xsi:type="generator:Component"
@@ -1212,7 +1212,26 @@
     </gameplays>
   </gameplays>
   <elements>
-    <equipments/>
+    <equipments>
+      <equipments
+          ID="FORCE_BELT"
+          lockedAbility="MOVABLE"/>
+      <equipments
+          ID="FORCE_GANT"
+          lockedAbility="ROTABLE"/>
+      <equipments
+          ID="FORCE_BRACELET"
+          lockedAbility="PUSHABLE"/>
+      <equipments
+          ID="MASTER_KEY"
+          lockedAbility="OPENABLE"/>
+      <equipments
+          ID="LIGHTWEIGHT_COAT"
+          lockedAbility="CROSSABLE"/>
+      <equipments
+          ID="CARROT"
+          lockedAbility="CATCHABLE"/>
+    </equipments>
     <elementTypes>
       <elements
           size="LARGE"
@@ -1387,25 +1406,31 @@
     <abilities
         name="VERIFICATOR"/>
     <abilities
-        name="ROTABLE"/>
+        name="ROTABLE"
+        lockingEquipment="FORCE_GANT"/>
     <abilities
-        name="MOVABLE"/>
+        name="MOVABLE"
+        lockingEquipment="FORCE_BELT"/>
     <abilities
         name="DETECTOR"/>
     <abilities
-        name="OPENABLE"/>
+        name="OPENABLE"
+        lockingEquipment="MASTER_KEY"/>
     <abilities
         name="DISPLAY"/>
     <abilities
-        name="CATCHABLE"/>
+        name="CATCHABLE"
+        lockingEquipment="CARROT"/>
     <abilities
         name="NONAVOIDABLE"/>
     <abilities
         name="AVOIDABLE"/>
     <abilities
-        name="PUSHABLE"/>
+        name="PUSHABLE"
+        lockingEquipment="FORCE_BRACELET"/>
     <abilities
-        name="CROSSABLE"/>
+        name="CROSSABLE"
+        lockingEquipment="LIGHTWEIGHT_COAT"/>
     <abilities
         name="FOLLOWABLE"/>
     <abilities

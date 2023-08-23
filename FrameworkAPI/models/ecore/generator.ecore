@@ -21,6 +21,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="learningobjective" lowerBound="1"
         eType="#//Objective"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="exit" eType="#//Room"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerPlayer" lowerBound="1"
+        eType="#//LearnerPlayer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Room">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -503,6 +505,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//ECorrectness"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElementType">
+    <eTypeParameters name="T"/>
     <eOperations name="isDisplayableElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="#//ElementSize"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"

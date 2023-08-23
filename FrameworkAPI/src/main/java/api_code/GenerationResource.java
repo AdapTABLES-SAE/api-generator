@@ -9,10 +9,6 @@ import java.io.Reader;
 import exceptions.NonExistantLearnerPlayerException;
 import flattener.Main;
 import generators.ALGAGenerator;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 //import io.swagger.annotations.Api;
 //import io.swagger.annotations.ApiResponse;
 import jakarta.servlet.ServletContext;
@@ -41,32 +37,14 @@ public class GenerationResource {
 	@GET
 	@Path("/{learnerID}")
 	@Produces(MediaType.TEXT_XML)
-    /*@Operation(summary = "Generates a dungeon.", description = "Produce an XML dungeon for a given learner ID.")
-    @ApiResponses(value = {
-            @ApiResponse(
-                    responseCode = "200",
-                    description = "XML File describing a dungeon.", 
-                    content = @Content(mediaType = MediaType.APPLICATION_XML)) })*/
 	public String generate(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
-	
-		//app.log(app.getContextPath());
-
 		return generateDungeon2String(null, learnerID, app);
 	}
 	
 	@GET
 	@Path("/{classID}/{learnerID}")
 	@Produces(MediaType.TEXT_XML)
-   /* @Operation(summary = "Generates a dungeon.", description = "Produce an XML dungeon for a given learner ID of given class.")
-    @ApiResponses(value = {
-            @ApiResponse(
-                    responseCode = "200",
-                    description = "XML File describing a dungeon.", 
-                    content = @Content(mediaType = MediaType.APPLICATION_XML)) })*/
 	public String generate(@PathParam("classID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
-		
-		//app.log(app.getContextPath());
-
 		return generateDungeon2String(classID, learnerID, app);
 	}
 	

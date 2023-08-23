@@ -1,0 +1,349 @@
+package api_code;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import exceptions.NonExistantLearnerPlayerException;
+import generator.ATask;
+import generator.CompletionCriteria;
+import generator.CurrentObjectiveLevel;
+import generator.Level;
+import generator.QuestionableFact;
+import generator.QuestionableFactResult;
+import generator.ResultsByTask;
+import generator.impl.CompletionCriteriaImpl;
+import generator.impl.CurrentObjectiveLevelImpl;
+import generator.impl.MTCompletion1Impl;
+import generator.impl.MTLevelImpl;
+import generator.impl.MTQFCompletion1Impl;
+import generator.impl.QuestionableFactResultImpl;
+import generator.impl.ResultsByTaskImpl;
+import generator.impl.ResultsImpl;
+import managers.ModelsManager;
+
+public class LearnerManager {
+
+	
+	private ModelsManager modelsManager;
+	
+	public LearnerManager(ModelsManager modelsManager) {
+		this.modelsManager = modelsManager;
+	}
+	
+	/**
+	 * Set achieved facts to achieve = true
+	 */
+	private void updateQuestionableFactStatus(ResultsByTask taskResults) {
+		int numberOfExpectedConsecutiveSuccess = taskResults.getTask().getNbConsecutiveSuccess();
+		
+		for(QuestionableFact fact: taskResults.getQuestionableFacts()) {
+			if(this.numberOfSuccessiveSuccess(fact) >= numberOfExpectedConsecutiveSuccess) {
+				fact.setAchieved(true);
+			}
+		}
+	}
+	
+	public static void main(String[] args){
+		// Test methods 
+		QuestionableFact fact = new MTQFCompletion1Impl();
+		for(int i = 0; i < 10; i++) {
+			QuestionableFactResult res = new QuestionableFactResultImpl();
+			if(i < 1 || (i > 3 && i < 5) || i > 7) {
+				res.setAnswerValid(true);
+			} else {
+				res.setAnswerValid(false);
+			}
+			fact.getResults().add(res);
+		}
+		
+		QuestionableFact fact2 = new MTQFCompletion1Impl();
+		for(int i = 0; i < 10; i++) {
+			QuestionableFactResult res = new QuestionableFactResultImpl();
+			res.setAnswerValid(false);
+			fact2.getResults().add(res);
+		}
+		
+		LearnerManager lm = new LearnerManager(null);
+		System.err.println("nb Successive "+lm.numberOfSuccessiveSuccess(fact));
+		ResultsByTask rbt = new ResultsByTaskImpl();
+		ATask task = new MTCompletion1Impl();
+		task.setNbConsecutiveSuccess(2);
+		rbt.setTask(task);
+		rbt.getQuestionableFacts().add(fact);
+		//rbt.getQuestionableFacts().add(fact2);
+		rbt.getQuestionableFacts().add(new MTQFCompletion1Impl());
+		rbt.getQuestionableFacts().add(new MTQFCompletion1Impl());
+		rbt.getQuestionableFacts().add(new MTQFCompletion1Impl());
+		rbt.getQuestionableFacts().add(new MTQFCompletion1Impl());
+		
+		
+		/*lm.updateQuestionableFactStatus(rbt);
+		System.err.println("achieved ? "+rbt.getQuestionableFacts().get(0).isAchieved());
+		System.err.println("achieved ? "+rbt.getQuestionableFacts().get(1).isAchieved());
+		System.err.println("achieved ? "+rbt.getQuestionableFacts().get(2).isAchieved());
+		System.err.println("achieved ? "+rbt.getQuestionableFacts().get(3).isAchieved());
+		System.err.println("achieved ? "+rbt.getQuestionableFacts().get(4).isAchieved());
+		
+		System.out.println("Success before "+rbt.getSucessPercent());
+		rbt.setSucessPercent(lm.computeTaskSuccessPercent(rbt));
+		System.out.println("Success after "+rbt.getSucessPercent());
+		
+		System.out.println("Encounter before "+rbt.getEncountersPercent());
+		rbt.setEncountersPercent(lm.computeTaskEncounteredPercent(rbt));
+		System.out.println("Encounter after "+rbt.getEncountersPercent());*/ 
+		
+		CurrentObjectiveLevel col = new CurrentObjectiveLevelImpl();
+		col.setResults(new ResultsImpl());
+		col.getResults().getResultsbytask().add(rbt);
+		col.setAchieved(false);
+		
+		Level level = new MTLevelImpl(); 
+		CompletionCriteria criteria = new CompletionCriteriaImpl();
+		criteria.setEncountersPercent(10.);
+		criteria.setSuccesPercent(5.0); // 10.
+		level.setCompletionCriteria(criteria);
+		
+		col.setLevel(level);
+
+		ResultsByTask rbt2 = new ResultsByTaskImpl();
+		ATask task2 = new MTCompletion1Impl();
+		task2.setNbConsecutiveSuccess(2);
+		rbt2.setTask(task);
+		rbt2.getQuestionableFacts().add(fact2);
+		rbt2.getQuestionableFacts().add(new MTQFCompletion1Impl());
+		rbt2.getQuestionableFacts().add(new MTQFCompletion1Impl());
+		rbt2.getQuestionableFacts().add(new MTQFCompletion1Impl());
+		rbt2.getQuestionableFacts().add(new MTQFCompletion1Impl());
+		col.getResults().getResultsbytask().add(rbt2);
+		ResultsByTask rbt3 = new ResultsByTaskImpl();
+		rbt3.setTask(task);rbt3.getQuestionableFacts().add(new MTQFCompletion1Impl());
+		col.getResults().getResultsbytask().add(rbt3);
+		
+		System.err.println(col.getResults().getResultsbytask().size());
+		
+		lm.updateResultsPercentages(col);
+		System.out.println("success col "+col.getSucessPercent());
+		System.out.println("encounter col "+col.getEncountersPercent());
+		System.out.println("achieved "+col.isAchieved());
+	
+	}
+	
+	/**
+	 * Computes is a pair objective/level is achieved 
+	 * @param currentOL
+	 */
+	private void updateCurrentLevelStatus(CurrentObjectiveLevel currentOL) {
+		CompletionCriteria criteria = currentOL.getLevel().getCompletionCriteria();
+		if(currentOL.getEncountersPercent() >= criteria.getEncountersPercent() && 
+				currentOL.getSucessPercent() >= criteria.getSuccesPercent()) {
+			currentOL.setAchieved(true);
+		}
+	}
+	
+	/**
+	 * Computes the number of maximal successive correct answers reached, on a fact by a learner
+	 * @return maximal number of successive success
+	 */
+	private int numberOfSuccessiveSuccess(QuestionableFact fact) {
+		Map<Integer, Integer> listOfSuccessiveSuccess = new HashMap<>();
+		int i = 0; 
+		
+		for(QuestionableFactResult result: fact.getResults()) {
+			if(result.isAnswerValid()) {
+				if(listOfSuccessiveSuccess.containsKey(i)) {
+					listOfSuccessiveSuccess.put(i, listOfSuccessiveSuccess.get(i) + 1);
+				} else {
+					listOfSuccessiveSuccess.put(i, 1);
+				}
+			} else {
+				i++;
+			}
+		}
+		if(listOfSuccessiveSuccess.isEmpty()) {
+			return 0;
+		} else {
+			int key = Collections.max(listOfSuccessiveSuccess.entrySet(), Map.Entry.comparingByValue()).getKey();
+			return listOfSuccessiveSuccess.get(key);
+		}
+	}
+	
+	/**
+	 * Computes computed values based on results 
+	 */
+	public void updateResultsPercentages(CurrentObjectiveLevel currentOL) {
+	
+		this.updateEveryQuestionableFactStatus(currentOL);
+		
+		double sumTaskSuccess = 0.0; 
+		double sumTaskEncounters = 0.0; 
+		double numberOfTasks = currentOL.getResults().getResultsbytask().size();
+		
+		for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {	
+			rbt.setEncountersPercent(this.computeTaskEncounteredPercent(rbt));
+			rbt.setSucessPercent(this.computeTaskSuccessPercent(rbt));
+			
+			System.out.println("success "+rbt.getSucessPercent());
+			System.out.println("encounter "+rbt.getEncountersPercent());
+			
+			sumTaskSuccess += rbt.getSucessPercent();
+			sumTaskEncounters += rbt.getEncountersPercent(); 
+		}
+		System.out.println(sumTaskSuccess);
+		System.out.println(sumTaskEncounters);
+		System.out.println(numberOfTasks);
+		currentOL.setEncountersPercent(sumTaskEncounters / numberOfTasks); 
+		currentOL.setSucessPercent(sumTaskSuccess / numberOfTasks);
+		this.updateCurrentLevelStatus(currentOL);
+	}
+	
+	private void updateEveryQuestionableFactStatus(CurrentObjectiveLevel currentOL) {
+		for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {
+			this.updateQuestionableFactStatus(rbt);
+		}
+	}
+	
+	/**
+	 * Computes the percentage of success of a learner on a task 
+	 * @param taskResults
+	 * @return percentage of success 
+	 */
+	private double computeTaskSuccessPercent(ResultsByTask taskResults) {
+		double numberOfachievedFacts = numberTaskAchievedFacts(taskResults); 
+		double numberOfFacts = taskResults.getQuestionableFacts().size();
+		return (numberOfachievedFacts / numberOfFacts) * 100;
+	}
+	
+	/**
+	 * Computes the number of questionable facts encountered by the learner
+	 * @param taskResults
+	 * @return
+	 */
+	private double computeTaskEncounteredPercent(ResultsByTask taskResults) {
+		double numberOfencounteredFacts = numberTaskEncounteredFacts(taskResults);
+		double numberOfFacts = taskResults.getQuestionableFacts().size();
+		return (numberOfencounteredFacts / numberOfFacts) * 100;
+	}
+	
+	/**
+	 * Computes the number of questionable facts that have been achieved
+	 * @param taskResults 
+	 * @return number of achieved facts
+	 */
+	private double numberTaskAchievedFacts(ResultsByTask taskResults) {
+		double count = 0.; 
+		
+		for(QuestionableFact fact: taskResults.getQuestionableFacts()) {
+			if(fact.isAchieved()) {
+				count++;
+			}
+		}
+		
+		return count;
+	}
+
+	/**
+	 * Compute the number of questionable facts that have been encountered by the learner at least once
+	 * @param taskResults 
+	 * @return number of encountered facts
+	 */
+	private double numberTaskEncounteredFacts(ResultsByTask taskResults) {
+		double count = 0.; 
+		
+		for(QuestionableFact fact: taskResults.getQuestionableFacts()) {
+			if(!fact.getResults().isEmpty()) {
+				count++;
+			}
+		}
+		
+		return count;
+	}
+
+	/**
+	 * Add learners' results for each facts per task questioned in a dungeon
+	 * @param obj (results in json) 
+	 * @return
+	 */
+	public String saveLearnerResults(JSONObject obj) { // TODO: Values of percentages are not valid
+		CurrentObjectiveLevel col;
+		try {
+			col = getCorrespondingCOL((String) obj.get("objectiveID"), (String) obj.get("levelID"), (String) obj.get("learnerID"));
+			if(col != null) {
+				JSONArray results = (JSONArray) obj.get("resultsByTasks");
+				for (Object object : results) {
+					JSONObject taskResult = (JSONObject) object;
+					ResultsByTask rbt = getCorrespondingResultsByTask((String) taskResult.get("taskID"), col);
+					if(rbt != null) {
+						addResultsToTask(taskResult, rbt);
+					} else {
+						System.err.println("ResultsByTask not found with ID = " + (String) taskResult.get("taskID"));
+					}
+				}
+				updateResultsPercentages(col);
+				System.out.println(col.getSucessPercent());
+				System.out.println(col.getEncountersPercent());
+			} else {
+				System.err.println("CurrentObjectiveLevel not found for O/L = (" + (String) obj.get("objectiveID") + " , " + (String) obj.get("levelID") + ")");
+			}
+		} catch (NonExistantLearnerPlayerException e) {
+			e.printStackTrace();
+		}
+		
+		modelsManager.saveContextModel();
+		return "Success";
+	}
+	
+	private void addResultsToTask(JSONObject jtask, ResultsByTask rbt) {
+		JSONArray facts = (JSONArray) jtask.get("questionableFacts");
+		for (Object object : facts) {
+			JSONObject factResult = (JSONObject) object;
+			QuestionableFact qf = getCorrespondingQuestionnableFact((String) factResult.get("questionableFactID"), rbt);
+			if(qf != null) {
+				QuestionableFactResult qfres = new QuestionableFactResultImpl();
+				qfres.setAnswerValid((boolean) factResult.get("isCorrect"));
+				qfres.setResponseTime((int) (long) factResult.get("responseTime"));
+				JSONArray answers = (JSONArray) factResult.get("answers");
+				for (Object answer : answers) {
+					qfres.getGivenAnswers().add(answer+"");
+				}
+				qf.getResults().add(qfres);
+			} else {
+				System.err.println("Questionnable fact not found with ID = " + (String) factResult.get("questionableFactID"));
+			}
+		}
+	}
+	
+	private QuestionableFact getCorrespondingQuestionnableFact(String factID, ResultsByTask rbt) {
+		for (QuestionableFact qf : rbt.getQuestionableFacts()) {
+			if(qf.getID().equals(factID)) {
+				return qf;
+			}
+		}
+		return null; 
+	}
+	
+	private ResultsByTask getCorrespondingResultsByTask(String taskID, CurrentObjectiveLevel col) {
+		for (ResultsByTask rbt : col.getResults().getResultsbytask()) {
+			if(rbt.getTask().getID().equals(taskID)) {
+				return rbt;
+			}
+		}
+		return null;
+	}
+	
+	private CurrentObjectiveLevel getCorrespondingCOL(String objectiveID, String levelID, String learnerID) throws NonExistantLearnerPlayerException {
+		for (CurrentObjectiveLevel col : modelsManager.getLearnerPlayer(learnerID).getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
+			/*System.out.println(col.getObjective().getID()+" "+col.getLevel().getID());
+			System.out.println(col.getObjective().getID().equals(objectiveID));
+			System.out.println(col.getLevel().getID().equals(levelID));*/
+			if(col.getObjective().getID().equals(objectiveID) && col.getLevel().getID().equals(levelID)) {
+				return col;
+			}
+		}
+		return null;
+	}
+
+}

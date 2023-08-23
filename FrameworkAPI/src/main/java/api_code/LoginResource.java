@@ -2,13 +2,16 @@ package api_code;
 
 import java.io.File;
 
+import exceptions.NonExistantLearnerPlayerException;
+import generator.LearnerPlayer;
 import jakarta.servlet.ServletContext;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
+import managers.ModelsManager;
 
 /**
  * Path : http://localhost:8080/FrameworkAPI/rest/generator?ID=blemoine
@@ -25,24 +28,55 @@ public class LoginResource {
 		
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	public String generate(@QueryParam("ID") String learnerID, @Context ServletContext app) {  
+	@Path("/{learnerID}")
+	public String generate(@PathParam("learnerID") String learnerID, @Context ServletContext app) {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		return isContextModelExistant(Constant.CONTEXTS_FILES_PREFIX + learnerID + ".xmi")? "OK" : "KO";
+		return isLearnerPlayerExistant(learnerID)? "OK" : "KO";
 	}
+	
+	
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	@Path("/{classID}/{learnerID}")
+	public String generate(@PathParam("classID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) {  
+		Constant.PROJECT_PATH = app.getRealPath("");
+		return isLearnerPlayerExistant(classID, learnerID)? "OK" : "KO";
+	}
+
 	
 	/***********************************/
 	/**          JOB METHODS          **/
-	/***********************************/
+	/**
+	 * @throws NonExistantLearnerPlayerException *********************************/
+	private boolean isLearnerPlayerExistant(String learnerID) {
+		return isLearnerPlayerExistant("", learnerID);
+	}
 	
-	private boolean isContextModelExistant(String contextFileName) {
+	private boolean isLearnerPlayerExistant(String classID, String learnerID) {
+		classID = classID.isEmpty() ? "default": classID;
+		if(isClassExistant(classID)) {
+			ModelsManager modelsManager = new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+					Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH,
+					Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true);
+			LearnerPlayer learner = null;
+			try {
+				learner = modelsManager.getLearnerPlayer(learnerID);
+			} catch (NonExistantLearnerPlayerException e) {
+				e.printStackTrace();
+			}
+			return learner != null; 
+		}
+		return false;
+	}
+	
+	private boolean isClassExistant(String classID) {
 		String contextsRepertory = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CONTEXTS_FILES_PATH; 
 		File[] files = new File(contextsRepertory).listFiles();
 		
-		System.out.println(files);
 		int i = 0;
 		boolean exists = false;
 		while(i < files.length && !exists) {
-			if (files[i].isFile() && files[i].getName().equals(contextFileName)) {
+			if (files[i].isFile() && files[i].getName().equals(Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi")) {
 				exists = true;
 			}
 			i++;
