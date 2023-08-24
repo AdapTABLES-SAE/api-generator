@@ -1629,13 +1629,22 @@ public interface GeneratorPackage extends EPackage {
 	int LEARNER_PLAYER__ID = 3;
 
 	/**
+	 * The feature id for the '<em><b>Statistics</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNER_PLAYER__STATISTICS = 4;
+
+	/**
 	 * The number of structural features of the '<em>Learner Player</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEARNER_PLAYER_FEATURE_COUNT = 4;
+	int LEARNER_PLAYER_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Learner Player</em>' class.
@@ -4219,13 +4228,22 @@ public interface GeneratorPackage extends EPackage {
 	int QUESTIONABLE_FACT_RESULT__GIVEN_ANSWERS = 2;
 
 	/**
+	 * The feature id for the '<em><b>On Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONABLE_FACT_RESULT__ON_TIME = 3;
+
+	/**
 	 * The number of structural features of the '<em>Questionable Fact Result</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONABLE_FACT_RESULT_FEATURE_COUNT = 3;
+	int QUESTIONABLE_FACT_RESULT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Questionable Fact Result</em>' class.
@@ -6279,6 +6297,106 @@ public interface GeneratorPackage extends EPackage {
 	int LEARNER_PLAYERS_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.StatisticsImpl <em>Statistics</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.StatisticsImpl
+	 * @see generator.impl.GeneratorPackageImpl#getStatistics()
+	 * @generated
+	 */
+	int STATISTICS = 91;
+
+	/**
+	 * The feature id for the '<em><b>Nb Correct Given Answers</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__NB_CORRECT_GIVEN_ANSWERS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Nb Questions Encountered</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__NB_QUESTIONS_ENCOUNTERED = 1;
+
+	/**
+	 * The feature id for the '<em><b>Max Game Level Reached</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__MAX_GAME_LEVEL_REACHED = 2;
+
+	/**
+	 * The feature id for the '<em><b>Total Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__TOTAL_TIME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Nb Deaths</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__NB_DEATHS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Nb Levels Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__NB_LEVELS_GENERATED = 5;
+
+	/**
+	 * The feature id for the '<em><b>Nb Finished Levels</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__NB_FINISHED_LEVELS = 6;
+
+	/**
+	 * The feature id for the '<em><b>Nb Unfinished Levels</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__NB_UNFINISHED_LEVELS = 7;
+
+	/**
+	 * The number of structural features of the '<em>Statistics</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS_FEATURE_COUNT = 8;
+
+	/**
+	 * The number of operations of the '<em>Statistics</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6286,7 +6404,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 91;
+	int DIRECTIONS = 92;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -6296,7 +6414,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 92;
+	int DUNGEON_MODE = 93;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -6306,7 +6424,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 93;
+	int TABLE_BUILD = 94;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -6316,7 +6434,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 94;
+	int RESULT_POSITION = 95;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -6326,7 +6444,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 95;
+	int ESINGLE_TARGET = 96;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -6336,7 +6454,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 96;
+	int ETASK_TYPE = 97;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -6346,7 +6464,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 97;
+	int EMODALITY = 98;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -6356,7 +6474,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 98;
+	int ESEVERAL_TARGET = 99;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -6366,7 +6484,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 99;
+	int ELEMENT_SIZE = 100;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -6376,7 +6494,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 100;
+	int GP_CATEGORY = 101;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -6386,7 +6504,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 101;
+	int ECORRECTNESS = 102;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -6396,7 +6514,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 102;
+	int EBOUNDARY = 103;
 
 	/**
 	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
@@ -6406,7 +6524,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 103;
+	int ESTATEMENT_TYPE = 104;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -7310,6 +7428,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLearnerPlayer_ID();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.LearnerPlayer#getStatistics <em>Statistics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Statistics</em>'.
+	 * @see generator.LearnerPlayer#getStatistics()
+	 * @see #getLearnerPlayer()
+	 * @generated
+	 */
+	EReference getLearnerPlayer_Statistics();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Progression <em>Progression</em>}'.
@@ -8908,6 +9037,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getQuestionableFactResult_GivenAnswers();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.QuestionableFactResult#isOnTime <em>On Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>On Time</em>'.
+	 * @see generator.QuestionableFactResult#isOnTime()
+	 * @see #getQuestionableFactResult()
+	 * @generated
+	 */
+	EAttribute getQuestionableFactResult_OnTime();
+
+	/**
 	 * Returns the meta object for class '{@link generator.Ability <em>Ability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9885,6 +10025,104 @@ public interface GeneratorPackage extends EPackage {
 	EReference getLearnerPlayers_LearnerPlayers();
 
 	/**
+	 * Returns the meta object for class '{@link generator.Statistics <em>Statistics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Statistics</em>'.
+	 * @see generator.Statistics
+	 * @generated
+	 */
+	EClass getStatistics();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Statistics#getNbCorrectGivenAnswers <em>Nb Correct Given Answers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Correct Given Answers</em>'.
+	 * @see generator.Statistics#getNbCorrectGivenAnswers()
+	 * @see #getStatistics()
+	 * @generated
+	 */
+	EAttribute getStatistics_NbCorrectGivenAnswers();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Statistics#getNbQuestionsEncountered <em>Nb Questions Encountered</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Questions Encountered</em>'.
+	 * @see generator.Statistics#getNbQuestionsEncountered()
+	 * @see #getStatistics()
+	 * @generated
+	 */
+	EAttribute getStatistics_NbQuestionsEncountered();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Statistics#getMaxGameLevelReached <em>Max Game Level Reached</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Max Game Level Reached</em>'.
+	 * @see generator.Statistics#getMaxGameLevelReached()
+	 * @see #getStatistics()
+	 * @generated
+	 */
+	EAttribute getStatistics_MaxGameLevelReached();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Statistics#getTotalTime <em>Total Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Total Time</em>'.
+	 * @see generator.Statistics#getTotalTime()
+	 * @see #getStatistics()
+	 * @generated
+	 */
+	EAttribute getStatistics_TotalTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Statistics#getNbDeaths <em>Nb Deaths</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Deaths</em>'.
+	 * @see generator.Statistics#getNbDeaths()
+	 * @see #getStatistics()
+	 * @generated
+	 */
+	EAttribute getStatistics_NbDeaths();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Statistics#getNbLevelsGenerated <em>Nb Levels Generated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Levels Generated</em>'.
+	 * @see generator.Statistics#getNbLevelsGenerated()
+	 * @see #getStatistics()
+	 * @generated
+	 */
+	EAttribute getStatistics_NbLevelsGenerated();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Statistics#getNbFinishedLevels <em>Nb Finished Levels</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Finished Levels</em>'.
+	 * @see generator.Statistics#getNbFinishedLevels()
+	 * @see #getStatistics()
+	 * @generated
+	 */
+	EAttribute getStatistics_NbFinishedLevels();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Statistics#getNbUnfinishedLevels <em>Nb Unfinished Levels</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Unfinished Levels</em>'.
+	 * @see generator.Statistics#getNbUnfinishedLevels()
+	 * @see #getStatistics()
+	 * @generated
+	 */
+	EAttribute getStatistics_NbUnfinishedLevels();
+
+	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10749,6 +10987,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LEARNER_PLAYER__ID = eINSTANCE.getLearnerPlayer_ID();
+
+		/**
+		 * The meta object literal for the '<em><b>Statistics</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEARNER_PLAYER__STATISTICS = eINSTANCE.getLearnerPlayer_Statistics();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ProgressionImpl <em>Progression</em>}' class.
@@ -12018,6 +12264,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute QUESTIONABLE_FACT_RESULT__GIVEN_ANSWERS = eINSTANCE.getQuestionableFactResult_GivenAnswers();
 
 		/**
+		 * The meta object literal for the '<em><b>On Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTIONABLE_FACT_RESULT__ON_TIME = eINSTANCE.getQuestionableFactResult_OnTime();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.AbilityImpl <em>Ability</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12824,6 +13078,80 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LEARNER_PLAYERS__LEARNER_PLAYERS = eINSTANCE.getLearnerPlayers_LearnerPlayers();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.StatisticsImpl <em>Statistics</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.StatisticsImpl
+		 * @see generator.impl.GeneratorPackageImpl#getStatistics()
+		 * @generated
+		 */
+		EClass STATISTICS = eINSTANCE.getStatistics();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Correct Given Answers</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATISTICS__NB_CORRECT_GIVEN_ANSWERS = eINSTANCE.getStatistics_NbCorrectGivenAnswers();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Questions Encountered</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATISTICS__NB_QUESTIONS_ENCOUNTERED = eINSTANCE.getStatistics_NbQuestionsEncountered();
+
+		/**
+		 * The meta object literal for the '<em><b>Max Game Level Reached</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATISTICS__MAX_GAME_LEVEL_REACHED = eINSTANCE.getStatistics_MaxGameLevelReached();
+
+		/**
+		 * The meta object literal for the '<em><b>Total Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATISTICS__TOTAL_TIME = eINSTANCE.getStatistics_TotalTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Deaths</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATISTICS__NB_DEATHS = eINSTANCE.getStatistics_NbDeaths();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Levels Generated</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATISTICS__NB_LEVELS_GENERATED = eINSTANCE.getStatistics_NbLevelsGenerated();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Finished Levels</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATISTICS__NB_FINISHED_LEVELS = eINSTANCE.getStatistics_NbFinishedLevels();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Unfinished Levels</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATISTICS__NB_UNFINISHED_LEVELS = eINSTANCE.getStatistics_NbUnfinishedLevels();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.

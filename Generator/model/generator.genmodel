@@ -195,6 +195,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LearnerPlayer/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayer/learningpath"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LearnerPlayer/ID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayer/statistics"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Progression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Progression/playerProgress"/>
@@ -365,6 +366,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFactResult/responseTime"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFactResult/answerValid"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFactResult/givenAnswers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFactResult/onTime"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Ability">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Ability/name"/>
@@ -499,6 +501,16 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//LearnerPlayers">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayers/learnerPlayers"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Statistics">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbCorrectGivenAnswers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbQuestionsEncountered"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/maxGameLevelReached"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/totalTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbDeaths"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbLevelsGenerated"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbFinishedLevels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbUnfinishedLevels"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

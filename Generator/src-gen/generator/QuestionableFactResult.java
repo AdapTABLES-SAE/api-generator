@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.QuestionableFactResult#getResponseTime <em>Response Time</em>}</li>
  *   <li>{@link generator.QuestionableFactResult#isAnswerValid <em>Answer Valid</em>}</li>
  *   <li>{@link generator.QuestionableFactResult#getGivenAnswers <em>Given Answers</em>}</li>
+ *   <li>{@link generator.QuestionableFactResult#isOnTime <em>On Time</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getQuestionableFactResult()
@@ -80,5 +81,27 @@ public interface QuestionableFactResult extends EObject {
 	 * @generated
 	 */
 	EList<String> getGivenAnswers();
+
+	/**
+	 * Returns the value of the '<em><b>On Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>On Time</em>' attribute.
+	 * @see #setOnTime(boolean)
+	 * @see generator.GeneratorPackage#getQuestionableFactResult_OnTime()
+	 * @model
+	 * @generated
+	 */
+	boolean isOnTime();
+
+	/**
+	 * Sets the value of the '{@link generator.QuestionableFactResult#isOnTime <em>On Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>On Time</em>' attribute.
+	 * @see #isOnTime()
+	 * @generated
+	 */
+	void setOnTime(boolean value);
 
 } // QuestionableFactResult

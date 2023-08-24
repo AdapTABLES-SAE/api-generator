@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.LearnerPlayer#getName <em>Name</em>}</li>
  *   <li>{@link generator.LearnerPlayer#getLearningpath <em>Learningpath</em>}</li>
  *   <li>{@link generator.LearnerPlayer#getID <em>ID</em>}</li>
+ *   <li>{@link generator.LearnerPlayer#getStatistics <em>Statistics</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getLearnerPlayer()
@@ -138,5 +139,27 @@ public interface LearnerPlayer extends EObject {
 	 * @generated
 	 */
 	boolean isSetID();
+
+	/**
+	 * Returns the value of the '<em><b>Statistics</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Statistics</em>' containment reference.
+	 * @see #setStatistics(Statistics)
+	 * @see generator.GeneratorPackage#getLearnerPlayer_Statistics()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Statistics getStatistics();
+
+	/**
+	 * Sets the value of the '{@link generator.LearnerPlayer#getStatistics <em>Statistics</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Statistics</em>' containment reference.
+	 * @see #getStatistics()
+	 * @generated
+	 */
+	void setStatistics(Statistics value);
 
 } // LearnerPlayer

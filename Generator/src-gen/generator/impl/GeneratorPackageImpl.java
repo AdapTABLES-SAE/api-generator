@@ -663,6 +663,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass statisticsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum directionsEEnum = null;
 
 	/**
@@ -1570,6 +1577,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getLearnerPlayer_ID() {
 		return (EAttribute) learnerPlayerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLearnerPlayer_Statistics() {
+		return (EReference) learnerPlayerEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2918,6 +2934,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getQuestionableFactResult_OnTime() {
+		return (EAttribute) questionableFactResultEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAbility() {
 		return abilityEClass;
 	}
@@ -3746,6 +3771,87 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getStatistics() {
+		return statisticsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStatistics_NbCorrectGivenAnswers() {
+		return (EAttribute) statisticsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStatistics_NbQuestionsEncountered() {
+		return (EAttribute) statisticsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStatistics_MaxGameLevelReached() {
+		return (EAttribute) statisticsEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStatistics_TotalTime() {
+		return (EAttribute) statisticsEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStatistics_NbDeaths() {
+		return (EAttribute) statisticsEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStatistics_NbLevelsGenerated() {
+		return (EAttribute) statisticsEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStatistics_NbFinishedLevels() {
+		return (EAttribute) statisticsEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStatistics_NbUnfinishedLevels() {
+		return (EAttribute) statisticsEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDirections() {
 		return directionsEEnum;
 	}
@@ -3990,6 +4096,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(learnerPlayerEClass, LEARNER_PLAYER__NAME);
 		createEReference(learnerPlayerEClass, LEARNER_PLAYER__LEARNINGPATH);
 		createEAttribute(learnerPlayerEClass, LEARNER_PLAYER__ID);
+		createEReference(learnerPlayerEClass, LEARNER_PLAYER__STATISTICS);
 
 		progressionEClass = createEClass(PROGRESSION);
 		createEReference(progressionEClass, PROGRESSION__PLAYER_PROGRESS);
@@ -4162,6 +4269,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(questionableFactResultEClass, QUESTIONABLE_FACT_RESULT__RESPONSE_TIME);
 		createEAttribute(questionableFactResultEClass, QUESTIONABLE_FACT_RESULT__ANSWER_VALID);
 		createEAttribute(questionableFactResultEClass, QUESTIONABLE_FACT_RESULT__GIVEN_ANSWERS);
+		createEAttribute(questionableFactResultEClass, QUESTIONABLE_FACT_RESULT__ON_TIME);
 
 		abilityEClass = createEClass(ABILITY);
 		createEAttribute(abilityEClass, ABILITY__NAME);
@@ -4302,6 +4410,16 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		learnerPlayersEClass = createEClass(LEARNER_PLAYERS);
 		createEReference(learnerPlayersEClass, LEARNER_PLAYERS__LEARNER_PLAYERS);
+
+		statisticsEClass = createEClass(STATISTICS);
+		createEAttribute(statisticsEClass, STATISTICS__NB_CORRECT_GIVEN_ANSWERS);
+		createEAttribute(statisticsEClass, STATISTICS__NB_QUESTIONS_ENCOUNTERED);
+		createEAttribute(statisticsEClass, STATISTICS__MAX_GAME_LEVEL_REACHED);
+		createEAttribute(statisticsEClass, STATISTICS__TOTAL_TIME);
+		createEAttribute(statisticsEClass, STATISTICS__NB_DEATHS);
+		createEAttribute(statisticsEClass, STATISTICS__NB_LEVELS_GENERATED);
+		createEAttribute(statisticsEClass, STATISTICS__NB_FINISHED_LEVELS);
+		createEAttribute(statisticsEClass, STATISTICS__NB_UNFINISHED_LEVELS);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -4618,6 +4736,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLearnerPlayer_ID(), ecorePackage.getEString(), "ID", null, 0, 1, LearnerPlayer.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLearnerPlayer_Statistics(), this.getStatistics(), null, "statistics", null, 0, 1,
+				LearnerPlayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(progressionEClass, Progression.class, "Progression", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5005,6 +5126,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getQuestionableFactResult_GivenAnswers(), ecorePackage.getEString(), "givenAnswers", null, 0, -1,
 				QuestionableFactResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestionableFactResult_OnTime(), ecorePackage.getEBoolean(), "onTime", null, 0, 1,
+				QuestionableFactResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abilityEClass, Ability.class, "Ability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbility_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ability.class, !IS_TRANSIENT,
@@ -5286,6 +5410,31 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getLearnerPlayers_LearnerPlayers(), this.getLearnerPlayer(), null, "learnerPlayers", null, 0, -1,
 				LearnerPlayers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(statisticsEClass, Statistics.class, "Statistics", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStatistics_NbCorrectGivenAnswers(), ecorePackage.getEInt(), "nbCorrectGivenAnswers", null, 0,
+				1, Statistics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatistics_NbQuestionsEncountered(), ecorePackage.getEInt(), "nbQuestionsEncountered", null,
+				0, 1, Statistics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatistics_MaxGameLevelReached(), ecorePackage.getEInt(), "maxGameLevelReached", null, 0, 1,
+				Statistics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatistics_TotalTime(), ecorePackage.getEDouble(), "totalTime", null, 0, 1, Statistics.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatistics_NbDeaths(), ecorePackage.getEInt(), "nbDeaths", null, 0, 1, Statistics.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatistics_NbLevelsGenerated(), ecorePackage.getEInt(), "nbLevelsGenerated", null, 0, 1,
+				Statistics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatistics_NbFinishedLevels(), ecorePackage.getEInt(), "nbFinishedLevels", null, 0, 1,
+				Statistics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatistics_NbUnfinishedLevels(), ecorePackage.getEInt(), "nbUnfinishedLevels", null, 0, 1,
+				Statistics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

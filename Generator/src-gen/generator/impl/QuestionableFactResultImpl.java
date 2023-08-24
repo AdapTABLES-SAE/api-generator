@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  *   <li>{@link generator.impl.QuestionableFactResultImpl#getResponseTime <em>Response Time</em>}</li>
  *   <li>{@link generator.impl.QuestionableFactResultImpl#isAnswerValid <em>Answer Valid</em>}</li>
  *   <li>{@link generator.impl.QuestionableFactResultImpl#getGivenAnswers <em>Given Answers</em>}</li>
+ *   <li>{@link generator.impl.QuestionableFactResultImpl#isOnTime <em>On Time</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,6 +84,26 @@ public class QuestionableFactResultImpl extends MinimalEObjectImpl.Container imp
 	 * @ordered
 	 */
 	protected EList<String> givenAnswers;
+
+	/**
+	 * The default value of the '{@link #isOnTime() <em>On Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isOnTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ON_TIME_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isOnTime() <em>On Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isOnTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean onTime = ON_TIME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -165,6 +186,28 @@ public class QuestionableFactResultImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isOnTime() {
+		return onTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOnTime(boolean newOnTime) {
+		boolean oldOnTime = onTime;
+		onTime = newOnTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.QUESTIONABLE_FACT_RESULT__ON_TIME,
+					oldOnTime, onTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -174,6 +217,8 @@ public class QuestionableFactResultImpl extends MinimalEObjectImpl.Container imp
 			return isAnswerValid();
 		case GeneratorPackage.QUESTIONABLE_FACT_RESULT__GIVEN_ANSWERS:
 			return getGivenAnswers();
+		case GeneratorPackage.QUESTIONABLE_FACT_RESULT__ON_TIME:
+			return isOnTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -197,6 +242,9 @@ public class QuestionableFactResultImpl extends MinimalEObjectImpl.Container imp
 			getGivenAnswers().clear();
 			getGivenAnswers().addAll((Collection<? extends String>) newValue);
 			return;
+		case GeneratorPackage.QUESTIONABLE_FACT_RESULT__ON_TIME:
+			setOnTime((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -218,6 +266,9 @@ public class QuestionableFactResultImpl extends MinimalEObjectImpl.Container imp
 		case GeneratorPackage.QUESTIONABLE_FACT_RESULT__GIVEN_ANSWERS:
 			getGivenAnswers().clear();
 			return;
+		case GeneratorPackage.QUESTIONABLE_FACT_RESULT__ON_TIME:
+			setOnTime(ON_TIME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -236,6 +287,8 @@ public class QuestionableFactResultImpl extends MinimalEObjectImpl.Container imp
 			return answerValid != ANSWER_VALID_EDEFAULT;
 		case GeneratorPackage.QUESTIONABLE_FACT_RESULT__GIVEN_ANSWERS:
 			return givenAnswers != null && !givenAnswers.isEmpty();
+		case GeneratorPackage.QUESTIONABLE_FACT_RESULT__ON_TIME:
+			return onTime != ON_TIME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -257,6 +310,8 @@ public class QuestionableFactResultImpl extends MinimalEObjectImpl.Container imp
 		result.append(answerValid);
 		result.append(", givenAnswers: ");
 		result.append(givenAnswers);
+		result.append(", onTime: ");
+		result.append(onTime);
 		result.append(')');
 		return result.toString();
 	}

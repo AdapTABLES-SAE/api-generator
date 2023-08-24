@@ -21,14 +21,14 @@ import jakarta.ws.rs.core.MediaType;
 import managers.ModelsManager;
 
 @Path("/path")
-public class LearningPathManagerResource {
+public class LearningPathResource {
 	
 	private PathManager manager; 
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
-	public String addObjectiveLevel(String jsonContent, @Context ServletContext app) { // https://waytolearnx.com/2020/03/lire-un-fichier-json-avec-java.html
+	@Produces(MediaType.TEXT_PLAIN)
+	public String addObjectiveLevel(String jsonContent, @Context ServletContext app) { 
 		Constant.PROJECT_PATH = app.getRealPath("");		
 		JSONObject obj = new JSONObject();
 		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, true));
@@ -39,18 +39,26 @@ public class LearningPathManagerResource {
 		}
 		manager.updateOrCreateTrainingPath(obj);
 		
-		return obj.toString();
+		return "Success";
 	}
 	
 	@GET
-	@Path("/{learnerID}")
+	@Path("/learner/{learnerID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public String generate(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public String buildObjectiveLevelParams2JSON(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		//
 		String contextFileName = Constant.CONTEXTS_FILES_PREFIX + Constant.DEFAULT_CONTEXT_FILE_NAME + ".xmi";
 		LearningPath path = this.getLearnerTrainingPath(contextFileName, learnerID); 
-		System.err.println("IS null "+path);
+		return manager.buildJSONTrainingPath(path).toJSONString();
+	}
+	
+	@GET
+	@Path("/classroom/{classroomID}/learner/{learnerID}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String buildObjectiveLevelParams2JSON(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+		Constant.PROJECT_PATH = app.getRealPath("");
+		String contextFileName = Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi";
+		LearningPath path = this.getLearnerTrainingPath(contextFileName, learnerID); 
 		return manager.buildJSONTrainingPath(path).toJSONString();
 	}
 	

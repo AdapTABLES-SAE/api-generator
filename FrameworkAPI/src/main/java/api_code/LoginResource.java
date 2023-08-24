@@ -14,7 +14,11 @@ import jakarta.ws.rs.core.MediaType;
 import managers.ModelsManager;
 
 /**
- * Path : http://localhost:8080/FrameworkAPI/rest/generator?ID=blemoine
+ * Paths : 
+ * 	- http://localhost:8080/FrameworkAPI/login/(classroomID)/(learnerID)
+ * 	- http://localhost:8080/FrameworkAPI/login/(learnerID) => default classroom is used in this case
+ * 
+ * Resource that checks if a learner-player exists based on his/her id. 
  * @author Bérénice LEMOINE
  */
 
@@ -28,7 +32,7 @@ public class LoginResource {
 		
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	@Path("/{learnerID}")
+	@Path("/learner/{learnerID}")
 	public String generate(@PathParam("learnerID") String learnerID, @Context ServletContext app) {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		return isLearnerPlayerExistant(learnerID)? "OK" : "KO";
@@ -37,7 +41,7 @@ public class LoginResource {
 	
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	@Path("/{classID}/{learnerID}")
+	@Path("/classroom/{classID}/learner/{learnerID}")
 	public String generate(@PathParam("classID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		return isLearnerPlayerExistant(classID, learnerID)? "OK" : "KO";

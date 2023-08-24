@@ -11,6 +11,7 @@ import exceptions.NonExistantLearnerPlayerException;
 import generator.ATask;
 import generator.CompletionCriteria;
 import generator.CurrentObjectiveLevel;
+import generator.LearnerPlayer;
 import generator.Level;
 import generator.QuestionableFact;
 import generator.QuestionableFactResult;
@@ -47,6 +48,67 @@ public class LearnerManager {
 		}
 	}
 	
+	private String getTaskType(ATask task) {
+		System.out.print(task.getClass().getSimpleName());
+		switch(task.getClass().getSimpleName()) {
+		case "MTCompletion1Impl": return "C1"; 
+		case "MTCompletion2Impl": return "C2"; 
+		case "MTRecontructionImpl": return "REB"; 
+		case "MTIdentificationImpl": return "ID"; 
+		case "MTMembershipImpl": return "MEMB"; 
+		default: return "";
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	public JSONObject getTaskProgresses(String learnerID, String objectiveID, String levelID) {
+		JSONObject progress = new JSONObject();
+		JSONArray progresses = new JSONArray();
+		try {
+			
+			CurrentObjectiveLevel currentOL = getCorrespondingCOL(objectiveID, levelID, learnerID);
+			for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {
+				JSONObject taskProgress = new JSONObject(); 
+				taskProgress.put("idTask", rbt.getTask().getID());
+				taskProgress.put("typeTask", getTaskType(rbt.getTask())); 
+				taskProgress.put("currentSuccess", rbt.getSucessPercent());
+				taskProgress.put("currentEncounters", rbt.getEncountersPercent());
+				progresses.add(taskProgress);
+			}
+			
+			progress.put("progresses", progresses);
+			progress.put("globalSuccess", currentOL.getSucessPercent());
+			progress.put("globalEncounters", currentOL.getEncountersPercent());
+			
+		} catch (NonExistantLearnerPlayerException e) {
+			e.printStackTrace();
+		}
+		return progress;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public JSONObject getGeneralStats(String learnerID) {
+		JSONObject stats = new JSONObject();
+		try {
+			LearnerPlayer learner = modelsManager.getLearnerPlayer(learnerID);
+			
+			stats.put("nbLevelsGenerated", learner.getStatistics().getNbLevelsGenerated());
+			stats.put("nbLevelsPlayedUntilEnd", learner.getStatistics().getNbFinishedLevels());
+			stats.put("nbDeaths", learner.getStatistics().getNbDeaths());
+			stats.put("nbExits", learner.getStatistics().getNbUnfinishedLevels());
+			stats.put("totalCoins", learner.getProgression().getPlayerProgress().getCoins()); // TODO: est-ce le bon param 
+			stats.put("nbQuestionsMeet", learner.getStatistics().getNbQuestionsEncountered());
+			stats.put("nbCorrectAnswers", learner.getStatistics().getNbCorrectGivenAnswers());
+			stats.put("maxLevelReached", learner.getStatistics().getMaxGameLevelReached());
+			
+		} catch (NonExistantLearnerPlayerException e) {
+			e.printStackTrace();
+		}
+		
+		// "totalDispensedCoins": 0
+		return stats;
+	}
+	
 	public static void main(String[] args){
 		// Test methods 
 		QuestionableFact fact = new MTQFCompletion1Impl();
@@ -68,7 +130,7 @@ public class LearnerManager {
 		}
 		
 		LearnerManager lm = new LearnerManager(null);
-		System.err.println("nb Successive "+lm.numberOfSuccessiveSuccess(fact));
+		//System.err.println("nb Successive "+lm.numberOfSuccessiveSuccess(fact));
 		ResultsByTask rbt = new ResultsByTaskImpl();
 		ATask task = new MTCompletion1Impl();
 		task.setNbConsecutiveSuccess(2);
@@ -123,12 +185,12 @@ public class LearnerManager {
 		rbt3.setTask(task);rbt3.getQuestionableFacts().add(new MTQFCompletion1Impl());
 		col.getResults().getResultsbytask().add(rbt3);
 		
-		System.err.println(col.getResults().getResultsbytask().size());
+	//	System.err.println(col.getResults().getResultsbytask().size());
 		
 		lm.updateResultsPercentages(col);
-		System.out.println("success col "+col.getSucessPercent());
+	/*	System.out.println("success col "+col.getSucessPercent());
 		System.out.println("encounter col "+col.getEncountersPercent());
-		System.out.println("achieved "+col.isAchieved());
+		System.out.println("achieved "+col.isAchieved());*/
 	
 	}
 	
@@ -186,15 +248,15 @@ public class LearnerManager {
 			rbt.setEncountersPercent(this.computeTaskEncounteredPercent(rbt));
 			rbt.setSucessPercent(this.computeTaskSuccessPercent(rbt));
 			
-			System.out.println("success "+rbt.getSucessPercent());
-			System.out.println("encounter "+rbt.getEncountersPercent());
+			/*System.out.println("success "+rbt.getSucessPercent());
+			System.out.println("encounter "+rbt.getEncountersPercent());*/
 			
 			sumTaskSuccess += rbt.getSucessPercent();
 			sumTaskEncounters += rbt.getEncountersPercent(); 
 		}
-		System.out.println(sumTaskSuccess);
-		System.out.println(sumTaskEncounters);
-		System.out.println(numberOfTasks);
+		/*System.out.println(sumTaskEncounters / numberOfTasks);
+		System.out.println(sumTaskSuccess / numberOfTasks);
+		System.out.println(numberOfTasks);*/
 		currentOL.setEncountersPercent(sumTaskEncounters / numberOfTasks); 
 		currentOL.setSucessPercent(sumTaskSuccess / numberOfTasks);
 		this.updateCurrentLevelStatus(currentOL);
@@ -261,6 +323,37 @@ public class LearnerManager {
 		
 		return count;
 	}
+	
+	public String savePlayerResults(JSONObject obj) {
+		try {
+			LearnerPlayer player = modelsManager.getLearnerPlayer((String) obj.get("learnerID"));
+			player.getStatistics().setNbQuestionsEncountered(player.getStatistics().getNbQuestionsEncountered() + Long.valueOf((Long) obj.get("nbQuestionsMeet")).intValue());
+			player.getStatistics().setNbCorrectGivenAnswers(player.getStatistics().getNbCorrectGivenAnswers() + Long.valueOf((Long) obj.get("nbCorrectAnswers")).intValue());
+			player.getStatistics().setTotalTime(player.getStatistics().getTotalTime() + (double) obj.get("timeInSec"));
+			
+			switch((String) obj.get("finishStatus")) {
+				case "DEAD": player.getStatistics().setNbDeaths(player.getStatistics().getNbDeaths() + 1);
+				player.getProgression().getPlayerProgress().setCurrentLevel(1);
+				break;
+				case "EXIT": player.getStatistics().setNbFinishedLevels(player.getStatistics().getNbFinishedLevels() + 1); 
+				player.getProgression().getPlayerProgress().setCurrentLevel(player.getProgression().getPlayerProgress().getCurrentLevel() + 1);
+				break;
+			default: player.getStatistics().setNbUnfinishedLevels(player.getStatistics().getNbUnfinishedLevels() + 1); // == HUB
+					 player.getProgression().getPlayerProgress().setCurrentLevel(1);
+			}
+			
+			if(player.getStatistics().getMaxGameLevelReached() < player.getProgression().getPlayerProgress().getCurrentLevel()) {
+				player.getStatistics().setMaxGameLevelReached(player.getProgression().getPlayerProgress().getCurrentLevel());
+			}
+			
+			player.getProgression().getPlayerProgress().setCoins(player.getProgression().getPlayerProgress().getCoins() + Long.valueOf((Long) obj.get("nbCoinsCollected")).intValue());
+			
+			modelsManager.saveContextModel();
+		} catch (NonExistantLearnerPlayerException e) {
+			e.printStackTrace();
+		} 	
+		return "Success";
+	}
 
 	/**
 	 * Add learners' results for each facts per task questioned in a dungeon
@@ -283,8 +376,8 @@ public class LearnerManager {
 					}
 				}
 				updateResultsPercentages(col);
-				System.out.println(col.getSucessPercent());
-				System.out.println(col.getEncountersPercent());
+				/*System.out.println(col.getSucessPercent());
+				System.out.println(col.getEncountersPercent());*/
 			} else {
 				System.err.println("CurrentObjectiveLevel not found for O/L = (" + (String) obj.get("objectiveID") + " , " + (String) obj.get("levelID") + ")");
 			}

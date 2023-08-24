@@ -7,6 +7,7 @@ import generator.LearnerPlayer;
 import generator.LearningPath;
 import generator.Progression;
 
+import generator.Statistics;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link generator.impl.LearnerPlayerImpl#getName <em>Name</em>}</li>
  *   <li>{@link generator.impl.LearnerPlayerImpl#getLearningpath <em>Learningpath</em>}</li>
  *   <li>{@link generator.impl.LearnerPlayerImpl#getID <em>ID</em>}</li>
+ *   <li>{@link generator.impl.LearnerPlayerImpl#getStatistics <em>Statistics</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,6 +103,16 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 	 * @ordered
 	 */
 	protected boolean idESet;
+
+	/**
+	 * The cached value of the '{@link #getStatistics() <em>Statistics</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatistics()
+	 * @generated
+	 * @ordered
+	 */
+	protected Statistics statistics;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -286,11 +298,63 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Statistics getStatistics() {
+		return statistics;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStatistics(Statistics newStatistics, NotificationChain msgs) {
+		Statistics oldStatistics = statistics;
+		statistics = newStatistics;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.LEARNER_PLAYER__STATISTICS, oldStatistics, newStatistics);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStatistics(Statistics newStatistics) {
+		if (newStatistics != statistics) {
+			NotificationChain msgs = null;
+			if (statistics != null)
+				msgs = ((InternalEObject) statistics).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.LEARNER_PLAYER__STATISTICS, null, msgs);
+			if (newStatistics != null)
+				msgs = ((InternalEObject) newStatistics).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.LEARNER_PLAYER__STATISTICS, null, msgs);
+			msgs = basicSetStatistics(newStatistics, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEARNER_PLAYER__STATISTICS,
+					newStatistics, newStatistics));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case GeneratorPackage.LEARNER_PLAYER__PROGRESSION:
 			return basicSetProgression(null, msgs);
+		case GeneratorPackage.LEARNER_PLAYER__STATISTICS:
+			return basicSetStatistics(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -313,6 +377,8 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 			return basicGetLearningpath();
 		case GeneratorPackage.LEARNER_PLAYER__ID:
 			return getID();
+		case GeneratorPackage.LEARNER_PLAYER__STATISTICS:
+			return getStatistics();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -336,6 +402,9 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 			return;
 		case GeneratorPackage.LEARNER_PLAYER__ID:
 			setID((String) newValue);
+			return;
+		case GeneratorPackage.LEARNER_PLAYER__STATISTICS:
+			setStatistics((Statistics) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -361,6 +430,9 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 		case GeneratorPackage.LEARNER_PLAYER__ID:
 			unsetID();
 			return;
+		case GeneratorPackage.LEARNER_PLAYER__STATISTICS:
+			setStatistics((Statistics) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -381,6 +453,8 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 			return learningpath != null;
 		case GeneratorPackage.LEARNER_PLAYER__ID:
 			return isSetID();
+		case GeneratorPackage.LEARNER_PLAYER__STATISTICS:
+			return statistics != null;
 		}
 		return super.eIsSet(featureID);
 	}

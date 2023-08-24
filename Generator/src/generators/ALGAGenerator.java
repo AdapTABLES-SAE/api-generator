@@ -15,6 +15,7 @@ import generator.Value;
 import generator.impl.LearnerProgressImpl;
 import generator.impl.PlayerProgressImpl;
 import generator.impl.ProgressionImpl;
+import generator.impl.StatisticsImpl;
 import managers.ModelsManager;
 import structures.DungeonElements;
 
@@ -82,6 +83,16 @@ public class ALGAGenerator {
 		}
 	}
 	
+	private void updateLearnerPlayerStatistics() {
+		// update learner statistics 
+		if(learnerPlayer.getStatistics() == null) {
+			learnerPlayer.setStatistics(new StatisticsImpl());
+		}
+		learnerPlayer.getStatistics().setNbLevelsGenerated(learnerPlayer.getStatistics().getNbLevelsGenerated() + 1); 
+		learnerPlayer.getStatistics().setMaxGameLevelReached(learnerPlayer.getProgression().getPlayerProgress().getCurrentLevel());
+		modelAccess.saveContextModel();
+	}
+	
 	public Dungeon generate() {
 		LevelsDifficultyProgress gameDifficulty = modelAccess.getGameDescriptionModel().getLevelsDifficultyProgress();
 
@@ -125,7 +136,9 @@ public class ALGAGenerator {
 		
 		if(generatedDungeon.getLevel() == null || generatedDungeon.getLearningobjective() == null) {
 			System.err.println("Dungeon objective and/or level are not set properly, possible mistake may appear");
-		}		
+		} else {
+			this.updateLearnerPlayerStatistics();
+		}
 		
 		return generatedDungeon;
 	}

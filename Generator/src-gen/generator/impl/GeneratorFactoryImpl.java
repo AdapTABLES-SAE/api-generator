@@ -211,6 +211,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createItems();
 		case GeneratorPackage.LEARNER_PLAYERS:
 			return createLearnerPlayers();
+		case GeneratorPackage.STATISTICS:
+			return createStatistics();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1012,6 +1014,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public LearnerPlayers createLearnerPlayers() {
 		LearnerPlayersImpl learnerPlayers = new LearnerPlayersImpl();
 		return learnerPlayers;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Statistics createStatistics() {
+		StatisticsImpl statistics = new StatisticsImpl();
+		return statistics;
 	}
 
 	/**

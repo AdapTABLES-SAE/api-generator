@@ -20,7 +20,11 @@ import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 
 /**
- * Path : http://localhost:8080/FrameworkAPI/rest/generator?ID=blemoine
+ * Paths : 
+ * 	- http://localhost:8080/FrameworkAPI/generator/classroom/(classroomID)/learner/(learnerID)
+ * 	- http://localhost:8080/FrameworkAPI/generator/(learnerID) => default classroom is used in this case
+ * 
+ * Resource that generates for an existent learner-player a dungeon corresponding to his/her progression. 
  * @author Bérénice LEMOINE
  */
 
@@ -31,23 +35,30 @@ public class GenerationResource {
 	/*
 	 * Deployed File Path : 
 	 * C:\apache-tomcat-10.1.5\wtpwebapps\FrameworkAPI\
-	 * OLD = C:\blemoine\TheseGenerator\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\FrameworkAPI
 	 * Warning ! Models are modified on the deployed repository and not in the eclipse one !  
 	 */
 	@GET
-	@Path("/{learnerID}")
+	@Path("/learner/{learnerID}")
 	@Produces(MediaType.TEXT_XML)
 	public String generate(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
 		return generateDungeon2String(null, learnerID, app);
 	}
 	
 	@GET
-	@Path("/{classID}/{learnerID}")
+	@Path("/classroom/{classID}/learner/{learnerID}")
 	@Produces(MediaType.TEXT_XML)
 	public String generate(@PathParam("classID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
 		return generateDungeon2String(classID, learnerID, app);
 	}
 	
+	/**
+	 * Loads and serialize an XML file representing a dungeon for a given learner of a given classroom. 
+	 * @param classroomID
+	 * @param learnerID
+	 * @param app
+	 * @return A XML file as a String describing a dungeon.  
+	 * @throws NonExistantLearnerPlayerException
+	 */
 	private String generateDungeon2String(String classroomID, String learnerID, ServletContext app) throws NonExistantLearnerPlayerException {
 		Constant.PROJECT_PATH = app.getRealPath("");
 		System.out.println("Project : "+Constant.PROJECT_PATH);
@@ -74,9 +85,14 @@ public class GenerationResource {
 	
 	/***********************************/
 	/**          JOB METHODS          **/
-	/**
-	 * @throws NonExistantLearnerPlayerException *********************************/
+	/***********************************/
 	
+	/**
+	 * Generates a dungeon for a learner (learnerPlayerID) of a given classroom (classroomID) as an XML file.  
+	 * @param classroomID
+	 * @param learnerPlayerID
+	 * @throws NonExistantLearnerPlayerException
+	 */
 	private void generateDungeon(String classroomID, String learnerPlayerID) throws NonExistantLearnerPlayerException {
 		String contextFile = Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + 
 				(classroomID == null? Constant.DEFAULT_CONTEXT_FILE_NAME : classroomID) + ".xmi";
@@ -86,23 +102,5 @@ public class GenerationResource {
 		generator.generate();
 		generator.saveDungeon("DungeonGen_"+ learnerPlayerID +".xmi");
 		Main.transformModel(Constant.PROJECT_PATH + Constant.ECORE_PATH, Constant.PROJECT_PATH + Constant.FLATNER_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xmi", Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xml");
-	}
-	
-	/*@GET
-	@Produces(MediaType.TEXT_HTML)
-	public String presentation() {
-		String s = "<!doctype html><html ng-app=\"demo\">"
-		   + "<head>"
-		   + "<title>Framework API</title>"
-		   + "</head>"
-		   + "<body>"
-		   + "<h1>Generator Methods & Attributes </h1>"
-		   + "ID is the first letter of the learner-player name followed by its last name <br/>"
-		   + "Example : Jane Doe gives jdoe<br/>"
-		   + "The url gives : http://localhost:8080/FrameworkAPI/rest/generator?ID=jdoe"
-		   + "</body><br/>"
-		   + "</html><br/>";
-		return s;
-	}*/
-	
+	}	
 }
