@@ -11,6 +11,8 @@ import exceptions.NonExistantLearnerPlayerException;
 import generator.ATask;
 import generator.CompletionCriteria;
 import generator.CurrentObjectiveLevel;
+import generator.Equipment;
+import generator.Item;
 import generator.LearnerPlayer;
 import generator.Level;
 import generator.QuestionableFact;
@@ -18,6 +20,7 @@ import generator.QuestionableFactResult;
 import generator.ResultsByTask;
 import generator.impl.CompletionCriteriaImpl;
 import generator.impl.CurrentObjectiveLevelImpl;
+import generator.impl.ItemImpl;
 import generator.impl.MTCompletion1Impl;
 import generator.impl.MTLevelImpl;
 import generator.impl.MTQFCompletion1Impl;
@@ -26,12 +29,12 @@ import generator.impl.ResultsByTaskImpl;
 import generator.impl.ResultsImpl;
 import managers.ModelsManager;
 
-public class LearnerManager {
+public class LearnerPlayerManager {
 
 	
 	private ModelsManager modelsManager;
 	
-	public LearnerManager(ModelsManager modelsManager) {
+	public LearnerPlayerManager(ModelsManager modelsManager) {
 		this.modelsManager = modelsManager;
 	}
 	
@@ -58,6 +61,72 @@ public class LearnerManager {
 		case "MTMembershipImpl": return "MEMB"; 
 		default: return "";
 		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public JSONObject getItemsStatus(String playerID) {
+		JSONObject store = new JSONObject();
+		JSONArray items = new JSONArray();
+		try {
+			LearnerPlayer player = modelsManager.getLearnerPlayer(playerID);
+			for(Item anItem: player.getProgression().getPlayerProgress().getItems().getItems()) {
+				JSONObject item = new JSONObject();
+				item.put("id", anItem.getEquipment().getID());
+				item.put("isBought", anItem.isBought());
+				item.put("isActivated", anItem.isActivated());
+				items.add(item);
+			}
+			store.put("items", items);
+		} catch (NonExistantLearnerPlayerException e) {
+			e.printStackTrace();
+		}
+		return store;
+	}
+	
+	public String setItemsStatus(JSONObject obj) {
+		try {
+			LearnerPlayer player = modelsManager.getLearnerPlayer((String) obj.get("learnerID"));
+			
+			JSONArray items = (JSONArray) obj.get("items");
+			for(Object oItem: items) {
+				JSONObject jItem = (JSONObject) oItem;
+				Item item = getPlayerItem(player, (String) jItem.get("id"));
+				item.setActivated((boolean) jItem.get("isActivated"));
+				item.setBought((boolean) jItem.get("isBought"));
+			}
+			
+			modelsManager.saveContextModel();
+		} catch (NonExistantLearnerPlayerException e) {
+			e.printStackTrace();
+		}
+		return "Success"; 
+	}
+	
+	private Item getPlayerItem(LearnerPlayer player, String itemID) {
+		for(Item item: player.getProgression().getPlayerProgress().getItems().getItems()) {
+			if(item.getEquipment().getID().equals(itemID)) {
+				return item;
+			}
+		}
+		
+		Item item = new ItemImpl();
+		Equipment equipment = getEquipmentForID(itemID);
+		if(equipment == null) {
+			System.err.println("The equipment ID given "+itemID+" is not valid. (Does not exists in model). ");
+		}
+		item.setEquipment(getEquipmentForID(itemID));
+		player.getProgression().getPlayerProgress().getItems().getItems().add(item);
+		return item;
+		
+	}
+	
+	private Equipment getEquipmentForID(String identifier) {
+		for(Equipment equipment: modelsManager.getGameDescriptionModel().getElements().getEquipments().getEquipments()) {
+			if(equipment.getID().equals(identifier)) {
+				return equipment;
+			}
+		}
+		return null; 
 	}
 
 	@SuppressWarnings("unchecked")
@@ -129,7 +198,7 @@ public class LearnerManager {
 			fact2.getResults().add(res);
 		}
 		
-		LearnerManager lm = new LearnerManager(null);
+		LearnerPlayerManager lm = new LearnerPlayerManager(null);
 		//System.err.println("nb Successive "+lm.numberOfSuccessiveSuccess(fact));
 		ResultsByTask rbt = new ResultsByTaskImpl();
 		ATask task = new MTCompletion1Impl();
@@ -398,6 +467,7 @@ public class LearnerManager {
 				QuestionableFactResult qfres = new QuestionableFactResultImpl();
 				qfres.setAnswerValid((boolean) factResult.get("isCorrect"));
 				qfres.setResponseTime((int) (long) factResult.get("responseTime"));
+				qfres.setOnTime((boolean) factResult.get("onTime"));
 				JSONArray answers = (JSONArray) factResult.get("answers");
 				for (Object answer : answers) {
 					qfres.getGivenAnswers().add(answer+"");

@@ -4054,13 +4054,13 @@ public interface GeneratorPackage extends EPackage {
 	int EQUIPMENT__ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Locked Ability</b></em>' reference.
+	 * The feature id for the '<em><b>Locked Abilities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EQUIPMENT__LOCKED_ABILITY = 1;
+	int EQUIPMENT__LOCKED_ABILITIES = 1;
 
 	/**
 	 * The number of structural features of the '<em>Equipment</em>' class.
@@ -8897,15 +8897,15 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getEquipment_ID();
 
 	/**
-	 * Returns the meta object for the reference '{@link generator.Equipment#getLockedAbility <em>Locked Ability</em>}'.
+	 * Returns the meta object for the reference list '{@link generator.Equipment#getLockedAbilities <em>Locked Abilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Locked Ability</em>'.
-	 * @see generator.Equipment#getLockedAbility()
+	 * @return the meta object for the reference list '<em>Locked Abilities</em>'.
+	 * @see generator.Equipment#getLockedAbilities()
 	 * @see #getEquipment()
 	 * @generated
 	 */
-	EReference getEquipment_LockedAbility();
+	EReference getEquipment_LockedAbilities();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Gameplay <em>Gameplay</em>}'.
@@ -12154,12 +12154,12 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute EQUIPMENT__ID = eINSTANCE.getEquipment_ID();
 
 		/**
-		 * The meta object literal for the '<em><b>Locked Ability</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Locked Abilities</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EQUIPMENT__LOCKED_ABILITY = eINSTANCE.getEquipment_LockedAbility();
+		EReference EQUIPMENT__LOCKED_ABILITIES = eINSTANCE.getEquipment_LockedAbilities();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.GameplayImpl <em>Gameplay</em>}' class.

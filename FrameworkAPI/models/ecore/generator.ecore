@@ -407,8 +407,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Equipment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lockedAbility" eType="#//Ability"
-        eOpposite="#//Ability/lockingEquipment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lockedAbilities" upperBound="-1"
+        eType="#//Ability" eOpposite="#//Ability/lockingEquipment"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Gameplay" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -435,7 +435,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lockingEquipment" eType="#//Equipment"
-        eOpposite="#//Equipment/lockedAbility"/>
+        eOpposite="#//Equipment/lockedAbilities"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ElementSize">
     <eLiterals name="SMALL"/>

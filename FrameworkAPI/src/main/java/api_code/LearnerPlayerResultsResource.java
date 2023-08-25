@@ -22,9 +22,9 @@ import managers.ModelsManager;
  * @author Bérénice LEMOINE
  */
 @Path("/results")
-public class LearnerPlayerResource {
+public class LearnerPlayerResultsResource {
 
-	private LearnerManager manager;
+	private LearnerPlayerManager manager;
 	
 	@POST
 	@Path("/training")
@@ -39,7 +39,7 @@ public class LearnerPlayerResource {
 			e.printStackTrace();
 		}
 		
-		manager = new LearnerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + "default.xmi", true));
 				
@@ -59,7 +59,7 @@ public class LearnerPlayerResource {
 			e.printStackTrace();
 		}
 		
-		manager = new LearnerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
 				
@@ -79,7 +79,7 @@ public class LearnerPlayerResource {
 			e.printStackTrace();
 		}
 		
-		manager = new LearnerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + "default.xmi", true));
 				
@@ -99,7 +99,7 @@ public class LearnerPlayerResource {
 			e.printStackTrace();
 		}
 		
-		manager = new LearnerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID +".xmi", true));
 				
@@ -113,7 +113,7 @@ public class LearnerPlayerResource {
 			@PathParam("objID") String objectiveID, @PathParam("levelID") String levelID, 
 			@Context ServletContext app) throws NonExistantLearnerPlayerException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		manager = new LearnerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + "default.xmi", true));
 		return manager.getTaskProgresses(learnerID, objectiveID, levelID).toJSONString();
@@ -125,7 +125,7 @@ public class LearnerPlayerResource {
 	public String buildObjectiveLevelParams2JSON(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID,
 			@PathParam("objID") String objectiveID, @PathParam("levelID") String levelID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		manager = new LearnerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
 		return manager.getTaskProgresses(learnerID, objectiveID, levelID).toJSONString();

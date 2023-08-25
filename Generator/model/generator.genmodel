@@ -350,7 +350,7 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Equipment">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Equipment/ID"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Equipment/lockedAbility"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Equipment/lockedAbilities"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Gameplay">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Gameplay/name"/>

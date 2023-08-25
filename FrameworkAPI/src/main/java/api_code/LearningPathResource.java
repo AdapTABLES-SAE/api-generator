@@ -48,6 +48,7 @@ public class LearningPathResource {
 	public String buildObjectiveLevelParams2JSON(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		String contextFileName = Constant.CONTEXTS_FILES_PREFIX + Constant.DEFAULT_CONTEXT_FILE_NAME + ".xmi";
+		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, true));
 		LearningPath path = this.getLearnerTrainingPath(contextFileName, learnerID); 
 		return manager.buildJSONTrainingPath(path).toJSONString();
 	}
@@ -58,6 +59,7 @@ public class LearningPathResource {
 	public String buildObjectiveLevelParams2JSON(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		String contextFileName = Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi";
+		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, true));
 		LearningPath path = this.getLearnerTrainingPath(contextFileName, learnerID); 
 		return manager.buildJSONTrainingPath(path).toJSONString();
 	}
@@ -70,10 +72,12 @@ public class LearningPathResource {
 		String contextsRepertory = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CONTEXTS_FILES_PATH; 
 		File[] files = new File(contextsRepertory).listFiles();
 
+		
 		int i = 0;
 		String pathID = "";
 		ModelsManager modelsManager = null;
 		while(i < files.length && pathID.isEmpty()) {
+			System.out.println(files[i].getName()+ " -- "+contextFileName);
 			if (files[i].isFile() && files[i].getName().equals(contextFileName)) {
 				modelsManager = new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 						Constant.CONTEXTS_FILES_PATH + contextFileName, true);

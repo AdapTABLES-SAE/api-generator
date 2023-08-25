@@ -1,27 +1,26 @@
 package api_code;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import exceptions.NonExistantLearnerPlayerException;
-import flattener.Main;
-import generators.ALGAGenerator;
 //import io.swagger.annotations.Api;
 //import io.swagger.annotations.ApiResponse;
 import jakarta.servlet.ServletContext;
+import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
+import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
+import managers.ModelsManager;
 
 /**
  * Paths : 
- * 	- http://localhost:8080/FrameworkAPI/statistics/(classroomID)/(learnerID)
+ * 	- http://localhost:8080/FrameworkAPI/store/learner/(learnerID)
  * 	- http://localhost:8080/FrameworkAPI/statistics/(learnerID) => default classroom is used in this case
  * 
  * Resource that deals with learner-player items purchase and activation. 
@@ -32,16 +31,47 @@ import jakarta.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class PurchaseActivationResource {
 	
-	/*
-	 * Deployed File Path : 
-	 * C:\apache-tomcat-10.1.5\wtpwebapps\FrameworkAPI\
-	 * Warning ! Models are modified on the deployed repository and not in the eclipse one !  
-	 */
+	private LearnerPlayerManager manager;
+	
 	@GET
-	@Path("/{learnerID}")
-	@Produces(MediaType.TEXT_XML)
-	public String (@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
-		return generateDungeon2String(null, learnerID, app);
+	@Path("/equip/learner/{playerID}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getActivatedItems(@PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+		Constant.PROJECT_PATH = app.getRealPath("");
+		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
+				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + "default.xmi", true));
+		return manager.getItemsStatus(playerID).toJSONString();
+	}
+	
+	@GET
+	@Path("/equip/classroom/{classroomID}/learner/{playerID}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getActivatedItems(@PathParam("classroomID") String classID, @PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+		Constant.PROJECT_PATH = app.getRealPath("");
+		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
+				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
+		return manager.getItemsStatus(playerID).toJSONString();
+	}
+	
+	@POST
+	@Path("/equip")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.TEXT_PLAIN)
+	public String setActivatedItems(String jsonContent, @Context ServletContext app) {
+		Constant.PROJECT_PATH = app.getRealPath("");
+		JSONObject obj = new JSONObject();
+		try {
+			obj = (JSONObject) new JSONParser().parse(jsonContent);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		String classID = obj.containsKey("classroomID")? (String) obj.get("classroomID"): Constant.DEFAULT_CONTEXT_FILE_NAME;
+		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
+				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
+		return manager.setItemsStatus(obj);
 	}
 	
 /*	@GET

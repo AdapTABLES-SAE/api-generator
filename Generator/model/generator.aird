@@ -42,7 +42,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_pGi0ACCTEe2pjb8HURi2ww" name="gameStructureDesc" repPath="#_pGfwsCCTEe2pjb8HURi2ww" changeId="1692875882855">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_pGi0ACCTEe2pjb8HURi2ww" name="gameStructureDesc" repPath="#_pGfwsCCTEe2pjb8HURi2ww" changeId="1692954412126">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -7434,9 +7434,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Lb58QCVvEe6Ux6qzq78Jow" sourceNode="_KxONILHXEe2BkcLGHblEyQ" targetNode="_38e28Lv2Ee2acvqMSYjqcQ" beginLabel="[0..1] lockingEquipment" endLabel="[0..1] lockedAbility">
-      <target xmi:type="ecore:EReference" href="generator.ecore#//Equipment/lockedAbility"/>
-      <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//Equipment/lockedAbility"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Lb58QCVvEe6Ux6qzq78Jow" sourceNode="_KxONILHXEe2BkcLGHblEyQ" targetNode="_38e28Lv2Ee2acvqMSYjqcQ" beginLabel="[0..1] lockingEquipment" endLabel="[0..*] lockedAbilities">
+      <target xmi:type="ecore:EReference" href="generator.ecore#//Equipment/lockedAbilities"/>
+      <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//Equipment/lockedAbilities"/>
       <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//Ability/lockingEquipment"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Lb6jUCVvEe6Ux6qzq78Jow" sourceArrow="InputArrow" routingStyle="manhattan" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']/@style"/>
@@ -11846,8 +11846,8 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_LcP6hSVvEe6Ux6qzq78Jow" name=" lockedAbility : Ability" tooltipText="">
-        <target xmi:type="ecore:EReference" href="generator.ecore#//Equipment/lockedAbility"/>
-        <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//Equipment/lockedAbility"/>
+        <target xmi:type="ecore:EReference" href="generator.ecore#//Equipment/lockedAbilities"/>
+        <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//Equipment/lockedAbilities"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_LcP6hiVvEe6Ux6qzq78Jow" labelAlignment="LEFT" color="114,159,207">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
         </ownedStyle>

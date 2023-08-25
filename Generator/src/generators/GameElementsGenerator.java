@@ -66,8 +66,8 @@ public class GameElementsGenerator {
 	private List<Ability> getInitallyLockedAbilities() {
 		List<Ability> abilities = new ArrayList<>();
 		for(Equipment equipment: this.modelAccess.getGameDescriptionModel().getElements().getEquipments().getEquipments()) {
-			if(equipment.getLockedAbility() != null) {
-				abilities.add(equipment.getLockedAbility());
+			if(equipment.getLockedAbilities() != null) {
+				abilities.addAll(equipment.getLockedAbilities());
 			}
 		}
 		return abilities;
@@ -78,7 +78,7 @@ public class GameElementsGenerator {
 		if(learnerPlayer.getProgression().getPlayerProgress().getItems() != null) {
 			for(Item item: learnerPlayer.getProgression().getPlayerProgress().getItems().getItems()) {
 				if(item.isBought() && item.isActivated()) {
-					abilities.add(item.getEquipment().getLockedAbility());
+					abilities.addAll(item.getEquipment().getLockedAbilities());
 				}
 			}
 		}

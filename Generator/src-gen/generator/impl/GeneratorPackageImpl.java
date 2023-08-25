@@ -2817,7 +2817,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEquipment_LockedAbility() {
+	public EReference getEquipment_LockedAbilities() {
 		return (EReference) equipmentEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -4253,7 +4253,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		equipmentEClass = createEClass(EQUIPMENT);
 		createEAttribute(equipmentEClass, EQUIPMENT__ID);
-		createEReference(equipmentEClass, EQUIPMENT__LOCKED_ABILITY);
+		createEReference(equipmentEClass, EQUIPMENT__LOCKED_ABILITIES);
 
 		gameplayEClass = createEClass(GAMEPLAY);
 		createEAttribute(gameplayEClass, GAMEPLAY__NAME);
@@ -5091,9 +5091,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEquipment_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Equipment.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEquipment_LockedAbility(), this.getAbility(), this.getAbility_LockingEquipment(),
-				"lockedAbility", null, 0, 1, Equipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEquipment_LockedAbilities(), this.getAbility(), this.getAbility_LockingEquipment(),
+				"lockedAbilities", null, 0, -1, Equipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gameplayEClass, Gameplay.class, "Gameplay", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGameplay_Name(), ecorePackage.getEString(), "name", null, 0, 1, Gameplay.class, !IS_TRANSIENT,
@@ -5133,7 +5133,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(abilityEClass, Ability.class, "Ability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbility_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ability.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbility_LockingEquipment(), this.getEquipment(), this.getEquipment_LockedAbility(),
+		initEReference(getAbility_LockingEquipment(), this.getEquipment(), this.getEquipment_LockedAbilities(),
 				"lockingEquipment", null, 0, 1, Ability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

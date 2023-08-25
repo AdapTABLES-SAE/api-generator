@@ -1214,23 +1214,43 @@
   <elements>
     <equipments>
       <equipments
-          ID="FORCE_BELT"
-          lockedAbility="MOVABLE"/>
+          ID="BRACELET"
+          lockedAbilities="MOVABLE"/>
       <equipments
-          ID="FORCE_GANT"
-          lockedAbility="ROTABLE"/>
+          ID="BELT"
+          lockedAbilities="ROTABLE"/>
       <equipments
-          ID="FORCE_BRACELET"
-          lockedAbility="PUSHABLE"/>
+          ID="GLOVE"
+          lockedAbilities="PUSHABLE"/>
       <equipments
-          ID="MASTER_KEY"
-          lockedAbility="OPENABLE"/>
+          ID="KEYS"
+          lockedAbilities="OPENABLE FOLLOWABLE"/>
       <equipments
-          ID="LIGHTWEIGHT_COAT"
-          lockedAbility="CROSSABLE"/>
+          ID="COAT"
+          lockedAbilities="CROSSABLE"/>
       <equipments
           ID="CARROT"
-          lockedAbility="CATCHABLE"/>
+          lockedAbilities="CATCHABLE"/>
+      <equipments
+          ID="AMOR"/>
+      <equipments
+          ID="HELMET"/>
+      <equipments
+          ID="PANTS"/>
+      <equipments
+          ID="SHIELD"/>
+      <equipments
+          ID="SHOULDERS"/>
+      <equipments
+          ID="BAG"/>
+      <equipments
+          ID="LANTERN"/>
+      <equipments
+          ID="COMPAS"/>
+      <equipments
+          ID="BOOTS"/>
+      <equipments
+          ID="HP"/>
     </equipments>
     <elementTypes>
       <elements
@@ -1407,15 +1427,15 @@
         name="VERIFICATOR"/>
     <abilities
         name="ROTABLE"
-        lockingEquipment="FORCE_GANT"/>
+        lockingEquipment="BELT"/>
     <abilities
         name="MOVABLE"
-        lockingEquipment="FORCE_BELT"/>
+        lockingEquipment="BRACELET"/>
     <abilities
         name="DETECTOR"/>
     <abilities
         name="OPENABLE"
-        lockingEquipment="MASTER_KEY"/>
+        lockingEquipment="KEYS"/>
     <abilities
         name="DISPLAY"/>
     <abilities
@@ -1427,12 +1447,13 @@
         name="AVOIDABLE"/>
     <abilities
         name="PUSHABLE"
-        lockingEquipment="FORCE_BRACELET"/>
+        lockingEquipment="GLOVE"/>
     <abilities
         name="CROSSABLE"
-        lockingEquipment="LIGHTWEIGHT_COAT"/>
+        lockingEquipment="COAT"/>
     <abilities
-        name="FOLLOWABLE"/>
+        name="FOLLOWABLE"
+        lockingEquipment="KEYS"/>
     <abilities
         name="HORIZONTAL_DISPLAY"/>
     <abilities

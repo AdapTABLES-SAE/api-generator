@@ -46,14 +46,14 @@ public interface Ability extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Locking Equipment</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link generator.Equipment#getLockedAbility <em>Locked Ability</em>}'.
+	 * It is bidirectional and its opposite is '{@link generator.Equipment#getLockedAbilities <em>Locked Abilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Locking Equipment</em>' reference.
 	 * @see #setLockingEquipment(Equipment)
 	 * @see generator.GeneratorPackage#getAbility_LockingEquipment()
-	 * @see generator.Equipment#getLockedAbility
-	 * @model opposite="lockedAbility"
+	 * @see generator.Equipment#getLockedAbilities
+	 * @model opposite="lockedAbilities"
 	 * @generated
 	 */
 	Equipment getLockingEquipment();

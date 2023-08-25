@@ -153,10 +153,10 @@ public class AbilityImpl extends MinimalEObjectImpl.Container implements Ability
 			NotificationChain msgs = null;
 			if (lockingEquipment != null)
 				msgs = ((InternalEObject) lockingEquipment).eInverseRemove(this,
-						GeneratorPackage.EQUIPMENT__LOCKED_ABILITY, Equipment.class, msgs);
+						GeneratorPackage.EQUIPMENT__LOCKED_ABILITIES, Equipment.class, msgs);
 			if (newLockingEquipment != null)
 				msgs = ((InternalEObject) newLockingEquipment).eInverseAdd(this,
-						GeneratorPackage.EQUIPMENT__LOCKED_ABILITY, Equipment.class, msgs);
+						GeneratorPackage.EQUIPMENT__LOCKED_ABILITIES, Equipment.class, msgs);
 			msgs = basicSetLockingEquipment(newLockingEquipment, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -176,7 +176,7 @@ public class AbilityImpl extends MinimalEObjectImpl.Container implements Ability
 		case GeneratorPackage.ABILITY__LOCKING_EQUIPMENT:
 			if (lockingEquipment != null)
 				msgs = ((InternalEObject) lockingEquipment).eInverseRemove(this,
-						GeneratorPackage.EQUIPMENT__LOCKED_ABILITY, Equipment.class, msgs);
+						GeneratorPackage.EQUIPMENT__LOCKED_ABILITIES, Equipment.class, msgs);
 			return basicSetLockingEquipment((Equipment) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
