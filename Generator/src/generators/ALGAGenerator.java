@@ -77,9 +77,6 @@ public class ALGAGenerator {
 			learnerPlayer.getProgression().setLearnerProgress(new LearnerProgressImpl());
 			learnerPlayer.getProgression().setPlayerProgress(new PlayerProgressImpl());
 		}
-		if(learnerPlayer.getStatistics() == null) {
-			learnerPlayer.setStatistics(new StatisticsImpl());
-		}
 	}
 	
 	private void updateLearnerPlayerStatistics() {

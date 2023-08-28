@@ -31,6 +31,7 @@ public class StatisticsResource {
 	@Path("/learner/{learnerID}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String generalStatistics(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + "default.xmi", true));
@@ -42,6 +43,7 @@ public class StatisticsResource {
 	@Path("/classroom/{classroomID}/learner/{learnerID}")
 	@Produces(MediaType.TEXT_XML)
 	public String generate(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID +".xmi", true));

@@ -21,12 +21,14 @@ import generator.ResultsByTask;
 import generator.impl.CompletionCriteriaImpl;
 import generator.impl.CurrentObjectiveLevelImpl;
 import generator.impl.ItemImpl;
+import generator.impl.ItemsImpl;
 import generator.impl.MTCompletion1Impl;
 import generator.impl.MTLevelImpl;
 import generator.impl.MTQFCompletion1Impl;
 import generator.impl.QuestionableFactResultImpl;
 import generator.impl.ResultsByTaskImpl;
 import generator.impl.ResultsImpl;
+import generator.impl.StatisticsImpl;
 import managers.ModelsManager;
 
 public class LearnerPlayerManager {
@@ -69,6 +71,12 @@ public class LearnerPlayerManager {
 		JSONArray items = new JSONArray();
 		try {
 			LearnerPlayer player = modelsManager.getLearnerPlayer(playerID);
+			
+			if(player.getProgression().getPlayerProgress().getItems() == null) {
+				player.getProgression().getPlayerProgress().setItems(new ItemsImpl());
+				modelsManager.saveContextModel();
+			}
+			
 			for(Item anItem: player.getProgression().getPlayerProgress().getItems().getItems()) {
 				JSONObject item = new JSONObject();
 				item.put("id", anItem.getEquipment().getID());
@@ -160,6 +168,11 @@ public class LearnerPlayerManager {
 		JSONObject stats = new JSONObject();
 		try {
 			LearnerPlayer learner = modelsManager.getLearnerPlayer(learnerID);
+			
+			if(learner.getStatistics() == null) {
+				learner.setStatistics(new StatisticsImpl());
+				modelsManager.saveContextModel();
+			}
 			
 			stats.put("nbLevelsGenerated", learner.getStatistics().getNbLevelsGenerated());
 			stats.put("nbLevelsPlayedUntilEnd", learner.getStatistics().getNbFinishedLevels());
