@@ -182,6 +182,7 @@ public class LearnerPlayerManager {
 			stats.put("nbQuestionsMeet", learner.getStatistics().getNbQuestionsEncountered());
 			stats.put("nbCorrectAnswers", learner.getStatistics().getNbCorrectGivenAnswers());
 			stats.put("maxLevelReached", learner.getStatistics().getMaxGameLevelReached());
+			stats.put("totalTime", learner.getStatistics().getTotalTime());
 			
 		} catch (NonExistantLearnerPlayerException e) {
 			e.printStackTrace();
