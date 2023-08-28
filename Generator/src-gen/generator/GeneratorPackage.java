@@ -6379,13 +6379,22 @@ public interface GeneratorPackage extends EPackage {
 	int STATISTICS__NB_UNFINISHED_LEVELS = 7;
 
 	/**
+	 * The feature id for the '<em><b>Total Coins</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICS__TOTAL_COINS = 8;
+
+	/**
 	 * The number of structural features of the '<em>Statistics</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTICS_FEATURE_COUNT = 8;
+	int STATISTICS_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Statistics</em>' class.
@@ -10123,6 +10132,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getStatistics_NbUnfinishedLevels();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.Statistics#getTotalCoins <em>Total Coins</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Total Coins</em>'.
+	 * @see generator.Statistics#getTotalCoins()
+	 * @see #getStatistics()
+	 * @generated
+	 */
+	EAttribute getStatistics_TotalCoins();
+
+	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13152,6 +13172,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute STATISTICS__NB_UNFINISHED_LEVELS = eINSTANCE.getStatistics_NbUnfinishedLevels();
+
+		/**
+		 * The meta object literal for the '<em><b>Total Coins</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATISTICS__TOTAL_COINS = eINSTANCE.getStatistics_TotalCoins();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.

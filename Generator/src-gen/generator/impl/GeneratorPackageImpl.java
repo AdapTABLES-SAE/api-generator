@@ -3852,6 +3852,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getStatistics_TotalCoins() {
+		return (EAttribute) statisticsEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDirections() {
 		return directionsEEnum;
 	}
@@ -4420,6 +4429,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(statisticsEClass, STATISTICS__NB_LEVELS_GENERATED);
 		createEAttribute(statisticsEClass, STATISTICS__NB_FINISHED_LEVELS);
 		createEAttribute(statisticsEClass, STATISTICS__NB_UNFINISHED_LEVELS);
+		createEAttribute(statisticsEClass, STATISTICS__TOTAL_COINS);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -5435,6 +5445,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getStatistics_NbUnfinishedLevels(), ecorePackage.getEInt(), "nbUnfinishedLevels", null, 0, 1,
 				Statistics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatistics_TotalCoins(), ecorePackage.getEInt(), "totalCoins", null, 0, 1, Statistics.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

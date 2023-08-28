@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link generator.impl.StatisticsImpl#getNbLevelsGenerated <em>Nb Levels Generated</em>}</li>
  *   <li>{@link generator.impl.StatisticsImpl#getNbFinishedLevels <em>Nb Finished Levels</em>}</li>
  *   <li>{@link generator.impl.StatisticsImpl#getNbUnfinishedLevels <em>Nb Unfinished Levels</em>}</li>
+ *   <li>{@link generator.impl.StatisticsImpl#getTotalCoins <em>Total Coins</em>}</li>
  * </ul>
  *
  * @generated
@@ -192,6 +193,26 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 	 * @ordered
 	 */
 	protected int nbUnfinishedLevels = NB_UNFINISHED_LEVELS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTotalCoins() <em>Total Coins</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTotalCoins()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int TOTAL_COINS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getTotalCoins() <em>Total Coins</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTotalCoins()
+	 * @generated
+	 * @ordered
+	 */
+	protected int totalCoins = TOTAL_COINS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -393,6 +414,28 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getTotalCoins() {
+		return totalCoins;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTotalCoins(int newTotalCoins) {
+		int oldTotalCoins = totalCoins;
+		totalCoins = newTotalCoins;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.STATISTICS__TOTAL_COINS,
+					oldTotalCoins, totalCoins));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -412,6 +455,8 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 			return getNbFinishedLevels();
 		case GeneratorPackage.STATISTICS__NB_UNFINISHED_LEVELS:
 			return getNbUnfinishedLevels();
+		case GeneratorPackage.STATISTICS__TOTAL_COINS:
+			return getTotalCoins();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -447,6 +492,9 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 			return;
 		case GeneratorPackage.STATISTICS__NB_UNFINISHED_LEVELS:
 			setNbUnfinishedLevels((Integer) newValue);
+			return;
+		case GeneratorPackage.STATISTICS__TOTAL_COINS:
+			setTotalCoins((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -484,6 +532,9 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 		case GeneratorPackage.STATISTICS__NB_UNFINISHED_LEVELS:
 			setNbUnfinishedLevels(NB_UNFINISHED_LEVELS_EDEFAULT);
 			return;
+		case GeneratorPackage.STATISTICS__TOTAL_COINS:
+			setTotalCoins(TOTAL_COINS_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -512,6 +563,8 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 			return nbFinishedLevels != NB_FINISHED_LEVELS_EDEFAULT;
 		case GeneratorPackage.STATISTICS__NB_UNFINISHED_LEVELS:
 			return nbUnfinishedLevels != NB_UNFINISHED_LEVELS_EDEFAULT;
+		case GeneratorPackage.STATISTICS__TOTAL_COINS:
+			return totalCoins != TOTAL_COINS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -543,6 +596,8 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 		result.append(nbFinishedLevels);
 		result.append(", nbUnfinishedLevels: ");
 		result.append(nbUnfinishedLevels);
+		result.append(", totalCoins: ");
+		result.append(totalCoins);
 		result.append(')');
 		return result.toString();
 	}

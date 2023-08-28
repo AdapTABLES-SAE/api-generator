@@ -511,6 +511,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbLevelsGenerated"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbFinishedLevels"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbUnfinishedLevels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/totalCoins"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

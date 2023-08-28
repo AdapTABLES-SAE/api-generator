@@ -41,9 +41,6 @@ public class ALGAGenerator {
 				e.printStackTrace();
 			}	
 		}
-
-		
-		
 	}
 	
 	public ALGAGenerator(String learnerID) throws NonExistantLearnerPlayerException {
@@ -79,7 +76,9 @@ public class ALGAGenerator {
 			learnerPlayer.setProgression(new ProgressionImpl());
 			learnerPlayer.getProgression().setLearnerProgress(new LearnerProgressImpl());
 			learnerPlayer.getProgression().setPlayerProgress(new PlayerProgressImpl());
-			//learnerPlayer.getProgression().setCurrentGameLevel(new CurrentGameLevelImpl());
+		}
+		if(learnerPlayer.getStatistics() == null) {
+			learnerPlayer.setStatistics(new StatisticsImpl());
 		}
 	}
 	

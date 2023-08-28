@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.Statistics#getNbLevelsGenerated <em>Nb Levels Generated</em>}</li>
  *   <li>{@link generator.Statistics#getNbFinishedLevels <em>Nb Finished Levels</em>}</li>
  *   <li>{@link generator.Statistics#getNbUnfinishedLevels <em>Nb Unfinished Levels</em>}</li>
+ *   <li>{@link generator.Statistics#getTotalCoins <em>Total Coins</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getStatistics()
@@ -203,5 +204,27 @@ public interface Statistics extends EObject {
 	 * @generated
 	 */
 	void setNbUnfinishedLevels(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Total Coins</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Total Coins</em>' attribute.
+	 * @see #setTotalCoins(int)
+	 * @see generator.GeneratorPackage#getStatistics_TotalCoins()
+	 * @model
+	 * @generated
+	 */
+	int getTotalCoins();
+
+	/**
+	 * Sets the value of the '{@link generator.Statistics#getTotalCoins <em>Total Coins</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Total Coins</em>' attribute.
+	 * @see #getTotalCoins()
+	 * @generated
+	 */
+	void setTotalCoins(int value);
 
 } // Statistics

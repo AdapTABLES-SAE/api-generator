@@ -165,7 +165,7 @@ public class LearnerPlayerManager {
 			stats.put("nbLevelsPlayedUntilEnd", learner.getStatistics().getNbFinishedLevels());
 			stats.put("nbDeaths", learner.getStatistics().getNbDeaths());
 			stats.put("nbExits", learner.getStatistics().getNbUnfinishedLevels());
-			stats.put("totalCoins", learner.getProgression().getPlayerProgress().getCoins()); // TODO: est-ce le bon param 
+			stats.put("totalCoins", learner.getStatistics().getTotalCoins()); 
 			stats.put("nbQuestionsMeet", learner.getStatistics().getNbQuestionsEncountered());
 			stats.put("nbCorrectAnswers", learner.getStatistics().getNbCorrectGivenAnswers());
 			stats.put("maxLevelReached", learner.getStatistics().getMaxGameLevelReached());
@@ -416,6 +416,7 @@ public class LearnerPlayerManager {
 			}
 			
 			player.getProgression().getPlayerProgress().setCoins(player.getProgression().getPlayerProgress().getCoins() + Long.valueOf((Long) obj.get("nbCoinsCollected")).intValue());
+			player.getStatistics().setTotalCoins(player.getStatistics().getTotalCoins() + Long.valueOf((Long) obj.get("nbCoinsCollected")).intValue());
 			
 			modelsManager.saveContextModel();
 		} catch (NonExistantLearnerPlayerException e) {
