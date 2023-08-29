@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.Dungeon#getLearningobjective <em>Learningobjective</em>}</li>
  *   <li>{@link generator.Dungeon#getExit <em>Exit</em>}</li>
  *   <li>{@link generator.Dungeon#getLearnerPlayer <em>Learner Player</em>}</li>
+ *   <li>{@link generator.Dungeon#getCurses <em>Curses</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getDungeon()
@@ -175,5 +176,17 @@ public interface Dungeon extends EObject {
 	 * @generated
 	 */
 	void setLearnerPlayer(LearnerPlayer value);
+
+	/**
+	 * Returns the value of the '<em><b>Curses</b></em>' reference list.
+	 * The list contents are of type {@link generator.Curse}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Curses</em>' reference list.
+	 * @see generator.GeneratorPackage#getDungeon_Curses()
+	 * @model
+	 * @generated
+	 */
+	EList<Curse> getCurses();
 
 } // Dungeon

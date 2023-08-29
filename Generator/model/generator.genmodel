@@ -116,6 +116,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Dungeon/learningobjective"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Dungeon/exit"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Dungeon/learnerPlayer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Dungeon/curses"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Room">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Room/x"/>
@@ -347,10 +348,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LevelsDifficultyProgress/nbNQRoomIncrease"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LevelsDifficultyProgress/initNbQRoom"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LevelsDifficultyProgress/initNbNQRoom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LevelsDifficultyProgress/cursesAvailabilities"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//GameElementTypes">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameElementTypes/equipments"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameElementTypes/elementTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GameElementTypes/curses"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//ElementsTypes">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//ElementsTypes/elements"/>
@@ -521,6 +524,17 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//ElementType/ability"/>
       <genOperations ecoreOperation="generator.ecore#//ElementType/isDisplayableElement"
           body="return this.nbDisplays > 0;"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Curses">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Curses/curses"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Curse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Curse/name"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//LabyrinthCurse"/>
+    <genClasses ecoreClass="generator.ecore#//CurseEligibility">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CurseEligibility/startLevel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//CurseEligibility/curse"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -527,6 +527,26 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseCurses(Curses object) {
+			return createCursesAdapter();
+		}
+
+		@Override
+		public Adapter caseCurse(Curse object) {
+			return createCurseAdapter();
+		}
+
+		@Override
+		public Adapter caseLabyrinthCurse(LabyrinthCurse object) {
+			return createLabyrinthCurseAdapter();
+		}
+
+		@Override
+		public Adapter caseCurseEligibility(CurseEligibility object) {
+			return createCurseEligibilityAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1270,6 +1290,62 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createElementTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Curses <em>Curses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Curses
+	 * @generated
+	 */
+	public Adapter createCursesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Curse <em>Curse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Curse
+	 * @generated
+	 */
+	public Adapter createCurseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.LabyrinthCurse <em>Labyrinth Curse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.LabyrinthCurse
+	 * @generated
+	 */
+	public Adapter createLabyrinthCurseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.CurseEligibility <em>Curse Eligibility</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.CurseEligibility
+	 * @generated
+	 */
+	public Adapter createCurseEligibilityAdapter() {
 		return null;
 	}
 

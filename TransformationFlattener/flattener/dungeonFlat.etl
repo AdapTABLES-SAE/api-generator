@@ -12,7 +12,15 @@ rule Dungeon2Dungeon
 		dOut.objectiveID = dIn.learningobjective.id;
 		dOut.levelID = dIn.level.id;
 		dOut.gameLevelID = dIn.learnerPlayer.progression.playerProgress.currentLevel;
-
+		
+		dIn.curses.println();
+		dOut.curses = "["; 
+		for (curse in dIn.curses) {
+			curse.name.println();
+			dOut.curses = dOut.curses + curse.name + ",";
+			dOut.curses.println();
+		} 
+		dOut.curses = dOut.curses + "]";
         // ROOMS
         var rooms: new OUT!Rooms;
         dOut.rooms = rooms;

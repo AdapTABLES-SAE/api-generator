@@ -58,7 +58,8 @@ public class DungeonGenerator {
 		this(modelAccess); 		
 		generatedDungeon.setLearningobjective(dungeonElements.getChosenObjective());
 		generatedDungeon.setLevel(dungeonElements.getChosenLevel());
-		generatedDungeon.setMode(dungeonElements.getDungeonMode());
+		//generatedDungeon.setMode(dungeonElements.getDungeonMode());
+		generatedDungeon.getCurses().addAll(dungeonElements.getCurses());
 		this.dungeonElements = dungeonElements;
 		this.nbRooms = nbRooms;
 	}

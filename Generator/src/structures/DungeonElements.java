@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import generator.CurrentObjectiveLevel;
+import generator.Curse;
 import generator.DungeonMode;
 import generator.GameDescription;
+import generator.LabyrinthCurse;
 import generator.Level;
 import generator.Objective;
 import generator.ResultsByTask;
@@ -14,6 +16,7 @@ public class DungeonElements {
 
 	private CurrentObjectiveLevel currentObjectiveLevel; 
 	private List<RoomElements> roomsElements;
+	private List<Curse> curses; 
 	private DungeonMode mode;
 	
 	private GameDescription gameDescriptionModel;
@@ -26,18 +29,27 @@ public class DungeonElements {
 		this.nbQRooms = nbQuestionRoom;
 		this.gameDescriptionModel = gameDescriptionModel;
 		this.roomsElements = new ArrayList<>();
+		this.curses = new ArrayList<>();
+		this.mode = DungeonMode.LINEAR;
 	}
 	
 	public List<RoomElements> getRoomsElements() {
 		return roomsElements;
 	}
 	
-	public void setDungeonMode(DungeonMode mode) {
-		this.mode = mode;
-	}
-	
 	public DungeonMode getDungeonMode() {
 		return mode;
+	}
+	
+	public void addCurse(Curse curse) {
+		this.curses.add(curse);
+		if(curse instanceof LabyrinthCurse) {
+			mode = DungeonMode.LABYRINTHINE;
+		}
+	}
+	
+	public List<Curse> getCurses() {
+		return this.curses;
 	}
 	
 	public void setCurrentObjectiveLevel(CurrentObjectiveLevel currentObjectiveLevel) {

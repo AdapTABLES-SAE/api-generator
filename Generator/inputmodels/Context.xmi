@@ -4,7 +4,7 @@
   <learnerPlayers>
     <learnerPlayers name="Learner FICTIF" ID="learnerFic">
       <progression>
-        <playerProgress currentLevel="3" coins="0"/>
+        <playerProgress currentLevel="12" coins="0"/>
         <learnerProgress>
           <currentobjectivelevels achieved="false">
             <objective href="LearningDomain.xmi#REC-O1"/>
@@ -302,7 +302,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH2"/>
-      <statistics maxGameLevelReached="3" nbLevelsGenerated="5"/>
+      <statistics maxGameLevelReached="12" nbLevelsGenerated="19"/>
     </learnerPlayers>
   </learnerPlayers>
 </generator:Context>

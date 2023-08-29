@@ -409,6 +409,42 @@ public interface GeneratorFactory extends EFactory {
 	ElementType createElementType();
 
 	/**
+	 * Returns a new object of class '<em>Curses</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Curses</em>'.
+	 * @generated
+	 */
+	Curses createCurses();
+
+	/**
+	 * Returns a new object of class '<em>Curse</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Curse</em>'.
+	 * @generated
+	 */
+	Curse createCurse();
+
+	/**
+	 * Returns a new object of class '<em>Labyrinth Curse</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Labyrinth Curse</em>'.
+	 * @generated
+	 */
+	LabyrinthCurse createLabyrinthCurse();
+
+	/**
+	 * Returns a new object of class '<em>Curse Eligibility</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Curse Eligibility</em>'.
+	 * @generated
+	 */
+	CurseEligibility createCurseEligibility();
+
+	/**
 	 * Returns a new object of class '<em>Equipment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

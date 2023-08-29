@@ -9,6 +9,8 @@ import java.util.Set;
 import generator.AComponent;
 import generator.ATask;
 import generator.Ability;
+import generator.Curse;
+import generator.CurseEligibility;
 import generator.Dungeon;
 import generator.EBoundary;
 import generator.EModality;
@@ -42,9 +44,33 @@ public class GameElementsGenerator {
 	}
 	
 	public void generateGPandCurses() {
-		setDungeonMode();
+		selectCurses();
 		unlockGameplays();
 		selectCompatibleGameplays();
+	}
+	
+	private void selectCurses() {
+		for(Curse curse: getAvailableCurses()) {
+			int headsOrtails = random.nextInt(2);
+			if(headsOrtails == 1) {
+				System.out.println("Curses selected " + curse.getName());
+				dungeonElements.addCurse(curse);
+			}
+		}		
+	}
+	
+	private List<Curse> getAvailableCurses(){
+		List<Curse> curses = new ArrayList<>(); 
+		
+		int playerLevel = learnerPlayer.getProgression().getPlayerProgress().getCurrentLevel();
+		
+		for(CurseEligibility curse: modelAccess.getGameDescriptionModel().getLevelsDifficultyProgress().getCursesAvailabilities()) {
+			if(curse.getStartLevel() <= playerLevel) {
+				curses.add(curse.getCurse()); 
+			}
+		}
+		System.out.println("Curses " + curses);
+		return curses; 
 	}
 	
 	private void unlockGameplays() {
@@ -89,10 +115,6 @@ public class GameElementsGenerator {
 		List<Ability> abilities = new ArrayList<>(getInitallyLockedAbilities());
 		abilities.removeAll(getUnlockedAbilityByPlayer());
 		return abilities;
-	}
-	
-	private void setDungeonMode(){
-		dungeonElements.setDungeonMode(modelAccess.getContextModel().getGamecontext().getMode());
 	}
 	
 	public Dungeon generateRoomContent(Dungeon generatedDungeon) {

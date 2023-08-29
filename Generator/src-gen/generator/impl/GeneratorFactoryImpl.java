@@ -213,6 +213,14 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createStatistics();
 		case GeneratorPackage.ELEMENT_TYPE:
 			return createElementType();
+		case GeneratorPackage.CURSES:
+			return createCurses();
+		case GeneratorPackage.CURSE:
+			return createCurse();
+		case GeneratorPackage.LABYRINTH_CURSE:
+			return createLabyrinthCurse();
+		case GeneratorPackage.CURSE_ELIGIBILITY:
+			return createCurseEligibility();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -728,6 +736,46 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public ElementType createElementType() {
 		ElementTypeImpl elementType = new ElementTypeImpl();
 		return elementType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Curses createCurses() {
+		CursesImpl curses = new CursesImpl();
+		return curses;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Curse createCurse() {
+		CurseImpl curse = new CurseImpl();
+		return curse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LabyrinthCurse createLabyrinthCurse() {
+		LabyrinthCurseImpl labyrinthCurse = new LabyrinthCurseImpl();
+		return labyrinthCurse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CurseEligibility createCurseEligibility() {
+		CurseEligibilityImpl curseEligibility = new CurseEligibilityImpl();
+		return curseEligibility;
 	}
 
 	/**

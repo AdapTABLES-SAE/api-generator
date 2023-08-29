@@ -2,6 +2,7 @@
  */
 package generator;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.LevelsDifficultyProgress#getNbNQRoomIncrease <em>Nb NQ Room Increase</em>}</li>
  *   <li>{@link generator.LevelsDifficultyProgress#getInitNbQRoom <em>Init Nb QRoom</em>}</li>
  *   <li>{@link generator.LevelsDifficultyProgress#getInitNbNQRoom <em>Init Nb NQ Room</em>}</li>
+ *   <li>{@link generator.LevelsDifficultyProgress#getCursesAvailabilities <em>Curses Availabilities</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getLevelsDifficultyProgress()
@@ -115,5 +117,17 @@ public interface LevelsDifficultyProgress extends EObject {
 	 * @generated
 	 */
 	void setInitNbNQRoom(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Curses Availabilities</b></em>' containment reference list.
+	 * The list contents are of type {@link generator.CurseEligibility}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Curses Availabilities</em>' containment reference list.
+	 * @see generator.GeneratorPackage#getLevelsDifficultyProgress_CursesAvailabilities()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<CurseEligibility> getCursesAvailabilities();
 
 } // LevelsDifficultyProgress

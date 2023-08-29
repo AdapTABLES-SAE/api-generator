@@ -252,13 +252,22 @@ public interface GeneratorPackage extends EPackage {
 	int DUNGEON__LEARNER_PLAYER = 6;
 
 	/**
+	 * The feature id for the '<em><b>Curses</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUNGEON__CURSES = 7;
+
+	/**
 	 * The number of structural features of the '<em>Dungeon</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DUNGEON_FEATURE_COUNT = 7;
+	int DUNGEON_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Dungeon</em>' class.
@@ -3968,13 +3977,22 @@ public interface GeneratorPackage extends EPackage {
 	int LEVELS_DIFFICULTY_PROGRESS__INIT_NB_NQ_ROOM = 3;
 
 	/**
+	 * The feature id for the '<em><b>Curses Availabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVELS_DIFFICULTY_PROGRESS__CURSES_AVAILABILITIES = 4;
+
+	/**
 	 * The number of structural features of the '<em>Levels Difficulty Progress</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEVELS_DIFFICULTY_PROGRESS_FEATURE_COUNT = 4;
+	int LEVELS_DIFFICULTY_PROGRESS_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Levels Difficulty Progress</em>' class.
@@ -4014,13 +4032,22 @@ public interface GeneratorPackage extends EPackage {
 	int GAME_ELEMENT_TYPES__ELEMENT_TYPES = 1;
 
 	/**
+	 * The feature id for the '<em><b>Curses</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_ELEMENT_TYPES__CURSES = 2;
+
+	/**
 	 * The number of structural features of the '<em>Game Element Types</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GAME_ELEMENT_TYPES_FEATURE_COUNT = 2;
+	int GAME_ELEMENT_TYPES_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Game Element Types</em>' class.
@@ -6487,6 +6514,163 @@ public interface GeneratorPackage extends EPackage {
 	int STATISTICS_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.CursesImpl <em>Curses</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.CursesImpl
+	 * @see generator.impl.GeneratorPackageImpl#getCurses()
+	 * @generated
+	 */
+	int CURSES = 92;
+
+	/**
+	 * The feature id for the '<em><b>Curses</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSES__CURSES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Curses</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSES_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Curses</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.CurseImpl <em>Curse</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.CurseImpl
+	 * @see generator.impl.GeneratorPackageImpl#getCurse()
+	 * @generated
+	 */
+	int CURSE = 93;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSE__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Curse</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Curse</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.LabyrinthCurseImpl <em>Labyrinth Curse</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.LabyrinthCurseImpl
+	 * @see generator.impl.GeneratorPackageImpl#getLabyrinthCurse()
+	 * @generated
+	 */
+	int LABYRINTH_CURSE = 94;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABYRINTH_CURSE__NAME = CURSE__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Labyrinth Curse</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABYRINTH_CURSE_FEATURE_COUNT = CURSE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Labyrinth Curse</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABYRINTH_CURSE_OPERATION_COUNT = CURSE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.CurseEligibilityImpl <em>Curse Eligibility</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.CurseEligibilityImpl
+	 * @see generator.impl.GeneratorPackageImpl#getCurseEligibility()
+	 * @generated
+	 */
+	int CURSE_ELIGIBILITY = 95;
+
+	/**
+	 * The feature id for the '<em><b>Start Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSE_ELIGIBILITY__START_LEVEL = 0;
+
+	/**
+	 * The feature id for the '<em><b>Curse</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSE_ELIGIBILITY__CURSE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Curse Eligibility</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSE_ELIGIBILITY_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Curse Eligibility</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURSE_ELIGIBILITY_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6494,7 +6678,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 92;
+	int DIRECTIONS = 96;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -6504,7 +6688,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 93;
+	int DUNGEON_MODE = 97;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -6514,7 +6698,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 94;
+	int TABLE_BUILD = 98;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -6524,7 +6708,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 95;
+	int RESULT_POSITION = 99;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -6534,7 +6718,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 96;
+	int ESINGLE_TARGET = 100;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -6544,7 +6728,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 97;
+	int ETASK_TYPE = 101;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -6554,7 +6738,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 98;
+	int EMODALITY = 102;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -6564,7 +6748,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 99;
+	int ESEVERAL_TARGET = 103;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -6574,7 +6758,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 100;
+	int ELEMENT_SIZE = 104;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -6584,7 +6768,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 101;
+	int GP_CATEGORY = 105;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -6594,7 +6778,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 102;
+	int ECORRECTNESS = 106;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -6604,7 +6788,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 103;
+	int EBOUNDARY = 107;
 
 	/**
 	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
@@ -6614,7 +6798,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 104;
+	int ESTATEMENT_TYPE = 108;
 
 	/**
 	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
@@ -6624,7 +6808,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
 	 * @generated
 	 */
-	int EROOM_TYPE = 105;
+	int EROOM_TYPE = 109;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -6786,6 +6970,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDungeon_LearnerPlayer();
+
+	/**
+	 * Returns the meta object for the reference list '{@link generator.Dungeon#getCurses <em>Curses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Curses</em>'.
+	 * @see generator.Dungeon#getCurses()
+	 * @see #getDungeon()
+	 * @generated
+	 */
+	EReference getDungeon_Curses();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Room <em>Room</em>}'.
@@ -8856,6 +9051,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getLevelsDifficultyProgress_InitNbNQRoom();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link generator.LevelsDifficultyProgress#getCursesAvailabilities <em>Curses Availabilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Curses Availabilities</em>'.
+	 * @see generator.LevelsDifficultyProgress#getCursesAvailabilities()
+	 * @see #getLevelsDifficultyProgress()
+	 * @generated
+	 */
+	EReference getLevelsDifficultyProgress_CursesAvailabilities();
+
+	/**
 	 * Returns the meta object for class '{@link generator.GameElementTypes <em>Game Element Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8886,6 +9092,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGameElementTypes_ElementTypes();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.GameElementTypes#getCurses <em>Curses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Curses</em>'.
+	 * @see generator.GameElementTypes#getCurses()
+	 * @see #getGameElementTypes()
+	 * @generated
+	 */
+	EReference getGameElementTypes_Curses();
 
 	/**
 	 * Returns the meta object for class '{@link generator.ElementsTypes <em>Elements Types</em>}'.
@@ -9003,6 +9220,90 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getElementType__IsDisplayableElement();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Curses <em>Curses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Curses</em>'.
+	 * @see generator.Curses
+	 * @generated
+	 */
+	EClass getCurses();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.Curses#getCurses <em>Curses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Curses</em>'.
+	 * @see generator.Curses#getCurses()
+	 * @see #getCurses()
+	 * @generated
+	 */
+	EReference getCurses_Curses();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Curse <em>Curse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Curse</em>'.
+	 * @see generator.Curse
+	 * @generated
+	 */
+	EClass getCurse();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Curse#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.Curse#getName()
+	 * @see #getCurse()
+	 * @generated
+	 */
+	EAttribute getCurse_Name();
+
+	/**
+	 * Returns the meta object for class '{@link generator.LabyrinthCurse <em>Labyrinth Curse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Labyrinth Curse</em>'.
+	 * @see generator.LabyrinthCurse
+	 * @generated
+	 */
+	EClass getLabyrinthCurse();
+
+	/**
+	 * Returns the meta object for class '{@link generator.CurseEligibility <em>Curse Eligibility</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Curse Eligibility</em>'.
+	 * @see generator.CurseEligibility
+	 * @generated
+	 */
+	EClass getCurseEligibility();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.CurseEligibility#getStartLevel <em>Start Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Level</em>'.
+	 * @see generator.CurseEligibility#getStartLevel()
+	 * @see #getCurseEligibility()
+	 * @generated
+	 */
+	EAttribute getCurseEligibility_StartLevel();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.CurseEligibility#getCurse <em>Curse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Curse</em>'.
+	 * @see generator.CurseEligibility#getCurse()
+	 * @see #getCurseEligibility()
+	 * @generated
+	 */
+	EReference getCurseEligibility_Curse();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Equipment <em>Equipment</em>}'.
@@ -10552,6 +10853,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DUNGEON__LEARNER_PLAYER = eINSTANCE.getDungeon_LearnerPlayer();
+
+		/**
+		 * The meta object literal for the '<em><b>Curses</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DUNGEON__CURSES = eINSTANCE.getDungeon_Curses();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.RoomImpl <em>Room</em>}' class.
@@ -12190,6 +12499,15 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute LEVELS_DIFFICULTY_PROGRESS__INIT_NB_NQ_ROOM = eINSTANCE.getLevelsDifficultyProgress_InitNbNQRoom();
 
 		/**
+		 * The meta object literal for the '<em><b>Curses Availabilities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEVELS_DIFFICULTY_PROGRESS__CURSES_AVAILABILITIES = eINSTANCE
+				.getLevelsDifficultyProgress_CursesAvailabilities();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.GameElementTypesImpl <em>Game Element Types</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12214,6 +12532,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GAME_ELEMENT_TYPES__ELEMENT_TYPES = eINSTANCE.getGameElementTypes_ElementTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Curses</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAME_ELEMENT_TYPES__CURSES = eINSTANCE.getGameElementTypes_Curses();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ElementsTypesImpl <em>Elements Types</em>}' class.
@@ -12308,6 +12634,78 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ELEMENT_TYPE___IS_DISPLAYABLE_ELEMENT = eINSTANCE.getElementType__IsDisplayableElement();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.CursesImpl <em>Curses</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.CursesImpl
+		 * @see generator.impl.GeneratorPackageImpl#getCurses()
+		 * @generated
+		 */
+		EClass CURSES = eINSTANCE.getCurses();
+
+		/**
+		 * The meta object literal for the '<em><b>Curses</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CURSES__CURSES = eINSTANCE.getCurses_Curses();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.CurseImpl <em>Curse</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.CurseImpl
+		 * @see generator.impl.GeneratorPackageImpl#getCurse()
+		 * @generated
+		 */
+		EClass CURSE = eINSTANCE.getCurse();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CURSE__NAME = eINSTANCE.getCurse_Name();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.LabyrinthCurseImpl <em>Labyrinth Curse</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.LabyrinthCurseImpl
+		 * @see generator.impl.GeneratorPackageImpl#getLabyrinthCurse()
+		 * @generated
+		 */
+		EClass LABYRINTH_CURSE = eINSTANCE.getLabyrinthCurse();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.CurseEligibilityImpl <em>Curse Eligibility</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.CurseEligibilityImpl
+		 * @see generator.impl.GeneratorPackageImpl#getCurseEligibility()
+		 * @generated
+		 */
+		EClass CURSE_ELIGIBILITY = eINSTANCE.getCurseEligibility();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Level</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CURSE_ELIGIBILITY__START_LEVEL = eINSTANCE.getCurseEligibility_StartLevel();
+
+		/**
+		 * The meta object literal for the '<em><b>Curse</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CURSE_ELIGIBILITY__CURSE = eINSTANCE.getCurseEligibility_Curse();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.EquipmentImpl <em>Equipment</em>}' class.

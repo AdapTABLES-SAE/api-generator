@@ -390,6 +390,34 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass cursesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass curseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass labyrinthCurseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass curseEligibilityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass equipmentEClass = null;
 
 	/**
@@ -963,6 +991,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EReference getDungeon_LearnerPlayer() {
 		return (EReference) dungeonEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDungeon_Curses() {
+		return (EReference) dungeonEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2707,6 +2744,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLevelsDifficultyProgress_CursesAvailabilities() {
+		return (EReference) levelsDifficultyProgressEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGameElementTypes() {
 		return gameElementTypesEClass;
 	}
@@ -2727,6 +2773,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EReference getGameElementTypes_ElementTypes() {
 		return (EReference) gameElementTypesEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGameElementTypes_Curses() {
+		return (EReference) gameElementTypesEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2826,6 +2881,78 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EOperation getElementType__IsDisplayableElement() {
 		return elementTypeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCurses() {
+		return cursesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCurses_Curses() {
+		return (EReference) cursesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCurse() {
+		return curseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCurse_Name() {
+		return (EAttribute) curseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLabyrinthCurse() {
+		return labyrinthCurseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCurseEligibility() {
+		return curseEligibilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCurseEligibility_StartLevel() {
+		return (EAttribute) curseEligibilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCurseEligibility_Curse() {
+		return (EReference) curseEligibilityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -4063,6 +4190,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(dungeonEClass, DUNGEON__LEARNINGOBJECTIVE);
 		createEReference(dungeonEClass, DUNGEON__EXIT);
 		createEReference(dungeonEClass, DUNGEON__LEARNER_PLAYER);
+		createEReference(dungeonEClass, DUNGEON__CURSES);
 
 		roomEClass = createEClass(ROOM);
 		createEAttribute(roomEClass, ROOM__X);
@@ -4295,10 +4423,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(levelsDifficultyProgressEClass, LEVELS_DIFFICULTY_PROGRESS__NB_NQ_ROOM_INCREASE);
 		createEAttribute(levelsDifficultyProgressEClass, LEVELS_DIFFICULTY_PROGRESS__INIT_NB_QROOM);
 		createEAttribute(levelsDifficultyProgressEClass, LEVELS_DIFFICULTY_PROGRESS__INIT_NB_NQ_ROOM);
+		createEReference(levelsDifficultyProgressEClass, LEVELS_DIFFICULTY_PROGRESS__CURSES_AVAILABILITIES);
 
 		gameElementTypesEClass = createEClass(GAME_ELEMENT_TYPES);
 		createEReference(gameElementTypesEClass, GAME_ELEMENT_TYPES__EQUIPMENTS);
 		createEReference(gameElementTypesEClass, GAME_ELEMENT_TYPES__ELEMENT_TYPES);
+		createEReference(gameElementTypesEClass, GAME_ELEMENT_TYPES__CURSES);
 
 		elementsTypesEClass = createEClass(ELEMENTS_TYPES);
 		createEReference(elementsTypesEClass, ELEMENTS_TYPES__ELEMENTS);
@@ -4477,6 +4607,18 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(elementTypeEClass, ELEMENT_TYPE__ABILITY);
 		createEOperation(elementTypeEClass, ELEMENT_TYPE___IS_DISPLAYABLE_ELEMENT);
 
+		cursesEClass = createEClass(CURSES);
+		createEReference(cursesEClass, CURSES__CURSES);
+
+		curseEClass = createEClass(CURSE);
+		createEAttribute(curseEClass, CURSE__NAME);
+
+		labyrinthCurseEClass = createEClass(LABYRINTH_CURSE);
+
+		curseEligibilityEClass = createEClass(CURSE_ELIGIBILITY);
+		createEAttribute(curseEligibilityEClass, CURSE_ELIGIBILITY__START_LEVEL);
+		createEReference(curseEligibilityEClass, CURSE_ELIGIBILITY__CURSE);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -4567,6 +4709,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		noQuestionGameplayEClass.getESuperTypes().add(this.getGameplay());
 		sizeEClass.getESuperTypes().add(this.getParameter());
 		statementElementTypeEClass.getESuperTypes().add(this.getElementType());
+		labyrinthCurseEClass.getESuperTypes().add(this.getCurse());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -4609,6 +4752,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getDungeon_LearnerPlayer(), this.getLearnerPlayer(), null, "learnerPlayer", null, 1, 1,
 				Dungeon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDungeon_Curses(), this.getCurse(), null, "curses", null, 0, -1, Dungeon.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoom_X(), ecorePackage.getEInt(), "x", null, 0, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE,
@@ -5131,6 +5277,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getLevelsDifficultyProgress_InitNbNQRoom(), ecorePackage.getEInt(), "initNbNQRoom", "1", 0, 1,
 				LevelsDifficultyProgress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLevelsDifficultyProgress_CursesAvailabilities(), this.getCurseEligibility(), null,
+				"cursesAvailabilities", null, 0, -1, LevelsDifficultyProgress.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gameElementTypesEClass, GameElementTypes.class, "GameElementTypes", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5138,6 +5287,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				GameElementTypes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGameElementTypes_ElementTypes(), this.getElementsTypes(), null, "elementTypes", null, 0, 1,
+				GameElementTypes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGameElementTypes_Curses(), this.getCurses(), null, "curses", null, 0, 1,
 				GameElementTypes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -5504,6 +5656,27 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEOperation(getElementType__IsDisplayableElement(), ecorePackage.getEBoolean(), "isDisplayableElement", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
+
+		initEClass(cursesEClass, Curses.class, "Curses", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCurses_Curses(), this.getCurse(), null, "curses", null, 0, -1, Curses.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(curseEClass, Curse.class, "Curse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCurse_Name(), ecorePackage.getEString(), "name", null, 0, 1, Curse.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(labyrinthCurseEClass, LabyrinthCurse.class, "LabyrinthCurse", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(curseEligibilityEClass, CurseEligibility.class, "CurseEligibility", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCurseEligibility_StartLevel(), ecorePackage.getEInt(), "startLevel", null, 0, 1,
+				CurseEligibility.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getCurseEligibility_Curse(), this.getCurse(), null, "curse", null, 1, 1, CurseEligibility.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.GameElementTypes#getEquipments <em>Equipments</em>}</li>
  *   <li>{@link generator.GameElementTypes#getElementTypes <em>Element Types</em>}</li>
+ *   <li>{@link generator.GameElementTypes#getCurses <em>Curses</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getGameElementTypes()
@@ -65,5 +66,27 @@ public interface GameElementTypes extends EObject {
 	 * @generated
 	 */
 	void setElementTypes(ElementsTypes value);
+
+	/**
+	 * Returns the value of the '<em><b>Curses</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Curses</em>' containment reference.
+	 * @see #setCurses(Curses)
+	 * @see generator.GeneratorPackage#getGameElementTypes_Curses()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Curses getCurses();
+
+	/**
+	 * Sets the value of the '{@link generator.GameElementTypes#getCurses <em>Curses</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Curses</em>' containment reference.
+	 * @see #getCurses()
+	 * @generated
+	 */
+	void setCurses(Curses value);
 
 } // GameElementTypes

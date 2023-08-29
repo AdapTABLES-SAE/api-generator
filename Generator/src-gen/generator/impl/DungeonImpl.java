@@ -2,6 +2,7 @@
  */
 package generator.impl;
 
+import generator.Curse;
 import generator.Dungeon;
 import generator.DungeonMode;
 import generator.GeneratorPackage;
@@ -24,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -41,6 +43,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.DungeonImpl#getLearningobjective <em>Learningobjective</em>}</li>
  *   <li>{@link generator.impl.DungeonImpl#getExit <em>Exit</em>}</li>
  *   <li>{@link generator.impl.DungeonImpl#getLearnerPlayer <em>Learner Player</em>}</li>
+ *   <li>{@link generator.impl.DungeonImpl#getCurses <em>Curses</em>}</li>
  * </ul>
  *
  * @generated
@@ -125,6 +128,16 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * @ordered
 	 */
 	protected LearnerPlayer learnerPlayer;
+
+	/**
+	 * The cached value of the '{@link #getCurses() <em>Curses</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCurses()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Curse> curses;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -380,6 +393,18 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Curse> getCurses() {
+		if (curses == null) {
+			curses = new EObjectResolvingEList<Curse>(Curse.class, this, GeneratorPackage.DUNGEON__CURSES);
+		}
+		return curses;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -421,6 +446,8 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 			if (resolve)
 				return getLearnerPlayer();
 			return basicGetLearnerPlayer();
+		case GeneratorPackage.DUNGEON__CURSES:
+			return getCurses();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -456,6 +483,10 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 		case GeneratorPackage.DUNGEON__LEARNER_PLAYER:
 			setLearnerPlayer((LearnerPlayer) newValue);
 			return;
+		case GeneratorPackage.DUNGEON__CURSES:
+			getCurses().clear();
+			getCurses().addAll((Collection<? extends Curse>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -489,6 +520,9 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 		case GeneratorPackage.DUNGEON__LEARNER_PLAYER:
 			setLearnerPlayer((LearnerPlayer) null);
 			return;
+		case GeneratorPackage.DUNGEON__CURSES:
+			getCurses().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -515,6 +549,8 @@ public class DungeonImpl extends MinimalEObjectImpl.Container implements Dungeon
 			return exit != null;
 		case GeneratorPackage.DUNGEON__LEARNER_PLAYER:
 			return learnerPlayer != null;
+		case GeneratorPackage.DUNGEON__CURSES:
+			return curses != null && !curses.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

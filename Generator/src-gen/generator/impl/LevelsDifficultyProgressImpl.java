@@ -2,15 +2,22 @@
  */
 package generator.impl;
 
+import generator.CurseEligibility;
 import generator.GeneratorPackage;
 import generator.LevelsDifficultyProgress;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link generator.impl.LevelsDifficultyProgressImpl#getNbNQRoomIncrease <em>Nb NQ Room Increase</em>}</li>
  *   <li>{@link generator.impl.LevelsDifficultyProgressImpl#getInitNbQRoom <em>Init Nb QRoom</em>}</li>
  *   <li>{@link generator.impl.LevelsDifficultyProgressImpl#getInitNbNQRoom <em>Init Nb NQ Room</em>}</li>
+ *   <li>{@link generator.impl.LevelsDifficultyProgressImpl#getCursesAvailabilities <em>Curses Availabilities</em>}</li>
  * </ul>
  *
  * @generated
@@ -108,6 +116,16 @@ public class LevelsDifficultyProgressImpl extends MinimalEObjectImpl.Container i
 	 * @ordered
 	 */
 	protected int initNbNQRoom = INIT_NB_NQ_ROOM_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getCursesAvailabilities() <em>Curses Availabilities</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCursesAvailabilities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CurseEligibility> cursesAvailabilities;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -223,6 +241,33 @@ public class LevelsDifficultyProgressImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<CurseEligibility> getCursesAvailabilities() {
+		if (cursesAvailabilities == null) {
+			cursesAvailabilities = new EObjectContainmentEList<CurseEligibility>(CurseEligibility.class, this,
+					GeneratorPackage.LEVELS_DIFFICULTY_PROGRESS__CURSES_AVAILABILITIES);
+		}
+		return cursesAvailabilities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case GeneratorPackage.LEVELS_DIFFICULTY_PROGRESS__CURSES_AVAILABILITIES:
+			return ((InternalEList<?>) getCursesAvailabilities()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -234,6 +279,8 @@ public class LevelsDifficultyProgressImpl extends MinimalEObjectImpl.Container i
 			return getInitNbQRoom();
 		case GeneratorPackage.LEVELS_DIFFICULTY_PROGRESS__INIT_NB_NQ_ROOM:
 			return getInitNbNQRoom();
+		case GeneratorPackage.LEVELS_DIFFICULTY_PROGRESS__CURSES_AVAILABILITIES:
+			return getCursesAvailabilities();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -243,6 +290,7 @@ public class LevelsDifficultyProgressImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -257,6 +305,10 @@ public class LevelsDifficultyProgressImpl extends MinimalEObjectImpl.Container i
 			return;
 		case GeneratorPackage.LEVELS_DIFFICULTY_PROGRESS__INIT_NB_NQ_ROOM:
 			setInitNbNQRoom((Integer) newValue);
+			return;
+		case GeneratorPackage.LEVELS_DIFFICULTY_PROGRESS__CURSES_AVAILABILITIES:
+			getCursesAvailabilities().clear();
+			getCursesAvailabilities().addAll((Collection<? extends CurseEligibility>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -282,6 +334,9 @@ public class LevelsDifficultyProgressImpl extends MinimalEObjectImpl.Container i
 		case GeneratorPackage.LEVELS_DIFFICULTY_PROGRESS__INIT_NB_NQ_ROOM:
 			setInitNbNQRoom(INIT_NB_NQ_ROOM_EDEFAULT);
 			return;
+		case GeneratorPackage.LEVELS_DIFFICULTY_PROGRESS__CURSES_AVAILABILITIES:
+			getCursesAvailabilities().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -302,6 +357,8 @@ public class LevelsDifficultyProgressImpl extends MinimalEObjectImpl.Container i
 			return initNbQRoom != INIT_NB_QROOM_EDEFAULT;
 		case GeneratorPackage.LEVELS_DIFFICULTY_PROGRESS__INIT_NB_NQ_ROOM:
 			return initNbNQRoom != INIT_NB_NQ_ROOM_EDEFAULT;
+		case GeneratorPackage.LEVELS_DIFFICULTY_PROGRESS__CURSES_AVAILABILITIES:
+			return cursesAvailabilities != null && !cursesAvailabilities.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
