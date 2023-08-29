@@ -506,7 +506,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbCorrectGivenAnswers"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbQuestionsEncountered"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/maxGameLevelReached"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/totalTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/totalTimeMin"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbDeaths"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbLevelsGenerated"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbFinishedLevels"/>

@@ -4,7 +4,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import exceptions.NonExistantLearnerPlayerException;
 //import io.swagger.annotations.Api;
 //import io.swagger.annotations.ApiResponse;
 import jakarta.servlet.ServletContext;
@@ -22,45 +21,45 @@ import managers.ModelsManager;
 
 /**
  * Paths : 
- * 	- http://localhost:8080/FrameworkAPI/store/learner/(learnerID)
- * 	- http://localhost:8080/FrameworkAPI/statistics/(learnerID) => default classroom is used in this case
+ * 	- http://localhost:8080/FrameworkAPI/coins/classroom/(classroomID)/learner/(learnerID)
+ * 	- http://localhost:8080/FrameworkAPI/coins/learner/(learnerID) => default classroom is used in this case
  * 
- * Resource that deals with learner-player items purchase and activation. 
+ * Resource that allows to set and get the current number of coins for a given learner
  * @author Bérénice LEMOINE
  */
 
-@Path("/store")
-@Produces(MediaType.APPLICATION_JSON)
-public class PurchaseActivationResource {
+@Path("/coins")
+@Produces(MediaType.TEXT_XML)
+public class CoinsResource {
 	
-	private LearnerPlayerManager manager;
+	private LearnerPlayerManager manager; 
 	
 	@GET
-	@Path("/learner/{playerID}")
+	@Path("/learner/{learnerID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getActivatedItems(@PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public String getCoins(@PathParam("learnerID") String learnerID, @Context ServletContext app) {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + Constant.DEFAULT_CONTEXT_FILE_NAME + ".xmi", true));
-		return manager.getItemsStatus(playerID).toJSONString();
+		return manager.getLearnerCoins(learnerID).toJSONString();
 	}
 	
 	@GET
-	@Path("/classroom/{classroomID}/learner/{playerID}")
+	@Path("/classroom/{classID}/learner/{learnerID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getActivatedItems(@PathParam("classroomID") String classID, @PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public String getCoins(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
-		return manager.getItemsStatus(playerID).toJSONString();
+		return manager.getLearnerCoins(learnerID).toJSONString();
 	}
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public String setActivatedItems(String jsonContent, @Context ServletContext app) {
+	public String setCoins(String jsonContent, @PathParam("learnerID") String learnerID, @Context ServletContext app) {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		JSONObject obj = new JSONObject();
 		try {
@@ -72,18 +71,6 @@ public class PurchaseActivationResource {
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
-		return manager.setItemsStatus(obj);
+		return manager.setLearnerCoins(obj);
 	}
-	
-/*	@GET
-	@Path("/{classID}/{learnerID}")
-	@Produces(MediaType.TEXT_XML)
-	public String generate(@PathParam("classID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
-		return generateDungeon2String(classID, learnerID, app);
-	}*/
-	
-	/***********************************/
-	/**          JOB METHODS          **/
-	/***********************************/
-	
 }

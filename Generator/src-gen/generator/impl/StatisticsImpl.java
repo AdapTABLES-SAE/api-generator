@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link generator.impl.StatisticsImpl#getNbCorrectGivenAnswers <em>Nb Correct Given Answers</em>}</li>
  *   <li>{@link generator.impl.StatisticsImpl#getNbQuestionsEncountered <em>Nb Questions Encountered</em>}</li>
  *   <li>{@link generator.impl.StatisticsImpl#getMaxGameLevelReached <em>Max Game Level Reached</em>}</li>
- *   <li>{@link generator.impl.StatisticsImpl#getTotalTime <em>Total Time</em>}</li>
+ *   <li>{@link generator.impl.StatisticsImpl#getTotalTimeMin <em>Total Time Min</em>}</li>
  *   <li>{@link generator.impl.StatisticsImpl#getNbDeaths <em>Nb Deaths</em>}</li>
  *   <li>{@link generator.impl.StatisticsImpl#getNbLevelsGenerated <em>Nb Levels Generated</em>}</li>
  *   <li>{@link generator.impl.StatisticsImpl#getNbFinishedLevels <em>Nb Finished Levels</em>}</li>
@@ -95,24 +95,24 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 	protected int maxGameLevelReached = MAX_GAME_LEVEL_REACHED_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTotalTime() <em>Total Time</em>}' attribute.
+	 * The default value of the '{@link #getTotalTimeMin() <em>Total Time Min</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTotalTime()
+	 * @see #getTotalTimeMin()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double TOTAL_TIME_EDEFAULT = 0.0;
+	protected static final int TOTAL_TIME_MIN_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getTotalTime() <em>Total Time</em>}' attribute.
+	 * The cached value of the '{@link #getTotalTimeMin() <em>Total Time Min</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTotalTime()
+	 * @see #getTotalTimeMin()
 	 * @generated
 	 * @ordered
 	 */
-	protected double totalTime = TOTAL_TIME_EDEFAULT;
+	protected int totalTimeMin = TOTAL_TIME_MIN_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getNbDeaths() <em>Nb Deaths</em>}' attribute.
@@ -304,8 +304,8 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getTotalTime() {
-		return totalTime;
+	public int getTotalTimeMin() {
+		return totalTimeMin;
 	}
 
 	/**
@@ -313,12 +313,12 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTotalTime(double newTotalTime) {
-		double oldTotalTime = totalTime;
-		totalTime = newTotalTime;
+	public void setTotalTimeMin(int newTotalTimeMin) {
+		int oldTotalTimeMin = totalTimeMin;
+		totalTimeMin = newTotalTimeMin;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.STATISTICS__TOTAL_TIME, oldTotalTime,
-					totalTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.STATISTICS__TOTAL_TIME_MIN,
+					oldTotalTimeMin, totalTimeMin));
 	}
 
 	/**
@@ -445,8 +445,8 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 			return getNbQuestionsEncountered();
 		case GeneratorPackage.STATISTICS__MAX_GAME_LEVEL_REACHED:
 			return getMaxGameLevelReached();
-		case GeneratorPackage.STATISTICS__TOTAL_TIME:
-			return getTotalTime();
+		case GeneratorPackage.STATISTICS__TOTAL_TIME_MIN:
+			return getTotalTimeMin();
 		case GeneratorPackage.STATISTICS__NB_DEATHS:
 			return getNbDeaths();
 		case GeneratorPackage.STATISTICS__NB_LEVELS_GENERATED:
@@ -478,8 +478,8 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 		case GeneratorPackage.STATISTICS__MAX_GAME_LEVEL_REACHED:
 			setMaxGameLevelReached((Integer) newValue);
 			return;
-		case GeneratorPackage.STATISTICS__TOTAL_TIME:
-			setTotalTime((Double) newValue);
+		case GeneratorPackage.STATISTICS__TOTAL_TIME_MIN:
+			setTotalTimeMin((Integer) newValue);
 			return;
 		case GeneratorPackage.STATISTICS__NB_DEATHS:
 			setNbDeaths((Integer) newValue);
@@ -517,8 +517,8 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 		case GeneratorPackage.STATISTICS__MAX_GAME_LEVEL_REACHED:
 			setMaxGameLevelReached(MAX_GAME_LEVEL_REACHED_EDEFAULT);
 			return;
-		case GeneratorPackage.STATISTICS__TOTAL_TIME:
-			setTotalTime(TOTAL_TIME_EDEFAULT);
+		case GeneratorPackage.STATISTICS__TOTAL_TIME_MIN:
+			setTotalTimeMin(TOTAL_TIME_MIN_EDEFAULT);
 			return;
 		case GeneratorPackage.STATISTICS__NB_DEATHS:
 			setNbDeaths(NB_DEATHS_EDEFAULT);
@@ -553,8 +553,8 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 			return nbQuestionsEncountered != NB_QUESTIONS_ENCOUNTERED_EDEFAULT;
 		case GeneratorPackage.STATISTICS__MAX_GAME_LEVEL_REACHED:
 			return maxGameLevelReached != MAX_GAME_LEVEL_REACHED_EDEFAULT;
-		case GeneratorPackage.STATISTICS__TOTAL_TIME:
-			return totalTime != TOTAL_TIME_EDEFAULT;
+		case GeneratorPackage.STATISTICS__TOTAL_TIME_MIN:
+			return totalTimeMin != TOTAL_TIME_MIN_EDEFAULT;
 		case GeneratorPackage.STATISTICS__NB_DEATHS:
 			return nbDeaths != NB_DEATHS_EDEFAULT;
 		case GeneratorPackage.STATISTICS__NB_LEVELS_GENERATED:
@@ -586,8 +586,8 @@ public class StatisticsImpl extends MinimalEObjectImpl.Container implements Stat
 		result.append(nbQuestionsEncountered);
 		result.append(", maxGameLevelReached: ");
 		result.append(maxGameLevelReached);
-		result.append(", totalTime: ");
-		result.append(totalTime);
+		result.append(", totalTimeMin: ");
+		result.append(totalTimeMin);
 		result.append(", nbDeaths: ");
 		result.append(nbDeaths);
 		result.append(", nbLevelsGenerated: ");

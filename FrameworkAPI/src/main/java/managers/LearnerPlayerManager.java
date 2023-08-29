@@ -1,4 +1,4 @@
-package api_code;
+package managers;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -29,7 +29,6 @@ import generator.impl.QuestionableFactResultImpl;
 import generator.impl.ResultsByTaskImpl;
 import generator.impl.ResultsImpl;
 import generator.impl.StatisticsImpl;
-import managers.ModelsManager;
 
 public class LearnerPlayerManager {
 
@@ -182,7 +181,7 @@ public class LearnerPlayerManager {
 			stats.put("nbQuestionsMeet", learner.getStatistics().getNbQuestionsEncountered());
 			stats.put("nbCorrectAnswers", learner.getStatistics().getNbCorrectGivenAnswers());
 			stats.put("maxLevelReached", learner.getStatistics().getMaxGameLevelReached());
-			stats.put("totalTime", learner.getStatistics().getTotalTime());
+			stats.put("totalTimeMin", learner.getStatistics().getTotalTimeMin());
 			
 		} catch (NonExistantLearnerPlayerException e) {
 			e.printStackTrace();
@@ -407,12 +406,41 @@ public class LearnerPlayerManager {
 		return count;
 	}
 	
+	@SuppressWarnings("unchecked")
+	public JSONObject getLearnerCoins(String learnerID) {
+		JSONObject coins = new JSONObject();
+		LearnerPlayer learnerPlayer;
+		try {
+			learnerPlayer = modelsManager.getLearnerPlayer(learnerID);
+			coins.put("balance", learnerPlayer.getProgression().getPlayerProgress().getCoins()); 
+		} catch (NonExistantLearnerPlayerException e) {
+			e.printStackTrace();
+		}
+		return coins;
+	}
+	
+	public String setLearnerCoins(JSONObject obj) {
+		/*
+		 * The total number of coins is not impacted because this call will only be used by cheat code 
+		 */
+		LearnerPlayer learnerPlayer;
+		try {
+			learnerPlayer = modelsManager.getLearnerPlayer((String) obj.get("learnerID"));
+			learnerPlayer.getProgression().getPlayerProgress().setCoins((int) (long) obj.get("newBalance"));
+		} catch (NonExistantLearnerPlayerException e) {
+			e.printStackTrace();
+		}
+		
+		modelsManager.saveContextModel();
+		return "Success";
+	}
+	
 	public String savePlayerResults(JSONObject obj) {
 		try {
 			LearnerPlayer player = modelsManager.getLearnerPlayer((String) obj.get("learnerID"));
 			player.getStatistics().setNbQuestionsEncountered(player.getStatistics().getNbQuestionsEncountered() + Long.valueOf((Long) obj.get("nbQuestionsMeet")).intValue());
 			player.getStatistics().setNbCorrectGivenAnswers(player.getStatistics().getNbCorrectGivenAnswers() + Long.valueOf((Long) obj.get("nbCorrectAnswers")).intValue());
-			player.getStatistics().setTotalTime(player.getStatistics().getTotalTime() + (double) obj.get("timeInSec"));
+			player.getStatistics().setTotalTimeMin(player.getStatistics().getTotalTimeMin() + (int) obj.get("timeInMin"));
 			
 			switch((String) obj.get("finishStatus")) {
 				case "DEAD": player.getStatistics().setNbDeaths(player.getStatistics().getNbDeaths() + 1);
@@ -422,7 +450,6 @@ public class LearnerPlayerManager {
 				player.getProgression().getPlayerProgress().setCurrentLevel(player.getProgression().getPlayerProgress().getCurrentLevel() + 1);
 				break;
 			default: player.getStatistics().setNbUnfinishedLevels(player.getStatistics().getNbUnfinishedLevels() + 1); // == HUB
-					 player.getProgression().getPlayerProgress().setCurrentLevel(1);
 			}
 			
 			if(player.getStatistics().getMaxGameLevelReached() < player.getProgression().getPlayerProgress().getCurrentLevel()) {
@@ -514,9 +541,9 @@ public class LearnerPlayerManager {
 	
 	private CurrentObjectiveLevel getCorrespondingCOL(String objectiveID, String levelID, String learnerID) throws NonExistantLearnerPlayerException {
 		for (CurrentObjectiveLevel col : modelsManager.getLearnerPlayer(learnerID).getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
-			/*System.out.println(col.getObjective().getID()+" "+col.getLevel().getID());
+			System.out.println(col.getObjective().getID()+" "+col.getLevel().getID());
 			System.out.println(col.getObjective().getID().equals(objectiveID));
-			System.out.println(col.getLevel().getID().equals(levelID));*/
+			System.out.println(col.getLevel().getID().equals(levelID));
 			if(col.getObjective().getID().equals(objectiveID) && col.getLevel().getID().equals(levelID)) {
 				return col;
 			}

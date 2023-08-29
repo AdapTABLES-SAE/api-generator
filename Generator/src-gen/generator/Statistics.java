@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.Statistics#getNbCorrectGivenAnswers <em>Nb Correct Given Answers</em>}</li>
  *   <li>{@link generator.Statistics#getNbQuestionsEncountered <em>Nb Questions Encountered</em>}</li>
  *   <li>{@link generator.Statistics#getMaxGameLevelReached <em>Max Game Level Reached</em>}</li>
- *   <li>{@link generator.Statistics#getTotalTime <em>Total Time</em>}</li>
+ *   <li>{@link generator.Statistics#getTotalTimeMin <em>Total Time Min</em>}</li>
  *   <li>{@link generator.Statistics#getNbDeaths <em>Nb Deaths</em>}</li>
  *   <li>{@link generator.Statistics#getNbLevelsGenerated <em>Nb Levels Generated</em>}</li>
  *   <li>{@link generator.Statistics#getNbFinishedLevels <em>Nb Finished Levels</em>}</li>
@@ -96,26 +96,26 @@ public interface Statistics extends EObject {
 	void setMaxGameLevelReached(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Total Time</b></em>' attribute.
+	 * Returns the value of the '<em><b>Total Time Min</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Total Time</em>' attribute.
-	 * @see #setTotalTime(double)
-	 * @see generator.GeneratorPackage#getStatistics_TotalTime()
+	 * @return the value of the '<em>Total Time Min</em>' attribute.
+	 * @see #setTotalTimeMin(int)
+	 * @see generator.GeneratorPackage#getStatistics_TotalTimeMin()
 	 * @model
 	 * @generated
 	 */
-	double getTotalTime();
+	int getTotalTimeMin();
 
 	/**
-	 * Sets the value of the '{@link generator.Statistics#getTotalTime <em>Total Time</em>}' attribute.
+	 * Sets the value of the '{@link generator.Statistics#getTotalTimeMin <em>Total Time Min</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Total Time</em>' attribute.
-	 * @see #getTotalTime()
+	 * @param value the new value of the '<em>Total Time Min</em>' attribute.
+	 * @see #getTotalTimeMin()
 	 * @generated
 	 */
-	void setTotalTime(double value);
+	void setTotalTimeMin(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Nb Deaths</b></em>' attribute.

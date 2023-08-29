@@ -3807,7 +3807,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getStatistics_TotalTime() {
+	public EAttribute getStatistics_TotalTimeMin() {
 		return (EAttribute) statisticsEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -4424,7 +4424,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(statisticsEClass, STATISTICS__NB_CORRECT_GIVEN_ANSWERS);
 		createEAttribute(statisticsEClass, STATISTICS__NB_QUESTIONS_ENCOUNTERED);
 		createEAttribute(statisticsEClass, STATISTICS__MAX_GAME_LEVEL_REACHED);
-		createEAttribute(statisticsEClass, STATISTICS__TOTAL_TIME);
+		createEAttribute(statisticsEClass, STATISTICS__TOTAL_TIME_MIN);
 		createEAttribute(statisticsEClass, STATISTICS__NB_DEATHS);
 		createEAttribute(statisticsEClass, STATISTICS__NB_LEVELS_GENERATED);
 		createEAttribute(statisticsEClass, STATISTICS__NB_FINISHED_LEVELS);
@@ -5432,8 +5432,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getStatistics_MaxGameLevelReached(), ecorePackage.getEInt(), "maxGameLevelReached", null, 0, 1,
 				Statistics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStatistics_TotalTime(), ecorePackage.getEDouble(), "totalTime", null, 0, 1, Statistics.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatistics_TotalTimeMin(), ecorePackage.getEInt(), "totalTimeMin", null, 0, 1,
+				Statistics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStatistics_NbDeaths(), ecorePackage.getEInt(), "nbDeaths", null, 0, 1, Statistics.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStatistics_NbLevelsGenerated(), ecorePackage.getEInt(), "nbLevelsGenerated", null, 0, 1,

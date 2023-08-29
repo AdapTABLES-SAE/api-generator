@@ -6334,13 +6334,13 @@ public interface GeneratorPackage extends EPackage {
 	int STATISTICS__MAX_GAME_LEVEL_REACHED = 2;
 
 	/**
-	 * The feature id for the '<em><b>Total Time</b></em>' attribute.
+	 * The feature id for the '<em><b>Total Time Min</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTICS__TOTAL_TIME = 3;
+	int STATISTICS__TOTAL_TIME_MIN = 3;
 
 	/**
 	 * The feature id for the '<em><b>Nb Deaths</b></em>' attribute.
@@ -10077,15 +10077,15 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getStatistics_MaxGameLevelReached();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.Statistics#getTotalTime <em>Total Time</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.Statistics#getTotalTimeMin <em>Total Time Min</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Total Time</em>'.
-	 * @see generator.Statistics#getTotalTime()
+	 * @return the meta object for the attribute '<em>Total Time Min</em>'.
+	 * @see generator.Statistics#getTotalTimeMin()
 	 * @see #getStatistics()
 	 * @generated
 	 */
-	EAttribute getStatistics_TotalTime();
+	EAttribute getStatistics_TotalTimeMin();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.Statistics#getNbDeaths <em>Nb Deaths</em>}'.
@@ -13134,12 +13134,12 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute STATISTICS__MAX_GAME_LEVEL_REACHED = eINSTANCE.getStatistics_MaxGameLevelReached();
 
 		/**
-		 * The meta object literal for the '<em><b>Total Time</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Total Time Min</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STATISTICS__TOTAL_TIME = eINSTANCE.getStatistics_TotalTime();
+		EAttribute STATISTICS__TOTAL_TIME_MIN = eINSTANCE.getStatistics_TotalTimeMin();
 
 		/**
 		 * The meta object literal for the '<em><b>Nb Deaths</b></em>' attribute feature.

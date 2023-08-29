@@ -1,4 +1,4 @@
-package api_code;
+package managers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +36,6 @@ import generator.impl.MTMembershipImpl;
 import generator.impl.MTRecontructionImpl;
 import generator.impl.MultipleChoiceImpl;
 import generator.impl.ObjectiveImpl;
-import managers.ModelsManager;
 
 public class PathManager {
 
@@ -51,6 +50,7 @@ public class PathManager {
 		JSONObject json = new JSONObject();
 		json.put("learningPathID", path.getID()); // TODO: define a default paths for this version 
 		json.put("objective", path.getObjectives().get(0).getID()); // TODO: define default objective 
+		json.put("levelID",  path.getObjectives().get(0).getLevels().get(0).getID()); // TODO: define default level 
 	
 		JSONObject setupParameters = new JSONObject();
 		setupParameters.put("buildingParameters", initialiseJSONBuildParameters(path.getObjectives().get(0), (MTLevel) path.getObjectives().get(0).getLevels().get(0)));
