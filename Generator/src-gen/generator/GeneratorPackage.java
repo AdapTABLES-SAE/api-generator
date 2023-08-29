@@ -471,22 +471,13 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM_TYPE__ELEMENT_POSITIONS = 1;
 
 	/**
-	 * The feature id for the '<em><b>For Entry</b></em>' attribute.
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE__FOR_ENTRY = 2;
-
-	/**
-	 * The feature id for the '<em><b>For Exit</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_TYPE__FOR_EXIT = 3;
+	int ROOM_TYPE__TYPE = 2;
 
 	/**
 	 * The number of structural features of the '<em>Room Type</em>' class.
@@ -495,7 +486,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_FEATURE_COUNT = 4;
+	int ROOM_TYPE_FEATURE_COUNT = 3;
 
 	/**
 	 * The operation id for the '<em>Get Directions</em>' operation.
@@ -507,13 +498,49 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM_TYPE___GET_DIRECTIONS = 0;
 
 	/**
+	 * The operation id for the '<em>Is Entry Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE___IS_ENTRY_ROOM_TYPE = 1;
+
+	/**
+	 * The operation id for the '<em>Is Exit Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE___IS_EXIT_ROOM_TYPE = 2;
+
+	/**
+	 * The operation id for the '<em>Is Question Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE___IS_QUESTION_ROOM_TYPE = 3;
+
+	/**
+	 * The operation id for the '<em>Is Trap Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE___IS_TRAP_ROOM_TYPE = 4;
+
+	/**
 	 * The number of operations of the '<em>Room Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_OPERATION_COUNT = 1;
+	int ROOM_TYPE_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.SmallRoomTypeImpl <em>Small Room Type</em>}' class.
@@ -544,22 +571,13 @@ public interface GeneratorPackage extends EPackage {
 	int SMALL_ROOM_TYPE__ELEMENT_POSITIONS = ROOM_TYPE__ELEMENT_POSITIONS;
 
 	/**
-	 * The feature id for the '<em><b>For Entry</b></em>' attribute.
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SMALL_ROOM_TYPE__FOR_ENTRY = ROOM_TYPE__FOR_ENTRY;
-
-	/**
-	 * The feature id for the '<em><b>For Exit</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SMALL_ROOM_TYPE__FOR_EXIT = ROOM_TYPE__FOR_EXIT;
+	int SMALL_ROOM_TYPE__TYPE = ROOM_TYPE__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Directions</b></em>' attribute list.
@@ -587,6 +605,42 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int SMALL_ROOM_TYPE___GET_DIRECTIONS = ROOM_TYPE___GET_DIRECTIONS;
+
+	/**
+	 * The operation id for the '<em>Is Entry Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMALL_ROOM_TYPE___IS_ENTRY_ROOM_TYPE = ROOM_TYPE___IS_ENTRY_ROOM_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Exit Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMALL_ROOM_TYPE___IS_EXIT_ROOM_TYPE = ROOM_TYPE___IS_EXIT_ROOM_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Question Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMALL_ROOM_TYPE___IS_QUESTION_ROOM_TYPE = ROOM_TYPE___IS_QUESTION_ROOM_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Trap Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMALL_ROOM_TYPE___IS_TRAP_ROOM_TYPE = ROOM_TYPE___IS_TRAP_ROOM_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Small Room Type</em>' class.
@@ -626,22 +680,13 @@ public interface GeneratorPackage extends EPackage {
 	int LARGE_ROOM_TYPE__ELEMENT_POSITIONS = ROOM_TYPE__ELEMENT_POSITIONS;
 
 	/**
-	 * The feature id for the '<em><b>For Entry</b></em>' attribute.
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LARGE_ROOM_TYPE__FOR_ENTRY = ROOM_TYPE__FOR_ENTRY;
-
-	/**
-	 * The feature id for the '<em><b>For Exit</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LARGE_ROOM_TYPE__FOR_EXIT = ROOM_TYPE__FOR_EXIT;
+	int LARGE_ROOM_TYPE__TYPE = ROOM_TYPE__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Directions</b></em>' attribute list.
@@ -669,6 +714,42 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int LARGE_ROOM_TYPE___GET_DIRECTIONS = ROOM_TYPE___GET_DIRECTIONS;
+
+	/**
+	 * The operation id for the '<em>Is Entry Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LARGE_ROOM_TYPE___IS_ENTRY_ROOM_TYPE = ROOM_TYPE___IS_ENTRY_ROOM_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Exit Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LARGE_ROOM_TYPE___IS_EXIT_ROOM_TYPE = ROOM_TYPE___IS_EXIT_ROOM_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Question Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LARGE_ROOM_TYPE___IS_QUESTION_ROOM_TYPE = ROOM_TYPE___IS_QUESTION_ROOM_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Trap Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LARGE_ROOM_TYPE___IS_TRAP_ROOM_TYPE = ROOM_TYPE___IS_TRAP_ROOM_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Large Room Type</em>' class.
@@ -4032,7 +4113,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementType()
 	 * @generated
 	 */
-	int ELEMENT_TYPE = 64;
+	int ELEMENT_TYPE = 91;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.EquipmentImpl <em>Equipment</em>}' class.
@@ -4429,22 +4510,13 @@ public interface GeneratorPackage extends EPackage {
 	int POSITIONED_ELEMENT__DISPLAYS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Element Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITIONED_ELEMENT__ELEMENT_TYPE = 4;
-
-	/**
 	 * The feature id for the '<em><b>Expected Answer</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_ELEMENT__EXPECTED_ANSWER = 5;
+	int POSITIONED_ELEMENT__EXPECTED_ANSWER = 4;
 
 	/**
 	 * The feature id for the '<em><b>Fact</b></em>' reference.
@@ -4453,7 +4525,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_ELEMENT__FACT = 6;
+	int POSITIONED_ELEMENT__FACT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Accepted Facts</b></em>' containment reference list.
@@ -4462,7 +4534,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_ELEMENT__ACCEPTED_FACTS = 7;
+	int POSITIONED_ELEMENT__ACCEPTED_FACTS = 6;
+
+	/**
+	 * The feature id for the '<em><b>Element Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_ELEMENT__ELEMENT_TYPE = 7;
 
 	/**
 	 * The number of structural features of the '<em>Positioned Element</em>' class.
@@ -4628,7 +4709,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAValue()
 	 * @generated
 	 */
-	int AVALUE = 73;
+	int AVALUE = 72;
 
 	/**
 	 * The number of structural features of the '<em>AValue</em>' class.
@@ -4769,78 +4850,6 @@ public interface GeneratorPackage extends EPackage {
 	int ENTRY_SOLUCE_PARAM_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE__SIZE = 0;
-
-	/**
-	 * The feature id for the '<em><b>ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE__ID = 1;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE__TYPE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Ability</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE__ABILITY = 3;
-
-	/**
-	 * The feature id for the '<em><b>Nb Displays</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE__NB_DISPLAYS = 4;
-
-	/**
-	 * The number of structural features of the '<em>Element Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE_FEATURE_COUNT = 5;
-
-	/**
-	 * The operation id for the '<em>Is Displayable Element</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE___IS_DISPLAYABLE_ELEMENT = 0;
-
-	/**
-	 * The number of operations of the '<em>Element Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_TYPE_OPERATION_COUNT = 1;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.DisplayImpl <em>Display</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4848,7 +4857,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDisplay()
 	 * @generated
 	 */
-	int DISPLAY = 65;
+	int DISPLAY = 64;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -4903,7 +4912,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAComponent()
 	 * @generated
 	 */
-	int ACOMPONENT = 66;
+	int ACOMPONENT = 65;
 
 	/**
 	 * The feature id for the '<em><b>Allowed Ability</b></em>' reference.
@@ -4949,7 +4958,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStructure()
 	 * @generated
 	 */
-	int STRUCTURE = 67;
+	int STRUCTURE = 66;
 
 	/**
 	 * The feature id for the '<em><b>Allowed Ability</b></em>' reference.
@@ -5013,7 +5022,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getComponent()
 	 * @generated
 	 */
-	int COMPONENT = 68;
+	int COMPONENT = 67;
 
 	/**
 	 * The feature id for the '<em><b>Allowed Ability</b></em>' reference.
@@ -5113,7 +5122,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuantity()
 	 * @generated
 	 */
-	int QUANTITY = 69;
+	int QUANTITY = 68;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5159,7 +5168,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getWantedAnswersParam()
 	 * @generated
 	 */
-	int WANTED_ANSWERS_PARAM = 70;
+	int WANTED_ANSWERS_PARAM = 69;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5196,7 +5205,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getExpectedAnswer()
 	 * @generated
 	 */
-	int EXPECTED_ANSWER = 71;
+	int EXPECTED_ANSWER = 70;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5233,7 +5242,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCorrectnessValue()
 	 * @generated
 	 */
-	int CORRECTNESS_VALUE = 72;
+	int CORRECTNESS_VALUE = 71;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -5270,7 +5279,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPositionedStructureElement()
 	 * @generated
 	 */
-	int POSITIONED_STRUCTURE_ELEMENT = 74;
+	int POSITIONED_STRUCTURE_ELEMENT = 73;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -5309,15 +5318,6 @@ public interface GeneratorPackage extends EPackage {
 	int POSITIONED_STRUCTURE_ELEMENT__DISPLAYS = POSITIONED_ELEMENT__DISPLAYS;
 
 	/**
-	 * The feature id for the '<em><b>Element Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITIONED_STRUCTURE_ELEMENT__ELEMENT_TYPE = POSITIONED_ELEMENT__ELEMENT_TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Expected Answer</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5343,6 +5343,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int POSITIONED_STRUCTURE_ELEMENT__ACCEPTED_FACTS = POSITIONED_ELEMENT__ACCEPTED_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Element Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_STRUCTURE_ELEMENT__ELEMENT_TYPE = POSITIONED_ELEMENT__ELEMENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Created Position</b></em>' containment reference.
@@ -5379,7 +5388,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getFactSolutionParam()
 	 * @generated
 	 */
-	int FACT_SOLUTION_PARAM = 75;
+	int FACT_SOLUTION_PARAM = 74;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5416,7 +5425,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getOrderingTask()
 	 * @generated
 	 */
-	int ORDERING_TASK = 76;
+	int ORDERING_TASK = 75;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -5543,7 +5552,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPrompt()
 	 * @generated
 	 */
-	int PROMPT = 77;
+	int PROMPT = 76;
 
 	/**
 	 * The feature id for the '<em><b>Prompt</b></em>' attribute.
@@ -5580,7 +5589,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getFactCorrectnessParam()
 	 * @generated
 	 */
-	int FACT_CORRECTNESS_PARAM = 78;
+	int FACT_CORRECTNESS_PARAM = 77;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5617,7 +5626,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGameplayTaskRelations()
 	 * @generated
 	 */
-	int GAMEPLAY_TASK_RELATIONS = 79;
+	int GAMEPLAY_TASK_RELATIONS = 78;
 
 	/**
 	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
@@ -5654,7 +5663,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getRelation()
 	 * @generated
 	 */
-	int RELATION = 80;
+	int RELATION = 79;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' attribute.
@@ -5709,7 +5718,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCondition()
 	 * @generated
 	 */
-	int CONDITION = 81;
+	int CONDITION = 80;
 
 	/**
 	 * The feature id for the '<em><b>Statement Types</b></em>' attribute list.
@@ -5773,7 +5782,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getQuestionGameplay()
 	 * @generated
 	 */
-	int QUESTION_GAMEPLAY = 82;
+	int QUESTION_GAMEPLAY = 81;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5882,7 +5891,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getNoQuestionGameplay()
 	 * @generated
 	 */
-	int NO_QUESTION_GAMEPLAY = 83;
+	int NO_QUESTION_GAMEPLAY = 82;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5955,7 +5964,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 84;
+	int SIZE = 83;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -5985,6 +5994,78 @@ public interface GeneratorPackage extends EPackage {
 	int SIZE_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE__SIZE = 0;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE__ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE__TYPE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Nb Displays</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE__NB_DISPLAYS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Ability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE__ABILITY = 4;
+
+	/**
+	 * The number of structural features of the '<em>Element Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE_FEATURE_COUNT = 5;
+
+	/**
+	 * The operation id for the '<em>Is Displayable Element</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE___IS_DISPLAYABLE_ELEMENT = 0;
+
+	/**
+	 * The number of operations of the '<em>Element Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_TYPE_OPERATION_COUNT = 1;
+
+	/**
 	 * The meta object id for the '{@link generator.impl.StatementElementTypeImpl <em>Statement Element Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5992,7 +6073,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStatementElementType()
 	 * @generated
 	 */
-	int STATEMENT_ELEMENT_TYPE = 85;
+	int STATEMENT_ELEMENT_TYPE = 84;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -6022,15 +6103,6 @@ public interface GeneratorPackage extends EPackage {
 	int STATEMENT_ELEMENT_TYPE__TYPE = ELEMENT_TYPE__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Ability</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATEMENT_ELEMENT_TYPE__ABILITY = ELEMENT_TYPE__ABILITY;
-
-	/**
 	 * The feature id for the '<em><b>Nb Displays</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6038,6 +6110,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int STATEMENT_ELEMENT_TYPE__NB_DISPLAYS = ELEMENT_TYPE__NB_DISPLAYS;
+
+	/**
+	 * The feature id for the '<em><b>Ability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATEMENT_ELEMENT_TYPE__ABILITY = ELEMENT_TYPE__ABILITY;
 
 	/**
 	 * The feature id for the '<em><b>For Structure</b></em>' attribute.
@@ -6083,7 +6164,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPlayerProgress()
 	 * @generated
 	 */
-	int PLAYER_PROGRESS = 86;
+	int PLAYER_PROGRESS = 85;
 
 	/**
 	 * The feature id for the '<em><b>Current Level</b></em>' attribute.
@@ -6138,7 +6219,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLearnerProgress()
 	 * @generated
 	 */
-	int LEARNER_PROGRESS = 87;
+	int LEARNER_PROGRESS = 86;
 
 	/**
 	 * The feature id for the '<em><b>Currentobjectivelevels</b></em>' containment reference list.
@@ -6175,7 +6256,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getItem()
 	 * @generated
 	 */
-	int ITEM = 88;
+	int ITEM = 87;
 
 	/**
 	 * The feature id for the '<em><b>Bought</b></em>' attribute.
@@ -6230,7 +6311,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getItems()
 	 * @generated
 	 */
-	int ITEMS = 89;
+	int ITEMS = 88;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
@@ -6267,7 +6348,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLearnerPlayers()
 	 * @generated
 	 */
-	int LEARNER_PLAYERS = 90;
+	int LEARNER_PLAYERS = 89;
 
 	/**
 	 * The feature id for the '<em><b>Learner Players</b></em>' containment reference list.
@@ -6304,7 +6385,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStatistics()
 	 * @generated
 	 */
-	int STATISTICS = 91;
+	int STATISTICS = 90;
 
 	/**
 	 * The feature id for the '<em><b>Nb Correct Given Answers</b></em>' attribute.
@@ -6534,6 +6615,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	int ESTATEMENT_TYPE = 104;
+
+	/**
+	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.ERoomType
+	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
+	 * @generated
+	 */
+	int EROOM_TYPE = 105;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -6892,26 +6983,15 @@ public interface GeneratorPackage extends EPackage {
 	EReference getRoomType_ElementPositions();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.RoomType#isForEntry <em>For Entry</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.RoomType#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>For Entry</em>'.
-	 * @see generator.RoomType#isForEntry()
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see generator.RoomType#getType()
 	 * @see #getRoomType()
 	 * @generated
 	 */
-	EAttribute getRoomType_ForEntry();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.RoomType#isForExit <em>For Exit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>For Exit</em>'.
-	 * @see generator.RoomType#isForExit()
-	 * @see #getRoomType()
-	 * @generated
-	 */
-	EAttribute getRoomType_ForExit();
+	EAttribute getRoomType_Type();
 
 	/**
 	 * Returns the meta object for the '{@link generator.RoomType#getDirections() <em>Get Directions</em>}' operation.
@@ -6922,6 +7002,46 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRoomType__GetDirections();
+
+	/**
+	 * Returns the meta object for the '{@link generator.RoomType#isEntryRoomType() <em>Is Entry Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Entry Room Type</em>' operation.
+	 * @see generator.RoomType#isEntryRoomType()
+	 * @generated
+	 */
+	EOperation getRoomType__IsEntryRoomType();
+
+	/**
+	 * Returns the meta object for the '{@link generator.RoomType#isExitRoomType() <em>Is Exit Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Exit Room Type</em>' operation.
+	 * @see generator.RoomType#isExitRoomType()
+	 * @generated
+	 */
+	EOperation getRoomType__IsExitRoomType();
+
+	/**
+	 * Returns the meta object for the '{@link generator.RoomType#isQuestionRoomType() <em>Is Question Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Question Room Type</em>' operation.
+	 * @see generator.RoomType#isQuestionRoomType()
+	 * @generated
+	 */
+	EOperation getRoomType__IsQuestionRoomType();
+
+	/**
+	 * Returns the meta object for the '{@link generator.RoomType#isTrapRoomType() <em>Is Trap Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Trap Room Type</em>' operation.
+	 * @see generator.RoomType#isTrapRoomType()
+	 * @generated
+	 */
+	EOperation getRoomType__IsTrapRoomType();
 
 	/**
 	 * Returns the meta object for class '{@link generator.SmallRoomType <em>Small Room Type</em>}'.
@@ -9164,17 +9284,6 @@ public interface GeneratorPackage extends EPackage {
 	EReference getPositionedElement_Displays();
 
 	/**
-	 * Returns the meta object for the reference '{@link generator.PositionedElement#getElementType <em>Element Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Element Type</em>'.
-	 * @see generator.PositionedElement#getElementType()
-	 * @see #getPositionedElement()
-	 * @generated
-	 */
-	EReference getPositionedElement_ElementType();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link generator.PositionedElement#getExpectedAnswer <em>Expected Answer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9206,6 +9315,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPositionedElement_AcceptedFacts();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.PositionedElement#getElementType <em>Element Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Element Type</em>'.
+	 * @see generator.PositionedElement#getElementType()
+	 * @see #getPositionedElement()
+	 * @generated
+	 */
+	EReference getPositionedElement_ElementType();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Parameter <em>Parameter</em>}'.
@@ -10273,6 +10393,16 @@ public interface GeneratorPackage extends EPackage {
 	EEnum getEStatementType();
 
 	/**
+	 * Returns the meta object for enum '{@link generator.ERoomType <em>ERoom Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ERoom Type</em>'.
+	 * @see generator.ERoomType
+	 * @generated
+	 */
+	EEnum getERoomType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10575,20 +10705,12 @@ public interface GeneratorPackage extends EPackage {
 		EReference ROOM_TYPE__ELEMENT_POSITIONS = eINSTANCE.getRoomType_ElementPositions();
 
 		/**
-		 * The meta object literal for the '<em><b>For Entry</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROOM_TYPE__FOR_ENTRY = eINSTANCE.getRoomType_ForEntry();
-
-		/**
-		 * The meta object literal for the '<em><b>For Exit</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ROOM_TYPE__FOR_EXIT = eINSTANCE.getRoomType_ForExit();
+		EAttribute ROOM_TYPE__TYPE = eINSTANCE.getRoomType_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Directions</b></em>' operation.
@@ -10597,6 +10719,38 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ROOM_TYPE___GET_DIRECTIONS = eINSTANCE.getRoomType__GetDirections();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Entry Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_TYPE___IS_ENTRY_ROOM_TYPE = eINSTANCE.getRoomType__IsEntryRoomType();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Exit Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_TYPE___IS_EXIT_ROOM_TYPE = eINSTANCE.getRoomType__IsExitRoomType();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Question Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_TYPE___IS_QUESTION_ROOM_TYPE = eINSTANCE.getRoomType__IsQuestionRoomType();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Trap Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_TYPE___IS_TRAP_ROOM_TYPE = eINSTANCE.getRoomType__IsTrapRoomType();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.SmallRoomTypeImpl <em>Small Room Type</em>}' class.
@@ -12378,14 +12532,6 @@ public interface GeneratorPackage extends EPackage {
 		EReference POSITIONED_ELEMENT__DISPLAYS = eINSTANCE.getPositionedElement_Displays();
 
 		/**
-		 * The meta object literal for the '<em><b>Element Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference POSITIONED_ELEMENT__ELEMENT_TYPE = eINSTANCE.getPositionedElement_ElementType();
-
-		/**
 		 * The meta object literal for the '<em><b>Expected Answer</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12408,6 +12554,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference POSITIONED_ELEMENT__ACCEPTED_FACTS = eINSTANCE.getPositionedElement_AcceptedFacts();
+
+		/**
+		 * The meta object literal for the '<em><b>Element Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POSITIONED_ELEMENT__ELEMENT_TYPE = eINSTANCE.getPositionedElement_ElementType();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ParameterImpl <em>Parameter</em>}' class.
@@ -13310,6 +13464,16 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ESTATEMENT_TYPE = eINSTANCE.getEStatementType();
+
+		/**
+		 * The meta object literal for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.ERoomType
+		 * @see generator.impl.GeneratorPackageImpl#getERoomType()
+		 * @generated
+		 */
+		EEnum EROOM_TYPE = eINSTANCE.getERoomType();
 
 	}
 

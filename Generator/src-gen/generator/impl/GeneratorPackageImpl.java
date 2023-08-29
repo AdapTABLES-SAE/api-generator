@@ -757,6 +757,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	private EEnum eStatementTypeEEnum = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eRoomTypeEEnum = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -1125,17 +1132,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoomType_ForEntry() {
+	public EAttribute getRoomType_Type() {
 		return (EAttribute) roomTypeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRoomType_ForExit() {
-		return (EAttribute) roomTypeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1145,6 +1143,42 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EOperation getRoomType__GetDirections() {
 		return roomTypeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRoomType__IsEntryRoomType() {
+		return roomTypeEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRoomType__IsExitRoomType() {
+		return roomTypeEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRoomType__IsQuestionRoomType() {
+		return roomTypeEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRoomType__IsTrapRoomType() {
+		return roomTypeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -2773,7 +2807,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EReference getElementType_Ability() {
-		return (EReference) elementTypeEClass.getEStructuralFeatures().get(3);
+		return (EReference) elementTypeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2782,7 +2816,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EAttribute getElementType_NbDisplays() {
-		return (EAttribute) elementTypeEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) elementTypeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3033,7 +3067,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionedElement_ElementType() {
+	public EReference getPositionedElement_ExpectedAnswer() {
 		return (EReference) positionedElementEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -3042,7 +3076,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionedElement_ExpectedAnswer() {
+	public EReference getPositionedElement_Fact() {
 		return (EReference) positionedElementEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -3051,7 +3085,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionedElement_Fact() {
+	public EReference getPositionedElement_AcceptedFacts() {
 		return (EReference) positionedElementEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -3060,7 +3094,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionedElement_AcceptedFacts() {
+	public EReference getPositionedElement_ElementType() {
 		return (EReference) positionedElementEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -3978,6 +4012,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getERoomType() {
+		return eRoomTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GeneratorFactory getGeneratorFactory() {
 		return (GeneratorFactory) getEFactoryInstance();
 	}
@@ -4041,9 +4084,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		roomTypeEClass = createEClass(ROOM_TYPE);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__NAME);
 		createEReference(roomTypeEClass, ROOM_TYPE__ELEMENT_POSITIONS);
-		createEAttribute(roomTypeEClass, ROOM_TYPE__FOR_ENTRY);
-		createEAttribute(roomTypeEClass, ROOM_TYPE__FOR_EXIT);
+		createEAttribute(roomTypeEClass, ROOM_TYPE__TYPE);
 		createEOperation(roomTypeEClass, ROOM_TYPE___GET_DIRECTIONS);
+		createEOperation(roomTypeEClass, ROOM_TYPE___IS_ENTRY_ROOM_TYPE);
+		createEOperation(roomTypeEClass, ROOM_TYPE___IS_EXIT_ROOM_TYPE);
+		createEOperation(roomTypeEClass, ROOM_TYPE___IS_QUESTION_ROOM_TYPE);
+		createEOperation(roomTypeEClass, ROOM_TYPE___IS_TRAP_ROOM_TYPE);
 
 		smallRoomTypeEClass = createEClass(SMALL_ROOM_TYPE);
 		createEAttribute(smallRoomTypeEClass, SMALL_ROOM_TYPE__DIRECTIONS);
@@ -4297,10 +4343,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__POSITION);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__CORRECTNESS);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__DISPLAYS);
-		createEReference(positionedElementEClass, POSITIONED_ELEMENT__ELEMENT_TYPE);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__EXPECTED_ANSWER);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__FACT);
 		createEReference(positionedElementEClass, POSITIONED_ELEMENT__ACCEPTED_FACTS);
+		createEReference(positionedElementEClass, POSITIONED_ELEMENT__ELEMENT_TYPE);
 
 		parameterEClass = createEClass(PARAMETER);
 		createEReference(parameterEClass, PARAMETER__VALUE);
@@ -4319,14 +4365,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		entrySoluceParamEClass = createEClass(ENTRY_SOLUCE_PARAM);
 		createEAttribute(entrySoluceParamEClass, ENTRY_SOLUCE_PARAM__STATE);
-
-		elementTypeEClass = createEClass(ELEMENT_TYPE);
-		createEAttribute(elementTypeEClass, ELEMENT_TYPE__SIZE);
-		createEAttribute(elementTypeEClass, ELEMENT_TYPE__ID);
-		createEAttribute(elementTypeEClass, ELEMENT_TYPE__TYPE);
-		createEReference(elementTypeEClass, ELEMENT_TYPE__ABILITY);
-		createEAttribute(elementTypeEClass, ELEMENT_TYPE__NB_DISPLAYS);
-		createEOperation(elementTypeEClass, ELEMENT_TYPE___IS_DISPLAYABLE_ELEMENT);
 
 		displayEClass = createEClass(DISPLAY);
 		createEAttribute(displayEClass, DISPLAY__INTERACTIVE);
@@ -4431,6 +4469,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(statisticsEClass, STATISTICS__NB_UNFINISHED_LEVELS);
 		createEAttribute(statisticsEClass, STATISTICS__TOTAL_COINS);
 
+		elementTypeEClass = createEClass(ELEMENT_TYPE);
+		createEAttribute(elementTypeEClass, ELEMENT_TYPE__SIZE);
+		createEAttribute(elementTypeEClass, ELEMENT_TYPE__ID);
+		createEAttribute(elementTypeEClass, ELEMENT_TYPE__TYPE);
+		createEAttribute(elementTypeEClass, ELEMENT_TYPE__NB_DISPLAYS);
+		createEReference(elementTypeEClass, ELEMENT_TYPE__ABILITY);
+		createEOperation(elementTypeEClass, ELEMENT_TYPE___IS_DISPLAYABLE_ELEMENT);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -4445,6 +4491,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		eCorrectnessEEnum = createEEnum(ECORRECTNESS);
 		eBoundaryEEnum = createEEnum(EBOUNDARY);
 		eStatementTypeEEnum = createEEnum(ESTATEMENT_TYPE);
+		eRoomTypeEEnum = createEEnum(EROOM_TYPE);
 	}
 
 	/**
@@ -4476,7 +4523,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				.getEPackage(XMLTypePackage.eNS_URI);
 
 		// Create type parameters
-		addETypeParameter(elementTypeEClass, "T");
 
 		// Set bounds for type parameters
 
@@ -4612,12 +4658,22 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getRoomType_ElementPositions(), this.getPosition(), null, "elementPositions", null, 0, -1,
 				RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRoomType_ForEntry(), ecorePackage.getEBoolean(), "forEntry", "false", 0, 1, RoomType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRoomType_ForExit(), ecorePackage.getEBoolean(), "forExit", "false", 0, 1, RoomType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoomType_Type(), this.getERoomType(), "type", "QUESTION", 0, 1, RoomType.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getRoomType__GetDirections(), this.getDirections(), "getDirections", 0, -1, IS_UNIQUE,
+				IS_ORDERED);
+
+		initEOperation(getRoomType__IsEntryRoomType(), ecorePackage.getEBoolean(), "isEntryRoomType", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		initEOperation(getRoomType__IsExitRoomType(), ecorePackage.getEBoolean(), "isExitRoomType", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		initEOperation(getRoomType__IsQuestionRoomType(), ecorePackage.getEBoolean(), "isQuestionRoomType", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getRoomType__IsTrapRoomType(), ecorePackage.getEBoolean(), "isTrapRoomType", 0, 1, IS_UNIQUE,
 				IS_ORDERED);
 
 		initEClass(smallRoomTypeEClass, SmallRoomType.class, "SmallRoomType", !IS_ABSTRACT, !IS_INTERFACE,
@@ -5176,9 +5232,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getPositionedElement_Displays(), this.getDisplay(), null, "displays", null, 0, -1,
 				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPositionedElement_ElementType(), this.getElementType(), null, "elementType", null, 1, 1,
-				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPositionedElement_ExpectedAnswer(), this.getExpectedAnswer(), null, "expectedAnswer", null, 0,
 				-1, PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5188,6 +5241,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getPositionedElement_AcceptedFacts(), this.getFactSolutionParam(), null, "acceptedFacts", null,
 				0, -1, PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPositionedElement_ElementType(), this.getElementType(), null, "elementType", null, 0, 1,
+				PositionedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parameterEClass, Parameter.class, "Parameter", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5221,23 +5277,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEntrySoluceParam_State(), this.getECorrectness(), "state", null, 0, 1, EntrySoluceParam.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(elementTypeEClass, ElementType.class, "ElementType", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getElementType_Size(), this.getElementSize(), "size", null, 0, 1, ElementType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElementType_ID(), ecorePackage.getEString(), "ID", null, 0, 1, ElementType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElementType_Type(), ecorePackage.getEString(), "type", "", 0, 1, ElementType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElementType_Ability(), this.getAbility(), null, "ability", null, 0, 1, ElementType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElementType_NbDisplays(), ecorePackage.getEInt(), "nbDisplays", null, 0, 1, ElementType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getElementType__IsDisplayableElement(), ecorePackage.getEBoolean(), "isDisplayableElement", 0, 1,
-				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(displayEClass, Display.class, "Display", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDisplay_Interactive(), ecorePackage.getEBoolean(), "interactive", null, 0, 1, Display.class,
@@ -5449,6 +5488,23 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getStatistics_TotalCoins(), ecorePackage.getEInt(), "totalCoins", null, 0, 1, Statistics.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(elementTypeEClass, ElementType.class, "ElementType", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getElementType_Size(), this.getElementSize(), "size", null, 0, 1, ElementType.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementType_ID(), ecorePackage.getEString(), "ID", null, 0, 1, ElementType.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementType_Type(), ecorePackage.getEString(), "type", null, 0, 1, ElementType.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementType_NbDisplays(), ecorePackage.getEInt(), "nbDisplays", null, 0, 1, ElementType.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElementType_Ability(), this.getAbility(), null, "ability", null, 0, 1, ElementType.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getElementType__IsDisplayableElement(), ecorePackage.getEBoolean(), "isDisplayableElement", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");
 		addEEnumLiteral(directionsEEnum, Directions.SOUTH);
@@ -5533,6 +5589,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(eStatementTypeEEnum, EStatementType.CLASSIC);
 		addEEnumLiteral(eStatementTypeEEnum, EStatementType.GRAPHIC);
 		addEEnumLiteral(eStatementTypeEEnum, EStatementType.TO_FILL_IN);
+
+		initEEnum(eRoomTypeEEnum, ERoomType.class, "ERoomType");
+		addEEnumLiteral(eRoomTypeEEnum, ERoomType.ENTRY);
+		addEEnumLiteral(eRoomTypeEEnum, ERoomType.EXIT);
+		addEEnumLiteral(eRoomTypeEEnum, ERoomType.QUESTION);
+		addEEnumLiteral(eRoomTypeEEnum, ERoomType.TRAP);
 
 		// Create resource
 		createResource(eNS_URI);

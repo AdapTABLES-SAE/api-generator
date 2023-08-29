@@ -109,7 +109,7 @@ public class PathManager {
 		}
 		if(task instanceof MTIdentificationImpl) {
 			obj.put("nbFacts", task.getNbFacts());
-			obj.put("sourceVariation", ((MTIdentificationImpl) task).getTarget());
+			obj.put("sourceVariation", ((MTIdentificationImpl) task).getTarget().getName());
 			obj.put("taskType", "ID");
 		}
 		if(task instanceof MTMembershipImpl) {
@@ -198,7 +198,8 @@ public class PathManager {
 		level.setID(levelName);
 		
 		String jsonElem = (String) buildingParams.get("leftOperand");
-		TableBuild build = jsonElem.equals("TABLE")? TableBuild.TABLE_OPERAND: jsonElem.equals("OPERAND")? TableBuild.OPERAND_TABLE: TableBuild.MIX;
+		TableBuild build = TableBuild.valueOf(jsonElem); 
+		// jsonElem.equals("TABLE")? TableBuild.TABLE_OPERAND: jsonElem.equals("OPERAND")? TableBuild.OPERAND_TABLE: TableBuild.MIX;
 		jsonElem = (String) buildingParams.get("resultLocation");
 		ResultPosition resPosition = ResultPosition.valueOf(jsonElem);
 		

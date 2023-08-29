@@ -387,11 +387,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public <T> Adapter caseElementType(ElementType<T> object) {
-			return createElementTypeAdapter();
-		}
-
-		@Override
 		public Adapter caseDisplay(Display object) {
 			return createDisplayAdapter();
 		}
@@ -524,6 +519,11 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseStatistics(Statistics object) {
 			return createStatisticsAdapter();
+		}
+
+		@Override
+		public Adapter caseElementType(ElementType object) {
+			return createElementTypeAdapter();
 		}
 
 		@Override

@@ -283,6 +283,7 @@ public class GridManager {
 	 * @return An association between each verified entryDirection and their possible exits
 	 */
  	public LinearRoomOrientations getAllowedDirections(Coordinate actualCoordinates, Directions theOriginDirection){
+ 		System.out.println("origin "+theOriginDirection);
  		Set<Directions> entryDirections = directionManager.getOppositeDirections().get(theOriginDirection);
  		LinearRoomOrientations roomOrientations = new LinearRoomOrientations(); // Possible entry to possible exits 
 		Map<GridPositions, Boolean> gridPosOccupations = computesGridPositionsOccupied(actualCoordinates);

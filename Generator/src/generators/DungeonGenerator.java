@@ -15,7 +15,9 @@ import generator.Dungeon;
 import generator.DungeonMode;
 import generator.ElementSize;
 import generator.ElementType;
+import generator.NoQuestionGameplay;
 import generator.Position;
+import generator.QuestionGameplay;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
@@ -33,7 +35,7 @@ import structures.NeighborAccess;
 import structures.RoomElements;
 
 public class DungeonGenerator {
-	private Dungeon generatedDungeon; 
+	private Dungeon generatedDungeon; // TODO : change algorithms 
 	private ModelsManager modelAccess;
 	
 	
@@ -88,7 +90,7 @@ public class DungeonGenerator {
 		selectableRooms.add(new LabyrinthineRoom(originRoom));		
 		while(dungeonRooms.size() < (nbRooms + 1) && !selectableRooms.isEmpty()) {
 			LabyrinthineRoom randomStartingRoom = chooseEntryRoomForNewPathIn(selectableRooms);
-			LabyrinthineRoom aRoom = createNewRoomFrom(randomStartingRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size()), false);
+			LabyrinthineRoom aRoom = createNewRoomFrom(randomStartingRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size()));
 			if(aRoom != null) {
 				dungeonRooms.add(aRoom);
 				selectableRooms.add(aRoom);
@@ -110,7 +112,7 @@ public class DungeonGenerator {
 		LabyrinthineRoom exit = null;
 		while (exit == null) {
 			LabyrinthineRoom furthest = findFurthestFromEntryRoomEuclidianDistanceWith(dungeonRoomTemps);
-			exit = createNewRoomFrom(furthest, dungeonElements.getElementsOfRoom(dungeonRooms.size()), true);
+			exit = createNewRoomFrom(furthest, dungeonElements.getElementsOfRoom(dungeonRooms.size()));
 			dungeonRoomTemps.remove(furthest);
 		}
 		return exit;
@@ -152,7 +154,7 @@ public class DungeonGenerator {
 		}
 	}
 	
-	private LabyrinthineRoom createNewRoomFrom(LabyrinthineRoom originRoom, RoomElements roomElements, boolean isExitRoom) {
+	private LabyrinthineRoom createNewRoomFrom(LabyrinthineRoom originRoom, RoomElements roomElements/*, boolean isExitRoom*/) {
 		Directions originRoomAvailableDirection = originRoom.getAvailableExit(gridManager);
 
 		if(originRoomAvailableDirection.equals(Directions.NONE)) { return null; }
@@ -162,7 +164,7 @@ public class DungeonGenerator {
 		Directions entry = null;
 		while(roomType == null && !allowedDirections.isEmpty()) {
 			entry = chooseEntryDirection(allowedDirections);
-			roomType = getCompatibleRoomType(entry, roomElements, isExitRoom); 
+			roomType = getCompatibleRoomType(entry, roomElements); 
 			if(roomType == null) {
 				allowedDirections.remove(entry);
 			}
@@ -205,12 +207,12 @@ public class DungeonGenerator {
 	 * @param entry
 	 * @return Valid RoomType
 	 */
-	private RoomType getCompatibleRoomType(Directions entry, RoomElements roomElements, boolean isExitRoom) {
-		return getCompatibleRoomType(entry, Directions.NONE, roomElements, isExitRoom);
+	private RoomType getCompatibleRoomType(Directions entry, RoomElements roomElements) {
+		return getCompatibleRoomType(entry, Directions.NONE, roomElements);
 	}
 	
 	private Room createEntryRoomLabyrinthine() {
-		List<RoomType> rts = getRoomTypesForEntry();
+		List<RoomType> rts = getEntryRoomTypes();
 		RoomType rt = rts.get(random.nextInt(rts.size()));	
 		dungeonElements.getElementsOfRoom(0).setEntry(true);
 		return createRoom(0, 0, rt, dungeonElements.getElementsOfRoom(0), null, null, Directions.NONE);
@@ -279,7 +281,7 @@ public class DungeonGenerator {
 	}
 	
 	private StructureChosenRT chooseRoomType(LinearRoomOrientations eligibleRoomOrientations, RoomElements roomElements, boolean isExitRoom) {
-		List<Directions> chosenEntries = new ArrayList<>(); // There is a problem here 
+		List<Directions> chosenEntries = new ArrayList<>(); 
 		Directions entry = null; 
 		Directions exit = null;
 		RoomType roomType = null;
@@ -292,7 +294,7 @@ public class DungeonGenerator {
 				}else {
 					exit = Directions.NONE;
 				}
-				roomType = getCompatibleRoomType(entry, exit, roomElements, isExitRoom); 
+				roomType = getCompatibleRoomType(entry, exit, roomElements); 
 			}
 		}
 				
@@ -330,7 +332,7 @@ public class DungeonGenerator {
 	 * @return an entry Room
 	 */
 	private Room createEntryRoomLinear() {
-		List<RoomType> rts = getRoomTypesForEntry();
+		List<RoomType> rts = getEntryRoomTypes();
 		RoomType rt = rts.get(random.nextInt(rts.size()));		
 		dungeonElements.getElementsOfRoom(0).setEntry(true);
 		return createRoom(0, 0, rt, dungeonElements.getElementsOfRoom(0), null, null, rt.getDirections().get(0));
@@ -340,12 +342,11 @@ public class DungeonGenerator {
 	/*     COMMON DUNGEON GENERATIION METHODS     */
 	/* ****************************************** */
 	
-	private List<RoomType> getRoomTypesForNormalRooms(){
+	private List<RoomType> getQuestionRoomTypes(){
 		List<RoomType> roomtypes = new ArrayList<>();
-		
-		for (RoomType roomType : modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes()) {
-			if(!roomType.isForEntry() && !roomType.isForExit()) {
-				roomtypes.add(roomType);
+		for (RoomType roomtype : modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes()) {
+			if(roomtype.isQuestionRoomType()) {
+				roomtypes.add(roomtype);
 			}
 		}
 		return roomtypes;
@@ -357,13 +358,13 @@ public class DungeonGenerator {
 	 * @param exit
 	 * @return Valid RoomType
 	 */
-	private RoomType getCompatibleRoomType(Directions entry, Directions exit, RoomElements roomElements, boolean isExitRoom) {
+	private RoomType getCompatibleRoomType(Directions entry, Directions exit, RoomElements roomElements) {
 		List<RoomType> roomTypes; 
-		if(!isExitRoom) {
-			roomTypes = getRoomTypesForNormalRooms();
-		} else {
-			roomTypes = getRoomTypesForExit();
-		}
+		
+		if(roomElements.getGameplay() instanceof QuestionGameplay) { roomTypes = getQuestionRoomTypes(); }
+		else if(roomElements.getGameplay() instanceof NoQuestionGameplay){ roomTypes = getTrapRoomTypes(); }
+		else if(roomElements.isExit()) { roomTypes = getExitRoomTypes(); }
+		else { roomTypes = getEntryRoomTypes(); }
 		
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
 			//System.out.println("entry: "+entry+" exit: "+exit+" roomtype: "+roomType.getName()+" "+dungeonElements.getElementsOfRoom(roomElements));
@@ -500,24 +501,34 @@ public class DungeonGenerator {
 	 * Get the RoomTypes with one access/direction only
 	 * @return valid RoomTypes
 	 */
-	private List<RoomType> getRoomTypesForEntry() {
-		List<RoomType> rts = new ArrayList<>();
-		for (RoomType rt : modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes()) {
-			if(rt.isForEntry()) {
-				rts.add(rt);
+	private List<RoomType> getEntryRoomTypes() {
+		List<RoomType> roomtypes = new ArrayList<>();
+		for (RoomType roomtype : modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes()) {
+			if(roomtype.isEntryRoomType()) {
+				roomtypes.add(roomtype);
 			}
 		}
-		return rts;
+		return roomtypes;
 	}
 	
-	private List<RoomType> getRoomTypesForExit() {
-		List<RoomType> rts = new ArrayList<>();
-		for (RoomType rt : modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes()) {
-			if(rt.isForExit()) {
-				rts.add(rt);
+	private List<RoomType> getTrapRoomTypes(){
+		List<RoomType> roomtypes = new ArrayList<>();
+		for (RoomType roomtype : modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes()) {
+			if(roomtype.isTrapRoomType()) {
+				roomtypes.add(roomtype);
 			}
 		}
-		return rts;
+		return roomtypes;
+	}
+	
+	private List<RoomType> getExitRoomTypes() {
+		List<RoomType> roomtypes = new ArrayList<>();
+		for (RoomType roomtype : modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes()) {
+			if(roomtype.isExitRoomType()) {
+				roomtypes.add(roomtype);
+			}
+		}
+		return roomtypes;
 	}
 	
 	/* ****************************************** */

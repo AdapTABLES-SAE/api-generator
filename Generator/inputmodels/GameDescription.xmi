@@ -8,25 +8,25 @@
     <roomtypes
         xsi:type="generator:SmallRoomType"
         name="RegularRoomS"
-        forEntry="true">
+        type="ENTRY">
       <directions>SOUTH</directions>
     </roomtypes>
     <roomtypes
         xsi:type="generator:SmallRoomType"
         name="RegularRoomN"
-        forEntry="true">
+        type="ENTRY">
       <directions>NORTH</directions>
     </roomtypes>
     <roomtypes
         xsi:type="generator:SmallRoomType"
         name="RegularRoomE"
-        forEntry="true">
+        type="ENTRY">
       <directions>EAST</directions>
     </roomtypes>
     <roomtypes
         xsi:type="generator:SmallRoomType"
         name="RegularRoomW"
-        forEntry="true">
+        type="ENTRY">
       <directions>WEST</directions>
     </roomtypes>
     <roomtypes
@@ -176,7 +176,7 @@
     <roomtypes
         xsi:type="generator:SmallRoomType"
         name="ExitRoom1"
-        forExit="true">
+        type="EXIT">
       <directions>SOUTH</directions>
       <directions>EAST</directions>
       <directions>NORTH</directions>
@@ -525,6 +525,28 @@
       <elementPositions
           size="MEDIUM"
           ID="POSM8"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RoomTrap"
+        type="TRAP">
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM1"/>
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          ID="POS3"/>
+      <elementPositions
+          ID="POS4"/>
+      <elementPositions
+          ID="POS5"/>
       <directions>SOUTH</directions>
       <directions>EAST</directions>
       <directions>NORTH</directions>

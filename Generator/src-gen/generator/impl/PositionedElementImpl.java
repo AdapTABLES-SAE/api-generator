@@ -35,10 +35,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.PositionedElementImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link generator.impl.PositionedElementImpl#getCorrectness <em>Correctness</em>}</li>
  *   <li>{@link generator.impl.PositionedElementImpl#getDisplays <em>Displays</em>}</li>
- *   <li>{@link generator.impl.PositionedElementImpl#getElementType <em>Element Type</em>}</li>
  *   <li>{@link generator.impl.PositionedElementImpl#getExpectedAnswer <em>Expected Answer</em>}</li>
  *   <li>{@link generator.impl.PositionedElementImpl#getFact <em>Fact</em>}</li>
  *   <li>{@link generator.impl.PositionedElementImpl#getAcceptedFacts <em>Accepted Facts</em>}</li>
+ *   <li>{@link generator.impl.PositionedElementImpl#getElementType <em>Element Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -95,16 +95,6 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	protected EList<Display> displays;
 
 	/**
-	 * The cached value of the '{@link #getElementType() <em>Element Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getElementType()
-	 * @generated
-	 * @ordered
-	 */
-	protected ElementType elementType;
-
-	/**
 	 * The cached value of the '{@link #getExpectedAnswer() <em>Expected Answer</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -133,6 +123,16 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected EList<FactSolutionParam> acceptedFacts;
+
+	/**
+	 * The cached value of the '{@link #getElementType() <em>Element Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElementType()
+	 * @generated
+	 * @ordered
+	 */
+	protected ElementType elementType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -172,46 +172,6 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 		id = newID;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__ID, oldID, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ElementType getElementType() {
-		if (elementType != null && elementType.eIsProxy()) {
-			InternalEObject oldElementType = (InternalEObject) elementType;
-			elementType = (ElementType) eResolveProxy(oldElementType);
-			if (elementType != oldElementType) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE, oldElementType, elementType));
-			}
-		}
-		return elementType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ElementType basicGetElementType() {
-		return elementType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setElementType(ElementType newElementType) {
-		ElementType oldElementType = elementType;
-		elementType = newElementType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE,
-					oldElementType, elementType));
 	}
 
 	/**
@@ -278,6 +238,46 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 					GeneratorPackage.POSITIONED_ELEMENT__ACCEPTED_FACTS);
 		}
 		return acceptedFacts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ElementType getElementType() {
+		if (elementType != null && elementType.eIsProxy()) {
+			InternalEObject oldElementType = (InternalEObject) elementType;
+			elementType = (ElementType) eResolveProxy(oldElementType);
+			if (elementType != oldElementType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE, oldElementType, elementType));
+			}
+		}
+		return elementType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ElementType basicGetElementType() {
+		return elementType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setElementType(ElementType newElementType) {
+		ElementType oldElementType = elementType;
+		elementType = newElementType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE,
+					oldElementType, elementType));
 	}
 
 	/**
@@ -421,10 +421,6 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 			return getCorrectness();
 		case GeneratorPackage.POSITIONED_ELEMENT__DISPLAYS:
 			return getDisplays();
-		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
-			if (resolve)
-				return getElementType();
-			return basicGetElementType();
 		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
 			return getExpectedAnswer();
 		case GeneratorPackage.POSITIONED_ELEMENT__FACT:
@@ -433,6 +429,10 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 			return basicGetFact();
 		case GeneratorPackage.POSITIONED_ELEMENT__ACCEPTED_FACTS:
 			return getAcceptedFacts();
+		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
+			if (resolve)
+				return getElementType();
+			return basicGetElementType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -459,9 +459,6 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 			getDisplays().clear();
 			getDisplays().addAll((Collection<? extends Display>) newValue);
 			return;
-		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
-			setElementType((ElementType) newValue);
-			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
 			getExpectedAnswer().clear();
 			getExpectedAnswer().addAll((Collection<? extends ExpectedAnswer>) newValue);
@@ -472,6 +469,9 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.POSITIONED_ELEMENT__ACCEPTED_FACTS:
 			getAcceptedFacts().clear();
 			getAcceptedFacts().addAll((Collection<? extends FactSolutionParam>) newValue);
+			return;
+		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
+			setElementType((ElementType) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -497,9 +497,6 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.POSITIONED_ELEMENT__DISPLAYS:
 			getDisplays().clear();
 			return;
-		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
-			setElementType((ElementType) null);
-			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
 			getExpectedAnswer().clear();
 			return;
@@ -508,6 +505,9 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 			return;
 		case GeneratorPackage.POSITIONED_ELEMENT__ACCEPTED_FACTS:
 			getAcceptedFacts().clear();
+			return;
+		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
+			setElementType((ElementType) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -529,14 +529,14 @@ public class PositionedElementImpl extends MinimalEObjectImpl.Container implemen
 			return correctness != null;
 		case GeneratorPackage.POSITIONED_ELEMENT__DISPLAYS:
 			return displays != null && !displays.isEmpty();
-		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
-			return elementType != null;
 		case GeneratorPackage.POSITIONED_ELEMENT__EXPECTED_ANSWER:
 			return expectedAnswer != null && !expectedAnswer.isEmpty();
 		case GeneratorPackage.POSITIONED_ELEMENT__FACT:
 			return fact != null;
 		case GeneratorPackage.POSITIONED_ELEMENT__ACCEPTED_FACTS:
 			return acceptedFacts != null && !acceptedFacts.isEmpty();
+		case GeneratorPackage.POSITIONED_ELEMENT__ELEMENT_TYPE:
+			return elementType != null;
 		}
 		return super.eIsSet(featureID);
 	}

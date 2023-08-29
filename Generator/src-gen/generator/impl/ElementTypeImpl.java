@@ -26,13 +26,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link generator.impl.ElementTypeImpl#getSize <em>Size</em>}</li>
  *   <li>{@link generator.impl.ElementTypeImpl#getID <em>ID</em>}</li>
  *   <li>{@link generator.impl.ElementTypeImpl#getType <em>Type</em>}</li>
- *   <li>{@link generator.impl.ElementTypeImpl#getAbility <em>Ability</em>}</li>
  *   <li>{@link generator.impl.ElementTypeImpl#getNbDisplays <em>Nb Displays</em>}</li>
+ *   <li>{@link generator.impl.ElementTypeImpl#getAbility <em>Ability</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ElementTypeImpl<T> extends MinimalEObjectImpl.Container implements ElementType<T> {
+public class ElementTypeImpl extends MinimalEObjectImpl.Container implements ElementType {
 	/**
 	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -81,7 +81,7 @@ public class ElementTypeImpl<T> extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_EDEFAULT = "";
+	protected static final String TYPE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -92,16 +92,6 @@ public class ElementTypeImpl<T> extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String type = TYPE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getAbility() <em>Ability</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAbility()
-	 * @generated
-	 * @ordered
-	 */
-	protected Ability ability;
 
 	/**
 	 * The default value of the '{@link #getNbDisplays() <em>Nb Displays</em>}' attribute.
@@ -122,6 +112,16 @@ public class ElementTypeImpl<T> extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected int nbDisplays = NB_DISPLAYS_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getAbility() <em>Ability</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAbility()
+	 * @generated
+	 * @ordered
+	 */
+	protected Ability ability;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -290,12 +290,12 @@ public class ElementTypeImpl<T> extends MinimalEObjectImpl.Container implements 
 			return getID();
 		case GeneratorPackage.ELEMENT_TYPE__TYPE:
 			return getType();
+		case GeneratorPackage.ELEMENT_TYPE__NB_DISPLAYS:
+			return getNbDisplays();
 		case GeneratorPackage.ELEMENT_TYPE__ABILITY:
 			if (resolve)
 				return getAbility();
 			return basicGetAbility();
-		case GeneratorPackage.ELEMENT_TYPE__NB_DISPLAYS:
-			return getNbDisplays();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -318,11 +318,11 @@ public class ElementTypeImpl<T> extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.ELEMENT_TYPE__TYPE:
 			setType((String) newValue);
 			return;
-		case GeneratorPackage.ELEMENT_TYPE__ABILITY:
-			setAbility((Ability) newValue);
-			return;
 		case GeneratorPackage.ELEMENT_TYPE__NB_DISPLAYS:
 			setNbDisplays((Integer) newValue);
+			return;
+		case GeneratorPackage.ELEMENT_TYPE__ABILITY:
+			setAbility((Ability) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -345,11 +345,11 @@ public class ElementTypeImpl<T> extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.ELEMENT_TYPE__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
-		case GeneratorPackage.ELEMENT_TYPE__ABILITY:
-			setAbility((Ability) null);
-			return;
 		case GeneratorPackage.ELEMENT_TYPE__NB_DISPLAYS:
 			setNbDisplays(NB_DISPLAYS_EDEFAULT);
+			return;
+		case GeneratorPackage.ELEMENT_TYPE__ABILITY:
+			setAbility((Ability) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -369,10 +369,10 @@ public class ElementTypeImpl<T> extends MinimalEObjectImpl.Container implements 
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		case GeneratorPackage.ELEMENT_TYPE__TYPE:
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-		case GeneratorPackage.ELEMENT_TYPE__ABILITY:
-			return ability != null;
 		case GeneratorPackage.ELEMENT_TYPE__NB_DISPLAYS:
 			return nbDisplays != NB_DISPLAYS_EDEFAULT;
+		case GeneratorPackage.ELEMENT_TYPE__ABILITY:
+			return ability != null;
 		}
 		return super.eIsSet(featureID);
 	}

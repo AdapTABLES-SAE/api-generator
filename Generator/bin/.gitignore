@@ -1,11 +1,3 @@
-/generator/
 /generators/
-/managers/
-/modelsForTests/
 /structures/
-/FactsGenerationTestOLD.class
-/educational_dimension/
-/exceptions/
-/factgenerator_template/
-/factsgenerator_maths/
-/game_dimension/
+/managers/

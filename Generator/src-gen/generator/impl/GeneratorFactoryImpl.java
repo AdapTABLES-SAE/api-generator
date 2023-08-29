@@ -163,8 +163,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createCorrectness();
 		case GeneratorPackage.ENTRY_SOLUCE_PARAM:
 			return createEntrySoluceParam();
-		case GeneratorPackage.ELEMENT_TYPE:
-			return createElementType();
 		case GeneratorPackage.DISPLAY:
 			return createDisplay();
 		case GeneratorPackage.STRUCTURE:
@@ -213,6 +211,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createLearnerPlayers();
 		case GeneratorPackage.STATISTICS:
 			return createStatistics();
+		case GeneratorPackage.ELEMENT_TYPE:
+			return createElementType();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -252,6 +252,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createEBoundaryFromString(eDataType, initialValue);
 		case GeneratorPackage.ESTATEMENT_TYPE:
 			return createEStatementTypeFromString(eDataType, initialValue);
+		case GeneratorPackage.EROOM_TYPE:
+			return createERoomTypeFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -291,6 +293,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return convertEBoundaryToString(eDataType, instanceValue);
 		case GeneratorPackage.ESTATEMENT_TYPE:
 			return convertEStatementTypeToString(eDataType, instanceValue);
+		case GeneratorPackage.EROOM_TYPE:
+			return convertERoomTypeToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -721,8 +725,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public <T> ElementType<T> createElementType() {
-		ElementTypeImpl<T> elementType = new ElementTypeImpl<T>();
+	public ElementType createElementType() {
+		ElementTypeImpl elementType = new ElementTypeImpl();
 		return elementType;
 	}
 
@@ -1359,6 +1363,28 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * @generated
 	 */
 	public String convertEStatementTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ERoomType createERoomTypeFromString(EDataType eDataType, String initialValue) {
+		ERoomType result = ERoomType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertERoomTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

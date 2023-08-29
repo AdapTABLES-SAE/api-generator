@@ -19,10 +19,10 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.PositionedElement#getPosition <em>Position</em>}</li>
  *   <li>{@link generator.PositionedElement#getCorrectness <em>Correctness</em>}</li>
  *   <li>{@link generator.PositionedElement#getDisplays <em>Displays</em>}</li>
- *   <li>{@link generator.PositionedElement#getElementType <em>Element Type</em>}</li>
  *   <li>{@link generator.PositionedElement#getExpectedAnswer <em>Expected Answer</em>}</li>
  *   <li>{@link generator.PositionedElement#getFact <em>Fact</em>}</li>
  *   <li>{@link generator.PositionedElement#getAcceptedFacts <em>Accepted Facts</em>}</li>
+ *   <li>{@link generator.PositionedElement#getElementType <em>Element Type</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getPositionedElement()
@@ -109,28 +109,6 @@ public interface PositionedElement extends EObject {
 	EList<Display> getDisplays();
 
 	/**
-	 * Returns the value of the '<em><b>Element Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Element Type</em>' reference.
-	 * @see #setElementType(ElementType)
-	 * @see generator.GeneratorPackage#getPositionedElement_ElementType()
-	 * @model required="true"
-	 * @generated
-	 */
-	ElementType getElementType();
-
-	/**
-	 * Sets the value of the '{@link generator.PositionedElement#getElementType <em>Element Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Element Type</em>' reference.
-	 * @see #getElementType()
-	 * @generated
-	 */
-	void setElementType(ElementType value);
-
-	/**
 	 * Returns the value of the '<em><b>Expected Answer</b></em>' containment reference list.
 	 * The list contents are of type {@link generator.ExpectedAnswer}.
 	 * <!-- begin-user-doc -->
@@ -175,5 +153,27 @@ public interface PositionedElement extends EObject {
 	 * @generated
 	 */
 	EList<FactSolutionParam> getAcceptedFacts();
+
+	/**
+	 * Returns the value of the '<em><b>Element Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Element Type</em>' reference.
+	 * @see #setElementType(ElementType)
+	 * @see generator.GeneratorPackage#getPositionedElement_ElementType()
+	 * @model
+	 * @generated
+	 */
+	ElementType getElementType();
+
+	/**
+	 * Sets the value of the '{@link generator.PositionedElement#getElementType <em>Element Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Element Type</em>' reference.
+	 * @see #getElementType()
+	 * @generated
+	 */
+	void setElementType(ElementType value);
 
 } // PositionedElement

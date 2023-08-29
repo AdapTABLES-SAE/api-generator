@@ -17,8 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.RoomType#getName <em>Name</em>}</li>
  *   <li>{@link generator.RoomType#getElementPositions <em>Element Positions</em>}</li>
- *   <li>{@link generator.RoomType#isForEntry <em>For Entry</em>}</li>
- *   <li>{@link generator.RoomType#isForExit <em>For Exit</em>}</li>
+ *   <li>{@link generator.RoomType#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getRoomType()
@@ -61,50 +60,30 @@ public interface RoomType extends EObject {
 	EList<Position> getElementPositions();
 
 	/**
-	 * Returns the value of the '<em><b>For Entry</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The default value is <code>"QUESTION"</code>.
+	 * The literals are from the enumeration {@link generator.ERoomType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>For Entry</em>' attribute.
-	 * @see #setForEntry(boolean)
-	 * @see generator.GeneratorPackage#getRoomType_ForEntry()
-	 * @model default="false"
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see generator.ERoomType
+	 * @see #setType(ERoomType)
+	 * @see generator.GeneratorPackage#getRoomType_Type()
+	 * @model default="QUESTION"
 	 * @generated
 	 */
-	boolean isForEntry();
+	ERoomType getType();
 
 	/**
-	 * Sets the value of the '{@link generator.RoomType#isForEntry <em>For Entry</em>}' attribute.
+	 * Sets the value of the '{@link generator.RoomType#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>For Entry</em>' attribute.
-	 * @see #isForEntry()
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see generator.ERoomType
+	 * @see #getType()
 	 * @generated
 	 */
-	void setForEntry(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>For Exit</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>For Exit</em>' attribute.
-	 * @see #setForExit(boolean)
-	 * @see generator.GeneratorPackage#getRoomType_ForExit()
-	 * @model default="false"
-	 * @generated
-	 */
-	boolean isForExit();
-
-	/**
-	 * Sets the value of the '{@link generator.RoomType#isForExit <em>For Exit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>For Exit</em>' attribute.
-	 * @see #isForExit()
-	 * @generated
-	 */
-	void setForExit(boolean value);
+	void setType(ERoomType value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,5 +92,37 @@ public interface RoomType extends EObject {
 	 * @generated
 	 */
 	EList<Directions> getDirections();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	boolean isEntryRoomType();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	boolean isExitRoomType();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	boolean isQuestionRoomType();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	boolean isTrapRoomType();
 
 } // RoomType

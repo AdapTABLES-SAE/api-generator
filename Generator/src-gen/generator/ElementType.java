@@ -16,15 +16,15 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.ElementType#getSize <em>Size</em>}</li>
  *   <li>{@link generator.ElementType#getID <em>ID</em>}</li>
  *   <li>{@link generator.ElementType#getType <em>Type</em>}</li>
- *   <li>{@link generator.ElementType#getAbility <em>Ability</em>}</li>
  *   <li>{@link generator.ElementType#getNbDisplays <em>Nb Displays</em>}</li>
+ *   <li>{@link generator.ElementType#getAbility <em>Ability</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getElementType()
  * @model
  * @generated
  */
-public interface ElementType<T> extends EObject {
+public interface ElementType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Size</b></em>' attribute.
 	 * The literals are from the enumeration {@link generator.ElementSize}.
@@ -74,13 +74,12 @@ public interface ElementType<T> extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see generator.GeneratorPackage#getElementType_Type()
-	 * @model default=""
+	 * @model
 	 * @generated
 	 */
 	String getType();

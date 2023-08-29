@@ -3,6 +3,7 @@
 package generator.impl;
 
 import generator.Directions;
+import generator.ERoomType;
 import generator.GeneratorPackage;
 import generator.Position;
 import generator.RoomType;
@@ -34,8 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link generator.impl.RoomTypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link generator.impl.RoomTypeImpl#getElementPositions <em>Element Positions</em>}</li>
- *   <li>{@link generator.impl.RoomTypeImpl#isForEntry <em>For Entry</em>}</li>
- *   <li>{@link generator.impl.RoomTypeImpl#isForExit <em>For Exit</em>}</li>
+ *   <li>{@link generator.impl.RoomTypeImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -72,44 +72,24 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	protected EList<Position> elementPositions;
 
 	/**
-	 * The default value of the '{@link #isForEntry() <em>For Entry</em>}' attribute.
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isForEntry()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean FOR_ENTRY_EDEFAULT = false;
+	protected static final ERoomType TYPE_EDEFAULT = ERoomType.QUESTION;
 
 	/**
-	 * The cached value of the '{@link #isForEntry() <em>For Entry</em>}' attribute.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isForEntry()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean forEntry = FOR_ENTRY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isForExit() <em>For Exit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isForExit()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean FOR_EXIT_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isForExit() <em>For Exit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isForExit()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean forExit = FOR_EXIT_EDEFAULT;
+	protected ERoomType type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -169,8 +149,8 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isForEntry() {
-		return forEntry;
+	public ERoomType getType() {
+		return type;
 	}
 
 	/**
@@ -178,34 +158,11 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setForEntry(boolean newForEntry) {
-		boolean oldForEntry = forEntry;
-		forEntry = newForEntry;
+	public void setType(ERoomType newType) {
+		ERoomType oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ROOM_TYPE__FOR_ENTRY, oldForEntry,
-					forEntry));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isForExit() {
-		return forExit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setForExit(boolean newForExit) {
-		boolean oldForExit = forExit;
-		forExit = newForExit;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ROOM_TYPE__FOR_EXIT, oldForExit,
-					forExit));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ROOM_TYPE__TYPE, oldType, type));
 	}
 
 	/**
@@ -217,6 +174,42 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isEntryRoomType() {
+		return this.type.equals(ERoomType.ENTRY);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isExitRoomType() {
+		return this.type.equals(ERoomType.EXIT);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isQuestionRoomType() {
+		return this.type.equals(ERoomType.QUESTION);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isTrapRoomType() {
+		return this.type.equals(ERoomType.TRAP);
 	}
 
 	/**
@@ -245,10 +238,8 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 			return getName();
 		case GeneratorPackage.ROOM_TYPE__ELEMENT_POSITIONS:
 			return getElementPositions();
-		case GeneratorPackage.ROOM_TYPE__FOR_ENTRY:
-			return isForEntry();
-		case GeneratorPackage.ROOM_TYPE__FOR_EXIT:
-			return isForExit();
+		case GeneratorPackage.ROOM_TYPE__TYPE:
+			return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -269,11 +260,8 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 			getElementPositions().clear();
 			getElementPositions().addAll((Collection<? extends Position>) newValue);
 			return;
-		case GeneratorPackage.ROOM_TYPE__FOR_ENTRY:
-			setForEntry((Boolean) newValue);
-			return;
-		case GeneratorPackage.ROOM_TYPE__FOR_EXIT:
-			setForExit((Boolean) newValue);
+		case GeneratorPackage.ROOM_TYPE__TYPE:
+			setType((ERoomType) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -293,11 +281,8 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		case GeneratorPackage.ROOM_TYPE__ELEMENT_POSITIONS:
 			getElementPositions().clear();
 			return;
-		case GeneratorPackage.ROOM_TYPE__FOR_ENTRY:
-			setForEntry(FOR_ENTRY_EDEFAULT);
-			return;
-		case GeneratorPackage.ROOM_TYPE__FOR_EXIT:
-			setForExit(FOR_EXIT_EDEFAULT);
+		case GeneratorPackage.ROOM_TYPE__TYPE:
+			setType(TYPE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -315,10 +300,8 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case GeneratorPackage.ROOM_TYPE__ELEMENT_POSITIONS:
 			return elementPositions != null && !elementPositions.isEmpty();
-		case GeneratorPackage.ROOM_TYPE__FOR_ENTRY:
-			return forEntry != FOR_ENTRY_EDEFAULT;
-		case GeneratorPackage.ROOM_TYPE__FOR_EXIT:
-			return forExit != FOR_EXIT_EDEFAULT;
+		case GeneratorPackage.ROOM_TYPE__TYPE:
+			return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -333,6 +316,14 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		switch (operationID) {
 		case GeneratorPackage.ROOM_TYPE___GET_DIRECTIONS:
 			return getDirections();
+		case GeneratorPackage.ROOM_TYPE___IS_ENTRY_ROOM_TYPE:
+			return isEntryRoomType();
+		case GeneratorPackage.ROOM_TYPE___IS_EXIT_ROOM_TYPE:
+			return isExitRoomType();
+		case GeneratorPackage.ROOM_TYPE___IS_QUESTION_ROOM_TYPE:
+			return isQuestionRoomType();
+		case GeneratorPackage.ROOM_TYPE___IS_TRAP_ROOM_TYPE:
+			return isTrapRoomType();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -350,10 +341,8 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", forEntry: ");
-		result.append(forEntry);
-		result.append(", forExit: ");
-		result.append(forExit);
+		result.append(", type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}
