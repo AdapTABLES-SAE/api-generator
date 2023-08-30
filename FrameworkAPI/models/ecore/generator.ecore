@@ -23,6 +23,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="exit" eType="#//Room"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="learnerPlayer" lowerBound="1"
         eType="#//LearnerPlayer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="curses" upperBound="-1"
+        eType="#//Curse"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Room">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -391,11 +393,15 @@
         defaultValueLiteral="5"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initNbNQRoom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cursesAvailabilities" upperBound="-1"
+        eType="#//CurseEligibility" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GameElementTypes">
     <eStructuralFeatures xsi:type="ecore:EReference" name="equipments" eType="#//Equipments"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elementTypes" eType="#//ElementsTypes"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="curses" eType="#//Curses"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElementsTypes">
@@ -661,5 +667,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbDisplays" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ability" eType="#//Ability"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Curses">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="curses" upperBound="-1"
+        eType="#//Curse" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Curse">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LabyrinthCurse" eSuperTypes="#//Curse"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CurseEligibility">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="curse" lowerBound="1" eType="#//Curse"/>
   </eClassifiers>
 </ecore:EPackage>
