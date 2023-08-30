@@ -19,7 +19,7 @@ rule Dungeon2Dungeon
 			dOut.curses = "["; 
 			for (curse in dIn.curses) {
 				curse.name.println();
-				dOut.curses = dOut.curses + curse.name + ",";
+				dOut.curses = dOut.curses + "\"" + curse.name + "\"" + ",";
 				dOut.curses.println();
 			} 
 			dOut.curses = dOut.curses + "]";

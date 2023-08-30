@@ -59,6 +59,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_OBJECTIVE_LEVEL_TESTS"/>
+      <statistics maxGameLevelReached="1" nbLevelsGenerated="150"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 001 [TEST_OL]" ID="LP001">
       <progression>
@@ -102,6 +103,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_OBJECTIVE_LEVEL_TESTS"/>
+      <statistics maxGameLevelReached="5" nbLevelsGenerated="600"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 019 [TEST_OL] (every objectives are finished but not all are at 100%)" ID="LP019">
       <progression>
@@ -160,6 +162,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_OBJECTIVE_LEVEL_TESTS"/>
+      <statistics maxGameLevelReached="1" nbLevelsGenerated="150"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 004 [TEST1] (Level 1 -- every tasks are started not finished 0 &lt; % &lt; 100)" ID="LP004">
       <progression>
@@ -1092,6 +1095,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
+      <statistics maxGameLevelReached="1" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 005 [TEST1] (Level 16 -- every tasks are started not finished 0 &lt; % &lt; 100)" ID="LP005">
       <progression>
@@ -2024,6 +2028,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 012 [TEST2] (Level 1 -- every tasks are started not finished 0 &lt; % &lt; 100)" ID="LP012">
       <progression>
@@ -2833,6 +2838,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
+      <statistics maxGameLevelReached="1" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 013 [TEST2] (Level 16 -- every tasks are started not finished 0 &lt; % &lt; 100)" ID="LP013">
       <progression>
@@ -3642,6 +3648,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 006 [TEST1] (Level 1 -- one task is over 100% success &amp; encounters)" ID="LP006">
       <progression>
@@ -4574,6 +4581,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
+      <statistics maxGameLevelReached="1" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 007 [TEST1] (Level 16 -- one task is over 100% success &amp; encounters)" ID="LP007">
       <progression>
@@ -5506,6 +5514,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 014 [TEST2] (Level 1 -- one task is over 100% success &amp; encounters)" ID="LP014">
       <progression>
@@ -6315,6 +6324,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
+      <statistics maxGameLevelReached="1" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 015 [TEST2] (Level 16 -- one task is over 100% success &amp; encounters)" ID="LP015">
       <progression>
@@ -7124,6 +7134,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 008 [TEST1] (Level 1 -- only one task is not over &lt; 100% success or encounters)" ID="LP008">
       <progression>
@@ -8056,6 +8067,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
+      <statistics maxGameLevelReached="1" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 009 [TEST1] (Level 16 -- only one task is not over &lt; 100% success or encounters)" ID="LP009">
       <progression>
@@ -8988,6 +9000,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 016 [TEST2] (Level 1 -- only one task is not over &lt; 100% success or encounters)" ID="LP016">
       <progression>
@@ -9797,6 +9810,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
+      <statistics maxGameLevelReached="1" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 017 [TEST2] (Level 16 -- only one task is not over &lt; 100% success or encounters)" ID="LP017">
       <progression>
@@ -10606,6 +10620,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 002 [TEST1] (Level 1 -- 0% at every tasks)" ID="LP002">
       <progression>
@@ -11538,6 +11553,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
+      <statistics maxGameLevelReached="1" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 003 [TEST1] (Level 16 -- 0% at every tasks)" ID="LP003">
       <progression>
@@ -12470,6 +12486,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 010 [TEST2] (Level 1 -- 0% at every tasks)" ID="LP010">
       <progression>
@@ -13279,6 +13296,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
+      <statistics maxGameLevelReached="1" nbLevelsGenerated="1"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 011 [TEST2] (Level 16 -- 0% at every tasks)" ID="LP011">
       <progression>
@@ -14088,6 +14106,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="1"/>
     </learnerPlayers>
   </learnerPlayers>
 </generator:Context>

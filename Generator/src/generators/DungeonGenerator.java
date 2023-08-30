@@ -35,7 +35,7 @@ import structures.NeighborAccess;
 import structures.RoomElements;
 
 public class DungeonGenerator {
-	private Dungeon generatedDungeon; // TODO : change algorithms 
+	private Dungeon generatedDungeon;  
 	private ModelsManager modelAccess;
 	
 	
@@ -70,6 +70,8 @@ public class DungeonGenerator {
 		}else {
 			generateLabyrinthineDungeon();
 		}
+		
+		//generateLabyrinthineDungeon();
 		return generatedDungeon;
 	}
 	
@@ -141,7 +143,8 @@ public class DungeonGenerator {
 	private void createNewPath(LabyrinthineRoom originRoom, Room dungeonEntry) {
 		List<NeighborAccess> neighbors = gridManager.getNeighbors(originRoom.getRoomCoordinates(), originRoom.isRoomTypeSmall());
 		for (NeighborAccess neighbor : neighbors) {
-			if(!originRoom.hasRoomAccessWith(neighbor.getRoom()) && !neighbor.getRoom().equals(dungeonEntry)) {
+			if(!originRoom.hasRoomAccessWith(neighbor.getRoom()) && !neighbor.getRoom().equals(dungeonEntry)
+					&& neighborAccessRespectOriginRoomType(neighbor, originRoom)) {
 				RoomAccess raOrigin = new RoomAccessImpl();
 				raOrigin.setDirection(neighbor.getAccessDirectionToNeighbor());
 				RoomAccess raOther = new RoomAccessImpl();
@@ -153,6 +156,10 @@ public class DungeonGenerator {
 				return;
 			}
 		}
+	}
+	
+	private boolean neighborAccessRespectOriginRoomType(NeighborAccess neighbor, LabyrinthineRoom originRoom) {
+		return originRoom.getRoom().getRoomtype().getDirections().contains(neighbor.getAccessDirectionToNeighbor()) ;
 	}
 	
 	private LabyrinthineRoom createNewRoomFrom(LabyrinthineRoom originRoom, RoomElements roomElements/*, boolean isExitRoom*/) {

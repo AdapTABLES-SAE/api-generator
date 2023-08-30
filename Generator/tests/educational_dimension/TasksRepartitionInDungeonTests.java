@@ -14,7 +14,7 @@ import generator.Dungeon;
 import generator.Room;
 import generators.ALGAGenerator;
 
-class TasksRepartitionInDungeonTests {
+class TasksRepartitionInDungeonTests { // TODO : refaire les cas de labyrinthique pour respecter le premier niveau à partir duquel ils apparaisse 8 ou 16 
 
 	private Map<String, Integer> numberOfRoomsByTasks;
 	private ALGAGenerator generator;
