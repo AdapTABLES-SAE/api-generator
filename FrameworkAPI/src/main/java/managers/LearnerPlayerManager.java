@@ -22,6 +22,7 @@ import generator.impl.CompletionCriteriaImpl;
 import generator.impl.CurrentObjectiveLevelImpl;
 import generator.impl.ItemImpl;
 import generator.impl.ItemsImpl;
+import generator.impl.LearnerProgressImpl;
 import generator.impl.MTCompletion1Impl;
 import generator.impl.MTLevelImpl;
 import generator.impl.MTQFCompletion1Impl;
@@ -62,6 +63,17 @@ public class LearnerPlayerManager {
 		case "MTMembershipImpl": return "MEMB"; 
 		default: return "";
 		}
+	}
+	
+	public String resetEquipments(String learnerID) {
+		try {
+			LearnerPlayer player = modelsManager.getLearnerPlayer(learnerID);
+			player.getProgression().getPlayerProgress().setItems(new ItemsImpl());
+			modelsManager.saveContextModel();
+		} catch (NonExistantLearnerPlayerException e) {
+			e.printStackTrace();
+		}
+		return "Success";
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -499,6 +511,18 @@ public class LearnerPlayerManager {
 		modelsManager.saveContextModel();
 		return "Success";
 	}
+	
+	
+	public void resetProgressForEachLearnerHavingPath(String pathID) {
+		for(LearnerPlayer learner: modelsManager.getContextModel().getLearnerPlayers().getLearnerPlayers()) {
+			if(learner.getLearningpath().getID().equals(pathID)) {
+				learner.getProgression().setLearnerProgress(new LearnerProgressImpl());
+			}
+		}
+		
+		modelsManager.saveContextModel();
+	}
+	
 	
 	private void addResultsToTask(JSONObject jtask, ResultsByTask rbt) {
 		JSONArray facts = (JSONArray) jtask.get("questionableFacts");

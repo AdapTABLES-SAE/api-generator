@@ -1,5 +1,6 @@
 package managers;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -161,6 +162,32 @@ public class PathManager {
 		}
 		paths.getLearningpaths().add(aPath);
 		modelsManager.saveDomainModel(paths);
+		
+		// update progress for learner having this path TODO
+		resetEveryLearnerProgress(pathName);
+	}
+	
+	private List<String> getListOfContextFiles(){
+		List<String> contextFilesNames = new ArrayList<>(); 
+		String contextsRepertory = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CONTEXTS_FILES_PATH; 
+		File[] files = new File(contextsRepertory).listFiles();
+		
+		for(File file: files) {
+			contextFilesNames.add(file.getName());
+		}
+		return contextFilesNames; 
+	}
+	
+	private void resetEveryLearnerProgress(String pathID) {
+		List<String> contextFilesNames = getListOfContextFiles();
+		
+		LearnerPlayerManager manager; 
+		for(String context: contextFilesNames) {
+			manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+					Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
+					Constant.CONTEXTS_FILES_PATH + context , true));
+			manager.resetProgressForEachLearnerHavingPath(pathID);
+		}
 	}
 	
 	private List<JSONObject> getJSONTasks(JSONObject json){
@@ -187,9 +214,9 @@ public class PathManager {
 		return buildingParams;
 	}
 	
-	private void addLevelToObjective(Objective obj, MTLevel level,  JSONObject json) {
+	private void addLevelToObjective(Objective obj, MTLevel level, JSONObject json) {
 		JSONObject buildingParams = getJSONBuildSetup(json);
-		String levelName = obj.getID()+"-L"+(obj.getLevels().size() + 1);
+		String levelName = level != null? level.getID(): obj.getID()+"-L"+(obj.getLevels().size() + 1);
 		
 		if(level != null) {
 			obj.getLevels().remove(level);

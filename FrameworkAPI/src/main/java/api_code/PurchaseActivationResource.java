@@ -47,6 +47,28 @@ public class PurchaseActivationResource {
 	}
 	
 	@GET
+	@Path("/reset/learner/{playerID}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String resetItems(@PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+		Constant.PROJECT_PATH = app.getRealPath("");
+		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
+				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + Constant.DEFAULT_CONTEXT_FILE_NAME + ".xmi", true));
+		return manager.resetEquipments(playerID);
+	}
+	
+	@GET
+	@Path("/reset/classroom/{classroomID}/learner/{playerID}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String resetItems(@PathParam("classroomID") String classID, @PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+		Constant.PROJECT_PATH = app.getRealPath("");
+		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
+				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
+		return manager.resetEquipments(playerID);
+	}
+	
+	@GET
 	@Path("/classroom/{classroomID}/learner/{playerID}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getActivatedItems(@PathParam("classroomID") String classID, @PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
