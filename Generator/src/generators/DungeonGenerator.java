@@ -65,7 +65,9 @@ public class DungeonGenerator {
 	}
 	
 	public Dungeon generateDungeon() {
-		if(modelAccess.getContextModel().getGamecontext().getMode().equals(DungeonMode.LINEAR)) {
+		DungeonMode mode = modelAccess.lauchedFromTEST? modelAccess.getContextModel().getGamecontext().getMode(): dungeonElements.getDungeonMode();
+		
+		if(mode.equals(DungeonMode.LINEAR)) {
 			generateLinearDungeon();
 		}else {
 			generateLabyrinthineDungeon();
@@ -102,7 +104,6 @@ public class DungeonGenerator {
 				selectableRooms.remove(randomStartingRoom);
 			}
 		}	
-		System.err.println(dungeonRooms);
 		dungeonRooms.add(createAnExit(dungeonRooms));		
 		for (LabyrinthineRoom aEntry : dungeonRooms) {
 			generatedDungeon.getRooms().add(aEntry.getRoom());
@@ -127,10 +128,11 @@ public class DungeonGenerator {
 		double value = 0.0;
 		
 		for (LabyrinthineRoom labyrinthineRoom : eligibleRooms) {
+			
 			value = Math.sqrt(labyrinthineRoom.getRoom().getX()*labyrinthineRoom.getRoom().getX() + labyrinthineRoom.getRoom().getY()*labyrinthineRoom.getRoom().getY());
 			distances.put(labyrinthineRoom, value);
+			
 		}
-		
 		LabyrinthineRoom furthest = eligibleRooms.get(0);
 		for (LabyrinthineRoom labyrinthineRoom : distances.keySet()) {
 			if(distances.get(labyrinthineRoom) > distances.get(furthest)) {

@@ -122,9 +122,6 @@ public class ALGAGenerator {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		System.out.println(dungeonElements .getChosenObjective());
-		System.out.println(generatedDungeon == null);
 				
 		generatedDungeon.setLearningobjective(dungeonElements.getChosenObjective());
 		generatedDungeon.setLevel(dungeonElements.getChosenLevel());

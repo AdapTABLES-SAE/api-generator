@@ -53,7 +53,6 @@ public class GameElementsGenerator {
 		for(Curse curse: getAvailableCurses()) {
 			int headsOrtails = random.nextInt(2);
 			if(headsOrtails == 1) {
-				System.out.println("Curses selected " + curse.getName());
 				dungeonElements.addCurse(curse);
 			}
 		}		
@@ -69,7 +68,6 @@ public class GameElementsGenerator {
 				curses.add(curse.getCurse()); 
 			}
 		}
-		System.out.println("Curses " + curses);
 		return curses; 
 	}
 	

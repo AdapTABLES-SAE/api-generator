@@ -14,7 +14,9 @@ import generator.CurrentObjectiveLevel;
 import generator.Equipment;
 import generator.Item;
 import generator.LearnerPlayer;
+import generator.LearningPath;
 import generator.Level;
+import generator.Objective;
 import generator.QuestionableFact;
 import generator.QuestionableFactResult;
 import generator.ResultsByTask;
@@ -155,6 +157,9 @@ public class LearnerPlayerManager {
 		try {
 			
 			CurrentObjectiveLevel currentOL = getCorrespondingCOL(objectiveID, levelID, learnerID);
+			if(currentOL == null) {
+				currentOL = initialiseCurrentObjectiveLevel(objectiveID, levelID, learnerID);
+			}
 			for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {
 				JSONObject taskProgress = new JSONObject(); 
 				taskProgress.put("idTask", rbt.getTask().getID());
@@ -172,6 +177,56 @@ public class LearnerPlayerManager {
 			e.printStackTrace();
 		}
 		return progress;
+	}
+	
+	private CurrentObjectiveLevel initialiseCurrentObjectiveLevel(String objectiveID, String levelID, String learnerID) {
+		LearnerPlayer learner;
+		CurrentObjectiveLevel currentOL = new CurrentObjectiveLevelImpl();
+		try {
+			learner = modelsManager.getLearnerPlayer(learnerID);
+			LearningPath path = learner.getLearningpath(); 
+			Objective objective = getObjective(path, objectiveID); 
+			Level level = getLevel(path, objective, levelID); 
+			
+			currentOL.setAchieved(false);
+			currentOL.setObjective(objective);
+			currentOL.setLevel(level);
+			
+			currentOL.setResults(new ResultsImpl());
+			
+			for(ATask task: level.getTasks()) {
+				ResultsByTask rbt = new ResultsByTaskImpl(); 
+				rbt.setTask(task);
+				currentOL.getResults().getResultsbytask().add(rbt);
+			}
+			
+			learner.getProgression().getLearnerProgress().getCurrentobjectivelevels().add(currentOL);
+		} catch (NonExistantLearnerPlayerException e) {
+			e.printStackTrace();
+		} catch (NonExistantObjectiveOrLevelException e) {
+			e.printStackTrace();
+		}
+
+		modelsManager.saveContextModel();
+		return currentOL; 
+	}
+	
+	private Objective getObjective(LearningPath path, String objectiveID) throws NonExistantObjectiveOrLevelException {
+		for(Objective objective: path.getObjectives()) {
+			if(objective.getID().equals(objectiveID)) {
+				return objective;
+			}
+		}
+		throw new NonExistantObjectiveOrLevelException(objectiveID, "", path.getID());
+	}
+	
+	private Level getLevel(LearningPath path, Objective objective, String levelID) throws NonExistantObjectiveOrLevelException {
+		for(Level level: objective.getLevels()) {
+			if(level.getID().equals(levelID)) {
+				return level;
+			}
+		}
+		throw new NonExistantObjectiveOrLevelException(objective.getID(), levelID, path.getID());
 	}
 	
 	@SuppressWarnings("unchecked")

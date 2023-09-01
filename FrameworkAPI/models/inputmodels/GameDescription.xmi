@@ -1254,7 +1254,7 @@
           ID="CARROT"
           lockedAbilities="CATCHABLE"/>
       <equipments
-          ID="AMOR"/>
+          ID="ARMOR"/>
       <equipments
           ID="HELMET"/>
       <equipments
@@ -1288,8 +1288,8 @@
       <elements
           ID="ELEMTYPE_INTERRUPTOR"
           type="FloorInterrupt"
-          ability="TOUCHABLE"
-          nbDisplays="1"/>
+          nbDisplays="1"
+          ability="TOUCHABLE"/>
       <elements
           ID="ELEMTYPE_KEYBOARD"
           type="KeyBoard"
@@ -1301,23 +1301,23 @@
       <elements
           ID="ELEMTYPE_DISPLAY"
           type="Info"
-          ability="DISPLAY"
-          nbDisplays="1"/>
+          nbDisplays="1"
+          ability="DISPLAY"/>
       <elements
           ID="ELEMTYPE_POT"
           type="Pot"
-          ability="MOVABLE"
-          nbDisplays="1"/>
+          nbDisplays="1"
+          ability="MOVABLE"/>
       <elements
           ID="ELEMTYPE_DETECTOR"
           type="ObjectDetector"
-          ability="DETECTOR"
-          nbDisplays="1"/>
+          nbDisplays="1"
+          ability="DETECTOR"/>
       <elements
           ID="ELEMTYPE_CHEST"
           type="Chest"
-          ability="OPENABLE"
-          nbDisplays="1"/>
+          nbDisplays="1"
+          ability="OPENABLE"/>
       <elements
           size="LARGE"
           ID="ELEMTYPE_LARGE_DETECTOR"
@@ -1327,23 +1327,23 @@
           size="MEDIUM"
           ID="ELEMTYPE_STATUE_ROTABLE"
           type="Statue"
-          ability="ROTABLE"
-          nbDisplays="3"/>
+          nbDisplays="3"
+          ability="ROTABLE"/>
       <elements
           xsi:type="generator:StatementElementType"
           size="LARGE"
           ID="ELEMTYPE_STATEMENT_CORRECTNESS"
           type="StatementFact"
-          ability="DISPLAY"
           nbDisplays="1"
+          ability="DISPLAY"
           forStructure="true"/>
       <elements
           xsi:type="generator:StatementElementType"
           size="LARGE"
           ID="ELEMTYPE_STATEMENT_DISPLAY"
           type="Statement"
-          ability="DISPLAY"
-          nbDisplays="1"/>
+          nbDisplays="1"
+          ability="DISPLAY"/>
       <elements
           size="MEDIUM"
           ID="STRUCT_H_MEDIUM"
@@ -1400,34 +1400,34 @@
       <elements
           ID="ELEMENT_TYPE_BLOCK"
           type="Block"
-          ability="PUSHABLE"
-          nbDisplays="1"/>
+          nbDisplays="1"
+          ability="PUSHABLE"/>
       <elements
           size="XLARGE"
           ID="ELEMENT_TYPE_BRIDGE"
           type="CentralBridges"
-          ability="CROSSABLE"
-          nbDisplays="6"/>
+          nbDisplays="6"
+          ability="CROSSABLE"/>
       <elements
           ID="ELEMENT_TYPE_KEY"
           type="Key"
-          ability="FOLLOWABLE"
-          nbDisplays="1"/>
+          nbDisplays="1"
+          ability="FOLLOWABLE"/>
       <elements
           ID="ELEMENT_TYPE_RABBIT"
           type="Rabbit"
-          ability="CATCHABLE"
-          nbDisplays="1"/>
+          nbDisplays="1"
+          ability="CATCHABLE"/>
       <elements
           ID="ELEMTYPE_BREAKABLE_POT"
           type="BreakablePot"
-          ability="BREAKABLE"
-          nbDisplays="1"/>
+          nbDisplays="1"
+          ability="BREAKABLE"/>
       <elements
           ID="ELEMENT_TYPE_FOLLOWABLE_KEY"
           type="Key"
-          ability="FOLLOWABLE"
-          nbDisplays="1"/>
+          nbDisplays="1"
+          ability="FOLLOWABLE"/>
       <elements
           size="MEDIUM"
           ID="ELEMENT_TYPE_CHEST_DETECTOR"
@@ -1436,8 +1436,8 @@
       <elements
           ID="ELEMENT_TYPE_AVATAR_DETECTOR"
           type="AvatarDetector"
-          ability="DETECTOR_AVATAR"
-          nbDisplays="1"/>
+          nbDisplays="1"
+          ability="DETECTOR_AVATAR"/>
     </elementTypes>
   </elements>
   <abilities>

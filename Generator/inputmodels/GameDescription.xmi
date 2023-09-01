@@ -553,20 +553,7 @@
       <directions>WEST</directions>
     </roomtypes>
   </roomtypes>
-  <levelsDifficultyProgress>
-    <cursesAvailabilities
-        startLevel="8"
-        curse="//@elements/@curses/@curses.3"/>
-    <cursesAvailabilities
-        startLevel="4"
-        curse="//@elements/@curses/@curses.0"/>
-    <cursesAvailabilities
-        startLevel="12"
-        curse="//@elements/@curses/@curses.1"/>
-    <cursesAvailabilities
-        startLevel="16"
-        curse="//@elements/@curses/@curses.2"/>
-  </levelsDifficultyProgress>
+  <levelsDifficultyProgress/>
   <gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -1267,7 +1254,7 @@
           ID="CARROT"
           lockedAbilities="CATCHABLE"/>
       <equipments
-          ID="AMOR"/>
+          ID="ARMOR"/>
       <equipments
           ID="HELMET"/>
       <equipments
@@ -1452,17 +1439,6 @@
           nbDisplays="1"
           ability="DETECTOR_AVATAR"/>
     </elementTypes>
-    <curses>
-      <curses
-          name="Night"/>
-      <curses
-          name="OutOfTime"/>
-      <curses
-          name="OneLife"/>
-      <curses
-          xsi:type="generator:LabyrinthCurse"
-          name="Labyrinthine"/>
-    </curses>
   </elements>
   <abilities>
     <abilities

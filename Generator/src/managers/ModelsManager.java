@@ -29,6 +29,7 @@ public class ModelsManager {
 	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	private ResourceSet resourceSet;
 	private boolean lauchedFromAPI = false;
+	public boolean lauchedFromTEST = false;
 	
 	private static String INPUT_MODELS_PATH = "inputmodels/";
 	private static String INPUT_MODELS_PATH_TEST = "tests/modelsForTests/";
@@ -43,7 +44,8 @@ public class ModelsManager {
 	
 	public ModelsManager(boolean isForTest, String contextFileName) {
 		resourceSet = new ResourceSetImpl();
-		if(isForTest) { INPUT_MODELS_PATH = INPUT_MODELS_PATH_TEST;	}
+		lauchedFromTEST = isForTest;
+		if(lauchedFromTEST) { INPUT_MODELS_PATH = INPUT_MODELS_PATH_TEST;	}
 		if(!contextFileName.isEmpty()) { INPUT_MODELS_NAMES[0] = contextFileName; }
 		loadInputModels();
 	}

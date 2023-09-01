@@ -14,7 +14,7 @@ import generator.Dungeon;
 import generator.Room;
 import generators.ALGAGenerator;
 
-class TasksRepartitionInDungeonTests { // TODO : refaire les cas de labyrinthique pour respecter le premier niveau à partir duquel ils apparaisse 8 ou 16 
+class TasksRepartitionInDungeonTests { 
 
 	private Map<String, Integer> numberOfRoomsByTasks;
 	private ALGAGenerator generator;
@@ -48,15 +48,15 @@ class TasksRepartitionInDungeonTests { // TODO : refaire les cas de labyrinthiqu
         assertTrue(!numberOfRoomsByTasks.containsKey("T1_TASK-MEMB") || numberOfRoomsByTasks.get("T1_TASK-MEMB") == 1);
         assertTrue(sumNumberOfRooms() == 5);
         
-		generateAndComputes("LP002", LABYRINTHINE_CONTEXT); // Level 1 -- Labyrinthine -- Path TAST1
+		generateAndComputes("LP002", LABYRINTHINE_CONTEXT); // Level 8 -- Labyrinthine -- Path TAST1
 		System.out.println(numberOfRoomsByTasks);
-		assertFalse(numberOfRoomsByTasks.containsKey("T1_TASK-C1_1")); 
-        assertTrue(!numberOfRoomsByTasks.containsKey("T1_TASK-C1_2") || numberOfRoomsByTasks.get("T1_TASK-C1_2") == 1);
-        assertTrue(numberOfRoomsByTasks.get("T1_TASK-C2") == 1, "TASK-C2");
-        assertTrue(numberOfRoomsByTasks.get("T1_TASK-REB") == 1, "TASK-REB");
-        assertTrue(numberOfRoomsByTasks.get("T1_TASK-ID") == 2, "TASK-ID");
-        assertTrue(!numberOfRoomsByTasks.containsKey("T1_TASK-MEMB") || numberOfRoomsByTasks.get("T1_TASK-MEMB") == 1);
-        assertTrue(sumNumberOfRooms() == 5);
+		assertTrue(numberOfRoomsByTasks.get("T1_TASK-C1_1") == 1, "T1_TASK-C1_1"); 
+        assertTrue( numberOfRoomsByTasks.get("T1_TASK-C1_2") == 1, "T1_TASK-C1_2");
+        assertTrue(numberOfRoomsByTasks.get("T1_TASK-C2") == 3, "TASK-C2");
+        assertTrue(numberOfRoomsByTasks.get("T1_TASK-REB") == 2, "TASK-REB");
+        assertTrue(numberOfRoomsByTasks.get("T1_TASK-ID") == 4, "TASK-ID");
+        assertTrue(numberOfRoomsByTasks.get("T1_TASK-MEMB") == 1, "T1_TASK-MEMB");
+        assertTrue(sumNumberOfRooms() == 12);
         
 		generateAndComputes("LP003", LINEAR_CONTEXT); // Level 16 -- Linear -- Path TAST1
 		System.out.println(numberOfRoomsByTasks);
@@ -85,13 +85,13 @@ class TasksRepartitionInDungeonTests { // TODO : refaire les cas de labyrinthiqu
         assertTrue(numberOfRoomsByTasks.get("T2_TASK-MEMB") == 1, "TASK-MEMB");
         assertTrue(sumNumberOfRooms() == 5);
         
-		generateAndComputes("LP010", LABYRINTHINE_CONTEXT); // Level 1 -- Labyrinthine -- Path TAST2
-		assertTrue(numberOfRoomsByTasks.get("T2_TASK-C1") == 1, "TASK-C1"); 
-        assertTrue(numberOfRoomsByTasks.get("T2_TASK-C2") == 1, "TASK-C2");
-        assertTrue(numberOfRoomsByTasks.get("T2_TASK-REB") == 1, "TASK-REB");
-        assertTrue(numberOfRoomsByTasks.get("T2_TASK-ID") == 1, "TASK-ID");
-        assertTrue(numberOfRoomsByTasks.get("T2_TASK-MEMB") == 1, "TASK-MEMB");
-        assertTrue(sumNumberOfRooms() == 5);
+		generateAndComputes("LP010", LABYRINTHINE_CONTEXT); // Level 8 -- Labyrinthine -- Path TAST2
+		assertTrue(numberOfRoomsByTasks.get("T2_TASK-C1") == 2 || numberOfRoomsByTasks.get("T2_TASK-C1") == 3, "TASK-C1");  
+        assertTrue(numberOfRoomsByTasks.get("T2_TASK-C2") == 2 || numberOfRoomsByTasks.get("T2_TASK-C2") == 3, "TASK-C2");
+        assertTrue(numberOfRoomsByTasks.get("T2_TASK-REB") == 2 || numberOfRoomsByTasks.get("T2_TASK-REB") == 3, "TASK-REB");
+        assertTrue(numberOfRoomsByTasks.get("T2_TASK-ID") == 2 || numberOfRoomsByTasks.get("T2_TASK-ID") == 3, "TASK-ID");
+        assertTrue(numberOfRoomsByTasks.get("T2_TASK-MEMB") == 2 || numberOfRoomsByTasks.get("T2_TASK-MEMB") == 3, "TASK-MEMB");
+        assertTrue(sumNumberOfRooms() == 10);
         
 		generateAndComputes("LP011", LINEAR_CONTEXT); // Level 16 -- Linear -- Path TAST2
 		assertTrue(numberOfRoomsByTasks.get("T2_TASK-C1") == 4, "TASK-C1"); 
@@ -122,15 +122,15 @@ class TasksRepartitionInDungeonTests { // TODO : refaire les cas de labyrinthiqu
         assertTrue(!numberOfRoomsByTasks.containsKey("T1_TASK-MEMB") || numberOfRoomsByTasks.get("T1_TASK-MEMB") == 1);
         assertTrue(sumNumberOfRooms() == 5);
         
-		generateAndComputes("LP004", LABYRINTHINE_CONTEXT); // Level 1 -- Labyrinthine -- Path TAST1
+		generateAndComputes("LP004", LABYRINTHINE_CONTEXT); // Level 8 -- Labyrinthine -- Path TAST1
 		System.out.println(numberOfRoomsByTasks);
-		assertFalse(numberOfRoomsByTasks.containsKey("T1_TASK-C1_1")); 
-        assertTrue(!numberOfRoomsByTasks.containsKey("T1_TASK-C1_2") || numberOfRoomsByTasks.get("T1_TASK-C1_2") == 1);
-        assertTrue(numberOfRoomsByTasks.get("T1_TASK-C2") == 1, "TASK-C2");
-        assertTrue(numberOfRoomsByTasks.get("T1_TASK-REB") == 1, "TASK-REB");
-        assertTrue(numberOfRoomsByTasks.get("T1_TASK-ID") == 2, "TASK-ID");
-        assertTrue(!numberOfRoomsByTasks.containsKey("T1_TASK-MEMB") || numberOfRoomsByTasks.get("T1_TASK-MEMB") == 1);
-        assertTrue(sumNumberOfRooms() == 5);
+		assertTrue(numberOfRoomsByTasks.get("T1_TASK-C1_1") == 1, "T1_TASK-C1_1"); 
+        assertTrue( numberOfRoomsByTasks.get("T1_TASK-C1_2") == 1, "T1_TASK-C1_2");
+        assertTrue(numberOfRoomsByTasks.get("T1_TASK-C2") == 3, "TASK-C2");
+        assertTrue(numberOfRoomsByTasks.get("T1_TASK-REB") == 2, "TASK-REB");
+        assertTrue(numberOfRoomsByTasks.get("T1_TASK-ID") == 4, "TASK-ID");
+        assertTrue(numberOfRoomsByTasks.get("T1_TASK-MEMB") == 1, "T1_TASK-MEMB");
+        assertTrue(sumNumberOfRooms() == 12);
         
 		generateAndComputes("LP005", LINEAR_CONTEXT); // Level 16 -- Linear -- Path TAST1
 		System.out.println(numberOfRoomsByTasks);
@@ -159,13 +159,15 @@ class TasksRepartitionInDungeonTests { // TODO : refaire les cas de labyrinthiqu
         assertTrue(numberOfRoomsByTasks.get("T2_TASK-MEMB") == 1, "TASK-MEMB");
         assertTrue(sumNumberOfRooms() == 5);
         
-		generateAndComputes("LP012", LABYRINTHINE_CONTEXT); // Level 1 -- Labyrinthine -- Path TAST2
-		assertTrue(numberOfRoomsByTasks.get("T2_TASK-C1") == 1, "TASK-C1"); 
-        assertTrue(numberOfRoomsByTasks.get("T2_TASK-C2") == 1, "TASK-C2");
-        assertTrue(numberOfRoomsByTasks.get("T2_TASK-REB") == 1, "TASK-REB");
-        assertTrue(numberOfRoomsByTasks.get("T2_TASK-ID") == 1, "TASK-ID");
-        assertTrue(numberOfRoomsByTasks.get("T2_TASK-MEMB") == 1, "TASK-MEMB");
-        assertTrue(sumNumberOfRooms() == 5);
+		generateAndComputes("LP012", LABYRINTHINE_CONTEXT); // Level 8 -- Labyrinthine -- Path TAST2
+		System.out.println(this.numberOfRoomsByTasks+" LP012");
+		assertTrue(numberOfRoomsByTasks.get("T2_TASK-C1") == 2 || numberOfRoomsByTasks.get("T2_TASK-C1") == 3, "TASK-C1");  
+        assertTrue(numberOfRoomsByTasks.get("T2_TASK-C2") == 2 || numberOfRoomsByTasks.get("T2_TASK-C2") == 3, "TASK-C2");
+        assertTrue(numberOfRoomsByTasks.get("T2_TASK-REB") == 2 || numberOfRoomsByTasks.get("T2_TASK-REB") == 3, "TASK-REB");
+        assertTrue(numberOfRoomsByTasks.get("T2_TASK-ID") == 2 || numberOfRoomsByTasks.get("T2_TASK-ID") == 3, "TASK-ID");
+        assertTrue(numberOfRoomsByTasks.get("T2_TASK-MEMB") == 2 || numberOfRoomsByTasks.get("T2_TASK-MEMB") == 3, "TASK-MEMB");
+        assertTrue(sumNumberOfRooms() == 10);
+        System.out.println(sumNumberOfRooms());
         
 		generateAndComputes("LP013", LINEAR_CONTEXT); // Level 16 -- Linear -- Path TAST2
 		assertTrue(numberOfRoomsByTasks.get("T2_TASK-C1") == 4, "TASK-C1"); 
@@ -196,15 +198,15 @@ class TasksRepartitionInDungeonTests { // TODO : refaire les cas de labyrinthiqu
         assertTrue(numberOfRoomsByTasks.get("T1_TASK-MEMB") == 1, "TASK-MEMB");
         assertTrue(sumNumberOfRooms() == 5);
         
-		generateAndComputes("LP006", LABYRINTHINE_CONTEXT); // Level 1 -- Labyrinthine -- Path TAST1
-		System.out.println(numberOfRoomsByTasks);
-		assertFalse(numberOfRoomsByTasks.containsKey("T1_TASK-C1_1")); 
-        assertTrue(numberOfRoomsByTasks.get("T1_TASK-C1_2") == 1, "TASK-C1_2");
+		generateAndComputes("LP006", LABYRINTHINE_CONTEXT); // Level 8 -- Labyrinthine -- Path TAST1
+		System.out.println(numberOfRoomsByTasks+" LP006");
+		assertFalse(numberOfRoomsByTasks.containsKey("T1_TASK-C1_1"));
+        assertTrue(numberOfRoomsByTasks.get("T1_TASK-C1_2") == 2, "TASK-C1_2");
         assertFalse(numberOfRoomsByTasks.containsKey("T1_TASK-C2"));
-        assertTrue(numberOfRoomsByTasks.get("T1_TASK-REB") == 1, "TASK-REB");
-        assertTrue(numberOfRoomsByTasks.get("T1_TASK-ID") == 2, "TASK-ID");
-        assertTrue(numberOfRoomsByTasks.get("T1_TASK-MEMB") == 1, "TASK-MEMB");
-        assertTrue(sumNumberOfRooms() == 5);
+        assertTrue(numberOfRoomsByTasks.get("T1_TASK-REB") == 3, "TASK-REB");
+        assertTrue(numberOfRoomsByTasks.get("T1_TASK-ID") == 5, "TASK-ID");
+        assertTrue(numberOfRoomsByTasks.get("T1_TASK-MEMB") == 2, "TASK-MEMB");
+        assertTrue(sumNumberOfRooms() == 12);
         
 		generateAndComputes("LP007", LINEAR_CONTEXT); // Level 16 -- Linear -- Path TAST1
 		System.out.println(numberOfRoomsByTasks);
@@ -234,13 +236,13 @@ class TasksRepartitionInDungeonTests { // TODO : refaire les cas de labyrinthiqu
         assertTrue(numberOfRoomsByTasks.get("T2_TASK-MEMB") == 1, "TASK-MEMB");
         assertTrue(sumNumberOfRooms() == 4);
         
-		generateAndComputes("LP014", LABYRINTHINE_CONTEXT); // Level 1 -- Labyrinthine -- Path TAST2
-		assertTrue(numberOfRoomsByTasks.get("T2_TASK-C1") == 1, "TASK-C1"); 
-        assertTrue(numberOfRoomsByTasks.get("T2_TASK-C2") == 1, "TASK-C2");
+		generateAndComputes("LP014", LABYRINTHINE_CONTEXT); // Level 8 -- Labyrinthine -- Path TAST2
+		assertTrue(numberOfRoomsByTasks.get("T2_TASK-C1") == 3, "TASK-C1"); 
+        assertTrue(numberOfRoomsByTasks.get("T2_TASK-C2") == 3, "TASK-C2");
         assertFalse(numberOfRoomsByTasks.containsKey("T2_TASK-REB"));
-        assertTrue(numberOfRoomsByTasks.get("T2_TASK-ID") == 1, "TASK-ID");
-        assertTrue(numberOfRoomsByTasks.get("T2_TASK-MEMB") == 1, "TASK-MEMB");
-        assertTrue(sumNumberOfRooms() == 4);
+        assertTrue(numberOfRoomsByTasks.get("T2_TASK-ID") == 3, "TASK-ID");
+        assertTrue(numberOfRoomsByTasks.get("T2_TASK-MEMB") == 3, "TASK-MEMB");
+        assertTrue(sumNumberOfRooms() == 12);
         
 		generateAndComputes("LP015", LINEAR_CONTEXT); // Level 16 -- Linear -- Path TAST2
 		assertTrue(numberOfRoomsByTasks.get("T2_TASK-C1") == 5, "TASK-C1"); 
@@ -266,11 +268,11 @@ class TasksRepartitionInDungeonTests { // TODO : refaire les cas de labyrinthiqu
         assertTrue(numberOfRoomsByTasks.get("T1_TASK-C1_1") == 5, "TASK-C1_1");
         assertTrue(sumNumberOfRooms() == 5);
         
-		generateAndComputes("LP008", LABYRINTHINE_CONTEXT); // Level 1 -- Labyrinthine -- Path TAST1
+		generateAndComputes("LP008", LABYRINTHINE_CONTEXT); // Level 8 -- Labyrinthine -- Path TAST1
 		System.out.println(numberOfRoomsByTasks);
 		System.out.println(numberOfRoomsByTasks);
-        assertTrue(numberOfRoomsByTasks.get("T1_TASK-C1_1") == 5, "TASK-C1_1");
-        assertTrue(sumNumberOfRooms() == 5);
+        assertTrue(numberOfRoomsByTasks.get("T1_TASK-C1_1") == 12, "TASK-C1_1");
+        assertTrue(sumNumberOfRooms() == 12);
         
 		generateAndComputes("LP009", LINEAR_CONTEXT); // Level 16 -- Linear -- Path TAST1
 		System.out.println(numberOfRoomsByTasks);
@@ -286,9 +288,9 @@ class TasksRepartitionInDungeonTests { // TODO : refaire les cas de labyrinthiqu
 		assertTrue(numberOfRoomsByTasks.get("T2_TASK-C1") == 5, "TASK-C1"); 
         assertTrue(sumNumberOfRooms() == 5);
         
-		generateAndComputes("LP016", LABYRINTHINE_CONTEXT); // Level 1 -- Labyrinthine -- Path TAST2
-		assertTrue(numberOfRoomsByTasks.get("T2_TASK-C1") == 5, "TASK-C1"); 
-        assertTrue(sumNumberOfRooms() == 5);
+		generateAndComputes("LP016", LABYRINTHINE_CONTEXT); // Level 8 -- Labyrinthine -- Path TAST2
+		assertTrue(numberOfRoomsByTasks.get("T2_TASK-C1") == 12, "TASK-C1"); 
+        assertTrue(sumNumberOfRooms() == 12);
         
 		generateAndComputes("LP017", LINEAR_CONTEXT); // Level 16 -- Linear -- Path TAST2
 		assertTrue(numberOfRoomsByTasks.get("T2_TASK-C1") == 20, "TASK-C1"); 
