@@ -30,7 +30,7 @@ public class LearningPathResource {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public String addObjectiveLevel(String jsonContent, @Context ServletContext app) { 
+	public void addObjectiveLevel(String jsonContent, @Context ServletContext app) { 
 		Constant.PROJECT_PATH = app.getRealPath("");		
 		JSONObject obj = new JSONObject();
 		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, true));
@@ -40,8 +40,6 @@ public class LearningPathResource {
 			e.printStackTrace();
 		}
 		manager.updateOrCreateTrainingPath(obj);
-		
-		return "Success";
 	}
 	
 	@GET
@@ -73,7 +71,6 @@ public class LearningPathResource {
 	public LearningPath getLearnerTrainingPath(String contextFileName, String learnerID) {
 		String contextsRepertory = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CONTEXTS_FILES_PATH; 
 		File[] files = new File(contextsRepertory).listFiles();
-
 		
 		int i = 0;
 		String pathID = "";

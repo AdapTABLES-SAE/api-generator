@@ -4,6 +4,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import exceptions.NonExistantLearnerPlayerException;
 //import io.swagger.annotations.Api;
 //import io.swagger.annotations.ApiResponse;
 import jakarta.servlet.ServletContext;
@@ -59,7 +60,7 @@ public class CoinsResource {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public String setCoins(String jsonContent, @PathParam("learnerID") String learnerID, @Context ServletContext app) {  
+	public void setCoins(String jsonContent, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		JSONObject obj = new JSONObject();
 		try {
@@ -71,6 +72,6 @@ public class CoinsResource {
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
-		return manager.setLearnerCoins(obj);
+		manager.setLearnerCoins(obj);
 	}
 }

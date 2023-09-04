@@ -49,23 +49,23 @@ public class PurchaseActivationResource {
 	@GET
 	@Path("/reset/learner/{playerID}")
 	@Produces(MediaType.TEXT_PLAIN)
-	public String resetItems(@PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public void resetItems(@PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + Constant.DEFAULT_CONTEXT_FILE_NAME + ".xmi", true));
-		return manager.resetEquipments(playerID);
+		manager.resetEquipments(playerID);
 	}
 	
 	@GET
 	@Path("/reset/classroom/{classroomID}/learner/{playerID}")
 	@Produces(MediaType.TEXT_PLAIN)
-	public String resetItems(@PathParam("classroomID") String classID, @PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public void resetItems(@PathParam("classroomID") String classID, @PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
-		return manager.resetEquipments(playerID);
+		manager.resetEquipments(playerID);
 	}
 	
 	@GET
@@ -82,7 +82,7 @@ public class PurchaseActivationResource {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public String setActivatedItems(String jsonContent, @Context ServletContext app) {
+	public void setActivatedItems(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException {
 		Constant.PROJECT_PATH = app.getRealPath("");
 		JSONObject obj = new JSONObject();
 		try {
@@ -94,7 +94,7 @@ public class PurchaseActivationResource {
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
-		return manager.setItemsStatus(obj);
+		manager.setItemsStatus(obj);
 	}
 	
 /*	@GET

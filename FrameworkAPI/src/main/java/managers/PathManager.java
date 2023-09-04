@@ -144,7 +144,7 @@ public class PathManager {
 		return buildingParameters;
 	}
 	
-	public void updateOrCreateTrainingPath(JSONObject json) {
+	public void updateOrCreateTrainingPath(JSONObject json) { // TODO : works for this version might not work for future version 
 		String pathName = (String) json.get("learningPathID");
 		LearningDomain paths = modelsManager.loadDomainModel();
 		LearningPath aPath = getCorrespondingPath(paths, pathName);
@@ -153,7 +153,7 @@ public class PathManager {
 			aPath.setID(pathName);
 			aPath.setKnowledge(knowledge);
 			aPath.setName("Just another test");
-		} 
+		}
 		Objective obj = getCorrespondingObjective(aPath, knowledge, json);
 		MTLevel level = (MTLevel) getCorrespondingLevel(obj, (String) json.get("level"));
 		addLevelToObjective(obj, level, json);
@@ -164,7 +164,7 @@ public class PathManager {
 		modelsManager.saveDomainModel(paths);
 		
 		// update progress for learner having this path TODO
-		resetEveryLearnerProgress(pathName);
+		resetEveryLearnerProgress(pathName, obj, level);
 	}
 	
 	private List<String> getListOfContextFiles(){
@@ -178,7 +178,7 @@ public class PathManager {
 		return contextFilesNames; 
 	}
 	
-	private void resetEveryLearnerProgress(String pathID) {
+	private void resetEveryLearnerProgress(String pathID, Objective objective, Level level) {
 		List<String> contextFilesNames = getListOfContextFiles();
 		
 		LearnerPlayerManager manager; 
@@ -186,7 +186,7 @@ public class PathManager {
 			manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 					Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 					Constant.CONTEXTS_FILES_PATH + context , true));
-			manager.resetProgressForEachLearnerHavingPath(pathID);
+			manager.resetProgressForEachLearnerHavingPath(pathID, objective, level);
 		}
 	}
 	
@@ -233,7 +233,7 @@ public class PathManager {
 		level.setBuildSetup(build);
 		level.setResultPositionSetup(resPosition);
 		level.setMinInterval((int) ((long) buildingParams.get("intervalMin")));
-		level.setMaxInterval((int) ((long) buildingParams.get("maxInterval")));
+		level.setMaxInterval((int) ((long) buildingParams.get("intervalMax")));
 		
 		JSONObject achievementParam = getJSONAchievementParameters(json);
 		CompletionCriteria criteria = new CompletionCriteriaImpl(); 
@@ -252,7 +252,7 @@ public class PathManager {
 		String idTask;
 		for (JSONObject jtask : jsonTasks) {
 			idTask = levelID+"-T"+idNbTask;
-			switch (jtask.get("typeTask").toString()) {
+			switch ((String) jtask.get("taskType")) {
 			case "C1":
 				level.getTasks().add(createC1Task(jtask, idTask));
 				break;
@@ -279,7 +279,7 @@ public class PathManager {
 		MTCompletion1 task = new MTCompletion1Impl();
 		task.setID(taskID);
 		
-		task.setMaxTime((int)(long)jtask.get("timeMaxSeconds"));
+		task.setMaxTime((int)(long)jtask.get("timeMaxSecond"));
 		task.setPercentOfApparition((int)(long)jtask.get("repartitionPercent"));
 		task.setNbConsecutiveSuccess((int)(long)jtask.get("successiveSuccessesToReach"));
 		
@@ -308,7 +308,7 @@ public class PathManager {
 		MTCompletion2 task = new MTCompletion2Impl();
 		task.setID(taskID);
 		
-		task.setMaxTime((int)(long)jtask.get("timeMaxSeconds"));
+		task.setMaxTime((int)(long)jtask.get("timeMaxSecond"));
 		task.setPercentOfApparition((int)(long)jtask.get("repartitionPercent"));
 		task.setNbConsecutiveSuccess((int)(long)jtask.get("successiveSuccessesToReach"));
 		
@@ -334,7 +334,7 @@ public class PathManager {
 		MTRecontruction task = new MTRecontructionImpl();
 		task.setID(taskID);
 		
-		task.setMaxTime((int)(long)jtask.get("timeMaxSeconds"));
+		task.setMaxTime((int)(long)jtask.get("timeMaxSecond"));
 		task.setPercentOfApparition((int)(long)jtask.get("repartitionPercent"));
 		task.setNbConsecutiveSuccess((int)(long)jtask.get("successiveSuccessesToReach"));
 		
@@ -350,7 +350,7 @@ public class PathManager {
 		MTIdentification task = new MTIdentificationImpl();
 		task.setID(taskID);
 		
-		task.setMaxTime((int)(long)jtask.get("timeMaxSeconds"));
+		task.setMaxTime((int)(long)jtask.get("timeMaxSecond"));
 		task.setPercentOfApparition((int)(long)jtask.get("repartitionPercent"));
 		task.setNbConsecutiveSuccess((int)(long)jtask.get("successiveSuccessesToReach"));
 		
@@ -369,7 +369,7 @@ public class PathManager {
 		MTMembership task = new MTMembershipImpl();
 		task.setID(taskID);
 		
-		task.setMaxTime((int)(long)jtask.get("timeMaxSeconds"));
+		task.setMaxTime((int)(long)jtask.get("timeMaxSecond"));
 		task.setPercentOfApparition((int)(long)jtask.get("repartitionPercent"));
 		task.setNbConsecutiveSuccess((int)(long)jtask.get("successiveSuccessesToReach"));
 		
@@ -413,7 +413,6 @@ public class PathManager {
 				}
 			}
 			obj.setID(objID);
-			 
 		}
 		if(obj.getSetoffacts().isEmpty()) {
 			for (Long table :  (List<Long>) getJSONBuildSetup(json).get("tables")) {

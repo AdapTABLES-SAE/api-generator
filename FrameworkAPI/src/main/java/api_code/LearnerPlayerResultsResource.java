@@ -32,7 +32,7 @@ public class LearnerPlayerResultsResource {
 	@Path("/training")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public String addingLearnerResults(String jsonContent, @Context ServletContext app) { 
+	public void addingLearnerResults(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException { 
 		Constant.PROJECT_PATH = app.getRealPath("");
 		JSONObject obj = new JSONObject();
 		try {
@@ -45,14 +45,14 @@ public class LearnerPlayerResultsResource {
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + Constant.DEFAULT_CONTEXT_FILE_NAME + ".xmi", true));
 				
-		return manager.saveLearnerResults(obj);
+		manager.saveLearnerResults(obj);
 	}
 	
 	@POST
 	@Path("/classroom/{classroomID}/training")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public String addingLearnerResults(@PathParam("classroomID") String classID, String jsonContent, @Context ServletContext app) { 
+	public void addingLearnerResults(@PathParam("classroomID") String classID, String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException { 
 		Constant.PROJECT_PATH = app.getRealPath("");
 		JSONObject obj = new JSONObject();
 		try {
@@ -65,14 +65,14 @@ public class LearnerPlayerResultsResource {
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
 				
-		return manager.saveLearnerResults(obj);
+		manager.saveLearnerResults(obj);
 	}
 	
 	@POST
 	@Path("/game")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public String addingPlayerResults(String jsonContent, @Context ServletContext app) { 
+	public void addingPlayerResults(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException { 
 		Constant.PROJECT_PATH = app.getRealPath("");
 		JSONObject obj = new JSONObject();
 		try {
@@ -85,14 +85,14 @@ public class LearnerPlayerResultsResource {
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + Constant.DEFAULT_CONTEXT_FILE_NAME + ".xmi", true));
 				
-		return manager.savePlayerResults(obj);
+		manager.savePlayerResults(obj);
 	}
 	
 	@POST
 	@Path("/classroom/{classroomID}/game")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public String addingPlayerResults(@PathParam("classroomID") String classID, String jsonContent, @Context ServletContext app) { 
+	public void addingPlayerResults(@PathParam("classroomID") String classID, String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException { 
 		Constant.PROJECT_PATH = app.getRealPath("");
 		JSONObject obj = new JSONObject();
 		try {
@@ -105,7 +105,7 @@ public class LearnerPlayerResultsResource {
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID +".xmi", true));
 				
-		return manager.savePlayerResults(obj);
+		manager.savePlayerResults(obj);
 	}
 	
 	@GET
