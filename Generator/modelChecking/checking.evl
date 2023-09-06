@@ -40,7 +40,7 @@ context LearningDomain!LearningPath {
 		check {
 			return self.objectives.forAll(obj | 
 			obj.prerequisites.forAll(prereq | 
-			prereq.succesPercent >= 0 and prereq.succesPercent <= 100 and 
+			prereq.successPercent >= 0 and prereq.successPercent <= 100 and 
 			prereq.encountersPercent >= 0 and prereq.encountersPercent <= 100));
 		}
 		
@@ -56,7 +56,7 @@ context LearningDomain!LearningPath {
 		check {
 			return self.objectives.forAll(obj | 
 			obj.levels.forAll(level | 
-			level.completionCriteria.succesPercent >= 0 and level.completionCriteria.succesPercent <= 100 and 
+			level.completionCriteria.successPercent >= 0 and level.completionCriteria.successPercent <= 100 and 
 			level.completionCriteria.encountersPercent >= 0 and level.completionCriteria.encountersPercent <= 100));
 		}
 		
@@ -64,4 +64,20 @@ context LearningDomain!LearningPath {
 			return "Completion critera of a level has an non valid percentage (superior to 100 or inferior to 0)";
 		}
 	}
+	
+	/*
+	Checks if every prerequistes are unlockable : its percentages are inferior or equals to its requiredLevel percentages 
+	*/	
+	constraint prerequisiteAreUnlockable {
+		check {
+			return self.objectives.forAll(obj | 
+			obj.prerequisites.forAll(prereq | 
+			prereq.successPercent <= prereq.requiredLevel.completionCriteria.successPercent and
+			prereq.encountersPercent <= prereq.requiredLevel.completionCriteria.encountersPercent));
+		}
+		
+		message {
+			return "Prerequisite is not achievable (percentages are superior to those of the level completion criteria)";
+		}
+	}	
 }

@@ -240,7 +240,6 @@ public class PathManager {
 		criteria.setEncountersPercent((double) achievementParam.get("encounterCompletionCriteria"));
 		criteria.setSuccessPercent((double) achievementParam.get("successCompletionCriteria"));
 		level.setCompletionCriteria(criteria);
-		System.out.println(level.getCompletionCriteria());
 		
 		createLevelTasks(level, getJSONTasks(json), levelName);
 		
