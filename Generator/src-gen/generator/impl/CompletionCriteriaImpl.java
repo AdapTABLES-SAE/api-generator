@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.CompletionCriteriaImpl#getSuccesPercent <em>Succes Percent</em>}</li>
+ *   <li>{@link generator.impl.CompletionCriteriaImpl#getSuccessPercent <em>Success Percent</em>}</li>
  *   <li>{@link generator.impl.CompletionCriteriaImpl#getEncountersPercent <em>Encounters Percent</em>}</li>
  * </ul>
  *
@@ -28,24 +28,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class CompletionCriteriaImpl extends MinimalEObjectImpl.Container implements CompletionCriteria {
 	/**
-	 * The default value of the '{@link #getSuccesPercent() <em>Succes Percent</em>}' attribute.
+	 * The default value of the '{@link #getSuccessPercent() <em>Success Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSuccesPercent()
+	 * @see #getSuccessPercent()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double SUCCES_PERCENT_EDEFAULT = 80.0;
+	protected static final double SUCCESS_PERCENT_EDEFAULT = 80.0;
 
 	/**
-	 * The cached value of the '{@link #getSuccesPercent() <em>Succes Percent</em>}' attribute.
+	 * The cached value of the '{@link #getSuccessPercent() <em>Success Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSuccesPercent()
+	 * @see #getSuccessPercent()
 	 * @generated
 	 * @ordered
 	 */
-	protected double succesPercent = SUCCES_PERCENT_EDEFAULT;
+	protected double successPercent = SUCCESS_PERCENT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getEncountersPercent() <em>Encounters Percent</em>}' attribute.
@@ -91,8 +91,8 @@ public class CompletionCriteriaImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getSuccesPercent() {
-		return succesPercent;
+	public double getSuccessPercent() {
+		return successPercent;
 	}
 
 	/**
@@ -100,12 +100,12 @@ public class CompletionCriteriaImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSuccesPercent(double newSuccesPercent) {
-		double oldSuccesPercent = succesPercent;
-		succesPercent = newSuccesPercent;
+	public void setSuccessPercent(double newSuccessPercent) {
+		double oldSuccessPercent = successPercent;
+		successPercent = newSuccessPercent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.COMPLETION_CRITERIA__SUCCES_PERCENT,
-					oldSuccesPercent, succesPercent));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.COMPLETION_CRITERIA__SUCCESS_PERCENT,
+					oldSuccessPercent, successPercent));
 	}
 
 	/**
@@ -138,8 +138,8 @@ public class CompletionCriteriaImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.COMPLETION_CRITERIA__SUCCES_PERCENT:
-			return getSuccesPercent();
+		case GeneratorPackage.COMPLETION_CRITERIA__SUCCESS_PERCENT:
+			return getSuccessPercent();
 		case GeneratorPackage.COMPLETION_CRITERIA__ENCOUNTERS_PERCENT:
 			return getEncountersPercent();
 		}
@@ -154,8 +154,8 @@ public class CompletionCriteriaImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.COMPLETION_CRITERIA__SUCCES_PERCENT:
-			setSuccesPercent((Double) newValue);
+		case GeneratorPackage.COMPLETION_CRITERIA__SUCCESS_PERCENT:
+			setSuccessPercent((Double) newValue);
 			return;
 		case GeneratorPackage.COMPLETION_CRITERIA__ENCOUNTERS_PERCENT:
 			setEncountersPercent((Double) newValue);
@@ -172,8 +172,8 @@ public class CompletionCriteriaImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.COMPLETION_CRITERIA__SUCCES_PERCENT:
-			setSuccesPercent(SUCCES_PERCENT_EDEFAULT);
+		case GeneratorPackage.COMPLETION_CRITERIA__SUCCESS_PERCENT:
+			setSuccessPercent(SUCCESS_PERCENT_EDEFAULT);
 			return;
 		case GeneratorPackage.COMPLETION_CRITERIA__ENCOUNTERS_PERCENT:
 			setEncountersPercent(ENCOUNTERS_PERCENT_EDEFAULT);
@@ -190,8 +190,8 @@ public class CompletionCriteriaImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.COMPLETION_CRITERIA__SUCCES_PERCENT:
-			return succesPercent != SUCCES_PERCENT_EDEFAULT;
+		case GeneratorPackage.COMPLETION_CRITERIA__SUCCESS_PERCENT:
+			return successPercent != SUCCESS_PERCENT_EDEFAULT;
 		case GeneratorPackage.COMPLETION_CRITERIA__ENCOUNTERS_PERCENT:
 			return encountersPercent != ENCOUNTERS_PERCENT_EDEFAULT;
 		}
@@ -209,8 +209,8 @@ public class CompletionCriteriaImpl extends MinimalEObjectImpl.Container impleme
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (succesPercent: ");
-		result.append(succesPercent);
+		result.append(" (successPercent: ");
+		result.append(successPercent);
 		result.append(", encountersPercent: ");
 		result.append(encountersPercent);
 		result.append(')');

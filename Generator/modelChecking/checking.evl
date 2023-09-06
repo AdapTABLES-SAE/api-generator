@@ -1,0 +1,67 @@
+context LearningDomain!LearningPath {
+
+	/*
+	Checks if every SetOfFacts of an Objective, belongs to the 
+	corresponding Knowledge of the objective's path. 
+	*/
+	constraint objectiveFactsBelongsToPathKnowledge {
+		check {
+			return self.objectives.forAll(obj | 
+			obj.setoffacts.forAll(facts | 
+			self.knowledge.knowledgefacts.contains(facts))); 
+			//.println(); self.levels.size() = 0; isDefined();
+		}
+		
+		message {
+			return "SetOfFacts does not belong to the correct knowledge";
+		}
+	}
+	
+	/*
+	Checks if every required level of an Objective's Prerequisite, is not
+	a level of the actual objective. 
+	*/
+	constraint objectivePrerequisiteLevelsAreNotObjectiveLevels {
+		check {
+			return self.objectives.forAll(obj | 
+			obj.prerequisites.forAll(prereq | 
+			not obj.levels.contains(prereq.requiredLevel)));
+		}
+		
+		message {
+			return "Prerequisite of an objective references a level the objective";
+		}
+	}
+	
+	/*
+	Checks if every Prerequisite percentages are valid (over 0 and under 100).
+	*/
+	constraint prerequisitesPercentageAreOver0AndUnder100 {
+		check {
+			return self.objectives.forAll(obj | 
+			obj.prerequisites.forAll(prereq | 
+			prereq.succesPercent >= 0 and prereq.succesPercent <= 100 and 
+			prereq.encountersPercent >= 0 and prereq.encountersPercent <= 100));
+		}
+		
+		message {
+			return "Prerequisite has an non valid percentage (superior to 100 or inferior to 0)";
+		}
+	}
+
+	/*
+	Checks if every CompletionCriteria percentages are valid (over 0 and under 100).
+	*/	
+	constraint completionCriteriaAreOver0AndUnder100 {
+		check {
+			return self.objectives.forAll(obj | 
+			obj.levels.forAll(level | 
+			level.completionCriteria.succesPercent >= 0 and level.completionCriteria.succesPercent <= 100 and 
+			level.completionCriteria.encountersPercent >= 0 and level.completionCriteria.encountersPercent <= 100));
+		}
+		
+		message {
+			return "Completion critera of a level has an non valid percentage (superior to 100 or inferior to 0)";
+		}
+	}
+}

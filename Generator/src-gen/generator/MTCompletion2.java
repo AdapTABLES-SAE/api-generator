@@ -32,7 +32,7 @@ public interface MTCompletion2 extends CompletionTask {
 	 * @return the value of the '<em>Targets</em>' attribute list.
 	 * @see generator.ESeveralTarget
 	 * @see generator.GeneratorPackage#getMTCompletion2_Targets()
-	 * @model lower="2"
+	 * @model required="true"
 	 * @generated
 	 */
 	EList<ESeveralTarget> getTargets();

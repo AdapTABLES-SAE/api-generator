@@ -38,7 +38,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_IfMuYCCTEe2pjb8HURi2ww" name="contextStructuration" repPath="#_IfJrECCTEe2pjb8HURi2ww" changeId="1689689090479">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_IfMuYCCTEe2pjb8HURi2ww" name="contextStructuration" repPath="#_IfJrECCTEe2pjb8HURi2ww" changeId="1693987587371">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -46,7 +46,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Og-RsCg1Ee2OYdly36BzFQ" name="educationalDomain" repPath="#_Og7OYCg1Ee2OYdly36BzFQ" changeId="1689686602475">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Og-RsCg1Ee2OYdly36BzFQ" name="educationalDomain" repPath="#_Og7OYCg1Ee2OYdly36BzFQ" changeId="1694001111671">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -54,7 +54,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5Q1zgCkGEe2Mu67rFJOXFg" name="learnerPlayer" repPath="#_5QvF0CkGEe2Mu67rFJOXFg" changeId="1693221388689">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5Q1zgCkGEe2Mu67rFJOXFg" name="learnerPlayer" repPath="#_5QvF0CkGEe2Mu67rFJOXFg" changeId="1694001447874">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="generator.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -1807,8 +1807,8 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_XDrq4Cg7Ee2t_YScUF26DA" name="succesPercent : EDouble = 0.0" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="generator.ecore#//Prerequisite/succesPercent"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//Prerequisite/succesPercent"/>
+        <target xmi:type="ecore:EAttribute" href="generator.ecore#//Prerequisite/successPercent"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//Prerequisite/successPercent"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_-PR3BG8kEe2-HYYOHxL2bw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
@@ -2034,8 +2034,8 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_MYlJhsMPEe2MbdeXJ-5_DA" name="/sucessPercent : EDouble = 0.0" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="generator.ecore#//CurrentObjectiveLevel/sucessPercent"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//CurrentObjectiveLevel/sucessPercent"/>
+        <target xmi:type="ecore:EAttribute" href="generator.ecore#//CurrentObjectiveLevel/successPercent"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//CurrentObjectiveLevel/successPercent"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_MYmXoMMPEe2MbdeXJ-5_DA" labelColor="39,76,114" labelAlignment="LEFT" description="_MYlJhMMPEe2MbdeXJ-5_DA"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -4687,6 +4687,10 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_br3yYSkJEe273IP9OAkmZg" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_br3yYikJEe273IP9OAkmZg"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_R3XQ4EyMEe6cbdoFT8Pweg" type="3010" element="_R25W0EyMEe6cbdoFT8Pweg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_R3XQ4UyMEe6cbdoFT8Pweg" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_R3XQ4kyMEe6cbdoFT8Pweg"/>
+            </children>
             <children xmi:type="notation:Node" xmi:id="_Ee_RgCkIEe2jvPbl2IkItw" type="3010" element="_Ee05cikIEe2jvPbl2IkItw">
               <styles xmi:type="notation:FontStyle" xmi:id="_Ee_RgSkIEe2jvPbl2IkItw" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_Ee_RgikIEe2jvPbl2IkItw"/>
@@ -4895,6 +4899,14 @@
         <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//LearnerPlayer/learningpath"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_dex6dCkJEe273IP9OAkmZg" labelAlignment="LEFT" description="_dex6cikJEe273IP9OAkmZg" color="114,159,207">
           <labelFormat>bold</labelFormat>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_R25W0EyMEe6cbdoFT8Pweg" name=" statistics : Statistics" tooltipText="">
+        <target xmi:type="ecore:EReference" href="generator.ecore#//LearnerPlayer/statistics"/>
+        <semanticElements xmi:type="ecore:EReference" href="generator.ecore#//LearnerPlayer/statistics"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_R26k8EyMEe6cbdoFT8Pweg" labelAlignment="LEFT" color="114,159,207">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
       </ownedElements>
@@ -8391,9 +8403,9 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_rPItACg6Ee2t_YScUF26DA" name="succesPercent : EDouble = 0.0" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="generator.ecore#//Prerequisite/succesPercent"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//Prerequisite/succesPercent"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_rPItACg6Ee2t_YScUF26DA" name="successPercent : EDouble = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="generator.ecore#//Prerequisite/successPercent"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//Prerequisite/successPercent"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_-PKiNW8kEe2-HYYOHxL2bw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
@@ -8886,9 +8898,9 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_8j4vUJipEe2mRof_at-n1w" name="succesPercent : EDouble = 80.0" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="generator.ecore#//CompletionCriteria/succesPercent"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//CompletionCriteria/succesPercent"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_8j4vUJipEe2mRof_at-n1w" name="successPercent : EDouble = 80.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="generator.ecore#//CompletionCriteria/successPercent"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//CompletionCriteria/successPercent"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_8j4vUZipEe2mRof_at-n1w" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
@@ -11738,9 +11750,9 @@
         <ownedStyle xmi:type="diagram:BundledImage" uid="_3TvTsYwZEe2XpLXsluHyYw" labelColor="39,76,114" labelAlignment="LEFT" description="_2v9RMowZEe2XpLXsluHyYw"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_oiGEU4wZEe2XpLXsluHyYw" name="/sucessPercent : EDouble = 0.0" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="generator.ecore#//CurrentObjectiveLevel/sucessPercent"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//CurrentObjectiveLevel/sucessPercent"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_oiGEU4wZEe2XpLXsluHyYw" name="/successPercent : EDouble = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="generator.ecore#//CurrentObjectiveLevel/successPercent"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//CurrentObjectiveLevel/successPercent"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_2v9RNIwZEe2XpLXsluHyYw" labelColor="39,76,114" labelAlignment="LEFT" description="_2v9RMowZEe2XpLXsluHyYw"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -11821,9 +11833,9 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_PpblxYzWEe2XpLXsluHyYw" name="/sucessPercent : EDouble = 0.0" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="generator.ecore#//ResultsByTask/sucessPercent"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//ResultsByTask/sucessPercent"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_PpblxYzWEe2XpLXsluHyYw" name="/successPercent : EDouble = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="generator.ecore#//ResultsByTask/successPercent"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="generator.ecore#//ResultsByTask/successPercent"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_G_CgOIzkEe2XpLXsluHyYw" labelColor="39,76,114" labelAlignment="LEFT" description="_2v9RMowZEe2XpLXsluHyYw"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>

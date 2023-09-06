@@ -170,11 +170,11 @@ public class EducationalElementsGenerator {
 				int randomIndexChoice = random.nextInt(possibleRemoveTasks.size());
 				nbRoomsToTask.remove(possibleRemoveTasks.get(randomIndexChoice));
 			}
-		}/* else if(computedNumberOfRoom < dungeonElements.getNbQRooms()) {
+		} else if(computedNumberOfRoom < dungeonElements.getNbQRooms()) {
 			for(ResultsByTask task : getXTasksWithHigherApparitionPercentage((int) dungeonElements.getNbQRooms() - computedNumberOfRoom)) {
 				nbRoomsToTask.put(task, nbRoomsToTask.get(task) + 1);
 			}
-		}*/
+		}
 	}
 	
 	private double getLowerPercentagePresentInDungeon() {
@@ -187,17 +187,20 @@ public class EducationalElementsGenerator {
 		return percentage;
 	}
 	
-	/*private List<ResultsByTask> getXTasksWithHigherApparitionPercentage(int numberOfHigherTask){
+	private List<ResultsByTask> getXTasksWithHigherApparitionPercentage(int numberOfHigherTask){
+		System.out.println("Missing nbRoom "+numberOfHigherTask);
 		List<ResultsByTask> tasks = new ArrayList<>();
 		List<ResultsByTask> tasks_temp = new ArrayList<>(nbRoomsToTask.keySet());
+		System.out.println("Possibilities "+tasks_temp);
+
 		for(int i = 0; i < numberOfHigherTask; i++) {
 			tasks.add(getTaskWithHigherNumberOfRoom(tasks_temp));
-			tasks_temp.remove(tasks.get(tasks.size()));
+			tasks_temp.remove(tasks.get(tasks.size() - 1));
 		}
 		return tasks;
-	}*/
+	}
 	
-	/*private ResultsByTask getTaskWithHigherNumberOfRoom(List<ResultsByTask> tasks) {
+	private ResultsByTask getTaskWithHigherNumberOfRoom(List<ResultsByTask> tasks) {
 		ResultsByTask max = tasks.get(0);
 		for(ResultsByTask task : tasks) {
 			if(nbRoomsToTask.containsKey(task) && nbRoomsToTask.get(task) > nbRoomsToTask.get(max)) {
@@ -205,7 +208,7 @@ public class EducationalElementsGenerator {
 			}
 		}
 		return max;
-	}*/
+	}
 	
 	private Set<ResultsByTask> getTaskWithLowerApparitionPercentage(){
 		double percentage = getLowerPercentagePresentInDungeon();
@@ -247,7 +250,7 @@ public class EducationalElementsGenerator {
 		if(dungeonElements.getCurrentObjectiveLevel().getResults() != null) {
 			for (ResultsByTask resBytask : dungeonElements.getCurrentObjectiveLevel().getResults().getResultsbytask()) {
 				if(resBytask.getTask().equals(task)) {
-					return resBytask.getSucessPercent();
+					return resBytask.getSuccessPercent();
 				}
 			}
 		}
@@ -289,7 +292,7 @@ public class EducationalElementsGenerator {
 	
 	private boolean everyObjectiveLevelReached100Percent() {
 		for (CurrentObjectiveLevel currentObjectiveLevel : learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
-			if(!(currentObjectiveLevel.getEncountersPercent() >= 100.0 && currentObjectiveLevel.getSucessPercent() >= 100.0)) {
+			if(!(currentObjectiveLevel.getEncountersPercent() >= 100.0 && currentObjectiveLevel.getSuccessPercent() >= 100.0)) {
 				return false;
 			}
 		}
@@ -297,7 +300,7 @@ public class EducationalElementsGenerator {
 	}
 	
 	private boolean levelThresholdsAreAt100Percent(CurrentObjectiveLevel currentOL) {
-		return currentOL.getEncountersPercent() == 100.0 && currentOL.getSucessPercent() == 100.0;
+		return currentOL.getEncountersPercent() == 100.0 && currentOL.getSuccessPercent() == 100.0;
 	}
 	
 	private void addNewCurrentObjectiveLevelToLearnerPlayer(List<Objective> eligible_objective) {
@@ -386,7 +389,7 @@ public class EducationalElementsGenerator {
 	}
 	
 	private boolean isPreRequisitePercentageAchieved(CurrentObjectiveLevel currentOL, Prerequisite prerequisite) {
-		return currentOL.getSucessPercent() >= prerequisite.getSuccesPercent() && currentOL.getEncountersPercent() >= prerequisite.getEncountersPercent();
+		return currentOL.getSuccessPercent() >= prerequisite.getSuccessPercent() && currentOL.getEncountersPercent() >= prerequisite.getEncountersPercent();
 	}
 	
 	private CurrentObjectiveLevel getCorrespondingCurrentObjectiveLevel(Level level) {

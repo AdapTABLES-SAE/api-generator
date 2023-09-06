@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.CurrentObjectiveLevel#getLevel <em>Level</em>}</li>
  *   <li>{@link generator.CurrentObjectiveLevel#getResults <em>Results</em>}</li>
  *   <li>{@link generator.CurrentObjectiveLevel#getEncountersPercent <em>Encounters Percent</em>}</li>
- *   <li>{@link generator.CurrentObjectiveLevel#getSucessPercent <em>Sucess Percent</em>}</li>
+ *   <li>{@link generator.CurrentObjectiveLevel#getSuccessPercent <em>Success Percent</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getCurrentObjectiveLevel()
@@ -138,25 +138,25 @@ public interface CurrentObjectiveLevel extends EObject {
 	void setEncountersPercent(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Sucess Percent</b></em>' attribute.
+	 * Returns the value of the '<em><b>Success Percent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sucess Percent</em>' attribute.
-	 * @see #setSucessPercent(double)
-	 * @see generator.GeneratorPackage#getCurrentObjectiveLevel_SucessPercent()
+	 * @return the value of the '<em>Success Percent</em>' attribute.
+	 * @see #setSuccessPercent(double)
+	 * @see generator.GeneratorPackage#getCurrentObjectiveLevel_SuccessPercent()
 	 * @model derived="true"
 	 * @generated
 	 */
-	double getSucessPercent();
+	double getSuccessPercent();
 
 	/**
-	 * Sets the value of the '{@link generator.CurrentObjectiveLevel#getSucessPercent <em>Sucess Percent</em>}' attribute.
+	 * Sets the value of the '{@link generator.CurrentObjectiveLevel#getSuccessPercent <em>Success Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sucess Percent</em>' attribute.
-	 * @see #getSucessPercent()
+	 * @param value the new value of the '<em>Success Percent</em>' attribute.
+	 * @see #getSuccessPercent()
 	 * @generated
 	 */
-	void setSucessPercent(double value);
+	void setSuccessPercent(double value);
 
 } // CurrentObjectiveLevel

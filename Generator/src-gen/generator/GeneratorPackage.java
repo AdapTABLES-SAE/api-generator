@@ -1037,13 +1037,13 @@ public interface GeneratorPackage extends EPackage {
 	int PREREQUISITE = 14;
 
 	/**
-	 * The feature id for the '<em><b>Succes Percent</b></em>' attribute.
+	 * The feature id for the '<em><b>Success Percent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREREQUISITE__SUCCES_PERCENT = 0;
+	int PREREQUISITE__SUCCESS_PERCENT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Required Level</b></em>' reference.
@@ -1847,13 +1847,13 @@ public interface GeneratorPackage extends EPackage {
 	int CURRENT_OBJECTIVE_LEVEL__ENCOUNTERS_PERCENT = 4;
 
 	/**
-	 * The feature id for the '<em><b>Sucess Percent</b></em>' attribute.
+	 * The feature id for the '<em><b>Success Percent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CURRENT_OBJECTIVE_LEVEL__SUCESS_PERCENT = 5;
+	int CURRENT_OBJECTIVE_LEVEL__SUCCESS_PERCENT = 5;
 
 	/**
 	 * The number of structural features of the '<em>Current Objective Level</em>' class.
@@ -2940,13 +2940,13 @@ public interface GeneratorPackage extends EPackage {
 	int RESULTS_BY_TASK__QUESTIONABLE_FACTS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Sucess Percent</b></em>' attribute.
+	 * The feature id for the '<em><b>Success Percent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESULTS_BY_TASK__SUCESS_PERCENT = 2;
+	int RESULTS_BY_TASK__SUCCESS_PERCENT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Encounters Percent</b></em>' attribute.
@@ -3895,13 +3895,13 @@ public interface GeneratorPackage extends EPackage {
 	int COMPLETION_CRITERIA = 45;
 
 	/**
-	 * The feature id for the '<em><b>Succes Percent</b></em>' attribute.
+	 * The feature id for the '<em><b>Success Percent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION_CRITERIA__SUCCES_PERCENT = 0;
+	int COMPLETION_CRITERIA__SUCCESS_PERCENT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Encounters Percent</b></em>' attribute.
@@ -7484,15 +7484,15 @@ public interface GeneratorPackage extends EPackage {
 	EClass getPrerequisite();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.Prerequisite#getSuccesPercent <em>Succes Percent</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.Prerequisite#getSuccessPercent <em>Success Percent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Succes Percent</em>'.
-	 * @see generator.Prerequisite#getSuccesPercent()
+	 * @return the meta object for the attribute '<em>Success Percent</em>'.
+	 * @see generator.Prerequisite#getSuccessPercent()
 	 * @see #getPrerequisite()
 	 * @generated
 	 */
-	EAttribute getPrerequisite_SuccesPercent();
+	EAttribute getPrerequisite_SuccessPercent();
 
 	/**
 	 * Returns the meta object for the reference '{@link generator.Prerequisite#getRequiredLevel <em>Required Level</em>}'.
@@ -7862,15 +7862,15 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getCurrentObjectiveLevel_EncountersPercent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.CurrentObjectiveLevel#getSucessPercent <em>Sucess Percent</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.CurrentObjectiveLevel#getSuccessPercent <em>Success Percent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Sucess Percent</em>'.
-	 * @see generator.CurrentObjectiveLevel#getSucessPercent()
+	 * @return the meta object for the attribute '<em>Success Percent</em>'.
+	 * @see generator.CurrentObjectiveLevel#getSuccessPercent()
 	 * @see #getCurrentObjectiveLevel()
 	 * @generated
 	 */
-	EAttribute getCurrentObjectiveLevel_SucessPercent();
+	EAttribute getCurrentObjectiveLevel_SuccessPercent();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Position <em>Position</em>}'.
@@ -8382,15 +8382,15 @@ public interface GeneratorPackage extends EPackage {
 	EReference getResultsByTask_QuestionableFacts();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.ResultsByTask#getSucessPercent <em>Sucess Percent</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.ResultsByTask#getSuccessPercent <em>Success Percent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Sucess Percent</em>'.
-	 * @see generator.ResultsByTask#getSucessPercent()
+	 * @return the meta object for the attribute '<em>Success Percent</em>'.
+	 * @see generator.ResultsByTask#getSuccessPercent()
 	 * @see #getResultsByTask()
 	 * @generated
 	 */
-	EAttribute getResultsByTask_SucessPercent();
+	EAttribute getResultsByTask_SuccessPercent();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.ResultsByTask#getEncountersPercent <em>Encounters Percent</em>}'.
@@ -8975,15 +8975,15 @@ public interface GeneratorPackage extends EPackage {
 	EClass getCompletionCriteria();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.CompletionCriteria#getSuccesPercent <em>Succes Percent</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.CompletionCriteria#getSuccessPercent <em>Success Percent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Succes Percent</em>'.
-	 * @see generator.CompletionCriteria#getSuccesPercent()
+	 * @return the meta object for the attribute '<em>Success Percent</em>'.
+	 * @see generator.CompletionCriteria#getSuccessPercent()
 	 * @see #getCompletionCriteria()
 	 * @generated
 	 */
-	EAttribute getCompletionCriteria_SuccesPercent();
+	EAttribute getCompletionCriteria_SuccessPercent();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.CompletionCriteria#getEncountersPercent <em>Encounters Percent</em>}'.
@@ -11262,12 +11262,12 @@ public interface GeneratorPackage extends EPackage {
 		EClass PREREQUISITE = eINSTANCE.getPrerequisite();
 
 		/**
-		 * The meta object literal for the '<em><b>Succes Percent</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Success Percent</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PREREQUISITE__SUCCES_PERCENT = eINSTANCE.getPrerequisite_SuccesPercent();
+		EAttribute PREREQUISITE__SUCCESS_PERCENT = eINSTANCE.getPrerequisite_SuccessPercent();
 
 		/**
 		 * The meta object literal for the '<em><b>Required Level</b></em>' reference feature.
@@ -11556,12 +11556,12 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute CURRENT_OBJECTIVE_LEVEL__ENCOUNTERS_PERCENT = eINSTANCE.getCurrentObjectiveLevel_EncountersPercent();
 
 		/**
-		 * The meta object literal for the '<em><b>Sucess Percent</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Success Percent</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CURRENT_OBJECTIVE_LEVEL__SUCESS_PERCENT = eINSTANCE.getCurrentObjectiveLevel_SucessPercent();
+		EAttribute CURRENT_OBJECTIVE_LEVEL__SUCCESS_PERCENT = eINSTANCE.getCurrentObjectiveLevel_SuccessPercent();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.PositionImpl <em>Position</em>}' class.
@@ -11979,12 +11979,12 @@ public interface GeneratorPackage extends EPackage {
 		EReference RESULTS_BY_TASK__QUESTIONABLE_FACTS = eINSTANCE.getResultsByTask_QuestionableFacts();
 
 		/**
-		 * The meta object literal for the '<em><b>Sucess Percent</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Success Percent</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESULTS_BY_TASK__SUCESS_PERCENT = eINSTANCE.getResultsByTask_SucessPercent();
+		EAttribute RESULTS_BY_TASK__SUCCESS_PERCENT = eINSTANCE.getResultsByTask_SuccessPercent();
 
 		/**
 		 * The meta object literal for the '<em><b>Encounters Percent</b></em>' attribute feature.
@@ -12439,12 +12439,12 @@ public interface GeneratorPackage extends EPackage {
 		EClass COMPLETION_CRITERIA = eINSTANCE.getCompletionCriteria();
 
 		/**
-		 * The meta object literal for the '<em><b>Succes Percent</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Success Percent</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMPLETION_CRITERIA__SUCCES_PERCENT = eINSTANCE.getCompletionCriteria_SuccesPercent();
+		EAttribute COMPLETION_CRITERIA__SUCCESS_PERCENT = eINSTANCE.getCompletionCriteria_SuccessPercent();
 
 		/**
 		 * The meta object literal for the '<em><b>Encounters Percent</b></em>' attribute feature.

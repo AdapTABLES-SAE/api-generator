@@ -1430,7 +1430,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPrerequisite_SuccesPercent() {
+	public EAttribute getPrerequisite_SuccessPercent() {
 		return (EAttribute) prerequisiteEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1745,7 +1745,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCurrentObjectiveLevel_SucessPercent() {
+	public EAttribute getCurrentObjectiveLevel_SuccessPercent() {
 		return (EAttribute) currentObjectiveLevelEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -2186,7 +2186,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResultsByTask_SucessPercent() {
+	public EAttribute getResultsByTask_SuccessPercent() {
 		return (EAttribute) resultsByTaskEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2681,7 +2681,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCompletionCriteria_SuccesPercent() {
+	public EAttribute getCompletionCriteria_SuccessPercent() {
 		return (EAttribute) completionCriteriaEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -4249,7 +4249,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(objectiveEClass, OBJECTIVE__SETOFFACTS);
 
 		prerequisiteEClass = createEClass(PREREQUISITE);
-		createEAttribute(prerequisiteEClass, PREREQUISITE__SUCCES_PERCENT);
+		createEAttribute(prerequisiteEClass, PREREQUISITE__SUCCESS_PERCENT);
 		createEReference(prerequisiteEClass, PREREQUISITE__REQUIRED_LEVEL);
 		createEAttribute(prerequisiteEClass, PREREQUISITE__ENCOUNTERS_PERCENT);
 
@@ -4291,7 +4291,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__LEVEL);
 		createEReference(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__RESULTS);
 		createEAttribute(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__ENCOUNTERS_PERCENT);
-		createEAttribute(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__SUCESS_PERCENT);
+		createEAttribute(currentObjectiveLevelEClass, CURRENT_OBJECTIVE_LEVEL__SUCCESS_PERCENT);
 
 		responseModalityEClass = createEClass(RESPONSE_MODALITY);
 
@@ -4350,7 +4350,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		resultsByTaskEClass = createEClass(RESULTS_BY_TASK);
 		createEReference(resultsByTaskEClass, RESULTS_BY_TASK__TASK);
 		createEReference(resultsByTaskEClass, RESULTS_BY_TASK__QUESTIONABLE_FACTS);
-		createEAttribute(resultsByTaskEClass, RESULTS_BY_TASK__SUCESS_PERCENT);
+		createEAttribute(resultsByTaskEClass, RESULTS_BY_TASK__SUCCESS_PERCENT);
 		createEAttribute(resultsByTaskEClass, RESULTS_BY_TASK__ENCOUNTERS_PERCENT);
 
 		mtFactEClass = createEClass(MT_FACT);
@@ -4415,7 +4415,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(questionedFactEClass, QUESTIONED_FACT__FACT_CORRECTNESS);
 
 		completionCriteriaEClass = createEClass(COMPLETION_CRITERIA);
-		createEAttribute(completionCriteriaEClass, COMPLETION_CRITERIA__SUCCES_PERCENT);
+		createEAttribute(completionCriteriaEClass, COMPLETION_CRITERIA__SUCCESS_PERCENT);
 		createEAttribute(completionCriteriaEClass, COMPLETION_CRITERIA__ENCOUNTERS_PERCENT);
 
 		levelsDifficultyProgressEClass = createEClass(LEVELS_DIFFICULTY_PROGRESS);
@@ -4884,7 +4884,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(prerequisiteEClass, Prerequisite.class, "Prerequisite", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPrerequisite_SuccesPercent(), ecorePackage.getEDouble(), "succesPercent", null, 0, 1,
+		initEAttribute(getPrerequisite_SuccessPercent(), ecorePackage.getEDouble(), "successPercent", null, 0, 1,
 				Prerequisite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEReference(getPrerequisite_RequiredLevel(), this.getLevel(), null, "requiredLevel", null, 1, 1,
@@ -4978,8 +4978,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getCurrentObjectiveLevel_EncountersPercent(), ecorePackage.getEDouble(), "encountersPercent",
 				null, 0, 1, CurrentObjectiveLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCurrentObjectiveLevel_SucessPercent(), ecorePackage.getEDouble(), "sucessPercent", null, 0, 1,
-				CurrentObjectiveLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+		initEAttribute(getCurrentObjectiveLevel_SuccessPercent(), ecorePackage.getEDouble(), "successPercent", null, 0,
+				1, CurrentObjectiveLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(responseModalityEClass, ResponseModality.class, "ResponseModality", IS_ABSTRACT, !IS_INTERFACE,
@@ -5063,7 +5063,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(mtCompletion2EClass, MTCompletion2.class, "MTCompletion2", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMTCompletion2_Targets(), this.getESeveralTarget(), "targets", null, 2, -1,
+		initEAttribute(getMTCompletion2_Targets(), this.getESeveralTarget(), "targets", null, 1, -1,
 				MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMTCompletion2_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "2", 0, 1,
@@ -5104,7 +5104,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getResultsByTask_QuestionableFacts(), this.getQuestionableFact(), null, "questionableFacts",
 				null, 0, -1, ResultsByTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResultsByTask_SucessPercent(), ecorePackage.getEDouble(), "sucessPercent", null, 0, 1,
+		initEAttribute(getResultsByTask_SuccessPercent(), ecorePackage.getEDouble(), "successPercent", null, 0, 1,
 				ResultsByTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResultsByTask_EncountersPercent(), ecorePackage.getEDouble(), "encountersPercent", null, 0, 1,
@@ -5256,9 +5256,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(completionCriteriaEClass, CompletionCriteria.class, "CompletionCriteria", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCompletionCriteria_SuccesPercent(), ecorePackage.getEDouble(), "succesPercent", "80.0", 0, 1,
-				CompletionCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCompletionCriteria_SuccessPercent(), ecorePackage.getEDouble(), "successPercent", "80.0", 0,
+				1, CompletionCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCompletionCriteria_EncountersPercent(), ecorePackage.getEDouble(), "encountersPercent",
 				"100.0", 0, 1, CompletionCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

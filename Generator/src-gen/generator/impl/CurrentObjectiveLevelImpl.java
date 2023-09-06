@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link generator.impl.CurrentObjectiveLevelImpl#getLevel <em>Level</em>}</li>
  *   <li>{@link generator.impl.CurrentObjectiveLevelImpl#getResults <em>Results</em>}</li>
  *   <li>{@link generator.impl.CurrentObjectiveLevelImpl#getEncountersPercent <em>Encounters Percent</em>}</li>
- *   <li>{@link generator.impl.CurrentObjectiveLevelImpl#getSucessPercent <em>Sucess Percent</em>}</li>
+ *   <li>{@link generator.impl.CurrentObjectiveLevelImpl#getSuccessPercent <em>Success Percent</em>}</li>
  * </ul>
  *
  * @generated
@@ -109,24 +109,24 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 	protected double encountersPercent = ENCOUNTERS_PERCENT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getSucessPercent() <em>Sucess Percent</em>}' attribute.
+	 * The default value of the '{@link #getSuccessPercent() <em>Success Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSucessPercent()
+	 * @see #getSuccessPercent()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double SUCESS_PERCENT_EDEFAULT = 0.0;
+	protected static final double SUCCESS_PERCENT_EDEFAULT = 0.0;
 
 	/**
-	 * The cached value of the '{@link #getSucessPercent() <em>Sucess Percent</em>}' attribute.
+	 * The cached value of the '{@link #getSuccessPercent() <em>Success Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSucessPercent()
+	 * @see #getSuccessPercent()
 	 * @generated
 	 * @ordered
 	 */
-	protected double sucessPercent = SUCESS_PERCENT_EDEFAULT;
+	protected double successPercent = SUCCESS_PERCENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -327,8 +327,8 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getSucessPercent() {
-		return sucessPercent;
+	public double getSuccessPercent() {
+		return successPercent;
 	}
 
 	/**
@@ -336,12 +336,12 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSucessPercent(double newSucessPercent) {
-		double oldSucessPercent = sucessPercent;
-		sucessPercent = newSucessPercent;
+	public void setSuccessPercent(double newSuccessPercent) {
+		double oldSuccessPercent = successPercent;
+		successPercent = newSuccessPercent;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__SUCESS_PERCENT, oldSucessPercent, sucessPercent));
+					GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__SUCCESS_PERCENT, oldSuccessPercent, successPercent));
 	}
 
 	/**
@@ -380,8 +380,8 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 			return getResults();
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__ENCOUNTERS_PERCENT:
 			return getEncountersPercent();
-		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__SUCESS_PERCENT:
-			return getSucessPercent();
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__SUCCESS_PERCENT:
+			return getSuccessPercent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -409,8 +409,8 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__ENCOUNTERS_PERCENT:
 			setEncountersPercent((Double) newValue);
 			return;
-		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__SUCESS_PERCENT:
-			setSucessPercent((Double) newValue);
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__SUCCESS_PERCENT:
+			setSuccessPercent((Double) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -439,8 +439,8 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__ENCOUNTERS_PERCENT:
 			setEncountersPercent(ENCOUNTERS_PERCENT_EDEFAULT);
 			return;
-		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__SUCESS_PERCENT:
-			setSucessPercent(SUCESS_PERCENT_EDEFAULT);
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__SUCCESS_PERCENT:
+			setSuccessPercent(SUCCESS_PERCENT_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -464,8 +464,8 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 			return results != null;
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__ENCOUNTERS_PERCENT:
 			return encountersPercent != ENCOUNTERS_PERCENT_EDEFAULT;
-		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__SUCESS_PERCENT:
-			return sucessPercent != SUCESS_PERCENT_EDEFAULT;
+		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL__SUCCESS_PERCENT:
+			return successPercent != SUCCESS_PERCENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -485,8 +485,8 @@ public class CurrentObjectiveLevelImpl extends MinimalEObjectImpl.Container impl
 		result.append(achieved);
 		result.append(", encountersPercent: ");
 		result.append(encountersPercent);
-		result.append(", sucessPercent: ");
-		result.append(sucessPercent);
+		result.append(", successPercent: ");
+		result.append(successPercent);
 		result.append(')');
 		return result.toString();
 	}

@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.CompletionCriteria#getSuccesPercent <em>Succes Percent</em>}</li>
+ *   <li>{@link generator.CompletionCriteria#getSuccessPercent <em>Success Percent</em>}</li>
  *   <li>{@link generator.CompletionCriteria#getEncountersPercent <em>Encounters Percent</em>}</li>
  * </ul>
  *
@@ -23,27 +23,27 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface CompletionCriteria extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Succes Percent</b></em>' attribute.
+	 * Returns the value of the '<em><b>Success Percent</b></em>' attribute.
 	 * The default value is <code>"80.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Succes Percent</em>' attribute.
-	 * @see #setSuccesPercent(double)
-	 * @see generator.GeneratorPackage#getCompletionCriteria_SuccesPercent()
+	 * @return the value of the '<em>Success Percent</em>' attribute.
+	 * @see #setSuccessPercent(double)
+	 * @see generator.GeneratorPackage#getCompletionCriteria_SuccessPercent()
 	 * @model default="80.0"
 	 * @generated
 	 */
-	double getSuccesPercent();
+	double getSuccessPercent();
 
 	/**
-	 * Sets the value of the '{@link generator.CompletionCriteria#getSuccesPercent <em>Succes Percent</em>}' attribute.
+	 * Sets the value of the '{@link generator.CompletionCriteria#getSuccessPercent <em>Success Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Succes Percent</em>' attribute.
-	 * @see #getSuccesPercent()
+	 * @param value the new value of the '<em>Success Percent</em>' attribute.
+	 * @see #getSuccessPercent()
 	 * @generated
 	 */
-	void setSuccesPercent(double value);
+	void setSuccessPercent(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Encounters Percent</b></em>' attribute.

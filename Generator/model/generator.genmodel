@@ -176,7 +176,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Objective/setoffacts"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Prerequisite">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Prerequisite/succesPercent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Prerequisite/successPercent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Prerequisite/requiredLevel"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Prerequisite/encountersPercent"/>
     </genClasses>
@@ -218,7 +218,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//CurrentObjectiveLevel/level"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//CurrentObjectiveLevel/results"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CurrentObjectiveLevel/encountersPercent"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CurrentObjectiveLevel/sucessPercent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CurrentObjectiveLevel/successPercent"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//ResponseModality"/>
     <genClasses ecoreClass="generator.ecore#//MultipleChoice">
@@ -275,7 +275,7 @@
     <genClasses ecoreClass="generator.ecore#//ResultsByTask">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//ResultsByTask/task"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//ResultsByTask/questionableFacts"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ResultsByTask/sucessPercent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ResultsByTask/successPercent"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ResultsByTask/encountersPercent"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTFact">
@@ -340,7 +340,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionedFact/factCorrectness"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//CompletionCriteria">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionCriteria/succesPercent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionCriteria/successPercent"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionCriteria/encountersPercent"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//LevelsDifficultyProgress">

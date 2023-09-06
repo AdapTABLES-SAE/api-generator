@@ -154,13 +154,13 @@ public class LearnerPlayerManager {
 				JSONObject taskProgress = new JSONObject(); 
 				taskProgress.put("idTask", rbt.getTask().getID());
 				taskProgress.put("typeTask", getTaskType(rbt.getTask())); 
-				taskProgress.put("currentSuccess", rbt.getSucessPercent());
+				taskProgress.put("currentSuccess", rbt.getSuccessPercent());
 				taskProgress.put("currentEncounters", rbt.getEncountersPercent());
 				progresses.add(taskProgress);
 			}
 			
 			progress.put("progresses", progresses);
-			progress.put("globalSuccess", currentOL.getSucessPercent());
+			progress.put("globalSuccess", currentOL.getSuccessPercent());
 			progress.put("globalEncounters", currentOL.getEncountersPercent());
 			
 		} catch (NonExistantLearnerPlayerException e) {
@@ -305,7 +305,7 @@ public class LearnerPlayerManager {
 		Level level = new MTLevelImpl(); 
 		CompletionCriteria criteria = new CompletionCriteriaImpl();
 		criteria.setEncountersPercent(10.);
-		criteria.setSuccesPercent(5.0); // 10.
+		criteria.setSuccessPercent(5.0); // 10.
 		level.setCompletionCriteria(criteria);
 		
 		col.setLevel(level);
@@ -340,7 +340,7 @@ public class LearnerPlayerManager {
 	private void updateCurrentLevelStatus(CurrentObjectiveLevel currentOL) {
 		CompletionCriteria criteria = currentOL.getLevel().getCompletionCriteria();
 		if(currentOL.getEncountersPercent() >= criteria.getEncountersPercent() && 
-				currentOL.getSucessPercent() >= criteria.getSuccesPercent()) {
+				currentOL.getSuccessPercent() >= criteria.getSuccessPercent()) {
 			currentOL.setAchieved(true);
 		}
 	}
@@ -385,19 +385,19 @@ public class LearnerPlayerManager {
 		
 		for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {	
 			rbt.setEncountersPercent(this.computeTaskEncounteredPercent(rbt));
-			rbt.setSucessPercent(this.computeTaskSuccessPercent(rbt));
+			rbt.setSuccessPercent(this.computeTaskSuccessPercent(rbt));
 			
 			/*System.out.println("success "+rbt.getSucessPercent());
 			System.out.println("encounter "+rbt.getEncountersPercent());*/
 			
-			sumTaskSuccess += rbt.getSucessPercent();
+			sumTaskSuccess += rbt.getSuccessPercent();
 			sumTaskEncounters += rbt.getEncountersPercent(); 
 		}
 		/*System.out.println(sumTaskEncounters / numberOfTasks);
 		System.out.println(sumTaskSuccess / numberOfTasks);
 		System.out.println(numberOfTasks);*/
 		currentOL.setEncountersPercent(sumTaskEncounters / numberOfTasks); 
-		currentOL.setSucessPercent(sumTaskSuccess / numberOfTasks);
+		currentOL.setSuccessPercent(sumTaskSuccess / numberOfTasks);
 		this.updateCurrentLevelStatus(currentOL);
 	}
 	
@@ -482,7 +482,7 @@ public class LearnerPlayerManager {
 		 */
 		LearnerPlayer learnerPlayer;
 		learnerPlayer = modelsManager.getLearnerPlayer((String) obj.get("learnerID"));
-		learnerPlayer.getProgression().getPlayerProgress().setCoins((int) (long) obj.get("newBalance"));
+		learnerPlayer.getProgression().getPlayerProgress().setCoins(((Long) obj.get("newBalance")).intValue());
 		
 		modelsManager.saveContextModel();
 	}
@@ -496,7 +496,7 @@ public class LearnerPlayerManager {
 		
 		player.getStatistics().setNbQuestionsEncountered(player.getStatistics().getNbQuestionsEncountered() + Long.valueOf((Long) obj.get("nbQuestionsMeet")).intValue());
 		player.getStatistics().setNbCorrectGivenAnswers(player.getStatistics().getNbCorrectGivenAnswers() + Long.valueOf((Long) obj.get("nbCorrectAnswers")).intValue());
-		player.getStatistics().setTotalTimeMin(player.getStatistics().getTotalTimeMin() + (int) (long) obj.get("timeInMin"));
+		player.getStatistics().setTotalTimeMin(player.getStatistics().getTotalTimeMin() + ((Long) obj.get("timeInMin")).intValue());
 			
 		switch((String) obj.get("finishStatus")) {
 			case "DEAD": player.getStatistics().setNbDeaths(player.getStatistics().getNbDeaths() + 1);

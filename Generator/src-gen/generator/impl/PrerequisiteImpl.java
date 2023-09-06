@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.PrerequisiteImpl#getSuccesPercent <em>Succes Percent</em>}</li>
+ *   <li>{@link generator.impl.PrerequisiteImpl#getSuccessPercent <em>Success Percent</em>}</li>
  *   <li>{@link generator.impl.PrerequisiteImpl#getRequiredLevel <em>Required Level</em>}</li>
  *   <li>{@link generator.impl.PrerequisiteImpl#getEncountersPercent <em>Encounters Percent</em>}</li>
  * </ul>
@@ -31,24 +31,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Prerequisite {
 	/**
-	 * The default value of the '{@link #getSuccesPercent() <em>Succes Percent</em>}' attribute.
+	 * The default value of the '{@link #getSuccessPercent() <em>Success Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSuccesPercent()
+	 * @see #getSuccessPercent()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double SUCCES_PERCENT_EDEFAULT = 0.0;
+	protected static final double SUCCESS_PERCENT_EDEFAULT = 0.0;
 
 	/**
-	 * The cached value of the '{@link #getSuccesPercent() <em>Succes Percent</em>}' attribute.
+	 * The cached value of the '{@link #getSuccessPercent() <em>Success Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSuccesPercent()
+	 * @see #getSuccessPercent()
 	 * @generated
 	 * @ordered
 	 */
-	protected double succesPercent = SUCCES_PERCENT_EDEFAULT;
+	protected double successPercent = SUCCESS_PERCENT_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getRequiredLevel() <em>Required Level</em>}' reference.
@@ -104,8 +104,8 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getSuccesPercent() {
-		return succesPercent;
+	public double getSuccessPercent() {
+		return successPercent;
 	}
 
 	/**
@@ -113,12 +113,12 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSuccesPercent(double newSuccesPercent) {
-		double oldSuccesPercent = succesPercent;
-		succesPercent = newSuccesPercent;
+	public void setSuccessPercent(double newSuccessPercent) {
+		double oldSuccessPercent = successPercent;
+		successPercent = newSuccessPercent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PREREQUISITE__SUCCES_PERCENT,
-					oldSuccesPercent, succesPercent));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PREREQUISITE__SUCCESS_PERCENT,
+					oldSuccessPercent, successPercent));
 	}
 
 	/**
@@ -191,8 +191,8 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.PREREQUISITE__SUCCES_PERCENT:
-			return getSuccesPercent();
+		case GeneratorPackage.PREREQUISITE__SUCCESS_PERCENT:
+			return getSuccessPercent();
 		case GeneratorPackage.PREREQUISITE__REQUIRED_LEVEL:
 			if (resolve)
 				return getRequiredLevel();
@@ -211,8 +211,8 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.PREREQUISITE__SUCCES_PERCENT:
-			setSuccesPercent((Double) newValue);
+		case GeneratorPackage.PREREQUISITE__SUCCESS_PERCENT:
+			setSuccessPercent((Double) newValue);
 			return;
 		case GeneratorPackage.PREREQUISITE__REQUIRED_LEVEL:
 			setRequiredLevel((Level) newValue);
@@ -232,8 +232,8 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.PREREQUISITE__SUCCES_PERCENT:
-			setSuccesPercent(SUCCES_PERCENT_EDEFAULT);
+		case GeneratorPackage.PREREQUISITE__SUCCESS_PERCENT:
+			setSuccessPercent(SUCCESS_PERCENT_EDEFAULT);
 			return;
 		case GeneratorPackage.PREREQUISITE__REQUIRED_LEVEL:
 			setRequiredLevel((Level) null);
@@ -253,8 +253,8 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.PREREQUISITE__SUCCES_PERCENT:
-			return succesPercent != SUCCES_PERCENT_EDEFAULT;
+		case GeneratorPackage.PREREQUISITE__SUCCESS_PERCENT:
+			return successPercent != SUCCESS_PERCENT_EDEFAULT;
 		case GeneratorPackage.PREREQUISITE__REQUIRED_LEVEL:
 			return requiredLevel != null;
 		case GeneratorPackage.PREREQUISITE__ENCOUNTERS_PERCENT:
@@ -274,8 +274,8 @@ public class PrerequisiteImpl extends MinimalEObjectImpl.Container implements Pr
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (succesPercent: ");
-		result.append(succesPercent);
+		result.append(" (successPercent: ");
+		result.append(successPercent);
 		result.append(", encountersPercent: ");
 		result.append(encountersPercent);
 		result.append(')');

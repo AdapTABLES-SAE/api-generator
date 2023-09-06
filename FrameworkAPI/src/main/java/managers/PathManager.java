@@ -51,7 +51,7 @@ public class PathManager {
 		JSONObject json = new JSONObject();
 		json.put("learningPathID", path.getID()); // TODO: define a default paths for this version 
 		json.put("objective", path.getObjectives().get(0).getID()); // TODO: define default objective 
-		json.put("levelID",  path.getObjectives().get(0).getLevels().get(0).getID()); // TODO: define default level 
+		json.put("level",  path.getObjectives().get(0).getLevels().get(0).getID()); // TODO: define default level 
 	
 		JSONObject setupParameters = new JSONObject();
 		setupParameters.put("buildingParameters", initialiseJSONBuildParameters(path.getObjectives().get(0), (MTLevel) path.getObjectives().get(0).getLevels().get(0)));
@@ -138,8 +138,8 @@ public class PathManager {
 		buildingParameters.put("tables", tables);
 		buildingParameters.put("leftOperand", level.getBuildSetup().getName());
 		buildingParameters.put("resultLocation", level.getResultPositionSetup().getName());
-		buildingParameters.put("intervalMin", level.getMaxInterval());
-		buildingParameters.put("intervalMax", level.getMinInterval()); 
+		buildingParameters.put("intervalMin", level.getMinInterval());
+		buildingParameters.put("intervalMax", level.getMaxInterval()); 
 		
 		return buildingParameters;
 	}
@@ -238,7 +238,7 @@ public class PathManager {
 		JSONObject achievementParam = getJSONAchievementParameters(json);
 		CompletionCriteria criteria = new CompletionCriteriaImpl(); 
 		criteria.setEncountersPercent((double) achievementParam.get("encounterCompletionCriteria"));
-		criteria.setSuccesPercent((double) achievementParam.get("successCompletionCriteria"));
+		criteria.setSuccessPercent((double) achievementParam.get("successCompletionCriteria"));
 		level.setCompletionCriteria(criteria);
 		System.out.println(level.getCompletionCriteria());
 		

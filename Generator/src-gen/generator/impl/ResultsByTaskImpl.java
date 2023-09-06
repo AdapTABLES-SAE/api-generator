@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link generator.impl.ResultsByTaskImpl#getTask <em>Task</em>}</li>
  *   <li>{@link generator.impl.ResultsByTaskImpl#getQuestionableFacts <em>Questionable Facts</em>}</li>
- *   <li>{@link generator.impl.ResultsByTaskImpl#getSucessPercent <em>Sucess Percent</em>}</li>
+ *   <li>{@link generator.impl.ResultsByTaskImpl#getSuccessPercent <em>Success Percent</em>}</li>
  *   <li>{@link generator.impl.ResultsByTaskImpl#getEncountersPercent <em>Encounters Percent</em>}</li>
  * </ul>
  *
@@ -61,24 +61,24 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 	protected EList<QuestionableFact> questionableFacts;
 
 	/**
-	 * The default value of the '{@link #getSucessPercent() <em>Sucess Percent</em>}' attribute.
+	 * The default value of the '{@link #getSuccessPercent() <em>Success Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSucessPercent()
+	 * @see #getSuccessPercent()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double SUCESS_PERCENT_EDEFAULT = 0.0;
+	protected static final double SUCCESS_PERCENT_EDEFAULT = 0.0;
 
 	/**
-	 * The cached value of the '{@link #getSucessPercent() <em>Sucess Percent</em>}' attribute.
+	 * The cached value of the '{@link #getSuccessPercent() <em>Success Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSucessPercent()
+	 * @see #getSuccessPercent()
 	 * @generated
 	 * @ordered
 	 */
-	protected double sucessPercent = SUCESS_PERCENT_EDEFAULT;
+	protected double successPercent = SUCCESS_PERCENT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getEncountersPercent() <em>Encounters Percent</em>}' attribute.
@@ -177,8 +177,8 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getSucessPercent() {
-		return sucessPercent;
+	public double getSuccessPercent() {
+		return successPercent;
 	}
 
 	/**
@@ -186,12 +186,12 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSucessPercent(double newSucessPercent) {
-		double oldSucessPercent = sucessPercent;
-		sucessPercent = newSucessPercent;
+	public void setSuccessPercent(double newSuccessPercent) {
+		double oldSuccessPercent = successPercent;
+		successPercent = newSuccessPercent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT,
-					oldSucessPercent, sucessPercent));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.RESULTS_BY_TASK__SUCCESS_PERCENT,
+					oldSuccessPercent, successPercent));
 	}
 
 	/**
@@ -244,8 +244,8 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 			return basicGetTask();
 		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONABLE_FACTS:
 			return getQuestionableFacts();
-		case GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT:
-			return getSucessPercent();
+		case GeneratorPackage.RESULTS_BY_TASK__SUCCESS_PERCENT:
+			return getSuccessPercent();
 		case GeneratorPackage.RESULTS_BY_TASK__ENCOUNTERS_PERCENT:
 			return getEncountersPercent();
 		}
@@ -268,8 +268,8 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 			getQuestionableFacts().clear();
 			getQuestionableFacts().addAll((Collection<? extends QuestionableFact>) newValue);
 			return;
-		case GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT:
-			setSucessPercent((Double) newValue);
+		case GeneratorPackage.RESULTS_BY_TASK__SUCCESS_PERCENT:
+			setSuccessPercent((Double) newValue);
 			return;
 		case GeneratorPackage.RESULTS_BY_TASK__ENCOUNTERS_PERCENT:
 			setEncountersPercent((Double) newValue);
@@ -292,8 +292,8 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONABLE_FACTS:
 			getQuestionableFacts().clear();
 			return;
-		case GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT:
-			setSucessPercent(SUCESS_PERCENT_EDEFAULT);
+		case GeneratorPackage.RESULTS_BY_TASK__SUCCESS_PERCENT:
+			setSuccessPercent(SUCCESS_PERCENT_EDEFAULT);
 			return;
 		case GeneratorPackage.RESULTS_BY_TASK__ENCOUNTERS_PERCENT:
 			setEncountersPercent(ENCOUNTERS_PERCENT_EDEFAULT);
@@ -314,8 +314,8 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 			return task != null;
 		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONABLE_FACTS:
 			return questionableFacts != null && !questionableFacts.isEmpty();
-		case GeneratorPackage.RESULTS_BY_TASK__SUCESS_PERCENT:
-			return sucessPercent != SUCESS_PERCENT_EDEFAULT;
+		case GeneratorPackage.RESULTS_BY_TASK__SUCCESS_PERCENT:
+			return successPercent != SUCCESS_PERCENT_EDEFAULT;
 		case GeneratorPackage.RESULTS_BY_TASK__ENCOUNTERS_PERCENT:
 			return encountersPercent != ENCOUNTERS_PERCENT_EDEFAULT;
 		}
@@ -333,8 +333,8 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (sucessPercent: ");
-		result.append(sucessPercent);
+		result.append(" (successPercent: ");
+		result.append(successPercent);
 		result.append(", encountersPercent: ");
 		result.append(encountersPercent);
 		result.append(')');

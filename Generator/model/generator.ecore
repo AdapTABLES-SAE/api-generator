@@ -123,7 +123,7 @@
         upperBound="-1" eType="#//SetOfFacts"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Prerequisite">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="succesPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="successPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="requiredLevel" lowerBound="1"
         eType="#//Level"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="encountersPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
@@ -202,7 +202,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="encountersPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sucessPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="successPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResponseModality" abstract="true"/>
@@ -266,7 +266,7 @@
     <eLiterals name="INPUT" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTCompletion2" eSuperTypes="#//CompletionTask">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" lowerBound="2"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" lowerBound="1"
         upperBound="-1" eType="#//ESeveralTarget"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbMissingElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" transient="true" defaultValueLiteral="2" unsettable="true"/>
@@ -292,7 +292,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//ATask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="questionableFacts" upperBound="-1"
         eType="#//QuestionableFact" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sucessPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="successPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="encountersPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         derived="true"/>
@@ -379,7 +379,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CompletionCriteria">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="succesPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="successPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         defaultValueLiteral="80.0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="encountersPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         defaultValueLiteral="100.0"/>

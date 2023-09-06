@@ -6,52 +6,52 @@
       <progression>
         <playerProgress currentLevel="1" coins="0"/>
         <learnerProgress>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O1_L1"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O1_L2"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L1"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L2"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L3"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O3"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O3_L1"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O3"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O3_L2"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L1"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L2"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L3"/>
             <results/>
@@ -65,27 +65,27 @@
       <progression>
         <playerProgress currentLevel="5" coins="0"/>
         <learnerProgress>
-          <currentobjectivelevels achieved="true" encountersPercent="80.0" sucessPercent="80.0">
+          <currentobjectivelevels achieved="true" encountersPercent="80.0" successPercent="80.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L1"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="false" encountersPercent="75.0" sucessPercent="85.0">
+          <currentobjectivelevels achieved="false" encountersPercent="75.0" successPercent="85.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L2"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="81.0" sucessPercent="85.0">
+          <currentobjectivelevels achieved="true" encountersPercent="81.0" successPercent="85.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L1"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="92.0" sucessPercent="95.0">
+          <currentobjectivelevels achieved="true" encountersPercent="92.0" successPercent="95.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L2"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="90.0" sucessPercent="81.0">
+          <currentobjectivelevels achieved="true" encountersPercent="90.0" successPercent="81.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L3"/>
             <results/>
@@ -109,52 +109,52 @@
       <progression>
         <playerProgress currentLevel="1" coins="0"/>
         <learnerProgress>
-          <currentobjectivelevels achieved="true" encountersPercent="85.0" sucessPercent="87.0">
+          <currentobjectivelevels achieved="true" encountersPercent="85.0" successPercent="87.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O1_L1"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O1_L2"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="85.0" sucessPercent="90.0">
+          <currentobjectivelevels achieved="true" encountersPercent="85.0" successPercent="90.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L1"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L2"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="83.0" sucessPercent="92.0">
+          <currentobjectivelevels achieved="true" encountersPercent="83.0" successPercent="92.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L3"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O3"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O3_L1"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="75.0" sucessPercent="80.0">
+          <currentobjectivelevels achieved="true" encountersPercent="75.0" successPercent="80.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O3"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O3_L2"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L1"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" sucessPercent="100.0">
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L2"/>
             <results/>
           </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="70.0" sucessPercent="85.0">
+          <currentobjectivelevels achieved="true" encountersPercent="70.0" successPercent="85.0">
             <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L3"/>
             <results/>
@@ -172,7 +172,7 @@
             <objective href="LearningDomain.xmi#TASK-TEST-1_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#TASK-TEST-1-O1_L1"/>
             <results>
-              <resultsbytask sucessPercent="78.0" encountersPercent="80.0">
+              <resultsbytask successPercent="78.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T1_TASK-C1_1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -295,7 +295,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="80.0" encountersPercent="80.0">
+              <resultsbytask successPercent="80.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T1_TASK-C1_2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -418,7 +418,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="50.0" encountersPercent="50.0">
+              <resultsbytask successPercent="50.0" encountersPercent="50.0">
                 <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#T1_TASK-C2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT37" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
@@ -541,7 +541,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT62" leftOperand="-1" rightOperand="-1" result="21" soluceLeft="7" soluceRight="3" soluceRes="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT55" leftOperand="-1" rightOperand="-1" result="36" soluceLeft="6" soluceRight="6" soluceRes="36" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="80.0" encountersPercent="75.0">
+              <resultsbytask successPercent="80.0" encountersPercent="75.0">
                 <task xsi:type="generator:MTRecontruction" href="LearningDomain.xmi#T1_TASK-REB"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT74" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT146" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
@@ -664,7 +664,7 @@
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT72" soluceLeft="4" soluceRes="28" resultOnRight="true" soluceRight="7"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT172" soluceLeft="9" soluceRes="63" resultOnRight="true" soluceRight="7"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="80.0" encountersPercent="95.0">
+              <resultsbytask successPercent="80.0" encountersPercent="95.0">
                 <task xsi:type="generator:MTIdentification" href="LearningDomain.xmi#T1_TASK-ID"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT22" result="4" rightOperand="2" leftOperand="2" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT36" result="18" rightOperand="9" leftOperand="2" soluce="true" resultOnRight="true"/>
@@ -907,7 +907,7 @@
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT230" result="72" rightOperand="6" leftOperand="12" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT208" result="55" rightOperand="5" leftOperand="11" soluce="true" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="90.0" encountersPercent="90.0">
+              <resultsbytask successPercent="90.0" encountersPercent="90.0">
                 <task xsi:type="generator:MTMembership" href="LearningDomain.xmi#T1_TASK-MEMB"/>
                 <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="T1_TASK-MEMB-QAFACT34" table="12">
                   <goodResults>24</goodResults>
@@ -1095,7 +1095,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
-      <statistics maxGameLevelReached="8" nbLevelsGenerated="21"/>
+      <statistics maxGameLevelReached="8" nbLevelsGenerated="26"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 005 [TEST1] (Level 16 -- every tasks are started not finished 0 &lt; % &lt; 100)" ID="LP005">
       <progression>
@@ -1105,7 +1105,7 @@
             <objective href="LearningDomain.xmi#TASK-TEST-1_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#TASK-TEST-1-O1_L1"/>
             <results>
-              <resultsbytask sucessPercent="78.0" encountersPercent="80.0">
+              <resultsbytask successPercent="78.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T1_TASK-C1_1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -1228,7 +1228,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="80.0" encountersPercent="80.0">
+              <resultsbytask successPercent="80.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T1_TASK-C1_2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -1351,7 +1351,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="50.0" encountersPercent="50.0">
+              <resultsbytask successPercent="50.0" encountersPercent="50.0">
                 <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#T1_TASK-C2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT37" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
@@ -1474,7 +1474,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT62" leftOperand="-1" rightOperand="-1" result="21" soluceLeft="7" soluceRight="3" soluceRes="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT55" leftOperand="-1" rightOperand="-1" result="36" soluceLeft="6" soluceRight="6" soluceRes="36" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="80.0" encountersPercent="75.0">
+              <resultsbytask successPercent="80.0" encountersPercent="75.0">
                 <task xsi:type="generator:MTRecontruction" href="LearningDomain.xmi#T1_TASK-REB"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT74" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT146" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
@@ -1597,7 +1597,7 @@
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT72" soluceLeft="4" soluceRes="28" resultOnRight="true" soluceRight="7"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT172" soluceLeft="9" soluceRes="63" resultOnRight="true" soluceRight="7"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="80.0" encountersPercent="95.0">
+              <resultsbytask successPercent="80.0" encountersPercent="95.0">
                 <task xsi:type="generator:MTIdentification" href="LearningDomain.xmi#T1_TASK-ID"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT22" result="4" rightOperand="2" leftOperand="2" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT175" result="72" rightOperand="8" leftOperand="9" resultOnRight="true"/>
@@ -1840,7 +1840,7 @@
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT230" result="72" rightOperand="6" leftOperand="12" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT208" result="55" rightOperand="5" leftOperand="11" soluce="true" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="90.0" encountersPercent="90.0">
+              <resultsbytask successPercent="90.0" encountersPercent="90.0">
                 <task xsi:type="generator:MTMembership" href="LearningDomain.xmi#T1_TASK-MEMB"/>
                 <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="T1_TASK-MEMB-QAFACT8" table="3">
                   <goodResults>27</goodResults>
@@ -2028,7 +2028,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
-      <statistics maxGameLevelReached="16" nbLevelsGenerated="20"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="25"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 012 [TEST2] (Level 8 -- every tasks are started not finished 0 &lt; % &lt; 100)" ID="LP012">
       <progression>
@@ -2038,7 +2038,7 @@
             <objective href="LearningDomain.xmi#TASK-TEST-2_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#TASK-TEST-2-O1_L1"/>
             <results>
-              <resultsbytask sucessPercent="80.0" encountersPercent="80.0">
+              <resultsbytask successPercent="80.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T2_TASK-C1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -2161,7 +2161,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="50.0" encountersPercent="50.0">
+              <resultsbytask successPercent="50.0" encountersPercent="50.0">
                 <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#T2_TASK-C2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT37" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
@@ -2284,7 +2284,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT62" leftOperand="-1" rightOperand="-1" result="21" soluceLeft="7" soluceRight="3" soluceRes="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT55" leftOperand="-1" rightOperand="-1" result="36" soluceLeft="6" soluceRight="6" soluceRes="36" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="70.0" encountersPercent="70.0">
+              <resultsbytask successPercent="70.0" encountersPercent="70.0">
                 <task xsi:type="generator:MTRecontruction" href="LearningDomain.xmi#T2_TASK-REB"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT74" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT146" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
@@ -2407,7 +2407,7 @@
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT72" soluceLeft="4" soluceRes="28" resultOnRight="true" soluceRight="7"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT172" soluceLeft="9" soluceRes="63" resultOnRight="true" soluceRight="7"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="90.0" encountersPercent="80.0">
+              <resultsbytask successPercent="90.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTIdentification" href="LearningDomain.xmi#T2_TASK-ID"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT22" result="4" rightOperand="2" leftOperand="2" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT97" result="44" rightOperand="9" leftOperand="5" resultOnRight="true"/>
@@ -2650,7 +2650,7 @@
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT230" result="72" rightOperand="6" leftOperand="12" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT208" result="55" rightOperand="5" leftOperand="11" soluce="true" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="83.0" encountersPercent="92.0">
+              <resultsbytask successPercent="83.0" encountersPercent="92.0">
                 <task xsi:type="generator:MTMembership" href="LearningDomain.xmi#T2_TASK-MEMB"/>
                 <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="T2_TASK-MEMB-QAFACT18" table="7">
                   <goodResults>42</goodResults>
@@ -2838,7 +2838,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
-      <statistics maxGameLevelReached="8" nbLevelsGenerated="19"/>
+      <statistics maxGameLevelReached="8" nbLevelsGenerated="21"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 013 [TEST2] (Level 16 -- every tasks are started not finished 0 &lt; % &lt; 100)" ID="LP013">
       <progression>
@@ -2848,7 +2848,7 @@
             <objective href="LearningDomain.xmi#TASK-TEST-2_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#TASK-TEST-2-O1_L1"/>
             <results>
-              <resultsbytask sucessPercent="80.0" encountersPercent="80.0">
+              <resultsbytask successPercent="80.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T2_TASK-C1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -2971,7 +2971,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="50.0" encountersPercent="50.0">
+              <resultsbytask successPercent="50.0" encountersPercent="50.0">
                 <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#T2_TASK-C2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT37" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
@@ -3094,7 +3094,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT62" leftOperand="-1" rightOperand="-1" result="21" soluceLeft="7" soluceRight="3" soluceRes="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT55" leftOperand="-1" rightOperand="-1" result="36" soluceLeft="6" soluceRight="6" soluceRes="36" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="70.0" encountersPercent="70.0">
+              <resultsbytask successPercent="70.0" encountersPercent="70.0">
                 <task xsi:type="generator:MTRecontruction" href="LearningDomain.xmi#T2_TASK-REB"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT74" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT146" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
@@ -3217,7 +3217,7 @@
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT72" soluceLeft="4" soluceRes="28" resultOnRight="true" soluceRight="7"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT172" soluceLeft="9" soluceRes="63" resultOnRight="true" soluceRight="7"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="90.0" encountersPercent="80.0">
+              <resultsbytask successPercent="90.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTIdentification" href="LearningDomain.xmi#T2_TASK-ID"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT22" result="4" rightOperand="2" leftOperand="2" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT31" result="8" rightOperand="6" leftOperand="2" resultOnRight="true"/>
@@ -3460,7 +3460,7 @@
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT230" result="72" rightOperand="6" leftOperand="12" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT208" result="55" rightOperand="5" leftOperand="11" soluce="true" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="83.0" encountersPercent="92.0">
+              <resultsbytask successPercent="83.0" encountersPercent="92.0">
                 <task xsi:type="generator:MTMembership" href="LearningDomain.xmi#T2_TASK-MEMB"/>
                 <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="T2_TASK-MEMB-QAFACT17" table="6">
                   <goodResults>24</goodResults>
@@ -3648,7 +3648,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
-      <statistics maxGameLevelReached="16" nbLevelsGenerated="17"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="19"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 006 [TEST1] (Level 8 -- one task is over 100% success &amp; encounters)" ID="LP006">
       <progression>
@@ -3658,7 +3658,7 @@
             <objective href="LearningDomain.xmi#TASK-TEST-1_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#TASK-TEST-1-O1_L1"/>
             <results>
-              <resultsbytask sucessPercent="78.0" encountersPercent="80.0">
+              <resultsbytask successPercent="78.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T1_TASK-C1_1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -3781,7 +3781,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="80.0" encountersPercent="80.0">
+              <resultsbytask successPercent="80.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T1_TASK-C1_2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -3904,7 +3904,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#T1_TASK-C2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT37" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
@@ -4027,7 +4027,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT62" leftOperand="-1" rightOperand="-1" result="21" soluceLeft="7" soluceRight="3" soluceRes="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT55" leftOperand="-1" rightOperand="-1" result="36" soluceLeft="6" soluceRight="6" soluceRes="36" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="80.0" encountersPercent="75.0">
+              <resultsbytask successPercent="80.0" encountersPercent="75.0">
                 <task xsi:type="generator:MTRecontruction" href="LearningDomain.xmi#T1_TASK-REB"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT74" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT146" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
@@ -4150,7 +4150,7 @@
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT72" soluceLeft="4" soluceRes="28" resultOnRight="true" soluceRight="7"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT172" soluceLeft="9" soluceRes="63" resultOnRight="true" soluceRight="7"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="80.0" encountersPercent="95.0">
+              <resultsbytask successPercent="80.0" encountersPercent="95.0">
                 <task xsi:type="generator:MTIdentification" href="LearningDomain.xmi#T1_TASK-ID"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT22" result="4" rightOperand="2" leftOperand="2" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT119" result="56" rightOperand="10" leftOperand="6" resultOnRight="true"/>
@@ -4393,7 +4393,7 @@
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT137" result="65" rightOperand="9" leftOperand="7" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT208" result="55" rightOperand="5" leftOperand="11" soluce="true" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="90.0" encountersPercent="90.0">
+              <resultsbytask successPercent="90.0" encountersPercent="90.0">
                 <task xsi:type="generator:MTMembership" href="LearningDomain.xmi#T1_TASK-MEMB"/>
                 <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="T1_TASK-MEMB-QAFACT18" table="7">
                   <goodResults>21</goodResults>
@@ -4581,7 +4581,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
-      <statistics maxGameLevelReached="8" nbLevelsGenerated="21"/>
+      <statistics maxGameLevelReached="8" nbLevelsGenerated="26"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 007 [TEST1] (Level 16 -- one task is over 100% success &amp; encounters)" ID="LP007">
       <progression>
@@ -4591,7 +4591,7 @@
             <objective href="LearningDomain.xmi#TASK-TEST-1_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#TASK-TEST-1-O1_L1"/>
             <results>
-              <resultsbytask sucessPercent="78.0" encountersPercent="80.0">
+              <resultsbytask successPercent="78.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T1_TASK-C1_1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -4714,7 +4714,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="80.0" encountersPercent="80.0">
+              <resultsbytask successPercent="80.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T1_TASK-C1_2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -4837,7 +4837,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#T1_TASK-C2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT37" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
@@ -4960,7 +4960,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT62" leftOperand="-1" rightOperand="-1" result="21" soluceLeft="7" soluceRight="3" soluceRes="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT55" leftOperand="-1" rightOperand="-1" result="36" soluceLeft="6" soluceRight="6" soluceRes="36" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="80.0" encountersPercent="75.0">
+              <resultsbytask successPercent="80.0" encountersPercent="75.0">
                 <task xsi:type="generator:MTRecontruction" href="LearningDomain.xmi#T1_TASK-REB"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT74" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT146" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
@@ -5083,7 +5083,7 @@
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT72" soluceLeft="4" soluceRes="28" resultOnRight="true" soluceRight="7"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT172" soluceLeft="9" soluceRes="63" resultOnRight="true" soluceRight="7"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="80.0" encountersPercent="95.0">
+              <resultsbytask successPercent="80.0" encountersPercent="95.0">
                 <task xsi:type="generator:MTIdentification" href="LearningDomain.xmi#T1_TASK-ID"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT32" result="14" rightOperand="7" leftOperand="2" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT225" result="41" rightOperand="3" leftOperand="12" resultOnRight="true"/>
@@ -5326,7 +5326,7 @@
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT173" result="59" rightOperand="7" leftOperand="9" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT83" result="13" rightOperand="2" leftOperand="5" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="90.0" encountersPercent="90.0">
+              <resultsbytask successPercent="90.0" encountersPercent="90.0">
                 <task xsi:type="generator:MTMembership" href="LearningDomain.xmi#T1_TASK-MEMB"/>
                 <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="T1_TASK-MEMB-QAFACT18" table="7">
                   <goodResults>7</goodResults>
@@ -5514,7 +5514,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
-      <statistics maxGameLevelReached="16" nbLevelsGenerated="9"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="14"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 014 [TEST2] (Level 8 -- one task is over 100% success &amp; encounters)" ID="LP014">
       <progression>
@@ -5524,7 +5524,7 @@
             <objective href="LearningDomain.xmi#TASK-TEST-2_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#TASK-TEST-2-O1_L1"/>
             <results>
-              <resultsbytask sucessPercent="80.0" encountersPercent="80.0">
+              <resultsbytask successPercent="80.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T2_TASK-C1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -5647,7 +5647,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="50.0" encountersPercent="50.0">
+              <resultsbytask successPercent="50.0" encountersPercent="50.0">
                 <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#T2_TASK-C2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT37" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
@@ -5770,7 +5770,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT62" leftOperand="-1" rightOperand="-1" result="21" soluceLeft="7" soluceRight="3" soluceRes="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT55" leftOperand="-1" rightOperand="-1" result="36" soluceLeft="6" soluceRight="6" soluceRes="36" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTRecontruction" href="LearningDomain.xmi#T2_TASK-REB"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT74" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT146" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
@@ -5893,7 +5893,7 @@
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT72" soluceLeft="4" soluceRes="28" resultOnRight="true" soluceRight="7"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT172" soluceLeft="9" soluceRes="63" resultOnRight="true" soluceRight="7"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="90.0" encountersPercent="80.0">
+              <resultsbytask successPercent="90.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTIdentification" href="LearningDomain.xmi#T2_TASK-ID"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT32" result="14" rightOperand="7" leftOperand="2" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT47" result="11" rightOperand="4" leftOperand="3" resultOnRight="true"/>
@@ -6136,7 +6136,7 @@
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT39" result="23" rightOperand="10" leftOperand="2" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT118" result="60" rightOperand="10" leftOperand="6" soluce="true" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="83.0" encountersPercent="92.0">
+              <resultsbytask successPercent="83.0" encountersPercent="92.0">
                 <task xsi:type="generator:MTMembership" href="LearningDomain.xmi#T2_TASK-MEMB"/>
                 <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="T2_TASK-MEMB-QAFACT22" table="8">
                   <goodResults>64</goodResults>
@@ -6324,7 +6324,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
-      <statistics maxGameLevelReached="8" nbLevelsGenerated="9"/>
+      <statistics maxGameLevelReached="8" nbLevelsGenerated="10"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 015 [TEST2] (Level 16 -- one task is over 100% success &amp; encounters)" ID="LP015">
       <progression>
@@ -6334,7 +6334,7 @@
             <objective href="LearningDomain.xmi#TASK-TEST-2_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#TASK-TEST-2-O1_L1"/>
             <results>
-              <resultsbytask sucessPercent="80.0" encountersPercent="80.0">
+              <resultsbytask successPercent="80.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T2_TASK-C1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -6457,7 +6457,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="50.0" encountersPercent="50.0">
+              <resultsbytask successPercent="50.0" encountersPercent="50.0">
                 <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#T2_TASK-C2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT37" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
@@ -6580,7 +6580,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT62" leftOperand="-1" rightOperand="-1" result="21" soluceLeft="7" soluceRight="3" soluceRes="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT55" leftOperand="-1" rightOperand="-1" result="36" soluceLeft="6" soluceRight="6" soluceRes="36" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTRecontruction" href="LearningDomain.xmi#T2_TASK-REB"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT74" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT146" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
@@ -6703,7 +6703,7 @@
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT72" soluceLeft="4" soluceRes="28" resultOnRight="true" soluceRight="7"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT172" soluceLeft="9" soluceRes="63" resultOnRight="true" soluceRight="7"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="90.0" encountersPercent="80.0">
+              <resultsbytask successPercent="90.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTIdentification" href="LearningDomain.xmi#T2_TASK-ID"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT32" result="14" rightOperand="7" leftOperand="2" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT238" result="120" rightOperand="10" leftOperand="12" soluce="true" resultOnRight="true"/>
@@ -6946,7 +6946,7 @@
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT118" result="60" rightOperand="10" leftOperand="6" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT9" result="2" rightOperand="5" leftOperand="1" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="83.0" encountersPercent="92.0">
+              <resultsbytask successPercent="83.0" encountersPercent="92.0">
                 <task xsi:type="generator:MTMembership" href="LearningDomain.xmi#T2_TASK-MEMB"/>
                 <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="T2_TASK-MEMB-QAFACT27" table="10">
                   <goodResults>80</goodResults>
@@ -7134,7 +7134,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
-      <statistics maxGameLevelReached="16" nbLevelsGenerated="9"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="10"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 008 [TEST1] (Level 8 -- only one task is not over &lt; 100% success or encounters)" ID="LP008">
       <progression>
@@ -7144,7 +7144,7 @@
             <objective href="LearningDomain.xmi#TASK-TEST-1_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#TASK-TEST-1-O1_L1"/>
             <results>
-              <resultsbytask sucessPercent="78.0" encountersPercent="80.0">
+              <resultsbytask successPercent="78.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T1_TASK-C1_1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -7267,7 +7267,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T1_TASK-C1_2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -7390,7 +7390,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#T1_TASK-C2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT37" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
@@ -7513,7 +7513,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT62" leftOperand="-1" rightOperand="-1" result="21" soluceLeft="7" soluceRight="3" soluceRes="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT55" leftOperand="-1" rightOperand="-1" result="36" soluceLeft="6" soluceRight="6" soluceRes="36" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTRecontruction" href="LearningDomain.xmi#T1_TASK-REB"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT74" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT146" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
@@ -7636,7 +7636,7 @@
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT72" soluceLeft="4" soluceRes="28" resultOnRight="true" soluceRight="7"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT172" soluceLeft="9" soluceRes="63" resultOnRight="true" soluceRight="7"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTIdentification" href="LearningDomain.xmi#T1_TASK-ID"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT22" result="4" rightOperand="2" leftOperand="2" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT75" result="32" rightOperand="8" leftOperand="4" resultOnRight="true"/>
@@ -7879,7 +7879,7 @@
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT15" result="10" rightOperand="8" leftOperand="1" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT208" result="55" rightOperand="5" leftOperand="11" soluce="true" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTMembership" href="LearningDomain.xmi#T1_TASK-MEMB"/>
                 <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="T1_TASK-MEMB-QAFACT31" table="11">
                   <goodResults>88</goodResults>
@@ -8067,7 +8067,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
-      <statistics maxGameLevelReached="8" nbLevelsGenerated="21"/>
+      <statistics maxGameLevelReached="8" nbLevelsGenerated="26"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 009 [TEST1] (Level 16 -- only one task is not over &lt; 100% success or encounters)" ID="LP009">
       <progression>
@@ -8077,7 +8077,7 @@
             <objective href="LearningDomain.xmi#TASK-TEST-1_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#TASK-TEST-1-O1_L1"/>
             <results>
-              <resultsbytask sucessPercent="78.0" encountersPercent="80.0">
+              <resultsbytask successPercent="78.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T1_TASK-C1_1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -8200,7 +8200,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_1-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T1_TASK-C1_2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -8323,7 +8323,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T1_TASK-C1_2-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#T1_TASK-C2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT37" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
@@ -8446,7 +8446,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT62" leftOperand="-1" rightOperand="-1" result="21" soluceLeft="7" soluceRight="3" soluceRes="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T1_TASK-C2-QAFACT55" leftOperand="-1" rightOperand="-1" result="36" soluceLeft="6" soluceRight="6" soluceRes="36" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTRecontruction" href="LearningDomain.xmi#T1_TASK-REB"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT74" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT146" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
@@ -8569,7 +8569,7 @@
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT72" soluceLeft="4" soluceRes="28" resultOnRight="true" soluceRight="7"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T1_TASK-REB-QAFACT172" soluceLeft="9" soluceRes="63" resultOnRight="true" soluceRight="7"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTIdentification" href="LearningDomain.xmi#T1_TASK-ID"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT22" result="4" rightOperand="2" leftOperand="2" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT179" result="93" rightOperand="10" leftOperand="9" resultOnRight="true"/>
@@ -8812,7 +8812,7 @@
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT230" result="72" rightOperand="6" leftOperand="12" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T1_TASK-ID-QAFACT208" result="55" rightOperand="5" leftOperand="11" soluce="true" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTMembership" href="LearningDomain.xmi#T1_TASK-MEMB"/>
                 <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="T1_TASK-MEMB-QAFACT8" table="3">
                   <goodResults>18</goodResults>
@@ -9000,7 +9000,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
-      <statistics maxGameLevelReached="16" nbLevelsGenerated="21"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="26"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 016 [TEST2] (Level 8 -- only one task is not over &lt; 100% success or encounters)" ID="LP016">
       <progression>
@@ -9010,7 +9010,7 @@
             <objective href="LearningDomain.xmi#TASK-TEST-2_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#TASK-TEST-2-O1_L1"/>
             <results>
-              <resultsbytask sucessPercent="80.0" encountersPercent="80.0">
+              <resultsbytask successPercent="80.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T2_TASK-C1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -9133,7 +9133,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#T2_TASK-C2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT37" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
@@ -9256,7 +9256,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT62" leftOperand="-1" rightOperand="-1" result="21" soluceLeft="7" soluceRight="3" soluceRes="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT55" leftOperand="-1" rightOperand="-1" result="36" soluceLeft="6" soluceRight="6" soluceRes="36" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTRecontruction" href="LearningDomain.xmi#T2_TASK-REB"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT74" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT146" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
@@ -9379,7 +9379,7 @@
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT72" soluceLeft="4" soluceRes="28" resultOnRight="true" soluceRight="7"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT172" soluceLeft="9" soluceRes="63" resultOnRight="true" soluceRight="7"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTIdentification" href="LearningDomain.xmi#T2_TASK-ID"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT22" result="4" rightOperand="2" leftOperand="2" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT36" result="18" rightOperand="9" leftOperand="2" soluce="true" resultOnRight="true"/>
@@ -9622,7 +9622,7 @@
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT135" result="60" rightOperand="8" leftOperand="7" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT208" result="55" rightOperand="5" leftOperand="11" soluce="true" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTMembership" href="LearningDomain.xmi#T2_TASK-MEMB"/>
                 <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="T2_TASK-MEMB-QAFACT29" table="10">
                   <goodResults>100</goodResults>
@@ -9810,7 +9810,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
-      <statistics maxGameLevelReached="8" nbLevelsGenerated="21"/>
+      <statistics maxGameLevelReached="8" nbLevelsGenerated="26"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 017 [TEST2] (Level 16 -- only one task is not over &lt; 100% success or encounters)" ID="LP017">
       <progression>
@@ -9820,7 +9820,7 @@
             <objective href="LearningDomain.xmi#TASK-TEST-2_O1"/>
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#TASK-TEST-2-O1_L1"/>
             <results>
-              <resultsbytask sucessPercent="80.0" encountersPercent="80.0">
+              <resultsbytask successPercent="80.0" encountersPercent="80.0">
                 <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#T2_TASK-C1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT20" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -9943,7 +9943,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT72" leftOperand="8" rightOperand="3" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="T2_TASK-C1-QAFACT34" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#T2_TASK-C2"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT18" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT37" leftOperand="-1" rightOperand="-1" result="32" soluceLeft="4" soluceRight="8" soluceRes="32" resultOnRight="true"/>
@@ -10066,7 +10066,7 @@
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT62" leftOperand="-1" rightOperand="-1" result="21" soluceLeft="7" soluceRight="3" soluceRes="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="T2_TASK-C2-QAFACT55" leftOperand="-1" rightOperand="-1" result="36" soluceLeft="6" soluceRight="6" soluceRes="36" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTRecontruction" href="LearningDomain.xmi#T2_TASK-REB"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT74" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT146" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
@@ -10189,7 +10189,7 @@
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT72" soluceLeft="4" soluceRes="28" resultOnRight="true" soluceRight="7"/>
                 <questionableFacts xsi:type="generator:MTQFRebuild" achieved="false" wasSelected="false" ID="T2_TASK-REB-QAFACT172" soluceLeft="9" soluceRes="63" resultOnRight="true" soluceRight="7"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTIdentification" href="LearningDomain.xmi#T2_TASK-ID"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT22" result="4" rightOperand="2" leftOperand="2" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT105" result="15" rightOperand="3" leftOperand="6" resultOnRight="true"/>
@@ -10432,7 +10432,7 @@
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT135" result="60" rightOperand="8" leftOperand="7" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="T2_TASK-ID-QAFACT208" result="55" rightOperand="5" leftOperand="11" soluce="true" resultOnRight="true"/>
               </resultsbytask>
-              <resultsbytask sucessPercent="100.0" encountersPercent="100.0">
+              <resultsbytask successPercent="100.0" encountersPercent="100.0">
                 <task xsi:type="generator:MTMembership" href="LearningDomain.xmi#T2_TASK-MEMB"/>
                 <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="T2_TASK-MEMB-QAFACT7" table="3">
                   <goodResults>21</goodResults>
@@ -10620,7 +10620,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
-      <statistics maxGameLevelReached="16" nbLevelsGenerated="21"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="26"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 002 [TEST1] (Level 8 -- 0% at every tasks)" ID="LP002">
       <progression>
@@ -11553,7 +11553,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
-      <statistics maxGameLevelReached="8" nbLevelsGenerated="21"/>
+      <statistics maxGameLevelReached="8" nbLevelsGenerated="26"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 003 [TEST1] (Level 16 -- 0% at every tasks)" ID="LP003">
       <progression>
@@ -12486,7 +12486,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_1"/>
-      <statistics maxGameLevelReached="16" nbLevelsGenerated="21"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="26"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 010 [TEST2] (Level 8 -- 0% at every tasks)" ID="LP010">
       <progression>
@@ -13296,7 +13296,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
-      <statistics maxGameLevelReached="8" nbLevelsGenerated="19"/>
+      <statistics maxGameLevelReached="8" nbLevelsGenerated="21"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 011 [TEST2] (Level 16 -- 0% at every tasks)" ID="LP011">
       <progression>
@@ -14106,7 +14106,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_TASKS_TEST_2"/>
-      <statistics maxGameLevelReached="16" nbLevelsGenerated="8"/>
+      <statistics maxGameLevelReached="16" nbLevelsGenerated="10"/>
     </learnerPlayers>
   </learnerPlayers>
 </generator:Context>

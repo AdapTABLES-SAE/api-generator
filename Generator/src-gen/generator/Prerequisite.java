@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.Prerequisite#getSuccesPercent <em>Succes Percent</em>}</li>
+ *   <li>{@link generator.Prerequisite#getSuccessPercent <em>Success Percent</em>}</li>
  *   <li>{@link generator.Prerequisite#getRequiredLevel <em>Required Level</em>}</li>
  *   <li>{@link generator.Prerequisite#getEncountersPercent <em>Encounters Percent</em>}</li>
  * </ul>
@@ -24,26 +24,26 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Prerequisite extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Succes Percent</b></em>' attribute.
+	 * Returns the value of the '<em><b>Success Percent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Succes Percent</em>' attribute.
-	 * @see #setSuccesPercent(double)
-	 * @see generator.GeneratorPackage#getPrerequisite_SuccesPercent()
+	 * @return the value of the '<em>Success Percent</em>' attribute.
+	 * @see #setSuccessPercent(double)
+	 * @see generator.GeneratorPackage#getPrerequisite_SuccessPercent()
 	 * @model
 	 * @generated
 	 */
-	double getSuccesPercent();
+	double getSuccessPercent();
 
 	/**
-	 * Sets the value of the '{@link generator.Prerequisite#getSuccesPercent <em>Succes Percent</em>}' attribute.
+	 * Sets the value of the '{@link generator.Prerequisite#getSuccessPercent <em>Success Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Succes Percent</em>' attribute.
-	 * @see #getSuccesPercent()
+	 * @param value the new value of the '<em>Success Percent</em>' attribute.
+	 * @see #getSuccessPercent()
 	 * @generated
 	 */
-	void setSuccesPercent(double value);
+	void setSuccessPercent(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Required Level</b></em>' reference.

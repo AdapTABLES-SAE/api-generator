@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.ResultsByTask#getTask <em>Task</em>}</li>
  *   <li>{@link generator.ResultsByTask#getQuestionableFacts <em>Questionable Facts</em>}</li>
- *   <li>{@link generator.ResultsByTask#getSucessPercent <em>Sucess Percent</em>}</li>
+ *   <li>{@link generator.ResultsByTask#getSuccessPercent <em>Success Percent</em>}</li>
  *   <li>{@link generator.ResultsByTask#getEncountersPercent <em>Encounters Percent</em>}</li>
  * </ul>
  *
@@ -61,26 +61,26 @@ public interface ResultsByTask extends EObject {
 	EList<QuestionableFact> getQuestionableFacts();
 
 	/**
-	 * Returns the value of the '<em><b>Sucess Percent</b></em>' attribute.
+	 * Returns the value of the '<em><b>Success Percent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sucess Percent</em>' attribute.
-	 * @see #setSucessPercent(double)
-	 * @see generator.GeneratorPackage#getResultsByTask_SucessPercent()
+	 * @return the value of the '<em>Success Percent</em>' attribute.
+	 * @see #setSuccessPercent(double)
+	 * @see generator.GeneratorPackage#getResultsByTask_SuccessPercent()
 	 * @model derived="true"
 	 * @generated
 	 */
-	double getSucessPercent();
+	double getSuccessPercent();
 
 	/**
-	 * Sets the value of the '{@link generator.ResultsByTask#getSucessPercent <em>Sucess Percent</em>}' attribute.
+	 * Sets the value of the '{@link generator.ResultsByTask#getSuccessPercent <em>Success Percent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sucess Percent</em>' attribute.
-	 * @see #getSucessPercent()
+	 * @param value the new value of the '<em>Success Percent</em>' attribute.
+	 * @see #getSuccessPercent()
 	 * @generated
 	 */
-	void setSucessPercent(double value);
+	void setSuccessPercent(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Encounters Percent</b></em>' attribute.

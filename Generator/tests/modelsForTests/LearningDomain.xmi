@@ -23,9 +23,9 @@
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
     </objectives>
     <objectives ID="OBJ-LVL_O3" name="O3-POL">
-      <prerequisites succesPercent="80.0" requiredLevel="OBJ-LVL-O2_L2" encountersPercent="70.0"/>
+      <prerequisites successPercent="80.0" requiredLevel="OBJ-LVL-O2_L2" encountersPercent="70.0"/>
       <levels xsi:type="generator:MTLevel" ID="OBJ-LVL-O3_L1">
-        <completionCriteria succesPercent="50.0" encountersPercent="50.0"/>
+        <completionCriteria successPercent="50.0" encountersPercent="50.0"/>
       </levels>
       <levels xsi:type="generator:MTLevel" ID="OBJ-LVL-O3_L2">
         <completionCriteria encountersPercent="70.0"/>
