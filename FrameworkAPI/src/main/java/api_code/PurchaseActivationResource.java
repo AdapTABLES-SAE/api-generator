@@ -54,7 +54,7 @@ public class PurchaseActivationResource {
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + Constant.DEFAULT_CONTEXT_FILE_NAME + ".xmi", true));
-		manager.resetEquipments(playerID);
+		manager.resetPlayerProgress(playerID);
 	}
 	
 	@GET
@@ -65,7 +65,7 @@ public class PurchaseActivationResource {
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
-		manager.resetEquipments(playerID);
+		manager.resetPlayerProgress(playerID);
 	}
 	
 	@GET

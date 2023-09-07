@@ -32,6 +32,7 @@ import generator.impl.QuestionableFactResultImpl;
 import generator.impl.ResultsByTaskImpl;
 import generator.impl.ResultsImpl;
 import generator.impl.StatisticsImpl;
+import generator.impl.LearnerProgressImpl;
 
 public class LearnerPlayerManager {
 
@@ -67,9 +68,19 @@ public class LearnerPlayerManager {
 		}
 	}
 	
-	public void resetEquipments(String learnerID) throws NonExistantLearnerPlayerException {
+	/*public void resetEquipments(String learnerID) throws NonExistantLearnerPlayerException {
 		LearnerPlayer player = modelsManager.getLearnerPlayer(learnerID);
 		player.getProgression().getPlayerProgress().setItems(new ItemsImpl());
+		modelsManager.saveContextModel();
+	}*/
+	
+	public void resetPlayerProgress(String learnerID) throws NonExistantLearnerPlayerException {
+		LearnerPlayer player = modelsManager.getLearnerPlayer(learnerID);
+		player.getProgression().getPlayerProgress().setItems(new ItemsImpl());
+		player.setStatistics(new StatisticsImpl());
+		
+		player.getProgression().setLearnerProgress(new LearnerProgressImpl());
+		
 		modelsManager.saveContextModel();
 	}
 	
@@ -560,9 +571,14 @@ public class LearnerPlayerManager {
 						results.getResultsbytask().add(resByTask);
 					}
 					currentOL.setResults(results);
+					currentOL.setAchieved(false);
+					currentOL.setEncountersPercent(0);
+					currentOL.setSuccessPercent(0);
+					learner.getProgression().setLearnerProgress(new LearnerProgressImpl());
 					learner.getProgression().getLearnerProgress().getCurrentobjectivelevels().add(currentOL);
-					
 					learner.getProgression().getPlayerProgress().setCurrentLevel(1);
+					
+					learner.setStatistics(new StatisticsImpl());
 				}		
 			}
 		}		

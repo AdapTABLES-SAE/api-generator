@@ -155,8 +155,8 @@ public class PathManager {
 			aPath.setName("Just another test");
 		}
 		Objective obj = getCorrespondingObjective(aPath, knowledge, json);
-		MTLevel level = (MTLevel) getCorrespondingLevel(obj, (String) json.get("level"));
-		addLevelToObjective(obj, level, json);
+		Level level = recreateNewLevel(obj, (String) json.get("level"));
+		buildLevelTasks(obj, level, json);
 		if(!aPath.getObjectives().contains(obj)) {
 			aPath.getObjectives().add(obj);
 		}
@@ -214,43 +214,36 @@ public class PathManager {
 		return buildingParams;
 	}
 	
-	private void addLevelToObjective(Objective obj, MTLevel level, JSONObject json) {
+	private void buildLevelTasks(Objective obj, Level level, JSONObject json) {
 		JSONObject buildingParams = getJSONBuildSetup(json);
-		String levelName = level != null? level.getID(): obj.getID()+"-L"+(obj.getLevels().size() + 1);
-		
-		if(level != null) {
-			obj.getLevels().remove(level);
-		}
-		level = new MTLevelImpl();
-		level.setID(levelName);
-		
+	
 		String jsonElem = (String) buildingParams.get("leftOperand");
 		TableBuild build = TableBuild.valueOf(jsonElem); 
 		// jsonElem.equals("TABLE")? TableBuild.TABLE_OPERAND: jsonElem.equals("OPERAND")? TableBuild.OPERAND_TABLE: TableBuild.MIX;
 		jsonElem = (String) buildingParams.get("resultLocation");
 		ResultPosition resPosition = ResultPosition.valueOf(jsonElem);
 		
-		level.setBuildSetup(build);
-		level.setResultPositionSetup(resPosition);
-		level.setMinInterval((int) ((long) buildingParams.get("intervalMin")));
-		level.setMaxInterval((int) ((long) buildingParams.get("intervalMax")));
+		((MTLevel) level).setBuildSetup(build);
+		((MTLevel) level).setResultPositionSetup(resPosition);
+		((MTLevel) level).setMinInterval(((Long) buildingParams.get("intervalMin")).intValue());
+		((MTLevel) level).setMaxInterval(((Long) buildingParams.get("intervalMax")).intValue());
 		
 		JSONObject achievementParam = getJSONAchievementParameters(json);
 		CompletionCriteria criteria = new CompletionCriteriaImpl(); 
 		criteria.setEncountersPercent((double) achievementParam.get("encounterCompletionCriteria"));
 		criteria.setSuccessPercent((double) achievementParam.get("successCompletionCriteria"));
-		level.setCompletionCriteria(criteria);
+		((MTLevel) level).setCompletionCriteria(criteria);
 		
-		createLevelTasks(level, getJSONTasks(json), levelName);
+		createLevelTasks(((MTLevel) level), getJSONTasks(json));
 		
-		obj.getLevels().add(level);
+		obj.getLevels().add(((MTLevel) level));
 	}
 	
-	private void createLevelTasks(MTLevel level, List<JSONObject> jsonTasks, String levelID){
+	private void createLevelTasks(MTLevel level, List<JSONObject> jsonTasks){
 		int idNbTask = 1;
 		String idTask;
 		for (JSONObject jtask : jsonTasks) {
-			idTask = levelID+"-T"+idNbTask;
+			idTask = level.getID()+"-T"+idNbTask;
 			switch ((String) jtask.get("taskType")) {
 			case "C1":
 				level.getTasks().add(createC1Task(jtask, idTask));
@@ -384,6 +377,18 @@ public class PathManager {
 		task.setResponseModality(modality);
 		
 		return task;
+	}
+	
+	private Level recreateNewLevel(Objective obj, String levelID) {
+		Level existantLevel = getCorrespondingLevel(obj, levelID);
+		Level level = new MTLevelImpl();
+		if(existantLevel != null) {
+			level.setID(levelID);
+			obj.getLevels().remove(existantLevel);
+		} else {
+			level.setID(obj.getID()+"-L"+(obj.getLevels().size() + 1));
+		}
+		return level;
 	}
 	
 	private Level getCorrespondingLevel(Objective obj, String levelID) {
