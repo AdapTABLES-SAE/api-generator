@@ -122,4 +122,72 @@
     </objectives>
     <knowledge href="MultiplicationTables.xmi#/"/>
   </learningpaths>
+  <learningpaths name="PATH_FOR_FACTS_TEST" ID="PATH_FOR_FACTS_TEST">
+    <objectives ID="PATH_FOR_FACTS_TEST_O1" name="PATH_FOR_FACTS_TEST_O1">
+      <levels xsi:type="generator:MTLevel" ID="PATH_FOR_FACTS_TEST_O1_L1" buildSetup="MIX" resultPositionSetup="MIX" maxInterval="12">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" nbConsecutiveSuccess="1" ID="PATH_FOR_FACTS_TEST_O1_L1_T1">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="3"/>
+          <targets>RESULT</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="20" nbConsecutiveSuccess="1" ID="PATH_FOR_FACTS_TEST_O1_L1_T2">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
+          <targets>OPERAND_TABLE</targets>
+          <targets>TABLE_RESULT</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="PATH_FOR_FACTS_TEST_O1_L1_T3">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
+        </tasks>
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="1" ID="PATH_FOR_FACTS_TEST_O1_L1_T4">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
+        </tasks>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="20" nbConsecutiveSuccess="1" ID="PATH_FOR_FACTS_TEST_O1_L1_T5">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
+        </tasks>
+        <completionCriteria successPercent="100.0"/>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.5"/>
+    </objectives>
+    <knowledge href="MultiplicationTables.xmi#/"/>
+  </learningpaths>
+  <learningpaths name="PATH_FOR_FACTS_TEST_2" ID="PATH_FOR_FACTS_TEST_2">
+    <objectives ID="PATH_FOR_FACTS_TEST_O1" name="PATH_FOR_FACTS_TEST_O1">
+      <levels xsi:type="generator:MTLevel" ID="PATH_FOR_FACTS_TEST_O1_L1" buildSetup="MIX" resultPositionSetup="MIX" maxInterval="12">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="20" nbConsecutiveSuccess="2" ID="PATH_FOR_FACTS_TEST_O1_L1_T1">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="3"/>
+          <targets>RESULT</targets>
+          <targets>TABLE</targets>
+          <targets>OPERAND</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="20" nbConsecutiveSuccess="1" ID="PATH_FOR_FACTS_TEST_O1_L1_T2">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="4" nbBadChoices="2"/>
+          <targets>OPERAND_TABLE</targets>
+          <targets>TABLE_RESULT</targets>
+          <targets>OPERAND_RESULT</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" nbConsecutiveSuccess="1" ID="PATH_FOR_FACTS_TEST_O1_L1_T3">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
+        </tasks>
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="3" ID="PATH_FOR_FACTS_TEST_O1_L1_T4">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
+        </tasks>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="20" nbConsecutiveSuccess="2" ID="PATH_FOR_FACTS_TEST_O1_L1_T5">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="6" nbBadChoices="3"/>
+        </tasks>
+        <completionCriteria successPercent="100.0"/>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.5"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.0"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.6"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.7"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.8"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.10"/>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.11"/>
+    </objectives>
+    <knowledge href="MultiplicationTables.xmi#/"/>
+  </learningpaths>
 </generator:LearningDomain>

@@ -93,7 +93,7 @@ public interface Level extends EObject {
 	 * @return the value of the '<em>Completion Criteria</em>' containment reference.
 	 * @see #setCompletionCriteria(CompletionCriteria)
 	 * @see generator.GeneratorPackage#getLevel_CompletionCriteria()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	CompletionCriteria getCompletionCriteria();

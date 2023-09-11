@@ -41,15 +41,25 @@ public class MTFactGeneratorREB extends FactGeneratorTemplate {
 				
 				TableBuild build = ((MTLevel) dungeonElements.getChosenLevel()).getBuildSetup();
 				ResultPosition equalPos = ((MTLevel) dungeonElements.getChosenLevel()).getResultPositionSetup();
-				
-				if(equalPos.equals(ResultPosition.MIX)) {
-					qfs.add(buildQF(factC, ResultPosition.LEFT, TableBuild.OPERAND_TABLE));
-					qfs.add(buildQF(factC, ResultPosition.RIGHT, TableBuild.OPERAND_TABLE));
+				if(build.equals(TableBuild.MIX)) {
+					if(equalPos.equals(ResultPosition.MIX)) {
+						qfs.add(buildQF(factC, ResultPosition.LEFT, TableBuild.OPERAND_TABLE));
+						qfs.add(buildQF(factC, ResultPosition.RIGHT, TableBuild.OPERAND_TABLE));
+						qfs.add(buildQF(factC, ResultPosition.LEFT, TableBuild.TABLE_OPERAND));
+						qfs.add(buildQF(factC, ResultPosition.RIGHT, TableBuild.TABLE_OPERAND));
+					} else {
+						qfs.add(buildQF(factC, equalPos, TableBuild.TABLE_OPERAND));
+						qfs.add(buildQF(factC, equalPos, TableBuild.OPERAND_TABLE));
+					}
 				} else {
-					qfs.add(buildQF(factC, equalPos, build));
-					qfs.add(buildQF(factC, equalPos, build));
+					if(equalPos.equals(ResultPosition.MIX)) {
+						qfs.add(buildQF(factC, ResultPosition.LEFT, build));
+						qfs.add(buildQF(factC, ResultPosition.RIGHT, build));
+					} else {
+						qfs.add(buildQF(factC, equalPos, build));
+						qfs.add(buildQF(factC, equalPos, build));
+					}
 				}
-				
 				
 				return qfs;
 			}			
@@ -133,11 +143,12 @@ public class MTFactGeneratorREB extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact) {
+	protected Map<ECorrectness, List<String>> getListOfPropositions(ATask task, QuestionableFact qFact) {
 		Map<ECorrectness, List<String>> propositions = new HashMap<>();
 		MTQFRebuild qfact = (MTQFRebuild) qFact;
 		List<Integer> propositions_temp = new ArrayList<>();
 		List<Integer> allPossiblePropositions = new ArrayList<>();
+		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
 	
 		int number; int index;
 		int boundary = 8;

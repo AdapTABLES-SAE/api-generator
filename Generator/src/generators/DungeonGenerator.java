@@ -260,11 +260,7 @@ public class DungeonGenerator {
 				eligibleRoomsOrientations.lastElement().removeExitForEntry(r.getEntry(), r.getExit());
 			} else {
 				backtrack = false;
-				if(dungeonRooms.size() == (nbRooms + 1)) { 
-					structureRT = chooseRoomType(eligibleRoomsOrientations.lastElement(), dungeonElements.getElementsOfRoom(dungeonRooms.size()), true);
-				} else {
-					structureRT = chooseRoomType(eligibleRoomsOrientations.lastElement(), dungeonElements.getElementsOfRoom(dungeonRooms.size()), false);
-				}
+				structureRT = chooseRoomType(eligibleRoomsOrientations.lastElement(), dungeonElements.getElementsOfRoom(dungeonRooms.size()));
 				LinearRoom aRoom = createNewRoomFrom(nextPosition, dungeonElements.getElementsOfRoom(dungeonRooms.size()), dungeonRooms.lastElement().getExitRoomAccess(), structureRT);
 				dungeonRooms.add(aRoom);
 			}
@@ -290,7 +286,7 @@ public class DungeonGenerator {
 		}
 	}
 	
-	private StructureChosenRT chooseRoomType(LinearRoomOrientations eligibleRoomOrientations, RoomElements roomElements, boolean isExitRoom) {
+	private StructureChosenRT chooseRoomType(LinearRoomOrientations eligibleRoomOrientations, RoomElements roomElements) {
 		List<Directions> chosenEntries = new ArrayList<>(); 
 		Directions entry = null; 
 		Directions exit = null;
@@ -299,7 +295,7 @@ public class DungeonGenerator {
 			entry = chooseEntryDirection(eligibleRoomOrientations, chosenEntries);
 			if(entry != null) { 
 				chosenEntries.add(entry);
-				if(!isExitRoom) {
+				if(!roomElements.isExit()) {
 					exit = chooseExitDirection(eligibleRoomOrientations, entry);
 				}else {
 					exit = Directions.NONE;
@@ -376,9 +372,13 @@ public class DungeonGenerator {
 		else if(roomElements.isExit()) { roomTypes = getExitRoomTypes(); }
 		else { roomTypes = getEntryRoomTypes(); }
 		
+		System.out.println("Every roomtypes "+roomTypes);
+		System.out.println("Room "+roomElements.getGameplay()+" "+roomElements.isEntry());
+		System.out.println("entry: "+entry+" exit: "+exit+" ");
+
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
-			//System.out.println("entry: "+entry+" exit: "+exit+" roomtype: "+roomType.getName()+" "+dungeonElements.getElementsOfRoom(roomElements));
-			
+			System.out.println(" roomtype: "+roomType.getName());
+
 			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {				
 				roomTypes.remove(roomType);
 			}

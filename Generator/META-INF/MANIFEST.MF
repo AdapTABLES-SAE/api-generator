@@ -16,5 +16,6 @@ Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi,
  org.junit,
- junit-jupiter-api
+ junit-jupiter-api,
+ Generator
 Bundle-ActivationPolicy: lazy

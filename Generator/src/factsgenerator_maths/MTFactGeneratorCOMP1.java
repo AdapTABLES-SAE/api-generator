@@ -47,20 +47,20 @@ public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 				for (ESingleTarget target : taskC.getTargets()) {
 					if(build.equals(TableBuild.MIX)) {
 						if(equalPos.equals(ResultPosition.MIX)) {
-							qfs.add(buildQF(factC, ResultPosition.LEFT, TableBuild.OPERAND_TABLE, target));
-							qfs.add(buildQF(factC, ResultPosition.RIGHT, TableBuild.OPERAND_TABLE, target));
-							qfs.add(buildQF(factC, ResultPosition.LEFT, TableBuild.TABLE_OPERAND, target));
-							qfs.add(buildQF(factC, ResultPosition.RIGHT, TableBuild.TABLE_OPERAND, target));
+							add2Set(qfs, buildQF(factC, ResultPosition.LEFT, TableBuild.OPERAND_TABLE, target));
+							add2Set(qfs, buildQF(factC, ResultPosition.RIGHT, TableBuild.OPERAND_TABLE, target));
+							add2Set(qfs, buildQF(factC, ResultPosition.LEFT, TableBuild.TABLE_OPERAND, target));
+							add2Set(qfs, buildQF(factC, ResultPosition.RIGHT, TableBuild.TABLE_OPERAND, target));
 						} else {
-							qfs.add(buildQF(factC, equalPos, TableBuild.OPERAND_TABLE, target));
-							qfs.add(buildQF(factC, equalPos, TableBuild.TABLE_OPERAND, target));
+							add2Set(qfs, buildQF(factC, equalPos, TableBuild.OPERAND_TABLE, target));
+							add2Set(qfs, buildQF(factC, equalPos, TableBuild.TABLE_OPERAND, target));
 						}
 					} else {
 						if(equalPos.equals(ResultPosition.MIX)) {
-							qfs.add(buildQF(factC, ResultPosition.LEFT, build, target));
-							qfs.add(buildQF(factC, ResultPosition.RIGHT, build, target));
+							add2Set(qfs, buildQF(factC, ResultPosition.LEFT, build, target));
+							add2Set(qfs, buildQF(factC, ResultPosition.RIGHT, build, target));
 						} else {
-							qfs.add(buildQF(factC, equalPos, build, target));
+							add2Set(qfs, buildQF(factC, equalPos, build, target));
 						}
 					}
 				}
@@ -70,6 +70,10 @@ public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 
 		
 		return new HashSet<>();
+	}
+	
+	private void add2Set(Set<QuestionableFact> set, QuestionableFact fact) {
+		set.add(fact);
 	}
 	
 	private MTQFCompletion1 buildQF(MTFact fact, ResultPosition resPos, TableBuild build, ESingleTarget target) {
@@ -117,12 +121,12 @@ public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact) {
+	protected Map<ECorrectness, List<String>> getListOfPropositions(ATask task, QuestionableFact qFact) {
 		Map<ECorrectness, List<String>> propositions = new HashMap<>();
 		MTQFCompletion1 qfact = (MTQFCompletion1) qFact;
 		
 		List<Integer> propositions_temp = new ArrayList<>();
-		
+		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
 		
 		int min = qfact.getSoluce()-5 >= 0? qfact.getSoluce()-5: 0;
 		int max = qfact.getSoluce()+5;

@@ -9,23 +9,7 @@
         name="Bere test"
         ID="blemoine">
       <progression>
-        <playerProgress>
-          <items>
-            <items>
-              <equipment
-                  href="../GameDescription.xmi#BRACELET"/>
-            </items>
-            <items
-                activated="false">
-              <equipment
-                  href="../GameDescription.xmi#BELT"/>
-            </items>
-            <items>
-              <equipment
-                  href="../GameDescription.xmi#ARMOR"/>
-            </items>
-          </items>
-        </playerProgress>
+        <playerProgress/>
         <learnerProgress/>
       </progression>
       <learningpath

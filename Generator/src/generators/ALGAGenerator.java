@@ -1,13 +1,18 @@
 package generators;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 
 import exceptions.NonExistantLearnerPlayerException;
 import flattener.Main;
+import generator.CurrentObjectiveLevel;
 import generator.Dungeon;
 import generator.LearnerPlayer;
 import generator.LevelsDifficultyProgress;
 import generator.PropositionParam;
+import generator.QuestionableFact;
 import generator.QuestionedFact;
 import generator.Room;
 import generator.RoomAccess;
@@ -79,6 +84,18 @@ public class ALGAGenerator {
 		}
 	}
 	
+	public List<QuestionableFact> getDungeonFacts() {
+		List<QuestionableFact> facts = new ArrayList<>();
+	
+		for(Room room:	this.generatedDungeon.getRooms()) {
+			for(QuestionedFact fact: room.getQuestionedFacts()) {
+				facts.add(fact.getQuestionablefact());
+			}
+		}
+		
+		return facts;
+	}
+	
 	private void updateLearnerPlayerStatistics() {
 		// update learner statistics 
 		if(learnerPlayer.getStatistics() == null) {
@@ -89,6 +106,16 @@ public class ALGAGenerator {
 		modelAccess.saveContextModel();
 	}
 	
+	public CurrentObjectiveLevel getCurrentObjectiveLevel() {
+		System.out.println(this.generatedDungeon.getLearningobjective()+" ffgg");
+		for(CurrentObjectiveLevel currentOL: this.learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
+			if(currentOL.getObjective().equals(this.generatedDungeon.getLearningobjective()) && currentOL.getLevel().equals(this.generatedDungeon.getLevel())) {
+				return currentOL;
+			}
+		}
+		return null;
+	}
+		
 	public Dungeon generate() {
 		LevelsDifficultyProgress gameDifficulty = modelAccess.getGameDescriptionModel().getLevelsDifficultyProgress();
 

@@ -17,7 +17,6 @@ import generator.MTFact;
 import generator.MTIdentification;
 import generator.MTLevel;
 import generator.MTQFIdentification;
-import generator.MultipleChoice;
 import generator.QuestionableFact;
 import generator.ResultPosition;
 import generator.TableBuild;
@@ -166,7 +165,7 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact) {
+	protected Map<ECorrectness, List<String>> getListOfPropositions(ATask task, QuestionableFact qFact) {
 		Map<ECorrectness, List<String>> propositions = new HashMap<>();
 		List<String> propositions_temp = new ArrayList<>();
 		if(!((MTQFIdentification) qFact).isSoluce()) {		

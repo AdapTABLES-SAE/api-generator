@@ -30,7 +30,7 @@ public interface LearningDomain extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Learningpaths</em>' containment reference list.
 	 * @see generator.GeneratorPackage#getLearningDomain_Learningpaths()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<LearningPath> getLearningpaths();

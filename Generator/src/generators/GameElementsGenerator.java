@@ -25,6 +25,7 @@ import generator.NoQuestionGameplay;
 import generator.QuestionGameplay;
 import generator.Relation;
 import generator.Room;
+import generator.Structure;
 import managers.ModelsManager;
 import structures.DungeonElements;
 import structures.RoomElements;
@@ -73,18 +74,27 @@ public class GameElementsGenerator {
 	
 	private void unlockGameplays() {
 		List<Ability> abilities = getCurrentlyLockedAbilities();
+		System.out.println("Locked abilities "+abilities);
 		for(Gameplay gameplay: this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			gameplay.setLocked(hasGameplayLockedAbilities(gameplay, abilities));
 		}
 	}
 	
 	private boolean hasGameplayLockedAbilities(Gameplay gameplay, List<Ability> lockedAbilities) {
+		List<Boolean> isLockedAbilities = new ArrayList<>(); 
 		for(AComponent comp: gameplay.getComponents()) {
-			if(lockedAbilities.contains(comp.getAllowedAbility())) {
-				return true;
+			isLockedAbilities.add(hasElementLockedAbilities(comp, lockedAbilities));
+		}
+		return isLockedAbilities.contains(true);
+	}
+	
+	private boolean hasElementLockedAbilities(AComponent component, List<Ability> lockedAbilities) {
+		if(component instanceof Structure) {
+			for (AComponent comp: ((Structure) component).getComponents()) {
+				return hasElementLockedAbilities(comp, lockedAbilities);
 			}
 		}
-		return false;
+		return lockedAbilities.contains(component.getAllowedAbility());
 	}
 	
 	private List<Ability> getInitallyLockedAbilities() {
@@ -175,7 +185,7 @@ public class GameElementsGenerator {
 				}
 			}
 		}
-		
+		System.out.println("Valid categories "+allowedCategories);
 		return allowedCategories; 
 	}
 	
@@ -191,15 +201,18 @@ public class GameElementsGenerator {
 					validCategories.remove(aCategorie);
 				} while(gameplays.isEmpty());
 				
-				Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
-				room.setGameplay(gameplay);
+				if(gameplays.isEmpty()) {
+					System.err.println("GAMEPLAY SELECTED : NONE");
+				} else {
+					Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
+					room.setGameplay(gameplay);
+					System.err.println("GAMEPLAY SELECTED : " + gameplay.getName());
+				}
 			} else if(!room.isExit() && !room.isEntry()) {
 				gameplays = getNoQuestionRoomGameplay();
 				Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
 				room.setGameplay(gameplay);
 			}
-			
-			
 		}
 	}
 
@@ -222,6 +235,9 @@ public class GameElementsGenerator {
 				}
 			}
 		}
+		
+		System.out.println("Category "+category.getName()+" -- "+task.getID()+" "+task.getType());
+		System.out.println("Compatible gameplays "+compatibleGameplays);
 		return compatibleGameplays;
 	}
 	

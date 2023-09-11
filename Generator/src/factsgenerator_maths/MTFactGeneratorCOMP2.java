@@ -46,22 +46,22 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 				ResultPosition equalPos = ((MTLevel) dungeonElements.getChosenLevel()).getResultPositionSetup();
 				
 				for (ESeveralTarget target : taskC.getTargets()) {
-					if(build.equals(TableBuild.MIX) && !target.equals(ESeveralTarget.OPERAND_TABLE)) {
+					if(build.equals(TableBuild.MIX) /*&& !target.equals(ESeveralTarget.OPERAND_TABLE)*/) {
 						if(equalPos.equals(ResultPosition.MIX)) {
-							qfs.add(buildQF(factC, ResultPosition.LEFT, TableBuild.OPERAND_TABLE, target));
-							qfs.add(buildQF(factC, ResultPosition.RIGHT, TableBuild.OPERAND_TABLE, target));
-							qfs.add(buildQF(factC, ResultPosition.LEFT, TableBuild.TABLE_OPERAND, target));
-							qfs.add(buildQF(factC, ResultPosition.RIGHT, TableBuild.TABLE_OPERAND, target));
+							add2Set(qfs, buildQF(factC, ResultPosition.LEFT, TableBuild.OPERAND_TABLE, target));
+							add2Set(qfs, buildQF(factC, ResultPosition.RIGHT, TableBuild.OPERAND_TABLE, target));
+							add2Set(qfs, buildQF(factC, ResultPosition.LEFT, TableBuild.TABLE_OPERAND, target));
+							add2Set(qfs, buildQF(factC, ResultPosition.RIGHT, TableBuild.TABLE_OPERAND, target));
 						} else {
-							qfs.add(buildQF(factC, equalPos, TableBuild.OPERAND_TABLE, target));
-							qfs.add(buildQF(factC, equalPos, TableBuild.TABLE_OPERAND, target));
+							add2Set(qfs, buildQF(factC, equalPos, TableBuild.OPERAND_TABLE, target));
+							add2Set(qfs, buildQF(factC, equalPos, TableBuild.TABLE_OPERAND, target));
 						}
 					} else {
 						if(equalPos.equals(ResultPosition.MIX)) {
-							qfs.add(buildQF(factC, ResultPosition.LEFT, build.equals(TableBuild.MIX)? TableBuild.OPERAND_TABLE : build, target));
-							qfs.add(buildQF(factC, ResultPosition.RIGHT, build.equals(TableBuild.MIX)? TableBuild.OPERAND_TABLE : build, target));
+							add2Set(qfs, buildQF(factC, ResultPosition.LEFT, build, target));
+							add2Set(qfs, buildQF(factC, ResultPosition.RIGHT, build, target));
 						} else {
-							qfs.add(buildQF(factC, equalPos, build, target));
+							add2Set(qfs, buildQF(factC, equalPos, build, target));
 						}
 					}
 				}
@@ -71,6 +71,10 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 		}
 
 		return new HashSet<>();
+	}
+	
+	private void add2Set(Set<QuestionableFact> set, QuestionableFact fact) {
+		set.add(fact);
 	}
 	
 	private MTQFCompletion2 buildQF(MTFact fact, ResultPosition resPos, TableBuild build, ESeveralTarget target) {
@@ -103,6 +107,7 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 			qf.setResult(-1);
 			break;
 		}
+		
 		return qf;
 	}
 
@@ -122,9 +127,10 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact) {
+	protected Map<ECorrectness, List<String>> getListOfPropositions(ATask task, QuestionableFact qFact) {
 		Map<ECorrectness, List<String>> propositions = new HashMap<>();
 		MTQFCompletion2 qfact = (MTQFCompletion2) qFact;
+		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
 		
 		List<Integer> propositions_temp = new ArrayList<>();
 		List<Integer> solutions = getListOfGoodSolutions(qFact).stream().map(Integer::valueOf).collect(Collectors.toList());

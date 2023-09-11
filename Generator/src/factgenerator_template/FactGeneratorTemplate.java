@@ -17,7 +17,6 @@ import generator.EnterResponse;
 import generator.EntrySoluceParam;
 import generator.FactCorrectnessParam;
 import generator.FactSolutionParam;
-import generator.MultipleChoice;
 import generator.PropositionParam;
 import generator.QuestionParam;
 import generator.QuestionableFact;
@@ -60,7 +59,11 @@ public abstract class FactGeneratorTemplate {
 		taskID = task.getID();
 		for (SetOfFacts setoffact : dungeonElements.getChosenObjective().getSetoffacts()) {
 			for (AbstractFact f : setoffact.getFacts()) { 
-				questionableFacts.addAll(generateQuestionableFactsOf(task, f));
+				for(QuestionableFact fact: generateQuestionableFactsOf(task, f)) {
+					questionableFacts.add(fact);
+				}
+				
+				
 			}
 		}	
 		return questionableFacts; 
@@ -82,7 +85,7 @@ public abstract class FactGeneratorTemplate {
 				qef.getEntrys().add(soluceParam);
 			}
 		} else {
-			Map<ECorrectness, List<String>> propositions = getListOfPropositions((MultipleChoice) roomElement.getTask().getResponseModality(), qFact);
+			Map<ECorrectness, List<String>> propositions = getListOfPropositions(roomElement.getTask(), qFact);
 			for (Entry<ECorrectness, List<String>> propState : propositions.entrySet()) {
 				for (String prop : propState.getValue()) {
 					PropositionParam propositionParam = new PropositionParamImpl();
@@ -153,7 +156,7 @@ public abstract class FactGeneratorTemplate {
 	}
 	
 	protected abstract List<String> getListOfGoodSolutions(QuestionableFact qFact);
-	protected abstract Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact);
+	protected abstract Map<ECorrectness, List<String>> getListOfPropositions(ATask task, QuestionableFact qFact);
 	protected abstract boolean isQuestionInteractive();
 	
 	public void generateQuestionedFact(RoomElements roomElements) {

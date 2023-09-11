@@ -77,7 +77,7 @@ public interface ATask extends EObject {
 	 * @return the value of the '<em>Response Modality</em>' containment reference.
 	 * @see #setResponseModality(ResponseModality)
 	 * @see generator.GeneratorPackage#getATask_ResponseModality()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	ResponseModality getResponseModality();

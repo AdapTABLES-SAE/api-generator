@@ -94,7 +94,7 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 
 
 	@Override
-	protected Map<ECorrectness, List<String>> getListOfPropositions(MultipleChoice mc, QuestionableFact qFact) {
+	protected Map<ECorrectness, List<String>> getListOfPropositions(ATask task, QuestionableFact qFact) {
 		Map<ECorrectness, List<String>> propositions = new HashMap<>();
 		MTQFMembership qfact = (MTQFMembership) qFact;
 		List<Integer> notallowed = new ArrayList<>();
@@ -102,6 +102,7 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 			notallowed.add(qfact.getTable() * i);
 		}
 		
+		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
 		List<Integer> propositions_temp = new ArrayList<>();
 		while(propositions_temp.size() < mc.getNbBadChoices()) {
 			int number = qfact.getTable() == 1? new Random().nextInt(qfact.getTable() * 12) + 12
@@ -111,8 +112,14 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 			}
 		}
 		
-		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
-		propositions.put(ECorrectness.INCORRECT, propositions_temp.stream().map(String::valueOf).collect(Collectors.toList()));
+		if(((MTMembership)task).isIdentifySharedProperty()) {
+			propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
+			propositions.put(ECorrectness.INCORRECT, propositions_temp.stream().map(String::valueOf).collect(Collectors.toList()));
+		} else {
+			propositions.put(ECorrectness.CORRECT, propositions_temp.stream().map(String::valueOf).collect(Collectors.toList()));
+			propositions.put(ECorrectness.INCORRECT, getListOfGoodSolutions(qFact));
+		}
+		
 		
 		return propositions;
 	}
