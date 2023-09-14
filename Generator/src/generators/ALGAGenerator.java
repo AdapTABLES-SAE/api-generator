@@ -48,6 +48,11 @@ public class ALGAGenerator {
 		}
 	}
 	
+	public void resetLearnerProgress() {
+		this.learnerPlayer.getProgression().setLearnerProgress(new LearnerProgressImpl());
+		this.modelAccess.saveContextModel();
+	}
+	
 	public ALGAGenerator(String learnerID) throws NonExistantLearnerPlayerException {
 		modelAccess = new ModelsManager();
 		this.learnerPlayer = modelAccess.getLearnerPlayer(learnerID);

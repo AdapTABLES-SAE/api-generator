@@ -39,9 +39,11 @@ class FactsSelectionTest {
 			generator.saveDungeon("DungeonGen.xmi");
 			addResultsToFacts();
 			updateResultsPercentages(generator.getCurrentObjectiveLevel());
-		} while(!isEachFactAchieved());
+		} while(!isEachFactAchieved() && !areEachFactisCorrectlyAchieved());
 		
 		assertTrue(true);
+		
+		generator.resetLearnerProgress();
 	}
 	
 	@Test
@@ -52,9 +54,10 @@ class FactsSelectionTest {
 			generator.saveDungeon("DungeonGen.xmi");
 			addResultsToFacts();
 			updateResultsPercentages(generator.getCurrentObjectiveLevel());
-		} while(!isEachFactAchieved());
+		} while(!isEachFactAchieved() && !areEachFactisCorrectlyAchieved());
 		
 		assertTrue(true);
+		generator.resetLearnerProgress();
 	}
 	
 	private void addResultsToFacts() {
@@ -69,10 +72,31 @@ class FactsSelectionTest {
 		CurrentObjectiveLevel currentOL = generator.getCurrentObjectiveLevel();
 		for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {
 			for(QuestionableFact fact: rbt.getQuestionableFacts()) {
-				if(!fact.isAchieved()) return false;
+				if(!fact.isAchieved() ) return false;
 			}
 		}
 		return true;
+	}
+	
+	private boolean areEachFactisCorrectlyAchieved() {
+		CurrentObjectiveLevel currentOL = generator.getCurrentObjectiveLevel();
+		for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {
+			int nbOfExpectedConsecutiveSuccess = rbt.getTask().getNbConsecutiveSuccess();
+			for(QuestionableFact fact: rbt.getQuestionableFacts()) {
+				if(!isNumberOfConsecutiveSuccessValid(fact, nbOfExpectedConsecutiveSuccess)) return false;
+			}
+		}
+		return true; 
+	}
+	
+	private boolean isNumberOfConsecutiveSuccessValid(QuestionableFact fact, int expectedNumber) {
+		int consecutive = 0; 
+		for(QuestionableFactResult res: fact.getResults()) {
+			if(res.isAnswerValid()) { consecutive++; } 
+			if(consecutive == expectedNumber) { return true; }
+			else { consecutive = 0; }
+		}
+		return false;
 	}
 	
 	public void updateResultsPercentages(CurrentObjectiveLevel currentOL) {
