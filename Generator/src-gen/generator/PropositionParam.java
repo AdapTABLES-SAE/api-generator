@@ -24,12 +24,12 @@ public interface PropositionParam extends Parameter {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>State</em>' containment reference.
-	 * @see #setState(Correctness)
+	 * @see #setState(AValue)
 	 * @see generator.GeneratorPackage#getPropositionParam_State()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Correctness getState();
+	AValue getState();
 
 	/**
 	 * Sets the value of the '{@link generator.PropositionParam#getState <em>State</em>}' containment reference.
@@ -39,6 +39,6 @@ public interface PropositionParam extends Parameter {
 	 * @see #getState()
 	 * @generated
 	 */
-	void setState(Correctness value);
+	void setState(AValue value);
 
 } // PropositionParam

@@ -77,6 +77,7 @@ public class GameElementsGenerator {
 		System.out.println("Locked abilities "+abilities);
 		for(Gameplay gameplay: this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			gameplay.setLocked(hasGameplayLockedAbilities(gameplay, abilities));
+			System.out.println(gameplay.getName()+" locked? "+gameplay.isLocked());
 		}
 	}
 	
@@ -179,7 +180,9 @@ public class GameElementsGenerator {
 				} else {
 					modalityCompatible = (task.getResponseModality() != null)? task.getResponseModality() instanceof EnterResponse: false;
 				}
+				System.out.println(task.nbExpectedAnswers()+" "+task.getNbFacts());
 
+				System.out.println("fact comp "+factCompatible+" expectedanswers "+expectedAnswerCompatible+" modality "+modalityCompatible);
 				if(factCompatible && expectedAnswerCompatible && modalityCompatible) {
 					allowedCategories.addAll(relation.getGameplays());
 				}
@@ -195,6 +198,7 @@ public class GameElementsGenerator {
 		for (RoomElements room : dungeonElements.getRoomsElements()) {
 			if(room.getTask() != null) {
 				List<GPCategory> validCategories = new ArrayList<>(getValidCategoriesFromRelations(room.getTask()));
+				System.out.println("Categorie valid " + validCategories);
 				do {
 					GPCategory aCategorie = validCategories.get(random.nextInt(validCategories.size()));
 					gameplays = getQuestionGameplayForCategorieType(aCategorie, room.getTask());

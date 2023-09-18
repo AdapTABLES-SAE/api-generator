@@ -2,11 +2,14 @@
  */
 package generator.impl;
 
+import generator.ATask;
 import generator.ETaskType;
 import generator.GeneratorPackage;
 import generator.IdentificationTask;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -121,6 +124,15 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int nbExpectedAnswers() {
+		return this.getNbFacts();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -176,6 +188,38 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 			return checkLearnerAction != CHECK_LEARNER_ACTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == ATask.class) {
+			switch (baseOperationID) {
+			case GeneratorPackage.ATASK___NB_EXPECTED_ANSWERS:
+				return GeneratorPackage.IDENTIFICATION_TASK___NB_EXPECTED_ANSWERS;
+			default:
+				return super.eDerivedOperationID(baseOperationID, baseClass);
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case GeneratorPackage.IDENTIFICATION_TASK___NB_EXPECTED_ANSWERS:
+			return nbExpectedAnswers();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

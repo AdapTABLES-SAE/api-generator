@@ -418,6 +418,90 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass imageEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mapEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mapElementPositionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass legendSymbolEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass legendTextEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass historyFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass geographyLegendFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass geographyFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass timePeriodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mapValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass timeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass equipmentEClass = null;
 
 	/**
@@ -790,6 +874,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EEnum eRoomTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eGeographyValueEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1817,7 +1908,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMultipleChoice_NbChoices() {
+	public EAttribute getMultipleChoice_NbBadChoices() {
 		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1826,7 +1917,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMultipleChoice_NbBadChoices() {
+	public EAttribute getMultipleChoice_NbChoices() {
 		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1988,6 +2079,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getCompletionTask__NbExpectedAnswers() {
+		return completionTaskEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIdentificationTask() {
 		return identificationTaskEClass;
 	}
@@ -2008,6 +2108,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getIdentificationTask_CheckLearnerAction() {
 		return (EAttribute) identificationTaskEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIdentificationTask__NbExpectedAnswers() {
+		return identificationTaskEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -2044,6 +2153,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getMembershipIDTask_CheckLearnerAction() {
 		return (EAttribute) membershipIDTaskEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getMembershipIDTask__NbExpectedAnswers() {
+		return membershipIDTaskEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -2960,6 +3078,312 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getImage() {
+		return imageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getImage_ID() {
+		return (EAttribute) imageEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMap() {
+		return mapEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMap_Positions() {
+		return (EReference) mapEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMapElementPosition() {
+		return mapElementPositionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMapElementPosition_ID() {
+		return (EAttribute) mapElementPositionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLegendSymbol() {
+		return legendSymbolEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLegendSymbol_Image() {
+		return (EReference) legendSymbolEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLegendSymbol_Position() {
+		return (EReference) legendSymbolEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLegendText() {
+		return legendTextEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLegendText_Text() {
+		return (EAttribute) legendTextEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLegendText_Position() {
+		return (EReference) legendTextEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHistoryFact() {
+		return historyFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHistoryFact_Event() {
+		return (EAttribute) historyFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHistoryFact_Image() {
+		return (EReference) historyFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHistoryFact_Time() {
+		return (EReference) historyFactEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGeographyLegendFact() {
+		return geographyLegendFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGeographyLegendFact_Map() {
+		return (EReference) geographyLegendFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGeographyLegendFact_Symbol() {
+		return (EReference) geographyLegendFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGeographyLegendFact_Legend() {
+		return (EReference) geographyLegendFactEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGeographyFact() {
+		return geographyFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGeographyFact_Map() {
+		return (EReference) geographyFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGeographyFact_Position() {
+		return (EReference) geographyFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGeographyFact_Value() {
+		return (EAttribute) geographyFactEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDate() {
+		return dateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDate_Day() {
+		return (EAttribute) dateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDate_Month() {
+		return (EAttribute) dateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDate_Year() {
+		return (EAttribute) dateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTimePeriod() {
+		return timePeriodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTimePeriod_StartYear() {
+		return (EAttribute) timePeriodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTimePeriod_EndYear() {
+		return (EAttribute) timePeriodEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMapValue() {
+		return mapValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getMapValue__IsCorrectValue() {
+		return mapValueEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTime() {
+		return timeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEquipment() {
 		return equipmentEClass;
 	}
@@ -3599,6 +4023,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getOrderingTask__NbExpectedAnswers() {
+		return orderingTaskEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPrompt() {
 		return promptEClass;
 	}
@@ -4148,6 +4581,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getEGeographyValue() {
+		return eGeographyValueEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GeneratorFactory getGeneratorFactory() {
 		return (GeneratorFactory) getEFactoryInstance();
 	}
@@ -4297,8 +4739,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		multipleChoiceEClass = createEClass(MULTIPLE_CHOICE);
 		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__TYPE);
-		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__NB_CHOICES);
 		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__NB_BAD_CHOICES);
+		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__NB_CHOICES);
 
 		enterResponseEClass = createEClass(ENTER_RESPONSE);
 		createEAttribute(enterResponseEClass, ENTER_RESPONSE__TYPE);
@@ -4320,15 +4762,18 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		completionTaskEClass = createEClass(COMPLETION_TASK);
 		createEAttribute(completionTaskEClass, COMPLETION_TASK__TYPE);
 		createEOperation(completionTaskEClass, COMPLETION_TASK___GET_NB_MISSING_ELEMENTS);
+		createEOperation(completionTaskEClass, COMPLETION_TASK___NB_EXPECTED_ANSWERS);
 
 		identificationTaskEClass = createEClass(IDENTIFICATION_TASK);
 		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__TYPE);
 		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__CHECK_LEARNER_ACTION);
+		createEOperation(identificationTaskEClass, IDENTIFICATION_TASK___NB_EXPECTED_ANSWERS);
 
 		membershipIDTaskEClass = createEClass(MEMBERSHIP_ID_TASK);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__TYPE);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION);
+		createEOperation(membershipIDTaskEClass, MEMBERSHIP_ID_TASK___NB_EXPECTED_ANSWERS);
 
 		mtCompletion2EClass = createEClass(MT_COMPLETION2);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__TARGETS);
@@ -4536,6 +4981,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		orderingTaskEClass = createEClass(ORDERING_TASK);
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__TYPE);
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__CHECK_LEARNER_ACTION);
+		createEOperation(orderingTaskEClass, ORDERING_TASK___NB_EXPECTED_ANSWERS);
 
 		promptEClass = createEClass(PROMPT);
 		createEAttribute(promptEClass, PROMPT__PROMPT);
@@ -4619,6 +5065,52 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(curseEligibilityEClass, CURSE_ELIGIBILITY__START_LEVEL);
 		createEReference(curseEligibilityEClass, CURSE_ELIGIBILITY__CURSE);
 
+		imageEClass = createEClass(IMAGE);
+		createEAttribute(imageEClass, IMAGE__ID);
+
+		mapEClass = createEClass(MAP);
+		createEReference(mapEClass, MAP__POSITIONS);
+
+		mapElementPositionEClass = createEClass(MAP_ELEMENT_POSITION);
+		createEAttribute(mapElementPositionEClass, MAP_ELEMENT_POSITION__ID);
+
+		legendSymbolEClass = createEClass(LEGEND_SYMBOL);
+		createEReference(legendSymbolEClass, LEGEND_SYMBOL__IMAGE);
+		createEReference(legendSymbolEClass, LEGEND_SYMBOL__POSITION);
+
+		legendTextEClass = createEClass(LEGEND_TEXT);
+		createEAttribute(legendTextEClass, LEGEND_TEXT__TEXT);
+		createEReference(legendTextEClass, LEGEND_TEXT__POSITION);
+
+		historyFactEClass = createEClass(HISTORY_FACT);
+		createEAttribute(historyFactEClass, HISTORY_FACT__EVENT);
+		createEReference(historyFactEClass, HISTORY_FACT__IMAGE);
+		createEReference(historyFactEClass, HISTORY_FACT__TIME);
+
+		geographyLegendFactEClass = createEClass(GEOGRAPHY_LEGEND_FACT);
+		createEReference(geographyLegendFactEClass, GEOGRAPHY_LEGEND_FACT__MAP);
+		createEReference(geographyLegendFactEClass, GEOGRAPHY_LEGEND_FACT__SYMBOL);
+		createEReference(geographyLegendFactEClass, GEOGRAPHY_LEGEND_FACT__LEGEND);
+
+		geographyFactEClass = createEClass(GEOGRAPHY_FACT);
+		createEReference(geographyFactEClass, GEOGRAPHY_FACT__MAP);
+		createEReference(geographyFactEClass, GEOGRAPHY_FACT__POSITION);
+		createEAttribute(geographyFactEClass, GEOGRAPHY_FACT__VALUE);
+
+		dateEClass = createEClass(DATE);
+		createEAttribute(dateEClass, DATE__DAY);
+		createEAttribute(dateEClass, DATE__MONTH);
+		createEAttribute(dateEClass, DATE__YEAR);
+
+		timePeriodEClass = createEClass(TIME_PERIOD);
+		createEAttribute(timePeriodEClass, TIME_PERIOD__START_YEAR);
+		createEAttribute(timePeriodEClass, TIME_PERIOD__END_YEAR);
+
+		mapValueEClass = createEClass(MAP_VALUE);
+		createEOperation(mapValueEClass, MAP_VALUE___IS_CORRECT_VALUE);
+
+		timeEClass = createEClass(TIME);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -4634,6 +5126,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		eBoundaryEEnum = createEEnum(EBOUNDARY);
 		eStatementTypeEEnum = createEEnum(ESTATEMENT_TYPE);
 		eRoomTypeEEnum = createEEnum(EROOM_TYPE);
+		eGeographyValueEEnum = createEEnum(EGEOGRAPHY_VALUE);
 	}
 
 	/**
@@ -4710,6 +5203,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		sizeEClass.getESuperTypes().add(this.getParameter());
 		statementElementTypeEClass.getESuperTypes().add(this.getElementType());
 		labyrinthCurseEClass.getESuperTypes().add(this.getCurse());
+		mapEClass.getESuperTypes().add(this.getImage());
+		historyFactEClass.getESuperTypes().add(this.getAbstractFact());
+		geographyLegendFactEClass.getESuperTypes().add(this.getAbstractFact());
+		geographyFactEClass.getESuperTypes().add(this.getAbstractFact());
+		dateEClass.getESuperTypes().add(this.getTime());
+		timePeriodEClass.getESuperTypes().add(this.getTime());
+		mapValueEClass.getESuperTypes().add(this.getValue());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -4989,10 +5489,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMultipleChoice_Type(), this.getEModality(), "type", "CHOICE", 0, 1, MultipleChoice.class,
 				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMultipleChoice_NbChoices(), ecorePackage.getEInt(), "nbChoices", null, 0, 1,
+		initEAttribute(getMultipleChoice_NbBadChoices(), ecorePackage.getEInt(), "nbBadChoices", null, 0, 1,
 				MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMultipleChoice_NbBadChoices(), ecorePackage.getEInt(), "nbBadChoices", null, 0, 1,
+		initEAttribute(getMultipleChoice_NbChoices(), ecorePackage.getEInt(), "nbChoices", null, 0, 1,
 				MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
@@ -5040,6 +5540,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEOperation(getCompletionTask__GetNbMissingElements(), ecorePackage.getEInt(), "getNbMissingElements", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
 
+		initEOperation(getCompletionTask__NbExpectedAnswers(), ecorePackage.getEInt(), "nbExpectedAnswers", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+
 		initEClass(identificationTaskEClass, IdentificationTask.class, "IdentificationTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIdentificationTask_Type(), this.getETaskType(), "type", "IDENTIFY", 0, 1,
@@ -5048,6 +5551,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getIdentificationTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
 				"false", 0, 1, IdentificationTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getIdentificationTask__NbExpectedAnswers(), ecorePackage.getEInt(), "nbExpectedAnswers", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(membershipIDTaskEClass, MembershipIDTask.class, "MembershipIDTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5060,6 +5566,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMembershipIDTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
 				"false", 0, 1, MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getMembershipIDTask__NbExpectedAnswers(), ecorePackage.getEInt(), "nbExpectedAnswers", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mtCompletion2EClass, MTCompletion2.class, "MTCompletion2", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5414,9 +5923,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(propositionParamEClass, PropositionParam.class, "PropositionParam", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPropositionParam_State(), this.getCorrectness(), null, "state", null, 0, 1,
-				PropositionParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPropositionParam_State(), this.getAValue(), null, "state", null, 0, 1, PropositionParam.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getValue_Value(), ecorePackage.getEString(), "value", null, 0, 1, Value.class, !IS_TRANSIENT,
@@ -5511,6 +6020,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getOrderingTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", "true",
 				0, 1, OrderingTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getOrderingTask__NbExpectedAnswers(), ecorePackage.getEInt(), "nbExpectedAnswers", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(promptEClass, Prompt.class, "Prompt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrompt_Prompt(), ecorePackage.getEString(), "prompt", null, 0, 1, Prompt.class, !IS_TRANSIENT,
@@ -5678,6 +6190,95 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getImage_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Image.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mapEClass, Map.class, "Map", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMap_Positions(), this.getMapElementPosition(), null, "positions", null, 0, -1, Map.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mapElementPositionEClass, MapElementPosition.class, "MapElementPosition", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMapElementPosition_ID(), ecorePackage.getEString(), "ID", null, 0, 1,
+				MapElementPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(legendSymbolEClass, LegendSymbol.class, "LegendSymbol", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLegendSymbol_Image(), this.getImage(), null, "image", null, 1, 1, LegendSymbol.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLegendSymbol_Position(), this.getMapElementPosition(), null, "position", null, 1, 1,
+				LegendSymbol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(legendTextEClass, LegendText.class, "LegendText", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLegendText_Text(), ecorePackage.getEString(), "text", null, 0, 1, LegendText.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLegendText_Position(), this.getMapElementPosition(), null, "position", null, 1, 1,
+				LegendText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(historyFactEClass, HistoryFact.class, "HistoryFact", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getHistoryFact_Event(), ecorePackage.getEString(), "event", null, 0, 1, HistoryFact.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHistoryFact_Image(), this.getImage(), null, "image", null, 0, 1, HistoryFact.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHistoryFact_Time(), this.getTime(), null, "time", null, 1, 1, HistoryFact.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(geographyLegendFactEClass, GeographyLegendFact.class, "GeographyLegendFact", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGeographyLegendFact_Map(), this.getMap(), null, "map", null, 1, 1, GeographyLegendFact.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeographyLegendFact_Symbol(), this.getLegendSymbol(), null, "symbol", null, 1, 1,
+				GeographyLegendFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeographyLegendFact_Legend(), this.getLegendText(), null, "legend", null, 1, 1,
+				GeographyLegendFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(geographyFactEClass, GeographyFact.class, "GeographyFact", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGeographyFact_Map(), this.getMap(), null, "map", null, 1, 1, GeographyFact.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeographyFact_Position(), this.getMapElementPosition(), null, "position", null, 1, 1,
+				GeographyFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGeographyFact_Value(), this.getEGeographyValue(), "value", null, 0, 1, GeographyFact.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dateEClass, Date.class, "Date", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDate_Day(), ecorePackage.getEString(), "day", null, 0, 1, Date.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDate_Month(), ecorePackage.getEString(), "month", null, 0, 1, Date.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDate_Year(), ecorePackage.getEString(), "year", null, 0, 1, Date.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(timePeriodEClass, TimePeriod.class, "TimePeriod", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTimePeriod_StartYear(), ecorePackage.getEString(), "startYear", null, 0, 1, TimePeriod.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTimePeriod_EndYear(), ecorePackage.getEString(), "endYear", null, 0, 1, TimePeriod.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mapValueEClass, MapValue.class, "MapValue", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getMapValue__IsCorrectValue(), ecorePackage.getEBoolean(), "isCorrectValue", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		initEClass(timeEClass, Time.class, "Time", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");
 		addEEnumLiteral(directionsEEnum, Directions.SOUTH);
@@ -5768,6 +6369,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(eRoomTypeEEnum, ERoomType.EXIT);
 		addEEnumLiteral(eRoomTypeEEnum, ERoomType.QUESTION);
 		addEEnumLiteral(eRoomTypeEEnum, ERoomType.TRAP);
+
+		initEEnum(eGeographyValueEEnum, EGeographyValue.class, "EGeographyValue");
+		addEEnumLiteral(eGeographyValueEEnum, EGeographyValue.CITY);
+		addEEnumLiteral(eGeographyValueEEnum, EGeographyValue.COUNTRY);
 
 		// Create resource
 		createResource(eNS_URI);

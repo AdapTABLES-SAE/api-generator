@@ -57,4 +57,12 @@ public interface IdentificationTask extends ATask {
 	 */
 	void setCheckLearnerAction(boolean value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	int nbExpectedAnswers();
+
 } // IdentificationTask

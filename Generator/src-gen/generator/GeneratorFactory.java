@@ -445,6 +445,105 @@ public interface GeneratorFactory extends EFactory {
 	CurseEligibility createCurseEligibility();
 
 	/**
+	 * Returns a new object of class '<em>Image</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Image</em>'.
+	 * @generated
+	 */
+	Image createImage();
+
+	/**
+	 * Returns a new object of class '<em>Map</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Map</em>'.
+	 * @generated
+	 */
+	Map createMap();
+
+	/**
+	 * Returns a new object of class '<em>Map Element Position</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Map Element Position</em>'.
+	 * @generated
+	 */
+	MapElementPosition createMapElementPosition();
+
+	/**
+	 * Returns a new object of class '<em>Legend Symbol</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Legend Symbol</em>'.
+	 * @generated
+	 */
+	LegendSymbol createLegendSymbol();
+
+	/**
+	 * Returns a new object of class '<em>Legend Text</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Legend Text</em>'.
+	 * @generated
+	 */
+	LegendText createLegendText();
+
+	/**
+	 * Returns a new object of class '<em>History Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>History Fact</em>'.
+	 * @generated
+	 */
+	HistoryFact createHistoryFact();
+
+	/**
+	 * Returns a new object of class '<em>Geography Legend Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Geography Legend Fact</em>'.
+	 * @generated
+	 */
+	GeographyLegendFact createGeographyLegendFact();
+
+	/**
+	 * Returns a new object of class '<em>Geography Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Geography Fact</em>'.
+	 * @generated
+	 */
+	GeographyFact createGeographyFact();
+
+	/**
+	 * Returns a new object of class '<em>Date</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Date</em>'.
+	 * @generated
+	 */
+	Date createDate();
+
+	/**
+	 * Returns a new object of class '<em>Time Period</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Time Period</em>'.
+	 * @generated
+	 */
+	TimePeriod createTimePeriod();
+
+	/**
+	 * Returns a new object of class '<em>Map Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Map Value</em>'.
+	 * @generated
+	 */
+	MapValue createMapValue();
+
+	/**
 	 * Returns a new object of class '<em>Equipment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

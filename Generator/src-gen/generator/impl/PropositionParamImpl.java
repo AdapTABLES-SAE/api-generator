@@ -2,7 +2,7 @@
  */
 package generator.impl;
 
-import generator.Correctness;
+import generator.AValue;
 import generator.GeneratorPackage;
 import generator.PropositionParam;
 import org.eclipse.emf.common.notify.Notification;
@@ -35,7 +35,7 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 	 * @generated
 	 * @ordered
 	 */
-	protected Correctness state;
+	protected AValue state;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,7 +61,7 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Correctness getState() {
+	public AValue getState() {
 		return state;
 	}
 
@@ -70,8 +70,8 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetState(Correctness newState, NotificationChain msgs) {
-		Correctness oldState = state;
+	public NotificationChain basicSetState(AValue newState, NotificationChain msgs) {
+		AValue oldState = state;
 		state = newState;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -89,7 +89,7 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setState(Correctness newState) {
+	public void setState(AValue newState) {
 		if (newState != state) {
 			NotificationChain msgs = null;
 			if (state != null)
@@ -143,7 +143,7 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case GeneratorPackage.PROPOSITION_PARAM__STATE:
-			setState((Correctness) newValue);
+			setState((AValue) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -158,7 +158,7 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case GeneratorPackage.PROPOSITION_PARAM__STATE:
-			setState((Correctness) null);
+			setState((AValue) null);
 			return;
 		}
 		super.eUnset(featureID);

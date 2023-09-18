@@ -2,7 +2,9 @@
  */
 package generator.impl;
 
+import generator.ATask;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -10,6 +12,7 @@ import generator.ETaskType;
 import generator.GeneratorPackage;
 import generator.MembershipIDTask;
 import generator.MultipleChoice;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * <!-- begin-user-doc -->
@@ -237,6 +240,38 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 			return checkLearnerAction != CHECK_LEARNER_ACTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == ATask.class) {
+			switch (baseOperationID) {
+			case GeneratorPackage.ATASK___NB_EXPECTED_ANSWERS:
+				return GeneratorPackage.MEMBERSHIP_ID_TASK___NB_EXPECTED_ANSWERS;
+			default:
+				return super.eDerivedOperationID(baseOperationID, baseClass);
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case GeneratorPackage.MEMBERSHIP_ID_TASK___NB_EXPECTED_ANSWERS:
+			return nbExpectedAnswers();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

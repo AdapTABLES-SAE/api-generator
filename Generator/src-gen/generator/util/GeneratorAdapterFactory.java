@@ -547,6 +547,66 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseImage(Image object) {
+			return createImageAdapter();
+		}
+
+		@Override
+		public Adapter caseMap(Map object) {
+			return createMapAdapter();
+		}
+
+		@Override
+		public Adapter caseMapElementPosition(MapElementPosition object) {
+			return createMapElementPositionAdapter();
+		}
+
+		@Override
+		public Adapter caseLegendSymbol(LegendSymbol object) {
+			return createLegendSymbolAdapter();
+		}
+
+		@Override
+		public Adapter caseLegendText(LegendText object) {
+			return createLegendTextAdapter();
+		}
+
+		@Override
+		public Adapter caseHistoryFact(HistoryFact object) {
+			return createHistoryFactAdapter();
+		}
+
+		@Override
+		public Adapter caseGeographyLegendFact(GeographyLegendFact object) {
+			return createGeographyLegendFactAdapter();
+		}
+
+		@Override
+		public Adapter caseGeographyFact(GeographyFact object) {
+			return createGeographyFactAdapter();
+		}
+
+		@Override
+		public Adapter caseDate(Date object) {
+			return createDateAdapter();
+		}
+
+		@Override
+		public Adapter caseTimePeriod(TimePeriod object) {
+			return createTimePeriodAdapter();
+		}
+
+		@Override
+		public Adapter caseMapValue(MapValue object) {
+			return createMapValueAdapter();
+		}
+
+		@Override
+		public Adapter caseTime(Time object) {
+			return createTimeAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1346,6 +1406,174 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCurseEligibilityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Image <em>Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Image
+	 * @generated
+	 */
+	public Adapter createImageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Map <em>Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Map
+	 * @generated
+	 */
+	public Adapter createMapAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MapElementPosition <em>Map Element Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MapElementPosition
+	 * @generated
+	 */
+	public Adapter createMapElementPositionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.LegendSymbol <em>Legend Symbol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.LegendSymbol
+	 * @generated
+	 */
+	public Adapter createLegendSymbolAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.LegendText <em>Legend Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.LegendText
+	 * @generated
+	 */
+	public Adapter createLegendTextAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.HistoryFact <em>History Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.HistoryFact
+	 * @generated
+	 */
+	public Adapter createHistoryFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.GeographyLegendFact <em>Geography Legend Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.GeographyLegendFact
+	 * @generated
+	 */
+	public Adapter createGeographyLegendFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.GeographyFact <em>Geography Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.GeographyFact
+	 * @generated
+	 */
+	public Adapter createGeographyFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Date <em>Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Date
+	 * @generated
+	 */
+	public Adapter createDateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.TimePeriod <em>Time Period</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.TimePeriod
+	 * @generated
+	 */
+	public Adapter createTimePeriodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MapValue <em>Map Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MapValue
+	 * @generated
+	 */
+	public Adapter createMapValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Time <em>Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Time
+	 * @generated
+	 */
+	public Adapter createTimeAdapter() {
 		return null;
 	}
 

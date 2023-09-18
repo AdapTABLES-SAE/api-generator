@@ -564,17 +564,20 @@ public class LearnerPlayerManager {
 				CurrentObjectiveLevel currentOL = getCurrentObjectiveLevel(learner, objective, level); 
 				if(currentOL != null) {
 					learner.getProgression().getLearnerProgress().getCurrentobjectivelevels().remove(currentOL);
+					currentOL = new CurrentObjectiveLevelImpl();
+					currentOL.setObjective(objective);
+					currentOL.setLevel(level);
 					Results results = new ResultsImpl();
-					for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {
+					for(ATask task: level.getTasks()) {
 						ResultsByTask resByTask = new ResultsByTaskImpl();
-						resByTask.setTask(rbt.getTask());
+						resByTask.setTask(task);
 						results.getResultsbytask().add(resByTask);
 					}
 					currentOL.setResults(results);
 					currentOL.setAchieved(false);
 					currentOL.setEncountersPercent(0);
 					currentOL.setSuccessPercent(0);
-					learner.getProgression().setLearnerProgress(new LearnerProgressImpl());
+					//learner.getProgression().setLearnerProgress(new LearnerProgressImpl());
 					learner.getProgression().getLearnerProgress().getCurrentobjectivelevels().add(currentOL);
 					learner.getProgression().getPlayerProgress().setCurrentLevel(1);
 					

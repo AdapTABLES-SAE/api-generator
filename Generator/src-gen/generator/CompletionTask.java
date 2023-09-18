@@ -41,4 +41,12 @@ public interface CompletionTask extends ATask {
 	 */
 	int getNbMissingElements();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	int nbExpectedAnswers();
+
 } // CompletionTask

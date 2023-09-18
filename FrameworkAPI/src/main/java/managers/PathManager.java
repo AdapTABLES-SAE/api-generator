@@ -152,15 +152,17 @@ public class PathManager {
 		if(aPath.getID() == null) {
 			aPath.setID(pathName);
 			aPath.setKnowledge(knowledge);
-			aPath.setName("Just another test");
+			aPath.setName(pathName);
 		}
 		Objective obj = getCorrespondingObjective(aPath, knowledge, json);
-		Level level = recreateNewLevel(obj, (String) json.get("level"));
+		Level level = createLevel(obj, (String) json.get("level")); // recreateNewLevel(obj, (String) json.get("level"));
 		buildLevelTasks(obj, level, json);
 		if(!aPath.getObjectives().contains(obj)) {
 			aPath.getObjectives().add(obj);
 		}
-		paths.getLearningpaths().add(aPath);
+		if(paths.getLearningpaths().contains(aPath)) {
+			paths.getLearningpaths().add(aPath);
+		}
 		modelsManager.saveDomainModel(paths);
 		
 		// update progress for learner having this path TODO
@@ -379,6 +381,17 @@ public class PathManager {
 		return task;
 	}
 	
+	private Level createLevel(Objective obj, String levelID) {
+		Level level = new MTLevelImpl();
+		if(levelID.isEmpty()) {
+			level.setID(levelID);
+		} else {
+			level.setID(obj.getID()+"-L"+(obj.getLevels().size() + 1));
+		}
+		return level;
+	}
+	
+	@Deprecated
 	private Level recreateNewLevel(Objective obj, String levelID) {
 		Level existantLevel = getCorrespondingLevel(obj, levelID);
 		Level level = new MTLevelImpl();
@@ -391,6 +404,7 @@ public class PathManager {
 		return level;
 	}
 	
+	@Deprecated
 	private Level getCorrespondingLevel(Objective obj, String levelID) {
 		for(Level level: obj.getLevels()) {
 			if(level.getID().equals(levelID)) {
@@ -412,21 +426,23 @@ public class PathManager {
 		} else {
 			for (Objective objective : learningPath.getObjectives()) {
 				if(objective.getID().equals(objID)) {
-					obj = objective;
+					//obj = objective;
+					obj.setID(objective.getID());
+					obj.setName(objective.getID());
+					learningPath.getObjectives().remove(objective);
 					break;
 				}
 			}
-			obj.setID(objID);
 		}
-		if(obj.getSetoffacts().isEmpty()) {
-			for (Long table :  (List<Long>) getJSONBuildSetup(json).get("tables")) {
-				for (SetOfFacts sof : knowledge.getKnowledgefacts()) {
-					if(Integer.parseInt(sof.getName()) == table) { // TODO : it's shit
-						obj.getSetoffacts().add(sof); 
-					}
+		//if(obj.getSetoffacts().isEmpty()) {
+		for (String table :  (List<String>) getJSONBuildSetup(json).get("tables")) {
+			for (SetOfFacts sof : knowledge.getKnowledgefacts()) {
+				if(Integer.parseInt(sof.getName()) == Integer.parseInt(table)) { // TODO : it's shit
+					obj.getSetoffacts().add(sof); 
 				}
 			}
-		}	
+		}
+		//}	
 		return obj;
 	}
 	

@@ -10,7 +10,6 @@ import java.util.Set;
 
 import generator.ATask;
 import generator.AbstractFact;
-import generator.Correctness;
 import generator.CorrectnessValue;
 import generator.ECorrectness;
 import generator.EnterResponse;
@@ -25,7 +24,6 @@ import generator.ResultsByTask;
 import generator.SetOfFacts;
 import generator.Value;
 import generator.WantedAnswersParam;
-import generator.impl.CorrectnessImpl;
 import generator.impl.CorrectnessValueImpl;
 import generator.impl.EntrySoluceParamImpl;
 import generator.impl.FactCorrectnessParamImpl;
@@ -90,11 +88,9 @@ public abstract class FactGeneratorTemplate {
 				for (String prop : propState.getValue()) {
 					PropositionParam propositionParam = new PropositionParamImpl();
 					
-					Correctness correctness = new CorrectnessImpl();
 					CorrectnessValue correctnessValue = new CorrectnessValueImpl();
 					correctnessValue.setValue(propState.getKey());
-					correctness.setValue(correctnessValue);
-					propositionParam.setState(correctness);
+					propositionParam.setState(correctnessValue);
 					
 					Value value = new ValueImpl();
 					value.setValue(prop);

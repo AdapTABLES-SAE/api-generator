@@ -2,6 +2,7 @@
  */
 package generator.impl;
 
+import generator.ATask;
 import generator.CompletionTask;
 import generator.ETaskType;
 import generator.GeneratorPackage;
@@ -123,10 +124,30 @@ public abstract class CompletionTaskImpl extends ATaskImpl implements Completion
 	 * @generated
 	 */
 	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == ATask.class) {
+			switch (baseOperationID) {
+			case GeneratorPackage.ATASK___NB_EXPECTED_ANSWERS:
+				return GeneratorPackage.COMPLETION_TASK___NB_EXPECTED_ANSWERS;
+			default:
+				return super.eDerivedOperationID(baseOperationID, baseClass);
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 		case GeneratorPackage.COMPLETION_TASK___GET_NB_MISSING_ELEMENTS:
 			return getNbMissingElements();
+		case GeneratorPackage.COMPLETION_TASK___NB_EXPECTED_ANSWERS:
+			return nbExpectedAnswers();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

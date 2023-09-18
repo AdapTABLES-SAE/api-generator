@@ -57,4 +57,12 @@ public interface OrderingTask extends ATask {
 	 */
 	void setCheckLearnerAction(boolean value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	int nbExpectedAnswers();
+
 } // OrderingTask

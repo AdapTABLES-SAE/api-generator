@@ -221,6 +221,28 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createLabyrinthCurse();
 		case GeneratorPackage.CURSE_ELIGIBILITY:
 			return createCurseEligibility();
+		case GeneratorPackage.IMAGE:
+			return createImage();
+		case GeneratorPackage.MAP:
+			return createMap();
+		case GeneratorPackage.MAP_ELEMENT_POSITION:
+			return createMapElementPosition();
+		case GeneratorPackage.LEGEND_SYMBOL:
+			return createLegendSymbol();
+		case GeneratorPackage.LEGEND_TEXT:
+			return createLegendText();
+		case GeneratorPackage.HISTORY_FACT:
+			return createHistoryFact();
+		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT:
+			return createGeographyLegendFact();
+		case GeneratorPackage.GEOGRAPHY_FACT:
+			return createGeographyFact();
+		case GeneratorPackage.DATE:
+			return createDate();
+		case GeneratorPackage.TIME_PERIOD:
+			return createTimePeriod();
+		case GeneratorPackage.MAP_VALUE:
+			return createMapValue();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -262,6 +284,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createEStatementTypeFromString(eDataType, initialValue);
 		case GeneratorPackage.EROOM_TYPE:
 			return createERoomTypeFromString(eDataType, initialValue);
+		case GeneratorPackage.EGEOGRAPHY_VALUE:
+			return createEGeographyValueFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -303,6 +327,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return convertEStatementTypeToString(eDataType, instanceValue);
 		case GeneratorPackage.EROOM_TYPE:
 			return convertERoomTypeToString(eDataType, instanceValue);
+		case GeneratorPackage.EGEOGRAPHY_VALUE:
+			return convertEGeographyValueToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -776,6 +802,116 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public CurseEligibility createCurseEligibility() {
 		CurseEligibilityImpl curseEligibility = new CurseEligibilityImpl();
 		return curseEligibility;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Image createImage() {
+		ImageImpl image = new ImageImpl();
+		return image;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map createMap() {
+		MapImpl map = new MapImpl();
+		return map;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MapElementPosition createMapElementPosition() {
+		MapElementPositionImpl mapElementPosition = new MapElementPositionImpl();
+		return mapElementPosition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LegendSymbol createLegendSymbol() {
+		LegendSymbolImpl legendSymbol = new LegendSymbolImpl();
+		return legendSymbol;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LegendText createLegendText() {
+		LegendTextImpl legendText = new LegendTextImpl();
+		return legendText;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HistoryFact createHistoryFact() {
+		HistoryFactImpl historyFact = new HistoryFactImpl();
+		return historyFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GeographyLegendFact createGeographyLegendFact() {
+		GeographyLegendFactImpl geographyLegendFact = new GeographyLegendFactImpl();
+		return geographyLegendFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GeographyFact createGeographyFact() {
+		GeographyFactImpl geographyFact = new GeographyFactImpl();
+		return geographyFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date createDate() {
+		DateImpl date = new DateImpl();
+		return date;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimePeriod createTimePeriod() {
+		TimePeriodImpl timePeriod = new TimePeriodImpl();
+		return timePeriod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MapValue createMapValue() {
+		MapValueImpl mapValue = new MapValueImpl();
+		return mapValue;
 	}
 
 	/**
@@ -1433,6 +1569,28 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * @generated
 	 */
 	public String convertERoomTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EGeographyValue createEGeographyValueFromString(EDataType eDataType, String initialValue) {
+		EGeographyValue result = EGeographyValue.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEGeographyValueToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

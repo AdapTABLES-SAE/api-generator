@@ -99,13 +99,13 @@
     <eLiterals name="LABYRINTHINE" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LearningDomain">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="learningpaths" upperBound="-1"
-        eType="#//LearningPath" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learningpaths" lowerBound="1"
+        upperBound="-1" eType="#//LearningPath" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LearningPath">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="objectives" upperBound="-1"
-        eType="#//Objective" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectives" lowerBound="1"
+        upperBound="-1" eType="#//Objective" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="knowledge" lowerBound="1"
         eType="#//Knowledge"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -117,8 +117,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisites" upperBound="-1"
         eType="#//Prerequisite" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="levels" upperBound="-1"
-        eType="#//Level" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="levels" lowerBound="1"
+        upperBound="-1" eType="#//Level" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="setoffacts" lowerBound="1"
         upperBound="-1" eType="#//SetOfFacts"/>
   </eClassifiers>
@@ -134,8 +134,8 @@
         unsettable="true" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" lowerBound="1" upperBound="-1"
         eType="#//ATask" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="completionCriteria" eType="#//CompletionCriteria"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="completionCriteria" lowerBound="1"
+        eType="#//CompletionCriteria" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTLevel" eSuperTypes="#//Level">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="buildSetup" eType="#//TableBuild"/>
@@ -209,8 +209,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="MultipleChoice" eSuperTypes="#//ResponseModality">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"
         changeable="false" transient="true" defaultValueLiteral="CHOICE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbBadChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EnterResponse" eSuperTypes="#//ResponseModality">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"
@@ -226,8 +226,8 @@
     <eOperations name="nbExpectedAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentOfApparition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="responseModality" eType="#//ResponseModality"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responseModality" lowerBound="1"
+        eType="#//ResponseModality" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
         unsettable="true" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -498,7 +498,7 @@
         eType="#//FactSolutionParam" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PropositionParam" eSuperTypes="#//Parameter">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//Correctness"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//AValue"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Value" eSuperTypes="#//AValue">
@@ -679,5 +679,58 @@
   <eClassifiers xsi:type="ecore:EClass" name="CurseEligibility">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="curse" lowerBound="1" eType="#//Curse"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Image">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Map" eSuperTypes="#//Image">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="positions" upperBound="-1"
+        eType="#//MapElementPosition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MapElementPosition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LegendSymbol">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="image" lowerBound="1" eType="#//Image"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
+        eType="#//MapElementPosition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LegendText">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
+        eType="#//MapElementPosition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HistoryFact" eSuperTypes="#//AbstractFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="image" eType="#//Image"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="date" eType="#//Date" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="period" upperBound="-1"
+        eType="#//TimePeriod" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeographyLegendFact" eSuperTypes="#//AbstractFact">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="map" lowerBound="1" eType="#//Map"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="symbol" lowerBound="1"
+        eType="#//LegendSymbol" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="legend" lowerBound="1"
+        eType="#//LegendText" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeographyFact" eSuperTypes="#//AbstractFact">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="map" lowerBound="1" eType="#//Map"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
+        eType="#//MapElementPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Date">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="day" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="month" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="year" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimePeriod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startYear" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endYear" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

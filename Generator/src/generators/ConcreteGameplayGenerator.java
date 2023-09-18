@@ -279,7 +279,7 @@ public class ConcreteGameplayGenerator {
 			
 			Correctness propCorrectness = new CorrectnessImpl();
 			CorrectnessValue propCorrectnessValue = new CorrectnessValueImpl();
-			propCorrectnessValue.setValue(((CorrectnessValue) param.getState().getValue()).getValue());
+			propCorrectnessValue.setValue(((CorrectnessValue) param.getState()).getValue());
 			propCorrectness.setValue(propCorrectnessValue);
 			proposition.setCorrectness(propCorrectness);
 			displays.add(proposition);
@@ -291,14 +291,12 @@ public class ConcreteGameplayGenerator {
 	private List<PropositionParam> getGoodSolutions(QuestionedFact fact){
 		List<PropositionParam> propositions = new ArrayList<>();
 		for(PropositionParam prop: fact.getPropositions()) {
-			if(((CorrectnessValue) prop.getState().getValue()).getValue().equals(ECorrectness.CORRECT)) {
+			if(((CorrectnessValue) prop.getState()).getValue().equals(ECorrectness.CORRECT)) {
 				PropositionParam propositionParam = new PropositionParamImpl();
 				
-				Correctness correctness = new CorrectnessImpl();
 				CorrectnessValue correctnessValue = new CorrectnessValueImpl();
 				correctnessValue.setValue(ECorrectness.CORRECT);
-				correctness.setValue(correctnessValue);
-				propositionParam.setState(correctness);
+				propositionParam.setState(correctnessValue);
 				
 				Value value = new ValueImpl();
 				value.setValue(((Value) prop.getValue()).getValue());
@@ -312,14 +310,12 @@ public class ConcreteGameplayGenerator {
 	private List<PropositionParam> getBadSolutions(QuestionedFact fact){
 		List<PropositionParam> propositions = new ArrayList<>();
 		for(PropositionParam prop: fact.getPropositions()) {
-			if(((CorrectnessValue) prop.getState().getValue()).getValue().equals(ECorrectness.INCORRECT)) {
+			if(((CorrectnessValue) prop.getState()).getValue().equals(ECorrectness.INCORRECT)) {
 				PropositionParam propositionParam = new PropositionParamImpl();
 				
-				Correctness correctness = new CorrectnessImpl();
 				CorrectnessValue correctnessValue = new CorrectnessValueImpl();
 				correctnessValue.setValue(ECorrectness.INCORRECT);
-				correctness.setValue(correctnessValue);
-				propositionParam.setState(correctness);
+				propositionParam.setState(correctnessValue);
 				
 				Value value = new ValueImpl();
 				value.setValue(((Value) prop.getValue()).getValue());
@@ -360,7 +356,7 @@ public class ConcreteGameplayGenerator {
 			correctness.setValue(value);
 		} else { // On est pas dans une structure on prends la valeur de correctness de la proposition du fait 
 			CorrectnessValue value = new CorrectnessValueImpl();
-			value.setValue(((CorrectnessValue) proposition.getState().getValue()).getValue());
+			value.setValue(((CorrectnessValue) proposition.getState()).getValue());
 			correctness.setValue(value);
 		}
 		

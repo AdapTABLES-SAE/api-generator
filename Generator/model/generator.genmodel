@@ -99,6 +99,10 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ERoomType/QUESTION"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ERoomType/TRAP"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EGeographyValue">
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/CITY"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/COUNTRY"/>
+    </genEnums>
     <genClasses image="false" ecoreClass="generator.ecore#//AbstractFact"/>
     <genClasses ecoreClass="generator.ecore#//SetOfFacts">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//SetOfFacts/facts"/>
@@ -223,8 +227,8 @@
     <genClasses ecoreClass="generator.ecore#//ResponseModality"/>
     <genClasses ecoreClass="generator.ecore#//MultipleChoice">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MultipleChoice/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MultipleChoice/nbChoices"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MultipleChoice/nbBadChoices"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MultipleChoice/nbChoices"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//EnterResponse">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//EnterResponse/type"/>
@@ -246,15 +250,21 @@
     <genClasses ecoreClass="generator.ecore#//CompletionTask">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionTask/type"/>
       <genOperations ecoreOperation="generator.ecore#//CompletionTask/getNbMissingElements"/>
+      <genOperations ecoreOperation="generator.ecore#//CompletionTask/nbExpectedAnswers"
+          body="return this.getNbMissingElements();"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//IdentificationTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentificationTask/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentificationTask/checkLearnerAction"/>
+      <genOperations ecoreOperation="generator.ecore#//IdentificationTask/nbExpectedAnswers"
+          body="return this.getNbFacts();"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MembershipIDTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/identifySharedProperty"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/checkLearnerAction"/>
+      <genOperations ecoreOperation="generator.ecore#//MembershipIDTask/nbExpectedAnswers"
+          body="MultipleChoice mc = (MultipleChoice) this.getResponseModality();&#xD;&#xA;return mc.getNbChoices() - mc.getNbBadChoices(); "/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTCompletion2">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/targets"/>
@@ -456,6 +466,8 @@
     <genClasses ecoreClass="generator.ecore#//OrderingTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/checkLearnerAction"/>
+      <genOperations ecoreOperation="generator.ecore#//OrderingTask/nbExpectedAnswers"
+          body="return this.getNbFacts();"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Prompt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Prompt/prompt"/>
@@ -536,5 +548,50 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CurseEligibility/startLevel"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//CurseEligibility/curse"/>
     </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Image">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Image/ID"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Map">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Map/positions"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//MapElementPosition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MapElementPosition/ID"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//LegendSymbol">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LegendSymbol/image"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//LegendSymbol/position"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//LegendText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LegendText/text"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//LegendText/position"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//HistoryFact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HistoryFact/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//HistoryFact/image"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//HistoryFact/time"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//GeographyLegendFact">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyLegendFact/map"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyLegendFact/symbol"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyLegendFact/legend"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//GeographyFact">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyFact/map"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyFact/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GeographyFact/value"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Date">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Date/day"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Date/month"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Date/year"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//TimePeriod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//TimePeriod/startYear"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//TimePeriod/endYear"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//MapValue">
+      <genOperations ecoreOperation="generator.ecore#//MapValue/isCorrectValue" body="return !this.value.isEmpty();"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Time"/>
   </genPackages>
 </genmodel:GenModel>
