@@ -57,12 +57,12 @@ public interface QuestionedFact extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Question</em>' containment reference.
-	 * @see #setQuestion(QuestionParam)
+	 * @see #setQuestion(AQuestionParam)
 	 * @see generator.GeneratorPackage#getQuestionedFact_Question()
 	 * @model containment="true"
 	 * @generated
 	 */
-	QuestionParam getQuestion();
+	AQuestionParam getQuestion();
 
 	/**
 	 * Sets the value of the '{@link generator.QuestionedFact#getQuestion <em>Question</em>}' containment reference.
@@ -72,7 +72,7 @@ public interface QuestionedFact extends EObject {
 	 * @see #getQuestion()
 	 * @generated
 	 */
-	void setQuestion(QuestionParam value);
+	void setQuestion(AQuestionParam value);
 
 	/**
 	 * Returns the value of the '<em><b>Propositions</b></em>' containment reference list.

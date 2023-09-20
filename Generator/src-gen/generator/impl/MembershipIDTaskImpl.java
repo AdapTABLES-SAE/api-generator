@@ -164,10 +164,14 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 					checkLearnerAction));
 	}
 
-	@Override
-	public int nbExpectedAnswers() {
-		return ((MultipleChoice) getResponseModality()).getNbChoices()
-				- ((MultipleChoice) getResponseModality()).getNbBadChoices();
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getNbExpectedAnswers() {
+		MultipleChoice mc = (MultipleChoice) this.getResponseModality();
+		return mc.getNbChoices() - mc.getNbBadChoices();
 	}
 
 	/**
@@ -251,8 +255,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == ATask.class) {
 			switch (baseOperationID) {
-			case GeneratorPackage.ATASK___NB_EXPECTED_ANSWERS:
-				return GeneratorPackage.MEMBERSHIP_ID_TASK___NB_EXPECTED_ANSWERS;
+			case GeneratorPackage.ATASK___GET_NB_EXPECTED_ANSWERS:
+				return GeneratorPackage.MEMBERSHIP_ID_TASK___GET_NB_EXPECTED_ANSWERS;
 			default:
 				return super.eDerivedOperationID(baseOperationID, baseClass);
 			}
@@ -268,8 +272,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case GeneratorPackage.MEMBERSHIP_ID_TASK___NB_EXPECTED_ANSWERS:
-			return nbExpectedAnswers();
+		case GeneratorPackage.MEMBERSHIP_ID_TASK___GET_NB_EXPECTED_ANSWERS:
+			return getNbExpectedAnswers();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

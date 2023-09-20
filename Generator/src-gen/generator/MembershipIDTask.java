@@ -84,9 +84,9 @@ public interface MembershipIDTask extends ATask {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model kind="operation"
 	 * @generated
 	 */
-	int nbExpectedAnswers();
+	int getNbExpectedAnswers();
 
 } // MembershipIDTask

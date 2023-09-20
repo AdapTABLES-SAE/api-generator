@@ -14,6 +14,7 @@ package generator;
  *   <li>{@link generator.Date#getDay <em>Day</em>}</li>
  *   <li>{@link generator.Date#getMonth <em>Month</em>}</li>
  *   <li>{@link generator.Date#getYear <em>Year</em>}</li>
+ *   <li>{@link generator.Date#getPosition <em>Position</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getDate()
@@ -86,5 +87,27 @@ public interface Date extends Time {
 	 * @generated
 	 */
 	void setYear(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Position</em>' reference.
+	 * @see #setPosition(MapElementPosition)
+	 * @see generator.GeneratorPackage#getDate_Position()
+	 * @model required="true"
+	 * @generated
+	 */
+	MapElementPosition getPosition();
+
+	/**
+	 * Sets the value of the '{@link generator.Date#getPosition <em>Position</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Position</em>' reference.
+	 * @see #getPosition()
+	 * @generated
+	 */
+	void setPosition(MapElementPosition value);
 
 } // Date

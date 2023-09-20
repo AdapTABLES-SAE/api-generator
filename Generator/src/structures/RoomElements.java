@@ -101,6 +101,7 @@ public class RoomElements {
 	}
 	
 	public void addQuestionedFact(QuestionedFact fact) {
+		System.out.println("ADD FACT "+fact.getFactCorrectness());
 		this.facts.add(fact);
 	}
 	
@@ -122,6 +123,7 @@ public class RoomElements {
 	
 	public void setGameplay(Gameplay gameplay) {
 		this.gameplay = gameplay;
+		//System.err.println("GAMEPLAY "+gameplay.getName()+" nb components "+gameplay.getComponents().size());
 		selectElementType();
 	}
 	
@@ -149,7 +151,9 @@ public class RoomElements {
 	private void selectElementType(List<AComponent> components, boolean isStructureComponents) {
 		for (AComponent aComponent : components) {
 			ElementType elementType = getCompatibleElementType(aComponent, isStructureComponents); 
-			if(isStructureComponents) {
+			//System.err.println("COMPONENT "+aComponent.getAllowedAbility());
+			//System.err.println("ELEMENT "+elementType.getType());
+			if(isStructureComponents && !elementsToQuantity.containsKey(elementType)) {
 				elementsToQuantity.put(elementType, -1);
 			} else {
 				if(isStructureComponent(aComponent)) {
@@ -161,10 +165,13 @@ public class RoomElements {
 					} else {
 						elementsToQuantity.put(elementType, 1);
 					}
-					selectElementType(structure.getComponents(), true);
+					
 				} else {
 					elementsToQuantity.put(elementType, (int) Math.ceil(computesNumberofElements((Component) aComponent, elementType)));
 				}
+			}
+			if(isStructureComponent(aComponent)) {
+				selectElementType(((Structure) aComponent).getComponents(), true);
 			}
 		}
 	}
@@ -182,7 +189,7 @@ public class RoomElements {
 		else if(component.isWearChoices()) { return facts.size(); }
 		else if(component.getQuantity() != null) {
 			if(component.getQuantity().isFactNbAnswers()) {
-				return facts.size() * task.nbExpectedAnswers();
+				return facts.size() * task.getNbExpectedAnswers();
 			} else {
 				return Integer.valueOf(((Value) component.getQuantity().getValue()).getValue());
 			}
@@ -227,12 +234,16 @@ public class RoomElements {
 	}
 
 	public ElementType getElementTypeFor(AComponent component) {
+
 		for (ElementType elementType : elementsToQuantity.keySet()) {
 			if((isComponentForStatement(component) && elementType instanceof StatementElementType) ||
 					 (!(elementType instanceof StatementElementType) && isEqualAbility(elementType, component) && isEqualSize(elementType, component))) {
 				return elementType;
 			}
 		}
+		//System.out.println("SELECTED "+elementsToQuantity);
+		//System.out.println("COMP "+component.getAllowedAbility());
+		//System.err.println("not found");
 		return null;
 	}
 	

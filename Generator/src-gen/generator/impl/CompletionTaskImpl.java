@@ -85,9 +85,13 @@ public abstract class CompletionTaskImpl extends ATaskImpl implements Completion
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
-	public int nbExpectedAnswers() {
-		return getNbMissingElements();
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getNbExpectedAnswers() {
+		return this.getNbMissingElements();
 	}
 
 	/**
@@ -127,8 +131,8 @@ public abstract class CompletionTaskImpl extends ATaskImpl implements Completion
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == ATask.class) {
 			switch (baseOperationID) {
-			case GeneratorPackage.ATASK___NB_EXPECTED_ANSWERS:
-				return GeneratorPackage.COMPLETION_TASK___NB_EXPECTED_ANSWERS;
+			case GeneratorPackage.ATASK___GET_NB_EXPECTED_ANSWERS:
+				return GeneratorPackage.COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS;
 			default:
 				return super.eDerivedOperationID(baseOperationID, baseClass);
 			}
@@ -146,8 +150,8 @@ public abstract class CompletionTaskImpl extends ATaskImpl implements Completion
 		switch (operationID) {
 		case GeneratorPackage.COMPLETION_TASK___GET_NB_MISSING_ELEMENTS:
 			return getNbMissingElements();
-		case GeneratorPackage.COMPLETION_TASK___NB_EXPECTED_ANSWERS:
-			return nbExpectedAnswers();
+		case GeneratorPackage.COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS:
+			return getNbExpectedAnswers();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

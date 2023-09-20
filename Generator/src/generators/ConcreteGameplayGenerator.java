@@ -18,6 +18,7 @@ import generator.PositionedElement;
 import generator.PositionedStructureElement;
 import generator.PropositionParam;
 import generator.QuestionGameplay;
+import generator.QuestionParam;
 import generator.QuestionedFact;
 import generator.RoomType;
 import generator.Structure;
@@ -145,7 +146,9 @@ public class ConcreteGameplayGenerator {
 	private PositionedElement buildStatementAsChoicesElement(Component component, ElementType elementType, QuestionedFact fact, Position position) {
 		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
 		Correctness correctness = new CorrectnessImpl();
-		correctness.setValue(fact.getFactCorrectness().getValue());
+		CorrectnessValue value = new CorrectnessValueImpl();
+		value.setValue(((CorrectnessValue) fact.getFactCorrectness().getValue()).getValue());
+		correctness.setValue(value);
 		comp.setCorrectness(correctness);
 	
 		Display proposition = new DisplayImpl();
@@ -163,11 +166,11 @@ public class ConcreteGameplayGenerator {
 		Value display = new ValueImpl();
 		display.setValue(((Value) fact.getQuestion().getValue()).getValue());
 		statement.setValue(display);
-		statement.setInteractive(fact.getQuestion().isInteractive());
+		statement.setInteractive(((QuestionParam) fact.getQuestion()).isInteractive());
 		comp.getDisplays().add(statement);
 				
-		if(!fact.getQuestion().getSolutions().isEmpty()) {
-			for (FactSolutionParam factSol: fact.getQuestion().getSolutions()) {
+		if(!((QuestionParam) fact.getQuestion()).getSolutions().isEmpty()) {
+			for (FactSolutionParam factSol: ((QuestionParam) fact.getQuestion()).getSolutions()) {
 				FactSolutionParam sol = new FactSolutionParamImpl();
 				Value solValue = new ValueImpl();
 				solValue.setValue(((Value) factSol.getValue()).getValue());
@@ -262,6 +265,7 @@ public class ConcreteGameplayGenerator {
 				}
 			}
 			selectedForElement = Shuffle.shufflePropositions(selectedForElement);
+			// Collections.shuffle(selectedForElement);
 			comp.getDisplays().addAll(this.buildDisplay(selectedForElement));
 			elements.add(comp);
 		}

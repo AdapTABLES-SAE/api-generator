@@ -202,9 +202,9 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.CONTEXT: {
-			Context context = (Context) theEObject;
-			T result = caseContext(context);
+		case GeneratorPackage.CLASSROOM: {
+			Classroom classroom = (Classroom) theEObject;
+			T result = caseClassroom(classroom);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -532,6 +532,8 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		case GeneratorPackage.QUESTION_PARAM: {
 			QuestionParam questionParam = (QuestionParam) theEObject;
 			T result = caseQuestionParam(questionParam);
+			if (result == null)
+				result = caseAQuestionParam(questionParam);
 			if (result == null)
 				result = caseParameter(questionParam);
 			if (result == null)
@@ -930,6 +932,73 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case GeneratorPackage.AQUESTION_PARAM: {
+			AQuestionParam aQuestionParam = (AQuestionParam) theEObject;
+			T result = caseAQuestionParam(aQuestionParam);
+			if (result == null)
+				result = caseParameter(aQuestionParam);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.MAP_QUESTION_PARAM: {
+			MapQuestionParam mapQuestionParam = (MapQuestionParam) theEObject;
+			T result = caseMapQuestionParam(mapQuestionParam);
+			if (result == null)
+				result = caseAQuestionParam(mapQuestionParam);
+			if (result == null)
+				result = caseParameter(mapQuestionParam);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.HASSOCIATION: {
+			HAssociation hAssociation = (HAssociation) theEObject;
+			T result = caseHAssociation(hAssociation);
+			if (result == null)
+				result = caseCompletionTask(hAssociation);
+			if (result == null)
+				result = caseATask(hAssociation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.HLEGEND: {
+			HLegend hLegend = (HLegend) theEObject;
+			T result = caseHLegend(hLegend);
+			if (result == null)
+				result = caseCompletionTask(hLegend);
+			if (result == null)
+				result = caseATask(hLegend);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.GLOCATE: {
+			GLocate gLocate = (GLocate) theEObject;
+			T result = caseGLocate(gLocate);
+			if (result == null)
+				result = caseMembershipIDTask(gLocate);
+			if (result == null)
+				result = caseATask(gLocate);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.TEACHER: {
+			Teacher teacher = (Teacher) theEObject;
+			T result = caseTeacher(teacher);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.TEACHERS: {
+			Teachers teachers = (Teachers) theEObject;
+			T result = caseTeachers(teachers);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -1206,17 +1275,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Context</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Classroom</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Context</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Classroom</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseContext(Context object) {
+	public T caseClassroom(Classroom object) {
 		return null;
 	}
 
@@ -2147,6 +2216,111 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTime(Time object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>AQuestion Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>AQuestion Param</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAQuestionParam(AQuestionParam object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Map Question Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Map Question Param</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMapQuestionParam(MapQuestionParam object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>HAssociation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>HAssociation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHAssociation(HAssociation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>HLegend</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>HLegend</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHLegend(HLegend object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GLocate</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GLocate</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGLocate(GLocate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Teacher</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Teacher</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTeacher(Teacher object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Teachers</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Teachers</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTeachers(Teachers object) {
 		return null;
 	}
 

@@ -103,6 +103,15 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/CITY"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/COUNTRY"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EHistoryTarget">
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EHistoryTarget/EVENT"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EHistoryTarget/TIME"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EHistoryTarget/IMAGE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//ELegendTarget">
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ELegendTarget/SYMBOL"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ELegendTarget/TEXT"/>
+    </genEnums>
     <genClasses image="false" ecoreClass="generator.ecore#//AbstractFact"/>
     <genClasses ecoreClass="generator.ecore#//SetOfFacts">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//SetOfFacts/facts"/>
@@ -200,10 +209,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/nbMissingElements"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/checkLearnerAction"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Context">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Context/gamecontext"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Context/ID"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Context/learnerPlayers"/>
+    <genClasses ecoreClass="generator.ecore#//Classroom">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Classroom/gamecontext"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Classroom/ID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Classroom/learnerPlayers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Classroom/name"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//LearnerPlayer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayer/progression"/>
@@ -245,25 +255,26 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ATask/nbFacts"/>
       <genOperations ecoreOperation="generator.ecore#//ATask/getType"/>
       <genOperations ecoreOperation="generator.ecore#//ATask/isCheckOnLearnerAction"/>
-      <genOperations ecoreOperation="generator.ecore#//ATask/nbExpectedAnswers" body="return 1;"/>
+      <genOperations ecoreOperation="generator.ecore#//ATask/getNbExpectedAnswers"
+          body="return 1;"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//CompletionTask">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionTask/type"/>
       <genOperations ecoreOperation="generator.ecore#//CompletionTask/getNbMissingElements"/>
-      <genOperations ecoreOperation="generator.ecore#//CompletionTask/nbExpectedAnswers"
+      <genOperations ecoreOperation="generator.ecore#//CompletionTask/getNbExpectedAnswers"
           body="return this.getNbMissingElements();"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//IdentificationTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentificationTask/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentificationTask/checkLearnerAction"/>
-      <genOperations ecoreOperation="generator.ecore#//IdentificationTask/nbExpectedAnswers"
+      <genOperations ecoreOperation="generator.ecore#//IdentificationTask/getNbExpectedAnswers"
           body="return this.getNbFacts();"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MembershipIDTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/identifySharedProperty"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/checkLearnerAction"/>
-      <genOperations ecoreOperation="generator.ecore#//MembershipIDTask/nbExpectedAnswers"
+      <genOperations ecoreOperation="generator.ecore#//MembershipIDTask/getNbExpectedAnswers"
           body="MultipleChoice mc = (MultipleChoice) this.getResponseModality();&#xD;&#xA;return mc.getNbChoices() - mc.getNbBadChoices(); "/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTCompletion2">
@@ -584,14 +595,42 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Date/day"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Date/month"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Date/year"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Date/position"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//TimePeriod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//TimePeriod/startYear"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//TimePeriod/endYear"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//TimePeriod/positions"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MapValue">
       <genOperations ecoreOperation="generator.ecore#//MapValue/isCorrectValue" body="return !this.value.isEmpty();"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Time"/>
+    <genClasses ecoreClass="generator.ecore#//Time">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Time/map"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//AQuestionParam"/>
+    <genClasses ecoreClass="generator.ecore#//MapQuestionParam">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//MapQuestionParam/map"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//HAssociation">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HAssociation/nbMissingElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HAssociation/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HAssociation/missing"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//HLegend">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HLegend/nbMissingElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HLegend/missing"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//GLocate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GLocate/nbExpectedAnswers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GLocate/learnersChoices"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Teacher">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Teacher/ID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Teacher/classrooms"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Teachers">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Teachers/teachers"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

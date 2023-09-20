@@ -124,7 +124,7 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int nbExpectedAnswers() {
+	public int getNbExpectedAnswers() {
 		return this.getNbFacts();
 	}
 
@@ -199,8 +199,8 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == ATask.class) {
 			switch (baseOperationID) {
-			case GeneratorPackage.ATASK___NB_EXPECTED_ANSWERS:
-				return GeneratorPackage.IDENTIFICATION_TASK___NB_EXPECTED_ANSWERS;
+			case GeneratorPackage.ATASK___GET_NB_EXPECTED_ANSWERS:
+				return GeneratorPackage.IDENTIFICATION_TASK___GET_NB_EXPECTED_ANSWERS;
 			default:
 				return super.eDerivedOperationID(baseOperationID, baseClass);
 			}
@@ -216,8 +216,8 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case GeneratorPackage.IDENTIFICATION_TASK___NB_EXPECTED_ANSWERS:
-			return nbExpectedAnswers();
+		case GeneratorPackage.IDENTIFICATION_TASK___GET_NB_EXPECTED_ANSWERS:
+			return getNbExpectedAnswers();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

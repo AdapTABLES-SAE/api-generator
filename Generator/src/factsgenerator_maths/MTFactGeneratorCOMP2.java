@@ -153,7 +153,7 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 			default:
 				number = new Random().nextInt(max3 - min3) + min3;
 			}
-			if(!propositions_temp.contains(number) && !solutions.contains(number)) {
+			if(!propositions_temp.contains(number) && !solutions.contains(number) && !createsOtherSolution(qfact, propositions_temp, number)) {
 				propositions_temp.add(number);
 			}
 		}
@@ -163,6 +163,22 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 		
 		return propositions;
 	}	
+	
+	private boolean createsOtherSolution(MTQFCompletion2 fact, List<Integer> previousResults, int number) { // TODO : to verify
+		List<Integer> previousRes = new ArrayList<>();
+		previousRes.add(fact.getSoluceLeft());
+		previousRes.add(fact.getSoluceRight());
+		previousRes.add(fact.getSoluceRes());
+		previousRes.addAll(previousResults);
+
+		for(int i = 0; i < previousRes.size() - 1; i++) {
+			if(previousRes.contains(previousRes.get(i) * number)) {return true;}
+			for(int j = 1; j < previousRes.size(); j++) {
+				if((previousRes.get(i) * previousRes.get(j)) == number) {return true;}
+			}
+		}
+		return false;
+	}
 	
 	@Override
 	protected List<String> factSolutionsToString(QuestionableFact qFact) {

@@ -18,6 +18,7 @@ import generator.ElementType;
 import generator.NoQuestionGameplay;
 import generator.Position;
 import generator.QuestionGameplay;
+import generator.QuestionedFact;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
@@ -267,8 +268,12 @@ public class DungeonGenerator {
 		}
 
 		
+		int i = 0;
 		for (LinearRoom aEntry : dungeonRooms) {
 			generatedDungeon.getRooms().add(aEntry.getRoom());
+			if(!aEntry.getRoom().getQuestionedFacts().isEmpty() && aEntry.getRoom().getQuestionedFacts().get(0).getFactCorrectness() != null)
+			System.out.println("Fact corr "+ generatedDungeon.getRooms().get(i).getQuestionedFacts().get(0).getFactCorrectness().getValue());
+			i++;
 		}
 		generatedDungeon.setEntry(originRoom);
 	}
@@ -372,21 +377,22 @@ public class DungeonGenerator {
 		else if(roomElements.isExit()) { roomTypes = getExitRoomTypes(); }
 		else { roomTypes = getEntryRoomTypes(); }
 		
-		System.out.println("Every roomtypes "+roomTypes);
-		System.out.println("Room "+roomElements.getGameplay()+" "+roomElements.isEntry());
-		System.out.println("entry: "+entry+" exit: "+exit+" ");
+		//System.out.println("Every roomtypes "+roomTypes);
+		//System.out.println("Room "+roomElements.getGameplay()+" "+roomElements.isEntry());
+		//System.out.println("entry: "+entry+" exit: "+exit+" ");
 
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
-			System.out.println(" roomtype: "+roomType.getName());
+			//System.out.println(" roomtype: "+roomType.getName());
 
 			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {				
 				roomTypes.remove(roomType);
 			}
 			
 		}
+		//System.err.println("ALLOWED "+roomTypes);
 		if(roomTypes.isEmpty()) { System.err.println("NO room type"); return null;}
 		RoomType rt = roomTypes.get(random.nextInt(roomTypes.size()));
-		
+		//System.err.println("SELECTED RT "+rt.getName());
 		return rt; 
 	}
 	
@@ -406,6 +412,8 @@ public class DungeonGenerator {
 		boolean compatible = true;
 		
 		Map<ElementSize, Map<Ability, Integer>> numberOfElementsPerSize = computesNumberOfElementsPerSize(roomElements);
+		
+		//System.out.println("COMPUTES positions "+numberOfElementsPerSize);
 		
 		for (ElementSize size : numberOfElementsPerSize.keySet()) {
 			List<Position> roomPositionOfSize = getRoomTypePositionsOfSize(roomtype, size);
@@ -485,6 +493,12 @@ public class DungeonGenerator {
 
 		if(roomElements != null) {
 			r.getQuestionedFacts().addAll(roomElements.getFacts());
+			
+			for(QuestionedFact fact: r.getQuestionedFacts()) {
+				if(fact.getFactCorrectness() != null)
+				System.err.println("FACT COR in room create "+fact.getFactCorrectness().getValue());
+			}
+			
 			r.setTask(roomElements.getTask());
 			r.setGameplay(roomElements.getGameplay());
 			roomElements.setRoom(r);

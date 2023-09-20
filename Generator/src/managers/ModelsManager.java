@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import exceptions.NonExistantLearnerPlayerException;
-import generator.Context;
+import generator.Classroom;
 import generator.Dungeon;
 import generator.GameDescription;
 import generator.GameplayTaskRelations;
@@ -36,7 +36,7 @@ public class ModelsManager {
 	private static String OUTPUT_MODELS_PATH = "outputmodels/";
 	private static String[] INPUT_MODELS_NAMES = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi", "Relations.xmi"};
 	
-	private Context context; 
+	private Classroom context; 
 	private GameDescription gameDescription; 
 	private Knowledge multiplicationTables;
 	private LearningDomain learningPath;
@@ -218,7 +218,7 @@ public class ModelsManager {
 		}
 		EcoreUtil.resolveAll(resourceSet); 
 		
-		this.context = (Context) resource1.getContents().get(0);
+		this.context = (Classroom) resource1.getContents().get(0);
 		this.gameDescription = (GameDescription) resource2.getContents().get(0);
 		this.multiplicationTables = (Knowledge) resource3.getContents().get(0);
 		this.learningPath = (LearningDomain) resource4.getContents().get(0);
@@ -227,11 +227,11 @@ public class ModelsManager {
 		LOGGER.info("Loading input models : OK");
 	}
 
-	public Context getContextModel() {
+	public Classroom getContextModel() {
 		return context;
 	}
 
-	public void setContextModel(Context context) {
+	public void setContextModel(Classroom context) {
 		this.context = context;
 	}
 

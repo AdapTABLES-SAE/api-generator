@@ -157,13 +157,13 @@ public interface GeneratorFactory extends EFactory {
 	MTCompletion1 createMTCompletion1();
 
 	/**
-	 * Returns a new object of class '<em>Context</em>'.
+	 * Returns a new object of class '<em>Classroom</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Context</em>'.
+	 * @return a new object of class '<em>Classroom</em>'.
 	 * @generated
 	 */
-	Context createContext();
+	Classroom createClassroom();
 
 	/**
 	 * Returns a new object of class '<em>Learner Player</em>'.
@@ -542,6 +542,60 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	MapValue createMapValue();
+
+	/**
+	 * Returns a new object of class '<em>Map Question Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Map Question Param</em>'.
+	 * @generated
+	 */
+	MapQuestionParam createMapQuestionParam();
+
+	/**
+	 * Returns a new object of class '<em>HAssociation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>HAssociation</em>'.
+	 * @generated
+	 */
+	HAssociation createHAssociation();
+
+	/**
+	 * Returns a new object of class '<em>HLegend</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>HLegend</em>'.
+	 * @generated
+	 */
+	HLegend createHLegend();
+
+	/**
+	 * Returns a new object of class '<em>GLocate</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GLocate</em>'.
+	 * @generated
+	 */
+	GLocate createGLocate();
+
+	/**
+	 * Returns a new object of class '<em>Teacher</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Teacher</em>'.
+	 * @generated
+	 */
+	Teacher createTeacher();
+
+	/**
+	 * Returns a new object of class '<em>Teachers</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Teachers</em>'.
+	 * @generated
+	 */
+	Teachers createTeachers();
 
 	/**
 	 * Returns a new object of class '<em>Equipment</em>'.

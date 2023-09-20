@@ -5,10 +5,12 @@ package generator.impl;
 import generator.Date;
 import generator.GeneratorPackage;
 
+import generator.MapElementPosition;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -22,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link generator.impl.DateImpl#getDay <em>Day</em>}</li>
  *   <li>{@link generator.impl.DateImpl#getMonth <em>Month</em>}</li>
  *   <li>{@link generator.impl.DateImpl#getYear <em>Year</em>}</li>
+ *   <li>{@link generator.impl.DateImpl#getPosition <em>Position</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,6 +89,16 @@ public class DateImpl extends TimeImpl implements Date {
 	 * @ordered
 	 */
 	protected String year = YEAR_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPosition() <em>Position</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPosition()
+	 * @generated
+	 * @ordered
+	 */
+	protected MapElementPosition position;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -174,6 +187,46 @@ public class DateImpl extends TimeImpl implements Date {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MapElementPosition getPosition() {
+		if (position != null && position.eIsProxy()) {
+			InternalEObject oldPosition = (InternalEObject) position;
+			position = (MapElementPosition) eResolveProxy(oldPosition);
+			if (position != oldPosition) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.DATE__POSITION,
+							oldPosition, position));
+			}
+		}
+		return position;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MapElementPosition basicGetPosition() {
+		return position;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPosition(MapElementPosition newPosition) {
+		MapElementPosition oldPosition = position;
+		position = newPosition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.DATE__POSITION, oldPosition,
+					position));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -183,6 +236,10 @@ public class DateImpl extends TimeImpl implements Date {
 			return getMonth();
 		case GeneratorPackage.DATE__YEAR:
 			return getYear();
+		case GeneratorPackage.DATE__POSITION:
+			if (resolve)
+				return getPosition();
+			return basicGetPosition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -203,6 +260,9 @@ public class DateImpl extends TimeImpl implements Date {
 			return;
 		case GeneratorPackage.DATE__YEAR:
 			setYear((String) newValue);
+			return;
+		case GeneratorPackage.DATE__POSITION:
+			setPosition((MapElementPosition) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -225,6 +285,9 @@ public class DateImpl extends TimeImpl implements Date {
 		case GeneratorPackage.DATE__YEAR:
 			setYear(YEAR_EDEFAULT);
 			return;
+		case GeneratorPackage.DATE__POSITION:
+			setPosition((MapElementPosition) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -243,6 +306,8 @@ public class DateImpl extends TimeImpl implements Date {
 			return MONTH_EDEFAULT == null ? month != null : !MONTH_EDEFAULT.equals(month);
 		case GeneratorPackage.DATE__YEAR:
 			return YEAR_EDEFAULT == null ? year != null : !YEAR_EDEFAULT.equals(year);
+		case GeneratorPackage.DATE__POSITION:
+			return position != null;
 		}
 		return super.eIsSet(featureID);
 	}

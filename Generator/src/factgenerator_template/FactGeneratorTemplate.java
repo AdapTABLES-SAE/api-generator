@@ -109,7 +109,7 @@ public abstract class FactGeneratorTemplate {
 		qef.setQuestion(question);
 		WantedAnswersParam correctness = new WantedAnswersParamImpl();
 		Value correctnessValue = new ValueImpl();
-		correctnessValue.setValue(roomElement.getTask().nbExpectedAnswers()+"");//correctnessToReach(task)+"");
+		correctnessValue.setValue(roomElement.getTask().getNbExpectedAnswers()+"");//correctnessToReach(task)+"");
 		correctness.setValue(correctnessValue);
 		qef.setCorrectnessToReach(correctness);
 		
@@ -118,11 +118,13 @@ public abstract class FactGeneratorTemplate {
 		
 		ECorrectness factCorrectness = getFactCorrectness(qFact);
 		if(factCorrectness != null) {
+			
 			FactCorrectnessParam param = new FactCorrectnessParamImpl();
 			CorrectnessValue cValue = new CorrectnessValueImpl();
 			cValue.setValue(factCorrectness);
 			param.setValue(cValue);
 			qef.setFactCorrectness(param);
+			System.out.println("FACT CORRECTNESS "+qef.getFactCorrectness().getValue());
 		}
 		
 		roomElement.addQuestionedFact(qef);

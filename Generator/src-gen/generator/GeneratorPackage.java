@@ -1319,13 +1319,13 @@ public interface GeneratorPackage extends EPackage {
 	int ATASK___IS_CHECK_ON_LEARNER_ACTION = 1;
 
 	/**
-	 * The operation id for the '<em>Nb Expected Answers</em>' operation.
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATASK___NB_EXPECTED_ANSWERS = 2;
+	int ATASK___GET_NB_EXPECTED_ANSWERS = 2;
 
 	/**
 	 * The number of operations of the '<em>ATask</em>' class.
@@ -1446,13 +1446,13 @@ public interface GeneratorPackage extends EPackage {
 	int COMPLETION_TASK___GET_NB_MISSING_ELEMENTS = ATASK_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Nb Expected Answers</em>' operation.
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLETION_TASK___NB_EXPECTED_ANSWERS = ATASK_OPERATION_COUNT + 1;
+	int COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS = ATASK_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Completion Task</em>' class.
@@ -1600,13 +1600,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_COMPLETION1___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
 
 	/**
-	 * The operation id for the '<em>Nb Expected Answers</em>' operation.
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1___NB_EXPECTED_ANSWERS = COMPLETION_TASK___NB_EXPECTED_ANSWERS;
+	int MT_COMPLETION1___GET_NB_EXPECTED_ANSWERS = COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS;
 
 	/**
 	 * The number of operations of the '<em>MT Completion1</em>' class.
@@ -1618,14 +1618,14 @@ public interface GeneratorPackage extends EPackage {
 	int MT_COMPLETION1_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.ContextImpl <em>Context</em>}' class.
+	 * The meta object id for the '{@link generator.impl.ClassroomImpl <em>Classroom</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.ContextImpl
-	 * @see generator.impl.GeneratorPackageImpl#getContext()
+	 * @see generator.impl.ClassroomImpl
+	 * @see generator.impl.GeneratorPackageImpl#getClassroom()
 	 * @generated
 	 */
-	int CONTEXT = 18;
+	int CLASSROOM = 18;
 
 	/**
 	 * The feature id for the '<em><b>Gamecontext</b></em>' containment reference.
@@ -1634,7 +1634,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT__GAMECONTEXT = 0;
+	int CLASSROOM__GAMECONTEXT = 0;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -1643,7 +1643,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT__ID = 1;
+	int CLASSROOM__ID = 1;
 
 	/**
 	 * The feature id for the '<em><b>Learner Players</b></em>' containment reference.
@@ -1652,25 +1652,34 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT__LEARNER_PLAYERS = 2;
+	int CLASSROOM__LEARNER_PLAYERS = 2;
 
 	/**
-	 * The number of structural features of the '<em>Context</em>' class.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT_FEATURE_COUNT = 3;
+	int CLASSROOM__NAME = 3;
 
 	/**
-	 * The number of operations of the '<em>Context</em>' class.
+	 * The number of structural features of the '<em>Classroom</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT_OPERATION_COUNT = 0;
+	int CLASSROOM_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Classroom</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSROOM_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.LearnerPlayerImpl <em>Learner Player</em>}' class.
@@ -2150,13 +2159,13 @@ public interface GeneratorPackage extends EPackage {
 	int IDENTIFICATION_TASK___IS_CHECK_ON_LEARNER_ACTION = ATASK___IS_CHECK_ON_LEARNER_ACTION;
 
 	/**
-	 * The operation id for the '<em>Nb Expected Answers</em>' operation.
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IDENTIFICATION_TASK___NB_EXPECTED_ANSWERS = ATASK_OPERATION_COUNT + 0;
+	int IDENTIFICATION_TASK___GET_NB_EXPECTED_ANSWERS = ATASK_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Identification Task</em>' class.
@@ -2286,13 +2295,13 @@ public interface GeneratorPackage extends EPackage {
 	int MEMBERSHIP_ID_TASK___IS_CHECK_ON_LEARNER_ACTION = ATASK___IS_CHECK_ON_LEARNER_ACTION;
 
 	/**
-	 * The operation id for the '<em>Nb Expected Answers</em>' operation.
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEMBERSHIP_ID_TASK___NB_EXPECTED_ANSWERS = ATASK_OPERATION_COUNT + 0;
+	int MEMBERSHIP_ID_TASK___GET_NB_EXPECTED_ANSWERS = ATASK_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Membership ID Task</em>' class.
@@ -2440,13 +2449,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_COMPLETION2___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
 
 	/**
-	 * The operation id for the '<em>Nb Expected Answers</em>' operation.
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2___NB_EXPECTED_ANSWERS = COMPLETION_TASK___NB_EXPECTED_ANSWERS;
+	int MT_COMPLETION2___GET_NB_EXPECTED_ANSWERS = COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS;
 
 	/**
 	 * The number of operations of the '<em>MT Completion2</em>' class.
@@ -2585,13 +2594,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_RECONTRUCTION___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
 
 	/**
-	 * The operation id for the '<em>Nb Expected Answers</em>' operation.
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION___NB_EXPECTED_ANSWERS = COMPLETION_TASK___NB_EXPECTED_ANSWERS;
+	int MT_RECONTRUCTION___GET_NB_EXPECTED_ANSWERS = COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS;
 
 	/**
 	 * The number of operations of the '<em>MT Recontruction</em>' class.
@@ -2721,13 +2730,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_IDENTIFICATION___IS_CHECK_ON_LEARNER_ACTION = IDENTIFICATION_TASK___IS_CHECK_ON_LEARNER_ACTION;
 
 	/**
-	 * The operation id for the '<em>Nb Expected Answers</em>' operation.
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_IDENTIFICATION___NB_EXPECTED_ANSWERS = IDENTIFICATION_TASK___NB_EXPECTED_ANSWERS;
+	int MT_IDENTIFICATION___GET_NB_EXPECTED_ANSWERS = IDENTIFICATION_TASK___GET_NB_EXPECTED_ANSWERS;
 
 	/**
 	 * The number of operations of the '<em>MT Identification</em>' class.
@@ -2857,13 +2866,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_MEMBERSHIP___IS_CHECK_ON_LEARNER_ACTION = MEMBERSHIP_ID_TASK___IS_CHECK_ON_LEARNER_ACTION;
 
 	/**
-	 * The operation id for the '<em>Nb Expected Answers</em>' operation.
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_MEMBERSHIP___NB_EXPECTED_ANSWERS = MEMBERSHIP_ID_TASK___NB_EXPECTED_ANSWERS;
+	int MT_MEMBERSHIP___GET_NB_EXPECTED_ANSWERS = MEMBERSHIP_ID_TASK___GET_NB_EXPECTED_ANSWERS;
 
 	/**
 	 * The number of operations of the '<em>MT Membership</em>' class.
@@ -4628,6 +4637,43 @@ public interface GeneratorPackage extends EPackage {
 	int PARAMETER_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.AQuestionParamImpl <em>AQuestion Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.AQuestionParamImpl
+	 * @see generator.impl.GeneratorPackageImpl#getAQuestionParam()
+	 * @generated
+	 */
+	int AQUESTION_PARAM = 108;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AQUESTION_PARAM__VALUE = PARAMETER__VALUE;
+
+	/**
+	 * The number of structural features of the '<em>AQuestion Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AQUESTION_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>AQuestion Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AQUESTION_PARAM_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link generator.impl.QuestionParamImpl <em>Question Param</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4644,7 +4690,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_PARAM__VALUE = PARAMETER__VALUE;
+	int QUESTION_PARAM__VALUE = AQUESTION_PARAM__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Interactive</b></em>' attribute.
@@ -4653,7 +4699,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_PARAM__INTERACTIVE = PARAMETER_FEATURE_COUNT + 0;
+	int QUESTION_PARAM__INTERACTIVE = AQUESTION_PARAM_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Solutions</b></em>' containment reference list.
@@ -4662,7 +4708,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_PARAM__SOLUTIONS = PARAMETER_FEATURE_COUNT + 1;
+	int QUESTION_PARAM__SOLUTIONS = AQUESTION_PARAM_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Question Param</em>' class.
@@ -4671,7 +4717,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 2;
+	int QUESTION_PARAM_FEATURE_COUNT = AQUESTION_PARAM_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Question Param</em>' class.
@@ -4680,7 +4726,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_PARAM_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+	int QUESTION_PARAM_OPERATION_COUNT = AQUESTION_PARAM_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.PropositionParamImpl <em>Proposition Param</em>}' class.
@@ -5552,6 +5598,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int ORDERING_TASK___IS_CHECK_ON_LEARNER_ACTION = ATASK___IS_CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK___GET_NB_EXPECTED_ANSWERS = ATASK___GET_NB_EXPECTED_ANSWERS;
 
 	/**
 	 * The operation id for the '<em>Nb Expected Answers</em>' operation.
@@ -7058,13 +7113,22 @@ public interface GeneratorPackage extends EPackage {
 	int TIME = 107;
 
 	/**
+	 * The feature id for the '<em><b>Map</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME__MAP = 0;
+
+	/**
 	 * The number of structural features of the '<em>Time</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_FEATURE_COUNT = 0;
+	int TIME_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Time</em>' class.
@@ -7084,6 +7148,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	int DATE = 104;
+
+	/**
+	 * The feature id for the '<em><b>Map</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE__MAP = TIME__MAP;
 
 	/**
 	 * The feature id for the '<em><b>Day</b></em>' attribute.
@@ -7113,13 +7186,22 @@ public interface GeneratorPackage extends EPackage {
 	int DATE__YEAR = TIME_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE__POSITION = TIME_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Date</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_FEATURE_COUNT = TIME_FEATURE_COUNT + 3;
+	int DATE_FEATURE_COUNT = TIME_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Date</em>' class.
@@ -7141,6 +7223,15 @@ public interface GeneratorPackage extends EPackage {
 	int TIME_PERIOD = 105;
 
 	/**
+	 * The feature id for the '<em><b>Map</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_PERIOD__MAP = TIME__MAP;
+
+	/**
 	 * The feature id for the '<em><b>Start Year</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7159,13 +7250,22 @@ public interface GeneratorPackage extends EPackage {
 	int TIME_PERIOD__END_YEAR = TIME_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Positions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_PERIOD__POSITIONS = TIME_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Time Period</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_PERIOD_FEATURE_COUNT = TIME_FEATURE_COUNT + 2;
+	int TIME_PERIOD_FEATURE_COUNT = TIME_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Time Period</em>' class.
@@ -7223,6 +7323,588 @@ public interface GeneratorPackage extends EPackage {
 	int MAP_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.MapQuestionParamImpl <em>Map Question Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MapQuestionParamImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMapQuestionParam()
+	 * @generated
+	 */
+	int MAP_QUESTION_PARAM = 109;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTION_PARAM__VALUE = AQUESTION_PARAM__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Map</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTION_PARAM__MAP = AQUESTION_PARAM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Map Question Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTION_PARAM_FEATURE_COUNT = AQUESTION_PARAM_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Map Question Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTION_PARAM_OPERATION_COUNT = AQUESTION_PARAM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.HAssociationImpl <em>HAssociation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.HAssociationImpl
+	 * @see generator.impl.GeneratorPackageImpl#getHAssociation()
+	 * @generated
+	 */
+	int HASSOCIATION = 110;
+
+	/**
+	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION__PERCENT_OF_APPARITION = COMPLETION_TASK__PERCENT_OF_APPARITION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION__NB_CONSECUTIVE_SUCCESS = COMPLETION_TASK__NB_CONSECUTIVE_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION__RESPONSE_MODALITY = COMPLETION_TASK__RESPONSE_MODALITY;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION__ID = COMPLETION_TASK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION__MAX_TIME = COMPLETION_TASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION__NB_FACTS = COMPLETION_TASK__NB_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION__TYPE = COMPLETION_TASK__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION__SOURCE = COMPLETION_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Missing</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION__MISSING = COMPLETION_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>HAssociation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION___GET_TYPE = COMPLETION_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Check On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION___IS_CHECK_ON_LEARNER_ACTION = COMPLETION_TASK___IS_CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Nb Missing Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION___GET_NB_EXPECTED_ANSWERS = COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS;
+
+	/**
+	 * The number of operations of the '<em>HAssociation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.HLegendImpl <em>HLegend</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.HLegendImpl
+	 * @see generator.impl.GeneratorPackageImpl#getHLegend()
+	 * @generated
+	 */
+	int HLEGEND = 111;
+
+	/**
+	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND__PERCENT_OF_APPARITION = COMPLETION_TASK__PERCENT_OF_APPARITION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND__NB_CONSECUTIVE_SUCCESS = COMPLETION_TASK__NB_CONSECUTIVE_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND__RESPONSE_MODALITY = COMPLETION_TASK__RESPONSE_MODALITY;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND__ID = COMPLETION_TASK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND__MAX_TIME = COMPLETION_TASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND__NB_FACTS = COMPLETION_TASK__NB_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND__TYPE = COMPLETION_TASK__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Missing</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND__MISSING = COMPLETION_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>HLegend</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND___GET_TYPE = COMPLETION_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Check On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND___IS_CHECK_ON_LEARNER_ACTION = COMPLETION_TASK___IS_CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Nb Missing Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND___GET_NB_EXPECTED_ANSWERS = COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS;
+
+	/**
+	 * The number of operations of the '<em>HLegend</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HLEGEND_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.GLocateImpl <em>GLocate</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.GLocateImpl
+	 * @see generator.impl.GeneratorPackageImpl#getGLocate()
+	 * @generated
+	 */
+	int GLOCATE = 112;
+
+	/**
+	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE__PERCENT_OF_APPARITION = MEMBERSHIP_ID_TASK__PERCENT_OF_APPARITION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE__NB_CONSECUTIVE_SUCCESS = MEMBERSHIP_ID_TASK__NB_CONSECUTIVE_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE__RESPONSE_MODALITY = MEMBERSHIP_ID_TASK__RESPONSE_MODALITY;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE__ID = MEMBERSHIP_ID_TASK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE__MAX_TIME = MEMBERSHIP_ID_TASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE__NB_FACTS = MEMBERSHIP_ID_TASK__NB_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE__TYPE = MEMBERSHIP_ID_TASK__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Identify Shared Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE__IDENTIFY_SHARED_PROPERTY = MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE__CHECK_LEARNER_ACTION = MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Expected Answers</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE__NB_EXPECTED_ANSWERS = MEMBERSHIP_ID_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Learners Choices</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE__LEARNERS_CHOICES = MEMBERSHIP_ID_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>GLocate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE_FEATURE_COUNT = MEMBERSHIP_ID_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE___GET_TYPE = MEMBERSHIP_ID_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Check On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE___IS_CHECK_ON_LEARNER_ACTION = MEMBERSHIP_ID_TASK___IS_CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE___GET_NB_EXPECTED_ANSWERS = MEMBERSHIP_ID_TASK___GET_NB_EXPECTED_ANSWERS;
+
+	/**
+	 * The number of operations of the '<em>GLocate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOCATE_OPERATION_COUNT = MEMBERSHIP_ID_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.TeacherImpl <em>Teacher</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.TeacherImpl
+	 * @see generator.impl.GeneratorPackageImpl#getTeacher()
+	 * @generated
+	 */
+	int TEACHER = 113;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEACHER__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Classrooms</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEACHER__CLASSROOMS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Teacher</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEACHER_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Teacher</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEACHER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.TeachersImpl <em>Teachers</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.TeachersImpl
+	 * @see generator.impl.GeneratorPackageImpl#getTeachers()
+	 * @generated
+	 */
+	int TEACHERS = 114;
+
+	/**
+	 * The feature id for the '<em><b>Teachers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEACHERS__TEACHERS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Teachers</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEACHERS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Teachers</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEACHERS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7230,7 +7912,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 108;
+	int DIRECTIONS = 115;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -7240,7 +7922,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 109;
+	int DUNGEON_MODE = 116;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -7250,7 +7932,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 110;
+	int TABLE_BUILD = 117;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -7260,7 +7942,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 111;
+	int RESULT_POSITION = 118;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -7270,7 +7952,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 112;
+	int ESINGLE_TARGET = 119;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -7280,7 +7962,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 113;
+	int ETASK_TYPE = 120;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -7290,7 +7972,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 114;
+	int EMODALITY = 121;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -7300,7 +7982,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 115;
+	int ESEVERAL_TARGET = 122;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -7310,7 +7992,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 116;
+	int ELEMENT_SIZE = 123;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -7320,7 +8002,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 117;
+	int GP_CATEGORY = 124;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -7330,7 +8012,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 118;
+	int ECORRECTNESS = 125;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -7340,7 +8022,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 119;
+	int EBOUNDARY = 126;
 
 	/**
 	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
@@ -7350,7 +8032,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 120;
+	int ESTATEMENT_TYPE = 127;
 
 	/**
 	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
@@ -7360,7 +8042,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
 	 * @generated
 	 */
-	int EROOM_TYPE = 121;
+	int EROOM_TYPE = 128;
 
 	/**
 	 * The meta object id for the '{@link generator.EGeographyValue <em>EGeography Value</em>}' enum.
@@ -7370,7 +8052,27 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEGeographyValue()
 	 * @generated
 	 */
-	int EGEOGRAPHY_VALUE = 122;
+	int EGEOGRAPHY_VALUE = 129;
+
+	/**
+	 * The meta object id for the '{@link generator.EHistoryTarget <em>EHistory Target</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.EHistoryTarget
+	 * @see generator.impl.GeneratorPackageImpl#getEHistoryTarget()
+	 * @generated
+	 */
+	int EHISTORY_TARGET = 130;
+
+	/**
+	 * The meta object id for the '{@link generator.ELegendTarget <em>ELegend Target</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.ELegendTarget
+	 * @see generator.impl.GeneratorPackageImpl#getELegendTarget()
+	 * @generated
+	 */
+	int ELEGEND_TARGET = 131;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -8219,47 +8921,58 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTCompletion1_CheckLearnerAction();
 
 	/**
-	 * Returns the meta object for class '{@link generator.Context <em>Context</em>}'.
+	 * Returns the meta object for class '{@link generator.Classroom <em>Classroom</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Context</em>'.
-	 * @see generator.Context
+	 * @return the meta object for class '<em>Classroom</em>'.
+	 * @see generator.Classroom
 	 * @generated
 	 */
-	EClass getContext();
+	EClass getClassroom();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.Context#getGamecontext <em>Gamecontext</em>}'.
+	 * Returns the meta object for the containment reference '{@link generator.Classroom#getGamecontext <em>Gamecontext</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Gamecontext</em>'.
-	 * @see generator.Context#getGamecontext()
-	 * @see #getContext()
+	 * @see generator.Classroom#getGamecontext()
+	 * @see #getClassroom()
 	 * @generated
 	 */
-	EReference getContext_Gamecontext();
+	EReference getClassroom_Gamecontext();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.Context#getID <em>ID</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.Classroom#getID <em>ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ID</em>'.
-	 * @see generator.Context#getID()
-	 * @see #getContext()
+	 * @see generator.Classroom#getID()
+	 * @see #getClassroom()
 	 * @generated
 	 */
-	EAttribute getContext_ID();
+	EAttribute getClassroom_ID();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.Context#getLearnerPlayers <em>Learner Players</em>}'.
+	 * Returns the meta object for the containment reference '{@link generator.Classroom#getLearnerPlayers <em>Learner Players</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Learner Players</em>'.
-	 * @see generator.Context#getLearnerPlayers()
-	 * @see #getContext()
+	 * @see generator.Classroom#getLearnerPlayers()
+	 * @see #getClassroom()
 	 * @generated
 	 */
-	EReference getContext_LearnerPlayers();
+	EReference getClassroom_LearnerPlayers();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Classroom#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.Classroom#getName()
+	 * @see #getClassroom()
+	 * @generated
+	 */
+	EAttribute getClassroom_Name();
 
 	/**
 	 * Returns the meta object for class '{@link generator.LearnerPlayer <em>Learner Player</em>}'.
@@ -8669,14 +9382,14 @@ public interface GeneratorPackage extends EPackage {
 	EOperation getATask__IsCheckOnLearnerAction();
 
 	/**
-	 * Returns the meta object for the '{@link generator.ATask#nbExpectedAnswers() <em>Nb Expected Answers</em>}' operation.
+	 * Returns the meta object for the '{@link generator.ATask#getNbExpectedAnswers() <em>Get Nb Expected Answers</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Nb Expected Answers</em>' operation.
-	 * @see generator.ATask#nbExpectedAnswers()
+	 * @return the meta object for the '<em>Get Nb Expected Answers</em>' operation.
+	 * @see generator.ATask#getNbExpectedAnswers()
 	 * @generated
 	 */
-	EOperation getATask__NbExpectedAnswers();
+	EOperation getATask__GetNbExpectedAnswers();
 
 	/**
 	 * Returns the meta object for class '{@link generator.CompletionTask <em>Completion Task</em>}'.
@@ -8710,14 +9423,14 @@ public interface GeneratorPackage extends EPackage {
 	EOperation getCompletionTask__GetNbMissingElements();
 
 	/**
-	 * Returns the meta object for the '{@link generator.CompletionTask#nbExpectedAnswers() <em>Nb Expected Answers</em>}' operation.
+	 * Returns the meta object for the '{@link generator.CompletionTask#getNbExpectedAnswers() <em>Get Nb Expected Answers</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Nb Expected Answers</em>' operation.
-	 * @see generator.CompletionTask#nbExpectedAnswers()
+	 * @return the meta object for the '<em>Get Nb Expected Answers</em>' operation.
+	 * @see generator.CompletionTask#getNbExpectedAnswers()
 	 * @generated
 	 */
-	EOperation getCompletionTask__NbExpectedAnswers();
+	EOperation getCompletionTask__GetNbExpectedAnswers();
 
 	/**
 	 * Returns the meta object for class '{@link generator.IdentificationTask <em>Identification Task</em>}'.
@@ -8752,14 +9465,14 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getIdentificationTask_CheckLearnerAction();
 
 	/**
-	 * Returns the meta object for the '{@link generator.IdentificationTask#nbExpectedAnswers() <em>Nb Expected Answers</em>}' operation.
+	 * Returns the meta object for the '{@link generator.IdentificationTask#getNbExpectedAnswers() <em>Get Nb Expected Answers</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Nb Expected Answers</em>' operation.
-	 * @see generator.IdentificationTask#nbExpectedAnswers()
+	 * @return the meta object for the '<em>Get Nb Expected Answers</em>' operation.
+	 * @see generator.IdentificationTask#getNbExpectedAnswers()
 	 * @generated
 	 */
-	EOperation getIdentificationTask__NbExpectedAnswers();
+	EOperation getIdentificationTask__GetNbExpectedAnswers();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MembershipIDTask <em>Membership ID Task</em>}'.
@@ -8805,14 +9518,14 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMembershipIDTask_CheckLearnerAction();
 
 	/**
-	 * Returns the meta object for the '{@link generator.MembershipIDTask#nbExpectedAnswers() <em>Nb Expected Answers</em>}' operation.
+	 * Returns the meta object for the '{@link generator.MembershipIDTask#getNbExpectedAnswers() <em>Get Nb Expected Answers</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Nb Expected Answers</em>' operation.
-	 * @see generator.MembershipIDTask#nbExpectedAnswers()
+	 * @return the meta object for the '<em>Get Nb Expected Answers</em>' operation.
+	 * @see generator.MembershipIDTask#getNbExpectedAnswers()
 	 * @generated
 	 */
-	EOperation getMembershipIDTask__NbExpectedAnswers();
+	EOperation getMembershipIDTask__GetNbExpectedAnswers();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MTCompletion2 <em>MT Completion2</em>}'.
@@ -10197,6 +10910,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getDate_Year();
 
 	/**
+	 * Returns the meta object for the reference '{@link generator.Date#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Position</em>'.
+	 * @see generator.Date#getPosition()
+	 * @see #getDate()
+	 * @generated
+	 */
+	EReference getDate_Position();
+
+	/**
 	 * Returns the meta object for class '{@link generator.TimePeriod <em>Time Period</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10229,6 +10953,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getTimePeriod_EndYear();
 
 	/**
+	 * Returns the meta object for the reference list '{@link generator.TimePeriod#getPositions <em>Positions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Positions</em>'.
+	 * @see generator.TimePeriod#getPositions()
+	 * @see #getTimePeriod()
+	 * @generated
+	 */
+	EReference getTimePeriod_Positions();
+
+	/**
 	 * Returns the meta object for class '{@link generator.MapValue <em>Map Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10257,6 +10992,208 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTime();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.Time#getMap <em>Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Map</em>'.
+	 * @see generator.Time#getMap()
+	 * @see #getTime()
+	 * @generated
+	 */
+	EReference getTime_Map();
+
+	/**
+	 * Returns the meta object for class '{@link generator.AQuestionParam <em>AQuestion Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>AQuestion Param</em>'.
+	 * @see generator.AQuestionParam
+	 * @generated
+	 */
+	EClass getAQuestionParam();
+
+	/**
+	 * Returns the meta object for class '{@link generator.MapQuestionParam <em>Map Question Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Map Question Param</em>'.
+	 * @see generator.MapQuestionParam
+	 * @generated
+	 */
+	EClass getMapQuestionParam();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.MapQuestionParam#getMap <em>Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Map</em>'.
+	 * @see generator.MapQuestionParam#getMap()
+	 * @see #getMapQuestionParam()
+	 * @generated
+	 */
+	EReference getMapQuestionParam_Map();
+
+	/**
+	 * Returns the meta object for class '{@link generator.HAssociation <em>HAssociation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>HAssociation</em>'.
+	 * @see generator.HAssociation
+	 * @generated
+	 */
+	EClass getHAssociation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.HAssociation#getNbMissingElements <em>Nb Missing Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
+	 * @see generator.HAssociation#getNbMissingElements()
+	 * @see #getHAssociation()
+	 * @generated
+	 */
+	EAttribute getHAssociation_NbMissingElements();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.HAssociation#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Source</em>'.
+	 * @see generator.HAssociation#getSource()
+	 * @see #getHAssociation()
+	 * @generated
+	 */
+	EAttribute getHAssociation_Source();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.HAssociation#getMissing <em>Missing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Missing</em>'.
+	 * @see generator.HAssociation#getMissing()
+	 * @see #getHAssociation()
+	 * @generated
+	 */
+	EAttribute getHAssociation_Missing();
+
+	/**
+	 * Returns the meta object for class '{@link generator.HLegend <em>HLegend</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>HLegend</em>'.
+	 * @see generator.HLegend
+	 * @generated
+	 */
+	EClass getHLegend();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.HLegend#getNbMissingElements <em>Nb Missing Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
+	 * @see generator.HLegend#getNbMissingElements()
+	 * @see #getHLegend()
+	 * @generated
+	 */
+	EAttribute getHLegend_NbMissingElements();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.HLegend#getMissing <em>Missing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Missing</em>'.
+	 * @see generator.HLegend#getMissing()
+	 * @see #getHLegend()
+	 * @generated
+	 */
+	EAttribute getHLegend_Missing();
+
+	/**
+	 * Returns the meta object for class '{@link generator.GLocate <em>GLocate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GLocate</em>'.
+	 * @see generator.GLocate
+	 * @generated
+	 */
+	EClass getGLocate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.GLocate#getNbExpectedAnswers <em>Nb Expected Answers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Expected Answers</em>'.
+	 * @see generator.GLocate#getNbExpectedAnswers()
+	 * @see #getGLocate()
+	 * @generated
+	 */
+	EAttribute getGLocate_NbExpectedAnswers();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.GLocate#isLearnersChoices <em>Learners Choices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Learners Choices</em>'.
+	 * @see generator.GLocate#isLearnersChoices()
+	 * @see #getGLocate()
+	 * @generated
+	 */
+	EAttribute getGLocate_LearnersChoices();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Teacher <em>Teacher</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Teacher</em>'.
+	 * @see generator.Teacher
+	 * @generated
+	 */
+	EClass getTeacher();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Teacher#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see generator.Teacher#getID()
+	 * @see #getTeacher()
+	 * @generated
+	 */
+	EAttribute getTeacher_ID();
+
+	/**
+	 * Returns the meta object for the reference list '{@link generator.Teacher#getClassrooms <em>Classrooms</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Classrooms</em>'.
+	 * @see generator.Teacher#getClassrooms()
+	 * @see #getTeacher()
+	 * @generated
+	 */
+	EReference getTeacher_Classrooms();
+
+	/**
+	 * Returns the meta object for class '{@link generator.Teachers <em>Teachers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Teachers</em>'.
+	 * @see generator.Teachers
+	 * @generated
+	 */
+	EClass getTeachers();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.Teachers#getTeachers <em>Teachers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Teachers</em>'.
+	 * @see generator.Teachers#getTeachers()
+	 * @see #getTeachers()
+	 * @generated
+	 */
+	EReference getTeachers_Teachers();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Equipment <em>Equipment</em>}'.
@@ -11677,6 +12614,26 @@ public interface GeneratorPackage extends EPackage {
 	EEnum getEGeographyValue();
 
 	/**
+	 * Returns the meta object for enum '{@link generator.EHistoryTarget <em>EHistory Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>EHistory Target</em>'.
+	 * @see generator.EHistoryTarget
+	 * @generated
+	 */
+	EEnum getEHistoryTarget();
+
+	/**
+	 * Returns the meta object for enum '{@link generator.ELegendTarget <em>ELegend Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ELegend Target</em>'.
+	 * @see generator.ELegendTarget
+	 * @generated
+	 */
+	EEnum getELegendTarget();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12369,14 +13326,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MT_COMPLETION1__CHECK_LEARNER_ACTION = eINSTANCE.getMTCompletion1_CheckLearnerAction();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.ContextImpl <em>Context</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.ClassroomImpl <em>Classroom</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.ContextImpl
-		 * @see generator.impl.GeneratorPackageImpl#getContext()
+		 * @see generator.impl.ClassroomImpl
+		 * @see generator.impl.GeneratorPackageImpl#getClassroom()
 		 * @generated
 		 */
-		EClass CONTEXT = eINSTANCE.getContext();
+		EClass CLASSROOM = eINSTANCE.getClassroom();
 
 		/**
 		 * The meta object literal for the '<em><b>Gamecontext</b></em>' containment reference feature.
@@ -12384,7 +13341,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTEXT__GAMECONTEXT = eINSTANCE.getContext_Gamecontext();
+		EReference CLASSROOM__GAMECONTEXT = eINSTANCE.getClassroom_Gamecontext();
 
 		/**
 		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
@@ -12392,7 +13349,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONTEXT__ID = eINSTANCE.getContext_ID();
+		EAttribute CLASSROOM__ID = eINSTANCE.getClassroom_ID();
 
 		/**
 		 * The meta object literal for the '<em><b>Learner Players</b></em>' containment reference feature.
@@ -12400,7 +13357,15 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTEXT__LEARNER_PLAYERS = eINSTANCE.getContext_LearnerPlayers();
+		EReference CLASSROOM__LEARNER_PLAYERS = eINSTANCE.getClassroom_LearnerPlayers();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLASSROOM__NAME = eINSTANCE.getClassroom_Name();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.LearnerPlayerImpl <em>Learner Player</em>}' class.
@@ -12725,12 +13690,12 @@ public interface GeneratorPackage extends EPackage {
 		EOperation ATASK___IS_CHECK_ON_LEARNER_ACTION = eINSTANCE.getATask__IsCheckOnLearnerAction();
 
 		/**
-		 * The meta object literal for the '<em><b>Nb Expected Answers</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Nb Expected Answers</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ATASK___NB_EXPECTED_ANSWERS = eINSTANCE.getATask__NbExpectedAnswers();
+		EOperation ATASK___GET_NB_EXPECTED_ANSWERS = eINSTANCE.getATask__GetNbExpectedAnswers();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.CompletionTaskImpl <em>Completion Task</em>}' class.
@@ -12759,12 +13724,12 @@ public interface GeneratorPackage extends EPackage {
 		EOperation COMPLETION_TASK___GET_NB_MISSING_ELEMENTS = eINSTANCE.getCompletionTask__GetNbMissingElements();
 
 		/**
-		 * The meta object literal for the '<em><b>Nb Expected Answers</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Nb Expected Answers</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation COMPLETION_TASK___NB_EXPECTED_ANSWERS = eINSTANCE.getCompletionTask__NbExpectedAnswers();
+		EOperation COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS = eINSTANCE.getCompletionTask__GetNbExpectedAnswers();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.IdentificationTaskImpl <em>Identification Task</em>}' class.
@@ -12793,12 +13758,13 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute IDENTIFICATION_TASK__CHECK_LEARNER_ACTION = eINSTANCE.getIdentificationTask_CheckLearnerAction();
 
 		/**
-		 * The meta object literal for the '<em><b>Nb Expected Answers</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Nb Expected Answers</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IDENTIFICATION_TASK___NB_EXPECTED_ANSWERS = eINSTANCE.getIdentificationTask__NbExpectedAnswers();
+		EOperation IDENTIFICATION_TASK___GET_NB_EXPECTED_ANSWERS = eINSTANCE
+				.getIdentificationTask__GetNbExpectedAnswers();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MembershipIDTaskImpl <em>Membership ID Task</em>}' class.
@@ -12836,12 +13802,12 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION = eINSTANCE.getMembershipIDTask_CheckLearnerAction();
 
 		/**
-		 * The meta object literal for the '<em><b>Nb Expected Answers</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Nb Expected Answers</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation MEMBERSHIP_ID_TASK___NB_EXPECTED_ANSWERS = eINSTANCE.getMembershipIDTask__NbExpectedAnswers();
+		EOperation MEMBERSHIP_ID_TASK___GET_NB_EXPECTED_ANSWERS = eINSTANCE.getMembershipIDTask__GetNbExpectedAnswers();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTCompletion2Impl <em>MT Completion2</em>}' class.
@@ -13947,6 +14913,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute DATE__YEAR = eINSTANCE.getDate_Year();
 
 		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATE__POSITION = eINSTANCE.getDate_Position();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.TimePeriodImpl <em>Time Period</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -13971,6 +14945,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TIME_PERIOD__END_YEAR = eINSTANCE.getTimePeriod_EndYear();
+
+		/**
+		 * The meta object literal for the '<em><b>Positions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TIME_PERIOD__POSITIONS = eINSTANCE.getTimePeriod_Positions();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MapValueImpl <em>Map Value</em>}' class.
@@ -13999,6 +14981,172 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TIME = eINSTANCE.getTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Map</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TIME__MAP = eINSTANCE.getTime_Map();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.AQuestionParamImpl <em>AQuestion Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.AQuestionParamImpl
+		 * @see generator.impl.GeneratorPackageImpl#getAQuestionParam()
+		 * @generated
+		 */
+		EClass AQUESTION_PARAM = eINSTANCE.getAQuestionParam();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MapQuestionParamImpl <em>Map Question Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MapQuestionParamImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMapQuestionParam()
+		 * @generated
+		 */
+		EClass MAP_QUESTION_PARAM = eINSTANCE.getMapQuestionParam();
+
+		/**
+		 * The meta object literal for the '<em><b>Map</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MAP_QUESTION_PARAM__MAP = eINSTANCE.getMapQuestionParam_Map();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.HAssociationImpl <em>HAssociation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.HAssociationImpl
+		 * @see generator.impl.GeneratorPackageImpl#getHAssociation()
+		 * @generated
+		 */
+		EClass HASSOCIATION = eINSTANCE.getHAssociation();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HASSOCIATION__NB_MISSING_ELEMENTS = eINSTANCE.getHAssociation_NbMissingElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HASSOCIATION__SOURCE = eINSTANCE.getHAssociation_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Missing</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HASSOCIATION__MISSING = eINSTANCE.getHAssociation_Missing();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.HLegendImpl <em>HLegend</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.HLegendImpl
+		 * @see generator.impl.GeneratorPackageImpl#getHLegend()
+		 * @generated
+		 */
+		EClass HLEGEND = eINSTANCE.getHLegend();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HLEGEND__NB_MISSING_ELEMENTS = eINSTANCE.getHLegend_NbMissingElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Missing</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HLEGEND__MISSING = eINSTANCE.getHLegend_Missing();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.GLocateImpl <em>GLocate</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.GLocateImpl
+		 * @see generator.impl.GeneratorPackageImpl#getGLocate()
+		 * @generated
+		 */
+		EClass GLOCATE = eINSTANCE.getGLocate();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Expected Answers</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GLOCATE__NB_EXPECTED_ANSWERS = eINSTANCE.getGLocate_NbExpectedAnswers();
+
+		/**
+		 * The meta object literal for the '<em><b>Learners Choices</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GLOCATE__LEARNERS_CHOICES = eINSTANCE.getGLocate_LearnersChoices();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.TeacherImpl <em>Teacher</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.TeacherImpl
+		 * @see generator.impl.GeneratorPackageImpl#getTeacher()
+		 * @generated
+		 */
+		EClass TEACHER = eINSTANCE.getTeacher();
+
+		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEACHER__ID = eINSTANCE.getTeacher_ID();
+
+		/**
+		 * The meta object literal for the '<em><b>Classrooms</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEACHER__CLASSROOMS = eINSTANCE.getTeacher_Classrooms();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.TeachersImpl <em>Teachers</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.TeachersImpl
+		 * @see generator.impl.GeneratorPackageImpl#getTeachers()
+		 * @generated
+		 */
+		EClass TEACHERS = eINSTANCE.getTeachers();
+
+		/**
+		 * The meta object literal for the '<em><b>Teachers</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEACHERS__TEACHERS = eINSTANCE.getTeachers_Teachers();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.EquipmentImpl <em>Equipment</em>}' class.
@@ -15183,6 +16331,26 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum EGEOGRAPHY_VALUE = eINSTANCE.getEGeographyValue();
+
+		/**
+		 * The meta object literal for the '{@link generator.EHistoryTarget <em>EHistory Target</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.EHistoryTarget
+		 * @see generator.impl.GeneratorPackageImpl#getEHistoryTarget()
+		 * @generated
+		 */
+		EEnum EHISTORY_TARGET = eINSTANCE.getEHistoryTarget();
+
+		/**
+		 * The meta object literal for the '{@link generator.ELegendTarget <em>ELegend Target</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.ELegendTarget
+		 * @see generator.impl.GeneratorPackageImpl#getELegendTarget()
+		 * @generated
+		 */
+		EEnum ELEGEND_TARGET = eINSTANCE.getELegendTarget();
 
 	}
 

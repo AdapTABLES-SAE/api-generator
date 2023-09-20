@@ -87,8 +87,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createMTLevel();
 		case GeneratorPackage.MT_COMPLETION1:
 			return createMTCompletion1();
-		case GeneratorPackage.CONTEXT:
-			return createContext();
+		case GeneratorPackage.CLASSROOM:
+			return createClassroom();
 		case GeneratorPackage.LEARNER_PLAYER:
 			return createLearnerPlayer();
 		case GeneratorPackage.PROGRESSION:
@@ -243,6 +243,18 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createTimePeriod();
 		case GeneratorPackage.MAP_VALUE:
 			return createMapValue();
+		case GeneratorPackage.MAP_QUESTION_PARAM:
+			return createMapQuestionParam();
+		case GeneratorPackage.HASSOCIATION:
+			return createHAssociation();
+		case GeneratorPackage.HLEGEND:
+			return createHLegend();
+		case GeneratorPackage.GLOCATE:
+			return createGLocate();
+		case GeneratorPackage.TEACHER:
+			return createTeacher();
+		case GeneratorPackage.TEACHERS:
+			return createTeachers();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -286,6 +298,10 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createERoomTypeFromString(eDataType, initialValue);
 		case GeneratorPackage.EGEOGRAPHY_VALUE:
 			return createEGeographyValueFromString(eDataType, initialValue);
+		case GeneratorPackage.EHISTORY_TARGET:
+			return createEHistoryTargetFromString(eDataType, initialValue);
+		case GeneratorPackage.ELEGEND_TARGET:
+			return createELegendTargetFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -329,6 +345,10 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return convertERoomTypeToString(eDataType, instanceValue);
 		case GeneratorPackage.EGEOGRAPHY_VALUE:
 			return convertEGeographyValueToString(eDataType, instanceValue);
+		case GeneratorPackage.EHISTORY_TARGET:
+			return convertEHistoryTargetToString(eDataType, instanceValue);
+		case GeneratorPackage.ELEGEND_TARGET:
+			return convertELegendTargetToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -489,9 +509,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Context createContext() {
-		ContextImpl context = new ContextImpl();
-		return context;
+	public Classroom createClassroom() {
+		ClassroomImpl classroom = new ClassroomImpl();
+		return classroom;
 	}
 
 	/**
@@ -522,16 +542,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public CurrentObjectiveLevel createCurrentObjectiveLevel() {
 		CurrentObjectiveLevelImpl currentObjectiveLevel = new CurrentObjectiveLevelImpl();
 		return currentObjectiveLevel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Position createPosition() {
-		PositionImpl position = new PositionImpl();
-		return position;
 	}
 
 	/**
@@ -759,166 +769,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ElementType createElementType() {
-		ElementTypeImpl elementType = new ElementTypeImpl();
-		return elementType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Curses createCurses() {
-		CursesImpl curses = new CursesImpl();
-		return curses;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Curse createCurse() {
-		CurseImpl curse = new CurseImpl();
-		return curse;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LabyrinthCurse createLabyrinthCurse() {
-		LabyrinthCurseImpl labyrinthCurse = new LabyrinthCurseImpl();
-		return labyrinthCurse;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CurseEligibility createCurseEligibility() {
-		CurseEligibilityImpl curseEligibility = new CurseEligibilityImpl();
-		return curseEligibility;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Image createImage() {
-		ImageImpl image = new ImageImpl();
-		return image;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Map createMap() {
-		MapImpl map = new MapImpl();
-		return map;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MapElementPosition createMapElementPosition() {
-		MapElementPositionImpl mapElementPosition = new MapElementPositionImpl();
-		return mapElementPosition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LegendSymbol createLegendSymbol() {
-		LegendSymbolImpl legendSymbol = new LegendSymbolImpl();
-		return legendSymbol;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LegendText createLegendText() {
-		LegendTextImpl legendText = new LegendTextImpl();
-		return legendText;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public HistoryFact createHistoryFact() {
-		HistoryFactImpl historyFact = new HistoryFactImpl();
-		return historyFact;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GeographyLegendFact createGeographyLegendFact() {
-		GeographyLegendFactImpl geographyLegendFact = new GeographyLegendFactImpl();
-		return geographyLegendFact;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GeographyFact createGeographyFact() {
-		GeographyFactImpl geographyFact = new GeographyFactImpl();
-		return geographyFact;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date createDate() {
-		DateImpl date = new DateImpl();
-		return date;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TimePeriod createTimePeriod() {
-		TimePeriodImpl timePeriod = new TimePeriodImpl();
-		return timePeriod;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MapValue createMapValue() {
-		MapValueImpl mapValue = new MapValueImpl();
-		return mapValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Equipment createEquipment() {
 		EquipmentImpl equipment = new EquipmentImpl();
 		return equipment;
@@ -969,9 +819,69 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Position createPosition() {
+		PositionImpl position = new PositionImpl();
+		return position;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PositionedElement createPositionedElement() {
 		PositionedElementImpl positionedElement = new PositionedElementImpl();
 		return positionedElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QuestionParam createQuestionParam() {
+		QuestionParamImpl questionParam = new QuestionParamImpl();
+		return questionParam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PropositionParam createPropositionParam() {
+		PropositionParamImpl propositionParam = new PropositionParamImpl();
+		return propositionParam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Value createValue() {
+		ValueImpl value = new ValueImpl();
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Correctness createCorrectness() {
+		CorrectnessImpl correctness = new CorrectnessImpl();
+		return correctness;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EntrySoluceParam createEntrySoluceParam() {
+		EntrySoluceParamImpl entrySoluceParam = new EntrySoluceParamImpl();
+		return entrySoluceParam;
 	}
 
 	/**
@@ -1219,9 +1129,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Correctness createCorrectness() {
-		CorrectnessImpl correctness = new CorrectnessImpl();
-		return correctness;
+	public ElementType createElementType() {
+		ElementTypeImpl elementType = new ElementTypeImpl();
+		return elementType;
 	}
 
 	/**
@@ -1229,9 +1139,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuestionParam createQuestionParam() {
-		QuestionParamImpl questionParam = new QuestionParamImpl();
-		return questionParam;
+	public Curses createCurses() {
+		CursesImpl curses = new CursesImpl();
+		return curses;
 	}
 
 	/**
@@ -1239,9 +1149,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PropositionParam createPropositionParam() {
-		PropositionParamImpl propositionParam = new PropositionParamImpl();
-		return propositionParam;
+	public Curse createCurse() {
+		CurseImpl curse = new CurseImpl();
+		return curse;
 	}
 
 	/**
@@ -1249,9 +1159,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Value createValue() {
-		ValueImpl value = new ValueImpl();
-		return value;
+	public LabyrinthCurse createLabyrinthCurse() {
+		LabyrinthCurseImpl labyrinthCurse = new LabyrinthCurseImpl();
+		return labyrinthCurse;
 	}
 
 	/**
@@ -1259,9 +1169,179 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntrySoluceParam createEntrySoluceParam() {
-		EntrySoluceParamImpl entrySoluceParam = new EntrySoluceParamImpl();
-		return entrySoluceParam;
+	public CurseEligibility createCurseEligibility() {
+		CurseEligibilityImpl curseEligibility = new CurseEligibilityImpl();
+		return curseEligibility;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Image createImage() {
+		ImageImpl image = new ImageImpl();
+		return image;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map createMap() {
+		MapImpl map = new MapImpl();
+		return map;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MapElementPosition createMapElementPosition() {
+		MapElementPositionImpl mapElementPosition = new MapElementPositionImpl();
+		return mapElementPosition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LegendSymbol createLegendSymbol() {
+		LegendSymbolImpl legendSymbol = new LegendSymbolImpl();
+		return legendSymbol;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LegendText createLegendText() {
+		LegendTextImpl legendText = new LegendTextImpl();
+		return legendText;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HistoryFact createHistoryFact() {
+		HistoryFactImpl historyFact = new HistoryFactImpl();
+		return historyFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GeographyLegendFact createGeographyLegendFact() {
+		GeographyLegendFactImpl geographyLegendFact = new GeographyLegendFactImpl();
+		return geographyLegendFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GeographyFact createGeographyFact() {
+		GeographyFactImpl geographyFact = new GeographyFactImpl();
+		return geographyFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date createDate() {
+		DateImpl date = new DateImpl();
+		return date;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimePeriod createTimePeriod() {
+		TimePeriodImpl timePeriod = new TimePeriodImpl();
+		return timePeriod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MapValue createMapValue() {
+		MapValueImpl mapValue = new MapValueImpl();
+		return mapValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MapQuestionParam createMapQuestionParam() {
+		MapQuestionParamImpl mapQuestionParam = new MapQuestionParamImpl();
+		return mapQuestionParam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HAssociation createHAssociation() {
+		HAssociationImpl hAssociation = new HAssociationImpl();
+		return hAssociation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HLegend createHLegend() {
+		HLegendImpl hLegend = new HLegendImpl();
+		return hLegend;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GLocate createGLocate() {
+		GLocateImpl gLocate = new GLocateImpl();
+		return gLocate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Teacher createTeacher() {
+		TeacherImpl teacher = new TeacherImpl();
+		return teacher;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Teachers createTeachers() {
+		TeachersImpl teachers = new TeachersImpl();
+		return teachers;
 	}
 
 	/**
@@ -1591,6 +1671,50 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * @generated
 	 */
 	public String convertEGeographyValueToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EHistoryTarget createEHistoryTargetFromString(EDataType eDataType, String initialValue) {
+		EHistoryTarget result = EHistoryTarget.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEHistoryTargetToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ELegendTarget createELegendTargetFromString(EDataType eDataType, String initialValue) {
+		ELegendTarget result = ELegendTarget.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertELegendTargetToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

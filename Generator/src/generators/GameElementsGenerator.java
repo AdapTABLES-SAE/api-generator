@@ -74,10 +74,10 @@ public class GameElementsGenerator {
 	
 	private void unlockGameplays() {
 		List<Ability> abilities = getCurrentlyLockedAbilities();
-		System.out.println("Locked abilities "+abilities);
+		//System.out.println("Locked abilities "+abilities);
 		for(Gameplay gameplay: this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			gameplay.setLocked(hasGameplayLockedAbilities(gameplay, abilities));
-			System.out.println(gameplay.getName()+" locked? "+gameplay.isLocked());
+			//System.out.println(gameplay.getName()+" locked? "+gameplay.isLocked());
 		}
 	}
 	
@@ -131,6 +131,7 @@ public class GameElementsGenerator {
 		//System.out.println(generatedDungeon.getRooms().size()+ " " + dungeonElements.getRoomsElements().size());
 		for (Room room: generatedDungeon.getRooms()) {
 			if(room.getGameplay() != null) {
+				//System.out.println(room.getX()+" "+room.getY()+" "+room.getGameplay());
 				room.getPositionedElement().addAll(gameplayGenerator.buildPositionedElements(this.getCorrespondingRoomElements(room)));
 			} 
 		}
@@ -163,15 +164,15 @@ public class GameElementsGenerator {
 
 				boolean expectedAnswerCompatible;
 				if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.ONE)) {
-					expectedAnswerCompatible = task.nbExpectedAnswers() == 1;
+					expectedAnswerCompatible = task.getNbExpectedAnswers() == 1;
 				} else if (relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_ONE)) {
-					expectedAnswerCompatible = task.nbExpectedAnswers() > 1;
+					expectedAnswerCompatible = task.getNbExpectedAnswers() > 1;
 				} else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.EQ_NB_FACTS)) {
-					expectedAnswerCompatible = task.nbExpectedAnswers() == task.getNbFacts();
+					expectedAnswerCompatible = task.getNbExpectedAnswers() == task.getNbFacts();
 				} else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_NB_FACTS)) {
-					expectedAnswerCompatible = task.nbExpectedAnswers() > task.getNbFacts();
+					expectedAnswerCompatible = task.getNbExpectedAnswers() > task.getNbFacts();
 				} else {
-					expectedAnswerCompatible = task.nbExpectedAnswers() >= 1;
+					expectedAnswerCompatible = task.getNbExpectedAnswers() >= 1;
 				}
 
 				boolean modalityCompatible;
@@ -180,15 +181,15 @@ public class GameElementsGenerator {
 				} else {
 					modalityCompatible = (task.getResponseModality() != null)? task.getResponseModality() instanceof EnterResponse: false;
 				}
-				System.out.println(task.nbExpectedAnswers()+" "+task.getNbFacts());
+				//System.out.println(task.getNbExpectedAnswers()+" "+task.getNbFacts());
 
-				System.out.println("fact comp "+factCompatible+" expectedanswers "+expectedAnswerCompatible+" modality "+modalityCompatible);
+				//System.out.println("fact comp "+factCompatible+" expectedanswers "+expectedAnswerCompatible+" modality "+modalityCompatible);
 				if(factCompatible && expectedAnswerCompatible && modalityCompatible) {
 					allowedCategories.addAll(relation.getGameplays());
 				}
 			}
 		}
-		System.out.println("Valid categories "+allowedCategories);
+		//System.out.println("Valid categories "+allowedCategories);
 		return allowedCategories; 
 	}
 	
@@ -198,7 +199,7 @@ public class GameElementsGenerator {
 		for (RoomElements room : dungeonElements.getRoomsElements()) {
 			if(room.getTask() != null) {
 				List<GPCategory> validCategories = new ArrayList<>(getValidCategoriesFromRelations(room.getTask()));
-				System.out.println("Categorie valid " + validCategories);
+				//System.out.println("Categorie valid " + validCategories);
 				do {
 					GPCategory aCategorie = validCategories.get(random.nextInt(validCategories.size()));
 					gameplays = getQuestionGameplayForCategorieType(aCategorie, room.getTask());
@@ -206,11 +207,11 @@ public class GameElementsGenerator {
 				} while(gameplays.isEmpty());
 				
 				if(gameplays.isEmpty()) {
-					System.err.println("GAMEPLAY SELECTED : NONE");
+					//System.err.println("GAMEPLAY SELECTED : NONE");
 				} else {
 					Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
 					room.setGameplay(gameplay);
-					System.err.println("GAMEPLAY SELECTED : " + gameplay.getName());
+					//System.err.println("GAMEPLAY SELECTED : " + gameplay.getName());
 				}
 			} else if(!room.isExit() && !room.isEntry()) {
 				gameplays = getNoQuestionRoomGameplay();
@@ -234,15 +235,22 @@ public class GameElementsGenerator {
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
 		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			if(gp instanceof QuestionGameplay && !gp.isLocked()) {
-				if(((QuestionGameplay) gp).getCategory().equals(category) && respectValidationMethod((QuestionGameplay) gp, task) && respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task)) {
+				if(((QuestionGameplay) gp).getCategory().equals(category) && 
+						respectValidationMethod((QuestionGameplay) gp, task) && 
+						respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task) &&
+						respectUndoable((QuestionGameplay) gp, task)) {
 					compatibleGameplays.add(gp);
 				}
 			}
 		}
 		
-		System.out.println("Category "+category.getName()+" -- "+task.getID()+" "+task.getType());
-		System.out.println("Compatible gameplays "+compatibleGameplays);
+		//System.out.println("Category "+category.getName()+" -- "+task.getID()+" "+task.getType());
+		//System.out.println("Compatible gameplays "+compatibleGameplays);
 		return compatibleGameplays;
+	}
+	
+	private boolean respectUndoable(QuestionGameplay gameplay, ATask task) {
+		return task.isCheckOnLearnerAction()? gameplay.isUndoable() :true;
 	}
 	
 	private boolean respectValidationMethod(QuestionGameplay gameplay, ATask task) {

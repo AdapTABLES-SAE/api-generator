@@ -152,7 +152,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass contextEClass = null;
+	private EClass classroomEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -496,6 +496,55 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass timeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass aQuestionParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mapQuestionParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass hAssociationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass hLegendEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gLocateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass teacherEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass teachersEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -881,6 +930,20 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EEnum eGeographyValueEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eHistoryTargetEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eLegendTargetEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1665,8 +1728,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getContext() {
-		return contextEClass;
+	public EClass getClassroom() {
+		return classroomEClass;
 	}
 
 	/**
@@ -1674,8 +1737,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContext_Gamecontext() {
-		return (EReference) contextEClass.getEStructuralFeatures().get(0);
+	public EReference getClassroom_Gamecontext() {
+		return (EReference) classroomEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1683,8 +1746,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getContext_ID() {
-		return (EAttribute) contextEClass.getEStructuralFeatures().get(1);
+	public EAttribute getClassroom_ID() {
+		return (EAttribute) classroomEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1692,8 +1755,17 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContext_LearnerPlayers() {
-		return (EReference) contextEClass.getEStructuralFeatures().get(2);
+	public EReference getClassroom_LearnerPlayers() {
+		return (EReference) classroomEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClassroom_Name() {
+		return (EAttribute) classroomEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2043,7 +2115,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getATask__NbExpectedAnswers() {
+	public EOperation getATask__GetNbExpectedAnswers() {
 		return aTaskEClass.getEOperations().get(2);
 	}
 
@@ -2079,7 +2151,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCompletionTask__NbExpectedAnswers() {
+	public EOperation getCompletionTask__GetNbExpectedAnswers() {
 		return completionTaskEClass.getEOperations().get(1);
 	}
 
@@ -2115,7 +2187,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIdentificationTask__NbExpectedAnswers() {
+	public EOperation getIdentificationTask__GetNbExpectedAnswers() {
 		return identificationTaskEClass.getEOperations().get(0);
 	}
 
@@ -2160,7 +2232,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getMembershipIDTask__NbExpectedAnswers() {
+	public EOperation getMembershipIDTask__GetNbExpectedAnswers() {
 		return membershipIDTaskEClass.getEOperations().get(0);
 	}
 
@@ -3330,6 +3402,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDate_Position() {
+		return (EReference) dateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTimePeriod() {
 		return timePeriodEClass;
 	}
@@ -3357,6 +3438,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTimePeriod_Positions() {
+		return (EReference) timePeriodEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMapValue() {
 		return mapValueEClass;
 	}
@@ -3377,6 +3467,177 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EClass getTime() {
 		return timeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTime_Map() {
+		return (EReference) timeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAQuestionParam() {
+		return aQuestionParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMapQuestionParam() {
+		return mapQuestionParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMapQuestionParam_Map() {
+		return (EReference) mapQuestionParamEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHAssociation() {
+		return hAssociationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHAssociation_NbMissingElements() {
+		return (EAttribute) hAssociationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHAssociation_Source() {
+		return (EAttribute) hAssociationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHAssociation_Missing() {
+		return (EAttribute) hAssociationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHLegend() {
+		return hLegendEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHLegend_NbMissingElements() {
+		return (EAttribute) hLegendEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHLegend_Missing() {
+		return (EAttribute) hLegendEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGLocate() {
+		return gLocateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGLocate_NbExpectedAnswers() {
+		return (EAttribute) gLocateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGLocate_LearnersChoices() {
+		return (EAttribute) gLocateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTeacher() {
+		return teacherEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTeacher_ID() {
+		return (EAttribute) teacherEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTeacher_Classrooms() {
+		return (EReference) teacherEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTeachers() {
+		return teachersEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTeachers_Teachers() {
+		return (EReference) teachersEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4590,6 +4851,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getEHistoryTarget() {
+		return eHistoryTargetEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getELegendTarget() {
+		return eLegendTargetEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GeneratorFactory getGeneratorFactory() {
 		return (GeneratorFactory) getEFactoryInstance();
 	}
@@ -4711,10 +4990,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__NB_MISSING_ELEMENTS);
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__CHECK_LEARNER_ACTION);
 
-		contextEClass = createEClass(CONTEXT);
-		createEReference(contextEClass, CONTEXT__GAMECONTEXT);
-		createEAttribute(contextEClass, CONTEXT__ID);
-		createEReference(contextEClass, CONTEXT__LEARNER_PLAYERS);
+		classroomEClass = createEClass(CLASSROOM);
+		createEReference(classroomEClass, CLASSROOM__GAMECONTEXT);
+		createEAttribute(classroomEClass, CLASSROOM__ID);
+		createEReference(classroomEClass, CLASSROOM__LEARNER_PLAYERS);
+		createEAttribute(classroomEClass, CLASSROOM__NAME);
 
 		learnerPlayerEClass = createEClass(LEARNER_PLAYER);
 		createEReference(learnerPlayerEClass, LEARNER_PLAYER__PROGRESSION);
@@ -4757,23 +5037,23 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(aTaskEClass, ATASK__NB_FACTS);
 		createEOperation(aTaskEClass, ATASK___GET_TYPE);
 		createEOperation(aTaskEClass, ATASK___IS_CHECK_ON_LEARNER_ACTION);
-		createEOperation(aTaskEClass, ATASK___NB_EXPECTED_ANSWERS);
+		createEOperation(aTaskEClass, ATASK___GET_NB_EXPECTED_ANSWERS);
 
 		completionTaskEClass = createEClass(COMPLETION_TASK);
 		createEAttribute(completionTaskEClass, COMPLETION_TASK__TYPE);
 		createEOperation(completionTaskEClass, COMPLETION_TASK___GET_NB_MISSING_ELEMENTS);
-		createEOperation(completionTaskEClass, COMPLETION_TASK___NB_EXPECTED_ANSWERS);
+		createEOperation(completionTaskEClass, COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		identificationTaskEClass = createEClass(IDENTIFICATION_TASK);
 		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__TYPE);
 		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__CHECK_LEARNER_ACTION);
-		createEOperation(identificationTaskEClass, IDENTIFICATION_TASK___NB_EXPECTED_ANSWERS);
+		createEOperation(identificationTaskEClass, IDENTIFICATION_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		membershipIDTaskEClass = createEClass(MEMBERSHIP_ID_TASK);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__TYPE);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION);
-		createEOperation(membershipIDTaskEClass, MEMBERSHIP_ID_TASK___NB_EXPECTED_ANSWERS);
+		createEOperation(membershipIDTaskEClass, MEMBERSHIP_ID_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		mtCompletion2EClass = createEClass(MT_COMPLETION2);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__TARGETS);
@@ -5101,15 +5381,43 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(dateEClass, DATE__DAY);
 		createEAttribute(dateEClass, DATE__MONTH);
 		createEAttribute(dateEClass, DATE__YEAR);
+		createEReference(dateEClass, DATE__POSITION);
 
 		timePeriodEClass = createEClass(TIME_PERIOD);
 		createEAttribute(timePeriodEClass, TIME_PERIOD__START_YEAR);
 		createEAttribute(timePeriodEClass, TIME_PERIOD__END_YEAR);
+		createEReference(timePeriodEClass, TIME_PERIOD__POSITIONS);
 
 		mapValueEClass = createEClass(MAP_VALUE);
 		createEOperation(mapValueEClass, MAP_VALUE___IS_CORRECT_VALUE);
 
 		timeEClass = createEClass(TIME);
+		createEReference(timeEClass, TIME__MAP);
+
+		aQuestionParamEClass = createEClass(AQUESTION_PARAM);
+
+		mapQuestionParamEClass = createEClass(MAP_QUESTION_PARAM);
+		createEReference(mapQuestionParamEClass, MAP_QUESTION_PARAM__MAP);
+
+		hAssociationEClass = createEClass(HASSOCIATION);
+		createEAttribute(hAssociationEClass, HASSOCIATION__NB_MISSING_ELEMENTS);
+		createEAttribute(hAssociationEClass, HASSOCIATION__SOURCE);
+		createEAttribute(hAssociationEClass, HASSOCIATION__MISSING);
+
+		hLegendEClass = createEClass(HLEGEND);
+		createEAttribute(hLegendEClass, HLEGEND__NB_MISSING_ELEMENTS);
+		createEAttribute(hLegendEClass, HLEGEND__MISSING);
+
+		gLocateEClass = createEClass(GLOCATE);
+		createEAttribute(gLocateEClass, GLOCATE__NB_EXPECTED_ANSWERS);
+		createEAttribute(gLocateEClass, GLOCATE__LEARNERS_CHOICES);
+
+		teacherEClass = createEClass(TEACHER);
+		createEAttribute(teacherEClass, TEACHER__ID);
+		createEReference(teacherEClass, TEACHER__CLASSROOMS);
+
+		teachersEClass = createEClass(TEACHERS);
+		createEReference(teachersEClass, TEACHERS__TEACHERS);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -5127,6 +5435,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		eStatementTypeEEnum = createEEnum(ESTATEMENT_TYPE);
 		eRoomTypeEEnum = createEEnum(EROOM_TYPE);
 		eGeographyValueEEnum = createEEnum(EGEOGRAPHY_VALUE);
+		eHistoryTargetEEnum = createEEnum(EHISTORY_TARGET);
+		eLegendTargetEEnum = createEEnum(ELEGEND_TARGET);
 	}
 
 	/**
@@ -5182,7 +5492,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtqfRebuildEClass.getESuperTypes().add(this.getQuestionableFact());
 		mtqfIdentificationEClass.getESuperTypes().add(this.getQuestionableFact());
 		mtqfMembershipEClass.getESuperTypes().add(this.getQuestionableFact());
-		questionParamEClass.getESuperTypes().add(this.getParameter());
+		questionParamEClass.getESuperTypes().add(this.getAQuestionParam());
 		propositionParamEClass.getESuperTypes().add(this.getParameter());
 		valueEClass.getESuperTypes().add(this.getAValue());
 		correctnessEClass.getESuperTypes().add(this.getParameter());
@@ -5210,6 +5520,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		dateEClass.getESuperTypes().add(this.getTime());
 		timePeriodEClass.getESuperTypes().add(this.getTime());
 		mapValueEClass.getESuperTypes().add(this.getValue());
+		aQuestionParamEClass.getESuperTypes().add(this.getParameter());
+		mapQuestionParamEClass.getESuperTypes().add(this.getAQuestionParam());
+		hAssociationEClass.getESuperTypes().add(this.getCompletionTask());
+		hLegendEClass.getESuperTypes().add(this.getCompletionTask());
+		gLocateEClass.getESuperTypes().add(this.getMembershipIDTask());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -5426,15 +5741,18 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				1, MTCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
-		initEClass(contextEClass, Context.class, "Context", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContext_Gamecontext(), this.getGameContext(), null, "gamecontext", null, 1, 1, Context.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContext_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Context.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContext_LearnerPlayers(), this.getLearnerPlayers(), null, "learnerPlayers", null, 0, 1,
-				Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEClass(classroomEClass, Classroom.class, "Classroom", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getClassroom_Gamecontext(), this.getGameContext(), null, "gamecontext", null, 1, 1,
+				Classroom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClassroom_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Classroom.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClassroom_LearnerPlayers(), this.getLearnerPlayers(), null, "learnerPlayers", null, 0, 1,
+				Classroom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClassroom_Name(), ecorePackage.getEString(), "name", null, 0, 1, Classroom.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(learnerPlayerEClass, LearnerPlayer.class, "LearnerPlayer", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5529,8 +5847,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEOperation(getATask__IsCheckOnLearnerAction(), ecorePackage.getEBoolean(), "isCheckOnLearnerAction", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getATask__NbExpectedAnswers(), ecorePackage.getEInt(), "nbExpectedAnswers", 0, 1, IS_UNIQUE,
-				IS_ORDERED);
+		initEOperation(getATask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(completionTaskEClass, CompletionTask.class, "CompletionTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5540,7 +5858,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEOperation(getCompletionTask__GetNbMissingElements(), ecorePackage.getEInt(), "getNbMissingElements", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getCompletionTask__NbExpectedAnswers(), ecorePackage.getEInt(), "nbExpectedAnswers", 0, 1,
+		initEOperation(getCompletionTask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(identificationTaskEClass, IdentificationTask.class, "IdentificationTask", IS_ABSTRACT, !IS_INTERFACE,
@@ -5552,8 +5870,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				"false", 0, 1, IdentificationTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getIdentificationTask__NbExpectedAnswers(), ecorePackage.getEInt(), "nbExpectedAnswers", 0, 1,
-				IS_UNIQUE, IS_ORDERED);
+		initEOperation(getIdentificationTask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0,
+				1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(membershipIDTaskEClass, MembershipIDTask.class, "MembershipIDTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5567,8 +5885,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				"false", 0, 1, MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getMembershipIDTask__NbExpectedAnswers(), ecorePackage.getEInt(), "nbExpectedAnswers", 0, 1,
-				IS_UNIQUE, IS_ORDERED);
+		initEOperation(getMembershipIDTask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0,
+				1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mtCompletion2EClass, MTCompletion2.class, "MTCompletion2", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5741,7 +6059,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getQuestionedFact_Questionablefact(), this.getQuestionableFact(), null, "questionablefact", null,
 				1, 1, QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuestionedFact_Question(), this.getQuestionParam(), null, "question", null, 0, 1,
+		initEReference(getQuestionedFact_Question(), this.getAQuestionParam(), null, "question", null, 0, 1,
 				QuestionedFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQuestionedFact_Propositions(), this.getPropositionParam(), null, "propositions", null, 0, -1,
@@ -6263,6 +6581,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDate_Year(), ecorePackage.getEString(), "year", null, 0, 1, Date.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDate_Position(), this.getMapElementPosition(), null, "position", null, 1, 1, Date.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(timePeriodEClass, TimePeriod.class, "TimePeriod", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -6270,6 +6591,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTimePeriod_EndYear(), ecorePackage.getEString(), "endYear", null, 0, 1, TimePeriod.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTimePeriod_Positions(), this.getMapElementPosition(), null, "positions", null, 2, 2,
+				TimePeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mapValueEClass, MapValue.class, "MapValue", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -6278,6 +6602,55 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_ORDERED);
 
 		initEClass(timeEClass, Time.class, "Time", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTime_Map(), this.getMap(), null, "map", null, 1, 1, Time.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(aQuestionParamEClass, AQuestionParam.class, "AQuestionParam", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mapQuestionParamEClass, MapQuestionParam.class, "MapQuestionParam", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMapQuestionParam_Map(), this.getMap(), null, "map", null, 1, 1, MapQuestionParam.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(hAssociationEClass, HAssociation.class, "HAssociation", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getHAssociation_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
+				HAssociation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHAssociation_Source(), this.getEHistoryTarget(), "source", null, 0, 1, HAssociation.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHAssociation_Missing(), this.getEHistoryTarget(), "missing", "TIME", 0, 1, HAssociation.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(hLegendEClass, HLegend.class, "HLegend", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getHLegend_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
+				HLegend.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHLegend_Missing(), this.getELegendTarget(), "missing", "", 0, 1, HLegend.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(gLocateEClass, GLocate.class, "GLocate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGLocate_NbExpectedAnswers(), ecorePackage.getEInt(), "nbExpectedAnswers", null, 0, 1,
+				GLocate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGLocate_LearnersChoices(), ecorePackage.getEBoolean(), "learnersChoices", null, 0, 1,
+				GLocate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(teacherEClass, Teacher.class, "Teacher", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTeacher_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Teacher.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTeacher_Classrooms(), this.getClassroom(), null, "classrooms", null, 0, -1, Teacher.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(teachersEClass, Teachers.class, "Teachers", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTeachers_Teachers(), this.getTeacher(), null, "teachers", null, 0, -1, Teachers.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");
@@ -6373,6 +6746,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEEnum(eGeographyValueEEnum, EGeographyValue.class, "EGeographyValue");
 		addEEnumLiteral(eGeographyValueEEnum, EGeographyValue.CITY);
 		addEEnumLiteral(eGeographyValueEEnum, EGeographyValue.COUNTRY);
+
+		initEEnum(eHistoryTargetEEnum, EHistoryTarget.class, "EHistoryTarget");
+		addEEnumLiteral(eHistoryTargetEEnum, EHistoryTarget.EVENT);
+		addEEnumLiteral(eHistoryTargetEEnum, EHistoryTarget.TIME);
+		addEEnumLiteral(eHistoryTargetEEnum, EHistoryTarget.IMAGE);
+
+		initEEnum(eLegendTargetEEnum, ELegendTarget.class, "ELegendTarget");
+		addEEnumLiteral(eLegendTargetEEnum, ELegendTarget.SYMBOL);
+		addEEnumLiteral(eLegendTargetEEnum, ELegendTarget.TEXT);
 
 		// Create resource
 		createResource(eNS_URI);

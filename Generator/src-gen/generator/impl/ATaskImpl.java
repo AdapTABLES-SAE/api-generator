@@ -381,7 +381,7 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int nbExpectedAnswers() {
+	public int getNbExpectedAnswers() {
 		return 1;
 	}
 
@@ -519,8 +519,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			return getType();
 		case GeneratorPackage.ATASK___IS_CHECK_ON_LEARNER_ACTION:
 			return isCheckOnLearnerAction();
-		case GeneratorPackage.ATASK___NB_EXPECTED_ANSWERS:
-			return nbExpectedAnswers();
+		case GeneratorPackage.ATASK___GET_NB_EXPECTED_ANSWERS:
+			return getNbExpectedAnswers();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

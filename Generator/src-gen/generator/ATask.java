@@ -206,9 +206,9 @@ public interface ATask extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model kind="operation"
 	 * @generated
 	 */
-	int nbExpectedAnswers();
+	int getNbExpectedAnswers();
 
 } // ATask

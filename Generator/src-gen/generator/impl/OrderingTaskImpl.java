@@ -2,7 +2,6 @@
  */
 package generator.impl;
 
-import generator.ATask;
 import generator.ETaskType;
 import generator.GeneratorPackage;
 import generator.OrderingTask;
@@ -189,24 +188,6 @@ public abstract class OrderingTaskImpl extends ATaskImpl implements OrderingTask
 			return checkLearnerAction != CHECK_LEARNER_ACTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == ATask.class) {
-			switch (baseOperationID) {
-			case GeneratorPackage.ATASK___NB_EXPECTED_ANSWERS:
-				return GeneratorPackage.ORDERING_TASK___NB_EXPECTED_ANSWERS;
-			default:
-				return super.eDerivedOperationID(baseOperationID, baseClass);
-			}
-		}
-		return super.eDerivedOperationID(baseOperationID, baseClass);
 	}
 
 	/**

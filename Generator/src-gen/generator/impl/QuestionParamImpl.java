@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class QuestionParamImpl extends ParameterImpl implements QuestionParam {
+public class QuestionParamImpl extends AQuestionParamImpl implements QuestionParam {
 	/**
 	 * The default value of the '{@link #isInteractive() <em>Interactive</em>}' attribute.
 	 * <!-- begin-user-doc -->

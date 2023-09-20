@@ -2,11 +2,11 @@
  */
 package generator.impl;
 
+import generator.AQuestionParam;
 import generator.EntrySoluceParam;
 import generator.FactCorrectnessParam;
 import generator.GeneratorPackage;
 import generator.PropositionParam;
-import generator.QuestionParam;
 import generator.QuestionableFact;
 import generator.QuestionedFact;
 
@@ -66,7 +66,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected QuestionParam question;
+	protected AQuestionParam question;
 
 	/**
 	 * The cached value of the '{@link #getPropositions() <em>Propositions</em>}' containment reference list.
@@ -212,7 +212,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuestionParam getQuestion() {
+	public AQuestionParam getQuestion() {
 		return question;
 	}
 
@@ -221,8 +221,8 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetQuestion(QuestionParam newQuestion, NotificationChain msgs) {
-		QuestionParam oldQuestion = question;
+	public NotificationChain basicSetQuestion(AQuestionParam newQuestion, NotificationChain msgs) {
+		AQuestionParam oldQuestion = question;
 		question = newQuestion;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -240,7 +240,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setQuestion(QuestionParam newQuestion) {
+	public void setQuestion(AQuestionParam newQuestion) {
 		if (newQuestion != question) {
 			NotificationChain msgs = null;
 			if (question != null)
@@ -495,7 +495,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 			setQuestionablefact((QuestionableFact) newValue);
 			return;
 		case GeneratorPackage.QUESTIONED_FACT__QUESTION:
-			setQuestion((QuestionParam) newValue);
+			setQuestion((AQuestionParam) newValue);
 			return;
 		case GeneratorPackage.QUESTIONED_FACT__PROPOSITIONS:
 			getPropositions().clear();
@@ -533,7 +533,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 			setQuestionablefact((QuestionableFact) null);
 			return;
 		case GeneratorPackage.QUESTIONED_FACT__QUESTION:
-			setQuestion((QuestionParam) null);
+			setQuestion((AQuestionParam) null);
 			return;
 		case GeneratorPackage.QUESTIONED_FACT__PROPOSITIONS:
 			getPropositions().clear();

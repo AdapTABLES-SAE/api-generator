@@ -188,10 +188,10 @@ public class EducationalElementsGenerator {
 	}
 	
 	private List<ResultsByTask> getXTasksWithHigherApparitionPercentage(int numberOfHigherTask){
-		System.out.println("Missing nbRoom "+numberOfHigherTask);
+		//System.out.println("Missing nbRoom "+numberOfHigherTask);
 		List<ResultsByTask> tasks = new ArrayList<>();
 		List<ResultsByTask> tasks_temp = new ArrayList<>(nbRoomsToTask.keySet());
-		System.out.println("Possibilities "+tasks_temp);
+		//System.out.println("Possibilities "+tasks_temp);
 
 		for(int i = 0; i < numberOfHigherTask; i++) {
 			tasks.add(getTaskWithHigherNumberOfRoom(tasks_temp));

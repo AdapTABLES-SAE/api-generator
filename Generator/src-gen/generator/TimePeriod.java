@@ -2,6 +2,8 @@
  */
 package generator;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Time Period</b></em>'.
@@ -13,6 +15,7 @@ package generator;
  * <ul>
  *   <li>{@link generator.TimePeriod#getStartYear <em>Start Year</em>}</li>
  *   <li>{@link generator.TimePeriod#getEndYear <em>End Year</em>}</li>
+ *   <li>{@link generator.TimePeriod#getPositions <em>Positions</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getTimePeriod()
@@ -63,5 +66,17 @@ public interface TimePeriod extends Time {
 	 * @generated
 	 */
 	void setEndYear(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Positions</b></em>' reference list.
+	 * The list contents are of type {@link generator.MapElementPosition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Positions</em>' reference list.
+	 * @see generator.GeneratorPackage#getTimePeriod_Positions()
+	 * @model lower="2" upper="2"
+	 * @generated
+	 */
+	EList<MapElementPosition> getPositions();
 
 } // TimePeriod

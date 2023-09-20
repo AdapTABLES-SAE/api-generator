@@ -157,8 +157,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseContext(Context object) {
-			return createContextAdapter();
+		public Adapter caseClassroom(Classroom object) {
+			return createClassroomAdapter();
 		}
 
 		@Override
@@ -607,6 +607,41 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseAQuestionParam(AQuestionParam object) {
+			return createAQuestionParamAdapter();
+		}
+
+		@Override
+		public Adapter caseMapQuestionParam(MapQuestionParam object) {
+			return createMapQuestionParamAdapter();
+		}
+
+		@Override
+		public Adapter caseHAssociation(HAssociation object) {
+			return createHAssociationAdapter();
+		}
+
+		@Override
+		public Adapter caseHLegend(HLegend object) {
+			return createHLegendAdapter();
+		}
+
+		@Override
+		public Adapter caseGLocate(GLocate object) {
+			return createGLocateAdapter();
+		}
+
+		@Override
+		public Adapter caseTeacher(Teacher object) {
+			return createTeacherAdapter();
+		}
+
+		@Override
+		public Adapter caseTeachers(Teachers object) {
+			return createTeachersAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -878,16 +913,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.Context <em>Context</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.Classroom <em>Classroom</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.Context
+	 * @see generator.Classroom
 	 * @generated
 	 */
-	public Adapter createContextAdapter() {
+	public Adapter createClassroomAdapter() {
 		return null;
 	}
 
@@ -1574,6 +1609,104 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTimeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.AQuestionParam <em>AQuestion Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.AQuestionParam
+	 * @generated
+	 */
+	public Adapter createAQuestionParamAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MapQuestionParam <em>Map Question Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MapQuestionParam
+	 * @generated
+	 */
+	public Adapter createMapQuestionParamAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.HAssociation <em>HAssociation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.HAssociation
+	 * @generated
+	 */
+	public Adapter createHAssociationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.HLegend <em>HLegend</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.HLegend
+	 * @generated
+	 */
+	public Adapter createHLegendAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.GLocate <em>GLocate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.GLocate
+	 * @generated
+	 */
+	public Adapter createGLocateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Teacher <em>Teacher</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Teacher
+	 * @generated
+	 */
+	public Adapter createTeacherAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.Teachers <em>Teachers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.Teachers
+	 * @generated
+	 */
+	public Adapter createTeachersAdapter() {
 		return null;
 	}
 
