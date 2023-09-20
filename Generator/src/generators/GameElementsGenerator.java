@@ -74,28 +74,33 @@ public class GameElementsGenerator {
 	
 	private void unlockGameplays() {
 		List<Ability> abilities = getCurrentlyLockedAbilities();
-		//System.out.println("Locked abilities "+abilities);
+		System.out.println("Locked abilities "+abilities);
 		for(Gameplay gameplay: this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
+			System.out.println("***********************************");
 			gameplay.setLocked(hasGameplayLockedAbilities(gameplay, abilities));
-			//System.out.println(gameplay.getName()+" locked? "+gameplay.isLocked());
+			System.out.println(gameplay.getName()+" locked? "+gameplay.isLocked());
+			System.out.println("***********************************");
 		}
 	}
 	
 	private boolean hasGameplayLockedAbilities(Gameplay gameplay, List<Ability> lockedAbilities) {
 		List<Boolean> isLockedAbilities = new ArrayList<>(); 
 		for(AComponent comp: gameplay.getComponents()) {
-			isLockedAbilities.add(hasElementLockedAbilities(comp, lockedAbilities));
+			hasElementLockedAbilities(comp, lockedAbilities, isLockedAbilities);
 		}
+		//System.out.println("islocked "+isLockedAbilities);
+
 		return isLockedAbilities.contains(true);
 	}
 	
-	private boolean hasElementLockedAbilities(AComponent component, List<Ability> lockedAbilities) {
+	private void hasElementLockedAbilities(AComponent component, List<Ability> lockedAbilities, List<Boolean> isLockedAbilities) {
 		if(component instanceof Structure) {
 			for (AComponent comp: ((Structure) component).getComponents()) {
-				return hasElementLockedAbilities(comp, lockedAbilities);
+				hasElementLockedAbilities(comp, lockedAbilities, isLockedAbilities);
 			}
 		}
-		return lockedAbilities.contains(component.getAllowedAbility());
+		//System.out.println("comp "+component.getAllowedAbility()+""+ lockedAbilities.contains(component.getAllowedAbility()));
+		isLockedAbilities.add(lockedAbilities.contains(component.getAllowedAbility()));
 	}
 	
 	private List<Ability> getInitallyLockedAbilities() {
