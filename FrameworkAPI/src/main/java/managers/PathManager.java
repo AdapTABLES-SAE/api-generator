@@ -280,9 +280,7 @@ public class PathManager {
 		List<ESingleTarget> targets = new ArrayList<>();
 		for (Object jtarget : (JSONArray) jtask.get("targets")) {
 			String starget = (String) jtarget; 
-			/*if(starget.equals("FACTOR"))targets.add(ESingleTarget.OPERAND);
-			else*/ 
-				targets.add(ESingleTarget.valueOf(starget));
+			targets.add(ESingleTarget.valueOf(starget));
 		}
 		task.getTargets().addAll(targets);
 		
@@ -309,9 +307,6 @@ public class PathManager {
 		List<ESeveralTarget> targets = new ArrayList<>();
 		for (Object jtarget : (JSONArray) jtask.get("targets")) {
 			String starget = (String) jtarget; 
-			/*if(starget.equals("OP_RES"))targets.add(ESeveralTarget.OPERAND_RESULT);
-			if(starget.equals("TAB_RES")) targets.add(ESeveralTarget.TABLE_RESULT);
-			else*/
 			targets.add(ESeveralTarget.valueOf(starget));
 		}
 		task.getTargets().addAll(targets);
@@ -434,7 +429,6 @@ public class PathManager {
 				}
 			}
 		}
-		//if(obj.getSetoffacts().isEmpty()) {
 		for (String table :  (List<String>) getJSONBuildSetup(json).get("tables")) {
 			for (SetOfFacts sof : knowledge.getKnowledgefacts()) {
 				if(Integer.parseInt(sof.getName()) == Integer.parseInt(table)) { // TODO : it's shit
@@ -442,7 +436,6 @@ public class PathManager {
 				}
 			}
 		}
-		//}	
 		return obj;
 	}
 	

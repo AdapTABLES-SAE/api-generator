@@ -562,9 +562,12 @@ public class LearnerPlayerManager {
 		for(LearnerPlayer learner: modelsManager.getContextModel().getLearnerPlayers().getLearnerPlayers()) {
 			if(learner.getLearningpath().getID().equals(pathID)) {
 				CurrentObjectiveLevel currentOL = getCurrentObjectiveLevel(learner, objective, level); 
+				//System.err.println("CURRENT "+currentOL);
 				if(currentOL != null) {
+					//System.err.println("Before " + learner.getProgression().getLearnerProgress().getCurrentobjectivelevels());
 					learner.getProgression().getLearnerProgress().getCurrentobjectivelevels().remove(currentOL);
-					currentOL = new CurrentObjectiveLevelImpl();
+					//System.err.println("After " + learner.getProgression().getLearnerProgress().getCurrentobjectivelevels());
+					/*currentOL = new CurrentObjectiveLevelImpl();
 					currentOL.setObjective(objective);
 					currentOL.setLevel(level);
 					Results results = new ResultsImpl();
@@ -578,7 +581,7 @@ public class LearnerPlayerManager {
 					currentOL.setEncountersPercent(0);
 					currentOL.setSuccessPercent(0);
 					//learner.getProgression().setLearnerProgress(new LearnerProgressImpl());
-					learner.getProgression().getLearnerProgress().getCurrentobjectivelevels().add(currentOL);
+					learner.getProgression().getLearnerProgress().getCurrentobjectivelevels().add(currentOL);*/
 					learner.getProgression().getPlayerProgress().setCurrentLevel(1);
 					
 					learner.setStatistics(new StatisticsImpl());
@@ -588,9 +591,10 @@ public class LearnerPlayerManager {
 		modelsManager.saveContextModel();
 	}
 	
+	
 	private CurrentObjectiveLevel getCurrentObjectiveLevel(LearnerPlayer learner, Objective objective, Level level) {
 		for(CurrentObjectiveLevel currentOL: learner.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
-			if(currentOL.getObjective().equals(objective) && currentOL.getLevel().equals(level)) {
+			if(currentOL.getObjective().getID().equals(objective.getID()) && currentOL.getLevel().getID().equals(level.getID())) {
 				return currentOL;
 			}
 		}
