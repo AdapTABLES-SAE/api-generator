@@ -128,7 +128,9 @@ public class RoomElements {
 	}
 	
 	private void selectElementType() {
+		System.err.println("************ GP = "+gameplay.getName());
 		selectElementType(gameplay.getComponents(), false);
+		System.err.println("************");
 	}
 	
 	public Gameplay getGameplay() {
@@ -151,10 +153,12 @@ public class RoomElements {
 	private void selectElementType(List<AComponent> components, boolean isStructureComponents) {
 		for (AComponent aComponent : components) {
 			ElementType elementType = getCompatibleElementType(aComponent, isStructureComponents); 
-			//System.err.println("COMPONENT "+aComponent.getAllowedAbility());
-			//System.err.println("ELEMENT "+elementType.getType());
-			if(isStructureComponents && !elementsToQuantity.containsKey(elementType)) {
-				elementsToQuantity.put(elementType, -1);
+			System.err.println("COMPONENT "+aComponent.getAllowedAbility());
+			System.err.println("ELEMENT "+elementType.getType());
+			if(isStructureComponents) {
+				if(!elementsToQuantity.containsKey(elementType)) {
+					elementsToQuantity.put(elementType, -1);
+				}
 			} else {
 				if(isStructureComponent(aComponent)) {
 					Structure structure = (Structure) aComponent;
@@ -200,12 +204,13 @@ public class RoomElements {
 	
 	private ElementType getCompatibleElementType(AComponent component, boolean isStructureComponent) { // TODO : Deal with statements 
 		List<ElementType> compatibleTypes = new ArrayList<>();
+		System.out.println("AQUI "+component.getAllowedAbility());
 		for (ElementType elementType : gameDescriptionModel.getElements().getElementTypes().getElements()) {
 			if(elementType instanceof StatementElementType) {
-				if(isComponentForStatement(component) && hasValidStatementConditions((StatementElementType) elementType, isStructureComponent)) {
+				if(isComponentForStatement(component) && !isComponentForChoices(component) && hasValidStatementConditions((StatementElementType) elementType, isStructureComponent)) {
 					compatibleTypes.add((StatementElementType) elementType);
 				}
-			} else if(!isComponentForStatement(component) && isEqualAbility(elementType, component) && isEqualSize(elementType, component)) {		
+			} else if((!isComponentForStatement(component) || isComponentForBothStatementAndChoices(component)) && isEqualAbility(elementType, component) && isEqualSize(elementType, component)) {		
 					compatibleTypes.add((ElementType) elementType);
 			}
 		}
@@ -231,6 +236,14 @@ public class RoomElements {
 
 	private boolean isComponentForStatement(AComponent component) {
 		return component instanceof Component && ((Component) component).isWearStatement();
+	}
+	
+	private boolean isComponentForChoices(AComponent component) {
+		return component instanceof Component && ((Component) component).isWearChoices();
+	}
+	
+	private boolean isComponentForBothStatementAndChoices(AComponent component) {
+		return isComponentForStatement(component) && isComponentForChoices(component);
 	}
 
 	public ElementType getElementTypeFor(AComponent component) {

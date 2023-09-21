@@ -2,23 +2,20 @@
  */
 package generator.impl;
 
-import generator.AComponent;
-import generator.GeneratorPackage;
-import generator.Structure;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import generator.AComponent;
+import generator.GeneratorPackage;
+import generator.Structure;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,6 +27,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link generator.impl.StructureImpl#getComponents <em>Components</em>}</li>
  *   <li>{@link generator.impl.StructureImpl#isPerFactOrPropositions <em>Per Fact Or Propositions</em>}</li>
+ *   <li>{@link generator.impl.StructureImpl#isAlternateComponents <em>Alternate Components</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,6 +62,26 @@ public class StructureImpl extends AComponentImpl implements Structure {
 	 * @ordered
 	 */
 	protected boolean perFactOrPropositions = PER_FACT_OR_PROPOSITIONS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isAlternateComponents() <em>Alternate Components</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAlternateComponents()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ALTERNATE_COMPONENTS_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isAlternateComponents() <em>Alternate Components</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAlternateComponents()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean alternateComponents = ALTERNATE_COMPONENTS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,6 +142,28 @@ public class StructureImpl extends AComponentImpl implements Structure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isAlternateComponents() {
+		return alternateComponents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAlternateComponents(boolean newAlternateComponents) {
+		boolean oldAlternateComponents = alternateComponents;
+		alternateComponents = newAlternateComponents;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.STRUCTURE__ALTERNATE_COMPONENTS,
+					oldAlternateComponents, alternateComponents));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -145,6 +185,8 @@ public class StructureImpl extends AComponentImpl implements Structure {
 			return getComponents();
 		case GeneratorPackage.STRUCTURE__PER_FACT_OR_PROPOSITIONS:
 			return isPerFactOrPropositions();
+		case GeneratorPackage.STRUCTURE__ALTERNATE_COMPONENTS:
+			return isAlternateComponents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -165,6 +207,9 @@ public class StructureImpl extends AComponentImpl implements Structure {
 		case GeneratorPackage.STRUCTURE__PER_FACT_OR_PROPOSITIONS:
 			setPerFactOrPropositions((Boolean) newValue);
 			return;
+		case GeneratorPackage.STRUCTURE__ALTERNATE_COMPONENTS:
+			setAlternateComponents((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -183,6 +228,9 @@ public class StructureImpl extends AComponentImpl implements Structure {
 		case GeneratorPackage.STRUCTURE__PER_FACT_OR_PROPOSITIONS:
 			setPerFactOrPropositions(PER_FACT_OR_PROPOSITIONS_EDEFAULT);
 			return;
+		case GeneratorPackage.STRUCTURE__ALTERNATE_COMPONENTS:
+			setAlternateComponents(ALTERNATE_COMPONENTS_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -199,6 +247,8 @@ public class StructureImpl extends AComponentImpl implements Structure {
 			return components != null && !components.isEmpty();
 		case GeneratorPackage.STRUCTURE__PER_FACT_OR_PROPOSITIONS:
 			return perFactOrPropositions != PER_FACT_OR_PROPOSITIONS_EDEFAULT;
+		case GeneratorPackage.STRUCTURE__ALTERNATE_COMPONENTS:
+			return alternateComponents != ALTERNATE_COMPONENTS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -216,6 +266,8 @@ public class StructureImpl extends AComponentImpl implements Structure {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (perFactOrPropositions: ");
 		result.append(perFactOrPropositions);
+		result.append(", alternateComponents: ");
+		result.append(alternateComponents);
 		result.append(')');
 		return result.toString();
 	}

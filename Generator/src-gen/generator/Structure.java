@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link generator.Structure#getComponents <em>Components</em>}</li>
  *   <li>{@link generator.Structure#isPerFactOrPropositions <em>Per Fact Or Propositions</em>}</li>
+ *   <li>{@link generator.Structure#isAlternateComponents <em>Alternate Components</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getStructure()
@@ -56,5 +57,27 @@ public interface Structure extends AComponent {
 	 * @generated
 	 */
 	void setPerFactOrPropositions(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Alternate Components</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Alternate Components</em>' attribute.
+	 * @see #setAlternateComponents(boolean)
+	 * @see generator.GeneratorPackage#getStructure_AlternateComponents()
+	 * @model
+	 * @generated
+	 */
+	boolean isAlternateComponents();
+
+	/**
+	 * Sets the value of the '{@link generator.Structure#isAlternateComponents <em>Alternate Components</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Alternate Components</em>' attribute.
+	 * @see #isAlternateComponents()
+	 * @generated
+	 */
+	void setAlternateComponents(boolean value);
 
 } // Structure

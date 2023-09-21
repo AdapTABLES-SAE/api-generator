@@ -33,6 +33,33 @@ public class ALGAGenerator {
 
 	public static void main(String[] args) {
 		
+		/*MTQFCompletion1 qFact = new MTQFCompletion1Impl();
+		qFact.setLeftOperand(2);
+		qFact.setResultOnRight(true);
+		qFact.setResult(4);
+		qFact.setRightOperand(-1);
+		qFact.setSoluce(2);
+		
+		QuestionedFact fact = new QuestionedFactImpl();
+		fact.setCompleteFact(qFact.getCompleteFact());
+		fact.setQuestionablefact(qFact);
+		fact.setLearnerValidation(false);
+		
+		QuestionParam question = new QuestionParamImpl();
+		question.setInteractive(false);
+		Value value = new ValueImpl(); 
+		value.setValue(qFact.getQuestionableFact());
+		question.setValue(value);
+		
+		fact.setQuestion(question);
+		WantedAnswersParam wanted = new WantedAnswersParamImpl();
+		value = new ValueImpl(); 
+		value.setValue("1");
+		wanted.setValue(value);
+		fact.setCorrectnessToReach(wanted);
+		
+		QuestionedFactSplitter splitter = new QuestionedFactSplitter(fact);*/
+		
 		for(int i = 0; i < 1; i++) {
 			ALGAGenerator generator;
 			try {

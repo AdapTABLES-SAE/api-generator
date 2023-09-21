@@ -2,16 +2,16 @@
  */
 package generator.impl;
 
-import generator.GeneratorPackage;
-import generator.HistoryFact;
-import generator.Image;
-import generator.Time;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import generator.GeneratorPackage;
+import generator.HistoryFact;
+import generator.Image;
+import generator.Time;
 
 /**
  * <!-- begin-user-doc -->

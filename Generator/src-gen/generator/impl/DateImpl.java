@@ -2,16 +2,14 @@
  */
 package generator.impl;
 
-import generator.Date;
-import generator.GeneratorPackage;
-
-import generator.MapElementPosition;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import generator.Date;
+import generator.GeneratorPackage;
+import generator.MapElementPosition;
 
 /**
  * <!-- begin-user-doc -->

@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link generator.QuestionGameplay#getCategory <em>Category</em>}</li>
  *   <li>{@link generator.QuestionGameplay#isHasIntegratedPropositions <em>Has Integrated Propositions</em>}</li>
  *   <li>{@link generator.QuestionGameplay#getRestrictedTo <em>Restricted To</em>}</li>
+ *   <li>{@link generator.QuestionGameplay#getStatementType <em>Statement Type</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getQuestionGameplay()
@@ -107,5 +108,30 @@ public interface QuestionGameplay extends Gameplay {
 	 * @generated
 	 */
 	EList<ETaskType> getRestrictedTo();
+
+	/**
+	 * Returns the value of the '<em><b>Statement Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link generator.EStatementType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Statement Type</em>' attribute.
+	 * @see generator.EStatementType
+	 * @see #setStatementType(EStatementType)
+	 * @see generator.GeneratorPackage#getQuestionGameplay_StatementType()
+	 * @model
+	 * @generated
+	 */
+	EStatementType getStatementType();
+
+	/**
+	 * Sets the value of the '{@link generator.QuestionGameplay#getStatementType <em>Statement Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Statement Type</em>' attribute.
+	 * @see generator.EStatementType
+	 * @see #getStatementType()
+	 * @generated
+	 */
+	void setStatementType(EStatementType value);
 
 } // QuestionGameplay

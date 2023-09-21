@@ -2,22 +2,18 @@
  */
 package generator.impl;
 
-import generator.Classroom;
-import generator.GeneratorPackage;
-import generator.Teacher;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import generator.Classroom;
+import generator.GeneratorPackage;
+import generator.Teacher;
 
 /**
  * <!-- begin-user-doc -->

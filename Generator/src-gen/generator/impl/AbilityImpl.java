@@ -2,15 +2,16 @@
  */
 package generator.impl;
 
-import generator.Ability;
-import generator.Equipment;
-import generator.GeneratorPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import generator.Ability;
+import generator.Equipment;
+import generator.GeneratorPackage;
 
 /**
  * <!-- begin-user-doc -->

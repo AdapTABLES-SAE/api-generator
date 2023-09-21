@@ -2,10 +2,10 @@
  */
 package generator.impl;
 
+import org.eclipse.emf.ecore.EClass;
+
 import generator.FactSolutionParam;
 import generator.GeneratorPackage;
-
-import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->

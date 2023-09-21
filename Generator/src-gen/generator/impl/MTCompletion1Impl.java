@@ -2,19 +2,17 @@
  */
 package generator.impl;
 
-import generator.ESingleTarget;
-import generator.GeneratorPackage;
-import generator.MTCompletion1;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+
+import generator.ESingleTarget;
+import generator.GeneratorPackage;
+import generator.MTCompletion1;
 
 /**
  * <!-- begin-user-doc -->

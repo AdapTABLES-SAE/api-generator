@@ -377,19 +377,19 @@ public class DungeonGenerator {
 		else if(roomElements.isExit()) { roomTypes = getExitRoomTypes(); }
 		else { roomTypes = getEntryRoomTypes(); }
 		
-		//System.out.println("Every roomtypes "+roomTypes);
-		//System.out.println("Room "+roomElements.getGameplay()+" "+roomElements.isEntry());
-		//System.out.println("entry: "+entry+" exit: "+exit+" ");
+		System.out.println("Every roomtypes "+roomTypes);
+		System.out.println("Room "+roomElements.getGameplay()+" "+roomElements.isEntry());
+		System.out.println("entry: "+entry+" exit: "+exit+" ");
 
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
-			//System.out.println(" roomtype: "+roomType.getName());
+			System.out.println(" roomtype: "+roomType.getName());
 
 			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {				
 				roomTypes.remove(roomType);
 			}
 			
 		}
-		//System.err.println("ALLOWED "+roomTypes);
+		System.err.println("ALLOWED "+roomTypes);
 		if(roomTypes.isEmpty()) { System.err.println("NO room type"); return null;}
 		RoomType rt = roomTypes.get(random.nextInt(roomTypes.size()));
 		//System.err.println("SELECTED RT "+rt.getName());
@@ -413,7 +413,7 @@ public class DungeonGenerator {
 		
 		Map<ElementSize, Map<Ability, Integer>> numberOfElementsPerSize = computesNumberOfElementsPerSize(roomElements);
 		
-		//System.out.println("COMPUTES positions "+numberOfElementsPerSize);
+		System.out.println("COMPUTES positions "+numberOfElementsPerSize);
 		
 		for (ElementSize size : numberOfElementsPerSize.keySet()) {
 			List<Position> roomPositionOfSize = getRoomTypePositionsOfSize(roomtype, size);

@@ -2,16 +2,14 @@
  */
 package generator.impl;
 
-import generator.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import generator.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -292,8 +290,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createECorrectnessFromString(eDataType, initialValue);
 		case GeneratorPackage.EBOUNDARY:
 			return createEBoundaryFromString(eDataType, initialValue);
-		case GeneratorPackage.ESTATEMENT_TYPE:
-			return createEStatementTypeFromString(eDataType, initialValue);
 		case GeneratorPackage.EROOM_TYPE:
 			return createERoomTypeFromString(eDataType, initialValue);
 		case GeneratorPackage.EGEOGRAPHY_VALUE:
@@ -302,6 +298,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createEHistoryTargetFromString(eDataType, initialValue);
 		case GeneratorPackage.ELEGEND_TARGET:
 			return createELegendTargetFromString(eDataType, initialValue);
+		case GeneratorPackage.ESTATEMENT_TYPE:
+			return createEStatementTypeFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -339,8 +337,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return convertECorrectnessToString(eDataType, instanceValue);
 		case GeneratorPackage.EBOUNDARY:
 			return convertEBoundaryToString(eDataType, instanceValue);
-		case GeneratorPackage.ESTATEMENT_TYPE:
-			return convertEStatementTypeToString(eDataType, instanceValue);
 		case GeneratorPackage.EROOM_TYPE:
 			return convertERoomTypeToString(eDataType, instanceValue);
 		case GeneratorPackage.EGEOGRAPHY_VALUE:
@@ -349,6 +345,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return convertEHistoryTargetToString(eDataType, instanceValue);
 		case GeneratorPackage.ELEGEND_TARGET:
 			return convertELegendTargetToString(eDataType, instanceValue);
+		case GeneratorPackage.ESTATEMENT_TYPE:
+			return convertEStatementTypeToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}

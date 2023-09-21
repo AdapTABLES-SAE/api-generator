@@ -533,6 +533,7 @@
         eType="#//AComponent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="perFactOrPropositions"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alternateComponents" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//AComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayValue" eType="#//Display"
@@ -607,16 +608,12 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="restrictedTo" upperBound="-1"
         eType="#//ETaskType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statementType" eType="#//EStatementType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NoQuestionGameplay" eSuperTypes="#//Gameplay"/>
   <eClassifiers xsi:type="ecore:EClass" name="Size" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="StatementElementType" eSuperTypes="#//ElementType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="forStructure" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EStatementType">
-    <eLiterals name="CLASSIC"/>
-    <eLiterals name="GRAPHIC" value="1"/>
-    <eLiterals name="TO_FILL_IN" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlayerProgress">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -790,5 +787,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Teachers">
     <eStructuralFeatures xsi:type="ecore:EReference" name="teachers" upperBound="-1"
         eType="#//Teacher" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EStatementType">
+    <eLiterals name="CLASSIC"/>
+    <eLiterals name="FILL_IN" value="1"/>
+    <eLiterals name="GRAPHIC" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

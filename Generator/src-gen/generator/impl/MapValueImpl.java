@@ -2,14 +2,13 @@
  */
 package generator.impl;
 
-import generator.GeneratorPackage;
-import generator.MapValue;
-
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
+
+import generator.GeneratorPackage;
+import generator.MapValue;
 
 /**
  * <!-- begin-user-doc -->

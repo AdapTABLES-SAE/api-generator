@@ -2,17 +2,16 @@
  */
 package generator.impl;
 
-import generator.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
+import generator.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -4104,6 +4103,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getStructure_AlternateComponents() {
+		return (EAttribute) structureEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getComponent() {
 		return componentEClass;
 	}
@@ -4457,6 +4465,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getQuestionGameplay_RestrictedTo() {
 		return (EAttribute) questionGameplayEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestionGameplay_StatementType() {
+		return (EAttribute) questionGameplayEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -5232,6 +5249,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		structureEClass = createEClass(STRUCTURE);
 		createEReference(structureEClass, STRUCTURE__COMPONENTS);
 		createEAttribute(structureEClass, STRUCTURE__PER_FACT_OR_PROPOSITIONS);
+		createEAttribute(structureEClass, STRUCTURE__ALTERNATE_COMPONENTS);
 
 		componentEClass = createEClass(COMPONENT);
 		createEReference(componentEClass, COMPONENT__DISPLAY_VALUE);
@@ -5287,6 +5305,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(questionGameplayEClass, QUESTION_GAMEPLAY__CATEGORY);
 		createEAttribute(questionGameplayEClass, QUESTION_GAMEPLAY__HAS_INTEGRATED_PROPOSITIONS);
 		createEAttribute(questionGameplayEClass, QUESTION_GAMEPLAY__RESTRICTED_TO);
+		createEAttribute(questionGameplayEClass, QUESTION_GAMEPLAY__STATEMENT_TYPE);
 
 		noQuestionGameplayEClass = createEClass(NO_QUESTION_GAMEPLAY);
 
@@ -5432,11 +5451,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		gpCategoryEEnum = createEEnum(GP_CATEGORY);
 		eCorrectnessEEnum = createEEnum(ECORRECTNESS);
 		eBoundaryEEnum = createEEnum(EBOUNDARY);
-		eStatementTypeEEnum = createEEnum(ESTATEMENT_TYPE);
 		eRoomTypeEEnum = createEEnum(EROOM_TYPE);
 		eGeographyValueEEnum = createEEnum(EGEOGRAPHY_VALUE);
 		eHistoryTargetEEnum = createEEnum(EHISTORY_TARGET);
 		eLegendTargetEEnum = createEEnum(ELEGEND_TARGET);
+		eStatementTypeEEnum = createEEnum(ESTATEMENT_TYPE);
 	}
 
 	/**
@@ -6281,6 +6300,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getStructure_PerFactOrPropositions(), ecorePackage.getEBoolean(), "perFactOrPropositions",
 				"false", 0, 1, Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStructure_AlternateComponents(), ecorePackage.getEBoolean(), "alternateComponents", null, 0,
+				1, Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -6391,6 +6413,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				"hasIntegratedPropositions", null, 0, 1, QuestionGameplay.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuestionGameplay_RestrictedTo(), this.getETaskType(), "restrictedTo", null, 0, -1,
+				QuestionGameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestionGameplay_StatementType(), this.getEStatementType(), "statementType", null, 0, 1,
 				QuestionGameplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
@@ -6732,11 +6757,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(eBoundaryEEnum, EBoundary.EQ_NB_FACTS);
 		addEEnumLiteral(eBoundaryEEnum, EBoundary.SUP_NB_FACTS);
 
-		initEEnum(eStatementTypeEEnum, EStatementType.class, "EStatementType");
-		addEEnumLiteral(eStatementTypeEEnum, EStatementType.CLASSIC);
-		addEEnumLiteral(eStatementTypeEEnum, EStatementType.GRAPHIC);
-		addEEnumLiteral(eStatementTypeEEnum, EStatementType.TO_FILL_IN);
-
 		initEEnum(eRoomTypeEEnum, ERoomType.class, "ERoomType");
 		addEEnumLiteral(eRoomTypeEEnum, ERoomType.ENTRY);
 		addEEnumLiteral(eRoomTypeEEnum, ERoomType.EXIT);
@@ -6755,6 +6775,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEEnum(eLegendTargetEEnum, ELegendTarget.class, "ELegendTarget");
 		addEEnumLiteral(eLegendTargetEEnum, ELegendTarget.SYMBOL);
 		addEEnumLiteral(eLegendTargetEEnum, ELegendTarget.TEXT);
+
+		initEEnum(eStatementTypeEEnum, EStatementType.class, "EStatementType");
+		addEEnumLiteral(eStatementTypeEEnum, EStatementType.CLASSIC);
+		addEEnumLiteral(eStatementTypeEEnum, EStatementType.FILL_IN);
+		addEEnumLiteral(eStatementTypeEEnum, EStatementType.GRAPHIC);
 
 		// Create resource
 		createResource(eNS_URI);

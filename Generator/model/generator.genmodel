@@ -88,11 +88,6 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EBoundary/EQ_NB_FACTS"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EBoundary/SUP_NB_FACTS"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EStatementType">
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EStatementType/CLASSIC"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EStatementType/GRAPHIC"/>
-      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EStatementType/TO_FILL_IN"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//ERoomType">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ERoomType/ENTRY"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ERoomType/EXIT"/>
@@ -111,6 +106,11 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//ELegendTarget">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ELegendTarget/SYMBOL"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ELegendTarget/TEXT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EStatementType">
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EStatementType/CLASSIC"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EStatementType/FILL_IN"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EStatementType/GRAPHIC"/>
     </genEnums>
     <genClasses image="false" ecoreClass="generator.ecore#//AbstractFact"/>
     <genClasses ecoreClass="generator.ecore#//SetOfFacts">
@@ -452,6 +452,7 @@
     <genClasses ecoreClass="generator.ecore#//Structure">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Structure/components"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Structure/perFactOrPropositions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Structure/alternateComponents"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Component">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Component/displayValue"/>
@@ -503,6 +504,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionGameplay/category"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionGameplay/hasIntegratedPropositions"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionGameplay/restrictedTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionGameplay/statementType"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//NoQuestionGameplay"/>
     <genClasses ecoreClass="generator.ecore#//Size"/>

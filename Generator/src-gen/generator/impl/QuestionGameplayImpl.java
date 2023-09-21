@@ -2,22 +2,19 @@
  */
 package generator.impl;
 
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+
+import generator.EStatementType;
 import generator.ETaskType;
 import generator.GPCategory;
 import generator.GeneratorPackage;
 import generator.QuestionGameplay;
-
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,6 +28,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  *   <li>{@link generator.impl.QuestionGameplayImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link generator.impl.QuestionGameplayImpl#isHasIntegratedPropositions <em>Has Integrated Propositions</em>}</li>
  *   <li>{@link generator.impl.QuestionGameplayImpl#getRestrictedTo <em>Restricted To</em>}</li>
+ *   <li>{@link generator.impl.QuestionGameplayImpl#getStatementType <em>Statement Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,6 +103,26 @@ public class QuestionGameplayImpl extends GameplayImpl implements QuestionGamepl
 	 * @ordered
 	 */
 	protected EList<ETaskType> restrictedTo;
+
+	/**
+	 * The default value of the '{@link #getStatementType() <em>Statement Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatementType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EStatementType STATEMENT_TYPE_EDEFAULT = EStatementType.CLASSIC;
+
+	/**
+	 * The cached value of the '{@link #getStatementType() <em>Statement Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatementType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStatementType statementType = STATEMENT_TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,6 +228,28 @@ public class QuestionGameplayImpl extends GameplayImpl implements QuestionGamepl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EStatementType getStatementType() {
+		return statementType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStatementType(EStatementType newStatementType) {
+		EStatementType oldStatementType = statementType;
+		statementType = newStatementType == null ? STATEMENT_TYPE_EDEFAULT : newStatementType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.QUESTION_GAMEPLAY__STATEMENT_TYPE,
+					oldStatementType, statementType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -221,6 +261,8 @@ public class QuestionGameplayImpl extends GameplayImpl implements QuestionGamepl
 			return isHasIntegratedPropositions();
 		case GeneratorPackage.QUESTION_GAMEPLAY__RESTRICTED_TO:
 			return getRestrictedTo();
+		case GeneratorPackage.QUESTION_GAMEPLAY__STATEMENT_TYPE:
+			return getStatementType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -247,6 +289,9 @@ public class QuestionGameplayImpl extends GameplayImpl implements QuestionGamepl
 			getRestrictedTo().clear();
 			getRestrictedTo().addAll((Collection<? extends ETaskType>) newValue);
 			return;
+		case GeneratorPackage.QUESTION_GAMEPLAY__STATEMENT_TYPE:
+			setStatementType((EStatementType) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -271,6 +316,9 @@ public class QuestionGameplayImpl extends GameplayImpl implements QuestionGamepl
 		case GeneratorPackage.QUESTION_GAMEPLAY__RESTRICTED_TO:
 			getRestrictedTo().clear();
 			return;
+		case GeneratorPackage.QUESTION_GAMEPLAY__STATEMENT_TYPE:
+			setStatementType(STATEMENT_TYPE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -291,6 +339,8 @@ public class QuestionGameplayImpl extends GameplayImpl implements QuestionGamepl
 			return hasIntegratedPropositions != HAS_INTEGRATED_PROPOSITIONS_EDEFAULT;
 		case GeneratorPackage.QUESTION_GAMEPLAY__RESTRICTED_TO:
 			return restrictedTo != null && !restrictedTo.isEmpty();
+		case GeneratorPackage.QUESTION_GAMEPLAY__STATEMENT_TYPE:
+			return statementType != STATEMENT_TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -314,6 +364,8 @@ public class QuestionGameplayImpl extends GameplayImpl implements QuestionGamepl
 		result.append(hasIntegratedPropositions);
 		result.append(", restrictedTo: ");
 		result.append(restrictedTo);
+		result.append(", statementType: ");
+		result.append(statementType);
 		result.append(')');
 		return result.toString();
 	}

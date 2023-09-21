@@ -29,24 +29,23 @@ public enum EStatementType implements Enumerator {
 	CLASSIC(0, "CLASSIC", "CLASSIC"),
 
 	/**
-	 * The '<em><b>GRAPHIC</b></em>' literal object.
+	 * The '<em><b>FILL IN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #GRAPHIC_VALUE
+	 * @see #FILL_IN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	GRAPHIC(1, "GRAPHIC", "GRAPHIC"),
-
+	FILL_IN(1, "FILL_IN", "FILL_IN"),
 	/**
-	 * The '<em><b>TO FILL IN</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TO_FILL_IN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TO_FILL_IN(2, "TO_FILL_IN", "TO_FILL_IN");
+	* The '<em><b>GRAPHIC</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #GRAPHIC_VALUE
+	* @generated
+	* @ordered
+	*/
+	GRAPHIC(2, "GRAPHIC", "GRAPHIC");
 
 	/**
 	 * The '<em><b>CLASSIC</b></em>' literal value.
@@ -60,6 +59,17 @@ public enum EStatementType implements Enumerator {
 	public static final int CLASSIC_VALUE = 0;
 
 	/**
+	 * The '<em><b>FILL IN</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #FILL_IN
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int FILL_IN_VALUE = 1;
+
+	/**
 	 * The '<em><b>GRAPHIC</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,18 +78,7 @@ public enum EStatementType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int GRAPHIC_VALUE = 1;
-
-	/**
-	 * The '<em><b>TO FILL IN</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TO_FILL_IN
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int TO_FILL_IN_VALUE = 2;
+	public static final int GRAPHIC_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>EStatement Type</b></em>' enumerators.
@@ -87,7 +86,7 @@ public enum EStatementType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final EStatementType[] VALUES_ARRAY = new EStatementType[] { CLASSIC, GRAPHIC, TO_FILL_IN, };
+	private static final EStatementType[] VALUES_ARRAY = new EStatementType[] { CLASSIC, FILL_IN, GRAPHIC, };
 
 	/**
 	 * A public read-only list of all the '<em><b>EStatement Type</b></em>' enumerators.
@@ -145,10 +144,10 @@ public enum EStatementType implements Enumerator {
 		switch (value) {
 		case CLASSIC_VALUE:
 			return CLASSIC;
+		case FILL_IN_VALUE:
+			return FILL_IN;
 		case GRAPHIC_VALUE:
 			return GRAPHIC;
-		case TO_FILL_IN_VALUE:
-			return TO_FILL_IN;
 		}
 		return null;
 	}

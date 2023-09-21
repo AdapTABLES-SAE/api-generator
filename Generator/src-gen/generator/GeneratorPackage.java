@@ -5070,13 +5070,22 @@ public interface GeneratorPackage extends EPackage {
 	int STRUCTURE__PER_FACT_OR_PROPOSITIONS = ACOMPONENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Alternate Components</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__ALTERNATE_COMPONENTS = ACOMPONENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Structure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_FEATURE_COUNT = ACOMPONENT_FEATURE_COUNT + 2;
+	int STRUCTURE_FEATURE_COUNT = ACOMPONENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Structure</em>' class.
@@ -5948,13 +5957,22 @@ public interface GeneratorPackage extends EPackage {
 	int QUESTION_GAMEPLAY__RESTRICTED_TO = GAMEPLAY_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Statement Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION_GAMEPLAY__STATEMENT_TYPE = GAMEPLAY_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Question Gameplay</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_GAMEPLAY_FEATURE_COUNT = GAMEPLAY_FEATURE_COUNT + 4;
+	int QUESTION_GAMEPLAY_FEATURE_COUNT = GAMEPLAY_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Question Gameplay</em>' class.
@@ -8032,7 +8050,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 127;
+	int ESTATEMENT_TYPE = 131;
 
 	/**
 	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
@@ -8042,7 +8060,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
 	 * @generated
 	 */
-	int EROOM_TYPE = 128;
+	int EROOM_TYPE = 127;
 
 	/**
 	 * The meta object id for the '{@link generator.EGeographyValue <em>EGeography Value</em>}' enum.
@@ -8052,7 +8070,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEGeographyValue()
 	 * @generated
 	 */
-	int EGEOGRAPHY_VALUE = 129;
+	int EGEOGRAPHY_VALUE = 128;
 
 	/**
 	 * The meta object id for the '{@link generator.EHistoryTarget <em>EHistory Target</em>}' enum.
@@ -8062,7 +8080,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEHistoryTarget()
 	 * @generated
 	 */
-	int EHISTORY_TARGET = 130;
+	int EHISTORY_TARGET = 129;
 
 	/**
 	 * The meta object id for the '{@link generator.ELegendTarget <em>ELegend Target</em>}' enum.
@@ -8072,7 +8090,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getELegendTarget()
 	 * @generated
 	 */
-	int ELEGEND_TARGET = 131;
+	int ELEGEND_TARGET = 130;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -11741,6 +11759,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getStructure_PerFactOrPropositions();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.Structure#isAlternateComponents <em>Alternate Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alternate Components</em>'.
+	 * @see generator.Structure#isAlternateComponents()
+	 * @see #getStructure()
+	 * @generated
+	 */
+	EAttribute getStructure_AlternateComponents();
+
+	/**
 	 * Returns the meta object for class '{@link generator.Component <em>Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12163,6 +12192,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getQuestionGameplay_RestrictedTo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.QuestionGameplay#getStatementType <em>Statement Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Statement Type</em>'.
+	 * @see generator.QuestionGameplay#getStatementType()
+	 * @see #getQuestionGameplay()
+	 * @generated
+	 */
+	EAttribute getQuestionGameplay_StatementType();
 
 	/**
 	 * Returns the meta object for class '{@link generator.NoQuestionGameplay <em>No Question Gameplay</em>}'.
@@ -15589,6 +15629,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute STRUCTURE__PER_FACT_OR_PROPOSITIONS = eINSTANCE.getStructure_PerFactOrPropositions();
 
 		/**
+		 * The meta object literal for the '<em><b>Alternate Components</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRUCTURE__ALTERNATE_COMPONENTS = eINSTANCE.getStructure_AlternateComponents();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.ComponentImpl <em>Component</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -15939,6 +15987,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute QUESTION_GAMEPLAY__RESTRICTED_TO = eINSTANCE.getQuestionGameplay_RestrictedTo();
+
+		/**
+		 * The meta object literal for the '<em><b>Statement Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTION_GAMEPLAY__STATEMENT_TYPE = eINSTANCE.getQuestionGameplay_StatementType();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.NoQuestionGameplayImpl <em>No Question Gameplay</em>}' class.

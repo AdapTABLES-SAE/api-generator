@@ -2,15 +2,13 @@
  */
 package generator.impl;
 
-import generator.GeneratorPackage;
-import generator.Prompt;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import generator.GeneratorPackage;
+import generator.Prompt;
 
 /**
  * <!-- begin-user-doc -->

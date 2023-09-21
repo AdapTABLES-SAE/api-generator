@@ -2,17 +2,15 @@
  */
 package generator.impl;
 
-import generator.Directions;
-import generator.GeneratorPackage;
-import generator.SmallRoomType;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+
+import generator.Directions;
+import generator.GeneratorPackage;
+import generator.SmallRoomType;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,16 +2,14 @@
  */
 package generator.impl;
 
-import generator.GeneratorPackage;
-import generator.MTQFCompletion2;
-
 import java.util.Objects;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import generator.GeneratorPackage;
+import generator.MTQFCompletion2;
 
 /**
  * <!-- begin-user-doc -->

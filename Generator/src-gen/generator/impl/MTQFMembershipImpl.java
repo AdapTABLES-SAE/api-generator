@@ -2,21 +2,17 @@
  */
 package generator.impl;
 
-import generator.GeneratorPackage;
-import generator.MTQFMembership;
-
 import java.util.Collection;
 import java.util.Objects;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+
+import generator.GeneratorPackage;
+import generator.MTQFMembership;
 
 /**
  * <!-- begin-user-doc -->

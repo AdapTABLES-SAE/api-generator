@@ -1,12 +1,5 @@
 
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import java.util.List;
-
-import org.junit.Test;
-
-import generator.ResultsByTask;
 import generators.ALGAGenerator;
 
 class FactsGenerationTestOLD {

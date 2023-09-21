@@ -1171,6 +1171,8 @@
           wearStatement="true"/>
       <prompt
           prompt="Casse les bons elements"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -1221,6 +1223,8 @@
           wearStatement="true"/>
       <prompt
           prompt="Oriente correctement l(es) element(s)"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -1403,6 +1407,112 @@
       </components>
       <prompt
           prompt="Touche les bons elements"/>
+      <restrictedTo>IDENTIFY</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_UNIQUE_MOVABLE_FILL_IN"
+        undoable="true"
+        category="MOVE_UNIQUE"
+        statementType="FILL_IN">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="FILL_IN_DISPLAY"
+          perFactOrPropositions="true"
+          alternateComponents="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DISPLAY"
+            wearStatement="true"/>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="MOVABLE"
+          wearChoices="true"/>
+      <prompt
+          prompt="Place les bons elements"/>
+      <restrictedTo>ORDER</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE_MOVABLE_FILL_IN"
+        undoable="true"
+        manualValidation="true"
+        category="MOVE_MULTIPLE"
+        statementType="FILL_IN">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="FILL_IN_DISPLAY"
+          perFactOrPropositions="true"
+          alternateComponents="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DISPLAY"
+            wearStatement="true"/>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="MOVABLE"
+          wearChoices="true"/>
+      <prompt
+          prompt="Place les bons elements"/>
+      <restrictedTo>ORDER</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_ROTABLE_MULTIPLE"
+        undoable="true"
+        manualValidation="true"
+        category="ORIENT_MULTIPLE">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="VERTICAL_DISPLAY"
+          perFactOrPropositions="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DISPLAY"
+            wearStatement="true"/>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="ROTABLE"
+            wearChoices="true"/>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="VERIFICATOR"/>
+      <prompt
+          prompt="Oriente correctement l(es) element(s)"/>
+      <restrictedTo>IDENTIFY</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE_OPENABLE-IDENTIFY"
+        category="SELECT_MULTIPLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="OPENABLE"
+          wearChoices="true"
+          wearStatement="true"/>
+      <prompt
+          prompt="Ouvre les bons elements"/>
       <restrictedTo>IDENTIFY</restrictedTo>
     </gameplays>
   </gameplays>
@@ -1611,6 +1721,11 @@
           type="AvatarDetector"
           nbDisplays="1"
           ability="DETECTOR_AVATAR"/>
+      <elements
+          size="LARGE"
+          ID="STRUCT_FILL_IN"
+          type="StructureStatement"
+          ability="FILL_IN_DISPLAY"/>
     </elementTypes>
   </elements>
   <abilities>
@@ -1659,5 +1774,7 @@
         name="FOLLOWABLE_DETECTOR"/>
     <abilities
         name="DETECTOR_AVATAR"/>
+    <abilities
+        name="FILL_IN_DISPLAY"/>
   </abilities>
 </generator:GameDescription>

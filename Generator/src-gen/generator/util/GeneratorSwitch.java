@@ -2,12 +2,11 @@
  */
 package generator.util;
 
-import generator.*;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
+
+import generator.*;
 
 /**
  * <!-- begin-user-doc -->

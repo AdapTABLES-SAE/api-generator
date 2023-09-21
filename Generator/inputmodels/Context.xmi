@@ -3,7 +3,13 @@
   <learnerPlayers>
     <learnerPlayers name="Learner FICTIF" ID="learnerFic">
       <progression>
-        <playerProgress currentLevel="12" coins="0"/>
+        <playerProgress currentLevel="12" coins="0">
+          <items>
+            <items bought="true" activated="true">
+              <equipment href="GameDescription.xmi#BRACELET"/>
+            </items>
+          </items>
+        </playerProgress>
         <learnerProgress>
           <currentobjectivelevels achieved="false">
             <objective href="LearningDomain.xmi#PATH404-O1"/>
@@ -119,7 +125,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH404"/>
-      <statistics maxGameLevelReached="12" nbLevelsGenerated="131"/>
+      <statistics maxGameLevelReached="12" nbLevelsGenerated="160"/>
     </learnerPlayers>
   </learnerPlayers>
 </generator:Classroom>

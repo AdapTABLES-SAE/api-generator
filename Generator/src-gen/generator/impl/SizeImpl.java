@@ -2,10 +2,10 @@
  */
 package generator.impl;
 
+import org.eclipse.emf.ecore.EClass;
+
 import generator.GeneratorPackage;
 import generator.Size;
-
-import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->

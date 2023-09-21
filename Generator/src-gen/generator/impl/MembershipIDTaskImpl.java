@@ -2,17 +2,18 @@
  */
 package generator.impl;
 
-import generator.ATask;
+import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import generator.ATask;
 import generator.ETaskType;
 import generator.GeneratorPackage;
 import generator.MembershipIDTask;
 import generator.MultipleChoice;
-import java.lang.reflect.InvocationTargetException;
 
 /**
  * <!-- begin-user-doc -->
