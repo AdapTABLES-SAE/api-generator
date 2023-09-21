@@ -94,9 +94,11 @@ public class EducationalElementsGenerator {
 	public void instanciateQFbyTasks() {
 		System.err.println("chosen OBJLVL "+ dungeonElements.getChosenLevel().getID()+" "+dungeonElements.getChosenObjective().getID());
 		
-		if(dungeonElements.getCurrentObjectiveLevel().getResults() == null) {
+		if(dungeonElements.getCurrentObjectiveLevel().getResults() == null || dungeonElements.getCurrentObjectiveLevel().getResults().getResultsbytask().isEmpty()) {
+			System.out.println("AQUIIIIIIIIIIII"+dungeonElements.getChosenLevel().getTasks());
 			dungeonElements.getCurrentObjectiveLevel().setResults(new ResultsImpl());
 			for(ATask task: dungeonElements.getChosenLevel().getTasks()) {
+				System.out.println("IN loop");
 				ResultsByTask rbt = new ResultsByTaskImpl();
 				rbt.setTask(task);
 				dungeonElements.getCurrentObjectiveLevel().getResults().getResultsbytask().add(rbt);
@@ -141,12 +143,16 @@ public class EducationalElementsGenerator {
 	private void defineNumberOfRoomPerTaskNecessary() throws Exception {
 		if(dungeonElements.getChosenObjective() != null && dungeonElements.getChosenLevel() != null) {
 			double coeff = computesCoeffApparition();	
+			System.out.println("chosen "+dungeonElements.getLearnerResultsByTasks());
 			for (ResultsByTask rbt : dungeonElements.getLearnerResultsByTasks()) {
 				if(!isTaskAchieved(rbt.getTask())) {
 					addRoom2Task(rbt, coeff);
 				}
 			}
 		}
+		
+
+		System.out.println("ROOM defineds "+nbRoomsToTask);
 		this.cleanNumberOfComputedRooms();
 	}
 	
@@ -191,7 +197,7 @@ public class EducationalElementsGenerator {
 		//System.out.println("Missing nbRoom "+numberOfHigherTask);
 		List<ResultsByTask> tasks = new ArrayList<>();
 		List<ResultsByTask> tasks_temp = new ArrayList<>(nbRoomsToTask.keySet());
-		//System.out.println("Possibilities "+tasks_temp);
+		System.out.println("Possibilities "+tasks_temp);
 
 		for(int i = 0; i < numberOfHigherTask; i++) {
 			tasks.add(getTaskWithHigherNumberOfRoom(tasks_temp));
@@ -270,6 +276,7 @@ public class EducationalElementsGenerator {
 	
 	private void selectObjectiveLevel() {
 		List<CurrentObjectiveLevel> allowed = eligibleObjectiveLevels(); 
+		System.out.println("Allowed "+allowed);
 		dungeonElements.setCurrentObjectiveLevel(allowed.get(random.nextInt(allowed.size())));
 	}
 	

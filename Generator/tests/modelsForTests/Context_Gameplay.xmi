@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<generator:Context xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:generator="http://www.example.org/generator">
+<generator:Classroom xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:generator="http://www.example.org/generator">
   <gamecontext/>
   <learnerPlayers>
     <learnerPlayers name="Learner 03 (everything is bought but not activated) " ID="LP03">
@@ -71,7 +71,7 @@
         <learnerProgress/>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_FACTS_TEST_2"/>
-      <statistics maxGameLevelReached="4" nbLevelsGenerated="2149"/>
+      <statistics maxGameLevelReached="4" nbLevelsGenerated="3031"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 00 " ID="LP00">
       <progression>
@@ -79,7 +79,7 @@
         <learnerProgress/>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_FACTS_TEST"/>
-      <statistics maxGameLevelReached="4" nbLevelsGenerated="1373"/>
+      <statistics maxGameLevelReached="4" nbLevelsGenerated="1414"/>
     </learnerPlayers>
   </learnerPlayers>
-</generator:Context>
+</generator:Classroom>
