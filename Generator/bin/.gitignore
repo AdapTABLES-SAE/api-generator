@@ -1,4 +1,5 @@
 /generators/
-/educational_dimension/
-/generator/
-/structures/
+/managers/
+/factgenerator_template/
+/factsgenerator_maths/
+/modelsForTests/

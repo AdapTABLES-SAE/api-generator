@@ -448,17 +448,17 @@
     <genClasses ecoreClass="generator.ecore#//AComponent">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//AComponent/allowedAbility"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//AComponent/expectedSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//AComponent/forProposition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//AComponent/forStatement"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Structure">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Structure/components"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Structure/perFactOrPropositions"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Structure/alternateComponents"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Structure/forFact"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Component">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Component/displayValue"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Component/wearChoices"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Component/defaultCorrectness"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Component/wearStatement"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Component/inputEntry"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Component/quantity"/>
     </genClasses>

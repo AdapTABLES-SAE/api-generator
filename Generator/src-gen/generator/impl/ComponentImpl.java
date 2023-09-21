@@ -23,9 +23,7 @@ import generator.Quantity;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.ComponentImpl#getDisplayValue <em>Display Value</em>}</li>
- *   <li>{@link generator.impl.ComponentImpl#isWearChoices <em>Wear Choices</em>}</li>
  *   <li>{@link generator.impl.ComponentImpl#getDefaultCorrectness <em>Default Correctness</em>}</li>
- *   <li>{@link generator.impl.ComponentImpl#isWearStatement <em>Wear Statement</em>}</li>
  *   <li>{@link generator.impl.ComponentImpl#isInputEntry <em>Input Entry</em>}</li>
  *   <li>{@link generator.impl.ComponentImpl#getQuantity <em>Quantity</em>}</li>
  * </ul>
@@ -44,26 +42,6 @@ public class ComponentImpl extends AComponentImpl implements Component {
 	protected Display displayValue;
 
 	/**
-	 * The default value of the '{@link #isWearChoices() <em>Wear Choices</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isWearChoices()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean WEAR_CHOICES_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isWearChoices() <em>Wear Choices</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isWearChoices()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean wearChoices = WEAR_CHOICES_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getDefaultCorrectness() <em>Default Correctness</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -72,26 +50,6 @@ public class ComponentImpl extends AComponentImpl implements Component {
 	 * @ordered
 	 */
 	protected Correctness defaultCorrectness;
-
-	/**
-	 * The default value of the '{@link #isWearStatement() <em>Wear Statement</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isWearStatement()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean WEAR_STATEMENT_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isWearStatement() <em>Wear Statement</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isWearStatement()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean wearStatement = WEAR_STATEMENT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isInputEntry() <em>Input Entry</em>}' attribute.
@@ -197,28 +155,6 @@ public class ComponentImpl extends AComponentImpl implements Component {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isWearChoices() {
-		return wearChoices;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWearChoices(boolean newWearChoices) {
-		boolean oldWearChoices = wearChoices;
-		wearChoices = newWearChoices;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.COMPONENT__WEAR_CHOICES,
-					oldWearChoices, wearChoices));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Correctness getDefaultCorrectness() {
 		return defaultCorrectness;
 	}
@@ -262,28 +198,6 @@ public class ComponentImpl extends AComponentImpl implements Component {
 		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS,
 					newDefaultCorrectness, newDefaultCorrectness));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isWearStatement() {
-		return wearStatement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWearStatement(boolean newWearStatement) {
-		boolean oldWearStatement = wearStatement;
-		wearStatement = newWearStatement;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.COMPONENT__WEAR_STATEMENT,
-					oldWearStatement, wearStatement));
 	}
 
 	/**
@@ -386,12 +300,8 @@ public class ComponentImpl extends AComponentImpl implements Component {
 		switch (featureID) {
 		case GeneratorPackage.COMPONENT__DISPLAY_VALUE:
 			return getDisplayValue();
-		case GeneratorPackage.COMPONENT__WEAR_CHOICES:
-			return isWearChoices();
 		case GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS:
 			return getDefaultCorrectness();
-		case GeneratorPackage.COMPONENT__WEAR_STATEMENT:
-			return isWearStatement();
 		case GeneratorPackage.COMPONENT__INPUT_ENTRY:
 			return isInputEntry();
 		case GeneratorPackage.COMPONENT__QUANTITY:
@@ -411,14 +321,8 @@ public class ComponentImpl extends AComponentImpl implements Component {
 		case GeneratorPackage.COMPONENT__DISPLAY_VALUE:
 			setDisplayValue((Display) newValue);
 			return;
-		case GeneratorPackage.COMPONENT__WEAR_CHOICES:
-			setWearChoices((Boolean) newValue);
-			return;
 		case GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS:
 			setDefaultCorrectness((Correctness) newValue);
-			return;
-		case GeneratorPackage.COMPONENT__WEAR_STATEMENT:
-			setWearStatement((Boolean) newValue);
 			return;
 		case GeneratorPackage.COMPONENT__INPUT_ENTRY:
 			setInputEntry((Boolean) newValue);
@@ -441,14 +345,8 @@ public class ComponentImpl extends AComponentImpl implements Component {
 		case GeneratorPackage.COMPONENT__DISPLAY_VALUE:
 			setDisplayValue((Display) null);
 			return;
-		case GeneratorPackage.COMPONENT__WEAR_CHOICES:
-			setWearChoices(WEAR_CHOICES_EDEFAULT);
-			return;
 		case GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS:
 			setDefaultCorrectness((Correctness) null);
-			return;
-		case GeneratorPackage.COMPONENT__WEAR_STATEMENT:
-			setWearStatement(WEAR_STATEMENT_EDEFAULT);
 			return;
 		case GeneratorPackage.COMPONENT__INPUT_ENTRY:
 			setInputEntry(INPUT_ENTRY_EDEFAULT);
@@ -470,12 +368,8 @@ public class ComponentImpl extends AComponentImpl implements Component {
 		switch (featureID) {
 		case GeneratorPackage.COMPONENT__DISPLAY_VALUE:
 			return displayValue != null;
-		case GeneratorPackage.COMPONENT__WEAR_CHOICES:
-			return wearChoices != WEAR_CHOICES_EDEFAULT;
 		case GeneratorPackage.COMPONENT__DEFAULT_CORRECTNESS:
 			return defaultCorrectness != null;
-		case GeneratorPackage.COMPONENT__WEAR_STATEMENT:
-			return wearStatement != WEAR_STATEMENT_EDEFAULT;
 		case GeneratorPackage.COMPONENT__INPUT_ENTRY:
 			return inputEntry != INPUT_ENTRY_EDEFAULT;
 		case GeneratorPackage.COMPONENT__QUANTITY:
@@ -495,11 +389,7 @@ public class ComponentImpl extends AComponentImpl implements Component {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (wearChoices: ");
-		result.append(wearChoices);
-		result.append(", wearStatement: ");
-		result.append(wearStatement);
-		result.append(", inputEntry: ");
+		result.append(" (inputEntry: ");
 		result.append(inputEntry);
 		result.append(')');
 		return result.toString();

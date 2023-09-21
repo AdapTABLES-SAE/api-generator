@@ -14143,7 +14143,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_OBJECTIVE_LEVEL_TESTS"/>
-      <statistics maxGameLevelReached="1" nbLevelsGenerated="300"/>
+      <statistics maxGameLevelReached="1" nbLevelsGenerated="450"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 001 [TEST_OL]" ID="LP001">
       <progression>
@@ -14245,7 +14245,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_OBJECTIVE_LEVEL_TESTS"/>
-      <statistics maxGameLevelReached="5" nbLevelsGenerated="1200"/>
+      <statistics maxGameLevelReached="5" nbLevelsGenerated="1800"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 019 [TEST_OL] (every objectives are finished but not all are at 100%)" ID="LP019">
       <progression>
@@ -14394,7 +14394,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_OBJECTIVE_LEVEL_TESTS"/>
-      <statistics maxGameLevelReached="1" nbLevelsGenerated="300"/>
+      <statistics maxGameLevelReached="1" nbLevelsGenerated="450"/>
     </learnerPlayers>
   </learnerPlayers>
 </generator:Classroom>

@@ -12,9 +12,7 @@ package generator;
  * </p>
  * <ul>
  *   <li>{@link generator.Component#getDisplayValue <em>Display Value</em>}</li>
- *   <li>{@link generator.Component#isWearChoices <em>Wear Choices</em>}</li>
  *   <li>{@link generator.Component#getDefaultCorrectness <em>Default Correctness</em>}</li>
- *   <li>{@link generator.Component#isWearStatement <em>Wear Statement</em>}</li>
  *   <li>{@link generator.Component#isInputEntry <em>Input Entry</em>}</li>
  *   <li>{@link generator.Component#getQuantity <em>Quantity</em>}</li>
  * </ul>
@@ -47,29 +45,6 @@ public interface Component extends AComponent {
 	void setDisplayValue(Display value);
 
 	/**
-	 * Returns the value of the '<em><b>Wear Choices</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Wear Choices</em>' attribute.
-	 * @see #setWearChoices(boolean)
-	 * @see generator.GeneratorPackage#getComponent_WearChoices()
-	 * @model default="false"
-	 * @generated
-	 */
-	boolean isWearChoices();
-
-	/**
-	 * Sets the value of the '{@link generator.Component#isWearChoices <em>Wear Choices</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wear Choices</em>' attribute.
-	 * @see #isWearChoices()
-	 * @generated
-	 */
-	void setWearChoices(boolean value);
-
-	/**
 	 * Returns the value of the '<em><b>Default Correctness</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -90,29 +65,6 @@ public interface Component extends AComponent {
 	 * @generated
 	 */
 	void setDefaultCorrectness(Correctness value);
-
-	/**
-	 * Returns the value of the '<em><b>Wear Statement</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Wear Statement</em>' attribute.
-	 * @see #setWearStatement(boolean)
-	 * @see generator.GeneratorPackage#getComponent_WearStatement()
-	 * @model default="false"
-	 * @generated
-	 */
-	boolean isWearStatement();
-
-	/**
-	 * Sets the value of the '{@link generator.Component#isWearStatement <em>Wear Statement</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wear Statement</em>' attribute.
-	 * @see #isWearStatement()
-	 * @generated
-	 */
-	void setWearStatement(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Input Entry</b></em>' attribute.

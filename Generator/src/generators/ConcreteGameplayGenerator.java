@@ -34,6 +34,7 @@ import generator.impl.PositionedStructureElementImpl;
 import generator.impl.PropositionParamImpl;
 import generator.impl.ValueImpl;
 import managers.ModelsManager;
+import managers.QuestionedFactSplitter;
 import structures.RoomElements;
 import structures.Shuffle;
 
@@ -77,7 +78,7 @@ public class ConcreteGameplayGenerator {
 	}	
 	
 	private boolean isSingleChoiceComponent(Component component, ElementType elementType) {
-		return component.isWearChoices() && elementType.getNbDisplays() == 1;
+		return component.isForProposition() && elementType.getNbDisplays() == 1;
 	}
 	
 	private List<PositionedElement> buildNoQuestionGameplay(Component component, RoomElements roomElements){
@@ -101,15 +102,15 @@ public class ConcreteGameplayGenerator {
 		
 		boolean hasIntegratedChoice = ((QuestionGameplay) roomElements.getGameplay()).isHasIntegratedPropositions();
 		
-		if(component.isWearChoices() && component.isWearStatement()) {
+		if(component.isForProposition() && component.isForStatement()) {
 			//for (int i = 0; i < fact.getPropositions().size(); i++) {
 				elements.add(buildStatementAsChoicesElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
 			//}
-		} else if(component.isWearStatement()) {
+		} else if(component.isForStatement()) {
 			elements.add(buildStatementElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
 		} 
 		else if(component.isInputEntry()) { elements.add(buildInputEntryElement(component, elementType, fact, getAvailablePosition(roomtype, elementType))); }
-		else if(component.isWearChoices()) {
+		else if(component.isForProposition()) {
 			if(isSingleChoiceComponent(component, (ElementType) elementType)) {
 				for (int i = 0; i < fact.getPropositions().size(); i++) {
 					elements.add(buildSingleChoiceElement(component, elementType, fact, i, getAvailablePosition(roomtype, elementType), hasIntegratedChoice));
@@ -169,15 +170,7 @@ public class ConcreteGameplayGenerator {
 		statement.setInteractive(((QuestionParam) fact.getQuestion()).isInteractive());
 		comp.getDisplays().add(statement);
 				
-		if(!((QuestionParam) fact.getQuestion()).getSolutions().isEmpty()) {
-			for (FactSolutionParam factSol: ((QuestionParam) fact.getQuestion()).getSolutions()) {
-				FactSolutionParam sol = new FactSolutionParamImpl();
-				Value solValue = new ValueImpl();
-				solValue.setValue(((Value) factSol.getValue()).getValue());
-				sol.setValue(solValue);
-				comp.getAcceptedFacts().add(sol);
-			}
-		}
+		buildAcceptedSolutions(comp, fact);
 		return comp;
 	}
 	
@@ -384,7 +377,16 @@ public class ConcreteGameplayGenerator {
 	 * @return True if it wears choices, else false
 	 */
 	private boolean isComponentWearChoice(AComponent component) {
-		return component instanceof Component && ((Component) component).isWearChoices();
+		return component instanceof Component && component.isForProposition();
+	}
+	
+	/**
+	 * Predicate: does a component must wear a statement?
+	 * @param component
+	 * @return True if it wears statement, else false
+	 */
+	private boolean isComponentWearStatement(AComponent component) {
+		return component instanceof Component && component.isForStatement();
 	}
 	
 	/**
@@ -393,7 +395,7 @@ public class ConcreteGameplayGenerator {
 	 * @return True if it wears more than one choice, else false
 	 */
 	private boolean isComponentWearChoices(AComponent component, ElementType elementType) {
-		return component instanceof Component && ((Component) component).isWearChoices() && elementType.getNbDisplays() > 1;
+		return isComponentWearChoice(component) && elementType.getNbDisplays() > 1;
 	}
 	
 	private int getNumberOfChoicesWornBy(ElementType elementType) {
@@ -402,7 +404,7 @@ public class ConcreteGameplayGenerator {
 	
 	private boolean structureHasWearPropositions(Structure aStructure) {
 		for (AComponent component : aStructure.getComponents()) {
-			if(component instanceof Component && ((Component) component).isWearChoices()) {
+			if(component instanceof Component && component.isForProposition()) {
 				return true;
 			}
 		}
@@ -462,16 +464,117 @@ public class ConcreteGameplayGenerator {
 	
 	private List<PositionedElement> buildStructureForFactStatement(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType){
 		List<PositionedElement> elements = new ArrayList<>();
-		Structure comp = (Structure) component;
-		if(positionFromParent == null || !hasForParentAStructure(positionFromParent)) {
-			positionFromParent = getAvailablePosition(roomElements.getRoomTypeOfRoom(), elementType);
+		
+		
+		Component componentForText = null, componentForDetectors = null;
+		ElementType elementForTexts = null, elementForDetectors = null;
+		if(component.isAlternateComponents()) {
+			componentForText = getComponentForText(component);
+			componentForDetectors = getComponentForDetectors(component);
+			elementForTexts = roomElements.getElementTypeFor(componentForText);
+			elementForDetectors = roomElements.getElementTypeFor(componentForDetectors);
 		}
-		PositionedStructureElement struct = buildStructure(comp, elementType, positionFromParent);
-		elements.add(struct);
-		for (AComponent aComp : comp.getComponents()) {
-			elements.addAll(buildStructuredGameplay(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, 0, -1));
-		}
+		
+		for (int i = 0; i < roomElements.getFacts().size(); i++) {
+			Structure comp = (Structure) component;
+			if(positionFromParent == null || !hasForParentAStructure(positionFromParent)) {
+				positionFromParent = getAvailablePosition(roomElements.getRoomTypeOfRoom(), elementType);
+			}
+			PositionedStructureElement struct = buildStructure(comp, elementType, positionFromParent);
+			struct.setFact(roomElements.getFacts().get(i));
+			buildAcceptedSolutions(struct, roomElements.getFacts().get(i));
+			elements.add(struct);	
+			
+			if(component.isAlternateComponents()) {
+				elements.addAll(buildFillInStructureContent(roomElements.getFacts().get(i), roomElements, component, struct, elementForTexts, componentForText, elementForDetectors, componentForDetectors));
+			} else {
+				for (AComponent aComp : comp.getComponents()) {
+					elements.addAll(buildStructuredGameplay(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, 0, -1));
+				}
+			}
+		}		
 		return elements;
+	}
+	
+	private void buildAcceptedSolutions(PositionedElement element, QuestionedFact fact) {
+		if(!((QuestionParam) fact.getQuestion()).getSolutions().isEmpty()) {
+			for (FactSolutionParam factSol: ((QuestionParam) fact.getQuestion()).getSolutions()) {
+				FactSolutionParam sol = new FactSolutionParamImpl();
+				Value solValue = new ValueImpl();
+				solValue.setValue(((Value) factSol.getValue()).getValue());
+				sol.setValue(solValue);
+				element.getAcceptedFacts().add(sol);
+			}
+		}
+	}
+	
+	private Component getComponentForText(Structure component) {
+		for(AComponent comp: component.getComponents()) {
+			System.out.println("COMPPP "+comp.getAllowedAbility());
+			System.out.println("COMPPP statemeent "+comp.isForStatement());
+			if(comp instanceof Structure) {
+				System.err.println("Structure for FILL-IN question does not deal with inside strucutres.");
+			} else {
+				if(comp.isForStatement()) {
+					return (Component) comp;
+				}
+			}
+		}
+		return null;
+	}
+	
+	private Component getComponentForDetectors(Structure component) {
+		for(AComponent comp: component.getComponents()) {
+			if(comp instanceof Structure) {
+				System.err.println("Structure for FILL-IN question does not deal with inside strucutres.");
+			} else {
+				if(!comp.isForStatement()) {
+					return (Component) comp;
+				}
+			}
+		}
+		return null;
+	}
+	
+	private List<PositionedElement> buildFillInStructureContent(QuestionedFact fact, RoomElements roomElements, Structure component, PositionedStructureElement structure, ElementType elementForTexts, Component componentForText, ElementType elementForDetectors, Component componentForDetectors) {
+		List<PositionedElement> elements = new ArrayList<>();
+		
+		QuestionedFactSplitter splitter = new QuestionedFactSplitter(fact);
+		
+		int conditionForTextAppearance; 
+		if(splitter.isBeginByText()) {
+			conditionForTextAppearance = 0;
+		} else {
+			conditionForTextAppearance = 1;
+		}
+		
+		int textIndex = 0;
+		System.out.println("Number OF "+splitter.numberOfHoles()+splitter.numberOfTexts());
+		for(int i = 0; i < splitter.numberOfHoles()+splitter.numberOfTexts(); i++) {
+			
+			if(i%2 == conditionForTextAppearance) {
+				System.out.println("text");
+				elements.add(buildFillInElement(componentForText, elementForTexts, fact, structure.getCreatedPosition(),  splitter.getTexts().get(textIndex)));
+				textIndex++;
+			} else {
+				System.out.println("detector");
+				elements.add(buildFillInElement(componentForDetectors, elementForDetectors, fact, structure.getCreatedPosition(), ""));
+			}
+		}
+
+		return elements;
+	}
+	
+	private PositionedElement buildFillInElement(Component component, ElementType elementType, QuestionedFact fact, Position position, String value) {
+		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
+		if(!value.isEmpty()) {
+			Display defaultDisplay = new DisplayImpl();
+			Value displayValue = new ValueImpl();
+			displayValue.setValue(value);
+			defaultDisplay.setValue(displayValue);
+			comp.getDisplays().add(defaultDisplay);
+		}
+		return comp;
 	}
 	
 	private List<PositionedElement> buildSimpleStructure(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType, int propositionIndex, int factIndex){
@@ -485,7 +588,7 @@ public class ConcreteGameplayGenerator {
 		
 		for (AComponent aComp : comp.getComponents()) {
 			elementType = roomElements.getElementTypeFor(aComp);				
-			if(aComp instanceof Component && ((Component) aComp).isWearStatement()) {
+			if(aComp instanceof Component && aComp.isForStatement()) {
 				elements.addAll(buildStructuredGameplay(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, factIndex, propositionIndex));	
 			} else {
 				elements.addAll(buildStructuredGameplay(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, -1, propositionIndex));
@@ -499,11 +602,11 @@ public class ConcreteGameplayGenerator {
 		boolean hasIntegratedChoices = ((QuestionGameplay) roomElements.getGameplay()).isHasIntegratedPropositions();
 		// Les objets avec des quantites n'ont pas de sens dans le cas des structures et ne sont donc pas geres 
 		if(factIndex != -1) {
-			if(comp.isWearStatement()) { 
+			if(comp.isForStatement()) { 
 				elements.add(buildStatementElement(comp, elementType, roomElements.getFacts().get(factIndex), positionFromParent)); 
 			}
 			else if(comp.isInputEntry()) { elements.add(buildInputEntryElement(comp, elementType,  roomElements.getFacts().get(factIndex), positionFromParent)); }
-			else if(comp.isWearChoices()) {
+			else if(comp.isForProposition()) {
 				if(getNumberOfChoicesWornBy((ElementType) elementType) == 1) { elements.add(buildSingleChoiceElement(comp, elementType,  roomElements.getFacts().get(factIndex), propositionIndex, positionFromParent, hasIntegratedChoices)); }
 				else { elements.addAll(buildMultipleChoicesElements(comp, elementType,  roomElements.getFacts().get(factIndex), positionFromParent, roomElements.getRoomTypeOfRoom())); }
 			} else {
@@ -533,8 +636,18 @@ public class ConcreteGameplayGenerator {
 		elementType = roomElements.getElementTypeFor(component);
 		if(component instanceof Structure) {
 			Structure comp = (Structure) component;
-			if(comp.isPerFactOrPropositions()) {
-				if(roomElements.getFacts().size() > 1) {
+			if(comp.isForFact()) {
+				elements.addAll(buildStructureForFacts(roomElements, comp, positionFromParent, elementType));
+			} else if(comp.isForProposition()) {
+				elements.addAll(buildStructureForPropositions(roomElements, comp, positionFromParent, elementType));
+			} else if(comp.isForStatement()) {
+				elements.addAll(buildStructureForFactStatement(roomElements, comp, positionFromParent, elementType));
+			} else {
+				elements.addAll(buildSimpleStructure(roomElements, comp, positionFromParent, elementType, propositionIndex, factIndex));
+			}
+			
+			/*if(comp.isPerFactOrPropositions()) {
+				if(roomElements.getFacts().size() > 1) { // TODO 
 					elements.addAll(buildStructureForFacts(roomElements, comp, positionFromParent, elementType));
 				} else if(structureHasWearPropositions(comp)) {
 						elements.addAll(buildStructureForPropositions(roomElements, comp, positionFromParent, elementType));
@@ -543,7 +656,7 @@ public class ConcreteGameplayGenerator {
 				}
 			} else {
 				elements.addAll(buildSimpleStructure(roomElements, comp, positionFromParent, elementType, propositionIndex, factIndex));
-			}			
+			}	*/		
 		} else { 
 			Component comp = (Component) component;
 			if(positionFromParent == null) {

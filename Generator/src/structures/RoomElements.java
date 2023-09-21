@@ -139,7 +139,7 @@ public class RoomElements {
 	
 	private boolean isStructureForProposition(Structure aStructure) {
 		for (AComponent component : aStructure.getComponents()) {
-			if(component instanceof Component && ((Component) component).isWearChoices()) {
+			if(component instanceof Component && component.isForProposition()) {
 				return true;
 			}
 		}
@@ -162,9 +162,9 @@ public class RoomElements {
 			} else {
 				if(isStructureComponent(aComponent)) {
 					Structure structure = (Structure) aComponent;
-					if(structure.isPerFactOrPropositions() && facts.size() > 1) {
+					if(structure.isForFact() || structure.isForStatement()) {
 							elementsToQuantity.put(elementType, facts.size());
-					} else if(structure.isPerFactOrPropositions() && isStructureForProposition(structure)){
+					} else if(structure.isForProposition() /*structure.isPerFactOrPropositions() && isStructureForProposition(structure)*/){
 							elementsToQuantity.put(elementType, facts.get(0).getPropositions().size());
 					} else {
 						elementsToQuantity.put(elementType, 1);
@@ -181,7 +181,7 @@ public class RoomElements {
 	}
 	
 	private double computesNumberofElements(Component component, ElementType elementType) {  
-		if(component.isWearChoices()) {
+		if(component.isForProposition()) {
 			if(elementType.getNbDisplays() > 1) {
 				int factCorrectnessToReach = Integer.valueOf(((Value) facts.get(0).getCorrectnessToReach().getValue()).getValue());
 				double numberofToDisplayPerElement = (double) (facts.get(0).getPropositions().size() * facts.size()) / (double) elementType.getNbDisplays();
@@ -190,7 +190,7 @@ public class RoomElements {
 				return facts.size() * facts.get(0).getPropositions().size();
 			}
 		}
-		else if(component.isWearChoices()) { return facts.size(); }
+		else if(component.isForStatement()) { return facts.size(); }
 		else if(component.getQuantity() != null) {
 			if(component.getQuantity().isFactNbAnswers()) {
 				return facts.size() * task.getNbExpectedAnswers();
@@ -235,11 +235,11 @@ public class RoomElements {
 	}
 
 	private boolean isComponentForStatement(AComponent component) {
-		return component instanceof Component && ((Component) component).isWearStatement();
+		return component instanceof Component && component.isForStatement();
 	}
 	
 	private boolean isComponentForChoices(AComponent component) {
-		return component instanceof Component && ((Component) component).isWearChoices();
+		return component instanceof Component && component.isForProposition();
 	}
 	
 	private boolean isComponentForBothStatementAndChoices(AComponent component) {

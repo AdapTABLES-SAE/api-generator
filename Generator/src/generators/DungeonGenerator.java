@@ -413,6 +413,7 @@ public class DungeonGenerator {
 		
 		Map<ElementSize, Map<Ability, Integer>> numberOfElementsPerSize = computesNumberOfElementsPerSize(roomElements);
 		
+		System.out.println("Task type "+(roomElements.getTask() != null? roomElements.getTask().getType():"null"));
 		System.out.println("COMPUTES positions "+numberOfElementsPerSize);
 		
 		for (ElementSize size : numberOfElementsPerSize.keySet()) {

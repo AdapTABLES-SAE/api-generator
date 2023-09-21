@@ -105,6 +105,12 @@ rule Structures2Elements
 	elementOut.id = element.id;		
 	elementOut.pos = element.position.id;	
 	elementOut.type = element.elementType.type;
+	
+	if(element.acceptedFacts.isDefined()){
+		for (soluce in element.acceptedFacts) { 
+			elementOut.acceptedFacts += soluce.value.value + ";";
+		}		
+	}
 }
 
 rule Elements2Elements 

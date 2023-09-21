@@ -24,6 +24,8 @@ import generator.Size;
  * <ul>
  *   <li>{@link generator.impl.AComponentImpl#getAllowedAbility <em>Allowed Ability</em>}</li>
  *   <li>{@link generator.impl.AComponentImpl#getExpectedSize <em>Expected Size</em>}</li>
+ *   <li>{@link generator.impl.AComponentImpl#isForProposition <em>For Proposition</em>}</li>
+ *   <li>{@link generator.impl.AComponentImpl#isForStatement <em>For Statement</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,6 +49,43 @@ public abstract class AComponentImpl extends MinimalEObjectImpl.Container implem
 	 * @ordered
 	 */
 	protected Size expectedSize;
+
+	/**
+	 * The default value of the '{@link #isForProposition() <em>For Proposition</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isForProposition()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean FOR_PROPOSITION_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isForProposition() <em>For Proposition</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isForProposition()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean forProposition = FOR_PROPOSITION_EDEFAULT;
+	/**
+	 * The default value of the '{@link #isForStatement() <em>For Statement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isForStatement()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean FOR_STATEMENT_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isForStatement() <em>For Statement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isForStatement()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean forStatement = FOR_STATEMENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,6 +201,50 @@ public abstract class AComponentImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isForProposition() {
+		return forProposition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setForProposition(boolean newForProposition) {
+		boolean oldForProposition = forProposition;
+		forProposition = newForProposition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ACOMPONENT__FOR_PROPOSITION,
+					oldForProposition, forProposition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isForStatement() {
+		return forStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setForStatement(boolean newForStatement) {
+		boolean oldForStatement = forStatement;
+		forStatement = newForStatement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ACOMPONENT__FOR_STATEMENT,
+					oldForStatement, forStatement));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -185,6 +268,10 @@ public abstract class AComponentImpl extends MinimalEObjectImpl.Container implem
 			return basicGetAllowedAbility();
 		case GeneratorPackage.ACOMPONENT__EXPECTED_SIZE:
 			return getExpectedSize();
+		case GeneratorPackage.ACOMPONENT__FOR_PROPOSITION:
+			return isForProposition();
+		case GeneratorPackage.ACOMPONENT__FOR_STATEMENT:
+			return isForStatement();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -202,6 +289,12 @@ public abstract class AComponentImpl extends MinimalEObjectImpl.Container implem
 			return;
 		case GeneratorPackage.ACOMPONENT__EXPECTED_SIZE:
 			setExpectedSize((Size) newValue);
+			return;
+		case GeneratorPackage.ACOMPONENT__FOR_PROPOSITION:
+			setForProposition((Boolean) newValue);
+			return;
+		case GeneratorPackage.ACOMPONENT__FOR_STATEMENT:
+			setForStatement((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -221,6 +314,12 @@ public abstract class AComponentImpl extends MinimalEObjectImpl.Container implem
 		case GeneratorPackage.ACOMPONENT__EXPECTED_SIZE:
 			setExpectedSize((Size) null);
 			return;
+		case GeneratorPackage.ACOMPONENT__FOR_PROPOSITION:
+			setForProposition(FOR_PROPOSITION_EDEFAULT);
+			return;
+		case GeneratorPackage.ACOMPONENT__FOR_STATEMENT:
+			setForStatement(FOR_STATEMENT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -237,8 +336,31 @@ public abstract class AComponentImpl extends MinimalEObjectImpl.Container implem
 			return allowedAbility != null;
 		case GeneratorPackage.ACOMPONENT__EXPECTED_SIZE:
 			return expectedSize != null;
+		case GeneratorPackage.ACOMPONENT__FOR_PROPOSITION:
+			return forProposition != FOR_PROPOSITION_EDEFAULT;
+		case GeneratorPackage.ACOMPONENT__FOR_STATEMENT:
+			return forStatement != FOR_STATEMENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (forProposition: ");
+		result.append(forProposition);
+		result.append(", forStatement: ");
+		result.append(forStatement);
+		result.append(')');
+		return result.toString();
 	}
 
 } //AComponentImpl

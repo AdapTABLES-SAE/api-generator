@@ -4076,6 +4076,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getAComponent_ForProposition() {
+		return (EAttribute) aComponentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAComponent_ForStatement() {
+		return (EAttribute) aComponentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStructure() {
 		return structureEClass;
 	}
@@ -4094,7 +4112,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getStructure_PerFactOrPropositions() {
+	public EAttribute getStructure_AlternateComponents() {
 		return (EAttribute) structureEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -4103,7 +4121,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getStructure_AlternateComponents() {
+	public EAttribute getStructure_ForFact() {
 		return (EAttribute) structureEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -4130,26 +4148,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getComponent_WearChoices() {
-		return (EAttribute) componentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getComponent_DefaultCorrectness() {
-		return (EReference) componentEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getComponent_WearStatement() {
-		return (EAttribute) componentEClass.getEStructuralFeatures().get(3);
+		return (EReference) componentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -4158,7 +4158,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EAttribute getComponent_InputEntry() {
-		return (EAttribute) componentEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) componentEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -4167,7 +4167,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EReference getComponent_Quantity() {
-		return (EReference) componentEClass.getEStructuralFeatures().get(5);
+		return (EReference) componentEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -5245,17 +5245,17 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		aComponentEClass = createEClass(ACOMPONENT);
 		createEReference(aComponentEClass, ACOMPONENT__ALLOWED_ABILITY);
 		createEReference(aComponentEClass, ACOMPONENT__EXPECTED_SIZE);
+		createEAttribute(aComponentEClass, ACOMPONENT__FOR_PROPOSITION);
+		createEAttribute(aComponentEClass, ACOMPONENT__FOR_STATEMENT);
 
 		structureEClass = createEClass(STRUCTURE);
 		createEReference(structureEClass, STRUCTURE__COMPONENTS);
-		createEAttribute(structureEClass, STRUCTURE__PER_FACT_OR_PROPOSITIONS);
 		createEAttribute(structureEClass, STRUCTURE__ALTERNATE_COMPONENTS);
+		createEAttribute(structureEClass, STRUCTURE__FOR_FACT);
 
 		componentEClass = createEClass(COMPONENT);
 		createEReference(componentEClass, COMPONENT__DISPLAY_VALUE);
-		createEAttribute(componentEClass, COMPONENT__WEAR_CHOICES);
 		createEReference(componentEClass, COMPONENT__DEFAULT_CORRECTNESS);
-		createEAttribute(componentEClass, COMPONENT__WEAR_STATEMENT);
 		createEAttribute(componentEClass, COMPONENT__INPUT_ENTRY);
 		createEReference(componentEClass, COMPONENT__QUANTITY);
 
@@ -6291,33 +6291,32 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getAComponent_ExpectedSize(), this.getSize(), null, "expectedSize", null, 0, 1, AComponent.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAComponent_ForProposition(), ecorePackage.getEBoolean(), "forProposition", "false", 0, 1,
+				AComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAComponent_ForStatement(), ecorePackage.getEBoolean(), "forStatement", "false", 0, 1,
+				AComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(structureEClass, Structure.class, "Structure", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStructure_Components(), this.getAComponent(), null, "components", null, 0, -1,
 				Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStructure_PerFactOrPropositions(), ecorePackage.getEBoolean(), "perFactOrPropositions",
-				"false", 0, 1, Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStructure_AlternateComponents(), ecorePackage.getEBoolean(), "alternateComponents", null, 0,
 				1, Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStructure_ForFact(), ecorePackage.getEBoolean(), "forFact", null, 0, 1, Structure.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponent_DisplayValue(), this.getDisplay(), null, "displayValue", null, 0, 1,
 				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getComponent_WearChoices(), ecorePackage.getEBoolean(), "wearChoices", "false", 0, 1,
-				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 		initEReference(getComponent_DefaultCorrectness(), this.getCorrectness(), null, "defaultCorrectness", null, 0, 1,
 				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getComponent_WearStatement(), ecorePackage.getEBoolean(), "wearStatement", "false", 0, 1,
-				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComponent_InputEntry(), ecorePackage.getEBoolean(), "inputEntry", "false", 0, 1,
 				Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);

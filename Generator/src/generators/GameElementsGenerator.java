@@ -1,8 +1,10 @@
 package generators;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
@@ -14,6 +16,7 @@ import generator.CurseEligibility;
 import generator.Dungeon;
 import generator.EBoundary;
 import generator.EModality;
+import generator.EStatementType;
 import generator.EnterResponse;
 import generator.Equipment;
 import generator.GPCategory;
@@ -153,8 +156,9 @@ public class GameElementsGenerator {
 		return null;
 	}
 	
-	private Set<GPCategory> getValidCategoriesFromRelations(ATask task){
-		Set<GPCategory> allowedCategories = new HashSet<>(); 
+	
+	private Map<GPCategory, Set<EStatementType>> getValidCategoriesFromRelations(ATask task){
+		Map<GPCategory, Set<EStatementType>> allowedCategoriesWithStatements = new HashMap<>(); 
 		
 		for (Relation relation : new ArrayList<>(modelAccess.getRelationsModel().getRelations())) {
 			if(relation.getTask().equals(task.getType())) {
@@ -186,16 +190,26 @@ public class GameElementsGenerator {
 				} else {
 					modalityCompatible = (task.getResponseModality() != null)? task.getResponseModality() instanceof EnterResponse: false;
 				}
-				//System.out.println(task.getNbExpectedAnswers()+" "+task.getNbFacts());
+				//System.out.println(task.getNbExpectedAnswers()+" "+task.getNbFacts());				
 
 				//System.out.println("fact comp "+factCompatible+" expectedanswers "+expectedAnswerCompatible+" modality "+modalityCompatible);
 				if(factCompatible && expectedAnswerCompatible && modalityCompatible) {
-					allowedCategories.addAll(relation.getGameplays());
+					//allowedCategories.addAll(relation.getGameplays());
+					Set<EStatementType> types;
+					for(GPCategory category: relation.getGameplays()) {
+						if(allowedCategoriesWithStatements.containsKey(category)) {
+							types = allowedCategoriesWithStatements.get(category);
+						} else {
+							types = new HashSet<>();
+						}
+						types.addAll(relation.getCondition().getStatementTypes());
+						allowedCategoriesWithStatements.put(category, types);
+					}
 				}
 			}
 		}
 		//System.out.println("Valid categories "+allowedCategories);
-		return allowedCategories; 
+		return allowedCategoriesWithStatements; 
 	}
 	
 	private void selectCompatibleGameplays() {
@@ -203,11 +217,12 @@ public class GameElementsGenerator {
 		List<Gameplay> gameplays = new ArrayList<>();
 		for (RoomElements room : dungeonElements.getRoomsElements()) {
 			if(room.getTask() != null) {
-				List<GPCategory> validCategories = new ArrayList<>(getValidCategoriesFromRelations(room.getTask()));
+				Map<GPCategory, Set<EStatementType>> validCategoriesFromRelations = getValidCategoriesFromRelations(room.getTask());
+				List<GPCategory> validCategories = new ArrayList<>(validCategoriesFromRelations.keySet());
 				//System.out.println("Categorie valid " + validCategories);
 				do {
 					GPCategory aCategorie = validCategories.get(random.nextInt(validCategories.size()));
-					gameplays = getQuestionGameplayForCategorieType(aCategorie, room.getTask());
+					gameplays = getQuestionGameplayForCategorieType(aCategorie, room.getTask(), validCategoriesFromRelations.get(aCategorie));
 					validCategories.remove(aCategorie);
 				} while(gameplays.isEmpty());
 				
@@ -236,13 +251,13 @@ public class GameElementsGenerator {
 		return compatibleGameplays;
 	}
 	
-	private List<Gameplay> getQuestionGameplayForCategorieType(GPCategory category, ATask task){
+	private List<Gameplay> getQuestionGameplayForCategorieType(GPCategory category, ATask task, Set<EStatementType> allowedStatementTypes){
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
 		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			if(gp instanceof QuestionGameplay && !gp.isLocked()) {
 				if(((QuestionGameplay) gp).getCategory().equals(category) && 
 						respectValidationMethod((QuestionGameplay) gp, task) && 
-						respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task) &&
+						respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task, allowedStatementTypes) &&
 						respectUndoable((QuestionGameplay) gp, task)) {
 					compatibleGameplays.add(gp);
 				}
@@ -255,19 +270,22 @@ public class GameElementsGenerator {
 	}
 	
 	private boolean respectUndoable(QuestionGameplay gameplay, ATask task) {
-		return task.isCheckOnLearnerAction()? gameplay.isUndoable() :true;
+		return (task.isCheckOnLearnerAction() && gameplay.isUndoable()) || !task.isCheckOnLearnerAction();
 	}
 	
 	private boolean respectValidationMethod(QuestionGameplay gameplay, ATask task) {
 		return (task.isCheckOnLearnerAction() == gameplay.isManualValidation()) || (!task.isCheckOnLearnerAction() && gameplay.isManualValidation());
 	}
 	
-	private boolean respectGameplayTaskTypeRestriction(QuestionGameplay gameplay, ATask task) {
-		if(gameplay.getRestrictedTo().isEmpty()) {
+	private boolean respectGameplayTaskTypeRestriction(QuestionGameplay gameplay, ATask task, Set<EStatementType> allowedStatementTypes) {
+		/*if(gameplay.getRestrictedTo().isEmpty()) {
 			return true;
 		} else {
 			return gameplay.getRestrictedTo().contains(task.getType());
 		}
+		*/
+		return allowedStatementTypes.contains(gameplay.getStatementType()) && (gameplay.getRestrictedTo().isEmpty() 
+				|| gameplay.getRestrictedTo().contains(task.getType()));
 	}
 
 	

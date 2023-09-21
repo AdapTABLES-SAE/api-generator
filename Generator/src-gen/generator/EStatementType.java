@@ -38,13 +38,13 @@ public enum EStatementType implements Enumerator {
 	 */
 	FILL_IN(1, "FILL_IN", "FILL_IN"),
 	/**
-	* The '<em><b>GRAPHIC</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>GRAPHIC</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #GRAPHIC_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #GRAPHIC_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	GRAPHIC(2, "GRAPHIC", "GRAPHIC");
 
 	/**

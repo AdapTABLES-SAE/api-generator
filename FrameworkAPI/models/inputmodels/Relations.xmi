@@ -10,7 +10,7 @@
         answerModality="INPUT">
       <statementTypes>CLASSIC</statementTypes>
       <statementTypes>GRAPHIC</statementTypes>
-      <statementTypes>TO_FILL_IN</statementTypes>
+      <statementTypes>FILL_IN</statementTypes>
     </condition>
   </relations>
   <relations>
@@ -21,7 +21,7 @@
     <condition>
       <statementTypes>CLASSIC</statementTypes>
       <statementTypes>GRAPHIC</statementTypes>
-      <statementTypes>TO_FILL_IN</statementTypes>
+      <statementTypes>FILL_IN</statementTypes>
     </condition>
   </relations>
   <relations>
@@ -32,7 +32,7 @@
         nbExpectedAnswers="SUP_ONE">
       <statementTypes>CLASSIC</statementTypes>
       <statementTypes>GRAPHIC</statementTypes>
-      <statementTypes>TO_FILL_IN</statementTypes>
+      <statementTypes>FILL_IN</statementTypes>
     </condition>
   </relations>
   <relations>
@@ -42,7 +42,7 @@
         answerModality="INPUT"
         nbExpectedAnswers="EQ_NB_FACTS">
       <statementTypes>GRAPHIC</statementTypes>
-      <statementTypes>TO_FILL_IN</statementTypes>
+      <statementTypes>FILL_IN</statementTypes>
     </condition>
   </relations>
   <relations>
@@ -51,7 +51,7 @@
         nbFacts="SUP_ONE"
         nbExpectedAnswers="EQ_NB_FACTS">
       <statementTypes>GRAPHIC</statementTypes>
-      <statementTypes>TO_FILL_IN</statementTypes>
+      <statementTypes>FILL_IN</statementTypes>
     </condition>
   </relations>
   <relations>
@@ -60,7 +60,7 @@
         nbFacts="SUP_ONE"
         nbExpectedAnswers="SUP_NB_FACTS">
       <statementTypes>GRAPHIC</statementTypes>
-      <statementTypes>TO_FILL_IN</statementTypes>
+      <statementTypes>FILL_IN</statementTypes>
     </condition>
   </relations>
   <relations
@@ -105,9 +105,6 @@
   </relations>
   <relations
       task="IDENTIFY">
-    <gameplays>SELECT_MULTIPLE</gameplays>
-    <gameplays>MOVE_MULTIPLE</gameplays>
-    <gameplays>ORIENT_MULTIPLE</gameplays>
     <condition
         nbFacts="SUP_ONE"
         nbExpectedAnswers="EQ_NB_FACTS">

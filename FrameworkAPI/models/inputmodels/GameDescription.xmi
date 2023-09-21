@@ -565,14 +565,14 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="TOUCHABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="VERIFICATOR"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Touche les bons element puis active le levier"/>
       <restrictedTo>COMPLETE</restrictedTo>
@@ -612,7 +612,8 @@
           <components
               xsi:type="generator:Structure"
               allowedAbility="HORIZONTAL_DISPLAY"
-              perFactOrPropositions="true">
+              
+              forFact="true">
             <expectedSize>
               <value
                   xsi:type="generator:Value"
@@ -621,7 +622,7 @@
             <components
                 xsi:type="generator:Component"
                 allowedAbility="TOUCHABLE"
-                wearChoices="true">
+                forProposition="true">
               <defaultCorrectness>
                 <value
                     xsi:type="generator:CorrectnessValue"
@@ -631,11 +632,11 @@
             <components
                 xsi:type="generator:Component"
                 allowedAbility="DISPLAY"
-                wearStatement="true"/>
+                forStatement="true"/>
             <components
                 xsi:type="generator:Component"
                 allowedAbility="TOUCHABLE"
-                wearChoices="true">
+                forProposition="true">
               <defaultCorrectness>
                 <value
                     xsi:type="generator:CorrectnessValue"
@@ -669,7 +670,7 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Saisie la reponse"/>
     </gameplays>
@@ -697,7 +698,8 @@
           <components
               xsi:type="generator:Structure"
               allowedAbility="HORIZONTAL_DISPLAY"
-              perFactOrPropositions="true">
+              
+              forFact="true">
             <expectedSize>
               <value
                   xsi:type="generator:Value"
@@ -706,7 +708,7 @@
             <components
                 xsi:type="generator:Component"
                 allowedAbility="TOUCHABLE"
-                wearChoices="true">
+                forProposition="true">
               <displayValue>
                 <value
                     xsi:type="generator:Value"
@@ -721,11 +723,11 @@
             <components
                 xsi:type="generator:Component"
                 allowedAbility="DISPLAY"
-                wearStatement="true"/>
+                forStatement="true"/>
             <components
                 xsi:type="generator:Component"
                 allowedAbility="TOUCHABLE"
-                wearChoices="true">
+                forProposition="true">
               <displayValue>
                 <value
                     xsi:type="generator:Value"
@@ -750,11 +752,11 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="TOUCHABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Touche le bon element"/>
     </gameplays>
@@ -765,7 +767,7 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="MOVABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DETECTOR">
@@ -778,7 +780,7 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Deplace le bon elements sur la zone"/>
     </gameplays>
@@ -790,7 +792,7 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="MOVABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DETECTOR">
@@ -805,7 +807,7 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Deplace les bons elements sur les zones"/>
       <restrictedTo>COMPLETE</restrictedTo>
@@ -817,11 +819,11 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="OPENABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Ouvre le bon element"/>
     </gameplays>
@@ -832,11 +834,11 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="OPENABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Ouvre les bons elements"/>
       <restrictedTo>MEMBERSHIP</restrictedTo>
@@ -849,7 +851,8 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="VERTICAL_DISPLAY"
-          perFactOrPropositions="true">
+          
+          forFact="true">
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -867,12 +870,12 @@
         <components
             xsi:type="generator:Component"
             allowedAbility="DISPLAY"
-            wearStatement="true"/>
+            forStatement="true"/>
       </components>
       <components
           xsi:type="generator:Component"
           allowedAbility="MOVABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <prompt
           prompt="Deplace les bons elements sur la zone"/>
       <restrictedTo>MEMBERSHIP</restrictedTo>
@@ -886,14 +889,14 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="ROTABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="VERIFICATOR"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Oriente correctement l(es) element(s)"/>
     </gameplays>
@@ -903,11 +906,11 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="CATCHABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Attrape le bon element"/>
       <restrictedTo>COMPLETE</restrictedTo>
@@ -920,11 +923,11 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="CATCHABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Attrape les bons elements"/>
       <restrictedTo>COMPLETE</restrictedTo>
@@ -972,7 +975,7 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="HORIZONTAL_DISPLAY"
-          perFactOrPropositions="true">
+          >
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -981,7 +984,7 @@
         <components
             xsi:type="generator:Component"
             allowedAbility="PUSHABLE"
-            wearChoices="true">
+            forProposition="true">
           <expectedSize>
             <value
                 xsi:type="generator:Value"
@@ -1001,7 +1004,7 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Pousse le bon element"/>
     </gameplays>
@@ -1012,7 +1015,7 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="HORIZONTAL_DISPLAY"
-          perFactOrPropositions="true">
+          >
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -1021,7 +1024,7 @@
         <components
             xsi:type="generator:Component"
             allowedAbility="PUSHABLE"
-            wearChoices="true">
+            forProposition="true">
           <expectedSize>
             <value
                 xsi:type="generator:Value"
@@ -1041,7 +1044,7 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Pousse les bons elements"/>
       <restrictedTo>COMPLETE</restrictedTo>
@@ -1053,11 +1056,11 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="CROSSABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Traverse le bon element"/>
     </gameplays>
@@ -1068,7 +1071,8 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="HORIZONTAL_DISPLAY"
-          perFactOrPropositions="true">
+          forProposition="true"
+          >
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -1086,7 +1090,7 @@
         <components
             xsi:type="generator:Component"
             allowedAbility="PUSHABLE"
-            wearChoices="true">
+            forProposition="true">
           <expectedSize>
             <value
                 xsi:type="generator:Value"
@@ -1097,7 +1101,7 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Pousse le bon element"/>
     </gameplays>
@@ -1108,7 +1112,8 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="HORIZONTAL_DISPLAY"
-          perFactOrPropositions="true">
+          forProposition="true"
+          >
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -1126,7 +1131,7 @@
         <components
             xsi:type="generator:Component"
             allowedAbility="PUSHABLE"
-            wearChoices="true">
+            forProposition="true">
           <expectedSize>
             <value
                 xsi:type="generator:Value"
@@ -1137,7 +1142,7 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Pousse les bons elements"/>
       <restrictedTo>COMPLETE</restrictedTo>
@@ -1149,11 +1154,11 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="BREAKABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Casse le bon element"/>
     </gameplays>
@@ -1164,13 +1169,15 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="BREAKABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Casse les bons elements"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -1179,8 +1186,8 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="BREAKABLE"
-          wearChoices="true"
-          wearStatement="true"/>
+          forProposition="true"
+          forStatement="true"/>
       <prompt
           prompt="Casse les bons elements"/>
       <restrictedTo>IDENTIFY</restrictedTo>
@@ -1194,11 +1201,11 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="FOLLOWABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Attrape le bon element"/>
     </gameplays>
@@ -1211,16 +1218,18 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="ROTABLE"
-          wearChoices="true"/>
+          forProposition="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="VERIFICATOR"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <prompt
           prompt="Oriente correctement l(es) element(s)"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -1229,11 +1238,11 @@
       <components
           xsi:type="generator:Component"
           allowedAbility="DISPLAY"
-          wearStatement="true"/>
+          forStatement="true"/>
       <components
           xsi:type="generator:Component"
           allowedAbility="DETECTOR_AVATAR"
-          wearChoices="true"/>
+          forProposition="true"/>
       <prompt
           prompt="Place-toi sur la bonne dalle"/>
     </gameplays>
@@ -1270,7 +1279,8 @@
           <components
               xsi:type="generator:Structure"
               allowedAbility="HORIZONTAL_DISPLAY"
-              perFactOrPropositions="true">
+              
+              forFact="true">
             <expectedSize>
               <value
                   xsi:type="generator:Value"
@@ -1293,7 +1303,7 @@
             <components
                 xsi:type="generator:Component"
                 allowedAbility="PUSHABLE"
-                wearStatement="true"/>
+                forStatement="true"/>
             <components
                 xsi:type="generator:Component"
                 allowedAbility="DETECTOR">
@@ -1348,7 +1358,8 @@
           <components
               xsi:type="generator:Structure"
               allowedAbility="HORIZONTAL_DISPLAY"
-              perFactOrPropositions="true">
+              
+              forFact="true">
             <expectedSize>
               <value
                   xsi:type="generator:Value"
@@ -1357,7 +1368,7 @@
             <components
                 xsi:type="generator:Component"
                 allowedAbility="DETECTOR"
-                wearChoices="true">
+                forProposition="true">
               <expectedSize>
                 <value
                     xsi:type="generator:Value"
@@ -1377,11 +1388,11 @@
             <components
                 xsi:type="generator:Component"
                 allowedAbility="PUSHABLE"
-                wearStatement="true"/>
+                forStatement="true"/>
             <components
                 xsi:type="generator:Component"
                 allowedAbility="DETECTOR"
-                wearChoices="true">
+                forProposition="true">
               <expectedSize>
                 <value
                     xsi:type="generator:Value"
@@ -1403,6 +1414,114 @@
       </components>
       <prompt
           prompt="Touche les bons elements"/>
+      <restrictedTo>IDENTIFY</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_UNIQUE_MOVABLE_FILL_IN"
+        undoable="true"
+        category="MOVE_UNIQUE"
+        statementType="FILL_IN">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="FILL_IN_DISPLAY"
+          forStatement="true"
+          
+          alternateComponents="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DISPLAY"
+            forStatement="true"/>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="MOVABLE"
+          forProposition="true"/>
+      <prompt
+          prompt="Place les bons elements"/>
+      <restrictedTo>ORDER</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE_MOVABLE_FILL_IN"
+        undoable="true"
+        manualValidation="true"
+        category="MOVE_MULTIPLE"
+        statementType="FILL_IN">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="FILL_IN_DISPLAY"
+          forStatement="true"
+          
+          alternateComponents="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DISPLAY"
+            forStatement="true"/>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="MOVABLE"
+          forProposition="true"/>
+      <prompt
+          prompt="Place les bons elements"/>
+      <restrictedTo>ORDER</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_ROTABLE_MULTIPLE"
+        undoable="true"
+        manualValidation="true"
+        category="ORIENT_MULTIPLE">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="VERTICAL_DISPLAY"
+          >
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DISPLAY"
+            forStatement="true"/>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="ROTABLE"
+            forProposition="true"/>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="VERIFICATOR"/>
+      <prompt
+          prompt="Oriente correctement l(es) element(s)"/>
+      <restrictedTo>IDENTIFY</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE_OPENABLE-IDENTIFY"
+        category="SELECT_MULTIPLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="OPENABLE"
+          forProposition="true"
+          forStatement="true"/>
+      <prompt
+          prompt="Ouvre les bons elements"/>
       <restrictedTo>IDENTIFY</restrictedTo>
     </gameplays>
   </gameplays>
@@ -1611,6 +1730,11 @@
           type="AvatarDetector"
           nbDisplays="1"
           ability="DETECTOR_AVATAR"/>
+      <elements
+          size="LARGE"
+          ID="STRUCT_FILL_IN"
+          type="StructureStatement"
+          ability="FILL_IN_DISPLAY"/>
     </elementTypes>
   </elements>
   <abilities>
@@ -1659,5 +1783,7 @@
         name="FOLLOWABLE_DETECTOR"/>
     <abilities
         name="DETECTOR_AVATAR"/>
+    <abilities
+        name="FILL_IN_DISPLAY"/>
   </abilities>
 </generator:GameDescription>

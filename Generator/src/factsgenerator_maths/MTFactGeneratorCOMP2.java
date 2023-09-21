@@ -113,7 +113,7 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 
 	@Override
 	protected int correctnessToReach(ATask task) {
-		return 2;
+		return 2 * task.getNbFacts();
 	}
 
 	@Override

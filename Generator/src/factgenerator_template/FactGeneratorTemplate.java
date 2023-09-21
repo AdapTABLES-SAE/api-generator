@@ -69,7 +69,7 @@ public abstract class FactGeneratorTemplate {
 	
 	protected Set<QuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact){ return null; }
 		
-	protected void createAQuestionedFactFrom(RoomElements roomElement, QuestionableFact qFact, int correctnessToReach) {
+	protected void createAQuestionedFactFrom(RoomElements roomElement, QuestionableFact qFact) {
 		QuestionedFact qef = new QuestionedFactImpl(); 
 		qef.setQuestionablefact(qFact);
 		
@@ -109,7 +109,7 @@ public abstract class FactGeneratorTemplate {
 		qef.setQuestion(question);
 		WantedAnswersParam correctness = new WantedAnswersParamImpl();
 		Value correctnessValue = new ValueImpl();
-		correctnessValue.setValue(roomElement.getTask().getNbExpectedAnswers()+"");//correctnessToReach(task)+"");
+		correctnessValue.setValue(correctnessToReach(roomElement.getTask())+"");
 		correctness.setValue(correctnessValue);
 		qef.setCorrectnessToReach(correctness);
 		
@@ -162,7 +162,7 @@ public abstract class FactGeneratorTemplate {
 			QuestionableFact qf = null;
 			try {
 				qf = getAvailableFact(roomElements.getCorrespondingResultByTask(dungeonElements.getCurrentObjectiveLevel()));
-				createAQuestionedFactFrom(roomElements, qf, correctnessToReach(roomElements.getTask()));
+				createAQuestionedFactFrom(roomElements, qf);
 			} catch (Exception e) {
 				e.printStackTrace();
 			} 

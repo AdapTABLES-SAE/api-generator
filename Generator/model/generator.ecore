@@ -527,23 +527,22 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="allowedAbility" eType="#//Ability"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expectedSize" eType="#//Size"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forProposition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forStatement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Structure" eSuperTypes="#//AComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
         eType="#//AComponent" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="perFactOrPropositions"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alternateComponents" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//AComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayValue" eType="#//Display"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wearChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultCorrectness" eType="#//Correctness"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wearStatement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputEntry" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="quantity" eType="#//Quantity"

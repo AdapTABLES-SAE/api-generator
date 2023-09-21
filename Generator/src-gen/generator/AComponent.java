@@ -15,6 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.AComponent#getAllowedAbility <em>Allowed Ability</em>}</li>
  *   <li>{@link generator.AComponent#getExpectedSize <em>Expected Size</em>}</li>
+ *   <li>{@link generator.AComponent#isForProposition <em>For Proposition</em>}</li>
+ *   <li>{@link generator.AComponent#isForStatement <em>For Statement</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getAComponent()
@@ -66,4 +68,50 @@ public interface AComponent extends EObject {
 	 * @generated
 	 */
 	void setExpectedSize(Size value);
+
+	/**
+	 * Returns the value of the '<em><b>For Proposition</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>For Proposition</em>' attribute.
+	 * @see #setForProposition(boolean)
+	 * @see generator.GeneratorPackage#getAComponent_ForProposition()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isForProposition();
+
+	/**
+	 * Sets the value of the '{@link generator.AComponent#isForProposition <em>For Proposition</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>For Proposition</em>' attribute.
+	 * @see #isForProposition()
+	 * @generated
+	 */
+	void setForProposition(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>For Statement</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>For Statement</em>' attribute.
+	 * @see #setForStatement(boolean)
+	 * @see generator.GeneratorPackage#getAComponent_ForStatement()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isForStatement();
+
+	/**
+	 * Sets the value of the '{@link generator.AComponent#isForStatement <em>For Statement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>For Statement</em>' attribute.
+	 * @see #isForStatement()
+	 * @generated
+	 */
+	void setForStatement(boolean value);
 } // AComponent

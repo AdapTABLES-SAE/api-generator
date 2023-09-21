@@ -14,8 +14,8 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link generator.Structure#getComponents <em>Components</em>}</li>
- *   <li>{@link generator.Structure#isPerFactOrPropositions <em>Per Fact Or Propositions</em>}</li>
  *   <li>{@link generator.Structure#isAlternateComponents <em>Alternate Components</em>}</li>
+ *   <li>{@link generator.Structure#isForFact <em>For Fact</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getStructure()
@@ -34,29 +34,6 @@ public interface Structure extends AComponent {
 	 * @generated
 	 */
 	EList<AComponent> getComponents();
-
-	/**
-	 * Returns the value of the '<em><b>Per Fact Or Propositions</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Per Fact Or Propositions</em>' attribute.
-	 * @see #setPerFactOrPropositions(boolean)
-	 * @see generator.GeneratorPackage#getStructure_PerFactOrPropositions()
-	 * @model default="false"
-	 * @generated
-	 */
-	boolean isPerFactOrPropositions();
-
-	/**
-	 * Sets the value of the '{@link generator.Structure#isPerFactOrPropositions <em>Per Fact Or Propositions</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Per Fact Or Propositions</em>' attribute.
-	 * @see #isPerFactOrPropositions()
-	 * @generated
-	 */
-	void setPerFactOrPropositions(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Alternate Components</b></em>' attribute.
@@ -79,5 +56,27 @@ public interface Structure extends AComponent {
 	 * @generated
 	 */
 	void setAlternateComponents(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>For Fact</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>For Fact</em>' attribute.
+	 * @see #setForFact(boolean)
+	 * @see generator.GeneratorPackage#getStructure_ForFact()
+	 * @model
+	 * @generated
+	 */
+	boolean isForFact();
+
+	/**
+	 * Sets the value of the '{@link generator.Structure#isForFact <em>For Fact</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>For Fact</em>' attribute.
+	 * @see #isForFact()
+	 * @generated
+	 */
+	void setForFact(boolean value);
 
 } // Structure

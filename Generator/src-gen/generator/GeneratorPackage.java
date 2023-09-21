@@ -5006,13 +5006,31 @@ public interface GeneratorPackage extends EPackage {
 	int ACOMPONENT__EXPECTED_SIZE = 1;
 
 	/**
+	 * The feature id for the '<em><b>For Proposition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACOMPONENT__FOR_PROPOSITION = 2;
+
+	/**
+	 * The feature id for the '<em><b>For Statement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACOMPONENT__FOR_STATEMENT = 3;
+
+	/**
 	 * The number of structural features of the '<em>AComponent</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACOMPONENT_FEATURE_COUNT = 2;
+	int ACOMPONENT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>AComponent</em>' class.
@@ -5052,6 +5070,24 @@ public interface GeneratorPackage extends EPackage {
 	int STRUCTURE__EXPECTED_SIZE = ACOMPONENT__EXPECTED_SIZE;
 
 	/**
+	 * The feature id for the '<em><b>For Proposition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__FOR_PROPOSITION = ACOMPONENT__FOR_PROPOSITION;
+
+	/**
+	 * The feature id for the '<em><b>For Statement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__FOR_STATEMENT = ACOMPONENT__FOR_STATEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5061,22 +5097,22 @@ public interface GeneratorPackage extends EPackage {
 	int STRUCTURE__COMPONENTS = ACOMPONENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Per Fact Or Propositions</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRUCTURE__PER_FACT_OR_PROPOSITIONS = ACOMPONENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Alternate Components</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__ALTERNATE_COMPONENTS = ACOMPONENT_FEATURE_COUNT + 2;
+	int STRUCTURE__ALTERNATE_COMPONENTS = ACOMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>For Fact</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__FOR_FACT = ACOMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Structure</em>' class.
@@ -5125,6 +5161,24 @@ public interface GeneratorPackage extends EPackage {
 	int COMPONENT__EXPECTED_SIZE = ACOMPONENT__EXPECTED_SIZE;
 
 	/**
+	 * The feature id for the '<em><b>For Proposition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__FOR_PROPOSITION = ACOMPONENT__FOR_PROPOSITION;
+
+	/**
+	 * The feature id for the '<em><b>For Statement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__FOR_STATEMENT = ACOMPONENT__FOR_STATEMENT;
+
+	/**
 	 * The feature id for the '<em><b>Display Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5134,31 +5188,13 @@ public interface GeneratorPackage extends EPackage {
 	int COMPONENT__DISPLAY_VALUE = ACOMPONENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Wear Choices</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENT__WEAR_CHOICES = ACOMPONENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Default Correctness</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__DEFAULT_CORRECTNESS = ACOMPONENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Wear Statement</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENT__WEAR_STATEMENT = ACOMPONENT_FEATURE_COUNT + 3;
+	int COMPONENT__DEFAULT_CORRECTNESS = ACOMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Input Entry</b></em>' attribute.
@@ -5167,7 +5203,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__INPUT_ENTRY = ACOMPONENT_FEATURE_COUNT + 4;
+	int COMPONENT__INPUT_ENTRY = ACOMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Quantity</b></em>' containment reference.
@@ -5176,7 +5212,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__QUANTITY = ACOMPONENT_FEATURE_COUNT + 5;
+	int COMPONENT__QUANTITY = ACOMPONENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Component</em>' class.
@@ -5185,7 +5221,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = ACOMPONENT_FEATURE_COUNT + 6;
+	int COMPONENT_FEATURE_COUNT = ACOMPONENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -11727,6 +11763,28 @@ public interface GeneratorPackage extends EPackage {
 	EReference getAComponent_ExpectedSize();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.AComponent#isForProposition <em>For Proposition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>For Proposition</em>'.
+	 * @see generator.AComponent#isForProposition()
+	 * @see #getAComponent()
+	 * @generated
+	 */
+	EAttribute getAComponent_ForProposition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.AComponent#isForStatement <em>For Statement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>For Statement</em>'.
+	 * @see generator.AComponent#isForStatement()
+	 * @see #getAComponent()
+	 * @generated
+	 */
+	EAttribute getAComponent_ForStatement();
+
+	/**
 	 * Returns the meta object for class '{@link generator.Structure <em>Structure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11748,17 +11806,6 @@ public interface GeneratorPackage extends EPackage {
 	EReference getStructure_Components();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.Structure#isPerFactOrPropositions <em>Per Fact Or Propositions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Per Fact Or Propositions</em>'.
-	 * @see generator.Structure#isPerFactOrPropositions()
-	 * @see #getStructure()
-	 * @generated
-	 */
-	EAttribute getStructure_PerFactOrPropositions();
-
-	/**
 	 * Returns the meta object for the attribute '{@link generator.Structure#isAlternateComponents <em>Alternate Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11768,6 +11815,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getStructure_AlternateComponents();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Structure#isForFact <em>For Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>For Fact</em>'.
+	 * @see generator.Structure#isForFact()
+	 * @see #getStructure()
+	 * @generated
+	 */
+	EAttribute getStructure_ForFact();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Component <em>Component</em>}'.
@@ -11791,17 +11849,6 @@ public interface GeneratorPackage extends EPackage {
 	EReference getComponent_DisplayValue();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.Component#isWearChoices <em>Wear Choices</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wear Choices</em>'.
-	 * @see generator.Component#isWearChoices()
-	 * @see #getComponent()
-	 * @generated
-	 */
-	EAttribute getComponent_WearChoices();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link generator.Component#getDefaultCorrectness <em>Default Correctness</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11811,17 +11858,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComponent_DefaultCorrectness();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.Component#isWearStatement <em>Wear Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wear Statement</em>'.
-	 * @see generator.Component#isWearStatement()
-	 * @see #getComponent()
-	 * @generated
-	 */
-	EAttribute getComponent_WearStatement();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.Component#isInputEntry <em>Input Entry</em>}'.
@@ -15603,6 +15639,22 @@ public interface GeneratorPackage extends EPackage {
 		EReference ACOMPONENT__EXPECTED_SIZE = eINSTANCE.getAComponent_ExpectedSize();
 
 		/**
+		 * The meta object literal for the '<em><b>For Proposition</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACOMPONENT__FOR_PROPOSITION = eINSTANCE.getAComponent_ForProposition();
+
+		/**
+		 * The meta object literal for the '<em><b>For Statement</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACOMPONENT__FOR_STATEMENT = eINSTANCE.getAComponent_ForStatement();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.StructureImpl <em>Structure</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -15621,20 +15673,20 @@ public interface GeneratorPackage extends EPackage {
 		EReference STRUCTURE__COMPONENTS = eINSTANCE.getStructure_Components();
 
 		/**
-		 * The meta object literal for the '<em><b>Per Fact Or Propositions</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STRUCTURE__PER_FACT_OR_PROPOSITIONS = eINSTANCE.getStructure_PerFactOrPropositions();
-
-		/**
 		 * The meta object literal for the '<em><b>Alternate Components</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute STRUCTURE__ALTERNATE_COMPONENTS = eINSTANCE.getStructure_AlternateComponents();
+
+		/**
+		 * The meta object literal for the '<em><b>For Fact</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRUCTURE__FOR_FACT = eINSTANCE.getStructure_ForFact();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ComponentImpl <em>Component</em>}' class.
@@ -15655,28 +15707,12 @@ public interface GeneratorPackage extends EPackage {
 		EReference COMPONENT__DISPLAY_VALUE = eINSTANCE.getComponent_DisplayValue();
 
 		/**
-		 * The meta object literal for the '<em><b>Wear Choices</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMPONENT__WEAR_CHOICES = eINSTANCE.getComponent_WearChoices();
-
-		/**
 		 * The meta object literal for the '<em><b>Default Correctness</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference COMPONENT__DEFAULT_CORRECTNESS = eINSTANCE.getComponent_DefaultCorrectness();
-
-		/**
-		 * The meta object literal for the '<em><b>Wear Statement</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMPONENT__WEAR_STATEMENT = eINSTANCE.getComponent_WearStatement();
 
 		/**
 		 * The meta object literal for the '<em><b>Input Entry</b></em>' attribute feature.

@@ -71,7 +71,7 @@
         <learnerProgress/>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_FACTS_TEST_2"/>
-      <statistics maxGameLevelReached="4" nbLevelsGenerated="3031"/>
+      <statistics maxGameLevelReached="4" nbLevelsGenerated="3554"/>
     </learnerPlayers>
     <learnerPlayers name="Learner 00 " ID="LP00">
       <progression>
@@ -79,7 +79,7 @@
         <learnerProgress/>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_FACTS_TEST"/>
-      <statistics maxGameLevelReached="4" nbLevelsGenerated="1414"/>
+      <statistics maxGameLevelReached="4" nbLevelsGenerated="1454"/>
     </learnerPlayers>
   </learnerPlayers>
 </generator:Classroom>
