@@ -680,7 +680,6 @@ public class ConcreteGameplayGenerator {
 				if(position.getRestrictedTo().isEmpty() || position.getRestrictedTo().contains(((ElementType) elementType).getAbility())) {
 					allowed.add(position);
 				}
-				
 			}
 		}
 		

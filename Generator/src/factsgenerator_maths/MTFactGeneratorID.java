@@ -26,12 +26,10 @@ import structures.DungeonElements;
 public class MTFactGeneratorID extends FactGeneratorTemplate {
 
 	private final int[] buildFalseInteraval = {5,5};
-	private List<Integer> alreadyUsed; 
 	private Random rand;
 	
 	public MTFactGeneratorID(DungeonElements dungeonElements) {
 		super(dungeonElements);
-		this.alreadyUsed = new ArrayList<>();
 		this.rand = new Random();
 	}
 	
@@ -110,7 +108,8 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 			
 		while(chosenFalse == -1) {
 			chosenFalse = rand.nextInt((max - min) + 1) + min;
-			if(alreadyUsed.contains(chosenFalse) && isDifferentThanFactSolutions(goodFact, chosenFalse)) {
+			
+			if(!isDifferentThanFactSolutions(goodFact, chosenFalse)) {
 				chosenFalse = -1;
 			}
 		}

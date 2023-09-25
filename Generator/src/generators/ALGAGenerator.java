@@ -3,6 +3,7 @@ package generators;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.util.logging.Logger;
 import org.eclipse.emf.common.util.EList;
 
 import exceptions.NonExistantLearnerPlayerException;
@@ -26,6 +27,10 @@ import structures.DungeonElements;
 
 public class ALGAGenerator {
 	
+	//public static Logger LOGGER = LogManager.getLogger(ALGAGenerator.class);
+	//private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+	   
+	   
 	private ModelsManager modelAccess;
 	private Dungeon generatedDungeon;
 	private DungeonElements dungeonElements;
@@ -139,7 +144,6 @@ public class ALGAGenerator {
 	}
 	
 	public CurrentObjectiveLevel getCurrentObjectiveLevel() {
-		System.out.println(this.generatedDungeon.getLearningobjective()+" ffgg");
 		for(CurrentObjectiveLevel currentOL: this.learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			if(currentOL.getObjective().equals(this.generatedDungeon.getLearningobjective()) && currentOL.getLevel().equals(this.generatedDungeon.getLevel())) {
 				return currentOL;
@@ -155,9 +159,12 @@ public class ALGAGenerator {
 		
 		double nbQRooms = gameDifficulty.getInitNbQRoom() + gameDifficulty.getNbQRoomIncrease() * (learnerPlayer.getProgression().getPlayerProgress().getCurrentLevel() - 1);
 		double nbNQRooms = gameDifficulty.getInitNbNQRoom() + gameDifficulty.getNbNQRoomIncrease() * (learnerPlayer.getProgression().getPlayerProgress().getCurrentLevel() - 1);
+//		LOGGER.info(null);
+//		LOGGER.warning(null);
+//		LOGGER.severe(null);
 
-		System.out.println("Number of no question rooms "+nbNQRooms);
-		System.out.println("Number of question rooms "+nbQRooms);
+		System.out.println("Number of no question rooms " + nbNQRooms);
+		System.out.println("Number of question rooms " + nbQRooms);
 		
 		dungeonElements = new DungeonElements(modelAccess.getGameDescriptionModel(), nbQRooms, nbNQRooms);
 		

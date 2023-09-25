@@ -5,7 +5,6 @@ import java.util.List;
 
 import generator.QuestionedFact;
 import generator.Value;
-import generator.WantedAnswersParam;
 
 public class QuestionedFactSplitter {
 

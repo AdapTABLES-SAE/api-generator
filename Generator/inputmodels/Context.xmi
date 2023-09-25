@@ -76,48 +76,48 @@
               </resultsbytask>
               <resultsbytask>
                 <task xsi:type="generator:MTIdentification" href="LearningDomain.xmi#PATH404-O1-L1-T4"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT5" result="11" rightOperand="3" leftOperand="2" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT4" result="6" rightOperand="3" leftOperand="2" soluce="true" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT7" result="13" rightOperand="4" leftOperand="2" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT2" result="4" rightOperand="2" leftOperand="2" soluce="true" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT9" result="5" rightOperand="5" leftOperand="2" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT18" result="20" rightOperand="10" leftOperand="2" soluce="true" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT1" result="6" rightOperand="1" leftOperand="2" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT13" result="19" rightOperand="7" leftOperand="2" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT12" result="14" rightOperand="7" leftOperand="2" soluce="true" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT15" result="20" rightOperand="8" leftOperand="2" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT3" result="3" rightOperand="2" leftOperand="2" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT19" result="20" rightOperand="10" leftOperand="2" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT19" result="22" rightOperand="10" leftOperand="2" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT14" result="16" rightOperand="8" leftOperand="2" soluce="true" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT17" result="20" rightOperand="9" leftOperand="2" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT16" result="18" rightOperand="9" leftOperand="2" soluce="true" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT0" result="2" rightOperand="1" leftOperand="2" soluce="true" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT17" result="22" rightOperand="9" leftOperand="2" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT11" result="12" rightOperand="6" leftOperand="2" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT6" result="8" rightOperand="4" leftOperand="2" soluce="true" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT10" result="12" rightOperand="6" leftOperand="2" soluce="true" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT1" rightOperand="1" leftOperand="2" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT8" result="10" rightOperand="5" leftOperand="2" soluce="true" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT12" result="14" rightOperand="7" leftOperand="2" soluce="true" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT15" result="19" rightOperand="8" leftOperand="2" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT6" result="8" rightOperand="4" leftOperand="2" soluce="true" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT3" result="3" rightOperand="2" leftOperand="2" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT9" result="12" rightOperand="5" leftOperand="2" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT5" result="4" rightOperand="3" leftOperand="2" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT13" result="12" rightOperand="7" leftOperand="2" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT4" result="6" rightOperand="3" leftOperand="2" soluce="true" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT7" result="9" rightOperand="4" leftOperand="2" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT0" result="2" rightOperand="1" leftOperand="2" soluce="true" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFIdentification" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T4-QAFACT11" result="7" rightOperand="6" leftOperand="2" resultOnRight="true"/>
               </resultsbytask>
               <resultsbytask>
                 <task xsi:type="generator:MTMembership" href="LearningDomain.xmi#PATH404-O1-L1-T5"/>
-                <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT3" table="2">
+                <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT0" table="2">
                   <goodResults>2</goodResults>
+                  <goodResults>18</goodResults>
+                </questionableFacts>
+                <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT3" table="2">
                   <goodResults>20</goodResults>
-                </questionableFacts>
-                <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT2" table="2">
-                  <goodResults>8</goodResults>
-                  <goodResults>6</goodResults>
-                </questionableFacts>
-                <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT1" table="2">
-                  <goodResults>10</goodResults>
                   <goodResults>4</goodResults>
                 </questionableFacts>
-                <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT0" table="2">
+                <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT2" table="2">
                   <goodResults>12</goodResults>
+                  <goodResults>10</goodResults>
+                </questionableFacts>
+                <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT1" table="2">
+                  <goodResults>6</goodResults>
                   <goodResults>16</goodResults>
                 </questionableFacts>
                 <questionableFacts xsi:type="generator:MTQFMembership" achieved="false" wasSelected="false" ID="PATH404-O1-L1-T5-QAFACT4" table="2">
+                  <goodResults>8</goodResults>
                   <goodResults>14</goodResults>
-                  <goodResults>18</goodResults>
                 </questionableFacts>
               </resultsbytask>
             </results>
@@ -125,7 +125,7 @@
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH404"/>
-      <statistics maxGameLevelReached="12" nbLevelsGenerated="184"/>
+      <statistics maxGameLevelReached="12" nbLevelsGenerated="200"/>
     </learnerPlayers>
   </learnerPlayers>
 </generator:Classroom>

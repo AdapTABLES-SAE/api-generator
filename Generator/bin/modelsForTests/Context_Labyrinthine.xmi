@@ -13955,7 +13955,7 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O1_L1"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O1_L1-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O1_L1-T1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT1" leftOperand="1" rightOperand="2" result="-1" soluce="2" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT3" leftOperand="1" rightOperand="4" result="-1" soluce="4" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT5" leftOperand="1" rightOperand="6" result="-1" soluce="6" resultOnRight="true"/>
@@ -13974,7 +13974,7 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O1_L2"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O1_L2-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O1_L2-T1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L2-T1-QAFACT1" leftOperand="1" rightOperand="2" result="-1" soluce="2" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L2-T1-QAFACT3" leftOperand="1" rightOperand="4" result="-1" soluce="4" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L2-T1-QAFACT5" leftOperand="1" rightOperand="6" result="-1" soluce="6" resultOnRight="true"/>
@@ -13993,7 +13993,7 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L1"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O2_L1-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O2_L1-T1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT0" leftOperand="2" rightOperand="1" result="-1" soluce="2" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT1" leftOperand="2" rightOperand="2" result="-1" soluce="4" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT4" leftOperand="2" rightOperand="5" result="-1" soluce="10" resultOnRight="true"/>
@@ -14012,7 +14012,7 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L2"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O2_L2-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O2_L2-T1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT0" leftOperand="2" rightOperand="1" result="-1" soluce="2" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT1" leftOperand="2" rightOperand="2" result="-1" soluce="4" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT4" leftOperand="2" rightOperand="5" result="-1" soluce="10" resultOnRight="true"/>
@@ -14031,7 +14031,7 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L3"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O2_L3-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O2_L3-T1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT0" leftOperand="2" rightOperand="1" result="-1" soluce="2" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT1" leftOperand="2" rightOperand="2" result="-1" soluce="4" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT4" leftOperand="2" rightOperand="5" result="-1" soluce="10" resultOnRight="true"/>
@@ -14050,7 +14050,7 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O3_L1"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O3_L1-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O3_L1-T1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT6" leftOperand="3" rightOperand="7" result="-1" soluce="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT7" leftOperand="3" rightOperand="8" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT0" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -14069,7 +14069,7 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O3_L2"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O3_L2-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O3_L2-T1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT6" leftOperand="3" rightOperand="7" result="-1" soluce="21" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT7" leftOperand="3" rightOperand="8" result="-1" soluce="24" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT0" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
@@ -14088,7 +14088,7 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L1"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O4_L1-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O4_L1-T1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L1-T1-QAFACT8" leftOperand="4" rightOperand="9" result="-1" soluce="36" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L1-T1-QAFACT3" leftOperand="4" rightOperand="4" result="-1" soluce="16" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L1-T1-QAFACT2" leftOperand="4" rightOperand="3" result="-1" soluce="12" resultOnRight="true"/>
@@ -14107,7 +14107,7 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L2"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O4_L2-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O4_L2-T1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L2-T1-QAFACT8" leftOperand="4" rightOperand="9" result="-1" soluce="36" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L2-T1-QAFACT3" leftOperand="4" rightOperand="4" result="-1" soluce="16" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L2-T1-QAFACT2" leftOperand="4" rightOperand="3" result="-1" soluce="12" resultOnRight="true"/>
@@ -14126,7 +14126,156 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L3"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O4_L3-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O4_L3-T1"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT8" leftOperand="4" rightOperand="9" result="-1" soluce="36" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT3" leftOperand="4" rightOperand="4" result="-1" soluce="16" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT2" leftOperand="4" rightOperand="3" result="-1" soluce="12" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT7" leftOperand="4" rightOperand="8" result="-1" soluce="32" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT6" leftOperand="4" rightOperand="7" result="-1" soluce="28" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT1" leftOperand="4" rightOperand="2" result="-1" soluce="8" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT0" leftOperand="4" rightOperand="1" result="-1" soluce="4" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT5" leftOperand="4" rightOperand="6" result="-1" soluce="24" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT4" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT9" leftOperand="4" rightOperand="10" result="-1" soluce="40" resultOnRight="true"/>
+              </resultsbytask>
+            </results>
+          </currentobjectivelevels>
+        </learnerProgress>
+      </progression>
+      <learningpath href="LearningDomain.xmi#PATH_FOR_OBJECTIVE_LEVEL_TESTS"/>
+      <statistics maxGameLevelReached="1" nbLevelsGenerated="450"/>
+    </learnerPlayers>
+    <learnerPlayers name="Learner 019 [TEST_OL] (every objectives are finished but not all are at 100%)" ID="LP019">
+      <progression>
+        <playerProgress currentLevel="1" coins="0"/>
+        <learnerProgress>
+          <currentobjectivelevels achieved="true" encountersPercent="85.0" successPercent="87.0">
+            <objective href="LearningDomain.xmi#OBJ-LVL_O1"/>
+            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O1_L1"/>
+            <results>
+              <resultsbytask>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O1_L1-T1"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT1" leftOperand="1" rightOperand="2" result="-1" soluce="2" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT3" leftOperand="1" rightOperand="4" result="-1" soluce="4" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT5" leftOperand="1" rightOperand="6" result="-1" soluce="6" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT9" leftOperand="1" rightOperand="10" result="-1" soluce="10" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT0" leftOperand="1" rightOperand="1" result="-1" soluce="1" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT2" leftOperand="1" rightOperand="3" result="-1" soluce="3" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT4" leftOperand="1" rightOperand="5" result="-1" soluce="5" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT6" leftOperand="1" rightOperand="7" result="-1" soluce="7" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT8" leftOperand="1" rightOperand="9" result="-1" soluce="9" resultOnRight="true"/>
+              </resultsbytask>
+            </results>
+          </currentobjectivelevels>
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
+            <objective href="LearningDomain.xmi#OBJ-LVL_O1"/>
+            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O1_L2"/>
+            <results>
+              <resultsbytask>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O1_L2-T1"/>
+              </resultsbytask>
+            </results>
+          </currentobjectivelevels>
+          <currentobjectivelevels achieved="true" encountersPercent="85.0" successPercent="90.0">
+            <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
+            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L1"/>
+            <results>
+              <resultsbytask>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O2_L1-T1"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT0" leftOperand="2" rightOperand="1" result="-1" soluce="2" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT1" leftOperand="2" rightOperand="2" result="-1" soluce="4" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT4" leftOperand="2" rightOperand="5" result="-1" soluce="10" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT5" leftOperand="2" rightOperand="6" result="-1" soluce="12" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT2" leftOperand="2" rightOperand="3" result="-1" soluce="6" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT3" leftOperand="2" rightOperand="4" result="-1" soluce="8" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT8" leftOperand="2" rightOperand="9" result="-1" soluce="18" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT9" leftOperand="2" rightOperand="10" result="-1" soluce="20" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT6" leftOperand="2" rightOperand="7" result="-1" soluce="14" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT7" leftOperand="2" rightOperand="8" result="-1" soluce="16" resultOnRight="true"/>
+              </resultsbytask>
+            </results>
+          </currentobjectivelevels>
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
+            <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
+            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L2"/>
+            <results>
+              <resultsbytask>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O2_L2-T1"/>
+              </resultsbytask>
+            </results>
+          </currentobjectivelevels>
+          <currentobjectivelevels achieved="true" encountersPercent="83.0" successPercent="92.0">
+            <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
+            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L3"/>
+            <results>
+              <resultsbytask>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O2_L3-T1"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT0" leftOperand="2" rightOperand="1" result="-1" soluce="2" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT1" leftOperand="2" rightOperand="2" result="-1" soluce="4" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT4" leftOperand="2" rightOperand="5" result="-1" soluce="10" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT5" leftOperand="2" rightOperand="6" result="-1" soluce="12" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT2" leftOperand="2" rightOperand="3" result="-1" soluce="6" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT3" leftOperand="2" rightOperand="4" result="-1" soluce="8" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT8" leftOperand="2" rightOperand="9" result="-1" soluce="18" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT9" leftOperand="2" rightOperand="10" result="-1" soluce="20" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT6" leftOperand="2" rightOperand="7" result="-1" soluce="14" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT7" leftOperand="2" rightOperand="8" result="-1" soluce="16" resultOnRight="true"/>
+              </resultsbytask>
+            </results>
+          </currentobjectivelevels>
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
+            <objective href="LearningDomain.xmi#OBJ-LVL_O3"/>
+            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O3_L1"/>
+            <results>
+              <resultsbytask>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O3_L1-T1"/>
+              </resultsbytask>
+            </results>
+          </currentobjectivelevels>
+          <currentobjectivelevels achieved="true" encountersPercent="75.0" successPercent="80.0">
+            <objective href="LearningDomain.xmi#OBJ-LVL_O3"/>
+            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O3_L2"/>
+            <results>
+              <resultsbytask>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O3_L2-T1"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT6" leftOperand="3" rightOperand="7" result="-1" soluce="21" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT7" leftOperand="3" rightOperand="8" result="-1" soluce="24" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT0" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT8" leftOperand="3" rightOperand="9" result="-1" soluce="27" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT1" leftOperand="3" rightOperand="2" result="-1" soluce="6" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT9" leftOperand="3" rightOperand="10" result="-1" soluce="30" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT2" leftOperand="3" rightOperand="3" result="-1" soluce="9" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT3" leftOperand="3" rightOperand="4" result="-1" soluce="12" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT4" leftOperand="3" rightOperand="5" result="-1" soluce="15" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT5" leftOperand="3" rightOperand="6" result="-1" soluce="18" resultOnRight="true"/>
+              </resultsbytask>
+            </results>
+          </currentobjectivelevels>
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
+            <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
+            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L1"/>
+            <results>
+              <resultsbytask>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O4_L1-T1"/>
+              </resultsbytask>
+            </results>
+          </currentobjectivelevels>
+          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
+            <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
+            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L2"/>
+            <results>
+              <resultsbytask>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O4_L2-T1"/>
+              </resultsbytask>
+            </results>
+          </currentobjectivelevels>
+          <currentobjectivelevels achieved="true" encountersPercent="70.0" successPercent="85.0">
+            <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
+            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L3"/>
+            <results>
+              <resultsbytask>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O4_L3-T1"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT8" leftOperand="4" rightOperand="9" result="-1" soluce="36" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT3" leftOperand="4" rightOperand="4" result="-1" soluce="16" resultOnRight="true"/>
                 <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT2" leftOperand="4" rightOperand="3" result="-1" soluce="12" resultOnRight="true"/>
@@ -14154,7 +14303,7 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L1"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O2_L1-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O2_L1-T1"/>
               </resultsbytask>
             </results>
           </currentobjectivelevels>
@@ -14163,17 +14312,17 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L2"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O2_L2-T1"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT0" leftOperand="2" rightOperand="1" result="-1" soluce="2" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT1" leftOperand="2" rightOperand="2" result="-1" soluce="4" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT4" leftOperand="2" rightOperand="5" result="-1" soluce="10" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT5" leftOperand="2" rightOperand="6" result="-1" soluce="12" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT2" leftOperand="2" rightOperand="3" result="-1" soluce="6" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT3" leftOperand="2" rightOperand="4" result="-1" soluce="8" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT8" leftOperand="2" rightOperand="9" result="-1" soluce="18" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT9" leftOperand="2" rightOperand="10" result="-1" soluce="20" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT6" leftOperand="2" rightOperand="7" result="-1" soluce="14" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT7" leftOperand="2" rightOperand="8" result="-1" soluce="16" resultOnRight="true"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O2_L2-T1"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT3" leftOperand="-1" rightOperand="-1" result="8" soluceLeft="2" soluceRight="4" soluceRes="8" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT8" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="2" soluceRight="9" soluceRes="18" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT7" leftOperand="-1" rightOperand="-1" result="16" soluceLeft="2" soluceRight="8" soluceRes="16" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT5" leftOperand="-1" rightOperand="-1" result="12" soluceLeft="2" soluceRight="6" soluceRes="12" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT0" leftOperand="-1" rightOperand="-1" result="2" soluceLeft="2" soluceRight="1" soluceRes="2" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT1" leftOperand="-1" rightOperand="-1" result="4" soluceLeft="2" soluceRight="2" soluceRes="4" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT6" leftOperand="-1" rightOperand="-1" result="14" soluceLeft="2" soluceRight="7" soluceRes="14" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT9" leftOperand="-1" rightOperand="-1" result="20" soluceLeft="2" soluceRight="10" soluceRes="20" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT2" leftOperand="-1" rightOperand="-1" result="6" soluceLeft="2" soluceRight="3" soluceRes="6" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L2-T1-QAFACT4" leftOperand="-1" rightOperand="-1" result="10" soluceLeft="2" soluceRight="5" soluceRes="10" resultOnRight="true"/>
               </resultsbytask>
             </results>
           </currentobjectivelevels>
@@ -14182,7 +14331,7 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L1"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O4_L1-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O4_L1-T1"/>
               </resultsbytask>
             </results>
           </currentobjectivelevels>
@@ -14191,7 +14340,7 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L2"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O4_L2-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O4_L2-T1"/>
               </resultsbytask>
             </results>
           </currentobjectivelevels>
@@ -14200,7 +14349,7 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L3"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O4_L3-T1"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O4_L3-T1"/>
               </resultsbytask>
             </results>
           </currentobjectivelevels>
@@ -14209,17 +14358,17 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O1_L1"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O1_L1-T1"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT1" leftOperand="1" rightOperand="2" result="-1" soluce="2" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT3" leftOperand="1" rightOperand="4" result="-1" soluce="4" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT5" leftOperand="1" rightOperand="6" result="-1" soluce="6" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT9" leftOperand="1" rightOperand="10" result="-1" soluce="10" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT0" leftOperand="1" rightOperand="1" result="-1" soluce="1" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT2" leftOperand="1" rightOperand="3" result="-1" soluce="3" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT4" leftOperand="1" rightOperand="5" result="-1" soluce="5" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT6" leftOperand="1" rightOperand="7" result="-1" soluce="7" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT8" leftOperand="1" rightOperand="9" result="-1" soluce="9" resultOnRight="true"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O1_L1-T1"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT2" leftOperand="-1" rightOperand="-1" result="3" soluceLeft="1" soluceRight="3" soluceRes="3" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT5" leftOperand="-1" rightOperand="-1" result="6" soluceLeft="1" soluceRight="6" soluceRes="6" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT7" leftOperand="-1" rightOperand="-1" result="8" soluceLeft="1" soluceRight="8" soluceRes="8" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT6" leftOperand="-1" rightOperand="-1" result="7" soluceLeft="1" soluceRight="7" soluceRes="7" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT9" leftOperand="-1" rightOperand="-1" result="10" soluceLeft="1" soluceRight="10" soluceRes="10" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT1" leftOperand="-1" rightOperand="-1" result="2" soluceLeft="1" soluceRight="2" soluceRes="2" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT3" leftOperand="-1" rightOperand="-1" result="4" soluceLeft="1" soluceRight="4" soluceRes="4" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT0" leftOperand="-1" rightOperand="-1" result="1" soluceLeft="1" soluceRight="1" soluceRes="1" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT4" leftOperand="-1" rightOperand="-1" result="5" soluceLeft="1" soluceRight="5" soluceRes="5" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT8" leftOperand="-1" rightOperand="-1" result="9" soluceLeft="1" soluceRight="9" soluceRes="9" resultOnRight="true"/>
               </resultsbytask>
             </results>
           </currentobjectivelevels>
@@ -14228,173 +14377,24 @@
             <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O3_L1"/>
             <results>
               <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O3_L1-T1"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT6" leftOperand="3" rightOperand="7" result="-1" soluce="21" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT7" leftOperand="3" rightOperand="8" result="-1" soluce="24" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT0" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT8" leftOperand="3" rightOperand="9" result="-1" soluce="27" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT1" leftOperand="3" rightOperand="2" result="-1" soluce="6" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT9" leftOperand="3" rightOperand="10" result="-1" soluce="30" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT2" leftOperand="3" rightOperand="3" result="-1" soluce="9" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT3" leftOperand="3" rightOperand="4" result="-1" soluce="12" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT4" leftOperand="3" rightOperand="5" result="-1" soluce="15" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT5" leftOperand="3" rightOperand="6" result="-1" soluce="18" resultOnRight="true"/>
+                <task xsi:type="generator:MTCompletion2" href="LearningDomain.xmi#OBJ-LVL-O3_L1-T1"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT0" leftOperand="-1" rightOperand="-1" result="3" soluceLeft="3" soluceRight="1" soluceRes="3" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT9" leftOperand="-1" rightOperand="-1" result="30" soluceLeft="3" soluceRight="10" soluceRes="30" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT8" leftOperand="-1" rightOperand="-1" result="27" soluceLeft="3" soluceRight="9" soluceRes="27" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT5" leftOperand="-1" rightOperand="-1" result="18" soluceLeft="3" soluceRight="6" soluceRes="18" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT7" leftOperand="-1" rightOperand="-1" result="24" soluceLeft="3" soluceRight="8" soluceRes="24" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT3" leftOperand="-1" rightOperand="-1" result="12" soluceLeft="3" soluceRight="4" soluceRes="12" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT2" leftOperand="-1" rightOperand="-1" result="9" soluceLeft="3" soluceRight="3" soluceRes="9" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT1" leftOperand="-1" rightOperand="-1" result="6" soluceLeft="3" soluceRight="2" soluceRes="6" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT6" leftOperand="-1" rightOperand="-1" result="21" soluceLeft="3" soluceRight="7" soluceRes="21" resultOnRight="true"/>
+                <questionableFacts xsi:type="generator:MTQFCompletion2" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L1-T1-QAFACT4" leftOperand="-1" rightOperand="-1" result="15" soluceLeft="3" soluceRight="5" soluceRes="15" resultOnRight="true"/>
               </resultsbytask>
             </results>
           </currentobjectivelevels>
         </learnerProgress>
       </progression>
       <learningpath href="LearningDomain.xmi#PATH_FOR_OBJECTIVE_LEVEL_TESTS"/>
-      <statistics maxGameLevelReached="5" nbLevelsGenerated="1800"/>
-    </learnerPlayers>
-    <learnerPlayers name="Learner 019 [TEST_OL] (every objectives are finished but not all are at 100%)" ID="LP019">
-      <progression>
-        <playerProgress currentLevel="1" coins="0"/>
-        <learnerProgress>
-          <currentobjectivelevels achieved="true" encountersPercent="85.0" successPercent="87.0">
-            <objective href="LearningDomain.xmi#OBJ-LVL_O1"/>
-            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O1_L1"/>
-            <results>
-              <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O1_L1-T1"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT1" leftOperand="1" rightOperand="2" result="-1" soluce="2" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT3" leftOperand="1" rightOperand="4" result="-1" soluce="4" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT5" leftOperand="1" rightOperand="6" result="-1" soluce="6" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT7" leftOperand="1" rightOperand="8" result="-1" soluce="8" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT9" leftOperand="1" rightOperand="10" result="-1" soluce="10" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT0" leftOperand="1" rightOperand="1" result="-1" soluce="1" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT2" leftOperand="1" rightOperand="3" result="-1" soluce="3" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT4" leftOperand="1" rightOperand="5" result="-1" soluce="5" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT6" leftOperand="1" rightOperand="7" result="-1" soluce="7" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O1_L1-T1-QAFACT8" leftOperand="1" rightOperand="9" result="-1" soluce="9" resultOnRight="true"/>
-              </resultsbytask>
-            </results>
-          </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
-            <objective href="LearningDomain.xmi#OBJ-LVL_O1"/>
-            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O1_L2"/>
-            <results>
-              <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O1_L2-T1"/>
-              </resultsbytask>
-            </results>
-          </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="85.0" successPercent="90.0">
-            <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
-            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L1"/>
-            <results>
-              <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O2_L1-T1"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT0" leftOperand="2" rightOperand="1" result="-1" soluce="2" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT1" leftOperand="2" rightOperand="2" result="-1" soluce="4" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT4" leftOperand="2" rightOperand="5" result="-1" soluce="10" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT5" leftOperand="2" rightOperand="6" result="-1" soluce="12" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT2" leftOperand="2" rightOperand="3" result="-1" soluce="6" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT3" leftOperand="2" rightOperand="4" result="-1" soluce="8" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT8" leftOperand="2" rightOperand="9" result="-1" soluce="18" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT9" leftOperand="2" rightOperand="10" result="-1" soluce="20" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT6" leftOperand="2" rightOperand="7" result="-1" soluce="14" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L1-T1-QAFACT7" leftOperand="2" rightOperand="8" result="-1" soluce="16" resultOnRight="true"/>
-              </resultsbytask>
-            </results>
-          </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
-            <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
-            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L2"/>
-            <results>
-              <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O2_L2-T1"/>
-              </resultsbytask>
-            </results>
-          </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="83.0" successPercent="92.0">
-            <objective href="LearningDomain.xmi#OBJ-LVL_O2"/>
-            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O2_L3"/>
-            <results>
-              <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O2_L3-T1"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT0" leftOperand="2" rightOperand="1" result="-1" soluce="2" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT1" leftOperand="2" rightOperand="2" result="-1" soluce="4" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT4" leftOperand="2" rightOperand="5" result="-1" soluce="10" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT5" leftOperand="2" rightOperand="6" result="-1" soluce="12" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT2" leftOperand="2" rightOperand="3" result="-1" soluce="6" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT3" leftOperand="2" rightOperand="4" result="-1" soluce="8" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT8" leftOperand="2" rightOperand="9" result="-1" soluce="18" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT9" leftOperand="2" rightOperand="10" result="-1" soluce="20" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT6" leftOperand="2" rightOperand="7" result="-1" soluce="14" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O2_L3-T1-QAFACT7" leftOperand="2" rightOperand="8" result="-1" soluce="16" resultOnRight="true"/>
-              </resultsbytask>
-            </results>
-          </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
-            <objective href="LearningDomain.xmi#OBJ-LVL_O3"/>
-            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O3_L1"/>
-            <results>
-              <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O3_L1-T1"/>
-              </resultsbytask>
-            </results>
-          </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="75.0" successPercent="80.0">
-            <objective href="LearningDomain.xmi#OBJ-LVL_O3"/>
-            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O3_L2"/>
-            <results>
-              <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O3_L2-T1"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT6" leftOperand="3" rightOperand="7" result="-1" soluce="21" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT7" leftOperand="3" rightOperand="8" result="-1" soluce="24" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT0" leftOperand="3" rightOperand="1" result="-1" soluce="3" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT8" leftOperand="3" rightOperand="9" result="-1" soluce="27" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT1" leftOperand="3" rightOperand="2" result="-1" soluce="6" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT9" leftOperand="3" rightOperand="10" result="-1" soluce="30" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT2" leftOperand="3" rightOperand="3" result="-1" soluce="9" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT3" leftOperand="3" rightOperand="4" result="-1" soluce="12" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT4" leftOperand="3" rightOperand="5" result="-1" soluce="15" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O3_L2-T1-QAFACT5" leftOperand="3" rightOperand="6" result="-1" soluce="18" resultOnRight="true"/>
-              </resultsbytask>
-            </results>
-          </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
-            <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
-            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L1"/>
-            <results>
-              <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O4_L1-T1"/>
-              </resultsbytask>
-            </results>
-          </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="100.0" successPercent="100.0">
-            <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
-            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L2"/>
-            <results>
-              <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O4_L2-T1"/>
-              </resultsbytask>
-            </results>
-          </currentobjectivelevels>
-          <currentobjectivelevels achieved="true" encountersPercent="70.0" successPercent="85.0">
-            <objective href="LearningDomain.xmi#OBJ-LVL_O4"/>
-            <level xsi:type="generator:MTLevel" href="LearningDomain.xmi#OBJ-LVL-O4_L3"/>
-            <results>
-              <resultsbytask>
-                <task xsi:type="generator:MTCompletion1" href="LearningDomain.xmi#OBJ-LVL-O4_L3-T1"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT8" leftOperand="4" rightOperand="9" result="-1" soluce="36" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT3" leftOperand="4" rightOperand="4" result="-1" soluce="16" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT2" leftOperand="4" rightOperand="3" result="-1" soluce="12" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT7" leftOperand="4" rightOperand="8" result="-1" soluce="32" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT6" leftOperand="4" rightOperand="7" result="-1" soluce="28" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT1" leftOperand="4" rightOperand="2" result="-1" soluce="8" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT0" leftOperand="4" rightOperand="1" result="-1" soluce="4" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT5" leftOperand="4" rightOperand="6" result="-1" soluce="24" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT4" leftOperand="4" rightOperand="5" result="-1" soluce="20" resultOnRight="true"/>
-                <questionableFacts xsi:type="generator:MTQFCompletion1" achieved="false" wasSelected="false" ID="OBJ-LVL-O4_L3-T1-QAFACT9" leftOperand="4" rightOperand="10" result="-1" soluce="40" resultOnRight="true"/>
-              </resultsbytask>
-            </results>
-          </currentobjectivelevels>
-        </learnerProgress>
-      </progression>
-      <learningpath href="LearningDomain.xmi#PATH_FOR_OBJECTIVE_LEVEL_TESTS"/>
-      <statistics maxGameLevelReached="1" nbLevelsGenerated="450"/>
+      <statistics maxGameLevelReached="5" nbLevelsGenerated="1950"/>
     </learnerPlayers>
   </learnerPlayers>
 </generator:Classroom>
