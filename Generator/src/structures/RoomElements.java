@@ -101,7 +101,6 @@ public class RoomElements {
 	}
 	
 	public void addQuestionedFact(QuestionedFact fact) {
-		System.out.println("ADD FACT "+fact.getFactCorrectness());
 		this.facts.add(fact);
 	}
 	
@@ -128,22 +127,13 @@ public class RoomElements {
 	}
 	
 	private void selectElementType() {
-		System.err.println("************ GP = "+gameplay.getName());
+		//System.err.println("************ GP = "+gameplay.getName());
 		selectElementType(gameplay.getComponents(), false);
-		System.err.println("************");
+		//System.err.println("************");
 	}
 	
 	public Gameplay getGameplay() {
 		return gameplay;
-	}
-	
-	private boolean isStructureForProposition(Structure aStructure) {
-		for (AComponent component : aStructure.getComponents()) {
-			if(component instanceof Component && component.isForProposition()) {
-				return true;
-			}
-		}
-		return false;
 	}
 	
 	private boolean isStructureComponent(AComponent component) {
@@ -153,8 +143,8 @@ public class RoomElements {
 	private void selectElementType(List<AComponent> components, boolean isStructureComponents) {
 		for (AComponent aComponent : components) {
 			ElementType elementType = getCompatibleElementType(aComponent, isStructureComponents); 
-			System.err.println("COMPONENT "+aComponent.getAllowedAbility());
-			System.err.println("ELEMENT "+elementType.getType());
+			//System.err.println("COMPONENT "+aComponent.getAllowedAbility());
+			//System.err.println("ELEMENT "+elementType.getType());
 			if(isStructureComponents) {
 				if(!elementsToQuantity.containsKey(elementType)) {
 					elementsToQuantity.put(elementType, -1);
@@ -204,7 +194,6 @@ public class RoomElements {
 	
 	private ElementType getCompatibleElementType(AComponent component, boolean isStructureComponent) { // TODO : Deal with statements 
 		List<ElementType> compatibleTypes = new ArrayList<>();
-		System.out.println("AQUI "+component.getAllowedAbility());
 		for (ElementType elementType : gameDescriptionModel.getElements().getElementTypes().getElements()) {
 			if(elementType instanceof StatementElementType) {
 				if(isComponentForStatement(component) && !isComponentForChoices(component) && hasValidStatementConditions((StatementElementType) elementType, isStructureComponent)) {

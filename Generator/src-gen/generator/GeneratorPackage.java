@@ -1555,13 +1555,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_COMPLETION1__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION1__CHECK_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 2;
+	int MT_COMPLETION1__CHECK_ON_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>MT Completion1</em>' class.
@@ -2404,13 +2404,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_COMPLETION2__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_COMPLETION2__CHECK_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 2;
+	int MT_COMPLETION2__CHECK_ON_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>MT Completion2</em>' class.
@@ -2549,13 +2549,13 @@ public interface GeneratorPackage extends EPackage {
 	int MT_RECONTRUCTION__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Check Learner Action</b></em>' attribute.
+	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__CHECK_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 1;
+	int MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>MT Recontruction</em>' class.
@@ -8964,15 +8964,15 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTCompletion1_NbMissingElements();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.MTCompletion1#isCheckLearnerAction <em>Check Learner Action</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.MTCompletion1#isCheckOnLearnerAction <em>Check On Learner Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Check Learner Action</em>'.
-	 * @see generator.MTCompletion1#isCheckLearnerAction()
+	 * @return the meta object for the attribute '<em>Check On Learner Action</em>'.
+	 * @see generator.MTCompletion1#isCheckOnLearnerAction()
 	 * @see #getMTCompletion1()
 	 * @generated
 	 */
-	EAttribute getMTCompletion1_CheckLearnerAction();
+	EAttribute getMTCompletion1_CheckOnLearnerAction();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Classroom <em>Classroom</em>}'.
@@ -9614,15 +9614,15 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTCompletion2_NbMissingElements();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.MTCompletion2#isCheckLearnerAction <em>Check Learner Action</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.MTCompletion2#isCheckOnLearnerAction <em>Check On Learner Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Check Learner Action</em>'.
-	 * @see generator.MTCompletion2#isCheckLearnerAction()
+	 * @return the meta object for the attribute '<em>Check On Learner Action</em>'.
+	 * @see generator.MTCompletion2#isCheckOnLearnerAction()
 	 * @see #getMTCompletion2()
 	 * @generated
 	 */
-	EAttribute getMTCompletion2_CheckLearnerAction();
+	EAttribute getMTCompletion2_CheckOnLearnerAction();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MTRecontruction <em>MT Recontruction</em>}'.
@@ -9646,15 +9646,15 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTRecontruction_NbMissingElements();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.MTRecontruction#isCheckLearnerAction <em>Check Learner Action</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.MTRecontruction#isCheckOnLearnerAction <em>Check On Learner Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Check Learner Action</em>'.
-	 * @see generator.MTRecontruction#isCheckLearnerAction()
+	 * @return the meta object for the attribute '<em>Check On Learner Action</em>'.
+	 * @see generator.MTRecontruction#isCheckOnLearnerAction()
 	 * @see #getMTRecontruction()
 	 * @generated
 	 */
-	EAttribute getMTRecontruction_CheckLearnerAction();
+	EAttribute getMTRecontruction_CheckOnLearnerAction();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MTIdentification <em>MT Identification</em>}'.
@@ -13394,12 +13394,12 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MT_COMPLETION1__NB_MISSING_ELEMENTS = eINSTANCE.getMTCompletion1_NbMissingElements();
 
 		/**
-		 * The meta object literal for the '<em><b>Check Learner Action</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Check On Learner Action</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MT_COMPLETION1__CHECK_LEARNER_ACTION = eINSTANCE.getMTCompletion1_CheckLearnerAction();
+		EAttribute MT_COMPLETION1__CHECK_ON_LEARNER_ACTION = eINSTANCE.getMTCompletion1_CheckOnLearnerAction();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ClassroomImpl <em>Classroom</em>}' class.
@@ -13912,12 +13912,12 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MT_COMPLETION2__NB_MISSING_ELEMENTS = eINSTANCE.getMTCompletion2_NbMissingElements();
 
 		/**
-		 * The meta object literal for the '<em><b>Check Learner Action</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Check On Learner Action</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MT_COMPLETION2__CHECK_LEARNER_ACTION = eINSTANCE.getMTCompletion2_CheckLearnerAction();
+		EAttribute MT_COMPLETION2__CHECK_ON_LEARNER_ACTION = eINSTANCE.getMTCompletion2_CheckOnLearnerAction();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTRecontructionImpl <em>MT Recontruction</em>}' class.
@@ -13938,12 +13938,12 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MT_RECONTRUCTION__NB_MISSING_ELEMENTS = eINSTANCE.getMTRecontruction_NbMissingElements();
 
 		/**
-		 * The meta object literal for the '<em><b>Check Learner Action</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Check On Learner Action</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MT_RECONTRUCTION__CHECK_LEARNER_ACTION = eINSTANCE.getMTRecontruction_CheckLearnerAction();
+		EAttribute MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION = eINSTANCE.getMTRecontruction_CheckOnLearnerAction();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTIdentificationImpl <em>MT Identification</em>}' class.

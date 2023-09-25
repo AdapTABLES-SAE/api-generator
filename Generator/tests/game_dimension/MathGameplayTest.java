@@ -31,7 +31,7 @@ class MathGameplayTest {
 
 	@Test
 	@Tag(value = "LP001")
-	void allEligibleObjLevelAreChosenAtLeastOnceTest() {
+	void comp2AndRebuildAreNotWithNotUndoableGameplay() {
 		assertTrue(areCompletion2andRebuildTasksWithUndoableGameplay(generatedLinearDungeons));
 	    
 	    assertTrue(areCompletion2andRebuildTasksWithUndoableGameplay(generatedLabyrinthineDungeons));

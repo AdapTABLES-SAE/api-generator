@@ -207,7 +207,7 @@
     <genClasses ecoreClass="generator.ecore#//MTCompletion1">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/targets"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/nbMissingElements"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/checkLearnerAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/checkOnLearnerAction"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Classroom">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Classroom/gamecontext"/>
@@ -280,11 +280,11 @@
     <genClasses ecoreClass="generator.ecore#//MTCompletion2">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/targets"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/nbMissingElements"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/checkLearnerAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/checkOnLearnerAction"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTRecontruction">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTRecontruction/nbMissingElements"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTRecontruction/checkLearnerAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTRecontruction/checkOnLearnerAction"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTIdentification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTIdentification/target"/>

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
-
+import generator.MTCompletion2;
 import generator.AComponent;
 import generator.ATask;
 import generator.Ability;
@@ -77,12 +77,12 @@ public class GameElementsGenerator {
 	
 	private void unlockGameplays() {
 		List<Ability> abilities = getCurrentlyLockedAbilities();
-		System.out.println("Locked abilities "+abilities);
+		//System.out.println("Locked abilities "+abilities);
 		for(Gameplay gameplay: this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
-			System.out.println("***********************************");
+			//System.out.println("***********************************");
 			gameplay.setLocked(hasGameplayLockedAbilities(gameplay, abilities));
-			System.out.println(gameplay.getName()+" locked? "+gameplay.isLocked());
-			System.out.println("***********************************");
+			//System.out.println(gameplay.getName()+" locked? "+gameplay.isLocked());
+			//System.out.println("***********************************");
 		}
 	}
 	
@@ -255,6 +255,7 @@ public class GameElementsGenerator {
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
 		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			if(gp instanceof QuestionGameplay && !gp.isLocked()) {
+				
 				if(((QuestionGameplay) gp).getCategory().equals(category) && 
 						respectValidationMethod((QuestionGameplay) gp, task) && 
 						respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task, allowedStatementTypes) &&
@@ -263,14 +264,11 @@ public class GameElementsGenerator {
 				}
 			}
 		}
-		
-		//System.out.println("Category "+category.getName()+" -- "+task.getID()+" "+task.getType());
-		//System.out.println("Compatible gameplays "+compatibleGameplays);
 		return compatibleGameplays;
 	}
 	
 	private boolean respectUndoable(QuestionGameplay gameplay, ATask task) {
-		return (task.isCheckOnLearnerAction() && gameplay.isUndoable()) || !task.isCheckOnLearnerAction();
+		return (task.isCheckOnLearnerAction() && gameplay.isUndoable()) || task.isCheckOnLearnerAction() == false;
 	}
 	
 	private boolean respectValidationMethod(QuestionGameplay gameplay, ATask task) {
@@ -278,12 +276,6 @@ public class GameElementsGenerator {
 	}
 	
 	private boolean respectGameplayTaskTypeRestriction(QuestionGameplay gameplay, ATask task, Set<EStatementType> allowedStatementTypes) {
-		/*if(gameplay.getRestrictedTo().isEmpty()) {
-			return true;
-		} else {
-			return gameplay.getRestrictedTo().contains(task.getType());
-		}
-		*/
 		return allowedStatementTypes.contains(gameplay.getStatementType()) && (gameplay.getRestrictedTo().isEmpty() 
 				|| gameplay.getRestrictedTo().contains(task.getType()));
 	}

@@ -612,7 +612,6 @@
           <components
               xsi:type="generator:Structure"
               allowedAbility="HORIZONTAL_DISPLAY"
-              
               forFact="true">
             <expectedSize>
               <value
@@ -698,7 +697,6 @@
           <components
               xsi:type="generator:Structure"
               allowedAbility="HORIZONTAL_DISPLAY"
-              
               forFact="true">
             <expectedSize>
               <value
@@ -851,7 +849,6 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="VERTICAL_DISPLAY"
-          
           forFact="true">
         <expectedSize>
           <value
@@ -974,8 +971,7 @@
         category="MOVE_UNIQUE">
       <components
           xsi:type="generator:Structure"
-          allowedAbility="HORIZONTAL_DISPLAY"
-          >
+          allowedAbility="HORIZONTAL_DISPLAY">
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -1014,8 +1010,7 @@
         category="MOVE_MULTIPLE">
       <components
           xsi:type="generator:Structure"
-          allowedAbility="HORIZONTAL_DISPLAY"
-          >
+          allowedAbility="HORIZONTAL_DISPLAY">
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -1071,8 +1066,7 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="HORIZONTAL_DISPLAY"
-          forProposition="true"
-          >
+          forProposition="true">
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -1112,8 +1106,7 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="HORIZONTAL_DISPLAY"
-          forProposition="true"
-          >
+          forProposition="true">
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -1279,7 +1272,6 @@
           <components
               xsi:type="generator:Structure"
               allowedAbility="HORIZONTAL_DISPLAY"
-              
               forFact="true">
             <expectedSize>
               <value
@@ -1358,7 +1350,6 @@
           <components
               xsi:type="generator:Structure"
               allowedAbility="HORIZONTAL_DISPLAY"
-              
               forFact="true">
             <expectedSize>
               <value
@@ -1418,83 +1409,13 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_UNIQUE_MOVABLE_FILL_IN"
-        undoable="true"
-        category="MOVE_UNIQUE"
-        statementType="FILL_IN">
-      <components
-          xsi:type="generator:Structure"
-          allowedAbility="FILL_IN_DISPLAY"
-          forStatement="true"
-          
-          alternateComponents="true">
-        <components
-            xsi:type="generator:Component"
-            allowedAbility="DISPLAY"
-            forStatement="true"/>
-        <components
-            xsi:type="generator:Component"
-            allowedAbility="DETECTOR">
-          <expectedSize>
-            <value
-                xsi:type="generator:Value"
-                value="SMALL"/>
-          </expectedSize>
-        </components>
-      </components>
-      <components
-          xsi:type="generator:Component"
-          allowedAbility="MOVABLE"
-          forProposition="true"/>
-      <prompt
-          prompt="Place les bons elements"/>
-      <restrictedTo>ORDER</restrictedTo>
-    </gameplays>
-    <gameplays
-        xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE_MOVABLE_FILL_IN"
-        undoable="true"
-        manualValidation="true"
-        category="MOVE_MULTIPLE"
-        statementType="FILL_IN">
-      <components
-          xsi:type="generator:Structure"
-          allowedAbility="FILL_IN_DISPLAY"
-          forStatement="true"
-          
-          alternateComponents="true">
-        <components
-            xsi:type="generator:Component"
-            allowedAbility="DISPLAY"
-            forStatement="true"/>
-        <components
-            xsi:type="generator:Component"
-            allowedAbility="DETECTOR">
-          <expectedSize>
-            <value
-                xsi:type="generator:Value"
-                value="SMALL"/>
-          </expectedSize>
-        </components>
-      </components>
-      <components
-          xsi:type="generator:Component"
-          allowedAbility="MOVABLE"
-          forProposition="true"/>
-      <prompt
-          prompt="Place les bons elements"/>
-      <restrictedTo>ORDER</restrictedTo>
-    </gameplays>
-    <gameplays
-        xsi:type="generator:QuestionGameplay"
         name="GP_ROTABLE_MULTIPLE"
         undoable="true"
         manualValidation="true"
         category="ORIENT_MULTIPLE">
       <components
           xsi:type="generator:Structure"
-          allowedAbility="VERTICAL_DISPLAY"
-          >
+          allowedAbility="VERTICAL_DISPLAY">
         <components
             xsi:type="generator:Component"
             allowedAbility="DISPLAY"

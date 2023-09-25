@@ -1718,7 +1718,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMTCompletion1_CheckLearnerAction() {
+	public EAttribute getMTCompletion1_CheckOnLearnerAction() {
 		return (EAttribute) mtCompletion1EClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2267,7 +2267,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMTCompletion2_CheckLearnerAction() {
+	public EAttribute getMTCompletion2_CheckOnLearnerAction() {
 		return (EAttribute) mtCompletion2EClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2294,7 +2294,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMTRecontruction_CheckLearnerAction() {
+	public EAttribute getMTRecontruction_CheckOnLearnerAction() {
 		return (EAttribute) mtRecontructionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -5005,7 +5005,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtCompletion1EClass = createEClass(MT_COMPLETION1);
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__TARGETS);
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__NB_MISSING_ELEMENTS);
-		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__CHECK_LEARNER_ACTION);
+		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__CHECK_ON_LEARNER_ACTION);
 
 		classroomEClass = createEClass(CLASSROOM);
 		createEReference(classroomEClass, CLASSROOM__GAMECONTEXT);
@@ -5075,11 +5075,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtCompletion2EClass = createEClass(MT_COMPLETION2);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__TARGETS);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__NB_MISSING_ELEMENTS);
-		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__CHECK_LEARNER_ACTION);
+		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__CHECK_ON_LEARNER_ACTION);
 
 		mtRecontructionEClass = createEClass(MT_RECONTRUCTION);
 		createEAttribute(mtRecontructionEClass, MT_RECONTRUCTION__NB_MISSING_ELEMENTS);
-		createEAttribute(mtRecontructionEClass, MT_RECONTRUCTION__CHECK_LEARNER_ACTION);
+		createEAttribute(mtRecontructionEClass, MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION);
 
 		mtIdentificationEClass = createEClass(MT_IDENTIFICATION);
 		createEAttribute(mtIdentificationEClass, MT_IDENTIFICATION__TARGET);
@@ -5756,9 +5756,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTCompletion1_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
 				MTCompletion1.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTCompletion1_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", null, 0,
-				1, MTCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTCompletion1_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
+				null, 0, 1, MTCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(classroomEClass, Classroom.class, "Classroom", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5915,8 +5915,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTCompletion2_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "2", 0, 1,
 				MTCompletion2.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTCompletion2_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", "true",
-				0, 1, MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+		initEAttribute(getMTCompletion2_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
+				"true", 0, 1, MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtRecontructionEClass, MTRecontruction.class, "MTRecontruction", !IS_ABSTRACT, !IS_INTERFACE,
@@ -5924,7 +5924,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTRecontruction_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "3", 0, 1,
 				MTRecontruction.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTRecontruction_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
+		initEAttribute(getMTRecontruction_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"true", 0, 1, MTRecontruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

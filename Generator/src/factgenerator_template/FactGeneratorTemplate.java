@@ -124,7 +124,6 @@ public abstract class FactGeneratorTemplate {
 			cValue.setValue(factCorrectness);
 			param.setValue(cValue);
 			qef.setFactCorrectness(param);
-			System.out.println("FACT CORRECTNESS "+qef.getFactCorrectness().getValue());
 		}
 		
 		roomElement.addQuestionedFact(qef);

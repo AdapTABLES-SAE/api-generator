@@ -19,12 +19,12 @@ import generator.Level;
 import generator.Objective;
 import generator.QuestionableFact;
 import generator.QuestionableFactResult;
-import generator.Results;
 import generator.ResultsByTask;
 import generator.impl.CompletionCriteriaImpl;
 import generator.impl.CurrentObjectiveLevelImpl;
 import generator.impl.ItemImpl;
 import generator.impl.ItemsImpl;
+import generator.impl.LearnerProgressImpl;
 import generator.impl.MTCompletion1Impl;
 import generator.impl.MTLevelImpl;
 import generator.impl.MTQFCompletion1Impl;
@@ -32,7 +32,6 @@ import generator.impl.QuestionableFactResultImpl;
 import generator.impl.ResultsByTaskImpl;
 import generator.impl.ResultsImpl;
 import generator.impl.StatisticsImpl;
-import generator.impl.LearnerProgressImpl;
 
 public class LearnerPlayerManager {
 
@@ -121,6 +120,9 @@ public class LearnerPlayerManager {
 			item.setBought((boolean) jItem.get("isBought"));
 		}
 			
+		player.getProgression().getPlayerProgress().setCoins(player.getProgression().getPlayerProgress().getCoins() - ((Long) obj.get("usedCoins")).intValue());
+		player.getStatistics().setTotalCoins(player.getStatistics().getTotalCoins() - ((Long) obj.get("usedCoins")).intValue());
+		
 		modelsManager.saveContextModel();
 	}
 	

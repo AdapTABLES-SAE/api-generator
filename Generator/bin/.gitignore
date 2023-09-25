@@ -1,10 +1,5 @@
-/generator/
-/FactsGenerationTestOLD.class
-/educational_dimension/
-/exceptions/
-/factgenerator_template/
-/factsgenerator_maths/
-/game_dimension/
 /generators/
-/managers/
+/factgenerator_template/
 /structures/
+/game_dimension/
+/modelsForTests/
