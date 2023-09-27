@@ -1,5 +1,11 @@
-/generators/
+/factsgenerator_maths/
+/generator/
+/educational_dimension/
+/exceptions/
 /factgenerator_template/
-/structures/
 /game_dimension/
-/modelsForTests/
+/FactsGenerationTestOLD.class
+/generators/
+/managers/
+/structures/
+/.gitignore

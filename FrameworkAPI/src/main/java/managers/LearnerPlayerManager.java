@@ -121,6 +121,11 @@ public class LearnerPlayerManager {
 		}
 			
 		player.getProgression().getPlayerProgress().setCoins(player.getProgression().getPlayerProgress().getCoins() - ((Long) obj.get("usedCoins")).intValue());
+		
+		if(player.getStatistics() == null) {
+			player.setStatistics(new StatisticsImpl());
+		}
+		
 		player.getStatistics().setTotalCoins(player.getStatistics().getTotalCoins() - ((Long) obj.get("usedCoins")).intValue());
 		
 		modelsManager.saveContextModel();
