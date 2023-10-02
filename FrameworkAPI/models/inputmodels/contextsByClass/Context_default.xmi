@@ -15,5 +15,13 @@
       <learningpath
           href="../LearningDomain.xmi#PATH404"/>
     </learnerPlayers>
+    <learnerPlayers
+        name="Dorian"
+        ID="dorianla">
+      <progression/>
+      <learningpath
+          href="../LearningDomain.xmi#PATH_DORIAN"/>
+      <statistics/>
+    </learnerPlayers>
   </learnerPlayers>
 </generator:Classroom>

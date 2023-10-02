@@ -3,7 +3,6 @@ package managers;
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
-import java.util.logging.Logger;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -22,11 +21,12 @@ import generator.GeneratorPackage;
 import generator.Knowledge;
 import generator.LearnerPlayer;
 import generator.LearningDomain;
+import generators.ALGAGenerator;
 
 
 public class ModelsManager {
 	
-	private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+	
 	private ResourceSet resourceSet;
 	private boolean lauchedFromAPI = false;
 	public boolean lauchedFromTEST = false;
@@ -63,7 +63,7 @@ public class ModelsManager {
 	}
 	
 	public ModelsManager(String inputPath, String outputPath, boolean lauchedFromAPI) {
-		System.out.println(INPUT_MODELS_PATH);
+		//System.out.println(INPUT_MODELS_PATH);
 		INPUT_MODELS_PATH = inputPath;
 		OUTPUT_MODELS_PATH = outputPath;
 		this.lauchedFromAPI = lauchedFromAPI;
@@ -72,7 +72,7 @@ public class ModelsManager {
 	}
 	
 	public ModelsManager(String inputPath, String outputPath, String contextFilePath, boolean lauchedFromAPI) {
-		System.out.println(INPUT_MODELS_PATH);
+		//System.out.println(INPUT_MODELS_PATH);
 		INPUT_MODELS_PATH = inputPath;
 		OUTPUT_MODELS_PATH = outputPath;
 		this.lauchedFromAPI = lauchedFromAPI;
@@ -97,11 +97,11 @@ public class ModelsManager {
 		try {
 			resource.save(map);
 		}catch (IOException e) {
-			LOGGER.severe("Error while saving : " + OUTPUT_MODELS_PATH + outFileName);
+			ALGAGenerator.LOGGER.severe("Error while saving : " + OUTPUT_MODELS_PATH + outFileName);
 			e.printStackTrace();
 		}
 		
-		LOGGER.info("Saving '" + outFileName + "' file : OK");
+		ALGAGenerator.LOGGER.info("Saving '" + outFileName + "' file : OK");
 	}
 	
 	public void saveDomainModel(LearningDomain learningPaths) {
@@ -118,11 +118,11 @@ public class ModelsManager {
 		try {
 			resource.save(map);
 		}catch (IOException e) {
-			LOGGER.severe("Error while saving : " + INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]);
+			ALGAGenerator.LOGGER.severe("Error while saving : " + INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]);
 			e.printStackTrace();
 		}
 		
-		LOGGER.info("Saving '"+INPUT_MODELS_NAMES[3]+"' file : OK");
+		ALGAGenerator.LOGGER.info("Saving '"+INPUT_MODELS_NAMES[3]+"' file : OK");
 	}
 	
 	public LearningDomain loadDomainModel() {
@@ -172,7 +172,6 @@ public class ModelsManager {
 		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
-		System.out.println(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
 		
 		File contexte = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
 		
@@ -182,11 +181,11 @@ public class ModelsManager {
 		try {
 			resource.save(map);
 		}catch (IOException e) {
-			LOGGER.severe("Error while saving : " + INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
+			ALGAGenerator.LOGGER.severe("Error while saving : " + INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
 			e.printStackTrace();
 		}
 		
-		LOGGER.info("Saving '"+ INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]+"' file : OK");
+		ALGAGenerator.LOGGER.info("Saving '"+ INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]+"' file : OK");
 	}
 		
 	private void loadInputModels() {
@@ -224,7 +223,7 @@ public class ModelsManager {
 		this.learningPath = (LearningDomain) resource4.getContents().get(0);
 		this.relations = (GameplayTaskRelations) resource5.getContents().get(0);
 		
-		LOGGER.info("Loading input models : OK");
+		ALGAGenerator.LOGGER.info("Loading input models : OK");
 	}
 
 	public Classroom getContextModel() {

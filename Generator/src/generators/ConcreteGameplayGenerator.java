@@ -495,7 +495,7 @@ public class ConcreteGameplayGenerator {
 			//System.out.println("COMPPP "+comp.getAllowedAbility());
 			//System.out.println("COMPPP statemeent "+comp.isForStatement());
 			if(comp instanceof Structure) {
-				System.err.println("Structure for FILL-IN question does not deal with inside strucutres.");
+				ALGAGenerator.LOGGER.warning("Structure for FILL-IN question does not deal with inside strucutres.");
 			} else {
 				if(comp.isForStatement()) {
 					return (Component) comp;
@@ -508,7 +508,7 @@ public class ConcreteGameplayGenerator {
 	private Component getComponentForDetectors(Structure component) {
 		for(AComponent comp: component.getComponents()) {
 			if(comp instanceof Structure) {
-				System.err.println("Structure for FILL-IN question does not deal with inside strucutres.");
+				ALGAGenerator.LOGGER.warning("Structure for FILL-IN question does not deal with inside strucutres.");
 			} else {
 				if(!comp.isForStatement()) {
 					return (Component) comp;

@@ -43,16 +43,18 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 		int nbByFact = mc.getNbChoices() - mc.getNbBadChoices();
 		
 		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
-			List<MTResultFact> facts = new ArrayList<>();
-			for (AbstractFact f : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
-				if(f instanceof MTResultFact) {
-					MTResultFact fact = (MTResultFact) f;
-					if(min <= (fact.getRes()/fact.getTable()) && (fact.getRes()/fact.getTable()) <= max){
-						facts.add(fact);
+			if(!setoffact.getName().equals("1")) {
+				List<MTResultFact> facts = new ArrayList<>();
+				for (AbstractFact f : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
+					if(f instanceof MTResultFact) {
+						MTResultFact fact = (MTResultFact) f;
+						if(min <= (fact.getRes()/fact.getTable()) && (fact.getRes()/fact.getTable()) <= max){
+							facts.add(fact);
+						}
 					}
 				}
+				questionableFacts.addAll(generateQuestionableFactsOf(task, facts, nbByFact));
 			}
-			questionableFacts.addAll(generateQuestionableFactsOf(task, facts, nbByFact));
 		}	
 		return questionableFacts; 
 	}

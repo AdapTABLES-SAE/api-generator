@@ -7,7 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
-import generator.MTCompletion2;
+
+import exceptions.NoCompatibleGameplayException;
 import generator.AComponent;
 import generator.ATask;
 import generator.Ability;
@@ -47,7 +48,7 @@ public class GameElementsGenerator {
 		random = new Random();
 	}
 	
-	public void generateGPandCurses() {
+	public void generateGPandCurses() throws NoCompatibleGameplayException {
 		selectCurses();
 		unlockGameplays();
 		selectCompatibleGameplays();
@@ -212,8 +213,8 @@ public class GameElementsGenerator {
 		return allowedCategoriesWithStatements; 
 	}
 	
-	private void selectCompatibleGameplays() {
-		System.out.println("Gameplays selection");
+	private void selectCompatibleGameplays() throws NoCompatibleGameplayException {
+		ALGAGenerator.LOGGER.info("Selection of compatible gameplay");
 		List<Gameplay> gameplays = new ArrayList<>();
 		for (RoomElements room : dungeonElements.getRoomsElements()) {
 			if(room.getTask() != null) {
@@ -224,14 +225,14 @@ public class GameElementsGenerator {
 					GPCategory aCategorie = validCategories.get(random.nextInt(validCategories.size()));
 					gameplays = getQuestionGameplayForCategorieType(aCategorie, room.getTask(), validCategoriesFromRelations.get(aCategorie));
 					validCategories.remove(aCategorie);
-				} while(gameplays.isEmpty());
+				} while(gameplays.isEmpty() && !validCategories.isEmpty());
 				
 				if(gameplays.isEmpty()) {
-					//System.err.println("GAMEPLAY SELECTED : NONE");
+					ALGAGenerator.LOGGER.severe("No gameplay was found for task="+room.getTask().getID());
+					throw new NoCompatibleGameplayException(room.getTask());
 				} else {
 					Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
 					room.setGameplay(gameplay);
-					//System.err.println("GAMEPLAY SELECTED : " + gameplay.getName());
 				}
 			} else if(!room.isExit() && !room.isEntry()) {
 				gameplays = getNoQuestionRoomGameplay();

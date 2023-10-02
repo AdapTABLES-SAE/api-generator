@@ -105,6 +105,9 @@
   </relations>
   <relations
       task="IDENTIFY">
+    <gameplays>SELECT_MULTIPLE</gameplays>
+    <gameplays>MOVE_MULTIPLE</gameplays>
+    <gameplays>ORIENT_MULTIPLE</gameplays>
     <condition
         nbFacts="SUP_ONE"
         nbExpectedAnswers="EQ_NB_FACTS">

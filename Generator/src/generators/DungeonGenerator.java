@@ -9,6 +9,7 @@ import java.util.Set;
 import java.util.Stack;
 import java.util.stream.Collectors;
 
+import exceptions.NonRoomTypeException;
 import generator.Ability;
 import generator.Directions;
 import generator.Dungeon;
@@ -18,7 +19,6 @@ import generator.ElementType;
 import generator.NoQuestionGameplay;
 import generator.Position;
 import generator.QuestionGameplay;
-import generator.QuestionedFact;
 import generator.Room;
 import generator.RoomAccess;
 import generator.RoomType;
@@ -65,7 +65,7 @@ public class DungeonGenerator {
 		this.nbRooms = nbRooms;
 	}
 	
-	public Dungeon generateDungeon() {
+	public Dungeon generateDungeon() throws NonRoomTypeException {
 		DungeonMode mode = modelAccess.lauchedFromTEST? modelAccess.getContextModel().getGamecontext().getMode(): dungeonElements.getDungeonMode();
 		
 		if(mode.equals(DungeonMode.LINEAR)) {
@@ -86,8 +86,8 @@ public class DungeonGenerator {
 	/*   LABYRINTHINE DUNGEON GENERATION METHODS   */
 	/* ******************************************* */
 
-	private void generateLabyrinthineDungeon() {
-		System.out.println("Labyrinthe");
+	private void generateLabyrinthineDungeon() throws NonRoomTypeException {
+		ALGAGenerator.LOGGER.info("Generation of Labyrinthe dungeon");
 		List<LabyrinthineRoom> dungeonRooms = new ArrayList<>();
 		List<LabyrinthineRoom> selectableRooms = new ArrayList<>();
 		
@@ -112,7 +112,7 @@ public class DungeonGenerator {
 		generatedDungeon.setEntry(originRoom);
 	}
 	
-	private LabyrinthineRoom createAnExit(List<LabyrinthineRoom> dungeonRooms) {
+	private LabyrinthineRoom createAnExit(List<LabyrinthineRoom> dungeonRooms) throws NonRoomTypeException {
 		List<LabyrinthineRoom> dungeonRoomTemps = new ArrayList<>(dungeonRooms);
 		LabyrinthineRoom exit = null;
 		while (exit == null) {
@@ -165,7 +165,7 @@ public class DungeonGenerator {
 		return originRoom.getRoom().getRoomtype().getDirections().contains(neighbor.getAccessDirectionToNeighbor()) ;
 	}
 	
-	private LabyrinthineRoom createNewRoomFrom(LabyrinthineRoom originRoom, RoomElements roomElements/*, boolean isExitRoom*/) {
+	private LabyrinthineRoom createNewRoomFrom(LabyrinthineRoom originRoom, RoomElements roomElements/*, boolean isExitRoom*/) throws NonRoomTypeException {
 		Directions originRoomAvailableDirection = originRoom.getAvailableExit(gridManager);
 
 		if(originRoomAvailableDirection.equals(Directions.NONE)) { return null; }
@@ -217,8 +217,9 @@ public class DungeonGenerator {
 	 * Selection of a RoomType that at least possess the entry and exit directions/access.
 	 * @param entry
 	 * @return Valid RoomType
+	 * @throws NonRoomTypeException 
 	 */
-	private RoomType getCompatibleRoomType(Directions entry, RoomElements roomElements) {
+	private RoomType getCompatibleRoomType(Directions entry, RoomElements roomElements) throws NonRoomTypeException {
 		return getCompatibleRoomType(entry, Directions.NONE, roomElements);
 	}
 	
@@ -237,8 +238,8 @@ public class DungeonGenerator {
 	/*     LINEAR DUNGEON GENERATIION METHODS     */
 	/* ****************************************** */
 	
-	private void generateLinearDungeon() {
-		System.out.println("Linear");
+	private void generateLinearDungeon() throws NonRoomTypeException {
+		ALGAGenerator.LOGGER.info("Generation of Linear dungeon");
 		Stack<LinearRoom> dungeonRooms = new Stack<>();
 		Stack<LinearRoomOrientations> eligibleRoomsOrientations = new Stack<>();
 		
@@ -268,10 +269,8 @@ public class DungeonGenerator {
 		}
 
 		
-		int i = 0;
 		for (LinearRoom aEntry : dungeonRooms) {
 			generatedDungeon.getRooms().add(aEntry.getRoom());
-			i++;
 		}
 		generatedDungeon.setEntry(originRoom);
 	}
@@ -289,7 +288,7 @@ public class DungeonGenerator {
 		}
 	}
 	
-	private StructureChosenRT chooseRoomType(LinearRoomOrientations eligibleRoomOrientations, RoomElements roomElements) {
+	private StructureChosenRT chooseRoomType(LinearRoomOrientations eligibleRoomOrientations, RoomElements roomElements) throws NonRoomTypeException {
 		List<Directions> chosenEntries = new ArrayList<>(); 
 		Directions entry = null; 
 		Directions exit = null;
@@ -366,8 +365,9 @@ public class DungeonGenerator {
 	 * @param entry
 	 * @param exit
 	 * @return Valid RoomType
+	 * @throws NonRoomTypeException 
 	 */
-	private RoomType getCompatibleRoomType(Directions entry, Directions exit, RoomElements roomElements) {
+	private RoomType getCompatibleRoomType(Directions entry, Directions exit, RoomElements roomElements) throws NonRoomTypeException {
 		List<RoomType> roomTypes; 
 		
 		if(roomElements.getGameplay() instanceof QuestionGameplay) { roomTypes = getQuestionRoomTypes(); }
@@ -387,8 +387,9 @@ public class DungeonGenerator {
 			}
 			
 		}
+		
 		//System.err.println("ALLOWED "+roomTypes);
-		if(roomTypes.isEmpty()) { System.err.println("NO room type"); return null;}
+		if(roomTypes.isEmpty()) { throw new NonRoomTypeException(roomElements.getGameplay(), roomElements.getTask());}
 		RoomType rt = roomTypes.get(random.nextInt(roomTypes.size()));
 		//System.err.println("SELECTED RT "+rt.getName());
 		return rt; 

@@ -2,6 +2,7 @@ package generators;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 //import java.util.logging.Logger;
 import org.eclipse.emf.common.util.EList;
@@ -29,7 +30,7 @@ public class ALGAGenerator {
 	
 	//public static Logger LOGGER = LogManager.getLogger(ALGAGenerator.class);
 	//private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-	   
+	public static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);   
 	   
 	private ModelsManager modelAccess;
 	private Dungeon generatedDungeon;
@@ -156,6 +157,12 @@ public class ALGAGenerator {
 		LevelsDifficultyProgress gameDifficulty = modelAccess.getGameDescriptionModel().getLevelsDifficultyProgress();
 
 		checkLearnerPlayerSetProgression();
+		if(learnerPlayer.getProgression().getPlayerProgress() == null) {
+			learnerPlayer.getProgression().setPlayerProgress(new PlayerProgressImpl());
+		}
+		if(learnerPlayer.getProgression().getLearnerProgress() == null) {
+			learnerPlayer.getProgression().setLearnerProgress(new LearnerProgressImpl());
+		}
 		
 		double nbQRooms = gameDifficulty.getInitNbQRoom() + gameDifficulty.getNbQRoomIncrease() * (learnerPlayer.getProgression().getPlayerProgress().getCurrentLevel() - 1);
 		double nbNQRooms = gameDifficulty.getInitNbNQRoom() + gameDifficulty.getNbNQRoomIncrease() * (learnerPlayer.getProgression().getPlayerProgress().getCurrentLevel() - 1);
@@ -163,8 +170,8 @@ public class ALGAGenerator {
 //		LOGGER.warning(null);
 //		LOGGER.severe(null);
 
-		System.out.println("Number of no question rooms " + nbNQRooms);
-		System.out.println("Number of question rooms " + nbQRooms);
+		LOGGER.info("Number of no question rooms " + nbNQRooms);
+		LOGGER.info("Number of question rooms " + nbQRooms);
 		
 		dungeonElements = new DungeonElements(modelAccess.getGameDescriptionModel(), nbQRooms, nbNQRooms);
 		

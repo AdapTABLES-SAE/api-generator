@@ -644,7 +644,7 @@
   <learningpaths name="PATH404" ID="PATH404">
     <objectives ID="PATH404-O1" name="PATH404-O1">
       <levels xsi:type="generator:MTLevel" ID="PATH404-O1-L1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="30" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T1" maxTime="30">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T1" maxTime="30">
           <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="2" nbChoices="3"/>
           <targets>RESULT</targets>
           <targets>OPERAND</targets>
@@ -657,7 +657,7 @@
         <tasks xsi:type="generator:MTRecontruction" percentOfApparition="15" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T3" maxTime="30">
           <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="2" nbChoices="5"/>
         </tasks>
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="30" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T4" maxTime="30" nbFacts="3">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="10" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T4" maxTime="30" nbFacts="2">
           <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="1" nbChoices="2"/>
         </tasks>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="15" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T5" maxTime="30">

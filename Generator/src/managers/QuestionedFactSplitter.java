@@ -20,8 +20,6 @@ public class QuestionedFactSplitter {
 	}
 	
 	private boolean beginByQuestionMark(String question) {
-		
-		System.err.print("BEGIN WITH "+(question.charAt(0) == '?'));
 		return question.charAt(0) == '?'; //question.substring(0, 1).equals("\\?");
 	}
 	

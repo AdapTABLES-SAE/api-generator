@@ -25,6 +25,7 @@ import generator.impl.CurrentObjectiveLevelImpl;
 import generator.impl.ItemImpl;
 import generator.impl.ItemsImpl;
 import generator.impl.LearnerProgressImpl;
+import generator.impl.PlayerProgressImpl;
 import generator.impl.MTCompletion1Impl;
 import generator.impl.MTLevelImpl;
 import generator.impl.MTQFCompletion1Impl;
@@ -75,7 +76,7 @@ public class LearnerPlayerManager {
 	
 	public void resetPlayerProgress(String learnerID) throws NonExistantLearnerPlayerException {
 		LearnerPlayer player = modelsManager.getLearnerPlayer(learnerID);
-		player.getProgression().getPlayerProgress().setItems(new ItemsImpl());
+		player.getProgression().setPlayerProgress(new PlayerProgressImpl());
 		player.setStatistics(new StatisticsImpl());
 		
 		player.getProgression().setLearnerProgress(new LearnerProgressImpl());
@@ -89,6 +90,9 @@ public class LearnerPlayerManager {
 		JSONArray items = new JSONArray();
 		try {
 			LearnerPlayer player = modelsManager.getLearnerPlayer(playerID);
+			if(player.getProgression().getPlayerProgress() == null) {
+				player.getProgression().setPlayerProgress(new PlayerProgressImpl());
+			}
 			
 			if(player.getProgression().getPlayerProgress().getItems() == null) {
 				player.getProgression().getPlayerProgress().setItems(new ItemsImpl());
@@ -132,6 +136,9 @@ public class LearnerPlayerManager {
 	}
 	
 	private Item getPlayerItem(LearnerPlayer player, String itemID) {
+		if(player.getProgression().getPlayerProgress().getItems() == null) {
+			player.getProgression().getPlayerProgress().setItems(new ItemsImpl());
+		}
 		for(Item item: player.getProgression().getPlayerProgress().getItems().getItems()) {
 			if(item.getEquipment().getID().equals(itemID)) {
 				return item;

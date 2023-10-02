@@ -1573,4 +1573,54 @@
     <knowledge
         href="MultiplicationTables.xmi#/"/>
   </learningpaths>
+  <learningpaths
+      name="PATH_DORIAN"
+      ID="PATH_DORIAN">
+    <objectives
+        ID="O1_DORIAN"
+        name="O1_DORIAN">
+      <levels
+          xsi:type="generator:MTLevel"
+          ID="O1_L1_DORIAN"
+          maxInterval="12">
+        <tasks
+            xsi:type="generator:MTCompletion1"
+            percentOfApparition="100"
+            nbConsecutiveSuccess="2"
+            ID="O1_L1_DORIAN_T1">
+          <responseModality
+              xsi:type="generator:MultipleChoice"
+              nbBadChoices="1"
+              nbChoices="3"/>
+          <targets>RESULT</targets>
+          <targets>TABLE</targets>
+          <targets>OPERAND</targets>
+        </tasks>
+      </levels>
+      <setoffacts
+          href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+      <setoffacts
+          href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
+      <setoffacts
+          href="MultiplicationTables.xmi#//@knowledgefacts.3"/>
+      <setoffacts
+          href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
+      <setoffacts
+          href="MultiplicationTables.xmi#//@knowledgefacts.5"/>
+      <setoffacts
+          href="MultiplicationTables.xmi#//@knowledgefacts.6"/>
+      <setoffacts
+          href="MultiplicationTables.xmi#//@knowledgefacts.7"/>
+      <setoffacts
+          href="MultiplicationTables.xmi#//@knowledgefacts.8"/>
+      <setoffacts
+          href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
+      <setoffacts
+          href="MultiplicationTables.xmi#//@knowledgefacts.10"/>
+      <setoffacts
+          href="MultiplicationTables.xmi#//@knowledgefacts.11"/>
+    </objectives>
+    <knowledge
+        href="MultiplicationTables.xmi#/"/>
+  </learningpaths>
 </generator:LearningDomain>

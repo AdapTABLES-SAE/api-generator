@@ -47,13 +47,13 @@ public class EducationalElementsGenerator {
 	
 	public DungeonElements generateEE() throws Exception {
 		selectObjectiveLevel();	
-		System.out.println("Selected Objective/Level "+dungeonElements.getChosenObjective().getID()+" "+dungeonElements.getChosenLevel().getID());
+		ALGAGenerator.LOGGER.info("Selection of Objective/Level = "+dungeonElements.getChosenObjective().getID()+"/"+dungeonElements.getChosenLevel().getID());
 		generateQuestionnableFacts();
-		System.out.println("Faits questionnables générés");
+		ALGAGenerator.LOGGER.info("Generation of questionnable facts");
 		defineNumberOfRoomPerTaskNecessary();
-		System.out.println("Room per task defini");
+		ALGAGenerator.LOGGER.info("Computes number of rooms per tasks");
 		generateFactsToQuestion();
-		System.out.println("Faits questionnés générés ");
+		ALGAGenerator.LOGGER.info("Generation of questioned facts for the dungeon");
 		//System.out.println(" DEBUG FACT QUESTIONED *********************");
 		//eeManager.printFactsToQuestion();
 		dungeonElements.buildNumberOfNonQuestionRooms();
@@ -92,8 +92,7 @@ public class EducationalElementsGenerator {
 	
 	
 	public void instanciateQFbyTasks() {
-		System.err.println("chosen OBJLVL "+ dungeonElements.getChosenLevel().getID()+" "+dungeonElements.getChosenObjective().getID());
-		
+	
 		if(dungeonElements.getCurrentObjectiveLevel().getResults() == null || dungeonElements.getCurrentObjectiveLevel().getResults().getResultsbytask().isEmpty()) {
 			dungeonElements.getCurrentObjectiveLevel().setResults(new ResultsImpl());
 			for(ATask task: dungeonElements.getChosenLevel().getTasks()) {
@@ -156,7 +155,7 @@ public class EducationalElementsGenerator {
 				//	((rbt.getTask().getPercentOfApparition()*coeffAdditional)*dungeonElements.getNbQRooms())/100)));
 			nbRoomsToTask.put(rbt, (double) Math.round(nbRoomsToTask.get(rbt) +
 					((rbt.getTask().getPercentOfApparition()*coeffAdditional)*dungeonElements.getNbQRooms())/100));
-		}else {
+		} else {
 			//System.out.println("nbroom "+((double) Math.round(((rbt.getTask().getPercentOfApparition()*coeffAdditional)*dungeonElements.getNbQRooms())/100)));
 			nbRoomsToTask.put(rbt, (double) Math.round(((rbt.getTask().getPercentOfApparition()*coeffAdditional)*dungeonElements.getNbQRooms())/100));
 		}
