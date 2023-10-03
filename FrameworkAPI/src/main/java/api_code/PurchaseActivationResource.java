@@ -4,6 +4,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
 //import io.swagger.annotations.Api;
 //import io.swagger.annotations.ApiResponse;
@@ -38,51 +39,47 @@ public class PurchaseActivationResource {
 	@GET
 	@Path("/learner/{playerID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getActivatedItems(@PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public String getActivatedItems(@PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
-				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
-				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + Constant.DEFAULT_CONTEXT_FILE_NAME + ".xmi", true));
-		return manager.getItemsStatus(playerID).toJSONString();
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, playerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME, true));
+		return manager.getItemsStatus().toJSONString();
 	}
 	
 	@GET
 	@Path("/reset/learner/{playerID}")
 	@Produces(MediaType.TEXT_PLAIN)
-	public void resetItems(@PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public void resetItems(@PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
-				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
-				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + Constant.DEFAULT_CONTEXT_FILE_NAME + ".xmi", true));
-		manager.resetPlayerProgress(playerID);
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH,  playerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME,true));
+		manager.resetPlayerProgress();
 	}
 	
 	@GET
 	@Path("/reset/classroom/{classroomID}/learner/{playerID}")
 	@Produces(MediaType.TEXT_PLAIN)
-	public void resetItems(@PathParam("classroomID") String classID, @PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public void resetItems(@PathParam("classroomID") String classID, @PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
-				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
-				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
-		manager.resetPlayerProgress(playerID);
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, playerID, Constant.CLASSROOMS_FILE, classID, true));
+		manager.resetPlayerProgress();
 	}
 	
 	@GET
 	@Path("/classroom/{classroomID}/learner/{playerID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getActivatedItems(@PathParam("classroomID") String classID, @PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public String getActivatedItems(@PathParam("classroomID") String classID, @PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
-				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
-				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
-		return manager.getItemsStatus(playerID).toJSONString();
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH,  playerID, Constant.CLASSROOMS_FILE, classID, true));
+		return manager.getItemsStatus().toJSONString();
 	}
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public void setActivatedItems(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException {
+	public void setActivatedItems(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		Constant.PROJECT_PATH = app.getRealPath("");
 		JSONObject obj = new JSONObject();
 		try {
@@ -90,10 +87,9 @@ public class PurchaseActivationResource {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		String classID = obj.containsKey("classroomID")? (String) obj.get("classroomID"): Constant.DEFAULT_CONTEXT_FILE_NAME;
+		String classID = obj.containsKey("classroomID")? (String) obj.get("classroomID"): Constant.DEFAULT_CLASSROOM_NAME;
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
-				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
-				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) obj.get("learnerID"), Constant.CLASSROOMS_FILE, classID, true));
 		manager.setItemsStatus(obj);
 	}
 	

@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 
+import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
 import flattener.Main;
 import generators.ALGAGenerator;
@@ -41,14 +42,15 @@ public class GenerationResource {
 	@GET
 	@Path("/learner/{learnerID}")
 	@Produces(MediaType.TEXT_XML)
-	public String generate(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
-		return generateDungeon2String(null, learnerID, app);
+	public String generate(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
+		System.out.println("ID learner ="+learnerID);
+		return generateDungeon2String("", learnerID, app);
 	}
 	
 	@GET
 	@Path("/classroom/{classID}/learner/{learnerID}")
 	@Produces(MediaType.TEXT_XML)
-	public String generate(@PathParam("classID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public String generate(@PathParam("classID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		return generateDungeon2String(classID, learnerID, app);
 	}
 	
@@ -59,8 +61,9 @@ public class GenerationResource {
 	 * @param app
 	 * @return A XML file as a String describing a dungeon.  
 	 * @throws NonExistantLearnerPlayerException
+	 * @throws ContextNotFoundException 
 	 */
-	private String generateDungeon2String(String classroomID, String learnerID, ServletContext app) throws NonExistantLearnerPlayerException {
+	private String generateDungeon2String(String classroomID, String learnerID, ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		Constant.PROJECT_PATH = app.getRealPath("");
 		System.out.println("Project : "+Constant.PROJECT_PATH);
 		
@@ -93,13 +96,12 @@ public class GenerationResource {
 	 * @param classroomID
 	 * @param learnerPlayerID
 	 * @throws NonExistantLearnerPlayerException
+	 * @throws ContextNotFoundException 
 	 */
-	private void generateDungeon(String classroomID, String learnerPlayerID) throws NonExistantLearnerPlayerException {
-		String contextFile = Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + 
-				(classroomID == null? Constant.DEFAULT_CONTEXT_FILE_NAME : classroomID) + ".xmi";
+	private void generateDungeon(String classroomID, String learnerPlayerID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		ALGAGenerator generator = new ALGAGenerator(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
-				contextFile, learnerPlayerID, true); 
+				 learnerPlayerID, Constant.CLASSROOMS_FILE, classroomID.isEmpty()? Constant.DEFAULT_CLASSROOM_NAME: classroomID, true); 
 		generator.generate();
 		generator.saveDungeon("DungeonGen_"+ learnerPlayerID +".xmi");
 		Main.transformModel(Constant.PROJECT_PATH + Constant.ECORE_PATH, Constant.PROJECT_PATH + Constant.FLATNER_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xmi", Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xml");

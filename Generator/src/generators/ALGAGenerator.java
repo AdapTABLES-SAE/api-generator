@@ -89,21 +89,21 @@ public class ALGAGenerator {
 		modelAccess = new ModelsManager(learnerID);
 	}
 	
-	public ALGAGenerator(String learnerID, String fileContext) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+	/*public ALGAGenerator(String learnerID, String fileContext) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		modelAccess = new ModelsManager(learnerID, fileContext);
 	}
 	
 	public ALGAGenerator(boolean forTest, String learnerID, String contextFileName) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		modelAccess = new ModelsManager(forTest, learnerID, contextFileName);
-	}
+	}*/
 	
 	public ALGAGenerator(boolean forTest, String learnerID, String contextsFileName, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		modelAccess = new ModelsManager(forTest, learnerID, contextsFileName, contextID);
 	}
 	
 	
-	public ALGAGenerator(String inputPath, String outputPath, String contextFileName, String learnerID, boolean lauchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		modelAccess = new ModelsManager(inputPath, outputPath, contextFileName, lauchedFromAPI);
+	public ALGAGenerator(String inputPath, String outputPath, String learnerID, String contextsFILE, String contextID,  boolean lauchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		modelAccess = new ModelsManager(inputPath, outputPath, learnerID, contextsFILE, contextID, lauchedFromAPI);
 	}
 	
 	public void saveDungeon(String fileName) {

@@ -1,14 +1,11 @@
 package api_code;
 
-import java.io.File;
-
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
-import generator.LearnerPlayer;
-import generator.LearningPath;
 import jakarta.servlet.ServletContext;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
@@ -30,68 +27,39 @@ public class LearningPathResource {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public void addObjectiveLevel(String jsonContent, @Context ServletContext app) { 
+	public void addObjectiveLevel(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException { 
 		Constant.PROJECT_PATH = app.getRealPath("");		
 		JSONObject obj = new JSONObject();
-		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, true));
+
 		try {
 			obj = (JSONObject) new JSONParser().parse(jsonContent);
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
+		
+		//String classID = obj.containsKey("classroomID")? (String) obj.get("classroomID") : Constant.DEFAULT_CLASSROOM_NAME;
+		manager = new PathManager((String) obj.get("learningPathID"));
 		manager.updateOrCreateTrainingPath(obj);
 	}
 	
 	@GET
 	@Path("/learner/{learnerID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public String buildObjectiveLevelParams2JSON(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public String buildObjectiveLevelParams2JSON(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		String contextFileName = Constant.CONTEXTS_FILES_PREFIX + Constant.DEFAULT_CONTEXT_FILE_NAME + ".xmi";
-		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, true));
-		LearningPath path = this.getLearnerTrainingPath(contextFileName, learnerID); 
-		return manager.buildJSONTrainingPath(path).toJSONString();
+		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME,  true));
+		return manager.buildJSONTrainingPath(manager.getLearningPath()).toJSONString();
 	}
 	
 	@GET
 	@Path("/classroom/{classroomID}/learner/{learnerID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public String buildObjectiveLevelParams2JSON(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public String buildObjectiveLevelParams2JSON(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		String contextFileName = Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi";
-		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, true));
-		LearningPath path = this.getLearnerTrainingPath(contextFileName, learnerID); 
-		return manager.buildJSONTrainingPath(path).toJSONString();
+		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, Constant.CLASSROOMS_FILE, classID,  true));
+		return manager.buildJSONTrainingPath(manager.getLearningPath()).toJSONString();
 	}
 	
-	/***********************************/
-	/**          JOB METHODS          **/
-	/***********************************/
-
-	public LearningPath getLearnerTrainingPath(String contextFileName, String learnerID) {
-		String contextsRepertory = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CONTEXTS_FILES_PATH; 
-		File[] files = new File(contextsRepertory).listFiles();
-		
-		int i = 0;
-		String pathID = "";
-		ModelsManager modelsManager = null;
-		while(i < files.length && pathID.isEmpty()) {
-			System.out.println(files[i].getName()+ " -- "+contextFileName);
-			if (files[i].isFile() && files[i].getName().equals(contextFileName)) {
-				modelsManager = new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
-						Constant.CONTEXTS_FILES_PATH + contextFileName, true);
-				try {
-					LearnerPlayer learner = modelsManager.getLearnerPlayerFromID(learnerID);
-					if(learner != null) {
-						pathID = learner.getLearningpath().getID();
-					}
-				} catch (NonExistantLearnerPlayerException e) {
-					e.printStackTrace();
-				}
-			}
-			i++;
-		}
-		
-		return manager.getCorrespondingPath(modelsManager.getLearningPathModel(), pathID);
-	}
 }

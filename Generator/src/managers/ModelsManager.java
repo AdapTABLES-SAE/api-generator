@@ -109,12 +109,7 @@ public class ModelsManager {
 	}
 	
 	public ModelsManager(String inputPath, String outputPath, String learnerID, boolean lauchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		//System.out.println(INPUT_MODELS_PATH);
-		/*INPUT_MODELS_PATH = inputPath;
-		OUTPUT_MODELS_PATH = outputPath;
-		this.lauchedFromAPI = lauchedFromAPI;
-		resourceSet = new ResourceSetImpl();
-		loadDomainModel();*/
+
 		this(inputPath, outputPath, learnerID, "", DEFAULT_CONTEXTID, lauchedFromAPI);
 	}
 	
@@ -125,12 +120,12 @@ public class ModelsManager {
 	
 	public ModelsManager(String inputPath, String outputPath, String learnerID, String contextsFileName, String contextID,  boolean launchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		//System.out.println(INPUT_MODELS_PATH);
+		resourceSet = new ResourceSetImpl();
 		INPUT_MODELS_PATH = inputPath;
 		OUTPUT_MODELS_PATH = outputPath;
 		this.launchedFromAPI = launchedFromAPI;
 		if(!contextsFileName.isEmpty()) { INPUT_MODELS_NAMES[0] = contextsFileName; }
 		setLearnerPlayerFileName(learnerID); 
-		resourceSet = new ResourceSetImpl();
 		loadInputModels(contextID);
 	}
 

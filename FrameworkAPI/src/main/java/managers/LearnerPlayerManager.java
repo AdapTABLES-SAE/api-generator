@@ -74,65 +74,59 @@ public class LearnerPlayerManager {
 		modelsManager.saveContextModel();
 	}*/
 	
-	public void resetPlayerProgress(String learnerID) throws NonExistantLearnerPlayerException {
-		LearnerPlayer player = modelsManager.getLearnerPlayerFromID(learnerID);
-		player.getProgression().setPlayerProgress(new PlayerProgressImpl());
-		player.setStatistics(new StatisticsImpl());
+	public void resetPlayerProgress() throws NonExistantLearnerPlayerException {
 		
-		player.getProgression().setLearnerProgress(new LearnerProgressImpl());
+		modelsManager.getLearnerPlayer().getProgression().setPlayerProgress(new PlayerProgressImpl());
+		modelsManager.getLearnerPlayer().setStatistics(new StatisticsImpl());
 		
-		modelsManager.saveContextModel();
+		modelsManager.getLearnerPlayer().getProgression().setLearnerProgress(new LearnerProgressImpl());
+		
+		modelsManager.saveLearnerPlayerModel();
 	}
 	
 	@SuppressWarnings("unchecked")
-	public JSONObject getItemsStatus(String playerID) {
+	public JSONObject getItemsStatus() {
 		JSONObject store = new JSONObject();
 		JSONArray items = new JSONArray();
-		try {
-			LearnerPlayer player = modelsManager.getLearnerPlayerFromID(playerID);
-			if(player.getProgression().getPlayerProgress() == null) {
-				player.getProgression().setPlayerProgress(new PlayerProgressImpl());
-			}
-			
-			if(player.getProgression().getPlayerProgress().getItems() == null) {
-				player.getProgression().getPlayerProgress().setItems(new ItemsImpl());
-				modelsManager.saveContextModel();
-			}
-			
-			for(Item anItem: player.getProgression().getPlayerProgress().getItems().getItems()) {
-				JSONObject item = new JSONObject();
-				item.put("id", anItem.getEquipment().getID());
-				item.put("isBought", anItem.isBought());
-				item.put("isActivated", anItem.isActivated());
-				items.add(item);
-			}
-			store.put("items", items);
-		} catch (NonExistantLearnerPlayerException e) {
-			e.printStackTrace();
+		if(modelsManager.getLearnerPlayer().getProgression().getPlayerProgress() == null) {
+			modelsManager.getLearnerPlayer().getProgression().setPlayerProgress(new PlayerProgressImpl());
 		}
+		
+		if(modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().getItems() == null) {
+			modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().setItems(new ItemsImpl());
+			modelsManager.saveLearnerPlayerModel();
+		}
+		
+		for(Item anItem: modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().getItems().getItems()) {
+			JSONObject item = new JSONObject();
+			item.put("id", anItem.getEquipment().getID());
+			item.put("isBought", anItem.isBought());
+			item.put("isActivated", anItem.isActivated());
+			items.add(item);
+		}
+		store.put("items", items);
 		return store;
 	}
 	
 	public void setItemsStatus(JSONObject obj) throws NonExistantLearnerPlayerException {
-		LearnerPlayer player = modelsManager.getLearnerPlayerFromID((String) obj.get("learnerID"));
 			
 		JSONArray items = (JSONArray) obj.get("items");
 		for(Object oItem: items) {
 			JSONObject jItem = (JSONObject) oItem;
-			Item item = getPlayerItem(player, (String) jItem.get("id"));
+			Item item = getPlayerItem(modelsManager.getLearnerPlayer(), (String) jItem.get("id"));
 			item.setActivated((boolean) jItem.get("isActivated"));
 			item.setBought((boolean) jItem.get("isBought"));
 		}
 			
-		player.getProgression().getPlayerProgress().setCoins(player.getProgression().getPlayerProgress().getCoins() - ((Long) obj.get("usedCoins")).intValue());
+		modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().setCoins(modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().getCoins() - ((Long) obj.get("usedCoins")).intValue());
 		
-		if(player.getStatistics() == null) {
-			player.setStatistics(new StatisticsImpl());
+		if(modelsManager.getLearnerPlayer().getStatistics() == null) {
+			modelsManager.getLearnerPlayer().setStatistics(new StatisticsImpl());
 		}
 		
-		player.getStatistics().setTotalCoins(player.getStatistics().getTotalCoins() - ((Long) obj.get("usedCoins")).intValue());
+		modelsManager.getLearnerPlayer().getStatistics().setTotalCoins(modelsManager.getLearnerPlayer().getStatistics().getTotalCoins() - ((Long) obj.get("usedCoins")).intValue());
 		
-		modelsManager.saveContextModel();
+		modelsManager.saveLearnerPlayerModel();
 	}
 	
 	private Item getPlayerItem(LearnerPlayer player, String itemID) {
@@ -166,14 +160,14 @@ public class LearnerPlayerManager {
 	}
 
 	@SuppressWarnings("unchecked")
-	public JSONObject getTaskProgresses(String learnerID, String objectiveID, String levelID) {
+	public JSONObject getTaskProgresses(String objectiveID, String levelID) {
 		JSONObject progress = new JSONObject();
 		JSONArray progresses = new JSONArray();
 		try {
 			
-			CurrentObjectiveLevel currentOL = getCorrespondingCOL(objectiveID, levelID, learnerID);
+			CurrentObjectiveLevel currentOL = getCorrespondingCOL(objectiveID, levelID);
 			if(currentOL == null) {
-				currentOL = initialiseCurrentObjectiveLevel(objectiveID, levelID, learnerID);
+				currentOL = initialiseCurrentObjectiveLevel(objectiveID, levelID);
 			}
 			for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {
 				JSONObject taskProgress = new JSONObject(); 
@@ -194,12 +188,10 @@ public class LearnerPlayerManager {
 		return progress;
 	}
 	
-	private CurrentObjectiveLevel initialiseCurrentObjectiveLevel(String objectiveID, String levelID, String learnerID) {
-		LearnerPlayer learner;
+	private CurrentObjectiveLevel initialiseCurrentObjectiveLevel(String objectiveID, String levelID) {
 		CurrentObjectiveLevel currentOL = new CurrentObjectiveLevelImpl();
 		try {
-			learner = modelsManager.getLearnerPlayerFromID(learnerID);
-			LearningPath path = learner.getLearningpath(); 
+			LearningPath path = modelsManager.getLearnerPlayer().getLearningpath(); 
 			Objective objective = getObjective(path, objectiveID); 
 			Level level = getLevel(path, objective, levelID); 
 			
@@ -215,14 +207,12 @@ public class LearnerPlayerManager {
 				currentOL.getResults().getResultsbytask().add(rbt);
 			}
 			
-			learner.getProgression().getLearnerProgress().getCurrentobjectivelevels().add(currentOL);
-		} catch (NonExistantLearnerPlayerException e) {
-			e.printStackTrace();
+			modelsManager.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels().add(currentOL);
 		} catch (NonExistantObjectiveOrLevelException e) {
 			e.printStackTrace();
 		}
 
-		modelsManager.saveContextModel();
+		modelsManager.saveLearnerPlayerModel();
 		return currentOL; 
 	}
 	
@@ -245,29 +235,22 @@ public class LearnerPlayerManager {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public JSONObject getGeneralStats(String learnerID) {
+	public JSONObject getGeneralStats() {
 		JSONObject stats = new JSONObject();
-		try {
-			LearnerPlayer learner = modelsManager.getLearnerPlayerFromID(learnerID);
-			
-			if(learner.getStatistics() == null) {
-				learner.setStatistics(new StatisticsImpl());
-				modelsManager.saveContextModel();
-			}
-			
-			stats.put("nbLevelsGenerated", learner.getStatistics().getNbLevelsGenerated());
-			stats.put("nbLevelsPlayedUntilEnd", learner.getStatistics().getNbFinishedLevels());
-			stats.put("nbDeaths", learner.getStatistics().getNbDeaths());
-			stats.put("nbExits", learner.getStatistics().getNbUnfinishedLevels());
-			stats.put("totalCoins", learner.getStatistics().getTotalCoins()); 
-			stats.put("nbQuestionsMeet", learner.getStatistics().getNbQuestionsEncountered());
-			stats.put("nbCorrectAnswers", learner.getStatistics().getNbCorrectGivenAnswers());
-			stats.put("maxLevelReached", learner.getStatistics().getMaxGameLevelReached());
-			stats.put("totalTimeMin", learner.getStatistics().getTotalTimeMin());
-			
-		} catch (NonExistantLearnerPlayerException e) {
-			e.printStackTrace();
+		if(modelsManager.getLearnerPlayer().getStatistics() == null) {
+			modelsManager.getLearnerPlayer().setStatistics(new StatisticsImpl());
+			modelsManager.saveLearnerPlayerModel();
 		}
+		
+		stats.put("nbLevelsGenerated", modelsManager.getLearnerPlayer().getStatistics().getNbLevelsGenerated());
+		stats.put("nbLevelsPlayedUntilEnd", modelsManager.getLearnerPlayer().getStatistics().getNbFinishedLevels());
+		stats.put("nbDeaths", modelsManager.getLearnerPlayer().getStatistics().getNbDeaths());
+		stats.put("nbExits", modelsManager.getLearnerPlayer().getStatistics().getNbUnfinishedLevels());
+		stats.put("totalCoins", modelsManager.getLearnerPlayer().getStatistics().getTotalCoins()); 
+		stats.put("nbQuestionsMeet", modelsManager.getLearnerPlayer().getStatistics().getNbQuestionsEncountered());
+		stats.put("nbCorrectAnswers", modelsManager.getLearnerPlayer().getStatistics().getNbCorrectGivenAnswers());
+		stats.put("maxLevelReached", modelsManager.getLearnerPlayer().getStatistics().getMaxGameLevelReached());
+		stats.put("totalTimeMin", modelsManager.getLearnerPlayer().getStatistics().getTotalTimeMin());
 		
 		// "totalDispensedCoins": 0
 		return stats;
@@ -489,15 +472,9 @@ public class LearnerPlayerManager {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public JSONObject getLearnerCoins(String learnerID) {
+	public JSONObject getLearnerCoins() {
 		JSONObject coins = new JSONObject();
-		LearnerPlayer learnerPlayer;
-		try {
-			learnerPlayer = modelsManager.getLearnerPlayerFromID(learnerID);
-			coins.put("balance", learnerPlayer.getProgression().getPlayerProgress().getCoins()); 
-		} catch (NonExistantLearnerPlayerException e) {
-			e.printStackTrace();
-		}
+		coins.put("balance", modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().getCoins());
 		return coins;
 	}
 	
@@ -505,42 +482,39 @@ public class LearnerPlayerManager {
 		/*
 		 * The total number of coins is not impacted because this call will only be used by cheat code 
 		 */
-		LearnerPlayer learnerPlayer;
-		learnerPlayer = modelsManager.getLearnerPlayerFromID((String) obj.get("learnerID"));
-		learnerPlayer.getProgression().getPlayerProgress().setCoins(((Long) obj.get("newBalance")).intValue());
 		
-		modelsManager.saveContextModel();
+		modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().setCoins(((Long) obj.get("newBalance")).intValue());		
+		modelsManager.saveLearnerPlayerModel();
 	}
 	
 	public void savePlayerResults(JSONObject obj) throws NonExistantLearnerPlayerException {
-		LearnerPlayer player = modelsManager.getLearnerPlayerFromID((String) obj.get("learnerID"));
 		
-		if(player.getStatistics() == null) {
-			player.setStatistics(new StatisticsImpl());
+		if(modelsManager.getLearnerPlayer().getStatistics() == null) {
+			modelsManager.getLearnerPlayer().setStatistics(new StatisticsImpl());
 		}
 		
-		player.getStatistics().setNbQuestionsEncountered(player.getStatistics().getNbQuestionsEncountered() + Long.valueOf((Long) obj.get("nbQuestionsMeet")).intValue());
-		player.getStatistics().setNbCorrectGivenAnswers(player.getStatistics().getNbCorrectGivenAnswers() + Long.valueOf((Long) obj.get("nbCorrectAnswers")).intValue());
-		player.getStatistics().setTotalTimeMin(player.getStatistics().getTotalTimeMin() + ((Long) obj.get("timeInMin")).intValue());
+		modelsManager.getLearnerPlayer().getStatistics().setNbQuestionsEncountered(modelsManager.getLearnerPlayer().getStatistics().getNbQuestionsEncountered() + Long.valueOf((Long) obj.get("nbQuestionsMeet")).intValue());
+		modelsManager.getLearnerPlayer().getStatistics().setNbCorrectGivenAnswers(modelsManager.getLearnerPlayer().getStatistics().getNbCorrectGivenAnswers() + Long.valueOf((Long) obj.get("nbCorrectAnswers")).intValue());
+		modelsManager.getLearnerPlayer().getStatistics().setTotalTimeMin(modelsManager.getLearnerPlayer().getStatistics().getTotalTimeMin() + ((Long) obj.get("timeInMin")).intValue());
 			
 		switch((String) obj.get("finishStatus")) {
-			case "DEAD": player.getStatistics().setNbDeaths(player.getStatistics().getNbDeaths() + 1);
-			player.getProgression().getPlayerProgress().setCurrentLevel(1);
+			case "DEAD": modelsManager.getLearnerPlayer().getStatistics().setNbDeaths(modelsManager.getLearnerPlayer().getStatistics().getNbDeaths() + 1);
+			modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().setCurrentLevel(1);
 			break;
-			case "EXIT": player.getStatistics().setNbFinishedLevels(player.getStatistics().getNbFinishedLevels() + 1); 
-			player.getProgression().getPlayerProgress().setCurrentLevel(player.getProgression().getPlayerProgress().getCurrentLevel() + 1);
+			case "EXIT": modelsManager.getLearnerPlayer().getStatistics().setNbFinishedLevels(modelsManager.getLearnerPlayer().getStatistics().getNbFinishedLevels() + 1); 
+			modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().setCurrentLevel(modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().getCurrentLevel() + 1);
 			break;
-			default: player.getStatistics().setNbUnfinishedLevels(player.getStatistics().getNbUnfinishedLevels() + 1); // == HUB
+			default: modelsManager.getLearnerPlayer().getStatistics().setNbUnfinishedLevels(modelsManager.getLearnerPlayer().getStatistics().getNbUnfinishedLevels() + 1); // == HUB
 		}
 			
-		if(player.getStatistics().getMaxGameLevelReached() < player.getProgression().getPlayerProgress().getCurrentLevel()) {
-			player.getStatistics().setMaxGameLevelReached(player.getProgression().getPlayerProgress().getCurrentLevel());
+		if(modelsManager.getLearnerPlayer().getStatistics().getMaxGameLevelReached() < modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().getCurrentLevel()) {
+			modelsManager.getLearnerPlayer().getStatistics().setMaxGameLevelReached(modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().getCurrentLevel());
 		}
 			
-		player.getProgression().getPlayerProgress().setCoins(player.getProgression().getPlayerProgress().getCoins() + Long.valueOf((Long) obj.get("nbCoinsCollected")).intValue());
-		player.getStatistics().setTotalCoins(player.getStatistics().getTotalCoins() + Long.valueOf((Long) obj.get("nbCoinsCollected")).intValue());
+		modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().setCoins(modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().getCoins() + Long.valueOf((Long) obj.get("nbCoinsCollected")).intValue());
+		modelsManager.getLearnerPlayer().getStatistics().setTotalCoins(modelsManager.getLearnerPlayer().getStatistics().getTotalCoins() + Long.valueOf((Long) obj.get("nbCoinsCollected")).intValue());
 			
-		modelsManager.saveContextModel();
+		modelsManager.saveLearnerPlayerModel();
 	}
 
 	/**
@@ -551,7 +525,7 @@ public class LearnerPlayerManager {
 	 */
 	public void saveLearnerResults(JSONObject obj) throws NonExistantLearnerPlayerException { 
 		CurrentObjectiveLevel col;
-		col = getCorrespondingCOL((String) obj.get("objectiveID"), (String) obj.get("levelID"), (String) obj.get("learnerID"));
+		col = getCorrespondingCOL((String) obj.get("objectiveID"), (String) obj.get("levelID"));
 		if(col != null) {
 			JSONArray results = (JSONArray) obj.get("resultsByTasks");
 			for (Object object : results) {
@@ -568,42 +542,19 @@ public class LearnerPlayerManager {
 			System.err.println("CurrentObjectiveLevel not found for O/L = (" + (String) obj.get("objectiveID") + " , " + (String) obj.get("levelID") + ")");
 		}
 		
-		modelsManager.saveContextModel();
+		modelsManager.saveLearnerPlayerModel();
 	}
 	
-	
-	public void resetProgressForEachLearnerHavingPath(String pathID, Objective objective, Level level) {
-		for(LearnerPlayer learner: modelsManager.getContextModel().getLearnerPlayers().getLearnerPlayers()) {
-			if(learner.getLearningpath().getID().equals(pathID)) {
-				CurrentObjectiveLevel currentOL = getCurrentObjectiveLevel(learner, objective, level); 
-				//System.err.println("CURRENT "+currentOL);
-				if(currentOL != null) {
-					//System.err.println("Before " + learner.getProgression().getLearnerProgress().getCurrentobjectivelevels());
-					learner.getProgression().getLearnerProgress().getCurrentobjectivelevels().remove(currentOL);
-					//System.err.println("After " + learner.getProgression().getLearnerProgress().getCurrentobjectivelevels());
-					/*currentOL = new CurrentObjectiveLevelImpl();
-					currentOL.setObjective(objective);
-					currentOL.setLevel(level);
-					Results results = new ResultsImpl();
-					for(ATask task: level.getTasks()) {
-						ResultsByTask resByTask = new ResultsByTaskImpl();
-						resByTask.setTask(task);
-						results.getResultsbytask().add(resByTask);
-					}
-					currentOL.setResults(results);
-					currentOL.setAchieved(false);
-					currentOL.setEncountersPercent(0);
-					currentOL.setSuccessPercent(0);
-					//learner.getProgression().setLearnerProgress(new LearnerProgressImpl());
-					learner.getProgression().getLearnerProgress().getCurrentobjectivelevels().add(currentOL);*/
-					learner.getProgression().getPlayerProgress().setCurrentLevel(1);
-					
-					learner.setStatistics(new StatisticsImpl());
-				}		
-			}
-		}		
-		modelsManager.saveContextModel();
+	public void resetLearnerProgress(LearnerPlayer learner, Objective objective, Level level) {
+		CurrentObjectiveLevel currentOL = getCurrentObjectiveLevel(learner, objective, level); 
+		if(currentOL != null) {
+			learner.getProgression().getLearnerProgress().getCurrentobjectivelevels().remove(currentOL);
+			learner.getProgression().getPlayerProgress().setCurrentLevel(1);
+			learner.setStatistics(new StatisticsImpl());
+		}	
+		modelsManager.saveLearnerPlayerModel();
 	}
+
 	
 	
 	private CurrentObjectiveLevel getCurrentObjectiveLevel(LearnerPlayer learner, Objective objective, Level level) {
@@ -655,8 +606,8 @@ public class LearnerPlayerManager {
 		return null;
 	}
 	
-	private CurrentObjectiveLevel getCorrespondingCOL(String objectiveID, String levelID, String learnerID) throws NonExistantLearnerPlayerException {
-		for (CurrentObjectiveLevel col : modelsManager.getLearnerPlayerFromID(learnerID).getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
+	private CurrentObjectiveLevel getCorrespondingCOL(String objectiveID, String levelID) throws NonExistantLearnerPlayerException {
+		for (CurrentObjectiveLevel col : modelsManager.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			/*System.out.println(col.getObjective().getID()+" "+col.getLevel().getID());
 			System.out.println(col.getObjective().getID().equals(objectiveID));
 			System.out.println(col.getLevel().getID().equals(levelID));*/

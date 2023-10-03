@@ -1,17 +1,32 @@
 package managers;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import exceptions.ContextNotFoundException;
+import exceptions.NonExistantLearnerPlayerException;
 import generator.ATask;
+import generator.Classroom;
+import generator.Classrooms;
 import generator.CompletionCriteria;
 import generator.ESeveralTarget;
 import generator.ESingleTarget;
+import generator.GeneratorPackage;
 import generator.Knowledge;
+import generator.LearnerPlayer;
 import generator.LearningDomain;
 import generator.LearningPath;
 import generator.Level;
@@ -37,13 +52,29 @@ import generator.impl.MTMembershipImpl;
 import generator.impl.MTRecontructionImpl;
 import generator.impl.MultipleChoiceImpl;
 import generator.impl.ObjectiveImpl;
+import generators.ALGAGenerator;
 
 public class PathManager {
 
 	private ModelsManager modelsManager;
 	
+	private LearningPath path;
+	private LearningDomain domain;
+	ResourceSet resourceSet;
+
+	
 	public PathManager(ModelsManager modelsManager) {
 		this.modelsManager = modelsManager;
+	}
+	
+	public PathManager(String pathID) {
+		resourceSet = new ResourceSetImpl();
+		getPath(pathID);
+	}
+	
+	public LearningPath getLearningPath() {
+		if(modelsManager == null) return path;
+		return modelsManager.getLearnerPlayer().getLearningpath();
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -144,51 +175,44 @@ public class PathManager {
 		return buildingParameters;
 	}
 	
-	public void updateOrCreateTrainingPath(JSONObject json) { // TODO : works for this version might not work for future version 
-		String pathName = (String) json.get("learningPathID");
-		LearningDomain paths = modelsManager.loadDomainModel();
-		LearningPath aPath = getCorrespondingPath(paths, pathName);
-		Knowledge knowledge = modelsManager.loadKnowledgeModel();
-		if(aPath.getID() == null) {
-			aPath.setID(pathName);
-			aPath.setKnowledge(knowledge);
-			aPath.setName(pathName);
+	public void updateOrCreateTrainingPath(JSONObject json) throws NonExistantLearnerPlayerException, ContextNotFoundException { // TODO : works for this version might not work for future version 
+		if(path == null) { path = new LearningPathImpl(); } // TODO : set Path to learner
+		Knowledge knowledge = loadKnowledge();
+		if(path.getID() == null) {
+			path.setID((String) json.get("learningPathID"));
+			path.setKnowledge(knowledge);
+			path.setName((String) json.get("learningPathID"));
 		}
-		Objective obj = getCorrespondingObjective(aPath, knowledge, json);
+		Objective obj = getCorrespondingObjective(knowledge, json);
 		Level level = createLevel(obj, (String) json.get("level")); // recreateNewLevel(obj, (String) json.get("level"));
 		buildLevelTasks(obj, level, json);
-		if(!aPath.getObjectives().contains(obj)) {
-			aPath.getObjectives().add(obj);
+		if(!path.getObjectives().contains(obj)) {
+			path.getObjectives().add(obj);
 		}
-		if(paths.getLearningpaths().contains(aPath)) {
-			paths.getLearningpaths().add(aPath);
+		if(!domain.getLearningpaths().contains(path)) {
+			domain.getLearningpaths().add(path);
 		}
-		modelsManager.saveDomainModel(paths);
+		saveDomainModel();
 		
 		// update progress for learner having this path TODO
-		resetEveryLearnerProgress(pathName, obj, level);
+		resetEveryLearnerProgress(obj, level);
 	}
 	
-	private List<String> getListOfContextFiles(){
-		List<String> contextFilesNames = new ArrayList<>(); 
-		String contextsRepertory = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CONTEXTS_FILES_PATH; 
-		File[] files = new File(contextsRepertory).listFiles();
-		
-		for(File file: files) {
-			contextFilesNames.add(file.getName());
-		}
-		return contextFilesNames; 
-	}
+
 	
-	private void resetEveryLearnerProgress(String pathID, Objective objective, Level level) {
-		List<String> contextFilesNames = getListOfContextFiles();
-		
+	private void resetEveryLearnerProgress(Objective objective, Level level) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		Classrooms classrooms = Constant.loadClassrooms(); 
 		LearnerPlayerManager manager; 
-		for(String context: contextFilesNames) {
-			manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
-					Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
-					Constant.CONTEXTS_FILES_PATH + context , true));
-			manager.resetProgressForEachLearnerHavingPath(pathID, objective, level);
+		for(Classroom classroom : classrooms.getClassrooms()) {
+			for(LearnerPlayer LP : classroom.getLearnerPlayers()) {
+				if(LP.getLearningpath().equals(path)) {
+					manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+							Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, LP.getID(),
+							Constant.CLASSROOMS_FILE, classroom.getID(), true));
+					manager.resetLearnerProgress(LP, objective, level);
+				}
+				
+			}
 		}
 	}
 	
@@ -385,58 +409,36 @@ public class PathManager {
 		}
 		return level;
 	}
-	
-	@Deprecated
-	private Level recreateNewLevel(Objective obj, String levelID) {
-		Level existantLevel = getCorrespondingLevel(obj, levelID);
-		Level level = new MTLevelImpl();
-		if(existantLevel != null) {
-			level.setID(levelID);
-			obj.getLevels().remove(existantLevel);
-		} else {
-			level.setID(obj.getID()+"-L"+(obj.getLevels().size() + 1));
-		}
-		return level;
-	}
-	
-	@Deprecated
-	private Level getCorrespondingLevel(Objective obj, String levelID) {
-		for(Level level: obj.getLevels()) {
-			if(level.getID().equals(levelID)) {
-				return level;
-			}
-		}
-		return null;
-	}
-	
+
 	@SuppressWarnings("unchecked")
-	private Objective getCorrespondingObjective(LearningPath learningPath, Knowledge knowledge, JSONObject json) {
+	private Objective getCorrespondingObjective(Knowledge knowledge, JSONObject json) {
 		Objective obj = new ObjectiveImpl();
 		String objID = (String) json.get("objective");
-		System.out.println(objID);
 		if(objID.isEmpty()) {
-			int nbObjs = learningPath.getObjectives().size() + 1;
-			obj.setID(learningPath.getID()+"-O"+nbObjs);
+			int nbObjs = path.getObjectives().size() + 1;
+			obj.setID(path.getID()+"-O"+nbObjs);
 			obj.setName(obj.getID());
 		} else {
-			for (Objective objective : learningPath.getObjectives()) {
-				if(objective.getID().equals(objID)) {
-					//obj = objective;
-					obj.setID(objective.getID());
-					obj.setName(objective.getID());
-					learningPath.getObjectives().remove(objective);
-					break;
-				}
-			}
+			obj.setID(objID);
+			obj.setName(objID);
+			removeObjectiveFromPath(objID);
 		}
 		for (String table :  (List<String>) getJSONBuildSetup(json).get("tables")) {
 			for (SetOfFacts sof : knowledge.getKnowledgefacts()) {
-				if(Integer.parseInt(sof.getName()) == Integer.parseInt(table)) { // TODO : it's shit
+				if(Integer.parseInt(sof.getName()) == Integer.parseInt(table)) {
 					obj.getSetoffacts().add(sof); 
 				}
 			}
 		}
 		return obj;
+	}
+	
+	private void removeObjectiveFromPath(String objectiveID) {
+		for(Objective obj : path.getObjectives()) {
+			if(obj.getID().equals(objectiveID)) {
+				path.getObjectives().remove(obj);
+			}
+		}
 	}
 	
 	public LearningPath getCorrespondingPath(LearningDomain paths, String pathID) {
@@ -446,5 +448,71 @@ public class PathManager {
 			}
 		}
 		return new LearningPathImpl();
+	}
+	
+	private void getPath(String pathID) {
+		loadPaths();
+		for(LearningPath path : domain.getLearningpaths()) {
+			if(path.getID().equals(pathID)) {
+				this.path = path;
+				domain.getLearningpaths().remove(path);
+				saveDomainModel();
+			}
+		}
+		
+		
+	}
+	
+	private void saveDomainModel() {
+		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> map = registry.getExtensionToFactoryMap();
+		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
+		map.put("xmi", toSave);
+		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
+		
+		Resource resource = resourceSet.createResource(URI.createURI("file:///"+Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE));
+		resource.getContents().add(domain);
+		try {
+			resource.save(map);
+		}catch (IOException e) {
+			ALGAGenerator.LOGGER.severe("Error while saving : " +Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE);
+			e.printStackTrace();
+		}
+		
+		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE + "' file : OK");
+	}
+	
+	private void loadPaths() {
+		GeneratorPackage.eINSTANCE.eClass();
+		ResourceSet resourceSet = new ResourceSetImpl();
+		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> map = registry.getExtensionToFactoryMap();
+		map.put("xmi", new XMIResourceFactoryImpl());
+		File learningPaths = new File(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE);
+		Resource resource = resourceSet.createResource(URI.createFileURI(learningPaths.getAbsolutePath()));
+		try {
+			resource.load(null);
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+		EcoreUtil.resolveAll(resourceSet); 
+		this.domain = (LearningDomain) resource.getContents().get(0);
+		System.out.println("DOMAIN WAS LOADED "+domain);
+	}
+	
+	private Knowledge loadKnowledge() {
+		GeneratorPackage.eINSTANCE.eClass();
+		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> map = registry.getExtensionToFactoryMap();
+		map.put("xmi", new XMIResourceFactoryImpl());
+		File knowledge = new File(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.KNOWLEDGE_FILE);
+		Resource resource = resourceSet.createResource(URI.createFileURI(knowledge.getAbsolutePath()));
+		try {
+			resource.load(null);
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+		EcoreUtil.resolveAll(resourceSet); 
+		return (Knowledge) resource.getContents().get(0);
 	}
 }

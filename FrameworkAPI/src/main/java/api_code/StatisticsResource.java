@@ -1,5 +1,6 @@
 package api_code;
 
+import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
 //import io.swagger.annotations.Api;
 //import io.swagger.annotations.ApiResponse;
@@ -32,25 +33,23 @@ public class StatisticsResource {
 	@GET
 	@Path("/learner/{learnerID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public String generalStatistics(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public String generalStatistics(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
-				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
-				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + Constant.DEFAULT_CONTEXT_FILE_NAME + ".xmi", true));
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH,  learnerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME, true));
 		
-		return manager.getGeneralStats(learnerID).toJSONString();
+		return manager.getGeneralStats().toJSONString();
 	}
 	
 	@GET
 	@Path("/classroom/{classroomID}/learner/{learnerID}")
 	@Produces(MediaType.TEXT_XML)
-	public String generate(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public String generate(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
-				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
-				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID +".xmi", true));
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, Constant.CLASSROOMS_FILE, classID, true));
 		
-		return manager.getGeneralStats(learnerID).toJSONString();
+		return manager.getGeneralStats().toJSONString();
 	}
 	
 	/***********************************/

@@ -4,6 +4,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
 //import io.swagger.annotations.Api;
 //import io.swagger.annotations.ApiResponse;
@@ -38,29 +39,29 @@ public class CoinsResource {
 	@GET
 	@Path("/learner/{learnerID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getCoins(@PathParam("learnerID") String learnerID, @Context ServletContext app) {  
+	public String getCoins(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
-				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
-				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + Constant.DEFAULT_CONTEXT_FILE_NAME + ".xmi", true));
-		return manager.getLearnerCoins(learnerID).toJSONString();
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, 
+				Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME, true));
+		return manager.getLearnerCoins().toJSONString();
 	}
 	
 	@GET
 	@Path("/classroom/{classID}/learner/{learnerID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getCoins(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) {  
+	public String getCoins(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
-				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
-				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
-		return manager.getLearnerCoins(learnerID).toJSONString();
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, 
+				Constant.CLASSROOMS_FILE, classID, true));
+		return manager.getLearnerCoins().toJSONString();
 	}
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public void setCoins(String jsonContent, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException {  
+	public void setCoins(String jsonContent, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		JSONObject obj = new JSONObject();
 		try {
@@ -68,10 +69,10 @@ public class CoinsResource {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		String classID = obj.containsKey("classroomID")? (String) obj.get("classroomID"): Constant.DEFAULT_CONTEXT_FILE_NAME;
+		String classID = obj.containsKey("classroomID")? (String) obj.get("classroomID"): Constant.DEFAULT_CLASSROOM_NAME;
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
-				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
-				Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true));
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, 
+				Constant.CLASSROOMS_FILE, classID, true));
 		manager.setLearnerCoins(obj);
 	}
 }

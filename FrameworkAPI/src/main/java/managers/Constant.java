@@ -7,6 +7,7 @@ import java.util.Map;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
@@ -17,7 +18,7 @@ import generator.LearnerPlayer;
 
 public class Constant {
 	
-	private static ResourceSet resourceSet;
+	//rivate static ResourceSet resourceSet;
 	
 	/*
 	 * PROJECT PATH 
@@ -41,6 +42,8 @@ public class Constant {
 	
 	
 	public static final String CLASSROOMS_FILE = "Classrooms.xmi";
+	public static final String PATHS_FILE = "LearningDomain.xmi";
+	public static final String KNOWLEDGE_FILE = "MultiplicationTables.xmi";
 	
 	public static Classroom getClassroom(String classroomID) {
 		Classrooms classrooms = loadClassrooms();  
@@ -62,12 +65,14 @@ public class Constant {
 		return false;
 	}
 	
-	private static Classrooms loadClassrooms() {
+	public static Classrooms loadClassrooms() {
 		GeneratorPackage.eINSTANCE.eClass();
+		ResourceSet resourceSet = new ResourceSetImpl();
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		map.put("xmi", new XMIResourceFactoryImpl());
 		File classrooms = new File(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CLASSROOMS_FILE);
+		System.out.println();
 		Resource resource = resourceSet.createResource(URI.createFileURI(classrooms.getAbsolutePath()));
 		try {
 			resource.load(null);
