@@ -632,5 +632,8 @@
     <genClasses ecoreClass="generator.ecore#//Teachers">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Teachers/teachers"/>
     </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Classrooms">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Classrooms/classrooms"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator:Classrooms
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:generator="http://www.example.org/generator">
+  <classrooms
+      ID="default"
+      name="DEFAULT">
+    <learnerPlayers
+        href="learnerPlayers/LearnerPlayer1.xmi#blemoine"/>
+    <learnerPlayers
+        href="learnerPlayers/LearnerPlayer2.xmi#dorianla"/>
+  </classrooms>
+</generator:Classrooms>

@@ -16,6 +16,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
 import generator.Ability;
 import generator.Dungeon;
@@ -28,11 +29,11 @@ class GameplaySelectionTest {
 	private List<Dungeon> generatedDungeons;	
 	
 	@BeforeEach
-	void initDataSet(TestInfo info) throws NonExistantLearnerPlayerException {
+	void initDataSet(TestInfo info) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		gameplaysByAbility = new HashMap<>();
 		instanciateGameplayByAbilities();
 		String learnerID = new ArrayList<>(info.getTags()).get(0);
-		generatedDungeons = generateXDungeons(new ALGAGenerator(true, learnerID, "Context_Gameplay.xmi"), 150);
+		generatedDungeons = generateXDungeons(new ALGAGenerator(true, learnerID, "Classrooms.xmi", "GAMEPLAY_TEST"), 150);
 	}
 	
 	private List<Dungeon> generateXDungeons(ALGAGenerator generator, int quantityX) {

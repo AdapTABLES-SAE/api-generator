@@ -32,7 +32,7 @@ public interface Classroom extends EObject {
 	 * @return the value of the '<em>Gamecontext</em>' containment reference.
 	 * @see #setGamecontext(GameContext)
 	 * @see generator.GeneratorPackage#getClassroom_Gamecontext()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	GameContext getGamecontext();

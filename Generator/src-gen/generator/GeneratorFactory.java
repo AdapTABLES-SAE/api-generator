@@ -598,6 +598,15 @@ public interface GeneratorFactory extends EFactory {
 	Teachers createTeachers();
 
 	/**
+	 * Returns a new object of class '<em>Classrooms</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Classrooms</em>'.
+	 * @generated
+	 */
+	Classrooms createClassrooms();
+
+	/**
 	 * Returns a new object of class '<em>Equipment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<generator:LearnerPlayer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" name="Learner 02 (everything is bought and activated)" ID="LP02">
+<generator:LearnerPlayer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" name="Learner 02 (everything is bought and activated) GP" ID="LP02">
   <progression>
     <playerProgress>
       <items>

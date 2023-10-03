@@ -1,9 +1,6 @@
 package api_code;
 
-import java.io.File;
-
-import exceptions.NonExistantLearnerPlayerException;
-import generator.LearnerPlayer;
+import generator.Classroom;
 import jakarta.servlet.ServletContext;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -12,7 +9,6 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 import managers.Constant;
-import managers.ModelsManager;
 
 /**
  * Paths : 
@@ -36,7 +32,8 @@ public class LoginResource {
 	@Path("/learner/{learnerID}")
 	public String generate(@PathParam("learnerID") String learnerID, @Context ServletContext app) {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		return isLearnerPlayerExistant(learnerID)? "OK" : "KO";
+		Classroom classroom = Constant.getClassroom(Constant.DEFAULT_CLASSROOM_NAME);
+		return (classroom == null) || !Constant.doesLearnerBelongsToClassroom(classroom, learnerID)? "KO" : "OK";
 	}
 	
 	
@@ -45,49 +42,8 @@ public class LoginResource {
 	@Path("/classroom/{classID}/learner/{learnerID}")
 	public String generate(@PathParam("classID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		return isLearnerPlayerExistant(classID, learnerID)? "OK" : "KO";
-	}
-
-	
-	/***********************************/
-	/**          JOB METHODS          **/
-	/**
-	 * @throws NonExistantLearnerPlayerException *********************************/
-	private boolean isLearnerPlayerExistant(String learnerID) {
-		return isLearnerPlayerExistant("", learnerID);
-	}
-	
-	private boolean isLearnerPlayerExistant(String classID, String learnerID) {
-		classID = classID.isEmpty() ? "default": classID;
-		if(isClassExistant(classID)) {
-			ModelsManager modelsManager = new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
-					Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH,
-					Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true);
-			LearnerPlayer learner = null;
-			try {
-				learner = modelsManager.getLearnerPlayerFromID(learnerID);
-			} catch (NonExistantLearnerPlayerException e) {
-				e.printStackTrace();
-			}
-			return learner != null; 
-		}
-		return false;
-	}
-	
-	private boolean isClassExistant(String classID) {
-		String contextsRepertory = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CONTEXTS_FILES_PATH; 
-		File[] files = new File(contextsRepertory).listFiles();
-		
-		int i = 0;
-		boolean exists = false;
-		while(i < files.length && !exists) {
-			if (files[i].isFile() && files[i].getName().equals(Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi")) {
-				exists = true;
-			}
-			i++;
-		}
-		
-		return exists;
+		Classroom classroom = Constant.getClassroom(classID);
+		return (classroom == null) || !Constant.doesLearnerBelongsToClassroom(classroom, learnerID)? "KO" : "OK";
 	}
 	
 }

@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 //import java.util.logging.Logger;
 import org.eclipse.emf.common.util.EList;
 
+import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
 import flattener.Main;
 import generator.CurrentObjectiveLevel;
@@ -71,9 +72,11 @@ public class ALGAGenerator {
 				generator.saveDungeon("DungeonGen.xmi");
 				Main.transformModel("C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\", 
 					"C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\flattener\\", "outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
+			} catch (ContextNotFoundException e) {
+				e.printStackTrace();
 			} catch (NonExistantLearnerPlayerException e) {
 				e.printStackTrace();
-			}	
+			} 	
 		}
 	}
 	
@@ -82,19 +85,24 @@ public class ALGAGenerator {
 		modelAccess.saveLearnerPlayerModel();
 	}
 	
-	public ALGAGenerator(String learnerID) throws NonExistantLearnerPlayerException {
+	public ALGAGenerator(String learnerID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		modelAccess = new ModelsManager(learnerID);
 	}
 	
-	public ALGAGenerator(String learnerID, String fileContext) throws NonExistantLearnerPlayerException {
-		modelAccess = new ModelsManager(fileContext);
+	public ALGAGenerator(String learnerID, String fileContext) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		modelAccess = new ModelsManager(learnerID, fileContext);
 	}
 	
-	public ALGAGenerator(boolean forTest, String learnerID, String contextFileName) throws NonExistantLearnerPlayerException {
+	public ALGAGenerator(boolean forTest, String learnerID, String contextFileName) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		modelAccess = new ModelsManager(forTest, learnerID, contextFileName);
 	}
 	
-	public ALGAGenerator(String inputPath, String outputPath, String contextFileName, String learnerID, boolean lauchedFromAPI) throws NonExistantLearnerPlayerException {
+	public ALGAGenerator(boolean forTest, String learnerID, String contextsFileName, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		modelAccess = new ModelsManager(forTest, learnerID, contextsFileName, contextID);
+	}
+	
+	
+	public ALGAGenerator(String inputPath, String outputPath, String contextFileName, String learnerID, boolean lauchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		modelAccess = new ModelsManager(inputPath, outputPath, contextFileName, lauchedFromAPI);
 	}
 	

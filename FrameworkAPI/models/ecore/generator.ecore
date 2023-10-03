@@ -168,13 +168,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Classroom">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gamecontext" lowerBound="1"
-        eType="#//GameContext" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gamecontext" eType="#//GameContext"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         unsettable="true" iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerPlayers" eType="#//LearnerPlayers"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerPlayers" upperBound="-1"
+        eType="#//LearnerPlayer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LearnerPlayer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="progression" eType="#//Progression"
@@ -186,6 +186,7 @@
         unsettable="true" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statistics" eType="#//Statistics"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Progression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="playerProgress" eType="#//PlayerProgress"
@@ -637,10 +638,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
         eType="#//Item" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LearnerPlayers">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="learnerPlayers" upperBound="-1"
-        eType="#//LearnerPlayer" containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Statistics">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbCorrectGivenAnswers"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -791,5 +788,9 @@
     <eLiterals name="CLASSIC"/>
     <eLiterals name="FILL_IN" value="1"/>
     <eLiterals name="GRAPHIC" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Classrooms">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classrooms" upperBound="-1"
+        eType="#//Classroom" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
 import generator.Dungeon;
 import generators.ALGAGenerator;
@@ -20,20 +21,18 @@ class ObjectiveLevelTest {
 	private List<Dungeon> generatedLinearDungeons, generatedLabyrinthineDungeons;
 	
 	@BeforeEach
-	void initDataSet(TestInfo info) throws NonExistantLearnerPlayerException {
+	void initDataSet(TestInfo info) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		String learnerID = new ArrayList<>(info.getTags()).get(0);
 		System.out.println("ID "+learnerID);
 		if(!learnerID.equals("-1")) {
-			generatedLinearDungeons = generateXDungeons(new ALGAGenerator(true, learnerID, "Context_Linear.xmi"), 150);
-			generatedLabyrinthineDungeons = generateXDungeons(new ALGAGenerator(true, learnerID, "Context_Labyrinthine.xmi"), 150);
+			generatedLinearDungeons = generateXDungeons(new ALGAGenerator(true, learnerID, "Contexts.xmi", "LINEAR_GENERATION_TEST"), 150);
+			generatedLabyrinthineDungeons = generateXDungeons(new ALGAGenerator(true, learnerID, "Contexts.xmi", "LABYRINTHINE_GENERATION_TEST"), 150);
 		}
 	}
 	
 	@Test
 	@Tag(value = "LP001")
 	void allEligibleObjLevelAreChosenAtLeastOnceTest() throws NonExistantLearnerPlayerException {
-		List<Dungeon> generatedLinearDungeons = generateXDungeons(new ALGAGenerator(true, "LP001", "Context_Linear.xmi"), 150);
-		List<Dungeon> generatedLabyrinthineDungeons = generateXDungeons(new ALGAGenerator(true, "LP001", "Context_Labyrinthine.xmi"), 150);
 		assertTrue(isObjectiveLevelSelected(generatedLinearDungeons, "OBJ-LVL_O1", "OBJ-LVL-O1_L1"));
 	    assertTrue(isObjectiveLevelSelected(generatedLinearDungeons, "OBJ-LVL_O2", "OBJ-LVL-O2_L2"));
 	    assertTrue(isObjectiveLevelSelected(generatedLinearDungeons, "OBJ-LVL_O3", "OBJ-LVL-O3_L1"));

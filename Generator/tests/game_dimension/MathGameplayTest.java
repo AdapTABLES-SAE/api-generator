@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
 import generator.ATask;
 import generator.Dungeon;
@@ -23,10 +24,10 @@ class MathGameplayTest {
 	private List<Dungeon> generatedLinearDungeons, generatedLabyrinthineDungeons;
 	
 	@BeforeEach
-	void initDataSet(TestInfo info) throws NonExistantLearnerPlayerException {
+	void initDataSet(TestInfo info) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		String learnerID = new ArrayList<>(info.getTags()).get(0);
-		generatedLinearDungeons = generateXDungeons(new ALGAGenerator(true, learnerID, "Context_Linear.xmi"), 50);
-		generatedLabyrinthineDungeons = generateXDungeons(new ALGAGenerator(true, learnerID, "Context_Labyrinthine.xmi"), 50);
+		generatedLinearDungeons = generateXDungeons(new ALGAGenerator(true, learnerID,  "Classrooms.xmi", "LINEAR_GENERATION_TEST"), 50);
+		generatedLabyrinthineDungeons = generateXDungeons(new ALGAGenerator(true, learnerID, "Classrooms.xmi", "LABYRINTHINE_GENERATION_TEST"), 50);
 	}
 
 	@Test
@@ -36,6 +37,7 @@ class MathGameplayTest {
 	    
 	    assertTrue(areCompletion2andRebuildTasksWithUndoableGameplay(generatedLabyrinthineDungeons));
 	 
+	    
 	}
 	
 	private boolean areCompletion2andRebuildTasksWithUndoableGameplay(List<Dungeon> dungeons) {

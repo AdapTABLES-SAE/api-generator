@@ -168,8 +168,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Classroom">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gamecontext" lowerBound="1"
-        eType="#//GameContext" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gamecontext" eType="#//GameContext"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         unsettable="true" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -788,5 +788,9 @@
     <eLiterals name="CLASSIC"/>
     <eLiterals name="FILL_IN" value="1"/>
     <eLiterals name="GRAPHIC" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Classrooms">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classrooms" upperBound="-1"
+        eType="#//Classroom" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

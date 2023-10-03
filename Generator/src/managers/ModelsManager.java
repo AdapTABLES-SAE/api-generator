@@ -12,8 +12,10 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
+import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
 import generator.Classroom;
+import generator.Classrooms;
 import generator.Dungeon;
 import generator.GameDescription;
 import generator.GameplayTaskRelations;
@@ -35,9 +37,11 @@ public class ModelsManager {
 	private static String INPUT_MODELS_PATH_TEST = "tests/modelsForTests/";
 	private static String OUTPUT_MODELS_PATH = "outputmodels/";
 	private static String INPUT_LEARNER_MODELS_PATH = "learnerPlayers/";
-	private static String[] INPUT_MODELS_NAMES = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi", "Relations.xmi", ""};
+	private static String[] INPUT_MODELS_NAMES = {"Contexts.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi", "Relations.xmi", ""};
 	
-	private Classroom context; 
+	private static final String DEFAULT_CONTEXTID = "default";
+	
+	private Classroom context;
 	private GameDescription gameDescription; 
 	private Knowledge multiplicationTables;
 	private LearningDomain learningPath;
@@ -79,42 +83,55 @@ public class ModelsManager {
 		return (LearnerPlayer) resource.getContents().get(0);
 	}
 	
-	public ModelsManager(boolean isForTest, String learnerID,  String contextFileName) throws NonExistantLearnerPlayerException {
+	public ModelsManager(boolean isForTest, String learnerID,  String contextsFileName, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		resourceSet = new ResourceSetImpl();
 		launchedFromTEST = isForTest;
 		if(launchedFromTEST) { INPUT_MODELS_PATH = INPUT_MODELS_PATH_TEST;}
 		setLearnerPlayerFileName(learnerID); 
-		if(!contextFileName.isEmpty()) { INPUT_MODELS_NAMES[0] = contextFileName; }
-		loadInputModels();
-	}
-
-	public ModelsManager(String learnerID, String contextFileName) throws NonExistantLearnerPlayerException {	
-		this(false, learnerID, contextFileName);
-	}
-
-	public ModelsManager(String learnerID) throws NonExistantLearnerPlayerException {
-		this(learnerID, "");
+		if(!contextsFileName.isEmpty()) { INPUT_MODELS_NAMES[0] = contextsFileName; }
+		loadInputModels(contextID);
 	}
 	
-	public ModelsManager(String inputPath, String outputPath, String learnerID, boolean lauchedFromAPI) throws NonExistantLearnerPlayerException {
+	public ModelsManager(boolean isForTest, String learnerID,  String contextsFileName) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		this(isForTest, learnerID, contextsFileName, DEFAULT_CONTEXTID);
+	}
+
+	public ModelsManager(String learnerID, String contextsFileName, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {	
+		this(false, learnerID, contextsFileName, contextID);
+	}
+
+	public ModelsManager(String learnerID, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		this(learnerID, "", contextID);
+	}
+	
+	public ModelsManager(String learnerID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		this(learnerID, "", DEFAULT_CONTEXTID);
+	}
+	
+	public ModelsManager(String inputPath, String outputPath, String learnerID, boolean lauchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		//System.out.println(INPUT_MODELS_PATH);
 		/*INPUT_MODELS_PATH = inputPath;
 		OUTPUT_MODELS_PATH = outputPath;
 		this.lauchedFromAPI = lauchedFromAPI;
 		resourceSet = new ResourceSetImpl();
 		loadDomainModel();*/
-		this(inputPath, outputPath, learnerID, "", lauchedFromAPI);
+		this(inputPath, outputPath, learnerID, "", DEFAULT_CONTEXTID, lauchedFromAPI);
 	}
 	
-	public ModelsManager(String inputPath, String outputPath, String learnerID, String contextFilePath, boolean lauchedFromAPI) throws NonExistantLearnerPlayerException {
+	public ModelsManager(String inputPath, String outputPath, String learnerID, String contextsFileName, boolean launchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		//System.out.println(INPUT_MODELS_PATH);
+		this(inputPath, outputPath, learnerID, contextsFileName, DEFAULT_CONTEXTID, launchedFromAPI);
+	}
+	
+	public ModelsManager(String inputPath, String outputPath, String learnerID, String contextsFileName, String contextID,  boolean launchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		//System.out.println(INPUT_MODELS_PATH);
 		INPUT_MODELS_PATH = inputPath;
 		OUTPUT_MODELS_PATH = outputPath;
-		this.launchedFromAPI = lauchedFromAPI;
-		if(!contextFilePath.isEmpty()) { INPUT_MODELS_NAMES[0] = contextFilePath; }
+		this.launchedFromAPI = launchedFromAPI;
+		if(!contextsFileName.isEmpty()) { INPUT_MODELS_NAMES[0] = contextsFileName; }
 		setLearnerPlayerFileName(learnerID); 
 		resourceSet = new ResourceSetImpl();
-		loadInputModels();
+		loadInputModels(contextID);
 	}
 
 	public void saveGeneratedModel(Dungeon generatedDungeon, String outFileName) {
@@ -244,20 +261,20 @@ public class ModelsManager {
 		ALGAGenerator.LOGGER.info("Saving '"+ INPUT_MODELS_PATH + INPUT_LEARNER_MODELS_PATH + INPUT_MODELS_NAMES[5]+"' file : OK");
 	}
 		
-	private void loadInputModels() {
+	private void loadInputModels(String contextID) throws ContextNotFoundException {
 		GeneratorPackage.eINSTANCE.eClass();
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		map.put("xmi", new XMIResourceFactoryImpl());
 		
-		File contexte = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
+		File contextes = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
 		File gamedescription = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[1]);
 		File multiplicationTables = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[2]);
 		File learningPaths = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]);
 		File relations = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[4]);
 		File learnerPlayer = new File(INPUT_MODELS_PATH + INPUT_LEARNER_MODELS_PATH + INPUT_MODELS_NAMES[5]);
 		
-		Resource resource1 = resourceSet.createResource(URI.createFileURI(contexte.getAbsolutePath()));
+		Resource resource1 = resourceSet.createResource(URI.createFileURI(contextes.getAbsolutePath()));
 		Resource resource2 = resourceSet.createResource(URI.createFileURI(gamedescription.getAbsolutePath()));
 		Resource resource3 = resourceSet.createResource(URI.createFileURI(multiplicationTables.getAbsolutePath()));
 		Resource resource4 = resourceSet.createResource(URI.createFileURI(learningPaths.getAbsolutePath()));
@@ -276,7 +293,7 @@ public class ModelsManager {
 		}
 		EcoreUtil.resolveAll(resourceSet); 
 		
-		this.context = (Classroom) resource1.getContents().get(0);
+		loadCorrespondingContext((Classrooms) resource1.getContents().get(0), contextID);
 		this.gameDescription = (GameDescription) resource2.getContents().get(0);
 		this.multiplicationTables = (Knowledge) resource3.getContents().get(0);
 		this.learningPath = (LearningDomain) resource4.getContents().get(0);
@@ -285,6 +302,20 @@ public class ModelsManager {
 		
 		ALGAGenerator.LOGGER.info("Loading input models : OK");
 	}
+	
+	private void loadCorrespondingContext(Classrooms contexts, String contextID) throws ContextNotFoundException {
+		for(Classroom classe : contexts.getClassrooms()) {
+			if(classe.getID().equals(contextID)) {
+				this.context = classe;
+			}
+		}
+		
+		if(this.context == null) {
+			ALGAGenerator.LOGGER.severe("CONTEXT WITH ID="+contextID+" was not found !");
+			throw new ContextNotFoundException(contextID, INPUT_MODELS_NAMES[0]);
+		}
+	}
+
 
 	public Classroom getContextModel() {
 		return context;

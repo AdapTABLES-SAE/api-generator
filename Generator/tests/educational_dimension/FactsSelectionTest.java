@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
 import generator.CompletionCriteria;
 import generator.CurrentObjectiveLevel;
@@ -21,18 +22,18 @@ import generator.ResultsByTask;
 import generator.impl.QuestionableFactResultImpl;
 import generators.ALGAGenerator;
 
-class FactsSelectionTest {
+class FactsSelectionTest { //TODO : refaire proprement
 	
 	private ALGAGenerator generator;
 	
 	@BeforeEach
-	void initDataSet(TestInfo info) throws NonExistantLearnerPlayerException {
+	void initDataSet(TestInfo info) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		String learnerID = new ArrayList<>(info.getTags()).get(0);
-		generator = new ALGAGenerator(true, learnerID, "Context_Gameplay.xmi");
+		generator = new ALGAGenerator(true, learnerID, "Contexts.xmi", "FACT_TEST");
 	}
 
 	@Test
-	@Tag(value = "LP00")
+	@Tag(value = "LP01F")
 	void oneConsecutiveSuccessTest() {
 		do {
 			generator.generate(); 
@@ -47,7 +48,7 @@ class FactsSelectionTest {
 	}
 	
 	@Test
-	@Tag(value = "LP001B")
+	@Tag(value = "LP02F")
 	void multipleConsecutiveSuccessOnFullParamsTest() {
 		do {
 			generator.generate(); 
