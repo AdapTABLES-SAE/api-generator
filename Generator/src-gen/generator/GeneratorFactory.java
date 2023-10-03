@@ -895,15 +895,6 @@ public interface GeneratorFactory extends EFactory {
 	Items createItems();
 
 	/**
-	 * Returns a new object of class '<em>Learner Players</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Learner Players</em>'.
-	 * @generated
-	 */
-	LearnerPlayers createLearnerPlayers();
-
-	/**
 	 * Returns a new object of class '<em>Statistics</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

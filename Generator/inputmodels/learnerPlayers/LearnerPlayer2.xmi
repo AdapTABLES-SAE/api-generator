@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator:LearnerPlayer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:generator="http://www.example.org/generator" name="FICTIF02" ID="FICTIF02">
+  <progression>
+    <playerProgress>
+      <items/>
+    </playerProgress>
+    <learnerProgress/>
+  </progression>
+  <learningpath href="../LearningDomain.xmi#PATH404"/>
+  <statistics/>
+</generator:LearnerPlayer>

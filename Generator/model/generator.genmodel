@@ -212,8 +212,8 @@
     <genClasses ecoreClass="generator.ecore#//Classroom">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Classroom/gamecontext"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Classroom/ID"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Classroom/learnerPlayers"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Classroom/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Classroom/learnerPlayers"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//LearnerPlayer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayer/progression"/>
@@ -221,6 +221,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayer/learningpath"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LearnerPlayer/ID"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayer/statistics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LearnerPlayer/lastName"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Progression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Progression/playerProgress"/>
@@ -526,9 +527,6 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Items">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Items/items"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//LearnerPlayers">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LearnerPlayers/learnerPlayers"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Statistics">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Statistics/nbCorrectGivenAnswers"/>

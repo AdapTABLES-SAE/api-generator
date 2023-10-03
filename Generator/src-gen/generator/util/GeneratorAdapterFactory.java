@@ -510,11 +510,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseLearnerPlayers(LearnerPlayers object) {
-			return createLearnerPlayersAdapter();
-		}
-
-		@Override
 		public Adapter caseStatistics(Statistics object) {
 			return createStatisticsAdapter();
 		}
@@ -2153,20 +2148,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createItemsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.LearnerPlayers <em>Learner Players</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.LearnerPlayers
-	 * @generated
-	 */
-	public Adapter createLearnerPlayersAdapter() {
 		return null;
 	}
 

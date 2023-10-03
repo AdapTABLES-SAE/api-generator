@@ -205,8 +205,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createItem();
 		case GeneratorPackage.ITEMS:
 			return createItems();
-		case GeneratorPackage.LEARNER_PLAYERS:
-			return createLearnerPlayers();
 		case GeneratorPackage.STATISTICS:
 			return createStatistics();
 		case GeneratorPackage.ELEMENT_TYPE:
@@ -1100,16 +1098,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public Items createItems() {
 		ItemsImpl items = new ItemsImpl();
 		return items;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LearnerPlayers createLearnerPlayers() {
-		LearnerPlayersImpl learnerPlayers = new LearnerPlayersImpl();
-		return learnerPlayers;
 	}
 
 	/**

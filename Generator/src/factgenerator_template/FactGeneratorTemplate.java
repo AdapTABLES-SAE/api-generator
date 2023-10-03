@@ -52,6 +52,7 @@ public abstract class FactGeneratorTemplate {
 		this.factsCounter = 0;
 	}
 	
+	
 	public Set<QuestionableFact> generateQuestionableFacts(ATask task){
 		Set<QuestionableFact> questionableFacts = new HashSet<>();
 		taskID = task.getID();
@@ -170,9 +171,24 @@ public abstract class FactGeneratorTemplate {
 	
 	protected abstract int correctnessToReach(ATask task);
 	
+	private boolean areEveryFactAchieved(ResultsByTask resByTask) {
+		boolean allAchieved = true;
+		for (QuestionableFact qfact: resByTask.getQuestionableFacts()) {
+			if(!qfact.isAchieved()) {
+				allAchieved = false;
+			}
+		}
+		return allAchieved;
+	}
+	
 	private QuestionableFact getAvailableFact(ResultsByTask resByTask) throws Exception { 
-		if(isPoolEmpty(resByTask)) {
-			resetPoolOfFacts(resByTask);
+		//boolean isEveryFactAchieved = areEveryFactAchieved(resByTask); 
+		if(areEveryFactAchieved(resByTask)) {
+			resetPoolWithEveryFacts(resByTask);
+		} else {
+			if(isPoolEmpty(resByTask)) {
+				resetPoolOfFacts(resByTask);
+			}
 		}	
 		
 		List<QuestionableFact> eligibleFacts = getEligibleQuestionableFacts(resByTask);
@@ -187,7 +203,7 @@ public abstract class FactGeneratorTemplate {
 	private List<QuestionableFact> getEligibleQuestionableFacts(ResultsByTask resByTask){
 		List<QuestionableFact> eligibleFacts = new ArrayList<>();
 		for (QuestionableFact qfact: resByTask.getQuestionableFacts()) {
-			if(!qfact.isAchieved() && !qfact.isWasSelected()) {
+			if(!qfact.isWasSelected()) {
 				eligibleFacts.add(qfact);
 			}
 		}
@@ -204,6 +220,12 @@ public abstract class FactGeneratorTemplate {
 			i++;
 		}
 		return hasAvailable; 
+	}
+	
+	private void resetPoolWithEveryFacts(ResultsByTask resByTask) {
+		for (QuestionableFact qfact: resByTask.getQuestionableFacts()) {
+			qfact.setWasSelected(false);
+		}
 	}
 	
 	private void resetPoolOfFacts(ResultsByTask resByTask) {

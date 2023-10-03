@@ -2,6 +2,7 @@
  */
 package generator;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,8 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.Classroom#getGamecontext <em>Gamecontext</em>}</li>
  *   <li>{@link generator.Classroom#getID <em>ID</em>}</li>
- *   <li>{@link generator.Classroom#getLearnerPlayers <em>Learner Players</em>}</li>
  *   <li>{@link generator.Classroom#getName <em>Name</em>}</li>
+ *   <li>{@link generator.Classroom#getLearnerPlayers <em>Learner Players</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getClassroom()
@@ -96,26 +97,16 @@ public interface Classroom extends EObject {
 	boolean isSetID();
 
 	/**
-	 * Returns the value of the '<em><b>Learner Players</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Learner Players</b></em>' reference list.
+	 * The list contents are of type {@link generator.LearnerPlayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Learner Players</em>' containment reference.
-	 * @see #setLearnerPlayers(LearnerPlayers)
+	 * @return the value of the '<em>Learner Players</em>' reference list.
 	 * @see generator.GeneratorPackage#getClassroom_LearnerPlayers()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	LearnerPlayers getLearnerPlayers();
-
-	/**
-	 * Sets the value of the '{@link generator.Classroom#getLearnerPlayers <em>Learner Players</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Learner Players</em>' containment reference.
-	 * @see #getLearnerPlayers()
-	 * @generated
-	 */
-	void setLearnerPlayers(LearnerPlayers value);
+	EList<LearnerPlayer> getLearnerPlayers();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

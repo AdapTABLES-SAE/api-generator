@@ -28,57 +28,91 @@ public class ModelsManager {
 	
 	
 	private ResourceSet resourceSet;
-	private boolean lauchedFromAPI = false;
-	public boolean lauchedFromTEST = false;
+	private boolean launchedFromAPI = false;
+	public boolean launchedFromTEST = false;
 	
 	private static String INPUT_MODELS_PATH = "inputmodels/";
 	private static String INPUT_MODELS_PATH_TEST = "tests/modelsForTests/";
 	private static String OUTPUT_MODELS_PATH = "outputmodels/";
-	private static String[] INPUT_MODELS_NAMES = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi", "Relations.xmi"};
+	private static String INPUT_LEARNER_MODELS_PATH = "learnerPlayers/";
+	private static String[] INPUT_MODELS_NAMES = {"Context.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi", "Relations.xmi", ""};
 	
 	private Classroom context; 
 	private GameDescription gameDescription; 
 	private Knowledge multiplicationTables;
 	private LearningDomain learningPath;
 	private GameplayTaskRelations relations;
+	private LearnerPlayer learnerPlayer; 
 	
-	public ModelsManager(boolean isForTest, String contextFileName) {
+	private void setLearnerPlayerFileName(String ID) throws NonExistantLearnerPlayerException {
+		String modelsPath = INPUT_MODELS_PATH + INPUT_LEARNER_MODELS_PATH;
+		INPUT_MODELS_NAMES[5] = "";
+		File[] files = new File(modelsPath).listFiles();
+		int i = 0;
+		while(i < files.length && INPUT_MODELS_NAMES[5].isEmpty()) {
+			LearnerPlayer learnerPlayer = loadLearnerPlayerFile(files[i].getAbsolutePath()); 
+			if(learnerPlayer.getID().equals(ID)) {
+				INPUT_MODELS_NAMES[5] = files[i].getName();
+			}
+			i++;
+		}
+		ALGAGenerator.LOGGER.info("ID Learner="+ID+" -- Corresponding FILE NAME="+INPUT_MODELS_NAMES[5]);
+		if(INPUT_MODELS_NAMES[5].isEmpty()) {
+			ALGAGenerator.LOGGER.severe("LEARNER PLAYER MODEL NOT FOUND !");
+			throw new NonExistantLearnerPlayerException(ID);
+		}
+	}
+	
+	private LearnerPlayer loadLearnerPlayerFile(String path) {
+		GeneratorPackage.eINSTANCE.eClass();
+		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> map = registry.getExtensionToFactoryMap();
+		map.put("xmi", new XMIResourceFactoryImpl());
+		File learnerPlayer = new File(path);
+		Resource resource = resourceSet.createResource(URI.createFileURI(learnerPlayer.getAbsolutePath()));
+		try {
+			resource.load(null);
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+		EcoreUtil.resolveAll(resourceSet); 
+		return (LearnerPlayer) resource.getContents().get(0);
+	}
+	
+	public ModelsManager(boolean isForTest, String learnerID,  String contextFileName) throws NonExistantLearnerPlayerException {
 		resourceSet = new ResourceSetImpl();
-		lauchedFromTEST = isForTest;
-		if(lauchedFromTEST) { INPUT_MODELS_PATH = INPUT_MODELS_PATH_TEST;	}
+		launchedFromTEST = isForTest;
+		if(launchedFromTEST) { INPUT_MODELS_PATH = INPUT_MODELS_PATH_TEST;}
+		setLearnerPlayerFileName(learnerID); 
 		if(!contextFileName.isEmpty()) { INPUT_MODELS_NAMES[0] = contextFileName; }
 		loadInputModels();
 	}
 
-	public ModelsManager(String contextFileName) {
-		resourceSet = new ResourceSetImpl();
-		if(!contextFileName.isEmpty()) {
-			INPUT_MODELS_NAMES[0] = contextFileName;
-		}
-		loadInputModels();
+	public ModelsManager(String learnerID, String contextFileName) throws NonExistantLearnerPlayerException {	
+		this(false, learnerID, contextFileName);
 	}
 
-	public ModelsManager() {
-		this("");
+	public ModelsManager(String learnerID) throws NonExistantLearnerPlayerException {
+		this(learnerID, "");
 	}
 	
-	public ModelsManager(String inputPath, String outputPath, boolean lauchedFromAPI) {
+	public ModelsManager(String inputPath, String outputPath, String learnerID, boolean lauchedFromAPI) throws NonExistantLearnerPlayerException {
 		//System.out.println(INPUT_MODELS_PATH);
-		INPUT_MODELS_PATH = inputPath;
+		/*INPUT_MODELS_PATH = inputPath;
 		OUTPUT_MODELS_PATH = outputPath;
 		this.lauchedFromAPI = lauchedFromAPI;
 		resourceSet = new ResourceSetImpl();
-		loadDomainModel();
+		loadDomainModel();*/
+		this(inputPath, outputPath, learnerID, "", lauchedFromAPI);
 	}
 	
-	public ModelsManager(String inputPath, String outputPath, String contextFilePath, boolean lauchedFromAPI) {
+	public ModelsManager(String inputPath, String outputPath, String learnerID, String contextFilePath, boolean lauchedFromAPI) throws NonExistantLearnerPlayerException {
 		//System.out.println(INPUT_MODELS_PATH);
 		INPUT_MODELS_PATH = inputPath;
 		OUTPUT_MODELS_PATH = outputPath;
-		this.lauchedFromAPI = lauchedFromAPI;
-		if(!contextFilePath.isEmpty()) {
-			INPUT_MODELS_NAMES[0] = contextFilePath;
-		}
+		this.launchedFromAPI = lauchedFromAPI;
+		if(!contextFilePath.isEmpty()) { INPUT_MODELS_NAMES[0] = contextFilePath; }
+		setLearnerPlayerFileName(learnerID); 
 		resourceSet = new ResourceSetImpl();
 		loadInputModels();
 	}
@@ -90,7 +124,7 @@ public class ModelsManager {
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
 		
-		String filePathComplement = lauchedFromAPI? "file:///": "";
+		String filePathComplement = launchedFromAPI? "file:///": "";
 		
 		Resource resource = resourceSet.createResource(URI.createURI(filePathComplement + OUTPUT_MODELS_PATH + outFileName));
 		resource.getContents().add(generatedDungeon);
@@ -187,6 +221,28 @@ public class ModelsManager {
 		
 		ALGAGenerator.LOGGER.info("Saving '"+ INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]+"' file : OK");
 	}
+	
+	public void saveLearnerPlayerModel() {
+		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> map = registry.getExtensionToFactoryMap();
+		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
+		map.put("xmi", toSave);
+		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
+		
+		File learnerPlayer = new File(INPUT_MODELS_PATH + INPUT_LEARNER_MODELS_PATH + INPUT_MODELS_NAMES[5]);
+		
+		Resource resource = resourceSet.createResource(URI.createFileURI(learnerPlayer.getAbsolutePath()));
+		resource.getContents().add(this.learnerPlayer);
+		
+		try {
+			resource.save(map);
+		}catch (IOException e) {
+			ALGAGenerator.LOGGER.severe("Error while saving : " + INPUT_MODELS_PATH + INPUT_LEARNER_MODELS_PATH + INPUT_MODELS_NAMES[5]);
+			e.printStackTrace();
+		}
+		
+		ALGAGenerator.LOGGER.info("Saving '"+ INPUT_MODELS_PATH + INPUT_LEARNER_MODELS_PATH + INPUT_MODELS_NAMES[5]+"' file : OK");
+	}
 		
 	private void loadInputModels() {
 		GeneratorPackage.eINSTANCE.eClass();
@@ -199,12 +255,14 @@ public class ModelsManager {
 		File multiplicationTables = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[2]);
 		File learningPaths = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]);
 		File relations = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[4]);
+		File learnerPlayer = new File(INPUT_MODELS_PATH + INPUT_LEARNER_MODELS_PATH + INPUT_MODELS_NAMES[5]);
 		
 		Resource resource1 = resourceSet.createResource(URI.createFileURI(contexte.getAbsolutePath()));
 		Resource resource2 = resourceSet.createResource(URI.createFileURI(gamedescription.getAbsolutePath()));
 		Resource resource3 = resourceSet.createResource(URI.createFileURI(multiplicationTables.getAbsolutePath()));
 		Resource resource4 = resourceSet.createResource(URI.createFileURI(learningPaths.getAbsolutePath()));
 		Resource resource5 = resourceSet.createResource(URI.createFileURI(relations.getAbsolutePath()));
+		Resource resource6 = resourceSet.createResource(URI.createFileURI(learnerPlayer.getAbsolutePath()));
 
 		try {
 			resource1.load(null);
@@ -212,6 +270,7 @@ public class ModelsManager {
 			resource3.load(null);
 			resource4.load(null);
 			resource5.load(null);
+			resource6.load(null);
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -222,6 +281,7 @@ public class ModelsManager {
 		this.multiplicationTables = (Knowledge) resource3.getContents().get(0);
 		this.learningPath = (LearningDomain) resource4.getContents().get(0);
 		this.relations = (GameplayTaskRelations) resource5.getContents().get(0);
+		this.learnerPlayer = (LearnerPlayer) resource6.getContents().get(0);
 		
 		ALGAGenerator.LOGGER.info("Loading input models : OK");
 	}
@@ -257,19 +317,10 @@ public class ModelsManager {
 	public GameplayTaskRelations getRelationsModel() {
 		return relations;
 	}
-	
-	public LearnerPlayer getLearnerPlayer(String identifier) throws NonExistantLearnerPlayerException {
-		LearnerPlayer learnerPlayer = null;
-		int i = 0;
-		while(learnerPlayer == null && i < getContextModel().getLearnerPlayers().getLearnerPlayers().size()) {
-			if(getContextModel().getLearnerPlayers().getLearnerPlayers().get(i).getID().equals(identifier)) {
-				learnerPlayer = getContextModel().getLearnerPlayers().getLearnerPlayers().get(i);
-			}
-			i++;
-		}
-		if(learnerPlayer == null) {
-			throw new NonExistantLearnerPlayerException(identifier);
-		}
+
+	public LearnerPlayer getLearnerPlayer() {
 		return learnerPlayer;
 	}
+	
+	
 }

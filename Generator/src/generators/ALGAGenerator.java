@@ -11,7 +11,6 @@ import exceptions.NonExistantLearnerPlayerException;
 import flattener.Main;
 import generator.CurrentObjectiveLevel;
 import generator.Dungeon;
-import generator.LearnerPlayer;
 import generator.LevelsDifficultyProgress;
 import generator.PropositionParam;
 import generator.QuestionableFact;
@@ -27,15 +26,12 @@ import managers.ModelsManager;
 import structures.DungeonElements;
 
 public class ALGAGenerator {
-	
-	//public static Logger LOGGER = LogManager.getLogger(ALGAGenerator.class);
-	//private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+
 	public static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);   
 	   
 	private ModelsManager modelAccess;
 	private Dungeon generatedDungeon;
 	private DungeonElements dungeonElements;
-	private LearnerPlayer learnerPlayer;
 
 	public static void main(String[] args) {
 		
@@ -69,7 +65,7 @@ public class ALGAGenerator {
 		for(int i = 0; i < 1; i++) {
 			ALGAGenerator generator;
 			try {
-				generator = new ALGAGenerator("learnerFic");
+				generator = new ALGAGenerator("FICTIF01");
 				generator.generate();
 				generator.printDungeon();
 				generator.saveDungeon("DungeonGen.xmi");
@@ -82,28 +78,24 @@ public class ALGAGenerator {
 	}
 	
 	public void resetLearnerProgress() {
-		this.learnerPlayer.getProgression().setLearnerProgress(new LearnerProgressImpl());
-		this.modelAccess.saveContextModel();
+		modelAccess.getLearnerPlayer().getProgression().setLearnerProgress(new LearnerProgressImpl());
+		modelAccess.saveLearnerPlayerModel();
 	}
 	
 	public ALGAGenerator(String learnerID) throws NonExistantLearnerPlayerException {
-		modelAccess = new ModelsManager();
-		this.learnerPlayer = modelAccess.getLearnerPlayer(learnerID);
+		modelAccess = new ModelsManager(learnerID);
 	}
 	
 	public ALGAGenerator(String learnerID, String fileContext) throws NonExistantLearnerPlayerException {
 		modelAccess = new ModelsManager(fileContext);
-		this.learnerPlayer = modelAccess.getLearnerPlayer(learnerID);
 	}
 	
 	public ALGAGenerator(boolean forTest, String learnerID, String contextFileName) throws NonExistantLearnerPlayerException {
-		modelAccess = new ModelsManager(forTest, contextFileName);
-		this.learnerPlayer = modelAccess.getLearnerPlayer(learnerID);
+		modelAccess = new ModelsManager(forTest, learnerID, contextFileName);
 	}
 	
 	public ALGAGenerator(String inputPath, String outputPath, String contextFileName, String learnerID, boolean lauchedFromAPI) throws NonExistantLearnerPlayerException {
 		modelAccess = new ModelsManager(inputPath, outputPath, contextFileName, lauchedFromAPI);
-		this.learnerPlayer = modelAccess.getLearnerPlayer(learnerID);
 	}
 	
 	public void saveDungeon(String fileName) {
@@ -115,11 +107,17 @@ public class ALGAGenerator {
 	}
 	
 	private void checkLearnerPlayerSetProgression() {
-		if(learnerPlayer.getProgression() == null) {
-			learnerPlayer.setProgression(new ProgressionImpl());
-			learnerPlayer.getProgression().setLearnerProgress(new LearnerProgressImpl());
-			learnerPlayer.getProgression().setPlayerProgress(new PlayerProgressImpl());
+		if(modelAccess.getLearnerPlayer().getProgression() == null) {
+			modelAccess.getLearnerPlayer().setProgression(new ProgressionImpl());
 		}
+		if(modelAccess.getLearnerPlayer().getProgression().getPlayerProgress() == null) {
+			modelAccess.getLearnerPlayer().getProgression().setPlayerProgress(new PlayerProgressImpl());
+		}
+		if(modelAccess.getLearnerPlayer().getProgression().getLearnerProgress() == null) {
+			modelAccess.getLearnerPlayer().getProgression().setLearnerProgress(new LearnerProgressImpl());
+		}
+		
+		modelAccess.saveLearnerPlayerModel();
 	}
 	
 	public List<QuestionableFact> getDungeonFacts() {
@@ -136,16 +134,16 @@ public class ALGAGenerator {
 	
 	private void updateLearnerPlayerStatistics() {
 		// update learner statistics 
-		if(learnerPlayer.getStatistics() == null) {
-			learnerPlayer.setStatistics(new StatisticsImpl());
+		if(modelAccess.getLearnerPlayer().getStatistics() == null) {
+			modelAccess.getLearnerPlayer().setStatistics(new StatisticsImpl());
 		}
-		learnerPlayer.getStatistics().setNbLevelsGenerated(learnerPlayer.getStatistics().getNbLevelsGenerated() + 1); 
-		learnerPlayer.getStatistics().setMaxGameLevelReached(learnerPlayer.getProgression().getPlayerProgress().getCurrentLevel());
-		modelAccess.saveContextModel();
+		modelAccess.getLearnerPlayer().getStatistics().setNbLevelsGenerated(modelAccess.getLearnerPlayer().getStatistics().getNbLevelsGenerated() + 1); 
+		modelAccess.getLearnerPlayer().getStatistics().setMaxGameLevelReached(modelAccess.getLearnerPlayer().getProgression().getPlayerProgress().getCurrentLevel());
+		modelAccess.saveLearnerPlayerModel();
 	}
 	
 	public CurrentObjectiveLevel getCurrentObjectiveLevel() {
-		for(CurrentObjectiveLevel currentOL: this.learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
+		for(CurrentObjectiveLevel currentOL: modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			if(currentOL.getObjective().equals(this.generatedDungeon.getLearningobjective()) && currentOL.getLevel().equals(this.generatedDungeon.getLevel())) {
 				return currentOL;
 			}
@@ -157,30 +155,21 @@ public class ALGAGenerator {
 		LevelsDifficultyProgress gameDifficulty = modelAccess.getGameDescriptionModel().getLevelsDifficultyProgress();
 
 		checkLearnerPlayerSetProgression();
-		if(learnerPlayer.getProgression().getPlayerProgress() == null) {
-			learnerPlayer.getProgression().setPlayerProgress(new PlayerProgressImpl());
-		}
-		if(learnerPlayer.getProgression().getLearnerProgress() == null) {
-			learnerPlayer.getProgression().setLearnerProgress(new LearnerProgressImpl());
-		}
-		
-		double nbQRooms = gameDifficulty.getInitNbQRoom() + gameDifficulty.getNbQRoomIncrease() * (learnerPlayer.getProgression().getPlayerProgress().getCurrentLevel() - 1);
-		double nbNQRooms = gameDifficulty.getInitNbNQRoom() + gameDifficulty.getNbNQRoomIncrease() * (learnerPlayer.getProgression().getPlayerProgress().getCurrentLevel() - 1);
-//		LOGGER.info(null);
-//		LOGGER.warning(null);
-//		LOGGER.severe(null);
+
+		double nbQRooms = gameDifficulty.getInitNbQRoom() + gameDifficulty.getNbQRoomIncrease() * (modelAccess.getLearnerPlayer().getProgression().getPlayerProgress().getCurrentLevel() - 1);
+		double nbNQRooms = gameDifficulty.getInitNbNQRoom() + gameDifficulty.getNbNQRoomIncrease() * (modelAccess.getLearnerPlayer().getProgression().getPlayerProgress().getCurrentLevel() - 1);
 
 		LOGGER.info("Number of no question rooms " + nbNQRooms);
 		LOGGER.info("Number of question rooms " + nbQRooms);
 		
 		dungeonElements = new DungeonElements(modelAccess.getGameDescriptionModel(), nbQRooms, nbNQRooms);
 		
-		EducationalElementsGenerator eduGeneration = new EducationalElementsGenerator(modelAccess, dungeonElements, learnerPlayer);
+		EducationalElementsGenerator eduGeneration = new EducationalElementsGenerator(modelAccess, dungeonElements);
 		GameElementsGenerator gameGeneration;
 		DungeonGenerator dungeonGeneration;
 		try {
 			dungeonElements = eduGeneration.generateEE();
-			gameGeneration = new GameElementsGenerator(modelAccess, dungeonElements, learnerPlayer);
+			gameGeneration = new GameElementsGenerator(modelAccess, dungeonElements);
 			gameGeneration.generateGPandCurses();
 			//dungeonElements.print();
 			dungeonGeneration = new DungeonGenerator(modelAccess, dungeonElements, nbNQRooms+nbQRooms);
@@ -198,7 +187,7 @@ public class ALGAGenerator {
 				
 		generatedDungeon.setLearningobjective(dungeonElements.getChosenObjective());
 		generatedDungeon.setLevel(dungeonElements.getChosenLevel());
-		generatedDungeon.setLearnerPlayer(learnerPlayer);
+		generatedDungeon.setLearnerPlayer(modelAccess.getLearnerPlayer());
 		
 		if(generatedDungeon.getLevel() == null || generatedDungeon.getLearningobjective() == null) {
 			System.err.println("Dungeon objective and/or level are not set properly, possible mistake may appear");

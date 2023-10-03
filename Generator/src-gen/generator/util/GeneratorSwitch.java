@@ -780,13 +780,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.LEARNER_PLAYERS: {
-			LearnerPlayers learnerPlayers = (LearnerPlayers) theEObject;
-			T result = caseLearnerPlayers(learnerPlayers);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case GeneratorPackage.STATISTICS: {
 			Statistics statistics = (Statistics) theEObject;
 			T result = caseStatistics(statistics);
@@ -2695,21 +2688,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseItems(Items object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Learner Players</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Learner Players</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLearnerPlayers(LearnerPlayers object) {
 		return null;
 	}
 

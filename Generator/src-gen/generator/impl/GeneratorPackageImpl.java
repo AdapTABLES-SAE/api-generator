@@ -816,13 +816,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass learnerPlayersEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass statisticsEClass = null;
 
 	/**
@@ -1755,7 +1748,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EReference getClassroom_LearnerPlayers() {
-		return (EReference) classroomEClass.getEStructuralFeatures().get(2);
+		return (EReference) classroomEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1764,7 +1757,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EAttribute getClassroom_Name() {
-		return (EAttribute) classroomEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) classroomEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1819,6 +1812,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EReference getLearnerPlayer_Statistics() {
 		return (EReference) learnerPlayerEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLearnerPlayer_LastName() {
+		return (EAttribute) learnerPlayerEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -4625,24 +4627,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLearnerPlayers() {
-		return learnerPlayersEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getLearnerPlayers_LearnerPlayers() {
-		return (EReference) learnerPlayersEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getStatistics() {
 		return statisticsEClass;
 	}
@@ -5010,8 +4994,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		classroomEClass = createEClass(CLASSROOM);
 		createEReference(classroomEClass, CLASSROOM__GAMECONTEXT);
 		createEAttribute(classroomEClass, CLASSROOM__ID);
-		createEReference(classroomEClass, CLASSROOM__LEARNER_PLAYERS);
 		createEAttribute(classroomEClass, CLASSROOM__NAME);
+		createEReference(classroomEClass, CLASSROOM__LEARNER_PLAYERS);
 
 		learnerPlayerEClass = createEClass(LEARNER_PLAYER);
 		createEReference(learnerPlayerEClass, LEARNER_PLAYER__PROGRESSION);
@@ -5019,6 +5003,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(learnerPlayerEClass, LEARNER_PLAYER__LEARNINGPATH);
 		createEAttribute(learnerPlayerEClass, LEARNER_PLAYER__ID);
 		createEReference(learnerPlayerEClass, LEARNER_PLAYER__STATISTICS);
+		createEAttribute(learnerPlayerEClass, LEARNER_PLAYER__LAST_NAME);
 
 		progressionEClass = createEClass(PROGRESSION);
 		createEReference(progressionEClass, PROGRESSION__PLAYER_PROGRESS);
@@ -5329,9 +5314,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		itemsEClass = createEClass(ITEMS);
 		createEReference(itemsEClass, ITEMS__ITEMS);
-
-		learnerPlayersEClass = createEClass(LEARNER_PLAYERS);
-		createEReference(learnerPlayersEClass, LEARNER_PLAYERS__LEARNER_PLAYERS);
 
 		statisticsEClass = createEClass(STATISTICS);
 		createEAttribute(statisticsEClass, STATISTICS__NB_CORRECT_GIVEN_ANSWERS);
@@ -5767,11 +5749,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassroom_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Classroom.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClassroom_LearnerPlayers(), this.getLearnerPlayers(), null, "learnerPlayers", null, 0, 1,
-				Classroom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassroom_Name(), ecorePackage.getEString(), "name", null, 0, 1, Classroom.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClassroom_LearnerPlayers(), this.getLearnerPlayer(), null, "learnerPlayers", null, 0, -1,
+				Classroom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(learnerPlayerEClass, LearnerPlayer.class, "LearnerPlayer", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -5788,6 +5770,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getLearnerPlayer_Statistics(), this.getStatistics(), null, "statistics", null, 0, 1,
 				LearnerPlayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLearnerPlayer_LastName(), ecorePackage.getEString(), "lastName", null, 0, 1,
+				LearnerPlayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(progressionEClass, Progression.class, "Progression", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -6459,12 +6444,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getItems_Items(), this.getItem(), null, "items", null, 0, -1, Items.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-
-		initEClass(learnerPlayersEClass, LearnerPlayers.class, "LearnerPlayers", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLearnerPlayers_LearnerPlayers(), this.getLearnerPlayer(), null, "learnerPlayers", null, 0, -1,
-				LearnerPlayers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(statisticsEClass, Statistics.class, "Statistics", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

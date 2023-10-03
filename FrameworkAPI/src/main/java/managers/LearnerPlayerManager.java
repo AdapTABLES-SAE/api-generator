@@ -75,7 +75,7 @@ public class LearnerPlayerManager {
 	}*/
 	
 	public void resetPlayerProgress(String learnerID) throws NonExistantLearnerPlayerException {
-		LearnerPlayer player = modelsManager.getLearnerPlayer(learnerID);
+		LearnerPlayer player = modelsManager.getLearnerPlayerFromID(learnerID);
 		player.getProgression().setPlayerProgress(new PlayerProgressImpl());
 		player.setStatistics(new StatisticsImpl());
 		
@@ -89,7 +89,7 @@ public class LearnerPlayerManager {
 		JSONObject store = new JSONObject();
 		JSONArray items = new JSONArray();
 		try {
-			LearnerPlayer player = modelsManager.getLearnerPlayer(playerID);
+			LearnerPlayer player = modelsManager.getLearnerPlayerFromID(playerID);
 			if(player.getProgression().getPlayerProgress() == null) {
 				player.getProgression().setPlayerProgress(new PlayerProgressImpl());
 			}
@@ -114,7 +114,7 @@ public class LearnerPlayerManager {
 	}
 	
 	public void setItemsStatus(JSONObject obj) throws NonExistantLearnerPlayerException {
-		LearnerPlayer player = modelsManager.getLearnerPlayer((String) obj.get("learnerID"));
+		LearnerPlayer player = modelsManager.getLearnerPlayerFromID((String) obj.get("learnerID"));
 			
 		JSONArray items = (JSONArray) obj.get("items");
 		for(Object oItem: items) {
@@ -198,7 +198,7 @@ public class LearnerPlayerManager {
 		LearnerPlayer learner;
 		CurrentObjectiveLevel currentOL = new CurrentObjectiveLevelImpl();
 		try {
-			learner = modelsManager.getLearnerPlayer(learnerID);
+			learner = modelsManager.getLearnerPlayerFromID(learnerID);
 			LearningPath path = learner.getLearningpath(); 
 			Objective objective = getObjective(path, objectiveID); 
 			Level level = getLevel(path, objective, levelID); 
@@ -248,7 +248,7 @@ public class LearnerPlayerManager {
 	public JSONObject getGeneralStats(String learnerID) {
 		JSONObject stats = new JSONObject();
 		try {
-			LearnerPlayer learner = modelsManager.getLearnerPlayer(learnerID);
+			LearnerPlayer learner = modelsManager.getLearnerPlayerFromID(learnerID);
 			
 			if(learner.getStatistics() == null) {
 				learner.setStatistics(new StatisticsImpl());
@@ -493,7 +493,7 @@ public class LearnerPlayerManager {
 		JSONObject coins = new JSONObject();
 		LearnerPlayer learnerPlayer;
 		try {
-			learnerPlayer = modelsManager.getLearnerPlayer(learnerID);
+			learnerPlayer = modelsManager.getLearnerPlayerFromID(learnerID);
 			coins.put("balance", learnerPlayer.getProgression().getPlayerProgress().getCoins()); 
 		} catch (NonExistantLearnerPlayerException e) {
 			e.printStackTrace();
@@ -506,14 +506,14 @@ public class LearnerPlayerManager {
 		 * The total number of coins is not impacted because this call will only be used by cheat code 
 		 */
 		LearnerPlayer learnerPlayer;
-		learnerPlayer = modelsManager.getLearnerPlayer((String) obj.get("learnerID"));
+		learnerPlayer = modelsManager.getLearnerPlayerFromID((String) obj.get("learnerID"));
 		learnerPlayer.getProgression().getPlayerProgress().setCoins(((Long) obj.get("newBalance")).intValue());
 		
 		modelsManager.saveContextModel();
 	}
 	
 	public void savePlayerResults(JSONObject obj) throws NonExistantLearnerPlayerException {
-		LearnerPlayer player = modelsManager.getLearnerPlayer((String) obj.get("learnerID"));
+		LearnerPlayer player = modelsManager.getLearnerPlayerFromID((String) obj.get("learnerID"));
 		
 		if(player.getStatistics() == null) {
 			player.setStatistics(new StatisticsImpl());
@@ -656,7 +656,7 @@ public class LearnerPlayerManager {
 	}
 	
 	private CurrentObjectiveLevel getCorrespondingCOL(String objectiveID, String levelID, String learnerID) throws NonExistantLearnerPlayerException {
-		for (CurrentObjectiveLevel col : modelsManager.getLearnerPlayer(learnerID).getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
+		for (CurrentObjectiveLevel col : modelsManager.getLearnerPlayerFromID(learnerID).getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			/*System.out.println(col.getObjective().getID()+" "+col.getLevel().getID());
 			System.out.println(col.getObjective().getID().equals(objectiveID));
 			System.out.println(col.getLevel().getID().equals(levelID));*/

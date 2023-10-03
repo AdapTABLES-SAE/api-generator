@@ -65,7 +65,7 @@ public class LoginResource {
 					Constant.CONTEXTS_FILES_PATH + Constant.CONTEXTS_FILES_PREFIX + classID + ".xmi", true);
 			LearnerPlayer learner = null;
 			try {
-				learner = modelsManager.getLearnerPlayer(learnerID);
+				learner = modelsManager.getLearnerPlayerFromID(learnerID);
 			} catch (NonExistantLearnerPlayerException e) {
 				e.printStackTrace();
 			}

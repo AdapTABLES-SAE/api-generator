@@ -81,7 +81,7 @@ public class LearningPathResource {
 				modelsManager = new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 						Constant.CONTEXTS_FILES_PATH + contextFileName, true);
 				try {
-					LearnerPlayer learner = modelsManager.getLearnerPlayer(learnerID);
+					LearnerPlayer learner = modelsManager.getLearnerPlayerFromID(learnerID);
 					if(learner != null) {
 						pathID = learner.getLearningpath().getID();
 					}

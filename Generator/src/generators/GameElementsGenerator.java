@@ -23,7 +23,6 @@ import generator.Equipment;
 import generator.GPCategory;
 import generator.Gameplay;
 import generator.Item;
-import generator.LearnerPlayer;
 import generator.MultipleChoice;
 import generator.NoQuestionGameplay;
 import generator.QuestionGameplay;
@@ -39,12 +38,10 @@ public class GameElementsGenerator {
 	private Random random;
 	private DungeonElements dungeonElements;
 	private ModelsManager modelAccess; 
-	private LearnerPlayer learnerPlayer;
 	
-	public GameElementsGenerator(ModelsManager modelAccess,  DungeonElements dungeonElements, LearnerPlayer learnerPlayer) {
+	public GameElementsGenerator(ModelsManager modelAccess,  DungeonElements dungeonElements) {
 		this.dungeonElements = dungeonElements;
 		this.modelAccess = modelAccess;
-		this.learnerPlayer = learnerPlayer;
 		random = new Random();
 	}
 	
@@ -66,7 +63,7 @@ public class GameElementsGenerator {
 	private List<Curse> getAvailableCurses(){
 		List<Curse> curses = new ArrayList<>(); 
 		
-		int playerLevel = learnerPlayer.getProgression().getPlayerProgress().getCurrentLevel();
+		int playerLevel = modelAccess.getLearnerPlayer().getProgression().getPlayerProgress().getCurrentLevel();
 		
 		for(CurseEligibility curse: modelAccess.getGameDescriptionModel().getLevelsDifficultyProgress().getCursesAvailabilities()) {
 			if(curse.getStartLevel() <= playerLevel) {
@@ -119,8 +116,8 @@ public class GameElementsGenerator {
 	
 	private List<Ability> getUnlockedAbilityByPlayer() {
 		List<Ability> abilities = new ArrayList<>();
-		if(learnerPlayer.getProgression().getPlayerProgress().getItems() != null) {
-			for(Item item: learnerPlayer.getProgression().getPlayerProgress().getItems().getItems()) {
+		if(modelAccess.getLearnerPlayer().getProgression().getPlayerProgress().getItems() != null) {
+			for(Item item: modelAccess.getLearnerPlayer().getProgression().getPlayerProgress().getItems().getItems()) {
 				if(item.isBought() && item.isActivated()) {
 					abilities.addAll(item.getEquipment().getLockedAbilities());
 				}

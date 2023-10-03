@@ -47,7 +47,7 @@ class FactsSelectionTest {
 	}
 	
 	@Test
-	@Tag(value = "LP001")
+	@Tag(value = "LP001B")
 	void multipleConsecutiveSuccessOnFullParamsTest() {
 		do {
 			generator.generate(); 

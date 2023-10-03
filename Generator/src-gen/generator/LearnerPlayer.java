@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.LearnerPlayer#getLearningpath <em>Learningpath</em>}</li>
  *   <li>{@link generator.LearnerPlayer#getID <em>ID</em>}</li>
  *   <li>{@link generator.LearnerPlayer#getStatistics <em>Statistics</em>}</li>
+ *   <li>{@link generator.LearnerPlayer#getLastName <em>Last Name</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getLearnerPlayer()
@@ -161,5 +162,27 @@ public interface LearnerPlayer extends EObject {
 	 * @generated
 	 */
 	void setStatistics(Statistics value);
+
+	/**
+	 * Returns the value of the '<em><b>Last Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Last Name</em>' attribute.
+	 * @see #setLastName(String)
+	 * @see generator.GeneratorPackage#getLearnerPlayer_LastName()
+	 * @model
+	 * @generated
+	 */
+	String getLastName();
+
+	/**
+	 * Sets the value of the '{@link generator.LearnerPlayer#getLastName <em>Last Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Last Name</em>' attribute.
+	 * @see #getLastName()
+	 * @generated
+	 */
+	void setLastName(String value);
 
 } // LearnerPlayer

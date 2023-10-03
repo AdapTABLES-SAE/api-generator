@@ -34,6 +34,7 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 	@Override
 	protected Set<QuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
 		if(fact instanceof MTFact) {
+
 			MTCompletion2 taskC = (MTCompletion2) task;
 			MTFact factC = (MTFact) fact;
 			
@@ -46,7 +47,7 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 				ResultPosition equalPos = ((MTLevel) dungeonElements.getChosenLevel()).getResultPositionSetup();
 				
 				for (ESeveralTarget target : taskC.getTargets()) {
-					if(build.equals(TableBuild.MIX) /*&& !target.equals(ESeveralTarget.OPERAND_TABLE)*/) {
+					if(build.equals(TableBuild.MIX)) {
 						if(equalPos.equals(ResultPosition.MIX)) {
 							add2Set(qfs, buildQF(factC, ResultPosition.LEFT, TableBuild.OPERAND_TABLE, target));
 							add2Set(qfs, buildQF(factC, ResultPosition.RIGHT, TableBuild.OPERAND_TABLE, target));
@@ -65,7 +66,7 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 						}
 					}
 				}
-				
+
 				return qfs;
 			}	
 		}
@@ -90,7 +91,6 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 		}
 		qf.setSoluceRes(fact.getRes());
 		qf.setResultOnRight(resPos.equals(ResultPosition.RIGHT));
-		
 		
 		switch (target) {
 		case OPERAND_TABLE:

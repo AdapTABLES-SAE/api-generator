@@ -4,15 +4,18 @@ package generator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import generator.Classroom;
 import generator.GameContext;
 import generator.GeneratorPackage;
-import generator.LearnerPlayers;
+import generator.LearnerPlayer;
+import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,8 +27,8 @@ import generator.LearnerPlayers;
  * <ul>
  *   <li>{@link generator.impl.ClassroomImpl#getGamecontext <em>Gamecontext</em>}</li>
  *   <li>{@link generator.impl.ClassroomImpl#getID <em>ID</em>}</li>
- *   <li>{@link generator.impl.ClassroomImpl#getLearnerPlayers <em>Learner Players</em>}</li>
  *   <li>{@link generator.impl.ClassroomImpl#getName <em>Name</em>}</li>
+ *   <li>{@link generator.impl.ClassroomImpl#getLearnerPlayers <em>Learner Players</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,16 +74,6 @@ public class ClassroomImpl extends MinimalEObjectImpl.Container implements Class
 	protected boolean idESet;
 
 	/**
-	 * The cached value of the '{@link #getLearnerPlayers() <em>Learner Players</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLearnerPlayers()
-	 * @generated
-	 * @ordered
-	 */
-	protected LearnerPlayers learnerPlayers;
-
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -99,6 +92,16 @@ public class ClassroomImpl extends MinimalEObjectImpl.Container implements Class
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLearnerPlayers() <em>Learner Players</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLearnerPlayers()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<LearnerPlayer> learnerPlayers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -222,49 +225,12 @@ public class ClassroomImpl extends MinimalEObjectImpl.Container implements Class
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LearnerPlayers getLearnerPlayers() {
-		return learnerPlayers;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetLearnerPlayers(LearnerPlayers newLearnerPlayers, NotificationChain msgs) {
-		LearnerPlayers oldLearnerPlayers = learnerPlayers;
-		learnerPlayers = newLearnerPlayers;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.CLASSROOM__LEARNER_PLAYERS, oldLearnerPlayers, newLearnerPlayers);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+	public EList<LearnerPlayer> getLearnerPlayers() {
+		if (learnerPlayers == null) {
+			learnerPlayers = new EObjectResolvingEList<LearnerPlayer>(LearnerPlayer.class, this,
+					GeneratorPackage.CLASSROOM__LEARNER_PLAYERS);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLearnerPlayers(LearnerPlayers newLearnerPlayers) {
-		if (newLearnerPlayers != learnerPlayers) {
-			NotificationChain msgs = null;
-			if (learnerPlayers != null)
-				msgs = ((InternalEObject) learnerPlayers).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.CLASSROOM__LEARNER_PLAYERS, null, msgs);
-			if (newLearnerPlayers != null)
-				msgs = ((InternalEObject) newLearnerPlayers).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.CLASSROOM__LEARNER_PLAYERS, null, msgs);
-			msgs = basicSetLearnerPlayers(newLearnerPlayers, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.CLASSROOM__LEARNER_PLAYERS,
-					newLearnerPlayers, newLearnerPlayers));
+		return learnerPlayers;
 	}
 
 	/**
@@ -298,8 +264,6 @@ public class ClassroomImpl extends MinimalEObjectImpl.Container implements Class
 		switch (featureID) {
 		case GeneratorPackage.CLASSROOM__GAMECONTEXT:
 			return basicSetGamecontext(null, msgs);
-		case GeneratorPackage.CLASSROOM__LEARNER_PLAYERS:
-			return basicSetLearnerPlayers(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -316,10 +280,10 @@ public class ClassroomImpl extends MinimalEObjectImpl.Container implements Class
 			return getGamecontext();
 		case GeneratorPackage.CLASSROOM__ID:
 			return getID();
-		case GeneratorPackage.CLASSROOM__LEARNER_PLAYERS:
-			return getLearnerPlayers();
 		case GeneratorPackage.CLASSROOM__NAME:
 			return getName();
+		case GeneratorPackage.CLASSROOM__LEARNER_PLAYERS:
+			return getLearnerPlayers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -329,6 +293,7 @@ public class ClassroomImpl extends MinimalEObjectImpl.Container implements Class
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -338,11 +303,12 @@ public class ClassroomImpl extends MinimalEObjectImpl.Container implements Class
 		case GeneratorPackage.CLASSROOM__ID:
 			setID((String) newValue);
 			return;
-		case GeneratorPackage.CLASSROOM__LEARNER_PLAYERS:
-			setLearnerPlayers((LearnerPlayers) newValue);
-			return;
 		case GeneratorPackage.CLASSROOM__NAME:
 			setName((String) newValue);
+			return;
+		case GeneratorPackage.CLASSROOM__LEARNER_PLAYERS:
+			getLearnerPlayers().clear();
+			getLearnerPlayers().addAll((Collection<? extends LearnerPlayer>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -362,11 +328,11 @@ public class ClassroomImpl extends MinimalEObjectImpl.Container implements Class
 		case GeneratorPackage.CLASSROOM__ID:
 			unsetID();
 			return;
-		case GeneratorPackage.CLASSROOM__LEARNER_PLAYERS:
-			setLearnerPlayers((LearnerPlayers) null);
-			return;
 		case GeneratorPackage.CLASSROOM__NAME:
 			setName(NAME_EDEFAULT);
+			return;
+		case GeneratorPackage.CLASSROOM__LEARNER_PLAYERS:
+			getLearnerPlayers().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -384,10 +350,10 @@ public class ClassroomImpl extends MinimalEObjectImpl.Container implements Class
 			return gamecontext != null;
 		case GeneratorPackage.CLASSROOM__ID:
 			return isSetID();
-		case GeneratorPackage.CLASSROOM__LEARNER_PLAYERS:
-			return learnerPlayers != null;
 		case GeneratorPackage.CLASSROOM__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case GeneratorPackage.CLASSROOM__LEARNER_PLAYERS:
+			return learnerPlayers != null && !learnerPlayers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

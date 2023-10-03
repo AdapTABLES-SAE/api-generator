@@ -28,6 +28,7 @@ import generator.Statistics;
  *   <li>{@link generator.impl.LearnerPlayerImpl#getLearningpath <em>Learningpath</em>}</li>
  *   <li>{@link generator.impl.LearnerPlayerImpl#getID <em>ID</em>}</li>
  *   <li>{@link generator.impl.LearnerPlayerImpl#getStatistics <em>Statistics</em>}</li>
+ *   <li>{@link generator.impl.LearnerPlayerImpl#getLastName <em>Last Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -111,6 +112,26 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 	 * @ordered
 	 */
 	protected Statistics statistics;
+
+	/**
+	 * The default value of the '{@link #getLastName() <em>Last Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LAST_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLastName() <em>Last Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String lastName = LAST_NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -346,6 +367,28 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getLastName() {
+		return lastName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLastName(String newLastName) {
+		String oldLastName = lastName;
+		lastName = newLastName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEARNER_PLAYER__LAST_NAME,
+					oldLastName, lastName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -377,6 +420,8 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 			return getID();
 		case GeneratorPackage.LEARNER_PLAYER__STATISTICS:
 			return getStatistics();
+		case GeneratorPackage.LEARNER_PLAYER__LAST_NAME:
+			return getLastName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -403,6 +448,9 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 			return;
 		case GeneratorPackage.LEARNER_PLAYER__STATISTICS:
 			setStatistics((Statistics) newValue);
+			return;
+		case GeneratorPackage.LEARNER_PLAYER__LAST_NAME:
+			setLastName((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -431,6 +479,9 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 		case GeneratorPackage.LEARNER_PLAYER__STATISTICS:
 			setStatistics((Statistics) null);
 			return;
+		case GeneratorPackage.LEARNER_PLAYER__LAST_NAME:
+			setLastName(LAST_NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -453,6 +504,8 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 			return isSetID();
 		case GeneratorPackage.LEARNER_PLAYER__STATISTICS:
 			return statistics != null;
+		case GeneratorPackage.LEARNER_PLAYER__LAST_NAME:
+			return LAST_NAME_EDEFAULT == null ? lastName != null : !LAST_NAME_EDEFAULT.equals(lastName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -475,6 +528,8 @@ public class LearnerPlayerImpl extends MinimalEObjectImpl.Container implements L
 			result.append(id);
 		else
 			result.append("<unset>");
+		result.append(", lastName: ");
+		result.append(lastName);
 		result.append(')');
 		return result.toString();
 	}

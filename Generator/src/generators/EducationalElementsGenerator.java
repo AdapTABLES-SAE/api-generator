@@ -11,7 +11,6 @@ import java.util.Set;
 import factgenerator_template.FactGenerator;
 import generator.ATask;
 import generator.CurrentObjectiveLevel;
-import generator.LearnerPlayer;
 import generator.Level;
 import generator.Objective;
 import generator.Prerequisite;
@@ -35,25 +34,23 @@ public class EducationalElementsGenerator {
 	private Map<ResultsByTask, Double> nbRoomsToTask; 
 	private ModelsManager modelAccess;
 	
-	private LearnerPlayer learnerPlayer;
 
-	public EducationalElementsGenerator(ModelsManager modelAccess, DungeonElements dungeonElements, LearnerPlayer learner) {
+	public EducationalElementsGenerator(ModelsManager modelAccess, DungeonElements dungeonElements) {
 		random = new Random();
 		this.dungeonElements = dungeonElements;
 		this.modelAccess = modelAccess;
 		this.nbRoomsToTask = new HashMap<>();
-		this.learnerPlayer = learner;
 	}
 	
 	public DungeonElements generateEE() throws Exception {
 		selectObjectiveLevel();	
-		ALGAGenerator.LOGGER.info("Selection of Objective/Level = "+dungeonElements.getChosenObjective().getID()+"/"+dungeonElements.getChosenLevel().getID());
+		ALGAGenerator.LOGGER.info("FINISH Selection of Objective/Level = "+dungeonElements.getChosenObjective().getID()+"/"+dungeonElements.getChosenLevel().getID());
 		generateQuestionnableFacts();
-		ALGAGenerator.LOGGER.info("Generation of questionnable facts");
+		ALGAGenerator.LOGGER.info("FINISH Generation of questionnable facts");
 		defineNumberOfRoomPerTaskNecessary();
-		ALGAGenerator.LOGGER.info("Computes number of rooms per tasks");
+		ALGAGenerator.LOGGER.info("FINISH Computes number of rooms per tasks");
 		generateFactsToQuestion();
-		ALGAGenerator.LOGGER.info("Generation of questioned facts for the dungeon");
+		ALGAGenerator.LOGGER.info("FINISH Generation of questioned facts for the dungeon");
 		//System.out.println(" DEBUG FACT QUESTIONED *********************");
 		//eeManager.printFactsToQuestion();
 		dungeonElements.buildNumberOfNonQuestionRooms();
@@ -75,20 +72,21 @@ public class EducationalElementsGenerator {
 
 	
 	public void saveLearnerModel() {
-		this.deleteLearnerPlayer();
-		modelAccess.getContextModel().getLearnerPlayers().getLearnerPlayers().add(this.learnerPlayer);
-		modelAccess.saveContextModel();
+		/*this.deleteLearnerPlayer();
+		modelAccess.getContextModel().getLearnerPlayers().add(modelAccess.getLearnerPlayer());
+		modelAccess.saveContextModel();*/
+		modelAccess.saveLearnerPlayerModel();
 	}
 	
-	private void deleteLearnerPlayer() {
+	/*private void deleteLearnerPlayer() {
 		int i = 0;
-		while(i < modelAccess.getContextModel().getLearnerPlayers().getLearnerPlayers().size()) {
-			if(modelAccess.getContextModel().getLearnerPlayers().getLearnerPlayers().get(i).getID().equals(this.learnerPlayer.getID())) {
-				modelAccess.getContextModel().getLearnerPlayers().getLearnerPlayers().remove(i);
+		while(i < modelAccess.getContextModel().getLearnerPlayers().size()) {
+			if(modelAccess.getContextModel().getLearnerPlayers().get(i).getID().equals(modelAccess.getLearnerPlayer().getID())) {
+				modelAccess.getContextModel().getLearnerPlayers().remove(i);
 			}
 			i++;
 		}
-	}
+	}*/
 	
 	
 	public void instanciateQFbyTasks() {
@@ -102,15 +100,15 @@ public class EducationalElementsGenerator {
 			}
 		}
 		
-		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
+		for (CurrentObjectiveLevel col : modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			if(col.getResults() == null) {
 				col.setResults(new ResultsImpl());
 			}
 			addResultByTasks(col);
 		}
 		
-		if(!learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels().contains(dungeonElements.getCurrentObjectiveLevel())) {
-			learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels().add(dungeonElements.getCurrentObjectiveLevel());
+		if(!modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels().contains(dungeonElements.getCurrentObjectiveLevel())) {
+			modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels().add(dungeonElements.getCurrentObjectiveLevel());
 		}
 	}
 	
@@ -140,13 +138,16 @@ public class EducationalElementsGenerator {
 	private void defineNumberOfRoomPerTaskNecessary() throws Exception {
 		if(dungeonElements.getChosenObjective() != null && dungeonElements.getChosenLevel() != null) {
 			double coeff = computesCoeffApparition();	
+			boolean everyTaskAchieved = areEveryTaskAchieved();
 			for (ResultsByTask rbt : dungeonElements.getLearnerResultsByTasks()) {
-				if(!isTaskAchieved(rbt.getTask())) {
+				if(everyTaskAchieved) {
+					addRoom2Task(rbt, 1);
+				} else if(!isTaskAchieved(rbt.getTask())) {
 					addRoom2Task(rbt, coeff);
 				}
 			}
+			this.cleanNumberOfComputedRooms();
 		}
-		this.cleanNumberOfComputedRooms();
 	}
 	
 	private void addRoom2Task(ResultsByTask rbt, double coeffAdditional) throws Exception {
@@ -190,6 +191,7 @@ public class EducationalElementsGenerator {
 		//System.out.println("Missing nbRoom "+numberOfHigherTask);
 		List<ResultsByTask> tasks = new ArrayList<>();
 		List<ResultsByTask> tasks_temp = new ArrayList<>(nbRoomsToTask.keySet());
+		System.out.println("room to task "+nbRoomsToTask);
 
 		for(int i = 0; i < numberOfHigherTask; i++) {
 			tasks.add(getTaskWithHigherNumberOfRoom(tasks_temp));
@@ -244,6 +246,16 @@ public class EducationalElementsGenerator {
 				encounterPercentageByTask(task) == 100.;
 	}
 	
+	private boolean areEveryTaskAchieved() {
+		boolean everyTaskAchieved = true;
+		for(ResultsByTask rbt : dungeonElements.getLearnerResultsByTasks()) {
+			if(!isTaskAchieved(rbt.getTask())) {
+				everyTaskAchieved = false;
+			}
+		}
+		return everyTaskAchieved; 
+	}
+	
 	public double successPercentageByTask(ATask task) {
 		if(dungeonElements.getCurrentObjectiveLevel().getResults() != null) {
 			for (ResultsByTask resBytask : dungeonElements.getCurrentObjectiveLevel().getResults().getResultsbytask()) {
@@ -269,6 +281,7 @@ public class EducationalElementsGenerator {
 	private void selectObjectiveLevel() {
 		List<CurrentObjectiveLevel> allowed = eligibleObjectiveLevels(); 
 		dungeonElements.setCurrentObjectiveLevel(allowed.get(random.nextInt(allowed.size())));
+		
 	}
 	
 	private List<CurrentObjectiveLevel> eligibleObjectiveLevels(){
@@ -280,16 +293,18 @@ public class EducationalElementsGenerator {
 		}
 		
 		List<CurrentObjectiveLevel> cols = new ArrayList<>();
-		for (CurrentObjectiveLevel currentObjectiveLevel : learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
+		for (CurrentObjectiveLevel currentObjectiveLevel : modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			if(!currentObjectiveLevel.isAchieved() || (allObjectiveAreReached && !levelThresholdsAreAt100Percent(currentObjectiveLevel)) || allIObjectiveLevelAreAt100Percent) {
 				cols.add(currentObjectiveLevel);
 			}
 		}
+		
+		ALGAGenerator.LOGGER.severe("CurrentOLs "+cols);
 		return cols;
 	}
 	
 	private boolean everyObjectiveLevelReached100Percent() {
-		for (CurrentObjectiveLevel currentObjectiveLevel : learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
+		for (CurrentObjectiveLevel currentObjectiveLevel : modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			if(!(currentObjectiveLevel.getEncountersPercent() >= 100.0 && currentObjectiveLevel.getSuccessPercent() >= 100.0)) {
 				return false;
 			}
@@ -318,13 +333,14 @@ public class EducationalElementsGenerator {
 	}
 	
 	public void addLearnerNewCurrentObjectifLevel(CurrentObjectiveLevel currentObjectiveLevel) {
-		if(!learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels().contains(currentObjectiveLevel)) {
-			learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels().add(currentObjectiveLevel);
+		if(!modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels().contains(currentObjectiveLevel)) {
+			modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels().add(currentObjectiveLevel);
+			modelAccess.saveLearnerPlayerModel();
 		}
 	}
 	
 	private boolean currentObjectiveLevelExist(Objective o, Level l) {
-		for (CurrentObjectiveLevel col : this.learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
+		for (CurrentObjectiveLevel col : modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			if(col.getObjective().getID().equals(o.getID()) && col.getLevel().getID().equals(l.getID())) {
 				return true;
 			}
@@ -347,7 +363,7 @@ public class EducationalElementsGenerator {
 	 * @return
 	 */
 	private boolean hasLearnerBeginObjective(Objective o) {
-		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
+		for (CurrentObjectiveLevel col : modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			if(col.getObjective().equals(o) && !col.isAchieved()) {
 				return true;
 			}
@@ -361,7 +377,7 @@ public class EducationalElementsGenerator {
 	 * @return
 	 */
 	private boolean hasLearnerFinishedLevel(Objective o, Level l) {
-		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
+		for (CurrentObjectiveLevel col : modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			if(col.getObjective().equals(o) && col.getLevel().equals(l) && col.isAchieved()) {
 				return true;
 			}
@@ -372,7 +388,7 @@ public class EducationalElementsGenerator {
 	private boolean isObjectiveAchieved(Objective objective) {
 		int numberOfLevelsCompleted = 0;
 		for (Level level : objective.getLevels()) {
-			for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
+			for (CurrentObjectiveLevel col : modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 				if(col.getObjective().equals(objective) && col.getLevel().equals(level) && col.isAchieved()) {
 					numberOfLevelsCompleted++;
 				}
@@ -391,7 +407,7 @@ public class EducationalElementsGenerator {
 	}
 	
 	private CurrentObjectiveLevel getCorrespondingCurrentObjectiveLevel(Level level) {
-		for (CurrentObjectiveLevel col : learnerPlayer.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
+		for (CurrentObjectiveLevel col : modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			if(col.getLevel().equals(level)) {
 				return col;
 			}
@@ -399,16 +415,20 @@ public class EducationalElementsGenerator {
 		return null;
 	}
 	
+
+	
 	private List<Objective> getEligibleObjectives() {
 		List<Objective> eligibleObjective = new ArrayList<>();
-		boolean allPrerequisiteAchied;
-		for (Objective obj : learnerPlayer.getLearningpath().getObjectives()) {
+		boolean allPrerequisiteAchieved;
+		for (Objective obj : modelAccess.getLearnerPlayer().getLearningpath().getObjectives()) {
 			if(!isObjectiveAchieved(obj)) {
-				allPrerequisiteAchied = true;
+				allPrerequisiteAchieved = true;
 				for (Prerequisite prerequisite : obj.getPrerequisites()) {
-					allPrerequisiteAchied = isPreRequisiteReached(prerequisite);
+					if(!isPreRequisiteReached(prerequisite)) {
+						allPrerequisiteAchieved = false;
+					}
 				}
-				if(allPrerequisiteAchied) { eligibleObjective.add(obj); }
+				if(allPrerequisiteAchieved) { eligibleObjective.add(obj); }
 			}
 		}
 		return eligibleObjective;

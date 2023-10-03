@@ -66,7 +66,7 @@ public class DungeonGenerator {
 	}
 	
 	public Dungeon generateDungeon() throws NonRoomTypeException {
-		DungeonMode mode = modelAccess.lauchedFromTEST? modelAccess.getContextModel().getGamecontext().getMode(): dungeonElements.getDungeonMode();
+		DungeonMode mode = modelAccess.launchedFromTEST? modelAccess.getContextModel().getGamecontext().getMode(): dungeonElements.getDungeonMode();
 		
 		if(mode.equals(DungeonMode.LINEAR)) {
 			generateLinearDungeon();

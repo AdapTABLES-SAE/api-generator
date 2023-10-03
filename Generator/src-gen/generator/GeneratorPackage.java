@@ -1646,22 +1646,22 @@ public interface GeneratorPackage extends EPackage {
 	int CLASSROOM__ID = 1;
 
 	/**
-	 * The feature id for the '<em><b>Learner Players</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSROOM__LEARNER_PLAYERS = 2;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSROOM__NAME = 3;
+	int CLASSROOM__NAME = 2;
+
+	/**
+	 * The feature id for the '<em><b>Learner Players</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSROOM__LEARNER_PLAYERS = 3;
 
 	/**
 	 * The number of structural features of the '<em>Classroom</em>' class.
@@ -1737,13 +1737,22 @@ public interface GeneratorPackage extends EPackage {
 	int LEARNER_PLAYER__STATISTICS = 4;
 
 	/**
+	 * The feature id for the '<em><b>Last Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEARNER_PLAYER__LAST_NAME = 5;
+
+	/**
 	 * The number of structural features of the '<em>Learner Player</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEARNER_PLAYER_FEATURE_COUNT = 5;
+	int LEARNER_PLAYER_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Learner Player</em>' class.
@@ -4149,7 +4158,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementType()
 	 * @generated
 	 */
-	int ELEMENT_TYPE = 91;
+	int ELEMENT_TYPE = 90;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.EquipmentImpl <em>Equipment</em>}' class.
@@ -4644,7 +4653,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAQuestionParam()
 	 * @generated
 	 */
-	int AQUESTION_PARAM = 108;
+	int AQUESTION_PARAM = 107;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -6477,43 +6486,6 @@ public interface GeneratorPackage extends EPackage {
 	int ITEMS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.LearnerPlayersImpl <em>Learner Players</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.LearnerPlayersImpl
-	 * @see generator.impl.GeneratorPackageImpl#getLearnerPlayers()
-	 * @generated
-	 */
-	int LEARNER_PLAYERS = 89;
-
-	/**
-	 * The feature id for the '<em><b>Learner Players</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNER_PLAYERS__LEARNER_PLAYERS = 0;
-
-	/**
-	 * The number of structural features of the '<em>Learner Players</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNER_PLAYERS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Learner Players</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEARNER_PLAYERS_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.StatisticsImpl <em>Statistics</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6521,7 +6493,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getStatistics()
 	 * @generated
 	 */
-	int STATISTICS = 90;
+	int STATISTICS = 89;
 
 	/**
 	 * The feature id for the '<em><b>Nb Correct Given Answers</b></em>' attribute.
@@ -6630,7 +6602,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCurses()
 	 * @generated
 	 */
-	int CURSES = 92;
+	int CURSES = 91;
 
 	/**
 	 * The feature id for the '<em><b>Curses</b></em>' containment reference list.
@@ -6667,7 +6639,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCurse()
 	 * @generated
 	 */
-	int CURSE = 93;
+	int CURSE = 92;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6704,7 +6676,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLabyrinthCurse()
 	 * @generated
 	 */
-	int LABYRINTH_CURSE = 94;
+	int LABYRINTH_CURSE = 93;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6741,7 +6713,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getCurseEligibility()
 	 * @generated
 	 */
-	int CURSE_ELIGIBILITY = 95;
+	int CURSE_ELIGIBILITY = 94;
 
 	/**
 	 * The feature id for the '<em><b>Start Level</b></em>' attribute.
@@ -6787,7 +6759,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getImage()
 	 * @generated
 	 */
-	int IMAGE = 96;
+	int IMAGE = 95;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -6824,7 +6796,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMap()
 	 * @generated
 	 */
-	int MAP = 97;
+	int MAP = 96;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -6870,7 +6842,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMapElementPosition()
 	 * @generated
 	 */
-	int MAP_ELEMENT_POSITION = 98;
+	int MAP_ELEMENT_POSITION = 97;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -6907,7 +6879,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLegendSymbol()
 	 * @generated
 	 */
-	int LEGEND_SYMBOL = 99;
+	int LEGEND_SYMBOL = 98;
 
 	/**
 	 * The feature id for the '<em><b>Image</b></em>' containment reference.
@@ -6953,7 +6925,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLegendText()
 	 * @generated
 	 */
-	int LEGEND_TEXT = 100;
+	int LEGEND_TEXT = 99;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -6999,7 +6971,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getHistoryFact()
 	 * @generated
 	 */
-	int HISTORY_FACT = 101;
+	int HISTORY_FACT = 100;
 
 	/**
 	 * The feature id for the '<em><b>Event</b></em>' attribute.
@@ -7054,7 +7026,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGeographyLegendFact()
 	 * @generated
 	 */
-	int GEOGRAPHY_LEGEND_FACT = 102;
+	int GEOGRAPHY_LEGEND_FACT = 101;
 
 	/**
 	 * The feature id for the '<em><b>Map</b></em>' reference.
@@ -7109,7 +7081,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGeographyFact()
 	 * @generated
 	 */
-	int GEOGRAPHY_FACT = 103;
+	int GEOGRAPHY_FACT = 102;
 
 	/**
 	 * The feature id for the '<em><b>Map</b></em>' reference.
@@ -7164,7 +7136,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTime()
 	 * @generated
 	 */
-	int TIME = 107;
+	int TIME = 106;
 
 	/**
 	 * The feature id for the '<em><b>Map</b></em>' reference.
@@ -7201,7 +7173,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDate()
 	 * @generated
 	 */
-	int DATE = 104;
+	int DATE = 103;
 
 	/**
 	 * The feature id for the '<em><b>Map</b></em>' reference.
@@ -7274,7 +7246,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTimePeriod()
 	 * @generated
 	 */
-	int TIME_PERIOD = 105;
+	int TIME_PERIOD = 104;
 
 	/**
 	 * The feature id for the '<em><b>Map</b></em>' reference.
@@ -7338,7 +7310,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMapValue()
 	 * @generated
 	 */
-	int MAP_VALUE = 106;
+	int MAP_VALUE = 105;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -7384,7 +7356,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getMapQuestionParam()
 	 * @generated
 	 */
-	int MAP_QUESTION_PARAM = 109;
+	int MAP_QUESTION_PARAM = 108;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -7430,7 +7402,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getHAssociation()
 	 * @generated
 	 */
-	int HASSOCIATION = 110;
+	int HASSOCIATION = 109;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -7584,7 +7556,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getHLegend()
 	 * @generated
 	 */
-	int HLEGEND = 111;
+	int HLEGEND = 110;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -7729,7 +7701,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGLocate()
 	 * @generated
 	 */
-	int GLOCATE = 112;
+	int GLOCATE = 111;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -7883,7 +7855,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTeacher()
 	 * @generated
 	 */
-	int TEACHER = 113;
+	int TEACHER = 112;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -7929,7 +7901,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTeachers()
 	 * @generated
 	 */
-	int TEACHERS = 114;
+	int TEACHERS = 113;
 
 	/**
 	 * The feature id for the '<em><b>Teachers</b></em>' containment reference list.
@@ -7966,7 +7938,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 115;
+	int DIRECTIONS = 114;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -7976,7 +7948,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 116;
+	int DUNGEON_MODE = 115;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -7986,7 +7958,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 117;
+	int TABLE_BUILD = 116;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -7996,7 +7968,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 118;
+	int RESULT_POSITION = 117;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -8006,7 +7978,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 119;
+	int ESINGLE_TARGET = 118;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -8016,7 +7988,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 120;
+	int ETASK_TYPE = 119;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -8026,7 +7998,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 121;
+	int EMODALITY = 120;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -8036,7 +8008,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 122;
+	int ESEVERAL_TARGET = 121;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -8046,7 +8018,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 123;
+	int ELEMENT_SIZE = 122;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -8056,7 +8028,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 124;
+	int GP_CATEGORY = 123;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -8066,7 +8038,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 125;
+	int ECORRECTNESS = 124;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -8076,7 +8048,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 126;
+	int EBOUNDARY = 125;
 
 	/**
 	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
@@ -8086,7 +8058,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 131;
+	int ESTATEMENT_TYPE = 130;
 
 	/**
 	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
@@ -8096,7 +8068,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
 	 * @generated
 	 */
-	int EROOM_TYPE = 127;
+	int EROOM_TYPE = 126;
 
 	/**
 	 * The meta object id for the '{@link generator.EGeographyValue <em>EGeography Value</em>}' enum.
@@ -8106,7 +8078,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEGeographyValue()
 	 * @generated
 	 */
-	int EGEOGRAPHY_VALUE = 128;
+	int EGEOGRAPHY_VALUE = 127;
 
 	/**
 	 * The meta object id for the '{@link generator.EHistoryTarget <em>EHistory Target</em>}' enum.
@@ -8116,7 +8088,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEHistoryTarget()
 	 * @generated
 	 */
-	int EHISTORY_TARGET = 129;
+	int EHISTORY_TARGET = 128;
 
 	/**
 	 * The meta object id for the '{@link generator.ELegendTarget <em>ELegend Target</em>}' enum.
@@ -8126,7 +8098,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getELegendTarget()
 	 * @generated
 	 */
-	int ELEGEND_TARGET = 130;
+	int ELEGEND_TARGET = 129;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -9007,10 +8979,10 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getClassroom_ID();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.Classroom#getLearnerPlayers <em>Learner Players</em>}'.
+	 * Returns the meta object for the reference list '{@link generator.Classroom#getLearnerPlayers <em>Learner Players</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Learner Players</em>'.
+	 * @return the meta object for the reference list '<em>Learner Players</em>'.
 	 * @see generator.Classroom#getLearnerPlayers()
 	 * @see #getClassroom()
 	 * @generated
@@ -9092,6 +9064,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLearnerPlayer_Statistics();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.LearnerPlayer#getLastName <em>Last Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Last Name</em>'.
+	 * @see generator.LearnerPlayer#getLastName()
+	 * @see #getLearnerPlayer()
+	 * @generated
+	 */
+	EAttribute getLearnerPlayer_LastName();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Progression <em>Progression</em>}'.
@@ -12410,27 +12393,6 @@ public interface GeneratorPackage extends EPackage {
 	EReference getItems_Items();
 
 	/**
-	 * Returns the meta object for class '{@link generator.LearnerPlayers <em>Learner Players</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Learner Players</em>'.
-	 * @see generator.LearnerPlayers
-	 * @generated
-	 */
-	EClass getLearnerPlayers();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.LearnerPlayers#getLearnerPlayers <em>Learner Players</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Learner Players</em>'.
-	 * @see generator.LearnerPlayers#getLearnerPlayers()
-	 * @see #getLearnerPlayers()
-	 * @generated
-	 */
-	EReference getLearnerPlayers_LearnerPlayers();
-
-	/**
 	 * Returns the meta object for class '{@link generator.Statistics <em>Statistics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13428,7 +13390,7 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute CLASSROOM__ID = eINSTANCE.getClassroom_ID();
 
 		/**
-		 * The meta object literal for the '<em><b>Learner Players</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Learner Players</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -13492,6 +13454,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LEARNER_PLAYER__STATISTICS = eINSTANCE.getLearnerPlayer_Statistics();
+
+		/**
+		 * The meta object literal for the '<em><b>Last Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEARNER_PLAYER__LAST_NAME = eINSTANCE.getLearnerPlayer_LastName();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ProgressionImpl <em>Progression</em>}' class.
@@ -16173,24 +16143,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ITEMS__ITEMS = eINSTANCE.getItems_Items();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.LearnerPlayersImpl <em>Learner Players</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.LearnerPlayersImpl
-		 * @see generator.impl.GeneratorPackageImpl#getLearnerPlayers()
-		 * @generated
-		 */
-		EClass LEARNER_PLAYERS = eINSTANCE.getLearnerPlayers();
-
-		/**
-		 * The meta object literal for the '<em><b>Learner Players</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LEARNER_PLAYERS__LEARNER_PLAYERS = eINSTANCE.getLearnerPlayers_LearnerPlayers();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.StatisticsImpl <em>Statistics</em>}' class.
