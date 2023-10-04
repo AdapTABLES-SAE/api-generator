@@ -241,8 +241,8 @@ public class ALGAGenerator {
 		System.out.println("---- Dungeon -----");
 		System.out.println("Objective : "+generatedDungeon.getLearningobjective());
 		System.out.println("Level : "+generatedDungeon.getLevel());
-		System.out.println("Number of room without entry "+(generatedDungeon.getRooms().size()-1));
-		
+		System.out.println("Number of room without entry : "+(generatedDungeon.getRooms().size()-1));
+		System.out.println("Curses : "+generatedDungeon.getCurses());
 		for (Room r : generatedDungeon.getRooms()) {
 			printRoom(r);
 			

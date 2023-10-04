@@ -70,6 +70,8 @@ public class GameElementsGenerator {
 				curses.add(curse.getCurse()); 
 			}
 		}
+		
+		ALGAGenerator.LOGGER.severe("curses "+curses);
 		return curses; 
 	}
 	

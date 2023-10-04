@@ -7876,13 +7876,22 @@ public interface GeneratorPackage extends EPackage {
 	int TEACHER__CLASSROOMS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEACHER__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Teacher</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEACHER_FEATURE_COUNT = 2;
+	int TEACHER_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Teacher</em>' class.
@@ -11247,6 +11256,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTeacher_Classrooms();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Teacher#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.Teacher#getName()
+	 * @see #getTeacher()
+	 * @generated
+	 */
+	EAttribute getTeacher_Name();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Teachers <em>Teachers</em>}'.
@@ -15233,6 +15253,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TEACHER__CLASSROOMS = eINSTANCE.getTeacher_Classrooms();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEACHER__NAME = eINSTANCE.getTeacher_Name();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.TeachersImpl <em>Teachers</em>}' class.

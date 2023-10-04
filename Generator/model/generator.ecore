@@ -779,6 +779,7 @@
         unsettable="true" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="classrooms" upperBound="-1"
         eType="#//Classroom"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Teachers">
     <eStructuralFeatures xsi:type="ecore:EReference" name="teachers" upperBound="-1"

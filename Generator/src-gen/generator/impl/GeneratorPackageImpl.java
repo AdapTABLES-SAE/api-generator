@@ -2,140 +2,6 @@
  */
 package generator.impl;
 
-import generator.AComponent;
-import generator.AQuestionParam;
-import generator.ATask;
-import generator.AValue;
-import generator.Abilities;
-import generator.Ability;
-import generator.AbstractFact;
-import generator.Classroom;
-import generator.Classrooms;
-import generator.CompletionCriteria;
-import generator.CompletionTask;
-import generator.Component;
-import generator.Condition;
-import generator.Correctness;
-import generator.CorrectnessValue;
-import generator.CurrentObjectiveLevel;
-import generator.Curse;
-import generator.CurseEligibility;
-import generator.Curses;
-import generator.Date;
-import generator.Directions;
-import generator.Display;
-import generator.Dungeon;
-import generator.DungeonMode;
-import generator.EBoundary;
-import generator.ECorrectness;
-import generator.EGeographyValue;
-import generator.EHistoryTarget;
-import generator.ELegendTarget;
-import generator.EModality;
-import generator.ERoomType;
-import generator.ESeveralTarget;
-import generator.ESingleTarget;
-import generator.EStatementType;
-import generator.ETaskType;
-import generator.ElementSize;
-import generator.ElementType;
-import generator.ElementsTypes;
-import generator.EnterResponse;
-import generator.EntrySoluceParam;
-import generator.Equipment;
-import generator.Equipments;
-import generator.ExpectedAnswer;
-import generator.FactCorrectnessParam;
-import generator.FactSolutionParam;
-import generator.GLocate;
-import generator.GPCategory;
-import generator.GameContext;
-import generator.GameDescription;
-import generator.GameElementTypes;
-import generator.Gameplay;
-import generator.GameplayTaskRelations;
-import generator.Gameplays;
-import generator.GeneratorFactory;
-import generator.GeneratorPackage;
-import generator.GeographyFact;
-import generator.GeographyLegendFact;
-import generator.HAssociation;
-import generator.HLegend;
-import generator.HistoryFact;
-import generator.IdentificationTask;
-import generator.Image;
-import generator.Item;
-import generator.Items;
-import generator.Knowledge;
-import generator.LabyrinthCurse;
-import generator.LargeRoomType;
-import generator.LearnerPlayer;
-import generator.LearnerProgress;
-import generator.LearningDomain;
-import generator.LearningPath;
-import generator.LegendSymbol;
-import generator.LegendText;
-import generator.Level;
-import generator.LevelsDifficultyProgress;
-import generator.MTCompletion1;
-import generator.MTCompletion2;
-import generator.MTFact;
-import generator.MTIdentification;
-import generator.MTLevel;
-import generator.MTMembership;
-import generator.MTQFCompletion1;
-import generator.MTQFCompletion2;
-import generator.MTQFIdentification;
-import generator.MTQFMembership;
-import generator.MTQFRebuild;
-import generator.MTRecontruction;
-import generator.MTResultFact;
-import generator.Map;
-import generator.MapElementPosition;
-import generator.MapQuestionParam;
-import generator.MapValue;
-import generator.MembershipIDTask;
-import generator.MultipleChoice;
-import generator.NoQuestionGameplay;
-import generator.Objective;
-import generator.OrderingTask;
-import generator.Parameter;
-import generator.PlayerProgress;
-import generator.Position;
-import generator.PositionedElement;
-import generator.PositionedStructureElement;
-import generator.Prerequisite;
-import generator.Progression;
-import generator.Prompt;
-import generator.PropositionParam;
-import generator.Quantity;
-import generator.QuestionGameplay;
-import generator.QuestionParam;
-import generator.QuestionableFact;
-import generator.QuestionableFactResult;
-import generator.QuestionedFact;
-import generator.Relation;
-import generator.ResponseModality;
-import generator.ResultPosition;
-import generator.Results;
-import generator.ResultsByTask;
-import generator.Room;
-import generator.RoomAccess;
-import generator.RoomType;
-import generator.RoomTypes;
-import generator.SetOfFacts;
-import generator.Size;
-import generator.SmallRoomType;
-import generator.StatementElementType;
-import generator.Statistics;
-import generator.Structure;
-import generator.TableBuild;
-import generator.Teacher;
-import generator.Teachers;
-import generator.Time;
-import generator.TimePeriod;
-import generator.Value;
-import generator.WantedAnswersParam;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -3769,6 +3635,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTeacher_Name() {
+		return (EAttribute) teacherEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTeachers() {
 		return teachersEClass;
 	}
@@ -5575,6 +5450,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		teacherEClass = createEClass(TEACHER);
 		createEAttribute(teacherEClass, TEACHER__ID);
 		createEReference(teacherEClass, TEACHER__CLASSROOMS);
+		createEAttribute(teacherEClass, TEACHER__NAME);
 
 		teachersEClass = createEClass(TEACHERS);
 		createEReference(teachersEClass, TEACHERS__TEACHERS);
@@ -6810,6 +6686,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getTeacher_Classrooms(), this.getClassroom(), null, "classrooms", null, 0, -1, Teacher.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTeacher_Name(), ecorePackage.getEString(), "name", null, 0, 1, Teacher.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(teachersEClass, Teachers.class, "Teachers", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

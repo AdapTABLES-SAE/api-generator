@@ -25,6 +25,7 @@ import generator.Teacher;
  * <ul>
  *   <li>{@link generator.impl.TeacherImpl#getID <em>ID</em>}</li>
  *   <li>{@link generator.impl.TeacherImpl#getClassrooms <em>Classrooms</em>}</li>
+ *   <li>{@link generator.impl.TeacherImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,6 +69,26 @@ public class TeacherImpl extends MinimalEObjectImpl.Container implements Teacher
 	 * @ordered
 	 */
 	protected EList<Classroom> classrooms;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,6 +174,27 @@ public class TeacherImpl extends MinimalEObjectImpl.Container implements Teacher
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.TEACHER__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -160,6 +202,8 @@ public class TeacherImpl extends MinimalEObjectImpl.Container implements Teacher
 			return getID();
 		case GeneratorPackage.TEACHER__CLASSROOMS:
 			return getClassrooms();
+		case GeneratorPackage.TEACHER__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -180,6 +224,9 @@ public class TeacherImpl extends MinimalEObjectImpl.Container implements Teacher
 			getClassrooms().clear();
 			getClassrooms().addAll((Collection<? extends Classroom>) newValue);
 			return;
+		case GeneratorPackage.TEACHER__NAME:
+			setName((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -198,6 +245,9 @@ public class TeacherImpl extends MinimalEObjectImpl.Container implements Teacher
 		case GeneratorPackage.TEACHER__CLASSROOMS:
 			getClassrooms().clear();
 			return;
+		case GeneratorPackage.TEACHER__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -214,6 +264,8 @@ public class TeacherImpl extends MinimalEObjectImpl.Container implements Teacher
 			return isSetID();
 		case GeneratorPackage.TEACHER__CLASSROOMS:
 			return classrooms != null && !classrooms.isEmpty();
+		case GeneratorPackage.TEACHER__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -234,6 +286,8 @@ public class TeacherImpl extends MinimalEObjectImpl.Container implements Teacher
 			result.append(id);
 		else
 			result.append("<unset>");
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

@@ -628,6 +628,7 @@
     <genClasses ecoreClass="generator.ecore#//Teacher">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Teacher/ID"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Teacher/classrooms"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Teacher/name"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Teachers">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Teachers/teachers"/>

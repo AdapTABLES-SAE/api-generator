@@ -30,7 +30,7 @@ public class LoginResource {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	@Path("/learner/{learnerID}")
-	public String generate(@PathParam("learnerID") String learnerID, @Context ServletContext app) {  
+	public String learnerLogin(@PathParam("learnerID") String learnerID, @Context ServletContext app) {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		Classroom classroom = Constant.getClassroom(Constant.DEFAULT_CLASSROOM_NAME);
 		return (classroom == null) || !Constant.doesLearnerBelongsToClassroom(classroom, learnerID)? "KO" : "OK";
@@ -40,10 +40,18 @@ public class LoginResource {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	@Path("/classroom/{classID}/learner/{learnerID}")
-	public String generate(@PathParam("classID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) {  
+	public String learnerLogin(@PathParam("classID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		Classroom classroom = Constant.getClassroom(classID);
 		return (classroom == null) || !Constant.doesLearnerBelongsToClassroom(classroom, learnerID)? "KO" : "OK";
+	}
+	
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	@Path("/teacher/{teacherID}")
+	public String teacherLogin(@PathParam("teacherID") String teacherID, @Context ServletContext app) {  
+		Constant.PROJECT_PATH = app.getRealPath("");
+		return Constant.getTeacher(teacherID) == null ? "KO" : "OK";
 	}
 	
 }

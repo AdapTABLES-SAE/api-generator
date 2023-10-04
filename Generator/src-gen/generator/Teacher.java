@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.Teacher#getID <em>ID</em>}</li>
  *   <li>{@link generator.Teacher#getClassrooms <em>Classrooms</em>}</li>
+ *   <li>{@link generator.Teacher#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getTeacher()
@@ -83,5 +84,27 @@ public interface Teacher extends EObject {
 	 * @generated
 	 */
 	EList<Classroom> getClassrooms();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see generator.GeneratorPackage#getTeacher_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link generator.Teacher#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Teacher

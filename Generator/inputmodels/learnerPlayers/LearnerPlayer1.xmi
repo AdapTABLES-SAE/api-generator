@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <generator:LearnerPlayer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" name="FICTIF01" ID="FICTIF01">
   <progression>
-    <playerProgress currentLevel="1" coins="0">
+    <playerProgress currentLevel="8" coins="0">
       <items/>
     </playerProgress>
     <learnerProgress>
@@ -119,5 +119,5 @@
     </learnerProgress>
   </progression>
   <learningpath href="../LearningDomain.xmi#PATH404"/>
-  <statistics maxGameLevelReached="1" nbLevelsGenerated="3"/>
+  <statistics maxGameLevelReached="8" nbLevelsGenerated="15"/>
 </generator:LearnerPlayer>

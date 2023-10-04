@@ -553,8 +553,166 @@
       <directions>NORTH</directions>
       <directions>WEST</directions>
     </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RoomTrap2"
+        type="TRAP">
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM1"/>
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          ID="POS3"/>
+      <elementPositions
+          ID="POS4"/>
+      <elementPositions
+          ID="POS5"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RoomTrap3"
+        type="TRAP">
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          ID="POS3"/>
+      <elementPositions
+          ID="POS4"/>
+      <elementPositions
+          ID="POS5"/>
+      <elementPositions
+          ID="POS6"/>
+      <elementPositions
+          ID="POS7"/>
+      <elementPositions
+          ID="POS8"/>
+      <elementPositions
+          ID="POS9"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RoomTrap4"
+        type="TRAP">
+      <elementPositions
+          size="MEDIUM"
+          restrictedTo="AVOIDABLE"
+          ID="POSM1"/>
+      <elementPositions
+          size="MEDIUM"
+          restrictedTo="AVOIDABLE"
+          ID="POSM2"/>
+      <elementPositions
+          size="MEDIUM"
+          restrictedTo="AVOIDABLE"
+          ID="POSM3"/>
+      <elementPositions
+          size="MEDIUM"
+          restrictedTo="AVOIDABLE"
+          ID="POSM4"/>
+      <elementPositions
+          size="MEDIUM"
+          restrictedTo="AVOIDABLE"
+          ID="POSM5"/>
+      <elementPositions
+          size="MEDIUM"
+          restrictedTo="AVOIDABLE"
+          ID="POSM6"/>
+      <elementPositions
+          size="MEDIUM"
+          restrictedTo="AVOIDABLE"
+          ID="POSM7"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="TwoWaysRoom3">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ2"/>
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          ID="POS3"/>
+      <elementPositions
+          ID="POS4"/>
+      <elementPositions
+          ID="POS5"/>
+      <elementPositions
+          ID="POS6"/>
+      <directions>SOUTH</directions>
+      <directions>NORTH</directions>
+    </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="TwoWaysRoom4">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ2"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ3"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ4"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ5"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ6"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POM1"/>
+      <directions>SOUTH</directions>
+      <directions>NORTH</directions>
+    </roomtypes>
   </roomtypes>
-  <levelsDifficultyProgress/>
+  <levelsDifficultyProgress>
+    <cursesAvailabilities
+        startLevel="8"
+        curse="//@elements/@curses/@curses.0"/>
+    <cursesAvailabilities
+        startLevel="4"
+        curse="//@elements/@curses/@curses.1"/>
+    <cursesAvailabilities
+        startLevel="12"
+        curse="//@elements/@curses/@curses.3"/>
+    <cursesAvailabilities
+        startLevel="16"
+        curse="//@elements/@curses/@curses.2"/>
+  </levelsDifficultyProgress>
   <gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -928,42 +1086,6 @@
       <prompt
           prompt="Attrape les bons elements"/>
       <restrictedTo>COMPLETE</restrictedTo>
-    </gameplays>
-    <gameplays
-        xsi:type="generator:NoQuestionGameplay"
-        name="ONE TYPES - 5 SMALL TRAP EVITABLE">
-      <components
-          xsi:type="generator:Component"
-          allowedAbility="AVOIDABLE">
-        <expectedSize>
-          <value
-              xsi:type="generator:Value"
-              value="SMALL"/>
-        </expectedSize>
-        <quantity>
-          <value
-              xsi:type="generator:Value"
-              value="5"/>
-        </quantity>
-      </components>
-    </gameplays>
-    <gameplays
-        xsi:type="generator:NoQuestionGameplay"
-        name="ONE TYPES - 3 SMALL TRAP INEVITABLE">
-      <components
-          xsi:type="generator:Component"
-          allowedAbility="NONAVOIDABLE">
-        <expectedSize>
-          <value
-              xsi:type="generator:Value"
-              value="SMALL"/>
-        </expectedSize>
-        <quantity>
-          <value
-              xsi:type="generator:Value"
-              value="3"/>
-        </quantity>
-      </components>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -1513,6 +1635,78 @@
           prompt="Ouvre les bons elements"/>
       <restrictedTo>IDENTIFY</restrictedTo>
     </gameplays>
+    <gameplays
+        xsi:type="generator:NoQuestionGameplay"
+        name="GP_TRAP_5_SMALL_AVOIDABLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="AVOIDABLE">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="SMALL"/>
+        </expectedSize>
+        <quantity>
+          <value
+              xsi:type="generator:Value"
+              value="5"/>
+        </quantity>
+      </components>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:NoQuestionGameplay"
+        name="GP_TRAP_3_SMALL_NONAVOIDABLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="NONAVOIDABLE">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="SMALL"/>
+        </expectedSize>
+        <quantity>
+          <value
+              xsi:type="generator:Value"
+              value="3"/>
+        </quantity>
+      </components>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:NoQuestionGameplay"
+        name="GP_TRAP_7_AVOIDABLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="AVOIDABLE">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="MEDIUM"/>
+        </expectedSize>
+        <quantity>
+          <value
+              xsi:type="generator:Value"
+              value="7"/>
+        </quantity>
+      </components>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:NoQuestionGameplay"
+        name="GP_TRAP_7_AVOIDABLE">
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="AVOIDABLE">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="SMALL"/>
+        </expectedSize>
+        <quantity>
+          <value
+              xsi:type="generator:Value"
+              value="7"/>
+        </quantity>
+      </components>
+    </gameplays>
   </gameplays>
   <elements>
     <equipments>
@@ -1567,53 +1761,53 @@
           type="VStructL"
           ability="VERTICAL_DISPLAY"/>
       <elements
-          ID="ELEMTYPE_INTERRUPTOR"
+          ID="ELEMENT_TYPE_INTERRUPTOR"
           type="FloorInterrupt"
           nbDisplays="1"
           ability="TOUCHABLE"/>
       <elements
-          ID="ELEMTYPE_KEYBOARD"
+          ID="ELEMENT_TYPE_KEYBOARD"
           type="KeyBoard"
           ability="TYPABLE"/>
       <elements
-          ID="ELEMTYPE_SWITCH"
+          ID="ELEMENT_TYPE_SWITCH"
           type="Switch"
           ability="VERIFICATOR"/>
       <elements
-          ID="ELEMTYPE_DISPLAY"
+          ID="ELEMENT_TYPE_DISPLAY"
           type="Info"
           nbDisplays="1"
           ability="DISPLAY"/>
       <elements
-          ID="ELEMTYPE_POT"
+          ID="ELEMENT_TYPE_POT"
           type="Pot"
           nbDisplays="1"
           ability="MOVABLE"/>
       <elements
-          ID="ELEMTYPE_DETECTOR"
+          ID="ELEMENT_TYPE_DETECTOR"
           type="ObjectDetector"
           nbDisplays="1"
           ability="DETECTOR"/>
       <elements
-          ID="ELEMTYPE_CHEST"
+          ID="ELEMENT_TYPE_CHEST"
           type="Chest"
           nbDisplays="1"
           ability="OPENABLE"/>
       <elements
           size="LARGE"
-          ID="ELEMTYPE_LARGE_DETECTOR"
+          ID="ELEMENT_TYPE_LARGE_DETECTOR"
           type="LargeNewObjectDetector"
           ability="DETECTOR"/>
       <elements
           size="MEDIUM"
-          ID="ELEMTYPE_STATUE_ROTABLE"
+          ID="ELEMENT_TYPE_STATUE_ROTABLE"
           type="Statue"
           nbDisplays="3"
           ability="ROTABLE"/>
       <elements
           xsi:type="generator:StatementElementType"
           size="LARGE"
-          ID="ELEMTYPE_STATEMENT_CORRECTNESS"
+          ID="ELEMENT_TYPE_STATEMENT_CORRECTNESS"
           type="StatementFact"
           nbDisplays="1"
           ability="DISPLAY"
@@ -1621,7 +1815,7 @@
       <elements
           xsi:type="generator:StatementElementType"
           size="LARGE"
-          ID="ELEMTYPE_STATEMENT_DISPLAY"
+          ID="ELEMENT_TYPE_STATEMENT_DISPLAY"
           type="Statement"
           nbDisplays="1"
           ability="DISPLAY"/>
@@ -1724,7 +1918,23 @@
           ID="STRUCT_FILL_IN"
           type="StructureStatement"
           ability="FILL_IN_DISPLAY"/>
+      <elements
+          size="MEDIUM"
+          ID="ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"
+          type="MediumWaitFireTrap"
+          ability="AVOIDABLE"/>
     </elementTypes>
+    <curses>
+      <curses
+          xsi:type="generator:LabyrinthCurse"
+          name="Labyrinth"/>
+      <curses
+          name="Night"/>
+      <curses
+          name="OneLife"/>
+      <curses
+          name="OutOfTime"/>
+    </curses>
   </elements>
   <abilities>
     <abilities
