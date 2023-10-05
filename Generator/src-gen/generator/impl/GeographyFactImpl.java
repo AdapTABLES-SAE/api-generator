@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import generator.EGeographyValue;
 import generator.GeneratorPackage;
 import generator.GeographyFact;
-import generator.Map;
 import generator.MapElementPosition;
 
 /**
@@ -21,24 +20,14 @@ import generator.MapElementPosition;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.GeographyFactImpl#getMap <em>Map</em>}</li>
  *   <li>{@link generator.impl.GeographyFactImpl#getPosition <em>Position</em>}</li>
+ *   <li>{@link generator.impl.GeographyFactImpl#getType <em>Type</em>}</li>
  *   <li>{@link generator.impl.GeographyFactImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact {
-	/**
-	 * The cached value of the '{@link #getMap() <em>Map</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMap()
-	 * @generated
-	 * @ordered
-	 */
-	protected Map map;
-
 	/**
 	 * The cached value of the '{@link #getPosition() <em>Position</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -50,6 +39,26 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	protected MapElementPosition position;
 
 	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EGeographyValue TYPE_EDEFAULT = EGeographyValue.CITY;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EGeographyValue type = TYPE_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -57,7 +66,7 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	 * @generated
 	 * @ordered
 	 */
-	protected static final EGeographyValue VALUE_EDEFAULT = EGeographyValue.CITY;
+	protected static final String VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -67,7 +76,7 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	 * @generated
 	 * @ordered
 	 */
-	protected EGeographyValue value = VALUE_EDEFAULT;
+	protected String value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -86,45 +95,6 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	@Override
 	protected EClass eStaticClass() {
 		return GeneratorPackage.Literals.GEOGRAPHY_FACT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Map getMap() {
-		if (map != null && map.eIsProxy()) {
-			InternalEObject oldMap = (InternalEObject) map;
-			map = (Map) eResolveProxy(oldMap);
-			if (map != oldMap) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.GEOGRAPHY_FACT__MAP,
-							oldMap, map));
-			}
-		}
-		return map;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Map basicGetMap() {
-		return map;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMap(Map newMap) {
-		Map oldMap = map;
-		map = newMap;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GEOGRAPHY_FACT__MAP, oldMap, map));
 	}
 
 	/**
@@ -172,7 +142,29 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EGeographyValue getValue() {
+	public EGeographyValue getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(EGeographyValue newType) {
+		EGeographyValue oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GEOGRAPHY_FACT__TYPE, oldType,
+					type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getValue() {
 		return value;
 	}
 
@@ -181,9 +173,9 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(EGeographyValue newValue) {
-		EGeographyValue oldValue = value;
-		value = newValue == null ? VALUE_EDEFAULT : newValue;
+	public void setValue(String newValue) {
+		String oldValue = value;
+		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GEOGRAPHY_FACT__VALUE, oldValue,
 					value));
@@ -197,14 +189,12 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.GEOGRAPHY_FACT__MAP:
-			if (resolve)
-				return getMap();
-			return basicGetMap();
 		case GeneratorPackage.GEOGRAPHY_FACT__POSITION:
 			if (resolve)
 				return getPosition();
 			return basicGetPosition();
+		case GeneratorPackage.GEOGRAPHY_FACT__TYPE:
+			return getType();
 		case GeneratorPackage.GEOGRAPHY_FACT__VALUE:
 			return getValue();
 		}
@@ -219,14 +209,14 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.GEOGRAPHY_FACT__MAP:
-			setMap((Map) newValue);
-			return;
 		case GeneratorPackage.GEOGRAPHY_FACT__POSITION:
 			setPosition((MapElementPosition) newValue);
 			return;
+		case GeneratorPackage.GEOGRAPHY_FACT__TYPE:
+			setType((EGeographyValue) newValue);
+			return;
 		case GeneratorPackage.GEOGRAPHY_FACT__VALUE:
-			setValue((EGeographyValue) newValue);
+			setValue((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -240,11 +230,11 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GEOGRAPHY_FACT__MAP:
-			setMap((Map) null);
-			return;
 		case GeneratorPackage.GEOGRAPHY_FACT__POSITION:
 			setPosition((MapElementPosition) null);
+			return;
+		case GeneratorPackage.GEOGRAPHY_FACT__TYPE:
+			setType(TYPE_EDEFAULT);
 			return;
 		case GeneratorPackage.GEOGRAPHY_FACT__VALUE:
 			setValue(VALUE_EDEFAULT);
@@ -261,12 +251,12 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GEOGRAPHY_FACT__MAP:
-			return map != null;
 		case GeneratorPackage.GEOGRAPHY_FACT__POSITION:
 			return position != null;
+		case GeneratorPackage.GEOGRAPHY_FACT__TYPE:
+			return type != TYPE_EDEFAULT;
 		case GeneratorPackage.GEOGRAPHY_FACT__VALUE:
-			return value != VALUE_EDEFAULT;
+			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -282,7 +272,9 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (value: ");
+		result.append(" (type: ");
+		result.append(type);
+		result.append(", value: ");
 		result.append(value);
 		result.append(')');
 		return result.toString();

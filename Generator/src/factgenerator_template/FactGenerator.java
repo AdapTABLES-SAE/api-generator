@@ -2,14 +2,18 @@ package factgenerator_template;
 
 import java.util.Set;
 
+import factsgenerator_hg.HGFactGeneratorLocate;
 import factsgenerator_maths.MTFactGeneratorCOMP1;
 import factsgenerator_maths.MTFactGeneratorCOMP2;
 import factsgenerator_maths.MTFactGeneratorID;
 import factsgenerator_maths.MTFactGeneratorMEMB;
 import factsgenerator_maths.MTFactGeneratorREB;
+import generator.AQuestionableFact;
+import generator.ATask;
 import generator.CompletionTask;
-import generator.QuestionableFact;
 import generator.ResultsByTask;
+import generators.ALGAGenerator;
+import structures.DidacticDomain;
 import structures.DungeonElements;
 import structures.RoomElements;
 
@@ -17,9 +21,32 @@ public class FactGenerator {
 	
 	public static void  generateQuestionableFactsByTask(DungeonElements dungeonElements, ResultsByTask resBytask) {  
 		FactGeneratorTemplate factGenerator; 
-		switch(resBytask.getTask().getType()) {
+		
+		if(ALGAGenerator.DOMAIN.equals(DidacticDomain.MATHEMATICS)) {
+			factGenerator = getCorrectMathFactsGenerators(dungeonElements, resBytask.getTask());
+		} else {
+			factGenerator = getCorrectHGFactsGenerators(dungeonElements, resBytask.getTask());
+		}
+		
+		Set<AQuestionableFact> facts = factGenerator.generateQuestionableFacts(resBytask.getTask());
+		resBytask.getQuestionableFacts().addAll(facts);
+	}
+	
+	private static FactGeneratorTemplate getCorrectHGFactsGenerators(DungeonElements dungeonElements, ATask task) {
+		FactGeneratorTemplate factGenerator; 
+		switch(task.getType()) {
+		default: 
+			factGenerator = new HGFactGeneratorLocate(dungeonElements);
+			break;
+		}
+		return factGenerator;
+	}
+	
+	private static FactGeneratorTemplate getCorrectMathFactsGenerators(DungeonElements dungeonElements, ATask task) {
+		FactGeneratorTemplate factGenerator; 
+		switch(task.getType()) {
 		case COMPLETE: 
-			switch (((CompletionTask) resBytask.getTask()).getNbMissingElements()) {
+			switch (((CompletionTask) task).getNbMissingElements()) {
 			case 1:
 				factGenerator = new MTFactGeneratorCOMP1(dungeonElements);
 				break;
@@ -38,37 +65,19 @@ public class FactGenerator {
 			factGenerator = new MTFactGeneratorMEMB(dungeonElements);
 			break;
 		}
-		Set<QuestionableFact> facts = factGenerator.generateQuestionableFacts(resBytask.getTask());
-		resBytask.getQuestionableFacts().addAll(facts);
+		return factGenerator;
 	}
 	
 	public static void generateQuestionedFact(DungeonElements dungeonElements) throws Exception {
-		FactGeneratorTemplate factGenerator = null; 
+		FactGeneratorTemplate factGenerator; 
 		for (RoomElements roomElements : dungeonElements.getRoomsElements()) {
-			switch(roomElements.getTask().getType()) {
-			case COMPLETE: 
-				switch (((CompletionTask) roomElements.getTask()).getNbMissingElements()) {
-				case 1:
-					factGenerator = new MTFactGeneratorCOMP1(dungeonElements);
-					break;
-				case 2:
-					factGenerator = new MTFactGeneratorCOMP2(dungeonElements);		
-					break;
-				default: // 3
-					factGenerator = new MTFactGeneratorREB(dungeonElements);
-					break;
-				}
-				break;
-			case IDENTIFY: 
-				factGenerator = new MTFactGeneratorID(dungeonElements);
-				break;
-			default: 
-				factGenerator = new MTFactGeneratorMEMB(dungeonElements);
-				break;
-			}	
+						if(ALGAGenerator.DOMAIN.equals(DidacticDomain.MATHEMATICS)) {
+				factGenerator = getCorrectMathFactsGenerators(dungeonElements, roomElements.getTask());
+			} else {
+				factGenerator = getCorrectHGFactsGenerators(dungeonElements, roomElements.getTask());
+			}
 			if(factGenerator != null) factGenerator.generateQuestionedFact(roomElements);
 		}
-		
 		dungeonElements.shuffleRoomsOrder();
 	}
 }

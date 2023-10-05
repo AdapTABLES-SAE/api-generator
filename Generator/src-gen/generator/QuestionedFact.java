@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.QuestionedFact#getEntrys <em>Entrys</em>}</li>
  *   <li>{@link generator.QuestionedFact#getCorrectnessToReach <em>Correctness To Reach</em>}</li>
  *   <li>{@link generator.QuestionedFact#isLearnerValidation <em>Learner Validation</em>}</li>
- *   <li>{@link generator.QuestionedFact#getCompleteFact <em>Complete Fact</em>}</li>
  *   <li>{@link generator.QuestionedFact#getFactCorrectness <em>Fact Correctness</em>}</li>
  * </ul>
  *
@@ -34,12 +33,12 @@ public interface QuestionedFact extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Questionablefact</em>' reference.
-	 * @see #setQuestionablefact(QuestionableFact)
+	 * @see #setQuestionablefact(AQuestionableFact)
 	 * @see generator.GeneratorPackage#getQuestionedFact_Questionablefact()
 	 * @model required="true"
 	 * @generated
 	 */
-	QuestionableFact getQuestionablefact();
+	AQuestionableFact getQuestionablefact();
 
 	/**
 	 * Sets the value of the '{@link generator.QuestionedFact#getQuestionablefact <em>Questionablefact</em>}' reference.
@@ -49,7 +48,7 @@ public interface QuestionedFact extends EObject {
 	 * @see #getQuestionablefact()
 	 * @generated
 	 */
-	void setQuestionablefact(QuestionableFact value);
+	void setQuestionablefact(AQuestionableFact value);
 
 	/**
 	 * Returns the value of the '<em><b>Question</b></em>' containment reference.
@@ -140,28 +139,6 @@ public interface QuestionedFact extends EObject {
 	 * @generated
 	 */
 	void setLearnerValidation(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Complete Fact</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Complete Fact</em>' attribute.
-	 * @see #setCompleteFact(String)
-	 * @see generator.GeneratorPackage#getQuestionedFact_CompleteFact()
-	 * @model
-	 * @generated
-	 */
-	String getCompleteFact();
-
-	/**
-	 * Sets the value of the '{@link generator.QuestionedFact#getCompleteFact <em>Complete Fact</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Complete Fact</em>' attribute.
-	 * @see #getCompleteFact()
-	 * @generated
-	 */
-	void setCompleteFact(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Fact Correctness</b></em>' containment reference.

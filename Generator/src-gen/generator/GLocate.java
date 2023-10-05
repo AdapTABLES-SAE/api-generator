@@ -13,6 +13,7 @@ package generator;
  * <ul>
  *   <li>{@link generator.GLocate#getNbExpectedAnswers <em>Nb Expected Answers</em>}</li>
  *   <li>{@link generator.GLocate#isLearnersChoices <em>Learners Choices</em>}</li>
+ *   <li>{@link generator.GLocate#isGraphicTask <em>Graphic Task</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getGLocate()
@@ -63,5 +64,28 @@ public interface GLocate extends MembershipIDTask {
 	 * @generated
 	 */
 	void setLearnersChoices(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Graphic Task</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Graphic Task</em>' attribute.
+	 * @see #setGraphicTask(boolean)
+	 * @see generator.GeneratorPackage#getGLocate_GraphicTask()
+	 * @model default="true"
+	 * @generated
+	 */
+	boolean isGraphicTask();
+
+	/**
+	 * Sets the value of the '{@link generator.GLocate#isGraphicTask <em>Graphic Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Graphic Task</em>' attribute.
+	 * @see #isGraphicTask()
+	 * @generated
+	 */
+	void setGraphicTask(boolean value);
 
 } // GLocate

@@ -97,6 +97,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EGeographyValue">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/CITY"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/COUNTRY"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/REGIONS"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EHistoryTarget">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EHistoryTarget/EVENT"/>
@@ -116,6 +117,7 @@
     <genClasses ecoreClass="generator.ecore#//SetOfFacts">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//SetOfFacts/facts"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//SetOfFacts/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//SetOfFacts/map"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Knowledge">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Knowledge/name"/>
@@ -258,6 +260,7 @@
       <genOperations ecoreOperation="generator.ecore#//ATask/isCheckOnLearnerAction"/>
       <genOperations ecoreOperation="generator.ecore#//ATask/getNbExpectedAnswers"
           body="return 1;"/>
+      <genOperations ecoreOperation="generator.ecore#//ATask/isGraphicTask" body="return false; "/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//CompletionTask">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionTask/type"/>
@@ -310,10 +313,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTResultFact/res"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//QuestionableFact">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFact/achieved"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFact/wasSelected"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionableFact/ID"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionableFact/results"/>
       <genOperations ecoreOperation="generator.ecore#//QuestionableFact/getQuestionableFact"/>
       <genOperations ecoreOperation="generator.ecore#//QuestionableFact/getCompleteFact"/>
     </genClasses>
@@ -358,7 +357,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionedFact/entrys"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionedFact/correctnessToReach"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionedFact/learnerValidation"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionedFact/completeFact"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionedFact/factCorrectness"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//CompletionCriteria">
@@ -431,6 +429,7 @@
     <genClasses ecoreClass="generator.ecore#//QuestionParam">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionParam/interactive"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionParam/solutions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionParam/completeFact"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//PropositionParam">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PropositionParam/state"/>
@@ -441,6 +440,7 @@
     <genClasses ecoreClass="generator.ecore#//Correctness"/>
     <genClasses ecoreClass="generator.ecore#//EntrySoluceParam">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//EntrySoluceParam/state"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//EntrySoluceParam/mapValue"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Display">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Display/interactive"/>
@@ -582,13 +582,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//HistoryFact/time"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//GeographyLegendFact">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyLegendFact/map"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyLegendFact/symbol"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyLegendFact/legend"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//GeographyFact">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyFact/map"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyFact/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GeographyFact/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GeographyFact/value"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Date">
@@ -605,9 +604,7 @@
     <genClasses ecoreClass="generator.ecore#//MapValue">
       <genOperations ecoreOperation="generator.ecore#//MapValue/isCorrectValue" body="return !this.value.isEmpty();"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//Time">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Time/map"/>
-    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//Time"/>
     <genClasses ecoreClass="generator.ecore#//AQuestionParam"/>
     <genClasses ecoreClass="generator.ecore#//MapQuestionParam">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//MapQuestionParam/map"/>
@@ -624,6 +621,7 @@
     <genClasses ecoreClass="generator.ecore#//GLocate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GLocate/nbExpectedAnswers"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GLocate/learnersChoices"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GLocate/graphicTask"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Teacher">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Teacher/ID"/>
@@ -636,5 +634,21 @@
     <genClasses ecoreClass="generator.ecore#//Classrooms">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Classrooms/classrooms"/>
     </genClasses>
+    <genClasses ecoreClass="generator.ecore#//AQuestionableFact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//AQuestionableFact/wasSelected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//AQuestionableFact/achieved"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//AQuestionableFact/results"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//AQuestionableFact/ID"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//MapQuestionableFact">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//MapQuestionableFact/map"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//MapQuestionableFact/mapsolutions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MapQuestionableFact/type"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//MapSolution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MapSolution/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//MapSolution/mapPosition"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//HGLevel"/>
   </genPackages>
 </genmodel:GenModel>

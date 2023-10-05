@@ -15,11 +15,11 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import generator.AQuestionParam;
+import generator.AQuestionableFact;
 import generator.EntrySoluceParam;
 import generator.FactCorrectnessParam;
 import generator.GeneratorPackage;
 import generator.PropositionParam;
-import generator.QuestionableFact;
 import generator.QuestionedFact;
 import generator.WantedAnswersParam;
 
@@ -37,7 +37,6 @@ import generator.WantedAnswersParam;
  *   <li>{@link generator.impl.QuestionedFactImpl#getEntrys <em>Entrys</em>}</li>
  *   <li>{@link generator.impl.QuestionedFactImpl#getCorrectnessToReach <em>Correctness To Reach</em>}</li>
  *   <li>{@link generator.impl.QuestionedFactImpl#isLearnerValidation <em>Learner Validation</em>}</li>
- *   <li>{@link generator.impl.QuestionedFactImpl#getCompleteFact <em>Complete Fact</em>}</li>
  *   <li>{@link generator.impl.QuestionedFactImpl#getFactCorrectness <em>Fact Correctness</em>}</li>
  * </ul>
  *
@@ -52,7 +51,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected QuestionableFact questionablefact;
+	protected AQuestionableFact questionablefact;
 
 	/**
 	 * The cached value of the '{@link #getQuestion() <em>Question</em>}' containment reference.
@@ -115,26 +114,6 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	protected boolean learnerValidation = LEARNER_VALIDATION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCompleteFact() <em>Complete Fact</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCompleteFact()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String COMPLETE_FACT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCompleteFact() <em>Complete Fact</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCompleteFact()
-	 * @generated
-	 * @ordered
-	 */
-	protected String completeFact = COMPLETE_FACT_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getFactCorrectness() <em>Fact Correctness</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -168,10 +147,10 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuestionableFact getQuestionablefact() {
+	public AQuestionableFact getQuestionablefact() {
 		if (questionablefact != null && questionablefact.eIsProxy()) {
 			InternalEObject oldQuestionablefact = (InternalEObject) questionablefact;
-			questionablefact = (QuestionableFact) eResolveProxy(oldQuestionablefact);
+			questionablefact = (AQuestionableFact) eResolveProxy(oldQuestionablefact);
 			if (questionablefact != oldQuestionablefact) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
@@ -186,7 +165,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuestionableFact basicGetQuestionablefact() {
+	public AQuestionableFact basicGetQuestionablefact() {
 		return questionablefact;
 	}
 
@@ -195,8 +174,8 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setQuestionablefact(QuestionableFact newQuestionablefact) {
-		QuestionableFact oldQuestionablefact = questionablefact;
+	public void setQuestionablefact(AQuestionableFact newQuestionablefact) {
+		AQuestionableFact oldQuestionablefact = questionablefact;
 		questionablefact = newQuestionablefact;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.QUESTIONED_FACT__QUESTIONABLEFACT,
@@ -359,28 +338,6 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCompleteFact() {
-		return completeFact;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCompleteFact(String newCompleteFact) {
-		String oldCompleteFact = completeFact;
-		completeFact = newCompleteFact;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT,
-					oldCompleteFact, completeFact));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public FactCorrectnessParam getFactCorrectness() {
 		return factCorrectness;
 	}
@@ -470,8 +427,6 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 			return getCorrectnessToReach();
 		case GeneratorPackage.QUESTIONED_FACT__LEARNER_VALIDATION:
 			return isLearnerValidation();
-		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
-			return getCompleteFact();
 		case GeneratorPackage.QUESTIONED_FACT__FACT_CORRECTNESS:
 			return getFactCorrectness();
 		}
@@ -488,7 +443,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case GeneratorPackage.QUESTIONED_FACT__QUESTIONABLEFACT:
-			setQuestionablefact((QuestionableFact) newValue);
+			setQuestionablefact((AQuestionableFact) newValue);
 			return;
 		case GeneratorPackage.QUESTIONED_FACT__QUESTION:
 			setQuestion((AQuestionParam) newValue);
@@ -507,9 +462,6 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.QUESTIONED_FACT__LEARNER_VALIDATION:
 			setLearnerValidation((Boolean) newValue);
 			return;
-		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
-			setCompleteFact((String) newValue);
-			return;
 		case GeneratorPackage.QUESTIONED_FACT__FACT_CORRECTNESS:
 			setFactCorrectness((FactCorrectnessParam) newValue);
 			return;
@@ -526,7 +478,7 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case GeneratorPackage.QUESTIONED_FACT__QUESTIONABLEFACT:
-			setQuestionablefact((QuestionableFact) null);
+			setQuestionablefact((AQuestionableFact) null);
 			return;
 		case GeneratorPackage.QUESTIONED_FACT__QUESTION:
 			setQuestion((AQuestionParam) null);
@@ -542,9 +494,6 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 			return;
 		case GeneratorPackage.QUESTIONED_FACT__LEARNER_VALIDATION:
 			setLearnerValidation(LEARNER_VALIDATION_EDEFAULT);
-			return;
-		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
-			setCompleteFact(COMPLETE_FACT_EDEFAULT);
 			return;
 		case GeneratorPackage.QUESTIONED_FACT__FACT_CORRECTNESS:
 			setFactCorrectness((FactCorrectnessParam) null);
@@ -573,8 +522,6 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 			return correctnessToReach != null;
 		case GeneratorPackage.QUESTIONED_FACT__LEARNER_VALIDATION:
 			return learnerValidation != LEARNER_VALIDATION_EDEFAULT;
-		case GeneratorPackage.QUESTIONED_FACT__COMPLETE_FACT:
-			return COMPLETE_FACT_EDEFAULT == null ? completeFact != null : !COMPLETE_FACT_EDEFAULT.equals(completeFact);
 		case GeneratorPackage.QUESTIONED_FACT__FACT_CORRECTNESS:
 			return factCorrectness != null;
 		}
@@ -594,8 +541,6 @@ public class QuestionedFactImpl extends MinimalEObjectImpl.Container implements 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (learnerValidation: ");
 		result.append(learnerValidation);
-		result.append(", completeFact: ");
-		result.append(completeFact);
 		result.append(')');
 		return result.toString();
 	}

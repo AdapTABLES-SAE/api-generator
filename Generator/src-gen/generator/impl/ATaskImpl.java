@@ -2,20 +2,23 @@
  */
 package generator.impl;
 
-import java.lang.reflect.InvocationTargetException;
-
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import generator.ATask;
 import generator.ETaskType;
 import generator.GeneratorPackage;
 import generator.ResponseModality;
+
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -362,16 +365,24 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public abstract ETaskType getType();
+	public ETaskType getType() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public abstract boolean isCheckOnLearnerAction();
+	public boolean isCheckOnLearnerAction() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -380,6 +391,15 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public int getNbExpectedAnswers() {
 		return 1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isGraphicTask() {
+		return false;
 	}
 
 	/**
@@ -518,6 +538,8 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 			return isCheckOnLearnerAction();
 		case GeneratorPackage.ATASK___GET_NB_EXPECTED_ANSWERS:
 			return getNbExpectedAnswers();
+		case GeneratorPackage.ATASK___IS_GRAPHIC_TASK:
+			return isGraphicTask();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

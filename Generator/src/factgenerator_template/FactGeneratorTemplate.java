@@ -8,6 +8,9 @@ import java.util.Map.Entry;
 import java.util.Random;
 import java.util.Set;
 
+import exceptions.BadSolutionGenerationException;
+import generator.AQuestionParam;
+import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
 import generator.CorrectnessValue;
@@ -16,6 +19,9 @@ import generator.EnterResponse;
 import generator.EntrySoluceParam;
 import generator.FactCorrectnessParam;
 import generator.FactSolutionParam;
+import generator.MapQuestionParam;
+import generator.MapQuestionableFact;
+import generator.MapValue;
 import generator.PropositionParam;
 import generator.QuestionParam;
 import generator.QuestionableFact;
@@ -28,6 +34,8 @@ import generator.impl.CorrectnessValueImpl;
 import generator.impl.EntrySoluceParamImpl;
 import generator.impl.FactCorrectnessParamImpl;
 import generator.impl.FactSolutionParamImpl;
+import generator.impl.MapQuestionParamImpl;
+import generator.impl.MapValueImpl;
 import generator.impl.PropositionParamImpl;
 import generator.impl.QuestionParamImpl;
 import generator.impl.QuestionedFactImpl;
@@ -35,6 +43,7 @@ import generator.impl.ValueImpl;
 import generator.impl.WantedAnswersParamImpl;
 import structures.DungeonElements;
 import structures.RoomElements;
+import structures.Soluce;
 
 public abstract class FactGeneratorTemplate {
 	
@@ -53,12 +62,12 @@ public abstract class FactGeneratorTemplate {
 	}
 	
 	
-	public Set<QuestionableFact> generateQuestionableFacts(ATask task){
-		Set<QuestionableFact> questionableFacts = new HashSet<>();
+	public Set<AQuestionableFact> generateQuestionableFacts(ATask task){
+		Set<AQuestionableFact> questionableFacts = new HashSet<>();
 		taskID = task.getID();
 		for (SetOfFacts setoffact : dungeonElements.getChosenObjective().getSetoffacts()) {
 			for (AbstractFact f : setoffact.getFacts()) { 
-				for(QuestionableFact fact: generateQuestionableFactsOf(task, f)) {
+				for(AQuestionableFact fact: generateQuestionableFactsOf(task, f)) {
 					questionableFacts.add(fact);
 				}
 				
@@ -68,25 +77,30 @@ public abstract class FactGeneratorTemplate {
 		return questionableFacts; 
 	}
 	
-	protected Set<QuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact){ return null; }
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact){ return null; }
 		
-	protected void createAQuestionedFactFrom(RoomElements roomElement, QuestionableFact qFact) {
+	protected void createAQuestionedFactFrom(RoomElements roomElement, AQuestionableFact qFact) throws BadSolutionGenerationException {
 		QuestionedFact qef = new QuestionedFactImpl(); 
 		qef.setQuestionablefact(qFact);
 		
 		if(roomElement.getTask().getResponseModality() instanceof EnterResponse) {
-			List<String> solutions = getListOfGoodSolutions(qFact);
-			for (String sol : solutions) {
+			List<Soluce> solutions = getListOfGoodSolutions(qFact);
+			for (Soluce sol : solutions) {
 				EntrySoluceParam soluceParam = new EntrySoluceParamImpl(); 
 				Value value = new ValueImpl();
-				value.setValue(sol);
-				soluceParam.setValue(value);
-				qef.getEntrys().add(soluceParam);
+				value.setValue(sol.getValue());
+				soluceParam.setValue(value);				
+				if(sol.isGraphicSolution()) {
+					MapValue mapValue = new MapValueImpl();
+					mapValue.setValue(sol.getPosition().getID());
+					soluceParam.setMapValue(mapValue);
+				}
+				qef.getEntrys().add(soluceParam); //TODO
 			}
 		} else {
-			Map<ECorrectness, List<String>> propositions = getListOfPropositions(roomElement.getTask(), qFact);
-			for (Entry<ECorrectness, List<String>> propState : propositions.entrySet()) {
-				for (String prop : propState.getValue()) {
+			Map<ECorrectness, List<Soluce>> propositions = getListOfPropositions(roomElement.getTask(), qFact);
+			for (Entry<ECorrectness, List<Soluce>> propState : propositions.entrySet()) {
+				for (Soluce prop : propState.getValue()) {
 					PropositionParam propositionParam = new PropositionParamImpl();
 					
 					CorrectnessValue correctnessValue = new CorrectnessValueImpl();
@@ -94,20 +108,14 @@ public abstract class FactGeneratorTemplate {
 					propositionParam.setState(correctnessValue);
 					
 					Value value = new ValueImpl();
-					value.setValue(prop);
+					value.setValue(prop.getValue());
 					propositionParam.setValue(value);
 					
 					qef.getPropositions().add(propositionParam);
 				}
 			}
 		}
-		QuestionParam question = new QuestionParamImpl();
-		Value value = new ValueImpl();
-		value.setValue(qFact.getQuestionableFact());
-		question.setValue(value);
-		question.setInteractive(isQuestionInteractive());
-		question.getSolutions().addAll(fullFactsSolution(qFact));
-		qef.setQuestion(question);
+		qef.setQuestion(buildQuestionParam(qFact));
 		WantedAnswersParam correctness = new WantedAnswersParamImpl();
 		Value correctnessValue = new ValueImpl();
 		correctnessValue.setValue(correctnessToReach(roomElement.getTask())+"");
@@ -115,7 +123,7 @@ public abstract class FactGeneratorTemplate {
 		qef.setCorrectnessToReach(correctness);
 		
 		qef.setLearnerValidation(roomElement.getTask().isCheckOnLearnerAction());
-		qef.setCompleteFact(qFact.getCompleteFact());
+		
 		
 		ECorrectness factCorrectness = getFactCorrectness(qFact);
 		if(factCorrectness != null) {
@@ -130,11 +138,30 @@ public abstract class FactGeneratorTemplate {
 		roomElement.addQuestionedFact(qef);
 	}
 	
-	protected ECorrectness getFactCorrectness(QuestionableFact qFact) {
+	protected AQuestionParam buildQuestionParam(AQuestionableFact qFact) {
+		if(qFact instanceof QuestionableFact) {
+			QuestionParam question = new QuestionParamImpl();
+			Value value = new ValueImpl();
+			value.setValue(((QuestionableFact) qFact).getQuestionableFact());
+			question.setValue(value);
+			question.setInteractive(isQuestionInteractive());
+			question.getSolutions().addAll(fullFactsSolution(qFact));			
+			question.setCompleteFact(((QuestionableFact) qFact).getCompleteFact());
+
+			
+			return question;
+		} else {
+			MapQuestionParam question = new MapQuestionParamImpl();
+			question.setMap(((MapQuestionableFact) qFact).getMap());
+			return question;
+		}
+	}
+	
+	protected ECorrectness getFactCorrectness(AQuestionableFact qFact) {
 		return null;
 	}
 	
-	private List<FactSolutionParam> fullFactsSolution(QuestionableFact qFact){
+	private List<FactSolutionParam> fullFactsSolution(AQuestionableFact qFact){
 		List<String> stringSolutions = factSolutionsToString(qFact);
 		List<FactSolutionParam> solutions = new ArrayList<>();
 		if(!stringSolutions.isEmpty()) {
@@ -149,17 +176,17 @@ public abstract class FactGeneratorTemplate {
 		return solutions;
 	}
 	
-	protected List<String> factSolutionsToString(QuestionableFact qFact){
+	protected List<String> factSolutionsToString(AQuestionableFact qFact){
 		return new ArrayList<>();
 	}
 	
-	protected abstract List<String> getListOfGoodSolutions(QuestionableFact qFact);
-	protected abstract Map<ECorrectness, List<String>> getListOfPropositions(ATask task, QuestionableFact qFact);
+	protected abstract List<Soluce> getListOfGoodSolutions(AQuestionableFact qFact);
+	protected abstract Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) throws BadSolutionGenerationException;
 	protected abstract boolean isQuestionInteractive();
 	
 	public void generateQuestionedFact(RoomElements roomElements) {
 		for (int i = 0; i < roomElements.getTask().getNbFacts(); i++) {
-			QuestionableFact qf = null;
+			AQuestionableFact qf = null;
 			try {
 				qf = getAvailableFact(roomElements.getCorrespondingResultByTask(dungeonElements.getCurrentObjectiveLevel()));
 				createAQuestionedFactFrom(roomElements, qf);
@@ -173,7 +200,7 @@ public abstract class FactGeneratorTemplate {
 	
 	private boolean areEveryFactAchieved(ResultsByTask resByTask) {
 		boolean allAchieved = true;
-		for (QuestionableFact qfact: resByTask.getQuestionableFacts()) {
+		for (AQuestionableFact qfact: resByTask.getQuestionableFacts()) {
 			if(!qfact.isAchieved()) {
 				allAchieved = false;
 			}
@@ -181,7 +208,7 @@ public abstract class FactGeneratorTemplate {
 		return allAchieved;
 	}
 	
-	private QuestionableFact getAvailableFact(ResultsByTask resByTask) throws Exception { 
+	private AQuestionableFact getAvailableFact(ResultsByTask resByTask) throws Exception { 
 		//boolean isEveryFactAchieved = areEveryFactAchieved(resByTask); 
 		if(areEveryFactAchieved(resByTask)) {
 			resetPoolWithEveryFacts(resByTask);
@@ -191,7 +218,7 @@ public abstract class FactGeneratorTemplate {
 			}
 		}	
 		
-		List<QuestionableFact> eligibleFacts = getEligibleQuestionableFacts(resByTask);
+		List<AQuestionableFact> eligibleFacts = getEligibleQuestionableFacts(resByTask);
 		if(eligibleFacts.isEmpty()) {
 			throw new Exception("Pool of facts should not be empty for task "+resByTask.getTask().getType());
 		} else {
@@ -200,9 +227,9 @@ public abstract class FactGeneratorTemplate {
 		}
 	}
 	
-	private List<QuestionableFact> getEligibleQuestionableFacts(ResultsByTask resByTask){
-		List<QuestionableFact> eligibleFacts = new ArrayList<>();
-		for (QuestionableFact qfact: resByTask.getQuestionableFacts()) {
+	private List<AQuestionableFact> getEligibleQuestionableFacts(ResultsByTask resByTask){
+		List<AQuestionableFact> eligibleFacts = new ArrayList<>();
+		for (AQuestionableFact qfact: resByTask.getQuestionableFacts()) {
 			if(!qfact.isWasSelected()) {
 				eligibleFacts.add(qfact);
 			}
@@ -223,13 +250,13 @@ public abstract class FactGeneratorTemplate {
 	}
 	
 	private void resetPoolWithEveryFacts(ResultsByTask resByTask) {
-		for (QuestionableFact qfact: resByTask.getQuestionableFacts()) {
+		for (AQuestionableFact qfact: resByTask.getQuestionableFacts()) {
 			qfact.setWasSelected(false);
 		}
 	}
 	
 	private void resetPoolOfFacts(ResultsByTask resByTask) {
-		for (QuestionableFact qfact: resByTask.getQuestionableFacts()) {
+		for (AQuestionableFact qfact: resByTask.getQuestionableFacts()) {
 			if(!qfact.isAchieved() && qfact.isWasSelected()) {
 				qfact.setWasSelected(false);
 			}

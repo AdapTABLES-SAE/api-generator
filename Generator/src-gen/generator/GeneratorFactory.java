@@ -607,6 +607,33 @@ public interface GeneratorFactory extends EFactory {
 	Classrooms createClassrooms();
 
 	/**
+	 * Returns a new object of class '<em>Map Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Map Questionable Fact</em>'.
+	 * @generated
+	 */
+	MapQuestionableFact createMapQuestionableFact();
+
+	/**
+	 * Returns a new object of class '<em>Map Solution</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Map Solution</em>'.
+	 * @generated
+	 */
+	MapSolution createMapSolution();
+
+	/**
+	 * Returns a new object of class '<em>HG Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>HG Level</em>'.
+	 * @generated
+	 */
+	HGLevel createHGLevel();
+
+	/**
 	 * Returns a new object of class '<em>Equipment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -12,6 +12,7 @@ package generator;
  * </p>
  * <ul>
  *   <li>{@link generator.EntrySoluceParam#getState <em>State</em>}</li>
+ *   <li>{@link generator.EntrySoluceParam#getMapValue <em>Map Value</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getEntrySoluceParam()
@@ -43,5 +44,27 @@ public interface EntrySoluceParam extends Parameter {
 	 * @generated
 	 */
 	void setState(ECorrectness value);
+
+	/**
+	 * Returns the value of the '<em><b>Map Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Map Value</em>' containment reference.
+	 * @see #setMapValue(MapValue)
+	 * @see generator.GeneratorPackage#getEntrySoluceParam_MapValue()
+	 * @model containment="true"
+	 * @generated
+	 */
+	MapValue getMapValue();
+
+	/**
+	 * Sets the value of the '{@link generator.EntrySoluceParam#getMapValue <em>Map Value</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Map Value</em>' containment reference.
+	 * @see #getMapValue()
+	 * @generated
+	 */
+	void setMapValue(MapValue value);
 
 } // EntrySoluceParam

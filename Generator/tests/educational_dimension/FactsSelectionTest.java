@@ -14,9 +14,9 @@ import org.junit.jupiter.api.TestInfo;
 
 import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
+import generator.AQuestionableFact;
 import generator.CompletionCriteria;
 import generator.CurrentObjectiveLevel;
-import generator.QuestionableFact;
 import generator.QuestionableFactResult;
 import generator.ResultsByTask;
 import generator.impl.QuestionableFactResultImpl;
@@ -62,7 +62,7 @@ class FactsSelectionTest { //TODO : refaire proprement
 	}
 	
 	private void addResultsToFacts() {
-		for(QuestionableFact fact: this.generator.getDungeonFacts()) {
+		for(AQuestionableFact fact: this.generator.getDungeonFacts()) {
 			QuestionableFactResult result = new QuestionableFactResultImpl();
 			result.setAnswerValid(true);
 			fact.getResults().add(result);
@@ -72,7 +72,7 @@ class FactsSelectionTest { //TODO : refaire proprement
 	public boolean isEachFactAchieved() {
 		CurrentObjectiveLevel currentOL = generator.getCurrentObjectiveLevel();
 		for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {
-			for(QuestionableFact fact: rbt.getQuestionableFacts()) {
+			for(AQuestionableFact fact: rbt.getQuestionableFacts()) {
 				if(!fact.isAchieved() ) return false;
 			}
 		}
@@ -83,14 +83,14 @@ class FactsSelectionTest { //TODO : refaire proprement
 		CurrentObjectiveLevel currentOL = generator.getCurrentObjectiveLevel();
 		for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {
 			int nbOfExpectedConsecutiveSuccess = rbt.getTask().getNbConsecutiveSuccess();
-			for(QuestionableFact fact: rbt.getQuestionableFacts()) {
+			for(AQuestionableFact fact: rbt.getQuestionableFacts()) {
 				if(!isNumberOfConsecutiveSuccessValid(fact, nbOfExpectedConsecutiveSuccess)) return false;
 			}
 		}
 		return true; 
 	}
 	
-	private boolean isNumberOfConsecutiveSuccessValid(QuestionableFact fact, int expectedNumber) {
+	private boolean isNumberOfConsecutiveSuccessValid(AQuestionableFact fact, int expectedNumber) {
 		int consecutive = 0; 
 		for(QuestionableFactResult res: fact.getResults()) {
 			if(res.isAnswerValid()) { consecutive++; } 
@@ -131,7 +131,7 @@ class FactsSelectionTest { //TODO : refaire proprement
 	private void updateQuestionableFactStatus(ResultsByTask taskResults) {
 		int numberOfExpectedConsecutiveSuccess = taskResults.getTask().getNbConsecutiveSuccess();
 		
-		for(QuestionableFact fact: taskResults.getQuestionableFacts()) {
+		for(AQuestionableFact fact: taskResults.getQuestionableFacts()) {
 			if(this.numberOfSuccessiveSuccess(fact) >= numberOfExpectedConsecutiveSuccess) {
 				fact.setAchieved(true);
 			}
@@ -142,7 +142,7 @@ class FactsSelectionTest { //TODO : refaire proprement
 	 * Computes the number of maximal successive correct answers reached, on a fact by a learner
 	 * @return maximal number of successive success
 	 */
-	private int numberOfSuccessiveSuccess(QuestionableFact fact) {
+	private int numberOfSuccessiveSuccess(AQuestionableFact fact) {
 		Map<Integer, Integer> listOfSuccessiveSuccess = new HashMap<>();
 		int i = 0; 
 		
@@ -195,7 +195,7 @@ class FactsSelectionTest { //TODO : refaire proprement
 	private double numberTaskAchievedFacts(ResultsByTask taskResults) {
 		double count = 0.; 
 		
-		for(QuestionableFact fact: taskResults.getQuestionableFacts()) {
+		for(AQuestionableFact fact: taskResults.getQuestionableFacts()) {
 			if(fact.isAchieved()) {
 				count++;
 			}
@@ -212,7 +212,7 @@ class FactsSelectionTest { //TODO : refaire proprement
 	private double numberTaskEncounteredFacts(ResultsByTask taskResults) {
 		double count = 0.; 
 		
-		for(QuestionableFact fact: taskResults.getQuestionableFacts()) {
+		for(AQuestionableFact fact: taskResults.getQuestionableFacts()) {
 			if(!fact.getResults().isEmpty()) {
 				count++;
 			}

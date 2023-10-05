@@ -1707,6 +1707,11 @@
         </quantity>
       </components>
     </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_GRAPHIC"
+        category="MOVE_MULTIPLE"
+        statementType="GRAPHIC"/>
   </gameplays>
   <elements>
     <equipments>

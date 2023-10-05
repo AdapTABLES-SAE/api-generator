@@ -2,6 +2,7 @@ package managers;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
@@ -24,6 +25,7 @@ import generator.Knowledge;
 import generator.LearnerPlayer;
 import generator.LearningDomain;
 import generators.ALGAGenerator;
+import structures.DidacticDomain;
 
 
 public class ModelsManager {
@@ -33,11 +35,18 @@ public class ModelsManager {
 	private boolean launchedFromAPI = false;
 	public boolean launchedFromTEST = false;
 	
+	private static final HashMap<DidacticDomain, String> didacticDomainFileNames = new HashMap<>();
+	static {
+		didacticDomainFileNames.put(DidacticDomain.MATHEMATICS, "MultiplicationTables.xmi");
+		didacticDomainFileNames.put(DidacticDomain.HISTORY_GEOGRAPHY, "HistoryGeographyFacts.xmi");
+	}
+	
 	private static String INPUT_MODELS_PATH = "inputmodels/";
 	private static String INPUT_MODELS_PATH_TEST = "tests/modelsForTests/";
 	private static String OUTPUT_MODELS_PATH = "outputmodels/";
 	private static String INPUT_LEARNER_MODELS_PATH = "learnerPlayers/";
-	private static String[] INPUT_MODELS_NAMES = {"Contexts.xmi", "GameDescription.xmi", "MultiplicationTables.xmi", "LearningDomain.xmi", "Relations.xmi", ""};
+	private static String[] INPUT_MODELS_NAMES = {"Contexts.xmi", "GameDescription.xmi", 
+			didacticDomainFileNames.get(ALGAGenerator.DOMAIN), "LearningDomain.xmi", "Relations.xmi", ""};
 	
 	private static final String DEFAULT_CONTEXTID = "default";
 	

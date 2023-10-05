@@ -11,8 +11,8 @@ package generator;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.GeographyFact#getMap <em>Map</em>}</li>
  *   <li>{@link generator.GeographyFact#getPosition <em>Position</em>}</li>
+ *   <li>{@link generator.GeographyFact#getType <em>Type</em>}</li>
  *   <li>{@link generator.GeographyFact#getValue <em>Value</em>}</li>
  * </ul>
  *
@@ -21,28 +21,6 @@ package generator;
  * @generated
  */
 public interface GeographyFact extends AbstractFact {
-	/**
-	 * Returns the value of the '<em><b>Map</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Map</em>' reference.
-	 * @see #setMap(Map)
-	 * @see generator.GeneratorPackage#getGeographyFact_Map()
-	 * @model required="true"
-	 * @generated
-	 */
-	Map getMap();
-
-	/**
-	 * Sets the value of the '{@link generator.GeographyFact#getMap <em>Map</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Map</em>' reference.
-	 * @see #getMap()
-	 * @generated
-	 */
-	void setMap(Map value);
-
 	/**
 	 * Returns the value of the '<em><b>Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -66,28 +44,50 @@ public interface GeographyFact extends AbstractFact {
 	void setPosition(MapElementPosition value);
 
 	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link generator.EGeographyValue}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute.
+	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see generator.EGeographyValue
-	 * @see #setValue(EGeographyValue)
+	 * @see #setType(EGeographyValue)
+	 * @see generator.GeneratorPackage#getGeographyFact_Type()
+	 * @model
+	 * @generated
+	 */
+	EGeographyValue getType();
+
+	/**
+	 * Sets the value of the '{@link generator.GeographyFact#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see generator.EGeographyValue
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(EGeographyValue value);
+
+	/**
+	 * Returns the value of the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value</em>' attribute.
+	 * @see #setValue(String)
 	 * @see generator.GeneratorPackage#getGeographyFact_Value()
 	 * @model
 	 * @generated
 	 */
-	EGeographyValue getValue();
+	String getValue();
 
 	/**
 	 * Sets the value of the '{@link generator.GeographyFact#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see generator.EGeographyValue
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(EGeographyValue value);
+	void setValue(String value);
 
 } // GeographyFact

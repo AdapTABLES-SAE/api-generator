@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link generator.QuestionParam#isInteractive <em>Interactive</em>}</li>
  *   <li>{@link generator.QuestionParam#getSolutions <em>Solutions</em>}</li>
+ *   <li>{@link generator.QuestionParam#getCompleteFact <em>Complete Fact</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getQuestionParam()
@@ -55,5 +56,27 @@ public interface QuestionParam extends AQuestionParam {
 	 * @generated
 	 */
 	EList<FactSolutionParam> getSolutions();
+
+	/**
+	 * Returns the value of the '<em><b>Complete Fact</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Complete Fact</em>' attribute.
+	 * @see #setCompleteFact(String)
+	 * @see generator.GeneratorPackage#getQuestionParam_CompleteFact()
+	 * @model
+	 * @generated
+	 */
+	String getCompleteFact();
+
+	/**
+	 * Sets the value of the '{@link generator.QuestionParam#getCompleteFact <em>Complete Fact</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Complete Fact</em>' attribute.
+	 * @see #getCompleteFact()
+	 * @generated
+	 */
+	void setCompleteFact(String value);
 
 } // QuestionParam

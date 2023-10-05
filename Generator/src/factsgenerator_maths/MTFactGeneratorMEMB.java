@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 import factgenerator_template.FactGeneratorTemplate;
+import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
 import generator.ECorrectness;
@@ -18,11 +18,11 @@ import generator.MTMembership;
 import generator.MTQFMembership;
 import generator.MTResultFact;
 import generator.MultipleChoice;
-import generator.QuestionableFact;
 import generator.SetOfFacts;
 import generator.impl.MTQFMembershipImpl;
 import structures.DungeonElements;
 import structures.Shuffle;
+import structures.Soluce;
 
 public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 
@@ -32,8 +32,8 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 
 
 	@Override
-	public Set<QuestionableFact> generateQuestionableFacts(ATask task){
-		Set<QuestionableFact> questionableFacts = new HashSet<>();
+	public Set<AQuestionableFact> generateQuestionableFacts(ATask task){
+		Set<AQuestionableFact> AQuestionableFacts = new HashSet<>();
 		taskID = task.getID();
 		
 		int min = ((MTLevel) dungeonElements.getChosenLevel()).getMinInterval();
@@ -53,15 +53,15 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 						}
 					}
 				}
-				questionableFacts.addAll(generateQuestionableFactsOf(task, facts, nbByFact));
+				AQuestionableFacts.addAll(generateAQuestionableFactsOf(task, facts, nbByFact));
 			}
 		}	
-		return questionableFacts; 
+		return AQuestionableFacts; 
 	}
 	
 	
-	protected Set<QuestionableFact> generateQuestionableFactsOf(ATask task, List<MTResultFact> facts, int nbByFact) {
-		Set<QuestionableFact> qfs = new HashSet<>(); 
+	protected Set<AQuestionableFact> generateAQuestionableFactsOf(ATask task, List<MTResultFact> facts, int nbByFact) {
+		Set<AQuestionableFact> qfs = new HashSet<>(); 
 		int k = 0;
 		for (int i = 0; i < (facts.size() / nbByFact); i++) {
 			List<MTResultFact> factres = new ArrayList<>(); 
@@ -86,18 +86,18 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected List<String> getListOfGoodSolutions(QuestionableFact qFact) {
-		List<String> solutions = new ArrayList<>();
+	protected List<Soluce> getListOfGoodSolutions(AQuestionableFact qFact) {
+		List<Soluce> solutions = new ArrayList<>();
 		for (Integer prop : ((MTQFMembership) qFact).getGoodResults()) {
-			solutions.add(prop+"");
+			solutions.add(new Soluce(prop+""));
 		}
 		return solutions;
 	}
 
 
 	@Override
-	protected Map<ECorrectness, List<String>> getListOfPropositions(ATask task, QuestionableFact qFact) {
-		Map<ECorrectness, List<String>> propositions = new HashMap<>();
+	protected Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) {
+		Map<ECorrectness, List<Soluce>> propositions = new HashMap<>();
 		MTQFMembership qfact = (MTQFMembership) qFact;
 		List<Integer> notallowed = new ArrayList<>();
 		for (int i = 0; i < 13; i++) {
@@ -114,11 +114,17 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 			}
 		}
 		
+		List<Soluce> badpropositions = new ArrayList<>();
+		for(Integer value: propositions_temp) {
+			badpropositions.add(new Soluce(value+""));
+		}
+		
+		
 		if(((MTMembership)task).isIdentifySharedProperty()) {
 			propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
-			propositions.put(ECorrectness.INCORRECT, propositions_temp.stream().map(String::valueOf).collect(Collectors.toList()));
+			propositions.put(ECorrectness.INCORRECT, badpropositions);
 		} else {
-			propositions.put(ECorrectness.CORRECT, propositions_temp.stream().map(String::valueOf).collect(Collectors.toList()));
+			propositions.put(ECorrectness.CORRECT, badpropositions);
 			propositions.put(ECorrectness.INCORRECT, getListOfGoodSolutions(qFact));
 		}
 		

@@ -375,6 +375,8 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			QuestionableFact questionableFact = (QuestionableFact) theEObject;
 			T result = caseQuestionableFact(questionableFact);
 			if (result == null)
+				result = caseAQuestionableFact(questionableFact);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -383,6 +385,8 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			T result = caseMTQFCompletion1(mtqfCompletion1);
 			if (result == null)
 				result = caseQuestionableFact(mtqfCompletion1);
+			if (result == null)
+				result = caseAQuestionableFact(mtqfCompletion1);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -393,6 +397,8 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseQuestionableFact(mtqfCompletion2);
 			if (result == null)
+				result = caseAQuestionableFact(mtqfCompletion2);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -401,6 +407,8 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			T result = caseMTQFRebuild(mtqfRebuild);
 			if (result == null)
 				result = caseQuestionableFact(mtqfRebuild);
+			if (result == null)
+				result = caseAQuestionableFact(mtqfRebuild);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -411,6 +419,8 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseQuestionableFact(mtqfIdentification);
 			if (result == null)
+				result = caseAQuestionableFact(mtqfIdentification);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -419,6 +429,8 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			T result = caseMTQFMembership(mtqfMembership);
 			if (result == null)
 				result = caseQuestionableFact(mtqfMembership);
+			if (result == null)
+				result = caseAQuestionableFact(mtqfMembership);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -994,6 +1006,38 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		case GeneratorPackage.CLASSROOMS: {
 			Classrooms classrooms = (Classrooms) theEObject;
 			T result = caseClassrooms(classrooms);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.AQUESTIONABLE_FACT: {
+			AQuestionableFact aQuestionableFact = (AQuestionableFact) theEObject;
+			T result = caseAQuestionableFact(aQuestionableFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.MAP_QUESTIONABLE_FACT: {
+			MapQuestionableFact mapQuestionableFact = (MapQuestionableFact) theEObject;
+			T result = caseMapQuestionableFact(mapQuestionableFact);
+			if (result == null)
+				result = caseAQuestionableFact(mapQuestionableFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.MAP_SOLUTION: {
+			MapSolution mapSolution = (MapSolution) theEObject;
+			T result = caseMapSolution(mapSolution);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.HG_LEVEL: {
+			HGLevel hgLevel = (HGLevel) theEObject;
+			T result = caseHGLevel(hgLevel);
+			if (result == null)
+				result = caseLevel(hgLevel);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -2335,6 +2379,66 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseClassrooms(Classrooms object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>AQuestionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>AQuestionable Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAQuestionableFact(AQuestionableFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Map Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Map Questionable Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMapQuestionableFact(MapQuestionableFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Map Solution</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Map Solution</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMapSolution(MapSolution object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>HG Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>HG Level</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHGLevel(HGLevel object) {
 		return null;
 	}
 

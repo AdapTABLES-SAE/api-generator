@@ -2,6 +2,7 @@
  */
 package generator.impl;
 
+import generator.AQuestionableFact;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -16,7 +17,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import generator.ATask;
 import generator.GeneratorPackage;
-import generator.QuestionableFact;
 import generator.ResultsByTask;
 
 /**
@@ -54,7 +54,7 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<QuestionableFact> questionableFacts;
+	protected EList<AQuestionableFact> questionableFacts;
 
 	/**
 	 * The default value of the '{@link #getSuccessPercent() <em>Success Percent</em>}' attribute.
@@ -160,9 +160,9 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<QuestionableFact> getQuestionableFacts() {
+	public EList<AQuestionableFact> getQuestionableFacts() {
 		if (questionableFacts == null) {
-			questionableFacts = new EObjectContainmentEList<QuestionableFact>(QuestionableFact.class, this,
+			questionableFacts = new EObjectContainmentEList<AQuestionableFact>(AQuestionableFact.class, this,
 					GeneratorPackage.RESULTS_BY_TASK__QUESTIONABLE_FACTS);
 		}
 		return questionableFacts;
@@ -262,7 +262,7 @@ public class ResultsByTaskImpl extends MinimalEObjectImpl.Container implements R
 			return;
 		case GeneratorPackage.RESULTS_BY_TASK__QUESTIONABLE_FACTS:
 			getQuestionableFacts().clear();
-			getQuestionableFacts().addAll((Collection<? extends QuestionableFact>) newValue);
+			getQuestionableFacts().addAll((Collection<? extends AQuestionableFact>) newValue);
 			return;
 		case GeneratorPackage.RESULTS_BY_TASK__SUCCESS_PERCENT:
 			setSuccessPercent((Double) newValue);

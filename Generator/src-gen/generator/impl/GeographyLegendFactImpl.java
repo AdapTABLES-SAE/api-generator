@@ -12,7 +12,6 @@ import generator.GeneratorPackage;
 import generator.GeographyLegendFact;
 import generator.LegendSymbol;
 import generator.LegendText;
-import generator.Map;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +21,6 @@ import generator.Map;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.GeographyLegendFactImpl#getMap <em>Map</em>}</li>
  *   <li>{@link generator.impl.GeographyLegendFactImpl#getSymbol <em>Symbol</em>}</li>
  *   <li>{@link generator.impl.GeographyLegendFactImpl#getLegend <em>Legend</em>}</li>
  * </ul>
@@ -30,16 +28,6 @@ import generator.Map;
  * @generated
  */
 public class GeographyLegendFactImpl extends AbstractFactImpl implements GeographyLegendFact {
-	/**
-	 * The cached value of the '{@link #getMap() <em>Map</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMap()
-	 * @generated
-	 * @ordered
-	 */
-	protected Map map;
-
 	/**
 	 * The cached value of the '{@link #getSymbol() <em>Symbol</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -77,46 +65,6 @@ public class GeographyLegendFactImpl extends AbstractFactImpl implements Geograp
 	@Override
 	protected EClass eStaticClass() {
 		return GeneratorPackage.Literals.GEOGRAPHY_LEGEND_FACT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Map getMap() {
-		if (map != null && map.eIsProxy()) {
-			InternalEObject oldMap = (InternalEObject) map;
-			map = (Map) eResolveProxy(oldMap);
-			if (map != oldMap) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.GEOGRAPHY_LEGEND_FACT__MAP, oldMap, map));
-			}
-		}
-		return map;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Map basicGetMap() {
-		return map;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMap(Map newMap) {
-		Map oldMap = map;
-		map = newMap;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GEOGRAPHY_LEGEND_FACT__MAP, oldMap,
-					map));
 	}
 
 	/**
@@ -243,10 +191,6 @@ public class GeographyLegendFactImpl extends AbstractFactImpl implements Geograp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__MAP:
-			if (resolve)
-				return getMap();
-			return basicGetMap();
 		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL:
 			return getSymbol();
 		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__LEGEND:
@@ -263,9 +207,6 @@ public class GeographyLegendFactImpl extends AbstractFactImpl implements Geograp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__MAP:
-			setMap((Map) newValue);
-			return;
 		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL:
 			setSymbol((LegendSymbol) newValue);
 			return;
@@ -284,9 +225,6 @@ public class GeographyLegendFactImpl extends AbstractFactImpl implements Geograp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__MAP:
-			setMap((Map) null);
-			return;
 		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL:
 			setSymbol((LegendSymbol) null);
 			return;
@@ -305,8 +243,6 @@ public class GeographyLegendFactImpl extends AbstractFactImpl implements Geograp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__MAP:
-			return map != null;
 		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL:
 			return symbol != null;
 		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__LEGEND:

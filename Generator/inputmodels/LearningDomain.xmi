@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="ASCII"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <generator:LearningDomain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator">
   <learningpaths name="Ingrid | CE1-REP -- Classe Moyenne " ID="PATH1">
-    <objectives ID="ICM-O1" name="D&#xe9;couverte Table 2">
+    <objectives ID="ICM-O1" name="Découverte Table 2">
       <levels xsi:type="generator:MTLevel" ID="ICM-O1-N1" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK1">
           <responseModality xsi:type="generator:EnterResponse"/>
@@ -21,7 +21,7 @@
       </levels>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
     </objectives>
-    <objectives ID="ICM-O2" name="D&#xe9;couverte Table 10">
+    <objectives ID="ICM-O2" name="Découverte Table 10">
       <prerequisites successPercent="80.0" requiredLevel="ICM-O1-N3" encountersPercent="80.0"/>
       <levels xsi:type="generator:MTLevel" ID="ICM-O2-N1" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK4">
@@ -106,7 +106,7 @@
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.9"/>
     </objectives>
-    <objectives ID="ICM-O4" name="D&#xe9;couverte Table 5">
+    <objectives ID="ICM-O4" name="Découverte Table 5">
       <prerequisites successPercent="80.0" requiredLevel="ICM-O2-N3" encountersPercent="80.0"/>
       <levels xsi:type="generator:MTLevel" ID="ICM-O4-N1" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK15">
@@ -127,7 +127,7 @@
       </levels>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.4"/>
     </objectives>
-    <objectives ID="ICM-O5" name="D&#xe9;couverte Table 3">
+    <objectives ID="ICM-O5" name="Découverte Table 3">
       <prerequisites successPercent="80.0" requiredLevel="ICM-O3-N3" encountersPercent="80.0"/>
       <levels xsi:type="generator:MTLevel" ID="ICM-O5-N1" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK18">
@@ -148,7 +148,7 @@
       </levels>
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.2"/>
     </objectives>
-    <objectives ID="ICM-O6" name="D&#xe9;couverte Table 4">
+    <objectives ID="ICM-O6" name="Découverte Table 4">
       <prerequisites successPercent="80.0" requiredLevel="ICM-O5-N3" encountersPercent="80.0"/>
       <levels xsi:type="generator:MTLevel" ID="ICM-O6-N1" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="TASK21">
@@ -302,7 +302,7 @@
     <knowledge href="MultiplicationTables.xmi#/"/>
   </learningpaths>
   <learningpaths name="Rozenn | CE2 -- En cours" ID="PATH2">
-    <objectives ID="REC-O1" name="R&#xe9;vision table travaill&#xe9;e en CE1">
+    <objectives ID="REC-O1" name="Révision table travaillée en CE1">
       <levels xsi:type="generator:MTLevel" ID="REC-O1-N1">
         <tasks xsi:type="generator:MTCompletion1" percentOfApparition="70" ID="TASK40">
           <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="2" nbChoices="3"/>
@@ -668,5 +668,17 @@
       <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
     </objectives>
     <knowledge href="MultiplicationTables.xmi#/"/>
+  </learningpaths>
+  <learningpaths name="HGPATH" ID="HGPATH">
+    <objectives ID="HG_O1" name="HG_O1">
+      <levels xsi:type="generator:HGLevel" ID="HG_O1_L1">
+        <tasks xsi:type="generator:GLocate" percentOfApparition="100" ID="HG_O1_L1_T1" maxTime="30" nbExpectedAnswers="18">
+          <responseModality xsi:type="generator:MultipleChoice" nbChoices="18"/>
+        </tasks>
+        <completionCriteria/>
+      </levels>
+      <setoffacts href="HistoryGeographyFacts.xmi#//@knowledgefacts.0"/>
+    </objectives>
+    <knowledge href="HistoryGeographyFacts.xmi#/"/>
   </learningpaths>
 </generator:LearningDomain>

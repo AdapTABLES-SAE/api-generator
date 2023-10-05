@@ -190,20 +190,26 @@ public class GameElementsGenerator {
 				} else {
 					modalityCompatible = (task.getResponseModality() != null)? task.getResponseModality() instanceof EnterResponse: false;
 				}
-				//System.out.println(task.getNbExpectedAnswers()+" "+task.getNbFacts());				
+				//System.out.println(task.getNbExpectedAnswers()+" "+task.getNbFacts());	
+				
+				
 
 				//System.out.println("fact comp "+factCompatible+" expectedanswers "+expectedAnswerCompatible+" modality "+modalityCompatible);
 				if(factCompatible && expectedAnswerCompatible && modalityCompatible) {
 					//allowedCategories.addAll(relation.getGameplays());
-					Set<EStatementType> types;
 					for(GPCategory category: relation.getGameplays()) {
-						if(allowedCategoriesWithStatements.containsKey(category)) {
-							types = allowedCategoriesWithStatements.get(category);
+						Set<EStatementType> types = new HashSet<>();
+						if(task.isGraphicTask()) {
+							if(relation.getCondition().getStatementTypes().contains(EStatementType.GRAPHIC)) {
+								types.add(EStatementType.GRAPHIC);
+							}
 						} else {
-							types = new HashSet<>();
+							types.addAll(relation.getCondition().getStatementTypes());
+							if(types.contains(EStatementType.GRAPHIC)) {
+								types.remove(EStatementType.GRAPHIC);
+							}
 						}
-						types.addAll(relation.getCondition().getStatementTypes());
-						allowedCategoriesWithStatements.put(category, types);
+						if(!types.isEmpty()) { allowedCategoriesWithStatements.put(category, types); }
 					}
 				}
 			}
@@ -230,8 +236,11 @@ public class GameElementsGenerator {
 					ALGAGenerator.LOGGER.severe("No gameplay was found for task="+room.getTask().getID());
 					throw new NoCompatibleGameplayException(room.getTask());
 				} else {
+
 					Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
 					room.setGameplay(gameplay);
+					ALGAGenerator.LOGGER.severe("Gameplays found for task="+room.getGameplay().getName());
+
 				}
 			} else if(!room.isExit() && !room.isEntry()) {
 				gameplays = getNoQuestionRoomGameplay();

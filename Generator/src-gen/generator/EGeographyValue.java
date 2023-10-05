@@ -36,7 +36,16 @@ public enum EGeographyValue implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	COUNTRY(1, "COUNTRY", "COUNTRY");
+	COUNTRY(1, "COUNTRY", "COUNTRY"),
+	/**
+	 * The '<em><b>REGIONS</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #REGIONS_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	REGIONS(1, "REGIONS", "REGIONS");
 
 	/**
 	 * The '<em><b>CITY</b></em>' literal value.
@@ -61,12 +70,23 @@ public enum EGeographyValue implements Enumerator {
 	public static final int COUNTRY_VALUE = 1;
 
 	/**
+	 * The '<em><b>REGIONS</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #REGIONS
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int REGIONS_VALUE = 1;
+
+	/**
 	 * An array of all the '<em><b>EGeography Value</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final EGeographyValue[] VALUES_ARRAY = new EGeographyValue[] { CITY, COUNTRY, };
+	private static final EGeographyValue[] VALUES_ARRAY = new EGeographyValue[] { CITY, COUNTRY, REGIONS, };
 
 	/**
 	 * A public read-only list of all the '<em><b>EGeography Value</b></em>' enumerators.

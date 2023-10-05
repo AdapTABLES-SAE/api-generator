@@ -27,6 +27,7 @@ import generator.QuestionParam;
  * <ul>
  *   <li>{@link generator.impl.QuestionParamImpl#isInteractive <em>Interactive</em>}</li>
  *   <li>{@link generator.impl.QuestionParamImpl#getSolutions <em>Solutions</em>}</li>
+ *   <li>{@link generator.impl.QuestionParamImpl#getCompleteFact <em>Complete Fact</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,6 +61,25 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 	 * @ordered
 	 */
 	protected EList<FactSolutionParam> solutions;
+
+	/**
+	 * The default value of the '{@link #getCompleteFact() <em>Complete Fact</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCompleteFact()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String COMPLETE_FACT_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getCompleteFact() <em>Complete Fact</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCompleteFact()
+	 * @generated
+	 * @ordered
+	 */
+	protected String completeFact = COMPLETE_FACT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,6 +140,28 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCompleteFact() {
+		return completeFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCompleteFact(String newCompleteFact) {
+		String oldCompleteFact = completeFact;
+		completeFact = newCompleteFact;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.QUESTION_PARAM__COMPLETE_FACT,
+					oldCompleteFact, completeFact));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -141,6 +183,8 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 			return isInteractive();
 		case GeneratorPackage.QUESTION_PARAM__SOLUTIONS:
 			return getSolutions();
+		case GeneratorPackage.QUESTION_PARAM__COMPLETE_FACT:
+			return getCompleteFact();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,6 +205,9 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 			getSolutions().clear();
 			getSolutions().addAll((Collection<? extends FactSolutionParam>) newValue);
 			return;
+		case GeneratorPackage.QUESTION_PARAM__COMPLETE_FACT:
+			setCompleteFact((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -179,6 +226,9 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 		case GeneratorPackage.QUESTION_PARAM__SOLUTIONS:
 			getSolutions().clear();
 			return;
+		case GeneratorPackage.QUESTION_PARAM__COMPLETE_FACT:
+			setCompleteFact(COMPLETE_FACT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -195,6 +245,8 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 			return interactive != INTERACTIVE_EDEFAULT;
 		case GeneratorPackage.QUESTION_PARAM__SOLUTIONS:
 			return solutions != null && !solutions.isEmpty();
+		case GeneratorPackage.QUESTION_PARAM__COMPLETE_FACT:
+			return COMPLETE_FACT_EDEFAULT == null ? completeFact != null : !COMPLETE_FACT_EDEFAULT.equals(completeFact);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -212,6 +264,8 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (interactive: ");
 		result.append(interactive);
+		result.append(", completeFact: ");
+		result.append(completeFact);
 		result.append(')');
 		return result.toString();
 	}

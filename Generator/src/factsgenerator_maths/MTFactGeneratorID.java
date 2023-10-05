@@ -9,6 +9,7 @@ import java.util.Random;
 import java.util.Set;
 
 import factgenerator_template.FactGeneratorTemplate;
+import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
 import generator.ECorrectness;
@@ -17,11 +18,11 @@ import generator.MTFact;
 import generator.MTIdentification;
 import generator.MTLevel;
 import generator.MTQFIdentification;
-import generator.QuestionableFact;
 import generator.ResultPosition;
 import generator.TableBuild;
 import generator.impl.MTQFIdentificationImpl;
 import structures.DungeonElements;
+import structures.Soluce;
 
 public class MTFactGeneratorID extends FactGeneratorTemplate {
 
@@ -34,13 +35,13 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 	}
 	
 	@Override
-	protected Set<QuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
 		if(fact instanceof MTFact) {
 			MTFact factC = (MTFact) fact;
 			int min = ((MTLevel) dungeonElements.getChosenLevel()).getMinInterval();
 			int max = ((MTLevel) dungeonElements.getChosenLevel()).getMaxInterval();
 			if(min <= factC.getOp() && factC.getOp()<= max){
-				Set<QuestionableFact> qfs = new HashSet<>(); 
+				Set<AQuestionableFact> qfs = new HashSet<>(); 
 				
 				TableBuild build = ((MTLevel) dungeonElements.getChosenLevel()).getBuildSetup();
 				ResultPosition equalPos = ((MTLevel) dungeonElements.getChosenLevel()).getResultPositionSetup();
@@ -72,12 +73,12 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 		return new HashSet<>();
 	}
 	
-	private List<QuestionableFact> generateFalseFacts(MTIdentification task, Set<QuestionableFact> goodFacts){
+	private List<AQuestionableFact> generateFalseFacts(MTIdentification task, Set<AQuestionableFact> goodFacts){
 		ESingleTarget falseTarget = task.getTarget();
-		List<QuestionableFact> allFacts = new ArrayList<>(goodFacts); 
+		List<AQuestionableFact> allFacts = new ArrayList<>(goodFacts); 
 		
-		for (QuestionableFact questionableFact : goodFacts) {
-			allFacts.add(buildBadQF((MTQFIdentification) questionableFact, falseTarget));
+		for (AQuestionableFact AQuestionableFact : goodFacts) {
+			allFacts.add(buildBadQF((MTQFIdentification) AQuestionableFact, falseTarget));
 		}
 		
 		return allFacts;
@@ -153,24 +154,24 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected List<String> getListOfGoodSolutions(QuestionableFact qFact) {
-		List<String> solutions = new ArrayList<>();
+	protected List<Soluce> getListOfGoodSolutions(AQuestionableFact qFact) {
+		List<Soluce> solutions = new ArrayList<>();
 		if(((MTQFIdentification) qFact).isSoluce()) {
-			solutions.add("Vrai");
+			solutions.add(new Soluce("Vrai"));
 		}else {
-			solutions.add("Faux");
+			solutions.add(new Soluce("Faux"));
 		}
 		return solutions;
 	}
 
 	@Override
-	protected Map<ECorrectness, List<String>> getListOfPropositions(ATask task, QuestionableFact qFact) {
-		Map<ECorrectness, List<String>> propositions = new HashMap<>();
-		List<String> propositions_temp = new ArrayList<>();
+	protected Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) {
+		Map<ECorrectness, List<Soluce>> propositions = new HashMap<>();
+		List<Soluce> propositions_temp = new ArrayList<>();
 		if(!((MTQFIdentification) qFact).isSoluce()) {		
-			propositions_temp.add("Vrai");
+			propositions_temp.add(new Soluce("Vrai"));
 		} else {
-			propositions_temp.add("Faux");
+			propositions_temp.add(new Soluce("Faux"));
 		}
 		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
 		propositions.put(ECorrectness.INCORRECT, propositions_temp);		
@@ -178,7 +179,7 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 	}
 	
 	@Override
-	protected ECorrectness getFactCorrectness(QuestionableFact qFact) {
+	protected ECorrectness getFactCorrectness(AQuestionableFact qFact) {
 		return ((MTQFIdentification) qFact).isSoluce()? ECorrectness.CORRECT : ECorrectness.INCORRECT;
 	}
 

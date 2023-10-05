@@ -640,6 +640,26 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseAQuestionableFact(AQuestionableFact object) {
+			return createAQuestionableFactAdapter();
+		}
+
+		@Override
+		public Adapter caseMapQuestionableFact(MapQuestionableFact object) {
+			return createMapQuestionableFactAdapter();
+		}
+
+		@Override
+		public Adapter caseMapSolution(MapSolution object) {
+			return createMapSolutionAdapter();
+		}
+
+		@Override
+		public Adapter caseHGLevel(HGLevel object) {
+			return createHGLevelAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1719,6 +1739,62 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createClassroomsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.AQuestionableFact <em>AQuestionable Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.AQuestionableFact
+	 * @generated
+	 */
+	public Adapter createAQuestionableFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MapQuestionableFact <em>Map Questionable Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MapQuestionableFact
+	 * @generated
+	 */
+	public Adapter createMapQuestionableFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MapSolution <em>Map Solution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MapSolution
+	 * @generated
+	 */
+	public Adapter createMapSolutionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.HGLevel <em>HG Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.HGLevel
+	 * @generated
+	 */
+	public Adapter createHGLevelAdapter() {
 		return null;
 	}
 

@@ -253,6 +253,12 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createTeachers();
 		case GeneratorPackage.CLASSROOMS:
 			return createClassrooms();
+		case GeneratorPackage.MAP_QUESTIONABLE_FACT:
+			return createMapQuestionableFact();
+		case GeneratorPackage.MAP_SOLUTION:
+			return createMapSolution();
+		case GeneratorPackage.HG_LEVEL:
+			return createHGLevel();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1340,6 +1346,36 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public Classrooms createClassrooms() {
 		ClassroomsImpl classrooms = new ClassroomsImpl();
 		return classrooms;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MapQuestionableFact createMapQuestionableFact() {
+		MapQuestionableFactImpl mapQuestionableFact = new MapQuestionableFactImpl();
+		return mapQuestionableFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MapSolution createMapSolution() {
+		MapSolutionImpl mapSolution = new MapSolutionImpl();
+		return mapSolution;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HGLevel createHGLevel() {
+		HGLevelImpl hgLevel = new HGLevelImpl();
+		return hgLevel;
 	}
 
 	/**

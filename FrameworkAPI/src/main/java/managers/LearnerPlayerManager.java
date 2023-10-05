@@ -8,6 +8,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import exceptions.NonExistantLearnerPlayerException;
+import generator.AQuestionableFact;
 import generator.ATask;
 import generator.CompletionCriteria;
 import generator.CurrentObjectiveLevel;
@@ -49,7 +50,7 @@ public class LearnerPlayerManager {
 	private void updateQuestionableFactStatus(ResultsByTask taskResults) {
 		int numberOfExpectedConsecutiveSuccess = taskResults.getTask().getNbConsecutiveSuccess();
 		
-		for(QuestionableFact fact: taskResults.getQuestionableFacts()) {
+		for(AQuestionableFact fact: taskResults.getQuestionableFacts()) {
 			if(this.numberOfSuccessiveSuccess(fact) >= numberOfExpectedConsecutiveSuccess) {
 				fact.setAchieved(true);
 			}
@@ -357,7 +358,7 @@ public class LearnerPlayerManager {
 	 * Computes the number of maximal successive correct answers reached, on a fact by a learner
 	 * @return maximal number of successive success
 	 */
-	private int numberOfSuccessiveSuccess(QuestionableFact fact) {
+	private int numberOfSuccessiveSuccess(AQuestionableFact fact) {
 		Map<Integer, Integer> listOfSuccessiveSuccess = new HashMap<>();
 		int i = 0; 
 		
@@ -445,7 +446,7 @@ public class LearnerPlayerManager {
 	private double numberTaskAchievedFacts(ResultsByTask taskResults) {
 		double count = 0.; 
 		
-		for(QuestionableFact fact: taskResults.getQuestionableFacts()) {
+		for(AQuestionableFact fact: taskResults.getQuestionableFacts()) {
 			if(fact.isAchieved()) {
 				count++;
 			}
@@ -462,7 +463,7 @@ public class LearnerPlayerManager {
 	private double numberTaskEncounteredFacts(ResultsByTask taskResults) {
 		double count = 0.; 
 		
-		for(QuestionableFact fact: taskResults.getQuestionableFacts()) {
+		for(AQuestionableFact fact: taskResults.getQuestionableFacts()) {
 			if(!fact.getResults().isEmpty()) {
 				count++;
 			}
@@ -571,7 +572,7 @@ public class LearnerPlayerManager {
 		JSONArray facts = (JSONArray) jtask.get("questionableFacts");
 		for (Object object : facts) {
 			JSONObject factResult = (JSONObject) object;
-			QuestionableFact qf = getCorrespondingQuestionnableFact((String) factResult.get("questionableFactID"), rbt);
+			AQuestionableFact qf = getCorrespondingQuestionnableFact((String) factResult.get("questionableFactID"), rbt);
 			if(qf != null) {
 				QuestionableFactResult qfres = new QuestionableFactResultImpl();
 				qfres.setAnswerValid((boolean) factResult.get("isCorrect"));
@@ -588,8 +589,8 @@ public class LearnerPlayerManager {
 		}
 	}
 	
-	private QuestionableFact getCorrespondingQuestionnableFact(String factID, ResultsByTask rbt) {
-		for (QuestionableFact qf : rbt.getQuestionableFacts()) {
+	private AQuestionableFact getCorrespondingQuestionnableFact(String factID, ResultsByTask rbt) {
+		for (AQuestionableFact qf : rbt.getQuestionableFacts()) {
 			if(qf.getID().equals(factID)) {
 				return qf;
 			}

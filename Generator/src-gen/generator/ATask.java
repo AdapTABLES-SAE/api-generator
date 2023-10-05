@@ -211,4 +211,12 @@ public interface ATask extends EObject {
 	 */
 	int getNbExpectedAnswers();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	boolean isGraphicTask();
+
 } // ATask

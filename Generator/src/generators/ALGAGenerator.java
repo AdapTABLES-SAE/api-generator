@@ -10,11 +10,12 @@ import org.eclipse.emf.common.util.EList;
 import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
 import flattener.Main;
+import generator.AQuestionableFact;
 import generator.CurrentObjectiveLevel;
 import generator.Dungeon;
 import generator.LevelsDifficultyProgress;
+import generator.MapQuestionParam;
 import generator.PropositionParam;
-import generator.QuestionableFact;
 import generator.QuestionedFact;
 import generator.Room;
 import generator.RoomAccess;
@@ -24,6 +25,7 @@ import generator.impl.PlayerProgressImpl;
 import generator.impl.ProgressionImpl;
 import generator.impl.StatisticsImpl;
 import managers.ModelsManager;
+import structures.DidacticDomain;
 import structures.DungeonElements;
 
 public class ALGAGenerator {
@@ -33,6 +35,8 @@ public class ALGAGenerator {
 	private ModelsManager modelAccess;
 	private Dungeon generatedDungeon;
 	private DungeonElements dungeonElements;
+	
+	public static DidacticDomain DOMAIN = DidacticDomain.MATHEMATICS;
 
 	public static void main(String[] args) {
 		
@@ -66,7 +70,7 @@ public class ALGAGenerator {
 		for(int i = 0; i < 1; i++) {
 			ALGAGenerator generator;
 			try {
-				generator = new ALGAGenerator("FICTIF01");
+				generator = new ALGAGenerator("FICTIF03");
 				generator.generate();
 				generator.printDungeon();
 				generator.saveDungeon("DungeonGen.xmi");
@@ -128,8 +132,8 @@ public class ALGAGenerator {
 		modelAccess.saveLearnerPlayerModel();
 	}
 	
-	public List<QuestionableFact> getDungeonFacts() {
-		List<QuestionableFact> facts = new ArrayList<>();
+	public List<AQuestionableFact> getDungeonFacts() {
+		List<AQuestionableFact> facts = new ArrayList<>();
 	
 		for(Room room:	this.generatedDungeon.getRooms()) {
 			for(QuestionedFact fact: room.getQuestionedFacts()) {
@@ -221,8 +225,12 @@ public class ALGAGenerator {
 		if(r.getQuestionedFacts() != null && !r.getQuestionedFacts().isEmpty()) {
 			String facts = "{";
 			for (QuestionedFact qef : r.getQuestionedFacts()) {
-				facts += ((Value) qef.getQuestion().getValue()).getValue() + "[" + propositionsToString(qef.getPropositions()) + "]" + 
-						(r.getQuestionedFacts().get(r.getQuestionedFacts().size()-1).equals(qef)? "}":", ");
+				if(qef.getQuestion() instanceof MapQuestionParam) {
+					facts += "MAP "+((MapQuestionParam) qef.getQuestion()).getMap().getID()+"}";
+				} else {
+					facts += ((Value) qef.getQuestion().getValue()).getValue() + "[" + propositionsToString(qef.getPropositions()) + "]" + 
+							(r.getQuestionedFacts().get(r.getQuestionedFacts().size()-1).equals(qef)? "}":", ");	
+				}
 			}
 			System.out.println("\t Facts : "+facts);
 		}

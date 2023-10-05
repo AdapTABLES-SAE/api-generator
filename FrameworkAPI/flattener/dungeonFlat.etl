@@ -60,7 +60,7 @@ rule Room2Room
         	for (fact in roomIn.questionedFacts) { 
         	var factOUT: new OUT!Fact;
 				factOUT.id = fact.questionablefact.id; 
-			    factOUT.complete = fact.completeFact;
+			    factOUT.complete = fact.question.completeFact;
 			    if(fact.correctnessToReach.isDefined()){
 			    	factOUT.correctnessToReach = fact.correctnessToReach.value.value;
 			    }
