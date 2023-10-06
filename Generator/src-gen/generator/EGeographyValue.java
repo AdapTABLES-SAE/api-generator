@@ -37,10 +37,11 @@ public enum EGeographyValue implements Enumerator {
 	 * @ordered
 	 */
 	COUNTRY(1, "COUNTRY", "COUNTRY"),
+
 	/**
 	 * The '<em><b>REGIONS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #REGIONS_VALUE
 	 * @generated
 	 * @ordered

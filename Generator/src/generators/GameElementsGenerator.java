@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
+import exceptions.MapGameplayElementException;
 import exceptions.NoCompatibleGameplayException;
 import generator.AComponent;
 import generator.ATask;
@@ -77,11 +78,11 @@ public class GameElementsGenerator {
 	
 	private void unlockGameplays() {
 		List<Ability> abilities = getCurrentlyLockedAbilities();
-		//System.out.println("Locked abilities "+abilities);
+		System.out.println("Locked abilities "+abilities);
 		for(Gameplay gameplay: this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			//System.out.println("***********************************");
 			gameplay.setLocked(hasGameplayLockedAbilities(gameplay, abilities));
-			//System.out.println(gameplay.getName()+" locked? "+gameplay.isLocked());
+			System.out.println(gameplay.getName()+" locked? "+gameplay.isLocked());
 			//System.out.println("***********************************");
 		}
 	}
@@ -125,8 +126,10 @@ public class GameElementsGenerator {
 				}
 			}
 		}
+		System.out.println("Unlocked by player "+abilities);
 		return abilities;
 	}
+	
 	
 	private List<Ability> getCurrentlyLockedAbilities() {
 		List<Ability> abilities = new ArrayList<>(getInitallyLockedAbilities());
@@ -134,7 +137,7 @@ public class GameElementsGenerator {
 		return abilities;
 	}
 	
-	public Dungeon generateRoomContent(Dungeon generatedDungeon) {
+	public Dungeon generateRoomContent(Dungeon generatedDungeon) throws MapGameplayElementException {
 		ConcreteGameplayGenerator gameplayGenerator = new ConcreteGameplayGenerator(modelAccess);
 		//System.out.println(generatedDungeon.getRooms().size()+ " " + dungeonElements.getRoomsElements().size());
 		for (Room room: generatedDungeon.getRooms()) {
@@ -228,6 +231,7 @@ public class GameElementsGenerator {
 				//System.out.println("Categorie valid " + validCategories);
 				do {
 					GPCategory aCategorie = validCategories.get(random.nextInt(validCategories.size()));
+					//System.out.println("Categorie "+aCategorie);
 					gameplays = getQuestionGameplayForCategorieType(aCategorie, room.getTask(), validCategoriesFromRelations.get(aCategorie));
 					validCategories.remove(aCategorie);
 				} while(gameplays.isEmpty() && !validCategories.isEmpty());
@@ -264,7 +268,12 @@ public class GameElementsGenerator {
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
 		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			if(gp instanceof QuestionGameplay && !gp.isLocked()) {
-				
+				//System.out.println("\t"+gp.getName());
+				//System.out.println("\t cat "+((QuestionGameplay) gp).getCategory().equals(category));
+				//System.out.println("\t validation "+respectValidationMethod((QuestionGameplay) gp, task));
+				//System.out.println("\t restriction "+respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task, allowedStatementTypes));
+				//System.out.println("\t undoable "+respectUndoable((QuestionGameplay) gp, task));
+
 				if(((QuestionGameplay) gp).getCategory().equals(category) && 
 						respectValidationMethod((QuestionGameplay) gp, task) && 
 						respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task, allowedStatementTypes) &&

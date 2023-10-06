@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import exceptions.MapGameplayElementException;
 import generator.AComponent;
 import generator.Component;
 import generator.Correctness;
@@ -11,10 +12,12 @@ import generator.CorrectnessValue;
 import generator.Display;
 import generator.ECorrectness;
 import generator.ElementType;
+import generator.EntrySoluceParam;
 import generator.ExpectedAnswer;
 import generator.FactSolutionParam;
 import generator.Position;
 import generator.PositionedElement;
+import generator.PositionedMapElement;
 import generator.PositionedStructureElement;
 import generator.PropositionParam;
 import generator.QuestionGameplay;
@@ -30,6 +33,7 @@ import generator.impl.ExpectedAnswerImpl;
 import generator.impl.FactSolutionParamImpl;
 import generator.impl.PositionImpl;
 import generator.impl.PositionedElementImpl;
+import generator.impl.PositionedMapElementImpl;
 import generator.impl.PositionedStructureElementImpl;
 import generator.impl.PropositionParamImpl;
 import generator.impl.ValueImpl;
@@ -57,8 +61,9 @@ public class ConcreteGameplayGenerator {
 	 * Build every elements of a room based on gameplay components
 	 * @param roomElements
 	 * @return list of PositionedElements of the room
+	 * @throws MapGameplayElementException 
 	 */
-	public List<PositionedElement> buildPositionedElements(RoomElements roomElements){
+	public List<PositionedElement> buildPositionedElements(RoomElements roomElements) throws MapGameplayElementException{
 		List<PositionedElement> elements = new ArrayList<>();
 		for (AComponent aComp : roomElements.getGameplay().getComponents()) {
 			if(aComp instanceof Structure) {
@@ -140,7 +145,7 @@ public class ConcreteGameplayGenerator {
 		return nbOfElements;
 	}
 		
-	private List<PositionedElement> buildStructuredGameplay(AComponent component, RoomElements roomElements){
+	private List<PositionedElement> buildStructuredGameplay(AComponent component, RoomElements roomElements) throws MapGameplayElementException{
 		return buildStructuredGameplay(component, null, null, new ArrayList<>(), roomElements, 0, -1);
 	}
 	
@@ -167,7 +172,9 @@ public class ConcreteGameplayGenerator {
 		Value display = new ValueImpl();
 		display.setValue(((Value) fact.getQuestion().getValue()).getValue());
 		statement.setValue(display);
-		statement.setInteractive(((QuestionParam) fact.getQuestion()).isInteractive());
+		if(fact.getQuestion() instanceof QuestionParam) {
+			statement.setInteractive(((QuestionParam) fact.getQuestion()).isInteractive());
+		}
 		comp.getDisplays().add(statement);
 				
 		buildAcceptedSolutions(comp, fact);
@@ -200,6 +207,24 @@ public class ConcreteGameplayGenerator {
 	
 	private PositionedElement buildClassicElement(Component component, ElementType elementType, Position position) {
 		return buildClassicElement(component, elementType, null, position);
+	}
+	
+	private PositionedElement buildSingleDetectorElement(Component component, ElementType elementType, QuestionedFact fact, int index, Position position, boolean hasIntegratedChoices) {
+		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
+		
+		ExpectedAnswer answer = new ExpectedAnswerImpl(); 
+		Value value = new ValueImpl();
+		
+		if(fact.getPropositions().size() > 0) {
+			value.setValue(((Value) fact.getPropositions().get(index).getValue()).getValue());
+		} else {
+			value.setValue(((Value) fact.getEntrys().get(index).getValue()).getValue());
+		}
+		
+		answer.setValue(value);
+	
+		comp.getExpectedAnswer().add(answer);		
+		return comp;
 	}
 	
 	private PositionedElement buildSingleChoiceElement(Component component, ElementType elementType, QuestionedFact fact, int propositionIndex, Position position, boolean hasIntegratedChoices) {
@@ -371,6 +396,17 @@ public class ConcreteGameplayGenerator {
 		return structP;
 	}
 	
+	private PositionedMapElement buildMapStructure(Structure structure, ElementType elementType, Position position) {
+		PositionedMapElement structP = new PositionedMapElementImpl();
+		structP.setElementType(elementType);
+		structP.setID("STRUCT" + nbPositionedElement++); 
+		structP.setPosition(position);
+		Position pos = new PositionImpl();
+		pos.setID("id/" + structP.getID());
+		structP.getCreatedPositions().add(pos);
+		return structP;
+	}
+	
 	/**
 	 * Predicate: does a component must wear at least a choice?
 	 * @param component
@@ -397,7 +433,7 @@ public class ConcreteGameplayGenerator {
 		return position.getID().contains("id");
 	}
 	
-	private List<PositionedElement> buildStructureForFacts(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType){
+	private List<PositionedElement> buildStructureForFacts(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType) throws MapGameplayElementException{
 		List<PositionedElement> elements = new ArrayList<>();
 		Structure comp = (Structure) component;
 		PositionedStructureElement struct;
@@ -421,7 +457,7 @@ public class ConcreteGameplayGenerator {
 		return elements;
 	}
 	
-	private List<PositionedElement> buildStructureForPropositions(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType) {
+	private List<PositionedElement> buildStructureForPropositions(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType) throws MapGameplayElementException {
 		List<PositionedElement> elements = new ArrayList<>();
 		Structure comp = (Structure) component;
 		PositionedStructureElement struct;
@@ -444,7 +480,65 @@ public class ConcreteGameplayGenerator {
 		return elements;
 	}
 	
-	private List<PositionedElement> buildStructureForFactStatement(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType){
+	private List<PositionedElement> buildStructureForMap(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType) throws MapGameplayElementException{
+		
+	
+		List<PositionedElement> elements = new ArrayList<>();
+		Structure comp = (Structure) component;
+		PositionedMapElement struct;
+		if(positionFromParent == null || !hasForParentAStructure(positionFromParent)) {
+			positionFromParent = getAvailablePosition(roomElements.getRoomTypeOfRoom(), elementType);
+		}
+		struct = buildMapStructure(comp, elementType, positionFromParent);
+		elements.add(struct);
+		
+		for (AComponent aComp : comp.getComponents()) {
+			elementType = roomElements.getElementTypeFor(aComp);
+			if(aComp instanceof Component) {
+				if(!((Component) aComp).getQuantity().isFactNbAnswers()) {
+					throw new MapGameplayElementException("Expected quantity is supposed to have the number of facts answers elements ! (boolean is false should be true)");
+				} else {
+					if(roomElements.getFacts().size() > 1) {
+						throw new MapGameplayElementException("Map gameplay cannot deal with multiple facts ! ");
+					}				
+					if(roomElements.getFacts().get(0).getPropositions().size() > 0) { // CHOIX
+						for(int i = 0; i < roomElements.getFacts().get(0).getPropositions().size(); i++) {
+							//TODO
+							PropositionParam proposition = roomElements.getFacts().get(0).getPropositions().get(i); 
+							
+							String mapPos = proposition.getPosition().getID();
+							Position position = new PositionImpl();
+							position.setID(struct.getCreatedPositions().get(0).getID()+"/"+mapPos);
+							
+							struct.getCreatedPositions().add(position);
+							
+							elements.add(buildSingleDetectorElement((Component) aComp, elementType, roomElements.getFacts().get(0), i, 
+									struct.getCreatedPositions().get(i + 1), false));
+						}
+					} else { // SAISIE
+						for(int i = 0; i < roomElements.getFacts().get(0).getEntrys().size(); i++) {
+							//TODO
+							EntrySoluceParam entrys = roomElements.getFacts().get(0).getEntrys().get(i); 
+							
+							String mapPos = entrys.getPosition().getID();
+							Position position = new PositionImpl();
+							position.setID(struct.getCreatedPositions().get(0).getID()+"/"+mapPos);
+							
+							struct.getCreatedPositions().add(position);
+							
+							elements.add(buildSingleDetectorElement((Component) aComp, elementType, roomElements.getFacts().get(0), i, 
+									struct.getCreatedPositions().get(i + 1), false));
+						}						
+					}
+				}
+			} else {
+				throw new MapGameplayElementException("MapStructure should not have integrated structures ! ");
+			}
+		} 
+		return elements;
+	}
+	
+	private List<PositionedElement> buildStructureForFactStatement(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType) throws MapGameplayElementException{
 		List<PositionedElement> elements = new ArrayList<>();
 		
 		
@@ -479,7 +573,7 @@ public class ConcreteGameplayGenerator {
 	}
 	
 	private void buildAcceptedSolutions(PositionedElement element, QuestionedFact fact) {
-		if(!((QuestionParam) fact.getQuestion()).getSolutions().isEmpty()) {
+		if(fact.getQuestion() instanceof QuestionParam && !((QuestionParam) fact.getQuestion()).getSolutions().isEmpty()) {
 			for (FactSolutionParam factSol: ((QuestionParam) fact.getQuestion()).getSolutions()) {
 				FactSolutionParam sol = new FactSolutionParamImpl();
 				Value solValue = new ValueImpl();
@@ -559,7 +653,7 @@ public class ConcreteGameplayGenerator {
 		return comp;
 	}
 	
-	private List<PositionedElement> buildSimpleStructure(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType, int propositionIndex, int factIndex){
+	private List<PositionedElement> buildSimpleStructure(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType, int propositionIndex, int factIndex) throws MapGameplayElementException{
 		List<PositionedElement> elements = new ArrayList<>();
 		Structure comp = (Structure) component;
 		if(positionFromParent == null || !hasForParentAStructure(positionFromParent)) {
@@ -613,8 +707,9 @@ public class ConcreteGameplayGenerator {
 	 * @param factIndex, the index of the fact targeted (-1 if the recursion do not concern a fact) 
 	 * @param propositionIndex, the index of the proposition, of the fact at *factIndex*, targeted (-1 if the recursion do not concern a proposition) 
 	 * @return
+	 * @throws MapGameplayElementException 
 	 */
-	private List<PositionedElement> buildStructuredGameplay(AComponent component, ElementType elementType, Position positionFromParent, List<PositionedElement> elements, RoomElements roomElements, int factIndex, int propositionIndex){
+	private List<PositionedElement> buildStructuredGameplay(AComponent component, ElementType elementType, Position positionFromParent, List<PositionedElement> elements, RoomElements roomElements, int factIndex, int propositionIndex) throws MapGameplayElementException{
 		elementType = roomElements.getElementTypeFor(component);
 		if(component instanceof Structure) {
 			Structure comp = (Structure) component;
@@ -624,6 +719,8 @@ public class ConcreteGameplayGenerator {
 				elements.addAll(buildStructureForPropositions(roomElements, comp, positionFromParent, elementType));
 			} else if(comp.isForStatement()) {
 				elements.addAll(buildStructureForFactStatement(roomElements, comp, positionFromParent, elementType));
+			} else if(comp.isForMap()){
+				elements.addAll(buildStructureForMap(roomElements, comp, positionFromParent, elementType));
 			} else {
 				elements.addAll(buildSimpleStructure(roomElements, comp, positionFromParent, elementType, propositionIndex, factIndex));
 			}

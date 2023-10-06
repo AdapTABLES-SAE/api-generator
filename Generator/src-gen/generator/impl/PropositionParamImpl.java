@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import generator.AValue;
 import generator.GeneratorPackage;
+import generator.Position;
 import generator.PropositionParam;
 
 /**
@@ -21,6 +22,7 @@ import generator.PropositionParam;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.PropositionParamImpl#getState <em>State</em>}</li>
+ *   <li>{@link generator.impl.PropositionParamImpl#getPosition <em>Position</em>}</li>
  * </ul>
  *
  * @generated
@@ -35,6 +37,16 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 	 * @ordered
 	 */
 	protected AValue state;
+
+	/**
+	 * The cached value of the '{@link #getPosition() <em>Position</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPosition()
+	 * @generated
+	 * @ordered
+	 */
+	protected Position position;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -110,11 +122,63 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Position getPosition() {
+		return position;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPosition(Position newPosition, NotificationChain msgs) {
+		Position oldPosition = position;
+		position = newPosition;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.PROPOSITION_PARAM__POSITION, oldPosition, newPosition);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPosition(Position newPosition) {
+		if (newPosition != position) {
+			NotificationChain msgs = null;
+			if (position != null)
+				msgs = ((InternalEObject) position).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.PROPOSITION_PARAM__POSITION, null, msgs);
+			if (newPosition != null)
+				msgs = ((InternalEObject) newPosition).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.PROPOSITION_PARAM__POSITION, null, msgs);
+			msgs = basicSetPosition(newPosition, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PROPOSITION_PARAM__POSITION,
+					newPosition, newPosition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case GeneratorPackage.PROPOSITION_PARAM__STATE:
 			return basicSetState(null, msgs);
+		case GeneratorPackage.PROPOSITION_PARAM__POSITION:
+			return basicSetPosition(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -129,6 +193,8 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 		switch (featureID) {
 		case GeneratorPackage.PROPOSITION_PARAM__STATE:
 			return getState();
+		case GeneratorPackage.PROPOSITION_PARAM__POSITION:
+			return getPosition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -143,6 +209,9 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 		switch (featureID) {
 		case GeneratorPackage.PROPOSITION_PARAM__STATE:
 			setState((AValue) newValue);
+			return;
+		case GeneratorPackage.PROPOSITION_PARAM__POSITION:
+			setPosition((Position) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -159,6 +228,9 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 		case GeneratorPackage.PROPOSITION_PARAM__STATE:
 			setState((AValue) null);
 			return;
+		case GeneratorPackage.PROPOSITION_PARAM__POSITION:
+			setPosition((Position) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -173,6 +245,8 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 		switch (featureID) {
 		case GeneratorPackage.PROPOSITION_PARAM__STATE:
 			return state != null;
+		case GeneratorPackage.PROPOSITION_PARAM__POSITION:
+			return position != null;
 		}
 		return super.eIsSet(featureID);
 	}

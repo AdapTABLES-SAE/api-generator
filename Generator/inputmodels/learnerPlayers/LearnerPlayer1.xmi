@@ -2,7 +2,11 @@
 <generator:LearnerPlayer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" name="FICTIF01" ID="FICTIF01">
   <progression>
     <playerProgress currentLevel="8" coins="0">
-      <items/>
+      <items>
+        <items bought="true" activated="true">
+          <equipment href="../GameDescription.xmi#BRACELET"/>
+        </items>
+      </items>
     </playerProgress>
     <learnerProgress>
       <currentobjectivelevels achieved="false">
@@ -119,5 +123,5 @@
     </learnerProgress>
   </progression>
   <learningpath href="../LearningDomain.xmi#PATH404"/>
-  <statistics maxGameLevelReached="8" nbLevelsGenerated="20"/>
+  <statistics maxGameLevelReached="8" nbLevelsGenerated="23"/>
 </generator:LearnerPlayer>

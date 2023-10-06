@@ -3,6 +3,7 @@
 package generator;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -24,7 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Position extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Size</b></em>' attribute.
 	 * The literals are from the enumeration {@link generator.ElementSize}.
@@ -83,4 +83,5 @@ public interface Position extends EObject {
 	 * @generated
 	 */
 	void setID(String value);
+
 } // Position

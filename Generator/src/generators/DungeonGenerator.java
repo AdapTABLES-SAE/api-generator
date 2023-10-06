@@ -294,8 +294,9 @@ public class DungeonGenerator {
 		Directions entry = null; 
 		Directions exit = null;
 		RoomType roomType = null;
-		while(roomType == null ) { 
+		while(roomType == null) { 
 			entry = chooseEntryDirection(eligibleRoomOrientations, chosenEntries);
+			if(entry == null) { throw new NonRoomTypeException(roomElements.getGameplay(), roomElements.getTask()); }
 			if(entry != null) { 
 				chosenEntries.add(entry);
 				if(!roomElements.isExit()) {
@@ -331,6 +332,7 @@ public class DungeonGenerator {
 	 */
 	private Directions chooseEntryDirection(LinearRoomOrientations roomAllowedOrientations, List<Directions> chosenEntries) {
 		List<Directions> possibleEntries = new ArrayList<>(roomAllowedOrientations.eligibleEntries());
+		//System.out.println(possibleEntries);
 		possibleEntries.removeAll(chosenEntries);
 		if(possibleEntries.isEmpty()) { return null; }
 		return possibleEntries.get(random.nextInt(possibleEntries.size()));
@@ -382,15 +384,18 @@ public class DungeonGenerator {
 
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
 			//System.out.println(" roomtype: "+roomType.getName());
+			//System.out.println(" \t compatible access : "+roomTypeHasCompatibleAccesses(entry, exit, roomType));
+			//System.out.println(" \t compatible positions : "+roomTypeHasCompatiblePositions(roomType, roomElements));
 
-			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {				
+			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {	
+				//System.out.println("entry "+entry+" "+"exit "+exit);
 				roomTypes.remove(roomType);
 			}
 			
 		}
 		
 		//System.err.println("ALLOWED "+roomTypes);
-		if(roomTypes.isEmpty()) { throw new NonRoomTypeException(roomElements.getGameplay(), roomElements.getTask());}
+		if(roomTypes.isEmpty()) { return null; }
 		RoomType rt = roomTypes.get(random.nextInt(roomTypes.size()));
 		//System.err.println("SELECTED RT "+rt.getName());
 		return rt; 

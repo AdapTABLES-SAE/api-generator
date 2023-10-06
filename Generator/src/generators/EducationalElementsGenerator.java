@@ -146,8 +146,10 @@ public class EducationalElementsGenerator {
 					addRoom2Task(rbt, coeff);
 				}
 			}
+			System.out.println("before " + this.nbRoomsToTask);
 			this.cleanNumberOfComputedRooms();
 		}
+		System.out.println(this.nbRoomsToTask);
 	}
 	
 	private void addRoom2Task(ResultsByTask rbt, double coeffAdditional) throws Exception {
@@ -164,13 +166,22 @@ public class EducationalElementsGenerator {
 	
 	private void cleanNumberOfComputedRooms() {
 		int computedNumberOfRoom = this.getNumberOfRoomsComputed();
+		System.out.println("combien y en a "+computedNumberOfRoom);
+		System.out.println("combien il en faut "+dungeonElements.getNbQRooms());
 		if(computedNumberOfRoom > dungeonElements.getNbQRooms()) {
+			System.out.println("combien en enlever "+(computedNumberOfRoom - dungeonElements.getNbQRooms()));
 			List<ResultsByTask> possibleRemoveTasks = new ArrayList<>(getTaskWithLowerApparitionPercentage());
 			for(int i = 0; i < computedNumberOfRoom - dungeonElements.getNbQRooms(); i++) {
 				int randomIndexChoice = random.nextInt(possibleRemoveTasks.size());
-				nbRoomsToTask.remove(possibleRemoveTasks.get(randomIndexChoice));
+				if(nbRoomsToTask.containsKey(possibleRemoveTasks.get(randomIndexChoice))) {
+					nbRoomsToTask.put(possibleRemoveTasks.get(randomIndexChoice), nbRoomsToTask.get(possibleRemoveTasks.get(randomIndexChoice)) - 1);
+					if(nbRoomsToTask.get(possibleRemoveTasks.get(randomIndexChoice)) == 0) {
+						nbRoomsToTask.remove(possibleRemoveTasks.get(randomIndexChoice));
+					}
+				}
 			}
 		} else if(computedNumberOfRoom < dungeonElements.getNbQRooms()) {
+			System.out.println("combien en ajouter "+(dungeonElements.getNbQRooms() - computedNumberOfRoom));
 			for(ResultsByTask task : getXTasksWithHigherApparitionPercentage((int) dungeonElements.getNbQRooms() - computedNumberOfRoom)) {
 				nbRoomsToTask.put(task, nbRoomsToTask.get(task) + 1);
 			}

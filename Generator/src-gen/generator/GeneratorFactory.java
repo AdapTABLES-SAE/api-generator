@@ -193,15 +193,6 @@ public interface GeneratorFactory extends EFactory {
 	CurrentObjectiveLevel createCurrentObjectiveLevel();
 
 	/**
-	 * Returns a new object of class '<em>Position</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Position</em>'.
-	 * @generated
-	 */
-	Position createPosition();
-
-	/**
 	 * Returns a new object of class '<em>Multiple Choice</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -400,240 +391,6 @@ public interface GeneratorFactory extends EFactory {
 	Equipments createEquipments();
 
 	/**
-	 * Returns a new object of class '<em>Element Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Element Type</em>'.
-	 * @generated
-	 */
-	ElementType createElementType();
-
-	/**
-	 * Returns a new object of class '<em>Curses</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Curses</em>'.
-	 * @generated
-	 */
-	Curses createCurses();
-
-	/**
-	 * Returns a new object of class '<em>Curse</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Curse</em>'.
-	 * @generated
-	 */
-	Curse createCurse();
-
-	/**
-	 * Returns a new object of class '<em>Labyrinth Curse</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Labyrinth Curse</em>'.
-	 * @generated
-	 */
-	LabyrinthCurse createLabyrinthCurse();
-
-	/**
-	 * Returns a new object of class '<em>Curse Eligibility</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Curse Eligibility</em>'.
-	 * @generated
-	 */
-	CurseEligibility createCurseEligibility();
-
-	/**
-	 * Returns a new object of class '<em>Image</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Image</em>'.
-	 * @generated
-	 */
-	Image createImage();
-
-	/**
-	 * Returns a new object of class '<em>Map</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map</em>'.
-	 * @generated
-	 */
-	Map createMap();
-
-	/**
-	 * Returns a new object of class '<em>Map Element Position</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map Element Position</em>'.
-	 * @generated
-	 */
-	MapElementPosition createMapElementPosition();
-
-	/**
-	 * Returns a new object of class '<em>Legend Symbol</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Legend Symbol</em>'.
-	 * @generated
-	 */
-	LegendSymbol createLegendSymbol();
-
-	/**
-	 * Returns a new object of class '<em>Legend Text</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Legend Text</em>'.
-	 * @generated
-	 */
-	LegendText createLegendText();
-
-	/**
-	 * Returns a new object of class '<em>History Fact</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>History Fact</em>'.
-	 * @generated
-	 */
-	HistoryFact createHistoryFact();
-
-	/**
-	 * Returns a new object of class '<em>Geography Legend Fact</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Geography Legend Fact</em>'.
-	 * @generated
-	 */
-	GeographyLegendFact createGeographyLegendFact();
-
-	/**
-	 * Returns a new object of class '<em>Geography Fact</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Geography Fact</em>'.
-	 * @generated
-	 */
-	GeographyFact createGeographyFact();
-
-	/**
-	 * Returns a new object of class '<em>Date</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Date</em>'.
-	 * @generated
-	 */
-	Date createDate();
-
-	/**
-	 * Returns a new object of class '<em>Time Period</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Time Period</em>'.
-	 * @generated
-	 */
-	TimePeriod createTimePeriod();
-
-	/**
-	 * Returns a new object of class '<em>Map Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map Value</em>'.
-	 * @generated
-	 */
-	MapValue createMapValue();
-
-	/**
-	 * Returns a new object of class '<em>Map Question Param</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map Question Param</em>'.
-	 * @generated
-	 */
-	MapQuestionParam createMapQuestionParam();
-
-	/**
-	 * Returns a new object of class '<em>HAssociation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>HAssociation</em>'.
-	 * @generated
-	 */
-	HAssociation createHAssociation();
-
-	/**
-	 * Returns a new object of class '<em>HLegend</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>HLegend</em>'.
-	 * @generated
-	 */
-	HLegend createHLegend();
-
-	/**
-	 * Returns a new object of class '<em>GLocate</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GLocate</em>'.
-	 * @generated
-	 */
-	GLocate createGLocate();
-
-	/**
-	 * Returns a new object of class '<em>Teacher</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Teacher</em>'.
-	 * @generated
-	 */
-	Teacher createTeacher();
-
-	/**
-	 * Returns a new object of class '<em>Teachers</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Teachers</em>'.
-	 * @generated
-	 */
-	Teachers createTeachers();
-
-	/**
-	 * Returns a new object of class '<em>Classrooms</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Classrooms</em>'.
-	 * @generated
-	 */
-	Classrooms createClassrooms();
-
-	/**
-	 * Returns a new object of class '<em>Map Questionable Fact</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map Questionable Fact</em>'.
-	 * @generated
-	 */
-	MapQuestionableFact createMapQuestionableFact();
-
-	/**
-	 * Returns a new object of class '<em>Map Solution</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map Solution</em>'.
-	 * @generated
-	 */
-	MapSolution createMapSolution();
-
-	/**
-	 * Returns a new object of class '<em>HG Level</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>HG Level</em>'.
-	 * @generated
-	 */
-	HGLevel createHGLevel();
-
-	/**
 	 * Returns a new object of class '<em>Equipment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -677,6 +434,15 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	Abilities createAbilities();
+
+	/**
+	 * Returns a new object of class '<em>Position</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Position</em>'.
+	 * @generated
+	 */
+	Position createPosition();
 
 	/**
 	 * Returns a new object of class '<em>Positioned Element</em>'.
@@ -938,6 +704,240 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	Statistics createStatistics();
+
+	/**
+	 * Returns a new object of class '<em>Element Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Element Type</em>'.
+	 * @generated
+	 */
+	ElementType createElementType();
+
+	/**
+	 * Returns a new object of class '<em>Curses</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Curses</em>'.
+	 * @generated
+	 */
+	Curses createCurses();
+
+	/**
+	 * Returns a new object of class '<em>Curse</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Curse</em>'.
+	 * @generated
+	 */
+	Curse createCurse();
+
+	/**
+	 * Returns a new object of class '<em>Labyrinth Curse</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Labyrinth Curse</em>'.
+	 * @generated
+	 */
+	LabyrinthCurse createLabyrinthCurse();
+
+	/**
+	 * Returns a new object of class '<em>Curse Eligibility</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Curse Eligibility</em>'.
+	 * @generated
+	 */
+	CurseEligibility createCurseEligibility();
+
+	/**
+	 * Returns a new object of class '<em>Image</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Image</em>'.
+	 * @generated
+	 */
+	Image createImage();
+
+	/**
+	 * Returns a new object of class '<em>Map</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Map</em>'.
+	 * @generated
+	 */
+	Map createMap();
+
+	/**
+	 * Returns a new object of class '<em>Map Element Position</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Map Element Position</em>'.
+	 * @generated
+	 */
+	MapElementPosition createMapElementPosition();
+
+	/**
+	 * Returns a new object of class '<em>Legend Symbol</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Legend Symbol</em>'.
+	 * @generated
+	 */
+	LegendSymbol createLegendSymbol();
+
+	/**
+	 * Returns a new object of class '<em>Legend Text</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Legend Text</em>'.
+	 * @generated
+	 */
+	LegendText createLegendText();
+
+	/**
+	 * Returns a new object of class '<em>History Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>History Fact</em>'.
+	 * @generated
+	 */
+	HistoryFact createHistoryFact();
+
+	/**
+	 * Returns a new object of class '<em>Geography Legend Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Geography Legend Fact</em>'.
+	 * @generated
+	 */
+	GeographyLegendFact createGeographyLegendFact();
+
+	/**
+	 * Returns a new object of class '<em>Geography Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Geography Fact</em>'.
+	 * @generated
+	 */
+	GeographyFact createGeographyFact();
+
+	/**
+	 * Returns a new object of class '<em>Date</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Date</em>'.
+	 * @generated
+	 */
+	Date createDate();
+
+	/**
+	 * Returns a new object of class '<em>Time Period</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Time Period</em>'.
+	 * @generated
+	 */
+	TimePeriod createTimePeriod();
+
+	/**
+	 * Returns a new object of class '<em>Map Question Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Map Question Param</em>'.
+	 * @generated
+	 */
+	MapQuestionParam createMapQuestionParam();
+
+	/**
+	 * Returns a new object of class '<em>HAssociation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>HAssociation</em>'.
+	 * @generated
+	 */
+	HAssociation createHAssociation();
+
+	/**
+	 * Returns a new object of class '<em>HLegend</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>HLegend</em>'.
+	 * @generated
+	 */
+	HLegend createHLegend();
+
+	/**
+	 * Returns a new object of class '<em>GLocate</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GLocate</em>'.
+	 * @generated
+	 */
+	GLocate createGLocate();
+
+	/**
+	 * Returns a new object of class '<em>Teacher</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Teacher</em>'.
+	 * @generated
+	 */
+	Teacher createTeacher();
+
+	/**
+	 * Returns a new object of class '<em>Teachers</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Teachers</em>'.
+	 * @generated
+	 */
+	Teachers createTeachers();
+
+	/**
+	 * Returns a new object of class '<em>Classrooms</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Classrooms</em>'.
+	 * @generated
+	 */
+	Classrooms createClassrooms();
+
+	/**
+	 * Returns a new object of class '<em>Map Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Map Questionable Fact</em>'.
+	 * @generated
+	 */
+	MapQuestionableFact createMapQuestionableFact();
+
+	/**
+	 * Returns a new object of class '<em>Map Solution</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Map Solution</em>'.
+	 * @generated
+	 */
+	MapSolution createMapSolution();
+
+	/**
+	 * Returns a new object of class '<em>HG Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>HG Level</em>'.
+	 * @generated
+	 */
+	HGLevel createHGLevel();
+
+	/**
+	 * Returns a new object of class '<em>Positioned Map Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Positioned Map Element</em>'.
+	 * @generated
+	 */
+	PositionedMapElement createPositionedMapElement();
 
 	/**
 	 * Returns the package supported by this factory.

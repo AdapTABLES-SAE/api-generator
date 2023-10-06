@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link generator.MapQuestionableFact#getMap <em>Map</em>}</li>
  *   <li>{@link generator.MapQuestionableFact#getMapsolutions <em>Mapsolutions</em>}</li>
  *   <li>{@link generator.MapQuestionableFact#getType <em>Type</em>}</li>
+ *   <li>{@link generator.MapQuestionableFact#getConsigne <em>Consigne</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getMapQuestionableFact()
@@ -81,5 +82,27 @@ public interface MapQuestionableFact extends AQuestionableFact {
 	 * @generated
 	 */
 	void setType(EGeographyValue value);
+
+	/**
+	 * Returns the value of the '<em><b>Consigne</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Consigne</em>' attribute.
+	 * @see #setConsigne(String)
+	 * @see generator.GeneratorPackage#getMapQuestionableFact_Consigne()
+	 * @model
+	 * @generated
+	 */
+	String getConsigne();
+
+	/**
+	 * Sets the value of the '{@link generator.MapQuestionableFact#getConsigne <em>Consigne</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Consigne</em>' attribute.
+	 * @see #getConsigne()
+	 * @generated
+	 */
+	void setConsigne(String value);
 
 } // MapQuestionableFact

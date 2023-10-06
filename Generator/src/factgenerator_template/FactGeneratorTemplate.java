@@ -21,7 +21,7 @@ import generator.FactCorrectnessParam;
 import generator.FactSolutionParam;
 import generator.MapQuestionParam;
 import generator.MapQuestionableFact;
-import generator.MapValue;
+import generator.Position;
 import generator.PropositionParam;
 import generator.QuestionParam;
 import generator.QuestionableFact;
@@ -35,7 +35,7 @@ import generator.impl.EntrySoluceParamImpl;
 import generator.impl.FactCorrectnessParamImpl;
 import generator.impl.FactSolutionParamImpl;
 import generator.impl.MapQuestionParamImpl;
-import generator.impl.MapValueImpl;
+import generator.impl.PositionImpl;
 import generator.impl.PropositionParamImpl;
 import generator.impl.QuestionParamImpl;
 import generator.impl.QuestionedFactImpl;
@@ -91,9 +91,9 @@ public abstract class FactGeneratorTemplate {
 				value.setValue(sol.getValue());
 				soluceParam.setValue(value);				
 				if(sol.isGraphicSolution()) {
-					MapValue mapValue = new MapValueImpl();
-					mapValue.setValue(sol.getPosition().getID());
-					soluceParam.setMapValue(mapValue);
+					Position mapValue = new PositionImpl();
+					mapValue.setID(sol.getPosition().getID());
+					soluceParam.setPosition(mapValue);
 				}
 				qef.getEntrys().add(soluceParam); //TODO
 			}
@@ -110,6 +110,12 @@ public abstract class FactGeneratorTemplate {
 					Value value = new ValueImpl();
 					value.setValue(prop.getValue());
 					propositionParam.setValue(value);
+					
+					if(prop.isGraphicSolution()) {
+						Position mapValue = new PositionImpl();
+						mapValue.setID(prop.getPosition().getID());
+						propositionParam.setPosition(mapValue);
+					}
 					
 					qef.getPropositions().add(propositionParam);
 				}
@@ -153,6 +159,9 @@ public abstract class FactGeneratorTemplate {
 		} else {
 			MapQuestionParam question = new MapQuestionParamImpl();
 			question.setMap(((MapQuestionableFact) qFact).getMap());
+			Value consigne = new ValueImpl();
+			consigne.setValue(((MapQuestionableFact) qFact).getConsigne());
+			question.setValue(consigne);
 			return question;
 		}
 	}

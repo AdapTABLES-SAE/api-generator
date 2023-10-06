@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import generator.ECorrectness;
 import generator.EntrySoluceParam;
 import generator.GeneratorPackage;
-import generator.MapValue;
+import generator.Position;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import generator.MapValue;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.EntrySoluceParamImpl#getState <em>State</em>}</li>
- *   <li>{@link generator.impl.EntrySoluceParamImpl#getMapValue <em>Map Value</em>}</li>
+ *   <li>{@link generator.impl.EntrySoluceParamImpl#getPosition <em>Position</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,14 +49,14 @@ public class EntrySoluceParamImpl extends ParameterImpl implements EntrySolucePa
 	protected ECorrectness state = STATE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getMapValue() <em>Map Value</em>}' containment reference.
+	 * The cached value of the '{@link #getPosition() <em>Position</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMapValue()
+	 * @see #getPosition()
 	 * @generated
 	 * @ordered
 	 */
-	protected MapValue mapValue;
+	protected Position position;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,8 +104,8 @@ public class EntrySoluceParamImpl extends ParameterImpl implements EntrySolucePa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapValue getMapValue() {
-		return mapValue;
+	public Position getPosition() {
+		return position;
 	}
 
 	/**
@@ -113,12 +113,12 @@ public class EntrySoluceParamImpl extends ParameterImpl implements EntrySolucePa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMapValue(MapValue newMapValue, NotificationChain msgs) {
-		MapValue oldMapValue = mapValue;
-		mapValue = newMapValue;
+	public NotificationChain basicSetPosition(Position newPosition, NotificationChain msgs) {
+		Position oldPosition = position;
+		position = newPosition;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.ENTRY_SOLUCE_PARAM__MAP_VALUE, oldMapValue, newMapValue);
+					GeneratorPackage.ENTRY_SOLUCE_PARAM__POSITION, oldPosition, newPosition);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -132,21 +132,21 @@ public class EntrySoluceParamImpl extends ParameterImpl implements EntrySolucePa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMapValue(MapValue newMapValue) {
-		if (newMapValue != mapValue) {
+	public void setPosition(Position newPosition) {
+		if (newPosition != position) {
 			NotificationChain msgs = null;
-			if (mapValue != null)
-				msgs = ((InternalEObject) mapValue).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.ENTRY_SOLUCE_PARAM__MAP_VALUE, null, msgs);
-			if (newMapValue != null)
-				msgs = ((InternalEObject) newMapValue).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.ENTRY_SOLUCE_PARAM__MAP_VALUE, null, msgs);
-			msgs = basicSetMapValue(newMapValue, msgs);
+			if (position != null)
+				msgs = ((InternalEObject) position).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.ENTRY_SOLUCE_PARAM__POSITION, null, msgs);
+			if (newPosition != null)
+				msgs = ((InternalEObject) newPosition).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.ENTRY_SOLUCE_PARAM__POSITION, null, msgs);
+			msgs = basicSetPosition(newPosition, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ENTRY_SOLUCE_PARAM__MAP_VALUE,
-					newMapValue, newMapValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ENTRY_SOLUCE_PARAM__POSITION,
+					newPosition, newPosition));
 	}
 
 	/**
@@ -157,8 +157,8 @@ public class EntrySoluceParamImpl extends ParameterImpl implements EntrySolucePa
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.ENTRY_SOLUCE_PARAM__MAP_VALUE:
-			return basicSetMapValue(null, msgs);
+		case GeneratorPackage.ENTRY_SOLUCE_PARAM__POSITION:
+			return basicSetPosition(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -173,8 +173,8 @@ public class EntrySoluceParamImpl extends ParameterImpl implements EntrySolucePa
 		switch (featureID) {
 		case GeneratorPackage.ENTRY_SOLUCE_PARAM__STATE:
 			return getState();
-		case GeneratorPackage.ENTRY_SOLUCE_PARAM__MAP_VALUE:
-			return getMapValue();
+		case GeneratorPackage.ENTRY_SOLUCE_PARAM__POSITION:
+			return getPosition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -190,8 +190,8 @@ public class EntrySoluceParamImpl extends ParameterImpl implements EntrySolucePa
 		case GeneratorPackage.ENTRY_SOLUCE_PARAM__STATE:
 			setState((ECorrectness) newValue);
 			return;
-		case GeneratorPackage.ENTRY_SOLUCE_PARAM__MAP_VALUE:
-			setMapValue((MapValue) newValue);
+		case GeneratorPackage.ENTRY_SOLUCE_PARAM__POSITION:
+			setPosition((Position) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -208,8 +208,8 @@ public class EntrySoluceParamImpl extends ParameterImpl implements EntrySolucePa
 		case GeneratorPackage.ENTRY_SOLUCE_PARAM__STATE:
 			setState(STATE_EDEFAULT);
 			return;
-		case GeneratorPackage.ENTRY_SOLUCE_PARAM__MAP_VALUE:
-			setMapValue((MapValue) null);
+		case GeneratorPackage.ENTRY_SOLUCE_PARAM__POSITION:
+			setPosition((Position) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -225,8 +225,8 @@ public class EntrySoluceParamImpl extends ParameterImpl implements EntrySolucePa
 		switch (featureID) {
 		case GeneratorPackage.ENTRY_SOLUCE_PARAM__STATE:
 			return state != STATE_EDEFAULT;
-		case GeneratorPackage.ENTRY_SOLUCE_PARAM__MAP_VALUE:
-			return mapValue != null;
+		case GeneratorPackage.ENTRY_SOLUCE_PARAM__POSITION:
+			return position != null;
 		}
 		return super.eIsSet(featureID);
 	}

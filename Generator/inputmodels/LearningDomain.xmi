@@ -672,8 +672,11 @@
   <learningpaths name="HGPATH" ID="HGPATH">
     <objectives ID="HG_O1" name="HG_O1">
       <levels xsi:type="generator:HGLevel" ID="HG_O1_L1">
-        <tasks xsi:type="generator:GLocate" percentOfApparition="100" ID="HG_O1_L1_T1" maxTime="30" nbExpectedAnswers="18">
+        <tasks xsi:type="generator:GLocate" percentOfApparition="50" ID="HG_O1_L1_T1" maxTime="30" nbExpectedAnswers="18">
           <responseModality xsi:type="generator:MultipleChoice" nbChoices="18"/>
+        </tasks>
+        <tasks xsi:type="generator:GLocate" percentOfApparition="50" ID="HG_O1_L1_T2" maxTime="30" nbExpectedAnswers="18">
+          <responseModality xsi:type="generator:EnterResponse"/>
         </tasks>
         <completionCriteria/>
       </levels>

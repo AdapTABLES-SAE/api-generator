@@ -1,107 +1,436 @@
 <?xml version="1.0" encoding="ASCII"?>
-<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="PATH404-O1" levelID="PATH404-O1-L1" gameLevelID="1" curses="[]">
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="HG_O1" levelID="HG_O1_L1" gameLevelID="5" curses="[]">
   <rooms>
-    <room id="Room[0/0]" roomTypeName="RegularRoomE">
+    <room id="Room[0/0]" roomTypeName="RegularRoomN">
       <roomaccesses>
-        <roomaccess id="a2" direction="EAST" accessRef="a3"/>
+        <roomaccess id="a2" direction="NORTH" accessRef="a3"/>
       </roomaccesses>
     </room>
-    <room id="Room[1/0]" x="1" roomTypeName="RegularRoom2" time="30" idTask="PATH404-O1-L1-T5" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true">
+    <room id="Room[0/1]" y="1" roomTypeName="RoomTrap3">
       <roomaccesses>
-        <roomaccess id="a3" direction="WEST" accessRef="a2"/>
+        <roomaccess id="a3" direction="SOUTH" accessRef="a2"/>
         <roomaccess id="a4" direction="NORTH" accessRef="a5"/>
       </roomaccesses>
-      <facts>
-        <fact id="PATH404-O1-L1-T5-QAFACT2" complete="Resultats table de 2" correctnessToReach="2"/>
-      </facts>
       <elements>
-        <element id="ELEM1" type="FloorInterrupt" displayValue="13" correctness="INCORRECT" pos="POS4" ability="TOUCHABLE" idFact="PATH404-O1-L1-T5-QAFACT2"/>
-        <element id="ELEM2" type="FloorInterrupt" displayValue="23" correctness="INCORRECT" pos="POS2" ability="TOUCHABLE" idFact="PATH404-O1-L1-T5-QAFACT2"/>
-        <element id="ELEM3" type="FloorInterrupt" displayValue="18" correctness="CORRECT" pos="POS5" ability="TOUCHABLE" idFact="PATH404-O1-L1-T5-QAFACT2"/>
-        <element id="ELEM4" type="FloorInterrupt" displayValue="6" correctness="CORRECT" pos="POS1" ability="TOUCHABLE" idFact="PATH404-O1-L1-T5-QAFACT2"/>
-        <element id="ELEM5" type="Switch" pos="POS3" ability="VERIFICATOR"/>
-        <element id="ELEM6" type="Statement" displayValue="Resultats table de 2" pos="POSQ1" idFact="PATH404-O1-L1-T5-QAFACT2"/>
+        <element id="ELEM1" type="SpikeTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM2" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM3" type="SpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM4" type="SpikeTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM5" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM6" type="SpikeTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM7" type="SpikeTrap" pos="POS7" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[1/1]" x="1" y="1" roomTypeName="RegularRoom2" time="30" idTask="PATH404-O1-L1-T1" prompt="Casse le bon element">
+    <room id="Room[-1/2]" x="-1" y="2" size="LARGE" roomTypeName="MapRoom" time="30" idTask="HG_O1_L1_T2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true">
       <roomaccesses>
-        <roomaccess id="a5" direction="SOUTH" accessRef="a4"/>
-        <roomaccess id="a6" direction="WEST" accessRef="a7"/>
+        <roomaccess id="a5" direction="SOUTH_EAST" accessRef="a4"/>
+        <roomaccess id="a6" direction="NORTH_WEST" accessRef="a7"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH404-O1-L1-T1-QAFACT18" complete="2 x 10 = 20" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T2-QAFACT0" correctnessToReach="18"/>
       </facts>
       <elements>
-        <element id="ELEM7" type="BreakablePot" displayValue="16" correctness="INCORRECT" pos="POS2" ability="BREAKABLE" idFact="PATH404-O1-L1-T1-QAFACT18"/>
-        <element id="ELEM8" type="BreakablePot" displayValue="18" correctness="INCORRECT" pos="POS6" ability="BREAKABLE" idFact="PATH404-O1-L1-T1-QAFACT18"/>
-        <element id="ELEM9" type="BreakablePot" displayValue="20" correctness="CORRECT" pos="POS1" ability="BREAKABLE" idFact="PATH404-O1-L1-T1-QAFACT18"/>
-        <element id="ELEM10" type="Statement" displayValue="2 x 10 = ?" pos="POSQ2" idFact="PATH404-O1-L1-T1-QAFACT18" interactive="true"/>
+        <element id="STRUCT8" type="MapStructure" pos="POSL1"/>
+        <element id="ELEM9" type="TypableDetector" pos="id/STRUCT8/NORMANDIE" correctAnswer="Normandie;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM10" type="TypableDetector" pos="id/STRUCT8/NOUVELLE_AQUITAINE" correctAnswer="Nouvelle Aquitaine;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM11" type="TypableDetector" pos="id/STRUCT8/CENTRE_VAL_DE_LOIRE" correctAnswer="Centre-val de Loire;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM12" type="TypableDetector" pos="id/STRUCT8/HAUTS_DE_FRANCE" correctAnswer="Hauts-de-France;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM13" type="TypableDetector" pos="id/STRUCT8/GUYANE" correctAnswer="Guyane;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM14" type="TypableDetector" pos="id/STRUCT8/PAYS_DE_LA_LOIRE" correctAnswer="Pays de la Loire;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM15" type="TypableDetector" pos="id/STRUCT8/MARTINIQUE" correctAnswer="Martinique;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM16" type="TypableDetector" pos="id/STRUCT8/ILE_DE_FRANCE" correctAnswer="&#xce;le-de-France;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM17" type="TypableDetector" pos="id/STRUCT8/OCCITANIE" correctAnswer="Occitanie;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM18" type="TypableDetector" pos="id/STRUCT8/AUVERGNE_RHONE_ALPES" correctAnswer="Auvergne-Rh&#xf4;ne-Alpes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM19" type="TypableDetector" pos="id/STRUCT8/BOURGOGNE_FRANCHE_COMTE" correctAnswer="Bourgogne-Franche-Comt&#xe9;;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM20" type="TypableDetector" pos="id/STRUCT8/MAYOTTE" correctAnswer="Mayotte;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM21" type="TypableDetector" pos="id/STRUCT8/GRAND_EST" correctAnswer="Grand Est;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM22" type="TypableDetector" pos="id/STRUCT8/PROVENCE_ALPES_COTE_DAZUR" correctAnswer="Provence-Alpes-C&#xf4;te-D'Azur;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM23" type="TypableDetector" pos="id/STRUCT8/CORSE" correctAnswer="Corse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM24" type="TypableDetector" pos="id/STRUCT8/GUADELOUPE" correctAnswer="Guadeloupe;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM25" type="TypableDetector" pos="id/STRUCT8/LA_REUNION" correctAnswer="La R&#xe9;union;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM26" type="TypableDetector" pos="id/STRUCT8/BRETAGNE" correctAnswer="Bretagne;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM27" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2-QAFACT0"/>
       </elements>
     </room>
-    <room id="Room[0/1]" y="1" roomTypeName="RegularRoom7" time="30" idTask="PATH404-O1-L1-T1" prompt="Casse le bon element">
+    <room id="Room[-1/4]" x="-1" y="4" size="LARGE" roomTypeName="MapRoom" time="30" idTask="HG_O1_L1_T1" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true">
       <roomaccesses>
-        <roomaccess id="a7" direction="EAST" accessRef="a6"/>
-        <roomaccess id="a8" direction="WEST" accessRef="a9"/>
+        <roomaccess id="a7" direction="SOUTH_WEST" accessRef="a6"/>
+        <roomaccess id="a8" direction="EAST_NORTH" accessRef="a9"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH404-O1-L1-T1-QAFACT11" complete="2 x 6 = 12" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T1-QAFACT0" correctnessToReach="18"/>
       </facts>
       <elements>
-        <element id="ELEM11" type="BreakablePot" displayValue="10" correctness="INCORRECT" pos="POS5" ability="BREAKABLE" idFact="PATH404-O1-L1-T1-QAFACT11"/>
-        <element id="ELEM12" type="BreakablePot" displayValue="7" correctness="INCORRECT" pos="POS6" ability="BREAKABLE" idFact="PATH404-O1-L1-T1-QAFACT11"/>
-        <element id="ELEM13" type="BreakablePot" displayValue="6" correctness="CORRECT" pos="POS4" ability="BREAKABLE" idFact="PATH404-O1-L1-T1-QAFACT11"/>
-        <element id="ELEM14" type="Statement" displayValue="2 x ? = 12" pos="POSL2" idFact="PATH404-O1-L1-T1-QAFACT11" interactive="true"/>
+        <element id="STRUCT28" type="MapStructure" pos="POSL1"/>
+        <element id="ELEM29" type="ObjectDetector" pos="id/STRUCT28/GUADELOUPE" correctAnswer="Guadeloupe;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM30" type="ObjectDetector" pos="id/STRUCT28/PAYS_DE_LA_LOIRE" correctAnswer="Pays de la Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM31" type="ObjectDetector" pos="id/STRUCT28/OCCITANIE" correctAnswer="Occitanie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM32" type="ObjectDetector" pos="id/STRUCT28/NORMANDIE" correctAnswer="Normandie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM33" type="ObjectDetector" pos="id/STRUCT28/LA_REUNION" correctAnswer="La R&#xe9;union;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM34" type="ObjectDetector" pos="id/STRUCT28/MARTINIQUE" correctAnswer="Martinique;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM35" type="ObjectDetector" pos="id/STRUCT28/BOURGOGNE_FRANCHE_COMTE" correctAnswer="Bourgogne-Franche-Comt&#xe9;;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM36" type="ObjectDetector" pos="id/STRUCT28/GUYANE" correctAnswer="Guyane;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM37" type="ObjectDetector" pos="id/STRUCT28/GRAND_EST" correctAnswer="Grand Est;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM38" type="ObjectDetector" pos="id/STRUCT28/MAYOTTE" correctAnswer="Mayotte;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM39" type="ObjectDetector" pos="id/STRUCT28/HAUTS_DE_FRANCE" correctAnswer="Hauts-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM40" type="ObjectDetector" pos="id/STRUCT28/AUVERGNE_RHONE_ALPES" correctAnswer="Auvergne-Rh&#xf4;ne-Alpes;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM41" type="ObjectDetector" pos="id/STRUCT28/ILE_DE_FRANCE" correctAnswer="&#xce;le-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM42" type="ObjectDetector" pos="id/STRUCT28/CENTRE_VAL_DE_LOIRE" correctAnswer="Centre-val de Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM43" type="ObjectDetector" pos="id/STRUCT28/NOUVELLE_AQUITAINE" correctAnswer="Nouvelle Aquitaine;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM44" type="ObjectDetector" pos="id/STRUCT28/PROVENCE_ALPES_COTE_DAZUR" correctAnswer="Provence-Alpes-C&#xf4;te-D'Azur;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM45" type="ObjectDetector" pos="id/STRUCT28/BRETAGNE" correctAnswer="Bretagne;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM46" type="ObjectDetector" pos="id/STRUCT28/CORSE" correctAnswer="Corse;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM47" type="Pot" displayValue="Guadeloupe" correctness="CORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM48" type="Pot" displayValue="Pays de la Loire" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM49" type="Pot" displayValue="Occitanie" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM50" type="Pot" displayValue="Normandie" correctness="CORRECT" pos="POS15" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM51" type="Pot" displayValue="La R&#xe9;union" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM52" type="Pot" displayValue="Martinique" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM53" type="Pot" displayValue="Bourgogne-Franche-Comt&#xe9;" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM54" type="Pot" displayValue="Guyane" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM55" type="Pot" displayValue="Grand Est" correctness="CORRECT" pos="POS17" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM56" type="Pot" displayValue="Mayotte" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM57" type="Pot" displayValue="Hauts-de-France" correctness="CORRECT" pos="POS13" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM58" type="Pot" displayValue="Auvergne-Rh&#xf4;ne-Alpes" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM59" type="Pot" displayValue="&#xce;le-de-France" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM60" type="Pot" displayValue="Centre-val de Loire" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM61" type="Pot" displayValue="Nouvelle Aquitaine" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM62" type="Pot" displayValue="Provence-Alpes-C&#xf4;te-D'Azur" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM63" type="Pot" displayValue="Bretagne" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM64" type="Pot" displayValue="Corse" correctness="CORRECT" pos="POS16" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM65" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+        <element id="ELEM66" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T1-QAFACT0"/>
       </elements>
     </room>
-    <room id="Room[-1/1]" x="-1" y="1" roomTypeName="TrapRoom2">
+    <room id="Room[1/4]" x="1" y="4" size="LARGE" roomTypeName="MapRoom" time="30" idTask="HG_O1_L1_T1" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true">
       <roomaccesses>
-        <roomaccess id="a9" direction="EAST" accessRef="a8"/>
-        <roomaccess id="a10" direction="NORTH" accessRef="a11"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM15" type="BearTrap" pos="POS6" ability="NONAVOIDABLE"/>
-        <element id="ELEM16" type="BearTrap" pos="POS1" ability="NONAVOIDABLE"/>
-        <element id="ELEM17" type="BearTrap" pos="POS2" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-1/2]" x="-1" y="2" roomTypeName="RegularRoom7" time="30" idTask="PATH404-O1-L1-T3" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a11" direction="SOUTH" accessRef="a10"/>
-        <roomaccess id="a12" direction="WEST" accessRef="a13"/>
+        <roomaccess id="a9" direction="WEST_NORTH" accessRef="a8"/>
+        <roomaccess id="a10" direction="EAST_NORTH" accessRef="a11"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH404-O1-L1-T3-QAFACT6" complete="2 x 4 = 8" correctnessToReach="3"/>
+        <fact id="HG_O1_L1_T1-QAFACT0" correctnessToReach="18"/>
       </facts>
       <elements>
-        <element id="ELEM18" type="FloorInterrupt" displayValue="17" correctness="INCORRECT" pos="POS2" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT6"/>
-        <element id="ELEM19" type="FloorInterrupt" displayValue="7" correctness="INCORRECT" pos="POS1" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT6"/>
-        <element id="ELEM20" type="FloorInterrupt" displayValue="2" correctness="CORRECT" pos="POS3" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT6"/>
-        <element id="ELEM21" type="FloorInterrupt" displayValue="4" correctness="CORRECT" pos="POS4" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT6"/>
-        <element id="ELEM22" type="FloorInterrupt" displayValue="8" correctness="CORRECT" pos="POS5" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT6"/>
-        <element id="ELEM23" type="Switch" pos="POS6" ability="VERIFICATOR"/>
-        <element id="ELEM24" type="Statement" displayValue="? x ? = ?" pos="POSQ1" idFact="PATH404-O1-L1-T3-QAFACT6" interactive="true" acceptedFacts="2 x 4 = 8;4 x 2 = 8;"/>
+        <element id="STRUCT67" type="MapStructure" pos="POSL1"/>
+        <element id="ELEM68" type="ObjectDetector" pos="id/STRUCT67/GUADELOUPE" correctAnswer="Guadeloupe;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM69" type="ObjectDetector" pos="id/STRUCT67/PAYS_DE_LA_LOIRE" correctAnswer="Pays de la Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM70" type="ObjectDetector" pos="id/STRUCT67/OCCITANIE" correctAnswer="Occitanie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM71" type="ObjectDetector" pos="id/STRUCT67/NORMANDIE" correctAnswer="Normandie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM72" type="ObjectDetector" pos="id/STRUCT67/LA_REUNION" correctAnswer="La R&#xe9;union;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM73" type="ObjectDetector" pos="id/STRUCT67/MARTINIQUE" correctAnswer="Martinique;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM74" type="ObjectDetector" pos="id/STRUCT67/BOURGOGNE_FRANCHE_COMTE" correctAnswer="Bourgogne-Franche-Comt&#xe9;;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM75" type="ObjectDetector" pos="id/STRUCT67/GUYANE" correctAnswer="Guyane;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM76" type="ObjectDetector" pos="id/STRUCT67/GRAND_EST" correctAnswer="Grand Est;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM77" type="ObjectDetector" pos="id/STRUCT67/MAYOTTE" correctAnswer="Mayotte;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM78" type="ObjectDetector" pos="id/STRUCT67/HAUTS_DE_FRANCE" correctAnswer="Hauts-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM79" type="ObjectDetector" pos="id/STRUCT67/AUVERGNE_RHONE_ALPES" correctAnswer="Auvergne-Rh&#xf4;ne-Alpes;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM80" type="ObjectDetector" pos="id/STRUCT67/ILE_DE_FRANCE" correctAnswer="&#xce;le-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM81" type="ObjectDetector" pos="id/STRUCT67/CENTRE_VAL_DE_LOIRE" correctAnswer="Centre-val de Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM82" type="ObjectDetector" pos="id/STRUCT67/NOUVELLE_AQUITAINE" correctAnswer="Nouvelle Aquitaine;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM83" type="ObjectDetector" pos="id/STRUCT67/PROVENCE_ALPES_COTE_DAZUR" correctAnswer="Provence-Alpes-C&#xf4;te-D'Azur;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM84" type="ObjectDetector" pos="id/STRUCT67/BRETAGNE" correctAnswer="Bretagne;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM85" type="ObjectDetector" pos="id/STRUCT67/CORSE" correctAnswer="Corse;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM86" type="Pot" displayValue="Guadeloupe" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM87" type="Pot" displayValue="Pays de la Loire" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM88" type="Pot" displayValue="Occitanie" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM89" type="Pot" displayValue="Normandie" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM90" type="Pot" displayValue="La R&#xe9;union" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM91" type="Pot" displayValue="Martinique" correctness="CORRECT" pos="POS17" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM92" type="Pot" displayValue="Bourgogne-Franche-Comt&#xe9;" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM93" type="Pot" displayValue="Guyane" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM94" type="Pot" displayValue="Grand Est" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM95" type="Pot" displayValue="Mayotte" correctness="CORRECT" pos="POS15" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM96" type="Pot" displayValue="Hauts-de-France" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM97" type="Pot" displayValue="Auvergne-Rh&#xf4;ne-Alpes" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM98" type="Pot" displayValue="&#xce;le-de-France" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM99" type="Pot" displayValue="Centre-val de Loire" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM100" type="Pot" displayValue="Nouvelle Aquitaine" correctness="CORRECT" pos="POS13" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM101" type="Pot" displayValue="Provence-Alpes-C&#xf4;te-D'Azur" correctness="CORRECT" pos="POS16" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM102" type="Pot" displayValue="Bretagne" correctness="CORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM103" type="Pot" displayValue="Corse" correctness="CORRECT" pos="POS19" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM104" type="Switch" pos="POS2" ability="VERIFICATOR"/>
+        <element id="ELEM105" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T1-QAFACT0"/>
       </elements>
     </room>
-    <room id="Room[-2/2]" x="-2" y="2" roomTypeName="RegularRoom7" time="30" idTask="PATH404-O1-L1-T2" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true">
+    <room id="Room[3/4]" x="3" y="4" size="LARGE" roomTypeName="MapRoom" time="30" idTask="HG_O1_L1_T2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true">
       <roomaccesses>
-        <roomaccess id="a13" direction="EAST" accessRef="a12"/>
-        <roomaccess id="a14" direction="NORTH" accessRef="a15"/>
+        <roomaccess id="a11" direction="WEST_NORTH" accessRef="a10"/>
+        <roomaccess id="a12" direction="SOUTH_WEST" accessRef="a13"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH404-O1-L1-T2-QAFACT2" complete="2 x 2 = 4" correctnessToReach="2"/>
+        <fact id="HG_O1_L1_T2-QAFACT0" correctnessToReach="18"/>
       </facts>
       <elements>
-        <element id="ELEM25" type="FloorInterrupt" displayValue="3" correctness="INCORRECT" pos="POS3" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT2"/>
-        <element id="ELEM26" type="FloorInterrupt" displayValue="9" correctness="INCORRECT" pos="POS1" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT2"/>
-        <element id="ELEM27" type="FloorInterrupt" displayValue="2" correctness="CORRECT" pos="POS5" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT2"/>
-        <element id="ELEM28" type="FloorInterrupt" displayValue="4" correctness="CORRECT" pos="POS2" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT2"/>
-        <element id="ELEM29" type="Switch" pos="POS4" ability="VERIFICATOR"/>
-        <element id="ELEM30" type="Statement" displayValue="2 x ? = ?" pos="POSL2" idFact="PATH404-O1-L1-T2-QAFACT2" interactive="true" acceptedFacts="2 x 2 = 4;2 x 2 = 4;"/>
+        <element id="STRUCT106" type="MapStructure" pos="POSL1"/>
+        <element id="ELEM107" type="TypableDetector" pos="id/STRUCT106/NORMANDIE" correctAnswer="Normandie;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM108" type="TypableDetector" pos="id/STRUCT106/NOUVELLE_AQUITAINE" correctAnswer="Nouvelle Aquitaine;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM109" type="TypableDetector" pos="id/STRUCT106/CENTRE_VAL_DE_LOIRE" correctAnswer="Centre-val de Loire;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM110" type="TypableDetector" pos="id/STRUCT106/HAUTS_DE_FRANCE" correctAnswer="Hauts-de-France;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM111" type="TypableDetector" pos="id/STRUCT106/GUYANE" correctAnswer="Guyane;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM112" type="TypableDetector" pos="id/STRUCT106/PAYS_DE_LA_LOIRE" correctAnswer="Pays de la Loire;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM113" type="TypableDetector" pos="id/STRUCT106/MARTINIQUE" correctAnswer="Martinique;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM114" type="TypableDetector" pos="id/STRUCT106/ILE_DE_FRANCE" correctAnswer="&#xce;le-de-France;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM115" type="TypableDetector" pos="id/STRUCT106/OCCITANIE" correctAnswer="Occitanie;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM116" type="TypableDetector" pos="id/STRUCT106/AUVERGNE_RHONE_ALPES" correctAnswer="Auvergne-Rh&#xf4;ne-Alpes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM117" type="TypableDetector" pos="id/STRUCT106/BOURGOGNE_FRANCHE_COMTE" correctAnswer="Bourgogne-Franche-Comt&#xe9;;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM118" type="TypableDetector" pos="id/STRUCT106/MAYOTTE" correctAnswer="Mayotte;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM119" type="TypableDetector" pos="id/STRUCT106/GRAND_EST" correctAnswer="Grand Est;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM120" type="TypableDetector" pos="id/STRUCT106/PROVENCE_ALPES_COTE_DAZUR" correctAnswer="Provence-Alpes-C&#xf4;te-D'Azur;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM121" type="TypableDetector" pos="id/STRUCT106/CORSE" correctAnswer="Corse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM122" type="TypableDetector" pos="id/STRUCT106/GUADELOUPE" correctAnswer="Guadeloupe;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM123" type="TypableDetector" pos="id/STRUCT106/LA_REUNION" correctAnswer="La R&#xe9;union;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM124" type="TypableDetector" pos="id/STRUCT106/BRETAGNE" correctAnswer="Bretagne;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM125" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2-QAFACT0"/>
       </elements>
     </room>
-    <room id="Room[-2/3]" x="-2" y="3" roomTypeName="ExitRoom1">
+    <room id="Room[3/3]" x="3" y="3" roomTypeName="RoomTrap4">
       <roomaccesses>
-        <roomaccess id="a15" direction="SOUTH" accessRef="a14"/>
+        <roomaccess id="a13" direction="NORTH" accessRef="a12"/>
+        <roomaccess id="a14" direction="SOUTH" accessRef="a15"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM126" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM127" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM128" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM129" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM130" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM131" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM132" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[2/1]" x="2" y="1" size="LARGE" roomTypeName="MapRoom" time="30" idTask="HG_O1_L1_T1" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a15" direction="NORTH_EAST" accessRef="a14"/>
+        <roomaccess id="a16" direction="SOUTH_WEST" accessRef="a17"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T1-QAFACT0" correctnessToReach="18"/>
+      </facts>
+      <elements>
+        <element id="STRUCT133" type="MapStructure" pos="POSL1"/>
+        <element id="ELEM134" type="ObjectDetector" pos="id/STRUCT133/GUADELOUPE" correctAnswer="Guadeloupe;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM135" type="ObjectDetector" pos="id/STRUCT133/PAYS_DE_LA_LOIRE" correctAnswer="Pays de la Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM136" type="ObjectDetector" pos="id/STRUCT133/OCCITANIE" correctAnswer="Occitanie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM137" type="ObjectDetector" pos="id/STRUCT133/NORMANDIE" correctAnswer="Normandie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM138" type="ObjectDetector" pos="id/STRUCT133/LA_REUNION" correctAnswer="La R&#xe9;union;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM139" type="ObjectDetector" pos="id/STRUCT133/MARTINIQUE" correctAnswer="Martinique;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM140" type="ObjectDetector" pos="id/STRUCT133/BOURGOGNE_FRANCHE_COMTE" correctAnswer="Bourgogne-Franche-Comt&#xe9;;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM141" type="ObjectDetector" pos="id/STRUCT133/GUYANE" correctAnswer="Guyane;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM142" type="ObjectDetector" pos="id/STRUCT133/GRAND_EST" correctAnswer="Grand Est;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM143" type="ObjectDetector" pos="id/STRUCT133/MAYOTTE" correctAnswer="Mayotte;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM144" type="ObjectDetector" pos="id/STRUCT133/HAUTS_DE_FRANCE" correctAnswer="Hauts-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM145" type="ObjectDetector" pos="id/STRUCT133/AUVERGNE_RHONE_ALPES" correctAnswer="Auvergne-Rh&#xf4;ne-Alpes;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM146" type="ObjectDetector" pos="id/STRUCT133/ILE_DE_FRANCE" correctAnswer="&#xce;le-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM147" type="ObjectDetector" pos="id/STRUCT133/CENTRE_VAL_DE_LOIRE" correctAnswer="Centre-val de Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM148" type="ObjectDetector" pos="id/STRUCT133/NOUVELLE_AQUITAINE" correctAnswer="Nouvelle Aquitaine;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM149" type="ObjectDetector" pos="id/STRUCT133/PROVENCE_ALPES_COTE_DAZUR" correctAnswer="Provence-Alpes-C&#xf4;te-D'Azur;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM150" type="ObjectDetector" pos="id/STRUCT133/BRETAGNE" correctAnswer="Bretagne;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM151" type="ObjectDetector" pos="id/STRUCT133/CORSE" correctAnswer="Corse;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM152" type="Pot" displayValue="Guadeloupe" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM153" type="Pot" displayValue="Pays de la Loire" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM154" type="Pot" displayValue="Occitanie" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM155" type="Pot" displayValue="Normandie" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM156" type="Pot" displayValue="La R&#xe9;union" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM157" type="Pot" displayValue="Martinique" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM158" type="Pot" displayValue="Bourgogne-Franche-Comt&#xe9;" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM159" type="Pot" displayValue="Guyane" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM160" type="Pot" displayValue="Grand Est" correctness="CORRECT" pos="POS19" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM161" type="Pot" displayValue="Mayotte" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM162" type="Pot" displayValue="Hauts-de-France" correctness="CORRECT" pos="POS17" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM163" type="Pot" displayValue="Auvergne-Rh&#xf4;ne-Alpes" correctness="CORRECT" pos="POS16" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM164" type="Pot" displayValue="&#xce;le-de-France" correctness="CORRECT" pos="POS15" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM165" type="Pot" displayValue="Centre-val de Loire" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM166" type="Pot" displayValue="Nouvelle Aquitaine" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM167" type="Pot" displayValue="Provence-Alpes-C&#xf4;te-D'Azur" correctness="CORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM168" type="Pot" displayValue="Bretagne" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM169" type="Pot" displayValue="Corse" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM170" type="Switch" pos="POS13" ability="VERIFICATOR"/>
+        <element id="ELEM171" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T1-QAFACT0"/>
+      </elements>
+    </room>
+    <room id="Room[2/0]" x="2" roomTypeName="RegularRoom7" time="30" idTask="HG_O1_L1_T2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a17" direction="NORTH" accessRef="a16"/>
+        <roomaccess id="a18" direction="EAST" accessRef="a19"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T2-QAFACT0" correctnessToReach="18"/>
+      </facts>
+      <elements>
+        <element id="STRUCT172" type="MapStructure" pos="POSL2"/>
+        <element id="ELEM173" type="TypableDetector" pos="id/STRUCT172/NORMANDIE" correctAnswer="Normandie;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM174" type="TypableDetector" pos="id/STRUCT172/NOUVELLE_AQUITAINE" correctAnswer="Nouvelle Aquitaine;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM175" type="TypableDetector" pos="id/STRUCT172/CENTRE_VAL_DE_LOIRE" correctAnswer="Centre-val de Loire;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM176" type="TypableDetector" pos="id/STRUCT172/HAUTS_DE_FRANCE" correctAnswer="Hauts-de-France;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM177" type="TypableDetector" pos="id/STRUCT172/GUYANE" correctAnswer="Guyane;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM178" type="TypableDetector" pos="id/STRUCT172/PAYS_DE_LA_LOIRE" correctAnswer="Pays de la Loire;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM179" type="TypableDetector" pos="id/STRUCT172/MARTINIQUE" correctAnswer="Martinique;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM180" type="TypableDetector" pos="id/STRUCT172/ILE_DE_FRANCE" correctAnswer="&#xce;le-de-France;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM181" type="TypableDetector" pos="id/STRUCT172/OCCITANIE" correctAnswer="Occitanie;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM182" type="TypableDetector" pos="id/STRUCT172/AUVERGNE_RHONE_ALPES" correctAnswer="Auvergne-Rh&#xf4;ne-Alpes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM183" type="TypableDetector" pos="id/STRUCT172/BOURGOGNE_FRANCHE_COMTE" correctAnswer="Bourgogne-Franche-Comt&#xe9;;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM184" type="TypableDetector" pos="id/STRUCT172/MAYOTTE" correctAnswer="Mayotte;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM185" type="TypableDetector" pos="id/STRUCT172/GRAND_EST" correctAnswer="Grand Est;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM186" type="TypableDetector" pos="id/STRUCT172/PROVENCE_ALPES_COTE_DAZUR" correctAnswer="Provence-Alpes-C&#xf4;te-D'Azur;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM187" type="TypableDetector" pos="id/STRUCT172/CORSE" correctAnswer="Corse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM188" type="TypableDetector" pos="id/STRUCT172/GUADELOUPE" correctAnswer="Guadeloupe;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM189" type="TypableDetector" pos="id/STRUCT172/LA_REUNION" correctAnswer="La R&#xe9;union;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM190" type="TypableDetector" pos="id/STRUCT172/BRETAGNE" correctAnswer="Bretagne;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM191" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSL1" idFact="HG_O1_L1_T2-QAFACT0"/>
+      </elements>
+    </room>
+    <room id="Room[3/0]" x="3" roomTypeName="RoomTrap">
+      <roomaccesses>
+        <roomaccess id="a19" direction="WEST" accessRef="a18"/>
+        <roomaccess id="a20" direction="SOUTH" accessRef="a21"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM192" type="SpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM193" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM194" type="SpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM195" type="SpikeTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM196" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[3/-1]" x="3" y="-1" roomTypeName="RoomTrap3">
+      <roomaccesses>
+        <roomaccess id="a21" direction="NORTH" accessRef="a20"/>
+        <roomaccess id="a22" direction="SOUTH" accessRef="a23"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM197" type="RegularSlime" pos="POS4" ability="NONAVOIDABLE"/>
+        <element id="ELEM198" type="RegularSlime" pos="POS3" ability="NONAVOIDABLE"/>
+        <element id="ELEM199" type="RegularSlime" pos="POS9" ability="NONAVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[2/-3]" x="2" y="-3" size="LARGE" roomTypeName="MapRoom" time="30" idTask="HG_O1_L1_T2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a23" direction="NORTH_EAST" accessRef="a22"/>
+        <roomaccess id="a24" direction="SOUTH_EAST" accessRef="a25"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T2-QAFACT0" correctnessToReach="18"/>
+      </facts>
+      <elements>
+        <element id="STRUCT200" type="MapStructure" pos="POSL1"/>
+        <element id="ELEM201" type="TypableDetector" pos="id/STRUCT200/NORMANDIE" correctAnswer="Normandie;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM202" type="TypableDetector" pos="id/STRUCT200/NOUVELLE_AQUITAINE" correctAnswer="Nouvelle Aquitaine;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM203" type="TypableDetector" pos="id/STRUCT200/CENTRE_VAL_DE_LOIRE" correctAnswer="Centre-val de Loire;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM204" type="TypableDetector" pos="id/STRUCT200/HAUTS_DE_FRANCE" correctAnswer="Hauts-de-France;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM205" type="TypableDetector" pos="id/STRUCT200/GUYANE" correctAnswer="Guyane;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM206" type="TypableDetector" pos="id/STRUCT200/PAYS_DE_LA_LOIRE" correctAnswer="Pays de la Loire;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM207" type="TypableDetector" pos="id/STRUCT200/MARTINIQUE" correctAnswer="Martinique;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM208" type="TypableDetector" pos="id/STRUCT200/ILE_DE_FRANCE" correctAnswer="&#xce;le-de-France;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM209" type="TypableDetector" pos="id/STRUCT200/OCCITANIE" correctAnswer="Occitanie;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM210" type="TypableDetector" pos="id/STRUCT200/AUVERGNE_RHONE_ALPES" correctAnswer="Auvergne-Rh&#xf4;ne-Alpes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM211" type="TypableDetector" pos="id/STRUCT200/BOURGOGNE_FRANCHE_COMTE" correctAnswer="Bourgogne-Franche-Comt&#xe9;;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM212" type="TypableDetector" pos="id/STRUCT200/MAYOTTE" correctAnswer="Mayotte;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM213" type="TypableDetector" pos="id/STRUCT200/GRAND_EST" correctAnswer="Grand Est;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM214" type="TypableDetector" pos="id/STRUCT200/PROVENCE_ALPES_COTE_DAZUR" correctAnswer="Provence-Alpes-C&#xf4;te-D'Azur;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM215" type="TypableDetector" pos="id/STRUCT200/CORSE" correctAnswer="Corse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM216" type="TypableDetector" pos="id/STRUCT200/GUADELOUPE" correctAnswer="Guadeloupe;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM217" type="TypableDetector" pos="id/STRUCT200/LA_REUNION" correctAnswer="La R&#xe9;union;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM218" type="TypableDetector" pos="id/STRUCT200/BRETAGNE" correctAnswer="Bretagne;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM219" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2-QAFACT0"/>
+      </elements>
+    </room>
+    <room id="Room[3/-4]" x="3" y="-4" roomTypeName="RoomTrap3">
+      <roomaccesses>
+        <roomaccess id="a25" direction="NORTH" accessRef="a24"/>
+        <roomaccess id="a26" direction="WEST" accessRef="a27"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM220" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM221" type="WaitSpikeTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM222" type="WaitSpikeTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM223" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM224" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[1/-5]" x="1" y="-5" size="LARGE" roomTypeName="MapRoom" time="30" idTask="HG_O1_L1_T1" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a27" direction="EAST_NORTH" accessRef="a26"/>
+        <roomaccess id="a28" direction="SOUTH_EAST" accessRef="a29"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T1-QAFACT0" correctnessToReach="18"/>
+      </facts>
+      <elements>
+        <element id="STRUCT225" type="MapStructure" pos="POSL1"/>
+        <element id="ELEM226" type="ObjectDetector" pos="id/STRUCT225/GUADELOUPE" correctAnswer="Guadeloupe;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM227" type="ObjectDetector" pos="id/STRUCT225/PAYS_DE_LA_LOIRE" correctAnswer="Pays de la Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM228" type="ObjectDetector" pos="id/STRUCT225/OCCITANIE" correctAnswer="Occitanie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM229" type="ObjectDetector" pos="id/STRUCT225/NORMANDIE" correctAnswer="Normandie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM230" type="ObjectDetector" pos="id/STRUCT225/LA_REUNION" correctAnswer="La R&#xe9;union;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM231" type="ObjectDetector" pos="id/STRUCT225/MARTINIQUE" correctAnswer="Martinique;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM232" type="ObjectDetector" pos="id/STRUCT225/BOURGOGNE_FRANCHE_COMTE" correctAnswer="Bourgogne-Franche-Comt&#xe9;;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM233" type="ObjectDetector" pos="id/STRUCT225/GUYANE" correctAnswer="Guyane;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM234" type="ObjectDetector" pos="id/STRUCT225/GRAND_EST" correctAnswer="Grand Est;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM235" type="ObjectDetector" pos="id/STRUCT225/MAYOTTE" correctAnswer="Mayotte;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM236" type="ObjectDetector" pos="id/STRUCT225/HAUTS_DE_FRANCE" correctAnswer="Hauts-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM237" type="ObjectDetector" pos="id/STRUCT225/AUVERGNE_RHONE_ALPES" correctAnswer="Auvergne-Rh&#xf4;ne-Alpes;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM238" type="ObjectDetector" pos="id/STRUCT225/ILE_DE_FRANCE" correctAnswer="&#xce;le-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM239" type="ObjectDetector" pos="id/STRUCT225/CENTRE_VAL_DE_LOIRE" correctAnswer="Centre-val de Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM240" type="ObjectDetector" pos="id/STRUCT225/NOUVELLE_AQUITAINE" correctAnswer="Nouvelle Aquitaine;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM241" type="ObjectDetector" pos="id/STRUCT225/PROVENCE_ALPES_COTE_DAZUR" correctAnswer="Provence-Alpes-C&#xf4;te-D'Azur;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM242" type="ObjectDetector" pos="id/STRUCT225/BRETAGNE" correctAnswer="Bretagne;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM243" type="ObjectDetector" pos="id/STRUCT225/CORSE" correctAnswer="Corse;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM244" type="Pot" displayValue="Guadeloupe" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM245" type="Pot" displayValue="Pays de la Loire" correctness="CORRECT" pos="POS15" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM246" type="Pot" displayValue="Occitanie" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM247" type="Pot" displayValue="Normandie" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM248" type="Pot" displayValue="La R&#xe9;union" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM249" type="Pot" displayValue="Martinique" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM250" type="Pot" displayValue="Bourgogne-Franche-Comt&#xe9;" correctness="CORRECT" pos="POS19" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM251" type="Pot" displayValue="Guyane" correctness="CORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM252" type="Pot" displayValue="Grand Est" correctness="CORRECT" pos="POS16" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM253" type="Pot" displayValue="Mayotte" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM254" type="Pot" displayValue="Hauts-de-France" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM255" type="Pot" displayValue="Auvergne-Rh&#xf4;ne-Alpes" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM256" type="Pot" displayValue="&#xce;le-de-France" correctness="CORRECT" pos="POS13" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM257" type="Pot" displayValue="Centre-val de Loire" correctness="CORRECT" pos="POS17" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM258" type="Pot" displayValue="Nouvelle Aquitaine" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM259" type="Pot" displayValue="Provence-Alpes-C&#xf4;te-D'Azur" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM260" type="Pot" displayValue="Bretagne" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM261" type="Pot" displayValue="Corse" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="ELEM262" type="Switch" pos="POS14" ability="VERIFICATOR"/>
+        <element id="ELEM263" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T1-QAFACT0"/>
+      </elements>
+    </room>
+    <room id="Room[1/-7]" x="1" y="-7" size="LARGE" roomTypeName="MapRoom" time="30" idTask="HG_O1_L1_T2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a29" direction="NORTH_EAST" accessRef="a28"/>
+        <roomaccess id="a30" direction="SOUTH_EAST" accessRef="a31"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T2-QAFACT0" correctnessToReach="18"/>
+      </facts>
+      <elements>
+        <element id="STRUCT264" type="MapStructure" pos="POSL1"/>
+        <element id="ELEM265" type="TypableDetector" pos="id/STRUCT264/NORMANDIE" correctAnswer="Normandie;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM266" type="TypableDetector" pos="id/STRUCT264/NOUVELLE_AQUITAINE" correctAnswer="Nouvelle Aquitaine;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM267" type="TypableDetector" pos="id/STRUCT264/CENTRE_VAL_DE_LOIRE" correctAnswer="Centre-val de Loire;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM268" type="TypableDetector" pos="id/STRUCT264/HAUTS_DE_FRANCE" correctAnswer="Hauts-de-France;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM269" type="TypableDetector" pos="id/STRUCT264/GUYANE" correctAnswer="Guyane;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM270" type="TypableDetector" pos="id/STRUCT264/PAYS_DE_LA_LOIRE" correctAnswer="Pays de la Loire;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM271" type="TypableDetector" pos="id/STRUCT264/MARTINIQUE" correctAnswer="Martinique;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM272" type="TypableDetector" pos="id/STRUCT264/ILE_DE_FRANCE" correctAnswer="&#xce;le-de-France;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM273" type="TypableDetector" pos="id/STRUCT264/OCCITANIE" correctAnswer="Occitanie;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM274" type="TypableDetector" pos="id/STRUCT264/AUVERGNE_RHONE_ALPES" correctAnswer="Auvergne-Rh&#xf4;ne-Alpes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM275" type="TypableDetector" pos="id/STRUCT264/BOURGOGNE_FRANCHE_COMTE" correctAnswer="Bourgogne-Franche-Comt&#xe9;;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM276" type="TypableDetector" pos="id/STRUCT264/MAYOTTE" correctAnswer="Mayotte;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM277" type="TypableDetector" pos="id/STRUCT264/GRAND_EST" correctAnswer="Grand Est;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM278" type="TypableDetector" pos="id/STRUCT264/PROVENCE_ALPES_COTE_DAZUR" correctAnswer="Provence-Alpes-C&#xf4;te-D'Azur;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM279" type="TypableDetector" pos="id/STRUCT264/CORSE" correctAnswer="Corse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM280" type="TypableDetector" pos="id/STRUCT264/GUADELOUPE" correctAnswer="Guadeloupe;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM281" type="TypableDetector" pos="id/STRUCT264/LA_REUNION" correctAnswer="La R&#xe9;union;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM282" type="TypableDetector" pos="id/STRUCT264/BRETAGNE" correctAnswer="Bretagne;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM283" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2-QAFACT0"/>
+      </elements>
+    </room>
+    <room id="Room[2/-8]" x="2" y="-8" roomTypeName="ExitRoom1">
+      <roomaccesses>
+        <roomaccess id="a31" direction="NORTH" accessRef="a30"/>
       </roomaccesses>
     </room>
   </rooms>

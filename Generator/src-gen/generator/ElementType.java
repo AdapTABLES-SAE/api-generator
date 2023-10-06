@@ -95,28 +95,6 @@ public interface ElementType extends EObject {
 	void setType(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Ability</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ability</em>' reference.
-	 * @see #setAbility(Ability)
-	 * @see generator.GeneratorPackage#getElementType_Ability()
-	 * @model
-	 * @generated
-	 */
-	Ability getAbility();
-
-	/**
-	 * Sets the value of the '{@link generator.ElementType#getAbility <em>Ability</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ability</em>' reference.
-	 * @see #getAbility()
-	 * @generated
-	 */
-	void setAbility(Ability value);
-
-	/**
 	 * Returns the value of the '<em><b>Nb Displays</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,6 +115,28 @@ public interface ElementType extends EObject {
 	 * @generated
 	 */
 	void setNbDisplays(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Ability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ability</em>' reference.
+	 * @see #setAbility(Ability)
+	 * @see generator.GeneratorPackage#getElementType_Ability()
+	 * @model
+	 * @generated
+	 */
+	Ability getAbility();
+
+	/**
+	 * Sets the value of the '{@link generator.ElementType#getAbility <em>Ability</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ability</em>' reference.
+	 * @see #getAbility()
+	 * @generated
+	 */
+	void setAbility(Ability value);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -39,7 +39,6 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
 		taskID = task.getID();
 		
-	
 		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
 			if(setoffact.getMap() != null) {
 				List<GeographyFact> facts = new ArrayList<>();
@@ -67,6 +66,12 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 			soluce.setValue(fact.getValue());
 			soluce.setMapPosition(fact.getPosition());
 			qf.getMapsolutions().add(soluce);
+		}
+		
+		if(task.getNbExpectedAnswers() == facts.size()) {
+			qf.setConsigne("Donner l'ensemble des réponses");
+		} else {
+			qf.setConsigne("Donner "+task.getNbExpectedAnswers()+" réponses");
 		}
 		return qf;
 	}

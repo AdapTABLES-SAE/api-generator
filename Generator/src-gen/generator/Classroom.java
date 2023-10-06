@@ -3,6 +3,7 @@
 package generator;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -97,18 +98,6 @@ public interface Classroom extends EObject {
 	boolean isSetID();
 
 	/**
-	 * Returns the value of the '<em><b>Learner Players</b></em>' reference list.
-	 * The list contents are of type {@link generator.LearnerPlayer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Learner Players</em>' reference list.
-	 * @see generator.GeneratorPackage#getClassroom_LearnerPlayers()
-	 * @model
-	 * @generated
-	 */
-	EList<LearnerPlayer> getLearnerPlayers();
-
-	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,5 +118,17 @@ public interface Classroom extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Learner Players</b></em>' reference list.
+	 * The list contents are of type {@link generator.LearnerPlayer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Learner Players</em>' reference list.
+	 * @see generator.GeneratorPackage#getClassroom_LearnerPlayers()
+	 * @model
+	 * @generated
+	 */
+	EList<LearnerPlayer> getLearnerPlayers();
 
 } // Classroom

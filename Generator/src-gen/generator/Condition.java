@@ -3,6 +3,7 @@
 package generator;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -65,31 +66,6 @@ public interface Condition extends EObject {
 	void setNbFacts(EBoundary value);
 
 	/**
-	 * Returns the value of the '<em><b>Nb Expected Answers</b></em>' attribute.
-	 * The literals are from the enumeration {@link generator.EBoundary}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nb Expected Answers</em>' attribute.
-	 * @see generator.EBoundary
-	 * @see #setNbExpectedAnswers(EBoundary)
-	 * @see generator.GeneratorPackage#getCondition_NbExpectedAnswers()
-	 * @model
-	 * @generated
-	 */
-	EBoundary getNbExpectedAnswers();
-
-	/**
-	 * Sets the value of the '{@link generator.Condition#getNbExpectedAnswers <em>Nb Expected Answers</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nb Expected Answers</em>' attribute.
-	 * @see generator.EBoundary
-	 * @see #getNbExpectedAnswers()
-	 * @generated
-	 */
-	void setNbExpectedAnswers(EBoundary value);
-
-	/**
 	 * Returns the value of the '<em><b>Answer Modality</b></em>' attribute.
 	 * The literals are from the enumeration {@link generator.EModality}.
 	 * <!-- begin-user-doc -->
@@ -113,5 +89,30 @@ public interface Condition extends EObject {
 	 * @generated
 	 */
 	void setAnswerModality(EModality value);
+
+	/**
+	 * Returns the value of the '<em><b>Nb Expected Answers</b></em>' attribute.
+	 * The literals are from the enumeration {@link generator.EBoundary}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nb Expected Answers</em>' attribute.
+	 * @see generator.EBoundary
+	 * @see #setNbExpectedAnswers(EBoundary)
+	 * @see generator.GeneratorPackage#getCondition_NbExpectedAnswers()
+	 * @model
+	 * @generated
+	 */
+	EBoundary getNbExpectedAnswers();
+
+	/**
+	 * Sets the value of the '{@link generator.Condition#getNbExpectedAnswers <em>Nb Expected Answers</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nb Expected Answers</em>' attribute.
+	 * @see generator.EBoundary
+	 * @see #getNbExpectedAnswers()
+	 * @generated
+	 */
+	void setNbExpectedAnswers(EBoundary value);
 
 } // Condition

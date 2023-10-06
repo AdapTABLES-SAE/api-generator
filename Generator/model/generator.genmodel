@@ -433,6 +433,7 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//PropositionParam">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PropositionParam/state"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PropositionParam/position"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Value">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Value/value"/>
@@ -440,11 +441,12 @@
     <genClasses ecoreClass="generator.ecore#//Correctness"/>
     <genClasses ecoreClass="generator.ecore#//EntrySoluceParam">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//EntrySoluceParam/state"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//EntrySoluceParam/mapValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//EntrySoluceParam/position"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Display">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Display/interactive"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Display/correctness"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Display/imageDisplay"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//AComponent">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//AComponent/allowedAbility"/>
@@ -456,6 +458,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Structure/components"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Structure/alternateComponents"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Structure/forFact"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Structure/forMap"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Component">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Component/displayValue"/>
@@ -601,9 +604,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//TimePeriod/endYear"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//TimePeriod/positions"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//MapValue">
-      <genOperations ecoreOperation="generator.ecore#//MapValue/isCorrectValue" body="return !this.value.isEmpty();"/>
-    </genClasses>
     <genClasses ecoreClass="generator.ecore#//Time"/>
     <genClasses ecoreClass="generator.ecore#//AQuestionParam"/>
     <genClasses ecoreClass="generator.ecore#//MapQuestionParam">
@@ -644,11 +644,15 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//MapQuestionableFact/map"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//MapQuestionableFact/mapsolutions"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MapQuestionableFact/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MapQuestionableFact/consigne"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MapSolution">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MapSolution/value"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//MapSolution/mapPosition"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//HGLevel"/>
+    <genClasses ecoreClass="generator.ecore#//PositionedMapElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedMapElement/createdPositions"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

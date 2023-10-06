@@ -60,7 +60,9 @@ rule Room2Room
         	for (fact in roomIn.questionedFacts) { 
         	var factOUT: new OUT!Fact;
 				factOUT.id = fact.questionablefact.id; 
-			    factOUT.complete = fact.question.completeFact;
+				if(fact.question.instanceOf(QuestionParam)){
+					factOUT.complete = fact.question.completeFact;
+				}
 			    if(fact.correctnessToReach.isDefined()){
 			    	factOUT.correctnessToReach = fact.correctnessToReach.value.value;
 			    }
@@ -113,6 +115,16 @@ rule Structures2Elements
 	}
 }
 
+rule Structures2Elements 
+	transform element : IN!PositionedMapElement
+	to elementOut : OUT!Element {
+	//"\t\t\tStrucutres creation".println();
+	
+	elementOut.id = element.id;		
+	elementOut.pos = element.position.id;	
+	elementOut.type = element.elementType.type;
+}
+
 rule Elements2Elements 
 	transform element : IN!PositionedElement
 	to elementOut : OUT!Element {
@@ -125,6 +137,7 @@ rule Elements2Elements
 		if(element.displays.size() == 1){
 			elementOut.displayValue = element.displays.get(0).value.value + "";
 			elementOut.interactive = element.displays.get(0).interactive;
+			elementOut.isImageDisplay = element.displays.get(0).imageDisplay; 
 		}
 		if(element.displays.size() > 1){
 			for (display in element.displays) { 
@@ -135,7 +148,8 @@ rule Elements2Elements
 					elementOut.displayValue = elementOut.displayValue + display.value.value + ";";
 				}
 			}
-		}
+			elementOut.isImageDisplay = element.displays.get(0).imageDisplay; 
+		}		
 	} 
 	
 	if(element.correctness.isDefined()){

@@ -6,6 +6,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="facts" upperBound="-1"
         eType="#//AbstractFact" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="map" eType="#//Map" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Knowledge">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -226,6 +227,7 @@
     <eOperations name="getType" eType="#//ETaskType"/>
     <eOperations name="isCheckOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eOperations name="getNbExpectedAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eOperations name="isGraphicTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentOfApparition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="responseModality" lowerBound="1"
@@ -296,7 +298,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ResultsByTask">
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//ATask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="questionableFacts" upperBound="-1"
-        eType="#//QuestionableFact" containment="true"/>
+        eType="#//AQuestionableFact" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="successPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="encountersPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
@@ -311,17 +313,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="table" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="res" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QuestionableFact" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionableFact" abstract="true" eSuperTypes="#//AQuestionableFact">
     <eOperations name="getQuestionableFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eOperations name="getCompleteFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="achieved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="false"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wasSelected" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="false"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        unsettable="true" iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="results" upperBound="-1"
-        eType="#//QuestionableFactResult" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTQFCompletion1" eSuperTypes="#//QuestionableFact">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="leftOperand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -369,7 +363,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QuestionedFact">
     <eStructuralFeatures xsi:type="ecore:EReference" name="questionablefact" lowerBound="1"
-        eType="#//QuestionableFact"/>
+        eType="#//AQuestionableFact"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="question" eType="#//AQuestionParam"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="propositions" upperBound="-1"
@@ -379,7 +373,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="correctnessToReach" eType="#//WantedAnswersParam"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="learnerValidation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="completeFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="factCorrectness" eType="#//FactCorrectnessParam"
         containment="true"/>
   </eClassifiers>
@@ -501,9 +494,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interactive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="solutions" upperBound="-1"
         eType="#//FactSolutionParam" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="completeFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PropositionParam" eSuperTypes="#//Parameter">
     <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//AValue"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//Position"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Value" eSuperTypes="#//AValue">
@@ -518,11 +514,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="Correctness" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntrySoluceParam" eSuperTypes="#//Parameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//ECorrectness"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//Position"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Display" eSuperTypes="#//Parameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interactive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="correctness" eType="#//Correctness"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageDisplay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AComponent" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="allowedAbility" eType="#//Ability"/>
@@ -538,6 +537,7 @@
         eType="#//AComponent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alternateComponents" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="forFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forMap" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//AComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayValue" eType="#//Display"
@@ -709,17 +709,16 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeographyLegendFact" eSuperTypes="#//AbstractFact">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="map" lowerBound="1" eType="#//Map"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="symbol" lowerBound="1"
         eType="#//LegendSymbol" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="legend" lowerBound="1"
         eType="#//LegendText" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeographyFact" eSuperTypes="#//AbstractFact">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="map" lowerBound="1" eType="#//Map"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
         eType="#//MapElementPosition"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//EGeographyValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EGeographyValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Date" eSuperTypes="#//Time">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="day" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -734,15 +733,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="positions" lowerBound="2"
         upperBound="2" eType="#//MapElementPosition"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MapValue" eSuperTypes="#//Value">
-    <eOperations name="isCorrectValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Time" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="map" lowerBound="1" eType="#//Map"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Time" abstract="true"/>
   <eClassifiers xsi:type="ecore:EEnum" name="EGeographyValue">
     <eLiterals name="CITY"/>
     <eLiterals name="COUNTRY" value="1"/>
+    <eLiterals name="REGIONS" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AQuestionParam" abstract="true" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="MapQuestionParam" eSuperTypes="#//AQuestionParam">
@@ -773,6 +768,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="GLocate" eSuperTypes="#//MembershipIDTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbExpectedAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="learnersChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="graphicTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Teacher">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -793,5 +790,32 @@
   <eClassifiers xsi:type="ecore:EClass" name="Classrooms">
     <eStructuralFeatures xsi:type="ecore:EReference" name="classrooms" upperBound="-1"
         eType="#//Classroom" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AQuestionableFact" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wasSelected" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="achieved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="results" upperBound="-1"
+        eType="#//QuestionableFactResult" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        unsettable="true" iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MapQuestionableFact" eSuperTypes="#//AQuestionableFact">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="map" lowerBound="1" eType="#//Map"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mapsolutions" upperBound="-1"
+        eType="#//MapSolution" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EGeographyValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="consigne" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MapSolution">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mapPosition" lowerBound="1"
+        eType="#//MapElementPosition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HGLevel" eSuperTypes="#//Level"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PositionedMapElement" eSuperTypes="#//PositionedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="createdPositions" upperBound="-1"
+        eType="#//Position" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

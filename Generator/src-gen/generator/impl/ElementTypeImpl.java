@@ -306,7 +306,6 @@ public class ElementTypeImpl extends MinimalEObjectImpl.Container implements Ele
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

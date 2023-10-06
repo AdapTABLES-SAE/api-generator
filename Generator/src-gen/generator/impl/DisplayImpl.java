@@ -22,6 +22,7 @@ import generator.GeneratorPackage;
  * <ul>
  *   <li>{@link generator.impl.DisplayImpl#isInteractive <em>Interactive</em>}</li>
  *   <li>{@link generator.impl.DisplayImpl#getCorrectness <em>Correctness</em>}</li>
+ *   <li>{@link generator.impl.DisplayImpl#isImageDisplay <em>Image Display</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,6 +56,25 @@ public class DisplayImpl extends ParameterImpl implements Display {
 	 * @ordered
 	 */
 	protected Correctness correctness;
+
+	/**
+	 * The default value of the '{@link #isImageDisplay() <em>Image Display</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isImageDisplay()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IMAGE_DISPLAY_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isImageDisplay() <em>Image Display</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isImageDisplay()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean imageDisplay = IMAGE_DISPLAY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,6 +172,28 @@ public class DisplayImpl extends ParameterImpl implements Display {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isImageDisplay() {
+		return imageDisplay;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setImageDisplay(boolean newImageDisplay) {
+		boolean oldImageDisplay = imageDisplay;
+		imageDisplay = newImageDisplay;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.DISPLAY__IMAGE_DISPLAY,
+					oldImageDisplay, imageDisplay));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -173,6 +215,8 @@ public class DisplayImpl extends ParameterImpl implements Display {
 			return isInteractive();
 		case GeneratorPackage.DISPLAY__CORRECTNESS:
 			return getCorrectness();
+		case GeneratorPackage.DISPLAY__IMAGE_DISPLAY:
+			return isImageDisplay();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -190,6 +234,9 @@ public class DisplayImpl extends ParameterImpl implements Display {
 			return;
 		case GeneratorPackage.DISPLAY__CORRECTNESS:
 			setCorrectness((Correctness) newValue);
+			return;
+		case GeneratorPackage.DISPLAY__IMAGE_DISPLAY:
+			setImageDisplay((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -209,6 +256,9 @@ public class DisplayImpl extends ParameterImpl implements Display {
 		case GeneratorPackage.DISPLAY__CORRECTNESS:
 			setCorrectness((Correctness) null);
 			return;
+		case GeneratorPackage.DISPLAY__IMAGE_DISPLAY:
+			setImageDisplay(IMAGE_DISPLAY_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -225,6 +275,8 @@ public class DisplayImpl extends ParameterImpl implements Display {
 			return interactive != INTERACTIVE_EDEFAULT;
 		case GeneratorPackage.DISPLAY__CORRECTNESS:
 			return correctness != null;
+		case GeneratorPackage.DISPLAY__IMAGE_DISPLAY:
+			return imageDisplay != IMAGE_DISPLAY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -242,6 +294,8 @@ public class DisplayImpl extends ParameterImpl implements Display {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (interactive: ");
 		result.append(interactive);
+		result.append(", imageDisplay: ");
+		result.append(imageDisplay);
 		result.append(')');
 		return result.toString();
 	}

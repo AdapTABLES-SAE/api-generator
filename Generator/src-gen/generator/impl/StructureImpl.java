@@ -28,6 +28,7 @@ import generator.Structure;
  *   <li>{@link generator.impl.StructureImpl#getComponents <em>Components</em>}</li>
  *   <li>{@link generator.impl.StructureImpl#isAlternateComponents <em>Alternate Components</em>}</li>
  *   <li>{@link generator.impl.StructureImpl#isForFact <em>For Fact</em>}</li>
+ *   <li>{@link generator.impl.StructureImpl#isForMap <em>For Map</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,6 +83,26 @@ public class StructureImpl extends AComponentImpl implements Structure {
 	 * @ordered
 	 */
 	protected boolean forFact = FOR_FACT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isForMap() <em>For Map</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isForMap()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean FOR_MAP_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isForMap() <em>For Map</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isForMap()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean forMap = FOR_MAP_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -164,6 +185,28 @@ public class StructureImpl extends AComponentImpl implements Structure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isForMap() {
+		return forMap;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setForMap(boolean newForMap) {
+		boolean oldForMap = forMap;
+		forMap = newForMap;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.STRUCTURE__FOR_MAP, oldForMap,
+					forMap));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -187,6 +230,8 @@ public class StructureImpl extends AComponentImpl implements Structure {
 			return isAlternateComponents();
 		case GeneratorPackage.STRUCTURE__FOR_FACT:
 			return isForFact();
+		case GeneratorPackage.STRUCTURE__FOR_MAP:
+			return isForMap();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -210,6 +255,9 @@ public class StructureImpl extends AComponentImpl implements Structure {
 		case GeneratorPackage.STRUCTURE__FOR_FACT:
 			setForFact((Boolean) newValue);
 			return;
+		case GeneratorPackage.STRUCTURE__FOR_MAP:
+			setForMap((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -231,6 +279,9 @@ public class StructureImpl extends AComponentImpl implements Structure {
 		case GeneratorPackage.STRUCTURE__FOR_FACT:
 			setForFact(FOR_FACT_EDEFAULT);
 			return;
+		case GeneratorPackage.STRUCTURE__FOR_MAP:
+			setForMap(FOR_MAP_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -249,6 +300,8 @@ public class StructureImpl extends AComponentImpl implements Structure {
 			return alternateComponents != ALTERNATE_COMPONENTS_EDEFAULT;
 		case GeneratorPackage.STRUCTURE__FOR_FACT:
 			return forFact != FOR_FACT_EDEFAULT;
+		case GeneratorPackage.STRUCTURE__FOR_MAP:
+			return forMap != FOR_MAP_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -268,6 +321,8 @@ public class StructureImpl extends AComponentImpl implements Structure {
 		result.append(alternateComponents);
 		result.append(", forFact: ");
 		result.append(forFact);
+		result.append(", forMap: ");
+		result.append(forMap);
 		result.append(')');
 		return result.toString();
 	}

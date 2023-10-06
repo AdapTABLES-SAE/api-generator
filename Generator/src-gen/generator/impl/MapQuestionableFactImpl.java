@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.MapQuestionableFactImpl#getMap <em>Map</em>}</li>
  *   <li>{@link generator.impl.MapQuestionableFactImpl#getMapsolutions <em>Mapsolutions</em>}</li>
  *   <li>{@link generator.impl.MapQuestionableFactImpl#getType <em>Type</em>}</li>
+ *   <li>{@link generator.impl.MapQuestionableFactImpl#getConsigne <em>Consigne</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,6 +78,26 @@ public class MapQuestionableFactImpl extends AQuestionableFactImpl implements Ma
 	 * @ordered
 	 */
 	protected EGeographyValue type = TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getConsigne() <em>Consigne</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConsigne()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONSIGNE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getConsigne() <em>Consigne</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConsigne()
+	 * @generated
+	 * @ordered
+	 */
+	protected String consigne = CONSIGNE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,6 +198,28 @@ public class MapQuestionableFactImpl extends AQuestionableFactImpl implements Ma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getConsigne() {
+		return consigne;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConsigne(String newConsigne) {
+		String oldConsigne = consigne;
+		consigne = newConsigne;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MAP_QUESTIONABLE_FACT__CONSIGNE,
+					oldConsigne, consigne));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -202,6 +245,8 @@ public class MapQuestionableFactImpl extends AQuestionableFactImpl implements Ma
 			return getMapsolutions();
 		case GeneratorPackage.MAP_QUESTIONABLE_FACT__TYPE:
 			return getType();
+		case GeneratorPackage.MAP_QUESTIONABLE_FACT__CONSIGNE:
+			return getConsigne();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -225,6 +270,9 @@ public class MapQuestionableFactImpl extends AQuestionableFactImpl implements Ma
 		case GeneratorPackage.MAP_QUESTIONABLE_FACT__TYPE:
 			setType((EGeographyValue) newValue);
 			return;
+		case GeneratorPackage.MAP_QUESTIONABLE_FACT__CONSIGNE:
+			setConsigne((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -246,6 +294,9 @@ public class MapQuestionableFactImpl extends AQuestionableFactImpl implements Ma
 		case GeneratorPackage.MAP_QUESTIONABLE_FACT__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
+		case GeneratorPackage.MAP_QUESTIONABLE_FACT__CONSIGNE:
+			setConsigne(CONSIGNE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -264,6 +315,8 @@ public class MapQuestionableFactImpl extends AQuestionableFactImpl implements Ma
 			return mapsolutions != null && !mapsolutions.isEmpty();
 		case GeneratorPackage.MAP_QUESTIONABLE_FACT__TYPE:
 			return type != TYPE_EDEFAULT;
+		case GeneratorPackage.MAP_QUESTIONABLE_FACT__CONSIGNE:
+			return CONSIGNE_EDEFAULT == null ? consigne != null : !CONSIGNE_EDEFAULT.equals(consigne);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -281,6 +334,8 @@ public class MapQuestionableFactImpl extends AQuestionableFactImpl implements Ma
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (type: ");
 		result.append(type);
+		result.append(", consigne: ");
+		result.append(consigne);
 		result.append(')');
 		return result.toString();
 	}

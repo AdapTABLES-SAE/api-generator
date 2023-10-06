@@ -499,6 +499,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="PropositionParam" eSuperTypes="#//Parameter">
     <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//AValue"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//Position"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Value" eSuperTypes="#//AValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -512,13 +514,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="Correctness" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntrySoluceParam" eSuperTypes="#//Parameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//ECorrectness"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mapValue" eType="#//MapValue"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//Position"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Display" eSuperTypes="#//Parameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interactive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="correctness" eType="#//Correctness"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageDisplay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AComponent" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="allowedAbility" eType="#//Ability"/>
@@ -534,6 +537,7 @@
         eType="#//AComponent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alternateComponents" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="forFact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forMap" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//AComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayValue" eType="#//Display"
@@ -729,9 +733,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="positions" lowerBound="2"
         upperBound="2" eType="#//MapElementPosition"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MapValue" eSuperTypes="#//Value">
-    <eOperations name="isCorrectValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Time" abstract="true"/>
   <eClassifiers xsi:type="ecore:EEnum" name="EGeographyValue">
     <eLiterals name="CITY"/>
@@ -805,6 +806,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="mapsolutions" upperBound="-1"
         eType="#//MapSolution" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EGeographyValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="consigne" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MapSolution">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -812,4 +814,8 @@
         eType="#//MapElementPosition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HGLevel" eSuperTypes="#//Level"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PositionedMapElement" eSuperTypes="#//PositionedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="createdPositions" upperBound="-1"
+        eType="#//Position" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

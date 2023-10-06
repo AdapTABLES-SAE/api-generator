@@ -13,6 +13,7 @@ package generator;
  * <ul>
  *   <li>{@link generator.Display#isInteractive <em>Interactive</em>}</li>
  *   <li>{@link generator.Display#getCorrectness <em>Correctness</em>}</li>
+ *   <li>{@link generator.Display#isImageDisplay <em>Image Display</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getDisplay()
@@ -63,5 +64,27 @@ public interface Display extends Parameter {
 	 * @generated
 	 */
 	void setCorrectness(Correctness value);
+
+	/**
+	 * Returns the value of the '<em><b>Image Display</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Image Display</em>' attribute.
+	 * @see #setImageDisplay(boolean)
+	 * @see generator.GeneratorPackage#getDisplay_ImageDisplay()
+	 * @model
+	 * @generated
+	 */
+	boolean isImageDisplay();
+
+	/**
+	 * Sets the value of the '{@link generator.Display#isImageDisplay <em>Image Display</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Image Display</em>' attribute.
+	 * @see #isImageDisplay()
+	 * @generated
+	 */
+	void setImageDisplay(boolean value);
 
 } // Display

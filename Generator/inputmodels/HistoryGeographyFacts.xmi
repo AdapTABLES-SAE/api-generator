@@ -1,121 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<generator:Knowledge
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:generator="http://www.example.org/generator"
-    name="History Geography Facts">
-  <knowledgefacts
-      name="Régions de France">
-    <facts xsi:type="generator:GeographyFact"
-        position="OCCITANIE"
-        type="REGIONS"
-        value="Occitanie"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="PAYS_DE_LA_LOIRE"
-        type="REGIONS"
-        value="Pays de la Loire"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="BRETAGNE"
-        type="REGIONS"
-        value="Bretagne"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="NORMANDIE"
-        type="REGIONS"
-        value="Normandie"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="HAUTS_DE_FRANCE"
-        type="REGIONS"
-        value="Hauts-de-France"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="CENTRE_VAL_DE_LOIRE"
-        type="REGIONS"
-        value="Centre-val de Loire"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="ILE_DE_FRANCE"
-        type="REGIONS"
-        value="Île-de-France"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="GRAND_EST"
-        type="REGIONS"
-        value="Grand Est"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="BOURGOGNE_FRANCHE_COMTE"
-        type="REGIONS"
-        value="Bourgogne-Franche-Comté"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="AUVERGNE_RHONE_ALPES"
-        type="REGIONS"
-        value="Auvergne-Rhône-Alpes"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="PROVENCE_ALPES_COTE_DAZUR"
-        type="REGIONS"
-        value="Provence-Alpes-Côte-D'Azur"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="NOUVELLE_AQUITAINE"
-        type="REGIONS"
-        value="Nouvelle Aquitaine"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="CORSE"
-        type="REGIONS"
-        value="Corse"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="LA_REUNION"
-        type="REGIONS"
-        value="La Réunion"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="MARTINIQUE"
-        type="REGIONS"
-        value="Martinique"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="GUYANE"
-        type="REGIONS"
-        value="Guyane"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="GUADELOUPE"
-        type="REGIONS"
-        value="Guadeloupe"/>
-    <facts xsi:type="generator:GeographyFact"
-        position="MAYOTTE"
-        type="REGIONS"
-        value="Mayotte"/>
+<generator:Knowledge xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" name="History Geography Facts">
+  <knowledgefacts name="Régions de France">
+    <facts xsi:type="generator:GeographyFact" position="OCCITANIE" type="REGIONS" value="Occitanie"/>
+    <facts xsi:type="generator:GeographyFact" position="PAYS_DE_LA_LOIRE" type="REGIONS" value="Pays de la Loire"/>
+    <facts xsi:type="generator:GeographyFact" position="BRETAGNE" type="REGIONS" value="Bretagne"/>
+    <facts xsi:type="generator:GeographyFact" position="NORMANDIE" type="REGIONS" value="Normandie"/>
+    <facts xsi:type="generator:GeographyFact" position="HAUTS_DE_FRANCE" type="REGIONS" value="Hauts-de-France"/>
+    <facts xsi:type="generator:GeographyFact" position="CENTRE_VAL_DE_LOIRE" type="REGIONS" value="Centre-val de Loire"/>
+    <facts xsi:type="generator:GeographyFact" position="ILE_DE_FRANCE" type="REGIONS" value="Île-de-France"/>
+    <facts xsi:type="generator:GeographyFact" position="GRAND_EST" type="REGIONS" value="Grand Est"/>
+    <facts xsi:type="generator:GeographyFact" position="BOURGOGNE_FRANCHE_COMTE" type="REGIONS" value="Bourgogne-Franche-Comté"/>
+    <facts xsi:type="generator:GeographyFact" position="AUVERGNE_RHONE_ALPES" type="REGIONS" value="Auvergne-Rhône-Alpes"/>
+    <facts xsi:type="generator:GeographyFact" position="PROVENCE_ALPES_COTE_DAZUR" type="REGIONS" value="Provence-Alpes-Côte-D'Azur"/>
+    <facts xsi:type="generator:GeographyFact" position="NOUVELLE_AQUITAINE" type="REGIONS" value="Nouvelle Aquitaine"/>
+    <facts xsi:type="generator:GeographyFact" position="CORSE" type="REGIONS" value="Corse"/>
+    <facts xsi:type="generator:GeographyFact" position="LA_REUNION" type="REGIONS" value="La Réunion"/>
+    <facts xsi:type="generator:GeographyFact" position="MARTINIQUE" type="REGIONS" value="Martinique"/>
+    <facts xsi:type="generator:GeographyFact" position="GUYANE" type="REGIONS" value="Guyane"/>
+    <facts xsi:type="generator:GeographyFact" position="GUADELOUPE" type="REGIONS" value="Guadeloupe"/>
+    <facts xsi:type="generator:GeographyFact" position="MAYOTTE" type="REGIONS" value="Mayotte"/>
     <map ID="FRANCE_REGIONS">
-      <positions
-          ID="OCCITANIE"/>
-      <positions
-          ID="PAYS_DE_LA_LOIRE"/>
-      <positions
-          ID="BRETAGNE"/>
-      <positions
-          ID="NORMANDIE"/>
-      <positions
-          ID="HAUTS_DE_FRANCE"/>
-      <positions
-          ID="CENTRE_VAL_DE_LOIRE"/>
-      <positions
-          ID="ILE_DE_FRANCE"/>
-      <positions
-          ID="GRAND_EST"/>
-      <positions
-          ID="BOURGOGNE_FRANCHE_COMTE"/>
-      <positions
-          ID="AUVERGNE_RHONE_ALPES"/>
-      <positions
-          ID="PROVENCE_ALPES_COTE_DAZUR"/>
-      <positions
-          ID="NOUVELLE_AQUITAINE"/>
-      <positions
-          ID="CORSE"/>
-      <positions
-          ID="LA_REUNION"/>
-      <positions
-          ID="MARTINIQUE"/>
-      <positions
-          ID="GUYANE"/>
-      <positions
-          ID="GUADELOUPE"/>
-      <positions
-          ID="MAYOTTE"/>
+      <positions ID="OCCITANIE"/>
+      <positions ID="PAYS_DE_LA_LOIRE"/>
+      <positions ID="BRETAGNE"/>
+      <positions ID="NORMANDIE"/>
+      <positions ID="HAUTS_DE_FRANCE"/>
+      <positions ID="CENTRE_VAL_DE_LOIRE"/>
+      <positions ID="ILE_DE_FRANCE"/>
+      <positions ID="GRAND_EST"/>
+      <positions ID="BOURGOGNE_FRANCHE_COMTE"/>
+      <positions ID="AUVERGNE_RHONE_ALPES"/>
+      <positions ID="PROVENCE_ALPES_COTE_DAZUR"/>
+      <positions ID="NOUVELLE_AQUITAINE"/>
+      <positions ID="CORSE"/>
+      <positions ID="LA_REUNION"/>
+      <positions ID="MARTINIQUE"/>
+      <positions ID="GUYANE"/>
+      <positions ID="GUADELOUPE"/>
+      <positions ID="MAYOTTE"/>
     </map>
   </knowledgefacts>
 </generator:Knowledge>

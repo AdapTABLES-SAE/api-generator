@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface AComponent extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Allowed Ability</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -114,4 +113,5 @@ public interface AComponent extends EObject {
 	 * @generated
 	 */
 	void setForStatement(boolean value);
+
 } // AComponent

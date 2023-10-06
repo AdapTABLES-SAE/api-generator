@@ -2,14 +2,16 @@
  */
 package generator.impl;
 
+import generator.*;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.impl.EFactoryImpl;
-import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import generator.*;
+import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
  * <!-- begin-user-doc -->
@@ -237,8 +239,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createDate();
 		case GeneratorPackage.TIME_PERIOD:
 			return createTimePeriod();
-		case GeneratorPackage.MAP_VALUE:
-			return createMapValue();
 		case GeneratorPackage.MAP_QUESTION_PARAM:
 			return createMapQuestionParam();
 		case GeneratorPackage.HASSOCIATION:
@@ -259,6 +259,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createMapSolution();
 		case GeneratorPackage.HG_LEVEL:
 			return createHGLevel();
+		case GeneratorPackage.POSITIONED_MAP_ELEMENT:
+			return createPositionedMapElement();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1273,16 +1275,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapValue createMapValue() {
-		MapValueImpl mapValue = new MapValueImpl();
-		return mapValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public MapQuestionParam createMapQuestionParam() {
 		MapQuestionParamImpl mapQuestionParam = new MapQuestionParamImpl();
 		return mapQuestionParam;
@@ -1376,6 +1368,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public HGLevel createHGLevel() {
 		HGLevelImpl hgLevel = new HGLevelImpl();
 		return hgLevel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PositionedMapElement createPositionedMapElement() {
+		PositionedMapElementImpl positionedMapElement = new PositionedMapElementImpl();
+		return positionedMapElement;
 	}
 
 	/**
@@ -1647,28 +1649,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EStatementType createEStatementTypeFromString(EDataType eDataType, String initialValue) {
-		EStatementType result = EStatementType.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertEStatementTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ERoomType createERoomTypeFromString(EDataType eDataType, String initialValue) {
 		ERoomType result = ERoomType.get(initialValue);
 		if (result == null)
@@ -1749,6 +1729,28 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * @generated
 	 */
 	public String convertELegendTargetToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EStatementType createEStatementTypeFromString(EDataType eDataType, String initialValue) {
+		EStatementType result = EStatementType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEStatementTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -12,6 +12,7 @@ package generator;
  * </p>
  * <ul>
  *   <li>{@link generator.PropositionParam#getState <em>State</em>}</li>
+ *   <li>{@link generator.PropositionParam#getPosition <em>Position</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getPropositionParam()
@@ -40,5 +41,27 @@ public interface PropositionParam extends Parameter {
 	 * @generated
 	 */
 	void setState(AValue value);
+
+	/**
+	 * Returns the value of the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Position</em>' containment reference.
+	 * @see #setPosition(Position)
+	 * @see generator.GeneratorPackage#getPropositionParam_Position()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Position getPosition();
+
+	/**
+	 * Sets the value of the '{@link generator.PropositionParam#getPosition <em>Position</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Position</em>' containment reference.
+	 * @see #getPosition()
+	 * @generated
+	 */
+	void setPosition(Position value);
 
 } // PropositionParam

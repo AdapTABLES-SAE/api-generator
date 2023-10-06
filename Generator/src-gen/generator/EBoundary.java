@@ -47,19 +47,21 @@ public enum EBoundary implements Enumerator {
 	 * @ordered
 	 */
 	SUP_EQ_ONE(2, "SUP_EQ_ONE", "SUP_EQ_ONE"),
+
 	/**
 	 * The '<em><b>EQ NB FACTS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #EQ_NB_FACTS_VALUE
 	 * @generated
 	 * @ordered
 	 */
 	EQ_NB_FACTS(3, "EQ_NB_FACTS", "EQ_NB_FACTS"),
+
 	/**
 	 * The '<em><b>SUP NB FACTS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #SUP_NB_FACTS_VALUE
 	 * @generated
 	 * @ordered

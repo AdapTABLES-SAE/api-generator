@@ -698,6 +698,64 @@
       <directions>SOUTH</directions>
       <directions>NORTH</directions>
     </roomtypes>
+    <roomtypes
+        xsi:type="generator:LargeRoomType"
+        name="MapRoom">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="MAP_DISPLAY"
+          ID="POSL1"/>
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          ID="POS3"/>
+      <elementPositions
+          ID="POS4"/>
+      <elementPositions
+          ID="POS5"/>
+      <elementPositions
+          ID="POS6"/>
+      <elementPositions
+          ID="POS7"/>
+      <elementPositions
+          ID="POS8"/>
+      <elementPositions
+          ID="POS9"/>
+      <elementPositions
+          ID="POS10"/>
+      <elementPositions
+          ID="POS11"/>
+      <elementPositions
+          ID="POS12"/>
+      <elementPositions
+          ID="POS13"/>
+      <elementPositions
+          ID="POS14"/>
+      <elementPositions
+          ID="POS15"/>
+      <elementPositions
+          ID="POS16"/>
+      <elementPositions
+          ID="POS17"/>
+      <elementPositions
+          ID="POS18"/>
+      <elementPositions
+          ID="POS19"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <directions>SOUTH_EAST</directions>
+      <directions>SOUTH_WEST</directions>
+      <directions>NORTH_EAST</directions>
+      <directions>NORTH_WEST</directions>
+      <directions>EAST_SOUTH</directions>
+      <directions>EAST_NORTH</directions>
+      <directions>WEST_NORTH</directions>
+      <directions>WEST_SOUTH</directions>
+    </roomtypes>
   </roomtypes>
   <levelsDifficultyProgress>
     <cursesAvailabilities
@@ -1636,6 +1694,43 @@
       <restrictedTo>IDENTIFY</restrictedTo>
     </gameplays>
     <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_GRAPHIC"
+        undoable="true"
+        manualValidation="true"
+        category="MOVE_MULTIPLE"
+        statementType="GRAPHIC">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="MAP_DISPLAY"
+          forMap="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+          <quantity
+              factNbAnswers="true"/>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="MOVABLE"
+          forProposition="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="VERIFICATOR"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          forStatement="true"/>
+      <prompt
+          prompt="Déplace les éléments sur les bonnes zones "/>
+    </gameplays>
+    <gameplays
         xsi:type="generator:NoQuestionGameplay"
         name="GP_TRAP_5_SMALL_AVOIDABLE">
       <components
@@ -1706,6 +1801,35 @@
               value="7"/>
         </quantity>
       </components>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_GRAPHIC_INPUT"
+        undoable="true"
+        category="POSITION_MULTIPLE"
+        statementType="GRAPHIC">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="MAP_DISPLAY"
+          forMap="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="TYPABLE_DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+          <quantity
+              factNbAnswers="true"/>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          forStatement="true"/>
+      <prompt
+          prompt="Place toi et saisie les bonnes réponses"/>
     </gameplays>
   </gameplays>
   <elements>
@@ -1923,6 +2047,15 @@
           ID="ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"
           type="MediumWaitFireTrap"
           ability="AVOIDABLE"/>
+      <elements
+          size="LARGE"
+          ID="STRUCT_MAP_LARGE"
+          type="MapStructure"
+          ability="MAP_DISPLAY"/>
+      <elements
+          ID="ELEMENT_TYPE_TYPABLE_DETECTOR"
+          type="TypableDetector"
+          ability="TYPABLE_DETECTOR"/>
     </elementTypes>
     <curses>
       <curses
@@ -1984,5 +2117,9 @@
         name="DETECTOR_AVATAR"/>
     <abilities
         name="FILL_IN_DISPLAY"/>
+    <abilities
+        name="MAP_DISPLAY"/>
+    <abilities
+        name="TYPABLE_DETECTOR"/>
   </abilities>
 </generator:GameDescription>

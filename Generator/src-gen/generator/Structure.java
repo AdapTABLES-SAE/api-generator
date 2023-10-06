@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link generator.Structure#getComponents <em>Components</em>}</li>
  *   <li>{@link generator.Structure#isAlternateComponents <em>Alternate Components</em>}</li>
  *   <li>{@link generator.Structure#isForFact <em>For Fact</em>}</li>
+ *   <li>{@link generator.Structure#isForMap <em>For Map</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getStructure()
@@ -78,5 +79,27 @@ public interface Structure extends AComponent {
 	 * @generated
 	 */
 	void setForFact(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>For Map</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>For Map</em>' attribute.
+	 * @see #setForMap(boolean)
+	 * @see generator.GeneratorPackage#getStructure_ForMap()
+	 * @model
+	 * @generated
+	 */
+	boolean isForMap();
+
+	/**
+	 * Sets the value of the '{@link generator.Structure#isForMap <em>For Map</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>For Map</em>' attribute.
+	 * @see #isForMap()
+	 * @generated
+	 */
+	void setForMap(boolean value);
 
 } // Structure

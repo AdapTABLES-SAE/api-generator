@@ -2,6 +2,8 @@
  */
 package generator.impl;
 
+import java.util.Objects;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -220,7 +222,6 @@ public class AbilityImpl extends MinimalEObjectImpl.Container implements Ability
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -283,6 +284,23 @@ public class AbilityImpl extends MinimalEObjectImpl.Container implements Ability
 		result.append(name);
 		result.append(')');
 		return result.toString();
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(lockingEquipment, name);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AbilityImpl other = (AbilityImpl) obj;
+		return Objects.equals(name, other.name);
 	}
 
 } //AbilityImpl
