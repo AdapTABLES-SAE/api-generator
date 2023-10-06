@@ -602,7 +602,8 @@
     <genClasses ecoreClass="generator.ecore#//TimePeriod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//TimePeriod/startYear"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//TimePeriod/endYear"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//TimePeriod/positions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//TimePeriod/startPosition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//TimePeriod/endPosition"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Time"/>
     <genClasses ecoreClass="generator.ecore#//AQuestionParam"/>

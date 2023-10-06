@@ -95,7 +95,7 @@ public interface Date extends Time {
 	 * @return the value of the '<em>Position</em>' reference.
 	 * @see #setPosition(MapElementPosition)
 	 * @see generator.GeneratorPackage#getDate_Position()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	MapElementPosition getPosition();

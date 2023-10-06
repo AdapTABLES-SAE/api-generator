@@ -4693,8 +4693,17 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTimePeriod_Positions() {
+	public EReference getTimePeriod_StartPosition() {
 		return (EReference) timePeriodEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTimePeriod_EndPosition() {
+		return (EReference) timePeriodEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -5724,7 +5733,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		timePeriodEClass = createEClass(TIME_PERIOD);
 		createEAttribute(timePeriodEClass, TIME_PERIOD__START_YEAR);
 		createEAttribute(timePeriodEClass, TIME_PERIOD__END_YEAR);
-		createEReference(timePeriodEClass, TIME_PERIOD__POSITIONS);
+		createEReference(timePeriodEClass, TIME_PERIOD__START_POSITION);
+		createEReference(timePeriodEClass, TIME_PERIOD__END_POSITION);
 
 		timeEClass = createEClass(TIME);
 
@@ -6947,7 +6957,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDate_Year(), ecorePackage.getEString(), "year", null, 0, 1, Date.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDate_Position(), this.getMapElementPosition(), null, "position", null, 1, 1, Date.class,
+		initEReference(getDate_Position(), this.getMapElementPosition(), null, "position", null, 0, 1, Date.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -6957,7 +6967,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTimePeriod_EndYear(), ecorePackage.getEString(), "endYear", null, 0, 1, TimePeriod.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTimePeriod_Positions(), this.getMapElementPosition(), null, "positions", null, 2, 2,
+		initEReference(getTimePeriod_StartPosition(), this.getMapElementPosition(), null, "startPosition", null, 0, 1,
+				TimePeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTimePeriod_EndPosition(), this.getMapElementPosition(), null, "endPosition", null, 0, 1,
 				TimePeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

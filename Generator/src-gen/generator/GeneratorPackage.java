@@ -7439,13 +7439,22 @@ public interface GeneratorPackage extends EPackage {
 	int TIME_PERIOD__END_YEAR = TIME_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Positions</b></em>' reference list.
+	 * The feature id for the '<em><b>Start Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_PERIOD__POSITIONS = TIME_FEATURE_COUNT + 2;
+	int TIME_PERIOD__START_POSITION = TIME_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>End Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_PERIOD__END_POSITION = TIME_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Time Period</em>' class.
@@ -7454,7 +7463,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_PERIOD_FEATURE_COUNT = TIME_FEATURE_COUNT + 3;
+	int TIME_PERIOD_FEATURE_COUNT = TIME_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Time Period</em>' class.
@@ -12778,15 +12787,26 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getTimePeriod_EndYear();
 
 	/**
-	 * Returns the meta object for the reference list '{@link generator.TimePeriod#getPositions <em>Positions</em>}'.
+	 * Returns the meta object for the reference '{@link generator.TimePeriod#getStartPosition <em>Start Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Positions</em>'.
-	 * @see generator.TimePeriod#getPositions()
+	 * @return the meta object for the reference '<em>Start Position</em>'.
+	 * @see generator.TimePeriod#getStartPosition()
 	 * @see #getTimePeriod()
 	 * @generated
 	 */
-	EReference getTimePeriod_Positions();
+	EReference getTimePeriod_StartPosition();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.TimePeriod#getEndPosition <em>End Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>End Position</em>'.
+	 * @see generator.TimePeriod#getEndPosition()
+	 * @see #getTimePeriod()
+	 * @generated
+	 */
+	EReference getTimePeriod_EndPosition();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Time <em>Time</em>}'.
@@ -16735,12 +16755,20 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute TIME_PERIOD__END_YEAR = eINSTANCE.getTimePeriod_EndYear();
 
 		/**
-		 * The meta object literal for the '<em><b>Positions</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Start Position</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TIME_PERIOD__POSITIONS = eINSTANCE.getTimePeriod_Positions();
+		EReference TIME_PERIOD__START_POSITION = eINSTANCE.getTimePeriod_StartPosition();
+
+		/**
+		 * The meta object literal for the '<em><b>End Position</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TIME_PERIOD__END_POSITION = eINSTANCE.getTimePeriod_EndPosition();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.TimeImpl <em>Time</em>}' class.

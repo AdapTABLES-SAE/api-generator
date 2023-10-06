@@ -2,8 +2,6 @@
  */
 package generator;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Time Period</b></em>'.
@@ -15,7 +13,8 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link generator.TimePeriod#getStartYear <em>Start Year</em>}</li>
  *   <li>{@link generator.TimePeriod#getEndYear <em>End Year</em>}</li>
- *   <li>{@link generator.TimePeriod#getPositions <em>Positions</em>}</li>
+ *   <li>{@link generator.TimePeriod#getStartPosition <em>Start Position</em>}</li>
+ *   <li>{@link generator.TimePeriod#getEndPosition <em>End Position</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getTimePeriod()
@@ -68,15 +67,47 @@ public interface TimePeriod extends Time {
 	void setEndYear(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Positions</b></em>' reference list.
-	 * The list contents are of type {@link generator.MapElementPosition}.
+	 * Returns the value of the '<em><b>Start Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Positions</em>' reference list.
-	 * @see generator.GeneratorPackage#getTimePeriod_Positions()
-	 * @model lower="2" upper="2"
+	 * @return the value of the '<em>Start Position</em>' reference.
+	 * @see #setStartPosition(MapElementPosition)
+	 * @see generator.GeneratorPackage#getTimePeriod_StartPosition()
+	 * @model
 	 * @generated
 	 */
-	EList<MapElementPosition> getPositions();
+	MapElementPosition getStartPosition();
+
+	/**
+	 * Sets the value of the '{@link generator.TimePeriod#getStartPosition <em>Start Position</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Start Position</em>' reference.
+	 * @see #getStartPosition()
+	 * @generated
+	 */
+	void setStartPosition(MapElementPosition value);
+
+	/**
+	 * Returns the value of the '<em><b>End Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>End Position</em>' reference.
+	 * @see #setEndPosition(MapElementPosition)
+	 * @see generator.GeneratorPackage#getTimePeriod_EndPosition()
+	 * @model
+	 * @generated
+	 */
+	MapElementPosition getEndPosition();
+
+	/**
+	 * Sets the value of the '{@link generator.TimePeriod#getEndPosition <em>End Position</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>End Position</em>' reference.
+	 * @see #getEndPosition()
+	 * @generated
+	 */
+	void setEndPosition(MapElementPosition value);
 
 } // TimePeriod
