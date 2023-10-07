@@ -817,4 +817,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="createdPositions" upperBound="-1"
         eType="#//Position" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateQuestionableFact" eSuperTypes="#//QuestionableFact"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventQuestionableFact"/>
 </ecore:EPackage>

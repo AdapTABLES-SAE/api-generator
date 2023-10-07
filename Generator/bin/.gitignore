@@ -1,4 +1,4 @@
-/modelsForTests/
+/generator/
 /FactsGenerationTestOLD.class
 /educational_dimension/
 /exceptions/
@@ -6,7 +6,6 @@
 /factsgenerator_hg/
 /factsgenerator_maths/
 /game_dimension/
-/generator/
 /generators/
 /managers/
 /structures/

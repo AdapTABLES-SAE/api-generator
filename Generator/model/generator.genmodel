@@ -655,5 +655,7 @@
     <genClasses ecoreClass="generator.ecore#//PositionedMapElement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedMapElement/createdPositions"/>
     </genClasses>
+    <genClasses ecoreClass="generator.ecore#//DateQuestionableFact"/>
+    <genClasses ecoreClass="generator.ecore#//EventQuestionableFact"/>
   </genPackages>
 </genmodel:GenModel>

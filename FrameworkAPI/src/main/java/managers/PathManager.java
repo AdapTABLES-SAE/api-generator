@@ -382,9 +382,9 @@ public class PathManager {
 		MTMembership task = new MTMembershipImpl();
 		task.setID(taskID);
 		
-		task.setMaxTime((int)(long)jtask.get("timeMaxSecond"));
-		task.setPercentOfApparition((int)(long)jtask.get("repartitionPercent"));
-		task.setNbConsecutiveSuccess((int)(long)jtask.get("successiveSuccessesToReach"));
+		task.setMaxTime(((Long) jtask.get("timeMaxSecond")).intValue());
+		task.setPercentOfApparition(((Long) jtask.get("repartitionPercent")).intValue());
+		task.setNbConsecutiveSuccess(((Long) jtask.get("successiveSuccessesToReach")).intValue());
 		
 		if(((String) jtask.get("target")).equals("CORRECT")) {
 			task.setIdentifySharedProperty(true);
@@ -393,8 +393,8 @@ public class PathManager {
 		}
 				
 		MultipleChoice modality = new MultipleChoiceImpl();
-		modality.setNbChoices((int)(long) jtask.get("nbCorrectChoices") + (int)(long) jtask.get("nbIncorrectChoices"));
-		modality.setNbBadChoices((int)(long) jtask.get("nbIncorrectChoices"));	
+		modality.setNbChoices(((Long) jtask.get("nbCorrectChoices")).intValue() + ((Long) jtask.get("nbIncorrectChoices")).intValue());
+		modality.setNbBadChoices(((Long) jtask.get("nbIncorrectChoices")).intValue());	
 		task.setResponseModality(modality);
 		
 		return task;
@@ -434,7 +434,7 @@ public class PathManager {
 	}
 	
 	private void removeObjectiveFromPath(String objectiveID) {
-		for(Objective obj : path.getObjectives()) {
+		for(Objective obj : new ArrayList<>(path.getObjectives())) {
 			if(obj.getID().equals(objectiveID)) {
 				path.getObjectives().remove(obj);
 			}

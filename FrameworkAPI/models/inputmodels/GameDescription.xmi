@@ -698,64 +698,6 @@
       <directions>SOUTH</directions>
       <directions>NORTH</directions>
     </roomtypes>
-    <roomtypes
-        xsi:type="generator:LargeRoomType"
-        name="MapRoom">
-      <elementPositions
-          size="LARGE"
-          restrictedTo="MAP_DISPLAY"
-          ID="POSL1"/>
-      <elementPositions
-          ID="POS1"/>
-      <elementPositions
-          ID="POS2"/>
-      <elementPositions
-          ID="POS3"/>
-      <elementPositions
-          ID="POS4"/>
-      <elementPositions
-          ID="POS5"/>
-      <elementPositions
-          ID="POS6"/>
-      <elementPositions
-          ID="POS7"/>
-      <elementPositions
-          ID="POS8"/>
-      <elementPositions
-          ID="POS9"/>
-      <elementPositions
-          ID="POS10"/>
-      <elementPositions
-          ID="POS11"/>
-      <elementPositions
-          ID="POS12"/>
-      <elementPositions
-          ID="POS13"/>
-      <elementPositions
-          ID="POS14"/>
-      <elementPositions
-          ID="POS15"/>
-      <elementPositions
-          ID="POS16"/>
-      <elementPositions
-          ID="POS17"/>
-      <elementPositions
-          ID="POS18"/>
-      <elementPositions
-          ID="POS19"/>
-      <elementPositions
-          size="LARGE"
-          restrictedTo="DISPLAY"
-          ID="POSQ1"/>
-      <directions>SOUTH_EAST</directions>
-      <directions>SOUTH_WEST</directions>
-      <directions>NORTH_EAST</directions>
-      <directions>NORTH_WEST</directions>
-      <directions>EAST_SOUTH</directions>
-      <directions>EAST_NORTH</directions>
-      <directions>WEST_NORTH</directions>
-      <directions>WEST_SOUTH</directions>
-    </roomtypes>
   </roomtypes>
   <levelsDifficultyProgress>
     <cursesAvailabilities
