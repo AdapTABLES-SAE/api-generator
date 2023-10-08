@@ -452,15 +452,13 @@ public class PathManager {
 	
 	private void getPath(String pathID) {
 		loadPaths();
-		for(LearningPath path : domain.getLearningpaths()) {
+		for(LearningPath path : new ArrayList<>(domain.getLearningpaths())) {
 			if(path.getID().equals(pathID)) {
 				this.path = path;
 				domain.getLearningpaths().remove(path);
 				saveDomainModel();
 			}
 		}
-		
-		
 	}
 	
 	private void saveDomainModel() {
@@ -497,7 +495,7 @@ public class PathManager {
 		}
 		EcoreUtil.resolveAll(resourceSet); 
 		this.domain = (LearningDomain) resource.getContents().get(0);
-		System.out.println("DOMAIN WAS LOADED "+domain);
+		System.out.println("DOMAIN WAS LOADED "+domain.getLearningpaths());
 	}
 	
 	private Knowledge loadKnowledge() {

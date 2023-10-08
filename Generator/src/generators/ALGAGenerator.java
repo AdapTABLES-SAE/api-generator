@@ -70,7 +70,7 @@ public class ALGAGenerator {
 		for(int i = 0; i < 1; i++) {
 			ALGAGenerator generator;
 			try {
-				generator = new ALGAGenerator("FICTIF03");
+				generator = new ALGAGenerator("FICTIF02");
 				generator.generate();
 				generator.printDungeon();
 				generator.saveDungeon("DungeonGen.xmi");

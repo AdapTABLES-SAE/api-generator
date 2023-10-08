@@ -124,7 +124,7 @@ public abstract class FactGeneratorTemplate {
 		qef.setQuestion(buildQuestionParam(qFact));
 		WantedAnswersParam correctness = new WantedAnswersParamImpl();
 		Value correctnessValue = new ValueImpl();
-		correctnessValue.setValue(correctnessToReach(roomElement.getTask())+"");
+		correctnessValue.setValue(correctnessToReach(qFact)+"");
 		correctness.setValue(correctnessValue);
 		qef.setCorrectnessToReach(correctness);
 		
@@ -205,7 +205,7 @@ public abstract class FactGeneratorTemplate {
 		}
 	}
 	
-	protected abstract int correctnessToReach(ATask task);
+	protected abstract int correctnessToReach(AQuestionableFact fact);
 	
 	private boolean areEveryFactAchieved(ResultsByTask resByTask) {
 		boolean allAchieved = true;

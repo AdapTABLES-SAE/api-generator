@@ -132,8 +132,8 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected int correctnessToReach(ATask task) {
-		return task.getNbExpectedAnswers();
+	protected int correctnessToReach(AQuestionableFact fact) {
+		return ((MapQuestionableFact) fact).getMapsolutions().size();
 	}	
 	
 	@Override

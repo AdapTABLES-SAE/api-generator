@@ -134,9 +134,8 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 
 
 	@Override
-	protected int correctnessToReach(ATask task) {
-		MultipleChoice mc =  (MultipleChoice)((MTMembership) task).getResponseModality();
-		return mc.getNbChoices() - mc.getNbBadChoices();
+	protected int correctnessToReach(AQuestionableFact fact) {
+		return ((MTQFMembership) fact).getGoodResults().size();
 	}	
 	
 	@Override

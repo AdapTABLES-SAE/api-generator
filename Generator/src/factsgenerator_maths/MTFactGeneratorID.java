@@ -149,8 +149,8 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected int correctnessToReach(ATask task) {
-		return 1;
+	protected int correctnessToReach(AQuestionableFact fact) {
+		return 1; //((MTQFIdentification) fact).isSoluce()? 1: 0;
 	}
 
 	@Override

@@ -3,6 +3,7 @@
 package generator.impl;
 
 import java.util.Collection;
+import java.util.Objects;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -374,4 +375,22 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 		return result.toString();
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		LearningPathImpl other = (LearningPathImpl) obj;
+		return Objects.equals(id, other.id);
+	}
+
+	
 } //LearningPathImpl

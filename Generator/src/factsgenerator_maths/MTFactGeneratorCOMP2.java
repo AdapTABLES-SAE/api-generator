@@ -112,8 +112,8 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected int correctnessToReach(ATask task) {
-		return 2 * task.getNbFacts();
+	protected int correctnessToReach(AQuestionableFact fact) {
+		return 2;
 	}
 
 	@Override
