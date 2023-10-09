@@ -167,14 +167,14 @@ public class LearnerPlayerManager {
 	}
 
 	@SuppressWarnings("unchecked")
-	public JSONObject getTaskProgresses(String objectiveID, String levelID) {
+	public JSONObject getTaskProgresses(String objectiveID, String levelID) throws NonExistantObjectiveOrLevelException {
 		JSONObject progress = new JSONObject();
 		JSONArray progresses = new JSONArray();
 		try {
-			
+			initialiseCurrentObjectiveLevel();
 			CurrentObjectiveLevel currentOL = getCorrespondingCOL(objectiveID, levelID);
 			if(currentOL == null) {
-				currentOL = initialiseCurrentObjectiveLevel(objectiveID, levelID);
+				throw new NonExistantObjectiveOrLevelException(objectiveID, levelID, "");
 			}
 			for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {
 				JSONObject taskProgress = new JSONObject(); 
@@ -195,35 +195,32 @@ public class LearnerPlayerManager {
 		return progress;
 	}
 	
-	private CurrentObjectiveLevel initialiseCurrentObjectiveLevel(String objectiveID, String levelID) {
-		CurrentObjectiveLevel currentOL = new CurrentObjectiveLevelImpl();
-		try {
-			LearningPath path = modelsManager.getLearnerPlayer().getLearningpath(); 
-			Objective objective = getObjective(path, objectiveID); 
-			Level level = getLevel(path, objective, levelID); 
-			
-			currentOL.setAchieved(false);
-			currentOL.setObjective(objective);
-			currentOL.setLevel(level);
-			
-			currentOL.setResults(new ResultsImpl());
-			
-			for(ATask task: level.getTasks()) {
-				ResultsByTask rbt = new ResultsByTaskImpl(); 
-				rbt.setTask(task);
-				currentOL.getResults().getResultsbytask().add(rbt);
+	private void initialiseCurrentObjectiveLevel() {
+		
+		LearningPath path = modelsManager.getLearnerPlayer().getLearningpath(); 
+		
+		for(Objective objective: path.getObjectives()) {
+			for(Level level: objective.getLevels()) {
+				CurrentObjectiveLevel currentOL = new CurrentObjectiveLevelImpl();
+				currentOL.setAchieved(false);
+				currentOL.setObjective(objective);
+				currentOL.setLevel(level);
+				
+				currentOL.setResults(new ResultsImpl());
+				
+				for(ATask task: level.getTasks()) {
+					ResultsByTask rbt = new ResultsByTaskImpl(); 
+					rbt.setTask(task);
+					currentOL.getResults().getResultsbytask().add(rbt);
+				}
+				modelsManager.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels().add(currentOL);
 			}
-			
-			modelsManager.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels().add(currentOL);
-		} catch (NonExistantObjectiveOrLevelException e) {
-			e.printStackTrace();
 		}
 
 		saveLearnerPlayerModel();
-		return currentOL; 
 	}
 	
-	private Objective getObjective(LearningPath path, String objectiveID) throws NonExistantObjectiveOrLevelException {
+	/*private Objective getObjective(LearningPath path, String objectiveID) throws NonExistantObjectiveOrLevelException {
 		for(Objective objective: path.getObjectives()) {
 			if(objective.getID().equals(objectiveID)) {
 				return objective;
@@ -239,7 +236,7 @@ public class LearnerPlayerManager {
 			}
 		}
 		throw new NonExistantObjectiveOrLevelException(objective.getID(), levelID, path.getID());
-	}
+	}*/
 	
 	@SuppressWarnings("unchecked")
 	public JSONObject getGeneralStats() {
@@ -617,9 +614,9 @@ public class LearnerPlayerManager {
 	
 	private CurrentObjectiveLevel getCorrespondingCOL(String objectiveID, String levelID) throws NonExistantLearnerPlayerException {
 		for (CurrentObjectiveLevel col : modelsManager.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
-			/*System.out.println(col.getObjective().getID()+" "+col.getLevel().getID());
+			System.out.println(col.getObjective().getID()+" "+col.getLevel().getID());
 			System.out.println(col.getObjective().getID().equals(objectiveID));
-			System.out.println(col.getLevel().getID().equals(levelID));*/
+			System.out.println(col.getLevel().getID().equals(levelID));
 			if(col.getObjective().getID().equals(objectiveID) && col.getLevel().getID().equals(levelID)) {
 				return col;
 			}

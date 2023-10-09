@@ -265,6 +265,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createDateQuestionableFact();
 		case GeneratorPackage.EVENT_QUESTIONABLE_FACT:
 			return createEventQuestionableFact();
+		case GeneratorPackage.HCHRONOLOGY:
+			return createHChronology();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1402,6 +1404,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public EventQuestionableFact createEventQuestionableFact() {
 		EventQuestionableFactImpl eventQuestionableFact = new EventQuestionableFactImpl();
 		return eventQuestionableFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HChronology createHChronology() {
+		HChronologyImpl hChronology = new HChronologyImpl();
+		return hChronology;
 	}
 
 	/**

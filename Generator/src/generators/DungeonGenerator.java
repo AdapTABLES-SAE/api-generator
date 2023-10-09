@@ -296,7 +296,7 @@ public class DungeonGenerator {
 		RoomType roomType = null;
 		while(roomType == null) { 
 			entry = chooseEntryDirection(eligibleRoomOrientations, chosenEntries);
-			if(entry == null) { throw new NonRoomTypeException(roomElements.getGameplay(), roomElements.getTask()); }
+			if(entry == null) { return null; }// throw new NonRoomTypeException(roomElements.getGameplay(), roomElements.getTask());
 			if(entry != null) { 
 				chosenEntries.add(entry);
 				if(!roomElements.isExit()) {
@@ -332,9 +332,10 @@ public class DungeonGenerator {
 	 */
 	private Directions chooseEntryDirection(LinearRoomOrientations roomAllowedOrientations, List<Directions> chosenEntries) {
 		List<Directions> possibleEntries = new ArrayList<>(roomAllowedOrientations.eligibleEntries());
-		//System.out.println(possibleEntries);
+		
 		possibleEntries.removeAll(chosenEntries);
 		if(possibleEntries.isEmpty()) { return null; }
+		//System.out.println(possibleEntries+" "+chosenEntries);
 		return possibleEntries.get(random.nextInt(possibleEntries.size()));
 	}
 		
@@ -378,14 +379,14 @@ public class DungeonGenerator {
 		else if(roomElements.isExit()) { roomTypes = getExitRoomTypes(); }
 		else { roomTypes = getEntryRoomTypes(); }
 		
-		//System.out.println("Every roomtypes "+roomTypes);
-		//System.out.println("Room "+roomElements.getGameplay()+" "+roomElements.isEntry());
-		//System.out.println("entry: "+entry+" exit: "+exit+" ");
+		/*System.out.println("Every roomtypes "+roomTypes);
+		System.out.println("Room "+roomElements.getGameplay()+" "+roomElements.isEntry());
+		System.out.println("entry: "+entry+" exit: "+exit+" ");*/
 
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
-			//System.out.println(" roomtype: "+roomType.getName());
-			//System.out.println(" \t compatible access : "+roomTypeHasCompatibleAccesses(entry, exit, roomType));
-			//System.out.println(" \t compatible positions : "+roomTypeHasCompatiblePositions(roomType, roomElements));
+			/*System.out.println(" roomtype: "+roomType.getName());
+			System.out.println(" \t compatible access : "+roomTypeHasCompatibleAccesses(entry, exit, roomType));
+			System.out.println(" \t compatible positions : "+roomTypeHasCompatiblePositions(roomType, roomElements));*/
 
 			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, roomElements)) {	
 				//System.out.println("entry "+entry+" "+"exit "+exit);
@@ -421,12 +422,15 @@ public class DungeonGenerator {
 		for (ElementSize size : numberOfElementsPerSize.keySet()) {
 			List<Position> roomPositionOfSize = getRoomTypePositionsOfSize(roomtype, size);
 			if(roomPositionOfSize.size() < sumOfElementOfSize(numberOfElementsPerSize.get(size))) {
+				//System.out.println("On est pas valid "+sumOfElementOfSize(numberOfElementsPerSize.get(size))+" "+roomPositionOfSize.size());
+
 				compatible = false; break;
 			} else {
 				for (Ability ability : numberOfElementsPerSize.get(size).keySet()) {
 					if(ability != null) {
 						List<Position> roomPositionOfSize_Ability = getRoomTypePositionsOfSizeForAbility(roomtype, size, ability);
 						if(numberOfElementsPerSize.get(size).get(ability) > roomPositionOfSize_Ability.size()) {
+							//System.out.println("On est pas valid "+ability+" "+numberOfElementsPerSize.get(size).get(ability)+" "+ roomPositionOfSize_Ability.size());
 							compatible = false;
 						}
 					}

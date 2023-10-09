@@ -18,6 +18,7 @@ import jakarta.ws.rs.core.MediaType;
 import managers.Constant;
 import managers.LearnerPlayerManager;
 import managers.ModelsManager;
+import managers.NonExistantObjectiveOrLevelException;
 
 /**
  * Path : http://localhost:8080/FrameworkAPI/results 
@@ -114,7 +115,7 @@ public class LearnerPlayerResultsResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String buildObjectiveLevelParams2JSON(@PathParam("learnerID") String learnerID,
 			@PathParam("objID") String objectiveID, @PathParam("levelID") String levelID, 
-			@Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
+			@Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException, NonExistantObjectiveOrLevelException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) learnerID,
@@ -126,7 +127,7 @@ public class LearnerPlayerResultsResource {
 	@Path("/classroom/{classroomID}/learner/{learnerID}/objective/{objID}/level/{levelID}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String buildObjectiveLevelParams2JSON(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID,
-			@PathParam("objID") String objectiveID, @PathParam("levelID") String levelID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
+			@PathParam("objID") String objectiveID, @PathParam("levelID") String levelID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException, NonExistantObjectiveOrLevelException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID,

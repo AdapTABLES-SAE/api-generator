@@ -15,6 +15,7 @@ import generator.ElementType;
 import generator.EntrySoluceParam;
 import generator.ExpectedAnswer;
 import generator.FactSolutionParam;
+import generator.MapQuestionParam;
 import generator.Position;
 import generator.PositionedElement;
 import generator.PositionedMapElement;
@@ -70,9 +71,9 @@ public class ConcreteGameplayGenerator {
 				elements.addAll(buildStructuredGameplay(aComp, roomElements));
 			} else {
 				if(roomElements.getGameplay() instanceof QuestionGameplay) {
-					for (int i = 0; i < roomElements.getFacts().size(); i++) {
-						elements.addAll(buildNonStructuredGameplay((Component) aComp, roomElements, i)); 
-					}
+					//for (int i = 0; i < roomElements.getFacts().size(); i++) {
+						elements.addAll(buildNonStructuredGameplay((Component) aComp, roomElements)); 
+					//}
 				} else {
 					elements.addAll(buildNoQuestionGameplay((Component) aComp, roomElements));
 				}				
@@ -98,35 +99,46 @@ public class ConcreteGameplayGenerator {
 		return elements;
 	}
 	
-	private List<PositionedElement> buildNonStructuredGameplay(Component component, RoomElements roomElements, int factIndex){
+	private List<PositionedElement> buildNonStructuredGameplay(Component component, RoomElements roomElements){
 		List<PositionedElement> elements = new ArrayList<>();
 
 		ElementType elementType = roomElements.getElementTypeFor(component); //getCompatibleElementType(component, roomtype, false, fact.getQuestion().isInteractive());
-		QuestionedFact fact = roomElements.getFacts().get(factIndex);
 		RoomType roomtype = roomElements.getRoomTypeOfRoom();
 		
 		boolean hasIntegratedChoice = ((QuestionGameplay) roomElements.getGameplay()).isHasIntegratedPropositions();
 		
 		if(component.isForProposition() && component.isForStatement()) {
 			//for (int i = 0; i < fact.getPropositions().size(); i++) {
+			for(QuestionedFact fact : roomElements.getFacts()) {
 				elements.add(buildStatementAsChoicesElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
+			}
 			//}
 		} else if(component.isForStatement()) {
-			elements.add(buildStatementElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
-		} 
-		else if(component.isInputEntry()) { elements.add(buildInputEntryElement(component, elementType, fact, getAvailablePosition(roomtype, elementType))); }
-		else if(component.isForProposition()) {
+			for(QuestionedFact fact : roomElements.getFacts()) {
+				elements.add(buildStatementElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
+			}
+		} else if(component.isInputEntry()) { 
+			for(QuestionedFact fact : roomElements.getFacts()) {
+				elements.add(buildInputEntryElement(component, elementType, fact, getAvailablePosition(roomtype, elementType))); 
+			}
+		} else if(component.isForProposition()) {
 			if(isSingleChoiceComponent(component, (ElementType) elementType)) {
-				for (int i = 0; i < fact.getPropositions().size(); i++) {
-					elements.add(buildSingleChoiceElement(component, elementType, fact, i, getAvailablePosition(roomtype, elementType), hasIntegratedChoice));
+				for(QuestionedFact fact : roomElements.getFacts()) {
+					for (int i = 0; i < fact.getPropositions().size(); i++) {
+						elements.add(buildSingleChoiceElement(component, elementType, fact, i, getAvailablePosition(roomtype, elementType), hasIntegratedChoice));
+					}
 				}
 			} else {
-				elements.addAll(buildMultipleChoicesElement(component, elementType, fact, roomtype));
+				for(QuestionedFact fact : roomElements.getFacts()) {
+					elements.addAll(buildMultipleChoicesElement(component, elementType, fact, roomtype));
+				}
 			}
 		} else {
 			if(component.getQuantity() != null) {
-				for (int i = 0; i < getElementQuantity(component, fact); i++) {
-					elements.add(buildClassicElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
+				for(QuestionedFact fact : roomElements.getFacts()) {
+					for (int i = 0; i < getElementQuantity(component, fact); i++) {
+						elements.add(buildClassicElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
+					}
 				}
 			} else {
 				elements.add(buildClassicElement(component, elementType, getAvailablePosition(roomtype, elementType)));
@@ -481,7 +493,7 @@ public class ConcreteGameplayGenerator {
 	}
 	
 	private List<PositionedElement> buildStructureForMap(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType) throws MapGameplayElementException{
-		
+		System.out.println("***");
 	
 		List<PositionedElement> elements = new ArrayList<>();
 		Structure comp = (Structure) component;
@@ -490,6 +502,7 @@ public class ConcreteGameplayGenerator {
 			positionFromParent = getAvailablePosition(roomElements.getRoomTypeOfRoom(), elementType);
 		}
 		struct = buildMapStructure(comp, elementType, positionFromParent);
+		struct.setMap(((MapQuestionParam) roomElements.getFacts().get(0).getQuestion()).getMap());
 		elements.add(struct);
 		
 		for (AComponent aComp : comp.getComponents()) {
@@ -498,36 +511,41 @@ public class ConcreteGameplayGenerator {
 				if(!((Component) aComp).getQuantity().isFactNbAnswers()) {
 					throw new MapGameplayElementException("Expected quantity is supposed to have the number of facts answers elements ! (boolean is false should be true)");
 				} else {
-					if(roomElements.getFacts().size() > 1) {
+					/*if(roomElements.getFacts().size() > 1) {
 						throw new MapGameplayElementException("Map gameplay cannot deal with multiple facts ! ");
-					}				
+					}	*/			
 					if(roomElements.getFacts().get(0).getPropositions().size() > 0) { // CHOIX
-						for(int i = 0; i < roomElements.getFacts().get(0).getPropositions().size(); i++) {
-							//TODO
-							PropositionParam proposition = roomElements.getFacts().get(0).getPropositions().get(i); 
-							
-							String mapPos = proposition.getPosition().getID();
-							Position position = new PositionImpl();
-							position.setID(struct.getCreatedPositions().get(0).getID()+"/"+mapPos);
-							
-							struct.getCreatedPositions().add(position);
-							
-							elements.add(buildSingleDetectorElement((Component) aComp, elementType, roomElements.getFacts().get(0), i, 
-									struct.getCreatedPositions().get(i + 1), false));
+						for(QuestionedFact fact: roomElements.getFacts()) {
+							for(int i = 0; i < fact.getPropositions().size(); i++) {
+								PropositionParam proposition = fact.getPropositions().get(i); 
+								
+								String mapPos = proposition.getPosition().getID();
+								Position position = new PositionImpl();
+								position.setID(struct.getCreatedPositions().get(0).getID()+"/"+mapPos);
+								
+								struct.getCreatedPositions().add(position);
+								
+								elements.add(buildSingleDetectorElement((Component) aComp, elementType, fact, i, 
+										position, false));
+								
+								System.out.println("build detector");
+							}
 						}
+
 					} else { // SAISIE
-						for(int i = 0; i < roomElements.getFacts().get(0).getEntrys().size(); i++) {
-							//TODO
-							EntrySoluceParam entrys = roomElements.getFacts().get(0).getEntrys().get(i); 
-							
-							String mapPos = entrys.getPosition().getID();
-							Position position = new PositionImpl();
-							position.setID(struct.getCreatedPositions().get(0).getID()+"/"+mapPos);
-							
-							struct.getCreatedPositions().add(position);
-							
-							elements.add(buildSingleDetectorElement((Component) aComp, elementType, roomElements.getFacts().get(0), i, 
-									struct.getCreatedPositions().get(i + 1), false));
+						for(QuestionedFact fact: roomElements.getFacts()) {
+							for(int i = 0; i < fact.getEntrys().size(); i++) {
+								EntrySoluceParam entrys = fact.getEntrys().get(i); 
+								
+								String mapPos = entrys.getPosition().getID();
+								Position position = new PositionImpl();
+								position.setID(struct.getCreatedPositions().get(0).getID()+"/"+mapPos);
+								
+								struct.getCreatedPositions().add(position);
+								
+								elements.add(buildSingleDetectorElement((Component) aComp, elementType, fact, i, 
+										position, false));
+							}	
 						}						
 					}
 				}
@@ -729,6 +747,7 @@ public class ConcreteGameplayGenerator {
 			if(positionFromParent == null) {
 				positionFromParent = getAvailablePosition(roomElements.getRoomTypeOfRoom(), elementType);
 			}	
+			System.out.println("on passe ici");
 			elements.addAll(buildStructureClassicElements(roomElements, comp, positionFromParent, elementType, propositionIndex, factIndex));
 		}
 		

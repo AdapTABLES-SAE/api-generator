@@ -197,7 +197,7 @@ public abstract class FactGeneratorTemplate {
 		for (int i = 0; i < roomElements.getTask().getNbFacts(); i++) {
 			AQuestionableFact qf = null;
 			try {
-				qf = getAvailableFact(roomElements.getCorrespondingResultByTask(dungeonElements.getCurrentObjectiveLevel()));
+				qf = getAvailableFact(roomElements, roomElements.getCorrespondingResultByTask(dungeonElements.getCurrentObjectiveLevel()));
 				createAQuestionedFactFrom(roomElements, qf);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -217,7 +217,7 @@ public abstract class FactGeneratorTemplate {
 		return allAchieved;
 	}
 	
-	private AQuestionableFact getAvailableFact(ResultsByTask resByTask) throws Exception { 
+	private AQuestionableFact getAvailableFact(RoomElements roomElements, ResultsByTask resByTask) throws Exception { 
 		//boolean isEveryFactAchieved = areEveryFactAchieved(resByTask); 
 		if(areEveryFactAchieved(resByTask)) {
 			resetPoolWithEveryFacts(resByTask);
@@ -227,7 +227,7 @@ public abstract class FactGeneratorTemplate {
 			}
 		}	
 		
-		List<AQuestionableFact> eligibleFacts = getEligibleQuestionableFacts(resByTask);
+		List<AQuestionableFact> eligibleFacts = removeUnEligibleFactsBasedOnPreviouslySelectedFact(roomElements.getFacts(), getEligibleQuestionableFacts(resByTask));
 		if(eligibleFacts.isEmpty()) {
 			throw new Exception("Pool of facts should not be empty for task "+resByTask.getTask().getType());
 		} else {
@@ -235,6 +235,11 @@ public abstract class FactGeneratorTemplate {
 			return eligibleFacts.get(number);
 		}
 	}
+	
+	protected List<AQuestionableFact> removeUnEligibleFactsBasedOnPreviouslySelectedFact(List<QuestionedFact> previousFacts, List<AQuestionableFact> facts) {
+		return facts;
+	}
+
 	
 	private List<AQuestionableFact> getEligibleQuestionableFacts(ResultsByTask resByTask){
 		List<AQuestionableFact> eligibleFacts = new ArrayList<>();
@@ -245,7 +250,7 @@ public abstract class FactGeneratorTemplate {
 		}
 		return eligibleFacts;
 	}
-	
+			
 	private boolean isPoolEmpty(ResultsByTask resByTask) {
 		int i = 0; 
 		boolean hasAvailable = false;

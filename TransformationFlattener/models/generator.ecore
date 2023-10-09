@@ -252,7 +252,7 @@
     <eOperations name="getNbExpectedAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
         changeable="false" transient="true" defaultValueLiteral="IDENTIFY"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MembershipIDTask" abstract="true" eSuperTypes="#//ATask">
@@ -261,7 +261,7 @@
         changeable="false" transient="true" defaultValueLiteral="MEMBERSHIP"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifySharedProperty"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ETaskType">
@@ -567,10 +567,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FactSolutionParam" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="OrderingTask" abstract="true" eSuperTypes="#//ATask">
-    <eOperations name="nbExpectedAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eOperations name="getNbExpectedAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ETaskType"
         changeable="false" transient="true" defaultValueLiteral="ORDER"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Prompt">
@@ -723,6 +723,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Date" eSuperTypes="#//Time">
+    <eOperations name="getDate" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="day" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="month" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="year" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -739,6 +740,7 @@
     <eLiterals name="CITY"/>
     <eLiterals name="COUNTRY" value="1"/>
     <eLiterals name="REGIONS" value="1"/>
+    <eLiterals name="NONE" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AQuestionParam" abstract="true" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="MapQuestionParam" eSuperTypes="#//AQuestionParam">
@@ -806,7 +808,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="map" lowerBound="1" eType="#//Map"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mapsolutions" upperBound="-1"
         eType="#//MapSolution" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EGeographyValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EGeographyValue"
+        defaultValueLiteral="NONE"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="consigne" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MapSolution">
@@ -818,7 +821,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="PositionedMapElement" eSuperTypes="#//PositionedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="createdPositions" upperBound="-1"
         eType="#//Position" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="map" eType="#//Map"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DateQuestionableFact" eSuperTypes="#//QuestionableFact"/>
   <eClassifiers xsi:type="ecore:EClass" name="EventQuestionableFact"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HChronology" eSuperTypes="#//OrderingTask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixDatePeriod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="graphicTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
 </ecore:EPackage>

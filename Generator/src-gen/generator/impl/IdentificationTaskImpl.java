@@ -23,7 +23,7 @@ import generator.IdentificationTask;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.IdentificationTaskImpl#getType <em>Type</em>}</li>
- *   <li>{@link generator.impl.IdentificationTaskImpl#isCheckLearnerAction <em>Check Learner Action</em>}</li>
+ *   <li>{@link generator.impl.IdentificationTaskImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,24 +50,24 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 	protected ETaskType type = TYPE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isCheckLearnerAction() <em>Check Learner Action</em>}' attribute.
+	 * The default value of the '{@link #isCheckOnLearnerAction() <em>Check On Learner Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isCheckLearnerAction()
+	 * @see #isCheckOnLearnerAction()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean CHECK_LEARNER_ACTION_EDEFAULT = false;
+	protected static final boolean CHECK_ON_LEARNER_ACTION_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isCheckLearnerAction() <em>Check Learner Action</em>}' attribute.
+	 * The cached value of the '{@link #isCheckOnLearnerAction() <em>Check On Learner Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isCheckLearnerAction()
+	 * @see #isCheckOnLearnerAction()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean checkLearnerAction = CHECK_LEARNER_ACTION_EDEFAULT;
+	protected boolean checkOnLearnerAction = CHECK_ON_LEARNER_ACTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -102,8 +102,8 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isCheckLearnerAction() {
-		return checkLearnerAction;
+	public boolean isCheckOnLearnerAction() {
+		return checkOnLearnerAction;
 	}
 
 	/**
@@ -111,13 +111,13 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCheckLearnerAction(boolean newCheckLearnerAction) {
-		boolean oldCheckLearnerAction = checkLearnerAction;
-		checkLearnerAction = newCheckLearnerAction;
+	public void setCheckOnLearnerAction(boolean newCheckOnLearnerAction) {
+		boolean oldCheckOnLearnerAction = checkOnLearnerAction;
+		checkOnLearnerAction = newCheckOnLearnerAction;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.IDENTIFICATION_TASK__CHECK_LEARNER_ACTION, oldCheckLearnerAction,
-					checkLearnerAction));
+					GeneratorPackage.IDENTIFICATION_TASK__CHECK_ON_LEARNER_ACTION, oldCheckOnLearnerAction,
+					checkOnLearnerAction));
 	}
 
 	/**
@@ -139,8 +139,8 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 		switch (featureID) {
 		case GeneratorPackage.IDENTIFICATION_TASK__TYPE:
 			return getType();
-		case GeneratorPackage.IDENTIFICATION_TASK__CHECK_LEARNER_ACTION:
-			return isCheckLearnerAction();
+		case GeneratorPackage.IDENTIFICATION_TASK__CHECK_ON_LEARNER_ACTION:
+			return isCheckOnLearnerAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -153,8 +153,8 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.IDENTIFICATION_TASK__CHECK_LEARNER_ACTION:
-			setCheckLearnerAction((Boolean) newValue);
+		case GeneratorPackage.IDENTIFICATION_TASK__CHECK_ON_LEARNER_ACTION:
+			setCheckOnLearnerAction((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -168,8 +168,8 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.IDENTIFICATION_TASK__CHECK_LEARNER_ACTION:
-			setCheckLearnerAction(CHECK_LEARNER_ACTION_EDEFAULT);
+		case GeneratorPackage.IDENTIFICATION_TASK__CHECK_ON_LEARNER_ACTION:
+			setCheckOnLearnerAction(CHECK_ON_LEARNER_ACTION_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -185,8 +185,8 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 		switch (featureID) {
 		case GeneratorPackage.IDENTIFICATION_TASK__TYPE:
 			return type != TYPE_EDEFAULT;
-		case GeneratorPackage.IDENTIFICATION_TASK__CHECK_LEARNER_ACTION:
-			return checkLearnerAction != CHECK_LEARNER_ACTION_EDEFAULT;
+		case GeneratorPackage.IDENTIFICATION_TASK__CHECK_ON_LEARNER_ACTION:
+			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -236,8 +236,8 @@ public abstract class IdentificationTaskImpl extends ATaskImpl implements Identi
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (type: ");
 		result.append(type);
-		result.append(", checkLearnerAction: ");
-		result.append(checkLearnerAction);
+		result.append(", checkOnLearnerAction: ");
+		result.append(checkOnLearnerAction);
 		result.append(')');
 		return result.toString();
 	}

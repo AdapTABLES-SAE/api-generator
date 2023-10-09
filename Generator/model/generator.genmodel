@@ -98,6 +98,7 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/CITY"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/COUNTRY"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/REGIONS"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/NONE"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EHistoryTarget">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EHistoryTarget/EVENT"/>
@@ -271,14 +272,14 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//IdentificationTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentificationTask/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentificationTask/checkLearnerAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentificationTask/checkOnLearnerAction"/>
       <genOperations ecoreOperation="generator.ecore#//IdentificationTask/getNbExpectedAnswers"
           body="return this.getNbFacts();"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MembershipIDTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/identifySharedProperty"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/checkLearnerAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/checkOnLearnerAction"/>
       <genOperations ecoreOperation="generator.ecore#//MembershipIDTask/getNbExpectedAnswers"
           body="MultipleChoice mc = (MultipleChoice) this.getResponseModality();&#xD;&#xA;return mc.getNbChoices() - mc.getNbBadChoices(); "/>
     </genClasses>
@@ -482,8 +483,8 @@
     <genClasses ecoreClass="generator.ecore#//FactSolutionParam"/>
     <genClasses ecoreClass="generator.ecore#//OrderingTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/checkLearnerAction"/>
-      <genOperations ecoreOperation="generator.ecore#//OrderingTask/nbExpectedAnswers"
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/checkOnLearnerAction"/>
+      <genOperations ecoreOperation="generator.ecore#//OrderingTask/getNbExpectedAnswers"
           body="return this.getNbFacts();"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Prompt">
@@ -599,6 +600,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Date/month"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Date/year"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Date/position"/>
+      <genOperations ecoreOperation="generator.ecore#//Date/getDate" body="&#x9;&#x9;if (day != null) {&#xD;&#xA;&#x9;&#x9;&#x9;return day + &quot; &quot; + month + &quot; &quot; + year;&#xD;&#xA;&#x9;&#x9;} else if(month != null) {&#xD;&#xA;&#x9;&#x9;&#x9;return month + &quot; &quot; + year;&#xD;&#xA;&#x9;&#x9;} else {&#xD;&#xA;&#x9;&#x9;&#x9;return year;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//TimePeriod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//TimePeriod/startYear"/>
@@ -655,8 +657,13 @@
     <genClasses ecoreClass="generator.ecore#//HGLevel"/>
     <genClasses ecoreClass="generator.ecore#//PositionedMapElement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedMapElement/createdPositions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedMapElement/map"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//DateQuestionableFact"/>
     <genClasses ecoreClass="generator.ecore#//EventQuestionableFact"/>
+    <genClasses ecoreClass="generator.ecore#//HChronology">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HChronology/mixDatePeriod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HChronology/graphicTask"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

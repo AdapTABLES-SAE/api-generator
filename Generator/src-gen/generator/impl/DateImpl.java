@@ -3,6 +3,7 @@
 package generator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -10,6 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import generator.Date;
 import generator.GeneratorPackage;
 import generator.MapElementPosition;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * <!-- begin-user-doc -->
@@ -225,6 +227,22 @@ public class DateImpl extends TimeImpl implements Date {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDate() {
+		if (day != null) {
+			return day + " " + month + " " + year;
+		} else if (month != null) {
+			return month + " " + year;
+		} else {
+			return year;
+		}
+
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -308,6 +326,20 @@ public class DateImpl extends TimeImpl implements Date {
 			return position != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case GeneratorPackage.DATE___GET_DATE:
+			return getDate();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

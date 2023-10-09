@@ -110,4 +110,12 @@ public interface Date extends Time {
 	 */
 	void setPosition(MapElementPosition value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @generated
+	 */
+	String getDate();
+
 } // Date

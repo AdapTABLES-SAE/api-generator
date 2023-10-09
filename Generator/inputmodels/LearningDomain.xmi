@@ -1601,10 +1601,18 @@
           <responseModality
               xsi:type="generator:EnterResponse"/>
         </tasks>
+        <tasks
+            xsi:type="generator:HChronology"
+            ID="HG_O1_L1_T3"
+            nbFacts="3"
+            checkOnLearnerAction="false"
+            mixDatePeriod="true"/>
         <completionCriteria/>
       </levels>
       <setoffacts
           href="HistoryGeographyFacts.xmi#//@knowledgefacts.0"/>
+      <setoffacts
+          href="HistoryGeographyFacts.xmi#//@knowledgefacts.1"/>
     </objectives>
     <knowledge
         href="HistoryGeographyFacts.xmi#/"/>

@@ -90,7 +90,7 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 	protected java.util.Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) throws BadSolutionGenerationException {
 		java.util.Map<ECorrectness, List<Soluce>> propositions = new HashMap<>();
 		MapQuestionableFact qfact = (MapQuestionableFact) qFact;
-				
+		
 		List<Soluce> goodSoluces = getListOfGoodSolutions(qFact);
 		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
 		List<Soluce> propositions_temp = new ArrayList<>();

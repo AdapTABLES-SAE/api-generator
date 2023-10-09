@@ -60,6 +60,7 @@ public interface MapQuestionableFact extends AQuestionableFact {
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The default value is <code>"NONE"</code>.
 	 * The literals are from the enumeration {@link generator.EGeographyValue}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,7 +68,7 @@ public interface MapQuestionableFact extends AQuestionableFact {
 	 * @see generator.EGeographyValue
 	 * @see #setType(EGeographyValue)
 	 * @see generator.GeneratorPackage#getMapQuestionableFact_Type()
-	 * @model
+	 * @model default="NONE"
 	 * @generated
 	 */
 	EGeographyValue getType();

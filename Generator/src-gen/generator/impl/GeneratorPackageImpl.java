@@ -63,6 +63,7 @@ import generator.GeneratorPackage;
 import generator.GeographyFact;
 import generator.GeographyLegendFact;
 import generator.HAssociation;
+import generator.HChronology;
 import generator.HGLevel;
 import generator.HLegend;
 import generator.HistoryFact;
@@ -1007,6 +1008,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass eventQuestionableFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass hChronologyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2360,7 +2368,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIdentificationTask_CheckLearnerAction() {
+	public EAttribute getIdentificationTask_CheckOnLearnerAction() {
 		return (EAttribute) identificationTaskEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2405,7 +2413,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMembershipIDTask_CheckLearnerAction() {
+	public EAttribute getMembershipIDTask_CheckOnLearnerAction() {
 		return (EAttribute) membershipIDTaskEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3872,7 +3880,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getOrderingTask_CheckLearnerAction() {
+	public EAttribute getOrderingTask_CheckOnLearnerAction() {
 		return (EAttribute) orderingTaskEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3881,7 +3889,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getOrderingTask__NbExpectedAnswers() {
+	public EOperation getOrderingTask__GetNbExpectedAnswers() {
 		return orderingTaskEClass.getEOperations().get(0);
 	}
 
@@ -4691,6 +4699,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getDate__GetDate() {
+		return dateEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTimePeriod() {
 		return timePeriodEClass;
 	}
@@ -5087,6 +5104,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPositionedMapElement_Map() {
+		return (EReference) positionedMapElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDateQuestionableFact() {
 		return dateQuestionableFactEClass;
 	}
@@ -5098,6 +5124,33 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EClass getEventQuestionableFact() {
 		return eventQuestionableFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHChronology() {
+		return hChronologyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHChronology_MixDatePeriod() {
+		return (EAttribute) hChronologyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHChronology_GraphicTask() {
+		return (EAttribute) hChronologyEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -5439,13 +5492,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		identificationTaskEClass = createEClass(IDENTIFICATION_TASK);
 		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__TYPE);
-		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__CHECK_LEARNER_ACTION);
+		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__CHECK_ON_LEARNER_ACTION);
 		createEOperation(identificationTaskEClass, IDENTIFICATION_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		membershipIDTaskEClass = createEClass(MEMBERSHIP_ID_TASK);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__TYPE);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY);
-		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION);
+		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION);
 		createEOperation(membershipIDTaskEClass, MEMBERSHIP_ID_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		mtCompletion2EClass = createEClass(MT_COMPLETION2);
@@ -5654,8 +5707,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		orderingTaskEClass = createEClass(ORDERING_TASK);
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__TYPE);
-		createEAttribute(orderingTaskEClass, ORDERING_TASK__CHECK_LEARNER_ACTION);
-		createEOperation(orderingTaskEClass, ORDERING_TASK___NB_EXPECTED_ANSWERS);
+		createEAttribute(orderingTaskEClass, ORDERING_TASK__CHECK_ON_LEARNER_ACTION);
+		createEOperation(orderingTaskEClass, ORDERING_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		promptEClass = createEClass(PROMPT);
 		createEAttribute(promptEClass, PROMPT__PROMPT);
@@ -5773,6 +5826,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(dateEClass, DATE__MONTH);
 		createEAttribute(dateEClass, DATE__YEAR);
 		createEReference(dateEClass, DATE__POSITION);
+		createEOperation(dateEClass, DATE___GET_DATE);
 
 		timePeriodEClass = createEClass(TIME_PERIOD);
 		createEAttribute(timePeriodEClass, TIME_PERIOD__START_YEAR);
@@ -5832,10 +5886,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		positionedMapElementEClass = createEClass(POSITIONED_MAP_ELEMENT);
 		createEReference(positionedMapElementEClass, POSITIONED_MAP_ELEMENT__CREATED_POSITIONS);
+		createEReference(positionedMapElementEClass, POSITIONED_MAP_ELEMENT__MAP);
 
 		dateQuestionableFactEClass = createEClass(DATE_QUESTIONABLE_FACT);
 
 		eventQuestionableFactEClass = createEClass(EVENT_QUESTIONABLE_FACT);
+
+		hChronologyEClass = createEClass(HCHRONOLOGY);
+		createEAttribute(hChronologyEClass, HCHRONOLOGY__MIX_DATE_PERIOD);
+		createEAttribute(hChronologyEClass, HCHRONOLOGY__GRAPHIC_TASK);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -5947,6 +6006,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		hgLevelEClass.getESuperTypes().add(this.getLevel());
 		positionedMapElementEClass.getESuperTypes().add(this.getPositionedElement());
 		dateQuestionableFactEClass.getESuperTypes().add(this.getQuestionableFact());
+		hChronologyEClass.getESuperTypes().add(this.getOrderingTask());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -6299,7 +6359,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getIdentificationTask_Type(), this.getETaskType(), "type", "IDENTIFY", 0, 1,
 				IdentificationTask.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIdentificationTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
+		initEAttribute(getIdentificationTask_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"false", 0, 1, IdentificationTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -6314,7 +6374,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMembershipIDTask_IdentifySharedProperty(), ecorePackage.getEBoolean(),
 				"identifySharedProperty", "true", 0, 1, MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMembershipIDTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction",
+		initEAttribute(getMembershipIDTask_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"false", 0, 1, MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -6769,11 +6829,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOrderingTask_Type(), this.getETaskType(), "type", "ORDER", 0, 1, OrderingTask.class,
 				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOrderingTask_CheckLearnerAction(), ecorePackage.getEBoolean(), "checkLearnerAction", "true",
-				0, 1, OrderingTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOrderingTask_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
+				"true", 0, 1, OrderingTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getOrderingTask__NbExpectedAnswers(), ecorePackage.getEInt(), "nbExpectedAnswers", 0, 1,
+		initEOperation(getOrderingTask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(promptEClass, Prompt.class, "Prompt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -7012,6 +7072,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEOperation(getDate__GetDate(), theXMLTypePackage.getString(), "getDate", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(timePeriodEClass, TimePeriod.class, "TimePeriod", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTimePeriod_StartYear(), ecorePackage.getEString(), "startYear", null, 0, 1, TimePeriod.class,
@@ -7106,7 +7168,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getMapQuestionableFact_Mapsolutions(), this.getMapSolution(), null, "mapsolutions", null, 0, -1,
 				MapQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMapQuestionableFact_Type(), this.getEGeographyValue(), "type", null, 0, 1,
+		initEAttribute(getMapQuestionableFact_Type(), this.getEGeographyValue(), "type", "NONE", 0, 1,
 				MapQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMapQuestionableFact_Consigne(), ecorePackage.getEString(), "consigne", null, 0, 1,
@@ -7128,12 +7190,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getPositionedMapElement_CreatedPositions(), this.getPosition(), null, "createdPositions", null,
 				0, -1, PositionedMapElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPositionedMapElement_Map(), this.getMap(), null, "map", null, 0, 1,
+				PositionedMapElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dateQuestionableFactEClass, DateQuestionableFact.class, "DateQuestionableFact", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(eventQuestionableFactEClass, EventQuestionableFact.class, "EventQuestionableFact", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(hChronologyEClass, HChronology.class, "HChronology", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getHChronology_MixDatePeriod(), ecorePackage.getEBoolean(), "mixDatePeriod", null, 0, 1,
+				HChronology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHChronology_GraphicTask(), ecorePackage.getEBoolean(), "graphicTask", "true", 0, 1,
+				HChronology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");
@@ -7225,6 +7299,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(eGeographyValueEEnum, EGeographyValue.CITY);
 		addEEnumLiteral(eGeographyValueEEnum, EGeographyValue.COUNTRY);
 		addEEnumLiteral(eGeographyValueEEnum, EGeographyValue.REGIONS);
+		addEEnumLiteral(eGeographyValueEEnum, EGeographyValue.NONE);
 
 		initEEnum(eHistoryTargetEEnum, EHistoryTarget.class, "EHistoryTarget");
 		addEEnumLiteral(eHistoryTargetEEnum, EHistoryTarget.EVENT);

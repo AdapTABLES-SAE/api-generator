@@ -25,7 +25,7 @@ import generator.MultipleChoice;
  * <ul>
  *   <li>{@link generator.impl.MembershipIDTaskImpl#getType <em>Type</em>}</li>
  *   <li>{@link generator.impl.MembershipIDTaskImpl#isIdentifySharedProperty <em>Identify Shared Property</em>}</li>
- *   <li>{@link generator.impl.MembershipIDTaskImpl#isCheckLearnerAction <em>Check Learner Action</em>}</li>
+ *   <li>{@link generator.impl.MembershipIDTaskImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
  * </ul>
  *
  * @generated
@@ -72,24 +72,24 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 	protected boolean identifySharedProperty = IDENTIFY_SHARED_PROPERTY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isCheckLearnerAction() <em>Check Learner Action</em>}' attribute.
+	 * The default value of the '{@link #isCheckOnLearnerAction() <em>Check On Learner Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isCheckLearnerAction()
+	 * @see #isCheckOnLearnerAction()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean CHECK_LEARNER_ACTION_EDEFAULT = false;
+	protected static final boolean CHECK_ON_LEARNER_ACTION_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isCheckLearnerAction() <em>Check Learner Action</em>}' attribute.
+	 * The cached value of the '{@link #isCheckOnLearnerAction() <em>Check On Learner Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isCheckLearnerAction()
+	 * @see #isCheckOnLearnerAction()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean checkLearnerAction = CHECK_LEARNER_ACTION_EDEFAULT;
+	protected boolean checkOnLearnerAction = CHECK_ON_LEARNER_ACTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -147,8 +147,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isCheckLearnerAction() {
-		return checkLearnerAction;
+	public boolean isCheckOnLearnerAction() {
+		return checkOnLearnerAction;
 	}
 
 	/**
@@ -156,13 +156,13 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCheckLearnerAction(boolean newCheckLearnerAction) {
-		boolean oldCheckLearnerAction = checkLearnerAction;
-		checkLearnerAction = newCheckLearnerAction;
+	public void setCheckOnLearnerAction(boolean newCheckOnLearnerAction) {
+		boolean oldCheckOnLearnerAction = checkOnLearnerAction;
+		checkOnLearnerAction = newCheckOnLearnerAction;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION, oldCheckLearnerAction,
-					checkLearnerAction));
+					GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION, oldCheckOnLearnerAction,
+					checkOnLearnerAction));
 	}
 
 	/**
@@ -187,8 +187,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 			return getType();
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY:
 			return isIdentifySharedProperty();
-		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION:
-			return isCheckLearnerAction();
+		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION:
+			return isCheckOnLearnerAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -204,8 +204,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY:
 			setIdentifySharedProperty((Boolean) newValue);
 			return;
-		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION:
-			setCheckLearnerAction((Boolean) newValue);
+		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION:
+			setCheckOnLearnerAction((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -222,8 +222,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY:
 			setIdentifySharedProperty(IDENTIFY_SHARED_PROPERTY_EDEFAULT);
 			return;
-		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION:
-			setCheckLearnerAction(CHECK_LEARNER_ACTION_EDEFAULT);
+		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION:
+			setCheckOnLearnerAction(CHECK_ON_LEARNER_ACTION_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -241,8 +241,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 			return type != TYPE_EDEFAULT;
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY:
 			return identifySharedProperty != IDENTIFY_SHARED_PROPERTY_EDEFAULT;
-		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_LEARNER_ACTION:
-			return checkLearnerAction != CHECK_LEARNER_ACTION_EDEFAULT;
+		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION:
+			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -294,8 +294,8 @@ public abstract class MembershipIDTaskImpl extends ATaskImpl implements Membersh
 		result.append(type);
 		result.append(", identifySharedProperty: ");
 		result.append(identifySharedProperty);
-		result.append(", checkLearnerAction: ");
-		result.append(checkLearnerAction);
+		result.append(", checkOnLearnerAction: ");
+		result.append(checkOnLearnerAction);
 		result.append(')');
 		return result.toString();
 	}

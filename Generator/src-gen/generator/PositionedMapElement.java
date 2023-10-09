@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link generator.PositionedMapElement#getCreatedPositions <em>Created Positions</em>}</li>
+ *   <li>{@link generator.PositionedMapElement#getMap <em>Map</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getPositionedMapElement()
@@ -32,5 +33,27 @@ public interface PositionedMapElement extends PositionedElement {
 	 * @generated
 	 */
 	EList<Position> getCreatedPositions();
+
+	/**
+	 * Returns the value of the '<em><b>Map</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Map</em>' reference.
+	 * @see #setMap(Map)
+	 * @see generator.GeneratorPackage#getPositionedMapElement_Map()
+	 * @model
+	 * @generated
+	 */
+	Map getMap();
+
+	/**
+	 * Sets the value of the '{@link generator.PositionedMapElement#getMap <em>Map</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Map</em>' reference.
+	 * @see #getMap()
+	 * @generated
+	 */
+	void setMap(Map value);
 
 } // PositionedMapElement

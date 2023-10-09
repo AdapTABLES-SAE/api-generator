@@ -958,6 +958,15 @@ public interface GeneratorFactory extends EFactory {
 	EventQuestionableFact createEventQuestionableFact();
 
 	/**
+	 * Returns a new object of class '<em>HChronology</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>HChronology</em>'.
+	 * @generated
+	 */
+	HChronology createHChronology();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

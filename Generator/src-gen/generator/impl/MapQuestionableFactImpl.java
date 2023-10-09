@@ -67,7 +67,7 @@ public class MapQuestionableFactImpl extends AQuestionableFactImpl implements Ma
 	 * @generated
 	 * @ordered
 	 */
-	protected static final EGeographyValue TYPE_EDEFAULT = EGeographyValue.CITY;
+	protected static final EGeographyValue TYPE_EDEFAULT = EGeographyValue.NONE;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.

@@ -133,10 +133,121 @@
               </mapsolutions>
             </questionableFacts>
           </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:HChronology" href="../LearningDomain.xmi#HG_O1_L1_T3"/>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT1" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="(Debut) 1er Guerre Mondiale">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1914"/>
+              </mapsolutions>
+              <mapsolutions value="(Fin) 1er Guerre Mondiale">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1918"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT8" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="L'Euro">
+                <mapPosition href="../HistoryGeographyFacts.xmi#2002"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT15" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="Trait&#xe9; de Rome">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1957"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT11" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="(Debut) R&#xe9;gime de Vichy">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1940"/>
+              </mapsolutions>
+              <mapsolutions value="(Fin) R&#xe9;gime de Vichy">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1944"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT14" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1962"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT3" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="Premi&#xe8;re alternance">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1981"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT6" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="Appel du g&#xe9;n&#xe9;ral de Gaulle">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1940"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT4" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="Armistice">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1918"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT10" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="Cr&#xe9;ation de l'ONU">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1945"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT0" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="Les accords d'Evian">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1962"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT9" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="Chute du mur de Berlin">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1989"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT13" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="(Debut) Front Populaire">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1936"/>
+              </mapsolutions>
+              <mapsolutions value="(Fin) Front Populaire">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1937"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT7" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="Loi Veil (IVG)">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1975"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT12" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="Naissance de la Ve R&#xe9;publique">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1958"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT2" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="R&#xe9;volution Russe">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1917"/>
+              </mapsolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT5" type="NONE">
+              <map href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <mapsolutions value="(Debut) Allemagne Nazie (Hitl&#xe9;rienne)">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1933"/>
+              </mapsolutions>
+              <mapsolutions value="(Fin) Allemagne Nazie (Hitl&#xe9;rienne)">
+                <mapPosition href="../HistoryGeographyFacts.xmi#1945"/>
+              </mapsolutions>
+            </questionableFacts>
+          </resultsbytask>
         </results>
       </currentobjectivelevels>
     </learnerProgress>
   </progression>
   <learningpath href="../LearningDomain.xmi#HGPATH"/>
-  <statistics maxGameLevelReached="5" nbLevelsGenerated="42"/>
+  <statistics maxGameLevelReached="5" nbLevelsGenerated="57"/>
 </generator:LearnerPlayer>

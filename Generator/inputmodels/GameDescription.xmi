@@ -756,6 +756,40 @@
       <directions>WEST_NORTH</directions>
       <directions>WEST_SOUTH</directions>
     </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoom11">
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ1"/>
+      <elementPositions
+          size="LARGE"
+          restrictedTo="DISPLAY"
+          ID="POSQ2"/>
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          ID="POS3"/>
+      <elementPositions
+          ID="POS4"/>
+      <elementPositions
+          ID="POS5"/>
+      <elementPositions
+          ID="POS6"/>
+      <elementPositions
+          size="MEDIUM"
+          ID="POSM1"/>
+      <elementPositions
+          size="XLARGE"
+          ID="POSXL1"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
   </roomtypes>
   <levelsDifficultyProgress>
     <cursesAvailabilities
@@ -806,7 +840,7 @@
         <expectedSize>
           <value
               xsi:type="generator:Value"
-              value="LARGE"/>
+              value="XLARGE"/>
         </expectedSize>
         <components
             xsi:type="generator:Component"
@@ -823,7 +857,7 @@
           <expectedSize>
             <value
                 xsi:type="generator:Value"
-                value="LARGE"/>
+                value="XLARGE"/>
           </expectedSize>
           <components
               xsi:type="generator:Structure"
@@ -832,7 +866,7 @@
             <expectedSize>
               <value
                   xsi:type="generator:Value"
-                  value="LARGE"/>
+                  value="XLARGE"/>
             </expectedSize>
             <components
                 xsi:type="generator:Component"
@@ -900,7 +934,7 @@
         <expectedSize>
           <value
               xsi:type="generator:Value"
-              value="LARGE"/>
+              value="XLARGE"/>
         </expectedSize>
         <components
             xsi:type="generator:Structure"
@@ -908,7 +942,7 @@
           <expectedSize>
             <value
                 xsi:type="generator:Value"
-                value="LARGE"/>
+                value="XLARGE"/>
           </expectedSize>
           <components
               xsi:type="generator:Structure"
@@ -917,7 +951,7 @@
             <expectedSize>
               <value
                   xsi:type="generator:Value"
-                  value="LARGE"/>
+                  value="XLARGE"/>
             </expectedSize>
             <components
                 xsi:type="generator:Component"
@@ -1069,7 +1103,7 @@
         <expectedSize>
           <value
               xsi:type="generator:Value"
-              value="LARGE"/>
+              value="XLARGE"/>
         </expectedSize>
         <components
             xsi:type="generator:Component"
@@ -1431,7 +1465,7 @@
         <expectedSize>
           <value
               xsi:type="generator:Value"
-              value="LARGE"/>
+              value="XLARGE"/>
         </expectedSize>
         <components
             xsi:type="generator:Component"
@@ -1448,7 +1482,7 @@
           <expectedSize>
             <value
                 xsi:type="generator:Value"
-                value="LARGE"/>
+                value="XLARGE"/>
           </expectedSize>
           <components
               xsi:type="generator:Structure"
@@ -1457,7 +1491,7 @@
             <expectedSize>
               <value
                   xsi:type="generator:Value"
-                  value="LARGE"/>
+                  value="XLARGE"/>
             </expectedSize>
             <components
                 xsi:type="generator:Component"
@@ -1518,7 +1552,7 @@
         <expectedSize>
           <value
               xsi:type="generator:Value"
-              value="LARGE"/>
+              value="XLARGE"/>
         </expectedSize>
         <components
             xsi:type="generator:Structure"
@@ -1526,7 +1560,7 @@
           <expectedSize>
             <value
                 xsi:type="generator:Value"
-                value="LARGE"/>
+                value="XLARGE"/>
           </expectedSize>
           <components
               xsi:type="generator:Structure"
@@ -1535,7 +1569,7 @@
             <expectedSize>
               <value
                   xsi:type="generator:Value"
-                  value="LARGE"/>
+                  value="XLARGE"/>
             </expectedSize>
             <components
                 xsi:type="generator:Component"
@@ -1727,6 +1761,9 @@
           forStatement="true"/>
       <prompt
           prompt="Déplace les éléments sur les bonnes zones "/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>IDENTIFY</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:NoQuestionGameplay"
@@ -1829,6 +1866,40 @@
       <prompt
           prompt="Place toi et saisie les bonnes réponses"/>
     </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_GRAPHIC_ORDER"
+        undoable="true"
+        manualValidation="true"
+        category="MOVE_MULTIPLE"
+        statementType="GRAPHIC">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="MAP_DISPLAY"
+          forMap="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+          <quantity
+              factNbAnswers="true"/>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="MOVABLE"
+          forProposition="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="VERIFICATOR"/>
+      <prompt
+          prompt="Déplace les éléments sur les bonnes zones "/>
+      <restrictedTo>ORDER</restrictedTo>
+    </gameplays>
   </gameplays>
   <elements>
     <equipments>
@@ -1873,12 +1944,12 @@
     </equipments>
     <elementTypes>
       <elements
-          size="LARGE"
+          size="XLARGE"
           ID="STRUCT_H"
           type="HStructL"
           ability="HORIZONTAL_DISPLAY"/>
       <elements
-          size="LARGE"
+          size="XLARGE"
           ID="STRUCT_V"
           type="VStructL"
           ability="VERTICAL_DISPLAY"/>

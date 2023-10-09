@@ -286,11 +286,12 @@ public class GameElementsGenerator {
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
 		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			if(gp instanceof QuestionGameplay && !gp.isLocked()) {
-				//System.out.println("\t"+gp.getName());
-				//System.out.println("\t cat "+((QuestionGameplay) gp).getCategory().equals(category));
-				//System.out.println("\t validation "+respectValidationMethod((QuestionGameplay) gp, task));
-				//System.out.println("\t restriction "+respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task, allowedStatementTypes));
-				//System.out.println("\t undoable "+respectUndoable((QuestionGameplay) gp, task));
+				/*System.out.println("\t"+gp.getName());
+				System.out.println("\t cat "+((QuestionGameplay) gp).getCategory().equals(category));
+				System.out.println("\t validation "+respectValidationMethod((QuestionGameplay) gp, task));
+				System.out.println("\t types stat "+allowedStatementTypes);
+				System.out.println("\t restriction "+respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task, allowedStatementTypes));
+				System.out.println("\t undoable "+respectUndoable((QuestionGameplay) gp, task));*/
 
 				if(((QuestionGameplay) gp).getCategory().equals(category) && 
 						respectValidationMethod((QuestionGameplay) gp, task) && 

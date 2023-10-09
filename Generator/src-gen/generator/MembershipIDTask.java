@@ -13,7 +13,7 @@ package generator;
  * <ul>
  *   <li>{@link generator.MembershipIDTask#getType <em>Type</em>}</li>
  *   <li>{@link generator.MembershipIDTask#isIdentifySharedProperty <em>Identify Shared Property</em>}</li>
- *   <li>{@link generator.MembershipIDTask#isCheckLearnerAction <em>Check Learner Action</em>}</li>
+ *   <li>{@link generator.MembershipIDTask#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getMembershipIDTask()
@@ -59,27 +59,27 @@ public interface MembershipIDTask extends ATask {
 	void setIdentifySharedProperty(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Check Learner Action</b></em>' attribute.
+	 * Returns the value of the '<em><b>Check On Learner Action</b></em>' attribute.
 	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Check Learner Action</em>' attribute.
-	 * @see #setCheckLearnerAction(boolean)
-	 * @see generator.GeneratorPackage#getMembershipIDTask_CheckLearnerAction()
+	 * @return the value of the '<em>Check On Learner Action</em>' attribute.
+	 * @see #setCheckOnLearnerAction(boolean)
+	 * @see generator.GeneratorPackage#getMembershipIDTask_CheckOnLearnerAction()
 	 * @model default="false"
 	 * @generated
 	 */
-	boolean isCheckLearnerAction();
+	boolean isCheckOnLearnerAction();
 
 	/**
-	 * Sets the value of the '{@link generator.MembershipIDTask#isCheckLearnerAction <em>Check Learner Action</em>}' attribute.
+	 * Sets the value of the '{@link generator.MembershipIDTask#isCheckOnLearnerAction <em>Check On Learner Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Check Learner Action</em>' attribute.
-	 * @see #isCheckLearnerAction()
+	 * @param value the new value of the '<em>Check On Learner Action</em>' attribute.
+	 * @see #isCheckOnLearnerAction()
 	 * @generated
 	 */
-	void setCheckLearnerAction(boolean value);
+	void setCheckOnLearnerAction(boolean value);
 
 	/**
 	 * <!-- begin-user-doc -->
