@@ -40,6 +40,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="positionedElement" upperBound="-1"
         eType="#//PositionedElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="gameplay" eType="#//Gameplay"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbExpectedAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GameDescription">
     <eStructuralFeatures xsi:type="ecore:EReference" name="roomtypes" eType="#//RoomTypes"

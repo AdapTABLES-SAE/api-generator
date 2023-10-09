@@ -1561,7 +1561,6 @@
           forProposition="true"/>
       <prompt
           prompt="Place les bons elements"/>
-      <restrictedTo>ORDER</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -1595,7 +1594,6 @@
           forProposition="true"/>
       <prompt
           prompt="Place les bons elements"/>
-      <restrictedTo>ORDER</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"

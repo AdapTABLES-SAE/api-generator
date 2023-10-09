@@ -23,6 +23,7 @@ import generator.Curse;
 import generator.CurseEligibility;
 import generator.Curses;
 import generator.Date;
+import generator.DateQuestionableFact;
 import generator.Directions;
 import generator.Display;
 import generator.Dungeon;
@@ -45,6 +46,7 @@ import generator.EnterResponse;
 import generator.EntrySoluceParam;
 import generator.Equipment;
 import generator.Equipments;
+import generator.EventQuestionableFact;
 import generator.ExpectedAnswer;
 import generator.FactCorrectnessParam;
 import generator.FactSolutionParam;
@@ -997,6 +999,20 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass dateQuestionableFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eventQuestionableFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum directionsEEnum = null;
 
 	/**
@@ -1410,6 +1426,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EReference getRoom_Gameplay() {
 		return (EReference) roomEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRoom_NbExpectedAnswers() {
+		return (EAttribute) roomEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -5062,6 +5087,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDateQuestionableFact() {
+		return dateQuestionableFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEventQuestionableFact() {
+		return eventQuestionableFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDirections() {
 		return directionsEEnum;
 	}
@@ -5269,6 +5312,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(roomEClass, ROOM__TASK);
 		createEReference(roomEClass, ROOM__POSITIONED_ELEMENT);
 		createEReference(roomEClass, ROOM__GAMEPLAY);
+		createEAttribute(roomEClass, ROOM__NB_EXPECTED_ANSWERS);
 
 		gameDescriptionEClass = createEClass(GAME_DESCRIPTION);
 		createEReference(gameDescriptionEClass, GAME_DESCRIPTION__ROOMTYPES);
@@ -5789,6 +5833,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		positionedMapElementEClass = createEClass(POSITIONED_MAP_ELEMENT);
 		createEReference(positionedMapElementEClass, POSITIONED_MAP_ELEMENT__CREATED_POSITIONS);
 
+		dateQuestionableFactEClass = createEClass(DATE_QUESTIONABLE_FACT);
+
+		eventQuestionableFactEClass = createEClass(EVENT_QUESTIONABLE_FACT);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -5898,6 +5946,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mapQuestionableFactEClass.getESuperTypes().add(this.getAQuestionableFact());
 		hgLevelEClass.getESuperTypes().add(this.getLevel());
 		positionedMapElementEClass.getESuperTypes().add(this.getPositionedElement());
+		dateQuestionableFactEClass.getESuperTypes().add(this.getQuestionableFact());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -5970,6 +6019,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getRoom_Gameplay(), this.getGameplay(), null, "gameplay", null, 0, 1, Room.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEAttribute(getRoom_NbExpectedAnswers(), ecorePackage.getEInt(), "nbExpectedAnswers", "0", 0, 1, Room.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(gameDescriptionEClass, GameDescription.class, "GameDescription", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -7077,6 +7128,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getPositionedMapElement_CreatedPositions(), this.getPosition(), null, "createdPositions", null,
 				0, -1, PositionedMapElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dateQuestionableFactEClass, DateQuestionableFact.class, "DateQuestionableFact", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eventQuestionableFactEClass, EventQuestionableFact.class, "EventQuestionableFact", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

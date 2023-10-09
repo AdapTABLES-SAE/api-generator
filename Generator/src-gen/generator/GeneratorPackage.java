@@ -370,13 +370,22 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM__GAMEPLAY = 7;
 
 	/**
+	 * The feature id for the '<em><b>Nb Expected Answers</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM__NB_EXPECTED_ANSWERS = 8;
+
+	/**
 	 * The number of structural features of the '<em>Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_FEATURE_COUNT = 8;
+	int ROOM_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Room</em>' class.
@@ -8449,6 +8458,116 @@ public interface GeneratorPackage extends EPackage {
 	int POSITIONED_MAP_ELEMENT_OPERATION_COUNT = POSITIONED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.DateQuestionableFactImpl <em>Date Questionable Fact</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.DateQuestionableFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getDateQuestionableFact()
+	 * @generated
+	 */
+	int DATE_QUESTIONABLE_FACT = 119;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT__RESULTS = QUESTIONABLE_FACT__RESULTS;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT__ID = QUESTIONABLE_FACT__ID;
+
+	/**
+	 * The number of structural features of the '<em>Date Questionable Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
+
+	/**
+	 * The operation id for the '<em>Get Complete Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT___GET_COMPLETE_FACT = QUESTIONABLE_FACT___GET_COMPLETE_FACT;
+
+	/**
+	 * The number of operations of the '<em>Date Questionable Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.EventQuestionableFactImpl <em>Event Questionable Fact</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.EventQuestionableFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getEventQuestionableFact()
+	 * @generated
+	 */
+	int EVENT_QUESTIONABLE_FACT = 120;
+
+	/**
+	 * The number of structural features of the '<em>Event Questionable Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_QUESTIONABLE_FACT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Event Questionable Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_QUESTIONABLE_FACT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8456,7 +8575,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 119;
+	int DIRECTIONS = 121;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -8466,7 +8585,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 120;
+	int DUNGEON_MODE = 122;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -8476,7 +8595,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 121;
+	int TABLE_BUILD = 123;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -8486,7 +8605,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 122;
+	int RESULT_POSITION = 124;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -8496,7 +8615,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 123;
+	int ESINGLE_TARGET = 125;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -8506,7 +8625,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 124;
+	int ETASK_TYPE = 126;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -8516,7 +8635,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 125;
+	int EMODALITY = 127;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -8526,7 +8645,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 126;
+	int ESEVERAL_TARGET = 128;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -8536,7 +8655,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 127;
+	int ELEMENT_SIZE = 129;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -8546,7 +8665,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 128;
+	int GP_CATEGORY = 130;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -8556,7 +8675,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 129;
+	int ECORRECTNESS = 131;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -8566,7 +8685,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 130;
+	int EBOUNDARY = 132;
 
 	/**
 	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
@@ -8576,7 +8695,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
 	 * @generated
 	 */
-	int EROOM_TYPE = 131;
+	int EROOM_TYPE = 133;
 
 	/**
 	 * The meta object id for the '{@link generator.EGeographyValue <em>EGeography Value</em>}' enum.
@@ -8586,7 +8705,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEGeographyValue()
 	 * @generated
 	 */
-	int EGEOGRAPHY_VALUE = 132;
+	int EGEOGRAPHY_VALUE = 134;
 
 	/**
 	 * The meta object id for the '{@link generator.EHistoryTarget <em>EHistory Target</em>}' enum.
@@ -8596,7 +8715,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEHistoryTarget()
 	 * @generated
 	 */
-	int EHISTORY_TARGET = 133;
+	int EHISTORY_TARGET = 135;
 
 	/**
 	 * The meta object id for the '{@link generator.ELegendTarget <em>ELegend Target</em>}' enum.
@@ -8606,7 +8725,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getELegendTarget()
 	 * @generated
 	 */
-	int ELEGEND_TARGET = 134;
+	int ELEGEND_TARGET = 136;
 
 	/**
 	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
@@ -8616,7 +8735,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 135;
+	int ESTATEMENT_TYPE = 137;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -8898,6 +9017,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRoom_Gameplay();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Room#getNbExpectedAnswers <em>Nb Expected Answers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Expected Answers</em>'.
+	 * @see generator.Room#getNbExpectedAnswers()
+	 * @see #getRoom()
+	 * @generated
+	 */
+	EAttribute getRoom_NbExpectedAnswers();
 
 	/**
 	 * Returns the meta object for class '{@link generator.GameDescription <em>Game Description</em>}'.
@@ -13224,6 +13354,26 @@ public interface GeneratorPackage extends EPackage {
 	EReference getPositionedMapElement_CreatedPositions();
 
 	/**
+	 * Returns the meta object for class '{@link generator.DateQuestionableFact <em>Date Questionable Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Date Questionable Fact</em>'.
+	 * @see generator.DateQuestionableFact
+	 * @generated
+	 */
+	EClass getDateQuestionableFact();
+
+	/**
+	 * Returns the meta object for class '{@link generator.EventQuestionableFact <em>Event Questionable Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Event Questionable Fact</em>'.
+	 * @see generator.EventQuestionableFact
+	 * @generated
+	 */
+	EClass getEventQuestionableFact();
+
+	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13633,6 +13783,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROOM__GAMEPLAY = eINSTANCE.getRoom_Gameplay();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Expected Answers</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOM__NB_EXPECTED_ANSWERS = eINSTANCE.getRoom_NbExpectedAnswers();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.GameDescriptionImpl <em>Game Description</em>}' class.
@@ -17109,6 +17267,26 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference POSITIONED_MAP_ELEMENT__CREATED_POSITIONS = eINSTANCE.getPositionedMapElement_CreatedPositions();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.DateQuestionableFactImpl <em>Date Questionable Fact</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.DateQuestionableFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getDateQuestionableFact()
+		 * @generated
+		 */
+		EClass DATE_QUESTIONABLE_FACT = eINSTANCE.getDateQuestionableFact();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.EventQuestionableFactImpl <em>Event Questionable Fact</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.EventQuestionableFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getEventQuestionableFact()
+		 * @generated
+		 */
+		EClass EVENT_QUESTIONABLE_FACT = eINSTANCE.getEventQuestionableFact();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.

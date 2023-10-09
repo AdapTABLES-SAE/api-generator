@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.Room#getTask <em>Task</em>}</li>
  *   <li>{@link generator.Room#getPositionedElement <em>Positioned Element</em>}</li>
  *   <li>{@link generator.Room#getGameplay <em>Gameplay</em>}</li>
+ *   <li>{@link generator.Room#getNbExpectedAnswers <em>Nb Expected Answers</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getRoom()
@@ -175,5 +176,28 @@ public interface Room extends EObject {
 	 * @generated
 	 */
 	void setGameplay(Gameplay value);
+
+	/**
+	 * Returns the value of the '<em><b>Nb Expected Answers</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nb Expected Answers</em>' attribute.
+	 * @see #setNbExpectedAnswers(int)
+	 * @see generator.GeneratorPackage#getRoom_NbExpectedAnswers()
+	 * @model default="0" derived="true"
+	 * @generated
+	 */
+	int getNbExpectedAnswers();
+
+	/**
+	 * Sets the value of the '{@link generator.Room#getNbExpectedAnswers <em>Nb Expected Answers</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nb Expected Answers</em>' attribute.
+	 * @see #getNbExpectedAnswers()
+	 * @generated
+	 */
+	void setNbExpectedAnswers(int value);
 
 } // Room

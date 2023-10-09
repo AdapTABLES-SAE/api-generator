@@ -261,6 +261,10 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createHGLevel();
 		case GeneratorPackage.POSITIONED_MAP_ELEMENT:
 			return createPositionedMapElement();
+		case GeneratorPackage.DATE_QUESTIONABLE_FACT:
+			return createDateQuestionableFact();
+		case GeneratorPackage.EVENT_QUESTIONABLE_FACT:
+			return createEventQuestionableFact();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1378,6 +1382,26 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public PositionedMapElement createPositionedMapElement() {
 		PositionedMapElementImpl positionedMapElement = new PositionedMapElementImpl();
 		return positionedMapElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DateQuestionableFact createDateQuestionableFact() {
+		DateQuestionableFactImpl dateQuestionableFact = new DateQuestionableFactImpl();
+		return dateQuestionableFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EventQuestionableFact createEventQuestionableFact() {
+		EventQuestionableFactImpl eventQuestionableFact = new EventQuestionableFactImpl();
+		return eventQuestionableFact;
 	}
 
 	/**

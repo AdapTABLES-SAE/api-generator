@@ -13,10 +13,12 @@ import exceptions.NoCompatibleGameplayException;
 import generator.AComponent;
 import generator.ATask;
 import generator.Ability;
+import generator.CorrectnessValue;
 import generator.Curse;
 import generator.CurseEligibility;
 import generator.Dungeon;
 import generator.EBoundary;
+import generator.ECorrectness;
 import generator.EModality;
 import generator.EStatementType;
 import generator.EnterResponse;
@@ -26,6 +28,7 @@ import generator.Gameplay;
 import generator.Item;
 import generator.MultipleChoice;
 import generator.NoQuestionGameplay;
+import generator.PositionedElement;
 import generator.QuestionGameplay;
 import generator.Relation;
 import generator.Room;
@@ -144,10 +147,25 @@ public class GameElementsGenerator {
 			if(room.getGameplay() != null) {
 				//System.out.println(room.getX()+" "+room.getY()+" "+room.getGameplay());
 				room.getPositionedElement().addAll(gameplayGenerator.buildPositionedElements(this.getCorrespondingRoomElements(room)));
+				computeNumberOfExpectedAnswers(room);
 			} 
 		}
 		
 		return generatedDungeon;
+	}
+	
+	
+	private void computeNumberOfExpectedAnswers(Room room) {
+		int number = 0;
+		for(PositionedElement element: room.getPositionedElement()) {
+			if(element.getCorrectness() != null) {
+				ECorrectness correctness = ((CorrectnessValue) element.getCorrectness().getValue()).getValue();
+				if(correctness.equals(ECorrectness.CORRECT)) {
+					number++;
+				}
+			}
+		}
+		room.setNbExpectedAnswers(number);
 	}
 	
 	private RoomElements getCorrespondingRoomElements(Room room) {

@@ -755,4 +755,6 @@ public class ConcreteGameplayGenerator {
 		occupiedPositions.add(allowed.get(number));
 		return allowed.get(number);
 	}
+
 }
+

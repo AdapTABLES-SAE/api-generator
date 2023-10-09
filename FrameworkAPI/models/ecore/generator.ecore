@@ -724,14 +724,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="day" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="month" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="year" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
-        eType="#//MapElementPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//MapElementPosition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TimePeriod" eSuperTypes="#//Time">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startYear" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="endYear" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="positions" lowerBound="2"
-        upperBound="2" eType="#//MapElementPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="startPosition" eType="#//MapElementPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endPosition" eType="#//MapElementPosition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Time" abstract="true"/>
   <eClassifiers xsi:type="ecore:EEnum" name="EGeographyValue">
@@ -818,4 +817,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="createdPositions" upperBound="-1"
         eType="#//Position" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateQuestionableFact" eSuperTypes="#//QuestionableFact"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventQuestionableFact"/>
 </ecore:EPackage>

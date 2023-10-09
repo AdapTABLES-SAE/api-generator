@@ -39,6 +39,7 @@ import generator.RoomType;
  *   <li>{@link generator.impl.RoomImpl#getTask <em>Task</em>}</li>
  *   <li>{@link generator.impl.RoomImpl#getPositionedElement <em>Positioned Element</em>}</li>
  *   <li>{@link generator.impl.RoomImpl#getGameplay <em>Gameplay</em>}</li>
+ *   <li>{@link generator.impl.RoomImpl#getNbExpectedAnswers <em>Nb Expected Answers</em>}</li>
  * </ul>
  *
  * @generated
@@ -143,6 +144,26 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * @ordered
 	 */
 	protected Gameplay gameplay;
+
+	/**
+	 * The default value of the '{@link #getNbExpectedAnswers() <em>Nb Expected Answers</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNbExpectedAnswers()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NB_EXPECTED_ANSWERS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNbExpectedAnswers() <em>Nb Expected Answers</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNbExpectedAnswers()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nbExpectedAnswers = NB_EXPECTED_ANSWERS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -368,6 +389,28 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getNbExpectedAnswers() {
+		return nbExpectedAnswers;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNbExpectedAnswers(int newNbExpectedAnswers) {
+		int oldNbExpectedAnswers = nbExpectedAnswers;
+		nbExpectedAnswers = newNbExpectedAnswers;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ROOM__NB_EXPECTED_ANSWERS,
+					oldNbExpectedAnswers, nbExpectedAnswers));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -411,6 +454,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			if (resolve)
 				return getGameplay();
 			return basicGetGameplay();
+		case GeneratorPackage.ROOM__NB_EXPECTED_ANSWERS:
+			return getNbExpectedAnswers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -451,6 +496,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		case GeneratorPackage.ROOM__GAMEPLAY:
 			setGameplay((Gameplay) newValue);
 			return;
+		case GeneratorPackage.ROOM__NB_EXPECTED_ANSWERS:
+			setNbExpectedAnswers((Integer) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -487,6 +535,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		case GeneratorPackage.ROOM__GAMEPLAY:
 			setGameplay((Gameplay) null);
 			return;
+		case GeneratorPackage.ROOM__NB_EXPECTED_ANSWERS:
+			setNbExpectedAnswers(NB_EXPECTED_ANSWERS_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -515,6 +566,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			return positionedElement != null && !positionedElement.isEmpty();
 		case GeneratorPackage.ROOM__GAMEPLAY:
 			return gameplay != null;
+		case GeneratorPackage.ROOM__NB_EXPECTED_ANSWERS:
+			return nbExpectedAnswers != NB_EXPECTED_ANSWERS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -534,6 +587,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		result.append(x);
 		result.append(", y: ");
 		result.append(y);
+		result.append(", nbExpectedAnswers: ");
+		result.append(nbExpectedAnswers);
 		result.append(')');
 		return result.toString();
 	}

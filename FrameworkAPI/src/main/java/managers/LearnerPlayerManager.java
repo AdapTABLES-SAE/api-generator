@@ -34,6 +34,7 @@ import generator.impl.QuestionableFactResultImpl;
 import generator.impl.ResultsByTaskImpl;
 import generator.impl.ResultsImpl;
 import generator.impl.StatisticsImpl;
+import generators.ALGAGenerator;
 
 public class LearnerPlayerManager {
 
@@ -55,6 +56,11 @@ public class LearnerPlayerManager {
 				fact.setAchieved(true);
 			}
 		}
+	}
+	
+	public void saveLearnerPlayerModel() {
+		System.out.println("save player "+this.modelsManager.getLearnerPlayer().getID());
+		Constant.saveLearnerModel(this.modelsManager.getLearnerPlayer());
 	}
 	
 	private String getTaskType(ATask task) {
@@ -82,7 +88,7 @@ public class LearnerPlayerManager {
 		
 		modelsManager.getLearnerPlayer().getProgression().setLearnerProgress(new LearnerProgressImpl());
 		
-		modelsManager.saveLearnerPlayerModel();
+		saveLearnerPlayerModel();
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -95,7 +101,7 @@ public class LearnerPlayerManager {
 		
 		if(modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().getItems() == null) {
 			modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().setItems(new ItemsImpl());
-			modelsManager.saveLearnerPlayerModel();
+			saveLearnerPlayerModel();
 		}
 		
 		for(Item anItem: modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().getItems().getItems()) {
@@ -127,7 +133,7 @@ public class LearnerPlayerManager {
 		
 		modelsManager.getLearnerPlayer().getStatistics().setTotalCoins(modelsManager.getLearnerPlayer().getStatistics().getTotalCoins() - ((Long) obj.get("usedCoins")).intValue());
 		
-		modelsManager.saveLearnerPlayerModel();
+		saveLearnerPlayerModel();
 	}
 	
 	private Item getPlayerItem(LearnerPlayer player, String itemID) {
@@ -213,7 +219,7 @@ public class LearnerPlayerManager {
 			e.printStackTrace();
 		}
 
-		modelsManager.saveLearnerPlayerModel();
+		saveLearnerPlayerModel();
 		return currentOL; 
 	}
 	
@@ -240,7 +246,7 @@ public class LearnerPlayerManager {
 		JSONObject stats = new JSONObject();
 		if(modelsManager.getLearnerPlayer().getStatistics() == null) {
 			modelsManager.getLearnerPlayer().setStatistics(new StatisticsImpl());
-			modelsManager.saveLearnerPlayerModel();
+			saveLearnerPlayerModel();
 		}
 		
 		stats.put("nbLevelsGenerated", modelsManager.getLearnerPlayer().getStatistics().getNbLevelsGenerated());
@@ -485,7 +491,7 @@ public class LearnerPlayerManager {
 		 */
 		
 		modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().setCoins(((Long) obj.get("newBalance")).intValue());		
-		modelsManager.saveLearnerPlayerModel();
+		saveLearnerPlayerModel();
 	}
 	
 	public void savePlayerResults(JSONObject obj) throws NonExistantLearnerPlayerException {
@@ -515,7 +521,7 @@ public class LearnerPlayerManager {
 		modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().setCoins(modelsManager.getLearnerPlayer().getProgression().getPlayerProgress().getCoins() + Long.valueOf((Long) obj.get("nbCoinsCollected")).intValue());
 		modelsManager.getLearnerPlayer().getStatistics().setTotalCoins(modelsManager.getLearnerPlayer().getStatistics().getTotalCoins() + Long.valueOf((Long) obj.get("nbCoinsCollected")).intValue());
 			
-		modelsManager.saveLearnerPlayerModel();
+		saveLearnerPlayerModel();
 	}
 
 	/**
@@ -535,29 +541,31 @@ public class LearnerPlayerManager {
 				if(rbt != null) {
 					addResultsToTask(taskResult, rbt);
 				} else {
-					System.err.println("ResultsByTask not found with ID = " + (String) taskResult.get("taskID"));
+					ALGAGenerator.LOGGER.severe("ResultsByTask not found with ID = " + (String) taskResult.get("taskID"));
 				}
 			}
 			updateResultsPercentages(col);
 		} else {
-			System.err.println("CurrentObjectiveLevel not found for O/L = (" + (String) obj.get("objectiveID") + " , " + (String) obj.get("levelID") + ")");
+			ALGAGenerator.LOGGER.severe("CurrentObjectiveLevel not found for O/L = (" + (String) obj.get("objectiveID") + " , " + (String) obj.get("levelID") + ")");
 		}
 		
-		modelsManager.saveLearnerPlayerModel();
+		saveLearnerPlayerModel();
 	}
 	
-	public void resetLearnerProgress(LearnerPlayer learner, Objective objective, Level level) {
-		CurrentObjectiveLevel currentOL = getCurrentObjectiveLevel(learner, objective, level); 
-		if(currentOL != null) {
-			learner.getProgression().getLearnerProgress().getCurrentobjectivelevels().remove(currentOL);
+	public void resetLearnerProgress(LearnerPlayerManager manager, LearnerPlayer learner) {
+		//CurrentObjectiveLevel currentOL = getCurrentObjectiveLevel(learner, objective, level); 
+		//System.out.println("CurrentOL is null");
+		//if(currentOL != null) {
+			learner.getProgression().setLearnerProgress(new LearnerProgressImpl());
 			learner.getProgression().getPlayerProgress().setCurrentLevel(1);
 			learner.setStatistics(new StatisticsImpl());
-		}	
-		modelsManager.saveLearnerPlayerModel();
+		//}	
+		System.out.println(learner.getID()+" "+learner.getProgression().getLearnerProgress().getCurrentobjectivelevels());
+		saveLearnerPlayerModel();
 	}
 
 	
-	
+	/*
 	private CurrentObjectiveLevel getCurrentObjectiveLevel(LearnerPlayer learner, Objective objective, Level level) {
 		for(CurrentObjectiveLevel currentOL: learner.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			if(currentOL.getObjective().getID().equals(objective.getID()) && currentOL.getLevel().getID().equals(level.getID())) {
@@ -565,7 +573,7 @@ public class LearnerPlayerManager {
 			}
 		}
 		return null;
-	}
+	}*/
 	
 	
 	private void addResultsToTask(JSONObject jtask, ResultsByTask rbt) {
@@ -576,7 +584,7 @@ public class LearnerPlayerManager {
 			if(qf != null) {
 				QuestionableFactResult qfres = new QuestionableFactResultImpl();
 				qfres.setAnswerValid((boolean) factResult.get("isCorrect"));
-				qfres.setResponseTime((int) (long) factResult.get("responseTime"));
+				qfres.setResponseTime(((Long) factResult.get("responseTime")).intValue());
 				qfres.setOnTime((boolean) factResult.get("onTime"));
 				JSONArray answers = (JSONArray) factResult.get("answers");
 				for (Object answer : answers) {

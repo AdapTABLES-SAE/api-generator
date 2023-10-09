@@ -1041,6 +1041,24 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case GeneratorPackage.DATE_QUESTIONABLE_FACT: {
+			DateQuestionableFact dateQuestionableFact = (DateQuestionableFact) theEObject;
+			T result = caseDateQuestionableFact(dateQuestionableFact);
+			if (result == null)
+				result = caseQuestionableFact(dateQuestionableFact);
+			if (result == null)
+				result = caseAQuestionableFact(dateQuestionableFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.EVENT_QUESTIONABLE_FACT: {
+			EventQuestionableFact eventQuestionableFact = (EventQuestionableFact) theEObject;
+			T result = caseEventQuestionableFact(eventQuestionableFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -2828,6 +2846,36 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePositionedMapElement(PositionedMapElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Date Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Date Questionable Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDateQuestionableFact(DateQuestionableFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Event Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Event Questionable Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEventQuestionableFact(EventQuestionableFact object) {
 		return null;
 	}
 

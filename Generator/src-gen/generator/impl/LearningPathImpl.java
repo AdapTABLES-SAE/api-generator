@@ -392,5 +392,4 @@ public class LearningPathImpl extends MinimalEObjectImpl.Container implements Le
 		return Objects.equals(id, other.id);
 	}
 
-	
 } //LearningPathImpl

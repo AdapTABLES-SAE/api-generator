@@ -940,6 +940,24 @@ public interface GeneratorFactory extends EFactory {
 	PositionedMapElement createPositionedMapElement();
 
 	/**
+	 * Returns a new object of class '<em>Date Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Date Questionable Fact</em>'.
+	 * @generated
+	 */
+	DateQuestionableFact createDateQuestionableFact();
+
+	/**
+	 * Returns a new object of class '<em>Event Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Event Questionable Fact</em>'.
+	 * @generated
+	 */
+	EventQuestionableFact createEventQuestionableFact();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

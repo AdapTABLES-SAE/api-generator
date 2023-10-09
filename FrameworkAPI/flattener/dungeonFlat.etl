@@ -115,7 +115,7 @@ rule Structures2Elements
 	}
 }
 
-rule Structures2Elements 
+rule MapStructures2Elements 
 	transform element : IN!PositionedMapElement
 	to elementOut : OUT!Element {
 	//"\t\t\tStrucutres creation".println();

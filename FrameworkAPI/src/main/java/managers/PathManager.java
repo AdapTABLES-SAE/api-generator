@@ -195,21 +195,22 @@ public class PathManager {
 		saveDomainModel();
 		
 		// update progress for learner having this path TODO
-		resetEveryLearnerProgress(obj, level);
+		resetEveryLearnerProgress();
 	}
 	
 
 	
-	private void resetEveryLearnerProgress(Objective objective, Level level) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+	private void resetEveryLearnerProgress() throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		Classrooms classrooms = Constant.loadClassrooms(); 
 		LearnerPlayerManager manager; 
 		for(Classroom classroom : classrooms.getClassrooms()) {
 			for(LearnerPlayer LP : classroom.getLearnerPlayers()) {
-				if(LP.getLearningpath().equals(path)) {
+				if(LP.getLearningpath().getID().equals(path.getID())) {
+					System.out.println("to reset "+LP.getID());
 					manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 							Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, LP.getID(),
 							Constant.CLASSROOMS_FILE, classroom.getID(), true));
-					manager.resetLearnerProgress(LP, objective, level);
+					manager.resetLearnerProgress(manager, LP);// objective, level);
 				}
 				
 			}
@@ -495,7 +496,6 @@ public class PathManager {
 		}
 		EcoreUtil.resolveAll(resourceSet); 
 		this.domain = (LearningDomain) resource.getContents().get(0);
-		System.out.println("DOMAIN WAS LOADED "+domain.getLearningpaths());
 	}
 	
 	private Knowledge loadKnowledge() {
