@@ -36,7 +36,7 @@ public class QuestionedFactSplitter {
 				text = text.replace("\\?", "");
 				if(text.contains("]")) {
 					String[] subParts = question.split("]"); 
-					this.texts.add(subParts[0] + "]");
+					this.texts.add(subParts[0].replace("[", ""));
 					this.textsAreImages.add(true);
 					this.texts.add(subParts[1].replace("?", ""));
 					this.textsAreImages.add(false);
