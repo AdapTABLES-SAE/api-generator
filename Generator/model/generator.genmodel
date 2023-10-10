@@ -114,6 +114,12 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EStatementType/FILL_IN"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EStatementType/GRAPHIC"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//ETimeTarget">
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETimeTarget/PERIOD"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETimeTarget/DATE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETimeTarget/MIX"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETimeTarget/NONE"/>
+    </genEnums>
     <genClasses image="false" ecoreClass="generator.ecore#//AbstractFact"/>
     <genClasses ecoreClass="generator.ecore#//SetOfFacts">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//SetOfFacts/facts"/>
@@ -432,10 +438,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionParam/interactive"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionParam/solutions"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionParam/completeFact"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//QuestionParam/image"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//PropositionParam">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PropositionParam/state"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PropositionParam/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//PropositionParam/image"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Value">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Value/value"/>
@@ -600,13 +608,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Date/month"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Date/year"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//Date/position"/>
-      <genOperations ecoreOperation="generator.ecore#//Date/getDate" body="&#x9;&#x9;if (day != null) {&#xD;&#xA;&#x9;&#x9;&#x9;return day + &quot; &quot; + month + &quot; &quot; + year;&#xD;&#xA;&#x9;&#x9;} else if(month != null) {&#xD;&#xA;&#x9;&#x9;&#x9;return month + &quot; &quot; + year;&#xD;&#xA;&#x9;&#x9;} else {&#xD;&#xA;&#x9;&#x9;&#x9;return year;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;"/>
+      <genOperations ecoreOperation="generator.ecore#//Date/toString" body="if(day != null &amp;&amp; month != null) { return day + &quot; &quot; + month + &quot; &quot; + year; }&#xD;&#xA;else if(month != null) { return month + &quot; &quot; + year; }&#xD;&#xA;else { return year; } "/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//TimePeriod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//TimePeriod/startYear"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//TimePeriod/endYear"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//TimePeriod/startPosition"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//TimePeriod/endPosition"/>
+      <genOperations ecoreOperation="generator.ecore#//TimePeriod/toString" body="return startYear + &quot; - &quot; + endYear;"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Time"/>
     <genClasses ecoreClass="generator.ecore#//AQuestionParam"/>
@@ -614,9 +623,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//MapQuestionParam/map"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//HAssociation">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HAssociation/nbMissingElements"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HAssociation/source"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HAssociation/missing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HAssociation/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HAssociation/checkOnLearnerAction"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//HLegend">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HLegend/nbMissingElements"/>
@@ -643,6 +653,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//AQuestionableFact/achieved"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//AQuestionableFact/results"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//AQuestionableFact/ID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//AQuestionableFact/questionWithImage"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MapQuestionableFact">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//MapQuestionableFact/map"/>
@@ -659,8 +670,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedMapElement/createdPositions"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedMapElement/map"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//DateQuestionableFact"/>
-    <genClasses ecoreClass="generator.ecore#//EventQuestionableFact"/>
+    <genClasses ecoreClass="generator.ecore#//DateQuestionableFact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//DateQuestionableFact/sourceElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//DateQuestionableFact/missingElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//DateQuestionableFact/sourceElementType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//DateQuestionableFact/missingElementsType"/>
+    </genClasses>
     <genClasses ecoreClass="generator.ecore#//HChronology">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HChronology/mixDatePeriod"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HChronology/graphicTask"/>

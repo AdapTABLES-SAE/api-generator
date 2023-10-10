@@ -28,6 +28,7 @@ import generator.QuestionParam;
  *   <li>{@link generator.impl.QuestionParamImpl#isInteractive <em>Interactive</em>}</li>
  *   <li>{@link generator.impl.QuestionParamImpl#getSolutions <em>Solutions</em>}</li>
  *   <li>{@link generator.impl.QuestionParamImpl#getCompleteFact <em>Complete Fact</em>}</li>
+ *   <li>{@link generator.impl.QuestionParamImpl#isImage <em>Image</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,6 +81,25 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 	 * @ordered
 	 */
 	protected String completeFact = COMPLETE_FACT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isImage() <em>Image</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isImage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IMAGE_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isImage() <em>Image</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isImage()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean image = IMAGE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,6 +182,28 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isImage() {
+		return image;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setImage(boolean newImage) {
+		boolean oldImage = image;
+		image = newImage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.QUESTION_PARAM__IMAGE, oldImage,
+					image));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -185,6 +227,8 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 			return getSolutions();
 		case GeneratorPackage.QUESTION_PARAM__COMPLETE_FACT:
 			return getCompleteFact();
+		case GeneratorPackage.QUESTION_PARAM__IMAGE:
+			return isImage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -208,6 +252,9 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 		case GeneratorPackage.QUESTION_PARAM__COMPLETE_FACT:
 			setCompleteFact((String) newValue);
 			return;
+		case GeneratorPackage.QUESTION_PARAM__IMAGE:
+			setImage((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -229,6 +276,9 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 		case GeneratorPackage.QUESTION_PARAM__COMPLETE_FACT:
 			setCompleteFact(COMPLETE_FACT_EDEFAULT);
 			return;
+		case GeneratorPackage.QUESTION_PARAM__IMAGE:
+			setImage(IMAGE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -247,6 +297,8 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 			return solutions != null && !solutions.isEmpty();
 		case GeneratorPackage.QUESTION_PARAM__COMPLETE_FACT:
 			return COMPLETE_FACT_EDEFAULT == null ? completeFact != null : !COMPLETE_FACT_EDEFAULT.equals(completeFact);
+		case GeneratorPackage.QUESTION_PARAM__IMAGE:
+			return image != IMAGE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -266,6 +318,8 @@ public class QuestionParamImpl extends AQuestionParamImpl implements QuestionPar
 		result.append(interactive);
 		result.append(", completeFact: ");
 		result.append(completeFact);
+		result.append(", image: ");
+		result.append(image);
 		result.append(')');
 		return result.toString();
 	}

@@ -227,22 +227,6 @@ public class DateImpl extends TimeImpl implements Date {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDate() {
-		if (day != null) {
-			return day + " " + month + " " + year;
-		} else if (month != null) {
-			return month + " " + year;
-		} else {
-			return year;
-		}
-
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -336,8 +320,8 @@ public class DateImpl extends TimeImpl implements Date {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case GeneratorPackage.DATE___GET_DATE:
-			return getDate();
+		case GeneratorPackage.DATE___TO_STRING:
+			return toString();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -349,18 +333,13 @@ public class DateImpl extends TimeImpl implements Date {
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (day: ");
-		result.append(day);
-		result.append(", month: ");
-		result.append(month);
-		result.append(", year: ");
-		result.append(year);
-		result.append(')');
-		return result.toString();
+		if (day != null && month != null) {
+			return day + " " + month + " " + year;
+		} else if (month != null) {
+			return month + " " + year;
+		} else {
+			return year;
+		}
 	}
 
 } //DateImpl

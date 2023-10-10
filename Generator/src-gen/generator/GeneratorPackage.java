@@ -3230,13 +3230,22 @@ public interface GeneratorPackage extends EPackage {
 	int AQUESTIONABLE_FACT__ID = 3;
 
 	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE = 4;
+
+	/**
 	 * The number of structural features of the '<em>AQuestionable Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AQUESTIONABLE_FACT_FEATURE_COUNT = 4;
+	int AQUESTIONABLE_FACT_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>AQuestionable Fact</em>' class.
@@ -3292,6 +3301,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int QUESTIONABLE_FACT__ID = AQUESTIONABLE_FACT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
 	 * The number of structural features of the '<em>Questionable Fact</em>' class.
@@ -3374,6 +3392,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTQF_COMPLETION1__ID = QUESTIONABLE_FACT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_COMPLETION1__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
 	 * The feature id for the '<em><b>Left Operand</b></em>' attribute.
@@ -3501,6 +3528,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTQF_COMPLETION2__ID = QUESTIONABLE_FACT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_COMPLETION2__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
 	 * The feature id for the '<em><b>Left Operand</b></em>' attribute.
@@ -3648,6 +3684,15 @@ public interface GeneratorPackage extends EPackage {
 	int MTQF_REBUILD__ID = QUESTIONABLE_FACT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_REBUILD__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
 	 * The feature id for the '<em><b>Soluce Left</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3764,6 +3809,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTQF_IDENTIFICATION__ID = QUESTIONABLE_FACT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
 	 * The feature id for the '<em><b>Result</b></em>' attribute.
@@ -3900,6 +3954,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTQF_MEMBERSHIP__ID = QUESTIONABLE_FACT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_MEMBERSHIP__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
 	 * The feature id for the '<em><b>Good Results</b></em>' attribute list.
@@ -4873,13 +4936,22 @@ public interface GeneratorPackage extends EPackage {
 	int QUESTION_PARAM__COMPLETE_FACT = AQUESTION_PARAM_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION_PARAM__IMAGE = AQUESTION_PARAM_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Question Param</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_PARAM_FEATURE_COUNT = AQUESTION_PARAM_FEATURE_COUNT + 3;
+	int QUESTION_PARAM_FEATURE_COUNT = AQUESTION_PARAM_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Question Param</em>' class.
@@ -4928,13 +5000,22 @@ public interface GeneratorPackage extends EPackage {
 	int PROPOSITION_PARAM__POSITION = PARAMETER_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPOSITION_PARAM__IMAGE = PARAMETER_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Proposition Param</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROPOSITION_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 2;
+	int PROPOSITION_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Proposition Param</em>' class.
@@ -7402,13 +7483,13 @@ public interface GeneratorPackage extends EPackage {
 	int DATE_FEATURE_COUNT = TIME_FEATURE_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Get Date</em>' operation.
+	 * The operation id for the '<em>To String</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE___GET_DATE = TIME_OPERATION_COUNT + 0;
+	int DATE___TO_STRING = TIME_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Date</em>' class.
@@ -7475,13 +7556,22 @@ public interface GeneratorPackage extends EPackage {
 	int TIME_PERIOD_FEATURE_COUNT = TIME_FEATURE_COUNT + 4;
 
 	/**
+	 * The operation id for the '<em>To String</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_PERIOD___TO_STRING = TIME_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Time Period</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_PERIOD_OPERATION_COUNT = TIME_OPERATION_COUNT + 0;
+	int TIME_PERIOD_OPERATION_COUNT = TIME_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MapQuestionParamImpl <em>Map Question Param</em>}' class.
@@ -7603,22 +7693,13 @@ public interface GeneratorPackage extends EPackage {
 	int HASSOCIATION__TYPE = COMPLETION_TASK__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HASSOCIATION__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Source</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HASSOCIATION__SOURCE = COMPLETION_TASK_FEATURE_COUNT + 1;
+	int HASSOCIATION__SOURCE = COMPLETION_TASK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Missing</b></em>' attribute.
@@ -7627,7 +7708,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HASSOCIATION__MISSING = COMPLETION_TASK_FEATURE_COUNT + 2;
+	int HASSOCIATION__MISSING = COMPLETION_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION__TARGET = COMPLETION_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASSOCIATION__CHECK_ON_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>HAssociation</em>' class.
@@ -7636,7 +7735,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HASSOCIATION_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 3;
+	int HASSOCIATION_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -8194,6 +8293,15 @@ public interface GeneratorPackage extends EPackage {
 	int MAP_QUESTIONABLE_FACT__ID = AQUESTIONABLE_FACT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
 	 * The feature id for the '<em><b>Map</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8513,13 +8621,58 @@ public interface GeneratorPackage extends EPackage {
 	int DATE_QUESTIONABLE_FACT__ID = QUESTIONABLE_FACT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Source Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT__SOURCE_ELEMENT = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Missing Elements</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT__MISSING_ELEMENTS = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Source Element Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT__SOURCE_ELEMENT_TYPE = QUESTIONABLE_FACT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Missing Elements Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT__MISSING_ELEMENTS_TYPE = QUESTIONABLE_FACT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Date Questionable Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_QUESTIONABLE_FACT_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+	int DATE_QUESTIONABLE_FACT_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
@@ -8549,34 +8702,6 @@ public interface GeneratorPackage extends EPackage {
 	int DATE_QUESTIONABLE_FACT_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.EventQuestionableFactImpl <em>Event Questionable Fact</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.EventQuestionableFactImpl
-	 * @see generator.impl.GeneratorPackageImpl#getEventQuestionableFact()
-	 * @generated
-	 */
-	int EVENT_QUESTIONABLE_FACT = 120;
-
-	/**
-	 * The number of structural features of the '<em>Event Questionable Fact</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVENT_QUESTIONABLE_FACT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Event Questionable Fact</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVENT_QUESTIONABLE_FACT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.HChronologyImpl <em>HChronology</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8584,7 +8709,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getHChronology()
 	 * @generated
 	 */
-	int HCHRONOLOGY = 121;
+	int HCHRONOLOGY = 120;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -8738,7 +8863,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 122;
+	int DIRECTIONS = 121;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -8748,7 +8873,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 123;
+	int DUNGEON_MODE = 122;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -8758,7 +8883,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 124;
+	int TABLE_BUILD = 123;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -8768,7 +8893,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 125;
+	int RESULT_POSITION = 124;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -8778,7 +8903,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 126;
+	int ESINGLE_TARGET = 125;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -8788,7 +8913,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 127;
+	int ETASK_TYPE = 126;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -8798,7 +8923,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 128;
+	int EMODALITY = 127;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -8808,7 +8933,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 129;
+	int ESEVERAL_TARGET = 128;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -8818,7 +8943,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 130;
+	int ELEMENT_SIZE = 129;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -8828,7 +8953,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 131;
+	int GP_CATEGORY = 130;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -8838,7 +8963,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 132;
+	int ECORRECTNESS = 131;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -8848,7 +8973,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 133;
+	int EBOUNDARY = 132;
 
 	/**
 	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
@@ -8858,7 +8983,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
 	 * @generated
 	 */
-	int EROOM_TYPE = 134;
+	int EROOM_TYPE = 133;
 
 	/**
 	 * The meta object id for the '{@link generator.EGeographyValue <em>EGeography Value</em>}' enum.
@@ -8868,7 +8993,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEGeographyValue()
 	 * @generated
 	 */
-	int EGEOGRAPHY_VALUE = 135;
+	int EGEOGRAPHY_VALUE = 134;
 
 	/**
 	 * The meta object id for the '{@link generator.EHistoryTarget <em>EHistory Target</em>}' enum.
@@ -8878,7 +9003,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEHistoryTarget()
 	 * @generated
 	 */
-	int EHISTORY_TARGET = 136;
+	int EHISTORY_TARGET = 135;
 
 	/**
 	 * The meta object id for the '{@link generator.ELegendTarget <em>ELegend Target</em>}' enum.
@@ -8888,7 +9013,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getELegendTarget()
 	 * @generated
 	 */
-	int ELEGEND_TARGET = 137;
+	int ELEGEND_TARGET = 136;
 
 	/**
 	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
@@ -8898,7 +9023,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 138;
+	int ESTATEMENT_TYPE = 137;
+
+	/**
+	 * The meta object id for the '{@link generator.ETimeTarget <em>ETime Target</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.ETimeTarget
+	 * @see generator.impl.GeneratorPackageImpl#getETimeTarget()
+	 * @generated
+	 */
+	int ETIME_TARGET = 138;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -11653,6 +11788,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getQuestionParam_CompleteFact();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.QuestionParam#isImage <em>Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Image</em>'.
+	 * @see generator.QuestionParam#isImage()
+	 * @see #getQuestionParam()
+	 * @generated
+	 */
+	EAttribute getQuestionParam_Image();
+
+	/**
 	 * Returns the meta object for class '{@link generator.PropositionParam <em>Proposition Param</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11683,6 +11829,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPropositionParam_Position();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.PropositionParam#isImage <em>Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Image</em>'.
+	 * @see generator.PropositionParam#isImage()
+	 * @see #getPropositionParam()
+	 * @generated
+	 */
+	EAttribute getPropositionParam_Image();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Value <em>Value</em>}'.
@@ -13048,14 +13205,14 @@ public interface GeneratorPackage extends EPackage {
 	EReference getDate_Position();
 
 	/**
-	 * Returns the meta object for the '{@link generator.Date#getDate() <em>Get Date</em>}' operation.
+	 * Returns the meta object for the '{@link generator.Date#toString() <em>To String</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Date</em>' operation.
-	 * @see generator.Date#getDate()
+	 * @return the meta object for the '<em>To String</em>' operation.
+	 * @see generator.Date#toString()
 	 * @generated
 	 */
-	EOperation getDate__GetDate();
+	EOperation getDate__ToString();
 
 	/**
 	 * Returns the meta object for class '{@link generator.TimePeriod <em>Time Period</em>}'.
@@ -13112,6 +13269,16 @@ public interface GeneratorPackage extends EPackage {
 	EReference getTimePeriod_EndPosition();
 
 	/**
+	 * Returns the meta object for the '{@link generator.TimePeriod#toString() <em>To String</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>To String</em>' operation.
+	 * @see generator.TimePeriod#toString()
+	 * @generated
+	 */
+	EOperation getTimePeriod__ToString();
+
+	/**
 	 * Returns the meta object for class '{@link generator.Time <em>Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13163,17 +13330,6 @@ public interface GeneratorPackage extends EPackage {
 	EClass getHAssociation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.HAssociation#getNbMissingElements <em>Nb Missing Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
-	 * @see generator.HAssociation#getNbMissingElements()
-	 * @see #getHAssociation()
-	 * @generated
-	 */
-	EAttribute getHAssociation_NbMissingElements();
-
-	/**
 	 * Returns the meta object for the attribute '{@link generator.HAssociation#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13194,6 +13350,28 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getHAssociation_Missing();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.HAssociation#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Target</em>'.
+	 * @see generator.HAssociation#getTarget()
+	 * @see #getHAssociation()
+	 * @generated
+	 */
+	EAttribute getHAssociation_Target();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.HAssociation#isCheckOnLearnerAction <em>Check On Learner Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check On Learner Action</em>'.
+	 * @see generator.HAssociation#isCheckOnLearnerAction()
+	 * @see #getHAssociation()
+	 * @generated
+	 */
+	EAttribute getHAssociation_CheckOnLearnerAction();
 
 	/**
 	 * Returns the meta object for class '{@link generator.HLegend <em>HLegend</em>}'.
@@ -13410,6 +13588,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getAQuestionableFact_ID();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.AQuestionableFact#isQuestionWithImage <em>Question With Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Question With Image</em>'.
+	 * @see generator.AQuestionableFact#isQuestionWithImage()
+	 * @see #getAQuestionableFact()
+	 * @generated
+	 */
+	EAttribute getAQuestionableFact_QuestionWithImage();
+
+	/**
 	 * Returns the meta object for class '{@link generator.MapQuestionableFact <em>Map Questionable Fact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13548,14 +13737,48 @@ public interface GeneratorPackage extends EPackage {
 	EClass getDateQuestionableFact();
 
 	/**
-	 * Returns the meta object for class '{@link generator.EventQuestionableFact <em>Event Questionable Fact</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.DateQuestionableFact#getSourceElement <em>Source Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Event Questionable Fact</em>'.
-	 * @see generator.EventQuestionableFact
+	 * @return the meta object for the attribute '<em>Source Element</em>'.
+	 * @see generator.DateQuestionableFact#getSourceElement()
+	 * @see #getDateQuestionableFact()
 	 * @generated
 	 */
-	EClass getEventQuestionableFact();
+	EAttribute getDateQuestionableFact_SourceElement();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link generator.DateQuestionableFact#getMissingElements <em>Missing Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Missing Elements</em>'.
+	 * @see generator.DateQuestionableFact#getMissingElements()
+	 * @see #getDateQuestionableFact()
+	 * @generated
+	 */
+	EAttribute getDateQuestionableFact_MissingElements();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.DateQuestionableFact#getSourceElementType <em>Source Element Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Source Element Type</em>'.
+	 * @see generator.DateQuestionableFact#getSourceElementType()
+	 * @see #getDateQuestionableFact()
+	 * @generated
+	 */
+	EAttribute getDateQuestionableFact_SourceElementType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.DateQuestionableFact#getMissingElementsType <em>Missing Elements Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Missing Elements Type</em>'.
+	 * @see generator.DateQuestionableFact#getMissingElementsType()
+	 * @see #getDateQuestionableFact()
+	 * @generated
+	 */
+	EAttribute getDateQuestionableFact_MissingElementsType();
 
 	/**
 	 * Returns the meta object for class '{@link generator.HChronology <em>HChronology</em>}'.
@@ -13758,6 +13981,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getEStatementType();
+
+	/**
+	 * Returns the meta object for enum '{@link generator.ETimeTarget <em>ETime Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ETime Target</em>'.
+	 * @see generator.ETimeTarget
+	 * @generated
+	 */
+	EEnum getETimeTarget();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -15966,6 +16199,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute QUESTION_PARAM__COMPLETE_FACT = eINSTANCE.getQuestionParam_CompleteFact();
 
 		/**
+		 * The meta object literal for the '<em><b>Image</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTION_PARAM__IMAGE = eINSTANCE.getQuestionParam_Image();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.PropositionParamImpl <em>Proposition Param</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -15990,6 +16231,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PROPOSITION_PARAM__POSITION = eINSTANCE.getPropositionParam_Position();
+
+		/**
+		 * The meta object literal for the '<em><b>Image</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROPOSITION_PARAM__IMAGE = eINSTANCE.getPropositionParam_Image();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ValueImpl <em>Value</em>}' class.
@@ -17104,12 +17353,12 @@ public interface GeneratorPackage extends EPackage {
 		EReference DATE__POSITION = eINSTANCE.getDate_Position();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Date</b></em>' operation.
+		 * The meta object literal for the '<em><b>To String</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATE___GET_DATE = eINSTANCE.getDate__GetDate();
+		EOperation DATE___TO_STRING = eINSTANCE.getDate__ToString();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.TimePeriodImpl <em>Time Period</em>}' class.
@@ -17152,6 +17401,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TIME_PERIOD__END_POSITION = eINSTANCE.getTimePeriod_EndPosition();
+
+		/**
+		 * The meta object literal for the '<em><b>To String</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TIME_PERIOD___TO_STRING = eINSTANCE.getTimePeriod__ToString();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.TimeImpl <em>Time</em>}' class.
@@ -17202,14 +17459,6 @@ public interface GeneratorPackage extends EPackage {
 		EClass HASSOCIATION = eINSTANCE.getHAssociation();
 
 		/**
-		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute HASSOCIATION__NB_MISSING_ELEMENTS = eINSTANCE.getHAssociation_NbMissingElements();
-
-		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -17224,6 +17473,22 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute HASSOCIATION__MISSING = eINSTANCE.getHAssociation_Missing();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HASSOCIATION__TARGET = eINSTANCE.getHAssociation_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Check On Learner Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HASSOCIATION__CHECK_ON_LEARNER_ACTION = eINSTANCE.getHAssociation_CheckOnLearnerAction();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.HLegendImpl <em>HLegend</em>}' class.
@@ -17398,6 +17663,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute AQUESTIONABLE_FACT__ID = eINSTANCE.getAQuestionableFact_ID();
 
 		/**
+		 * The meta object literal for the '<em><b>Question With Image</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE = eINSTANCE.getAQuestionableFact_QuestionWithImage();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.MapQuestionableFactImpl <em>Map Questionable Fact</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -17512,14 +17785,37 @@ public interface GeneratorPackage extends EPackage {
 		EClass DATE_QUESTIONABLE_FACT = eINSTANCE.getDateQuestionableFact();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.EventQuestionableFactImpl <em>Event Questionable Fact</em>}' class.
+		 * The meta object literal for the '<em><b>Source Element</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.EventQuestionableFactImpl
-		 * @see generator.impl.GeneratorPackageImpl#getEventQuestionableFact()
 		 * @generated
 		 */
-		EClass EVENT_QUESTIONABLE_FACT = eINSTANCE.getEventQuestionableFact();
+		EAttribute DATE_QUESTIONABLE_FACT__SOURCE_ELEMENT = eINSTANCE.getDateQuestionableFact_SourceElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Missing Elements</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATE_QUESTIONABLE_FACT__MISSING_ELEMENTS = eINSTANCE.getDateQuestionableFact_MissingElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Source Element Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATE_QUESTIONABLE_FACT__SOURCE_ELEMENT_TYPE = eINSTANCE.getDateQuestionableFact_SourceElementType();
+
+		/**
+		 * The meta object literal for the '<em><b>Missing Elements Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATE_QUESTIONABLE_FACT__MISSING_ELEMENTS_TYPE = eINSTANCE
+				.getDateQuestionableFact_MissingElementsType();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.HChronologyImpl <em>HChronology</em>}' class.
@@ -17716,6 +18012,16 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ESTATEMENT_TYPE = eINSTANCE.getEStatementType();
+
+		/**
+		 * The meta object literal for the '{@link generator.ETimeTarget <em>ETime Target</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.ETimeTarget
+		 * @see generator.impl.GeneratorPackageImpl#getETimeTarget()
+		 * @generated
+		 */
+		EEnum ETIME_TARGET = eINSTANCE.getETimeTarget();
 
 	}
 

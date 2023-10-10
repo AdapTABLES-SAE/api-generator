@@ -3,12 +3,14 @@
 package generator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import generator.GeneratorPackage;
 import generator.MapElementPosition;
 import generator.TimePeriod;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * <!-- begin-user-doc -->
@@ -329,17 +331,22 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case GeneratorPackage.TIME_PERIOD___TO_STRING:
+			return toString();
+		}
+		return super.eInvoke(operationID, arguments);
+	}
 
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (startYear: ");
-		result.append(startYear);
-		result.append(", endYear: ");
-		result.append(endYear);
-		result.append(')');
-		return result.toString();
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		return startYear + " - " + endYear;
 	}
 
 } //TimePeriodImpl

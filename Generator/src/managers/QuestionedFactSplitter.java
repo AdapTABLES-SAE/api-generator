@@ -9,12 +9,14 @@ import generator.Value;
 public class QuestionedFactSplitter {
 
 	private boolean beginByText; 
-	private List<String> texts; 
+	private List<String> texts;
+	private List<Boolean> textsAreImages;
 	
 	private QuestionedFact fact;
 	
 	public QuestionedFactSplitter(QuestionedFact fact) {
 		this.texts = new ArrayList<>();
+		this.textsAreImages = new ArrayList<>();
 		this.fact = fact;
 		splitter();
 	}
@@ -26,14 +28,30 @@ public class QuestionedFactSplitter {
 	private void splitter() {
 		String question = ((Value) fact.getQuestion().getValue()).getValue();
 		this.beginByText = !beginByQuestionMark(question);
-		//System.out.println(question);
+		System.out.println(question);
 		String[] parts = question.split("\\?"); 
 		for(String text : parts) {
 			//System.out.println(text);
 			if(!text.isEmpty()) {
-				this.texts.add(text);
+				text = text.replace("\\?", "");
+				if(text.contains("]")) {
+					String[] subParts = question.split("]"); 
+					this.texts.add(subParts[0] + "]");
+					this.textsAreImages.add(true);
+					this.texts.add(subParts[1].replace("?", ""));
+					this.textsAreImages.add(false);
+				} else {
+					this.texts.add(text);
+					this.textsAreImages.add(false);
+				}
 			}
 		}
+		
+		System.out.println(this.texts);
+	}
+	
+	public boolean isTextImage(int textIndex) {
+		return this.textsAreImages.get(textIndex);
 	}
 
 	public boolean isBeginByText() {

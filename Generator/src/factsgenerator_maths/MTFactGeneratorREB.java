@@ -18,6 +18,7 @@ import generator.MTLevel;
 import generator.MTQFRebuild;
 import generator.MultipleChoice;
 import generator.ResultPosition;
+import generator.SetOfFacts;
 import generator.TableBuild;
 import generator.impl.MTQFRebuildImpl;
 import structures.DungeonElements;
@@ -30,7 +31,7 @@ public class MTFactGeneratorREB extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
 		if(fact instanceof MTFact) {
 			MTFact factC = (MTFact) fact;
 			

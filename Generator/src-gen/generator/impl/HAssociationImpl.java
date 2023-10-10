@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import generator.EHistoryTarget;
+import generator.ETimeTarget;
 import generator.GeneratorPackage;
 import generator.HAssociation;
 
@@ -18,43 +19,15 @@ import generator.HAssociation;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.HAssociationImpl#getNbMissingElements <em>Nb Missing Elements</em>}</li>
  *   <li>{@link generator.impl.HAssociationImpl#getSource <em>Source</em>}</li>
  *   <li>{@link generator.impl.HAssociationImpl#getMissing <em>Missing</em>}</li>
+ *   <li>{@link generator.impl.HAssociationImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link generator.impl.HAssociationImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class HAssociationImpl extends CompletionTaskImpl implements HAssociation {
-	/**
-	 * The default value of the '{@link #getNbMissingElements() <em>Nb Missing Elements</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNbMissingElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int NB_MISSING_ELEMENTS_EDEFAULT = 1;
-
-	/**
-	 * The cached value of the '{@link #getNbMissingElements() <em>Nb Missing Elements</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNbMissingElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected int nbMissingElements = NB_MISSING_ELEMENTS_EDEFAULT;
-
-	/**
-	 * This is true if the Nb Missing Elements attribute has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean nbMissingElementsESet;
-
 	/**
 	 * The default value of the '{@link #getSource() <em>Source</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -96,6 +69,46 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 	protected EHistoryTarget missing = MISSING_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getTarget() <em>Target</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTarget()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ETimeTarget TARGET_EDEFAULT = ETimeTarget.NONE;
+
+	/**
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTarget()
+	 * @generated
+	 * @ordered
+	 */
+	protected ETimeTarget target = TARGET_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isCheckOnLearnerAction() <em>Check On Learner Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCheckOnLearnerAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean CHECK_ON_LEARNER_ACTION_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isCheckOnLearnerAction() <em>Check On Learner Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCheckOnLearnerAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean checkOnLearnerAction = CHECK_ON_LEARNER_ACTION_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -112,24 +125,6 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 	@Override
 	protected EClass eStaticClass() {
 		return GeneratorPackage.Literals.HASSOCIATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getNbMissingElements() {
-		return nbMissingElements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetNbMissingElements() {
-		return nbMissingElementsESet;
 	}
 
 	/**
@@ -181,15 +176,48 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ETimeTarget getTarget() {
+		return target;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTarget(ETimeTarget newTarget) {
+		ETimeTarget oldTarget = target;
+		target = newTarget == null ? TARGET_EDEFAULT : newTarget;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.HASSOCIATION__TARGET, oldTarget,
+					target));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isCheckOnLearnerAction() {
+		return checkOnLearnerAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.HASSOCIATION__NB_MISSING_ELEMENTS:
-			return getNbMissingElements();
 		case GeneratorPackage.HASSOCIATION__SOURCE:
 			return getSource();
 		case GeneratorPackage.HASSOCIATION__MISSING:
 			return getMissing();
+		case GeneratorPackage.HASSOCIATION__TARGET:
+			return getTarget();
+		case GeneratorPackage.HASSOCIATION__CHECK_ON_LEARNER_ACTION:
+			return isCheckOnLearnerAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -207,6 +235,12 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 			return;
 		case GeneratorPackage.HASSOCIATION__MISSING:
 			setMissing((EHistoryTarget) newValue);
+			return;
+		case GeneratorPackage.HASSOCIATION__TARGET:
+			setTarget((ETimeTarget) newValue);
+			return;
+		case GeneratorPackage.HASSOCIATION__CHECK_ON_LEARNER_ACTION:
+			setCheckOnLearnerAction((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,6 +260,12 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 		case GeneratorPackage.HASSOCIATION__MISSING:
 			setMissing(MISSING_EDEFAULT);
 			return;
+		case GeneratorPackage.HASSOCIATION__TARGET:
+			setTarget(TARGET_EDEFAULT);
+			return;
+		case GeneratorPackage.HASSOCIATION__CHECK_ON_LEARNER_ACTION:
+			setCheckOnLearnerAction(CHECK_ON_LEARNER_ACTION_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -238,12 +278,14 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.HASSOCIATION__NB_MISSING_ELEMENTS:
-			return isSetNbMissingElements();
 		case GeneratorPackage.HASSOCIATION__SOURCE:
 			return source != SOURCE_EDEFAULT;
 		case GeneratorPackage.HASSOCIATION__MISSING:
 			return missing != MISSING_EDEFAULT;
+		case GeneratorPackage.HASSOCIATION__TARGET:
+			return target != TARGET_EDEFAULT;
+		case GeneratorPackage.HASSOCIATION__CHECK_ON_LEARNER_ACTION:
+			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -259,23 +301,39 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (nbMissingElements: ");
-		if (nbMissingElementsESet)
-			result.append(nbMissingElements);
-		else
-			result.append("<unset>");
-		result.append(", source: ");
+		result.append(" (source: ");
 		result.append(source);
 		result.append(", missing: ");
 		result.append(missing);
+		result.append(", target: ");
+		result.append(target);
+		result.append(", checkOnLearnerAction: ");
+		result.append(checkOnLearnerAction);
 		result.append(')');
 		return result.toString();
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCheckOnLearnerAction(boolean newCheckOnLearnerAction) {
+		boolean oldCheckOnLearnerAction = checkOnLearnerAction;
+		checkOnLearnerAction = newCheckOnLearnerAction;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.HASSOCIATION__CHECK_ON_LEARNER_ACTION, oldCheckOnLearnerAction,
+					checkOnLearnerAction));
+	}
+
 	@Override
-	public boolean isCheckOnLearnerAction() {
-		// TODO Auto-generated method stub
-		return false;
+	public int getNbMissingElements() {
+		if (this.target.equals(ETimeTarget.DATE) || this.target.equals(ETimeTarget.MIX)) {
+			return 1 * this.getNbFacts();
+		} else {
+			return 2 * this.getNbFacts();
+		}
 	}
 
 } //HAssociationImpl

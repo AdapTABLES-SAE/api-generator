@@ -142,4 +142,9 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 	protected boolean isQuestionInteractive() {
 		return false;
 	}
+
+	@Override
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
+		return null;
+	}
 }

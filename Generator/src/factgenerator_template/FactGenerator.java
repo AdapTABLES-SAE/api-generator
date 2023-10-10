@@ -2,6 +2,7 @@ package factgenerator_template;
 
 import java.util.Set;
 
+import factsgenerator_hg.HGFactGeneratorAssociation;
 import factsgenerator_hg.HGFactGeneratorChronology;
 import factsgenerator_hg.HGFactGeneratorLocate;
 import factsgenerator_maths.MTFactGeneratorCOMP1;
@@ -36,6 +37,9 @@ public class FactGenerator {
 	private static FactGeneratorTemplate getCorrectHGFactsGenerators(DungeonElements dungeonElements, ATask task) {
 		FactGeneratorTemplate factGenerator; 
 		switch(task.getType()) {
+		case COMPLETE: 
+			factGenerator = new HGFactGeneratorAssociation(dungeonElements);
+			break;
 		case MEMBERSHIP: 
 			factGenerator = new HGFactGeneratorLocate(dungeonElements);
 			break;

@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.AQuestionableFactImpl#isAchieved <em>Achieved</em>}</li>
  *   <li>{@link generator.impl.AQuestionableFactImpl#getResults <em>Results</em>}</li>
  *   <li>{@link generator.impl.AQuestionableFactImpl#getID <em>ID</em>}</li>
+ *   <li>{@link generator.impl.AQuestionableFactImpl#isQuestionWithImage <em>Question With Image</em>}</li>
  * </ul>
  *
  * @generated
@@ -117,6 +118,26 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected boolean idESet;
+
+	/**
+	 * The default value of the '{@link #isQuestionWithImage() <em>Question With Image</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isQuestionWithImage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean QUESTION_WITH_IMAGE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isQuestionWithImage() <em>Question With Image</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isQuestionWithImage()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean questionWithImage = QUESTION_WITH_IMAGE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -247,6 +268,28 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isQuestionWithImage() {
+		return questionWithImage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setQuestionWithImage(boolean newQuestionWithImage) {
+		boolean oldQuestionWithImage = questionWithImage;
+		questionWithImage = newQuestionWithImage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE, oldQuestionWithImage, questionWithImage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -272,6 +315,8 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 			return getResults();
 		case GeneratorPackage.AQUESTIONABLE_FACT__ID:
 			return getID();
+		case GeneratorPackage.AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE:
+			return isQuestionWithImage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -298,6 +343,9 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 		case GeneratorPackage.AQUESTIONABLE_FACT__ID:
 			setID((String) newValue);
 			return;
+		case GeneratorPackage.AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE:
+			setQuestionWithImage((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -322,6 +370,9 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 		case GeneratorPackage.AQUESTIONABLE_FACT__ID:
 			unsetID();
 			return;
+		case GeneratorPackage.AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE:
+			setQuestionWithImage(QUESTION_WITH_IMAGE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -342,6 +393,8 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 			return results != null && !results.isEmpty();
 		case GeneratorPackage.AQUESTIONABLE_FACT__ID:
 			return isSetID();
+		case GeneratorPackage.AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE:
+			return questionWithImage != QUESTION_WITH_IMAGE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -366,6 +419,8 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 			result.append(id);
 		else
 			result.append("<unset>");
+		result.append(", questionWithImage: ");
+		result.append(questionWithImage);
 		result.append(')');
 		return result.toString();
 	}

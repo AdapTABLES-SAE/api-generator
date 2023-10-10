@@ -949,15 +949,6 @@ public interface GeneratorFactory extends EFactory {
 	DateQuestionableFact createDateQuestionableFact();
 
 	/**
-	 * Returns a new object of class '<em>Event Questionable Fact</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Event Questionable Fact</em>'.
-	 * @generated
-	 */
-	EventQuestionableFact createEventQuestionableFact();
-
-	/**
 	 * Returns a new object of class '<em>HChronology</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

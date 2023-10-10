@@ -141,4 +141,9 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 		return false;
 	}
 
+	@Override
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
+		return null;
+	}
+
 }

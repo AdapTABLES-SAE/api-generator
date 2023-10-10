@@ -307,6 +307,7 @@ public class ConcreteGameplayGenerator {
 		
 		for(PropositionParam param: params) {
 			Display proposition = new DisplayImpl();
+			proposition.setImageDisplay(param.isImage());
 			Value propValue = new ValueImpl();
 			propValue.setValue(((Value) param.getValue()).getValue());
 			proposition.setValue(propValue);
@@ -642,30 +643,44 @@ public class ConcreteGameplayGenerator {
 			conditionForTextAppearance = 1;
 		}
 		
-		int textIndex = 0;
+		int textIndex = 0, i = 0;
 		//System.out.println("Number OF "+splitter.numberOfHoles()+splitter.numberOfTexts());
-		for(int i = 0; i < splitter.numberOfHoles()+splitter.numberOfTexts(); i++) {
-			
+		//for(int i = 0; i < splitter.numberOfHoles()+splitter.numberOfTexts(); i++) 
+		while(elements.size() < splitter.numberOfHoles()+splitter.numberOfTexts()) {
 			if(i%2 == conditionForTextAppearance) {
-				//System.out.println("text");
-				elements.add(buildFillInElement(componentForText, elementForTexts, fact, structure.getCreatedPosition(),  splitter.getTexts().get(textIndex)));
-				textIndex++;
+				System.out.println("text "+splitter.numberOfTexts()+" "+textIndex);
+				if(splitter.isTextImage(textIndex)) {
+					elements.add(buildFillInElement(componentForText, elementForTexts, fact, structure.getCreatedPosition(),  splitter.getTexts().get(textIndex), splitter.isTextImage(textIndex)));
+					textIndex++;
+					elements.add(buildFillInElement(componentForText, elementForTexts, fact, structure.getCreatedPosition(),  splitter.getTexts().get(textIndex), splitter.isTextImage(textIndex)));
+					textIndex++;
+				} else {
+					elements.add(buildFillInElement(componentForText, elementForTexts, fact, structure.getCreatedPosition(),  splitter.getTexts().get(textIndex), splitter.isTextImage(textIndex)));
+					textIndex++;
+				}
+				
 			} else {
 				//System.out.println("detector");
-				elements.add(buildFillInElement(componentForDetectors, elementForDetectors, fact, structure.getCreatedPosition(), ""));
+				elements.add(buildFillInElement(componentForDetectors, elementForDetectors, fact, structure.getCreatedPosition()));
 			}
+			i++;
 		}
 
 		return elements;
 	}
 	
-	private PositionedElement buildFillInElement(Component component, ElementType elementType, QuestionedFact fact, Position position, String value) {
+	private PositionedElement buildFillInElement(Component component, ElementType elementType, QuestionedFact fact, Position position) {
+		return buildFillInElement(component, elementType, fact, position, "", false);
+	}
+	
+	private PositionedElement buildFillInElement(Component component, ElementType elementType, QuestionedFact fact, Position position, String value, boolean isImage) {
 		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
 		if(!value.isEmpty()) {
 			Display defaultDisplay = new DisplayImpl();
 			Value displayValue = new ValueImpl();
 			displayValue.setValue(value);
 			defaultDisplay.setValue(displayValue);
+			defaultDisplay.setImageDisplay(isImage);
 			comp.getDisplays().add(defaultDisplay);
 		}
 		return comp;

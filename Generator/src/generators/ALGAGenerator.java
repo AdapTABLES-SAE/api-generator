@@ -36,7 +36,7 @@ public class ALGAGenerator {
 	private Dungeon generatedDungeon;
 	private DungeonElements dungeonElements;
 	
-	public static DidacticDomain DOMAIN = DidacticDomain.MATHEMATICS;
+	public static DidacticDomain DOMAIN = DidacticDomain.HISTORY_GEOGRAPHY;
 
 	public static void main(String[] args) {
 		
@@ -70,7 +70,7 @@ public class ALGAGenerator {
 		for(int i = 0; i < 1; i++) {
 			ALGAGenerator generator;
 			try {
-				generator = new ALGAGenerator("FICTIF02");
+				generator = new ALGAGenerator("FICTIF03");
 				generator.generate();
 				generator.printDungeon();
 				generator.saveDungeon("DungeonGen.xmi");

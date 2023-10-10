@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.AQuestionableFact#isAchieved <em>Achieved</em>}</li>
  *   <li>{@link generator.AQuestionableFact#getResults <em>Results</em>}</li>
  *   <li>{@link generator.AQuestionableFact#getID <em>ID</em>}</li>
+ *   <li>{@link generator.AQuestionableFact#isQuestionWithImage <em>Question With Image</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getAQuestionableFact()
@@ -132,5 +133,27 @@ public interface AQuestionableFact extends EObject {
 	 * @generated
 	 */
 	boolean isSetID();
+
+	/**
+	 * Returns the value of the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Question With Image</em>' attribute.
+	 * @see #setQuestionWithImage(boolean)
+	 * @see generator.GeneratorPackage#getAQuestionableFact_QuestionWithImage()
+	 * @model
+	 * @generated
+	 */
+	boolean isQuestionWithImage();
+
+	/**
+	 * Sets the value of the '{@link generator.AQuestionableFact#isQuestionWithImage <em>Question With Image</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Question With Image</em>' attribute.
+	 * @see #isQuestionWithImage()
+	 * @generated
+	 */
+	void setQuestionWithImage(boolean value);
 
 } // AQuestionableFact

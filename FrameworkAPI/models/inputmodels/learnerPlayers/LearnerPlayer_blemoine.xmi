@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="ASCII"?>
-<generator:LearnerPlayer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:generator="http://www.example.org/generator" name="B&#xe9;r&#xe9;nice" ID="blemoine" lastName="Lemoine">
+<generator:LearnerPlayer
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:generator="http://www.example.org/generator"
+    name="B&#xe9;r&#xe9;nice"
+    ID="blemoine"
+    lastName="Lemoine">
   <progression>
-    <playerProgress>
-      <items/>
+    <playerProgress
+        currentLevel="8">
+      <items>
+        <items>
+          <equipment
+              href="../GameDescription.xmi#BRACELET"/>
+        </items>
+        <items>
+          <equipment
+              href="../GameDescription.xmi#BELT"/>
+        </items>
+        <items>
+          <equipment
+              href="../GameDescription.xmi#GLOVE"/>
+        </items>
+        <items>
+          <equipment
+              href="../GameDescription.xmi#KEYS"/>
+        </items>
+        <items>
+          <equipment
+              href="../GameDescription.xmi#CARROT"/>
+        </items>
+        <items>
+          <equipment
+              href="../GameDescription.xmi#COAT"/>
+        </items>
+      </items>
     </playerProgress>
     <learnerProgress/>
   </progression>
-  <learningpath href="../LearningDomain.xmi#PATH404"/>
-  <statistics maxGameLevelReached="1" nbLevelsGenerated="2"/>
+  <learningpath
+      href="../LearningDomain.xmi#PATH404"/>
+  <statistics
+      maxGameLevelReached="1"
+      nbLevelsGenerated="2"/>
 </generator:LearnerPlayer>

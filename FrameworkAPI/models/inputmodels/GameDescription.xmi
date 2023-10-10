@@ -1163,47 +1163,6 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE_PUSHABLE"
-        category="MOVE_MULTIPLE">
-      <components
-          xsi:type="generator:Structure"
-          allowedAbility="HORIZONTAL_DISPLAY">
-        <expectedSize>
-          <value
-              xsi:type="generator:Value"
-              value="MEDIUM"/>
-        </expectedSize>
-        <components
-            xsi:type="generator:Component"
-            allowedAbility="PUSHABLE"
-            forProposition="true">
-          <expectedSize>
-            <value
-                xsi:type="generator:Value"
-                value="SMALL"/>
-          </expectedSize>
-        </components>
-        <components
-            xsi:type="generator:Component"
-            allowedAbility="DETECTOR">
-          <expectedSize>
-            <value
-                xsi:type="generator:Value"
-                value="SMALL"/>
-          </expectedSize>
-        </components>
-      </components>
-      <components
-          xsi:type="generator:Component"
-          allowedAbility="DISPLAY"
-          forStatement="true"/>
-      <prompt
-          prompt="Pousse les bons elements"/>
-      <restrictedTo>COMPLETE</restrictedTo>
-      <restrictedTo>MEMBERSHIP</restrictedTo>
-    </gameplays>
-    <gameplays
-        xsi:type="generator:QuestionGameplay"
         name="GP_UNIQUE_CROSSABLE">
       <components
           xsi:type="generator:Component"
@@ -1703,6 +1662,9 @@
           forStatement="true"/>
       <prompt
           prompt="Déplace les éléments sur les bonnes zones "/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>IDENTIFY</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:NoQuestionGameplay"
@@ -1804,6 +1766,82 @@
           forStatement="true"/>
       <prompt
           prompt="Place toi et saisie les bonnes réponses"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_GRAPHIC_ORDER"
+        undoable="true"
+        manualValidation="true"
+        category="MOVE_MULTIPLE"
+        statementType="GRAPHIC">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="MAP_DISPLAY"
+          forMap="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+          <quantity
+              factNbAnswers="true"/>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="MOVABLE"
+          forProposition="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="VERIFICATOR"/>
+      <prompt
+          prompt="Déplace les éléments sur les bonnes zones "/>
+      <restrictedTo>ORDER</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE_PUSHABLE-RIGHT"
+        category="MOVE_MULTIPLE">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="HORIZONTAL_DISPLAY"
+          forProposition="true">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="MEDIUM"/>
+        </expectedSize>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="PUSHABLE"
+            forProposition="true">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          forStatement="true"/>
+      <prompt
+          prompt="Pousse les bons elements"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
   </gameplays>
   <elements>

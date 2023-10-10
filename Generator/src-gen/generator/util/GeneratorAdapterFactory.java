@@ -667,11 +667,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseEventQuestionableFact(EventQuestionableFact object) {
-			return createEventQuestionableFactAdapter();
-		}
-
-		@Override
 		public Adapter caseHChronology(HChronology object) {
 			return createHChronologyAdapter();
 		}
@@ -2372,20 +2367,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDateQuestionableFactAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.EventQuestionableFact <em>Event Questionable Fact</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.EventQuestionableFact
-	 * @generated
-	 */
-	public Adapter createEventQuestionableFactAdapter() {
 		return null;
 	}
 

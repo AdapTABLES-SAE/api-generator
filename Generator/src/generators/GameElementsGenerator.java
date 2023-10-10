@@ -244,6 +244,7 @@ public class GameElementsGenerator {
 		List<Gameplay> gameplays = new ArrayList<>();
 		for (RoomElements room : dungeonElements.getRoomsElements()) {
 			if(room.getTask() != null) {
+				System.out.println("*****"+room.getTask().getID());
 				Map<GPCategory, Set<EStatementType>> validCategoriesFromRelations = getValidCategoriesFromRelations(room.getTask());
 				List<GPCategory> validCategories = new ArrayList<>(validCategoriesFromRelations.keySet());
 				//System.out.println("Categorie valid " + validCategories);
@@ -286,10 +287,9 @@ public class GameElementsGenerator {
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
 		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			if(gp instanceof QuestionGameplay && !gp.isLocked()) {
-				/*System.out.println("\t"+gp.getName());
+			/*	System.out.println("\t"+gp.getName());
 				System.out.println("\t cat "+((QuestionGameplay) gp).getCategory().equals(category));
 				System.out.println("\t validation "+respectValidationMethod((QuestionGameplay) gp, task));
-				System.out.println("\t types stat "+allowedStatementTypes);
 				System.out.println("\t restriction "+respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task, allowedStatementTypes));
 				System.out.println("\t undoable "+respectUndoable((QuestionGameplay) gp, task));*/
 

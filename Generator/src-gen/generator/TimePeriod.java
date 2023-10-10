@@ -110,4 +110,12 @@ public interface TimePeriod extends Time {
 	 */
 	void setEndPosition(MapElementPosition value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @generated
+	 */
+	String toString();
+
 } // TimePeriod

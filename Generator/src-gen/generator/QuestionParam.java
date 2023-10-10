@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link generator.QuestionParam#isInteractive <em>Interactive</em>}</li>
  *   <li>{@link generator.QuestionParam#getSolutions <em>Solutions</em>}</li>
  *   <li>{@link generator.QuestionParam#getCompleteFact <em>Complete Fact</em>}</li>
+ *   <li>{@link generator.QuestionParam#isImage <em>Image</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getQuestionParam()
@@ -78,5 +79,27 @@ public interface QuestionParam extends AQuestionParam {
 	 * @generated
 	 */
 	void setCompleteFact(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Image</em>' attribute.
+	 * @see #setImage(boolean)
+	 * @see generator.GeneratorPackage#getQuestionParam_Image()
+	 * @model
+	 * @generated
+	 */
+	boolean isImage();
+
+	/**
+	 * Sets the value of the '{@link generator.QuestionParam#isImage <em>Image</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Image</em>' attribute.
+	 * @see #isImage()
+	 * @generated
+	 */
+	void setImage(boolean value);
 
 } // QuestionParam

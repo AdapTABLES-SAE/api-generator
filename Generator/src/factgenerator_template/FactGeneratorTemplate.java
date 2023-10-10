@@ -61,23 +61,20 @@ public abstract class FactGeneratorTemplate {
 		this.factsCounter = 0;
 	}
 	
-	
-	public Set<AQuestionableFact> generateQuestionableFacts(ATask task){
+	public Set<AQuestionableFact> generateQuestionableFacts(ATask task){ // TO OVERRIDE FOR MEMBERSHIP 
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
 		taskID = task.getID();
 		for (SetOfFacts setoffact : dungeonElements.getChosenObjective().getSetoffacts()) {
 			for (AbstractFact f : setoffact.getFacts()) { 
-				for(AQuestionableFact fact: generateQuestionableFactsOf(task, f)) {
+				for(AQuestionableFact fact: generateQuestionableFactsOf(setoffact, task, f)) {
 					questionableFacts.add(fact);
 				}
-				
-				
 			}
-		}	
+		}
 		return questionableFacts; 
 	}
 	
-	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact){ return null; }
+	protected abstract Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact);
 		
 	protected void createAQuestionedFactFrom(RoomElements roomElement, AQuestionableFact qFact) throws BadSolutionGenerationException {
 		QuestionedFact qef = new QuestionedFactImpl(); 
@@ -117,6 +114,7 @@ public abstract class FactGeneratorTemplate {
 						propositionParam.setPosition(mapValue);
 					}
 					
+					propositionParam.setImage(prop.isImage());
 					qef.getPropositions().add(propositionParam);
 				}
 			}
@@ -153,8 +151,7 @@ public abstract class FactGeneratorTemplate {
 			question.setInteractive(isQuestionInteractive());
 			question.getSolutions().addAll(fullFactsSolution(qFact));			
 			question.setCompleteFact(((QuestionableFact) qFact).getCompleteFact());
-
-			
+			question.setImage(qFact.isQuestionWithImage());
 			return question;
 		} else {
 			MapQuestionParam question = new MapQuestionParamImpl();
@@ -245,6 +242,7 @@ public abstract class FactGeneratorTemplate {
 		List<AQuestionableFact> eligibleFacts = new ArrayList<>();
 		for (AQuestionableFact qfact: resByTask.getQuestionableFacts()) {
 			if(!qfact.isWasSelected()) {
+				
 				eligibleFacts.add(qfact);
 			}
 		}

@@ -14,7 +14,6 @@ import generator.ElementType;
 import generator.GameDescription;
 import generator.Gameplay;
 import generator.PositionedElement;
-import generator.PropositionParam;
 import generator.QuestionedFact;
 import generator.ResultsByTask;
 import generator.Room;
@@ -144,8 +143,8 @@ public class RoomElements {
 	private void selectElementType(List<AComponent> components, boolean isStructureComponents) {
 		for (AComponent aComponent : components) {
 			ElementType elementType = getCompatibleElementType(aComponent, isStructureComponents); 
-			System.err.println("COMPONENT "+aComponent.getAllowedAbility());
-			System.err.println("ELEMENT "+elementType.getType());
+			//System.err.println("COMPONENT "+aComponent.getAllowedAbility());
+			//System.err.println("ELEMENT "+elementType.getType());
 			if(isStructureComponents) {
 				if(!elementsToQuantity.containsKey(elementType)) {
 					elementsToQuantity.put(elementType, -1);

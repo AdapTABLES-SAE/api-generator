@@ -24,7 +24,6 @@ import generator.TimePeriod;
 import generator.impl.MapQuestionableFactImpl;
 import generator.impl.MapSolutionImpl;
 import structures.DungeonElements;
-import structures.Shuffle;
 import structures.Soluce;
 
 public class HGFactGeneratorChronology extends FactGeneratorTemplate {
@@ -33,23 +32,14 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 		super(dungeonElements);
 	}
 
-
 	@Override
-	public Set<AQuestionableFact> generateQuestionableFacts(ATask task){
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
-		taskID = task.getID();
-			
-		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
-			if(setoffact.getMap() != null) {
-				for (AbstractFact f : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
-					if(f instanceof HistoryFact) {
-						HistoryFact fact = (HistoryFact) f;
-						 questionableFacts.add(buildQF(task, fact, setoffact.getMap()));
-					}
-				}
-			}
-		}	
-		return questionableFacts; 
+		if(fact instanceof HistoryFact  && parent.getMap() != null) {
+			 questionableFacts.add(buildQF(task, (HistoryFact) fact, parent.getMap()));
+		}
+		
+		return questionableFacts;
 	}
 	
 	private MapSolution buildMapSolution(String value, MapElementPosition position) {

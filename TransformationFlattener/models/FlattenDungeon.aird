@@ -4,7 +4,7 @@
     <semanticResources>FlattenDungeon.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_ZvPtQMT_Ee2B8vZiQySjjA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aJpxUMT_Ee2B8vZiQySjjA" name=" class diagram" repPath="#_aJmG8MT_Ee2B8vZiQySjjA" changeId="1696598630827">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aJpxUMT_Ee2B8vZiQySjjA" name=" class diagram" repPath="#_aJmG8MT_Ee2B8vZiQySjjA" changeId="1696949842619">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="FlattenDungeon.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -207,7 +207,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_b3YeesT_Ee2B8vZiQySjjA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_b3YedcT_Ee2B8vZiQySjjA" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b3YedsT_Ee2B8vZiQySjjA" x="690" y="70" width="255" height="271"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b3YedsT_Ee2B8vZiQySjjA" x="690" y="56" width="272" height="285"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_njPooMT_Ee2B8vZiQySjjA" type="2003" element="_njHs0MT_Ee2B8vZiQySjjA">
           <children xmi:type="notation:Node" xmi:id="_njPoo8T_Ee2B8vZiQySjjA" type="5007"/>
@@ -363,7 +363,7 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_C5qAIsUAEe2B8vZiQySjjA" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C5qAI8UAEe2B8vZiQySjjA" points="[7, -6, 144, 172]$[7, -90, 144, 88]$[-137, -90, 0, 88]$[-137, -178, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C5rOQMUAEe2B8vZiQySjjA" id="(0.4491525423728814,0.061224489795918366)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C5rOQcUAEe2B8vZiQySjjA" id="(0.32600605598317267,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C5rOQcUAEe2B8vZiQySjjA" id="(0.30547974875460254,1.0)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_ENRkIMUAEe2B8vZiQySjjA" type="4001" element="_Dt2dTsUAEe2B8vZiQySjjA" source="_b3XQUMT_Ee2B8vZiQySjjA" target="_A5iigMUAEe2B8vZiQySjjA">
           <children xmi:type="notation:Node" xmi:id="_ENSLMMUAEe2B8vZiQySjjA" type="6001">

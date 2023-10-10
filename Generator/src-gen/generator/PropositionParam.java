@@ -13,6 +13,7 @@ package generator;
  * <ul>
  *   <li>{@link generator.PropositionParam#getState <em>State</em>}</li>
  *   <li>{@link generator.PropositionParam#getPosition <em>Position</em>}</li>
+ *   <li>{@link generator.PropositionParam#isImage <em>Image</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getPropositionParam()
@@ -63,5 +64,27 @@ public interface PropositionParam extends Parameter {
 	 * @generated
 	 */
 	void setPosition(Position value);
+
+	/**
+	 * Returns the value of the '<em><b>Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Image</em>' attribute.
+	 * @see #setImage(boolean)
+	 * @see generator.GeneratorPackage#getPropositionParam_Image()
+	 * @model
+	 * @generated
+	 */
+	boolean isImage();
+
+	/**
+	 * Sets the value of the '{@link generator.PropositionParam#isImage <em>Image</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Image</em>' attribute.
+	 * @see #isImage()
+	 * @generated
+	 */
+	void setImage(boolean value);
 
 } // PropositionParam

@@ -263,8 +263,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createPositionedMapElement();
 		case GeneratorPackage.DATE_QUESTIONABLE_FACT:
 			return createDateQuestionableFact();
-		case GeneratorPackage.EVENT_QUESTIONABLE_FACT:
-			return createEventQuestionableFact();
 		case GeneratorPackage.HCHRONOLOGY:
 			return createHChronology();
 		default:
@@ -314,6 +312,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createELegendTargetFromString(eDataType, initialValue);
 		case GeneratorPackage.ESTATEMENT_TYPE:
 			return createEStatementTypeFromString(eDataType, initialValue);
+		case GeneratorPackage.ETIME_TARGET:
+			return createETimeTargetFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -361,6 +361,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return convertELegendTargetToString(eDataType, instanceValue);
 		case GeneratorPackage.ESTATEMENT_TYPE:
 			return convertEStatementTypeToString(eDataType, instanceValue);
+		case GeneratorPackage.ETIME_TARGET:
+			return convertETimeTargetToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -1401,16 +1403,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EventQuestionableFact createEventQuestionableFact() {
-		EventQuestionableFactImpl eventQuestionableFact = new EventQuestionableFactImpl();
-		return eventQuestionableFact;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public HChronology createHChronology() {
 		HChronologyImpl hChronology = new HChronologyImpl();
 		return hChronology;
@@ -1787,6 +1779,28 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * @generated
 	 */
 	public String convertEStatementTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ETimeTarget createETimeTargetFromString(EDataType eDataType, String initialValue) {
+		ETimeTarget result = ETimeTarget.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertETimeTargetToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

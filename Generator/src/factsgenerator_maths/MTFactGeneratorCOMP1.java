@@ -20,6 +20,7 @@ import generator.MTLevel;
 import generator.MTQFCompletion1;
 import generator.MultipleChoice;
 import generator.ResultPosition;
+import generator.SetOfFacts;
 import generator.TableBuild;
 import generator.impl.MTQFCompletion1Impl;
 import structures.DungeonElements;
@@ -32,7 +33,7 @@ public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
 		if(fact instanceof MTFact) {
 			MTCompletion1 taskC = (MTCompletion1) task;
 			MTFact factC = (MTFact) fact;
