@@ -253,6 +253,7 @@ public class ConcreteGameplayGenerator {
 				propValue.setValue(((Value) component.getDisplayValue().getValue()).getValue());	
 			}
 		}
+		proposition.setImageDisplay(fact.getPropositions().get(propositionIndex).isImage());
 		proposition.setValue(propValue);
 		comp.getDisplays().add(proposition);
 		

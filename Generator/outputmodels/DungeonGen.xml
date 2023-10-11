@@ -1,275 +1,275 @@
 <?xml version="1.0" encoding="ASCII"?>
-<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="HG_O1" levelID="HG_O1_L1" gameLevelID="5" curses="[&quot;Night&quot;,]">
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="HG_O1" levelID="HG_O1_L1" gameLevelID="5" curses="[]">
   <rooms>
     <room id="Room[0/0]" roomTypeName="RegularRoomS">
       <roomaccesses>
         <roomaccess id="a2" direction="SOUTH" accessRef="a3"/>
       </roomaccesses>
     </room>
-    <room id="Room[0/-1]" y="-1" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T5" prompt="Place les bons elements" gameplayWithUndo="true">
+    <room id="Room[0/-1]" y="-1" roomTypeName="RegularRoom5" time="20" idTask="HG_O1_L1_T7" prompt="Place les bons elements" gameplayWithUndo="true">
       <roomaccesses>
         <roomaccess id="a3" direction="NORTH" accessRef="a2"/>
-        <roomaccess id="a4" direction="EAST" accessRef="a5"/>
+        <roomaccess id="a4" direction="WEST" accessRef="a5"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T5-QAFACT9" complete="L'Euro a eu lieu en/le   2002" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T5-QAFACT9" complete="L'Euro a eu lieu en/le   2002" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T7-QAFACT1" complete="REVOLUTION_RUSSE represente R&#xe9;volution Russe" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T7-QAFACT1" complete="REVOLUTION_RUSSE represente R&#xe9;volution Russe" correctnessToReach="1"/>
       </facts>
       <elements>
         <element id="STRUCT1" type="StructureStatement" pos="POSL1"/>
-        <element id="ELEM2" type="StatementFact" displayValue="L'Euro a eu lieu en/le " pos="id/STRUCT1" idFact="HG_O1_L1_T5-QAFACT9"/>
-        <element id="ELEM3" type="ObjectDetector" pos="id/STRUCT1" ability="DETECTOR" idFact="HG_O1_L1_T5-QAFACT9"/>
-        <element id="STRUCT4" type="StructureStatement" pos="POSL2"/>
-        <element id="ELEM5" type="StatementFact" displayValue="L'Euro a eu lieu en/le " pos="id/STRUCT4" idFact="HG_O1_L1_T5-QAFACT9"/>
-        <element id="ELEM6" type="ObjectDetector" pos="id/STRUCT4" ability="DETECTOR" idFact="HG_O1_L1_T5-QAFACT9"/>
-        <element id="ELEM7" type="Pot" displayValue="  2002" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T5-QAFACT9"/>
-        <element id="ELEM8" type="Pot" displayValue="  2002" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T5-QAFACT9"/>
+        <element id="ELEM2" type="StatementFact" displayValue="REVOLUTION_RUSSE" pos="id/STRUCT1" idFact="HG_O1_L1_T7-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM3" type="StatementFact" displayValue=" represente " pos="id/STRUCT1" idFact="HG_O1_L1_T7-QAFACT1"/>
+        <element id="ELEM4" type="ObjectDetector" pos="id/STRUCT1" ability="DETECTOR" idFact="HG_O1_L1_T7-QAFACT1"/>
+        <element id="STRUCT5" type="StructureStatement" pos="POSL2"/>
+        <element id="ELEM6" type="StatementFact" displayValue="REVOLUTION_RUSSE" pos="id/STRUCT5" idFact="HG_O1_L1_T7-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM7" type="StatementFact" displayValue=" represente " pos="id/STRUCT5" idFact="HG_O1_L1_T7-QAFACT1"/>
+        <element id="ELEM8" type="ObjectDetector" pos="id/STRUCT5" ability="DETECTOR" idFact="HG_O1_L1_T7-QAFACT1"/>
+        <element id="ELEM9" type="Pot" displayValue="R&#xe9;volution Russe" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T7-QAFACT1"/>
+        <element id="ELEM10" type="Pot" displayValue="R&#xe9;volution Russe" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T7-QAFACT1"/>
       </elements>
     </room>
-    <room id="Room[1/-1]" x="1" y="-1" roomTypeName="RegularRoom5" time="20" idTask="HG_O1_L1_T6" prompt="Place les bons elements" gameplayWithUndo="true">
+    <room id="Room[-1/-1]" x="-1" y="-1" roomTypeName="RoomTrap4">
       <roomaccesses>
-        <roomaccess id="a5" direction="WEST" accessRef="a4"/>
-        <roomaccess id="a6" direction="NORTH" accessRef="a7"/>
+        <roomaccess id="a5" direction="EAST" accessRef="a4"/>
+        <roomaccess id="a6" direction="WEST" accessRef="a7"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM11" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM12" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM13" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM14" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM15" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM16" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM17" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-2/-1]" x="-2" y="-1" roomTypeName="RegularRoom5" time="20" idTask="HG_O1_L1_T4" prompt="Place les bons elements" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a7" direction="EAST" accessRef="a6"/>
+        <roomaccess id="a8" direction="SOUTH" accessRef="a9"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T6-QAFACT1" complete="R&#xe9;volution Russe a eu lieu en/le 1917" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T6-QAFACT11" complete="Les accords d'Evian a eu lieu en/le   1962" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T4-QAFACT3" complete="Allemagne Nazie (Hitl&#xe9;rienne) a eu lieu entre 1933 et 1945" correctnessToReach="2"/>
+        <fact id="HG_O1_L1_T4-QAFACT0" complete="1er Guerre Mondiale a eu lieu entre 1914 et 1918" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT9" type="StructureStatement" pos="POSL2"/>
-        <element id="ELEM10" type="Statement" displayValue="R&#xe9;volution Russe a eu lieu en/le " pos="id/STRUCT9" idFact="HG_O1_L1_T6-QAFACT1"/>
-        <element id="ELEM11" type="ObjectDetector" pos="id/STRUCT9" ability="DETECTOR" idFact="HG_O1_L1_T6-QAFACT1"/>
-        <element id="STRUCT12" type="StructureStatement" pos="POSL1"/>
-        <element id="ELEM13" type="Statement" displayValue="Les accords d'Evian a eu lieu en/le " pos="id/STRUCT12" idFact="HG_O1_L1_T6-QAFACT11"/>
-        <element id="ELEM14" type="ObjectDetector" pos="id/STRUCT12" ability="DETECTOR" idFact="HG_O1_L1_T6-QAFACT11"/>
-        <element id="ELEM15" type="Pot" displayValue="1917" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T6-QAFACT1"/>
-        <element id="ELEM16" type="Pot" displayValue="  1962" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T6-QAFACT11"/>
+        <element id="STRUCT18" type="StructureStatement" pos="POSL2"/>
+        <element id="ELEM19" type="Statement" displayValue="Allemagne Nazie (Hitl&#xe9;rienne) a eu lieu entre " pos="id/STRUCT18" idFact="HG_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM20" type="ObjectDetector" pos="id/STRUCT18" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM21" type="Statement" displayValue=" et " pos="id/STRUCT18" idFact="HG_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM22" type="ObjectDetector" pos="id/STRUCT18" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT3"/>
+        <element id="STRUCT23" type="StructureStatement" pos="POSL1"/>
+        <element id="ELEM24" type="Statement" displayValue="1er Guerre Mondiale a eu lieu entre " pos="id/STRUCT23" idFact="HG_O1_L1_T4-QAFACT0"/>
+        <element id="ELEM25" type="ObjectDetector" pos="id/STRUCT23" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT0"/>
+        <element id="ELEM26" type="Statement" displayValue=" et " pos="id/STRUCT23" idFact="HG_O1_L1_T4-QAFACT0"/>
+        <element id="ELEM27" type="ObjectDetector" pos="id/STRUCT23" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT0"/>
+        <element id="ELEM28" type="Pot" displayValue="1933" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM29" type="Pot" displayValue="1945" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM30" type="Pot" displayValue="1914" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT0"/>
+        <element id="ELEM31" type="Pot" displayValue="1918" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT0"/>
       </elements>
     </room>
-    <room id="Room[1/0]" x="1" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T6" prompt="Place les bons elements" gameplayWithUndo="true">
+    <room id="Room[-2/-2]" x="-2" y="-2" roomTypeName="RoomTrap3">
       <roomaccesses>
-        <roomaccess id="a7" direction="SOUTH" accessRef="a6"/>
-        <roomaccess id="a8" direction="EAST" accessRef="a9"/>
+        <roomaccess id="a9" direction="NORTH" accessRef="a8"/>
+        <roomaccess id="a10" direction="WEST" accessRef="a11"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM32" type="HoleTrap" pos="POS3" ability="NONAVOIDABLE"/>
+        <element id="ELEM33" type="HoleTrap" pos="POS8" ability="NONAVOIDABLE"/>
+        <element id="ELEM34" type="HoleTrap" pos="POS1" ability="NONAVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-3/-2]" x="-3" y="-2" roomTypeName="RoomTrap4">
+      <roomaccesses>
+        <roomaccess id="a11" direction="EAST" accessRef="a10"/>
+        <roomaccess id="a12" direction="SOUTH" accessRef="a13"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM35" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM36" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM37" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM38" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM39" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM40" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM41" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-3/-3]" x="-3" y="-3" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T8" prompt="Place les bons elements" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a13" direction="NORTH" accessRef="a12"/>
+        <roomaccess id="a14" direction="WEST" accessRef="a15"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T6-QAFACT1" complete="R&#xe9;volution Russe a eu lieu en/le 1917" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T6-QAFACT4" complete="Front Populaire a eu lieu en/le 1936 - 1937" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T8-QAFACT4" complete="Front Populaire correspond a FRONT_POPULAIRE" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T8-QAFACT11" complete="Les accords d'Evian correspond a EVIAN" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT17" type="StructureStatement" pos="POSL1"/>
-        <element id="ELEM18" type="StatementFact" displayValue="R&#xe9;volution Russe a eu lieu en/le " pos="id/STRUCT17" idFact="HG_O1_L1_T6-QAFACT1"/>
-        <element id="ELEM19" type="ObjectDetector" pos="id/STRUCT17" ability="DETECTOR" idFact="HG_O1_L1_T6-QAFACT1"/>
-        <element id="STRUCT20" type="StructureStatement" pos="POSL2"/>
-        <element id="ELEM21" type="StatementFact" displayValue="Front Populaire a eu lieu en/le " pos="id/STRUCT20" idFact="HG_O1_L1_T6-QAFACT4"/>
-        <element id="ELEM22" type="ObjectDetector" pos="id/STRUCT20" ability="DETECTOR" idFact="HG_O1_L1_T6-QAFACT4"/>
-        <element id="ELEM23" type="Pot" displayValue="1917" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T6-QAFACT1"/>
-        <element id="ELEM24" type="Pot" displayValue="1936 - 1937" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T6-QAFACT4"/>
+        <element id="STRUCT42" type="StructureStatement" pos="POSL2"/>
+        <element id="ELEM43" type="Statement" displayValue="Front Populaire correspond a " pos="id/STRUCT42" idFact="HG_O1_L1_T8-QAFACT4"/>
+        <element id="ELEM44" type="ObjectDetector" pos="id/STRUCT42" ability="DETECTOR" idFact="HG_O1_L1_T8-QAFACT4"/>
+        <element id="STRUCT45" type="StructureStatement" pos="POSL1"/>
+        <element id="ELEM46" type="Statement" displayValue="Les accords d'Evian correspond a " pos="id/STRUCT45" idFact="HG_O1_L1_T8-QAFACT11"/>
+        <element id="ELEM47" type="ObjectDetector" pos="id/STRUCT45" ability="DETECTOR" idFact="HG_O1_L1_T8-QAFACT11"/>
+        <element id="ELEM48" type="Pot" displayValue="FRONT_POPULAIRE" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T8-QAFACT4" isImageDisplay="true"/>
+        <element id="ELEM49" type="Pot" displayValue="EVIAN" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T8-QAFACT11" isImageDisplay="true"/>
       </elements>
     </room>
-    <room id="Room[2/0]" x="2" roomTypeName="RoomTrap">
+    <room id="Room[-4/-3]" x="-4" y="-3" roomTypeName="RoomTrap3">
       <roomaccesses>
-        <roomaccess id="a9" direction="WEST" accessRef="a8"/>
-        <roomaccess id="a10" direction="NORTH" accessRef="a11"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM25" type="HoleTrap" pos="POS2" ability="NONAVOIDABLE"/>
-        <element id="ELEM26" type="HoleTrap" pos="POS4" ability="NONAVOIDABLE"/>
-        <element id="ELEM27" type="HoleTrap" pos="POS1" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[2/1]" x="2" y="1" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T4" prompt="Place les bons elements" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a11" direction="SOUTH" accessRef="a10"/>
-        <roomaccess id="a12" direction="EAST" accessRef="a13"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T4-QAFACT6" complete="R&#xe9;gime de Vichy a eu lieu entre 1940 et 1944" correctnessToReach="2"/>
-        <fact id="HG_O1_L1_T4-QAFACT6" complete="R&#xe9;gime de Vichy a eu lieu entre 1940 et 1944" correctnessToReach="2"/>
-      </facts>
-      <elements>
-        <element id="STRUCT28" type="StructureStatement" pos="POSL2"/>
-        <element id="ELEM29" type="StatementFact" displayValue="R&#xe9;gime de Vichy a eu lieu entre " pos="id/STRUCT28" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM30" type="ObjectDetector" pos="id/STRUCT28" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM31" type="StatementFact" displayValue=" et " pos="id/STRUCT28" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM32" type="ObjectDetector" pos="id/STRUCT28" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="STRUCT33" type="StructureStatement" pos="POSL1"/>
-        <element id="ELEM34" type="StatementFact" displayValue="R&#xe9;gime de Vichy a eu lieu entre " pos="id/STRUCT33" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM35" type="ObjectDetector" pos="id/STRUCT33" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM36" type="StatementFact" displayValue=" et " pos="id/STRUCT33" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM37" type="ObjectDetector" pos="id/STRUCT33" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM38" type="Pot" displayValue="1940" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM39" type="Pot" displayValue="1944" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM40" type="Pot" displayValue="1940" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM41" type="Pot" displayValue="1944" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT6"/>
-      </elements>
-    </room>
-    <room id="Room[3/1]" x="3" y="1" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T7" prompt="Place les bons elements" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a13" direction="WEST" accessRef="a12"/>
-        <roomaccess id="a14" direction="NORTH" accessRef="a15"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T7-QAFACT9" complete="EURO represente L'Euro" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T7-QAFACT5" complete="DEGAULLE represente Appel du g&#xe9;n&#xe9;ral de Gaulle" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT42" type="StructureStatement" pos="POSL1"/>
-        <element id="ELEM43" type="StatementFact" displayValue="[EURO]" pos="id/STRUCT42" idFact="HG_O1_L1_T7-QAFACT9" isImageDisplay="true"/>
-        <element id="ELEM44" type="StatementFact" displayValue=" represente " pos="id/STRUCT42" idFact="HG_O1_L1_T7-QAFACT9"/>
-        <element id="ELEM45" type="ObjectDetector" pos="id/STRUCT42" ability="DETECTOR" idFact="HG_O1_L1_T7-QAFACT9"/>
-        <element id="STRUCT46" type="StructureStatement" pos="POSL2"/>
-        <element id="ELEM47" type="StatementFact" displayValue="[DEGAULLE]" pos="id/STRUCT46" idFact="HG_O1_L1_T7-QAFACT5" isImageDisplay="true"/>
-        <element id="ELEM48" type="StatementFact" displayValue=" represente " pos="id/STRUCT46" idFact="HG_O1_L1_T7-QAFACT5"/>
-        <element id="ELEM49" type="ObjectDetector" pos="id/STRUCT46" ability="DETECTOR" idFact="HG_O1_L1_T7-QAFACT5"/>
-        <element id="ELEM50" type="Pot" displayValue="L'Euro" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T7-QAFACT9"/>
-        <element id="ELEM51" type="Pot" displayValue="Appel du g&#xe9;n&#xe9;ral de Gaulle" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T7-QAFACT5"/>
-      </elements>
-    </room>
-    <room id="Room[3/2]" x="3" y="2" roomTypeName="RoomTrap3">
-      <roomaccesses>
-        <roomaccess id="a15" direction="SOUTH" accessRef="a14"/>
+        <roomaccess id="a15" direction="EAST" accessRef="a14"/>
         <roomaccess id="a16" direction="WEST" accessRef="a17"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM52" type="WaitSpikeTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM53" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM54" type="WaitSpikeTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM55" type="WaitSpikeTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM56" type="WaitSpikeTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM50" type="BearTrap" pos="POS5" ability="NONAVOIDABLE"/>
+        <element id="ELEM51" type="BearTrap" pos="POS1" ability="NONAVOIDABLE"/>
+        <element id="ELEM52" type="BearTrap" pos="POS3" ability="NONAVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[2/2]" x="2" y="2" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T4" prompt="Place les bons elements" gameplayWithUndo="true">
+    <room id="Room[-5/-3]" x="-5" y="-3" roomTypeName="RegularRoom5" time="20" idTask="HG_O1_L1_T8" prompt="Place les bons elements" gameplayWithUndo="true">
       <roomaccesses>
         <roomaccess id="a17" direction="EAST" accessRef="a16"/>
-        <roomaccess id="a18" direction="NORTH" accessRef="a19"/>
+        <roomaccess id="a18" direction="SOUTH" accessRef="a19"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T4-QAFACT0" complete="1er Guerre Mondiale a eu lieu entre 1914 et 1918" correctnessToReach="2"/>
-        <fact id="HG_O1_L1_T4-QAFACT0" complete="1er Guerre Mondiale a eu lieu entre 1914 et 1918" correctnessToReach="2"/>
+        <fact id="HG_O1_L1_T8-QAFACT3" complete="Allemagne Nazie (Hitl&#xe9;rienne) correspond a ALLEMAGNE_NAZIE" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T8-QAFACT1" complete="R&#xe9;volution Russe correspond a REVOLUTION_RUSSE" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT57" type="StructureStatement" pos="POSL1"/>
-        <element id="ELEM58" type="StatementFact" displayValue="1er Guerre Mondiale a eu lieu entre " pos="id/STRUCT57" idFact="HG_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM59" type="ObjectDetector" pos="id/STRUCT57" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM60" type="StatementFact" displayValue=" et " pos="id/STRUCT57" idFact="HG_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM61" type="ObjectDetector" pos="id/STRUCT57" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT0"/>
-        <element id="STRUCT62" type="StructureStatement" pos="POSL2"/>
-        <element id="ELEM63" type="StatementFact" displayValue="1er Guerre Mondiale a eu lieu entre " pos="id/STRUCT62" idFact="HG_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM64" type="ObjectDetector" pos="id/STRUCT62" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM65" type="StatementFact" displayValue=" et " pos="id/STRUCT62" idFact="HG_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM66" type="ObjectDetector" pos="id/STRUCT62" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM67" type="Pot" displayValue="1914" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM68" type="Pot" displayValue="1918" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM69" type="Pot" displayValue="1914" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM70" type="Pot" displayValue="1918" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT0"/>
+        <element id="STRUCT53" type="StructureStatement" pos="POSL2"/>
+        <element id="ELEM54" type="Statement" displayValue="Allemagne Nazie (Hitl&#xe9;rienne) correspond a " pos="id/STRUCT53" idFact="HG_O1_L1_T8-QAFACT3"/>
+        <element id="ELEM55" type="ObjectDetector" pos="id/STRUCT53" ability="DETECTOR" idFact="HG_O1_L1_T8-QAFACT3"/>
+        <element id="STRUCT56" type="StructureStatement" pos="POSL1"/>
+        <element id="ELEM57" type="Statement" displayValue="R&#xe9;volution Russe correspond a " pos="id/STRUCT56" idFact="HG_O1_L1_T8-QAFACT1"/>
+        <element id="ELEM58" type="ObjectDetector" pos="id/STRUCT56" ability="DETECTOR" idFact="HG_O1_L1_T8-QAFACT1"/>
+        <element id="ELEM59" type="Pot" displayValue="ALLEMAGNE_NAZIE" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T8-QAFACT3" isImageDisplay="true"/>
+        <element id="ELEM60" type="Pot" displayValue="REVOLUTION_RUSSE" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T8-QAFACT1" isImageDisplay="true"/>
       </elements>
     </room>
-    <room id="Room[2/3]" x="2" y="3" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T8" prompt="Place les bons elements" gameplayWithUndo="true">
+    <room id="Room[-5/-4]" x="-5" y="-4" roomTypeName="RoomTrap">
       <roomaccesses>
-        <roomaccess id="a19" direction="SOUTH" accessRef="a18"/>
-        <roomaccess id="a20" direction="EAST" accessRef="a21"/>
+        <roomaccess id="a19" direction="NORTH" accessRef="a18"/>
+        <roomaccess id="a20" direction="WEST" accessRef="a21"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM61" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM62" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM63" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM64" type="WaitFireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM65" type="WaitFireTrap" pos="POS5" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-6/-4]" x="-6" y="-4" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T6" prompt="Place les bons elements" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a21" direction="EAST" accessRef="a20"/>
+        <roomaccess id="a22" direction="SOUTH" accessRef="a23"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T8-QAFACT6" complete="R&#xe9;gime de Vichy correspond a VICHY" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T8-QAFACT5" complete="Appel du g&#xe9;n&#xe9;ral de Gaulle correspond a DEGAULLE" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T6-QAFACT11" complete="Les accords d'Evian a eu lieu en/le   1962" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T6-QAFACT5" complete="Appel du g&#xe9;n&#xe9;ral de Gaulle a eu lieu en/le 18 Juin 1940" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT71" type="StructureStatement" pos="POSL2"/>
-        <element id="ELEM72" type="StatementFact" displayValue="R&#xe9;gime de Vichy correspond a " pos="id/STRUCT71" idFact="HG_O1_L1_T8-QAFACT6"/>
-        <element id="ELEM73" type="ObjectDetector" pos="id/STRUCT71" ability="DETECTOR" idFact="HG_O1_L1_T8-QAFACT6"/>
+        <element id="STRUCT66" type="StructureStatement" pos="POSL1"/>
+        <element id="ELEM67" type="StatementFact" displayValue="Les accords d'Evian a eu lieu en/le " pos="id/STRUCT66" idFact="HG_O1_L1_T6-QAFACT11"/>
+        <element id="ELEM68" type="ObjectDetector" pos="id/STRUCT66" ability="DETECTOR" idFact="HG_O1_L1_T6-QAFACT11"/>
+        <element id="STRUCT69" type="StructureStatement" pos="POSL2"/>
+        <element id="ELEM70" type="StatementFact" displayValue="Appel du g&#xe9;n&#xe9;ral de Gaulle a eu lieu en/le " pos="id/STRUCT69" idFact="HG_O1_L1_T6-QAFACT5"/>
+        <element id="ELEM71" type="ObjectDetector" pos="id/STRUCT69" ability="DETECTOR" idFact="HG_O1_L1_T6-QAFACT5"/>
+        <element id="ELEM72" type="Pot" displayValue="  1962" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T6-QAFACT11"/>
+        <element id="ELEM73" type="Pot" displayValue="18 Juin 1940" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T6-QAFACT5"/>
+      </elements>
+    </room>
+    <room id="Room[-6/-5]" x="-6" y="-5" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T4" prompt="Place les bons elements" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a23" direction="NORTH" accessRef="a22"/>
+        <roomaccess id="a24" direction="SOUTH" accessRef="a25"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T4-QAFACT3" complete="Allemagne Nazie (Hitl&#xe9;rienne) a eu lieu entre 1933 et 1945" correctnessToReach="2"/>
+        <fact id="HG_O1_L1_T4-QAFACT4" complete="Front Populaire a eu lieu entre 1936 et 1937" correctnessToReach="2"/>
+      </facts>
+      <elements>
         <element id="STRUCT74" type="StructureStatement" pos="POSL1"/>
-        <element id="ELEM75" type="StatementFact" displayValue="Appel du g&#xe9;n&#xe9;ral de Gaulle correspond a " pos="id/STRUCT74" idFact="HG_O1_L1_T8-QAFACT5"/>
-        <element id="ELEM76" type="ObjectDetector" pos="id/STRUCT74" ability="DETECTOR" idFact="HG_O1_L1_T8-QAFACT5"/>
-        <element id="ELEM77" type="Pot" displayValue="VICHY" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T8-QAFACT6"/>
-        <element id="ELEM78" type="Pot" displayValue="DEGAULLE" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T8-QAFACT5"/>
-      </elements>
-    </room>
-    <room id="Room[3/3]" x="3" y="3" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T7" prompt="Place les bons elements" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a21" direction="WEST" accessRef="a20"/>
-        <roomaccess id="a22" direction="NORTH" accessRef="a23"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T7-QAFACT12" complete="5REPUBLIQUE represente Naissance de la Ve R&#xe9;publique" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T7-QAFACT2" complete="ARMISTICE represente Armistice" correctnessToReach="1"/>
-      </facts>
-      <elements>
+        <element id="ELEM75" type="Statement" displayValue="Allemagne Nazie (Hitl&#xe9;rienne) a eu lieu entre " pos="id/STRUCT74" idFact="HG_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM76" type="ObjectDetector" pos="id/STRUCT74" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM77" type="Statement" displayValue=" et " pos="id/STRUCT74" idFact="HG_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM78" type="ObjectDetector" pos="id/STRUCT74" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT3"/>
         <element id="STRUCT79" type="StructureStatement" pos="POSL2"/>
-        <element id="ELEM80" type="StatementFact" displayValue="[5REPUBLIQUE]" pos="id/STRUCT79" idFact="HG_O1_L1_T7-QAFACT12" isImageDisplay="true"/>
-        <element id="ELEM81" type="StatementFact" displayValue=" represente " pos="id/STRUCT79" idFact="HG_O1_L1_T7-QAFACT12"/>
-        <element id="ELEM82" type="ObjectDetector" pos="id/STRUCT79" ability="DETECTOR" idFact="HG_O1_L1_T7-QAFACT12"/>
-        <element id="STRUCT83" type="StructureStatement" pos="POSL1"/>
-        <element id="ELEM84" type="StatementFact" displayValue="[ARMISTICE]" pos="id/STRUCT83" idFact="HG_O1_L1_T7-QAFACT2" isImageDisplay="true"/>
-        <element id="ELEM85" type="StatementFact" displayValue=" represente " pos="id/STRUCT83" idFact="HG_O1_L1_T7-QAFACT2"/>
-        <element id="ELEM86" type="ObjectDetector" pos="id/STRUCT83" ability="DETECTOR" idFact="HG_O1_L1_T7-QAFACT2"/>
-        <element id="ELEM87" type="Pot" displayValue="Naissance de la Ve R&#xe9;publique" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T7-QAFACT12"/>
-        <element id="ELEM88" type="Pot" displayValue="Armistice" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T7-QAFACT2"/>
+        <element id="ELEM80" type="Statement" displayValue="Front Populaire a eu lieu entre " pos="id/STRUCT79" idFact="HG_O1_L1_T4-QAFACT4"/>
+        <element id="ELEM81" type="ObjectDetector" pos="id/STRUCT79" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT4"/>
+        <element id="ELEM82" type="Statement" displayValue=" et " pos="id/STRUCT79" idFact="HG_O1_L1_T4-QAFACT4"/>
+        <element id="ELEM83" type="ObjectDetector" pos="id/STRUCT79" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT4"/>
+        <element id="ELEM84" type="Pot" displayValue="1933" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM85" type="Pot" displayValue="1945" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM86" type="Pot" displayValue="1936" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT4"/>
+        <element id="ELEM87" type="Pot" displayValue="1937" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT4"/>
       </elements>
     </room>
-    <room id="Room[3/4]" x="3" y="4" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T8" prompt="Place les bons elements" gameplayWithUndo="true">
+    <room id="Room[-6/-6]" x="-6" y="-6" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T6" prompt="Place les bons elements" gameplayWithUndo="true">
       <roomaccesses>
-        <roomaccess id="a23" direction="SOUTH" accessRef="a22"/>
-        <roomaccess id="a24" direction="NORTH" accessRef="a25"/>
+        <roomaccess id="a25" direction="NORTH" accessRef="a24"/>
+        <roomaccess id="a26" direction="SOUTH" accessRef="a27"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T8-QAFACT8" complete="Trait&#xe9; de Rome correspond a ROME" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T8-QAFACT5" complete="Appel du g&#xe9;n&#xe9;ral de Gaulle correspond a DEGAULLE" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T6-QAFACT11" complete="Les accords d'Evian a eu lieu en/le   1962" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T6-QAFACT7" complete="Cr&#xe9;ation de l'ONU a eu lieu en/le   1945" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT89" type="StructureStatement" pos="POSL1"/>
-        <element id="ELEM90" type="Statement" displayValue="Trait&#xe9; de Rome correspond a " pos="id/STRUCT89" idFact="HG_O1_L1_T8-QAFACT8"/>
-        <element id="ELEM91" type="ObjectDetector" pos="id/STRUCT89" ability="DETECTOR" idFact="HG_O1_L1_T8-QAFACT8"/>
-        <element id="STRUCT92" type="StructureStatement" pos="POSL2"/>
-        <element id="ELEM93" type="Statement" displayValue="Appel du g&#xe9;n&#xe9;ral de Gaulle correspond a " pos="id/STRUCT92" idFact="HG_O1_L1_T8-QAFACT5"/>
-        <element id="ELEM94" type="ObjectDetector" pos="id/STRUCT92" ability="DETECTOR" idFact="HG_O1_L1_T8-QAFACT5"/>
-        <element id="ELEM95" type="Pot" displayValue="ROME" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T8-QAFACT8"/>
-        <element id="ELEM96" type="Pot" displayValue="DEGAULLE" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T8-QAFACT5"/>
+        <element id="STRUCT88" type="StructureStatement" pos="POSL1"/>
+        <element id="ELEM89" type="StatementFact" displayValue="Les accords d'Evian a eu lieu en/le " pos="id/STRUCT88" idFact="HG_O1_L1_T6-QAFACT11"/>
+        <element id="ELEM90" type="ObjectDetector" pos="id/STRUCT88" ability="DETECTOR" idFact="HG_O1_L1_T6-QAFACT11"/>
+        <element id="STRUCT91" type="StructureStatement" pos="POSL2"/>
+        <element id="ELEM92" type="StatementFact" displayValue="Cr&#xe9;ation de l'ONU a eu lieu en/le " pos="id/STRUCT91" idFact="HG_O1_L1_T6-QAFACT7"/>
+        <element id="ELEM93" type="ObjectDetector" pos="id/STRUCT91" ability="DETECTOR" idFact="HG_O1_L1_T6-QAFACT7"/>
+        <element id="ELEM94" type="Pot" displayValue="  1962" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T6-QAFACT11"/>
+        <element id="ELEM95" type="Pot" displayValue="  1945" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T6-QAFACT7"/>
       </elements>
     </room>
-    <room id="Room[3/5]" x="3" y="5" roomTypeName="RoomTrap3">
+    <room id="Room[-6/-7]" x="-6" y="-7" roomTypeName="RegularRoom5" time="20" idTask="HG_O1_L1_T7" prompt="Place les bons elements" gameplayWithUndo="true">
       <roomaccesses>
-        <roomaccess id="a25" direction="SOUTH" accessRef="a24"/>
-        <roomaccess id="a26" direction="EAST" accessRef="a27"/>
+        <roomaccess id="a27" direction="NORTH" accessRef="a26"/>
+        <roomaccess id="a28" direction="WEST" accessRef="a29"/>
       </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T7-QAFACT15" complete="ALTERNANCE represente Premi&#xe8;re alternance" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T7-QAFACT9" complete="EURO represente L'Euro" correctnessToReach="1"/>
+      </facts>
       <elements>
-        <element id="ELEM97" type="FireTrap" pos="POS8" ability="AVOIDABLE"/>
-        <element id="ELEM98" type="FireTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM99" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM100" type="FireTrap" pos="POS7" ability="AVOIDABLE"/>
-        <element id="ELEM101" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM102" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM103" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="STRUCT96" type="StructureStatement" pos="POSL2"/>
+        <element id="ELEM97" type="StatementFact" displayValue="ALTERNANCE" pos="id/STRUCT96" idFact="HG_O1_L1_T7-QAFACT15" isImageDisplay="true"/>
+        <element id="ELEM98" type="StatementFact" displayValue=" represente " pos="id/STRUCT96" idFact="HG_O1_L1_T7-QAFACT15"/>
+        <element id="ELEM99" type="ObjectDetector" pos="id/STRUCT96" ability="DETECTOR" idFact="HG_O1_L1_T7-QAFACT15"/>
+        <element id="STRUCT100" type="StructureStatement" pos="POSL1"/>
+        <element id="ELEM101" type="StatementFact" displayValue="EURO" pos="id/STRUCT100" idFact="HG_O1_L1_T7-QAFACT9" isImageDisplay="true"/>
+        <element id="ELEM102" type="StatementFact" displayValue=" represente " pos="id/STRUCT100" idFact="HG_O1_L1_T7-QAFACT9"/>
+        <element id="ELEM103" type="ObjectDetector" pos="id/STRUCT100" ability="DETECTOR" idFact="HG_O1_L1_T7-QAFACT9"/>
+        <element id="ELEM104" type="Pot" displayValue="Premi&#xe8;re alternance" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T7-QAFACT15"/>
+        <element id="ELEM105" type="Pot" displayValue="L'Euro" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T7-QAFACT9"/>
       </elements>
     </room>
-    <room id="Room[4/5]" x="4" y="5" roomTypeName="TrapRoom2">
+    <room id="Room[-7/-7]" x="-7" y="-7" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T5" prompt="Place les bons elements" gameplayWithUndo="true">
       <roomaccesses>
-        <roomaccess id="a27" direction="WEST" accessRef="a26"/>
-        <roomaccess id="a28" direction="NORTH" accessRef="a29"/>
+        <roomaccess id="a29" direction="EAST" accessRef="a28"/>
+        <roomaccess id="a30" direction="NORTH" accessRef="a31"/>
       </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T5-QAFACT14" complete="Loi Veil (IVG) a eu lieu en/le   1975" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T5-QAFACT13" complete="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct a eu lieu en/le   1962" correctnessToReach="1"/>
+      </facts>
       <elements>
-        <element id="ELEM104" type="RegularSlime" pos="POS5" ability="NONAVOIDABLE"/>
-        <element id="ELEM105" type="RegularSlime" pos="POS1" ability="NONAVOIDABLE"/>
-        <element id="ELEM106" type="RegularSlime" pos="POS3" ability="NONAVOIDABLE"/>
+        <element id="STRUCT106" type="StructureStatement" pos="POSL1"/>
+        <element id="ELEM107" type="StatementFact" displayValue="Loi Veil (IVG) a eu lieu en/le " pos="id/STRUCT106" idFact="HG_O1_L1_T5-QAFACT14"/>
+        <element id="ELEM108" type="ObjectDetector" pos="id/STRUCT106" ability="DETECTOR" idFact="HG_O1_L1_T5-QAFACT14"/>
+        <element id="STRUCT109" type="StructureStatement" pos="POSL2"/>
+        <element id="ELEM110" type="StatementFact" displayValue="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct a eu lieu en/le " pos="id/STRUCT109" idFact="HG_O1_L1_T5-QAFACT13"/>
+        <element id="ELEM111" type="ObjectDetector" pos="id/STRUCT109" ability="DETECTOR" idFact="HG_O1_L1_T5-QAFACT13"/>
+        <element id="ELEM112" type="Pot" displayValue="  1975" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T5-QAFACT14"/>
+        <element id="ELEM113" type="Pot" displayValue="  1962" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T5-QAFACT13"/>
       </elements>
     </room>
-    <room id="Room[4/6]" x="4" y="6" roomTypeName="RoomTrap4">
+    <room id="Room[-7/-6]" x="-7" y="-6" roomTypeName="ExitRoom1">
       <roomaccesses>
-        <roomaccess id="a29" direction="SOUTH" accessRef="a28"/>
-        <roomaccess id="a30" direction="WEST" accessRef="a31"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM107" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM108" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM109" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM110" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM111" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM112" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM113" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[3/6]" x="3" y="6" roomTypeName="ExitRoom1">
-      <roomaccesses>
-        <roomaccess id="a31" direction="EAST" accessRef="a30"/>
+        <roomaccess id="a31" direction="SOUTH" accessRef="a30"/>
       </roomaccesses>
     </room>
   </rooms>

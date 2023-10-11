@@ -12,6 +12,8 @@ public class QuestionedFactSplitter {
 	private List<String> texts;
 	private List<Boolean> textsAreImages;
 	
+	private int numberOfQuestionMark;
+	
 	private QuestionedFact fact;
 	
 	public QuestionedFactSplitter(QuestionedFact fact) {
@@ -29,6 +31,7 @@ public class QuestionedFactSplitter {
 		String question = ((Value) fact.getQuestion().getValue()).getValue();
 		this.beginByText = !beginByQuestionMark(question);
 		System.out.println(question);
+		this.numberOfQuestionMark = (int) question.chars().filter(ch -> ch == '?').count();
 		String[] parts = question.split("\\?"); 
 		for(String text : parts) {
 			//System.out.println(text);
@@ -67,7 +70,7 @@ public class QuestionedFactSplitter {
 	}
 	
 	public int numberOfHoles() {
-		return Integer.valueOf(((Value) fact.getCorrectnessToReach().getValue()).getValue());
+		return this.numberOfQuestionMark; //Integer.valueOf(((Value) fact.getCorrectnessToReach().getValue()).getValue());
 	}
 	
 	public int numberOfTexts() {
