@@ -3,6 +3,7 @@ package structures;
 import java.util.ArrayList;
 import java.util.List;
 
+import generator.ATask;
 import generator.CurrentObjectiveLevel;
 import generator.Curse;
 import generator.DungeonMode;
@@ -11,6 +12,7 @@ import generator.LabyrinthCurse;
 import generator.Level;
 import generator.Objective;
 import generator.ResultsByTask;
+import managers.GameElementsManager;
 
 public class DungeonElements {
 
@@ -20,6 +22,7 @@ public class DungeonElements {
 	private DungeonMode mode;
 	
 	private GameDescription gameDescriptionModel;
+	private GameElementsManager elementManager;
 	
 	private double nbQRooms;
 	private double nbNQRooms;
@@ -31,6 +34,7 @@ public class DungeonElements {
 		this.roomsElements = new ArrayList<>();
 		this.curses = new ArrayList<>();
 		this.mode = DungeonMode.LINEAR;
+		this.elementManager = new GameElementsManager(this.gameDescriptionModel);
 	}
 	
 	public List<RoomElements> getRoomsElements() {
@@ -41,6 +45,10 @@ public class DungeonElements {
 		return mode;
 	}
 	
+	public GameElementsManager getElementManager() {
+		return elementManager;
+	}
+
 	public void addCurse(Curse curse) {
 		this.curses.add(curse);
 		if(curse instanceof LabyrinthCurse) {
@@ -68,8 +76,8 @@ public class DungeonElements {
 		return currentObjectiveLevel;
 	}
 	
-	public void addRoomsElements(RoomElements roomElements) {
-		this.roomsElements.add(roomElements);
+	public void buildNewRoomsElements(ATask task) {
+		this.roomsElements.add(new RoomElements(this.gameDescriptionModel, elementManager, task));
 	}
 	
 	public RoomElements getElementsOfRoom(int i) {
@@ -89,14 +97,15 @@ public class DungeonElements {
 	}
 	
 	public void buildNumberOfNonQuestionRooms() {
+		 
 		while(roomsElements.size() < (nbNQRooms + nbQRooms)) { // + 1 = la sortie
-			roomsElements.add(new RoomElements(gameDescriptionModel));
+			roomsElements.add(new RoomElements(gameDescriptionModel, elementManager));
 		}
 		List<RoomElements> temporary = Shuffle.shuffleRoomElements(roomsElements);
 		roomsElements = new ArrayList<>();
-		roomsElements.add(new RoomElements(gameDescriptionModel, true, false)); //entry
+		roomsElements.add(new RoomElements(gameDescriptionModel, elementManager, true, false)); //entry
 		roomsElements.addAll(temporary);
-		roomsElements.add(new RoomElements(gameDescriptionModel, false, true)); //exit
+		roomsElements.add(new RoomElements(gameDescriptionModel, elementManager, false, true)); //exit
 	}
 	
 	public void print() {

@@ -495,7 +495,7 @@ public class ConcreteGameplayGenerator {
 	}
 	
 	private List<PositionedElement> buildStructureForMap(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType) throws MapGameplayElementException{
-		System.out.println("***");
+		//System.out.println("***");
 	
 		List<PositionedElement> elements = new ArrayList<>();
 		Structure comp = (Structure) component;
@@ -530,7 +530,7 @@ public class ConcreteGameplayGenerator {
 								elements.add(buildSingleDetectorElement((Component) aComp, elementType, fact, i, 
 										position, false));
 								
-								System.out.println("build detector");
+								//System.out.println("build detector");
 							}
 						}
 
@@ -649,7 +649,7 @@ public class ConcreteGameplayGenerator {
 		//for(int i = 0; i < splitter.numberOfHoles()+splitter.numberOfTexts(); i++) 
 		while(elements.size() < splitter.numberOfHoles()+splitter.numberOfTexts()) {
 			if(i%2 == conditionForTextAppearance) {
-				System.out.println("text "+splitter.numberOfTexts()+" "+textIndex);
+				//System.out.println("text "+splitter.numberOfTexts()+" "+textIndex);
 				if(splitter.isTextImage(textIndex)) {
 					elements.add(buildFillInElement(componentForText, elementForTexts, fact, structure.getCreatedPosition(),  splitter.getTexts().get(textIndex), splitter.isTextImage(textIndex)));
 					textIndex++;
@@ -763,7 +763,7 @@ public class ConcreteGameplayGenerator {
 			if(positionFromParent == null) {
 				positionFromParent = getAvailablePosition(roomElements.getRoomTypeOfRoom(), elementType);
 			}	
-			System.out.println("on passe ici");
+			//System.out.println("on passe ici");
 			elements.addAll(buildStructureClassicElements(roomElements, comp, positionFromParent, elementType, propositionIndex, factIndex));
 		}
 		

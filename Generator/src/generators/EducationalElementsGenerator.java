@@ -20,7 +20,6 @@ import generator.impl.ResultsByTaskImpl;
 import generator.impl.ResultsImpl;
 import managers.ModelsManager;
 import structures.DungeonElements;
-import structures.RoomElements;
 
 /**
  * Cette classe permet de g�n�rer / choisir, l'objectif d'entrainement vis�e ainsi que le niveau de difficult�. 
@@ -146,10 +145,10 @@ public class EducationalElementsGenerator {
 					addRoom2Task(rbt, coeff);
 				}
 			}
-			System.out.println("before " + this.nbRoomsToTask);
+			//System.out.println("before " + this.nbRoomsToTask);
 			this.cleanNumberOfComputedRooms();
 		}
-		System.out.println(this.nbRoomsToTask);
+		//System.out.println(this.nbRoomsToTask);
 	}
 	
 	private void addRoom2Task(ResultsByTask rbt, double coeffAdditional) throws Exception {
@@ -166,10 +165,10 @@ public class EducationalElementsGenerator {
 	
 	private void cleanNumberOfComputedRooms() {
 		int computedNumberOfRoom = this.getNumberOfRoomsComputed();
-		System.out.println("combien y en a "+computedNumberOfRoom);
-		System.out.println("combien il en faut "+dungeonElements.getNbQRooms());
+		//System.out.println("combien y en a "+computedNumberOfRoom);
+		//System.out.println("combien il en faut "+dungeonElements.getNbQRooms());
 		if(computedNumberOfRoom > dungeonElements.getNbQRooms()) {
-			System.out.println("combien en enlever "+(computedNumberOfRoom - dungeonElements.getNbQRooms()));
+			//System.out.println("combien en enlever "+(computedNumberOfRoom - dungeonElements.getNbQRooms()));
 			List<ResultsByTask> possibleRemoveTasks = new ArrayList<>(getTaskWithLowerApparitionPercentage());
 			for(int i = 0; i < computedNumberOfRoom - dungeonElements.getNbQRooms(); i++) {
 				int randomIndexChoice = random.nextInt(possibleRemoveTasks.size());
@@ -181,7 +180,7 @@ public class EducationalElementsGenerator {
 				}
 			}
 		} else if(computedNumberOfRoom < dungeonElements.getNbQRooms()) {
-			System.out.println("combien en ajouter "+(dungeonElements.getNbQRooms() - computedNumberOfRoom));
+		//	System.out.println("combien en ajouter "+(dungeonElements.getNbQRooms() - computedNumberOfRoom));
 			for(ResultsByTask task : getXTasksWithHigherApparitionPercentage((int) dungeonElements.getNbQRooms() - computedNumberOfRoom)) {
 				nbRoomsToTask.put(task, nbRoomsToTask.get(task) + 1);
 			}
@@ -202,7 +201,7 @@ public class EducationalElementsGenerator {
 		//System.out.println("Missing nbRoom "+numberOfHigherTask);
 		List<ResultsByTask> tasks = new ArrayList<>();
 		List<ResultsByTask> tasks_temp = new ArrayList<>(nbRoomsToTask.keySet());
-		System.out.println("room to task "+nbRoomsToTask);
+		//System.out.println("room to task "+nbRoomsToTask);
 
 		for(int i = 0; i < numberOfHigherTask; i++) {
 			tasks.add(getTaskWithHigherNumberOfRoom(tasks_temp));
@@ -453,7 +452,7 @@ public class EducationalElementsGenerator {
 	private void buildTaskRoomElements() {
 		for (ResultsByTask resultsByTask : nbRoomsToTask.keySet()) {
 			for (int i = 0; i < nbRoomsToTask.get(resultsByTask); i++) {
-				this.dungeonElements.addRoomsElements(new RoomElements(this.modelAccess.getGameDescriptionModel(), resultsByTask.getTask()));
+				this.dungeonElements.buildNewRoomsElements(resultsByTask.getTask());
 			}
 		}
 	}

@@ -36,41 +36,13 @@ public class ALGAGenerator {
 	private Dungeon generatedDungeon;
 	private DungeonElements dungeonElements;
 	
-	public static DidacticDomain DOMAIN = DidacticDomain.HISTORY_GEOGRAPHY;
+	public static DidacticDomain DOMAIN = DidacticDomain.MATHEMATICS; //.HISTORY_GEOGRAPHY;
 
-	public static void main(String[] args) {
-		
-		/*MTQFCompletion1 qFact = new MTQFCompletion1Impl();
-		qFact.setLeftOperand(2);
-		qFact.setResultOnRight(true);
-		qFact.setResult(4);
-		qFact.setRightOperand(-1);
-		qFact.setSoluce(2);
-		
-		QuestionedFact fact = new QuestionedFactImpl();
-		fact.setCompleteFact(qFact.getCompleteFact());
-		fact.setQuestionablefact(qFact);
-		fact.setLearnerValidation(false);
-		
-		QuestionParam question = new QuestionParamImpl();
-		question.setInteractive(false);
-		Value value = new ValueImpl(); 
-		value.setValue(qFact.getQuestionableFact());
-		question.setValue(value);
-		
-		fact.setQuestion(question);
-		WantedAnswersParam wanted = new WantedAnswersParamImpl();
-		value = new ValueImpl(); 
-		value.setValue("1");
-		wanted.setValue(value);
-		fact.setCorrectnessToReach(wanted);
-		
-		QuestionedFactSplitter splitter = new QuestionedFactSplitter(fact);*/
-		
+	public static void main(String[] args) {		
 		for(int i = 0; i < 1; i++) {
 			ALGAGenerator generator;
 			try {
-				generator = new ALGAGenerator("FICTIF03");
+				generator = new ALGAGenerator("FICTIF02");
 				generator.generate();
 				generator.printDungeon();
 				generator.saveDungeon("DungeonGen.xmi");
@@ -92,19 +64,10 @@ public class ALGAGenerator {
 	public ALGAGenerator(String learnerID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		modelAccess = new ModelsManager(learnerID);
 	}
-	
-	/*public ALGAGenerator(String learnerID, String fileContext) throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		modelAccess = new ModelsManager(learnerID, fileContext);
-	}
-	
-	public ALGAGenerator(boolean forTest, String learnerID, String contextFileName) throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		modelAccess = new ModelsManager(forTest, learnerID, contextFileName);
-	}*/
-	
+
 	public ALGAGenerator(boolean forTest, String learnerID, String contextsFileName, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		modelAccess = new ModelsManager(forTest, learnerID, contextsFileName, contextID);
 	}
-	
 	
 	public ALGAGenerator(String inputPath, String outputPath, String learnerID, String contextsFILE, String contextID,  boolean lauchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		modelAccess = new ModelsManager(inputPath, outputPath, learnerID, contextsFILE, contextID, lauchedFromAPI);
@@ -185,13 +148,7 @@ public class ALGAGenerator {
 			gameGeneration.generateGPandCurses();
 			//dungeonElements.print();
 			dungeonGeneration = new DungeonGenerator(modelAccess, dungeonElements, nbNQRooms+nbQRooms);
-			generatedDungeon = dungeonGeneration.generateDungeon();
-			/*System.out.println("TOUT LE BORDEL");
-			for (int i = 0; i < dungeonElements.getRoomsElements().size(); i++) {
-				System.out.println(dungeonElements.getRoomsElements().get(i).getRoom());
-				dungeonElements.getRoomsElements().get(i).printElementTypes();
-			}*/
-			
+			generatedDungeon = dungeonGeneration.generateDungeon();		
 			generatedDungeon = gameGeneration.generateRoomContent(generatedDungeon);
 		} catch (Exception e) {
 			e.printStackTrace();

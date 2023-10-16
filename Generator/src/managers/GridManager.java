@@ -25,12 +25,16 @@ public class GridManager {
 
 	
 	public GridManager(ModelsManager modelAccess) {
-		directionManager = new DirectionManager(modelAccess); 
+		directionManager = new DirectionManager(modelAccess.getGameDescriptionModel()); 
 		occupiedCoordinates = new HashMap<>();
 	}
 	
 	public void clearGrid() {
 		occupiedCoordinates = new HashMap<>();
+	}
+	
+	public Set<Coordinate> getOccupiedCoordinates(){
+		return this.occupiedCoordinates.keySet();
 	}
 	
 	public boolean isAvailableDirection(Coordinate origin, Directions aDirection) {

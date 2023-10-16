@@ -2132,6 +2132,16 @@
           ID="ELEMENT_TYPE_TYPABLE_DETECTOR"
           type="TypableDetector"
           ability="TYPABLE_DETECTOR"/>
+      <elements
+          size="LARGE"
+          ID="STRUCT_H_LARGE"
+          type="HStructL"
+          ability="HORIZONTAL_DISPLAY"/>
+      <elements
+          size="LARGE"
+          ID="STRUCT_V_LARGE"
+          type="VStructL"
+          ability="VERTICAL_DISPLAY"/>
     </elementTypes>
     <curses>
       <curses

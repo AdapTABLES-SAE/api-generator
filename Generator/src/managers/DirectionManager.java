@@ -7,13 +7,15 @@ import java.util.List;
 import java.util.Set;
 
 import generator.Directions;
+import generator.GameDescription;
 import generator.LargeRoomType;
 import generator.RoomType;
 import generator.SmallRoomType;
 
 public class DirectionManager {
 
-	private ModelsManager modelAccess; 
+	//private ModelsManager modelAccess; 
+	private GameDescription gameDescriptionModel;
 	/** Data structure saving for each direction, its opposite directions (e.g., SOUTH => NORTH, NORTH_EAST, NORTH_WEST) */
 	private EnumMap<Directions, Set<Directions>> oppositeDirections;
 	/** Data structure enumerating simple directions (SOUTH, NORTH, EAST, WEST) */
@@ -22,7 +24,7 @@ public class DirectionManager {
 	private Set<Directions> complexDirections;
 		
 	public boolean isSmallRoomTypes() {
-		List<RoomType> roomtypes = modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes();
+		List<RoomType> roomtypes = this.gameDescriptionModel.getRoomtypes().getRoomtypes();
 		boolean smallRT = false;
 		int i = 0;
 		while(i < roomtypes.size() && !smallRT ) {
@@ -33,7 +35,7 @@ public class DirectionManager {
 	}
 	
 	public boolean isLargeRoomTypes() {
-		List<RoomType> roomtypes = modelAccess.getGameDescriptionModel().getRoomtypes().getRoomtypes();
+		List<RoomType> roomtypes = this.gameDescriptionModel.getRoomtypes().getRoomtypes();
 		boolean largeRT = false;
 		int i = 0;
 		while(i < roomtypes.size() && !largeRT) {
@@ -43,8 +45,8 @@ public class DirectionManager {
 		return largeRT;
 	}
 	
-	public DirectionManager(ModelsManager modelAccess) {
-		this.modelAccess = modelAccess;
+	public DirectionManager(GameDescription gameDescriptionModel) {
+		this.gameDescriptionModel = gameDescriptionModel;
 		if (isLargeRoomTypes()) {setComplexeDirections();}
 		if(isSmallRoomTypes()) {setSimpleDirections();}
 		oppositeDirections = setOppositeDirections();

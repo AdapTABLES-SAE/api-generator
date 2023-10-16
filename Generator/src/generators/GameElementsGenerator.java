@@ -21,6 +21,7 @@ import generator.EBoundary;
 import generator.ECorrectness;
 import generator.EModality;
 import generator.EStatementType;
+import generator.ElementType;
 import generator.EnterResponse;
 import generator.Equipment;
 import generator.GPCategory;
@@ -43,7 +44,7 @@ public class GameElementsGenerator {
 	private DungeonElements dungeonElements;
 	private ModelsManager modelAccess; 
 	
-	public GameElementsGenerator(ModelsManager modelAccess,  DungeonElements dungeonElements) {
+	public GameElementsGenerator(ModelsManager modelAccess, DungeonElements dungeonElements) {
 		this.dungeonElements = dungeonElements;
 		this.modelAccess = modelAccess;
 		random = new Random();
@@ -54,6 +55,7 @@ public class GameElementsGenerator {
 		unlockGameplays();
 		selectCompatibleGameplays();
 	}
+	
 	
 	private void selectCurses() {
 		for(Curse curse: getAvailableCurses()) {
@@ -81,11 +83,11 @@ public class GameElementsGenerator {
 	
 	private void unlockGameplays() {
 		List<Ability> abilities = getCurrentlyLockedAbilities();
-		System.out.println("Locked abilities "+abilities);
+		//System.out.println("Locked abilities "+abilities);
 		for(Gameplay gameplay: this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			//System.out.println("***********************************");
 			gameplay.setLocked(hasGameplayLockedAbilities(gameplay, abilities));
-			System.out.println(gameplay.getName()+" locked? "+gameplay.isLocked());
+			//System.out.println(gameplay.getName()+" locked? "+gameplay.isLocked());
 			//System.out.println("***********************************");
 		}
 	}
@@ -129,7 +131,7 @@ public class GameElementsGenerator {
 				}
 			}
 		}
-		System.out.println("Unlocked by player "+abilities);
+		//System.out.println("Unlocked by player "+abilities);
 		return abilities;
 	}
 	
@@ -145,7 +147,7 @@ public class GameElementsGenerator {
 		//System.out.println(generatedDungeon.getRooms().size()+ " " + dungeonElements.getRoomsElements().size());
 		for (Room room: generatedDungeon.getRooms()) {
 			if(room.getGameplay() != null) {
-				//System.out.println(room.getX()+" "+room.getY()+" "+room.getGameplay());
+				//System.out.println(room.getX()+" "+room.getY()+" "+room.getGameplay()+" "+room.getRoomtype());
 				room.getPositionedElement().addAll(gameplayGenerator.buildPositionedElements(this.getCorrespondingRoomElements(room)));
 				computeNumberOfExpectedAnswers(room);
 			} 
@@ -239,31 +241,49 @@ public class GameElementsGenerator {
 		return allowedCategoriesWithStatements; 
 	}
 	
+	private List<Gameplay> getValidGameplaysForTask(ATask task) {
+		List<Gameplay> gameplays = new ArrayList<>();
+		Map<GPCategory, Set<EStatementType>> validCategoriesFromRelations = getValidCategoriesFromRelations(task);
+		
+		for(GPCategory category :  new ArrayList<>(validCategoriesFromRelations.keySet())) {
+			gameplays.addAll(getQuestionGameplayForCategorieType(category, task, validCategoriesFromRelations.get(category)));
+		}
+		
+		return gameplays;
+	}
+	
+	private List<Gameplay> filterGameplayByCompatibleRoomType(List<Gameplay> gameplays, RoomElements roomElements) {
+		List<Gameplay> gameplayWithCompatibleRoomType = new ArrayList<>();
+		
+		for(Gameplay gameplay : gameplays) {
+			Map<ElementType, Integer> elementsToQuantity = dungeonElements.getElementManager().selectElementType(gameplay.getComponents(), roomElements.getTask(), roomElements.getFacts());
+			if(!elementsToQuantity.isEmpty() && dungeonElements.getElementManager().hasCompatibleRoomTypeWithEveryAccessAndPositions(gameplay, elementsToQuantity)) {
+				gameplayWithCompatibleRoomType.add(gameplay);
+			} else {
+				ALGAGenerator.LOGGER.warning("No roomtype was found for task="+roomElements.getTask().getID()+" and gameplay="+gameplay.getName());
+			}
+		}
+		
+		return gameplayWithCompatibleRoomType;
+	}
+	
 	private void selectCompatibleGameplays() throws NoCompatibleGameplayException {
 		ALGAGenerator.LOGGER.info("Selection of compatible gameplay");
-		List<Gameplay> gameplays = new ArrayList<>();
+		List<Gameplay> gameplays;
 		for (RoomElements room : dungeonElements.getRoomsElements()) {
 			if(room.getTask() != null) {
-				System.out.println("*****"+room.getTask().getID());
-				Map<GPCategory, Set<EStatementType>> validCategoriesFromRelations = getValidCategoriesFromRelations(room.getTask());
-				List<GPCategory> validCategories = new ArrayList<>(validCategoriesFromRelations.keySet());
-				//System.out.println("Categorie valid " + validCategories);
-				do {
-					GPCategory aCategorie = validCategories.get(random.nextInt(validCategories.size()));
-					//System.out.println("Categorie "+aCategorie);
-					gameplays = getQuestionGameplayForCategorieType(aCategorie, room.getTask(), validCategoriesFromRelations.get(aCategorie));
-					validCategories.remove(aCategorie);
-				} while(gameplays.isEmpty() && !validCategories.isEmpty());
-				
+				gameplays = getValidGameplaysForTask(room.getTask()); 			
 				if(gameplays.isEmpty()) {
 					ALGAGenerator.LOGGER.severe("No gameplay was found for task="+room.getTask().getID());
 					throw new NoCompatibleGameplayException(room.getTask());
 				} else {
-
-					Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
-					room.setGameplay(gameplay);
-					ALGAGenerator.LOGGER.severe("Gameplays found for task="+room.getGameplay().getName());
-
+					gameplays = filterGameplayByCompatibleRoomType(gameplays, room);
+					if(gameplays.isEmpty()) {
+						ALGAGenerator.LOGGER.severe("No roomtype was found for any of the compatible gameplays for task="+room.getTask());
+					} else {
+						Gameplay gameplay = gameplays.get(random.nextInt(gameplays.size()));
+						room.setGameplay(gameplay);
+					}
 				}
 			} else if(!room.isExit() && !room.isEntry()) {
 				gameplays = getNoQuestionRoomGameplay();
