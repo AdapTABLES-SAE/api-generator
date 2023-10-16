@@ -213,5 +213,42 @@ public class ALGAGenerator {
 			
 		}
 	}
+	
+	private String roomToString(Room r) {
+		String s = "****\n";
+		s += r.getRoomtype().getClass().getName() + " ("+r.getX()+","+r.getY()+")" +"\n";
+		s += "RoomType : "+r.getRoomtype().getName()+ "\n";
+		if(r.getQuestionedFacts() != null && !r.getQuestionedFacts().isEmpty()) {
+			String facts = "{";
+			for (QuestionedFact qef : r.getQuestionedFacts()) {
+				if(qef.getQuestion() instanceof MapQuestionParam) {
+					facts += "MAP "+((MapQuestionParam) qef.getQuestion()).getMap().getID()+"}";
+				} else {
+					facts += ((Value) qef.getQuestion().getValue()).getValue() + "[" + propositionsToString(qef.getPropositions()) + "]" + 
+							(r.getQuestionedFacts().get(r.getQuestionedFacts().size()-1).equals(qef)? "}":", ");	
+				}
+			}
+			s += "\t Facts : " + facts + "\n";
+		}
+		for (RoomAccess ra : r.getRoomaccess()) {
+			s+= "Access : "+ra.getDirection() + "\n";
+		}
+		if(r.getGameplay() != null) s += "Gameplay : "+r.getGameplay().getName() + "\n";
+		s += "****\n";
+		return s;
+	}
+	
+	public String dungeonToString() {
+		String s = "---- Dungeon -----\n";
+		s += "Objective : "+generatedDungeon.getLearningobjective()+"\n";
+		s += "Level : "+generatedDungeon.getLevel()+"\n";
+		s += "Number of room without entry : "+(generatedDungeon.getRooms().size()-1)+"\n";
+		s += "Curses : "+generatedDungeon.getCurses()+"\n";
+		for (Room r : generatedDungeon.getRooms()) {
+			s+= roomToString(r);
+			
+		}
+		return s;
+	}
 
 }

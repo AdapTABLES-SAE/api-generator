@@ -188,4 +188,9 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 	protected boolean isQuestionInteractive() {
 		return false;
 	}
+	
+/*	@Override
+	protected List<AQuestionableFact> removeUnEligibleFactsBasedOnPreviouslySelectedFact(List<QuestionedFact> previousFacts, List<AQuestionableFact> facts) {
+
+	} */
 }

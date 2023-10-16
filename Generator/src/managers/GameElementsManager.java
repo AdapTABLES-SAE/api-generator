@@ -90,7 +90,7 @@ public class GameElementsManager {
 		}
 	}
 
-	private ElementType getCompatibleElementType(AComponent component, boolean isStructureComponent) { 
+	private ElementType getCompatibleElementType(AComponent component, boolean isStructureComponent) { // TODO : Check for statement display
 		List<ElementType> compatibleTypes = new ArrayList<>();
 		for (ElementType elementType : this.gameDescriptionModel.getElements().getElementTypes().getElements()) {
 			if(elementType instanceof StatementElementType) {

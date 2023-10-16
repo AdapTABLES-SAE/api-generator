@@ -4,34 +4,102 @@
     <roomaccess direction="WEST" otherroomaccess="//@rooms.1/@roomaccess.0"/>
     <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.3"/>
   </rooms>
-  <rooms x="-1" nbExpectedAnswers="2">
+  <rooms x="-1" nbExpectedAnswers="0">
     <roomaccess direction="EAST" otherroomaccess="//@rooms.0/@roomaccess.0"/>
-    <roomaccess otherroomaccess="//@rooms.2/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.26"/>
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.2/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
+    <positionedElement ID="ELEM1">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS8"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM2">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM3">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM4">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM5">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM6">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM7">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.33"/>
+  </rooms>
+  <rooms x="-1" y="1" nbExpectedAnswers="0">
+    <roomaccess otherroomaccess="//@rooms.1/@roomaccess.1"/>
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.3/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22"/>
+    <positionedElement ID="ELEM8">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM9">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM6"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM10">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM7"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM11">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM12">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM13">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM14">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.32"/>
+  </rooms>
+  <rooms x="-1" y="2" nbExpectedAnswers="2">
+    <roomaccess otherroomaccess="//@rooms.2/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.4/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
     <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT8"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 5 = 10">
-        <value xsi:type="generator:Value" value="2 x 5 = 10"/>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT18"/>
+      <question xsi:type="generator:QuestionParam" completeFact="5 x 2 = 15">
+        <value xsi:type="generator:Value" value="5 x 2 = 15"/>
       </question>
       <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
+        <value xsi:type="generator:Value" value="Faux"/>
         <state xsi:type="generator:CorrectnessValue"/>
       </propositions>
       <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
+        <value xsi:type="generator:Value" value="Vrai"/>
         <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </propositions>
       <correctnessToReach>
         <value xsi:type="generator:Value" value="1"/>
       </correctnessToReach>
       <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue"/>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </factCorrectness>
     </questionedFacts>
     <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT1"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 1 = 3">
-        <value xsi:type="generator:Value" value="2 x 1 = 3"/>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT6"/>
+      <question xsi:type="generator:QuestionParam" completeFact="2 x 2 = 6">
+        <value xsi:type="generator:Value" value="2 x 2 = 6"/>
       </question>
       <propositions>
         <value xsi:type="generator:Value" value="Faux"/>
@@ -49,20 +117,144 @@
       </factCorrectness>
     </questionedFacts>
     <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT1">
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT15">
       <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT1"/>
+      <createdPosition ID="id/STRUCT15"/>
     </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT2" position="id/STRUCT1">
+    <positionedElement ID="ELEM16" position="id/STRUCT15">
+      <displays>
+        <value xsi:type="generator:Value" value="FALSE"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT17" position="id/STRUCT15">
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
-      <createdPosition ID="id/STRUCT2"/>
+      <createdPosition ID="id/STRUCT17"/>
     </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT3" position="id/STRUCT2">
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT18" position="id/STRUCT17">
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT3"/>
+      <createdPosition ID="id/STRUCT18"/>
     </positionedElement>
-    <positionedElement ID="ELEM4" position="id/STRUCT3" fact="//@rooms.1/@questionedFacts.0">
+    <positionedElement ID="ELEM19" position="id/STRUCT18" fact="//@rooms.3/@questionedFacts.0">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM20" position="id/STRUCT18" fact="//@rooms.3/@questionedFacts.0">
+      <displays>
+        <value xsi:type="generator:Value" value="5 x 2 = 15"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+    </positionedElement>
+    <positionedElement ID="ELEM21" position="id/STRUCT18" fact="//@rooms.3/@questionedFacts.0">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT22" position="id/STRUCT17">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT22"/>
+    </positionedElement>
+    <positionedElement ID="ELEM23" position="id/STRUCT22" fact="//@rooms.3/@questionedFacts.1">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM24" position="id/STRUCT22" fact="//@rooms.3/@questionedFacts.1">
+      <displays>
+        <value xsi:type="generator:Value" value="2 x 2 = 6"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+    </positionedElement>
+    <positionedElement ID="ELEM25" position="id/STRUCT22" fact="//@rooms.3/@questionedFacts.1">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM26" position="id/STRUCT15">
+      <displays>
+        <value xsi:type="generator:Value" value="TRUE"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.1"/>
+  </rooms>
+  <rooms y="2" nbExpectedAnswers="2">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.3/@roomaccess.1"/>
+    <roomaccess otherroomaccess="//@rooms.5/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.26"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT20"/>
+      <question xsi:type="generator:QuestionParam" completeFact="6 x 2 = 12">
+        <value xsi:type="generator:Value" value="6 x 2 = 12"/>
+      </question>
+      <propositions>
+        <value xsi:type="generator:Value" value="Vrai"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions>
+        <value xsi:type="generator:Value" value="Faux"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+      <factCorrectness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </factCorrectness>
+    </questionedFacts>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT15"/>
+      <question xsi:type="generator:QuestionParam" completeFact="2 x 4 = 6">
+        <value xsi:type="generator:Value" value="2 x 4 = 6"/>
+      </question>
+      <propositions>
+        <value xsi:type="generator:Value" value="Faux"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions>
+        <value xsi:type="generator:Value" value="Vrai"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+      <factCorrectness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </factCorrectness>
+    </questionedFacts>
+    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT27">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT27"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT28" position="id/STRUCT27">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
+      <createdPosition ID="id/STRUCT28"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT29" position="id/STRUCT28">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT29"/>
+    </positionedElement>
+    <positionedElement ID="ELEM30" position="id/STRUCT29" fact="//@rooms.4/@questionedFacts.0">
       <correctness>
         <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </correctness>
@@ -71,13 +263,13 @@
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement ID="ELEM5" position="id/STRUCT3" fact="//@rooms.1/@questionedFacts.0">
+    <positionedElement ID="ELEM31" position="id/STRUCT29" fact="//@rooms.4/@questionedFacts.0">
       <displays>
-        <value xsi:type="generator:Value" value="2 x 5 = 10"/>
+        <value xsi:type="generator:Value" value="6 x 2 = 12"/>
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
     </positionedElement>
-    <positionedElement ID="ELEM6" position="id/STRUCT3" fact="//@rooms.1/@questionedFacts.0">
+    <positionedElement ID="ELEM32" position="id/STRUCT29" fact="//@rooms.4/@questionedFacts.0">
       <correctness>
         <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
@@ -86,11 +278,11 @@
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT7" position="id/STRUCT2">
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT33" position="id/STRUCT28">
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT7"/>
+      <createdPosition ID="id/STRUCT33"/>
     </positionedElement>
-    <positionedElement ID="ELEM8" position="id/STRUCT7" fact="//@rooms.1/@questionedFacts.1">
+    <positionedElement ID="ELEM34" position="id/STRUCT33" fact="//@rooms.4/@questionedFacts.1">
       <correctness>
         <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
@@ -99,13 +291,13 @@
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement ID="ELEM9" position="id/STRUCT7" fact="//@rooms.1/@questionedFacts.1">
+    <positionedElement ID="ELEM35" position="id/STRUCT33" fact="//@rooms.4/@questionedFacts.1">
       <displays>
-        <value xsi:type="generator:Value" value="2 x 1 = 3"/>
+        <value xsi:type="generator:Value" value="2 x 4 = 6"/>
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
     </positionedElement>
-    <positionedElement ID="ELEM10" position="id/STRUCT7" fact="//@rooms.1/@questionedFacts.1">
+    <positionedElement ID="ELEM36" position="id/STRUCT33" fact="//@rooms.4/@questionedFacts.1">
       <correctness>
         <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </correctness>
@@ -116,48 +308,172 @@
     </positionedElement>
     <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.3"/>
   </rooms>
-  <rooms x="-1" y="-1" nbExpectedAnswers="0">
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.1/@roomaccess.1"/>
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.3/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
-    <positionedElement ID="ELEM11">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+  <rooms y="1" nbExpectedAnswers="0">
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.4/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.6/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22"/>
+    <positionedElement ID="ELEM37">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
     </positionedElement>
-    <positionedElement ID="ELEM12">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+    <positionedElement ID="ELEM38">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
     </positionedElement>
-    <positionedElement ID="ELEM13">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+    <positionedElement ID="ELEM39">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
     </positionedElement>
-    <positionedElement ID="ELEM14">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS9"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+    <positionedElement ID="ELEM40">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM7"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
     </positionedElement>
-    <positionedElement ID="ELEM15">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS8"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+    <positionedElement ID="ELEM41">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
     </positionedElement>
-    <positionedElement ID="ELEM16">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+    <positionedElement ID="ELEM42">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM6"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
     </positionedElement>
-    <positionedElement ID="ELEM17">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+    <positionedElement ID="ELEM43">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
     </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.33"/>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.32"/>
   </rooms>
-  <rooms y="-2" nbExpectedAnswers="2">
-    <roomaccess direction="WEST_NORTH" otherroomaccess="//@rooms.2/@roomaccess.1"/>
-    <roomaccess direction="NORTH_EAST" otherroomaccess="//@rooms.4/@roomaccess.0"/>
+  <rooms x="1" y="1" nbExpectedAnswers="2">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.5/@roomaccess.1"/>
+    <roomaccess otherroomaccess="//@rooms.7/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.26"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT19"/>
+      <question xsi:type="generator:QuestionParam" completeFact="2 x 5 = 8">
+        <value xsi:type="generator:Value" value="2 x 5 = 8"/>
+      </question>
+      <propositions>
+        <value xsi:type="generator:Value" value="Faux"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions>
+        <value xsi:type="generator:Value" value="Vrai"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+      <factCorrectness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </factCorrectness>
+    </questionedFacts>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT34"/>
+      <question xsi:type="generator:QuestionParam" completeFact="2 x 9 = 15">
+        <value xsi:type="generator:Value" value="2 x 9 = 15"/>
+      </question>
+      <propositions>
+        <value xsi:type="generator:Value" value="Faux"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions>
+        <value xsi:type="generator:Value" value="Vrai"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+      <factCorrectness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </factCorrectness>
+    </questionedFacts>
+    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT44">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT44"/>
+    </positionedElement>
+    <positionedElement ID="ELEM45" position="id/STRUCT44">
+      <displays>
+        <value xsi:type="generator:Value" value="FALSE"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT46" position="id/STRUCT44">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
+      <createdPosition ID="id/STRUCT46"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT47" position="id/STRUCT46">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT47"/>
+    </positionedElement>
+    <positionedElement ID="ELEM48" position="id/STRUCT47" fact="//@rooms.6/@questionedFacts.0">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM49" position="id/STRUCT47" fact="//@rooms.6/@questionedFacts.0">
+      <displays>
+        <value xsi:type="generator:Value" value="2 x 5 = 8"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+    </positionedElement>
+    <positionedElement ID="ELEM50" position="id/STRUCT47" fact="//@rooms.6/@questionedFacts.0">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT51" position="id/STRUCT46">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT51"/>
+    </positionedElement>
+    <positionedElement ID="ELEM52" position="id/STRUCT51" fact="//@rooms.6/@questionedFacts.1">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM53" position="id/STRUCT51" fact="//@rooms.6/@questionedFacts.1">
+      <displays>
+        <value xsi:type="generator:Value" value="2 x 9 = 15"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+    </positionedElement>
+    <positionedElement ID="ELEM54" position="id/STRUCT51" fact="//@rooms.6/@questionedFacts.1">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM55" position="id/STRUCT44">
+      <displays>
+        <value xsi:type="generator:Value" value="TRUE"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.1"/>
+  </rooms>
+  <rooms x="1" y="-1" nbExpectedAnswers="2">
+    <roomaccess direction="NORTH_WEST" otherroomaccess="//@rooms.6/@roomaccess.1"/>
+    <roomaccess direction="EAST_SOUTH" otherroomaccess="//@rooms.8/@roomaccess.0"/>
     <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25"/>
     <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT6"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 4 = 8">
-        <value xsi:type="generator:Value" value="2 x 4 = 8"/>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT33"/>
+      <question xsi:type="generator:QuestionParam" completeFact="2 x 9 = 18">
+        <value xsi:type="generator:Value" value="2 x 9 = 18"/>
       </question>
       <propositions>
         <value xsi:type="generator:Value" value="Vrai"/>
@@ -175,9 +491,9 @@
       </factCorrectness>
     </questionedFacts>
     <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT12"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 7 = 14">
-        <value xsi:type="generator:Value" value="2 x 7 = 14"/>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT21"/>
+      <question xsi:type="generator:QuestionParam" completeFact="2 x 6 = 12">
+        <value xsi:type="generator:Value" value="2 x 6 = 12"/>
       </question>
       <propositions>
         <value xsi:type="generator:Value" value="Vrai"/>
@@ -195,34 +511,68 @@
       </factCorrectness>
     </questionedFacts>
     <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
-    <positionedElement ID="ELEM18" fact="//@rooms.3/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS14"/>
+    <positionedElement ID="ELEM56" fact="//@rooms.7/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS15"/>
       <correctness>
         <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
       <displays>
-        <value xsi:type="generator:Value" value="2 x 4 = 8"/>
+        <value xsi:type="generator:Value" value="2 x 9 = 18"/>
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
     </positionedElement>
-    <positionedElement ID="ELEM19" fact="//@rooms.3/@questionedFacts.1">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
+    <positionedElement ID="ELEM57" fact="//@rooms.7/@questionedFacts.1">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS11"/>
       <correctness>
         <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
       <displays>
-        <value xsi:type="generator:Value" value="2 x 7 = 14"/>
+        <value xsi:type="generator:Value" value="2 x 6 = 12"/>
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
     </positionedElement>
     <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.19"/>
   </rooms>
-  <rooms x="1" nbExpectedAnswers="2">
-    <roomaccess otherroomaccess="//@rooms.3/@roomaccess.1"/>
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.5/@roomaccess.0"/>
+  <rooms x="3" y="-1" nbExpectedAnswers="0">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.7/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.9/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
+    <positionedElement ID="ELEM58">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM59">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM60">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM61">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS9"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM62">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM63">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM64">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.33"/>
+  </rooms>
+  <rooms x="4" y="-1" nbExpectedAnswers="2">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.8/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.10/@roomaccess.0"/>
     <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
     <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT10"/>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT21"/>
       <question xsi:type="generator:QuestionParam" completeFact="2 x 6 = 12">
         <value xsi:type="generator:Value" value="2 x 6 = 12"/>
       </question>
@@ -242,9 +592,9 @@
       </factCorrectness>
     </questionedFacts>
     <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT8"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 5 = 10">
-        <value xsi:type="generator:Value" value="2 x 5 = 10"/>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT12"/>
+      <question xsi:type="generator:QuestionParam" completeFact="4 x 2 = 8">
+        <value xsi:type="generator:Value" value="4 x 2 = 8"/>
       </question>
       <propositions>
         <value xsi:type="generator:Value" value="Vrai"/>
@@ -262,448 +612,26 @@
       </factCorrectness>
     </questionedFacts>
     <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT20">
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT65">
       <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT20"/>
+      <createdPosition ID="id/STRUCT65"/>
     </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT21" position="id/STRUCT20">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
-      <createdPosition ID="id/STRUCT21"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT22" position="id/STRUCT21">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT22"/>
-    </positionedElement>
-    <positionedElement ID="ELEM23" position="id/STRUCT22" fact="//@rooms.4/@questionedFacts.0">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Faux"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM24" position="id/STRUCT22" fact="//@rooms.4/@questionedFacts.0">
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 6 = 12"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
-    </positionedElement>
-    <positionedElement ID="ELEM25" position="id/STRUCT22" fact="//@rooms.4/@questionedFacts.0">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Vrai"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT26" position="id/STRUCT21">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT26"/>
-    </positionedElement>
-    <positionedElement ID="ELEM27" position="id/STRUCT26" fact="//@rooms.4/@questionedFacts.1">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Faux"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM28" position="id/STRUCT26" fact="//@rooms.4/@questionedFacts.1">
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 5 = 10"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
-    </positionedElement>
-    <positionedElement ID="ELEM29" position="id/STRUCT26" fact="//@rooms.4/@questionedFacts.1">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Vrai"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.3"/>
-  </rooms>
-  <rooms x="1" y="1" nbExpectedAnswers="0">
-    <roomaccess otherroomaccess="//@rooms.4/@roomaccess.1"/>
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.6/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
-    <positionedElement ID="ELEM30">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM31">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM32">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM33">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM34">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS8"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM35">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM36">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.33"/>
-  </rooms>
-  <rooms x="1" y="2" nbExpectedAnswers="0">
-    <roomaccess otherroomaccess="//@rooms.5/@roomaccess.1"/>
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.7/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
-    <positionedElement ID="ELEM37">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM38">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM39">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM40">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM41">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM42">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS9"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM43">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS8"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.33"/>
-  </rooms>
-  <rooms x="1" y="3" nbExpectedAnswers="2">
-    <roomaccess otherroomaccess="//@rooms.6/@roomaccess.1"/>
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.8/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.26"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT15"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 8 = 11">
-        <value xsi:type="generator:Value" value="2 x 8 = 11"/>
-      </question>
-      <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-      <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </factCorrectness>
-    </questionedFacts>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT8"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 5 = 10">
-        <value xsi:type="generator:Value" value="2 x 5 = 10"/>
-      </question>
-      <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-      <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </factCorrectness>
-    </questionedFacts>
-    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT44">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT44"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT45" position="id/STRUCT44">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
-      <createdPosition ID="id/STRUCT45"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT46" position="id/STRUCT45">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT46"/>
-    </positionedElement>
-    <positionedElement ID="ELEM47" position="id/STRUCT46" fact="//@rooms.7/@questionedFacts.0">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Faux"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM48" position="id/STRUCT46" fact="//@rooms.7/@questionedFacts.0">
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 8 = 11"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_CORRECTNESS"/>
-    </positionedElement>
-    <positionedElement ID="ELEM49" position="id/STRUCT46" fact="//@rooms.7/@questionedFacts.0">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Vrai"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT50" position="id/STRUCT45">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT50"/>
-    </positionedElement>
-    <positionedElement ID="ELEM51" position="id/STRUCT50" fact="//@rooms.7/@questionedFacts.1">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Faux"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM52" position="id/STRUCT50" fact="//@rooms.7/@questionedFacts.1">
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 5 = 10"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_CORRECTNESS"/>
-    </positionedElement>
-    <positionedElement ID="ELEM53" position="id/STRUCT50" fact="//@rooms.7/@questionedFacts.1">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Vrai"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.3"/>
-  </rooms>
-  <rooms x="2" y="3" nbExpectedAnswers="0">
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.7/@roomaccess.1"/>
-    <roomaccess otherroomaccess="//@rooms.9/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
-    <positionedElement ID="ELEM54">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_REGULAR-SLIME"/>
-    </positionedElement>
-    <positionedElement ID="ELEM55">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_REGULAR-SLIME"/>
-    </positionedElement>
-    <positionedElement ID="ELEM56">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_REGULAR-SLIME"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.31"/>
-  </rooms>
-  <rooms x="2" y="2" nbExpectedAnswers="2">
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.8/@roomaccess.1"/>
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.10/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.26"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT4"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 3 = 6">
-        <value xsi:type="generator:Value" value="2 x 3 = 6"/>
-      </question>
-      <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-      <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </factCorrectness>
-    </questionedFacts>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT16"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 9 = 18">
-        <value xsi:type="generator:Value" value="2 x 9 = 18"/>
-      </question>
-      <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-      <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </factCorrectness>
-    </questionedFacts>
-    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT57">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT57"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT58" position="id/STRUCT57">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
-      <createdPosition ID="id/STRUCT58"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT59" position="id/STRUCT58">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT59"/>
-    </positionedElement>
-    <positionedElement ID="ELEM60" position="id/STRUCT59" fact="//@rooms.9/@questionedFacts.0">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Faux"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM61" position="id/STRUCT59" fact="//@rooms.9/@questionedFacts.0">
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 3 = 6"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
-    </positionedElement>
-    <positionedElement ID="ELEM62" position="id/STRUCT59" fact="//@rooms.9/@questionedFacts.0">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Vrai"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT63" position="id/STRUCT58">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT63"/>
-    </positionedElement>
-    <positionedElement ID="ELEM64" position="id/STRUCT63" fact="//@rooms.9/@questionedFacts.1">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Faux"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM65" position="id/STRUCT63" fact="//@rooms.9/@questionedFacts.1">
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 9 = 18"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
-    </positionedElement>
-    <positionedElement ID="ELEM66" position="id/STRUCT63" fact="//@rooms.9/@questionedFacts.1">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Vrai"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.3"/>
-  </rooms>
-  <rooms x="3" y="2" nbExpectedAnswers="2">
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.9/@roomaccess.1"/>
-    <roomaccess otherroomaccess="//@rooms.11/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT0"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 1 = 2">
-        <value xsi:type="generator:Value" value="2 x 1 = 2"/>
-      </question>
-      <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-      <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </factCorrectness>
-    </questionedFacts>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT1"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 1 = 3">
-        <value xsi:type="generator:Value" value="2 x 1 = 3"/>
-      </question>
-      <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-      <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </factCorrectness>
-    </questionedFacts>
-    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT67">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT67"/>
-    </positionedElement>
-    <positionedElement ID="ELEM68" position="id/STRUCT67">
+    <positionedElement ID="ELEM66" position="id/STRUCT65">
       <displays>
         <value xsi:type="generator:Value" value="FALSE"/>
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
     </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT69" position="id/STRUCT67">
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT67" position="id/STRUCT65">
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
-      <createdPosition ID="id/STRUCT69"/>
+      <createdPosition ID="id/STRUCT67"/>
     </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT70" position="id/STRUCT69">
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT68" position="id/STRUCT67">
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT70"/>
+      <createdPosition ID="id/STRUCT68"/>
     </positionedElement>
-    <positionedElement ID="ELEM71" position="id/STRUCT70" fact="//@rooms.10/@questionedFacts.0">
+    <positionedElement ID="ELEM69" position="id/STRUCT68" fact="//@rooms.9/@questionedFacts.0">
       <correctness>
         <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </correctness>
@@ -712,13 +640,13 @@
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement ID="ELEM72" position="id/STRUCT70" fact="//@rooms.10/@questionedFacts.0">
+    <positionedElement ID="ELEM70" position="id/STRUCT68" fact="//@rooms.9/@questionedFacts.0">
       <displays>
-        <value xsi:type="generator:Value" value="2 x 1 = 2"/>
+        <value xsi:type="generator:Value" value="2 x 6 = 12"/>
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
     </positionedElement>
-    <positionedElement ID="ELEM73" position="id/STRUCT70" fact="//@rooms.10/@questionedFacts.0">
+    <positionedElement ID="ELEM71" position="id/STRUCT68" fact="//@rooms.9/@questionedFacts.0">
       <correctness>
         <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
@@ -727,26 +655,11 @@
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT74" position="id/STRUCT69">
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT72" position="id/STRUCT67">
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT74"/>
+      <createdPosition ID="id/STRUCT72"/>
     </positionedElement>
-    <positionedElement ID="ELEM75" position="id/STRUCT74" fact="//@rooms.10/@questionedFacts.1">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM76" position="id/STRUCT74" fact="//@rooms.10/@questionedFacts.1">
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 1 = 3"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
-    </positionedElement>
-    <positionedElement ID="ELEM77" position="id/STRUCT74" fact="//@rooms.10/@questionedFacts.1">
+    <positionedElement ID="ELEM73" position="id/STRUCT72" fact="//@rooms.9/@questionedFacts.1">
       <correctness>
         <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </correctness>
@@ -755,7 +668,22 @@
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement ID="ELEM78" position="id/STRUCT67">
+    <positionedElement ID="ELEM74" position="id/STRUCT72" fact="//@rooms.9/@questionedFacts.1">
+      <displays>
+        <value xsi:type="generator:Value" value="4 x 2 = 8"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+    </positionedElement>
+    <positionedElement ID="ELEM75" position="id/STRUCT72" fact="//@rooms.9/@questionedFacts.1">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM76" position="id/STRUCT65">
       <displays>
         <value xsi:type="generator:Value" value="TRUE"/>
       </displays>
@@ -763,66 +691,12 @@
     </positionedElement>
     <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.1"/>
   </rooms>
-  <rooms x="3" y="1" nbExpectedAnswers="0">
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.10/@roomaccess.1"/>
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.12/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
-    <positionedElement ID="ELEM79">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM80">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM81">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM82">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS8"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM83">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM84">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM85">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS9"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.33"/>
-  </rooms>
-  <rooms x="4" nbExpectedAnswers="2">
-    <roomaccess direction="WEST_NORTH" otherroomaccess="//@rooms.11/@roomaccess.1"/>
-    <roomaccess direction="SOUTH_WEST" otherroomaccess="//@rooms.13/@roomaccess.0"/>
+  <rooms x="5" y="-2" nbExpectedAnswers="1">
+    <roomaccess direction="WEST_NORTH" otherroomaccess="//@rooms.9/@roomaccess.1"/>
+    <roomaccess direction="SOUTH_EAST" otherroomaccess="//@rooms.11/@roomaccess.0"/>
     <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25"/>
     <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT18"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 10 = 20">
-        <value xsi:type="generator:Value" value="2 x 10 = 20"/>
-      </question>
-      <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-      <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </factCorrectness>
-    </questionedFacts>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT14"/>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT29"/>
       <question xsi:type="generator:QuestionParam" completeFact="2 x 8 = 16">
         <value xsi:type="generator:Value" value="2 x 8 = 16"/>
       </question>
@@ -841,19 +715,29 @@
         <value xsi:type="generator:CorrectnessValue"/>
       </factCorrectness>
     </questionedFacts>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT23"/>
+      <question xsi:type="generator:QuestionParam" completeFact="2 x 6 = 10">
+        <value xsi:type="generator:Value" value="2 x 6 = 10"/>
+      </question>
+      <propositions>
+        <value xsi:type="generator:Value" value="Faux"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions>
+        <value xsi:type="generator:Value" value="Vrai"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+      <factCorrectness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </factCorrectness>
+    </questionedFacts>
     <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
-    <positionedElement ID="ELEM86" fact="//@rooms.12/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 10 = 20"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM87" fact="//@rooms.12/@questionedFacts.1">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
+    <positionedElement ID="ELEM77" fact="//@rooms.10/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS18"/>
       <correctness>
         <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
@@ -862,40 +746,148 @@
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
     </positionedElement>
+    <positionedElement ID="ELEM78" fact="//@rooms.10/@questionedFacts.1">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="2 x 6 = 10"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
+    </positionedElement>
     <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.19"/>
   </rooms>
-  <rooms x="4" y="-1" nbExpectedAnswers="0">
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.12/@roomaccess.1"/>
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.14/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.19"/>
-    <positionedElement ID="ELEM88">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM89">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM90">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM91">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM92">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.30"/>
-  </rooms>
-  <rooms x="5" y="-1" nbExpectedAnswers="1">
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.13/@roomaccess.1"/>
-    <roomaccess otherroomaccess="//@rooms.15/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.9"/>
+  <rooms x="6" y="-3" nbExpectedAnswers="2">
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.10/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.12/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
     <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT11"/>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT14"/>
+      <question xsi:type="generator:QuestionParam" completeFact="4 x 2 = 3">
+        <value xsi:type="generator:Value" value="4 x 2 = 3"/>
+      </question>
+      <propositions>
+        <value xsi:type="generator:Value" value="Faux"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions>
+        <value xsi:type="generator:Value" value="Vrai"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+      <factCorrectness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </factCorrectness>
+    </questionedFacts>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT32"/>
+      <question xsi:type="generator:QuestionParam" completeFact="9 x 2 = 18">
+        <value xsi:type="generator:Value" value="9 x 2 = 18"/>
+      </question>
+      <propositions>
+        <value xsi:type="generator:Value" value="Vrai"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions>
+        <value xsi:type="generator:Value" value="Faux"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+      <factCorrectness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </factCorrectness>
+    </questionedFacts>
+    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT79">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT79"/>
+    </positionedElement>
+    <positionedElement ID="ELEM80" position="id/STRUCT79">
+      <displays>
+        <value xsi:type="generator:Value" value="FALSE"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT81" position="id/STRUCT79">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
+      <createdPosition ID="id/STRUCT81"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT82" position="id/STRUCT81">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT82"/>
+    </positionedElement>
+    <positionedElement ID="ELEM83" position="id/STRUCT82" fact="//@rooms.11/@questionedFacts.0">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM84" position="id/STRUCT82" fact="//@rooms.11/@questionedFacts.0">
+      <displays>
+        <value xsi:type="generator:Value" value="4 x 2 = 3"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+    </positionedElement>
+    <positionedElement ID="ELEM85" position="id/STRUCT82" fact="//@rooms.11/@questionedFacts.0">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT86" position="id/STRUCT81">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT86"/>
+    </positionedElement>
+    <positionedElement ID="ELEM87" position="id/STRUCT86" fact="//@rooms.11/@questionedFacts.1">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM88" position="id/STRUCT86" fact="//@rooms.11/@questionedFacts.1">
+      <displays>
+        <value xsi:type="generator:Value" value="9 x 2 = 18"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+    </positionedElement>
+    <positionedElement ID="ELEM89" position="id/STRUCT86" fact="//@rooms.11/@questionedFacts.1">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM90" position="id/STRUCT79">
+      <displays>
+        <value xsi:type="generator:Value" value="TRUE"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.1"/>
+  </rooms>
+  <rooms x="7" y="-3" nbExpectedAnswers="2">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.11/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.13/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT23"/>
       <question xsi:type="generator:QuestionParam" completeFact="2 x 6 = 10">
         <value xsi:type="generator:Value" value="2 x 6 = 10"/>
       </question>
@@ -915,9 +907,9 @@
       </factCorrectness>
     </questionedFacts>
     <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT10"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 6 = 12">
-        <value xsi:type="generator:Value" value="2 x 6 = 12"/>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT12"/>
+      <question xsi:type="generator:QuestionParam" completeFact="4 x 2 = 8">
+        <value xsi:type="generator:Value" value="4 x 2 = 8"/>
       </question>
       <propositions>
         <value xsi:type="generator:Value" value="Vrai"/>
@@ -935,34 +927,271 @@
       </factCorrectness>
     </questionedFacts>
     <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
-    <positionedElement ID="ELEM93" fact="//@rooms.14/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 6 = 10"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT91">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT91"/>
     </positionedElement>
-    <positionedElement ID="ELEM94" fact="//@rooms.14/@questionedFacts.1">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT92" position="id/STRUCT91">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
+      <createdPosition ID="id/STRUCT92"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT93" position="id/STRUCT92">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT93"/>
+    </positionedElement>
+    <positionedElement ID="ELEM94" position="id/STRUCT93" fact="//@rooms.12/@questionedFacts.0">
       <correctness>
         <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
       <displays>
-        <value xsi:type="generator:Value" value="2 x 6 = 12"/>
+        <value xsi:type="generator:Value" value="Faux"/>
       </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.19"/>
+    <positionedElement ID="ELEM95" position="id/STRUCT93" fact="//@rooms.12/@questionedFacts.0">
+      <displays>
+        <value xsi:type="generator:Value" value="2 x 6 = 10"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_CORRECTNESS"/>
+    </positionedElement>
+    <positionedElement ID="ELEM96" position="id/STRUCT93" fact="//@rooms.12/@questionedFacts.0">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Vrai"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT97" position="id/STRUCT92">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT97"/>
+    </positionedElement>
+    <positionedElement ID="ELEM98" position="id/STRUCT97" fact="//@rooms.12/@questionedFacts.1">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Faux"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM99" position="id/STRUCT97" fact="//@rooms.12/@questionedFacts.1">
+      <displays>
+        <value xsi:type="generator:Value" value="4 x 2 = 8"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_CORRECTNESS"/>
+    </positionedElement>
+    <positionedElement ID="ELEM100" position="id/STRUCT97" fact="//@rooms.12/@questionedFacts.1">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Vrai"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.3"/>
   </rooms>
-  <rooms x="5" y="-2" nbExpectedAnswers="1">
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.14/@roomaccess.1"/>
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.16/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.11"/>
+  <rooms x="8" y="-3" nbExpectedAnswers="0">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.12/@roomaccess.1"/>
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.14/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22"/>
+    <positionedElement ID="ELEM101">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM102">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM103">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM6"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM104">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM105">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM106">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM107">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM7"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.32"/>
+  </rooms>
+  <rooms x="8" y="-2" nbExpectedAnswers="0">
+    <roomaccess otherroomaccess="//@rooms.13/@roomaccess.1"/>
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.15/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.20"/>
+    <positionedElement ID="ELEM108">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM109">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM110">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM111">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM112">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.30"/>
+  </rooms>
+  <rooms x="7" y="-2" nbExpectedAnswers="2">
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.14/@roomaccess.1"/>
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.16/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
     <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT12"/>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT6"/>
+      <question xsi:type="generator:QuestionParam" completeFact="2 x 2 = 6">
+        <value xsi:type="generator:Value" value="2 x 2 = 6"/>
+      </question>
+      <propositions>
+        <value xsi:type="generator:Value" value="Faux"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions>
+        <value xsi:type="generator:Value" value="Vrai"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+      <factCorrectness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </factCorrectness>
+    </questionedFacts>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT4"/>
+      <question xsi:type="generator:QuestionParam" completeFact="2 x 2 = 4">
+        <value xsi:type="generator:Value" value="2 x 2 = 4"/>
+      </question>
+      <propositions>
+        <value xsi:type="generator:Value" value="Vrai"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions>
+        <value xsi:type="generator:Value" value="Faux"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+      <factCorrectness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </factCorrectness>
+    </questionedFacts>
+    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT113">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT113"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT114" position="id/STRUCT113">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
+      <createdPosition ID="id/STRUCT114"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT115" position="id/STRUCT114">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT115"/>
+    </positionedElement>
+    <positionedElement ID="ELEM116" position="id/STRUCT115" fact="//@rooms.15/@questionedFacts.0">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Faux"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM117" position="id/STRUCT115" fact="//@rooms.15/@questionedFacts.0">
+      <displays>
+        <value xsi:type="generator:Value" value="2 x 2 = 6"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_CORRECTNESS"/>
+    </positionedElement>
+    <positionedElement ID="ELEM118" position="id/STRUCT115" fact="//@rooms.15/@questionedFacts.0">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Vrai"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT119" position="id/STRUCT114">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT119"/>
+    </positionedElement>
+    <positionedElement ID="ELEM120" position="id/STRUCT119" fact="//@rooms.15/@questionedFacts.1">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Faux"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM121" position="id/STRUCT119" fact="//@rooms.15/@questionedFacts.1">
+      <displays>
+        <value xsi:type="generator:Value" value="2 x 2 = 4"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_CORRECTNESS"/>
+    </positionedElement>
+    <positionedElement ID="ELEM122" position="id/STRUCT119" fact="//@rooms.15/@questionedFacts.1">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Vrai"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.3"/>
+  </rooms>
+  <rooms x="7" y="-1" nbExpectedAnswers="1">
+    <roomaccess direction="SOUTH_WEST" otherroomaccess="//@rooms.15/@roomaccess.1"/>
+    <roomaccess direction="WEST_NORTH" otherroomaccess="//@rooms.17/@roomaccess.0"/>
+    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT31"/>
+      <question xsi:type="generator:QuestionParam" completeFact="8 x 2 = 13">
+        <value xsi:type="generator:Value" value="8 x 2 = 13"/>
+      </question>
+      <propositions>
+        <value xsi:type="generator:Value" value="Faux"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions>
+        <value xsi:type="generator:Value" value="Vrai"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+      <factCorrectness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </factCorrectness>
+    </questionedFacts>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT25"/>
       <question xsi:type="generator:QuestionParam" completeFact="2 x 7 = 14">
         <value xsi:type="generator:Value" value="2 x 7 = 14"/>
       </question>
@@ -981,29 +1210,19 @@
         <value xsi:type="generator:CorrectnessValue"/>
       </factCorrectness>
     </questionedFacts>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT13"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 7 = 17">
-        <value xsi:type="generator:Value" value="2 x 7 = 17"/>
-      </question>
-      <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-      <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </factCorrectness>
-    </questionedFacts>
     <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
-    <positionedElement ID="ELEM95" fact="//@rooms.15/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
+    <positionedElement ID="ELEM123" fact="//@rooms.16/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS16"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="8 x 2 = 13"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
+    </positionedElement>
+    <positionedElement ID="ELEM124" fact="//@rooms.16/@questionedFacts.1">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
       <correctness>
         <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
@@ -1012,26 +1231,16 @@
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
     </positionedElement>
-    <positionedElement ID="ELEM96" fact="//@rooms.15/@questionedFacts.1">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 7 = 17"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
-    </positionedElement>
     <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.19"/>
   </rooms>
-  <rooms x="4" y="-2" nbExpectedAnswers="2">
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.15/@roomaccess.1"/>
-    <roomaccess otherroomaccess="//@rooms.17/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+  <rooms x="6" nbExpectedAnswers="2">
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.16/@roomaccess.1"/>
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.18/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.26"/>
     <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT3"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 2 = 0">
-        <value xsi:type="generator:Value" value="2 x 2 = 0"/>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT35"/>
+      <question xsi:type="generator:QuestionParam" completeFact="9 x 2 = 17">
+        <value xsi:type="generator:Value" value="9 x 2 = 17"/>
       </question>
       <propositions>
         <value xsi:type="generator:Value" value="Faux"/>
@@ -1049,408 +1258,117 @@
       </factCorrectness>
     </questionedFacts>
     <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT13"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 7 = 17">
-        <value xsi:type="generator:Value" value="2 x 7 = 17"/>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT24"/>
+      <question xsi:type="generator:QuestionParam" completeFact="7 x 2 = 14">
+        <value xsi:type="generator:Value" value="7 x 2 = 14"/>
       </question>
       <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
+        <value xsi:type="generator:Value" value="Vrai"/>
         <state xsi:type="generator:CorrectnessValue"/>
       </propositions>
       <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
+        <value xsi:type="generator:Value" value="Faux"/>
         <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </propositions>
       <correctnessToReach>
         <value xsi:type="generator:Value" value="1"/>
       </correctnessToReach>
       <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+        <value xsi:type="generator:CorrectnessValue"/>
       </factCorrectness>
     </questionedFacts>
     <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT97">
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT125">
       <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT97"/>
+      <createdPosition ID="id/STRUCT125"/>
     </positionedElement>
-    <positionedElement ID="ELEM98" position="id/STRUCT97">
-      <displays>
-        <value xsi:type="generator:Value" value="FALSE"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT99" position="id/STRUCT97">
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT126" position="id/STRUCT125">
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
-      <createdPosition ID="id/STRUCT99"/>
+      <createdPosition ID="id/STRUCT126"/>
     </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT100" position="id/STRUCT99">
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT127" position="id/STRUCT126">
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT100"/>
+      <createdPosition ID="id/STRUCT127"/>
     </positionedElement>
-    <positionedElement ID="ELEM101" position="id/STRUCT100" fact="//@rooms.16/@questionedFacts.0">
+    <positionedElement ID="ELEM128" position="id/STRUCT127" fact="//@rooms.17/@questionedFacts.0">
       <correctness>
         <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
       <displays>
-        <value xsi:type="generator:Value"/>
+        <value xsi:type="generator:Value" value="Faux"/>
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement ID="ELEM102" position="id/STRUCT100" fact="//@rooms.16/@questionedFacts.0">
+    <positionedElement ID="ELEM129" position="id/STRUCT127" fact="//@rooms.17/@questionedFacts.0">
       <displays>
-        <value xsi:type="generator:Value" value="2 x 2 = 0"/>
+        <value xsi:type="generator:Value" value="9 x 2 = 17"/>
       </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
     </positionedElement>
-    <positionedElement ID="ELEM103" position="id/STRUCT100" fact="//@rooms.16/@questionedFacts.0">
+    <positionedElement ID="ELEM130" position="id/STRUCT127" fact="//@rooms.17/@questionedFacts.0">
       <correctness>
         <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </correctness>
       <displays>
-        <value xsi:type="generator:Value"/>
+        <value xsi:type="generator:Value" value="Vrai"/>
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT104" position="id/STRUCT99">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT104"/>
-    </positionedElement>
-    <positionedElement ID="ELEM105" position="id/STRUCT104" fact="//@rooms.16/@questionedFacts.1">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM106" position="id/STRUCT104" fact="//@rooms.16/@questionedFacts.1">
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 7 = 17"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
-    </positionedElement>
-    <positionedElement ID="ELEM107" position="id/STRUCT104" fact="//@rooms.16/@questionedFacts.1">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM108" position="id/STRUCT97">
-      <displays>
-        <value xsi:type="generator:Value" value="TRUE"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.1"/>
-  </rooms>
-  <rooms x="4" y="-4" nbExpectedAnswers="2">
-    <roomaccess direction="NORTH_WEST" otherroomaccess="//@rooms.16/@roomaccess.1"/>
-    <roomaccess direction="WEST_NORTH" otherroomaccess="//@rooms.18/@roomaccess.0"/>
-    <roomtype xsi:type="generator:LargeRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT10"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 6 = 12">
-        <value xsi:type="generator:Value" value="2 x 6 = 12"/>
-      </question>
-      <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-      <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </factCorrectness>
-    </questionedFacts>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT6"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 4 = 8">
-        <value xsi:type="generator:Value" value="2 x 4 = 8"/>
-      </question>
-      <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-      <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </factCorrectness>
-    </questionedFacts>
-    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
-    <positionedElement ID="ELEM109" fact="//@rooms.17/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS11"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 6 = 12"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM110" fact="//@rooms.17/@questionedFacts.1">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 4 = 8"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.19"/>
-  </rooms>
-  <rooms x="3" y="-3" nbExpectedAnswers="0">
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.17/@roomaccess.1"/>
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.19/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
-    <positionedElement ID="ELEM111">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM112">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM113">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS9"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM114">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM115">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM116">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM117">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.33"/>
-  </rooms>
-  <rooms x="2" y="-3" nbExpectedAnswers="0">
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.18/@roomaccess.1"/>
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.20/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.16"/>
-    <positionedElement ID="ELEM118">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_REGULAR-SLIME"/>
-    </positionedElement>
-    <positionedElement ID="ELEM119">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_REGULAR-SLIME"/>
-    </positionedElement>
-    <positionedElement ID="ELEM120">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_REGULAR-SLIME"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.31"/>
-  </rooms>
-  <rooms x="2" y="-2" nbExpectedAnswers="0">
-    <roomaccess otherroomaccess="//@rooms.19/@roomaccess.1"/>
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.21/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22"/>
-    <positionedElement ID="ELEM121">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <positionedElement ID="ELEM122">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <positionedElement ID="ELEM123">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM6"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <positionedElement ID="ELEM124">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <positionedElement ID="ELEM125">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <positionedElement ID="ELEM126">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM7"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <positionedElement ID="ELEM127">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.32"/>
-  </rooms>
-  <rooms x="2" y="-1" nbExpectedAnswers="2">
-    <roomaccess otherroomaccess="//@rooms.20/@roomaccess.1"/>
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.22/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT1"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 1 = 3">
-        <value xsi:type="generator:Value" value="2 x 1 = 3"/>
-      </question>
-      <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-      <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </factCorrectness>
-    </questionedFacts>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT17"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 9 = 22">
-        <value xsi:type="generator:Value" value="2 x 9 = 22"/>
-      </question>
-      <propositions>
-        <value xsi:type="generator:Value" value="Faux"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-      <factCorrectness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </factCorrectness>
-    </questionedFacts>
-    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT128">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT128"/>
-    </positionedElement>
-    <positionedElement ID="ELEM129" position="id/STRUCT128">
-      <displays>
-        <value xsi:type="generator:Value" value="FALSE"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT130" position="id/STRUCT128">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
-      <createdPosition ID="id/STRUCT130"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT131" position="id/STRUCT130">
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT131" position="id/STRUCT126">
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
       <createdPosition ID="id/STRUCT131"/>
     </positionedElement>
-    <positionedElement ID="ELEM132" position="id/STRUCT131" fact="//@rooms.21/@questionedFacts.0">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM133" position="id/STRUCT131" fact="//@rooms.21/@questionedFacts.0">
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 1 = 3"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
-    </positionedElement>
-    <positionedElement ID="ELEM134" position="id/STRUCT131" fact="//@rooms.21/@questionedFacts.0">
+    <positionedElement ID="ELEM132" position="id/STRUCT131" fact="//@rooms.17/@questionedFacts.1">
       <correctness>
         <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </correctness>
       <displays>
-        <value xsi:type="generator:Value"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT135" position="id/STRUCT130">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT135"/>
-    </positionedElement>
-    <positionedElement ID="ELEM136" position="id/STRUCT135" fact="//@rooms.21/@questionedFacts.1">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM137" position="id/STRUCT135" fact="//@rooms.21/@questionedFacts.1">
-      <displays>
-        <value xsi:type="generator:Value" value="2 x 9 = 22"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
-    </positionedElement>
-    <positionedElement ID="ELEM138" position="id/STRUCT135" fact="//@rooms.21/@questionedFacts.1">
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM139" position="id/STRUCT128">
-      <displays>
-        <value xsi:type="generator:Value" value="TRUE"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DISPLAY"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.1"/>
-  </rooms>
-  <rooms x="2" nbExpectedAnswers="2">
-    <roomaccess otherroomaccess="//@rooms.21/@roomaccess.1"/>
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.23/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT6"/>
-      <question xsi:type="generator:QuestionParam" completeFact="2 x 4 = 8">
-        <value xsi:type="generator:Value" value="2 x 4 = 8"/>
-      </question>
-      <propositions>
-        <value xsi:type="generator:Value" value="Vrai"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions>
         <value xsi:type="generator:Value" value="Faux"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-      <factCorrectness>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM133" position="id/STRUCT131" fact="//@rooms.17/@questionedFacts.1">
+      <displays>
+        <value xsi:type="generator:Value" value="7 x 2 = 14"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
+    </positionedElement>
+    <positionedElement ID="ELEM134" position="id/STRUCT131" fact="//@rooms.17/@questionedFacts.1">
+      <correctness>
         <value xsi:type="generator:CorrectnessValue"/>
-      </factCorrectness>
-    </questionedFacts>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Vrai"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.3"/>
+  </rooms>
+  <rooms x="6" y="1" nbExpectedAnswers="0">
+    <roomaccess otherroomaccess="//@rooms.17/@roomaccess.1"/>
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.19/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.19"/>
+    <positionedElement ID="ELEM135">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_HOLE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM136">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_HOLE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM137">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_HOLE-TRAP"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.31"/>
+  </rooms>
+  <rooms x="6" y="2" nbExpectedAnswers="1">
+    <roomaccess otherroomaccess="//@rooms.18/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.20/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12"/>
     <questionedFacts>
-      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT5"/>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT10"/>
       <question xsi:type="generator:QuestionParam" completeFact="2 x 3 = 9">
         <value xsi:type="generator:Value" value="2 x 3 = 9"/>
       </question>
@@ -1469,66 +1387,213 @@
         <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </factCorrectness>
     </questionedFacts>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT4"/>
+      <question xsi:type="generator:QuestionParam" completeFact="2 x 2 = 4">
+        <value xsi:type="generator:Value" value="2 x 2 = 4"/>
+      </question>
+      <propositions>
+        <value xsi:type="generator:Value" value="Vrai"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions>
+        <value xsi:type="generator:Value" value="Faux"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+      <factCorrectness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </factCorrectness>
+    </questionedFacts>
     <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT140">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT140"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT141" position="id/STRUCT140">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
-      <createdPosition ID="id/STRUCT141"/>
-    </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT142" position="id/STRUCT141">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT142"/>
-    </positionedElement>
-    <positionedElement ID="ELEM143" position="id/STRUCT142" fact="//@rooms.22/@questionedFacts.0">
+    <positionedElement ID="ELEM138" fact="//@rooms.19/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
       <correctness>
         <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="2 x 3 = 9"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
+    </positionedElement>
+    <positionedElement ID="ELEM139" fact="//@rooms.19/@questionedFacts.1">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="2 x 2 = 4"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.19"/>
+  </rooms>
+  <rooms x="7" y="2" nbExpectedAnswers="0">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.19/@roomaccess.1"/>
+    <roomaccess otherroomaccess="//@rooms.21/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22"/>
+    <positionedElement ID="ELEM140">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM141">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM142">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM143">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM7"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM144">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM145">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM6"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM146">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.32"/>
+  </rooms>
+  <rooms x="7" y="1" nbExpectedAnswers="0">
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.20/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.22/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.20"/>
+    <positionedElement ID="ELEM147">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM148">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM149">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM150">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM151">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.30"/>
+  </rooms>
+  <rooms x="8" y="1" nbExpectedAnswers="2">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.21/@roomaccess.1"/>
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.23/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT30"/>
+      <question xsi:type="generator:QuestionParam" completeFact="2 x 8 = 20">
+        <value xsi:type="generator:Value" value="2 x 8 = 20"/>
+      </question>
+      <propositions>
+        <value xsi:type="generator:Value" value="Faux"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions>
+        <value xsi:type="generator:Value" value="Vrai"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+      <factCorrectness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </factCorrectness>
+    </questionedFacts>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:MTQFIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer2.xmi#PATH404-O1-L1-T4-QAFACT24"/>
+      <question xsi:type="generator:QuestionParam" completeFact="7 x 2 = 14">
+        <value xsi:type="generator:Value" value="7 x 2 = 14"/>
+      </question>
+      <propositions>
+        <value xsi:type="generator:Value" value="Vrai"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions>
+        <value xsi:type="generator:Value" value="Faux"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+      <factCorrectness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </factCorrectness>
+    </questionedFacts>
+    <task xsi:type="generator:MTIdentification" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1-T4"/>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT152">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT152"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT153" position="id/STRUCT152">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
+      <createdPosition ID="id/STRUCT153"/>
+    </positionedElement>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT154" position="id/STRUCT153">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
+      <createdPosition ID="id/STRUCT154"/>
+    </positionedElement>
+    <positionedElement ID="ELEM155" position="id/STRUCT154" fact="//@rooms.22/@questionedFacts.0">
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
       <displays>
         <value xsi:type="generator:Value" value="Faux"/>
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement ID="ELEM144" position="id/STRUCT142" fact="//@rooms.22/@questionedFacts.0">
+    <positionedElement ID="ELEM156" position="id/STRUCT154" fact="//@rooms.22/@questionedFacts.0">
       <displays>
-        <value xsi:type="generator:Value" value="2 x 4 = 8"/>
+        <value xsi:type="generator:Value" value="2 x 8 = 20"/>
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
     </positionedElement>
-    <positionedElement ID="ELEM145" position="id/STRUCT142" fact="//@rooms.22/@questionedFacts.0">
+    <positionedElement ID="ELEM157" position="id/STRUCT154" fact="//@rooms.22/@questionedFacts.0">
       <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </correctness>
       <displays>
         <value xsi:type="generator:Value" value="Vrai"/>
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT146" position="id/STRUCT141">
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT158" position="id/STRUCT153">
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_H"/>
-      <createdPosition ID="id/STRUCT146"/>
+      <createdPosition ID="id/STRUCT158"/>
     </positionedElement>
-    <positionedElement ID="ELEM147" position="id/STRUCT146" fact="//@rooms.22/@questionedFacts.1">
+    <positionedElement ID="ELEM159" position="id/STRUCT158" fact="//@rooms.22/@questionedFacts.1">
       <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </correctness>
       <displays>
         <value xsi:type="generator:Value" value="Faux"/>
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement ID="ELEM148" position="id/STRUCT146" fact="//@rooms.22/@questionedFacts.1">
+    <positionedElement ID="ELEM160" position="id/STRUCT158" fact="//@rooms.22/@questionedFacts.1">
       <displays>
-        <value xsi:type="generator:Value" value="2 x 3 = 9"/>
+        <value xsi:type="generator:Value" value="7 x 2 = 14"/>
       </displays>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
     </positionedElement>
-    <positionedElement ID="ELEM149" position="id/STRUCT146" fact="//@rooms.22/@questionedFacts.1">
+    <positionedElement ID="ELEM161" position="id/STRUCT158" fact="//@rooms.22/@questionedFacts.1">
       <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+        <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
       <displays>
         <value xsi:type="generator:Value" value="Vrai"/>
@@ -1537,8 +1602,8 @@
     </positionedElement>
     <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.3"/>
   </rooms>
-  <rooms x="3" nbExpectedAnswers="0">
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.22/@roomaccess.1"/>
+  <rooms x="8" y="2" nbExpectedAnswers="0">
+    <roomaccess otherroomaccess="//@rooms.22/@roomaccess.1"/>
     <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.8"/>
   </rooms>
   <level xsi:type="generator:MTLevel" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#PATH404-O1-L1"/>

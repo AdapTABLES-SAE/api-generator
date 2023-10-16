@@ -48,7 +48,9 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 						facts.add(fact);
 					}
 				}
-				questionableFacts.add(buildQF(task, facts, setoffact.getMap()));
+				if(!facts.isEmpty()) {
+					questionableFacts.add(buildQF(task, facts, setoffact.getMap()));
+				}
 			}
 		}	
 		return questionableFacts; 

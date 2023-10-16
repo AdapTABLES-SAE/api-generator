@@ -104,6 +104,8 @@ public class GenerationResource {
 				 learnerPlayerID, Constant.CLASSROOMS_FILE, classroomID.isEmpty()? Constant.DEFAULT_CLASSROOM_NAME: classroomID, true); 
 		generator.generate();
 		generator.saveDungeon("DungeonGen_"+ learnerPlayerID +".xmi");
+		generator.printDungeon();
+		//ALGAGenerator.LOGGER.info(generator.toString());
 		Main.transformModel(Constant.PROJECT_PATH + Constant.ECORE_PATH, Constant.PROJECT_PATH + Constant.FLATNER_PATH, Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xmi", Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH + "DungeonGen_"+ learnerPlayerID +".xml");
 	}	
 }

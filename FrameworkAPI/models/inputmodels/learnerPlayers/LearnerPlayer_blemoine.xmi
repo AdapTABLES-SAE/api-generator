@@ -12,27 +12,7 @@
       <items>
         <items>
           <equipment
-              href="../GameDescription.xmi#BRACELET"/>
-        </items>
-        <items>
-          <equipment
               href="../GameDescription.xmi#BELT"/>
-        </items>
-        <items>
-          <equipment
-              href="../GameDescription.xmi#GLOVE"/>
-        </items>
-        <items>
-          <equipment
-              href="../GameDescription.xmi#KEYS"/>
-        </items>
-        <items>
-          <equipment
-              href="../GameDescription.xmi#CARROT"/>
-        </items>
-        <items>
-          <equipment
-              href="../GameDescription.xmi#COAT"/>
         </items>
       </items>
     </playerProgress>

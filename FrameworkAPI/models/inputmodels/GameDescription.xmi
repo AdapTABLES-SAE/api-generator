@@ -1596,7 +1596,13 @@
         category="ORIENT_MULTIPLE">
       <components
           xsi:type="generator:Structure"
-          allowedAbility="VERTICAL_DISPLAY">
+          allowedAbility="VERTICAL_DISPLAY"
+          forFact="true">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="LARGE"/>
+        </expectedSize>
         <components
             xsi:type="generator:Component"
             allowedAbility="DISPLAY"
