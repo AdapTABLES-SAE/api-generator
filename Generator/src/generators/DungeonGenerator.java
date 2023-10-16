@@ -30,9 +30,9 @@ import structures.NeighborAccess;
 import structures.RoomElements;
 
 public class DungeonGenerator {
+	
 	private Dungeon generatedDungeon;  
 	private ModelsManager modelAccess;
-
 	
 	/** Attribute to generate random elements */
 	private Random random;
@@ -41,8 +41,7 @@ public class DungeonGenerator {
 	private DungeonElements dungeonElements;
 	
 	private double nbRooms;
-	
-	
+		
 	public DungeonGenerator(ModelsManager modelAccess, DungeonElements dungeonElements, double nbRooms) {
 		this.modelAccess = modelAccess;
 		generatedDungeon = new DungeonImpl();
