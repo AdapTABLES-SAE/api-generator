@@ -176,7 +176,7 @@ public class PathManager {
 	}
 	
 	public void updateOrCreateTrainingPath(JSONObject json) throws NonExistantLearnerPlayerException, ContextNotFoundException { // TODO : works for this version might not work for future version 
-		if(path == null) { path = new LearningPathImpl(); } // TODO : set Path to learner
+		if(path == null) { path = new LearningPathImpl(); } 
 		Knowledge knowledge = loadKnowledge();
 		if(path.getID() == null) {
 			path.setID((String) json.get("learningPathID"));
@@ -184,7 +184,7 @@ public class PathManager {
 			path.setName((String) json.get("learningPathID"));
 		}
 		Objective obj = getCorrespondingObjective(knowledge, json);
-		Level level = createLevel(obj, (String) json.get("level")); // recreateNewLevel(obj, (String) json.get("level"));
+		Level level = createLevel(obj, (String) json.get("level")); 
 		buildLevelTasks(obj, level, json);
 		if(!path.getObjectives().contains(obj)) {
 			path.getObjectives().add(obj);
@@ -194,7 +194,7 @@ public class PathManager {
 		}
 		saveDomainModel();
 		
-		// update progress for learner having this path TODO
+		// update progress for learner having this path 
 		resetEveryLearnerProgress();
 	}
 	
@@ -206,11 +206,10 @@ public class PathManager {
 		for(Classroom classroom : classrooms.getClassrooms()) {
 			for(LearnerPlayer LP : classroom.getLearnerPlayers()) {
 				if(LP.getLearningpath().getID().equals(path.getID())) {
-					System.out.println("to reset "+LP.getID());
 					manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 							Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, LP.getID(),
 							Constant.CLASSROOMS_FILE, classroom.getID(), true));
-					manager.resetLearnerProgress(manager, LP);// objective, level);
+					manager.resetLearnerProgress(manager);
 				}
 				
 			}

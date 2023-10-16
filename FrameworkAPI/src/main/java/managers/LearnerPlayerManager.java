@@ -18,17 +18,12 @@ import generator.LearnerPlayer;
 import generator.LearningPath;
 import generator.Level;
 import generator.Objective;
-import generator.QuestionableFact;
 import generator.QuestionableFactResult;
 import generator.ResultsByTask;
-import generator.impl.CompletionCriteriaImpl;
 import generator.impl.CurrentObjectiveLevelImpl;
 import generator.impl.ItemImpl;
 import generator.impl.ItemsImpl;
 import generator.impl.LearnerProgressImpl;
-import generator.impl.MTCompletion1Impl;
-import generator.impl.MTLevelImpl;
-import generator.impl.MTQFCompletion1Impl;
 import generator.impl.PlayerProgressImpl;
 import generator.impl.QuestionableFactResultImpl;
 import generator.impl.ResultsByTaskImpl;
@@ -58,13 +53,15 @@ public class LearnerPlayerManager {
 		}
 	}
 	
+	public LearnerPlayer getLearnerPlayer() {
+		return this.modelsManager.getLearnerPlayer();
+	}
+	
 	public void saveLearnerPlayerModel() {
-		System.out.println("save player "+this.modelsManager.getLearnerPlayer().getID());
 		Constant.saveLearnerModel(this.modelsManager.getLearnerPlayer());
 	}
 	
 	private String getTaskType(ATask task) {
-		System.out.print(task.getClass().getSimpleName());
 		switch(task.getClass().getSimpleName()) {
 		case "MTCompletion1Impl": return "C1"; 
 		case "MTCompletion2Impl": return "C2"; 
@@ -74,12 +71,6 @@ public class LearnerPlayerManager {
 		default: return "";
 		}
 	}
-	
-	/*public void resetEquipments(String learnerID) throws NonExistantLearnerPlayerException {
-		LearnerPlayer player = modelsManager.getLearnerPlayer(learnerID);
-		player.getProgression().getPlayerProgress().setItems(new ItemsImpl());
-		modelsManager.saveContextModel();
-	}*/
 	
 	public void resetPlayerProgress() throws NonExistantLearnerPlayerException {
 		
@@ -149,7 +140,7 @@ public class LearnerPlayerManager {
 		Item item = new ItemImpl();
 		Equipment equipment = getEquipmentForID(itemID);
 		if(equipment == null) {
-			System.err.println("The equipment ID given "+itemID+" is not valid. (Does not exists in model). ");
+			ALGAGenerator.LOGGER.severe("The equipment ID given "+itemID+" is not valid. (Does not exists in model). ");
 		}
 		item.setEquipment(getEquipmentForID(itemID));
 		player.getProgression().getPlayerProgress().getItems().getItems().add(item);
@@ -258,91 +249,6 @@ public class LearnerPlayerManager {
 		
 		// "totalDispensedCoins": 0
 		return stats;
-	}
-	
-	public static void main(String[] args){
-		// Test methods 
-		QuestionableFact fact = new MTQFCompletion1Impl();
-		for(int i = 0; i < 10; i++) {
-			QuestionableFactResult res = new QuestionableFactResultImpl();
-			if(i < 1 || (i > 3 && i < 5) || i > 7) {
-				res.setAnswerValid(true);
-			} else {
-				res.setAnswerValid(false);
-			}
-			fact.getResults().add(res);
-		}
-		
-		QuestionableFact fact2 = new MTQFCompletion1Impl();
-		for(int i = 0; i < 10; i++) {
-			QuestionableFactResult res = new QuestionableFactResultImpl();
-			res.setAnswerValid(false);
-			fact2.getResults().add(res);
-		}
-		
-		LearnerPlayerManager lm = new LearnerPlayerManager(null);
-		//System.err.println("nb Successive "+lm.numberOfSuccessiveSuccess(fact));
-		ResultsByTask rbt = new ResultsByTaskImpl();
-		ATask task = new MTCompletion1Impl();
-		task.setNbConsecutiveSuccess(2);
-		rbt.setTask(task);
-		rbt.getQuestionableFacts().add(fact);
-		//rbt.getQuestionableFacts().add(fact2);
-		rbt.getQuestionableFacts().add(new MTQFCompletion1Impl());
-		rbt.getQuestionableFacts().add(new MTQFCompletion1Impl());
-		rbt.getQuestionableFacts().add(new MTQFCompletion1Impl());
-		rbt.getQuestionableFacts().add(new MTQFCompletion1Impl());
-		
-		
-		/*lm.updateQuestionableFactStatus(rbt);
-		System.err.println("achieved ? "+rbt.getQuestionableFacts().get(0).isAchieved());
-		System.err.println("achieved ? "+rbt.getQuestionableFacts().get(1).isAchieved());
-		System.err.println("achieved ? "+rbt.getQuestionableFacts().get(2).isAchieved());
-		System.err.println("achieved ? "+rbt.getQuestionableFacts().get(3).isAchieved());
-		System.err.println("achieved ? "+rbt.getQuestionableFacts().get(4).isAchieved());
-		
-		System.out.println("Success before "+rbt.getSucessPercent());
-		rbt.setSucessPercent(lm.computeTaskSuccessPercent(rbt));
-		System.out.println("Success after "+rbt.getSucessPercent());
-		
-		System.out.println("Encounter before "+rbt.getEncountersPercent());
-		rbt.setEncountersPercent(lm.computeTaskEncounteredPercent(rbt));
-		System.out.println("Encounter after "+rbt.getEncountersPercent());*/ 
-		
-		CurrentObjectiveLevel col = new CurrentObjectiveLevelImpl();
-		col.setResults(new ResultsImpl());
-		col.getResults().getResultsbytask().add(rbt);
-		col.setAchieved(false);
-		
-		Level level = new MTLevelImpl(); 
-		CompletionCriteria criteria = new CompletionCriteriaImpl();
-		criteria.setEncountersPercent(10.);
-		criteria.setSuccessPercent(5.0); // 10.
-		level.setCompletionCriteria(criteria);
-		
-		col.setLevel(level);
-
-		ResultsByTask rbt2 = new ResultsByTaskImpl();
-		ATask task2 = new MTCompletion1Impl();
-		task2.setNbConsecutiveSuccess(2);
-		rbt2.setTask(task);
-		rbt2.getQuestionableFacts().add(fact2);
-		rbt2.getQuestionableFacts().add(new MTQFCompletion1Impl());
-		rbt2.getQuestionableFacts().add(new MTQFCompletion1Impl());
-		rbt2.getQuestionableFacts().add(new MTQFCompletion1Impl());
-		rbt2.getQuestionableFacts().add(new MTQFCompletion1Impl());
-		col.getResults().getResultsbytask().add(rbt2);
-		ResultsByTask rbt3 = new ResultsByTaskImpl();
-		rbt3.setTask(task);rbt3.getQuestionableFacts().add(new MTQFCompletion1Impl());
-		col.getResults().getResultsbytask().add(rbt3);
-		
-	//	System.err.println(col.getResults().getResultsbytask().size());
-		
-		lm.updateResultsPercentages(col);
-	/*	System.out.println("success col "+col.getSucessPercent());
-		System.out.println("encounter col "+col.getEncountersPercent());
-		System.out.println("achieved "+col.isAchieved());*/
-	
 	}
 	
 	/**
@@ -549,29 +455,12 @@ public class LearnerPlayerManager {
 		saveLearnerPlayerModel();
 	}
 	
-	public void resetLearnerProgress(LearnerPlayerManager manager, LearnerPlayer learner) {
-		//CurrentObjectiveLevel currentOL = getCurrentObjectiveLevel(learner, objective, level); 
-		//System.out.println("CurrentOL is null");
-		//if(currentOL != null) {
-			learner.getProgression().setLearnerProgress(new LearnerProgressImpl());
-			learner.getProgression().getPlayerProgress().setCurrentLevel(1);
-			learner.setStatistics(new StatisticsImpl());
-		//}	
-		System.out.println(learner.getID()+" "+learner.getProgression().getLearnerProgress().getCurrentobjectivelevels());
+	public void resetLearnerProgress(LearnerPlayerManager manager) {
+		manager.getLearnerPlayer().getProgression().setLearnerProgress(new LearnerProgressImpl());
+		manager.getLearnerPlayer().getProgression().getPlayerProgress().setCurrentLevel(1);
+		manager.getLearnerPlayer().setStatistics(new StatisticsImpl());
 		saveLearnerPlayerModel();
 	}
-
-	
-	/*
-	private CurrentObjectiveLevel getCurrentObjectiveLevel(LearnerPlayer learner, Objective objective, Level level) {
-		for(CurrentObjectiveLevel currentOL: learner.getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
-			if(currentOL.getObjective().getID().equals(objective.getID()) && currentOL.getLevel().getID().equals(level.getID())) {
-				return currentOL;
-			}
-		}
-		return null;
-	}*/
-	
 	
 	private void addResultsToTask(JSONObject jtask, ResultsByTask rbt) {
 		JSONArray facts = (JSONArray) jtask.get("questionableFacts");
@@ -589,7 +478,7 @@ public class LearnerPlayerManager {
 				}
 				qf.getResults().add(qfres);
 			} else {
-				System.err.println("Questionnable fact not found with ID = " + (String) factResult.get("questionableFactID"));
+				ALGAGenerator.LOGGER.severe("Questionnable fact not found with ID = " + (String) factResult.get("questionableFactID"));
 			}
 		}
 	}
@@ -614,14 +503,99 @@ public class LearnerPlayerManager {
 	
 	private CurrentObjectiveLevel getCorrespondingCOL(String objectiveID, String levelID) throws NonExistantLearnerPlayerException {
 		for (CurrentObjectiveLevel col : modelsManager.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
-			System.out.println(col.getObjective().getID()+" "+col.getLevel().getID());
+			/*System.out.println(col.getObjective().getID()+" "+col.getLevel().getID());
 			System.out.println(col.getObjective().getID().equals(objectiveID));
-			System.out.println(col.getLevel().getID().equals(levelID));
+			System.out.println(col.getLevel().getID().equals(levelID));*/
 			if(col.getObjective().getID().equals(objectiveID) && col.getLevel().getID().equals(levelID)) {
 				return col;
 			}
 		}
 		return null;
 	}
+	
+	
+	/*public static void main(String[] args){
+	// Test methods 
+	QuestionableFact fact = new MTQFCompletion1Impl();
+	for(int i = 0; i < 10; i++) {
+		QuestionableFactResult res = new QuestionableFactResultImpl();
+		if(i < 1 || (i > 3 && i < 5) || i > 7) {
+			res.setAnswerValid(true);
+		} else {
+			res.setAnswerValid(false);
+		}
+		fact.getResults().add(res);
+	}
+	
+	QuestionableFact fact2 = new MTQFCompletion1Impl();
+	for(int i = 0; i < 10; i++) {
+		QuestionableFactResult res = new QuestionableFactResultImpl();
+		res.setAnswerValid(false);
+		fact2.getResults().add(res);
+	}
+	
+	LearnerPlayerManager lm = new LearnerPlayerManager(null);
+	//System.err.println("nb Successive "+lm.numberOfSuccessiveSuccess(fact));
+	ResultsByTask rbt = new ResultsByTaskImpl();
+	ATask task = new MTCompletion1Impl();
+	task.setNbConsecutiveSuccess(2);
+	rbt.setTask(task);
+	rbt.getQuestionableFacts().add(fact);
+	//rbt.getQuestionableFacts().add(fact2);
+	rbt.getQuestionableFacts().add(new MTQFCompletion1Impl());
+	rbt.getQuestionableFacts().add(new MTQFCompletion1Impl());
+	rbt.getQuestionableFacts().add(new MTQFCompletion1Impl());
+	rbt.getQuestionableFacts().add(new MTQFCompletion1Impl());
+	
+	
+	lm.updateQuestionableFactStatus(rbt);
+	System.err.println("achieved ? "+rbt.getQuestionableFacts().get(0).isAchieved());
+	System.err.println("achieved ? "+rbt.getQuestionableFacts().get(1).isAchieved());
+	System.err.println("achieved ? "+rbt.getQuestionableFacts().get(2).isAchieved());
+	System.err.println("achieved ? "+rbt.getQuestionableFacts().get(3).isAchieved());
+	System.err.println("achieved ? "+rbt.getQuestionableFacts().get(4).isAchieved());
+	
+	System.out.println("Success before "+rbt.getSucessPercent());
+	rbt.setSucessPercent(lm.computeTaskSuccessPercent(rbt));
+	System.out.println("Success after "+rbt.getSucessPercent());
+	
+	System.out.println("Encounter before "+rbt.getEncountersPercent());
+	rbt.setEncountersPercent(lm.computeTaskEncounteredPercent(rbt));
+	System.out.println("Encounter after "+rbt.getEncountersPercent());
+	
+	CurrentObjectiveLevel col = new CurrentObjectiveLevelImpl();
+	col.setResults(new ResultsImpl());
+	col.getResults().getResultsbytask().add(rbt);
+	col.setAchieved(false);
+	
+	Level level = new MTLevelImpl(); 
+	CompletionCriteria criteria = new CompletionCriteriaImpl();
+	criteria.setEncountersPercent(10.);
+	criteria.setSuccessPercent(5.0); // 10.
+	level.setCompletionCriteria(criteria);
+	
+	col.setLevel(level);
 
+	ResultsByTask rbt2 = new ResultsByTaskImpl();
+	ATask task2 = new MTCompletion1Impl();
+	task2.setNbConsecutiveSuccess(2);
+	rbt2.setTask(task);
+	rbt2.getQuestionableFacts().add(fact2);
+	rbt2.getQuestionableFacts().add(new MTQFCompletion1Impl());
+	rbt2.getQuestionableFacts().add(new MTQFCompletion1Impl());
+	rbt2.getQuestionableFacts().add(new MTQFCompletion1Impl());
+	rbt2.getQuestionableFacts().add(new MTQFCompletion1Impl());
+	col.getResults().getResultsbytask().add(rbt2);
+	ResultsByTask rbt3 = new ResultsByTaskImpl();
+	rbt3.setTask(task);rbt3.getQuestionableFacts().add(new MTQFCompletion1Impl());
+	col.getResults().getResultsbytask().add(rbt3);
+	
+//	System.err.println(col.getResults().getResultsbytask().size());
+	
+	lm.updateResultsPercentages(col);
+	System.out.println("success col "+col.getSucessPercent());
+	System.out.println("encounter col "+col.getEncountersPercent());
+	System.out.println("achieved "+col.isAchieved());
+
+}*/
 }
