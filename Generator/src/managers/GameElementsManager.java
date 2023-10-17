@@ -41,9 +41,8 @@ public class GameElementsManager {
 	
 	private void selectElementType(Map<ElementType, Integer> elementsToQuantity, List<AComponent> components, ATask task, List<QuestionedFact> facts, boolean isStructureComponents) {
 		for (AComponent aComponent : components) {
-			//System.err.println("\t"+aComponent.getAllowedAbility());
 			ElementType elementType = getCompatibleElementType(aComponent, isStructureComponents); 
-			if(elementType == null) { elementsToQuantity = null; break;}
+			if(elementType == null) { break;}
 			if(isStructureComponents) {
 				if(!elementsToQuantity.containsKey(elementType)) {
 					elementsToQuantity.put(elementType, -1);
@@ -90,7 +89,7 @@ public class GameElementsManager {
 		}
 	}
 
-	private ElementType getCompatibleElementType(AComponent component, boolean isStructureComponent) { // TODO : Check for statement display
+	private ElementType getCompatibleElementType(AComponent component, boolean isStructureComponent) { 
 		List<ElementType> compatibleTypes = new ArrayList<>();
 		for (ElementType elementType : this.gameDescriptionModel.getElements().getElementTypes().getElements()) {
 			if(elementType instanceof StatementElementType) {
@@ -119,8 +118,7 @@ public class GameElementsManager {
 	
 	
 	private boolean hasValidStatementConditions(StatementElementType statementType, boolean isStructureComponent) {
-		return (statementType.isForStructure() && isStructureComponent) 
-				|| !(statementType.isForStructure() && !isStructureComponent);
+		return (statementType.isForStructure() && isStructureComponent) || (!statementType.isForStructure() && !isStructureComponent);
 	}
 	
 	private boolean isEqualAbility(ElementType element, AComponent component) {

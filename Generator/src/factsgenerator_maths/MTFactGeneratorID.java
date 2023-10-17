@@ -18,6 +18,7 @@ import generator.MTFact;
 import generator.MTIdentification;
 import generator.MTLevel;
 import generator.MTQFIdentification;
+import generator.QuestionedFact;
 import generator.ResultPosition;
 import generator.SetOfFacts;
 import generator.TableBuild;
@@ -189,8 +190,27 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 		return false;
 	}
 	
-/*	@Override
+	@Override
 	protected List<AQuestionableFact> removeUnEligibleFactsBasedOnPreviouslySelectedFact(List<QuestionedFact> previousFacts, List<AQuestionableFact> facts) {
-
-	} */
+		if(previousFactsContainsOneSoluce(previousFacts)) {
+			return facts;
+		} else {
+			List<AQuestionableFact> filteredFacts = new ArrayList<>();
+			for(AQuestionableFact fact : facts) {
+				if(((MTQFIdentification) fact).isSoluce()) {
+					filteredFacts.add(fact);
+				}
+			}
+			return filteredFacts;
+		}
+	} 
+	
+	private boolean previousFactsContainsOneSoluce(List<QuestionedFact> previousFacts) {
+		for(QuestionedFact fact : previousFacts) {
+			if(((MTQFIdentification) fact.getQuestionablefact()).isSoluce()){
+				return true;
+			}
+		}
+		return false;
+	}
 }

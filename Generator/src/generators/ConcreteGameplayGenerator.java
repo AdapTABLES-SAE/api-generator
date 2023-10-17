@@ -108,11 +108,9 @@ public class ConcreteGameplayGenerator {
 		boolean hasIntegratedChoice = ((QuestionGameplay) roomElements.getGameplay()).isHasIntegratedPropositions();
 		
 		if(component.isForProposition() && component.isForStatement()) {
-			//for (int i = 0; i < fact.getPropositions().size(); i++) {
 			for(QuestionedFact fact : roomElements.getFacts()) {
 				elements.add(buildStatementAsChoicesElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
 			}
-			//}
 		} else if(component.isForStatement()) {
 			for(QuestionedFact fact : roomElements.getFacts()) {
 				elements.add(buildStatementElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
