@@ -93,7 +93,7 @@ public class GameElementsManager {
 		List<ElementType> compatibleTypes = new ArrayList<>();
 		for (ElementType elementType : this.gameDescriptionModel.getElements().getElementTypes().getElements()) {
 			if(elementType instanceof StatementElementType) {
-				if(isComponentForStatement(component) && !isComponentForChoices(component) && hasValidStatementConditions((StatementElementType) elementType, isStructureComponent)) {
+				if(isComponentForStatement(component) && !isComponentForChoices(component) /*&& hasValidStatementConditions((StatementElementType) elementType, isStructureComponent)*/) {
 					compatibleTypes.add((StatementElementType) elementType);
 				}
 			} else if((!isComponentForStatement(component) || isComponentForBothStatementAndChoices(component)) && isEqualAbility(elementType, component) && isEqualSize(elementType, component)) {		
@@ -117,9 +117,9 @@ public class GameElementsManager {
 	}
 	
 	
-	private boolean hasValidStatementConditions(StatementElementType statementType, boolean isStructureComponent) {
+	/*private boolean hasValidStatementConditions(StatementElementType statementType, boolean isStructureComponent) {
 		return (statementType.isForStructure() && isStructureComponent) || (!statementType.isForStructure() && !isStructureComponent);
-	}
+	}*/
 	
 	private boolean isEqualAbility(ElementType element, AComponent component) {
 		return element.getAbility().equals(component.getAllowedAbility());
