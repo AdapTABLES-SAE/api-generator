@@ -2,147 +2,6 @@
  */
 package generator.impl;
 
-import generator.AComponent;
-import generator.AQuestionParam;
-import generator.AQuestionableFact;
-import generator.ATask;
-import generator.AValue;
-import generator.Abilities;
-import generator.Ability;
-import generator.AbstractFact;
-import generator.Classroom;
-import generator.Classrooms;
-import generator.CompletionCriteria;
-import generator.CompletionTask;
-import generator.Component;
-import generator.Condition;
-import generator.Correctness;
-import generator.CorrectnessValue;
-import generator.CurrentObjectiveLevel;
-import generator.Curse;
-import generator.CurseEligibility;
-import generator.Curses;
-import generator.Date;
-import generator.DateQuestionableFact;
-import generator.Directions;
-import generator.Display;
-import generator.Dungeon;
-import generator.DungeonMode;
-import generator.EBoundary;
-import generator.ECorrectness;
-import generator.EGeographyValue;
-import generator.EHistoryTarget;
-import generator.ELegendTarget;
-import generator.EModality;
-import generator.ERoomType;
-import generator.ESeveralTarget;
-import generator.ESingleTarget;
-import generator.EStatementType;
-import generator.ETaskType;
-import generator.ETimeTarget;
-import generator.ElementSize;
-import generator.ElementType;
-import generator.ElementsTypes;
-import generator.EnterResponse;
-import generator.EntrySoluceParam;
-import generator.Equipment;
-import generator.Equipments;
-import generator.ExpectedAnswer;
-import generator.FactCorrectnessParam;
-import generator.FactSolutionParam;
-import generator.GLocate;
-import generator.GPCategory;
-import generator.GameContext;
-import generator.GameDescription;
-import generator.GameElementTypes;
-import generator.Gameplay;
-import generator.GameplayTaskRelations;
-import generator.Gameplays;
-import generator.GeneratorFactory;
-import generator.GeneratorPackage;
-import generator.GeographyFact;
-import generator.GeographyLegendFact;
-import generator.HAssociation;
-import generator.HChronology;
-import generator.HGLevel;
-import generator.HLegend;
-import generator.HistoryFact;
-import generator.IdentificationTask;
-import generator.Image;
-import generator.Item;
-import generator.Items;
-import generator.Knowledge;
-import generator.LabyrinthCurse;
-import generator.LargeRoomType;
-import generator.LearnerPlayer;
-import generator.LearnerProgress;
-import generator.LearningDomain;
-import generator.LearningPath;
-import generator.LegendSymbol;
-import generator.LegendText;
-import generator.Level;
-import generator.LevelsDifficultyProgress;
-import generator.MTCompletion1;
-import generator.MTCompletion2;
-import generator.MTFact;
-import generator.MTIdentification;
-import generator.MTLevel;
-import generator.MTMembership;
-import generator.MTQFCompletion1;
-import generator.MTQFCompletion2;
-import generator.MTQFIdentification;
-import generator.MTQFMembership;
-import generator.MTQFRebuild;
-import generator.MTRecontruction;
-import generator.MTResultFact;
-import generator.Map;
-import generator.MapElementPosition;
-import generator.MapQuestionParam;
-import generator.MapQuestionableFact;
-import generator.MapSolution;
-import generator.MembershipIDTask;
-import generator.MultipleChoice;
-import generator.NoQuestionGameplay;
-import generator.Objective;
-import generator.OrderingTask;
-import generator.Parameter;
-import generator.PlayerProgress;
-import generator.Position;
-import generator.PositionedElement;
-import generator.PositionedMapElement;
-import generator.PositionedStructureElement;
-import generator.Prerequisite;
-import generator.Progression;
-import generator.Prompt;
-import generator.PropositionParam;
-import generator.Quantity;
-import generator.QuestionGameplay;
-import generator.QuestionParam;
-import generator.QuestionableFact;
-import generator.QuestionableFactResult;
-import generator.QuestionedFact;
-import generator.Relation;
-import generator.ResponseModality;
-import generator.ResultPosition;
-import generator.Results;
-import generator.ResultsByTask;
-import generator.Room;
-import generator.RoomAccess;
-import generator.RoomType;
-import generator.RoomTypes;
-import generator.SetOfFacts;
-import generator.Size;
-import generator.SmallRoomType;
-import generator.StatementElementType;
-import generator.Statistics;
-import generator.Structure;
-import generator.TableBuild;
-import generator.Teacher;
-import generator.Teachers;
-import generator.Time;
-import generator.TimePeriod;
-import generator.Value;
-import generator.WantedAnswersParam;
 import generator.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -966,6 +825,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass aQuestionableFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass aMapQuestionableFactEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2162,7 +2028,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EAttribute getMultipleChoice_NbBadChoices() {
-		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(1);
+		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2171,7 +2037,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	public EAttribute getMultipleChoice_NbChoices() {
-		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -5050,6 +4916,42 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAMapQuestionableFact() {
+		return aMapQuestionableFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAMapQuestionableFact_Map() {
+		return (EReference) aMapQuestionableFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAMapQuestionableFact_Mapsolutions() {
+		return (EReference) aMapQuestionableFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAMapQuestionableFact_Consigne() {
+		return (EAttribute) aMapQuestionableFactEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMapQuestionableFact() {
 		return mapQuestionableFactEClass;
 	}
@@ -5059,35 +4961,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMapQuestionableFact_Map() {
-		return (EReference) mapQuestionableFactEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMapQuestionableFact_Mapsolutions() {
-		return (EReference) mapQuestionableFactEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getMapQuestionableFact_Type() {
-		return (EAttribute) mapQuestionableFactEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMapQuestionableFact_Consigne() {
-		return (EAttribute) mapQuestionableFactEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) mapQuestionableFactEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5545,8 +5420,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		multipleChoiceEClass = createEClass(MULTIPLE_CHOICE);
 		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__TYPE);
-		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__NB_BAD_CHOICES);
 		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__NB_CHOICES);
+		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__NB_BAD_CHOICES);
 
 		enterResponseEClass = createEClass(ENTER_RESPONSE);
 		createEAttribute(enterResponseEClass, ENTER_RESPONSE__TYPE);
@@ -5958,11 +5833,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(aQuestionableFactEClass, AQUESTIONABLE_FACT__ID);
 		createEAttribute(aQuestionableFactEClass, AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE);
 
-		mapQuestionableFactEClass = createEClass(MAP_QUESTIONABLE_FACT);
-		createEReference(mapQuestionableFactEClass, MAP_QUESTIONABLE_FACT__MAP);
-		createEReference(mapQuestionableFactEClass, MAP_QUESTIONABLE_FACT__MAPSOLUTIONS);
-		createEAttribute(mapQuestionableFactEClass, MAP_QUESTIONABLE_FACT__TYPE);
-		createEAttribute(mapQuestionableFactEClass, MAP_QUESTIONABLE_FACT__CONSIGNE);
+		aMapQuestionableFactEClass = createEClass(AMAP_QUESTIONABLE_FACT);
+		createEReference(aMapQuestionableFactEClass, AMAP_QUESTIONABLE_FACT__MAP);
+		createEReference(aMapQuestionableFactEClass, AMAP_QUESTIONABLE_FACT__MAPSOLUTIONS);
+		createEAttribute(aMapQuestionableFactEClass, AMAP_QUESTIONABLE_FACT__CONSIGNE);
 
 		mapSolutionEClass = createEClass(MAP_SOLUTION);
 		createEAttribute(mapSolutionEClass, MAP_SOLUTION__VALUE);
@@ -5983,6 +5857,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		hChronologyEClass = createEClass(HCHRONOLOGY);
 		createEAttribute(hChronologyEClass, HCHRONOLOGY__MIX_DATE_PERIOD);
 		createEAttribute(hChronologyEClass, HCHRONOLOGY__GRAPHIC_TASK);
+
+		mapQuestionableFactEClass = createEClass(MAP_QUESTIONABLE_FACT);
+		createEAttribute(mapQuestionableFactEClass, MAP_QUESTIONABLE_FACT__TYPE);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -6091,11 +5968,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		hAssociationEClass.getESuperTypes().add(this.getCompletionTask());
 		hLegendEClass.getESuperTypes().add(this.getCompletionTask());
 		gLocateEClass.getESuperTypes().add(this.getMembershipIDTask());
-		mapQuestionableFactEClass.getESuperTypes().add(this.getAQuestionableFact());
+		aMapQuestionableFactEClass.getESuperTypes().add(this.getAQuestionableFact());
 		hgLevelEClass.getESuperTypes().add(this.getLevel());
 		positionedMapElementEClass.getESuperTypes().add(this.getPositionedElement());
 		dateQuestionableFactEClass.getESuperTypes().add(this.getQuestionableFact());
 		hChronologyEClass.getESuperTypes().add(this.getOrderingTask());
+		mapQuestionableFactEClass.getESuperTypes().add(this.getAMapQuestionableFact());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -6384,12 +6262,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(multipleChoiceEClass, MultipleChoice.class, "MultipleChoice", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMultipleChoice_Type(), this.getEModality(), "type", "CHOICE", 0, 1, MultipleChoice.class,
-				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMultipleChoice_NbBadChoices(), ecorePackage.getEInt(), "nbBadChoices", null, 0, 1,
+		initEAttribute(getMultipleChoice_Type(), this.getEModality(), "type", null, 0, 1, MultipleChoice.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMultipleChoice_NbChoices(), ecorePackage.getEInt(), "nbChoices", null, 0, 1,
 				MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMultipleChoice_NbChoices(), ecorePackage.getEInt(), "nbChoices", null, 0, 1,
+		initEAttribute(getMultipleChoice_NbBadChoices(), ecorePackage.getEInt(), "nbBadChoices", null, 0, 1,
 				MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
@@ -7262,19 +7140,16 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				0, 1, AQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(mapQuestionableFactEClass, MapQuestionableFact.class, "MapQuestionableFact", !IS_ABSTRACT,
+		initEClass(aMapQuestionableFactEClass, AMapQuestionableFact.class, "AMapQuestionableFact", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMapQuestionableFact_Map(), this.getMap(), null, "map", null, 1, 1, MapQuestionableFact.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMapQuestionableFact_Mapsolutions(), this.getMapSolution(), null, "mapsolutions", null, 0, -1,
-				MapQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getAMapQuestionableFact_Map(), this.getMap(), null, "map", null, 1, 1,
+				AMapQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAMapQuestionableFact_Mapsolutions(), this.getMapSolution(), null, "mapsolutions", null, 0, -1,
+				AMapQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMapQuestionableFact_Type(), this.getEGeographyValue(), "type", "NONE", 0, 1,
-				MapQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMapQuestionableFact_Consigne(), ecorePackage.getEString(), "consigne", null, 0, 1,
-				MapQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+		initEAttribute(getAMapQuestionableFact_Consigne(), ecorePackage.getEString(), "consigne", null, 0, 1,
+				AMapQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mapSolutionEClass, MapSolution.class, "MapSolution", !IS_ABSTRACT, !IS_INTERFACE,
@@ -7319,6 +7194,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getHChronology_GraphicTask(), ecorePackage.getEBoolean(), "graphicTask", "true", 0, 1,
 				HChronology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(mapQuestionableFactEClass, MapQuestionableFact.class, "MapQuestionableFact", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMapQuestionableFact_Type(), this.getEGeographyValue(), "type", "NONE", 0, 1,
+				MapQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

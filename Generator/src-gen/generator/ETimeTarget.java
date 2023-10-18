@@ -48,13 +48,13 @@ public enum ETimeTarget implements Enumerator {
 	 */
 	MIX(2, "MIX", "MIX"),
 	/**
-	* The '<em><b>NONE</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>NONE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #NONE_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #NONE_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	NONE(3, "NONE", "NONE");
 
 	/**

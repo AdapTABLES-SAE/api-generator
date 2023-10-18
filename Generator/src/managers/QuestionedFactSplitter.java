@@ -30,7 +30,6 @@ public class QuestionedFactSplitter {
 	private void splitter() {
 		String question = ((Value) fact.getQuestion().getValue()).getValue();
 		this.beginByText = !beginByQuestionMark(question);
-		System.out.println(question);
 		this.numberOfQuestionMark = (int) question.chars().filter(ch -> ch == '?').count();
 		String[] parts = question.split("\\?"); 
 		for(String text : parts) {
@@ -48,9 +47,7 @@ public class QuestionedFactSplitter {
 					this.textsAreImages.add(false);
 				}
 			}
-		}
-		
-		System.out.println(this.texts);
+		}		
 	}
 	
 	public boolean isTextImage(int textIndex) {

@@ -9,6 +9,7 @@ import java.util.Set;
 
 import exceptions.BadSolutionGenerationException;
 import factgenerator_template.FactGeneratorTemplate;
+import generator.AMapQuestionableFact;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
@@ -58,7 +59,7 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 	
 	
 
-	private MapQuestionableFact buildQF(ATask task, List<GeographyFact> facts, Map map) {
+	private AMapQuestionableFact buildQF(ATask task, List<GeographyFact> facts, Map map) {
 		MapQuestionableFact qf = new MapQuestionableFactImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		qf.setMap(map);
@@ -81,7 +82,7 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 	@Override
 	protected List<Soluce> getListOfGoodSolutions(AQuestionableFact qFact) {
 		List<Soluce> solutions = new ArrayList<>();
-		for (MapSolution prop : ((MapQuestionableFact) qFact).getMapsolutions()) {
+		for (MapSolution prop : ((AMapQuestionableFact) qFact).getMapsolutions()) {
 			solutions.add(new Soluce(prop.getValue(), prop.getMapPosition()));
 		}
 		return solutions;
@@ -135,7 +136,7 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 
 	@Override
 	protected int correctnessToReach(AQuestionableFact fact) {
-		return ((MapQuestionableFact) fact).getMapsolutions().size();
+		return ((AMapQuestionableFact) fact).getMapsolutions().size();
 	}	
 	
 	@Override

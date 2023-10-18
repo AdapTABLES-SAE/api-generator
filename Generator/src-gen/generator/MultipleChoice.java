@@ -12,8 +12,8 @@ package generator;
  * </p>
  * <ul>
  *   <li>{@link generator.MultipleChoice#getType <em>Type</em>}</li>
- *   <li>{@link generator.MultipleChoice#getNbBadChoices <em>Nb Bad Choices</em>}</li>
  *   <li>{@link generator.MultipleChoice#getNbChoices <em>Nb Choices</em>}</li>
+ *   <li>{@link generator.MultipleChoice#getNbBadChoices <em>Nb Bad Choices</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getMultipleChoice()
@@ -23,17 +23,28 @@ package generator;
 public interface MultipleChoice extends ResponseModality {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The default value is <code>"CHOICE"</code>.
 	 * The literals are from the enumeration {@link generator.EModality}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see generator.EModality
+	 * @see #setType(EModality)
 	 * @see generator.GeneratorPackage#getMultipleChoice_Type()
-	 * @model default="CHOICE" transient="true" changeable="false"
+	 * @model
 	 * @generated
 	 */
 	EModality getType();
+
+	/**
+	 * Sets the value of the '{@link generator.MultipleChoice#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see generator.EModality
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(EModality value);
 
 	/**
 	 * Returns the value of the '<em><b>Nb Bad Choices</b></em>' attribute.

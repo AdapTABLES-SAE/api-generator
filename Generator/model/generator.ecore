@@ -212,10 +212,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResponseModality" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="MultipleChoice" eSuperTypes="#//ResponseModality">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"
-        changeable="false" transient="true" defaultValueLiteral="CHOICE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbBadChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbBadChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EnterResponse" eSuperTypes="#//ResponseModality">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"
@@ -810,12 +809,11 @@
         unsettable="true" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="questionWithImage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MapQuestionableFact" eSuperTypes="#//AQuestionableFact">
+  <eClassifiers xsi:type="ecore:EClass" name="AMapQuestionableFact" abstract="true"
+      eSuperTypes="#//AQuestionableFact">
     <eStructuralFeatures xsi:type="ecore:EReference" name="map" lowerBound="1" eType="#//Map"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mapsolutions" upperBound="-1"
         eType="#//MapSolution" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EGeographyValue"
-        defaultValueLiteral="NONE"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="consigne" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MapSolution">
@@ -846,5 +844,9 @@
     <eLiterals name="DATE" value="1"/>
     <eLiterals name="MIX" value="2"/>
     <eLiterals name="NONE" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MapQuestionableFact" eSuperTypes="#//AMapQuestionableFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EGeographyValue"
+        defaultValueLiteral="NONE"/>
   </eClassifiers>
 </ecore:EPackage>

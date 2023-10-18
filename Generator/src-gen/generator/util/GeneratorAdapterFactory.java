@@ -642,8 +642,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMapQuestionableFact(MapQuestionableFact object) {
-			return createMapQuestionableFactAdapter();
+		public Adapter caseAMapQuestionableFact(AMapQuestionableFact object) {
+			return createAMapQuestionableFactAdapter();
 		}
 
 		@Override
@@ -669,6 +669,11 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseHChronology(HChronology object) {
 			return createHChronologyAdapter();
+		}
+
+		@Override
+		public Adapter caseMapQuestionableFact(MapQuestionableFact object) {
+			return createMapQuestionableFactAdapter();
 		}
 
 		@Override
@@ -2297,6 +2302,20 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAQuestionableFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.AMapQuestionableFact <em>AMap Questionable Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.AMapQuestionableFact
+	 * @generated
+	 */
+	public Adapter createAMapQuestionableFactAdapter() {
 		return null;
 	}
 

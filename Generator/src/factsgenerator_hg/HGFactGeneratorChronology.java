@@ -8,6 +8,7 @@ import java.util.Set;
 
 import exceptions.BadSolutionGenerationException;
 import factgenerator_template.FactGeneratorTemplate;
+import generator.AMapQuestionableFact;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
@@ -49,8 +50,8 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 		return soluce;
 	}
 	
-	private MapQuestionableFact buildQF(ATask task, HistoryFact fact, Map map) {
-		MapQuestionableFact qf = new MapQuestionableFactImpl(); 
+	private AMapQuestionableFact buildQF(ATask task, HistoryFact fact, Map map) {
+		AMapQuestionableFact qf = new MapQuestionableFactImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		qf.setMap(map);
 		if(fact.getTime() instanceof Date) {
@@ -100,8 +101,8 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 		for(AQuestionableFact qfact: facts) {
 			boolean conditionValide = true;
 			for(QuestionedFact fact: previousFacts) {
-				MapQuestionableFact prevF = (MapQuestionableFact) fact.getQuestionablefact();
-				MapQuestionableFact newF = (MapQuestionableFact) qfact;
+				AMapQuestionableFact prevF = (AMapQuestionableFact) fact.getQuestionablefact();
+				AMapQuestionableFact newF = (AMapQuestionableFact) qfact;
 				for(MapSolution sol1 : prevF.getMapsolutions()) {
 					for(MapSolution sol2 : newF.getMapsolutions()) {
 						if(sol1.getValue().equals(sol2.getValue())) {

@@ -309,7 +309,7 @@ public class EducationalElementsGenerator {
 			}
 		}
 		
-		ALGAGenerator.LOGGER.severe("CurrentOLs "+cols);
+		ALGAGenerator.LOGGER.info("Eligible CurrentOLs="+cols);
 		return cols;
 	}
 	

@@ -75,9 +75,7 @@ public class GameElementsGenerator {
 			if(curse.getStartLevel() <= playerLevel) {
 				curses.add(curse.getCurse()); 
 			}
-		}
-		
-		ALGAGenerator.LOGGER.severe("curses "+curses);
+		}		
 		return curses; 
 	}
 	

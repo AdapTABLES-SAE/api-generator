@@ -1984,22 +1984,22 @@ public interface GeneratorPackage extends EPackage {
 	int MULTIPLE_CHOICE__TYPE = RESPONSE_MODALITY_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Nb Bad Choices</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLE_CHOICE__NB_BAD_CHOICES = RESPONSE_MODALITY_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Nb Choices</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_CHOICE__NB_CHOICES = RESPONSE_MODALITY_FEATURE_COUNT + 2;
+	int MULTIPLE_CHOICE__NB_CHOICES = RESPONSE_MODALITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Nb Bad Choices</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_CHOICE__NB_BAD_CHOICES = RESPONSE_MODALITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Multiple Choice</em>' class.
@@ -8247,14 +8247,14 @@ public interface GeneratorPackage extends EPackage {
 	int CLASSROOMS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.MapQuestionableFactImpl <em>Map Questionable Fact</em>}' class.
+	 * The meta object id for the '{@link generator.impl.AMapQuestionableFactImpl <em>AMap Questionable Fact</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.MapQuestionableFactImpl
-	 * @see generator.impl.GeneratorPackageImpl#getMapQuestionableFact()
+	 * @see generator.impl.AMapQuestionableFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getAMapQuestionableFact()
 	 * @generated
 	 */
-	int MAP_QUESTIONABLE_FACT = 115;
+	int AMAP_QUESTIONABLE_FACT = 115;
 
 	/**
 	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
@@ -8263,7 +8263,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__WAS_SELECTED = AQUESTIONABLE_FACT__WAS_SELECTED;
+	int AMAP_QUESTIONABLE_FACT__WAS_SELECTED = AQUESTIONABLE_FACT__WAS_SELECTED;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -8272,7 +8272,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__ACHIEVED = AQUESTIONABLE_FACT__ACHIEVED;
+	int AMAP_QUESTIONABLE_FACT__ACHIEVED = AQUESTIONABLE_FACT__ACHIEVED;
 
 	/**
 	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
@@ -8281,7 +8281,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__RESULTS = AQUESTIONABLE_FACT__RESULTS;
+	int AMAP_QUESTIONABLE_FACT__RESULTS = AQUESTIONABLE_FACT__RESULTS;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -8290,7 +8290,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__ID = AQUESTIONABLE_FACT__ID;
+	int AMAP_QUESTIONABLE_FACT__ID = AQUESTIONABLE_FACT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
@@ -8299,7 +8299,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+	int AMAP_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
 	 * The feature id for the '<em><b>Map</b></em>' reference.
@@ -8308,7 +8308,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__MAP = AQUESTIONABLE_FACT_FEATURE_COUNT + 0;
+	int AMAP_QUESTIONABLE_FACT__MAP = AQUESTIONABLE_FACT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Mapsolutions</b></em>' containment reference list.
@@ -8317,16 +8317,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__MAPSOLUTIONS = AQUESTIONABLE_FACT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_QUESTIONABLE_FACT__TYPE = AQUESTIONABLE_FACT_FEATURE_COUNT + 2;
+	int AMAP_QUESTIONABLE_FACT__MAPSOLUTIONS = AQUESTIONABLE_FACT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Consigne</b></em>' attribute.
@@ -8335,25 +8326,35 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__CONSIGNE = AQUESTIONABLE_FACT_FEATURE_COUNT + 3;
+	int AMAP_QUESTIONABLE_FACT__CONSIGNE = AQUESTIONABLE_FACT_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Map Questionable Fact</em>' class.
+	 * The number of structural features of the '<em>AMap Questionable Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT_FEATURE_COUNT = AQUESTIONABLE_FACT_FEATURE_COUNT + 4;
+	int AMAP_QUESTIONABLE_FACT_FEATURE_COUNT = AQUESTIONABLE_FACT_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of operations of the '<em>Map Questionable Fact</em>' class.
+	 * The number of operations of the '<em>AMap Questionable Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT_OPERATION_COUNT = AQUESTIONABLE_FACT_OPERATION_COUNT + 0;
+	int AMAP_QUESTIONABLE_FACT_OPERATION_COUNT = AQUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.MapQuestionableFactImpl <em>Map Questionable Fact</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MapQuestionableFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMapQuestionableFact()
+	 * @generated
+	 */
+	int MAP_QUESTIONABLE_FACT = 121;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MapSolutionImpl <em>Map Solution</em>}' class.
@@ -8856,6 +8857,105 @@ public interface GeneratorPackage extends EPackage {
 	int HCHRONOLOGY_OPERATION_COUNT = ORDERING_TASK_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTIONABLE_FACT__WAS_SELECTED = AMAP_QUESTIONABLE_FACT__WAS_SELECTED;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTIONABLE_FACT__ACHIEVED = AMAP_QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTIONABLE_FACT__RESULTS = AMAP_QUESTIONABLE_FACT__RESULTS;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTIONABLE_FACT__ID = AMAP_QUESTIONABLE_FACT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = AMAP_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Map</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTIONABLE_FACT__MAP = AMAP_QUESTIONABLE_FACT__MAP;
+
+	/**
+	 * The feature id for the '<em><b>Mapsolutions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTIONABLE_FACT__MAPSOLUTIONS = AMAP_QUESTIONABLE_FACT__MAPSOLUTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Consigne</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTIONABLE_FACT__CONSIGNE = AMAP_QUESTIONABLE_FACT__CONSIGNE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTIONABLE_FACT__TYPE = AMAP_QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Map Questionable Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTIONABLE_FACT_FEATURE_COUNT = AMAP_QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Map Questionable Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTIONABLE_FACT_OPERATION_COUNT = AMAP_QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8863,7 +8963,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 121;
+	int DIRECTIONS = 122;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -8873,7 +8973,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 122;
+	int DUNGEON_MODE = 123;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -8883,7 +8983,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 123;
+	int TABLE_BUILD = 124;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -8893,7 +8993,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 124;
+	int RESULT_POSITION = 125;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -8903,7 +9003,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 125;
+	int ESINGLE_TARGET = 126;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -8913,7 +9013,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 126;
+	int ETASK_TYPE = 127;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -8923,7 +9023,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 127;
+	int EMODALITY = 128;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -8933,7 +9033,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 128;
+	int ESEVERAL_TARGET = 129;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -8943,7 +9043,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 129;
+	int ELEMENT_SIZE = 130;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -8953,7 +9053,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 130;
+	int GP_CATEGORY = 131;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -8963,7 +9063,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 131;
+	int ECORRECTNESS = 132;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -8973,7 +9073,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 132;
+	int EBOUNDARY = 133;
 
 	/**
 	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
@@ -8983,7 +9083,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
 	 * @generated
 	 */
-	int EROOM_TYPE = 133;
+	int EROOM_TYPE = 134;
 
 	/**
 	 * The meta object id for the '{@link generator.EGeographyValue <em>EGeography Value</em>}' enum.
@@ -8993,7 +9093,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEGeographyValue()
 	 * @generated
 	 */
-	int EGEOGRAPHY_VALUE = 134;
+	int EGEOGRAPHY_VALUE = 135;
 
 	/**
 	 * The meta object id for the '{@link generator.EHistoryTarget <em>EHistory Target</em>}' enum.
@@ -9003,7 +9103,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEHistoryTarget()
 	 * @generated
 	 */
-	int EHISTORY_TARGET = 135;
+	int EHISTORY_TARGET = 136;
 
 	/**
 	 * The meta object id for the '{@link generator.ELegendTarget <em>ELegend Target</em>}' enum.
@@ -9013,7 +9113,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getELegendTarget()
 	 * @generated
 	 */
-	int ELEGEND_TARGET = 136;
+	int ELEGEND_TARGET = 137;
 
 	/**
 	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
@@ -9023,7 +9123,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 137;
+	int ESTATEMENT_TYPE = 138;
 
 	/**
 	 * The meta object id for the '{@link generator.ETimeTarget <em>ETime Target</em>}' enum.
@@ -9033,7 +9133,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETimeTarget()
 	 * @generated
 	 */
-	int ETIME_TARGET = 138;
+	int ETIME_TARGET = 139;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -13599,6 +13699,49 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getAQuestionableFact_QuestionWithImage();
 
 	/**
+	 * Returns the meta object for class '{@link generator.AMapQuestionableFact <em>AMap Questionable Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>AMap Questionable Fact</em>'.
+	 * @see generator.AMapQuestionableFact
+	 * @generated
+	 */
+	EClass getAMapQuestionableFact();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.AMapQuestionableFact#getMap <em>Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Map</em>'.
+	 * @see generator.AMapQuestionableFact#getMap()
+	 * @see #getAMapQuestionableFact()
+	 * @generated
+	 */
+	EReference getAMapQuestionableFact_Map();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.AMapQuestionableFact#getMapsolutions <em>Mapsolutions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Mapsolutions</em>'.
+	 * @see generator.AMapQuestionableFact#getMapsolutions()
+	 * @see #getAMapQuestionableFact()
+	 * @generated
+	 */
+	EReference getAMapQuestionableFact_Mapsolutions();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.AMapQuestionableFact#getConsigne <em>Consigne</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Consigne</em>'.
+	 * @see generator.AMapQuestionableFact#getConsigne()
+	 * @see #getAMapQuestionableFact()
+	 * @generated
+	 */
+	EAttribute getAMapQuestionableFact_Consigne();
+
+	/**
 	 * Returns the meta object for class '{@link generator.MapQuestionableFact <em>Map Questionable Fact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13607,28 +13750,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMapQuestionableFact();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.MapQuestionableFact#getMap <em>Map</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Map</em>'.
-	 * @see generator.MapQuestionableFact#getMap()
-	 * @see #getMapQuestionableFact()
-	 * @generated
-	 */
-	EReference getMapQuestionableFact_Map();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link generator.MapQuestionableFact#getMapsolutions <em>Mapsolutions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Mapsolutions</em>'.
-	 * @see generator.MapQuestionableFact#getMapsolutions()
-	 * @see #getMapQuestionableFact()
-	 * @generated
-	 */
-	EReference getMapQuestionableFact_Mapsolutions();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.MapQuestionableFact#getType <em>Type</em>}'.
@@ -13640,17 +13761,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMapQuestionableFact_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.MapQuestionableFact#getConsigne <em>Consigne</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Consigne</em>'.
-	 * @see generator.MapQuestionableFact#getConsigne()
-	 * @see #getMapQuestionableFact()
-	 * @generated
-	 */
-	EAttribute getMapQuestionableFact_Consigne();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MapSolution <em>Map Solution</em>}'.
@@ -17671,6 +17781,40 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE = eINSTANCE.getAQuestionableFact_QuestionWithImage();
 
 		/**
+		 * The meta object literal for the '{@link generator.impl.AMapQuestionableFactImpl <em>AMap Questionable Fact</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.AMapQuestionableFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getAMapQuestionableFact()
+		 * @generated
+		 */
+		EClass AMAP_QUESTIONABLE_FACT = eINSTANCE.getAMapQuestionableFact();
+
+		/**
+		 * The meta object literal for the '<em><b>Map</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference AMAP_QUESTIONABLE_FACT__MAP = eINSTANCE.getAMapQuestionableFact_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Mapsolutions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference AMAP_QUESTIONABLE_FACT__MAPSOLUTIONS = eINSTANCE.getAMapQuestionableFact_Mapsolutions();
+
+		/**
+		 * The meta object literal for the '<em><b>Consigne</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AMAP_QUESTIONABLE_FACT__CONSIGNE = eINSTANCE.getAMapQuestionableFact_Consigne();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.MapQuestionableFactImpl <em>Map Questionable Fact</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -17681,36 +17825,12 @@ public interface GeneratorPackage extends EPackage {
 		EClass MAP_QUESTIONABLE_FACT = eINSTANCE.getMapQuestionableFact();
 
 		/**
-		 * The meta object literal for the '<em><b>Map</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MAP_QUESTIONABLE_FACT__MAP = eINSTANCE.getMapQuestionableFact_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>Mapsolutions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MAP_QUESTIONABLE_FACT__MAPSOLUTIONS = eINSTANCE.getMapQuestionableFact_Mapsolutions();
-
-		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute MAP_QUESTIONABLE_FACT__TYPE = eINSTANCE.getMapQuestionableFact_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Consigne</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MAP_QUESTIONABLE_FACT__CONSIGNE = eINSTANCE.getMapQuestionableFact_Consigne();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MapSolutionImpl <em>Map Solution</em>}' class.

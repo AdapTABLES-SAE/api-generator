@@ -1007,11 +1007,11 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.MAP_QUESTIONABLE_FACT: {
-			MapQuestionableFact mapQuestionableFact = (MapQuestionableFact) theEObject;
-			T result = caseMapQuestionableFact(mapQuestionableFact);
+		case GeneratorPackage.AMAP_QUESTIONABLE_FACT: {
+			AMapQuestionableFact aMapQuestionableFact = (AMapQuestionableFact) theEObject;
+			T result = caseAMapQuestionableFact(aMapQuestionableFact);
 			if (result == null)
-				result = caseAQuestionableFact(mapQuestionableFact);
+				result = caseAQuestionableFact(aMapQuestionableFact);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1059,6 +1059,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = caseOrderingTask(hChronology);
 			if (result == null)
 				result = caseATask(hChronology);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.MAP_QUESTIONABLE_FACT: {
+			MapQuestionableFact mapQuestionableFact = (MapQuestionableFact) theEObject;
+			T result = caseMapQuestionableFact(mapQuestionableFact);
+			if (result == null)
+				result = caseAMapQuestionableFact(mapQuestionableFact);
+			if (result == null)
+				result = caseAQuestionableFact(mapQuestionableFact);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -2790,6 +2801,21 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAQuestionableFact(AQuestionableFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>AMap Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>AMap Questionable Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAMapQuestionableFact(AMapQuestionableFact object) {
 		return null;
 	}
 

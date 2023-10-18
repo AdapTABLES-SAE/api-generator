@@ -253,8 +253,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createTeachers();
 		case GeneratorPackage.CLASSROOMS:
 			return createClassrooms();
-		case GeneratorPackage.MAP_QUESTIONABLE_FACT:
-			return createMapQuestionableFact();
 		case GeneratorPackage.MAP_SOLUTION:
 			return createMapSolution();
 		case GeneratorPackage.HG_LEVEL:
@@ -265,6 +263,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createDateQuestionableFact();
 		case GeneratorPackage.HCHRONOLOGY:
 			return createHChronology();
+		case GeneratorPackage.MAP_QUESTIONABLE_FACT:
+			return createMapQuestionableFact();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
