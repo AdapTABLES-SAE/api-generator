@@ -49,12 +49,12 @@ public interface MapSolution extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map Position</em>' reference.
-	 * @see #setMapPosition(MapElementPosition)
+	 * @see #setMapPosition(VizualisationPosition)
 	 * @see generator.GeneratorPackage#getMapSolution_MapPosition()
 	 * @model required="true"
 	 * @generated
 	 */
-	MapElementPosition getMapPosition();
+	VizualisationPosition getMapPosition();
 
 	/**
 	 * Sets the value of the '{@link generator.MapSolution#getMapPosition <em>Map Position</em>}' reference.
@@ -64,6 +64,6 @@ public interface MapSolution extends EObject {
 	 * @see #getMapPosition()
 	 * @generated
 	 */
-	void setMapPosition(MapElementPosition value);
+	void setMapPosition(VizualisationPosition value);
 
 } // MapSolution

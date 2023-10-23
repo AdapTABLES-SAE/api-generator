@@ -3,10 +3,10 @@
 package generator.impl;
 
 import generator.GeneratorPackage;
-import generator.Map;
 import generator.Position;
 import generator.PositionedMapElement;
 
+import generator.Vizualisation;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -54,7 +54,7 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	 * @generated
 	 * @ordered
 	 */
-	protected Map map;
+	protected Vizualisation map;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -93,10 +93,10 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map getMap() {
+	public Vizualisation getMap() {
 		if (map != null && map.eIsProxy()) {
 			InternalEObject oldMap = (InternalEObject) map;
-			map = (Map) eResolveProxy(oldMap);
+			map = (Vizualisation) eResolveProxy(oldMap);
 			if (map != oldMap) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
@@ -111,7 +111,7 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map basicGetMap() {
+	public Vizualisation basicGetMap() {
 		return map;
 	}
 
@@ -120,8 +120,8 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMap(Map newMap) {
-		Map oldMap = map;
+	public void setMap(Vizualisation newMap) {
+		Vizualisation oldMap = map;
 		map = newMap;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_MAP_ELEMENT__MAP, oldMap,
@@ -174,7 +174,7 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 			getCreatedPositions().addAll((Collection<? extends Position>) newValue);
 			return;
 		case GeneratorPackage.POSITIONED_MAP_ELEMENT__MAP:
-			setMap((Map) newValue);
+			setMap((Vizualisation) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,7 +192,7 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 			getCreatedPositions().clear();
 			return;
 		case GeneratorPackage.POSITIONED_MAP_ELEMENT__MAP:
-			setMap((Map) null);
+			setMap((Vizualisation) null);
 			return;
 		}
 		super.eUnset(featureID);

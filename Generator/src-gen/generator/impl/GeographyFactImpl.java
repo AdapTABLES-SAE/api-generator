@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import generator.EGeographyValue;
 import generator.GeneratorPackage;
 import generator.GeographyFact;
-import generator.MapElementPosition;
+import generator.VizualisationPosition;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +36,7 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	 * @generated
 	 * @ordered
 	 */
-	protected MapElementPosition position;
+	protected VizualisationPosition position;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -102,10 +102,10 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPosition getPosition() {
+	public VizualisationPosition getPosition() {
 		if (position != null && position.eIsProxy()) {
 			InternalEObject oldPosition = (InternalEObject) position;
-			position = (MapElementPosition) eResolveProxy(oldPosition);
+			position = (VizualisationPosition) eResolveProxy(oldPosition);
 			if (position != oldPosition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.GEOGRAPHY_FACT__POSITION,
@@ -120,7 +120,7 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPosition basicGetPosition() {
+	public VizualisationPosition basicGetPosition() {
 		return position;
 	}
 
@@ -129,8 +129,8 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPosition(MapElementPosition newPosition) {
-		MapElementPosition oldPosition = position;
+	public void setPosition(VizualisationPosition newPosition) {
+		VizualisationPosition oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GEOGRAPHY_FACT__POSITION,
@@ -210,7 +210,7 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case GeneratorPackage.GEOGRAPHY_FACT__POSITION:
-			setPosition((MapElementPosition) newValue);
+			setPosition((VizualisationPosition) newValue);
 			return;
 		case GeneratorPackage.GEOGRAPHY_FACT__TYPE:
 			setType((EGeographyValue) newValue);
@@ -231,7 +231,7 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case GeneratorPackage.GEOGRAPHY_FACT__POSITION:
-			setPosition((MapElementPosition) null);
+			setPosition((VizualisationPosition) null);
 			return;
 		case GeneratorPackage.GEOGRAPHY_FACT__TYPE:
 			setType(TYPE_EDEFAULT);

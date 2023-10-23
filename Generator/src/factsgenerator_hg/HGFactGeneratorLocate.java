@@ -9,20 +9,20 @@ import java.util.Set;
 
 import exceptions.BadSolutionGenerationException;
 import factgenerator_template.FactGeneratorTemplate;
-import generator.AMapQuestionableFact;
 import generator.AQuestionableFact;
 import generator.ATask;
+import generator.AVizualisationQuestionableFact;
 import generator.AbstractFact;
 import generator.ECorrectness;
 import generator.EGeographyValue;
 import generator.GeographyFact;
-import generator.Map;
 import generator.MapQuestionableFact;
-import generator.MapSolution;
 import generator.MultipleChoice;
 import generator.SetOfFacts;
+import generator.Vizualisation;
+import generator.VizualisationSolution;
 import generator.impl.MapQuestionableFactImpl;
-import generator.impl.MapSolutionImpl;
+import generator.impl.VizualisationSolutionImpl;
 import structures.DungeonElements;
 import structures.HistoryGeographyData;
 import structures.Shuffle;
@@ -41,7 +41,7 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 		taskID = task.getID();
 		
 		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
-			if(setoffact.getMap() != null) {
+			if(setoffact.getVizualisation() != null) {
 				List<GeographyFact> facts = new ArrayList<>();
 				for (AbstractFact f : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
 					if(f instanceof GeographyFact) {
@@ -50,7 +50,7 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 					}
 				}
 				if(!facts.isEmpty()) {
-					questionableFacts.add(buildQF(task, facts, setoffact.getMap()));
+					questionableFacts.add(buildQF(task, facts, setoffact.getVizualisation()));
 				}
 			}
 		}	
@@ -59,16 +59,16 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 	
 	
 
-	private AMapQuestionableFact buildQF(ATask task, List<GeographyFact> facts, Map map) {
+	private AVizualisationQuestionableFact buildQF(ATask task, List<GeographyFact> facts, Vizualisation map) {
 		MapQuestionableFact qf = new MapQuestionableFactImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
-		qf.setMap(map);
+		qf.setVizualisation(map);
 		qf.setType(facts.get(0).getType());
 		for (GeographyFact fact : facts) {
-			MapSolution soluce = new MapSolutionImpl();
+			VizualisationSolution soluce = new VizualisationSolutionImpl();
 			soluce.setValue(fact.getValue());
-			soluce.setMapPosition(fact.getPosition());
-			qf.getMapsolutions().add(soluce);
+			soluce.setVizualisationPosition(fact.getPosition());
+			qf.getVizualisationSolutions().add(soluce);
 		}
 		
 		if(task.getNbExpectedAnswers() == facts.size()) {
@@ -82,8 +82,8 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 	@Override
 	protected List<Soluce> getListOfGoodSolutions(AQuestionableFact qFact) {
 		List<Soluce> solutions = new ArrayList<>();
-		for (MapSolution prop : ((AMapQuestionableFact) qFact).getMapsolutions()) {
-			solutions.add(new Soluce(prop.getValue(), prop.getMapPosition()));
+		for (VizualisationSolution prop : ((AVizualisationQuestionableFact) qFact).getVizualisationSolutions()) {
+			solutions.add(new Soluce(prop.getValue(), prop.getVizualisationPosition()));
 		}
 		return solutions;
 	}
@@ -136,7 +136,7 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 
 	@Override
 	protected int correctnessToReach(AQuestionableFact fact) {
-		return ((AMapQuestionableFact) fact).getMapsolutions().size();
+		return ((AVizualisationQuestionableFact) fact).getVizualisationSolutions().size();
 	}	
 	
 	@Override

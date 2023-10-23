@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class MapQuestionableFactImpl extends AMapQuestionableFactImpl implements MapQuestionableFact {
+public class MapQuestionableFactImpl extends AVizualisationQuestionableFactImpl implements MapQuestionableFact {
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->

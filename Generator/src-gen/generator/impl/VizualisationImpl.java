@@ -2,33 +2,36 @@
  */
 package generator.impl;
 
+import generator.GeneratorPackage;
+import generator.Vizualisation;
+import generator.VizualisationPosition;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import generator.GeneratorPackage;
-import generator.Map;
-import generator.MapElementPosition;
-
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Map</b></em>'.
+ * An implementation of the model object '<em><b>Vizualisation</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.MapImpl#getPositions <em>Positions</em>}</li>
+ *   <li>{@link generator.impl.VizualisationImpl#getPositions <em>Positions</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MapImpl extends ImageImpl implements Map {
+public class VizualisationImpl extends ImageImpl implements Vizualisation {
 	/**
 	 * The cached value of the '{@link #getPositions() <em>Positions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -37,14 +40,14 @@ public class MapImpl extends ImageImpl implements Map {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MapElementPosition> positions;
+	protected EList<VizualisationPosition> positions;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapImpl() {
+	public VizualisationImpl() {
 		super();
 	}
 
@@ -55,7 +58,7 @@ public class MapImpl extends ImageImpl implements Map {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.MAP;
+		return GeneratorPackage.Literals.VIZUALISATION;
 	}
 
 	/**
@@ -63,10 +66,10 @@ public class MapImpl extends ImageImpl implements Map {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MapElementPosition> getPositions() {
+	public EList<VizualisationPosition> getPositions() {
 		if (positions == null) {
-			positions = new EObjectContainmentEList<MapElementPosition>(MapElementPosition.class, this,
-					GeneratorPackage.MAP__POSITIONS);
+			positions = new EObjectContainmentEList<VizualisationPosition>(VizualisationPosition.class, this,
+					GeneratorPackage.VIZUALISATION__POSITIONS);
 		}
 		return positions;
 	}
@@ -79,7 +82,7 @@ public class MapImpl extends ImageImpl implements Map {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.MAP__POSITIONS:
+		case GeneratorPackage.VIZUALISATION__POSITIONS:
 			return ((InternalEList<?>) getPositions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -93,7 +96,7 @@ public class MapImpl extends ImageImpl implements Map {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.MAP__POSITIONS:
+		case GeneratorPackage.VIZUALISATION__POSITIONS:
 			return getPositions();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,9 +111,9 @@ public class MapImpl extends ImageImpl implements Map {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.MAP__POSITIONS:
+		case GeneratorPackage.VIZUALISATION__POSITIONS:
 			getPositions().clear();
-			getPositions().addAll((Collection<? extends MapElementPosition>) newValue);
+			getPositions().addAll((Collection<? extends VizualisationPosition>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -124,7 +127,7 @@ public class MapImpl extends ImageImpl implements Map {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.MAP__POSITIONS:
+		case GeneratorPackage.VIZUALISATION__POSITIONS:
 			getPositions().clear();
 			return;
 		}
@@ -139,10 +142,10 @@ public class MapImpl extends ImageImpl implements Map {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.MAP__POSITIONS:
+		case GeneratorPackage.VIZUALISATION__POSITIONS:
 			return positions != null && !positions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //MapImpl
+} //VizualisationImpl

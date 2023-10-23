@@ -760,22 +760,22 @@ public interface GeneratorFactory extends EFactory {
 	Image createImage();
 
 	/**
-	 * Returns a new object of class '<em>Map</em>'.
+	 * Returns a new object of class '<em>Vizualisation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map</em>'.
+	 * @return a new object of class '<em>Vizualisation</em>'.
 	 * @generated
 	 */
-	Map createMap();
+	Vizualisation createVizualisation();
 
 	/**
-	 * Returns a new object of class '<em>Map Element Position</em>'.
+	 * Returns a new object of class '<em>Vizualisation Position</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map Element Position</em>'.
+	 * @return a new object of class '<em>Vizualisation Position</em>'.
 	 * @generated
 	 */
-	MapElementPosition createMapElementPosition();
+	VizualisationPosition createVizualisationPosition();
 
 	/**
 	 * Returns a new object of class '<em>Legend Symbol</em>'.
@@ -904,6 +904,15 @@ public interface GeneratorFactory extends EFactory {
 	Classrooms createClassrooms();
 
 	/**
+	 * Returns a new object of class '<em>Vizualisation Solution</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Vizualisation Solution</em>'.
+	 * @generated
+	 */
+	VizualisationSolution createVizualisationSolution();
+
+	/**
 	 * Returns a new object of class '<em>Map Questionable Fact</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -911,15 +920,6 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	MapQuestionableFact createMapQuestionableFact();
-
-	/**
-	 * Returns a new object of class '<em>Map Solution</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map Solution</em>'.
-	 * @generated
-	 */
-	MapSolution createMapSolution();
 
 	/**
 	 * Returns a new object of class '<em>HG Level</em>'.

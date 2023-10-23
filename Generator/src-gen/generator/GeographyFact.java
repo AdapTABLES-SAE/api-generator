@@ -26,12 +26,12 @@ public interface GeographyFact extends AbstractFact {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position</em>' reference.
-	 * @see #setPosition(MapElementPosition)
+	 * @see #setPosition(VizualisationPosition)
 	 * @see generator.GeneratorPackage#getGeographyFact_Position()
 	 * @model required="true"
 	 * @generated
 	 */
-	MapElementPosition getPosition();
+	VizualisationPosition getPosition();
 
 	/**
 	 * Sets the value of the '{@link generator.GeographyFact#getPosition <em>Position</em>}' reference.
@@ -41,7 +41,7 @@ public interface GeographyFact extends AbstractFact {
 	 * @see #getPosition()
 	 * @generated
 	 */
-	void setPosition(MapElementPosition value);
+	void setPosition(VizualisationPosition value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.

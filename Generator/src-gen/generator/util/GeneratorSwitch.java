@@ -844,18 +844,18 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.MAP: {
-			Map map = (Map) theEObject;
-			T result = caseMap(map);
+		case GeneratorPackage.VIZUALISATION: {
+			Vizualisation vizualisation = (Vizualisation) theEObject;
+			T result = caseVizualisation(vizualisation);
 			if (result == null)
-				result = caseImage(map);
+				result = caseImage(vizualisation);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.MAP_ELEMENT_POSITION: {
-			MapElementPosition mapElementPosition = (MapElementPosition) theEObject;
-			T result = caseMapElementPosition(mapElementPosition);
+		case GeneratorPackage.VIZUALISATION_POSITION: {
+			VizualisationPosition vizualisationPosition = (VizualisationPosition) theEObject;
+			T result = caseVizualisationPosition(vizualisationPosition);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1007,18 +1007,18 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT: {
-			AMapQuestionableFact aMapQuestionableFact = (AMapQuestionableFact) theEObject;
-			T result = caseAMapQuestionableFact(aMapQuestionableFact);
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT: {
+			AVizualisationQuestionableFact aVizualisationQuestionableFact = (AVizualisationQuestionableFact) theEObject;
+			T result = caseAVizualisationQuestionableFact(aVizualisationQuestionableFact);
 			if (result == null)
-				result = caseAQuestionableFact(aMapQuestionableFact);
+				result = caseAQuestionableFact(aVizualisationQuestionableFact);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.MAP_SOLUTION: {
-			MapSolution mapSolution = (MapSolution) theEObject;
-			T result = caseMapSolution(mapSolution);
+		case GeneratorPackage.VIZUALISATION_SOLUTION: {
+			VizualisationSolution vizualisationSolution = (VizualisationSolution) theEObject;
+			T result = caseVizualisationSolution(vizualisationSolution);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1067,7 +1067,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			MapQuestionableFact mapQuestionableFact = (MapQuestionableFact) theEObject;
 			T result = caseMapQuestionableFact(mapQuestionableFact);
 			if (result == null)
-				result = caseAMapQuestionableFact(mapQuestionableFact);
+				result = caseAVizualisationQuestionableFact(mapQuestionableFact);
 			if (result == null)
 				result = caseAQuestionableFact(mapQuestionableFact);
 			if (result == null)
@@ -2520,32 +2520,32 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Map</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Vizualisation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Map</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Vizualisation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMap(Map object) {
+	public T caseVizualisation(Vizualisation object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Map Element Position</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Vizualisation Position</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Map Element Position</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Vizualisation Position</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMapElementPosition(MapElementPosition object) {
+	public T caseVizualisationPosition(VizualisationPosition object) {
 		return null;
 	}
 
@@ -2805,17 +2805,32 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>AMap Questionable Fact</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>AVizualisation Questionable Fact</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>AMap Questionable Fact</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>AVizualisation Questionable Fact</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAMapQuestionableFact(AMapQuestionableFact object) {
+	public T caseAVizualisationQuestionableFact(AVizualisationQuestionableFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Vizualisation Solution</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Vizualisation Solution</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVizualisationSolution(VizualisationSolution object) {
 		return null;
 	}
 
@@ -2831,21 +2846,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMapQuestionableFact(MapQuestionableFact object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Map Solution</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Map Solution</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMapSolution(MapSolution object) {
 		return null;
 	}
 

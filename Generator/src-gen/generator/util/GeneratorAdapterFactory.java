@@ -547,13 +547,13 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMap(Map object) {
-			return createMapAdapter();
+		public Adapter caseVizualisation(Vizualisation object) {
+			return createVizualisationAdapter();
 		}
 
 		@Override
-		public Adapter caseMapElementPosition(MapElementPosition object) {
-			return createMapElementPositionAdapter();
+		public Adapter caseVizualisationPosition(VizualisationPosition object) {
+			return createVizualisationPositionAdapter();
 		}
 
 		@Override
@@ -642,13 +642,13 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseAMapQuestionableFact(AMapQuestionableFact object) {
-			return createAMapQuestionableFactAdapter();
+		public Adapter caseAVizualisationQuestionableFact(AVizualisationQuestionableFact object) {
+			return createAVizualisationQuestionableFactAdapter();
 		}
 
 		@Override
-		public Adapter caseMapSolution(MapSolution object) {
-			return createMapSolutionAdapter();
+		public Adapter caseVizualisationSolution(VizualisationSolution object) {
+			return createVizualisationSolutionAdapter();
 		}
 
 		@Override
@@ -2040,30 +2040,30 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.Map <em>Map</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.Vizualisation <em>Vizualisation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.Map
+	 * @see generator.Vizualisation
 	 * @generated
 	 */
-	public Adapter createMapAdapter() {
+	public Adapter createVizualisationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.MapElementPosition <em>Map Element Position</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.VizualisationPosition <em>Vizualisation Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.MapElementPosition
+	 * @see generator.VizualisationPosition
 	 * @generated
 	 */
-	public Adapter createMapElementPositionAdapter() {
+	public Adapter createVizualisationPositionAdapter() {
 		return null;
 	}
 
@@ -2306,16 +2306,30 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.AMapQuestionableFact <em>AMap Questionable Fact</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.AVizualisationQuestionableFact <em>AVizualisation Questionable Fact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.AMapQuestionableFact
+	 * @see generator.AVizualisationQuestionableFact
 	 * @generated
 	 */
-	public Adapter createAMapQuestionableFactAdapter() {
+	public Adapter createAVizualisationQuestionableFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.VizualisationSolution <em>Vizualisation Solution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.VizualisationSolution
+	 * @generated
+	 */
+	public Adapter createVizualisationSolutionAdapter() {
 		return null;
 	}
 
@@ -2330,20 +2344,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMapQuestionableFactAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link generator.MapSolution <em>Map Solution</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.MapSolution
-	 * @generated
-	 */
-	public Adapter createMapSolutionAdapter() {
 		return null;
 	}
 

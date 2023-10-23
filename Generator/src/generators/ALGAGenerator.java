@@ -36,13 +36,13 @@ public class ALGAGenerator {
 	private Dungeon generatedDungeon;
 	private DungeonElements dungeonElements;
 	
-	public static DidacticDomain DOMAIN = DidacticDomain.MATHEMATICS; //.HISTORY_GEOGRAPHY;
+	public static DidacticDomain DOMAIN = DidacticDomain.HISTORY_GEOGRAPHY;
 
 	public static void main(String[] args) {		
 		for(int i = 0; i < 1; i++) {
 			ALGAGenerator generator;
 			try {
-				generator = new ALGAGenerator("FICTIF02");
+				generator = new ALGAGenerator("FICTIF03");
 				generator.generate();
 				generator.printDungeon();
 				generator.saveDungeon("DungeonGen.xmi");

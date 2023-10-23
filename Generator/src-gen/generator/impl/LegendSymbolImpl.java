@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import generator.GeneratorPackage;
 import generator.Image;
 import generator.LegendSymbol;
-import generator.MapElementPosition;
+import generator.VizualisationPosition;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +47,7 @@ public class LegendSymbolImpl extends MinimalEObjectImpl.Container implements Le
 	 * @generated
 	 * @ordered
 	 */
-	protected MapElementPosition position;
+	protected VizualisationPosition position;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,10 +123,10 @@ public class LegendSymbolImpl extends MinimalEObjectImpl.Container implements Le
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPosition getPosition() {
+	public VizualisationPosition getPosition() {
 		if (position != null && position.eIsProxy()) {
 			InternalEObject oldPosition = (InternalEObject) position;
-			position = (MapElementPosition) eResolveProxy(oldPosition);
+			position = (VizualisationPosition) eResolveProxy(oldPosition);
 			if (position != oldPosition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.LEGEND_SYMBOL__POSITION,
@@ -141,7 +141,7 @@ public class LegendSymbolImpl extends MinimalEObjectImpl.Container implements Le
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPosition basicGetPosition() {
+	public VizualisationPosition basicGetPosition() {
 		return position;
 	}
 
@@ -150,8 +150,8 @@ public class LegendSymbolImpl extends MinimalEObjectImpl.Container implements Le
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPosition(MapElementPosition newPosition) {
-		MapElementPosition oldPosition = position;
+	public void setPosition(VizualisationPosition newPosition) {
+		VizualisationPosition oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEGEND_SYMBOL__POSITION, oldPosition,
@@ -202,7 +202,7 @@ public class LegendSymbolImpl extends MinimalEObjectImpl.Container implements Le
 			setImage((Image) newValue);
 			return;
 		case GeneratorPackage.LEGEND_SYMBOL__POSITION:
-			setPosition((MapElementPosition) newValue);
+			setPosition((VizualisationPosition) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -220,7 +220,7 @@ public class LegendSymbolImpl extends MinimalEObjectImpl.Container implements Le
 			setImage((Image) null);
 			return;
 		case GeneratorPackage.LEGEND_SYMBOL__POSITION:
-			setPosition((MapElementPosition) null);
+			setPosition((VizualisationPosition) null);
 			return;
 		}
 		super.eUnset(featureID);

@@ -12,6 +12,7 @@ import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
+import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
@@ -21,6 +22,7 @@ import managers.ClassroomAlreadyExistsException;
 import managers.ClassroomNotFoundException;
 import managers.Constant;
 import managers.DataManager;
+import managers.LearnerPlayerAlreadyExistsException;
 import managers.TeacherAlreadyExistsException;
 
 /**
@@ -63,6 +65,7 @@ public class DataResource {
 		manager.addTeacher(obj);		
 	}
 	
+
 	@GET
 	@Path("/students/teacher/{teacherID}/classroom/{classroomID}")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -88,6 +91,22 @@ public class DataResource {
 		manager.addClassroom(obj);		
 	}
 	
+	@PUT
+	@Path("/classroom")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void updateClassroom(String jsonContent, @Context ServletContext app) throws ClassroomNotFoundException { 
+		Constant.PROJECT_PATH = app.getRealPath("");
+		JSONObject obj = new JSONObject();
+		try {
+			obj = (JSONObject) new JSONParser().parse(jsonContent);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		manager = new DataManager(Constant.getTeacher((String) obj.get("idProf")));
+		manager.updateClassroom(obj);		
+	}
+	
 	@DELETE
 	@Path("/teacher/{teacherID}/classroom/{classroomID}")
 	public void deleteClassroom(@PathParam("teacherID") String teacherID, @PathParam("classroomID") String classroomID, @Context ServletContext app) throws ClassroomAlreadyExistsException { 
@@ -101,7 +120,7 @@ public class DataResource {
 	@POST
 	@Path("/student")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void addStudent(String jsonContent, @Context ServletContext app) throws ClassroomNotFoundException, ClassroomAlreadyExistsException { 
+	public void addStudent(String jsonContent, @Context ServletContext app) throws ClassroomNotFoundException, LearnerPlayerAlreadyExistsException { 
 		Constant.PROJECT_PATH = app.getRealPath("");
 		JSONObject obj = new JSONObject();
 		try {
@@ -112,6 +131,22 @@ public class DataResource {
 		
 		manager = new DataManager();
 		manager.addStudent(obj);		
+	}
+	
+	@PUT
+	@Path("/student")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void updateStudent(String jsonContent, @Context ServletContext app) throws ClassroomNotFoundException, NonExistantLearnerPlayerException  { 
+		Constant.PROJECT_PATH = app.getRealPath("");
+		JSONObject obj = new JSONObject();
+		try {
+			obj = (JSONObject) new JSONParser().parse(jsonContent);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		manager = new DataManager();
+		manager.updateStudent(obj);		
 	}
 	
 	@DELETE

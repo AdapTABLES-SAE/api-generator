@@ -2,11 +2,11 @@
  */
 package generator.impl;
 
-import generator.AMapQuestionableFact;
+import generator.AVizualisationQuestionableFact;
 import generator.GeneratorPackage;
-import generator.Map;
-import generator.MapSolution;
+import generator.Vizualisation;
 
+import generator.VizualisationSolution;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -24,39 +24,40 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>AMap Questionable Fact</b></em>'.
+ * An implementation of the model object '<em><b>AVizualisation Questionable Fact</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.AMapQuestionableFactImpl#getMap <em>Map</em>}</li>
- *   <li>{@link generator.impl.AMapQuestionableFactImpl#getMapsolutions <em>Mapsolutions</em>}</li>
- *   <li>{@link generator.impl.AMapQuestionableFactImpl#getConsigne <em>Consigne</em>}</li>
+ *   <li>{@link generator.impl.AVizualisationQuestionableFactImpl#getVizualisation <em>Vizualisation</em>}</li>
+ *   <li>{@link generator.impl.AVizualisationQuestionableFactImpl#getVizualisationSolutions <em>Vizualisation Solutions</em>}</li>
+ *   <li>{@link generator.impl.AVizualisationQuestionableFactImpl#getConsigne <em>Consigne</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl implements AMapQuestionableFact {
+public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFactImpl
+		implements AVizualisationQuestionableFact {
 	/**
-	 * The cached value of the '{@link #getMap() <em>Map</em>}' reference.
+	 * The cached value of the '{@link #getVizualisation() <em>Vizualisation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMap()
+	 * @see #getVizualisation()
 	 * @generated
 	 * @ordered
 	 */
-	protected Map map;
+	protected Vizualisation vizualisation;
 
 	/**
-	 * The cached value of the '{@link #getMapsolutions() <em>Mapsolutions</em>}' containment reference list.
+	 * The cached value of the '{@link #getVizualisationSolutions() <em>Vizualisation Solutions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMapsolutions()
+	 * @see #getVizualisationSolutions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MapSolution> mapsolutions;
+	protected EList<VizualisationSolution> vizualisationSolutions;
 
 	/**
 	 * The default value of the '{@link #getConsigne() <em>Consigne</em>}' attribute.
@@ -83,7 +84,7 @@ public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AMapQuestionableFactImpl() {
+	public AVizualisationQuestionableFactImpl() {
 		super();
 	}
 
@@ -94,7 +95,7 @@ public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.AMAP_QUESTIONABLE_FACT;
+		return GeneratorPackage.Literals.AVIZUALISATION_QUESTIONABLE_FACT;
 	}
 
 	/**
@@ -102,17 +103,18 @@ public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map getMap() {
-		if (map != null && map.eIsProxy()) {
-			InternalEObject oldMap = (InternalEObject) map;
-			map = (Map) eResolveProxy(oldMap);
-			if (map != oldMap) {
+	public Vizualisation getVizualisation() {
+		if (vizualisation != null && vizualisation.eIsProxy()) {
+			InternalEObject oldVizualisation = (InternalEObject) vizualisation;
+			vizualisation = (Vizualisation) eResolveProxy(oldVizualisation);
+			if (vizualisation != oldVizualisation) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.AMAP_QUESTIONABLE_FACT__MAP, oldMap, map));
+							GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION, oldVizualisation,
+							vizualisation));
 			}
 		}
-		return map;
+		return vizualisation;
 	}
 
 	/**
@@ -120,8 +122,8 @@ public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map basicGetMap() {
-		return map;
+	public Vizualisation basicGetVizualisation() {
+		return vizualisation;
 	}
 
 	/**
@@ -129,12 +131,12 @@ public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMap(Map newMap) {
-		Map oldMap = map;
-		map = newMap;
+	public void setVizualisation(Vizualisation newVizualisation) {
+		Vizualisation oldVizualisation = vizualisation;
+		vizualisation = newVizualisation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.AMAP_QUESTIONABLE_FACT__MAP, oldMap,
-					map));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION, oldVizualisation, vizualisation));
 	}
 
 	/**
@@ -142,12 +144,12 @@ public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MapSolution> getMapsolutions() {
-		if (mapsolutions == null) {
-			mapsolutions = new EObjectContainmentEList<MapSolution>(MapSolution.class, this,
-					GeneratorPackage.AMAP_QUESTIONABLE_FACT__MAPSOLUTIONS);
+	public EList<VizualisationSolution> getVizualisationSolutions() {
+		if (vizualisationSolutions == null) {
+			vizualisationSolutions = new EObjectContainmentEList<VizualisationSolution>(VizualisationSolution.class,
+					this, GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS);
 		}
-		return mapsolutions;
+		return vizualisationSolutions;
 	}
 
 	/**
@@ -168,8 +170,8 @@ public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl imp
 		String oldConsigne = consigne;
 		consigne = newConsigne;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.AMAP_QUESTIONABLE_FACT__CONSIGNE,
-					oldConsigne, consigne));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE, oldConsigne, consigne));
 	}
 
 	/**
@@ -180,8 +182,8 @@ public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl imp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT__MAPSOLUTIONS:
-			return ((InternalEList<?>) getMapsolutions()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS:
+			return ((InternalEList<?>) getVizualisationSolutions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -194,13 +196,13 @@ public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT__MAP:
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION:
 			if (resolve)
-				return getMap();
-			return basicGetMap();
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT__MAPSOLUTIONS:
-			return getMapsolutions();
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT__CONSIGNE:
+				return getVizualisation();
+			return basicGetVizualisation();
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS:
+			return getVizualisationSolutions();
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE:
 			return getConsigne();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -215,14 +217,14 @@ public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT__MAP:
-			setMap((Map) newValue);
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION:
+			setVizualisation((Vizualisation) newValue);
 			return;
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT__MAPSOLUTIONS:
-			getMapsolutions().clear();
-			getMapsolutions().addAll((Collection<? extends MapSolution>) newValue);
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS:
+			getVizualisationSolutions().clear();
+			getVizualisationSolutions().addAll((Collection<? extends VizualisationSolution>) newValue);
 			return;
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT__CONSIGNE:
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE:
 			setConsigne((String) newValue);
 			return;
 		}
@@ -237,13 +239,13 @@ public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT__MAP:
-			setMap((Map) null);
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION:
+			setVizualisation((Vizualisation) null);
 			return;
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT__MAPSOLUTIONS:
-			getMapsolutions().clear();
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS:
+			getVizualisationSolutions().clear();
 			return;
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT__CONSIGNE:
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE:
 			setConsigne(CONSIGNE_EDEFAULT);
 			return;
 		}
@@ -258,11 +260,11 @@ public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT__MAP:
-			return map != null;
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT__MAPSOLUTIONS:
-			return mapsolutions != null && !mapsolutions.isEmpty();
-		case GeneratorPackage.AMAP_QUESTIONABLE_FACT__CONSIGNE:
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION:
+			return vizualisation != null;
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS:
+			return vizualisationSolutions != null && !vizualisationSolutions.isEmpty();
+		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE:
 			return CONSIGNE_EDEFAULT == null ? consigne != null : !CONSIGNE_EDEFAULT.equals(consigne);
 		}
 		return super.eIsSet(featureID);
@@ -285,4 +287,4 @@ public abstract class AMapQuestionableFactImpl extends AQuestionableFactImpl imp
 		return result.toString();
 	}
 
-} //AMapQuestionableFactImpl
+} //AVizualisationQuestionableFactImpl

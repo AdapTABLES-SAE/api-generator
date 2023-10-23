@@ -2,28 +2,30 @@
  */
 package generator.impl;
 
+import generator.GeneratorPackage;
+import generator.VizualisationPosition;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import generator.GeneratorPackage;
-import generator.MapElementPosition;
-
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Map Element Position</b></em>'.
+ * An implementation of the model object '<em><b>Vizualisation Position</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.MapElementPositionImpl#getID <em>ID</em>}</li>
+ *   <li>{@link generator.impl.VizualisationPositionImpl#getID <em>ID</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MapElementPositionImpl extends MinimalEObjectImpl.Container implements MapElementPosition {
+public class VizualisationPositionImpl extends MinimalEObjectImpl.Container implements VizualisationPosition {
 	/**
 	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -49,7 +51,7 @@ public class MapElementPositionImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPositionImpl() {
+	public VizualisationPositionImpl() {
 		super();
 	}
 
@@ -60,7 +62,7 @@ public class MapElementPositionImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.MAP_ELEMENT_POSITION;
+		return GeneratorPackage.Literals.VIZUALISATION_POSITION;
 	}
 
 	/**
@@ -81,7 +83,7 @@ public class MapElementPositionImpl extends MinimalEObjectImpl.Container impleme
 		String oldID = id;
 		id = newID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MAP_ELEMENT_POSITION__ID, oldID,
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.VIZUALISATION_POSITION__ID, oldID,
 					id));
 	}
 
@@ -93,7 +95,7 @@ public class MapElementPositionImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.MAP_ELEMENT_POSITION__ID:
+		case GeneratorPackage.VIZUALISATION_POSITION__ID:
 			return getID();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -107,7 +109,7 @@ public class MapElementPositionImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.MAP_ELEMENT_POSITION__ID:
+		case GeneratorPackage.VIZUALISATION_POSITION__ID:
 			setID((String) newValue);
 			return;
 		}
@@ -122,7 +124,7 @@ public class MapElementPositionImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.MAP_ELEMENT_POSITION__ID:
+		case GeneratorPackage.VIZUALISATION_POSITION__ID:
 			setID(ID_EDEFAULT);
 			return;
 		}
@@ -137,7 +139,7 @@ public class MapElementPositionImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.MAP_ELEMENT_POSITION__ID:
+		case GeneratorPackage.VIZUALISATION_POSITION__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
@@ -160,4 +162,4 @@ public class MapElementPositionImpl extends MinimalEObjectImpl.Container impleme
 		return result.toString();
 	}
 
-} //MapElementPositionImpl
+} //VizualisationPositionImpl

@@ -93,12 +93,12 @@ public interface Date extends Time {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position</em>' reference.
-	 * @see #setPosition(MapElementPosition)
+	 * @see #setPosition(VizualisationPosition)
 	 * @see generator.GeneratorPackage#getDate_Position()
 	 * @model
 	 * @generated
 	 */
-	MapElementPosition getPosition();
+	VizualisationPosition getPosition();
 
 	/**
 	 * Sets the value of the '{@link generator.Date#getPosition <em>Position</em>}' reference.
@@ -108,7 +108,7 @@ public interface Date extends Time {
 	 * @see #getPosition()
 	 * @generated
 	 */
-	void setPosition(MapElementPosition value);
+	void setPosition(VizualisationPosition value);
 
 	/**
 	 * <!-- begin-user-doc -->

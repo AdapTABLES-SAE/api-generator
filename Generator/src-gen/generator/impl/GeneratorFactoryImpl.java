@@ -221,10 +221,10 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createCurseEligibility();
 		case GeneratorPackage.IMAGE:
 			return createImage();
-		case GeneratorPackage.MAP:
-			return createMap();
-		case GeneratorPackage.MAP_ELEMENT_POSITION:
-			return createMapElementPosition();
+		case GeneratorPackage.VIZUALISATION:
+			return createVizualisation();
+		case GeneratorPackage.VIZUALISATION_POSITION:
+			return createVizualisationPosition();
 		case GeneratorPackage.LEGEND_SYMBOL:
 			return createLegendSymbol();
 		case GeneratorPackage.LEGEND_TEXT:
@@ -253,8 +253,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createTeachers();
 		case GeneratorPackage.CLASSROOMS:
 			return createClassrooms();
-		case GeneratorPackage.MAP_SOLUTION:
-			return createMapSolution();
+		case GeneratorPackage.VIZUALISATION_SOLUTION:
+			return createVizualisationSolution();
 		case GeneratorPackage.HG_LEVEL:
 			return createHGLevel();
 		case GeneratorPackage.POSITIONED_MAP_ELEMENT:
@@ -1193,9 +1193,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map createMap() {
-		MapImpl map = new MapImpl();
-		return map;
+	public Vizualisation createVizualisation() {
+		VizualisationImpl vizualisation = new VizualisationImpl();
+		return vizualisation;
 	}
 
 	/**
@@ -1203,9 +1203,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPosition createMapElementPosition() {
-		MapElementPositionImpl mapElementPosition = new MapElementPositionImpl();
-		return mapElementPosition;
+	public VizualisationPosition createVizualisationPosition() {
+		VizualisationPositionImpl vizualisationPosition = new VizualisationPositionImpl();
+		return vizualisationPosition;
 	}
 
 	/**
@@ -1353,9 +1353,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapQuestionableFact createMapQuestionableFact() {
-		MapQuestionableFactImpl mapQuestionableFact = new MapQuestionableFactImpl();
-		return mapQuestionableFact;
+	public VizualisationSolution createVizualisationSolution() {
+		VizualisationSolutionImpl vizualisationSolution = new VizualisationSolutionImpl();
+		return vizualisationSolution;
 	}
 
 	/**
@@ -1363,9 +1363,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapSolution createMapSolution() {
-		MapSolutionImpl mapSolution = new MapSolutionImpl();
-		return mapSolution;
+	public MapQuestionableFact createMapQuestionableFact() {
+		MapQuestionableFactImpl mapQuestionableFact = new MapQuestionableFactImpl();
+		return mapQuestionableFact;
 	}
 
 	/**

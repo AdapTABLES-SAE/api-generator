@@ -49,12 +49,12 @@ public interface LegendSymbol extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position</em>' reference.
-	 * @see #setPosition(MapElementPosition)
+	 * @see #setPosition(VizualisationPosition)
 	 * @see generator.GeneratorPackage#getLegendSymbol_Position()
 	 * @model required="true"
 	 * @generated
 	 */
-	MapElementPosition getPosition();
+	VizualisationPosition getPosition();
 
 	/**
 	 * Sets the value of the '{@link generator.LegendSymbol#getPosition <em>Position</em>}' reference.
@@ -64,6 +64,6 @@ public interface LegendSymbol extends EObject {
 	 * @see #getPosition()
 	 * @generated
 	 */
-	void setPosition(MapElementPosition value);
+	void setPosition(VizualisationPosition value);
 
 } // LegendSymbol

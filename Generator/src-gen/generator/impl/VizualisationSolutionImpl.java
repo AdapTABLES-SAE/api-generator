@@ -3,8 +3,8 @@
 package generator.impl;
 
 import generator.GeneratorPackage;
-import generator.MapElementPosition;
-import generator.MapSolution;
+import generator.VizualisationPosition;
+import generator.VizualisationSolution;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -16,19 +16,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Map Solution</b></em>'.
+ * An implementation of the model object '<em><b>Vizualisation Solution</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.MapSolutionImpl#getValue <em>Value</em>}</li>
- *   <li>{@link generator.impl.MapSolutionImpl#getMapPosition <em>Map Position</em>}</li>
+ *   <li>{@link generator.impl.VizualisationSolutionImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link generator.impl.VizualisationSolutionImpl#getVizualisationPosition <em>Vizualisation Position</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MapSolutionImpl extends MinimalEObjectImpl.Container implements MapSolution {
+public class VizualisationSolutionImpl extends MinimalEObjectImpl.Container implements VizualisationSolution {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,21 +50,21 @@ public class MapSolutionImpl extends MinimalEObjectImpl.Container implements Map
 	protected String value = VALUE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getMapPosition() <em>Map Position</em>}' reference.
+	 * The cached value of the '{@link #getVizualisationPosition() <em>Vizualisation Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMapPosition()
+	 * @see #getVizualisationPosition()
 	 * @generated
 	 * @ordered
 	 */
-	protected MapElementPosition mapPosition;
+	protected VizualisationPosition vizualisationPosition;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapSolutionImpl() {
+	public VizualisationSolutionImpl() {
 		super();
 	}
 
@@ -75,7 +75,7 @@ public class MapSolutionImpl extends MinimalEObjectImpl.Container implements Map
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.MAP_SOLUTION;
+		return GeneratorPackage.Literals.VIZUALISATION_SOLUTION;
 	}
 
 	/**
@@ -96,8 +96,8 @@ public class MapSolutionImpl extends MinimalEObjectImpl.Container implements Map
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MAP_SOLUTION__VALUE, oldValue,
-					value));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.VIZUALISATION_SOLUTION__VALUE,
+					oldValue, value));
 	}
 
 	/**
@@ -105,17 +105,18 @@ public class MapSolutionImpl extends MinimalEObjectImpl.Container implements Map
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPosition getMapPosition() {
-		if (mapPosition != null && mapPosition.eIsProxy()) {
-			InternalEObject oldMapPosition = (InternalEObject) mapPosition;
-			mapPosition = (MapElementPosition) eResolveProxy(oldMapPosition);
-			if (mapPosition != oldMapPosition) {
+	public VizualisationPosition getVizualisationPosition() {
+		if (vizualisationPosition != null && vizualisationPosition.eIsProxy()) {
+			InternalEObject oldVizualisationPosition = (InternalEObject) vizualisationPosition;
+			vizualisationPosition = (VizualisationPosition) eResolveProxy(oldVizualisationPosition);
+			if (vizualisationPosition != oldVizualisationPosition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.MAP_SOLUTION__MAP_POSITION, oldMapPosition, mapPosition));
+							GeneratorPackage.VIZUALISATION_SOLUTION__VIZUALISATION_POSITION, oldVizualisationPosition,
+							vizualisationPosition));
 			}
 		}
-		return mapPosition;
+		return vizualisationPosition;
 	}
 
 	/**
@@ -123,8 +124,8 @@ public class MapSolutionImpl extends MinimalEObjectImpl.Container implements Map
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPosition basicGetMapPosition() {
-		return mapPosition;
+	public VizualisationPosition basicGetVizualisationPosition() {
+		return vizualisationPosition;
 	}
 
 	/**
@@ -132,12 +133,13 @@ public class MapSolutionImpl extends MinimalEObjectImpl.Container implements Map
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMapPosition(MapElementPosition newMapPosition) {
-		MapElementPosition oldMapPosition = mapPosition;
-		mapPosition = newMapPosition;
+	public void setVizualisationPosition(VizualisationPosition newVizualisationPosition) {
+		VizualisationPosition oldVizualisationPosition = vizualisationPosition;
+		vizualisationPosition = newVizualisationPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MAP_SOLUTION__MAP_POSITION,
-					oldMapPosition, mapPosition));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.VIZUALISATION_SOLUTION__VIZUALISATION_POSITION, oldVizualisationPosition,
+					vizualisationPosition));
 	}
 
 	/**
@@ -148,12 +150,12 @@ public class MapSolutionImpl extends MinimalEObjectImpl.Container implements Map
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.MAP_SOLUTION__VALUE:
+		case GeneratorPackage.VIZUALISATION_SOLUTION__VALUE:
 			return getValue();
-		case GeneratorPackage.MAP_SOLUTION__MAP_POSITION:
+		case GeneratorPackage.VIZUALISATION_SOLUTION__VIZUALISATION_POSITION:
 			if (resolve)
-				return getMapPosition();
-			return basicGetMapPosition();
+				return getVizualisationPosition();
+			return basicGetVizualisationPosition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -166,11 +168,11 @@ public class MapSolutionImpl extends MinimalEObjectImpl.Container implements Map
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.MAP_SOLUTION__VALUE:
+		case GeneratorPackage.VIZUALISATION_SOLUTION__VALUE:
 			setValue((String) newValue);
 			return;
-		case GeneratorPackage.MAP_SOLUTION__MAP_POSITION:
-			setMapPosition((MapElementPosition) newValue);
+		case GeneratorPackage.VIZUALISATION_SOLUTION__VIZUALISATION_POSITION:
+			setVizualisationPosition((VizualisationPosition) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -184,11 +186,11 @@ public class MapSolutionImpl extends MinimalEObjectImpl.Container implements Map
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.MAP_SOLUTION__VALUE:
+		case GeneratorPackage.VIZUALISATION_SOLUTION__VALUE:
 			setValue(VALUE_EDEFAULT);
 			return;
-		case GeneratorPackage.MAP_SOLUTION__MAP_POSITION:
-			setMapPosition((MapElementPosition) null);
+		case GeneratorPackage.VIZUALISATION_SOLUTION__VIZUALISATION_POSITION:
+			setVizualisationPosition((VizualisationPosition) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -202,10 +204,10 @@ public class MapSolutionImpl extends MinimalEObjectImpl.Container implements Map
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.MAP_SOLUTION__VALUE:
+		case GeneratorPackage.VIZUALISATION_SOLUTION__VALUE:
 			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-		case GeneratorPackage.MAP_SOLUTION__MAP_POSITION:
-			return mapPosition != null;
+		case GeneratorPackage.VIZUALISATION_SOLUTION__VIZUALISATION_POSITION:
+			return vizualisationPosition != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -227,4 +229,4 @@ public class MapSolutionImpl extends MinimalEObjectImpl.Container implements Map
 		return result.toString();
 	}
 
-} //MapSolutionImpl
+} //VizualisationSolutionImpl

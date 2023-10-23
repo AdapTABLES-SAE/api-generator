@@ -94,6 +94,21 @@ public class DataManager {
 		Constant.saveTeachersModel(teacher);
 	}
 	
+	public void updateClassroom(JSONObject data) throws ClassroomNotFoundException {
+		Classrooms classrooms = Constant.loadClassrooms();
+		JSONObject classe = (JSONObject) data.get("classe");
+		String classID = (String) classe.get("id");
+		
+		if(!containsClassroom(classrooms, classID)) {
+			throw new ClassroomNotFoundException(classID);
+		} else {
+			Classroom classroom = getClassroom(classrooms, classID);
+			classroom.setName((String) classe.get("name"));
+			Constant.saveClassroomsModel(classrooms);
+			Constant.saveTeachersModel(teacher);
+		}
+	}
+	
 	public void addTeacher(JSONObject data) throws TeacherAlreadyExistsException {
 		Teachers teachers = Constant.loadTeachers();
 		String teacherID = (String) data.get("idProf");
@@ -109,7 +124,8 @@ public class DataManager {
 		Constant.saveTeachersModel(teacher);
 	}
 	
-	public void addStudent(JSONObject data) throws ClassroomAlreadyExistsException, ClassroomNotFoundException {
+	
+	public void addStudent(JSONObject data) throws ClassroomNotFoundException, LearnerPlayerAlreadyExistsException {
 		Classrooms classrooms = Constant.loadClassrooms();
 		String classID = (String) data.get("idClasse");
 		
@@ -118,17 +134,64 @@ public class DataManager {
 			throw new ClassroomNotFoundException(classID);
 		}
 		
-		LearnerPlayer learner = new LearnerPlayerImpl();
-		learner.setID((String) data.get("idStudent"));
-		learner.setLastName((String) data.get("nomEleve"));
-		learner.setName((String) data.get("prenomEleve"));
-		learner.setProgression(new ProgressionImpl());
-		learner.getProgression().setLearnerProgress(new LearnerProgressImpl());
-		learner.getProgression().setPlayerProgress(new PlayerProgressImpl());
-		learner.setStatistics(new StatisticsImpl());
-		Constant.saveLearnerModel(learner);
-		classroom.getLearnerPlayers().add(learner);
-		Constant.saveClassroomsModel(classrooms);
+		if(containsLearnerPlayer(classroom, (String) data.get("idStudent"))) {
+			throw new LearnerPlayerAlreadyExistsException((String) data.get("idStudent"));
+		} else {
+			LearnerPlayer learner = new LearnerPlayerImpl();
+			learner.setID((String) data.get("idStudent"));
+			learner.setLastName((String) data.get("nomEleve"));
+			learner.setName((String) data.get("prenomEleve"));
+			learner.setProgression(new ProgressionImpl());
+			learner.getProgression().setLearnerProgress(new LearnerProgressImpl());
+			learner.getProgression().setPlayerProgress(new PlayerProgressImpl());
+			learner.setStatistics(new StatisticsImpl());
+			Constant.saveLearnerModel(learner);
+			classroom.getLearnerPlayers().add(learner);
+			Constant.saveClassroomsModel(classrooms);
+		}
+
+	}
+	
+	public void updateStudent(JSONObject data) throws  ClassroomNotFoundException, NonExistantLearnerPlayerException {
+		Classrooms classrooms = Constant.loadClassrooms();
+		String classID = (String) data.get("idClasse");
+		
+		Classroom classroom = getClassroomWithID(classrooms, classID);
+		if(classroom == null) {
+			throw new ClassroomNotFoundException(classID);
+		}
+		if(!containsLearnerPlayer(classroom, (String) data.get("idStudent"))) {
+			throw new  NonExistantLearnerPlayerException((String) data.get("idStudent"));
+		} else {
+			LearnerPlayer learner = getLearnerPlayer(classroom, (String) data.get("idStudent"));
+			learner.setLastName((String) data.get("nomEleve"));
+			learner.setName((String) data.get("prenomEleve"));
+			learner.setProgression(new ProgressionImpl());
+			learner.getProgression().setLearnerProgress(new LearnerProgressImpl());
+			learner.getProgression().setPlayerProgress(new PlayerProgressImpl());
+			learner.setStatistics(new StatisticsImpl());
+			Constant.saveLearnerModel(learner);
+			Constant.saveClassroomsModel(classrooms);
+		}
+		
+	}
+	
+	private LearnerPlayer getLearnerPlayer(Classroom classroom, String playerID) {
+		for(LearnerPlayer learner : classroom.getLearnerPlayers()) {
+			if(learner.getID().equals(playerID)) {
+				return learner;
+			} 
+		}
+		return null;
+	}
+	
+	private boolean containsLearnerPlayer(Classroom classroom, String playerID) {
+		for(LearnerPlayer learner : classroom.getLearnerPlayers()) {
+			if(learner.getID().equals(playerID)) {
+				return true;
+			} 
+		}
+		return false;
 	}
 	
 	public void deleteClassroom(String classroomID) throws ClassroomAlreadyExistsException {
@@ -181,6 +244,15 @@ public class DataManager {
 		for(Classroom classroom: classrooms.getClassrooms()) {
 			if(classroom.getID().equals(classID)) {
 				return classroom; 
+			}
+		}
+		return null;
+	}
+	
+	private Classroom getClassroom(Classrooms classrooms, String classID) {
+		for(Classroom classroom : classrooms.getClassrooms()) {
+			if(classroom.getID().equals(classID)) {
+				return classroom;
 			}
 		}
 		return null;

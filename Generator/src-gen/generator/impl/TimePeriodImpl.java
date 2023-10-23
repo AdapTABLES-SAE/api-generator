@@ -8,8 +8,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import generator.GeneratorPackage;
-import generator.MapElementPosition;
 import generator.TimePeriod;
+import generator.VizualisationPosition;
 import java.lang.reflect.InvocationTargetException;
 
 /**
@@ -77,7 +77,7 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * @generated
 	 * @ordered
 	 */
-	protected MapElementPosition startPosition;
+	protected VizualisationPosition startPosition;
 
 	/**
 	 * The cached value of the '{@link #getEndPosition() <em>End Position</em>}' reference.
@@ -87,7 +87,7 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * @generated
 	 * @ordered
 	 */
-	protected MapElementPosition endPosition;
+	protected VizualisationPosition endPosition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -157,10 +157,10 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPosition getStartPosition() {
+	public VizualisationPosition getStartPosition() {
 		if (startPosition != null && startPosition.eIsProxy()) {
 			InternalEObject oldStartPosition = (InternalEObject) startPosition;
-			startPosition = (MapElementPosition) eResolveProxy(oldStartPosition);
+			startPosition = (VizualisationPosition) eResolveProxy(oldStartPosition);
 			if (startPosition != oldStartPosition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
@@ -175,7 +175,7 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPosition basicGetStartPosition() {
+	public VizualisationPosition basicGetStartPosition() {
 		return startPosition;
 	}
 
@@ -184,8 +184,8 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStartPosition(MapElementPosition newStartPosition) {
-		MapElementPosition oldStartPosition = startPosition;
+	public void setStartPosition(VizualisationPosition newStartPosition) {
+		VizualisationPosition oldStartPosition = startPosition;
 		startPosition = newStartPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.TIME_PERIOD__START_POSITION,
@@ -197,10 +197,10 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPosition getEndPosition() {
+	public VizualisationPosition getEndPosition() {
 		if (endPosition != null && endPosition.eIsProxy()) {
 			InternalEObject oldEndPosition = (InternalEObject) endPosition;
-			endPosition = (MapElementPosition) eResolveProxy(oldEndPosition);
+			endPosition = (VizualisationPosition) eResolveProxy(oldEndPosition);
 			if (endPosition != oldEndPosition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
@@ -215,7 +215,7 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPosition basicGetEndPosition() {
+	public VizualisationPosition basicGetEndPosition() {
 		return endPosition;
 	}
 
@@ -224,8 +224,8 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEndPosition(MapElementPosition newEndPosition) {
-		MapElementPosition oldEndPosition = endPosition;
+	public void setEndPosition(VizualisationPosition newEndPosition) {
+		VizualisationPosition oldEndPosition = endPosition;
 		endPosition = newEndPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.TIME_PERIOD__END_POSITION,
@@ -272,10 +272,10 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 			setEndYear((String) newValue);
 			return;
 		case GeneratorPackage.TIME_PERIOD__START_POSITION:
-			setStartPosition((MapElementPosition) newValue);
+			setStartPosition((VizualisationPosition) newValue);
 			return;
 		case GeneratorPackage.TIME_PERIOD__END_POSITION:
-			setEndPosition((MapElementPosition) newValue);
+			setEndPosition((VizualisationPosition) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -296,10 +296,10 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 			setEndYear(END_YEAR_EDEFAULT);
 			return;
 		case GeneratorPackage.TIME_PERIOD__START_POSITION:
-			setStartPosition((MapElementPosition) null);
+			setStartPosition((VizualisationPosition) null);
 			return;
 		case GeneratorPackage.TIME_PERIOD__END_POSITION:
-			setEndPosition((MapElementPosition) null);
+			setEndPosition((VizualisationPosition) null);
 			return;
 		}
 		super.eUnset(featureID);

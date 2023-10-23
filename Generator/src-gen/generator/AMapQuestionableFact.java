@@ -28,12 +28,12 @@ public interface AMapQuestionableFact extends AQuestionableFact {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map</em>' reference.
-	 * @see #setMap(Map)
+	 * @see #setMap(Vizualisation)
 	 * @see generator.GeneratorPackage#getAMapQuestionableFact_Map()
 	 * @model required="true"
 	 * @generated
 	 */
-	Map getMap();
+	Vizualisation getMap();
 
 	/**
 	 * Sets the value of the '{@link generator.AMapQuestionableFact#getMap <em>Map</em>}' reference.
@@ -43,7 +43,7 @@ public interface AMapQuestionableFact extends AQuestionableFact {
 	 * @see #getMap()
 	 * @generated
 	 */
-	void setMap(Map value);
+	void setMap(Vizualisation value);
 
 	/**
 	 * Returns the value of the '<em><b>Mapsolutions</b></em>' containment reference list.

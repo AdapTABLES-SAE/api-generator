@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import generator.AbstractFact;
 import generator.GeneratorPackage;
-import generator.Map;
 import generator.SetOfFacts;
+import generator.Vizualisation;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +29,7 @@ import generator.SetOfFacts;
  * <ul>
  *   <li>{@link generator.impl.SetOfFactsImpl#getFacts <em>Facts</em>}</li>
  *   <li>{@link generator.impl.SetOfFactsImpl#getName <em>Name</em>}</li>
- *   <li>{@link generator.impl.SetOfFactsImpl#getMap <em>Map</em>}</li>
+ *   <li>{@link generator.impl.SetOfFactsImpl#getVizualisation <em>Vizualisation</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,14 +66,14 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getMap() <em>Map</em>}' containment reference.
+	 * The cached value of the '{@link #getVizualisation() <em>Vizualisation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMap()
+	 * @see #getVizualisation()
 	 * @generated
 	 * @ordered
 	 */
-	protected Map map;
+	protected Vizualisation vizualisation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,8 +133,8 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map getMap() {
-		return map;
+	public Vizualisation getVizualisation() {
+		return vizualisation;
 	}
 
 	/**
@@ -142,12 +142,12 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMap(Map newMap, NotificationChain msgs) {
-		Map oldMap = map;
-		map = newMap;
+	public NotificationChain basicSetVizualisation(Vizualisation newVizualisation, NotificationChain msgs) {
+		Vizualisation oldVizualisation = vizualisation;
+		vizualisation = newVizualisation;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.SET_OF_FACTS__MAP, oldMap, newMap);
+					GeneratorPackage.SET_OF_FACTS__VIZUALISATION, oldVizualisation, newVizualisation);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -161,20 +161,21 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMap(Map newMap) {
-		if (newMap != map) {
+	public void setVizualisation(Vizualisation newVizualisation) {
+		if (newVizualisation != vizualisation) {
 			NotificationChain msgs = null;
-			if (map != null)
-				msgs = ((InternalEObject) map).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.SET_OF_FACTS__MAP, null, msgs);
-			if (newMap != null)
-				msgs = ((InternalEObject) newMap).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.SET_OF_FACTS__MAP, null, msgs);
-			msgs = basicSetMap(newMap, msgs);
+			if (vizualisation != null)
+				msgs = ((InternalEObject) vizualisation).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.SET_OF_FACTS__VIZUALISATION, null, msgs);
+			if (newVizualisation != null)
+				msgs = ((InternalEObject) newVizualisation).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.SET_OF_FACTS__VIZUALISATION, null, msgs);
+			msgs = basicSetVizualisation(newVizualisation, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.SET_OF_FACTS__MAP, newMap, newMap));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.SET_OF_FACTS__VIZUALISATION,
+					newVizualisation, newVizualisation));
 	}
 
 	/**
@@ -187,8 +188,8 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 		switch (featureID) {
 		case GeneratorPackage.SET_OF_FACTS__FACTS:
 			return ((InternalEList<?>) getFacts()).basicRemove(otherEnd, msgs);
-		case GeneratorPackage.SET_OF_FACTS__MAP:
-			return basicSetMap(null, msgs);
+		case GeneratorPackage.SET_OF_FACTS__VIZUALISATION:
+			return basicSetVizualisation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -205,8 +206,8 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 			return getFacts();
 		case GeneratorPackage.SET_OF_FACTS__NAME:
 			return getName();
-		case GeneratorPackage.SET_OF_FACTS__MAP:
-			return getMap();
+		case GeneratorPackage.SET_OF_FACTS__VIZUALISATION:
+			return getVizualisation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -227,8 +228,8 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 		case GeneratorPackage.SET_OF_FACTS__NAME:
 			setName((String) newValue);
 			return;
-		case GeneratorPackage.SET_OF_FACTS__MAP:
-			setMap((Map) newValue);
+		case GeneratorPackage.SET_OF_FACTS__VIZUALISATION:
+			setVizualisation((Vizualisation) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -248,8 +249,8 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 		case GeneratorPackage.SET_OF_FACTS__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case GeneratorPackage.SET_OF_FACTS__MAP:
-			setMap((Map) null);
+		case GeneratorPackage.SET_OF_FACTS__VIZUALISATION:
+			setVizualisation((Vizualisation) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -267,8 +268,8 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 			return facts != null && !facts.isEmpty();
 		case GeneratorPackage.SET_OF_FACTS__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case GeneratorPackage.SET_OF_FACTS__MAP:
-			return map != null;
+		case GeneratorPackage.SET_OF_FACTS__VIZUALISATION:
+			return vizualisation != null;
 		}
 		return super.eIsSet(featureID);
 	}

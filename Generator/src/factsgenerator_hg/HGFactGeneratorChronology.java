@@ -8,22 +8,22 @@ import java.util.Set;
 
 import exceptions.BadSolutionGenerationException;
 import factgenerator_template.FactGeneratorTemplate;
-import generator.AMapQuestionableFact;
 import generator.AQuestionableFact;
 import generator.ATask;
+import generator.AVizualisationQuestionableFact;
 import generator.AbstractFact;
 import generator.Date;
 import generator.ECorrectness;
 import generator.HistoryFact;
-import generator.Map;
-import generator.MapElementPosition;
 import generator.MapQuestionableFact;
-import generator.MapSolution;
 import generator.QuestionedFact;
 import generator.SetOfFacts;
 import generator.TimePeriod;
+import generator.Vizualisation;
+import generator.VizualisationPosition;
+import generator.VizualisationSolution;
 import generator.impl.MapQuestionableFactImpl;
-import generator.impl.MapSolutionImpl;
+import generator.impl.VizualisationSolutionImpl;
 import structures.DungeonElements;
 import structures.Soluce;
 
@@ -36,29 +36,29 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 	@Override
 	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
-		if(fact instanceof HistoryFact  && parent.getMap() != null) {
-			 questionableFacts.add(buildQF(task, (HistoryFact) fact, parent.getMap()));
+		if(fact instanceof HistoryFact  && parent.getVizualisation() != null) {
+			 questionableFacts.add(buildQF(task, (HistoryFact) fact, parent.getVizualisation()));
 		}
 		
 		return questionableFacts;
 	}
 	
-	private MapSolution buildMapSolution(String value, MapElementPosition position) {
-		MapSolution soluce = new MapSolutionImpl();
+	private VizualisationSolution buildVizualisationSolution(String value, VizualisationPosition position) {
+		VizualisationSolution soluce = new VizualisationSolutionImpl();
 		soluce.setValue(value);
-		soluce.setMapPosition(position);
+		soluce.setVizualisationPosition(position);
 		return soluce;
 	}
 	
-	private AMapQuestionableFact buildQF(ATask task, HistoryFact fact, Map map) {
-		AMapQuestionableFact qf = new MapQuestionableFactImpl(); 
+	private AVizualisationQuestionableFact buildQF(ATask task, HistoryFact fact, Vizualisation map) {
+		AVizualisationQuestionableFact qf = new MapQuestionableFactImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
-		qf.setMap(map);
+		qf.setVizualisation(map);
 		if(fact.getTime() instanceof Date) {
-			qf.getMapsolutions().add(buildMapSolution(fact.getEvent(), ((Date) fact.getTime()).getPosition()));
+			qf.getVizualisationSolutions().add(buildVizualisationSolution(fact.getEvent(), ((Date) fact.getTime()).getPosition()));
 		} else {
-			qf.getMapsolutions().add(buildMapSolution("(Debut) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getStartPosition()));
-			qf.getMapsolutions().add(buildMapSolution("(Fin) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getEndPosition()));
+			qf.getVizualisationSolutions().add(buildVizualisationSolution("(Debut) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getStartPosition()));
+			qf.getVizualisationSolutions().add(buildVizualisationSolution("(Fin) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getEndPosition()));
 		}			
 		return qf;
 	}
@@ -66,8 +66,8 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 	@Override
 	protected List<Soluce> getListOfGoodSolutions(AQuestionableFact qFact) {
 		List<Soluce> solutions = new ArrayList<>();
-		for (MapSolution prop : ((MapQuestionableFact) qFact).getMapsolutions()) {
-			solutions.add(new Soluce(prop.getValue(), prop.getMapPosition()));
+		for (VizualisationSolution prop : ((MapQuestionableFact) qFact).getVizualisationSolutions()) {
+			solutions.add(new Soluce(prop.getValue(), prop.getVizualisationPosition()));
 		}
 		return solutions;
 	}
@@ -86,7 +86,7 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 
 	@Override
 	protected int correctnessToReach(AQuestionableFact fact) {
-		return ((MapQuestionableFact) fact).getMapsolutions().size();
+		return ((MapQuestionableFact) fact).getVizualisationSolutions().size();
 	}	
 	
 	@Override
@@ -101,10 +101,10 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 		for(AQuestionableFact qfact: facts) {
 			boolean conditionValide = true;
 			for(QuestionedFact fact: previousFacts) {
-				AMapQuestionableFact prevF = (AMapQuestionableFact) fact.getQuestionablefact();
-				AMapQuestionableFact newF = (AMapQuestionableFact) qfact;
-				for(MapSolution sol1 : prevF.getMapsolutions()) {
-					for(MapSolution sol2 : newF.getMapsolutions()) {
+				AVizualisationQuestionableFact prevF = (AVizualisationQuestionableFact) fact.getQuestionablefact();
+				AVizualisationQuestionableFact newF = (AVizualisationQuestionableFact) qfact;
+				for(VizualisationSolution sol1 : prevF.getVizualisationSolutions()) {
+					for(VizualisationSolution sol2 : newF.getVizualisationSolutions()) {
 						if(sol1.getValue().equals(sol2.getValue())) {
 							conditionValide = false;
 						}

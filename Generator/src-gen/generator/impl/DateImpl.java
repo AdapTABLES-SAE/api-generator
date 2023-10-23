@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import generator.Date;
 import generator.GeneratorPackage;
-import generator.MapElementPosition;
+import generator.VizualisationPosition;
 import java.lang.reflect.InvocationTargetException;
 
 /**
@@ -98,7 +98,7 @@ public class DateImpl extends TimeImpl implements Date {
 	 * @generated
 	 * @ordered
 	 */
-	protected MapElementPosition position;
+	protected VizualisationPosition position;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -187,10 +187,10 @@ public class DateImpl extends TimeImpl implements Date {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPosition getPosition() {
+	public VizualisationPosition getPosition() {
 		if (position != null && position.eIsProxy()) {
 			InternalEObject oldPosition = (InternalEObject) position;
-			position = (MapElementPosition) eResolveProxy(oldPosition);
+			position = (VizualisationPosition) eResolveProxy(oldPosition);
 			if (position != oldPosition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.DATE__POSITION,
@@ -205,7 +205,7 @@ public class DateImpl extends TimeImpl implements Date {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapElementPosition basicGetPosition() {
+	public VizualisationPosition basicGetPosition() {
 		return position;
 	}
 
@@ -214,8 +214,8 @@ public class DateImpl extends TimeImpl implements Date {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPosition(MapElementPosition newPosition) {
-		MapElementPosition oldPosition = position;
+	public void setPosition(VizualisationPosition newPosition) {
+		VizualisationPosition oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.DATE__POSITION, oldPosition,
@@ -262,7 +262,7 @@ public class DateImpl extends TimeImpl implements Date {
 			setYear((String) newValue);
 			return;
 		case GeneratorPackage.DATE__POSITION:
-			setPosition((MapElementPosition) newValue);
+			setPosition((VizualisationPosition) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -286,7 +286,7 @@ public class DateImpl extends TimeImpl implements Date {
 			setYear(YEAR_EDEFAULT);
 			return;
 		case GeneratorPackage.DATE__POSITION:
-			setPosition((MapElementPosition) null);
+			setPosition((VizualisationPosition) null);
 			return;
 		}
 		super.eUnset(featureID);

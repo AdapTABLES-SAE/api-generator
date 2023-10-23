@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.SetOfFacts#getFacts <em>Facts</em>}</li>
  *   <li>{@link generator.SetOfFacts#getName <em>Name</em>}</li>
- *   <li>{@link generator.SetOfFacts#getMap <em>Map</em>}</li>
+ *   <li>{@link generator.SetOfFacts#getVizualisation <em>Vizualisation</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getSetOfFacts()
@@ -60,25 +60,25 @@ public interface SetOfFacts extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Map</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Vizualisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Map</em>' containment reference.
-	 * @see #setMap(Map)
-	 * @see generator.GeneratorPackage#getSetOfFacts_Map()
+	 * @return the value of the '<em>Vizualisation</em>' containment reference.
+	 * @see #setVizualisation(Vizualisation)
+	 * @see generator.GeneratorPackage#getSetOfFacts_Vizualisation()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Map getMap();
+	Vizualisation getVizualisation();
 
 	/**
-	 * Sets the value of the '{@link generator.SetOfFacts#getMap <em>Map</em>}' containment reference.
+	 * Sets the value of the '{@link generator.SetOfFacts#getVizualisation <em>Vizualisation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Map</em>' containment reference.
-	 * @see #getMap()
+	 * @param value the new value of the '<em>Vizualisation</em>' containment reference.
+	 * @see #getVizualisation()
 	 * @generated
 	 */
-	void setMap(Map value);
+	void setVizualisation(Vizualisation value);
 
 } // SetOfFacts

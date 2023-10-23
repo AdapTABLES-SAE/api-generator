@@ -155,7 +155,7 @@ public abstract class FactGeneratorTemplate {
 			return question;
 		} else {
 			MapQuestionParam question = new MapQuestionParamImpl();
-			question.setMap(((MapQuestionableFact) qFact).getMap());
+			question.setMap(((MapQuestionableFact) qFact).getVizualisation());
 			Value consigne = new ValueImpl();
 			consigne.setValue(((MapQuestionableFact) qFact).getConsigne());
 			question.setValue(consigne);
