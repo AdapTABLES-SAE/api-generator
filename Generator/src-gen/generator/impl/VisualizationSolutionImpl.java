@@ -3,8 +3,8 @@
 package generator.impl;
 
 import generator.GeneratorPackage;
-import generator.VizualisationPosition;
-import generator.VizualisationSolution;
+import generator.VisualizationPosition;
+import generator.VisualizationSolution;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -16,19 +16,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Vizualisation Solution</b></em>'.
+ * An implementation of the model object '<em><b>Visualization Solution</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.VizualisationSolutionImpl#getValue <em>Value</em>}</li>
- *   <li>{@link generator.impl.VizualisationSolutionImpl#getVizualisationPosition <em>Vizualisation Position</em>}</li>
+ *   <li>{@link generator.impl.VisualizationSolutionImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link generator.impl.VisualizationSolutionImpl#getVisualizationPosition <em>Visualization Position</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VizualisationSolutionImpl extends MinimalEObjectImpl.Container implements VizualisationSolution {
+public class VisualizationSolutionImpl extends MinimalEObjectImpl.Container implements VisualizationSolution {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,21 +50,21 @@ public class VizualisationSolutionImpl extends MinimalEObjectImpl.Container impl
 	protected String value = VALUE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getVizualisationPosition() <em>Vizualisation Position</em>}' reference.
+	 * The cached value of the '{@link #getVisualizationPosition() <em>Visualization Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVizualisationPosition()
+	 * @see #getVisualizationPosition()
 	 * @generated
 	 * @ordered
 	 */
-	protected VizualisationPosition vizualisationPosition;
+	protected VisualizationPosition visualizationPosition;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VizualisationSolutionImpl() {
+	public VisualizationSolutionImpl() {
 		super();
 	}
 
@@ -75,7 +75,7 @@ public class VizualisationSolutionImpl extends MinimalEObjectImpl.Container impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.VIZUALISATION_SOLUTION;
+		return GeneratorPackage.Literals.VISUALIZATION_SOLUTION;
 	}
 
 	/**
@@ -96,7 +96,7 @@ public class VizualisationSolutionImpl extends MinimalEObjectImpl.Container impl
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.VIZUALISATION_SOLUTION__VALUE,
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.VISUALIZATION_SOLUTION__VALUE,
 					oldValue, value));
 	}
 
@@ -105,18 +105,18 @@ public class VizualisationSolutionImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VizualisationPosition getVizualisationPosition() {
-		if (vizualisationPosition != null && vizualisationPosition.eIsProxy()) {
-			InternalEObject oldVizualisationPosition = (InternalEObject) vizualisationPosition;
-			vizualisationPosition = (VizualisationPosition) eResolveProxy(oldVizualisationPosition);
-			if (vizualisationPosition != oldVizualisationPosition) {
+	public VisualizationPosition getVisualizationPosition() {
+		if (visualizationPosition != null && visualizationPosition.eIsProxy()) {
+			InternalEObject oldVisualizationPosition = (InternalEObject) visualizationPosition;
+			visualizationPosition = (VisualizationPosition) eResolveProxy(oldVisualizationPosition);
+			if (visualizationPosition != oldVisualizationPosition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.VIZUALISATION_SOLUTION__VIZUALISATION_POSITION, oldVizualisationPosition,
-							vizualisationPosition));
+							GeneratorPackage.VISUALIZATION_SOLUTION__VISUALIZATION_POSITION, oldVisualizationPosition,
+							visualizationPosition));
 			}
 		}
-		return vizualisationPosition;
+		return visualizationPosition;
 	}
 
 	/**
@@ -124,8 +124,8 @@ public class VizualisationSolutionImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VizualisationPosition basicGetVizualisationPosition() {
-		return vizualisationPosition;
+	public VisualizationPosition basicGetVisualizationPosition() {
+		return visualizationPosition;
 	}
 
 	/**
@@ -133,13 +133,13 @@ public class VizualisationSolutionImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVizualisationPosition(VizualisationPosition newVizualisationPosition) {
-		VizualisationPosition oldVizualisationPosition = vizualisationPosition;
-		vizualisationPosition = newVizualisationPosition;
+	public void setVisualizationPosition(VisualizationPosition newVisualizationPosition) {
+		VisualizationPosition oldVisualizationPosition = visualizationPosition;
+		visualizationPosition = newVisualizationPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.VIZUALISATION_SOLUTION__VIZUALISATION_POSITION, oldVizualisationPosition,
-					vizualisationPosition));
+					GeneratorPackage.VISUALIZATION_SOLUTION__VISUALIZATION_POSITION, oldVisualizationPosition,
+					visualizationPosition));
 	}
 
 	/**
@@ -150,12 +150,12 @@ public class VizualisationSolutionImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.VIZUALISATION_SOLUTION__VALUE:
+		case GeneratorPackage.VISUALIZATION_SOLUTION__VALUE:
 			return getValue();
-		case GeneratorPackage.VIZUALISATION_SOLUTION__VIZUALISATION_POSITION:
+		case GeneratorPackage.VISUALIZATION_SOLUTION__VISUALIZATION_POSITION:
 			if (resolve)
-				return getVizualisationPosition();
-			return basicGetVizualisationPosition();
+				return getVisualizationPosition();
+			return basicGetVisualizationPosition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -168,11 +168,11 @@ public class VizualisationSolutionImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.VIZUALISATION_SOLUTION__VALUE:
+		case GeneratorPackage.VISUALIZATION_SOLUTION__VALUE:
 			setValue((String) newValue);
 			return;
-		case GeneratorPackage.VIZUALISATION_SOLUTION__VIZUALISATION_POSITION:
-			setVizualisationPosition((VizualisationPosition) newValue);
+		case GeneratorPackage.VISUALIZATION_SOLUTION__VISUALIZATION_POSITION:
+			setVisualizationPosition((VisualizationPosition) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -186,11 +186,11 @@ public class VizualisationSolutionImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.VIZUALISATION_SOLUTION__VALUE:
+		case GeneratorPackage.VISUALIZATION_SOLUTION__VALUE:
 			setValue(VALUE_EDEFAULT);
 			return;
-		case GeneratorPackage.VIZUALISATION_SOLUTION__VIZUALISATION_POSITION:
-			setVizualisationPosition((VizualisationPosition) null);
+		case GeneratorPackage.VISUALIZATION_SOLUTION__VISUALIZATION_POSITION:
+			setVisualizationPosition((VisualizationPosition) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -204,10 +204,10 @@ public class VizualisationSolutionImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.VIZUALISATION_SOLUTION__VALUE:
+		case GeneratorPackage.VISUALIZATION_SOLUTION__VALUE:
 			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-		case GeneratorPackage.VIZUALISATION_SOLUTION__VIZUALISATION_POSITION:
-			return vizualisationPosition != null;
+		case GeneratorPackage.VISUALIZATION_SOLUTION__VISUALIZATION_POSITION:
+			return visualizationPosition != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -229,4 +229,4 @@ public class VizualisationSolutionImpl extends MinimalEObjectImpl.Container impl
 		return result.toString();
 	}
 
-} //VizualisationSolutionImpl
+} //VisualizationSolutionImpl

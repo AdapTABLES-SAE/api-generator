@@ -18,7 +18,7 @@ package generator;
  * @model
  * @generated
  */
-public interface MapQuestionableFact extends AVizualisationQuestionableFact {
+public interface MapQuestionableFact extends AVisualizationQuestionableFact {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The default value is <code>"NONE"</code>.

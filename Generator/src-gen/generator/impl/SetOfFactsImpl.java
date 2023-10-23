@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import generator.AbstractFact;
 import generator.GeneratorPackage;
 import generator.SetOfFacts;
-import generator.Vizualisation;
+import generator.Visualization;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +29,7 @@ import generator.Vizualisation;
  * <ul>
  *   <li>{@link generator.impl.SetOfFactsImpl#getFacts <em>Facts</em>}</li>
  *   <li>{@link generator.impl.SetOfFactsImpl#getName <em>Name</em>}</li>
- *   <li>{@link generator.impl.SetOfFactsImpl#getVizualisation <em>Vizualisation</em>}</li>
+ *   <li>{@link generator.impl.SetOfFactsImpl#getVisualization <em>Visualization</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,14 +66,14 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getVizualisation() <em>Vizualisation</em>}' containment reference.
+	 * The cached value of the '{@link #getVisualization() <em>Visualization</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVizualisation()
+	 * @see #getVisualization()
 	 * @generated
 	 * @ordered
 	 */
-	protected Vizualisation vizualisation;
+	protected Visualization visualization;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,8 +133,8 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Vizualisation getVizualisation() {
-		return vizualisation;
+	public Visualization getVisualization() {
+		return visualization;
 	}
 
 	/**
@@ -142,12 +142,12 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVizualisation(Vizualisation newVizualisation, NotificationChain msgs) {
-		Vizualisation oldVizualisation = vizualisation;
-		vizualisation = newVizualisation;
+	public NotificationChain basicSetVisualization(Visualization newVisualization, NotificationChain msgs) {
+		Visualization oldVisualization = visualization;
+		visualization = newVisualization;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.SET_OF_FACTS__VIZUALISATION, oldVizualisation, newVizualisation);
+					GeneratorPackage.SET_OF_FACTS__VISUALIZATION, oldVisualization, newVisualization);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -161,21 +161,21 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVizualisation(Vizualisation newVizualisation) {
-		if (newVizualisation != vizualisation) {
+	public void setVisualization(Visualization newVisualization) {
+		if (newVisualization != visualization) {
 			NotificationChain msgs = null;
-			if (vizualisation != null)
-				msgs = ((InternalEObject) vizualisation).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.SET_OF_FACTS__VIZUALISATION, null, msgs);
-			if (newVizualisation != null)
-				msgs = ((InternalEObject) newVizualisation).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.SET_OF_FACTS__VIZUALISATION, null, msgs);
-			msgs = basicSetVizualisation(newVizualisation, msgs);
+			if (visualization != null)
+				msgs = ((InternalEObject) visualization).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.SET_OF_FACTS__VISUALIZATION, null, msgs);
+			if (newVisualization != null)
+				msgs = ((InternalEObject) newVisualization).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GeneratorPackage.SET_OF_FACTS__VISUALIZATION, null, msgs);
+			msgs = basicSetVisualization(newVisualization, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.SET_OF_FACTS__VIZUALISATION,
-					newVizualisation, newVizualisation));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.SET_OF_FACTS__VISUALIZATION,
+					newVisualization, newVisualization));
 	}
 
 	/**
@@ -188,8 +188,8 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 		switch (featureID) {
 		case GeneratorPackage.SET_OF_FACTS__FACTS:
 			return ((InternalEList<?>) getFacts()).basicRemove(otherEnd, msgs);
-		case GeneratorPackage.SET_OF_FACTS__VIZUALISATION:
-			return basicSetVizualisation(null, msgs);
+		case GeneratorPackage.SET_OF_FACTS__VISUALIZATION:
+			return basicSetVisualization(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -206,8 +206,8 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 			return getFacts();
 		case GeneratorPackage.SET_OF_FACTS__NAME:
 			return getName();
-		case GeneratorPackage.SET_OF_FACTS__VIZUALISATION:
-			return getVizualisation();
+		case GeneratorPackage.SET_OF_FACTS__VISUALIZATION:
+			return getVisualization();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -228,8 +228,8 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 		case GeneratorPackage.SET_OF_FACTS__NAME:
 			setName((String) newValue);
 			return;
-		case GeneratorPackage.SET_OF_FACTS__VIZUALISATION:
-			setVizualisation((Vizualisation) newValue);
+		case GeneratorPackage.SET_OF_FACTS__VISUALIZATION:
+			setVisualization((Visualization) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -249,8 +249,8 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 		case GeneratorPackage.SET_OF_FACTS__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case GeneratorPackage.SET_OF_FACTS__VIZUALISATION:
-			setVizualisation((Vizualisation) null);
+		case GeneratorPackage.SET_OF_FACTS__VISUALIZATION:
+			setVisualization((Visualization) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -268,8 +268,8 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 			return facts != null && !facts.isEmpty();
 		case GeneratorPackage.SET_OF_FACTS__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case GeneratorPackage.SET_OF_FACTS__VIZUALISATION:
-			return vizualisation != null;
+		case GeneratorPackage.SET_OF_FACTS__VISUALIZATION:
+			return visualization != null;
 		}
 		return super.eIsSet(featureID);
 	}

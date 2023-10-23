@@ -115,13 +115,13 @@ public interface GeneratorPackage extends EPackage {
 	int SET_OF_FACTS__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Vizualisation</b></em>' containment reference.
+	 * The feature id for the '<em><b>Visualization</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SET_OF_FACTS__VIZUALISATION = 2;
+	int SET_OF_FACTS__VISUALIZATION = 2;
 
 	/**
 	 * The number of structural features of the '<em>Set Of Facts</em>' class.
@@ -7069,14 +7069,14 @@ public interface GeneratorPackage extends EPackage {
 	int IMAGE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.VizualisationImpl <em>Vizualisation</em>}' class.
+	 * The meta object id for the '{@link generator.impl.VisualizationImpl <em>Visualization</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.VizualisationImpl
-	 * @see generator.impl.GeneratorPackageImpl#getVizualisation()
+	 * @see generator.impl.VisualizationImpl
+	 * @see generator.impl.GeneratorPackageImpl#getVisualization()
 	 * @generated
 	 */
-	int VIZUALISATION = 96;
+	int VISUALIZATION = 96;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -7085,7 +7085,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIZUALISATION__ID = IMAGE__ID;
+	int VISUALIZATION__ID = IMAGE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Positions</b></em>' containment reference list.
@@ -7094,35 +7094,35 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIZUALISATION__POSITIONS = IMAGE_FEATURE_COUNT + 0;
+	int VISUALIZATION__POSITIONS = IMAGE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Vizualisation</em>' class.
+	 * The number of structural features of the '<em>Visualization</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIZUALISATION_FEATURE_COUNT = IMAGE_FEATURE_COUNT + 1;
+	int VISUALIZATION_FEATURE_COUNT = IMAGE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Vizualisation</em>' class.
+	 * The number of operations of the '<em>Visualization</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIZUALISATION_OPERATION_COUNT = IMAGE_OPERATION_COUNT + 0;
+	int VISUALIZATION_OPERATION_COUNT = IMAGE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.VizualisationPositionImpl <em>Vizualisation Position</em>}' class.
+	 * The meta object id for the '{@link generator.impl.VisualizationPositionImpl <em>Visualization Position</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.VizualisationPositionImpl
-	 * @see generator.impl.GeneratorPackageImpl#getVizualisationPosition()
+	 * @see generator.impl.VisualizationPositionImpl
+	 * @see generator.impl.GeneratorPackageImpl#getVisualizationPosition()
 	 * @generated
 	 */
-	int VIZUALISATION_POSITION = 97;
+	int VISUALIZATION_POSITION = 97;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -7131,25 +7131,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIZUALISATION_POSITION__ID = 0;
+	int VISUALIZATION_POSITION__ID = 0;
 
 	/**
-	 * The number of structural features of the '<em>Vizualisation Position</em>' class.
+	 * The number of structural features of the '<em>Visualization Position</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIZUALISATION_POSITION_FEATURE_COUNT = 1;
+	int VISUALIZATION_POSITION_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>Vizualisation Position</em>' class.
+	 * The number of operations of the '<em>Visualization Position</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIZUALISATION_POSITION_OPERATION_COUNT = 0;
+	int VISUALIZATION_POSITION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.LegendSymbolImpl <em>Legend Symbol</em>}' class.
@@ -8247,14 +8247,14 @@ public interface GeneratorPackage extends EPackage {
 	int CLASSROOMS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.AVizualisationQuestionableFactImpl <em>AVizualisation Questionable Fact</em>}' class.
+	 * The meta object id for the '{@link generator.impl.AVisualizationQuestionableFactImpl <em>AVisualization Questionable Fact</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.AVizualisationQuestionableFactImpl
-	 * @see generator.impl.GeneratorPackageImpl#getAVizualisationQuestionableFact()
+	 * @see generator.impl.AVisualizationQuestionableFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getAVisualizationQuestionableFact()
 	 * @generated
 	 */
-	int AVIZUALISATION_QUESTIONABLE_FACT = 115;
+	int AVISUALIZATION_QUESTIONABLE_FACT = 115;
 
 	/**
 	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
@@ -8263,7 +8263,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AVIZUALISATION_QUESTIONABLE_FACT__WAS_SELECTED = AQUESTIONABLE_FACT__WAS_SELECTED;
+	int AVISUALIZATION_QUESTIONABLE_FACT__WAS_SELECTED = AQUESTIONABLE_FACT__WAS_SELECTED;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -8272,7 +8272,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AVIZUALISATION_QUESTIONABLE_FACT__ACHIEVED = AQUESTIONABLE_FACT__ACHIEVED;
+	int AVISUALIZATION_QUESTIONABLE_FACT__ACHIEVED = AQUESTIONABLE_FACT__ACHIEVED;
 
 	/**
 	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
@@ -8281,7 +8281,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AVIZUALISATION_QUESTIONABLE_FACT__RESULTS = AQUESTIONABLE_FACT__RESULTS;
+	int AVISUALIZATION_QUESTIONABLE_FACT__RESULTS = AQUESTIONABLE_FACT__RESULTS;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -8290,7 +8290,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AVIZUALISATION_QUESTIONABLE_FACT__ID = AQUESTIONABLE_FACT__ID;
+	int AVISUALIZATION_QUESTIONABLE_FACT__ID = AQUESTIONABLE_FACT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
@@ -8299,25 +8299,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AVIZUALISATION_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+	int AVISUALIZATION_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
-	 * The feature id for the '<em><b>Vizualisation</b></em>' reference.
+	 * The feature id for the '<em><b>Visualization</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION = AQUESTIONABLE_FACT_FEATURE_COUNT + 0;
+	int AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION = AQUESTIONABLE_FACT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Vizualisation Solutions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Visualization Solutions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS = AQUESTIONABLE_FACT_FEATURE_COUNT + 1;
+	int AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION_SOLUTIONS = AQUESTIONABLE_FACT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Consigne</b></em>' attribute.
@@ -8326,35 +8326,35 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE = AQUESTIONABLE_FACT_FEATURE_COUNT + 2;
+	int AVISUALIZATION_QUESTIONABLE_FACT__CONSIGNE = AQUESTIONABLE_FACT_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>AVizualisation Questionable Fact</em>' class.
+	 * The number of structural features of the '<em>AVisualization Questionable Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AVIZUALISATION_QUESTIONABLE_FACT_FEATURE_COUNT = AQUESTIONABLE_FACT_FEATURE_COUNT + 3;
+	int AVISUALIZATION_QUESTIONABLE_FACT_FEATURE_COUNT = AQUESTIONABLE_FACT_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of operations of the '<em>AVizualisation Questionable Fact</em>' class.
+	 * The number of operations of the '<em>AVisualization Questionable Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AVIZUALISATION_QUESTIONABLE_FACT_OPERATION_COUNT = AQUESTIONABLE_FACT_OPERATION_COUNT + 0;
+	int AVISUALIZATION_QUESTIONABLE_FACT_OPERATION_COUNT = AQUESTIONABLE_FACT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.VizualisationSolutionImpl <em>Vizualisation Solution</em>}' class.
+	 * The meta object id for the '{@link generator.impl.VisualizationSolutionImpl <em>Visualization Solution</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.VizualisationSolutionImpl
-	 * @see generator.impl.GeneratorPackageImpl#getVizualisationSolution()
+	 * @see generator.impl.VisualizationSolutionImpl
+	 * @see generator.impl.GeneratorPackageImpl#getVisualizationSolution()
 	 * @generated
 	 */
-	int VIZUALISATION_SOLUTION = 116;
+	int VISUALIZATION_SOLUTION = 116;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -8363,34 +8363,34 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIZUALISATION_SOLUTION__VALUE = 0;
+	int VISUALIZATION_SOLUTION__VALUE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Vizualisation Position</b></em>' reference.
+	 * The feature id for the '<em><b>Visualization Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIZUALISATION_SOLUTION__VIZUALISATION_POSITION = 1;
+	int VISUALIZATION_SOLUTION__VISUALIZATION_POSITION = 1;
 
 	/**
-	 * The number of structural features of the '<em>Vizualisation Solution</em>' class.
+	 * The number of structural features of the '<em>Visualization Solution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIZUALISATION_SOLUTION_FEATURE_COUNT = 2;
+	int VISUALIZATION_SOLUTION_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Vizualisation Solution</em>' class.
+	 * The number of operations of the '<em>Visualization Solution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIZUALISATION_SOLUTION_OPERATION_COUNT = 0;
+	int VISUALIZATION_SOLUTION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MapQuestionableFactImpl <em>Map Questionable Fact</em>}' class.
@@ -8863,7 +8863,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__WAS_SELECTED = AVIZUALISATION_QUESTIONABLE_FACT__WAS_SELECTED;
+	int MAP_QUESTIONABLE_FACT__WAS_SELECTED = AVISUALIZATION_QUESTIONABLE_FACT__WAS_SELECTED;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -8872,7 +8872,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__ACHIEVED = AVIZUALISATION_QUESTIONABLE_FACT__ACHIEVED;
+	int MAP_QUESTIONABLE_FACT__ACHIEVED = AVISUALIZATION_QUESTIONABLE_FACT__ACHIEVED;
 
 	/**
 	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
@@ -8881,7 +8881,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__RESULTS = AVIZUALISATION_QUESTIONABLE_FACT__RESULTS;
+	int MAP_QUESTIONABLE_FACT__RESULTS = AVISUALIZATION_QUESTIONABLE_FACT__RESULTS;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -8890,7 +8890,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__ID = AVIZUALISATION_QUESTIONABLE_FACT__ID;
+	int MAP_QUESTIONABLE_FACT__ID = AVISUALIZATION_QUESTIONABLE_FACT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
@@ -8899,25 +8899,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = AVIZUALISATION_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+	int MAP_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = AVISUALIZATION_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
-	 * The feature id for the '<em><b>Vizualisation</b></em>' reference.
+	 * The feature id for the '<em><b>Visualization</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__VIZUALISATION = AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION;
+	int MAP_QUESTIONABLE_FACT__VISUALIZATION = AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION;
 
 	/**
-	 * The feature id for the '<em><b>Vizualisation Solutions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Visualization Solutions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS = AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS;
+	int MAP_QUESTIONABLE_FACT__VISUALIZATION_SOLUTIONS = AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION_SOLUTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Consigne</b></em>' attribute.
@@ -8926,7 +8926,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__CONSIGNE = AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE;
+	int MAP_QUESTIONABLE_FACT__CONSIGNE = AVISUALIZATION_QUESTIONABLE_FACT__CONSIGNE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -8935,7 +8935,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT__TYPE = AVIZUALISATION_QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+	int MAP_QUESTIONABLE_FACT__TYPE = AVISUALIZATION_QUESTIONABLE_FACT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Map Questionable Fact</em>' class.
@@ -8944,7 +8944,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT_FEATURE_COUNT = AVIZUALISATION_QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+	int MAP_QUESTIONABLE_FACT_FEATURE_COUNT = AVISUALIZATION_QUESTIONABLE_FACT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Map Questionable Fact</em>' class.
@@ -8953,7 +8953,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTIONABLE_FACT_OPERATION_COUNT = AVIZUALISATION_QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+	int MAP_QUESTIONABLE_FACT_OPERATION_COUNT = AVISUALIZATION_QUESTIONABLE_FACT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
@@ -9178,15 +9178,15 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getSetOfFacts_Name();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.SetOfFacts#getVizualisation <em>Vizualisation</em>}'.
+	 * Returns the meta object for the containment reference '{@link generator.SetOfFacts#getVisualization <em>Visualization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Vizualisation</em>'.
-	 * @see generator.SetOfFacts#getVizualisation()
+	 * @return the meta object for the containment reference '<em>Visualization</em>'.
+	 * @see generator.SetOfFacts#getVisualization()
 	 * @see #getSetOfFacts()
 	 * @generated
 	 */
-	EReference getSetOfFacts_Vizualisation();
+	EReference getSetOfFacts_Visualization();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Knowledge <em>Knowledge</em>}'.
@@ -13027,46 +13027,46 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getImage_ID();
 
 	/**
-	 * Returns the meta object for class '{@link generator.Vizualisation <em>Vizualisation</em>}'.
+	 * Returns the meta object for class '{@link generator.Visualization <em>Visualization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Vizualisation</em>'.
-	 * @see generator.Vizualisation
+	 * @return the meta object for class '<em>Visualization</em>'.
+	 * @see generator.Visualization
 	 * @generated
 	 */
-	EClass getVizualisation();
+	EClass getVisualization();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generator.Vizualisation#getPositions <em>Positions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link generator.Visualization#getPositions <em>Positions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Positions</em>'.
-	 * @see generator.Vizualisation#getPositions()
-	 * @see #getVizualisation()
+	 * @see generator.Visualization#getPositions()
+	 * @see #getVisualization()
 	 * @generated
 	 */
-	EReference getVizualisation_Positions();
+	EReference getVisualization_Positions();
 
 	/**
-	 * Returns the meta object for class '{@link generator.VizualisationPosition <em>Vizualisation Position</em>}'.
+	 * Returns the meta object for class '{@link generator.VisualizationPosition <em>Visualization Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Vizualisation Position</em>'.
-	 * @see generator.VizualisationPosition
+	 * @return the meta object for class '<em>Visualization Position</em>'.
+	 * @see generator.VisualizationPosition
 	 * @generated
 	 */
-	EClass getVizualisationPosition();
+	EClass getVisualizationPosition();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.VizualisationPosition#getID <em>ID</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.VisualizationPosition#getID <em>ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ID</em>'.
-	 * @see generator.VizualisationPosition#getID()
-	 * @see #getVizualisationPosition()
+	 * @see generator.VisualizationPosition#getID()
+	 * @see #getVisualizationPosition()
 	 * @generated
 	 */
-	EAttribute getVizualisationPosition_ID();
+	EAttribute getVisualizationPosition_ID();
 
 	/**
 	 * Returns the meta object for class '{@link generator.LegendSymbol <em>Legend Symbol</em>}'.
@@ -13699,79 +13699,79 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getAQuestionableFact_QuestionWithImage();
 
 	/**
-	 * Returns the meta object for class '{@link generator.AVizualisationQuestionableFact <em>AVizualisation Questionable Fact</em>}'.
+	 * Returns the meta object for class '{@link generator.AVisualizationQuestionableFact <em>AVisualization Questionable Fact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>AVizualisation Questionable Fact</em>'.
-	 * @see generator.AVizualisationQuestionableFact
+	 * @return the meta object for class '<em>AVisualization Questionable Fact</em>'.
+	 * @see generator.AVisualizationQuestionableFact
 	 * @generated
 	 */
-	EClass getAVizualisationQuestionableFact();
+	EClass getAVisualizationQuestionableFact();
 
 	/**
-	 * Returns the meta object for the reference '{@link generator.AVizualisationQuestionableFact#getVizualisation <em>Vizualisation</em>}'.
+	 * Returns the meta object for the reference '{@link generator.AVisualizationQuestionableFact#getVisualization <em>Visualization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Vizualisation</em>'.
-	 * @see generator.AVizualisationQuestionableFact#getVizualisation()
-	 * @see #getAVizualisationQuestionableFact()
+	 * @return the meta object for the reference '<em>Visualization</em>'.
+	 * @see generator.AVisualizationQuestionableFact#getVisualization()
+	 * @see #getAVisualizationQuestionableFact()
 	 * @generated
 	 */
-	EReference getAVizualisationQuestionableFact_Vizualisation();
+	EReference getAVisualizationQuestionableFact_Visualization();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generator.AVizualisationQuestionableFact#getVizualisationSolutions <em>Vizualisation Solutions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link generator.AVisualizationQuestionableFact#getVisualizationSolutions <em>Visualization Solutions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Vizualisation Solutions</em>'.
-	 * @see generator.AVizualisationQuestionableFact#getVizualisationSolutions()
-	 * @see #getAVizualisationQuestionableFact()
+	 * @return the meta object for the containment reference list '<em>Visualization Solutions</em>'.
+	 * @see generator.AVisualizationQuestionableFact#getVisualizationSolutions()
+	 * @see #getAVisualizationQuestionableFact()
 	 * @generated
 	 */
-	EReference getAVizualisationQuestionableFact_VizualisationSolutions();
+	EReference getAVisualizationQuestionableFact_VisualizationSolutions();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.AVizualisationQuestionableFact#getConsigne <em>Consigne</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.AVisualizationQuestionableFact#getConsigne <em>Consigne</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Consigne</em>'.
-	 * @see generator.AVizualisationQuestionableFact#getConsigne()
-	 * @see #getAVizualisationQuestionableFact()
+	 * @see generator.AVisualizationQuestionableFact#getConsigne()
+	 * @see #getAVisualizationQuestionableFact()
 	 * @generated
 	 */
-	EAttribute getAVizualisationQuestionableFact_Consigne();
+	EAttribute getAVisualizationQuestionableFact_Consigne();
 
 	/**
-	 * Returns the meta object for class '{@link generator.VizualisationSolution <em>Vizualisation Solution</em>}'.
+	 * Returns the meta object for class '{@link generator.VisualizationSolution <em>Visualization Solution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Vizualisation Solution</em>'.
-	 * @see generator.VizualisationSolution
+	 * @return the meta object for class '<em>Visualization Solution</em>'.
+	 * @see generator.VisualizationSolution
 	 * @generated
 	 */
-	EClass getVizualisationSolution();
+	EClass getVisualizationSolution();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.VizualisationSolution#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.VisualizationSolution#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see generator.VizualisationSolution#getValue()
-	 * @see #getVizualisationSolution()
+	 * @see generator.VisualizationSolution#getValue()
+	 * @see #getVisualizationSolution()
 	 * @generated
 	 */
-	EAttribute getVizualisationSolution_Value();
+	EAttribute getVisualizationSolution_Value();
 
 	/**
-	 * Returns the meta object for the reference '{@link generator.VizualisationSolution#getVizualisationPosition <em>Vizualisation Position</em>}'.
+	 * Returns the meta object for the reference '{@link generator.VisualizationSolution#getVisualizationPosition <em>Visualization Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Vizualisation Position</em>'.
-	 * @see generator.VizualisationSolution#getVizualisationPosition()
-	 * @see #getVizualisationSolution()
+	 * @return the meta object for the reference '<em>Visualization Position</em>'.
+	 * @see generator.VisualizationSolution#getVisualizationPosition()
+	 * @see #getVisualizationSolution()
 	 * @generated
 	 */
-	EReference getVizualisationSolution_VizualisationPosition();
+	EReference getVisualizationSolution_VisualizationPosition();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MapQuestionableFact <em>Map Questionable Fact</em>}'.
@@ -14162,12 +14162,12 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute SET_OF_FACTS__NAME = eINSTANCE.getSetOfFacts_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Vizualisation</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Visualization</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SET_OF_FACTS__VIZUALISATION = eINSTANCE.getSetOfFacts_Vizualisation();
+		EReference SET_OF_FACTS__VISUALIZATION = eINSTANCE.getSetOfFacts_Visualization();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.KnowledgeImpl <em>Knowledge</em>}' class.
@@ -17239,14 +17239,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute IMAGE__ID = eINSTANCE.getImage_ID();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.VizualisationImpl <em>Vizualisation</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.VisualizationImpl <em>Visualization</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.VizualisationImpl
-		 * @see generator.impl.GeneratorPackageImpl#getVizualisation()
+		 * @see generator.impl.VisualizationImpl
+		 * @see generator.impl.GeneratorPackageImpl#getVisualization()
 		 * @generated
 		 */
-		EClass VIZUALISATION = eINSTANCE.getVizualisation();
+		EClass VISUALIZATION = eINSTANCE.getVisualization();
 
 		/**
 		 * The meta object literal for the '<em><b>Positions</b></em>' containment reference list feature.
@@ -17254,17 +17254,17 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VIZUALISATION__POSITIONS = eINSTANCE.getVizualisation_Positions();
+		EReference VISUALIZATION__POSITIONS = eINSTANCE.getVisualization_Positions();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.VizualisationPositionImpl <em>Vizualisation Position</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.VisualizationPositionImpl <em>Visualization Position</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.VizualisationPositionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getVizualisationPosition()
+		 * @see generator.impl.VisualizationPositionImpl
+		 * @see generator.impl.GeneratorPackageImpl#getVisualizationPosition()
 		 * @generated
 		 */
-		EClass VIZUALISATION_POSITION = eINSTANCE.getVizualisationPosition();
+		EClass VISUALIZATION_POSITION = eINSTANCE.getVisualizationPosition();
 
 		/**
 		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
@@ -17272,7 +17272,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VIZUALISATION_POSITION__ID = eINSTANCE.getVizualisationPosition_ID();
+		EAttribute VISUALIZATION_POSITION__ID = eINSTANCE.getVisualizationPosition_ID();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.LegendSymbolImpl <em>Legend Symbol</em>}' class.
@@ -17781,32 +17781,32 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE = eINSTANCE.getAQuestionableFact_QuestionWithImage();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.AVizualisationQuestionableFactImpl <em>AVizualisation Questionable Fact</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.AVisualizationQuestionableFactImpl <em>AVisualization Questionable Fact</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.AVizualisationQuestionableFactImpl
-		 * @see generator.impl.GeneratorPackageImpl#getAVizualisationQuestionableFact()
+		 * @see generator.impl.AVisualizationQuestionableFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getAVisualizationQuestionableFact()
 		 * @generated
 		 */
-		EClass AVIZUALISATION_QUESTIONABLE_FACT = eINSTANCE.getAVizualisationQuestionableFact();
+		EClass AVISUALIZATION_QUESTIONABLE_FACT = eINSTANCE.getAVisualizationQuestionableFact();
 
 		/**
-		 * The meta object literal for the '<em><b>Vizualisation</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Visualization</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION = eINSTANCE
-				.getAVizualisationQuestionableFact_Vizualisation();
+		EReference AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION = eINSTANCE
+				.getAVisualizationQuestionableFact_Visualization();
 
 		/**
-		 * The meta object literal for the '<em><b>Vizualisation Solutions</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Visualization Solutions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS = eINSTANCE
-				.getAVizualisationQuestionableFact_VizualisationSolutions();
+		EReference AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION_SOLUTIONS = eINSTANCE
+				.getAVisualizationQuestionableFact_VisualizationSolutions();
 
 		/**
 		 * The meta object literal for the '<em><b>Consigne</b></em>' attribute feature.
@@ -17814,17 +17814,17 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE = eINSTANCE.getAVizualisationQuestionableFact_Consigne();
+		EAttribute AVISUALIZATION_QUESTIONABLE_FACT__CONSIGNE = eINSTANCE.getAVisualizationQuestionableFact_Consigne();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.VizualisationSolutionImpl <em>Vizualisation Solution</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.VisualizationSolutionImpl <em>Visualization Solution</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.VizualisationSolutionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getVizualisationSolution()
+		 * @see generator.impl.VisualizationSolutionImpl
+		 * @see generator.impl.GeneratorPackageImpl#getVisualizationSolution()
 		 * @generated
 		 */
-		EClass VIZUALISATION_SOLUTION = eINSTANCE.getVizualisationSolution();
+		EClass VISUALIZATION_SOLUTION = eINSTANCE.getVisualizationSolution();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -17832,16 +17832,16 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VIZUALISATION_SOLUTION__VALUE = eINSTANCE.getVizualisationSolution_Value();
+		EAttribute VISUALIZATION_SOLUTION__VALUE = eINSTANCE.getVisualizationSolution_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Vizualisation Position</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Visualization Position</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VIZUALISATION_SOLUTION__VIZUALISATION_POSITION = eINSTANCE
-				.getVizualisationSolution_VizualisationPosition();
+		EReference VISUALIZATION_SOLUTION__VISUALIZATION_POSITION = eINSTANCE
+				.getVisualizationSolution_VisualizationPosition();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MapQuestionableFactImpl <em>Map Questionable Fact</em>}' class.

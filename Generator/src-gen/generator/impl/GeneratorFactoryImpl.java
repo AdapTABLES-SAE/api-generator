@@ -221,10 +221,10 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createCurseEligibility();
 		case GeneratorPackage.IMAGE:
 			return createImage();
-		case GeneratorPackage.VIZUALISATION:
-			return createVizualisation();
-		case GeneratorPackage.VIZUALISATION_POSITION:
-			return createVizualisationPosition();
+		case GeneratorPackage.VISUALIZATION:
+			return createVisualization();
+		case GeneratorPackage.VISUALIZATION_POSITION:
+			return createVisualizationPosition();
 		case GeneratorPackage.LEGEND_SYMBOL:
 			return createLegendSymbol();
 		case GeneratorPackage.LEGEND_TEXT:
@@ -253,8 +253,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createTeachers();
 		case GeneratorPackage.CLASSROOMS:
 			return createClassrooms();
-		case GeneratorPackage.VIZUALISATION_SOLUTION:
-			return createVizualisationSolution();
+		case GeneratorPackage.VISUALIZATION_SOLUTION:
+			return createVisualizationSolution();
 		case GeneratorPackage.HG_LEVEL:
 			return createHGLevel();
 		case GeneratorPackage.POSITIONED_MAP_ELEMENT:
@@ -1193,9 +1193,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Vizualisation createVizualisation() {
-		VizualisationImpl vizualisation = new VizualisationImpl();
-		return vizualisation;
+	public Visualization createVisualization() {
+		VisualizationImpl visualization = new VisualizationImpl();
+		return visualization;
 	}
 
 	/**
@@ -1203,9 +1203,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VizualisationPosition createVizualisationPosition() {
-		VizualisationPositionImpl vizualisationPosition = new VizualisationPositionImpl();
-		return vizualisationPosition;
+	public VisualizationPosition createVisualizationPosition() {
+		VisualizationPositionImpl visualizationPosition = new VisualizationPositionImpl();
+		return visualizationPosition;
 	}
 
 	/**
@@ -1353,9 +1353,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VizualisationSolution createVizualisationSolution() {
-		VizualisationSolutionImpl vizualisationSolution = new VizualisationSolutionImpl();
-		return vizualisationSolution;
+	public VisualizationSolution createVisualizationSolution() {
+		VisualizationSolutionImpl visualizationSolution = new VisualizationSolutionImpl();
+		return visualizationSolution;
 	}
 
 	/**

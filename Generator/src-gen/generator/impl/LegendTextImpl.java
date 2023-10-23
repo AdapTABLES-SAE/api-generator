@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import generator.GeneratorPackage;
 import generator.LegendText;
-import generator.VizualisationPosition;
+import generator.VisualizationPosition;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ public class LegendTextImpl extends MinimalEObjectImpl.Container implements Lege
 	 * @generated
 	 * @ordered
 	 */
-	protected VizualisationPosition position;
+	protected VisualizationPosition position;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -102,10 +102,10 @@ public class LegendTextImpl extends MinimalEObjectImpl.Container implements Lege
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VizualisationPosition getPosition() {
+	public VisualizationPosition getPosition() {
 		if (position != null && position.eIsProxy()) {
 			InternalEObject oldPosition = (InternalEObject) position;
-			position = (VizualisationPosition) eResolveProxy(oldPosition);
+			position = (VisualizationPosition) eResolveProxy(oldPosition);
 			if (position != oldPosition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.LEGEND_TEXT__POSITION,
@@ -120,7 +120,7 @@ public class LegendTextImpl extends MinimalEObjectImpl.Container implements Lege
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VizualisationPosition basicGetPosition() {
+	public VisualizationPosition basicGetPosition() {
 		return position;
 	}
 
@@ -129,8 +129,8 @@ public class LegendTextImpl extends MinimalEObjectImpl.Container implements Lege
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPosition(VizualisationPosition newPosition) {
-		VizualisationPosition oldPosition = position;
+	public void setPosition(VisualizationPosition newPosition) {
+		VisualizationPosition oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEGEND_TEXT__POSITION, oldPosition,
@@ -167,7 +167,7 @@ public class LegendTextImpl extends MinimalEObjectImpl.Container implements Lege
 			setText((String) newValue);
 			return;
 		case GeneratorPackage.LEGEND_TEXT__POSITION:
-			setPosition((VizualisationPosition) newValue);
+			setPosition((VisualizationPosition) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -185,7 +185,7 @@ public class LegendTextImpl extends MinimalEObjectImpl.Container implements Lege
 			setText(TEXT_EDEFAULT);
 			return;
 		case GeneratorPackage.LEGEND_TEXT__POSITION:
-			setPosition((VizualisationPosition) null);
+			setPosition((VisualizationPosition) null);
 			return;
 		}
 		super.eUnset(featureID);

@@ -3,7 +3,7 @@
 package generator.impl;
 
 import generator.GeneratorPackage;
-import generator.VizualisationPosition;
+import generator.VisualizationPosition;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,18 +14,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Vizualisation Position</b></em>'.
+ * An implementation of the model object '<em><b>Visualization Position</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.VizualisationPositionImpl#getID <em>ID</em>}</li>
+ *   <li>{@link generator.impl.VisualizationPositionImpl#getID <em>ID</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VizualisationPositionImpl extends MinimalEObjectImpl.Container implements VizualisationPosition {
+public class VisualizationPositionImpl extends MinimalEObjectImpl.Container implements VisualizationPosition {
 	/**
 	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,7 +51,7 @@ public class VizualisationPositionImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VizualisationPositionImpl() {
+	public VisualizationPositionImpl() {
 		super();
 	}
 
@@ -62,7 +62,7 @@ public class VizualisationPositionImpl extends MinimalEObjectImpl.Container impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.VIZUALISATION_POSITION;
+		return GeneratorPackage.Literals.VISUALIZATION_POSITION;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class VizualisationPositionImpl extends MinimalEObjectImpl.Container impl
 		String oldID = id;
 		id = newID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.VIZUALISATION_POSITION__ID, oldID,
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.VISUALIZATION_POSITION__ID, oldID,
 					id));
 	}
 
@@ -95,7 +95,7 @@ public class VizualisationPositionImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.VIZUALISATION_POSITION__ID:
+		case GeneratorPackage.VISUALIZATION_POSITION__ID:
 			return getID();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -109,7 +109,7 @@ public class VizualisationPositionImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.VIZUALISATION_POSITION__ID:
+		case GeneratorPackage.VISUALIZATION_POSITION__ID:
 			setID((String) newValue);
 			return;
 		}
@@ -124,7 +124,7 @@ public class VizualisationPositionImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.VIZUALISATION_POSITION__ID:
+		case GeneratorPackage.VISUALIZATION_POSITION__ID:
 			setID(ID_EDEFAULT);
 			return;
 		}
@@ -139,7 +139,7 @@ public class VizualisationPositionImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.VIZUALISATION_POSITION__ID:
+		case GeneratorPackage.VISUALIZATION_POSITION__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
@@ -162,4 +162,4 @@ public class VizualisationPositionImpl extends MinimalEObjectImpl.Container impl
 		return result.toString();
 	}
 
-} //VizualisationPositionImpl
+} //VisualizationPositionImpl

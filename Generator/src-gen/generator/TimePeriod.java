@@ -71,12 +71,12 @@ public interface TimePeriod extends Time {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Start Position</em>' reference.
-	 * @see #setStartPosition(VizualisationPosition)
+	 * @see #setStartPosition(VisualizationPosition)
 	 * @see generator.GeneratorPackage#getTimePeriod_StartPosition()
 	 * @model
 	 * @generated
 	 */
-	VizualisationPosition getStartPosition();
+	VisualizationPosition getStartPosition();
 
 	/**
 	 * Sets the value of the '{@link generator.TimePeriod#getStartPosition <em>Start Position</em>}' reference.
@@ -86,19 +86,19 @@ public interface TimePeriod extends Time {
 	 * @see #getStartPosition()
 	 * @generated
 	 */
-	void setStartPosition(VizualisationPosition value);
+	void setStartPosition(VisualizationPosition value);
 
 	/**
 	 * Returns the value of the '<em><b>End Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End Position</em>' reference.
-	 * @see #setEndPosition(VizualisationPosition)
+	 * @see #setEndPosition(VisualizationPosition)
 	 * @see generator.GeneratorPackage#getTimePeriod_EndPosition()
 	 * @model
 	 * @generated
 	 */
-	VizualisationPosition getEndPosition();
+	VisualizationPosition getEndPosition();
 
 	/**
 	 * Sets the value of the '{@link generator.TimePeriod#getEndPosition <em>End Position</em>}' reference.
@@ -108,7 +108,7 @@ public interface TimePeriod extends Time {
 	 * @see #getEndPosition()
 	 * @generated
 	 */
-	void setEndPosition(VizualisationPosition value);
+	void setEndPosition(VisualizationPosition value);
 
 	/**
 	 * <!-- begin-user-doc -->

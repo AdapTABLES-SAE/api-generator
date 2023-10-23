@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import generator.GeneratorPackage;
 import generator.MapQuestionParam;
-import generator.Vizualisation;
+import generator.Visualization;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ public class MapQuestionParamImpl extends AQuestionParamImpl implements MapQuest
 	 * @generated
 	 * @ordered
 	 */
-	protected Vizualisation map;
+	protected Visualization map;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,10 +59,10 @@ public class MapQuestionParamImpl extends AQuestionParamImpl implements MapQuest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Vizualisation getMap() {
+	public Visualization getMap() {
 		if (map != null && map.eIsProxy()) {
 			InternalEObject oldMap = (InternalEObject) map;
-			map = (Vizualisation) eResolveProxy(oldMap);
+			map = (Visualization) eResolveProxy(oldMap);
 			if (map != oldMap) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeneratorPackage.MAP_QUESTION_PARAM__MAP,
@@ -77,7 +77,7 @@ public class MapQuestionParamImpl extends AQuestionParamImpl implements MapQuest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Vizualisation basicGetMap() {
+	public Visualization basicGetMap() {
 		return map;
 	}
 
@@ -86,8 +86,8 @@ public class MapQuestionParamImpl extends AQuestionParamImpl implements MapQuest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMap(Vizualisation newMap) {
-		Vizualisation oldMap = map;
+	public void setMap(Visualization newMap) {
+		Visualization oldMap = map;
 		map = newMap;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MAP_QUESTION_PARAM__MAP, oldMap,
@@ -119,7 +119,7 @@ public class MapQuestionParamImpl extends AQuestionParamImpl implements MapQuest
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case GeneratorPackage.MAP_QUESTION_PARAM__MAP:
-			setMap((Vizualisation) newValue);
+			setMap((Visualization) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -134,7 +134,7 @@ public class MapQuestionParamImpl extends AQuestionParamImpl implements MapQuest
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case GeneratorPackage.MAP_QUESTION_PARAM__MAP:
-			setMap((Vizualisation) null);
+			setMap((Visualization) null);
 			return;
 		}
 		super.eUnset(featureID);

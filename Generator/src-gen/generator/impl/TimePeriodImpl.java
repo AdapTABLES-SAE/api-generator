@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import generator.GeneratorPackage;
 import generator.TimePeriod;
-import generator.VizualisationPosition;
+import generator.VisualizationPosition;
 import java.lang.reflect.InvocationTargetException;
 
 /**
@@ -77,7 +77,7 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * @generated
 	 * @ordered
 	 */
-	protected VizualisationPosition startPosition;
+	protected VisualizationPosition startPosition;
 
 	/**
 	 * The cached value of the '{@link #getEndPosition() <em>End Position</em>}' reference.
@@ -87,7 +87,7 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * @generated
 	 * @ordered
 	 */
-	protected VizualisationPosition endPosition;
+	protected VisualizationPosition endPosition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -157,10 +157,10 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VizualisationPosition getStartPosition() {
+	public VisualizationPosition getStartPosition() {
 		if (startPosition != null && startPosition.eIsProxy()) {
 			InternalEObject oldStartPosition = (InternalEObject) startPosition;
-			startPosition = (VizualisationPosition) eResolveProxy(oldStartPosition);
+			startPosition = (VisualizationPosition) eResolveProxy(oldStartPosition);
 			if (startPosition != oldStartPosition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
@@ -175,7 +175,7 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VizualisationPosition basicGetStartPosition() {
+	public VisualizationPosition basicGetStartPosition() {
 		return startPosition;
 	}
 
@@ -184,8 +184,8 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStartPosition(VizualisationPosition newStartPosition) {
-		VizualisationPosition oldStartPosition = startPosition;
+	public void setStartPosition(VisualizationPosition newStartPosition) {
+		VisualizationPosition oldStartPosition = startPosition;
 		startPosition = newStartPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.TIME_PERIOD__START_POSITION,
@@ -197,10 +197,10 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VizualisationPosition getEndPosition() {
+	public VisualizationPosition getEndPosition() {
 		if (endPosition != null && endPosition.eIsProxy()) {
 			InternalEObject oldEndPosition = (InternalEObject) endPosition;
-			endPosition = (VizualisationPosition) eResolveProxy(oldEndPosition);
+			endPosition = (VisualizationPosition) eResolveProxy(oldEndPosition);
 			if (endPosition != oldEndPosition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
@@ -215,7 +215,7 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VizualisationPosition basicGetEndPosition() {
+	public VisualizationPosition basicGetEndPosition() {
 		return endPosition;
 	}
 
@@ -224,8 +224,8 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEndPosition(VizualisationPosition newEndPosition) {
-		VizualisationPosition oldEndPosition = endPosition;
+	public void setEndPosition(VisualizationPosition newEndPosition) {
+		VisualizationPosition oldEndPosition = endPosition;
 		endPosition = newEndPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.TIME_PERIOD__END_POSITION,
@@ -272,10 +272,10 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 			setEndYear((String) newValue);
 			return;
 		case GeneratorPackage.TIME_PERIOD__START_POSITION:
-			setStartPosition((VizualisationPosition) newValue);
+			setStartPosition((VisualizationPosition) newValue);
 			return;
 		case GeneratorPackage.TIME_PERIOD__END_POSITION:
-			setEndPosition((VizualisationPosition) newValue);
+			setEndPosition((VisualizationPosition) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -296,10 +296,10 @@ public class TimePeriodImpl extends TimeImpl implements TimePeriod {
 			setEndYear(END_YEAR_EDEFAULT);
 			return;
 		case GeneratorPackage.TIME_PERIOD__START_POSITION:
-			setStartPosition((VizualisationPosition) null);
+			setStartPosition((VisualizationPosition) null);
 			return;
 		case GeneratorPackage.TIME_PERIOD__END_POSITION:
-			setEndPosition((VizualisationPosition) null);
+			setEndPosition((VisualizationPosition) null);
 			return;
 		}
 		super.eUnset(featureID);

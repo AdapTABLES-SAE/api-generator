@@ -3,8 +3,8 @@
 package generator.impl;
 
 import generator.GeneratorPackage;
-import generator.Vizualisation;
-import generator.VizualisationPosition;
+import generator.Visualization;
+import generator.VisualizationPosition;
 
 import java.util.Collection;
 
@@ -20,18 +20,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Vizualisation</b></em>'.
+ * An implementation of the model object '<em><b>Visualization</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.VizualisationImpl#getPositions <em>Positions</em>}</li>
+ *   <li>{@link generator.impl.VisualizationImpl#getPositions <em>Positions</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VizualisationImpl extends ImageImpl implements Vizualisation {
+public class VisualizationImpl extends ImageImpl implements Visualization {
 	/**
 	 * The cached value of the '{@link #getPositions() <em>Positions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -40,14 +40,14 @@ public class VizualisationImpl extends ImageImpl implements Vizualisation {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VizualisationPosition> positions;
+	protected EList<VisualizationPosition> positions;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VizualisationImpl() {
+	public VisualizationImpl() {
 		super();
 	}
 
@@ -58,7 +58,7 @@ public class VizualisationImpl extends ImageImpl implements Vizualisation {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.VIZUALISATION;
+		return GeneratorPackage.Literals.VISUALIZATION;
 	}
 
 	/**
@@ -66,10 +66,10 @@ public class VizualisationImpl extends ImageImpl implements Vizualisation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VizualisationPosition> getPositions() {
+	public EList<VisualizationPosition> getPositions() {
 		if (positions == null) {
-			positions = new EObjectContainmentEList<VizualisationPosition>(VizualisationPosition.class, this,
-					GeneratorPackage.VIZUALISATION__POSITIONS);
+			positions = new EObjectContainmentEList<VisualizationPosition>(VisualizationPosition.class, this,
+					GeneratorPackage.VISUALIZATION__POSITIONS);
 		}
 		return positions;
 	}
@@ -82,7 +82,7 @@ public class VizualisationImpl extends ImageImpl implements Vizualisation {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.VIZUALISATION__POSITIONS:
+		case GeneratorPackage.VISUALIZATION__POSITIONS:
 			return ((InternalEList<?>) getPositions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -96,7 +96,7 @@ public class VizualisationImpl extends ImageImpl implements Vizualisation {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.VIZUALISATION__POSITIONS:
+		case GeneratorPackage.VISUALIZATION__POSITIONS:
 			return getPositions();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -111,9 +111,9 @@ public class VizualisationImpl extends ImageImpl implements Vizualisation {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.VIZUALISATION__POSITIONS:
+		case GeneratorPackage.VISUALIZATION__POSITIONS:
 			getPositions().clear();
-			getPositions().addAll((Collection<? extends VizualisationPosition>) newValue);
+			getPositions().addAll((Collection<? extends VisualizationPosition>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,7 +127,7 @@ public class VizualisationImpl extends ImageImpl implements Vizualisation {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.VIZUALISATION__POSITIONS:
+		case GeneratorPackage.VISUALIZATION__POSITIONS:
 			getPositions().clear();
 			return;
 		}
@@ -142,10 +142,10 @@ public class VizualisationImpl extends ImageImpl implements Vizualisation {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.VIZUALISATION__POSITIONS:
+		case GeneratorPackage.VISUALIZATION__POSITIONS:
 			return positions != null && !positions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //VizualisationImpl
+} //VisualizationImpl

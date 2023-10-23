@@ -10,7 +10,7 @@ import exceptions.BadSolutionGenerationException;
 import factgenerator_template.FactGeneratorTemplate;
 import generator.AQuestionableFact;
 import generator.ATask;
-import generator.AVizualisationQuestionableFact;
+import generator.AVisualizationQuestionableFact;
 import generator.AbstractFact;
 import generator.Date;
 import generator.ECorrectness;
@@ -19,11 +19,11 @@ import generator.MapQuestionableFact;
 import generator.QuestionedFact;
 import generator.SetOfFacts;
 import generator.TimePeriod;
-import generator.Vizualisation;
-import generator.VizualisationPosition;
-import generator.VizualisationSolution;
+import generator.Visualization;
+import generator.VisualizationPosition;
+import generator.VisualizationSolution;
 import generator.impl.MapQuestionableFactImpl;
-import generator.impl.VizualisationSolutionImpl;
+import generator.impl.VisualizationSolutionImpl;
 import structures.DungeonElements;
 import structures.Soluce;
 
@@ -36,29 +36,29 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 	@Override
 	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
-		if(fact instanceof HistoryFact  && parent.getVizualisation() != null) {
-			 questionableFacts.add(buildQF(task, (HistoryFact) fact, parent.getVizualisation()));
+		if(fact instanceof HistoryFact  && parent.getVisualization() != null) {
+			 questionableFacts.add(buildQF(task, (HistoryFact) fact, parent.getVisualization()));
 		}
 		
 		return questionableFacts;
 	}
 	
-	private VizualisationSolution buildVizualisationSolution(String value, VizualisationPosition position) {
-		VizualisationSolution soluce = new VizualisationSolutionImpl();
+	private VisualizationSolution buildVisualizationSolution(String value, VisualizationPosition position) {
+		VisualizationSolution soluce = new VisualizationSolutionImpl();
 		soluce.setValue(value);
-		soluce.setVizualisationPosition(position);
+		soluce.setVisualizationPosition(position);
 		return soluce;
 	}
 	
-	private AVizualisationQuestionableFact buildQF(ATask task, HistoryFact fact, Vizualisation map) {
-		AVizualisationQuestionableFact qf = new MapQuestionableFactImpl(); 
+	private AVisualizationQuestionableFact buildQF(ATask task, HistoryFact fact, Visualization map) {
+		AVisualizationQuestionableFact qf = new MapQuestionableFactImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
-		qf.setVizualisation(map);
+		qf.setVisualization(map);
 		if(fact.getTime() instanceof Date) {
-			qf.getVizualisationSolutions().add(buildVizualisationSolution(fact.getEvent(), ((Date) fact.getTime()).getPosition()));
+			qf.getVisualizationSolutions().add(buildVisualizationSolution(fact.getEvent(), ((Date) fact.getTime()).getPosition()));
 		} else {
-			qf.getVizualisationSolutions().add(buildVizualisationSolution("(Debut) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getStartPosition()));
-			qf.getVizualisationSolutions().add(buildVizualisationSolution("(Fin) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getEndPosition()));
+			qf.getVisualizationSolutions().add(buildVisualizationSolution("(Debut) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getStartPosition()));
+			qf.getVisualizationSolutions().add(buildVisualizationSolution("(Fin) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getEndPosition()));
 		}			
 		return qf;
 	}
@@ -66,8 +66,8 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 	@Override
 	protected List<Soluce> getListOfGoodSolutions(AQuestionableFact qFact) {
 		List<Soluce> solutions = new ArrayList<>();
-		for (VizualisationSolution prop : ((MapQuestionableFact) qFact).getVizualisationSolutions()) {
-			solutions.add(new Soluce(prop.getValue(), prop.getVizualisationPosition()));
+		for (VisualizationSolution prop : ((MapQuestionableFact) qFact).getVisualizationSolutions()) {
+			solutions.add(new Soluce(prop.getValue(), prop.getVisualizationPosition()));
 		}
 		return solutions;
 	}
@@ -86,7 +86,7 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 
 	@Override
 	protected int correctnessToReach(AQuestionableFact fact) {
-		return ((MapQuestionableFact) fact).getVizualisationSolutions().size();
+		return ((MapQuestionableFact) fact).getVisualizationSolutions().size();
 	}	
 	
 	@Override
@@ -101,10 +101,10 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 		for(AQuestionableFact qfact: facts) {
 			boolean conditionValide = true;
 			for(QuestionedFact fact: previousFacts) {
-				AVizualisationQuestionableFact prevF = (AVizualisationQuestionableFact) fact.getQuestionablefact();
-				AVizualisationQuestionableFact newF = (AVizualisationQuestionableFact) qfact;
-				for(VizualisationSolution sol1 : prevF.getVizualisationSolutions()) {
-					for(VizualisationSolution sol2 : newF.getVizualisationSolutions()) {
+				AVisualizationQuestionableFact prevF = (AVisualizationQuestionableFact) fact.getQuestionablefact();
+				AVisualizationQuestionableFact newF = (AVisualizationQuestionableFact) qfact;
+				for(VisualizationSolution sol1 : prevF.getVisualizationSolutions()) {
+					for(VisualizationSolution sol2 : newF.getVisualizationSolutions()) {
 						if(sol1.getValue().equals(sol2.getValue())) {
 							conditionValide = false;
 						}

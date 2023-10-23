@@ -16,232 +16,232 @@
           <resultsbytask>
             <task xsi:type="generator:GLocate" href="../LearningDomain.xmi#HG_O1_L1_T1"/>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T1-QAFACT0" consigne="Donner l'ensemble des r&#xe9;ponses" type="REGIONS">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRANCE_REGIONS"/>
-              <vizualisationSolutions value="Guyane">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#GUYANE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Normandie">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#NORMANDIE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Auvergne-Rh&#xf4;ne-Alpes">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#AUVERGNE_RHONE_ALPES"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Hauts-de-France">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#HAUTS_DE_FRANCE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Provence-Alpes-C&#xf4;te-D'Azur">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#PROVENCE_ALPES_COTE_DAZUR"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="La R&#xe9;union">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#LA_REUNION"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Pays de la Loire">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#PAYS_DE_LA_LOIRE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Grand Est">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#GRAND_EST"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Bourgogne-Franche-Comt&#xe9;">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#BOURGOGNE_FRANCHE_COMTE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Bretagne">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#BRETAGNE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Martinique">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#MARTINIQUE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Guadeloupe">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#GUADELOUPE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Mayotte">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#MAYOTTE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="&#xce;le-de-France">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#ILE_DE_FRANCE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Nouvelle Aquitaine">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#NOUVELLE_AQUITAINE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Corse">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#CORSE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Occitanie">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#OCCITANIE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Centre-val de Loire">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#CENTRE_VAL_DE_LOIRE"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRANCE_REGIONS"/>
+              <visualizationSolutions value="Martinique">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#MARTINIQUE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Occitanie">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#OCCITANIE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Grand Est">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#GRAND_EST"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Corse">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#CORSE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Nouvelle Aquitaine">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#NOUVELLE_AQUITAINE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Pays de la Loire">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#PAYS_DE_LA_LOIRE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Bourgogne-Franche-Comt&#xe9;">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#BOURGOGNE_FRANCHE_COMTE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Hauts-de-France">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#HAUTS_DE_FRANCE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="&#xce;le-de-France">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#ILE_DE_FRANCE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Guyane">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#GUYANE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Provence-Alpes-C&#xf4;te-D'Azur">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#PROVENCE_ALPES_COTE_DAZUR"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Normandie">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#NORMANDIE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Auvergne-Rh&#xf4;ne-Alpes">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#AUVERGNE_RHONE_ALPES"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Centre-val de Loire">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#CENTRE_VAL_DE_LOIRE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Bretagne">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#BRETAGNE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="La R&#xe9;union">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#LA_REUNION"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Mayotte">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#MAYOTTE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Guadeloupe">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#GUADELOUPE"/>
+              </visualizationSolutions>
             </questionableFacts>
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:GLocate" href="../LearningDomain.xmi#HG_O1_L1_T2"/>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T2-QAFACT0" consigne="Donner l'ensemble des r&#xe9;ponses" type="REGIONS">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRANCE_REGIONS"/>
-              <vizualisationSolutions value="Martinique">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#MARTINIQUE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Guadeloupe">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#GUADELOUPE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Provence-Alpes-C&#xf4;te-D'Azur">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#PROVENCE_ALPES_COTE_DAZUR"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Nouvelle Aquitaine">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#NOUVELLE_AQUITAINE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Bretagne">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#BRETAGNE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Occitanie">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#OCCITANIE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Mayotte">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#MAYOTTE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Bourgogne-Franche-Comt&#xe9;">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#BOURGOGNE_FRANCHE_COMTE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Auvergne-Rh&#xf4;ne-Alpes">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#AUVERGNE_RHONE_ALPES"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Guyane">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#GUYANE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Corse">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#CORSE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Grand Est">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#GRAND_EST"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Centre-val de Loire">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#CENTRE_VAL_DE_LOIRE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="La R&#xe9;union">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#LA_REUNION"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="&#xce;le-de-France">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#ILE_DE_FRANCE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Normandie">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#NORMANDIE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Hauts-de-France">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#HAUTS_DE_FRANCE"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="Pays de la Loire">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#PAYS_DE_LA_LOIRE"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRANCE_REGIONS"/>
+              <visualizationSolutions value="Bourgogne-Franche-Comt&#xe9;">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#BOURGOGNE_FRANCHE_COMTE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Pays de la Loire">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#PAYS_DE_LA_LOIRE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Guyane">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#GUYANE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Guadeloupe">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#GUADELOUPE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Grand Est">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#GRAND_EST"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Centre-val de Loire">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#CENTRE_VAL_DE_LOIRE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Occitanie">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#OCCITANIE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Bretagne">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#BRETAGNE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Nouvelle Aquitaine">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#NOUVELLE_AQUITAINE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Provence-Alpes-C&#xf4;te-D'Azur">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#PROVENCE_ALPES_COTE_DAZUR"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Martinique">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#MARTINIQUE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="&#xce;le-de-France">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#ILE_DE_FRANCE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Corse">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#CORSE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="La R&#xe9;union">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#LA_REUNION"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Normandie">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#NORMANDIE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Mayotte">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#MAYOTTE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Auvergne-Rh&#xf4;ne-Alpes">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#AUVERGNE_RHONE_ALPES"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Hauts-de-France">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#HAUTS_DE_FRANCE"/>
+              </visualizationSolutions>
             </questionableFacts>
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:HChronology" href="../LearningDomain.xmi#HG_O1_L1_T3"/>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT7" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="Cr&#xe9;ation de l'ONU">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1945"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Cr&#xe9;ation de l'ONU">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1945"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT1" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="R&#xe9;volution Russe">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1917"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="R&#xe9;volution Russe">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1917"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT2" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="Armistice">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1918"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Armistice">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1918"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT11" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="Les accords d'Evian">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1962"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Les accords d'Evian">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1962"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT0" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="(Debut) 1er Guerre Mondiale">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1914"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="(Fin) 1er Guerre Mondiale">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1918"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="(Debut) 1er Guerre Mondiale">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1914"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="(Fin) 1er Guerre Mondiale">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1918"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT3" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="(Debut) Allemagne Nazie (Hitl&#xe9;rienne)">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1933"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="(Fin) Allemagne Nazie (Hitl&#xe9;rienne)">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1945"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="(Debut) Allemagne Nazie (Hitl&#xe9;rienne)">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1933"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="(Fin) Allemagne Nazie (Hitl&#xe9;rienne)">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1945"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT12" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="Naissance de la Ve R&#xe9;publique">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1958"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Naissance de la Ve R&#xe9;publique">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1958"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT9" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="L'Euro">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#2002"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="L'Euro">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#2002"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT15" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="Premi&#xe8;re alternance">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1981"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Premi&#xe8;re alternance">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1981"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT13" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1962"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1962"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT5" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="Appel du g&#xe9;n&#xe9;ral de Gaulle">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1940"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Appel du g&#xe9;n&#xe9;ral de Gaulle">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1940"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT4" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="(Debut) Front Populaire">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1936"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="(Fin) Front Populaire">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1937"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="(Debut) Front Populaire">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1936"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="(Fin) Front Populaire">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1937"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT10" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="Chute du mur de Berlin">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1989"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Chute du mur de Berlin">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1989"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT14" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="Loi Veil (IVG)">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1975"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Loi Veil (IVG)">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1975"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT6" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="(Debut) R&#xe9;gime de Vichy">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1940"/>
-              </vizualisationSolutions>
-              <vizualisationSolutions value="(Fin) R&#xe9;gime de Vichy">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1944"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="(Debut) R&#xe9;gime de Vichy">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1940"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="(Fin) R&#xe9;gime de Vichy">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1944"/>
+              </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT8" type="NONE">
-              <vizualisation href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <vizualisationSolutions value="Trait&#xe9; de Rome">
-                <vizualisationPosition href="../HistoryGeographyFacts.xmi#1957"/>
-              </vizualisationSolutions>
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Trait&#xe9; de Rome">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1957"/>
+              </visualizationSolutions>
             </questionableFacts>
           </resultsbytask>
           <resultsbytask>
@@ -460,5 +460,5 @@
     </learnerProgress>
   </progression>
   <learningpath href="../LearningDomain.xmi#HGPATH"/>
-  <statistics maxGameLevelReached="5" nbLevelsGenerated="88"/>
+  <statistics maxGameLevelReached="5" nbLevelsGenerated="89"/>
 </generator:LearnerPlayer>

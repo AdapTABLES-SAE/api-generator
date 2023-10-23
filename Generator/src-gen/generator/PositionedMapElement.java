@@ -39,12 +39,12 @@ public interface PositionedMapElement extends PositionedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map</em>' reference.
-	 * @see #setMap(Vizualisation)
+	 * @see #setMap(Visualization)
 	 * @see generator.GeneratorPackage#getPositionedMapElement_Map()
 	 * @model
 	 * @generated
 	 */
-	Vizualisation getMap();
+	Visualization getMap();
 
 	/**
 	 * Sets the value of the '{@link generator.PositionedMapElement#getMap <em>Map</em>}' reference.
@@ -54,6 +54,6 @@ public interface PositionedMapElement extends PositionedElement {
 	 * @see #getMap()
 	 * @generated
 	 */
-	void setMap(Vizualisation value);
+	void setMap(Visualization value);
 
 } // PositionedMapElement

@@ -2,11 +2,10 @@
  */
 package generator.impl;
 
-import generator.AVizualisationQuestionableFact;
+import generator.AVisualizationQuestionableFact;
 import generator.GeneratorPackage;
-import generator.Vizualisation;
-
-import generator.VizualisationSolution;
+import generator.Visualization;
+import generator.VisualizationSolution;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -24,40 +23,40 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>AVizualisation Questionable Fact</b></em>'.
+ * An implementation of the model object '<em><b>AVisualization Questionable Fact</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.AVizualisationQuestionableFactImpl#getVizualisation <em>Vizualisation</em>}</li>
- *   <li>{@link generator.impl.AVizualisationQuestionableFactImpl#getVizualisationSolutions <em>Vizualisation Solutions</em>}</li>
- *   <li>{@link generator.impl.AVizualisationQuestionableFactImpl#getConsigne <em>Consigne</em>}</li>
+ *   <li>{@link generator.impl.AVisualizationQuestionableFactImpl#getVisualization <em>Visualization</em>}</li>
+ *   <li>{@link generator.impl.AVisualizationQuestionableFactImpl#getVisualizationSolutions <em>Visualization Solutions</em>}</li>
+ *   <li>{@link generator.impl.AVisualizationQuestionableFactImpl#getConsigne <em>Consigne</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFactImpl
-		implements AVizualisationQuestionableFact {
+public abstract class AVisualizationQuestionableFactImpl extends AQuestionableFactImpl
+		implements AVisualizationQuestionableFact {
 	/**
-	 * The cached value of the '{@link #getVizualisation() <em>Vizualisation</em>}' reference.
+	 * The cached value of the '{@link #getVisualization() <em>Visualization</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVizualisation()
+	 * @see #getVisualization()
 	 * @generated
 	 * @ordered
 	 */
-	protected Vizualisation vizualisation;
+	protected Visualization visualization;
 
 	/**
-	 * The cached value of the '{@link #getVizualisationSolutions() <em>Vizualisation Solutions</em>}' containment reference list.
+	 * The cached value of the '{@link #getVisualizationSolutions() <em>Visualization Solutions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVizualisationSolutions()
+	 * @see #getVisualizationSolutions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VizualisationSolution> vizualisationSolutions;
+	protected EList<VisualizationSolution> visualizationSolutions;
 
 	/**
 	 * The default value of the '{@link #getConsigne() <em>Consigne</em>}' attribute.
@@ -84,7 +83,7 @@ public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AVizualisationQuestionableFactImpl() {
+	public AVisualizationQuestionableFactImpl() {
 		super();
 	}
 
@@ -95,7 +94,7 @@ public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.AVIZUALISATION_QUESTIONABLE_FACT;
+		return GeneratorPackage.Literals.AVISUALIZATION_QUESTIONABLE_FACT;
 	}
 
 	/**
@@ -103,18 +102,18 @@ public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Vizualisation getVizualisation() {
-		if (vizualisation != null && vizualisation.eIsProxy()) {
-			InternalEObject oldVizualisation = (InternalEObject) vizualisation;
-			vizualisation = (Vizualisation) eResolveProxy(oldVizualisation);
-			if (vizualisation != oldVizualisation) {
+	public Visualization getVisualization() {
+		if (visualization != null && visualization.eIsProxy()) {
+			InternalEObject oldVisualization = (InternalEObject) visualization;
+			visualization = (Visualization) eResolveProxy(oldVisualization);
+			if (visualization != oldVisualization) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION, oldVizualisation,
-							vizualisation));
+							GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION, oldVisualization,
+							visualization));
 			}
 		}
-		return vizualisation;
+		return visualization;
 	}
 
 	/**
@@ -122,8 +121,8 @@ public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Vizualisation basicGetVizualisation() {
-		return vizualisation;
+	public Visualization basicGetVisualization() {
+		return visualization;
 	}
 
 	/**
@@ -131,12 +130,12 @@ public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVizualisation(Vizualisation newVizualisation) {
-		Vizualisation oldVizualisation = vizualisation;
-		vizualisation = newVizualisation;
+	public void setVisualization(Visualization newVisualization) {
+		Visualization oldVisualization = visualization;
+		visualization = newVisualization;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION, oldVizualisation, vizualisation));
+					GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION, oldVisualization, visualization));
 	}
 
 	/**
@@ -144,12 +143,12 @@ public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VizualisationSolution> getVizualisationSolutions() {
-		if (vizualisationSolutions == null) {
-			vizualisationSolutions = new EObjectContainmentEList<VizualisationSolution>(VizualisationSolution.class,
-					this, GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS);
+	public EList<VisualizationSolution> getVisualizationSolutions() {
+		if (visualizationSolutions == null) {
+			visualizationSolutions = new EObjectContainmentEList<VisualizationSolution>(VisualizationSolution.class,
+					this, GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION_SOLUTIONS);
 		}
-		return vizualisationSolutions;
+		return visualizationSolutions;
 	}
 
 	/**
@@ -171,7 +170,7 @@ public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFa
 		consigne = newConsigne;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE, oldConsigne, consigne));
+					GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__CONSIGNE, oldConsigne, consigne));
 	}
 
 	/**
@@ -182,8 +181,8 @@ public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFa
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS:
-			return ((InternalEList<?>) getVizualisationSolutions()).basicRemove(otherEnd, msgs);
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION_SOLUTIONS:
+			return ((InternalEList<?>) getVisualizationSolutions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -196,13 +195,13 @@ public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFa
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION:
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION:
 			if (resolve)
-				return getVizualisation();
-			return basicGetVizualisation();
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS:
-			return getVizualisationSolutions();
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE:
+				return getVisualization();
+			return basicGetVisualization();
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION_SOLUTIONS:
+			return getVisualizationSolutions();
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__CONSIGNE:
 			return getConsigne();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -217,14 +216,14 @@ public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFa
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION:
-			setVizualisation((Vizualisation) newValue);
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION:
+			setVisualization((Visualization) newValue);
 			return;
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS:
-			getVizualisationSolutions().clear();
-			getVizualisationSolutions().addAll((Collection<? extends VizualisationSolution>) newValue);
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION_SOLUTIONS:
+			getVisualizationSolutions().clear();
+			getVisualizationSolutions().addAll((Collection<? extends VisualizationSolution>) newValue);
 			return;
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE:
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__CONSIGNE:
 			setConsigne((String) newValue);
 			return;
 		}
@@ -239,13 +238,13 @@ public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFa
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION:
-			setVizualisation((Vizualisation) null);
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION:
+			setVisualization((Visualization) null);
 			return;
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS:
-			getVizualisationSolutions().clear();
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION_SOLUTIONS:
+			getVisualizationSolutions().clear();
 			return;
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE:
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__CONSIGNE:
 			setConsigne(CONSIGNE_EDEFAULT);
 			return;
 		}
@@ -260,11 +259,11 @@ public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFa
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION:
-			return vizualisation != null;
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS:
-			return vizualisationSolutions != null && !vizualisationSolutions.isEmpty();
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE:
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION:
+			return visualization != null;
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION_SOLUTIONS:
+			return visualizationSolutions != null && !visualizationSolutions.isEmpty();
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT__CONSIGNE:
 			return CONSIGNE_EDEFAULT == null ? consigne != null : !CONSIGNE_EDEFAULT.equals(consigne);
 		}
 		return super.eIsSet(featureID);
@@ -287,4 +286,4 @@ public abstract class AVizualisationQuestionableFactImpl extends AQuestionableFa
 		return result.toString();
 	}
 
-} //AVizualisationQuestionableFactImpl
+} //AVisualizationQuestionableFactImpl

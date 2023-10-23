@@ -844,18 +844,18 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.VIZUALISATION: {
-			Vizualisation vizualisation = (Vizualisation) theEObject;
-			T result = caseVizualisation(vizualisation);
+		case GeneratorPackage.VISUALIZATION: {
+			Visualization visualization = (Visualization) theEObject;
+			T result = caseVisualization(visualization);
 			if (result == null)
-				result = caseImage(vizualisation);
+				result = caseImage(visualization);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.VIZUALISATION_POSITION: {
-			VizualisationPosition vizualisationPosition = (VizualisationPosition) theEObject;
-			T result = caseVizualisationPosition(vizualisationPosition);
+		case GeneratorPackage.VISUALIZATION_POSITION: {
+			VisualizationPosition visualizationPosition = (VisualizationPosition) theEObject;
+			T result = caseVisualizationPosition(visualizationPosition);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1007,18 +1007,18 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.AVIZUALISATION_QUESTIONABLE_FACT: {
-			AVizualisationQuestionableFact aVizualisationQuestionableFact = (AVizualisationQuestionableFact) theEObject;
-			T result = caseAVizualisationQuestionableFact(aVizualisationQuestionableFact);
+		case GeneratorPackage.AVISUALIZATION_QUESTIONABLE_FACT: {
+			AVisualizationQuestionableFact aVisualizationQuestionableFact = (AVisualizationQuestionableFact) theEObject;
+			T result = caseAVisualizationQuestionableFact(aVisualizationQuestionableFact);
 			if (result == null)
-				result = caseAQuestionableFact(aVizualisationQuestionableFact);
+				result = caseAQuestionableFact(aVisualizationQuestionableFact);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.VIZUALISATION_SOLUTION: {
-			VizualisationSolution vizualisationSolution = (VizualisationSolution) theEObject;
-			T result = caseVizualisationSolution(vizualisationSolution);
+		case GeneratorPackage.VISUALIZATION_SOLUTION: {
+			VisualizationSolution visualizationSolution = (VisualizationSolution) theEObject;
+			T result = caseVisualizationSolution(visualizationSolution);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1067,7 +1067,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			MapQuestionableFact mapQuestionableFact = (MapQuestionableFact) theEObject;
 			T result = caseMapQuestionableFact(mapQuestionableFact);
 			if (result == null)
-				result = caseAVizualisationQuestionableFact(mapQuestionableFact);
+				result = caseAVisualizationQuestionableFact(mapQuestionableFact);
 			if (result == null)
 				result = caseAQuestionableFact(mapQuestionableFact);
 			if (result == null)
@@ -2520,32 +2520,32 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Vizualisation</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Visualization</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Vizualisation</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Visualization</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVizualisation(Vizualisation object) {
+	public T caseVisualization(Visualization object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Vizualisation Position</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Visualization Position</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Vizualisation Position</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Visualization Position</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVizualisationPosition(VizualisationPosition object) {
+	public T caseVisualizationPosition(VisualizationPosition object) {
 		return null;
 	}
 
@@ -2805,32 +2805,32 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>AVizualisation Questionable Fact</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>AVisualization Questionable Fact</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>AVizualisation Questionable Fact</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>AVisualization Questionable Fact</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAVizualisationQuestionableFact(AVizualisationQuestionableFact object) {
+	public T caseAVisualizationQuestionableFact(AVisualizationQuestionableFact object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Vizualisation Solution</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Visualization Solution</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Vizualisation Solution</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Visualization Solution</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVizualisationSolution(VizualisationSolution object) {
+	public T caseVisualizationSolution(VisualizationSolution object) {
 		return null;
 	}
 

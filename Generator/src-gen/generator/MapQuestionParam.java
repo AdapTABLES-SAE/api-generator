@@ -24,12 +24,12 @@ public interface MapQuestionParam extends AQuestionParam {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map</em>' reference.
-	 * @see #setMap(Vizualisation)
+	 * @see #setMap(Visualization)
 	 * @see generator.GeneratorPackage#getMapQuestionParam_Map()
 	 * @model required="true"
 	 * @generated
 	 */
-	Vizualisation getMap();
+	Visualization getMap();
 
 	/**
 	 * Sets the value of the '{@link generator.MapQuestionParam#getMap <em>Map</em>}' reference.
@@ -39,6 +39,6 @@ public interface MapQuestionParam extends AQuestionParam {
 	 * @see #getMap()
 	 * @generated
 	 */
-	void setMap(Vizualisation value);
+	void setMap(Visualization value);
 
 } // MapQuestionParam

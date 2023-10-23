@@ -2,148 +2,6 @@
  */
 package generator.impl;
 
-import generator.AComponent;
-import generator.AQuestionParam;
-import generator.AQuestionableFact;
-import generator.ATask;
-import generator.AValue;
-import generator.AVizualisationQuestionableFact;
-import generator.Abilities;
-import generator.Ability;
-import generator.AbstractFact;
-import generator.Classroom;
-import generator.Classrooms;
-import generator.CompletionCriteria;
-import generator.CompletionTask;
-import generator.Component;
-import generator.Condition;
-import generator.Correctness;
-import generator.CorrectnessValue;
-import generator.CurrentObjectiveLevel;
-import generator.Curse;
-import generator.CurseEligibility;
-import generator.Curses;
-import generator.Date;
-import generator.DateQuestionableFact;
-import generator.Directions;
-import generator.Display;
-import generator.Dungeon;
-import generator.DungeonMode;
-import generator.EBoundary;
-import generator.ECorrectness;
-import generator.EGeographyValue;
-import generator.EHistoryTarget;
-import generator.ELegendTarget;
-import generator.EModality;
-import generator.ERoomType;
-import generator.ESeveralTarget;
-import generator.ESingleTarget;
-import generator.EStatementType;
-import generator.ETaskType;
-import generator.ETimeTarget;
-import generator.ElementSize;
-import generator.ElementType;
-import generator.ElementsTypes;
-import generator.EnterResponse;
-import generator.EntrySoluceParam;
-import generator.Equipment;
-import generator.Equipments;
-import generator.ExpectedAnswer;
-import generator.FactCorrectnessParam;
-import generator.FactSolutionParam;
-import generator.GLocate;
-import generator.GPCategory;
-import generator.GameContext;
-import generator.GameDescription;
-import generator.GameElementTypes;
-import generator.Gameplay;
-import generator.GameplayTaskRelations;
-import generator.Gameplays;
-import generator.GeneratorFactory;
-import generator.GeneratorPackage;
-import generator.GeographyFact;
-import generator.GeographyLegendFact;
-import generator.HAssociation;
-import generator.HChronology;
-import generator.HGLevel;
-import generator.HLegend;
-import generator.HistoryFact;
-import generator.IdentificationTask;
-import generator.Image;
-import generator.Item;
-import generator.Items;
-import generator.Knowledge;
-import generator.LabyrinthCurse;
-import generator.LargeRoomType;
-import generator.LearnerPlayer;
-import generator.LearnerProgress;
-import generator.LearningDomain;
-import generator.LearningPath;
-import generator.LegendSymbol;
-import generator.LegendText;
-import generator.Level;
-import generator.LevelsDifficultyProgress;
-import generator.MTCompletion1;
-import generator.MTCompletion2;
-import generator.MTFact;
-import generator.MTIdentification;
-import generator.MTLevel;
-import generator.MTMembership;
-import generator.MTQFCompletion1;
-import generator.MTQFCompletion2;
-import generator.MTQFIdentification;
-import generator.MTQFMembership;
-import generator.MTQFRebuild;
-import generator.MTRecontruction;
-import generator.MTResultFact;
-import generator.MapQuestionParam;
-import generator.MapQuestionableFact;
-import generator.MembershipIDTask;
-import generator.MultipleChoice;
-import generator.NoQuestionGameplay;
-import generator.Objective;
-import generator.OrderingTask;
-import generator.Parameter;
-import generator.PlayerProgress;
-import generator.Position;
-import generator.PositionedElement;
-import generator.PositionedMapElement;
-import generator.PositionedStructureElement;
-import generator.Prerequisite;
-import generator.Progression;
-import generator.Prompt;
-import generator.PropositionParam;
-import generator.Quantity;
-import generator.QuestionGameplay;
-import generator.QuestionParam;
-import generator.QuestionableFact;
-import generator.QuestionableFactResult;
-import generator.QuestionedFact;
-import generator.Relation;
-import generator.ResponseModality;
-import generator.ResultPosition;
-import generator.Results;
-import generator.ResultsByTask;
-import generator.Room;
-import generator.RoomAccess;
-import generator.RoomType;
-import generator.RoomTypes;
-import generator.SetOfFacts;
-import generator.Size;
-import generator.SmallRoomType;
-import generator.StatementElementType;
-import generator.Statistics;
-import generator.Structure;
-import generator.TableBuild;
-import generator.Teacher;
-import generator.Teachers;
-import generator.Time;
-import generator.TimePeriod;
-import generator.Value;
-import generator.Vizualisation;
-import generator.VizualisationPosition;
-import generator.VizualisationSolution;
-import generator.WantedAnswersParam;
 import generator.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -840,14 +698,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vizualisationEClass = null;
+	private EClass visualizationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vizualisationPositionEClass = null;
+	private EClass visualizationPositionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -973,14 +831,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass aVizualisationQuestionableFactEClass = null;
+	private EClass aVisualizationQuestionableFactEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vizualisationSolutionEClass = null;
+	private EClass visualizationSolutionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1251,7 +1109,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSetOfFacts_Vizualisation() {
+	public EReference getSetOfFacts_Visualization() {
 		return (EReference) setOfFactsEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -4491,8 +4349,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVizualisation() {
-		return vizualisationEClass;
+	public EClass getVisualization() {
+		return visualizationEClass;
 	}
 
 	/**
@@ -4500,8 +4358,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVizualisation_Positions() {
-		return (EReference) vizualisationEClass.getEStructuralFeatures().get(0);
+	public EReference getVisualization_Positions() {
+		return (EReference) visualizationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4509,8 +4367,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVizualisationPosition() {
-		return vizualisationPositionEClass;
+	public EClass getVisualizationPosition() {
+		return visualizationPositionEClass;
 	}
 
 	/**
@@ -4518,8 +4376,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVizualisationPosition_ID() {
-		return (EAttribute) vizualisationPositionEClass.getEStructuralFeatures().get(0);
+	public EAttribute getVisualizationPosition_ID() {
+		return (EAttribute) visualizationPositionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5058,8 +4916,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAVizualisationQuestionableFact() {
-		return aVizualisationQuestionableFactEClass;
+	public EClass getAVisualizationQuestionableFact() {
+		return aVisualizationQuestionableFactEClass;
 	}
 
 	/**
@@ -5067,8 +4925,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAVizualisationQuestionableFact_Vizualisation() {
-		return (EReference) aVizualisationQuestionableFactEClass.getEStructuralFeatures().get(0);
+	public EReference getAVisualizationQuestionableFact_Visualization() {
+		return (EReference) aVisualizationQuestionableFactEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5076,8 +4934,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAVizualisationQuestionableFact_VizualisationSolutions() {
-		return (EReference) aVizualisationQuestionableFactEClass.getEStructuralFeatures().get(1);
+	public EReference getAVisualizationQuestionableFact_VisualizationSolutions() {
+		return (EReference) aVisualizationQuestionableFactEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -5085,8 +4943,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAVizualisationQuestionableFact_Consigne() {
-		return (EAttribute) aVizualisationQuestionableFactEClass.getEStructuralFeatures().get(2);
+	public EAttribute getAVisualizationQuestionableFact_Consigne() {
+		return (EAttribute) aVisualizationQuestionableFactEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -5094,8 +4952,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVizualisationSolution() {
-		return vizualisationSolutionEClass;
+	public EClass getVisualizationSolution() {
+		return visualizationSolutionEClass;
 	}
 
 	/**
@@ -5103,8 +4961,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVizualisationSolution_Value() {
-		return (EAttribute) vizualisationSolutionEClass.getEStructuralFeatures().get(0);
+	public EAttribute getVisualizationSolution_Value() {
+		return (EAttribute) visualizationSolutionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5112,8 +4970,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVizualisationSolution_VizualisationPosition() {
-		return (EReference) vizualisationSolutionEClass.getEStructuralFeatures().get(1);
+	public EReference getVisualizationSolution_VisualizationPosition() {
+		return (EReference) visualizationSolutionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -5438,7 +5296,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		setOfFactsEClass = createEClass(SET_OF_FACTS);
 		createEReference(setOfFactsEClass, SET_OF_FACTS__FACTS);
 		createEAttribute(setOfFactsEClass, SET_OF_FACTS__NAME);
-		createEReference(setOfFactsEClass, SET_OF_FACTS__VIZUALISATION);
+		createEReference(setOfFactsEClass, SET_OF_FACTS__VISUALIZATION);
 
 		knowledgeEClass = createEClass(KNOWLEDGE);
 		createEAttribute(knowledgeEClass, KNOWLEDGE__NAME);
@@ -5893,11 +5751,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		imageEClass = createEClass(IMAGE);
 		createEAttribute(imageEClass, IMAGE__ID);
 
-		vizualisationEClass = createEClass(VIZUALISATION);
-		createEReference(vizualisationEClass, VIZUALISATION__POSITIONS);
+		visualizationEClass = createEClass(VISUALIZATION);
+		createEReference(visualizationEClass, VISUALIZATION__POSITIONS);
 
-		vizualisationPositionEClass = createEClass(VIZUALISATION_POSITION);
-		createEAttribute(vizualisationPositionEClass, VIZUALISATION_POSITION__ID);
+		visualizationPositionEClass = createEClass(VISUALIZATION_POSITION);
+		createEAttribute(visualizationPositionEClass, VISUALIZATION_POSITION__ID);
 
 		legendSymbolEClass = createEClass(LEGEND_SYMBOL);
 		createEReference(legendSymbolEClass, LEGEND_SYMBOL__IMAGE);
@@ -5975,15 +5833,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(aQuestionableFactEClass, AQUESTIONABLE_FACT__ID);
 		createEAttribute(aQuestionableFactEClass, AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE);
 
-		aVizualisationQuestionableFactEClass = createEClass(AVIZUALISATION_QUESTIONABLE_FACT);
-		createEReference(aVizualisationQuestionableFactEClass, AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION);
-		createEReference(aVizualisationQuestionableFactEClass,
-				AVIZUALISATION_QUESTIONABLE_FACT__VIZUALISATION_SOLUTIONS);
-		createEAttribute(aVizualisationQuestionableFactEClass, AVIZUALISATION_QUESTIONABLE_FACT__CONSIGNE);
+		aVisualizationQuestionableFactEClass = createEClass(AVISUALIZATION_QUESTIONABLE_FACT);
+		createEReference(aVisualizationQuestionableFactEClass, AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION);
+		createEReference(aVisualizationQuestionableFactEClass,
+				AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION_SOLUTIONS);
+		createEAttribute(aVisualizationQuestionableFactEClass, AVISUALIZATION_QUESTIONABLE_FACT__CONSIGNE);
 
-		vizualisationSolutionEClass = createEClass(VIZUALISATION_SOLUTION);
-		createEAttribute(vizualisationSolutionEClass, VIZUALISATION_SOLUTION__VALUE);
-		createEReference(vizualisationSolutionEClass, VIZUALISATION_SOLUTION__VIZUALISATION_POSITION);
+		visualizationSolutionEClass = createEClass(VISUALIZATION_SOLUTION);
+		createEAttribute(visualizationSolutionEClass, VISUALIZATION_SOLUTION__VALUE);
+		createEReference(visualizationSolutionEClass, VISUALIZATION_SOLUTION__VISUALIZATION_POSITION);
 
 		hgLevelEClass = createEClass(HG_LEVEL);
 
@@ -6100,7 +5958,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		sizeEClass.getESuperTypes().add(this.getParameter());
 		statementElementTypeEClass.getESuperTypes().add(this.getElementType());
 		labyrinthCurseEClass.getESuperTypes().add(this.getCurse());
-		vizualisationEClass.getESuperTypes().add(this.getImage());
+		visualizationEClass.getESuperTypes().add(this.getImage());
 		historyFactEClass.getESuperTypes().add(this.getAbstractFact());
 		geographyLegendFactEClass.getESuperTypes().add(this.getAbstractFact());
 		geographyFactEClass.getESuperTypes().add(this.getAbstractFact());
@@ -6111,12 +5969,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		hAssociationEClass.getESuperTypes().add(this.getCompletionTask());
 		hLegendEClass.getESuperTypes().add(this.getCompletionTask());
 		gLocateEClass.getESuperTypes().add(this.getMembershipIDTask());
-		aVizualisationQuestionableFactEClass.getESuperTypes().add(this.getAQuestionableFact());
+		aVisualizationQuestionableFactEClass.getESuperTypes().add(this.getAQuestionableFact());
 		hgLevelEClass.getESuperTypes().add(this.getLevel());
 		positionedMapElementEClass.getESuperTypes().add(this.getPositionedElement());
 		dateQuestionableFactEClass.getESuperTypes().add(this.getQuestionableFact());
 		hChronologyEClass.getESuperTypes().add(this.getOrderingTask());
-		mapQuestionableFactEClass.getESuperTypes().add(this.getAVizualisationQuestionableFact());
+		mapQuestionableFactEClass.getESuperTypes().add(this.getAVisualizationQuestionableFact());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -6129,7 +5987,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSetOfFacts_Name(), ecorePackage.getEString(), "name", null, 0, 1, SetOfFacts.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSetOfFacts_Vizualisation(), this.getVizualisation(), null, "vizualisation", null, 0, 1,
+		initEReference(getSetOfFacts_Visualization(), this.getVisualization(), null, "visualization", null, 0, 1,
 				SetOfFacts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -7118,16 +6976,16 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getImage_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Image.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(vizualisationEClass, Vizualisation.class, "Vizualisation", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(visualizationEClass, Visualization.class, "Visualization", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVizualisation_Positions(), this.getVizualisationPosition(), null, "positions", null, 0, -1,
-				Vizualisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getVisualization_Positions(), this.getVisualizationPosition(), null, "positions", null, 0, -1,
+				Visualization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(vizualisationPositionEClass, VizualisationPosition.class, "VizualisationPosition", !IS_ABSTRACT,
+		initEClass(visualizationPositionEClass, VisualizationPosition.class, "VisualizationPosition", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVizualisationPosition_ID(), ecorePackage.getEString(), "ID", null, 0, 1,
-				VizualisationPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID,
+		initEAttribute(getVisualizationPosition_ID(), ecorePackage.getEString(), "ID", null, 0, 1,
+				VisualizationPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(legendSymbolEClass, LegendSymbol.class, "LegendSymbol", !IS_ABSTRACT, !IS_INTERFACE,
@@ -7135,7 +6993,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getLegendSymbol_Image(), this.getImage(), null, "image", null, 1, 1, LegendSymbol.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLegendSymbol_Position(), this.getVizualisationPosition(), null, "position", null, 1, 1,
+		initEReference(getLegendSymbol_Position(), this.getVisualizationPosition(), null, "position", null, 1, 1,
 				LegendSymbol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -7143,7 +7001,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLegendText_Text(), ecorePackage.getEString(), "text", null, 0, 1, LegendText.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLegendText_Position(), this.getVizualisationPosition(), null, "position", null, 1, 1,
+		initEReference(getLegendText_Position(), this.getVisualizationPosition(), null, "position", null, 1, 1,
 				LegendText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -7169,7 +7027,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(geographyFactEClass, GeographyFact.class, "GeographyFact", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGeographyFact_Position(), this.getVizualisationPosition(), null, "position", null, 1, 1,
+		initEReference(getGeographyFact_Position(), this.getVisualizationPosition(), null, "position", null, 1, 1,
 				GeographyFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGeographyFact_Type(), this.getEGeographyValue(), "type", null, 0, 1, GeographyFact.class,
@@ -7184,7 +7042,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDate_Year(), ecorePackage.getEString(), "year", null, 0, 1, Date.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDate_Position(), this.getVizualisationPosition(), null, "position", null, 0, 1, Date.class,
+		initEReference(getDate_Position(), this.getVisualizationPosition(), null, "position", null, 0, 1, Date.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -7196,10 +7054,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTimePeriod_EndYear(), ecorePackage.getEString(), "endYear", null, 0, 1, TimePeriod.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTimePeriod_StartPosition(), this.getVizualisationPosition(), null, "startPosition", null, 0,
+		initEReference(getTimePeriod_StartPosition(), this.getVisualizationPosition(), null, "startPosition", null, 0,
 				1, TimePeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTimePeriod_EndPosition(), this.getVizualisationPosition(), null, "endPosition", null, 0, 1,
+		initEReference(getTimePeriod_EndPosition(), this.getVisualizationPosition(), null, "endPosition", null, 0, 1,
 				TimePeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -7213,7 +7071,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(mapQuestionParamEClass, MapQuestionParam.class, "MapQuestionParam", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMapQuestionParam_Map(), this.getVizualisation(), null, "map", null, 1, 1,
+		initEReference(getMapQuestionParam_Map(), this.getVisualization(), null, "map", null, 1, 1,
 				MapQuestionParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -7284,26 +7142,26 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				0, 1, AQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(aVizualisationQuestionableFactEClass, AVizualisationQuestionableFact.class,
-				"AVizualisationQuestionableFact", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAVizualisationQuestionableFact_Vizualisation(), this.getVizualisation(), null,
-				"vizualisation", null, 1, 1, AVizualisationQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEClass(aVisualizationQuestionableFactEClass, AVisualizationQuestionableFact.class,
+				"AVisualizationQuestionableFact", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAVisualizationQuestionableFact_Visualization(), this.getVisualization(), null,
+				"visualization", null, 1, 1, AVisualizationQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAVizualisationQuestionableFact_VizualisationSolutions(), this.getVizualisationSolution(),
-				null, "vizualisationSolutions", null, 0, -1, AVizualisationQuestionableFact.class, !IS_TRANSIENT,
+		initEReference(getAVisualizationQuestionableFact_VisualizationSolutions(), this.getVisualizationSolution(),
+				null, "visualizationSolutions", null, 0, -1, AVisualizationQuestionableFact.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEAttribute(getAVizualisationQuestionableFact_Consigne(), ecorePackage.getEString(), "consigne", null, 0, 1,
-				AVizualisationQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+		initEAttribute(getAVisualizationQuestionableFact_Consigne(), ecorePackage.getEString(), "consigne", null, 0, 1,
+				AVisualizationQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(vizualisationSolutionEClass, VizualisationSolution.class, "VizualisationSolution", !IS_ABSTRACT,
+		initEClass(visualizationSolutionEClass, VisualizationSolution.class, "VisualizationSolution", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVizualisationSolution_Value(), ecorePackage.getEString(), "value", null, 0, 1,
-				VizualisationSolution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+		initEAttribute(getVisualizationSolution_Value(), ecorePackage.getEString(), "value", null, 0, 1,
+				VisualizationSolution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVizualisationSolution_VizualisationPosition(), this.getVizualisationPosition(), null,
-				"vizualisationPosition", null, 1, 1, VizualisationSolution.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getVisualizationSolution_VisualizationPosition(), this.getVisualizationPosition(), null,
+				"visualizationPosition", null, 1, 1, VisualizationSolution.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hgLevelEClass, HGLevel.class, "HGLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -7313,7 +7171,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getPositionedMapElement_CreatedPositions(), this.getPosition(), null, "createdPositions", null,
 				0, -1, PositionedMapElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPositionedMapElement_Map(), this.getVizualisation(), null, "map", null, 0, 1,
+		initEReference(getPositionedMapElement_Map(), this.getVisualization(), null, "map", null, 0, 1,
 				PositionedMapElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

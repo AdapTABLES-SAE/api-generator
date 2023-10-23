@@ -760,22 +760,22 @@ public interface GeneratorFactory extends EFactory {
 	Image createImage();
 
 	/**
-	 * Returns a new object of class '<em>Vizualisation</em>'.
+	 * Returns a new object of class '<em>Visualization</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Vizualisation</em>'.
+	 * @return a new object of class '<em>Visualization</em>'.
 	 * @generated
 	 */
-	Vizualisation createVizualisation();
+	Visualization createVisualization();
 
 	/**
-	 * Returns a new object of class '<em>Vizualisation Position</em>'.
+	 * Returns a new object of class '<em>Visualization Position</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Vizualisation Position</em>'.
+	 * @return a new object of class '<em>Visualization Position</em>'.
 	 * @generated
 	 */
-	VizualisationPosition createVizualisationPosition();
+	VisualizationPosition createVisualizationPosition();
 
 	/**
 	 * Returns a new object of class '<em>Legend Symbol</em>'.
@@ -904,13 +904,13 @@ public interface GeneratorFactory extends EFactory {
 	Classrooms createClassrooms();
 
 	/**
-	 * Returns a new object of class '<em>Vizualisation Solution</em>'.
+	 * Returns a new object of class '<em>Visualization Solution</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Vizualisation Solution</em>'.
+	 * @return a new object of class '<em>Visualization Solution</em>'.
 	 * @generated
 	 */
-	VizualisationSolution createVizualisationSolution();
+	VisualizationSolution createVisualizationSolution();
 
 	/**
 	 * Returns a new object of class '<em>Map Questionable Fact</em>'.

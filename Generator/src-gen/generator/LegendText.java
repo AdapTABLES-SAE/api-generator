@@ -49,12 +49,12 @@ public interface LegendText extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position</em>' reference.
-	 * @see #setPosition(VizualisationPosition)
+	 * @see #setPosition(VisualizationPosition)
 	 * @see generator.GeneratorPackage#getLegendText_Position()
 	 * @model required="true"
 	 * @generated
 	 */
-	VizualisationPosition getPosition();
+	VisualizationPosition getPosition();
 
 	/**
 	 * Sets the value of the '{@link generator.LegendText#getPosition <em>Position</em>}' reference.
@@ -64,6 +64,6 @@ public interface LegendText extends EObject {
 	 * @see #getPosition()
 	 * @generated
 	 */
-	void setPosition(VizualisationPosition value);
+	void setPosition(VisualizationPosition value);
 
 } // LegendText

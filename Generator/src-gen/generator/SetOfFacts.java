@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.SetOfFacts#getFacts <em>Facts</em>}</li>
  *   <li>{@link generator.SetOfFacts#getName <em>Name</em>}</li>
- *   <li>{@link generator.SetOfFacts#getVizualisation <em>Vizualisation</em>}</li>
+ *   <li>{@link generator.SetOfFacts#getVisualization <em>Visualization</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getSetOfFacts()
@@ -60,25 +60,25 @@ public interface SetOfFacts extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Vizualisation</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Visualization</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Vizualisation</em>' containment reference.
-	 * @see #setVizualisation(Vizualisation)
-	 * @see generator.GeneratorPackage#getSetOfFacts_Vizualisation()
+	 * @return the value of the '<em>Visualization</em>' containment reference.
+	 * @see #setVisualization(Visualization)
+	 * @see generator.GeneratorPackage#getSetOfFacts_Visualization()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Vizualisation getVizualisation();
+	Visualization getVisualization();
 
 	/**
-	 * Sets the value of the '{@link generator.SetOfFacts#getVizualisation <em>Vizualisation</em>}' containment reference.
+	 * Sets the value of the '{@link generator.SetOfFacts#getVisualization <em>Visualization</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Vizualisation</em>' containment reference.
-	 * @see #getVizualisation()
+	 * @param value the new value of the '<em>Visualization</em>' containment reference.
+	 * @see #getVisualization()
 	 * @generated
 	 */
-	void setVizualisation(Vizualisation value);
+	void setVisualization(Visualization value);
 
 } // SetOfFacts

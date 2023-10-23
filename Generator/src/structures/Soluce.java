@@ -1,13 +1,13 @@
 package structures;
 
-import generator.VizualisationPosition;
+import generator.VisualizationPosition;
 
 public class Soluce {
 
 	
 	private String value; 
 	private boolean isImage;
-	private VizualisationPosition position; 
+	private VisualizationPosition position; 
 	
 	
 	public Soluce(String value) {
@@ -17,11 +17,11 @@ public class Soluce {
 		this(value, isImage, null);
 	}
 	
-	public Soluce(String value, VizualisationPosition position) {
+	public Soluce(String value, VisualizationPosition position) {
 		this(value, false, position);
 	}
 	
-	public Soluce(String value, boolean isImage, VizualisationPosition position) {
+	public Soluce(String value, boolean isImage, VisualizationPosition position) {
 		this.value = value;
 		this.isImage = isImage;
 		this.position = position;
@@ -35,7 +35,7 @@ public class Soluce {
 		return value;
 	}
 
-	public VizualisationPosition getPosition() {
+	public VisualizationPosition getPosition() {
 		return position;
 	}
 

@@ -547,13 +547,13 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseVizualisation(Vizualisation object) {
-			return createVizualisationAdapter();
+		public Adapter caseVisualization(Visualization object) {
+			return createVisualizationAdapter();
 		}
 
 		@Override
-		public Adapter caseVizualisationPosition(VizualisationPosition object) {
-			return createVizualisationPositionAdapter();
+		public Adapter caseVisualizationPosition(VisualizationPosition object) {
+			return createVisualizationPositionAdapter();
 		}
 
 		@Override
@@ -642,13 +642,13 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseAVizualisationQuestionableFact(AVizualisationQuestionableFact object) {
-			return createAVizualisationQuestionableFactAdapter();
+		public Adapter caseAVisualizationQuestionableFact(AVisualizationQuestionableFact object) {
+			return createAVisualizationQuestionableFactAdapter();
 		}
 
 		@Override
-		public Adapter caseVizualisationSolution(VizualisationSolution object) {
-			return createVizualisationSolutionAdapter();
+		public Adapter caseVisualizationSolution(VisualizationSolution object) {
+			return createVisualizationSolutionAdapter();
 		}
 
 		@Override
@@ -2040,30 +2040,30 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.Vizualisation <em>Vizualisation</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.Visualization <em>Visualization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.Vizualisation
+	 * @see generator.Visualization
 	 * @generated
 	 */
-	public Adapter createVizualisationAdapter() {
+	public Adapter createVisualizationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.VizualisationPosition <em>Vizualisation Position</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.VisualizationPosition <em>Visualization Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.VizualisationPosition
+	 * @see generator.VisualizationPosition
 	 * @generated
 	 */
-	public Adapter createVizualisationPositionAdapter() {
+	public Adapter createVisualizationPositionAdapter() {
 		return null;
 	}
 
@@ -2306,30 +2306,30 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.AVizualisationQuestionableFact <em>AVizualisation Questionable Fact</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.AVisualizationQuestionableFact <em>AVisualization Questionable Fact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.AVizualisationQuestionableFact
+	 * @see generator.AVisualizationQuestionableFact
 	 * @generated
 	 */
-	public Adapter createAVizualisationQuestionableFactAdapter() {
+	public Adapter createAVisualizationQuestionableFactAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.VizualisationSolution <em>Vizualisation Solution</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.VisualizationSolution <em>Visualization Solution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.VizualisationSolution
+	 * @see generator.VisualizationSolution
 	 * @generated
 	 */
-	public Adapter createVizualisationSolutionAdapter() {
+	public Adapter createVisualizationSolutionAdapter() {
 		return null;
 	}
 
