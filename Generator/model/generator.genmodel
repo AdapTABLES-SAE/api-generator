@@ -619,8 +619,8 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Time"/>
     <genClasses ecoreClass="generator.ecore#//AQuestionParam"/>
-    <genClasses ecoreClass="generator.ecore#//MapQuestionParam">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//MapQuestionParam/map"/>
+    <genClasses ecoreClass="generator.ecore#//VisualizationQuestionParam">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//VisualizationQuestionParam/visualization"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//HAssociation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HAssociation/source"/>
@@ -665,9 +665,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//VisualizationSolution/visualizationPosition"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//HGLevel"/>
-    <genClasses ecoreClass="generator.ecore#//PositionedMapElement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedMapElement/createdPositions"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedMapElement/map"/>
+    <genClasses ecoreClass="generator.ecore#//PositionedVisualizationElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedVisualizationElement/createdPositions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//PositionedVisualizationElement/visualization"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//DateQuestionableFact">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//DateQuestionableFact/sourceElement"/>

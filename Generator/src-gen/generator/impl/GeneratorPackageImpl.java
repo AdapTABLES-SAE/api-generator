@@ -775,7 +775,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mapQuestionParamEClass = null;
+	private EClass visualizationQuestionParamEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -859,7 +859,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass positionedMapElementEClass = null;
+	private EClass positionedVisualizationElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -4664,8 +4664,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMapQuestionParam() {
-		return mapQuestionParamEClass;
+	public EClass getVisualizationQuestionParam() {
+		return visualizationQuestionParamEClass;
 	}
 
 	/**
@@ -4673,8 +4673,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMapQuestionParam_Map() {
-		return (EReference) mapQuestionParamEClass.getEStructuralFeatures().get(0);
+	public EReference getVisualizationQuestionParam_Visualization() {
+		return (EReference) visualizationQuestionParamEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5006,8 +5006,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPositionedMapElement() {
-		return positionedMapElementEClass;
+	public EClass getPositionedVisualizationElement() {
+		return positionedVisualizationElementEClass;
 	}
 
 	/**
@@ -5015,8 +5015,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionedMapElement_CreatedPositions() {
-		return (EReference) positionedMapElementEClass.getEStructuralFeatures().get(0);
+	public EReference getPositionedVisualizationElement_CreatedPositions() {
+		return (EReference) positionedVisualizationElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5024,8 +5024,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionedMapElement_Map() {
-		return (EReference) positionedMapElementEClass.getEStructuralFeatures().get(1);
+	public EReference getPositionedVisualizationElement_Visualization() {
+		return (EReference) positionedVisualizationElementEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -5797,8 +5797,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		aQuestionParamEClass = createEClass(AQUESTION_PARAM);
 
-		mapQuestionParamEClass = createEClass(MAP_QUESTION_PARAM);
-		createEReference(mapQuestionParamEClass, MAP_QUESTION_PARAM__MAP);
+		visualizationQuestionParamEClass = createEClass(VISUALIZATION_QUESTION_PARAM);
+		createEReference(visualizationQuestionParamEClass, VISUALIZATION_QUESTION_PARAM__VISUALIZATION);
 
 		hAssociationEClass = createEClass(HASSOCIATION);
 		createEAttribute(hAssociationEClass, HASSOCIATION__SOURCE);
@@ -5845,9 +5845,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		hgLevelEClass = createEClass(HG_LEVEL);
 
-		positionedMapElementEClass = createEClass(POSITIONED_MAP_ELEMENT);
-		createEReference(positionedMapElementEClass, POSITIONED_MAP_ELEMENT__CREATED_POSITIONS);
-		createEReference(positionedMapElementEClass, POSITIONED_MAP_ELEMENT__MAP);
+		positionedVisualizationElementEClass = createEClass(POSITIONED_VISUALIZATION_ELEMENT);
+		createEReference(positionedVisualizationElementEClass, POSITIONED_VISUALIZATION_ELEMENT__CREATED_POSITIONS);
+		createEReference(positionedVisualizationElementEClass, POSITIONED_VISUALIZATION_ELEMENT__VISUALIZATION);
 
 		dateQuestionableFactEClass = createEClass(DATE_QUESTIONABLE_FACT);
 		createEAttribute(dateQuestionableFactEClass, DATE_QUESTIONABLE_FACT__SOURCE_ELEMENT);
@@ -5965,13 +5965,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		dateEClass.getESuperTypes().add(this.getTime());
 		timePeriodEClass.getESuperTypes().add(this.getTime());
 		aQuestionParamEClass.getESuperTypes().add(this.getParameter());
-		mapQuestionParamEClass.getESuperTypes().add(this.getAQuestionParam());
+		visualizationQuestionParamEClass.getESuperTypes().add(this.getAQuestionParam());
 		hAssociationEClass.getESuperTypes().add(this.getCompletionTask());
 		hLegendEClass.getESuperTypes().add(this.getCompletionTask());
 		gLocateEClass.getESuperTypes().add(this.getMembershipIDTask());
 		aVisualizationQuestionableFactEClass.getESuperTypes().add(this.getAQuestionableFact());
 		hgLevelEClass.getESuperTypes().add(this.getLevel());
-		positionedMapElementEClass.getESuperTypes().add(this.getPositionedElement());
+		positionedVisualizationElementEClass.getESuperTypes().add(this.getPositionedElement());
 		dateQuestionableFactEClass.getESuperTypes().add(this.getQuestionableFact());
 		hChronologyEClass.getESuperTypes().add(this.getOrderingTask());
 		mapQuestionableFactEClass.getESuperTypes().add(this.getAVisualizationQuestionableFact());
@@ -7069,11 +7069,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(aQuestionParamEClass, AQuestionParam.class, "AQuestionParam", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(mapQuestionParamEClass, MapQuestionParam.class, "MapQuestionParam", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMapQuestionParam_Map(), this.getVisualization(), null, "map", null, 1, 1,
-				MapQuestionParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(visualizationQuestionParamEClass, VisualizationQuestionParam.class, "VisualizationQuestionParam",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVisualizationQuestionParam_Visualization(), this.getVisualization(), null, "visualization",
+				null, 1, 1, VisualizationQuestionParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hAssociationEClass, HAssociation.class, "HAssociation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -7166,14 +7166,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(hgLevelEClass, HGLevel.class, "HGLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(positionedMapElementEClass, PositionedMapElement.class, "PositionedMapElement", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPositionedMapElement_CreatedPositions(), this.getPosition(), null, "createdPositions", null,
-				0, -1, PositionedMapElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPositionedMapElement_Map(), this.getVisualization(), null, "map", null, 0, 1,
-				PositionedMapElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(positionedVisualizationElementEClass, PositionedVisualizationElement.class,
+				"PositionedVisualizationElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPositionedVisualizationElement_CreatedPositions(), this.getPosition(), null,
+				"createdPositions", null, 0, -1, PositionedVisualizationElement.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPositionedVisualizationElement_Visualization(), this.getVisualization(), null,
+				"visualization", null, 0, 1, PositionedVisualizationElement.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dateQuestionableFactEClass, DateQuestionableFact.class, "DateQuestionableFact", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

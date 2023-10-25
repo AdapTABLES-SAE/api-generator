@@ -602,8 +602,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMapQuestionParam(MapQuestionParam object) {
-			return createMapQuestionParamAdapter();
+		public Adapter caseVisualizationQuestionParam(VisualizationQuestionParam object) {
+			return createVisualizationQuestionParamAdapter();
 		}
 
 		@Override
@@ -657,8 +657,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter casePositionedMapElement(PositionedMapElement object) {
-			return createPositionedMapElementAdapter();
+		public Adapter casePositionedVisualizationElement(PositionedVisualizationElement object) {
+			return createPositionedVisualizationElementAdapter();
 		}
 
 		@Override
@@ -2194,16 +2194,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.MapQuestionParam <em>Map Question Param</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.VisualizationQuestionParam <em>Visualization Question Param</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.MapQuestionParam
+	 * @see generator.VisualizationQuestionParam
 	 * @generated
 	 */
-	public Adapter createMapQuestionParamAdapter() {
+	public Adapter createVisualizationQuestionParamAdapter() {
 		return null;
 	}
 
@@ -2362,16 +2362,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.PositionedMapElement <em>Positioned Map Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.PositionedVisualizationElement <em>Positioned Visualization Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.PositionedMapElement
+	 * @see generator.PositionedVisualizationElement
 	 * @generated
 	 */
-	public Adapter createPositionedMapElementAdapter() {
+	public Adapter createPositionedVisualizationElementAdapter() {
 		return null;
 	}
 

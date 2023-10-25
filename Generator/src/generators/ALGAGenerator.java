@@ -14,12 +14,12 @@ import generator.AQuestionableFact;
 import generator.CurrentObjectiveLevel;
 import generator.Dungeon;
 import generator.LevelsDifficultyProgress;
-import generator.MapQuestionParam;
 import generator.PropositionParam;
 import generator.QuestionedFact;
 import generator.Room;
 import generator.RoomAccess;
 import generator.Value;
+import generator.VisualizationQuestionParam;
 import generator.impl.LearnerProgressImpl;
 import generator.impl.PlayerProgressImpl;
 import generator.impl.ProgressionImpl;
@@ -182,8 +182,8 @@ public class ALGAGenerator {
 		if(r.getQuestionedFacts() != null && !r.getQuestionedFacts().isEmpty()) {
 			String facts = "{";
 			for (QuestionedFact qef : r.getQuestionedFacts()) {
-				if(qef.getQuestion() instanceof MapQuestionParam) {
-					facts += "MAP "+((MapQuestionParam) qef.getQuestion()).getMap().getID()+"}";
+				if(qef.getQuestion() instanceof VisualizationQuestionParam) {
+					facts += "MAP "+((VisualizationQuestionParam) qef.getQuestion()).getVisualization().getID()+"}";
 				} else {
 					facts += ((Value) qef.getQuestion().getValue()).getValue() + "[" + propositionsToString(qef.getPropositions()) + "]" + 
 							(r.getQuestionedFacts().get(r.getQuestionedFacts().size()-1).equals(qef)? "}":", ");	
@@ -221,8 +221,8 @@ public class ALGAGenerator {
 		if(r.getQuestionedFacts() != null && !r.getQuestionedFacts().isEmpty()) {
 			String facts = "{";
 			for (QuestionedFact qef : r.getQuestionedFacts()) {
-				if(qef.getQuestion() instanceof MapQuestionParam) {
-					facts += "MAP "+((MapQuestionParam) qef.getQuestion()).getMap().getID()+"}";
+				if(qef.getQuestion() instanceof VisualizationQuestionParam) {
+					facts += "MAP "+((VisualizationQuestionParam) qef.getQuestion()).getVisualization().getID()+"}";
 				} else {
 					facts += ((Value) qef.getQuestion().getValue()).getValue() + "[" + propositionsToString(qef.getPropositions()) + "]" + 
 							(r.getQuestionedFacts().get(r.getQuestionedFacts().size()-1).equals(qef)? "}":", ");	

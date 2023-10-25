@@ -4,9 +4,9 @@ package generator.impl;
 
 import generator.GeneratorPackage;
 import generator.Position;
-import generator.PositionedMapElement;
-
+import generator.PositionedVisualizationElement;
 import generator.Visualization;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -18,24 +18,26 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Positioned Map Element</b></em>'.
+ * An implementation of the model object '<em><b>Positioned Visualization Element</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.PositionedMapElementImpl#getCreatedPositions <em>Created Positions</em>}</li>
- *   <li>{@link generator.impl.PositionedMapElementImpl#getMap <em>Map</em>}</li>
+ *   <li>{@link generator.impl.PositionedVisualizationElementImpl#getCreatedPositions <em>Created Positions</em>}</li>
+ *   <li>{@link generator.impl.PositionedVisualizationElementImpl#getVisualization <em>Visualization</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PositionedMapElementImpl extends PositionedElementImpl implements PositionedMapElement {
+public class PositionedVisualizationElementImpl extends PositionedElementImpl
+		implements PositionedVisualizationElement {
 	/**
 	 * The cached value of the '{@link #getCreatedPositions() <em>Created Positions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -47,21 +49,21 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	protected EList<Position> createdPositions;
 
 	/**
-	 * The cached value of the '{@link #getMap() <em>Map</em>}' reference.
+	 * The cached value of the '{@link #getVisualization() <em>Visualization</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMap()
+	 * @see #getVisualization()
 	 * @generated
 	 * @ordered
 	 */
-	protected Visualization map;
+	protected Visualization visualization;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PositionedMapElementImpl() {
+	public PositionedVisualizationElementImpl() {
 		super();
 	}
 
@@ -72,7 +74,7 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.POSITIONED_MAP_ELEMENT;
+		return GeneratorPackage.Literals.POSITIONED_VISUALIZATION_ELEMENT;
 	}
 
 	/**
@@ -83,7 +85,7 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	public EList<Position> getCreatedPositions() {
 		if (createdPositions == null) {
 			createdPositions = new EObjectContainmentEList<Position>(Position.class, this,
-					GeneratorPackage.POSITIONED_MAP_ELEMENT__CREATED_POSITIONS);
+					GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT__CREATED_POSITIONS);
 		}
 		return createdPositions;
 	}
@@ -93,17 +95,18 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Visualization getMap() {
-		if (map != null && map.eIsProxy()) {
-			InternalEObject oldMap = (InternalEObject) map;
-			map = (Visualization) eResolveProxy(oldMap);
-			if (map != oldMap) {
+	public Visualization getVisualization() {
+		if (visualization != null && visualization.eIsProxy()) {
+			InternalEObject oldVisualization = (InternalEObject) visualization;
+			visualization = (Visualization) eResolveProxy(oldVisualization);
+			if (visualization != oldVisualization) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							GeneratorPackage.POSITIONED_MAP_ELEMENT__MAP, oldMap, map));
+							GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT__VISUALIZATION, oldVisualization,
+							visualization));
 			}
 		}
-		return map;
+		return visualization;
 	}
 
 	/**
@@ -111,8 +114,8 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Visualization basicGetMap() {
-		return map;
+	public Visualization basicGetVisualization() {
+		return visualization;
 	}
 
 	/**
@@ -120,12 +123,12 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMap(Visualization newMap) {
-		Visualization oldMap = map;
-		map = newMap;
+	public void setVisualization(Visualization newVisualization) {
+		Visualization oldVisualization = visualization;
+		visualization = newVisualization;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.POSITIONED_MAP_ELEMENT__MAP, oldMap,
-					map));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT__VISUALIZATION, oldVisualization, visualization));
 	}
 
 	/**
@@ -136,7 +139,7 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.POSITIONED_MAP_ELEMENT__CREATED_POSITIONS:
+		case GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT__CREATED_POSITIONS:
 			return ((InternalEList<?>) getCreatedPositions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -150,12 +153,12 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.POSITIONED_MAP_ELEMENT__CREATED_POSITIONS:
+		case GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT__CREATED_POSITIONS:
 			return getCreatedPositions();
-		case GeneratorPackage.POSITIONED_MAP_ELEMENT__MAP:
+		case GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT__VISUALIZATION:
 			if (resolve)
-				return getMap();
-			return basicGetMap();
+				return getVisualization();
+			return basicGetVisualization();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -169,12 +172,12 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.POSITIONED_MAP_ELEMENT__CREATED_POSITIONS:
+		case GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT__CREATED_POSITIONS:
 			getCreatedPositions().clear();
 			getCreatedPositions().addAll((Collection<? extends Position>) newValue);
 			return;
-		case GeneratorPackage.POSITIONED_MAP_ELEMENT__MAP:
-			setMap((Visualization) newValue);
+		case GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT__VISUALIZATION:
+			setVisualization((Visualization) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -188,11 +191,11 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.POSITIONED_MAP_ELEMENT__CREATED_POSITIONS:
+		case GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT__CREATED_POSITIONS:
 			getCreatedPositions().clear();
 			return;
-		case GeneratorPackage.POSITIONED_MAP_ELEMENT__MAP:
-			setMap((Visualization) null);
+		case GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT__VISUALIZATION:
+			setVisualization((Visualization) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -206,12 +209,12 @@ public class PositionedMapElementImpl extends PositionedElementImpl implements P
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.POSITIONED_MAP_ELEMENT__CREATED_POSITIONS:
+		case GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT__CREATED_POSITIONS:
 			return createdPositions != null && !createdPositions.isEmpty();
-		case GeneratorPackage.POSITIONED_MAP_ELEMENT__MAP:
-			return map != null;
+		case GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT__VISUALIZATION:
+			return visualization != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //PositionedMapElementImpl
+} //PositionedVisualizationElementImpl

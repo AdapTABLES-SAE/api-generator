@@ -935,13 +935,13 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.MAP_QUESTION_PARAM: {
-			MapQuestionParam mapQuestionParam = (MapQuestionParam) theEObject;
-			T result = caseMapQuestionParam(mapQuestionParam);
+		case GeneratorPackage.VISUALIZATION_QUESTION_PARAM: {
+			VisualizationQuestionParam visualizationQuestionParam = (VisualizationQuestionParam) theEObject;
+			T result = caseVisualizationQuestionParam(visualizationQuestionParam);
 			if (result == null)
-				result = caseAQuestionParam(mapQuestionParam);
+				result = caseAQuestionParam(visualizationQuestionParam);
 			if (result == null)
-				result = caseParameter(mapQuestionParam);
+				result = caseParameter(visualizationQuestionParam);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1032,11 +1032,11 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.POSITIONED_MAP_ELEMENT: {
-			PositionedMapElement positionedMapElement = (PositionedMapElement) theEObject;
-			T result = casePositionedMapElement(positionedMapElement);
+		case GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT: {
+			PositionedVisualizationElement positionedVisualizationElement = (PositionedVisualizationElement) theEObject;
+			T result = casePositionedVisualizationElement(positionedVisualizationElement);
 			if (result == null)
-				result = casePositionedElement(positionedMapElement);
+				result = casePositionedElement(positionedVisualizationElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -2685,17 +2685,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Map Question Param</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Visualization Question Param</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Map Question Param</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Visualization Question Param</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMapQuestionParam(MapQuestionParam object) {
+	public T caseVisualizationQuestionParam(VisualizationQuestionParam object) {
 		return null;
 	}
 
@@ -2865,17 +2865,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Positioned Map Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Positioned Visualization Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Positioned Map Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Positioned Visualization Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePositionedMapElement(PositionedMapElement object) {
+	public T casePositionedVisualizationElement(PositionedVisualizationElement object) {
 		return null;
 	}
 

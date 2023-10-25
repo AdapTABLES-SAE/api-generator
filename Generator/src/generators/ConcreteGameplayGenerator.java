@@ -15,11 +15,10 @@ import generator.ElementType;
 import generator.EntrySoluceParam;
 import generator.ExpectedAnswer;
 import generator.FactSolutionParam;
-import generator.MapQuestionParam;
 import generator.Position;
 import generator.PositionedElement;
-import generator.PositionedMapElement;
 import generator.PositionedStructureElement;
+import generator.PositionedVisualizationElement;
 import generator.PropositionParam;
 import generator.QuestionGameplay;
 import generator.QuestionParam;
@@ -27,6 +26,7 @@ import generator.QuestionedFact;
 import generator.RoomType;
 import generator.Structure;
 import generator.Value;
+import generator.VisualizationQuestionParam;
 import generator.impl.CorrectnessImpl;
 import generator.impl.CorrectnessValueImpl;
 import generator.impl.DisplayImpl;
@@ -34,8 +34,8 @@ import generator.impl.ExpectedAnswerImpl;
 import generator.impl.FactSolutionParamImpl;
 import generator.impl.PositionImpl;
 import generator.impl.PositionedElementImpl;
-import generator.impl.PositionedMapElementImpl;
 import generator.impl.PositionedStructureElementImpl;
+import generator.impl.PositionedVisualizationElementImpl;
 import generator.impl.PropositionParamImpl;
 import generator.impl.ValueImpl;
 import managers.ModelsManager;
@@ -408,8 +408,8 @@ public class ConcreteGameplayGenerator {
 		return structP;
 	}
 	
-	private PositionedMapElement buildMapStructure(Structure structure, ElementType elementType, Position position) {
-		PositionedMapElement structP = new PositionedMapElementImpl();
+	private PositionedVisualizationElement buildVisualizationStructure(Structure structure, ElementType elementType, Position position) {
+		PositionedVisualizationElement structP = new PositionedVisualizationElementImpl();
 		structP.setElementType(elementType);
 		structP.setID("STRUCT" + nbPositionedElement++); 
 		structP.setPosition(position);
@@ -497,12 +497,12 @@ public class ConcreteGameplayGenerator {
 	
 		List<PositionedElement> elements = new ArrayList<>();
 		Structure comp = (Structure) component;
-		PositionedMapElement struct;
+		PositionedVisualizationElement struct;
 		if(positionFromParent == null || !hasForParentAStructure(positionFromParent)) {
 			positionFromParent = getAvailablePosition(roomElements.getRoomTypeOfRoom(), elementType);
 		}
-		struct = buildMapStructure(comp, elementType, positionFromParent);
-		struct.setMap(((MapQuestionParam) roomElements.getFacts().get(0).getQuestion()).getMap());
+		struct = buildVisualizationStructure(comp, elementType, positionFromParent);
+		struct.setVisualization(((VisualizationQuestionParam) roomElements.getFacts().get(0).getQuestion()).getVisualization());
 		elements.add(struct);
 		
 		for (AComponent aComp : comp.getComponents()) {

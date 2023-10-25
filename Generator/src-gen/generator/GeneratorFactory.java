@@ -841,13 +841,13 @@ public interface GeneratorFactory extends EFactory {
 	TimePeriod createTimePeriod();
 
 	/**
-	 * Returns a new object of class '<em>Map Question Param</em>'.
+	 * Returns a new object of class '<em>Visualization Question Param</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map Question Param</em>'.
+	 * @return a new object of class '<em>Visualization Question Param</em>'.
 	 * @generated
 	 */
-	MapQuestionParam createMapQuestionParam();
+	VisualizationQuestionParam createVisualizationQuestionParam();
 
 	/**
 	 * Returns a new object of class '<em>HAssociation</em>'.
@@ -931,13 +931,13 @@ public interface GeneratorFactory extends EFactory {
 	HGLevel createHGLevel();
 
 	/**
-	 * Returns a new object of class '<em>Positioned Map Element</em>'.
+	 * Returns a new object of class '<em>Positioned Visualization Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Positioned Map Element</em>'.
+	 * @return a new object of class '<em>Positioned Visualization Element</em>'.
 	 * @generated
 	 */
-	PositionedMapElement createPositionedMapElement();
+	PositionedVisualizationElement createPositionedVisualizationElement();
 
 	/**
 	 * Returns a new object of class '<em>Date Questionable Fact</em>'.

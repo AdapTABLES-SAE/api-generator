@@ -746,8 +746,9 @@
     <eLiterals name="NONE" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AQuestionParam" abstract="true" eSuperTypes="#//Parameter"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MapQuestionParam" eSuperTypes="#//AQuestionParam">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="map" lowerBound="1" eType="#//Visualization"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VisualizationQuestionParam" eSuperTypes="#//AQuestionParam">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visualization" lowerBound="1"
+        eType="#//Visualization"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HAssociation" eSuperTypes="#//CompletionTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="#//EHistoryTarget"/>
@@ -824,10 +825,10 @@
         lowerBound="1" eType="#//VisualizationPosition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HGLevel" eSuperTypes="#//Level"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PositionedMapElement" eSuperTypes="#//PositionedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="PositionedVisualizationElement" eSuperTypes="#//PositionedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="createdPositions" upperBound="-1"
         eType="#//Position" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="map" eType="#//Visualization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visualization" eType="#//Visualization"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DateQuestionableFact" eSuperTypes="#//QuestionableFact">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

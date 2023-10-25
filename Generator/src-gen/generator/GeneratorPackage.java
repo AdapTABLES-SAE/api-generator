@@ -7574,14 +7574,14 @@ public interface GeneratorPackage extends EPackage {
 	int TIME_PERIOD_OPERATION_COUNT = TIME_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.MapQuestionParamImpl <em>Map Question Param</em>}' class.
+	 * The meta object id for the '{@link generator.impl.VisualizationQuestionParamImpl <em>Visualization Question Param</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.MapQuestionParamImpl
-	 * @see generator.impl.GeneratorPackageImpl#getMapQuestionParam()
+	 * @see generator.impl.VisualizationQuestionParamImpl
+	 * @see generator.impl.GeneratorPackageImpl#getVisualizationQuestionParam()
 	 * @generated
 	 */
-	int MAP_QUESTION_PARAM = 107;
+	int VISUALIZATION_QUESTION_PARAM = 107;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -7590,34 +7590,34 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTION_PARAM__VALUE = AQUESTION_PARAM__VALUE;
+	int VISUALIZATION_QUESTION_PARAM__VALUE = AQUESTION_PARAM__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Map</b></em>' reference.
+	 * The feature id for the '<em><b>Visualization</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTION_PARAM__MAP = AQUESTION_PARAM_FEATURE_COUNT + 0;
+	int VISUALIZATION_QUESTION_PARAM__VISUALIZATION = AQUESTION_PARAM_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Map Question Param</em>' class.
+	 * The number of structural features of the '<em>Visualization Question Param</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTION_PARAM_FEATURE_COUNT = AQUESTION_PARAM_FEATURE_COUNT + 1;
+	int VISUALIZATION_QUESTION_PARAM_FEATURE_COUNT = AQUESTION_PARAM_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Map Question Param</em>' class.
+	 * The number of operations of the '<em>Visualization Question Param</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_QUESTION_PARAM_OPERATION_COUNT = AQUESTION_PARAM_OPERATION_COUNT + 0;
+	int VISUALIZATION_QUESTION_PARAM_OPERATION_COUNT = AQUESTION_PARAM_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.HAssociationImpl <em>HAssociation</em>}' class.
@@ -8458,14 +8458,14 @@ public interface GeneratorPackage extends EPackage {
 	int HG_LEVEL_OPERATION_COUNT = LEVEL_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.PositionedMapElementImpl <em>Positioned Map Element</em>}' class.
+	 * The meta object id for the '{@link generator.impl.PositionedVisualizationElementImpl <em>Positioned Visualization Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.PositionedMapElementImpl
-	 * @see generator.impl.GeneratorPackageImpl#getPositionedMapElement()
+	 * @see generator.impl.PositionedVisualizationElementImpl
+	 * @see generator.impl.GeneratorPackageImpl#getPositionedVisualizationElement()
 	 * @generated
 	 */
-	int POSITIONED_MAP_ELEMENT = 118;
+	int POSITIONED_VISUALIZATION_ELEMENT = 118;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -8474,7 +8474,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_MAP_ELEMENT__ID = POSITIONED_ELEMENT__ID;
+	int POSITIONED_VISUALIZATION_ELEMENT__ID = POSITIONED_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' reference.
@@ -8483,7 +8483,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_MAP_ELEMENT__POSITION = POSITIONED_ELEMENT__POSITION;
+	int POSITIONED_VISUALIZATION_ELEMENT__POSITION = POSITIONED_ELEMENT__POSITION;
 
 	/**
 	 * The feature id for the '<em><b>Correctness</b></em>' containment reference.
@@ -8492,7 +8492,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_MAP_ELEMENT__CORRECTNESS = POSITIONED_ELEMENT__CORRECTNESS;
+	int POSITIONED_VISUALIZATION_ELEMENT__CORRECTNESS = POSITIONED_ELEMENT__CORRECTNESS;
 
 	/**
 	 * The feature id for the '<em><b>Displays</b></em>' containment reference list.
@@ -8501,7 +8501,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_MAP_ELEMENT__DISPLAYS = POSITIONED_ELEMENT__DISPLAYS;
+	int POSITIONED_VISUALIZATION_ELEMENT__DISPLAYS = POSITIONED_ELEMENT__DISPLAYS;
 
 	/**
 	 * The feature id for the '<em><b>Expected Answer</b></em>' containment reference list.
@@ -8510,7 +8510,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_MAP_ELEMENT__EXPECTED_ANSWER = POSITIONED_ELEMENT__EXPECTED_ANSWER;
+	int POSITIONED_VISUALIZATION_ELEMENT__EXPECTED_ANSWER = POSITIONED_ELEMENT__EXPECTED_ANSWER;
 
 	/**
 	 * The feature id for the '<em><b>Fact</b></em>' reference.
@@ -8519,7 +8519,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_MAP_ELEMENT__FACT = POSITIONED_ELEMENT__FACT;
+	int POSITIONED_VISUALIZATION_ELEMENT__FACT = POSITIONED_ELEMENT__FACT;
 
 	/**
 	 * The feature id for the '<em><b>Accepted Facts</b></em>' containment reference list.
@@ -8528,7 +8528,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_MAP_ELEMENT__ACCEPTED_FACTS = POSITIONED_ELEMENT__ACCEPTED_FACTS;
+	int POSITIONED_VISUALIZATION_ELEMENT__ACCEPTED_FACTS = POSITIONED_ELEMENT__ACCEPTED_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Element Type</b></em>' reference.
@@ -8537,7 +8537,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_MAP_ELEMENT__ELEMENT_TYPE = POSITIONED_ELEMENT__ELEMENT_TYPE;
+	int POSITIONED_VISUALIZATION_ELEMENT__ELEMENT_TYPE = POSITIONED_ELEMENT__ELEMENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Created Positions</b></em>' containment reference list.
@@ -8546,34 +8546,34 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_MAP_ELEMENT__CREATED_POSITIONS = POSITIONED_ELEMENT_FEATURE_COUNT + 0;
+	int POSITIONED_VISUALIZATION_ELEMENT__CREATED_POSITIONS = POSITIONED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Map</b></em>' reference.
+	 * The feature id for the '<em><b>Visualization</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_MAP_ELEMENT__MAP = POSITIONED_ELEMENT_FEATURE_COUNT + 1;
+	int POSITIONED_VISUALIZATION_ELEMENT__VISUALIZATION = POSITIONED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Positioned Map Element</em>' class.
+	 * The number of structural features of the '<em>Positioned Visualization Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_MAP_ELEMENT_FEATURE_COUNT = POSITIONED_ELEMENT_FEATURE_COUNT + 2;
+	int POSITIONED_VISUALIZATION_ELEMENT_FEATURE_COUNT = POSITIONED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Positioned Map Element</em>' class.
+	 * The number of operations of the '<em>Positioned Visualization Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIONED_MAP_ELEMENT_OPERATION_COUNT = POSITIONED_ELEMENT_OPERATION_COUNT + 0;
+	int POSITIONED_VISUALIZATION_ELEMENT_OPERATION_COUNT = POSITIONED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.DateQuestionableFactImpl <em>Date Questionable Fact</em>}' class.
@@ -13399,25 +13399,25 @@ public interface GeneratorPackage extends EPackage {
 	EClass getAQuestionParam();
 
 	/**
-	 * Returns the meta object for class '{@link generator.MapQuestionParam <em>Map Question Param</em>}'.
+	 * Returns the meta object for class '{@link generator.VisualizationQuestionParam <em>Visualization Question Param</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Map Question Param</em>'.
-	 * @see generator.MapQuestionParam
+	 * @return the meta object for class '<em>Visualization Question Param</em>'.
+	 * @see generator.VisualizationQuestionParam
 	 * @generated
 	 */
-	EClass getMapQuestionParam();
+	EClass getVisualizationQuestionParam();
 
 	/**
-	 * Returns the meta object for the reference '{@link generator.MapQuestionParam#getMap <em>Map</em>}'.
+	 * Returns the meta object for the reference '{@link generator.VisualizationQuestionParam#getVisualization <em>Visualization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Map</em>'.
-	 * @see generator.MapQuestionParam#getMap()
-	 * @see #getMapQuestionParam()
+	 * @return the meta object for the reference '<em>Visualization</em>'.
+	 * @see generator.VisualizationQuestionParam#getVisualization()
+	 * @see #getVisualizationQuestionParam()
 	 * @generated
 	 */
-	EReference getMapQuestionParam_Map();
+	EReference getVisualizationQuestionParam_Visualization();
 
 	/**
 	 * Returns the meta object for class '{@link generator.HAssociation <em>HAssociation</em>}'.
@@ -13805,36 +13805,36 @@ public interface GeneratorPackage extends EPackage {
 	EClass getHGLevel();
 
 	/**
-	 * Returns the meta object for class '{@link generator.PositionedMapElement <em>Positioned Map Element</em>}'.
+	 * Returns the meta object for class '{@link generator.PositionedVisualizationElement <em>Positioned Visualization Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Positioned Map Element</em>'.
-	 * @see generator.PositionedMapElement
+	 * @return the meta object for class '<em>Positioned Visualization Element</em>'.
+	 * @see generator.PositionedVisualizationElement
 	 * @generated
 	 */
-	EClass getPositionedMapElement();
+	EClass getPositionedVisualizationElement();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generator.PositionedMapElement#getCreatedPositions <em>Created Positions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link generator.PositionedVisualizationElement#getCreatedPositions <em>Created Positions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Created Positions</em>'.
-	 * @see generator.PositionedMapElement#getCreatedPositions()
-	 * @see #getPositionedMapElement()
+	 * @see generator.PositionedVisualizationElement#getCreatedPositions()
+	 * @see #getPositionedVisualizationElement()
 	 * @generated
 	 */
-	EReference getPositionedMapElement_CreatedPositions();
+	EReference getPositionedVisualizationElement_CreatedPositions();
 
 	/**
-	 * Returns the meta object for the reference '{@link generator.PositionedMapElement#getMap <em>Map</em>}'.
+	 * Returns the meta object for the reference '{@link generator.PositionedVisualizationElement#getVisualization <em>Visualization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Map</em>'.
-	 * @see generator.PositionedMapElement#getMap()
-	 * @see #getPositionedMapElement()
+	 * @return the meta object for the reference '<em>Visualization</em>'.
+	 * @see generator.PositionedVisualizationElement#getVisualization()
+	 * @see #getPositionedVisualizationElement()
 	 * @generated
 	 */
-	EReference getPositionedMapElement_Map();
+	EReference getPositionedVisualizationElement_Visualization();
 
 	/**
 	 * Returns the meta object for class '{@link generator.DateQuestionableFact <em>Date Questionable Fact</em>}'.
@@ -17541,22 +17541,23 @@ public interface GeneratorPackage extends EPackage {
 		EClass AQUESTION_PARAM = eINSTANCE.getAQuestionParam();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.MapQuestionParamImpl <em>Map Question Param</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.VisualizationQuestionParamImpl <em>Visualization Question Param</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.MapQuestionParamImpl
-		 * @see generator.impl.GeneratorPackageImpl#getMapQuestionParam()
+		 * @see generator.impl.VisualizationQuestionParamImpl
+		 * @see generator.impl.GeneratorPackageImpl#getVisualizationQuestionParam()
 		 * @generated
 		 */
-		EClass MAP_QUESTION_PARAM = eINSTANCE.getMapQuestionParam();
+		EClass VISUALIZATION_QUESTION_PARAM = eINSTANCE.getVisualizationQuestionParam();
 
 		/**
-		 * The meta object literal for the '<em><b>Map</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Visualization</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MAP_QUESTION_PARAM__MAP = eINSTANCE.getMapQuestionParam_Map();
+		EReference VISUALIZATION_QUESTION_PARAM__VISUALIZATION = eINSTANCE
+				.getVisualizationQuestionParam_Visualization();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.HAssociationImpl <em>HAssociation</em>}' class.
@@ -17872,14 +17873,14 @@ public interface GeneratorPackage extends EPackage {
 		EClass HG_LEVEL = eINSTANCE.getHGLevel();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.PositionedMapElementImpl <em>Positioned Map Element</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.PositionedVisualizationElementImpl <em>Positioned Visualization Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.PositionedMapElementImpl
-		 * @see generator.impl.GeneratorPackageImpl#getPositionedMapElement()
+		 * @see generator.impl.PositionedVisualizationElementImpl
+		 * @see generator.impl.GeneratorPackageImpl#getPositionedVisualizationElement()
 		 * @generated
 		 */
-		EClass POSITIONED_MAP_ELEMENT = eINSTANCE.getPositionedMapElement();
+		EClass POSITIONED_VISUALIZATION_ELEMENT = eINSTANCE.getPositionedVisualizationElement();
 
 		/**
 		 * The meta object literal for the '<em><b>Created Positions</b></em>' containment reference list feature.
@@ -17887,15 +17888,17 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference POSITIONED_MAP_ELEMENT__CREATED_POSITIONS = eINSTANCE.getPositionedMapElement_CreatedPositions();
+		EReference POSITIONED_VISUALIZATION_ELEMENT__CREATED_POSITIONS = eINSTANCE
+				.getPositionedVisualizationElement_CreatedPositions();
 
 		/**
-		 * The meta object literal for the '<em><b>Map</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Visualization</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference POSITIONED_MAP_ELEMENT__MAP = eINSTANCE.getPositionedMapElement_Map();
+		EReference POSITIONED_VISUALIZATION_ELEMENT__VISUALIZATION = eINSTANCE
+				.getPositionedVisualizationElement_Visualization();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.DateQuestionableFactImpl <em>Date Questionable Fact</em>}' class.

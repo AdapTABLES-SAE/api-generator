@@ -239,8 +239,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createDate();
 		case GeneratorPackage.TIME_PERIOD:
 			return createTimePeriod();
-		case GeneratorPackage.MAP_QUESTION_PARAM:
-			return createMapQuestionParam();
+		case GeneratorPackage.VISUALIZATION_QUESTION_PARAM:
+			return createVisualizationQuestionParam();
 		case GeneratorPackage.HASSOCIATION:
 			return createHAssociation();
 		case GeneratorPackage.HLEGEND:
@@ -257,8 +257,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createVisualizationSolution();
 		case GeneratorPackage.HG_LEVEL:
 			return createHGLevel();
-		case GeneratorPackage.POSITIONED_MAP_ELEMENT:
-			return createPositionedMapElement();
+		case GeneratorPackage.POSITIONED_VISUALIZATION_ELEMENT:
+			return createPositionedVisualizationElement();
 		case GeneratorPackage.DATE_QUESTIONABLE_FACT:
 			return createDateQuestionableFact();
 		case GeneratorPackage.HCHRONOLOGY:
@@ -1283,9 +1283,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapQuestionParam createMapQuestionParam() {
-		MapQuestionParamImpl mapQuestionParam = new MapQuestionParamImpl();
-		return mapQuestionParam;
+	public VisualizationQuestionParam createVisualizationQuestionParam() {
+		VisualizationQuestionParamImpl visualizationQuestionParam = new VisualizationQuestionParamImpl();
+		return visualizationQuestionParam;
 	}
 
 	/**
@@ -1383,9 +1383,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PositionedMapElement createPositionedMapElement() {
-		PositionedMapElementImpl positionedMapElement = new PositionedMapElementImpl();
-		return positionedMapElement;
+	public PositionedVisualizationElement createPositionedVisualizationElement() {
+		PositionedVisualizationElementImpl positionedVisualizationElement = new PositionedVisualizationElementImpl();
+		return positionedVisualizationElement;
 	}
 
 	/**
