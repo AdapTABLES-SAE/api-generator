@@ -247,8 +247,11 @@ public class DungeonGenerator {
 		boolean backtrack = false;
 		Coordinate nextPosition = null;	
 		StructureChosenRT structureRT = new StructureChosenRT(null, null, null);
+		
+		int variableNumberOfRooms = (int) nbRooms + 2;
 				
-		while(dungeonRooms.size() < nbRooms + 2) {
+		while(dungeonRooms.size() < variableNumberOfRooms) {
+			System.out.println("On est ici");
 			nextPosition = gridManager.getNextCoord(dungeonRooms.lastElement().getRoom(), dungeonRooms.lastElement().getExit());
 			if(!backtrack) {
 				eligibleRoomsOrientations.add(gridManager.getAllowedDirections(nextPosition, dungeonRooms.lastElement().getExit())); 
@@ -259,10 +262,21 @@ public class DungeonGenerator {
 				LinearRoom r = dungeonRooms.pop();
 				eligibleRoomsOrientations.lastElement().removeExitForEntry(r.getEntry(), r.getExit());
 			} else {
+				System.out.println("On est dans celle là");
 				backtrack = false;
 				structureRT = chooseRoomType(eligibleRoomsOrientations.lastElement(), dungeonElements.getElementsOfRoom(dungeonRooms.size()));
-				LinearRoom aRoom = createNewRoomFrom(nextPosition, dungeonElements.getElementsOfRoom(dungeonRooms.size()), dungeonRooms.lastElement().getExitRoomAccess(), structureRT);
-				dungeonRooms.add(aRoom);
+				if(structureRT == null || structureRT.isNull()) { 
+					
+					System.out.println(variableNumberOfRooms+" "+dungeonElements.getRoomsElements().size());
+					variableNumberOfRooms++;
+					dungeonElements.addEmptyRoom(dungeonRooms.size());
+					System.out.println(variableNumberOfRooms+" "+dungeonElements.getRoomsElements().size());
+					
+				} else {
+					LinearRoom aRoom = createNewRoomFrom(nextPosition, dungeonElements.getElementsOfRoom(dungeonRooms.size()), dungeonRooms.lastElement().getExitRoomAccess(), structureRT);
+					dungeonRooms.add(aRoom);
+				}
+				
 			}
 		}
 
@@ -284,17 +298,24 @@ public class DungeonGenerator {
 			this.exit = exit;
 			this.roomType = roomType;
 		}
+		
+		public boolean isNull() {
+			return entry == null && exit == null && roomType == null;
+		}
 	}
 	
 	private StructureChosenRT chooseRoomType(LinearRoomOrientations eligibleRoomOrientations, RoomElements roomElements) throws NonRoomTypeException {
+		System.out.println("Je suis avant le while");
 		List<Directions> chosenEntries = new ArrayList<>(); 
 		Directions entry = null; 
 		Directions exit = null;
 		RoomType roomType = null;
 		while(roomType == null) { 
+			System.out.println("Je suis ici");
 			entry = chooseEntryDirection(eligibleRoomOrientations, chosenEntries);
 			//if(entry == null) { return null; }// throw new NonRoomTypeException(roomElements.getGameplay(), roomElements.getTask());
 			if(entry != null) { 
+				System.out.println("J'arrive là");
 				chosenEntries.add(entry);
 				if(!roomElements.isExit()) {
 					exit = chooseExitDirection(eligibleRoomOrientations, entry);
@@ -303,6 +324,7 @@ public class DungeonGenerator {
 				}
 				roomType = getCompatibleRoomType(entry, exit, roomElements); 
 			}
+			if(entry == null) { return null; }
 		}
 				
 		return new StructureChosenRT(entry, exit, roomType);
@@ -360,7 +382,7 @@ public class DungeonGenerator {
 	 * @throws NonRoomTypeException 
 	 */
 	private RoomType getCompatibleRoomType(Directions entry, Directions exit, RoomElements roomElements) throws NonRoomTypeException {
-		return dungeonElements.getElementManager().getCompatibleRoomType(entry, exit, roomElements.getGameplay(), roomElements.getElementsToQuantity(), roomElements.isExit());
+		return dungeonElements.getElementManager().getCompatibleRoomType(entry, exit, roomElements.getGameplay(), roomElements.getElementsToQuantity(), roomElements.isExit(), roomElements.isEntry());
 	}
 
 	/**

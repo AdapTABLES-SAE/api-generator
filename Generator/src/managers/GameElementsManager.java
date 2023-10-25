@@ -91,22 +91,12 @@ public class GameElementsManager {
 
 	private ElementType getCompatibleElementType(AComponent component, boolean isStructureComponent) { 
 		List<ElementType> compatibleTypes = new ArrayList<>();
-		for (ElementType elementType : this.gameDescriptionModel.getElements().getElementTypes().getElements()) {
-			/*if(elementType instanceof StatementElementType) {
-				if(component instanceof Component && component.isForStatement() && !component.isForProposition()) {
-					if((((StatementElementType) elementType).isForStructure() && isStructureComponent) || (!((StatementElementType) elementType).isForStructure() && !isStructureComponent)) {
-						compatibleTypes.add((ElementType) elementType);
-					}
-				}
-			} else if((!component.isForStatement() || isComponentForBothStatementAndChoices(component)) && isEqualAbility(elementType, component) && isEqualSize(elementType, component)) {
-				compatibleTypes.add((ElementType) elementType);
-			}*/
-			
+		for (ElementType elementType : this.gameDescriptionModel.getElements().getElementTypes().getElements()) {	
 			if(elementType instanceof StatementElementType) {
-				if(isComponentForStatement(component) && !isComponentForChoices(component) /*&& hasValidStatementConditions((StatementElementType) elementType, isStructureComponent)*/) {
+				if(isComponentForStatement(component) && !isComponentForPropositions(component) && respectStatementConditions((StatementElementType) elementType, isStructureComponent)) {
 					compatibleTypes.add((StatementElementType) elementType);
 				}
-			} else if((!isComponentForStatement(component) || isComponentForBothStatementAndChoices(component)) && isEqualAbility(elementType, component) && isEqualSize(elementType, component)) {		
+			} else if((!isComponentForStatement(component) || isComponentForStatementAndChoices(component)) && abilitiesAreEqual(elementType, component) && sizeAreEqual(elementType, component)) {		
 					compatibleTypes.add((ElementType) elementType);
 			}
 		}
@@ -118,20 +108,20 @@ public class GameElementsManager {
 		return component instanceof Component && component.isForStatement();
 	}
 	
-	private boolean isComponentForChoices(AComponent component) {
+	private boolean isComponentForPropositions(AComponent component) {
 		return component instanceof Component && component.isForProposition();
 	}
 	
-	private boolean isComponentForBothStatementAndChoices(AComponent component) {
-		return isComponentForStatement(component) && isComponentForChoices(component);
+	private boolean isComponentForStatementAndChoices(AComponent component) {
+		return isComponentForStatement(component) && isComponentForPropositions(component);
 	}
 	
 	
-	/*private boolean hasValidStatementConditions(StatementElementType statementType, boolean isStructureComponent) {
+	private boolean respectStatementConditions(StatementElementType statementType, boolean isStructureComponent) {
 		return (statementType.isForStructure() && isStructureComponent) || (!statementType.isForStructure() && !isStructureComponent);
-	}*/
+	}
 	
-	private boolean isEqualAbility(ElementType element, AComponent component) {
+	private boolean abilitiesAreEqual(ElementType element, AComponent component) {
 		return element.getAbility().equals(component.getAllowedAbility());
 	}
 	
@@ -139,7 +129,7 @@ public class GameElementsManager {
 		return component.getExpectedSize() != null;
 	}
 	
-	private boolean isEqualSize(ElementType element, AComponent component) {
+	private boolean sizeAreEqual(ElementType element, AComponent component) {
 		return !hasExpectedSize(component) || element.getSize().getLiteral().equals(((Value) component.getExpectedSize().getValue()).getValue());
 	}
 	
@@ -148,7 +138,7 @@ public class GameElementsManager {
 		//System.out.println("-------------Gameplay "+gameplay);
 		for (ElementType elementType : elementsToQuantity.keySet()) {
 			if((isComponentForStatement(component) && elementType instanceof StatementElementType) ||
-					 (!(elementType instanceof StatementElementType) && isEqualAbility(elementType, component) && isEqualSize(elementType, component))) {
+					 (!(elementType instanceof StatementElementType) && abilitiesAreEqual(elementType, component) && sizeAreEqual(elementType, component))) {
 				return elementType;
 			}
 		}
@@ -295,23 +285,24 @@ public class GameElementsManager {
 	}
 	
 	
-	public RoomType getCompatibleRoomType(Directions entry, Directions exit, Gameplay gameplay, Map<ElementType, Integer> elementsToQuantity, boolean isExitRoom) {
+	public RoomType getCompatibleRoomType(Directions entry, Directions exit, Gameplay gameplay, Map<ElementType, Integer> elementsToQuantity, boolean isExitRoom, boolean isEntryRoom) {
 		List<RoomType> roomTypes; 
 		
-		if(gameplay instanceof QuestionGameplay) { roomTypes = getQuestionRoomTypes(); }
-		else if(gameplay instanceof NoQuestionGameplay){ roomTypes = getTrapRoomTypes(); }
+		if(gameplay instanceof NoQuestionGameplay){ roomTypes = getTrapRoomTypes(); }
 		else if(isExitRoom) { roomTypes = getExitRoomTypes(); }
-		else { roomTypes = getEntryRoomTypes(); }
+		else if(isEntryRoom) { roomTypes = getEntryRoomTypes(); }
+		else { roomTypes = getQuestionRoomTypes(); }
 		
-		/*System.out.println("Every roomtypes "+roomTypes);
-		System.out.println("Room "+roomElements.getGameplay()+" "+roomElements.isEntry());
-		System.out.println("entry: "+entry+" exit: "+exit+" ");*/
+		System.out.println("Every roomtypes "+roomTypes);
+		//System.out.println("Room "+roomElements.getGameplay()+" "+roomElements.isEntry());
+		//System.out.println("entry: "+entry+" exit: "+exit+" ");
 
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
-			/*System.out.println(" \troomtype: "+roomType.getName());
+			System.out.println(" \troomtype: "+roomType.getName());
 			System.out.println(" \t\t compatible access : "+roomTypeHasCompatibleAccesses(entry, exit, roomType));
-			System.out.println(" \t\t compatible positions : "+roomTypeHasCompatiblePositions(roomType, roomElements));*/
-
+			System.out.println(" \t\t compatible positions : "+roomTypeHasCompatiblePositions(roomType, elementsToQuantity));
+			System.out.println("\tentry "+entry+" "+"exit "+exit);
+			
 			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, elementsToQuantity)) {	
 				//System.out.println("\tentry "+entry+" "+"exit "+exit);
 				roomTypes.remove(roomType);

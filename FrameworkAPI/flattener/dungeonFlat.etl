@@ -116,13 +116,17 @@ rule Structures2Elements
 }
 
 rule MapStructures2Elements 
-	transform element : IN!PositionedMapElement
+	transform element : IN!PositionedVisualizationElement
 	to elementOut : OUT!Element {
 	//"\t\t\tStrucutres creation".println();
 	
 	elementOut.id = element.id;		
 	elementOut.pos = element.position.id;	
 	elementOut.type = element.elementType.type;
+	
+	if(element.visualization.isDefined()){
+		elementOut.visualisation = element.visualization.id;
+	}
 }
 
 rule Elements2Elements 

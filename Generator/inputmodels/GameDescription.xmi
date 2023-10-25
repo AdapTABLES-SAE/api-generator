@@ -858,12 +858,39 @@
       <restrictedTo>COMPLETE</restrictedTo>
       <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
+    <gameplays xsi:type="generator:QuestionGameplay" name="GP_UNIQUE_MOVABLE2" category="MOVE_UNIQUE">
+      <components xsi:type="generator:Component" allowedAbility="MOVABLE">
+        <quantity factNbAnswers="true"/>
+      </components>
+      <components xsi:type="generator:Component" allowedAbility="DETECTOR" forProposition="true">
+        <expectedSize>
+          <value xsi:type="generator:Value" value="SMALL"/>
+        </expectedSize>
+      </components>
+      <components xsi:type="generator:Component" allowedAbility="DISPLAY" forStatement="true"/>
+      <prompt prompt="Deplace le bon elements sur la zone"/>
+    </gameplays>
+    <gameplays xsi:type="generator:QuestionGameplay" name="GP_MULTIPLE_MOVABLE2" manualValidation="true" category="MOVE_MULTIPLE">
+      <components xsi:type="generator:Component" allowedAbility="MOVABLE">
+        <quantity factNbAnswers="true"/>
+      </components>
+      <components xsi:type="generator:Component" allowedAbility="DETECTOR" forProposition="true">
+        <expectedSize>
+          <value xsi:type="generator:Value" value="SMALL"/>
+        </expectedSize>
+        <quantity factNbAnswers="true"/>
+      </components>
+      <components xsi:type="generator:Component" allowedAbility="DISPLAY" forStatement="true"/>
+      <prompt prompt="Deplace les bons elements sur les zones"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
+    </gameplays>
   </gameplays>
   <elements>
     <equipments>
-      <equipments ID="BRACELET" lockedAbilities="MOVABLE"/>
-      <equipments ID="BELT" lockedAbilities="ROTABLE"/>
-      <equipments ID="GLOVE" lockedAbilities="PUSHABLE"/>
+      <equipments ID="BRACELET" lockedAbilities="PUSHABLE"/>
+      <equipments ID="BELT" lockedAbilities="MOVABLE"/>
+      <equipments ID="GLOVE" lockedAbilities="ROTABLE"/>
       <equipments ID="KEYS" lockedAbilities="OPENABLE FOLLOWABLE"/>
       <equipments ID="COAT" lockedAbilities="CROSSABLE"/>
       <equipments ID="CARROT" lockedAbilities="CATCHABLE"/>
@@ -918,6 +945,7 @@
       <elements ID="ELEMENT_TYPE_TYPABLE_DETECTOR" type="TypableDetector" ability="TYPABLE_DETECTOR"/>
       <elements size="LARGE" ID="STRUCT_H_LARGE" type="HStructL" ability="HORIZONTAL_DISPLAY"/>
       <elements size="LARGE" ID="STRUCT_V_LARGE" type="VStructL" ability="VERTICAL_DISPLAY"/>
+      <elements ID="ELEMENT_TYPE_COW" type="Cow" nbDisplays="1" ability="CATCHABLE"/>
     </elementTypes>
     <curses>
       <curses xsi:type="generator:LabyrinthCurse" name="Labyrinth"/>
@@ -930,15 +958,15 @@
     <abilities name="TOUCHABLE"/>
     <abilities name="TYPABLE"/>
     <abilities name="VERIFICATOR"/>
-    <abilities name="ROTABLE" lockingEquipment="BELT"/>
-    <abilities name="MOVABLE" lockingEquipment="BRACELET"/>
+    <abilities name="ROTABLE" lockingEquipment="GLOVE"/>
+    <abilities name="MOVABLE" lockingEquipment="BELT"/>
     <abilities name="DETECTOR"/>
     <abilities name="OPENABLE" lockingEquipment="KEYS"/>
     <abilities name="DISPLAY"/>
     <abilities name="CATCHABLE" lockingEquipment="CARROT"/>
     <abilities name="NONAVOIDABLE"/>
     <abilities name="AVOIDABLE"/>
-    <abilities name="PUSHABLE" lockingEquipment="GLOVE"/>
+    <abilities name="PUSHABLE" lockingEquipment="BRACELET"/>
     <abilities name="CROSSABLE" lockingEquipment="COAT"/>
     <abilities name="FOLLOWABLE" lockingEquipment="KEYS"/>
     <abilities name="HORIZONTAL_DISPLAY"/>

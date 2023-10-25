@@ -41,6 +41,23 @@ public class DungeonElements {
 		return roomsElements;
 	}
 	
+	public void addEmptyRoom(int position) {
+		if(position < this.roomsElements.size()) {
+			System.err.println("AJOUT SALLE SUP");
+			List<RoomElements> roomElements = new ArrayList<>();
+			for(int i = 0; i < this.roomsElements.size(); i++) {
+				if(i == position) {
+					roomElements.add(new RoomElements(this.gameDescriptionModel, this.elementManager));
+				}
+				roomElements.add(this.getElementsOfRoom(i));
+			}
+			this.roomsElements = roomElements;
+			
+			System.out.println(this.roomsElements.get(this.roomsElements.size()-1).isExit());
+		}
+	}
+	
+	
 	public DungeonMode getDungeonMode() {
 		return mode;
 	}
