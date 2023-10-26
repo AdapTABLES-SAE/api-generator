@@ -81,12 +81,12 @@ public class GameElementsGenerator {
 	
 	private void unlockGameplays() {
 		List<Ability> abilities = getCurrentlyLockedAbilities();
-		//System.out.println("Locked abilities "+abilities);
+		System.out.println("Locked abilities "+abilities);
 		for(Gameplay gameplay: this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			//System.out.println("***********************************");
 			gameplay.setLocked(hasGameplayLockedAbilities(gameplay, abilities));
-			//System.out.println(gameplay.getName()+" locked? "+gameplay.isLocked());
-			//System.out.println("***********************************");
+			System.out.println(gameplay.getName()+" locked? "+gameplay.isLocked());
+			System.out.println("***********************************");
 		}
 	}
 	
@@ -242,7 +242,7 @@ public class GameElementsGenerator {
 	private List<Gameplay> getValidGameplaysForTask(ATask task) {
 		List<Gameplay> gameplays = new ArrayList<>();
 		Map<GPCategory, Set<EStatementType>> validCategoriesFromRelations = getValidCategoriesFromRelations(task);
-		
+		System.out.println("Valid categories "+validCategoriesFromRelations);
 		for(GPCategory category :  new ArrayList<>(validCategoriesFromRelations.keySet())) {
 			gameplays.addAll(getQuestionGameplayForCategorieType(category, task, validCategoriesFromRelations.get(category)));
 		}

@@ -222,19 +222,21 @@ public class ConcreteGameplayGenerator {
 	private PositionedElement buildSingleDetectorElement(Component component, ElementType elementType, QuestionedFact fact, int index, Position position, boolean hasIntegratedChoices) {
 		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
 		
-		ExpectedAnswer answer = new ExpectedAnswerImpl(); 
-		Value value = new ValueImpl();
-		
+		String aValue = "";
 		if(fact.getPropositions().size() > 0) {
-			value.setValue(((Value) fact.getPropositions().get(index).getValue()).getValue());
+			aValue = ((Value) fact.getPropositions().get(index).getValue()).getValue();
 		} else {
-			System.out.println("ON EST ICI "+fact.getEntrys());
-			value.setValue(((Value) fact.getEntrys().get(index).getValue()).getValue());
+			aValue = ((Value) fact.getEntrys().get(index).getValue()).getValue();
 		}
 		
-		answer.setValue(value);
-	
-		comp.getExpectedAnswer().add(answer);		
+		if(!aValue.isEmpty()) {
+			ExpectedAnswer answer = new ExpectedAnswerImpl(); 
+			Value value = new ValueImpl();
+			value.setValue(aValue);
+			answer.setValue(value);
+			comp.getExpectedAnswer().add(answer);
+		}
+		
 		return comp;
 	}
 	

@@ -56,7 +56,16 @@ public enum ElementSize implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	XLARGE(3, "XLARGE", "XLARGE");
+	XLARGE(3, "XLARGE", "XLARGE"),
+	/**
+	* The '<em><b>XXLARGE</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #XXLARGE_VALUE
+	* @generated
+	* @ordered
+	*/
+	XXLARGE(4, "XXLARGE", "XXLARGE");
 
 	/**
 	 * The '<em><b>SMALL</b></em>' literal value.
@@ -103,12 +112,23 @@ public enum ElementSize implements Enumerator {
 	public static final int XLARGE_VALUE = 3;
 
 	/**
+	 * The '<em><b>XXLARGE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #XXLARGE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int XXLARGE_VALUE = 4;
+
+	/**
 	 * An array of all the '<em><b>Element Size</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final ElementSize[] VALUES_ARRAY = new ElementSize[] { SMALL, MEDIUM, LARGE, XLARGE, };
+	private static final ElementSize[] VALUES_ARRAY = new ElementSize[] { SMALL, MEDIUM, LARGE, XLARGE, XXLARGE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Element Size</b></em>' enumerators.
@@ -172,6 +192,8 @@ public enum ElementSize implements Enumerator {
 			return LARGE;
 		case XLARGE_VALUE:
 			return XLARGE;
+		case XXLARGE_VALUE:
+			return XXLARGE;
 		}
 		return null;
 	}

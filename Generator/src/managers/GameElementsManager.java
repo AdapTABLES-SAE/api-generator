@@ -293,15 +293,15 @@ public class GameElementsManager {
 		else if(isEntryRoom) { roomTypes = getEntryRoomTypes(); }
 		else { roomTypes = getQuestionRoomTypes(); }
 		
-		System.out.println("Every roomtypes "+roomTypes);
+		//System.out.println("Every roomtypes "+roomTypes);
 		//System.out.println("Room "+roomElements.getGameplay()+" "+roomElements.isEntry());
 		//System.out.println("entry: "+entry+" exit: "+exit+" ");
 
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
-			System.out.println(" \troomtype: "+roomType.getName());
+			/*System.out.println(" \troomtype: "+roomType.getName());
 			System.out.println(" \t\t compatible access : "+roomTypeHasCompatibleAccesses(entry, exit, roomType));
 			System.out.println(" \t\t compatible positions : "+roomTypeHasCompatiblePositions(roomType, elementsToQuantity));
-			System.out.println("\tentry "+entry+" "+"exit "+exit);
+			System.out.println("\tentry "+entry+" "+"exit "+exit);*/
 			
 			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, elementsToQuantity)) {	
 				//System.out.println("\tentry "+entry+" "+"exit "+exit);

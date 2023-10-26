@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 import exceptions.BadSolutionGenerationException;
@@ -16,6 +17,7 @@ import generator.Date;
 import generator.ECorrectness;
 import generator.HistoryFact;
 import generator.MapQuestionableFact;
+import generator.MultipleChoice;
 import generator.QuestionedFact;
 import generator.SetOfFacts;
 import generator.TimePeriod;
@@ -71,14 +73,64 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 		}
 		return solutions;
 	}
+	
+	private List<Soluce> getBadSoluces(AQuestionableFact qFact, List<Soluce> goodSolutions, int numberOfBadSoluce) {
+		MapQuestionableFact fact = 	(MapQuestionableFact) qFact;
+		
+		List<VisualizationPosition> positions = new ArrayList<>(fact.getVisualization().getPositions());
+		positions.removeAll(getSolutionsPositions(goodSolutions));
+		System.out.println("IL y a des positions "+ positions);
+		List<Soluce> badSoluces = new ArrayList<>();
+		if(positions.size() >= numberOfBadSoluce) {
+			for(int i = 0; i < numberOfBadSoluce; i++) {
+				int j = new Random().nextInt(positions.size());
+				badSoluces.add(new Soluce("", positions.get(j)));
+				positions.remove(j);
+			}
+		} else {
+			for(VisualizationPosition pos : positions) {
+				badSoluces.add(new Soluce("", pos));
+			}
+		}
+		
+		return badSoluces;
+	}
+	
+	private List<VisualizationPosition> getSolutionsPositions(List<Soluce> soluces) {
+		List<VisualizationPosition> positions = new ArrayList<>();
+		for(Soluce soluce: soluces) {
+			positions.add(soluce.getPosition());
+		}
+		return positions;
+	}
+	
+	/*private boolean containsSoluceWithPosition(List<Soluce> soluces, VisualizationPosition position) {
+		for(Soluce sol: soluces) {
+			System.out.println("SOL "+sol.getPosition().getID()+" bad "+position.getID());
+			if(sol.getPosition().getID().equals(position.getID())) {
+				return true;
+			}
+		}
+		return false;
+	}*/
 
 
 	@Override
 	protected java.util.Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) throws BadSolutionGenerationException {
 		java.util.Map<ECorrectness, List<Soluce>> propositions = new HashMap<>();
 
-		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
-		propositions.put(ECorrectness.INCORRECT, new ArrayList<>());
+		List<Soluce> goodSoluce = getListOfGoodSolutions(qFact);
+		propositions.put(ECorrectness.CORRECT, goodSoluce);
+		
+		MultipleChoice mc = task.getResponseModality() != null? (MultipleChoice) task.getResponseModality():null;
+ 		List<Soluce> badSoluce = new ArrayList<>();
+
+		if(mc != null) {
+			System.out.println("PAR ICI");
+			badSoluce = getBadSoluces(qFact, goodSoluce, mc.getNbBadChoices());
+		} 
+		
+		propositions.put(ECorrectness.INCORRECT, badSoluce);
 		
 		return propositions;
 	}
@@ -93,6 +145,16 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 	protected boolean isQuestionInteractive() {
 		return false;
 	}
+	
+	/*private int countNumberOfPeriod(List<QuestionedFact> previousFacts) {
+		int periods = 0; 
+		for(QuestionedFact fact: previousFacts) {	
+			if(fact.getPropositions().size() == 2) {
+				periods++;
+			}
+		}
+		return periods;
+	}*/
 	
 	@Override
 	protected List<AQuestionableFact> removeUnEligibleFactsBasedOnPreviouslySelectedFact(List<QuestionedFact> previousFacts, List<AQuestionableFact> facts) {

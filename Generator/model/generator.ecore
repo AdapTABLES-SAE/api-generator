@@ -450,6 +450,7 @@
     <eLiterals name="MEDIUM" value="1"/>
     <eLiterals name="LARGE" value="2"/>
     <eLiterals name="XLARGE" value="3" literal="XLARGE"/>
+    <eLiterals name="XXLARGE" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Abilities">
     <eStructuralFeatures xsi:type="ecore:EReference" name="abilities" upperBound="-1"

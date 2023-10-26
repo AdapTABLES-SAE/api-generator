@@ -5,6 +5,8 @@ package generator.impl;
 import generator.GeneratorPackage;
 import generator.VisualizationPosition;
 
+import java.util.Objects;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -162,4 +164,22 @@ public class VisualizationPositionImpl extends MinimalEObjectImpl.Container impl
 		return result.toString();
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		VisualizationPositionImpl other = (VisualizationPositionImpl) obj;
+		return Objects.equals(id, other.id);
+	}
+
+	
 } //VisualizationPositionImpl
