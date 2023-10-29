@@ -16,6 +16,7 @@ import generator.ElementSize;
 import generator.ElementType;
 import generator.GameDescription;
 import generator.Gameplay;
+import generator.LargeRoomType;
 import generator.NoQuestionGameplay;
 import generator.Position;
 import generator.QuestionGameplay;
@@ -313,16 +314,47 @@ public class GameElementsManager {
 		
 		//System.err.println("ALLOWED "+roomTypes);
 		if(roomTypes.isEmpty()) { return null; }
-		RoomType rt;
-		if(ALGAGenerator.MAXIMIZE_ROOMTYPE_ACCESS) {
+		RoomType rt = roomTypes.get(new Random().nextInt(roomTypes.size()));
+		/*if(ALGAGenerator.MAXIMIZE_ROOMTYPE_ACCESS) {
 			rt = getRoomTypeWithMaximumAccess(roomTypes);
 		} else {
-			rt = roomTypes.get(new Random().nextInt(roomTypes.size()));
-		}
+			rt = removeLargeRoomTypes(roomTypes).get(new Random().nextInt(roomTypes.size()));
+		}*/
 		
 		
 		//System.err.println("SELECTED RT "+rt.getName());
 		return rt; 
+	}
+	
+	private List<RoomType> removeLargeRoomTypes(List<RoomType> roomtypes) {
+		System.out.println("ON SUPPRIME LES ROOM LARGE");
+		if(containsSmallAndLargeRoomTypes(roomtypes)) {
+			List<RoomType> roomtypes_ = new ArrayList<>();
+			for(RoomType rt: roomtypes) {
+				System.out.println("ON SUPPRIME LES ROOM LARGE "+rt.getName());
+
+				if(rt instanceof SmallRoomType) {
+					roomtypes_.add(rt);
+				} 
+			}
+			return roomtypes_;
+		} else {
+			return roomtypes;
+		}
+	}
+	
+	private boolean containsSmallAndLargeRoomTypes(List<RoomType> roomtypes) {
+		boolean smallRT = false, largeRT = false;
+		for(RoomType rt: roomtypes) {
+			System.out.println("ON SUPPRIME LES ROOM LARGE "+rt.getName());
+
+			if(rt instanceof LargeRoomType) {
+				largeRT = true;
+			} else {
+				smallRT = true;
+			}
+		}
+		return largeRT && smallRT;
 	}
 	
 	private RoomType getRoomTypeWithMaximumAccess(List<RoomType> roomtypes) {

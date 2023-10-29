@@ -36,17 +36,23 @@ public class ModelsManager {
 	public boolean launchedFromTEST = false;
 	
 	private static final HashMap<DidacticDomain, String> didacticDomainFileNames = new HashMap<>();
+	private static final HashMap<DidacticDomain, String> gameDescriptionBasedOnDidacticDomain = new HashMap<>();
+
 	static {
 		didacticDomainFileNames.put(DidacticDomain.MATHEMATICS, "MultiplicationTables.xmi");
 		didacticDomainFileNames.put(DidacticDomain.HISTORY_GEOGRAPHY, "HistoryGeographyFacts.xmi");
 		didacticDomainFileNames.put(DidacticDomain.JUDO, "JudoFacts.xmi");
+		gameDescriptionBasedOnDidacticDomain.put(DidacticDomain.MATHEMATICS, "GameDescription.xmi");
+		gameDescriptionBasedOnDidacticDomain.put(DidacticDomain.HISTORY_GEOGRAPHY, "GameDescriptionHG.xmi");
+		gameDescriptionBasedOnDidacticDomain.put(DidacticDomain.JUDO, "GameDescription.xmi");
 	}
+	
 	
 	private static String INPUT_MODELS_PATH = "inputmodels/";
 	private static String INPUT_MODELS_PATH_TEST = "tests/modelsForTests/";
 	private static String OUTPUT_MODELS_PATH = "outputmodels/";
 	private static String INPUT_LEARNER_MODELS_PATH = "learnerPlayers/";
-	private static String[] INPUT_MODELS_NAMES = {"Contexts.xmi", "GameDescription.xmi", 
+	private static String[] INPUT_MODELS_NAMES = {"Contexts.xmi", gameDescriptionBasedOnDidacticDomain.get(ALGAGenerator.DOMAIN), 
 			didacticDomainFileNames.get(ALGAGenerator.DOMAIN), "LearningDomain.xmi", "Relations.xmi", ""};
 	
 	private static final String DEFAULT_CONTEXTID = "default";
@@ -272,6 +278,7 @@ public class ModelsManager {
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		map.put("xmi", new XMIResourceFactoryImpl());
 		
+		System.out.println(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[1]);
 		File contextes = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[0]);
 		File gamedescription = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[1]);
 		File knowledge = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[2]);

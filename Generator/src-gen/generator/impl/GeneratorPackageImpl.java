@@ -5304,6 +5304,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getJudoTechniqueFact_Category() {
+		return (EAttribute) judoTechniqueFactEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getClassifyTechnique() {
 		return classifyTechniqueEClass;
 	}
@@ -6205,6 +6214,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		judoTechniqueFactEClass = createEClass(JUDO_TECHNIQUE_FACT);
 		createEAttribute(judoTechniqueFactEClass, JUDO_TECHNIQUE_FACT__NAME);
 		createEAttribute(judoTechniqueFactEClass, JUDO_TECHNIQUE_FACT__DESCRIPTION);
+		createEAttribute(judoTechniqueFactEClass, JUDO_TECHNIQUE_FACT__CATEGORY);
 
 		classifyTechniqueEClass = createEClass(CLASSIFY_TECHNIQUE);
 
@@ -7574,6 +7584,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				JudoTechniqueFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getJudoTechniqueFact_Description(), ecorePackage.getEString(), "description", null, 0, 1,
+				JudoTechniqueFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJudoTechniqueFact_Category(), ecorePackage.getEString(), "category", null, 0, 1,
 				JudoTechniqueFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 

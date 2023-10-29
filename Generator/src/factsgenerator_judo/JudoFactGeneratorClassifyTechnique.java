@@ -40,38 +40,56 @@ public class JudoFactGeneratorClassifyTechnique extends FactGeneratorTemplate {
 		int number = mc.getNbChoices() - mc.getNbBadChoices();
 		
 		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
-			List<JudoTechniqueFact> facts = new ArrayList<>();
+			System.err.println(setoffact.getFacts().size());
+			HashMap<String, List<JudoTechniqueFact>> facts = new HashMap<>();
 				for (AbstractFact f : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
+					List<JudoTechniqueFact> factlist = new ArrayList<>();
 					if(f instanceof JudoTechniqueFact) {
 						JudoTechniqueFact fact = (JudoTechniqueFact) f;
-							facts.add(fact);
+						factlist.add(fact);
+						if(facts.containsKey(fact.getCategory())) {
+							factlist.addAll(facts.get(fact.getCategory()));
+							
+						} 
+						facts.put(fact.getCategory(), factlist);
 					}
 				}
-				AQuestionableFacts.addAll(generateAQuestionableFactsOf(setoffact, task, facts, number));
+				AQuestionableFacts.addAll(generateAQuestionableFactsOf(task, facts, number));
 		}	
 		return AQuestionableFacts; 
 	}
 	
 	
-	protected Set<AQuestionableFact> generateAQuestionableFactsOf(SetOfFacts setoffact, ATask task, List<JudoTechniqueFact> facts, int numberByFact) {
+	protected Set<AQuestionableFact> generateAQuestionableFactsOf(ATask task, HashMap<String, List<JudoTechniqueFact>> facts, int numberByFact) {
 		Set<AQuestionableFact> qfs = new HashSet<>(); 
-		int k = 0;
-		int numberOfQuestionableFacts = (int) Math.ceil(facts.size() / numberByFact);
-		for (int i = 0; i < numberOfQuestionableFacts; i++) {
-			List<JudoTechniqueFact> judoFacts = new ArrayList<>(); 
-			while(judoFacts.size() < numberByFact && k < facts.size()) {
-				judoFacts.add(facts.get(k));
-				k++;
+			
+		System.out.println("HASH "+facts);
+		for(String key: facts.keySet()) {
+			int k = 0;
+			int numberOfQuestionableFacts = (int) Math.floor(facts.get(key).size() / numberByFact);
+			if(numberOfQuestionableFacts == 0) {
+				numberOfQuestionableFacts = facts.get(key).size();
 			}
-			qfs.add(buildQF(setoffact, judoFacts)); 
+			for (int i = 0; i < numberOfQuestionableFacts; i++) {
+				List<JudoTechniqueFact> judoFacts = new ArrayList<>(); 
+				while(judoFacts.size() < numberByFact && k < facts.get(key).size()) {
+					judoFacts.add(facts.get(key).get(k));
+					k++;
+				}
+				System.out.println("GROUPEd "+ judoFacts);
+				if(!judoFacts.isEmpty()) {
+					qfs.add(buildQF(judoFacts)); 
+				}
+			}
 		}
+
 		return qfs;
 	}
 	
-	private JudoQuestionableClassifyFact buildQF(SetOfFacts setoffact, List<JudoTechniqueFact> facts) {
+	private JudoQuestionableClassifyFact buildQF(List<JudoTechniqueFact> facts) {
 		JudoQuestionableClassifyFact qf = new JudoQuestionableClassifyFactImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
-		qf.setCategory(setoffact.getName());
+		qf.setCategory(facts.get(0).getCategory());
 		for (JudoTechniqueFact judofact : facts) {
 			qf.getTechniques().add(judofact.getName());
 		}

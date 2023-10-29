@@ -8992,13 +8992,22 @@ public interface GeneratorPackage extends EPackage {
 	int JUDO_TECHNIQUE_FACT__DESCRIPTION = ABSTRACT_FACT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_TECHNIQUE_FACT__CATEGORY = ABSTRACT_FACT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Judo Technique Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JUDO_TECHNIQUE_FACT_FEATURE_COUNT = ABSTRACT_FACT_FEATURE_COUNT + 2;
+	int JUDO_TECHNIQUE_FACT_FEATURE_COUNT = ABSTRACT_FACT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Judo Technique Fact</em>' class.
@@ -14606,6 +14615,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getJudoTechniqueFact_Description();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.JudoTechniqueFact#getCategory <em>Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Category</em>'.
+	 * @see generator.JudoTechniqueFact#getCategory()
+	 * @see #getJudoTechniqueFact()
+	 * @generated
+	 */
+	EAttribute getJudoTechniqueFact_Category();
+
+	/**
 	 * Returns the meta object for class '{@link generator.ClassifyTechnique <em>Classify Technique</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18829,6 +18849,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute JUDO_TECHNIQUE_FACT__DESCRIPTION = eINSTANCE.getJudoTechniqueFact_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_TECHNIQUE_FACT__CATEGORY = eINSTANCE.getJudoTechniqueFact_Category();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ClassifyTechniqueImpl <em>Classify Technique</em>}' class.

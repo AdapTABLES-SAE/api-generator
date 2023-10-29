@@ -282,7 +282,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionTask/type"/>
       <genOperations ecoreOperation="generator.ecore#//CompletionTask/getNbMissingElements"/>
       <genOperations ecoreOperation="generator.ecore#//CompletionTask/getNbExpectedAnswers"
-          body="return this.getNbMissingElements();"/>
+          body="return this.getNbMissingElements() * this.getNbFacts();"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//IdentificationTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentificationTask/type"/>
@@ -689,6 +689,7 @@
     <genClasses ecoreClass="generator.ecore#//JudoTechniqueFact">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoTechniqueFact/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoTechniqueFact/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoTechniqueFact/category"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//ClassifyTechnique"/>
     <genClasses ecoreClass="generator.ecore#//IdentifyTechnique">

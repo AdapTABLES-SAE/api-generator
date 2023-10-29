@@ -13,6 +13,7 @@ package generator;
  * <ul>
  *   <li>{@link generator.JudoTechniqueFact#getName <em>Name</em>}</li>
  *   <li>{@link generator.JudoTechniqueFact#getDescription <em>Description</em>}</li>
+ *   <li>{@link generator.JudoTechniqueFact#getCategory <em>Category</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getJudoTechniqueFact()
@@ -63,5 +64,27 @@ public interface JudoTechniqueFact extends AbstractFact {
 	 * @generated
 	 */
 	void setDescription(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Category</em>' attribute.
+	 * @see #setCategory(String)
+	 * @see generator.GeneratorPackage#getJudoTechniqueFact_Category()
+	 * @model
+	 * @generated
+	 */
+	String getCategory();
+
+	/**
+	 * Sets the value of the '{@link generator.JudoTechniqueFact#getCategory <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Category</em>' attribute.
+	 * @see #getCategory()
+	 * @generated
+	 */
+	void setCategory(String value);
 
 } // JudoTechniqueFact

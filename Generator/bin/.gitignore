@@ -1,6 +1,6 @@
-/educational_dimension/
-/structures/
+/modelsForTests/
 /FactsGenerationTestOLD.class
+/educational_dimension/
 /exceptions/
 /factgenerator_template/
 /factsgenerator_hg/
@@ -10,3 +10,4 @@
 /generator/
 /generators/
 /managers/
+/structures/

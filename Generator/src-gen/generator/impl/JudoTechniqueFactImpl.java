@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link generator.impl.JudoTechniqueFactImpl#getName <em>Name</em>}</li>
  *   <li>{@link generator.impl.JudoTechniqueFactImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link generator.impl.JudoTechniqueFactImpl#getCategory <em>Category</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,6 +66,26 @@ public class JudoTechniqueFactImpl extends AbstractFactImpl implements JudoTechn
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategory()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CATEGORY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCategory() <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategory()
+	 * @generated
+	 * @ordered
+	 */
+	protected String category = CATEGORY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,6 +155,28 @@ public class JudoTechniqueFactImpl extends AbstractFactImpl implements JudoTechn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCategory() {
+		return category;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCategory(String newCategory) {
+		String oldCategory = category;
+		category = newCategory;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.JUDO_TECHNIQUE_FACT__CATEGORY,
+					oldCategory, category));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -141,6 +184,8 @@ public class JudoTechniqueFactImpl extends AbstractFactImpl implements JudoTechn
 			return getName();
 		case GeneratorPackage.JUDO_TECHNIQUE_FACT__DESCRIPTION:
 			return getDescription();
+		case GeneratorPackage.JUDO_TECHNIQUE_FACT__CATEGORY:
+			return getCategory();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,6 +203,9 @@ public class JudoTechniqueFactImpl extends AbstractFactImpl implements JudoTechn
 			return;
 		case GeneratorPackage.JUDO_TECHNIQUE_FACT__DESCRIPTION:
 			setDescription((String) newValue);
+			return;
+		case GeneratorPackage.JUDO_TECHNIQUE_FACT__CATEGORY:
+			setCategory((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,6 +225,9 @@ public class JudoTechniqueFactImpl extends AbstractFactImpl implements JudoTechn
 		case GeneratorPackage.JUDO_TECHNIQUE_FACT__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
+		case GeneratorPackage.JUDO_TECHNIQUE_FACT__CATEGORY:
+			setCategory(CATEGORY_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -193,6 +244,8 @@ public class JudoTechniqueFactImpl extends AbstractFactImpl implements JudoTechn
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case GeneratorPackage.JUDO_TECHNIQUE_FACT__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+		case GeneratorPackage.JUDO_TECHNIQUE_FACT__CATEGORY:
+			return CATEGORY_EDEFAULT == null ? category != null : !CATEGORY_EDEFAULT.equals(category);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -212,6 +265,8 @@ public class JudoTechniqueFactImpl extends AbstractFactImpl implements JudoTechn
 		result.append(name);
 		result.append(", description: ");
 		result.append(description);
+		result.append(", category: ");
+		result.append(category);
 		result.append(')');
 		return result.toString();
 	}
