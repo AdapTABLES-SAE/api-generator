@@ -242,7 +242,7 @@ public class GameElementsGenerator {
 	private List<Gameplay> getValidGameplaysForTask(ATask task) {
 		List<Gameplay> gameplays = new ArrayList<>();
 		Map<GPCategory, Set<EStatementType>> validCategoriesFromRelations = getValidCategoriesFromRelations(task);
-		System.out.println("Valid categories "+validCategoriesFromRelations);
+		//System.out.println("Valid categories "+validCategoriesFromRelations);
 		for(GPCategory category :  new ArrayList<>(validCategoriesFromRelations.keySet())) {
 			gameplays.addAll(getQuestionGameplayForCategorieType(category, task, validCategoriesFromRelations.get(category)));
 		}
@@ -305,7 +305,7 @@ public class GameElementsGenerator {
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
 		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			if(gp instanceof QuestionGameplay && !gp.isLocked()) {
-			/*	System.out.println("\t"+gp.getName());
+				/*System.out.println("\t"+gp.getName());
 				System.out.println("\t cat "+((QuestionGameplay) gp).getCategory().equals(category));
 				System.out.println("\t validation "+respectValidationMethod((QuestionGameplay) gp, task));
 				System.out.println("\t restriction "+respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task, allowedStatementTypes));

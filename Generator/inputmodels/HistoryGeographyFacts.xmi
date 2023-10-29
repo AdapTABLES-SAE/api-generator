@@ -42,67 +42,67 @@
   </knowledgefacts>
   <knowledgefacts name="Dates historiques">
     <facts xsi:type="generator:HistoryFact" event="1er Guerre Mondiale">
-      <image ID="GRANDE_GUERRE"/>
+      <representation ID="GRANDE_GUERRE"/>
       <time xsi:type="generator:TimePeriod" startYear="1914" endYear="1918" startPosition="1914" endPosition="1918"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Révolution Russe">
-      <image ID="REVOLUTION_RUSSE"/>
+      <representation ID="REVOLUTION_RUSSE"/>
       <time xsi:type="generator:Date" year="1917" position="1917"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Armistice">
-      <image ID="ARMISTICE"/>
+      <representation ID="ARMISTICE"/>
       <time xsi:type="generator:Date" day="11" month="Novembre" year="1918" position="1918"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Allemagne Nazie (Hitlérienne)">
-      <image ID="ALLEMAGNE_NAZIE"/>
+      <representation ID="ALLEMAGNE_NAZIE"/>
       <time xsi:type="generator:TimePeriod" startYear="1933" endYear="1945" startPosition="1933" endPosition="1945"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Front Populaire">
-      <image ID="FRONT_POPULAIRE"/>
+      <representation ID="FRONT_POPULAIRE"/>
       <time xsi:type="generator:TimePeriod" startYear="1936" endYear="1937" startPosition="1936" endPosition="1937"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Appel du général de Gaulle">
-      <image ID="DEGAULLE"/>
+      <representation ID="DEGAULLE"/>
       <time xsi:type="generator:Date" day="18" month="Juin" year="1940" position="1940"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Régime de Vichy">
-      <image ID="VICHY"/>
+      <representation ID="VICHY"/>
       <time xsi:type="generator:TimePeriod" startYear="1940" endYear="1944" startPosition="1940" endPosition="1944"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Création de l'ONU">
-      <image ID="ONU"/>
+      <representation ID="ONU"/>
       <time xsi:type="generator:Date" day="" month="" year="1945" position="1945"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Traité de Rome">
-      <image ID="ROME"/>
+      <representation ID="ROME"/>
       <time xsi:type="generator:Date" day="" month="" year="1957" position="1957"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="L'Euro">
-      <image ID="EURO"/>
+      <representation ID="EURO"/>
       <time xsi:type="generator:Date" day="" month="" year="2002" position="2002"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Chute du mur de Berlin">
-      <image ID="MUR_BERLIN"/>
+      <representation ID="MUR_BERLIN"/>
       <time xsi:type="generator:Date" day="" month="" year="1989" position="1989"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Les accords d'Evian">
-      <image ID="EVIAN"/>
+      <representation ID="EVIAN"/>
       <time xsi:type="generator:Date" day="" month="" year="1962" position="1962"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Naissance de la Ve République">
-      <image ID="5REPUBLIQUE"/>
+      <representation ID="5REPUBLIQUE"/>
       <time xsi:type="generator:Date" day="" month="" year="1958" position="1958"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Election Président de la République au suffrage universel direct">
-      <image ID="ELECTION"/>
+      <representation ID="ELECTION"/>
       <time xsi:type="generator:Date" day="" month="" year="1962" position="1962"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Loi Veil (IVG)">
-      <image ID="VEIL"/>
+      <representation ID="VEIL"/>
       <time xsi:type="generator:Date" day="" month="" year="1975" position="1975"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" event="Première alternance">
-      <image ID="ALTERNANCE"/>
+      <representation ID="ALTERNANCE"/>
       <time xsi:type="generator:Date" day="" month="" year="1981" position="1981"/>
     </facts>
     <visualization ID="FRISE_CHRONOLOGIQUE">

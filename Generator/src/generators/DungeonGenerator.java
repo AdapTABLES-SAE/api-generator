@@ -62,6 +62,17 @@ public class DungeonGenerator {
 		if(mode.equals(DungeonMode.LINEAR)) {
 			generateLinearDungeon();
 		}else {
+			/*while(true) {
+				System.out.println("ON REFAIT");
+				gridManager.clearGrid();
+				if(generatedDungeon != null) { 	
+					for(int i = 0; i < generatedDungeon.getRooms().size(); i++) {
+						generatedDungeon.getRooms().remove(i);
+					}
+				}
+				
+				dungeonElements.shuffleRoomsOrder();
+			}*/
 			generateLabyrinthineDungeon();
 		}
 		
@@ -86,18 +97,13 @@ public class DungeonGenerator {
 		dungeonRooms.add(new LabyrinthineRoom(originRoom));
 		selectableRooms.add(new LabyrinthineRoom(originRoom));		
 		while(dungeonRooms.size() < (nbRooms + 1))  {
-			//System.out.println(gridManager.getOccupiedCoordinates().size());
 			LabyrinthineRoom randomStartingRoom = chooseEntryRoomForNewPathIn(dungeonRooms);
 			LabyrinthineRoom aRoom = createNewRoomFrom(randomStartingRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size()));
-			//System.out.println("room "+randomStartingRoom.getRoomCoordinates()+" "+dungeonRooms.size());
 
 			if(aRoom != null) {
 				dungeonRooms.add(aRoom);
-				//System.out.print(aRoom.getRoomCoordinates()+" "+aRoom.getRoom().getRoomtype());
-				//selectableRooms.add(aRoom);
 			} else {
 				createNewPath(randomStartingRoom, originRoom);
-			//	selectableRooms.remove(randomStartingRoom);
 			}
 			
 		}	
@@ -107,6 +113,7 @@ public class DungeonGenerator {
 			generatedDungeon.getRooms().add(aEntry.getRoom());
 		}	
 		generatedDungeon.setEntry(originRoom);
+
 	}
 	
 	private LabyrinthineRoom createAnExit(List<LabyrinthineRoom> dungeonRooms) throws NonRoomTypeException {
@@ -163,7 +170,6 @@ public class DungeonGenerator {
 	
 	private LabyrinthineRoom createNewRoomFrom(LabyrinthineRoom originRoom, RoomElements roomElements/*, boolean isExitRoom*/) throws NonRoomTypeException {
 		Directions originRoomAvailableDirection = originRoom.getAvailableExit(gridManager);
-		//System.out.println(originRoomAvailableDirection);
 		if(originRoomAvailableDirection.equals(Directions.NONE)) { return null; }
 		Coordinate nextPosition = gridManager.getNextCoord(originRoom.getRoom(), originRoomAvailableDirection);
 		Set<Directions> allowedDirections = gridManager.getAllowedNewRoomEntries(nextPosition, originRoomAvailableDirection);
@@ -171,9 +177,7 @@ public class DungeonGenerator {
 		Directions entry = null;
 		while(roomType == null && !allowedDirections.isEmpty()) {
 			entry = chooseEntryDirection(allowedDirections);
-			//System.err.println("Entry "+entry);
 			roomType = getCompatibleRoomType(entry, roomElements); 
-			//System.err.println(roomType);
 			if(roomType == null) {
 				allowedDirections.remove(entry);
 			}

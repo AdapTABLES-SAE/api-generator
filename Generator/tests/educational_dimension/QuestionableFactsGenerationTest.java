@@ -287,7 +287,7 @@ class QuestionableFactsGenerationTest {
 			//if(currentOL.getResults().getResultsbytask().get(0).getTask().getID().equals("O2_AllTablesL8REC#1")) {
 			DungeonElements elements = new DungeonElements(null, -1, -1);
 			elements.setCurrentObjectiveLevel(currentOL);
-			FactGenerator.generateQuestionableFactsByTask(elements, currentOL.getResults().getResultsbytask().get(0));
+			FactGenerator.generateQuestionableFactsByTask(null, elements, currentOL.getResults().getResultsbytask().get(0));
 		}	//	}
 	}
 	

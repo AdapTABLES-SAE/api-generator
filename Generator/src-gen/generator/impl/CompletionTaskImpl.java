@@ -91,7 +91,7 @@ public abstract class CompletionTaskImpl extends ATaskImpl implements Completion
 	 * @generated
 	 */
 	public int getNbExpectedAnswers() {
-		return this.getNbMissingElements();
+		return this.getNbMissingElements() * this.getNbFacts();
 	}
 
 	/**

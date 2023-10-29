@@ -121,7 +121,14 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETimeTarget/MIX"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ETimeTarget/NONE"/>
     </genEnums>
-    <genClasses image="false" ecoreClass="generator.ecore#//AbstractFact"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EJudoTarget">
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EJudoTarget/NAME"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EJudoTarget/DESCRIPTION"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EJudoTarget/TECHNIQUE"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="generator.ecore#//AbstractFact">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//AbstractFact/representation"/>
+    </genClasses>
     <genClasses ecoreClass="generator.ecore#//SetOfFacts">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//SetOfFacts/facts"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//SetOfFacts/name"/>
@@ -578,13 +585,10 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Visualization">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Visualization/positions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Visualization/ID"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//VisualizationPosition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//VisualizationPosition/ID"/>
-    </genClasses>
-    <genClasses ecoreClass="generator.ecore#//LegendSymbol">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//LegendSymbol/image"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//LegendSymbol/position"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//LegendText">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LegendText/text"/>
@@ -592,12 +596,11 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//HistoryFact">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HistoryFact/event"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//HistoryFact/image"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//HistoryFact/time"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//GeographyLegendFact">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyLegendFact/symbol"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyLegendFact/legend"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyLegendFact/symbolPosition"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//GeographyFact">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyFact/position"/>
@@ -683,5 +686,27 @@
     <genClasses ecoreClass="generator.ecore#//MapQuestionableFact">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MapQuestionableFact/type"/>
     </genClasses>
+    <genClasses ecoreClass="generator.ecore#//JudoTechniqueFact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoTechniqueFact/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoTechniqueFact/description"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//ClassifyTechnique"/>
+    <genClasses ecoreClass="generator.ecore#//IdentifyTechnique">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyTechnique/nbMissingElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyTechnique/checkOnLearnerAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyTechnique/missing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyTechnique/source"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//JudoQuestionableTechniqueFact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableTechniqueFact/sourceElementType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableTechniqueFact/missingElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableTechniqueFact/sourceElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableTechniqueFact/missingElementType"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//JudoQuestionableClassifyFact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableClassifyFact/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableClassifyFact/techniques"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//JudoLevel"/>
   </genPackages>
 </genmodel:GenModel>

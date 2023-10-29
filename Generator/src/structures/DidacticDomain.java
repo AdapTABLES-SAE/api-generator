@@ -2,5 +2,6 @@ package structures;
 
 public enum DidacticDomain {
 MATHEMATICS,
-HISTORY_GEOGRAPHY
+HISTORY_GEOGRAPHY,
+JUDO
 }

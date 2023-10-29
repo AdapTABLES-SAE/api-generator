@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import exceptions.BadSolutionGenerationException;
@@ -62,7 +63,7 @@ public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 						qfact.setSourceElement(hfact.getEvent());
 						qfact.setSourceElementType(EHistoryTarget.EVENT);
 						qfact.setMissingElementsType(EHistoryTarget.IMAGE);
-						qfact.getMissingElements().add(hfact.getImage().getID());
+						qfact.getMissingElements().add(hfact.getRepresentation().getID());
 					} else {
 						throw null; 
 					}
@@ -82,7 +83,7 @@ public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 					if(ctask.getMissing().equals(EHistoryTarget.IMAGE) || ctask.getMissing().equals(EHistoryTarget.TIME)) {
 						throw null;
 					} else {
-						qfact.setSourceElement(hfact.getImage().getID());
+						qfact.setSourceElement(hfact.getRepresentation().getID());
 						qfact.setSourceElementType(EHistoryTarget.IMAGE);
 						qfact.setMissingElementsType(EHistoryTarget.EVENT);
 						qfact.getMissingElements().add(hfact.getEvent());
@@ -110,9 +111,9 @@ public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected java.util.Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact)
+	protected Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact)
 			throws BadSolutionGenerationException { // TODO : implémenter mauvais choix
-		java.util.Map<ECorrectness, List<Soluce>> propositions = new HashMap<>();
+		Map<ECorrectness, List<Soluce>> propositions = new HashMap<>();
 
 		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
 		propositions.put(ECorrectness.INCORRECT, new ArrayList<>());

@@ -225,8 +225,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createVisualization();
 		case GeneratorPackage.VISUALIZATION_POSITION:
 			return createVisualizationPosition();
-		case GeneratorPackage.LEGEND_SYMBOL:
-			return createLegendSymbol();
 		case GeneratorPackage.LEGEND_TEXT:
 			return createLegendText();
 		case GeneratorPackage.HISTORY_FACT:
@@ -265,6 +263,18 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createHChronology();
 		case GeneratorPackage.MAP_QUESTIONABLE_FACT:
 			return createMapQuestionableFact();
+		case GeneratorPackage.JUDO_TECHNIQUE_FACT:
+			return createJudoTechniqueFact();
+		case GeneratorPackage.CLASSIFY_TECHNIQUE:
+			return createClassifyTechnique();
+		case GeneratorPackage.IDENTIFY_TECHNIQUE:
+			return createIdentifyTechnique();
+		case GeneratorPackage.JUDO_QUESTIONABLE_TECHNIQUE_FACT:
+			return createJudoQuestionableTechniqueFact();
+		case GeneratorPackage.JUDO_QUESTIONABLE_CLASSIFY_FACT:
+			return createJudoQuestionableClassifyFact();
+		case GeneratorPackage.JUDO_LEVEL:
+			return createJudoLevel();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -314,6 +324,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createEStatementTypeFromString(eDataType, initialValue);
 		case GeneratorPackage.ETIME_TARGET:
 			return createETimeTargetFromString(eDataType, initialValue);
+		case GeneratorPackage.EJUDO_TARGET:
+			return createEJudoTargetFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -363,6 +375,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return convertEStatementTypeToString(eDataType, instanceValue);
 		case GeneratorPackage.ETIME_TARGET:
 			return convertETimeTargetToString(eDataType, instanceValue);
+		case GeneratorPackage.EJUDO_TARGET:
+			return convertEJudoTargetToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -1213,16 +1227,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LegendSymbol createLegendSymbol() {
-		LegendSymbolImpl legendSymbol = new LegendSymbolImpl();
-		return legendSymbol;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public LegendText createLegendText() {
 		LegendTextImpl legendText = new LegendTextImpl();
 		return legendText;
@@ -1363,16 +1367,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MapQuestionableFact createMapQuestionableFact() {
-		MapQuestionableFactImpl mapQuestionableFact = new MapQuestionableFactImpl();
-		return mapQuestionableFact;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public HGLevel createHGLevel() {
 		HGLevelImpl hgLevel = new HGLevelImpl();
 		return hgLevel;
@@ -1406,6 +1400,76 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public HChronology createHChronology() {
 		HChronologyImpl hChronology = new HChronologyImpl();
 		return hChronology;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MapQuestionableFact createMapQuestionableFact() {
+		MapQuestionableFactImpl mapQuestionableFact = new MapQuestionableFactImpl();
+		return mapQuestionableFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JudoTechniqueFact createJudoTechniqueFact() {
+		JudoTechniqueFactImpl judoTechniqueFact = new JudoTechniqueFactImpl();
+		return judoTechniqueFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ClassifyTechnique createClassifyTechnique() {
+		ClassifyTechniqueImpl classifyTechnique = new ClassifyTechniqueImpl();
+		return classifyTechnique;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IdentifyTechnique createIdentifyTechnique() {
+		IdentifyTechniqueImpl identifyTechnique = new IdentifyTechniqueImpl();
+		return identifyTechnique;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JudoQuestionableTechniqueFact createJudoQuestionableTechniqueFact() {
+		JudoQuestionableTechniqueFactImpl judoQuestionableTechniqueFact = new JudoQuestionableTechniqueFactImpl();
+		return judoQuestionableTechniqueFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JudoQuestionableClassifyFact createJudoQuestionableClassifyFact() {
+		JudoQuestionableClassifyFactImpl judoQuestionableClassifyFact = new JudoQuestionableClassifyFactImpl();
+		return judoQuestionableClassifyFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JudoLevel createJudoLevel() {
+		JudoLevelImpl judoLevel = new JudoLevelImpl();
+		return judoLevel;
 	}
 
 	/**
@@ -1801,6 +1865,28 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * @generated
 	 */
 	public String convertETimeTargetToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EJudoTarget createEJudoTargetFromString(EDataType eDataType, String initialValue) {
+		EJudoTarget result = EJudoTarget.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEJudoTargetToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

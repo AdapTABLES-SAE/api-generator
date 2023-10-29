@@ -57,14 +57,15 @@ public enum ElementSize implements Enumerator {
 	 * @ordered
 	 */
 	XLARGE(3, "XLARGE", "XLARGE"),
+
 	/**
-	* The '<em><b>XXLARGE</b></em>' literal object.
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @see #XXLARGE_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * The '<em><b>XXLARGE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #XXLARGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	XXLARGE(4, "XXLARGE", "XXLARGE");
 
 	/**

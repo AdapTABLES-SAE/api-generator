@@ -848,21 +848,12 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			Visualization visualization = (Visualization) theEObject;
 			T result = caseVisualization(visualization);
 			if (result == null)
-				result = caseImage(visualization);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.VISUALIZATION_POSITION: {
 			VisualizationPosition visualizationPosition = (VisualizationPosition) theEObject;
 			T result = caseVisualizationPosition(visualizationPosition);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.LEGEND_SYMBOL: {
-			LegendSymbol legendSymbol = (LegendSymbol) theEObject;
-			T result = caseLegendSymbol(legendSymbol);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1070,6 +1061,68 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = caseAVisualizationQuestionableFact(mapQuestionableFact);
 			if (result == null)
 				result = caseAQuestionableFact(mapQuestionableFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.JUDO_TECHNIQUE_FACT: {
+			JudoTechniqueFact judoTechniqueFact = (JudoTechniqueFact) theEObject;
+			T result = caseJudoTechniqueFact(judoTechniqueFact);
+			if (result == null)
+				result = caseAbstractFact(judoTechniqueFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.CLASSIFY_TECHNIQUE: {
+			ClassifyTechnique classifyTechnique = (ClassifyTechnique) theEObject;
+			T result = caseClassifyTechnique(classifyTechnique);
+			if (result == null)
+				result = caseMembershipIDTask(classifyTechnique);
+			if (result == null)
+				result = caseATask(classifyTechnique);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.IDENTIFY_TECHNIQUE: {
+			IdentifyTechnique identifyTechnique = (IdentifyTechnique) theEObject;
+			T result = caseIdentifyTechnique(identifyTechnique);
+			if (result == null)
+				result = caseCompletionTask(identifyTechnique);
+			if (result == null)
+				result = caseATask(identifyTechnique);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.JUDO_QUESTIONABLE_TECHNIQUE_FACT: {
+			JudoQuestionableTechniqueFact judoQuestionableTechniqueFact = (JudoQuestionableTechniqueFact) theEObject;
+			T result = caseJudoQuestionableTechniqueFact(judoQuestionableTechniqueFact);
+			if (result == null)
+				result = caseQuestionableFact(judoQuestionableTechniqueFact);
+			if (result == null)
+				result = caseAQuestionableFact(judoQuestionableTechniqueFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.JUDO_QUESTIONABLE_CLASSIFY_FACT: {
+			JudoQuestionableClassifyFact judoQuestionableClassifyFact = (JudoQuestionableClassifyFact) theEObject;
+			T result = caseJudoQuestionableClassifyFact(judoQuestionableClassifyFact);
+			if (result == null)
+				result = caseQuestionableFact(judoQuestionableClassifyFact);
+			if (result == null)
+				result = caseAQuestionableFact(judoQuestionableClassifyFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.JUDO_LEVEL: {
+			JudoLevel judoLevel = (JudoLevel) theEObject;
+			T result = caseJudoLevel(judoLevel);
+			if (result == null)
+				result = caseLevel(judoLevel);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -2550,21 +2603,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Legend Symbol</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Legend Symbol</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLegendSymbol(LegendSymbol object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Legend Text</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2835,21 +2873,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Map Questionable Fact</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Map Questionable Fact</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMapQuestionableFact(MapQuestionableFact object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>HG Level</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2906,6 +2929,111 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseHChronology(HChronology object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Map Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Map Questionable Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMapQuestionableFact(MapQuestionableFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Judo Technique Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Judo Technique Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJudoTechniqueFact(JudoTechniqueFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Classify Technique</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Classify Technique</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseClassifyTechnique(ClassifyTechnique object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Identify Technique</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Identify Technique</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIdentifyTechnique(IdentifyTechnique object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Judo Questionable Technique Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Judo Questionable Technique Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJudoQuestionableTechniqueFact(JudoQuestionableTechniqueFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Judo Questionable Classify Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Judo Questionable Classify Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJudoQuestionableClassifyFact(JudoQuestionableClassifyFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Judo Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Judo Level</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJudoLevel(JudoLevel object) {
 		return null;
 	}
 

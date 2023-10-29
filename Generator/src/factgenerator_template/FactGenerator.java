@@ -5,6 +5,8 @@ import java.util.Set;
 import factsgenerator_hg.HGFactGeneratorAssociation;
 import factsgenerator_hg.HGFactGeneratorChronology;
 import factsgenerator_hg.HGFactGeneratorLocate;
+import factsgenerator_judo.JudoFactGeneratorClassifyTechnique;
+import factsgenerator_judo.JudoFactGeneratorIdentifyTechnique;
 import factsgenerator_maths.MTFactGeneratorCOMP1;
 import factsgenerator_maths.MTFactGeneratorCOMP2;
 import factsgenerator_maths.MTFactGeneratorID;
@@ -15,26 +17,29 @@ import generator.ATask;
 import generator.CompletionTask;
 import generator.ResultsByTask;
 import generators.ALGAGenerator;
+import managers.ModelsManager;
 import structures.DidacticDomain;
 import structures.DungeonElements;
 import structures.RoomElements;
 
 public class FactGenerator {
 	
-	public static void  generateQuestionableFactsByTask(DungeonElements dungeonElements, ResultsByTask resBytask) {  
+	public static void  generateQuestionableFactsByTask(ModelsManager modelsManager, DungeonElements dungeonElements, ResultsByTask resBytask) {  
 		FactGeneratorTemplate factGenerator; 
 		
 		if(ALGAGenerator.DOMAIN.equals(DidacticDomain.MATHEMATICS)) {
 			factGenerator = getCorrectMathFactsGenerators(dungeonElements, resBytask.getTask());
+		} else if(ALGAGenerator.DOMAIN.equals(DidacticDomain.HISTORY_GEOGRAPHY)) {
+			factGenerator = getCorrectHGFactsGenerators(modelsManager, dungeonElements, resBytask.getTask());
 		} else {
-			factGenerator = getCorrectHGFactsGenerators(dungeonElements, resBytask.getTask());
+			factGenerator = getCorrectJudoFactsGenerators(modelsManager, dungeonElements, resBytask.getTask());
 		}
 		
 		Set<AQuestionableFact> facts = factGenerator.generateQuestionableFacts(resBytask.getTask());
 		resBytask.getQuestionableFacts().addAll(facts);
 	}
 	
-	private static FactGeneratorTemplate getCorrectHGFactsGenerators(DungeonElements dungeonElements, ATask task) {
+	private static FactGeneratorTemplate getCorrectHGFactsGenerators(ModelsManager modelsManager, DungeonElements dungeonElements, ATask task) {
 		FactGeneratorTemplate factGenerator; 
 		switch(task.getType()) {
 		case COMPLETE: 
@@ -46,6 +51,19 @@ public class FactGenerator {
 			default:
 				factGenerator = new HGFactGeneratorChronology(dungeonElements);
 				break;
+		}
+		return factGenerator;
+	}
+	
+	private static FactGeneratorTemplate getCorrectJudoFactsGenerators(ModelsManager modelsManager, DungeonElements dungeonElements, ATask task) {
+		FactGeneratorTemplate factGenerator; 
+		switch(task.getType()) {
+		case COMPLETE: 
+			factGenerator = new JudoFactGeneratorIdentifyTechnique(modelsManager, dungeonElements);
+			break;
+		default: 
+			factGenerator = new JudoFactGeneratorClassifyTechnique(modelsManager, dungeonElements);
+			break;
 		}
 		return factGenerator;
 	}
@@ -76,13 +94,15 @@ public class FactGenerator {
 		return factGenerator;
 	}
 	
-	public static void generateQuestionedFact(DungeonElements dungeonElements) throws Exception {
+	public static void generateQuestionedFact(ModelsManager modelsManager, DungeonElements dungeonElements) throws Exception {
 		FactGeneratorTemplate factGenerator; 
 		for (RoomElements roomElements : dungeonElements.getRoomsElements()) {
-						if(ALGAGenerator.DOMAIN.equals(DidacticDomain.MATHEMATICS)) {
+			if(ALGAGenerator.DOMAIN.equals(DidacticDomain.MATHEMATICS)) {
 				factGenerator = getCorrectMathFactsGenerators(dungeonElements, roomElements.getTask());
+			} else if(ALGAGenerator.DOMAIN.equals(DidacticDomain.HISTORY_GEOGRAPHY)) {
+				factGenerator = getCorrectHGFactsGenerators(modelsManager, dungeonElements, roomElements.getTask());
 			} else {
-				factGenerator = getCorrectHGFactsGenerators(dungeonElements, roomElements.getTask());
+				factGenerator = getCorrectJudoFactsGenerators(modelsManager, dungeonElements, roomElements.getTask());
 			}
 			if(factGenerator != null) factGenerator.generateQuestionedFact(roomElements);
 		}

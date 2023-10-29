@@ -10,8 +10,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import generator.GeneratorPackage;
 import generator.GeographyLegendFact;
-import generator.LegendSymbol;
 import generator.LegendText;
+import generator.VisualizationPosition;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,23 +21,13 @@ import generator.LegendText;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.GeographyLegendFactImpl#getSymbol <em>Symbol</em>}</li>
  *   <li>{@link generator.impl.GeographyLegendFactImpl#getLegend <em>Legend</em>}</li>
+ *   <li>{@link generator.impl.GeographyLegendFactImpl#getSymbolPosition <em>Symbol Position</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class GeographyLegendFactImpl extends AbstractFactImpl implements GeographyLegendFact {
-	/**
-	 * The cached value of the '{@link #getSymbol() <em>Symbol</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSymbol()
-	 * @generated
-	 * @ordered
-	 */
-	protected LegendSymbol symbol;
-
 	/**
 	 * The cached value of the '{@link #getLegend() <em>Legend</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -47,6 +37,16 @@ public class GeographyLegendFactImpl extends AbstractFactImpl implements Geograp
 	 * @ordered
 	 */
 	protected LegendText legend;
+
+	/**
+	 * The cached value of the '{@link #getSymbolPosition() <em>Symbol Position</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSymbolPosition()
+	 * @generated
+	 * @ordered
+	 */
+	protected VisualizationPosition symbolPosition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -65,56 +65,6 @@ public class GeographyLegendFactImpl extends AbstractFactImpl implements Geograp
 	@Override
 	protected EClass eStaticClass() {
 		return GeneratorPackage.Literals.GEOGRAPHY_LEGEND_FACT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LegendSymbol getSymbol() {
-		return symbol;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSymbol(LegendSymbol newSymbol, NotificationChain msgs) {
-		LegendSymbol oldSymbol = symbol;
-		symbol = newSymbol;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL, oldSymbol, newSymbol);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSymbol(LegendSymbol newSymbol) {
-		if (newSymbol != symbol) {
-			NotificationChain msgs = null;
-			if (symbol != null)
-				msgs = ((InternalEObject) symbol).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL, null, msgs);
-			if (newSymbol != null)
-				msgs = ((InternalEObject) newSymbol).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL, null, msgs);
-			msgs = basicSetSymbol(newSymbol, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL,
-					newSymbol, newSymbol));
 	}
 
 	/**
@@ -172,11 +122,50 @@ public class GeographyLegendFactImpl extends AbstractFactImpl implements Geograp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VisualizationPosition getSymbolPosition() {
+		if (symbolPosition != null && symbolPosition.eIsProxy()) {
+			InternalEObject oldSymbolPosition = (InternalEObject) symbolPosition;
+			symbolPosition = (VisualizationPosition) eResolveProxy(oldSymbolPosition);
+			if (symbolPosition != oldSymbolPosition) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL_POSITION, oldSymbolPosition,
+							symbolPosition));
+			}
+		}
+		return symbolPosition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VisualizationPosition basicGetSymbolPosition() {
+		return symbolPosition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSymbolPosition(VisualizationPosition newSymbolPosition) {
+		VisualizationPosition oldSymbolPosition = symbolPosition;
+		symbolPosition = newSymbolPosition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL_POSITION, oldSymbolPosition, symbolPosition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL:
-			return basicSetSymbol(null, msgs);
 		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__LEGEND:
 			return basicSetLegend(null, msgs);
 		}
@@ -191,10 +180,12 @@ public class GeographyLegendFactImpl extends AbstractFactImpl implements Geograp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL:
-			return getSymbol();
 		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__LEGEND:
 			return getLegend();
+		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL_POSITION:
+			if (resolve)
+				return getSymbolPosition();
+			return basicGetSymbolPosition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -207,11 +198,11 @@ public class GeographyLegendFactImpl extends AbstractFactImpl implements Geograp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL:
-			setSymbol((LegendSymbol) newValue);
-			return;
 		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__LEGEND:
 			setLegend((LegendText) newValue);
+			return;
+		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL_POSITION:
+			setSymbolPosition((VisualizationPosition) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -225,11 +216,11 @@ public class GeographyLegendFactImpl extends AbstractFactImpl implements Geograp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL:
-			setSymbol((LegendSymbol) null);
-			return;
 		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__LEGEND:
 			setLegend((LegendText) null);
+			return;
+		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL_POSITION:
+			setSymbolPosition((VisualizationPosition) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -243,10 +234,10 @@ public class GeographyLegendFactImpl extends AbstractFactImpl implements Geograp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL:
-			return symbol != null;
 		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__LEGEND:
 			return legend != null;
+		case GeneratorPackage.GEOGRAPHY_LEGEND_FACT__SYMBOL_POSITION:
+			return symbolPosition != null;
 		}
 		return super.eIsSet(featureID);
 	}

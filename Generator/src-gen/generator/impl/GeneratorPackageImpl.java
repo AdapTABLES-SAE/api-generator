@@ -11,6 +11,7 @@ import generator.AVisualizationQuestionableFact;
 import generator.Abilities;
 import generator.Ability;
 import generator.AbstractFact;
+import generator.ClassifyTechnique;
 import generator.Classroom;
 import generator.Classrooms;
 import generator.CompletionCriteria;
@@ -33,6 +34,7 @@ import generator.EBoundary;
 import generator.ECorrectness;
 import generator.EGeographyValue;
 import generator.EHistoryTarget;
+import generator.EJudoTarget;
 import generator.ELegendTarget;
 import generator.EModality;
 import generator.ERoomType;
@@ -69,9 +71,14 @@ import generator.HGLevel;
 import generator.HLegend;
 import generator.HistoryFact;
 import generator.IdentificationTask;
+import generator.IdentifyTechnique;
 import generator.Image;
 import generator.Item;
 import generator.Items;
+import generator.JudoLevel;
+import generator.JudoQuestionableClassifyFact;
+import generator.JudoQuestionableTechniqueFact;
+import generator.JudoTechniqueFact;
 import generator.Knowledge;
 import generator.LabyrinthCurse;
 import generator.LargeRoomType;
@@ -79,7 +86,6 @@ import generator.LearnerPlayer;
 import generator.LearnerProgress;
 import generator.LearningDomain;
 import generator.LearningPath;
-import generator.LegendSymbol;
 import generator.LegendText;
 import generator.Level;
 import generator.LevelsDifficultyProgress;
@@ -144,7 +150,7 @@ import generator.VisualizationPosition;
 import generator.VisualizationQuestionParam;
 import generator.VisualizationSolution;
 import generator.WantedAnswersParam;
-import generator.*;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -854,13 +860,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass legendSymbolEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass legendTextEClass = null;
 
 	/**
@@ -987,13 +986,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mapQuestionableFactEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass hgLevelEClass = null;
 
 	/**
@@ -1016,6 +1008,55 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass hChronologyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mapQuestionableFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass judoTechniqueFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass classifyTechniqueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass identifyTechniqueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass judoQuestionableTechniqueFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass judoQuestionableClassifyFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass judoLevelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1144,6 +1185,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	private EEnum eTimeTargetEEnum = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eJudoTargetEEnum = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -1217,6 +1265,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EClass getAbstractFact() {
 		return abstractFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractFact_Representation() {
+		return (EReference) abstractFactEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2169,8 +2226,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMultipleChoice_NbBadChoices() {
-		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(2);
+	public EAttribute getMultipleChoice_NbChoices() {
+		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2178,8 +2235,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMultipleChoice_NbChoices() {
-		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(1);
+	public EAttribute getMultipleChoice_NbBadChoices() {
+		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -4509,6 +4566,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getVisualization_ID() {
+		return (EAttribute) visualizationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVisualizationPosition() {
 		return visualizationPositionEClass;
 	}
@@ -4520,33 +4586,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getVisualizationPosition_ID() {
 		return (EAttribute) visualizationPositionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getLegendSymbol() {
-		return legendSymbolEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getLegendSymbol_Image() {
-		return (EReference) legendSymbolEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getLegendSymbol_Position() {
-		return (EReference) legendSymbolEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -4599,17 +4638,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHistoryFact_Image() {
-		return (EReference) historyFactEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getHistoryFact_Time() {
-		return (EReference) historyFactEClass.getEStructuralFeatures().get(2);
+		return (EReference) historyFactEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -4626,7 +4656,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGeographyLegendFact_Symbol() {
+	public EReference getGeographyLegendFact_Legend() {
 		return (EReference) geographyLegendFactEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -4635,7 +4665,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGeographyLegendFact_Legend() {
+	public EReference getGeographyLegendFact_SymbolPosition() {
 		return (EReference) geographyLegendFactEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -5121,24 +5151,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMapQuestionableFact() {
-		return mapQuestionableFactEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMapQuestionableFact_Type() {
-		return (EAttribute) mapQuestionableFactEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getHGLevel() {
 		return hgLevelEClass;
 	}
@@ -5240,6 +5252,186 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getHChronology_GraphicTask() {
 		return (EAttribute) hChronologyEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMapQuestionableFact() {
+		return mapQuestionableFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMapQuestionableFact_Type() {
+		return (EAttribute) mapQuestionableFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getJudoTechniqueFact() {
+		return judoTechniqueFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoTechniqueFact_Name() {
+		return (EAttribute) judoTechniqueFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoTechniqueFact_Description() {
+		return (EAttribute) judoTechniqueFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getClassifyTechnique() {
+		return classifyTechniqueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIdentifyTechnique() {
+		return identifyTechniqueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIdentifyTechnique_NbMissingElements() {
+		return (EAttribute) identifyTechniqueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIdentifyTechnique_CheckOnLearnerAction() {
+		return (EAttribute) identifyTechniqueEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIdentifyTechnique_Missing() {
+		return (EAttribute) identifyTechniqueEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIdentifyTechnique_Source() {
+		return (EAttribute) identifyTechniqueEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getJudoQuestionableTechniqueFact() {
+		return judoQuestionableTechniqueFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoQuestionableTechniqueFact_SourceElementType() {
+		return (EAttribute) judoQuestionableTechniqueFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoQuestionableTechniqueFact_MissingElement() {
+		return (EAttribute) judoQuestionableTechniqueFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoQuestionableTechniqueFact_SourceElement() {
+		return (EAttribute) judoQuestionableTechniqueFactEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoQuestionableTechniqueFact_MissingElementType() {
+		return (EAttribute) judoQuestionableTechniqueFactEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getJudoQuestionableClassifyFact() {
+		return judoQuestionableClassifyFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoQuestionableClassifyFact_Category() {
+		return (EAttribute) judoQuestionableClassifyFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoQuestionableClassifyFact_Techniques() {
+		return (EAttribute) judoQuestionableClassifyFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getJudoLevel() {
+		return judoLevelEClass;
 	}
 
 	/**
@@ -5409,6 +5601,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getEJudoTarget() {
+		return eJudoTargetEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GeneratorFactory getGeneratorFactory() {
 		return (GeneratorFactory) getEFactoryInstance();
 	}
@@ -5434,6 +5635,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		// Create classes and their features
 		abstractFactEClass = createEClass(ABSTRACT_FACT);
+		createEReference(abstractFactEClass, ABSTRACT_FACT__REPRESENTATION);
 
 		setOfFactsEClass = createEClass(SET_OF_FACTS);
 		createEReference(setOfFactsEClass, SET_OF_FACTS__FACTS);
@@ -5895,13 +6097,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		visualizationEClass = createEClass(VISUALIZATION);
 		createEReference(visualizationEClass, VISUALIZATION__POSITIONS);
+		createEAttribute(visualizationEClass, VISUALIZATION__ID);
 
 		visualizationPositionEClass = createEClass(VISUALIZATION_POSITION);
 		createEAttribute(visualizationPositionEClass, VISUALIZATION_POSITION__ID);
-
-		legendSymbolEClass = createEClass(LEGEND_SYMBOL);
-		createEReference(legendSymbolEClass, LEGEND_SYMBOL__IMAGE);
-		createEReference(legendSymbolEClass, LEGEND_SYMBOL__POSITION);
 
 		legendTextEClass = createEClass(LEGEND_TEXT);
 		createEAttribute(legendTextEClass, LEGEND_TEXT__TEXT);
@@ -5909,12 +6108,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		historyFactEClass = createEClass(HISTORY_FACT);
 		createEAttribute(historyFactEClass, HISTORY_FACT__EVENT);
-		createEReference(historyFactEClass, HISTORY_FACT__IMAGE);
 		createEReference(historyFactEClass, HISTORY_FACT__TIME);
 
 		geographyLegendFactEClass = createEClass(GEOGRAPHY_LEGEND_FACT);
-		createEReference(geographyLegendFactEClass, GEOGRAPHY_LEGEND_FACT__SYMBOL);
 		createEReference(geographyLegendFactEClass, GEOGRAPHY_LEGEND_FACT__LEGEND);
+		createEReference(geographyLegendFactEClass, GEOGRAPHY_LEGEND_FACT__SYMBOL_POSITION);
 
 		geographyFactEClass = createEClass(GEOGRAPHY_FACT);
 		createEReference(geographyFactEClass, GEOGRAPHY_FACT__POSITION);
@@ -6004,6 +6202,30 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mapQuestionableFactEClass = createEClass(MAP_QUESTIONABLE_FACT);
 		createEAttribute(mapQuestionableFactEClass, MAP_QUESTIONABLE_FACT__TYPE);
 
+		judoTechniqueFactEClass = createEClass(JUDO_TECHNIQUE_FACT);
+		createEAttribute(judoTechniqueFactEClass, JUDO_TECHNIQUE_FACT__NAME);
+		createEAttribute(judoTechniqueFactEClass, JUDO_TECHNIQUE_FACT__DESCRIPTION);
+
+		classifyTechniqueEClass = createEClass(CLASSIFY_TECHNIQUE);
+
+		identifyTechniqueEClass = createEClass(IDENTIFY_TECHNIQUE);
+		createEAttribute(identifyTechniqueEClass, IDENTIFY_TECHNIQUE__NB_MISSING_ELEMENTS);
+		createEAttribute(identifyTechniqueEClass, IDENTIFY_TECHNIQUE__CHECK_ON_LEARNER_ACTION);
+		createEAttribute(identifyTechniqueEClass, IDENTIFY_TECHNIQUE__MISSING);
+		createEAttribute(identifyTechniqueEClass, IDENTIFY_TECHNIQUE__SOURCE);
+
+		judoQuestionableTechniqueFactEClass = createEClass(JUDO_QUESTIONABLE_TECHNIQUE_FACT);
+		createEAttribute(judoQuestionableTechniqueFactEClass, JUDO_QUESTIONABLE_TECHNIQUE_FACT__SOURCE_ELEMENT_TYPE);
+		createEAttribute(judoQuestionableTechniqueFactEClass, JUDO_QUESTIONABLE_TECHNIQUE_FACT__MISSING_ELEMENT);
+		createEAttribute(judoQuestionableTechniqueFactEClass, JUDO_QUESTIONABLE_TECHNIQUE_FACT__SOURCE_ELEMENT);
+		createEAttribute(judoQuestionableTechniqueFactEClass, JUDO_QUESTIONABLE_TECHNIQUE_FACT__MISSING_ELEMENT_TYPE);
+
+		judoQuestionableClassifyFactEClass = createEClass(JUDO_QUESTIONABLE_CLASSIFY_FACT);
+		createEAttribute(judoQuestionableClassifyFactEClass, JUDO_QUESTIONABLE_CLASSIFY_FACT__CATEGORY);
+		createEAttribute(judoQuestionableClassifyFactEClass, JUDO_QUESTIONABLE_CLASSIFY_FACT__TECHNIQUES);
+
+		judoLevelEClass = createEClass(JUDO_LEVEL);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -6023,6 +6245,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		eLegendTargetEEnum = createEEnum(ELEGEND_TARGET);
 		eStatementTypeEEnum = createEEnum(ESTATEMENT_TYPE);
 		eTimeTargetEEnum = createEEnum(ETIME_TARGET);
+		eJudoTargetEEnum = createEEnum(EJUDO_TARGET);
 	}
 
 	/**
@@ -6100,7 +6323,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		sizeEClass.getESuperTypes().add(this.getParameter());
 		statementElementTypeEClass.getESuperTypes().add(this.getElementType());
 		labyrinthCurseEClass.getESuperTypes().add(this.getCurse());
-		visualizationEClass.getESuperTypes().add(this.getImage());
 		historyFactEClass.getESuperTypes().add(this.getAbstractFact());
 		geographyLegendFactEClass.getESuperTypes().add(this.getAbstractFact());
 		geographyFactEClass.getESuperTypes().add(this.getAbstractFact());
@@ -6117,10 +6339,19 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		dateQuestionableFactEClass.getESuperTypes().add(this.getQuestionableFact());
 		hChronologyEClass.getESuperTypes().add(this.getOrderingTask());
 		mapQuestionableFactEClass.getESuperTypes().add(this.getAVisualizationQuestionableFact());
+		judoTechniqueFactEClass.getESuperTypes().add(this.getAbstractFact());
+		classifyTechniqueEClass.getESuperTypes().add(this.getMembershipIDTask());
+		identifyTechniqueEClass.getESuperTypes().add(this.getCompletionTask());
+		judoQuestionableTechniqueFactEClass.getESuperTypes().add(this.getQuestionableFact());
+		judoQuestionableClassifyFactEClass.getESuperTypes().add(this.getQuestionableFact());
+		judoLevelEClass.getESuperTypes().add(this.getLevel());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractFact_Representation(), this.getImage(), null, "representation", null, 0, 1,
+				AbstractFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(setOfFactsEClass, SetOfFacts.class, "SetOfFacts", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -7123,21 +7354,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getVisualization_Positions(), this.getVisualizationPosition(), null, "positions", null, 0, -1,
 				Visualization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVisualization_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Visualization.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(visualizationPositionEClass, VisualizationPosition.class, "VisualizationPosition", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVisualizationPosition_ID(), ecorePackage.getEString(), "ID", null, 0, 1,
 				VisualizationPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(legendSymbolEClass, LegendSymbol.class, "LegendSymbol", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLegendSymbol_Image(), this.getImage(), null, "image", null, 1, 1, LegendSymbol.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLegendSymbol_Position(), this.getVisualizationPosition(), null, "position", null, 1, 1,
-				LegendSymbol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(legendTextEClass, LegendText.class, "LegendText", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -7151,21 +7375,18 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHistoryFact_Event(), ecorePackage.getEString(), "event", null, 0, 1, HistoryFact.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getHistoryFact_Image(), this.getImage(), null, "image", null, 0, 1, HistoryFact.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getHistoryFact_Time(), this.getTime(), null, "time", null, 1, 1, HistoryFact.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(geographyLegendFactEClass, GeographyLegendFact.class, "GeographyLegendFact", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGeographyLegendFact_Symbol(), this.getLegendSymbol(), null, "symbol", null, 1, 1,
-				GeographyLegendFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGeographyLegendFact_Legend(), this.getLegendText(), null, "legend", null, 1, 1,
 				GeographyLegendFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeographyLegendFact_SymbolPosition(), this.getVisualizationPosition(), null, "symbolPosition",
+				null, 1, 1, GeographyLegendFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(geographyFactEClass, GeographyFact.class, "GeographyFact", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -7347,6 +7568,60 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				MapQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(judoTechniqueFactEClass, JudoTechniqueFact.class, "JudoTechniqueFact", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getJudoTechniqueFact_Name(), ecorePackage.getEString(), "name", null, 0, 1,
+				JudoTechniqueFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJudoTechniqueFact_Description(), ecorePackage.getEString(), "description", null, 0, 1,
+				JudoTechniqueFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(classifyTechniqueEClass, ClassifyTechnique.class, "ClassifyTechnique", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(identifyTechniqueEClass, IdentifyTechnique.class, "IdentifyTechnique", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIdentifyTechnique_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
+				IdentifyTechnique.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIdentifyTechnique_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
+				"true", 0, 1, IdentifyTechnique.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIdentifyTechnique_Missing(), this.getEJudoTarget(), "missing", "TECHNIQUE", 0, 1,
+				IdentifyTechnique.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIdentifyTechnique_Source(), this.getEJudoTarget(), "source", null, 0, 1,
+				IdentifyTechnique.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(judoQuestionableTechniqueFactEClass, JudoQuestionableTechniqueFact.class,
+				"JudoQuestionableTechniqueFact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getJudoQuestionableTechniqueFact_SourceElementType(), this.getEJudoTarget(), "sourceElementType",
+				null, 0, 1, JudoQuestionableTechniqueFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJudoQuestionableTechniqueFact_MissingElement(), ecorePackage.getEString(), "missingElement",
+				null, 0, 1, JudoQuestionableTechniqueFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJudoQuestionableTechniqueFact_SourceElement(), ecorePackage.getEString(), "sourceElement",
+				null, 0, 1, JudoQuestionableTechniqueFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJudoQuestionableTechniqueFact_MissingElementType(), this.getEJudoTarget(),
+				"missingElementType", null, 0, 1, JudoQuestionableTechniqueFact.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(judoQuestionableClassifyFactEClass, JudoQuestionableClassifyFact.class,
+				"JudoQuestionableClassifyFact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getJudoQuestionableClassifyFact_Category(), ecorePackage.getEString(), "category", null, 0, 1,
+				JudoQuestionableClassifyFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJudoQuestionableClassifyFact_Techniques(), ecorePackage.getEString(), "techniques", null, 0,
+				-1, JudoQuestionableClassifyFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(judoLevelEClass, JudoLevel.class, "JudoLevel", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");
 		addEEnumLiteral(directionsEEnum, Directions.SOUTH);
@@ -7459,6 +7734,11 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		addEEnumLiteral(eTimeTargetEEnum, ETimeTarget.DATE);
 		addEEnumLiteral(eTimeTargetEEnum, ETimeTarget.MIX);
 		addEEnumLiteral(eTimeTargetEEnum, ETimeTarget.NONE);
+
+		initEEnum(eJudoTargetEEnum, EJudoTarget.class, "EJudoTarget");
+		addEEnumLiteral(eJudoTargetEEnum, EJudoTarget.NAME);
+		addEEnumLiteral(eJudoTargetEEnum, EJudoTarget.DESCRIPTION);
+		addEEnumLiteral(eJudoTargetEEnum, EJudoTarget.TECHNIQUE);
 
 		// Create resource
 		createResource(eNS_URI);

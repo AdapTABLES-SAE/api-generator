@@ -42,6 +42,7 @@ import generator.impl.QuestionedFactImpl;
 import generator.impl.ValueImpl;
 import generator.impl.VisualizationQuestionParamImpl;
 import generator.impl.WantedAnswersParamImpl;
+import managers.ModelsManager;
 import structures.DungeonElements;
 import structures.RoomElements;
 import structures.Soluce;
@@ -53,13 +54,19 @@ public abstract class FactGeneratorTemplate {
 	 * This template changes a little for membership facts. 
 	 */
 
+	protected ModelsManager modelsManager;
 	protected DungeonElements dungeonElements;
 	protected String taskID;
 	protected int factsCounter; 
 	
 	public FactGeneratorTemplate(DungeonElements dungeonElements) {
+		this(null, dungeonElements);
+	}
+	
+	public FactGeneratorTemplate(ModelsManager modelsManager, DungeonElements dungeonElements) {
 		this.dungeonElements = dungeonElements;
 		this.factsCounter = 0;
+		this.modelsManager = modelsManager;
 	}
 	
 	public Set<AQuestionableFact> generateQuestionableFacts(ATask task){ // TO OVERRIDE FOR MEMBERSHIP 

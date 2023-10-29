@@ -63,7 +63,7 @@ public class EducationalElementsGenerator {
 		instanciateQFbyTasks();
 		for (ResultsByTask resBytask : dungeonElements.getLearnerResultsByTasks()) {
 			if(resBytask.getQuestionableFacts().isEmpty()) {
-				FactGenerator.generateQuestionableFactsByTask(dungeonElements, resBytask);
+				FactGenerator.generateQuestionableFactsByTask(modelAccess, dungeonElements, resBytask);
 			}
 		}
 		saveLearnerModel();
@@ -446,7 +446,7 @@ public class EducationalElementsGenerator {
 	
 	private void generateFactsToQuestion() throws Exception {
 		buildTaskRoomElements();
-		FactGenerator.generateQuestionedFact(dungeonElements);
+		FactGenerator.generateQuestionedFact(modelAccess, dungeonElements);
 	}
 	
 	private void buildTaskRoomElements() {

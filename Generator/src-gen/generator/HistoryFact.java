@@ -12,7 +12,6 @@ package generator;
  * </p>
  * <ul>
  *   <li>{@link generator.HistoryFact#getEvent <em>Event</em>}</li>
- *   <li>{@link generator.HistoryFact#getImage <em>Image</em>}</li>
  *   <li>{@link generator.HistoryFact#getTime <em>Time</em>}</li>
  * </ul>
  *
@@ -42,28 +41,6 @@ public interface HistoryFact extends AbstractFact {
 	 * @generated
 	 */
 	void setEvent(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Image</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Image</em>' containment reference.
-	 * @see #setImage(Image)
-	 * @see generator.GeneratorPackage#getHistoryFact_Image()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Image getImage();
-
-	/**
-	 * Sets the value of the '{@link generator.HistoryFact#getImage <em>Image</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Image</em>' containment reference.
-	 * @see #getImage()
-	 * @generated
-	 */
-	void setImage(Image value);
 
 	/**
 	 * Returns the value of the '<em><b>Time</b></em>' containment reference.

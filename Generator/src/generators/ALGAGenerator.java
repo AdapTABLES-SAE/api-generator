@@ -36,13 +36,14 @@ public class ALGAGenerator {
 	private Dungeon generatedDungeon;
 	private DungeonElements dungeonElements;
 	
-	public static DidacticDomain DOMAIN = DidacticDomain.MATHEMATICS;
+	public static DidacticDomain DOMAIN = DidacticDomain.JUDO;
+	public static boolean MAXIMIZE_ROOMTYPE_ACCESS = false;
 	
 	public static void main(String[] args) {		
 		for(int i = 0; i < 1; i++) {
 			ALGAGenerator generator;
 			try {
-				generator = new ALGAGenerator("FICTIF02");
+				generator = new ALGAGenerator("FICTIF04");
 				generator.generate();
 				generator.printDungeon();
 				generator.saveDungeon("DungeonGen.xmi");

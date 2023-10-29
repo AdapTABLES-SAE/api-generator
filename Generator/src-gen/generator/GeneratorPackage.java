@@ -69,13 +69,22 @@ public interface GeneratorPackage extends EPackage {
 	int ABSTRACT_FACT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_FACT__REPRESENTATION = 0;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_FACT_FEATURE_COUNT = 0;
+	int ABSTRACT_FACT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Abstract Fact</em>' class.
@@ -3093,6 +3102,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_FACT = 36;
 
 	/**
+	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_FACT__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
+
+	/**
 	 * The feature id for the '<em><b>Table</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3148,6 +3166,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_RESULT_FACT = 37;
 
 	/**
+	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_RESULT_FACT__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
+
+	/**
 	 * The feature id for the '<em><b>Table</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3191,7 +3218,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAQuestionableFact()
 	 * @generated
 	 */
-	int AQUESTIONABLE_FACT = 114;
+	int AQUESTIONABLE_FACT = 113;
 
 	/**
 	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
@@ -4860,7 +4887,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAQuestionParam()
 	 * @generated
 	 */
-	int AQUESTION_PARAM = 106;
+	int AQUESTION_PARAM = 105;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -7079,22 +7106,22 @@ public interface GeneratorPackage extends EPackage {
 	int VISUALIZATION = 96;
 
 	/**
-	 * The feature id for the '<em><b>ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUALIZATION__ID = IMAGE__ID;
-
-	/**
 	 * The feature id for the '<em><b>Positions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VISUALIZATION__POSITIONS = IMAGE_FEATURE_COUNT + 0;
+	int VISUALIZATION__POSITIONS = 0;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUALIZATION__ID = 1;
 
 	/**
 	 * The number of structural features of the '<em>Visualization</em>' class.
@@ -7103,7 +7130,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VISUALIZATION_FEATURE_COUNT = IMAGE_FEATURE_COUNT + 1;
+	int VISUALIZATION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Visualization</em>' class.
@@ -7112,7 +7139,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VISUALIZATION_OPERATION_COUNT = IMAGE_OPERATION_COUNT + 0;
+	int VISUALIZATION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.VisualizationPositionImpl <em>Visualization Position</em>}' class.
@@ -7152,52 +7179,6 @@ public interface GeneratorPackage extends EPackage {
 	int VISUALIZATION_POSITION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.LegendSymbolImpl <em>Legend Symbol</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.LegendSymbolImpl
-	 * @see generator.impl.GeneratorPackageImpl#getLegendSymbol()
-	 * @generated
-	 */
-	int LEGEND_SYMBOL = 98;
-
-	/**
-	 * The feature id for the '<em><b>Image</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEGEND_SYMBOL__IMAGE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Position</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEGEND_SYMBOL__POSITION = 1;
-
-	/**
-	 * The number of structural features of the '<em>Legend Symbol</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEGEND_SYMBOL_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Legend Symbol</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEGEND_SYMBOL_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.LegendTextImpl <em>Legend Text</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7205,7 +7186,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getLegendText()
 	 * @generated
 	 */
-	int LEGEND_TEXT = 99;
+	int LEGEND_TEXT = 98;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -7251,7 +7232,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getHistoryFact()
 	 * @generated
 	 */
-	int HISTORY_FACT = 100;
+	int HISTORY_FACT = 99;
+
+	/**
+	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORY_FACT__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Event</b></em>' attribute.
@@ -7263,22 +7253,13 @@ public interface GeneratorPackage extends EPackage {
 	int HISTORY_FACT__EVENT = ABSTRACT_FACT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Image</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORY_FACT__IMAGE = ABSTRACT_FACT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Time</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORY_FACT__TIME = ABSTRACT_FACT_FEATURE_COUNT + 2;
+	int HISTORY_FACT__TIME = ABSTRACT_FACT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>History Fact</em>' class.
@@ -7287,7 +7268,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORY_FACT_FEATURE_COUNT = ABSTRACT_FACT_FEATURE_COUNT + 3;
+	int HISTORY_FACT_FEATURE_COUNT = ABSTRACT_FACT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>History Fact</em>' class.
@@ -7306,16 +7287,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGeographyLegendFact()
 	 * @generated
 	 */
-	int GEOGRAPHY_LEGEND_FACT = 101;
+	int GEOGRAPHY_LEGEND_FACT = 100;
 
 	/**
-	 * The feature id for the '<em><b>Symbol</b></em>' containment reference.
+	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEOGRAPHY_LEGEND_FACT__SYMBOL = ABSTRACT_FACT_FEATURE_COUNT + 0;
+	int GEOGRAPHY_LEGEND_FACT__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Legend</b></em>' containment reference.
@@ -7324,7 +7305,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEOGRAPHY_LEGEND_FACT__LEGEND = ABSTRACT_FACT_FEATURE_COUNT + 1;
+	int GEOGRAPHY_LEGEND_FACT__LEGEND = ABSTRACT_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Symbol Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_LEGEND_FACT__SYMBOL_POSITION = ABSTRACT_FACT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Geography Legend Fact</em>' class.
@@ -7352,7 +7342,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGeographyFact()
 	 * @generated
 	 */
-	int GEOGRAPHY_FACT = 102;
+	int GEOGRAPHY_FACT = 101;
+
+	/**
+	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_FACT__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' reference.
@@ -7407,7 +7406,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTime()
 	 * @generated
 	 */
-	int TIME = 105;
+	int TIME = 104;
 
 	/**
 	 * The number of structural features of the '<em>Time</em>' class.
@@ -7435,7 +7434,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDate()
 	 * @generated
 	 */
-	int DATE = 103;
+	int DATE = 102;
 
 	/**
 	 * The feature id for the '<em><b>Day</b></em>' attribute.
@@ -7508,7 +7507,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTimePeriod()
 	 * @generated
 	 */
-	int TIME_PERIOD = 104;
+	int TIME_PERIOD = 103;
 
 	/**
 	 * The feature id for the '<em><b>Start Year</b></em>' attribute.
@@ -7581,7 +7580,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getVisualizationQuestionParam()
 	 * @generated
 	 */
-	int VISUALIZATION_QUESTION_PARAM = 107;
+	int VISUALIZATION_QUESTION_PARAM = 106;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -7627,7 +7626,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getHAssociation()
 	 * @generated
 	 */
-	int HASSOCIATION = 108;
+	int HASSOCIATION = 107;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -7799,7 +7798,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getHLegend()
 	 * @generated
 	 */
-	int HLEGEND = 109;
+	int HLEGEND = 108;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -7953,7 +7952,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGLocate()
 	 * @generated
 	 */
-	int GLOCATE = 110;
+	int GLOCATE = 109;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -8125,7 +8124,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTeacher()
 	 * @generated
 	 */
-	int TEACHER = 111;
+	int TEACHER = 110;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -8180,7 +8179,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTeachers()
 	 * @generated
 	 */
-	int TEACHERS = 112;
+	int TEACHERS = 111;
 
 	/**
 	 * The feature id for the '<em><b>Teachers</b></em>' containment reference list.
@@ -8217,7 +8216,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getClassrooms()
 	 * @generated
 	 */
-	int CLASSROOMS = 113;
+	int CLASSROOMS = 112;
 
 	/**
 	 * The feature id for the '<em><b>Classrooms</b></em>' containment reference list.
@@ -8254,7 +8253,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getAVisualizationQuestionableFact()
 	 * @generated
 	 */
-	int AVISUALIZATION_QUESTIONABLE_FACT = 115;
+	int AVISUALIZATION_QUESTIONABLE_FACT = 114;
 
 	/**
 	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
@@ -8354,7 +8353,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getVisualizationSolution()
 	 * @generated
 	 */
-	int VISUALIZATION_SOLUTION = 116;
+	int VISUALIZATION_SOLUTION = 115;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -8393,16 +8392,6 @@ public interface GeneratorPackage extends EPackage {
 	int VISUALIZATION_SOLUTION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.MapQuestionableFactImpl <em>Map Questionable Fact</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see generator.impl.MapQuestionableFactImpl
-	 * @see generator.impl.GeneratorPackageImpl#getMapQuestionableFact()
-	 * @generated
-	 */
-	int MAP_QUESTIONABLE_FACT = 121;
-
-	/**
 	 * The meta object id for the '{@link generator.impl.HGLevelImpl <em>HG Level</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8410,7 +8399,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getHGLevel()
 	 * @generated
 	 */
-	int HG_LEVEL = 117;
+	int HG_LEVEL = 116;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -8465,7 +8454,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getPositionedVisualizationElement()
 	 * @generated
 	 */
-	int POSITIONED_VISUALIZATION_ELEMENT = 118;
+	int POSITIONED_VISUALIZATION_ELEMENT = 117;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -8583,7 +8572,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDateQuestionableFact()
 	 * @generated
 	 */
-	int DATE_QUESTIONABLE_FACT = 119;
+	int DATE_QUESTIONABLE_FACT = 118;
 
 	/**
 	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
@@ -8710,7 +8699,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getHChronology()
 	 * @generated
 	 */
-	int HCHRONOLOGY = 120;
+	int HCHRONOLOGY = 119;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -8857,6 +8846,16 @@ public interface GeneratorPackage extends EPackage {
 	int HCHRONOLOGY_OPERATION_COUNT = ORDERING_TASK_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.MapQuestionableFactImpl <em>Map Questionable Fact</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MapQuestionableFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMapQuestionableFact()
+	 * @generated
+	 */
+	int MAP_QUESTIONABLE_FACT = 120;
+
+	/**
 	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8956,6 +8955,669 @@ public interface GeneratorPackage extends EPackage {
 	int MAP_QUESTIONABLE_FACT_OPERATION_COUNT = AVISUALIZATION_QUESTIONABLE_FACT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.JudoTechniqueFactImpl <em>Judo Technique Fact</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.JudoTechniqueFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getJudoTechniqueFact()
+	 * @generated
+	 */
+	int JUDO_TECHNIQUE_FACT = 121;
+
+	/**
+	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_TECHNIQUE_FACT__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_TECHNIQUE_FACT__NAME = ABSTRACT_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_TECHNIQUE_FACT__DESCRIPTION = ABSTRACT_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Judo Technique Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_TECHNIQUE_FACT_FEATURE_COUNT = ABSTRACT_FACT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Judo Technique Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_TECHNIQUE_FACT_OPERATION_COUNT = ABSTRACT_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.ClassifyTechniqueImpl <em>Classify Technique</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.ClassifyTechniqueImpl
+	 * @see generator.impl.GeneratorPackageImpl#getClassifyTechnique()
+	 * @generated
+	 */
+	int CLASSIFY_TECHNIQUE = 122;
+
+	/**
+	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE__PERCENT_OF_APPARITION = MEMBERSHIP_ID_TASK__PERCENT_OF_APPARITION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE__NB_CONSECUTIVE_SUCCESS = MEMBERSHIP_ID_TASK__NB_CONSECUTIVE_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE__RESPONSE_MODALITY = MEMBERSHIP_ID_TASK__RESPONSE_MODALITY;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE__ID = MEMBERSHIP_ID_TASK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE__MAX_TIME = MEMBERSHIP_ID_TASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE__NB_FACTS = MEMBERSHIP_ID_TASK__NB_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE__TYPE = MEMBERSHIP_ID_TASK__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Identify Shared Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE__IDENTIFY_SHARED_PROPERTY = MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE__CHECK_ON_LEARNER_ACTION = MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The number of structural features of the '<em>Classify Technique</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE_FEATURE_COUNT = MEMBERSHIP_ID_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE___GET_TYPE = MEMBERSHIP_ID_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Check On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE___IS_CHECK_ON_LEARNER_ACTION = MEMBERSHIP_ID_TASK___IS_CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Is Graphic Task</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE___IS_GRAPHIC_TASK = MEMBERSHIP_ID_TASK___IS_GRAPHIC_TASK;
+
+	/**
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE___GET_NB_EXPECTED_ANSWERS = MEMBERSHIP_ID_TASK___GET_NB_EXPECTED_ANSWERS;
+
+	/**
+	 * The number of operations of the '<em>Classify Technique</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFY_TECHNIQUE_OPERATION_COUNT = MEMBERSHIP_ID_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.IdentifyTechniqueImpl <em>Identify Technique</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.IdentifyTechniqueImpl
+	 * @see generator.impl.GeneratorPackageImpl#getIdentifyTechnique()
+	 * @generated
+	 */
+	int IDENTIFY_TECHNIQUE = 123;
+
+	/**
+	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE__PERCENT_OF_APPARITION = COMPLETION_TASK__PERCENT_OF_APPARITION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE__NB_CONSECUTIVE_SUCCESS = COMPLETION_TASK__NB_CONSECUTIVE_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE__RESPONSE_MODALITY = COMPLETION_TASK__RESPONSE_MODALITY;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE__ID = COMPLETION_TASK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE__MAX_TIME = COMPLETION_TASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE__NB_FACTS = COMPLETION_TASK__NB_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE__TYPE = COMPLETION_TASK__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE__CHECK_ON_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Missing</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE__MISSING = COMPLETION_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE__SOURCE = COMPLETION_TASK_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Identify Technique</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE___GET_TYPE = COMPLETION_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Check On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE___IS_CHECK_ON_LEARNER_ACTION = COMPLETION_TASK___IS_CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Is Graphic Task</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE___IS_GRAPHIC_TASK = COMPLETION_TASK___IS_GRAPHIC_TASK;
+
+	/**
+	 * The operation id for the '<em>Get Nb Missing Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE___GET_NB_EXPECTED_ANSWERS = COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS;
+
+	/**
+	 * The number of operations of the '<em>Identify Technique</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_TECHNIQUE_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.JudoQuestionableTechniqueFactImpl <em>Judo Questionable Technique Fact</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.JudoQuestionableTechniqueFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getJudoQuestionableTechniqueFact()
+	 * @generated
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT = 124;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT__RESULTS = QUESTIONABLE_FACT__RESULTS;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT__ID = QUESTIONABLE_FACT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Source Element Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT__SOURCE_ELEMENT_TYPE = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Missing Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT__MISSING_ELEMENT = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Source Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT__SOURCE_ELEMENT = QUESTIONABLE_FACT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Missing Element Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT__MISSING_ELEMENT_TYPE = QUESTIONABLE_FACT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Judo Questionable Technique Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
+
+	/**
+	 * The operation id for the '<em>Get Complete Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT___GET_COMPLETE_FACT = QUESTIONABLE_FACT___GET_COMPLETE_FACT;
+
+	/**
+	 * The number of operations of the '<em>Judo Questionable Technique Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.JudoQuestionableClassifyFactImpl <em>Judo Questionable Classify Fact</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.JudoQuestionableClassifyFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getJudoQuestionableClassifyFact()
+	 * @generated
+	 */
+	int JUDO_QUESTIONABLE_CLASSIFY_FACT = 125;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_CLASSIFY_FACT__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_CLASSIFY_FACT__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_CLASSIFY_FACT__RESULTS = QUESTIONABLE_FACT__RESULTS;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_CLASSIFY_FACT__ID = QUESTIONABLE_FACT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_CLASSIFY_FACT__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_CLASSIFY_FACT__CATEGORY = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Techniques</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_CLASSIFY_FACT__TECHNIQUES = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Judo Questionable Classify Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_CLASSIFY_FACT_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_CLASSIFY_FACT___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
+
+	/**
+	 * The operation id for the '<em>Get Complete Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_CLASSIFY_FACT___GET_COMPLETE_FACT = QUESTIONABLE_FACT___GET_COMPLETE_FACT;
+
+	/**
+	 * The number of operations of the '<em>Judo Questionable Classify Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_CLASSIFY_FACT_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.JudoLevelImpl <em>Judo Level</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.JudoLevelImpl
+	 * @see generator.impl.GeneratorPackageImpl#getJudoLevel()
+	 * @generated
+	 */
+	int JUDO_LEVEL = 126;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_LEVEL__ID = LEVEL__ID;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_LEVEL__TASKS = LEVEL__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Completion Criteria</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_LEVEL__COMPLETION_CRITERIA = LEVEL__COMPLETION_CRITERIA;
+
+	/**
+	 * The number of structural features of the '<em>Judo Level</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_LEVEL_FEATURE_COUNT = LEVEL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Judo Level</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_LEVEL_OPERATION_COUNT = LEVEL_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8963,7 +9625,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 122;
+	int DIRECTIONS = 127;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -8973,7 +9635,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 123;
+	int DUNGEON_MODE = 128;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -8983,7 +9645,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 124;
+	int TABLE_BUILD = 129;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -8993,7 +9655,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 125;
+	int RESULT_POSITION = 130;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -9003,7 +9665,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 126;
+	int ESINGLE_TARGET = 131;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -9013,7 +9675,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 127;
+	int ETASK_TYPE = 132;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -9023,7 +9685,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 128;
+	int EMODALITY = 133;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -9033,7 +9695,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 129;
+	int ESEVERAL_TARGET = 134;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -9043,7 +9705,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 130;
+	int ELEMENT_SIZE = 135;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -9053,7 +9715,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 131;
+	int GP_CATEGORY = 136;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -9063,7 +9725,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 132;
+	int ECORRECTNESS = 137;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -9073,7 +9735,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 133;
+	int EBOUNDARY = 138;
 
 	/**
 	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
@@ -9083,7 +9745,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
 	 * @generated
 	 */
-	int EROOM_TYPE = 134;
+	int EROOM_TYPE = 139;
 
 	/**
 	 * The meta object id for the '{@link generator.EGeographyValue <em>EGeography Value</em>}' enum.
@@ -9093,7 +9755,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEGeographyValue()
 	 * @generated
 	 */
-	int EGEOGRAPHY_VALUE = 135;
+	int EGEOGRAPHY_VALUE = 140;
 
 	/**
 	 * The meta object id for the '{@link generator.EHistoryTarget <em>EHistory Target</em>}' enum.
@@ -9103,7 +9765,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEHistoryTarget()
 	 * @generated
 	 */
-	int EHISTORY_TARGET = 136;
+	int EHISTORY_TARGET = 141;
 
 	/**
 	 * The meta object id for the '{@link generator.ELegendTarget <em>ELegend Target</em>}' enum.
@@ -9113,7 +9775,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getELegendTarget()
 	 * @generated
 	 */
-	int ELEGEND_TARGET = 137;
+	int ELEGEND_TARGET = 142;
 
 	/**
 	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
@@ -9123,7 +9785,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 138;
+	int ESTATEMENT_TYPE = 143;
 
 	/**
 	 * The meta object id for the '{@link generator.ETimeTarget <em>ETime Target</em>}' enum.
@@ -9133,7 +9795,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETimeTarget()
 	 * @generated
 	 */
-	int ETIME_TARGET = 139;
+	int ETIME_TARGET = 144;
+
+	/**
+	 * The meta object id for the '{@link generator.EJudoTarget <em>EJudo Target</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.EJudoTarget
+	 * @see generator.impl.GeneratorPackageImpl#getEJudoTarget()
+	 * @generated
+	 */
+	int EJUDO_TARGET = 145;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -9144,6 +9816,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAbstractFact();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link generator.AbstractFact#getRepresentation <em>Representation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Representation</em>'.
+	 * @see generator.AbstractFact#getRepresentation()
+	 * @see #getAbstractFact()
+	 * @generated
+	 */
+	EReference getAbstractFact_Representation();
 
 	/**
 	 * Returns the meta object for class '{@link generator.SetOfFacts <em>Set Of Facts</em>}'.
@@ -10273,17 +10956,6 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMultipleChoice_Type();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.MultipleChoice#getNbBadChoices <em>Nb Bad Choices</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nb Bad Choices</em>'.
-	 * @see generator.MultipleChoice#getNbBadChoices()
-	 * @see #getMultipleChoice()
-	 * @generated
-	 */
-	EAttribute getMultipleChoice_NbBadChoices();
-
-	/**
 	 * Returns the meta object for the attribute '{@link generator.MultipleChoice#getNbChoices <em>Nb Choices</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10293,6 +10965,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMultipleChoice_NbChoices();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MultipleChoice#getNbBadChoices <em>Nb Bad Choices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Bad Choices</em>'.
+	 * @see generator.MultipleChoice#getNbBadChoices()
+	 * @see #getMultipleChoice()
+	 * @generated
+	 */
+	EAttribute getMultipleChoice_NbBadChoices();
 
 	/**
 	 * Returns the meta object for class '{@link generator.EnterResponse <em>Enter Response</em>}'.
@@ -13048,6 +13731,17 @@ public interface GeneratorPackage extends EPackage {
 	EReference getVisualization_Positions();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.Visualization#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see generator.Visualization#getID()
+	 * @see #getVisualization()
+	 * @generated
+	 */
+	EAttribute getVisualization_ID();
+
+	/**
 	 * Returns the meta object for class '{@link generator.VisualizationPosition <em>Visualization Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13067,38 +13761,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVisualizationPosition_ID();
-
-	/**
-	 * Returns the meta object for class '{@link generator.LegendSymbol <em>Legend Symbol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Legend Symbol</em>'.
-	 * @see generator.LegendSymbol
-	 * @generated
-	 */
-	EClass getLegendSymbol();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link generator.LegendSymbol#getImage <em>Image</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Image</em>'.
-	 * @see generator.LegendSymbol#getImage()
-	 * @see #getLegendSymbol()
-	 * @generated
-	 */
-	EReference getLegendSymbol_Image();
-
-	/**
-	 * Returns the meta object for the reference '{@link generator.LegendSymbol#getPosition <em>Position</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Position</em>'.
-	 * @see generator.LegendSymbol#getPosition()
-	 * @see #getLegendSymbol()
-	 * @generated
-	 */
-	EReference getLegendSymbol_Position();
 
 	/**
 	 * Returns the meta object for class '{@link generator.LegendText <em>Legend Text</em>}'.
@@ -13154,17 +13816,6 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getHistoryFact_Event();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.HistoryFact#getImage <em>Image</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Image</em>'.
-	 * @see generator.HistoryFact#getImage()
-	 * @see #getHistoryFact()
-	 * @generated
-	 */
-	EReference getHistoryFact_Image();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link generator.HistoryFact#getTime <em>Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13186,17 +13837,6 @@ public interface GeneratorPackage extends EPackage {
 	EClass getGeographyLegendFact();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link generator.GeographyLegendFact#getSymbol <em>Symbol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Symbol</em>'.
-	 * @see generator.GeographyLegendFact#getSymbol()
-	 * @see #getGeographyLegendFact()
-	 * @generated
-	 */
-	EReference getGeographyLegendFact_Symbol();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link generator.GeographyLegendFact#getLegend <em>Legend</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13206,6 +13846,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGeographyLegendFact_Legend();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.GeographyLegendFact#getSymbolPosition <em>Symbol Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Symbol Position</em>'.
+	 * @see generator.GeographyLegendFact#getSymbolPosition()
+	 * @see #getGeographyLegendFact()
+	 * @generated
+	 */
+	EReference getGeographyLegendFact_SymbolPosition();
 
 	/**
 	 * Returns the meta object for class '{@link generator.GeographyFact <em>Geography Fact</em>}'.
@@ -13774,27 +14425,6 @@ public interface GeneratorPackage extends EPackage {
 	EReference getVisualizationSolution_VisualizationPosition();
 
 	/**
-	 * Returns the meta object for class '{@link generator.MapQuestionableFact <em>Map Questionable Fact</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Map Questionable Fact</em>'.
-	 * @see generator.MapQuestionableFact
-	 * @generated
-	 */
-	EClass getMapQuestionableFact();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.MapQuestionableFact#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.MapQuestionableFact#getType()
-	 * @see #getMapQuestionableFact()
-	 * @generated
-	 */
-	EAttribute getMapQuestionableFact_Type();
-
-	/**
 	 * Returns the meta object for class '{@link generator.HGLevel <em>HG Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13921,6 +14551,219 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getHChronology_GraphicTask();
+
+	/**
+	 * Returns the meta object for class '{@link generator.MapQuestionableFact <em>Map Questionable Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Map Questionable Fact</em>'.
+	 * @see generator.MapQuestionableFact
+	 * @generated
+	 */
+	EClass getMapQuestionableFact();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MapQuestionableFact#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see generator.MapQuestionableFact#getType()
+	 * @see #getMapQuestionableFact()
+	 * @generated
+	 */
+	EAttribute getMapQuestionableFact_Type();
+
+	/**
+	 * Returns the meta object for class '{@link generator.JudoTechniqueFact <em>Judo Technique Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Judo Technique Fact</em>'.
+	 * @see generator.JudoTechniqueFact
+	 * @generated
+	 */
+	EClass getJudoTechniqueFact();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.JudoTechniqueFact#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.JudoTechniqueFact#getName()
+	 * @see #getJudoTechniqueFact()
+	 * @generated
+	 */
+	EAttribute getJudoTechniqueFact_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.JudoTechniqueFact#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see generator.JudoTechniqueFact#getDescription()
+	 * @see #getJudoTechniqueFact()
+	 * @generated
+	 */
+	EAttribute getJudoTechniqueFact_Description();
+
+	/**
+	 * Returns the meta object for class '{@link generator.ClassifyTechnique <em>Classify Technique</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Classify Technique</em>'.
+	 * @see generator.ClassifyTechnique
+	 * @generated
+	 */
+	EClass getClassifyTechnique();
+
+	/**
+	 * Returns the meta object for class '{@link generator.IdentifyTechnique <em>Identify Technique</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Identify Technique</em>'.
+	 * @see generator.IdentifyTechnique
+	 * @generated
+	 */
+	EClass getIdentifyTechnique();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.IdentifyTechnique#getNbMissingElements <em>Nb Missing Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
+	 * @see generator.IdentifyTechnique#getNbMissingElements()
+	 * @see #getIdentifyTechnique()
+	 * @generated
+	 */
+	EAttribute getIdentifyTechnique_NbMissingElements();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.IdentifyTechnique#isCheckOnLearnerAction <em>Check On Learner Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check On Learner Action</em>'.
+	 * @see generator.IdentifyTechnique#isCheckOnLearnerAction()
+	 * @see #getIdentifyTechnique()
+	 * @generated
+	 */
+	EAttribute getIdentifyTechnique_CheckOnLearnerAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.IdentifyTechnique#getMissing <em>Missing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Missing</em>'.
+	 * @see generator.IdentifyTechnique#getMissing()
+	 * @see #getIdentifyTechnique()
+	 * @generated
+	 */
+	EAttribute getIdentifyTechnique_Missing();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.IdentifyTechnique#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Source</em>'.
+	 * @see generator.IdentifyTechnique#getSource()
+	 * @see #getIdentifyTechnique()
+	 * @generated
+	 */
+	EAttribute getIdentifyTechnique_Source();
+
+	/**
+	 * Returns the meta object for class '{@link generator.JudoQuestionableTechniqueFact <em>Judo Questionable Technique Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Judo Questionable Technique Fact</em>'.
+	 * @see generator.JudoQuestionableTechniqueFact
+	 * @generated
+	 */
+	EClass getJudoQuestionableTechniqueFact();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.JudoQuestionableTechniqueFact#getSourceElementType <em>Source Element Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Source Element Type</em>'.
+	 * @see generator.JudoQuestionableTechniqueFact#getSourceElementType()
+	 * @see #getJudoQuestionableTechniqueFact()
+	 * @generated
+	 */
+	EAttribute getJudoQuestionableTechniqueFact_SourceElementType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.JudoQuestionableTechniqueFact#getMissingElement <em>Missing Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Missing Element</em>'.
+	 * @see generator.JudoQuestionableTechniqueFact#getMissingElement()
+	 * @see #getJudoQuestionableTechniqueFact()
+	 * @generated
+	 */
+	EAttribute getJudoQuestionableTechniqueFact_MissingElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.JudoQuestionableTechniqueFact#getSourceElement <em>Source Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Source Element</em>'.
+	 * @see generator.JudoQuestionableTechniqueFact#getSourceElement()
+	 * @see #getJudoQuestionableTechniqueFact()
+	 * @generated
+	 */
+	EAttribute getJudoQuestionableTechniqueFact_SourceElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.JudoQuestionableTechniqueFact#getMissingElementType <em>Missing Element Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Missing Element Type</em>'.
+	 * @see generator.JudoQuestionableTechniqueFact#getMissingElementType()
+	 * @see #getJudoQuestionableTechniqueFact()
+	 * @generated
+	 */
+	EAttribute getJudoQuestionableTechniqueFact_MissingElementType();
+
+	/**
+	 * Returns the meta object for class '{@link generator.JudoQuestionableClassifyFact <em>Judo Questionable Classify Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Judo Questionable Classify Fact</em>'.
+	 * @see generator.JudoQuestionableClassifyFact
+	 * @generated
+	 */
+	EClass getJudoQuestionableClassifyFact();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.JudoQuestionableClassifyFact#getCategory <em>Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Category</em>'.
+	 * @see generator.JudoQuestionableClassifyFact#getCategory()
+	 * @see #getJudoQuestionableClassifyFact()
+	 * @generated
+	 */
+	EAttribute getJudoQuestionableClassifyFact_Category();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link generator.JudoQuestionableClassifyFact#getTechniques <em>Techniques</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Techniques</em>'.
+	 * @see generator.JudoQuestionableClassifyFact#getTechniques()
+	 * @see #getJudoQuestionableClassifyFact()
+	 * @generated
+	 */
+	EAttribute getJudoQuestionableClassifyFact_Techniques();
+
+	/**
+	 * Returns the meta object for class '{@link generator.JudoLevel <em>Judo Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Judo Level</em>'.
+	 * @see generator.JudoLevel
+	 * @generated
+	 */
+	EClass getJudoLevel();
 
 	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
@@ -14103,6 +14946,16 @@ public interface GeneratorPackage extends EPackage {
 	EEnum getETimeTarget();
 
 	/**
+	 * Returns the meta object for enum '{@link generator.EJudoTarget <em>EJudo Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>EJudo Target</em>'.
+	 * @see generator.EJudoTarget
+	 * @generated
+	 */
+	EEnum getEJudoTarget();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14134,6 +14987,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ABSTRACT_FACT = eINSTANCE.getAbstractFact();
+
+		/**
+		 * The meta object literal for the '<em><b>Representation</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_FACT__REPRESENTATION = eINSTANCE.getAbstractFact_Representation();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.SetOfFactsImpl <em>Set Of Facts</em>}' class.
@@ -15023,20 +15884,20 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MULTIPLE_CHOICE__TYPE = eINSTANCE.getMultipleChoice_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Nb Bad Choices</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MULTIPLE_CHOICE__NB_BAD_CHOICES = eINSTANCE.getMultipleChoice_NbBadChoices();
-
-		/**
 		 * The meta object literal for the '<em><b>Nb Choices</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute MULTIPLE_CHOICE__NB_CHOICES = eINSTANCE.getMultipleChoice_NbChoices();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Bad Choices</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MULTIPLE_CHOICE__NB_BAD_CHOICES = eINSTANCE.getMultipleChoice_NbBadChoices();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.EnterResponseImpl <em>Enter Response</em>}' class.
@@ -17257,6 +18118,14 @@ public interface GeneratorPackage extends EPackage {
 		EReference VISUALIZATION__POSITIONS = eINSTANCE.getVisualization_Positions();
 
 		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VISUALIZATION__ID = eINSTANCE.getVisualization_ID();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.VisualizationPositionImpl <em>Visualization Position</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -17273,32 +18142,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VISUALIZATION_POSITION__ID = eINSTANCE.getVisualizationPosition_ID();
-
-		/**
-		 * The meta object literal for the '{@link generator.impl.LegendSymbolImpl <em>Legend Symbol</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.LegendSymbolImpl
-		 * @see generator.impl.GeneratorPackageImpl#getLegendSymbol()
-		 * @generated
-		 */
-		EClass LEGEND_SYMBOL = eINSTANCE.getLegendSymbol();
-
-		/**
-		 * The meta object literal for the '<em><b>Image</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LEGEND_SYMBOL__IMAGE = eINSTANCE.getLegendSymbol_Image();
-
-		/**
-		 * The meta object literal for the '<em><b>Position</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LEGEND_SYMBOL__POSITION = eINSTANCE.getLegendSymbol_Position();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.LegendTextImpl <em>Legend Text</em>}' class.
@@ -17345,14 +18188,6 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute HISTORY_FACT__EVENT = eINSTANCE.getHistoryFact_Event();
 
 		/**
-		 * The meta object literal for the '<em><b>Image</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference HISTORY_FACT__IMAGE = eINSTANCE.getHistoryFact_Image();
-
-		/**
 		 * The meta object literal for the '<em><b>Time</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -17371,20 +18206,20 @@ public interface GeneratorPackage extends EPackage {
 		EClass GEOGRAPHY_LEGEND_FACT = eINSTANCE.getGeographyLegendFact();
 
 		/**
-		 * The meta object literal for the '<em><b>Symbol</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GEOGRAPHY_LEGEND_FACT__SYMBOL = eINSTANCE.getGeographyLegendFact_Symbol();
-
-		/**
 		 * The meta object literal for the '<em><b>Legend</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference GEOGRAPHY_LEGEND_FACT__LEGEND = eINSTANCE.getGeographyLegendFact_Legend();
+
+		/**
+		 * The meta object literal for the '<em><b>Symbol Position</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GEOGRAPHY_LEGEND_FACT__SYMBOL_POSITION = eINSTANCE.getGeographyLegendFact_SymbolPosition();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.GeographyFactImpl <em>Geography Fact</em>}' class.
@@ -17845,24 +18680,6 @@ public interface GeneratorPackage extends EPackage {
 				.getVisualizationSolution_VisualizationPosition();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.MapQuestionableFactImpl <em>Map Questionable Fact</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see generator.impl.MapQuestionableFactImpl
-		 * @see generator.impl.GeneratorPackageImpl#getMapQuestionableFact()
-		 * @generated
-		 */
-		EClass MAP_QUESTIONABLE_FACT = eINSTANCE.getMapQuestionableFact();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MAP_QUESTIONABLE_FACT__TYPE = eINSTANCE.getMapQuestionableFact_Type();
-
-		/**
 		 * The meta object literal for the '{@link generator.impl.HGLevelImpl <em>HG Level</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -17968,6 +18785,184 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute HCHRONOLOGY__GRAPHIC_TASK = eINSTANCE.getHChronology_GraphicTask();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MapQuestionableFactImpl <em>Map Questionable Fact</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MapQuestionableFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMapQuestionableFact()
+		 * @generated
+		 */
+		EClass MAP_QUESTIONABLE_FACT = eINSTANCE.getMapQuestionableFact();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MAP_QUESTIONABLE_FACT__TYPE = eINSTANCE.getMapQuestionableFact_Type();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.JudoTechniqueFactImpl <em>Judo Technique Fact</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.JudoTechniqueFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getJudoTechniqueFact()
+		 * @generated
+		 */
+		EClass JUDO_TECHNIQUE_FACT = eINSTANCE.getJudoTechniqueFact();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_TECHNIQUE_FACT__NAME = eINSTANCE.getJudoTechniqueFact_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_TECHNIQUE_FACT__DESCRIPTION = eINSTANCE.getJudoTechniqueFact_Description();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.ClassifyTechniqueImpl <em>Classify Technique</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.ClassifyTechniqueImpl
+		 * @see generator.impl.GeneratorPackageImpl#getClassifyTechnique()
+		 * @generated
+		 */
+		EClass CLASSIFY_TECHNIQUE = eINSTANCE.getClassifyTechnique();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.IdentifyTechniqueImpl <em>Identify Technique</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.IdentifyTechniqueImpl
+		 * @see generator.impl.GeneratorPackageImpl#getIdentifyTechnique()
+		 * @generated
+		 */
+		EClass IDENTIFY_TECHNIQUE = eINSTANCE.getIdentifyTechnique();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IDENTIFY_TECHNIQUE__NB_MISSING_ELEMENTS = eINSTANCE.getIdentifyTechnique_NbMissingElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Check On Learner Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IDENTIFY_TECHNIQUE__CHECK_ON_LEARNER_ACTION = eINSTANCE.getIdentifyTechnique_CheckOnLearnerAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Missing</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IDENTIFY_TECHNIQUE__MISSING = eINSTANCE.getIdentifyTechnique_Missing();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IDENTIFY_TECHNIQUE__SOURCE = eINSTANCE.getIdentifyTechnique_Source();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.JudoQuestionableTechniqueFactImpl <em>Judo Questionable Technique Fact</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.JudoQuestionableTechniqueFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getJudoQuestionableTechniqueFact()
+		 * @generated
+		 */
+		EClass JUDO_QUESTIONABLE_TECHNIQUE_FACT = eINSTANCE.getJudoQuestionableTechniqueFact();
+
+		/**
+		 * The meta object literal for the '<em><b>Source Element Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_QUESTIONABLE_TECHNIQUE_FACT__SOURCE_ELEMENT_TYPE = eINSTANCE
+				.getJudoQuestionableTechniqueFact_SourceElementType();
+
+		/**
+		 * The meta object literal for the '<em><b>Missing Element</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_QUESTIONABLE_TECHNIQUE_FACT__MISSING_ELEMENT = eINSTANCE
+				.getJudoQuestionableTechniqueFact_MissingElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Source Element</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_QUESTIONABLE_TECHNIQUE_FACT__SOURCE_ELEMENT = eINSTANCE
+				.getJudoQuestionableTechniqueFact_SourceElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Missing Element Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_QUESTIONABLE_TECHNIQUE_FACT__MISSING_ELEMENT_TYPE = eINSTANCE
+				.getJudoQuestionableTechniqueFact_MissingElementType();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.JudoQuestionableClassifyFactImpl <em>Judo Questionable Classify Fact</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.JudoQuestionableClassifyFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getJudoQuestionableClassifyFact()
+		 * @generated
+		 */
+		EClass JUDO_QUESTIONABLE_CLASSIFY_FACT = eINSTANCE.getJudoQuestionableClassifyFact();
+
+		/**
+		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_QUESTIONABLE_CLASSIFY_FACT__CATEGORY = eINSTANCE.getJudoQuestionableClassifyFact_Category();
+
+		/**
+		 * The meta object literal for the '<em><b>Techniques</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_QUESTIONABLE_CLASSIFY_FACT__TECHNIQUES = eINSTANCE.getJudoQuestionableClassifyFact_Techniques();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.JudoLevelImpl <em>Judo Level</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.JudoLevelImpl
+		 * @see generator.impl.GeneratorPackageImpl#getJudoLevel()
+		 * @generated
+		 */
+		EClass JUDO_LEVEL = eINSTANCE.getJudoLevel();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.
@@ -18148,6 +19143,16 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ETIME_TARGET = eINSTANCE.getETimeTarget();
+
+		/**
+		 * The meta object literal for the '{@link generator.EJudoTarget <em>EJudo Target</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.EJudoTarget
+		 * @see generator.impl.GeneratorPackageImpl#getEJudoTarget()
+		 * @generated
+		 */
+		EEnum EJUDO_TARGET = eINSTANCE.getEJudoTarget();
 
 	}
 

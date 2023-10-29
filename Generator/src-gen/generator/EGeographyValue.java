@@ -47,10 +47,11 @@ public enum EGeographyValue implements Enumerator {
 	 * @ordered
 	 */
 	REGIONS(1, "REGIONS", "REGIONS"),
+
 	/**
 	 * The '<em><b>NONE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #NONE_VALUE
 	 * @generated
 	 * @ordered

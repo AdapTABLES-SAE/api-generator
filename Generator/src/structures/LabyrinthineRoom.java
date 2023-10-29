@@ -12,12 +12,13 @@ import managers.GridManager;
 
 /**
  * Structure that only contains a Room (RoomImpl) and methods necessary to build Labyrinthine Dungeons. 
- * @author Bérénice LEMOINE
+ * @author Bï¿½rï¿½nice LEMOINE
  *
  */
 public class LabyrinthineRoom {
 
 	private Room room;
+	
 	
 	public LabyrinthineRoom(Room room) {
 		this.room = room;

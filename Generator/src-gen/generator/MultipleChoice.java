@@ -47,28 +47,6 @@ public interface MultipleChoice extends ResponseModality {
 	void setType(EModality value);
 
 	/**
-	 * Returns the value of the '<em><b>Nb Bad Choices</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nb Bad Choices</em>' attribute.
-	 * @see #setNbBadChoices(int)
-	 * @see generator.GeneratorPackage#getMultipleChoice_NbBadChoices()
-	 * @model
-	 * @generated
-	 */
-	int getNbBadChoices();
-
-	/**
-	 * Sets the value of the '{@link generator.MultipleChoice#getNbBadChoices <em>Nb Bad Choices</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nb Bad Choices</em>' attribute.
-	 * @see #getNbBadChoices()
-	 * @generated
-	 */
-	void setNbBadChoices(int value);
-
-	/**
 	 * Returns the value of the '<em><b>Nb Choices</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,5 +67,27 @@ public interface MultipleChoice extends ResponseModality {
 	 * @generated
 	 */
 	void setNbChoices(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Nb Bad Choices</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nb Bad Choices</em>' attribute.
+	 * @see #setNbBadChoices(int)
+	 * @see generator.GeneratorPackage#getMultipleChoice_NbBadChoices()
+	 * @model
+	 * @generated
+	 */
+	int getNbBadChoices();
+
+	/**
+	 * Sets the value of the '{@link generator.MultipleChoice#getNbBadChoices <em>Nb Bad Choices</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nb Bad Choices</em>' attribute.
+	 * @see #getNbBadChoices()
+	 * @generated
+	 */
+	void setNbBadChoices(int value);
 
 } // MultipleChoice

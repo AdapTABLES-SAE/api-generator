@@ -181,5 +181,4 @@ public class VisualizationPositionImpl extends MinimalEObjectImpl.Container impl
 		return Objects.equals(id, other.id);
 	}
 
-	
 } //VisualizationPositionImpl

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator:Knowledge xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" name="Judo Techniques">
+  <knowledgefacts name="OSAEKOMI-WAZA (Techniques d'immobilisation)">
+    <facts xsi:type="generator:JudoTechniqueFact" name="Kami-Shiho-Gatame" description="contrôle des 4 points par-dessus">
+      <representation ID="kami-shiho-gatame"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ushiro-Gesa-Gatame" description="contrôle arrière par le travers">
+      <representation ID="ushiro-gesa-gatame"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Makura-Gesa-Gatame" description="contrôle en oreiller par le travers">
+      <representation ID="makura-gesa-gatame"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Yoko-Shiho-Gatame" description="contrôle latéral des 4 points">
+      <representation ID="yoko-shiho-gatame"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Tate-Shiho-Gatame" description="contrôle longitudinal des 4 points">
+      <representation ID="tate-shiho-gatame"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Kata-Gatame" description="contrôle par l'épaule">
+      <representation ID="kata-gatame"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Hon-Gesa-Gatame" description="contrôle fondamental par le travers ">
+      <representation ID="kamon-gesa-gatame"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Kuzure-Gesa-Gatame" description="variante du contrôle fondamental par le travers">
+      <representation ID="kusure-gesa-gatame"/>
+    </facts>
+  </knowledgefacts>
+  <knowledgefacts name="SHIME-WAZA (Techniques d'étranglement)">
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ashi-Gatame-Jime" description="étranglement avec contrôle des jambes ">
+      <representation ID="ashi-gatame-jime"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Gyaku-Juji-Jime" description="étranglement en croix, les deux paumes vers le haut">
+      <representation ID="gyaku-juji-jime"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Hadaka-Jime" description="étranglement à mains nues">
+      <representation ID="hadaka-jime"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Kata-Ha-Jime" description="étranglement en contrôlant d'un côté">
+      <representation ID="kata-ha-jime"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Kata-Te-Jime" description="étranglement avec une main">
+      <representation ID="kata-te-jime"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Morote-Jime" description="étranglement avec deux mains">
+      <representation ID="morote-jime"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Nami-Juji-Jime" description="étranglement en croix, les mains en position normale">
+      <representation ID="nami-juji-jime"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Okuri-Eri-Jime" description="étranglement en rapprochant les deux revers">
+      <representation ID="okuri-eri-jime"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Sankaku-Jime" description="étranglement en triangle">
+      <representation ID="sankaku-jime"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Sode-Guruma-Jime" description="étranglement par enroulement du revers">
+      <representation ID="sode-guruma-jime"/>
+    </facts>
+  </knowledgefacts>
+  <knowledgefacts name="KANSETSU-WAZA (Techniques de clés)">
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ude-Garami" description="Clé sur bras lié">
+      <representation ID="ude-garami"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ude-Hishigi-Ashi-Gatame" description="clé au coude avec la jambe">
+      <representation ID="ashi-gatame"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ude-Hishigi-Hara-Gatame" description="clé au coude avec le ventre">
+      <representation ID="hara-gatame"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ude-Hishigi-Hiza-Gatame" description="clé au coude avec le genou">
+      <representation ID="hiza-gatame"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ude-Hishigi-Juji-Gatame" description="clé au coude bras en croix">
+      <representation ID="juji-gatame"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ude-Hishigi-Ude-Gatame" description="clé au coude sur bras tendu">
+      <representation ID="ude-gatame"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ude-Hishgi-Waki-Gatame" description=" clé au coude avec l'aisselle">
+      <representation ID="waki-gatame"/>
+    </facts>
+  </knowledgefacts>
+  <knowledgefacts name="TE-WAZA (Techniques de main)">
+    <facts xsi:type="generator:JudoTechniqueFact" name="Eri-Seoi-Nage" description="projection d'épaule par le revers">
+      <representation ID="eri-seoi-nage"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ippon-Seoi-Nage" description="projection par-dessus l'épaule">
+      <representation ID="ippon-seoi-nage"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Kata-Guruma" description="roue autour des épaules">
+      <representation ID="kata-guruma"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Kuchiki-Daoshi" description="projection en prenant la jambe au niveau du genou">
+      <representation ID="kuchiki-daoshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Morote-Gari" description="fauchage des jambes par les deux mains">
+      <representation ID="morote-gari"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Morote-Seoi-Nage" description="projection d'épaule par deux mains">
+      <representation ID="morote-seoi-nage"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Sukui-Nage" description="projection en cuillère">
+      <representation ID="sukui-nage"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Tai-Otoshi" description="renversement du corps">
+      <representation ID="tai-otoshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Te-Guruma" description="roue autour des mains">
+      <representation ID="te-guruma"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Uki-Otoshi" description="lancement flottant">
+      <representation ID="uki-otoshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Tsukkomi-Jime" description="étranglement en poussant">
+      <representation ID="tsukkomi-jime"/>
+    </facts>
+  </knowledgefacts>
+  <knowledgefacts name="KOSHI-WAZA (Techniques de hanche)">
+    <facts xsi:type="generator:JudoTechniqueFact" name="Hane-Goshi" description="hanche percutée">
+      <representation ID="hane-goshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Harai-Goshi" description="hanche fauchée">
+      <representation ID="harai-goshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Koshi-Guruma" description="roue autour des hanches">
+      <representation ID="koshi-guruma"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Kubi-Nage" description="projection par le cou">
+      <representation ID="kubi-nage"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="O-Goshi" description="grande projection de hanche">
+      <representation ID="o-goshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Tsuri-Komi-Goshi" description="hanche pêchée">
+      <representation ID="tsuri-komi-goshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Sode-Tsuri-Komi-Goshi" description="hanche pêchée par la manche">
+      <representation ID="sode-tsuri-komi-goshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Uki-Goshi" description="hanche flottée">
+      <representation ID="uki-goshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ushiro-Goshi" description="projection de hanche sur l'arrière">
+      <representation ID="ushiro-goshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Utsuri-Goshi" description="projection de hanche vers l'avant en soulevant ">
+      <representation ID="utsuri-goshi"/>
+    </facts>
+  </knowledgefacts>
+  <knowledgefacts name="ASHI-WAZA (Techniques de jambe)">
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ashi-Guruma" description="roue autour de la jambe">
+      <representation ID="ashi-guruma"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="De-Ashi-Barai " description="balayage du pied qui avance">
+      <representation ID="de-ashi-barai"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Harai-Tsuri-Komi-Ashi" description="balayage du pied en pêchant">
+      <representation ID="harai-tsuri-komi-ashi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Hiza-Guruma" description="roue autour du genou">
+      <representation ID="hiza-guruma"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ko-Soto-Gake" description="petit accrochage extérieur">
+      <representation ID="ko-soto-gake"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ko-Soto-Gari" description="petit fauchage extérieur">
+      <representation ID="ko-soto-gari"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ko-Uchi-Gari" description="petit fauchage intérieur">
+      <representation ID="ko-uchi-gari"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="O-Guruma" description="grande roue">
+      <representation ID="o-guruma"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="O-Soto-Gari" description="grand fauchage extérieur">
+      <representation ID="o-soto-gari"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="O-Soto-Guruma" description="grande roue extérieur">
+      <representation ID="o-soto-guruma"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="O-Soto-Otoshi" description="grande projection extérieur">
+      <representation ID="o-soto-otoshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="O-Uchi-Gari" description="grand fauchage intérieur">
+      <representation ID="o-uchi-gari"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Okuri-Ashi-Barai" description="balayage en rapprochant les deux pieds">
+      <representation ID="okuri-ashi-barai"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Sasae-Tsuri-Komi-Ashi" description="blocage du pied en pêchant ">
+      <representation ID="sasae-tsuri-komi-ashi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Tsubame-Gaeshi" description="e vol de l'hirondelle">
+      <representation ID="tsubame-gaeshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Uchi-Mata" description="fauchage par l'intérieur de la cuisse">
+      <representation ID="uchi-mata"/>
+    </facts>
+  </knowledgefacts>
+  <knowledgefacts name="MA-SUTEMI-WAZA (Techniques de sacrifice de face)">
+    <facts xsi:type="generator:JudoTechniqueFact" name="Sumi-Gaeshi" description="renversement dans l'angle">
+      <representation ID="sumi-gaeshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Tomoe-Nage" description="projection en cercle">
+      <representation ID="tomoe-nage"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Ura-Nage" description="projection en arrière">
+      <representation ID="ura-nage"/>
+    </facts>
+  </knowledgefacts>
+  <knowledgefacts name="MA-SUTEMI-WAZA (Techniques de sacrifice de face)">
+    <facts xsi:type="generator:JudoTechniqueFact" name="Soto-Makikomi" description="enroulement extérieur">
+      <representation ID="soto-makikomi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Tana-Otoshi" description="chute dans la vallée">
+      <representation ID="tana-otoshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Uki-Waza" description="technique flottante">
+      <representation ID="uki-waza"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Yoko-Guruma" description="enroulement de côté">
+      <representation ID="yoko-guruma"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Yoko-Otoshi" description="renversement latéral">
+      <representation ID="yoko-otoshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Yoko-Tomoe-Nage" description="projection en cercle de côté">
+      <representation ID="yoko-tomoe-nage"/>
+    </facts>
+    <facts xsi:type="generator:JudoTechniqueFact" name="Yoko-Wakare" description="séparation de côté">
+      <representation ID="yoko-wakare"/>
+    </facts>
+  </knowledgefacts>
+</generator:Knowledge>

@@ -24,7 +24,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface DateQuestionableFact extends QuestionableFact {
-
 	/**
 	 * Returns the value of the '<em><b>Source Element</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -108,4 +107,5 @@ public interface DateQuestionableFact extends QuestionableFact {
 	 * @generated
 	 */
 	void setMissingElementsType(EHistoryTarget value);
+
 } // DateQuestionableFact

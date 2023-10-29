@@ -1,6 +1,7 @@
 package managers;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +25,7 @@ import generator.SmallRoomType;
 import generator.StatementElementType;
 import generator.Structure;
 import generator.Value;
+import generators.ALGAGenerator;
 
 public class GameElementsManager {
 	
@@ -205,7 +207,6 @@ public class GameElementsManager {
 		boolean compatible = true;
 		
 		Map<ElementSize, Map<Ability, Integer>> numberOfElementsPerSize = computesNumberOfElementsPerSize(elementsToQuantity);
-		
 		for (ElementSize size : numberOfElementsPerSize.keySet()) {
 			List<Position> roomPositionOfSize = getRoomTypePositionsOfSize(roomtype, size);
 			if(roomPositionOfSize.size() < sumOfElementOfSize(numberOfElementsPerSize.get(size))) {
@@ -312,9 +313,31 @@ public class GameElementsManager {
 		
 		//System.err.println("ALLOWED "+roomTypes);
 		if(roomTypes.isEmpty()) { return null; }
-		RoomType rt = roomTypes.get(new Random().nextInt(roomTypes.size()));
+		RoomType rt;
+		if(ALGAGenerator.MAXIMIZE_ROOMTYPE_ACCESS) {
+			rt = getRoomTypeWithMaximumAccess(roomTypes);
+		} else {
+			rt = roomTypes.get(new Random().nextInt(roomTypes.size()));
+		}
+		
+		
 		//System.err.println("SELECTED RT "+rt.getName());
 		return rt; 
+	}
+	
+	private RoomType getRoomTypeWithMaximumAccess(List<RoomType> roomtypes) {
+		Map<Integer, List<RoomType>> accessRoomtypes = new HashMap<>();
+		for(int i = 0; i < roomtypes.size(); i++) {
+			List<RoomType> roomtypes_ = new ArrayList<>();
+			if(accessRoomtypes.containsKey(roomtypes.get(i).getDirections().size())) {
+				roomtypes_.addAll(accessRoomtypes.get(roomtypes.get(i).getDirections().size()));
+			}
+			accessRoomtypes.put(roomtypes.get(i).getDirections().size(), roomtypes);
+		}
+		Integer max = Collections.max(accessRoomtypes.keySet());
+		
+		return accessRoomtypes.get(max).get(new Random().nextInt(accessRoomtypes.get(max).size()));
+		
 	}
 	
 	private boolean roomTypeHasCompatibleAccesses(Directions entry, Directions exit, RoomType roomType) {

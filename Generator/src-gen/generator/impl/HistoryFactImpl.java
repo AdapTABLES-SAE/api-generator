@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import generator.GeneratorPackage;
 import generator.HistoryFact;
-import generator.Image;
 import generator.Time;
 
 /**
@@ -22,7 +21,6 @@ import generator.Time;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.HistoryFactImpl#getEvent <em>Event</em>}</li>
- *   <li>{@link generator.impl.HistoryFactImpl#getImage <em>Image</em>}</li>
  *   <li>{@link generator.impl.HistoryFactImpl#getTime <em>Time</em>}</li>
  * </ul>
  *
@@ -48,16 +46,6 @@ public class HistoryFactImpl extends AbstractFactImpl implements HistoryFact {
 	 * @ordered
 	 */
 	protected String event = EVENT_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getImage() <em>Image</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImage()
-	 * @generated
-	 * @ordered
-	 */
-	protected Image image;
 
 	/**
 	 * The cached value of the '{@link #getTime() <em>Time</em>}' containment reference.
@@ -108,56 +96,6 @@ public class HistoryFactImpl extends AbstractFactImpl implements HistoryFact {
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.HISTORY_FACT__EVENT, oldEvent,
 					event));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Image getImage() {
-		return image;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetImage(Image newImage, NotificationChain msgs) {
-		Image oldImage = image;
-		image = newImage;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.HISTORY_FACT__IMAGE, oldImage, newImage);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setImage(Image newImage) {
-		if (newImage != image) {
-			NotificationChain msgs = null;
-			if (image != null)
-				msgs = ((InternalEObject) image).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.HISTORY_FACT__IMAGE, null, msgs);
-			if (newImage != null)
-				msgs = ((InternalEObject) newImage).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GeneratorPackage.HISTORY_FACT__IMAGE, null, msgs);
-			msgs = basicSetImage(newImage, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.HISTORY_FACT__IMAGE, newImage,
-					newImage));
 	}
 
 	/**
@@ -218,8 +156,6 @@ public class HistoryFactImpl extends AbstractFactImpl implements HistoryFact {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.HISTORY_FACT__IMAGE:
-			return basicSetImage(null, msgs);
 		case GeneratorPackage.HISTORY_FACT__TIME:
 			return basicSetTime(null, msgs);
 		}
@@ -236,8 +172,6 @@ public class HistoryFactImpl extends AbstractFactImpl implements HistoryFact {
 		switch (featureID) {
 		case GeneratorPackage.HISTORY_FACT__EVENT:
 			return getEvent();
-		case GeneratorPackage.HISTORY_FACT__IMAGE:
-			return getImage();
 		case GeneratorPackage.HISTORY_FACT__TIME:
 			return getTime();
 		}
@@ -254,9 +188,6 @@ public class HistoryFactImpl extends AbstractFactImpl implements HistoryFact {
 		switch (featureID) {
 		case GeneratorPackage.HISTORY_FACT__EVENT:
 			setEvent((String) newValue);
-			return;
-		case GeneratorPackage.HISTORY_FACT__IMAGE:
-			setImage((Image) newValue);
 			return;
 		case GeneratorPackage.HISTORY_FACT__TIME:
 			setTime((Time) newValue);
@@ -276,9 +207,6 @@ public class HistoryFactImpl extends AbstractFactImpl implements HistoryFact {
 		case GeneratorPackage.HISTORY_FACT__EVENT:
 			setEvent(EVENT_EDEFAULT);
 			return;
-		case GeneratorPackage.HISTORY_FACT__IMAGE:
-			setImage((Image) null);
-			return;
 		case GeneratorPackage.HISTORY_FACT__TIME:
 			setTime((Time) null);
 			return;
@@ -296,8 +224,6 @@ public class HistoryFactImpl extends AbstractFactImpl implements HistoryFact {
 		switch (featureID) {
 		case GeneratorPackage.HISTORY_FACT__EVENT:
 			return EVENT_EDEFAULT == null ? event != null : !EVENT_EDEFAULT.equals(event);
-		case GeneratorPackage.HISTORY_FACT__IMAGE:
-			return image != null;
 		case GeneratorPackage.HISTORY_FACT__TIME:
 			return time != null;
 		}

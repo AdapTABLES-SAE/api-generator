@@ -557,11 +557,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseLegendSymbol(LegendSymbol object) {
-			return createLegendSymbolAdapter();
-		}
-
-		@Override
 		public Adapter caseLegendText(LegendText object) {
 			return createLegendTextAdapter();
 		}
@@ -674,6 +669,36 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseMapQuestionableFact(MapQuestionableFact object) {
 			return createMapQuestionableFactAdapter();
+		}
+
+		@Override
+		public Adapter caseJudoTechniqueFact(JudoTechniqueFact object) {
+			return createJudoTechniqueFactAdapter();
+		}
+
+		@Override
+		public Adapter caseClassifyTechnique(ClassifyTechnique object) {
+			return createClassifyTechniqueAdapter();
+		}
+
+		@Override
+		public Adapter caseIdentifyTechnique(IdentifyTechnique object) {
+			return createIdentifyTechniqueAdapter();
+		}
+
+		@Override
+		public Adapter caseJudoQuestionableTechniqueFact(JudoQuestionableTechniqueFact object) {
+			return createJudoQuestionableTechniqueFactAdapter();
+		}
+
+		@Override
+		public Adapter caseJudoQuestionableClassifyFact(JudoQuestionableClassifyFact object) {
+			return createJudoQuestionableClassifyFactAdapter();
+		}
+
+		@Override
+		public Adapter caseJudoLevel(JudoLevel object) {
+			return createJudoLevelAdapter();
 		}
 
 		@Override
@@ -2068,20 +2093,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.LegendSymbol <em>Legend Symbol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see generator.LegendSymbol
-	 * @generated
-	 */
-	public Adapter createLegendSymbolAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link generator.LegendText <em>Legend Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2344,6 +2355,90 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMapQuestionableFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.JudoTechniqueFact <em>Judo Technique Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.JudoTechniqueFact
+	 * @generated
+	 */
+	public Adapter createJudoTechniqueFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.ClassifyTechnique <em>Classify Technique</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.ClassifyTechnique
+	 * @generated
+	 */
+	public Adapter createClassifyTechniqueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.IdentifyTechnique <em>Identify Technique</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.IdentifyTechnique
+	 * @generated
+	 */
+	public Adapter createIdentifyTechniqueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.JudoQuestionableTechniqueFact <em>Judo Questionable Technique Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.JudoQuestionableTechniqueFact
+	 * @generated
+	 */
+	public Adapter createJudoQuestionableTechniqueFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.JudoQuestionableClassifyFact <em>Judo Questionable Classify Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.JudoQuestionableClassifyFact
+	 * @generated
+	 */
+	public Adapter createJudoQuestionableClassifyFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.JudoLevel <em>Judo Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.JudoLevel
+	 * @generated
+	 */
+	public Adapter createJudoLevelAdapter() {
 		return null;
 	}
 

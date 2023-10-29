@@ -790,6 +790,43 @@
       <directions>NORTH</directions>
       <directions>WEST</directions>
     </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoom12">
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          ID="POS3"/>
+      <elementPositions
+          ID="POS4"/>
+      <elementPositions
+          ID="POS5"/>
+      <elementPositions
+          ID="POS6"/>
+      <elementPositions
+          size="LARGE"
+          ID="POSL1"/>
+      <elementPositions
+          size="LARGE"
+          ID="POSL2"/>
+      <elementPositions
+          size="LARGE"
+          ID="POSL3"/>
+      <elementPositions
+          ID="POS7"/>
+      <elementPositions
+          ID="POS8"/>
+      <elementPositions
+          ID="POS9"/>
+      <elementPositions
+          ID="POS10"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
   </roomtypes>
   <levelsDifficultyProgress>
     <cursesAvailabilities

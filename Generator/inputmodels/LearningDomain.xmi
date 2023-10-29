@@ -1581,6 +1581,7 @@
           ID="HG_O1_L1">
         <tasks
             xsi:type="generator:GLocate"
+            percentOfApparition="15"
             ID="HG_O1_L1_T1"
             maxTime="30"
             nbExpectedAnswers="18">
@@ -1590,6 +1591,7 @@
         </tasks>
         <tasks
             xsi:type="generator:GLocate"
+            percentOfApparition="10"
             ID="HG_O1_L1_T2"
             maxTime="30"
             nbExpectedAnswers="18">
@@ -1598,7 +1600,7 @@
         </tasks>
         <tasks
             xsi:type="generator:HChronology"
-            percentOfApparition="100"
+            percentOfApparition="15"
             ID="HG_O1_L1_T3"
             nbFacts="3"
             checkOnLearnerAction="false"
@@ -1609,6 +1611,7 @@
         </tasks>
         <tasks
             xsi:type="generator:HAssociation"
+            percentOfApparition="10"
             ID="HG_O1_L1_T4"
             nbFacts="2"
             target="PERIOD">
@@ -1617,6 +1620,7 @@
         </tasks>
         <tasks
             xsi:type="generator:HAssociation"
+            percentOfApparition="10"
             ID="HG_O1_L1_T5"
             nbFacts="2"
             target="DATE">
@@ -1625,6 +1629,7 @@
         </tasks>
         <tasks
             xsi:type="generator:HAssociation"
+            percentOfApparition="10"
             ID="HG_O1_L1_T6"
             nbFacts="2"
             target="MIX">
@@ -1633,6 +1638,7 @@
         </tasks>
         <tasks
             xsi:type="generator:HAssociation"
+            percentOfApparition="10"
             ID="HG_O1_L1_T7"
             nbFacts="2"
             source="IMAGE"
@@ -1642,12 +1648,20 @@
         </tasks>
         <tasks
             xsi:type="generator:HAssociation"
+            percentOfApparition="10"
             ID="HG_O1_L1_T8"
             nbFacts="2"
             missing="IMAGE">
           <responseModality
               xsi:type="generator:MultipleChoice"/>
         </tasks>
+        <tasks
+            xsi:type="generator:HChronology"
+            percentOfApparition="10"
+            ID="HG_O1_L1_T9"
+            nbFacts="3"
+            checkOnLearnerAction="false"
+            mixDatePeriod="true"/>
         <completionCriteria/>
       </levels>
       <setoffacts
@@ -1657,5 +1671,69 @@
     </objectives>
     <knowledge
         href="HistoryGeographyFacts.xmi#/"/>
+  </learningpaths>
+  <learningpaths
+      name="PATH_JUDO_BLEMOINE"
+      ID="PATH_JUDO_BLEMOINE">
+    <objectives
+        ID="JUDO_O1"
+        name="Judo Technique O1">
+      <levels
+          xsi:type="generator:JudoLevel"
+          ID="JUDO_O1_L1">
+        <tasks
+            xsi:type="generator:IdentifyTechnique"
+            percentOfApparition="50"
+            nbConsecutiveSuccess="1"
+            ID="JUDO_O1_L1_T1"
+            checkOnLearnerAction="false">
+          <responseModality
+              xsi:type="generator:MultipleChoice"
+              nbChoices="3"
+              nbBadChoices="2"/>
+        </tasks>
+        <tasks
+            xsi:type="generator:IdentifyTechnique"
+            percentOfApparition="25"
+            nbConsecutiveSuccess="1"
+            ID="JUDO_O1_L1_T2"
+            nbFacts="3"
+            checkOnLearnerAction="false"
+            missing="DESCRIPTION">
+          <responseModality
+              xsi:type="generator:MultipleChoice"
+              nbChoices="1"/>
+        </tasks>
+        <tasks
+            xsi:type="generator:ClassifyTechnique"
+            percentOfApparition="25"
+            nbConsecutiveSuccess="1"
+            ID="JUDO_O1_L1_T3">
+          <responseModality
+              xsi:type="generator:MultipleChoice"
+              nbChoices="5"
+              nbBadChoices="2"/>
+        </tasks>
+        <completionCriteria/>
+      </levels>
+      <setoffacts
+          href="JudoFacts.xmi#//@knowledgefacts.0"/>
+      <setoffacts
+          href="JudoFacts.xmi#//@knowledgefacts.1"/>
+      <setoffacts
+          href="JudoFacts.xmi#//@knowledgefacts.2"/>
+      <setoffacts
+          href="JudoFacts.xmi#//@knowledgefacts.3"/>
+      <setoffacts
+          href="JudoFacts.xmi#//@knowledgefacts.4"/>
+      <setoffacts
+          href="JudoFacts.xmi#//@knowledgefacts.5"/>
+      <setoffacts
+          href="JudoFacts.xmi#//@knowledgefacts.6"/>
+      <setoffacts
+          href="JudoFacts.xmi#//@knowledgefacts.7"/>
+    </objectives>
+    <knowledge
+        href="JudoFacts.xmi#/"/>
   </learningpaths>
 </generator:LearningDomain>

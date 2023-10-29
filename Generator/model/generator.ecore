@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="generator" nsURI="http://www.example.org/generator" nsPrefix="generator">
-  <eClassifiers xsi:type="ecore:EClass" name="AbstractFact" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractFact" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="representation" eType="#//Image"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SetOfFacts">
     <eStructuralFeatures xsi:type="ecore:EReference" name="facts" upperBound="-1"
         eType="#//AbstractFact" containment="true"/>
@@ -687,19 +690,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Visualization" eSuperTypes="#//Image">
+  <eClassifiers xsi:type="ecore:EClass" name="Visualization">
     <eStructuralFeatures xsi:type="ecore:EReference" name="positions" upperBound="-1"
         eType="#//VisualizationPosition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VisualizationPosition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LegendSymbol">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="image" lowerBound="1" eType="#//Image"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
-        eType="#//VisualizationPosition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LegendText">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -708,16 +707,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HistoryFact" eSuperTypes="#//AbstractFact">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="image" eType="#//Image"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="time" lowerBound="1" eType="#//Time"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeographyLegendFact" eSuperTypes="#//AbstractFact">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="symbol" lowerBound="1"
-        eType="#//LegendSymbol" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="legend" lowerBound="1"
         eType="#//LegendText" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="symbolPosition" lowerBound="1"
+        eType="#//VisualizationPosition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeographyFact" eSuperTypes="#//AbstractFact">
     <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
@@ -853,4 +850,35 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EGeographyValue"
         defaultValueLiteral="NONE"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JudoTechniqueFact" eSuperTypes="#//AbstractFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassifyTechnique" eSuperTypes="#//MembershipIDTask"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IdentifyTechnique" eSuperTypes="#//CompletionTask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbMissingElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" transient="true" defaultValueLiteral="1" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="missing" eType="#//EJudoTarget"
+        defaultValueLiteral="TECHNIQUE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="#//EJudoTarget"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JudoQuestionableTechniqueFact" eSuperTypes="#//QuestionableFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceElementType" eType="#//EJudoTarget"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="missingElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="missingElementType" eType="#//EJudoTarget"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JudoQuestionableClassifyFact" eSuperTypes="#//QuestionableFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="techniques" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EJudoTarget">
+    <eLiterals name="NAME"/>
+    <eLiterals name="DESCRIPTION"/>
+    <eLiterals name="TECHNIQUE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JudoLevel" eSuperTypes="#//Level"/>
 </ecore:EPackage>

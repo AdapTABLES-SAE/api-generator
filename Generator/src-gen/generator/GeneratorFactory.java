@@ -778,15 +778,6 @@ public interface GeneratorFactory extends EFactory {
 	VisualizationPosition createVisualizationPosition();
 
 	/**
-	 * Returns a new object of class '<em>Legend Symbol</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Legend Symbol</em>'.
-	 * @generated
-	 */
-	LegendSymbol createLegendSymbol();
-
-	/**
 	 * Returns a new object of class '<em>Legend Text</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -913,15 +904,6 @@ public interface GeneratorFactory extends EFactory {
 	VisualizationSolution createVisualizationSolution();
 
 	/**
-	 * Returns a new object of class '<em>Map Questionable Fact</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map Questionable Fact</em>'.
-	 * @generated
-	 */
-	MapQuestionableFact createMapQuestionableFact();
-
-	/**
 	 * Returns a new object of class '<em>HG Level</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -956,6 +938,69 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	HChronology createHChronology();
+
+	/**
+	 * Returns a new object of class '<em>Map Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Map Questionable Fact</em>'.
+	 * @generated
+	 */
+	MapQuestionableFact createMapQuestionableFact();
+
+	/**
+	 * Returns a new object of class '<em>Judo Technique Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Judo Technique Fact</em>'.
+	 * @generated
+	 */
+	JudoTechniqueFact createJudoTechniqueFact();
+
+	/**
+	 * Returns a new object of class '<em>Classify Technique</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Classify Technique</em>'.
+	 * @generated
+	 */
+	ClassifyTechnique createClassifyTechnique();
+
+	/**
+	 * Returns a new object of class '<em>Identify Technique</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Identify Technique</em>'.
+	 * @generated
+	 */
+	IdentifyTechnique createIdentifyTechnique();
+
+	/**
+	 * Returns a new object of class '<em>Judo Questionable Technique Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Judo Questionable Technique Fact</em>'.
+	 * @generated
+	 */
+	JudoQuestionableTechniqueFact createJudoQuestionableTechniqueFact();
+
+	/**
+	 * Returns a new object of class '<em>Judo Questionable Classify Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Judo Questionable Classify Fact</em>'.
+	 * @generated
+	 */
+	JudoQuestionableClassifyFact createJudoQuestionableClassifyFact();
+
+	/**
+	 * Returns a new object of class '<em>Judo Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Judo Level</em>'.
+	 * @generated
+	 */
+	JudoLevel createJudoLevel();
 
 	/**
 	 * Returns the package supported by this factory.

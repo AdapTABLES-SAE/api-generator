@@ -37,6 +37,7 @@ public class DungeonElements {
 		this.elementManager = new GameElementsManager(this.gameDescriptionModel);
 	}
 	
+	
 	public List<RoomElements> getRoomsElements() {
 		return roomsElements;
 	}
@@ -72,6 +73,7 @@ public class DungeonElements {
 			mode = DungeonMode.LABYRINTHINE;
 		}
 	}
+	
 	
 	public List<Curse> getCurses() {
 		return this.curses;
