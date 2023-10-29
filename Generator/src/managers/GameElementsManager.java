@@ -26,7 +26,6 @@ import generator.SmallRoomType;
 import generator.StatementElementType;
 import generator.Structure;
 import generator.Value;
-import generators.ALGAGenerator;
 
 public class GameElementsManager {
 	
@@ -300,10 +299,11 @@ public class GameElementsManager {
 		//System.out.println("entry: "+entry+" exit: "+exit+" ");
 
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
-			/*System.out.println(" \troomtype: "+roomType.getName());
+			System.out.println(" \troomtype: "+roomType.getName());
+			  if(gameplay != null) System.err.println(gameplay.getName());
 			System.out.println(" \t\t compatible access : "+roomTypeHasCompatibleAccesses(entry, exit, roomType));
 			System.out.println(" \t\t compatible positions : "+roomTypeHasCompatiblePositions(roomType, elementsToQuantity));
-			System.out.println("\tentry "+entry+" "+"exit "+exit);*/
+			System.out.println("\tentry "+entry+" "+"exit "+exit);
 			
 			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, elementsToQuantity)) {	
 				//System.out.println("\tentry "+entry+" "+"exit "+exit);
@@ -312,9 +312,12 @@ public class GameElementsManager {
 			
 		}
 		
-		//System.err.println("ALLOWED "+roomTypes);
+		//
+		  if(gameplay != null) System.err.println(gameplay.getName());
+
+		System.err.println(" ALLOWED "+roomTypes);
 		if(roomTypes.isEmpty()) { return null; }
-		RoomType rt = roomTypes.get(new Random().nextInt(roomTypes.size()));
+		RoomType rt = removeLargeRoomTypes(roomTypes).get(new Random().nextInt(roomTypes.size()));
 		/*if(ALGAGenerator.MAXIMIZE_ROOMTYPE_ACCESS) {
 			rt = getRoomTypeWithMaximumAccess(roomTypes);
 		} else {

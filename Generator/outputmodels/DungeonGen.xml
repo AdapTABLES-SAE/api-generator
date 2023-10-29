@@ -1,552 +1,119 @@
 <?xml version="1.0" encoding="ASCII"?>
-<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="HG_O1" levelID="HG_O1_L1" gameLevelID="9" curses="[&quot;Night&quot;,]">
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="JUDO_O1" levelID="JUDO_O1_L1" gameLevelID="1" curses="[]">
   <rooms>
-    <room id="Room[0/0]" roomTypeName="RegularRoomE">
+    <room id="Room[0/0]" roomTypeName="RegularRoomW">
       <roomaccesses>
-        <roomaccess id="a2" direction="EAST" accessRef="a3"/>
+        <roomaccess id="a2" direction="WEST" accessRef="a3"/>
       </roomaccesses>
     </room>
-    <room id="Room[1/0]" x="1" roomTypeName="RegularRoom12" time="20" idTask="HG_O1_L1_T4" prompt="Place les bons elements" gameplayWithUndo="true">
+    <room id="Room[-1/0]" x="-1" roomTypeName="RegularRoom12" time="20" idTask="JUDO_O1_L1_T1" prompt="Place-toi sur la bonne dalle">
       <roomaccesses>
-        <roomaccess id="a3" direction="WEST" accessRef="a2"/>
-        <roomaccess id="a4" direction="NORTH" accessRef="a5"/>
+        <roomaccess id="a3" direction="EAST" accessRef="a2"/>
+        <roomaccess id="a4" direction="WEST" accessRef="a5"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T4-QAFACT4" complete="Front Populaire a eu lieu entre 1936 et 1937" correctnessToReach="2"/>
-        <fact id="HG_O1_L1_T4-QAFACT6" complete="R&#xe9;gime de Vichy a eu lieu entre 1940 et 1944" correctnessToReach="2"/>
+        <fact id="JUDO_O1_L1_T1-QAFACT7" complete="Ushiro-Gesa-Gatame correspond a ushiro-gesa-gatame" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT1" type="StructureStatement" pos="POSL2" acceptedFacts="Front Populaire a eu lieu entre 1936 et 1937;"/>
-        <element id="ELEM2" type="StatementFact" displayValue="Front Populaire a eu lieu entre " pos="id/STRUCT1" idFact="HG_O1_L1_T4-QAFACT4"/>
-        <element id="ELEM3" type="ObjectDetector" pos="id/STRUCT1" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT4"/>
-        <element id="ELEM4" type="StatementFact" displayValue=" et " pos="id/STRUCT1" idFact="HG_O1_L1_T4-QAFACT4"/>
-        <element id="ELEM5" type="ObjectDetector" pos="id/STRUCT1" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT4"/>
-        <element id="STRUCT6" type="StructureStatement" pos="POSL1" acceptedFacts="R&#xe9;gime de Vichy a eu lieu entre 1940 et 1944;"/>
-        <element id="ELEM7" type="StatementFact" displayValue="R&#xe9;gime de Vichy a eu lieu entre " pos="id/STRUCT6" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM8" type="ObjectDetector" pos="id/STRUCT6" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM9" type="StatementFact" displayValue=" et " pos="id/STRUCT6" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM10" type="ObjectDetector" pos="id/STRUCT6" ability="DETECTOR" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM11" type="Pot" displayValue="1936" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT4"/>
-        <element id="ELEM12" type="Pot" displayValue="1937" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT4"/>
-        <element id="ELEM13" type="Pot" displayValue="1940" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT6"/>
-        <element id="ELEM14" type="Pot" displayValue="1944" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T4-QAFACT6"/>
+        <element id="ELEM1" type="Statement" displayValue="Ushiro-Gesa-Gatame correspond a ?" pos="POSL1" idFact="JUDO_O1_L1_T1-QAFACT7" interactive="true"/>
+        <element id="ELEM2" type="AvatarDetector" displayValue="ushiro-gesa-gatame" correctness="CORRECT" pos="POS2" ability="DETECTOR_AVATAR" idFact="JUDO_O1_L1_T1-QAFACT7" isImageDisplay="true"/>
+        <element id="ELEM3" type="AvatarDetector" displayValue="makura-gesa-gatame" correctness="INCORRECT" pos="POS10" ability="DETECTOR_AVATAR" idFact="JUDO_O1_L1_T1-QAFACT7" isImageDisplay="true"/>
+        <element id="ELEM4" type="AvatarDetector" displayValue="uchi-mata" correctness="INCORRECT" pos="POS8" ability="DETECTOR_AVATAR" idFact="JUDO_O1_L1_T1-QAFACT7" isImageDisplay="true"/>
       </elements>
     </room>
-    <room id="Room[1/1]" x="1" y="1" roomTypeName="RoomTrap3">
+    <room id="Room[-2/0]" x="-2" roomTypeName="RegularRoom8" time="20" idTask="JUDO_O1_L1_T1" prompt="Deplace le bon elements sur la zone">
       <roomaccesses>
-        <roomaccess id="a5" direction="SOUTH" accessRef="a4"/>
+        <roomaccess id="a5" direction="EAST" accessRef="a4"/>
         <roomaccess id="a6" direction="NORTH" accessRef="a7"/>
       </roomaccesses>
-      <elements>
-        <element id="ELEM15" type="WaitFireTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM16" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM17" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM18" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM19" type="WaitFireTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM20" type="WaitFireTrap" pos="POS8" ability="AVOIDABLE"/>
-        <element id="ELEM21" type="WaitFireTrap" pos="POS7" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[1/2]" x="1" y="2" size="LARGE" roomTypeName="Map Room" time="20" idTask="HG_O1_L1_T3" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a7" direction="SOUTH_WEST" accessRef="a6"/>
-        <roomaccess id="a8" direction="EAST_SOUTH" accessRef="a9"/>
-      </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T3-QAFACT13" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T3-QAFACT0" correctnessToReach="2"/>
-        <fact id="HG_O1_L1_T3-QAFACT15" correctnessToReach="1"/>
+        <fact id="JUDO_O1_L1_T1-QAFACT1" complete="O-Soto-Gari correspond a o-soto-gari" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT22" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
-        <element id="ELEM23" type="ObjectDetector" pos="id/STRUCT22/1933" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT13"/>
-        <element id="ELEM24" type="ObjectDetector" pos="id/STRUCT22/1962" correctAnswer="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct;" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT13"/>
-        <element id="ELEM25" type="ObjectDetector" pos="id/STRUCT22/1989" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT0"/>
-        <element id="ELEM26" type="ObjectDetector" pos="id/STRUCT22/1914" correctAnswer="(Debut) 1er Guerre Mondiale;" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT0"/>
-        <element id="ELEM27" type="ObjectDetector" pos="id/STRUCT22/1918" correctAnswer="(Fin) 1er Guerre Mondiale;" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT0"/>
-        <element id="ELEM28" type="ObjectDetector" pos="id/STRUCT22/1957" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT15"/>
-        <element id="ELEM29" type="ObjectDetector" pos="id/STRUCT22/1981" correctAnswer="Premi&#xe8;re alternance;" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT15"/>
-        <element id="ELEM30" type="Pot" displayValue="" correctness="INCORRECT" pos="POS19" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT13"/>
-        <element id="ELEM31" type="Pot" displayValue="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT13"/>
-        <element id="ELEM32" type="Pot" displayValue="" correctness="INCORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT0"/>
-        <element id="ELEM33" type="Pot" displayValue="(Debut) 1er Guerre Mondiale" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT0"/>
-        <element id="ELEM34" type="Pot" displayValue="(Fin) 1er Guerre Mondiale" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT0"/>
-        <element id="ELEM35" type="Pot" displayValue="" correctness="INCORRECT" pos="POS13" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT15"/>
-        <element id="ELEM36" type="Pot" displayValue="Premi&#xe8;re alternance" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT15"/>
-        <element id="ELEM37" type="Switch" pos="POS12" ability="VERIFICATOR"/>
+        <element id="ELEM5" type="Pot" pos="POS7" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT1"/>
+        <element id="ELEM6" type="ObjectDetector" displayValue="o-soto-gari" correctness="CORRECT" pos="POS6" ability="DETECTOR" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM7" type="ObjectDetector" displayValue="hane-goshi" correctness="INCORRECT" pos="POS3" ability="DETECTOR" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM8" type="ObjectDetector" displayValue="okuri-ashi-barai" correctness="INCORRECT" pos="POS2" ability="DETECTOR" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM9" type="Statement" displayValue="O-Soto-Gari correspond a ?" pos="POSQ2" idFact="JUDO_O1_L1_T1-QAFACT1" interactive="true"/>
       </elements>
     </room>
-    <room id="Room[3/2]" x="3" y="2" size="LARGE" roomTypeName="Map Room" time="20" idTask="HG_O1_L1_T3" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true">
+    <room id="Room[-2/1]" x="-2" y="1" roomTypeName="RoomTrap3">
       <roomaccesses>
-        <roomaccess id="a9" direction="WEST_SOUTH" accessRef="a8"/>
-        <roomaccess id="a10" direction="SOUTH_EAST" accessRef="a11"/>
+        <roomaccess id="a7" direction="SOUTH" accessRef="a6"/>
+        <roomaccess id="a8" direction="EAST" accessRef="a9"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM10" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM11" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM12" type="WaitSpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM13" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM14" type="WaitSpikeTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM15" type="WaitSpikeTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM16" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-1/1]" x="-1" y="1" roomTypeName="RegularRoom12" time="20" idTask="JUDO_O1_L1_T2" prompt="Place les bons elements" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a9" direction="WEST" accessRef="a8"/>
+        <roomaccess id="a10" direction="EAST" accessRef="a11"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T3-QAFACT5" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T3-QAFACT4" correctnessToReach="2"/>
-        <fact id="HG_O1_L1_T3-QAFACT3" correctnessToReach="2"/>
+        <fact id="JUDO_O1_L1_T2-QAFACT7" complete="Ushiro-Gesa-Gatame correspond a contr&#xf4;le arri&#xe8;re par le travers" correctnessToReach="1"/>
+        <fact id="JUDO_O1_L1_T2-QAFACT8" complete="Yoko-Shiho-Gatame correspond a contr&#xf4;le lat&#xe9;ral des 4 points" correctnessToReach="1"/>
+        <fact id="JUDO_O1_L1_T2-QAFACT4" complete="Hiza-Guruma correspond a roue autour du genou" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT38" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
-        <element id="ELEM39" type="ObjectDetector" pos="id/STRUCT38/1939" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT5"/>
-        <element id="ELEM40" type="ObjectDetector" pos="id/STRUCT38/1940" correctAnswer="Appel du g&#xe9;n&#xe9;ral de Gaulle;" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT5"/>
-        <element id="ELEM41" type="ObjectDetector" pos="id/STRUCT38/1945" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM42" type="ObjectDetector" pos="id/STRUCT38/1936" correctAnswer="(Debut) Front Populaire;" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM43" type="ObjectDetector" pos="id/STRUCT38/1937" correctAnswer="(Fin) Front Populaire;" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM44" type="ObjectDetector" pos="id/STRUCT38/2002" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT3"/>
-        <element id="ELEM45" type="ObjectDetector" pos="id/STRUCT38/1933" correctAnswer="(Debut) Allemagne Nazie (Hitl&#xe9;rienne);" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT3"/>
-        <element id="ELEM46" type="ObjectDetector" pos="id/STRUCT38/1945" correctAnswer="(Fin) Allemagne Nazie (Hitl&#xe9;rienne);" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT3"/>
-        <element id="ELEM47" type="Pot" displayValue="" correctness="INCORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT5"/>
-        <element id="ELEM48" type="Pot" displayValue="Appel du g&#xe9;n&#xe9;ral de Gaulle" correctness="CORRECT" pos="POS13" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT5"/>
-        <element id="ELEM49" type="Pot" displayValue="" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM50" type="Pot" displayValue="(Debut) Front Populaire" correctness="CORRECT" pos="POS16" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM51" type="Pot" displayValue="(Fin) Front Populaire" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM52" type="Pot" displayValue="" correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT3"/>
-        <element id="ELEM53" type="Pot" displayValue="(Debut) Allemagne Nazie (Hitl&#xe9;rienne)" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT3"/>
-        <element id="ELEM54" type="Pot" displayValue="(Fin) Allemagne Nazie (Hitl&#xe9;rienne)" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT3"/>
-        <element id="ELEM55" type="Switch" pos="POS7" ability="VERIFICATOR"/>
+        <element id="STRUCT17" type="StructureStatement" pos="POSL2"/>
+        <element id="ELEM18" type="StatementFact" displayValue="Ushiro-Gesa-Gatame correspond a " pos="id/STRUCT17" idFact="JUDO_O1_L1_T2-QAFACT7"/>
+        <element id="ELEM19" type="ObjectDetector" pos="id/STRUCT17" ability="DETECTOR" idFact="JUDO_O1_L1_T2-QAFACT7"/>
+        <element id="STRUCT20" type="StructureStatement" pos="POSL3"/>
+        <element id="ELEM21" type="StatementFact" displayValue="Yoko-Shiho-Gatame correspond a " pos="id/STRUCT20" idFact="JUDO_O1_L1_T2-QAFACT8"/>
+        <element id="ELEM22" type="ObjectDetector" pos="id/STRUCT20" ability="DETECTOR" idFact="JUDO_O1_L1_T2-QAFACT8"/>
+        <element id="STRUCT23" type="StructureStatement" pos="POSL1"/>
+        <element id="ELEM24" type="StatementFact" displayValue="Hiza-Guruma correspond a " pos="id/STRUCT23" idFact="JUDO_O1_L1_T2-QAFACT4"/>
+        <element id="ELEM25" type="ObjectDetector" pos="id/STRUCT23" ability="DETECTOR" idFact="JUDO_O1_L1_T2-QAFACT4"/>
+        <element id="ELEM26" type="Pot" displayValue="contr&#xf4;le arri&#xe8;re par le travers" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="JUDO_O1_L1_T2-QAFACT7"/>
+        <element id="ELEM27" type="Pot" displayValue="contr&#xf4;le lat&#xe9;ral des 4 points" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="JUDO_O1_L1_T2-QAFACT8"/>
+        <element id="ELEM28" type="Pot" displayValue="roue autour du genou" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="JUDO_O1_L1_T2-QAFACT4"/>
       </elements>
     </room>
-    <room id="Room[4/1]" x="4" y="1" roomTypeName="RoomTrap3">
+    <room id="Room[0/1]" y="1" roomTypeName="RegularRoom11" time="20" idTask="JUDO_O1_L1_T3" prompt="Deplace les bons elements sur la zone" gameplayWithUndo="true">
       <roomaccesses>
-        <roomaccess id="a11" direction="NORTH" accessRef="a10"/>
-        <roomaccess id="a12" direction="SOUTH" accessRef="a13"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM56" type="WaitSpikeTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM57" type="WaitSpikeTrap" pos="POS8" ability="AVOIDABLE"/>
-        <element id="ELEM58" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM59" type="WaitSpikeTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM60" type="WaitSpikeTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM61" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM62" type="WaitSpikeTrap" pos="POS7" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[4/-1]" x="4" y="-1" size="LARGE" roomTypeName="Map Room" time="30" idTask="HG_O1_L1_T1" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a13" direction="NORTH_WEST" accessRef="a12"/>
-        <roomaccess id="a14" direction="SOUTH_EAST" accessRef="a15"/>
+        <roomaccess id="a11" direction="WEST" accessRef="a10"/>
+        <roomaccess id="a12" direction="EAST" accessRef="a13"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T1-QAFACT0" correctnessToReach="18"/>
+        <fact id="JUDO_O1_L1_T3-QAFACT3" complete="Donner les KOSHI-WAZA (Techniques de hanche)" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT63" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_REGIONS"/>
-        <element id="ELEM64" type="ObjectDetector" pos="id/STRUCT63/MARTINIQUE" correctAnswer="Martinique;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM65" type="ObjectDetector" pos="id/STRUCT63/OCCITANIE" correctAnswer="Occitanie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM66" type="ObjectDetector" pos="id/STRUCT63/GRAND_EST" correctAnswer="Grand Est;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM67" type="ObjectDetector" pos="id/STRUCT63/CORSE" correctAnswer="Corse;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM68" type="ObjectDetector" pos="id/STRUCT63/NOUVELLE_AQUITAINE" correctAnswer="Nouvelle Aquitaine;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM69" type="ObjectDetector" pos="id/STRUCT63/PAYS_DE_LA_LOIRE" correctAnswer="Pays de la Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM70" type="ObjectDetector" pos="id/STRUCT63/BOURGOGNE_FRANCHE_COMTE" correctAnswer="Bourgogne-Franche-Comt&#xe9;;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM71" type="ObjectDetector" pos="id/STRUCT63/HAUTS_DE_FRANCE" correctAnswer="Hauts-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM72" type="ObjectDetector" pos="id/STRUCT63/ILE_DE_FRANCE" correctAnswer="&#xce;le-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM73" type="ObjectDetector" pos="id/STRUCT63/GUYANE" correctAnswer="Guyane;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM74" type="ObjectDetector" pos="id/STRUCT63/PROVENCE_ALPES_COTE_DAZUR" correctAnswer="Provence-Alpes-C&#xf4;te-D'Azur;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM75" type="ObjectDetector" pos="id/STRUCT63/NORMANDIE" correctAnswer="Normandie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM76" type="ObjectDetector" pos="id/STRUCT63/AUVERGNE_RHONE_ALPES" correctAnswer="Auvergne-Rh&#xf4;ne-Alpes;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM77" type="ObjectDetector" pos="id/STRUCT63/CENTRE_VAL_DE_LOIRE" correctAnswer="Centre-val de Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM78" type="ObjectDetector" pos="id/STRUCT63/BRETAGNE" correctAnswer="Bretagne;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM79" type="ObjectDetector" pos="id/STRUCT63/LA_REUNION" correctAnswer="La R&#xe9;union;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM80" type="ObjectDetector" pos="id/STRUCT63/MAYOTTE" correctAnswer="Mayotte;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM81" type="ObjectDetector" pos="id/STRUCT63/GUADELOUPE" correctAnswer="Guadeloupe;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM82" type="Pot" displayValue="Martinique" correctness="CORRECT" pos="POS17" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM83" type="Pot" displayValue="Occitanie" correctness="CORRECT" pos="POS16" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM84" type="Pot" displayValue="Grand Est" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM85" type="Pot" displayValue="Corse" correctness="CORRECT" pos="POS13" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM86" type="Pot" displayValue="Nouvelle Aquitaine" correctness="CORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM87" type="Pot" displayValue="Pays de la Loire" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM88" type="Pot" displayValue="Bourgogne-Franche-Comt&#xe9;" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM89" type="Pot" displayValue="Hauts-de-France" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM90" type="Pot" displayValue="&#xce;le-de-France" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM91" type="Pot" displayValue="Guyane" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM92" type="Pot" displayValue="Provence-Alpes-C&#xf4;te-D'Azur" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM93" type="Pot" displayValue="Normandie" correctness="CORRECT" pos="POS15" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM94" type="Pot" displayValue="Auvergne-Rh&#xf4;ne-Alpes" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM95" type="Pot" displayValue="Centre-val de Loire" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM96" type="Pot" displayValue="Bretagne" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM97" type="Pot" displayValue="La R&#xe9;union" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM98" type="Pot" displayValue="Mayotte" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM99" type="Pot" displayValue="Guadeloupe" correctness="CORRECT" pos="POS19" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM100" type="Switch" pos="POS9" ability="VERIFICATOR"/>
-        <element id="ELEM101" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T1-QAFACT0"/>
+        <element id="STRUCT29" type="VStructXL" pos="POSXL1"/>
+        <element id="ELEM30" type="LargeNewObjectDetector" pos="id/STRUCT29" ability="DETECTOR"/>
+        <element id="ELEM31" type="StatementFact" displayValue="Donner les KOSHI-WAZA (Techniques de hanche)" pos="id/STRUCT29" idFact="JUDO_O1_L1_T3-QAFACT3"/>
+        <element id="ELEM32" type="Pot" displayValue="Uki-Goshi" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT3"/>
+        <element id="ELEM33" type="Pot" displayValue="O-Goshi" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT3"/>
+        <element id="ELEM34" type="Pot" displayValue="Kami-Shiho-Gatame" correctness="INCORRECT" pos="POS2" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT3"/>
+        <element id="ELEM35" type="Pot" displayValue="Tsubame-Gaeshi" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT3"/>
       </elements>
     </room>
-    <room id="Room[5/-2]" x="5" y="-2" roomTypeName="RoomTrap4">
+    <room id="Room[1/1]" x="1" y="1" roomTypeName="RegularRoom11" time="20" idTask="JUDO_O1_L1_T1" prompt="Deplace le bon elements sur la zone">
       <roomaccesses>
-        <roomaccess id="a15" direction="NORTH" accessRef="a14"/>
-        <roomaccess id="a16" direction="SOUTH" accessRef="a17"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM102" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM103" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM104" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM105" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM106" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM107" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM108" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[5/-4]" x="5" y="-4" size="LARGE" roomTypeName="Map Room" time="20" idTask="HG_O1_L1_T3" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a17" direction="NORTH_WEST" accessRef="a16"/>
-        <roomaccess id="a18" direction="WEST_NORTH" accessRef="a19"/>
+        <roomaccess id="a13" direction="WEST" accessRef="a12"/>
+        <roomaccess id="a14" direction="EAST" accessRef="a15"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T3-QAFACT13" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T3-QAFACT11" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T3-QAFACT1" correctnessToReach="1"/>
+        <fact id="JUDO_O1_L1_T1-QAFACT3" complete="Uki-Goshi correspond a uki-goshi" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT109" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
-        <element id="ELEM110" type="ObjectDetector" pos="id/STRUCT109/1918" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT13"/>
-        <element id="ELEM111" type="ObjectDetector" pos="id/STRUCT109/1962" correctAnswer="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct;" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT13"/>
-        <element id="ELEM112" type="ObjectDetector" pos="id/STRUCT109/1945" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT11"/>
-        <element id="ELEM113" type="ObjectDetector" pos="id/STRUCT109/1962" correctAnswer="Les accords d'Evian;" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT11"/>
-        <element id="ELEM114" type="ObjectDetector" pos="id/STRUCT109/1958" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT1"/>
-        <element id="ELEM115" type="ObjectDetector" pos="id/STRUCT109/1917" correctAnswer="R&#xe9;volution Russe;" ability="DETECTOR" idFact="HG_O1_L1_T3-QAFACT1"/>
-        <element id="ELEM116" type="Pot" displayValue="" correctness="INCORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT13"/>
-        <element id="ELEM117" type="Pot" displayValue="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT13"/>
-        <element id="ELEM118" type="Pot" displayValue="" correctness="INCORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT11"/>
-        <element id="ELEM119" type="Pot" displayValue="Les accords d'Evian" correctness="CORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT11"/>
-        <element id="ELEM120" type="Pot" displayValue="" correctness="INCORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT1"/>
-        <element id="ELEM121" type="Pot" displayValue="R&#xe9;volution Russe" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T3-QAFACT1"/>
-        <element id="ELEM122" type="Switch" pos="POS10" ability="VERIFICATOR"/>
+        <element id="ELEM36" type="Pot" pos="POS4" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT3"/>
+        <element id="ELEM37" type="ObjectDetector" displayValue="uki-goshi" correctness="CORRECT" pos="POS5" ability="DETECTOR" idFact="JUDO_O1_L1_T1-QAFACT3" isImageDisplay="true"/>
+        <element id="ELEM38" type="ObjectDetector" displayValue="ko-uchi-gari" correctness="INCORRECT" pos="POS1" ability="DETECTOR" idFact="JUDO_O1_L1_T1-QAFACT3" isImageDisplay="true"/>
+        <element id="ELEM39" type="ObjectDetector" displayValue="sasae-tsuri-komi-ashi" correctness="INCORRECT" pos="POS2" ability="DETECTOR" idFact="JUDO_O1_L1_T1-QAFACT3" isImageDisplay="true"/>
+        <element id="ELEM40" type="Statement" displayValue="Uki-Goshi correspond a ?" pos="POSQ1" idFact="JUDO_O1_L1_T1-QAFACT3" interactive="true"/>
       </elements>
     </room>
-    <room id="Room[4/-3]" x="4" y="-3" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T5" prompt="Place les bons elements" gameplayWithUndo="true">
+    <room id="Room[2/1]" x="2" y="1" roomTypeName="ExitRoom1">
       <roomaccesses>
-        <roomaccess id="a19" direction="EAST" accessRef="a18"/>
-        <roomaccess id="a20" direction="SOUTH" accessRef="a21"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T5-QAFACT13" complete="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct a eu lieu en/le   1962" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T5-QAFACT1" complete="R&#xe9;volution Russe a eu lieu en/le 1917" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT123" type="StructureStatement" pos="POSL1" acceptedFacts="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct a eu lieu en/le   1962;"/>
-        <element id="ELEM124" type="StatementFact" displayValue="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct a eu lieu en/le " pos="id/STRUCT123" idFact="HG_O1_L1_T5-QAFACT13"/>
-        <element id="ELEM125" type="ObjectDetector" pos="id/STRUCT123" ability="DETECTOR" idFact="HG_O1_L1_T5-QAFACT13"/>
-        <element id="STRUCT126" type="StructureStatement" pos="POSL2" acceptedFacts="R&#xe9;volution Russe a eu lieu en/le 1917;"/>
-        <element id="ELEM127" type="StatementFact" displayValue="R&#xe9;volution Russe a eu lieu en/le " pos="id/STRUCT126" idFact="HG_O1_L1_T5-QAFACT1"/>
-        <element id="ELEM128" type="ObjectDetector" pos="id/STRUCT126" ability="DETECTOR" idFact="HG_O1_L1_T5-QAFACT1"/>
-        <element id="ELEM129" type="Pot" displayValue="  1962" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T5-QAFACT13"/>
-        <element id="ELEM130" type="Pot" displayValue="1917" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T5-QAFACT1"/>
-      </elements>
-    </room>
-    <room id="Room[4/-4]" x="4" y="-4" roomTypeName="RoomTrap3">
-      <roomaccesses>
-        <roomaccess id="a21" direction="NORTH" accessRef="a20"/>
-        <roomaccess id="a22" direction="WEST" accessRef="a23"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM131" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM132" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM133" type="FireTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM134" type="FireTrap" pos="POS7" ability="AVOIDABLE"/>
-        <element id="ELEM135" type="FireTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM136" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM137" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[3/-4]" x="3" y="-4" roomTypeName="RoomTrap4">
-      <roomaccesses>
-        <roomaccess id="a23" direction="EAST" accessRef="a22"/>
-        <roomaccess id="a24" direction="WEST" accessRef="a25"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM138" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM139" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM140" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM141" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM142" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM143" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM144" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[2/-4]" x="2" y="-4" roomTypeName="RegularRoom12" time="20" idTask="HG_O1_L1_T8" prompt="Place les bons elements" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a25" direction="EAST" accessRef="a24"/>
-        <roomaccess id="a26" direction="NORTH" accessRef="a27"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T8-QAFACT0" complete="1er Guerre Mondiale correspond a GRANDE_GUERRE" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T8-QAFACT15" complete="Premi&#xe8;re alternance correspond a ALTERNANCE" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT145" type="StructureStatement" pos="POSL1" acceptedFacts="1er Guerre Mondiale correspond a GRANDE_GUERRE;"/>
-        <element id="ELEM146" type="StatementFact" displayValue="1er Guerre Mondiale correspond a " pos="id/STRUCT145" idFact="HG_O1_L1_T8-QAFACT0"/>
-        <element id="ELEM147" type="ObjectDetector" pos="id/STRUCT145" ability="DETECTOR" idFact="HG_O1_L1_T8-QAFACT0"/>
-        <element id="STRUCT148" type="StructureStatement" pos="POSL3" acceptedFacts="Premi&#xe8;re alternance correspond a ALTERNANCE;"/>
-        <element id="ELEM149" type="StatementFact" displayValue="Premi&#xe8;re alternance correspond a " pos="id/STRUCT148" idFact="HG_O1_L1_T8-QAFACT15"/>
-        <element id="ELEM150" type="ObjectDetector" pos="id/STRUCT148" ability="DETECTOR" idFact="HG_O1_L1_T8-QAFACT15"/>
-        <element id="ELEM151" type="Pot" displayValue="GRANDE_GUERRE" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T8-QAFACT0" isImageDisplay="true"/>
-        <element id="ELEM152" type="Pot" displayValue="ALTERNANCE" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T8-QAFACT15" isImageDisplay="true"/>
-      </elements>
-    </room>
-    <room id="Room[1/-3]" x="1" y="-3" size="LARGE" roomTypeName="Map Room" time="30" idTask="HG_O1_L1_T1" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a27" direction="SOUTH_EAST" accessRef="a26"/>
-        <roomaccess id="a28" direction="NORTH_EAST" accessRef="a29"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T1-QAFACT0" correctnessToReach="18"/>
-      </facts>
-      <elements>
-        <element id="STRUCT153" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_REGIONS"/>
-        <element id="ELEM154" type="ObjectDetector" pos="id/STRUCT153/MARTINIQUE" correctAnswer="Martinique;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM155" type="ObjectDetector" pos="id/STRUCT153/OCCITANIE" correctAnswer="Occitanie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM156" type="ObjectDetector" pos="id/STRUCT153/GRAND_EST" correctAnswer="Grand Est;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM157" type="ObjectDetector" pos="id/STRUCT153/CORSE" correctAnswer="Corse;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM158" type="ObjectDetector" pos="id/STRUCT153/NOUVELLE_AQUITAINE" correctAnswer="Nouvelle Aquitaine;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM159" type="ObjectDetector" pos="id/STRUCT153/PAYS_DE_LA_LOIRE" correctAnswer="Pays de la Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM160" type="ObjectDetector" pos="id/STRUCT153/BOURGOGNE_FRANCHE_COMTE" correctAnswer="Bourgogne-Franche-Comt&#xe9;;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM161" type="ObjectDetector" pos="id/STRUCT153/HAUTS_DE_FRANCE" correctAnswer="Hauts-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM162" type="ObjectDetector" pos="id/STRUCT153/ILE_DE_FRANCE" correctAnswer="&#xce;le-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM163" type="ObjectDetector" pos="id/STRUCT153/GUYANE" correctAnswer="Guyane;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM164" type="ObjectDetector" pos="id/STRUCT153/PROVENCE_ALPES_COTE_DAZUR" correctAnswer="Provence-Alpes-C&#xf4;te-D'Azur;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM165" type="ObjectDetector" pos="id/STRUCT153/NORMANDIE" correctAnswer="Normandie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM166" type="ObjectDetector" pos="id/STRUCT153/AUVERGNE_RHONE_ALPES" correctAnswer="Auvergne-Rh&#xf4;ne-Alpes;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM167" type="ObjectDetector" pos="id/STRUCT153/CENTRE_VAL_DE_LOIRE" correctAnswer="Centre-val de Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM168" type="ObjectDetector" pos="id/STRUCT153/BRETAGNE" correctAnswer="Bretagne;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM169" type="ObjectDetector" pos="id/STRUCT153/LA_REUNION" correctAnswer="La R&#xe9;union;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM170" type="ObjectDetector" pos="id/STRUCT153/MAYOTTE" correctAnswer="Mayotte;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM171" type="ObjectDetector" pos="id/STRUCT153/GUADELOUPE" correctAnswer="Guadeloupe;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM172" type="Pot" displayValue="Martinique" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM173" type="Pot" displayValue="Occitanie" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM174" type="Pot" displayValue="Grand Est" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM175" type="Pot" displayValue="Corse" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM176" type="Pot" displayValue="Nouvelle Aquitaine" correctness="CORRECT" pos="POS15" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM177" type="Pot" displayValue="Pays de la Loire" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM178" type="Pot" displayValue="Bourgogne-Franche-Comt&#xe9;" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM179" type="Pot" displayValue="Hauts-de-France" correctness="CORRECT" pos="POS19" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM180" type="Pot" displayValue="&#xce;le-de-France" correctness="CORRECT" pos="POS13" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM181" type="Pot" displayValue="Guyane" correctness="CORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM182" type="Pot" displayValue="Provence-Alpes-C&#xf4;te-D'Azur" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM183" type="Pot" displayValue="Normandie" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM184" type="Pot" displayValue="Auvergne-Rh&#xf4;ne-Alpes" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM185" type="Pot" displayValue="Centre-val de Loire" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM186" type="Pot" displayValue="Bretagne" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM187" type="Pot" displayValue="La R&#xe9;union" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM188" type="Pot" displayValue="Mayotte" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM189" type="Pot" displayValue="Guadeloupe" correctness="CORRECT" pos="POS17" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM190" type="Switch" pos="POS16" ability="VERIFICATOR"/>
-        <element id="ELEM191" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T1-QAFACT0"/>
-      </elements>
-    </room>
-    <room id="Room[2/-1]" x="2" y="-1" roomTypeName="RoomTrap2">
-      <roomaccesses>
-        <roomaccess id="a29" direction="SOUTH" accessRef="a28"/>
-        <roomaccess id="a30" direction="NORTH" accessRef="a31"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM192" type="RegularSlime" pos="POS2" ability="NONAVOIDABLE"/>
-        <element id="ELEM193" type="RegularSlime" pos="POS5" ability="NONAVOIDABLE"/>
-        <element id="ELEM194" type="RegularSlime" pos="POS4" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[2/0]" x="2" roomTypeName="RoomTrap3">
-      <roomaccesses>
-        <roomaccess id="a31" direction="WEST" accessRef="a30"/>
-        <roomaccess id="a32" direction="SOUTH" accessRef="a33"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM195" type="WaitFireTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM196" type="WaitFireTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM197" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM198" type="WaitFireTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM199" type="WaitFireTrap" pos="POS7" ability="AVOIDABLE"/>
-        <element id="ELEM200" type="WaitFireTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM201" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[2/-1]" x="2" y="-1" roomTypeName="RegularRoom12">
-      <roomaccesses>
-        <roomaccess id="a33" direction="NORTH" accessRef="a32"/>
-        <roomaccess id="a34" direction="WEST" accessRef="a35"/>
-      </roomaccesses>
-    </room>
-    <room id="Room[1/-1]" x="1" y="-1" roomTypeName="RegularRoom6">
-      <roomaccesses>
-        <roomaccess id="a35" direction="EAST" accessRef="a34"/>
-        <roomaccess id="a36" direction="WEST" accessRef="a37"/>
-      </roomaccesses>
-    </room>
-    <room id="Room[-1/-2]" x="-1" y="-2" size="LARGE" roomTypeName="Map Room" time="30" idTask="HG_O1_L1_T2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a37" direction="EAST_NORTH" accessRef="a36"/>
-        <roomaccess id="a38" direction="NORTH_WEST" accessRef="a39"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T2-QAFACT0" correctnessToReach="18"/>
-      </facts>
-      <elements>
-        <element id="STRUCT202" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_REGIONS"/>
-        <element id="ELEM203" type="TypableDetector" pos="id/STRUCT202/BOURGOGNE_FRANCHE_COMTE" correctAnswer="Bourgogne-Franche-Comt&#xe9;;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM204" type="TypableDetector" pos="id/STRUCT202/PAYS_DE_LA_LOIRE" correctAnswer="Pays de la Loire;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM205" type="TypableDetector" pos="id/STRUCT202/GUYANE" correctAnswer="Guyane;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM206" type="TypableDetector" pos="id/STRUCT202/GUADELOUPE" correctAnswer="Guadeloupe;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM207" type="TypableDetector" pos="id/STRUCT202/GRAND_EST" correctAnswer="Grand Est;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM208" type="TypableDetector" pos="id/STRUCT202/CENTRE_VAL_DE_LOIRE" correctAnswer="Centre-val de Loire;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM209" type="TypableDetector" pos="id/STRUCT202/OCCITANIE" correctAnswer="Occitanie;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM210" type="TypableDetector" pos="id/STRUCT202/BRETAGNE" correctAnswer="Bretagne;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM211" type="TypableDetector" pos="id/STRUCT202/NOUVELLE_AQUITAINE" correctAnswer="Nouvelle Aquitaine;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM212" type="TypableDetector" pos="id/STRUCT202/PROVENCE_ALPES_COTE_DAZUR" correctAnswer="Provence-Alpes-C&#xf4;te-D'Azur;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM213" type="TypableDetector" pos="id/STRUCT202/MARTINIQUE" correctAnswer="Martinique;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM214" type="TypableDetector" pos="id/STRUCT202/ILE_DE_FRANCE" correctAnswer="&#xce;le-de-France;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM215" type="TypableDetector" pos="id/STRUCT202/CORSE" correctAnswer="Corse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM216" type="TypableDetector" pos="id/STRUCT202/LA_REUNION" correctAnswer="La R&#xe9;union;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM217" type="TypableDetector" pos="id/STRUCT202/NORMANDIE" correctAnswer="Normandie;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM218" type="TypableDetector" pos="id/STRUCT202/MAYOTTE" correctAnswer="Mayotte;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM219" type="TypableDetector" pos="id/STRUCT202/AUVERGNE_RHONE_ALPES" correctAnswer="Auvergne-Rh&#xf4;ne-Alpes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM220" type="TypableDetector" pos="id/STRUCT202/HAUTS_DE_FRANCE" correctAnswer="Hauts-de-France;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM221" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2-QAFACT0"/>
-      </elements>
-    </room>
-    <room id="Room[-1/0]" x="-1" roomTypeName="RoomTrap3">
-      <roomaccesses>
-        <roomaccess id="a39" direction="SOUTH" accessRef="a38"/>
-        <roomaccess id="a40" direction="NORTH" accessRef="a41"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM222" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM223" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM224" type="WaitSpikeTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM225" type="WaitSpikeTrap" pos="POS7" ability="AVOIDABLE"/>
-        <element id="ELEM226" type="WaitSpikeTrap" pos="POS9" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-2/1]" x="-2" y="1" size="LARGE" roomTypeName="Map Room" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a41" direction="SOUTH_EAST" accessRef="a40"/>
-        <roomaccess id="a42" direction="NORTH_EAST" accessRef="a43"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T9-QAFACT7" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T9-QAFACT15" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T9-QAFACT12" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT227" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
-        <element id="ELEM228" type="ObjectDetector" pos="id/STRUCT227/1945" correctAnswer="Cr&#xe9;ation de l'ONU;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT7"/>
-        <element id="ELEM229" type="ObjectDetector" pos="id/STRUCT227/1981" correctAnswer="Premi&#xe8;re alternance;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT15"/>
-        <element id="ELEM230" type="ObjectDetector" pos="id/STRUCT227/1958" correctAnswer="Naissance de la Ve R&#xe9;publique;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT12"/>
-        <element id="ELEM231" type="Pot" displayValue="Cr&#xe9;ation de l'ONU" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT7"/>
-        <element id="ELEM232" type="Pot" displayValue="Premi&#xe8;re alternance" correctness="CORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT15"/>
-        <element id="ELEM233" type="Pot" displayValue="Naissance de la Ve R&#xe9;publique" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT12"/>
-        <element id="ELEM234" type="Switch" pos="POS3" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[-1/3]" x="-1" y="3" roomTypeName="RegularRoom5" time="20" idTask="HG_O1_L1_T7" prompt="Place les bons elements" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a43" direction="SOUTH" accessRef="a42"/>
-        <roomaccess id="a44" direction="NORTH" accessRef="a45"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T7-QAFACT10" complete="MUR_BERLIN represente Chute du mur de Berlin" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T7-QAFACT12" complete="5REPUBLIQUE represente Naissance de la Ve R&#xe9;publique" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT235" type="StructureStatement" pos="POSL2" acceptedFacts="MUR_BERLIN represente Chute du mur de Berlin;"/>
-        <element id="ELEM236" type="StatementFact" displayValue="MUR_BERLIN" pos="id/STRUCT235" idFact="HG_O1_L1_T7-QAFACT10" isImageDisplay="true"/>
-        <element id="ELEM237" type="StatementFact" displayValue=" represente " pos="id/STRUCT235" idFact="HG_O1_L1_T7-QAFACT10"/>
-        <element id="ELEM238" type="ObjectDetector" pos="id/STRUCT235" ability="DETECTOR" idFact="HG_O1_L1_T7-QAFACT10"/>
-        <element id="STRUCT239" type="StructureStatement" pos="POSL1" acceptedFacts="5REPUBLIQUE represente Naissance de la Ve R&#xe9;publique;"/>
-        <element id="ELEM240" type="StatementFact" displayValue="5REPUBLIQUE" pos="id/STRUCT239" idFact="HG_O1_L1_T7-QAFACT12" isImageDisplay="true"/>
-        <element id="ELEM241" type="StatementFact" displayValue=" represente " pos="id/STRUCT239" idFact="HG_O1_L1_T7-QAFACT12"/>
-        <element id="ELEM242" type="ObjectDetector" pos="id/STRUCT239" ability="DETECTOR" idFact="HG_O1_L1_T7-QAFACT12"/>
-        <element id="ELEM243" type="Pot" displayValue="Chute du mur de Berlin" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T7-QAFACT10"/>
-        <element id="ELEM244" type="Pot" displayValue="Naissance de la Ve R&#xe9;publique" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T7-QAFACT12"/>
-      </elements>
-    </room>
-    <room id="Room[-1/4]" x="-1" y="4" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T6" prompt="Place les bons elements" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a45" direction="SOUTH" accessRef="a44"/>
-        <roomaccess id="a46" direction="EAST" accessRef="a47"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T6-QAFACT1" complete="R&#xe9;volution Russe a eu lieu en/le 1917" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T6-QAFACT0" complete="1er Guerre Mondiale a eu lieu en/le 1914 - 1918" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT245" type="StructureStatement" pos="POSL2" acceptedFacts="R&#xe9;volution Russe a eu lieu en/le 1917;"/>
-        <element id="ELEM246" type="StatementFact" displayValue="R&#xe9;volution Russe a eu lieu en/le " pos="id/STRUCT245" idFact="HG_O1_L1_T6-QAFACT1"/>
-        <element id="ELEM247" type="ObjectDetector" pos="id/STRUCT245" ability="DETECTOR" idFact="HG_O1_L1_T6-QAFACT1"/>
-        <element id="STRUCT248" type="StructureStatement" pos="POSL1" acceptedFacts="1er Guerre Mondiale a eu lieu en/le 1914 - 1918;"/>
-        <element id="ELEM249" type="StatementFact" displayValue="1er Guerre Mondiale a eu lieu en/le " pos="id/STRUCT248" idFact="HG_O1_L1_T6-QAFACT0"/>
-        <element id="ELEM250" type="ObjectDetector" pos="id/STRUCT248" ability="DETECTOR" idFact="HG_O1_L1_T6-QAFACT0"/>
-        <element id="ELEM251" type="Pot" displayValue="1917" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T6-QAFACT1"/>
-        <element id="ELEM252" type="Pot" displayValue="1914 - 1918" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T6-QAFACT0"/>
-      </elements>
-    </room>
-    <room id="Room[0/4]" y="4" roomTypeName="RoomTrap4">
-      <roomaccesses>
-        <roomaccess id="a47" direction="WEST" accessRef="a46"/>
-        <roomaccess id="a48" direction="NORTH" accessRef="a49"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM253" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM254" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM255" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM256" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM257" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM258" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM259" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-1/5]" x="-1" y="5" size="LARGE" roomTypeName="Map Room" time="30" idTask="HG_O1_L1_T1" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a49" direction="SOUTH_EAST" accessRef="a48"/>
-        <roomaccess id="a50" direction="NORTH_WEST" accessRef="a51"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T1-QAFACT0" correctnessToReach="18"/>
-      </facts>
-      <elements>
-        <element id="STRUCT260" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_REGIONS"/>
-        <element id="ELEM261" type="ObjectDetector" pos="id/STRUCT260/MARTINIQUE" correctAnswer="Martinique;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM262" type="ObjectDetector" pos="id/STRUCT260/OCCITANIE" correctAnswer="Occitanie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM263" type="ObjectDetector" pos="id/STRUCT260/GRAND_EST" correctAnswer="Grand Est;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM264" type="ObjectDetector" pos="id/STRUCT260/CORSE" correctAnswer="Corse;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM265" type="ObjectDetector" pos="id/STRUCT260/NOUVELLE_AQUITAINE" correctAnswer="Nouvelle Aquitaine;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM266" type="ObjectDetector" pos="id/STRUCT260/PAYS_DE_LA_LOIRE" correctAnswer="Pays de la Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM267" type="ObjectDetector" pos="id/STRUCT260/BOURGOGNE_FRANCHE_COMTE" correctAnswer="Bourgogne-Franche-Comt&#xe9;;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM268" type="ObjectDetector" pos="id/STRUCT260/HAUTS_DE_FRANCE" correctAnswer="Hauts-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM269" type="ObjectDetector" pos="id/STRUCT260/ILE_DE_FRANCE" correctAnswer="&#xce;le-de-France;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM270" type="ObjectDetector" pos="id/STRUCT260/GUYANE" correctAnswer="Guyane;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM271" type="ObjectDetector" pos="id/STRUCT260/PROVENCE_ALPES_COTE_DAZUR" correctAnswer="Provence-Alpes-C&#xf4;te-D'Azur;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM272" type="ObjectDetector" pos="id/STRUCT260/NORMANDIE" correctAnswer="Normandie;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM273" type="ObjectDetector" pos="id/STRUCT260/AUVERGNE_RHONE_ALPES" correctAnswer="Auvergne-Rh&#xf4;ne-Alpes;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM274" type="ObjectDetector" pos="id/STRUCT260/CENTRE_VAL_DE_LOIRE" correctAnswer="Centre-val de Loire;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM275" type="ObjectDetector" pos="id/STRUCT260/BRETAGNE" correctAnswer="Bretagne;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM276" type="ObjectDetector" pos="id/STRUCT260/LA_REUNION" correctAnswer="La R&#xe9;union;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM277" type="ObjectDetector" pos="id/STRUCT260/MAYOTTE" correctAnswer="Mayotte;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM278" type="ObjectDetector" pos="id/STRUCT260/GUADELOUPE" correctAnswer="Guadeloupe;" ability="DETECTOR" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM279" type="Pot" displayValue="Martinique" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM280" type="Pot" displayValue="Occitanie" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM281" type="Pot" displayValue="Grand Est" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM282" type="Pot" displayValue="Corse" correctness="CORRECT" pos="POS17" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM283" type="Pot" displayValue="Nouvelle Aquitaine" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM284" type="Pot" displayValue="Pays de la Loire" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM285" type="Pot" displayValue="Bourgogne-Franche-Comt&#xe9;" correctness="CORRECT" pos="POS13" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM286" type="Pot" displayValue="Hauts-de-France" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM287" type="Pot" displayValue="&#xce;le-de-France" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM288" type="Pot" displayValue="Guyane" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM289" type="Pot" displayValue="Provence-Alpes-C&#xf4;te-D'Azur" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM290" type="Pot" displayValue="Normandie" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM291" type="Pot" displayValue="Auvergne-Rh&#xf4;ne-Alpes" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM292" type="Pot" displayValue="Centre-val de Loire" correctness="CORRECT" pos="POS19" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM293" type="Pot" displayValue="Bretagne" correctness="CORRECT" pos="POS16" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM294" type="Pot" displayValue="La R&#xe9;union" correctness="CORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM295" type="Pot" displayValue="Mayotte" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM296" type="Pot" displayValue="Guadeloupe" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T1-QAFACT0"/>
-        <element id="ELEM297" type="Switch" pos="POS15" ability="VERIFICATOR"/>
-        <element id="ELEM298" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T1-QAFACT0"/>
-      </elements>
-    </room>
-    <room id="Room[-1/7]" x="-1" y="7" roomTypeName="ExitRoom1">
-      <roomaccesses>
-        <roomaccess id="a51" direction="SOUTH" accessRef="a50"/>
+        <roomaccess id="a15" direction="WEST" accessRef="a14"/>
       </roomaccesses>
     </room>
   </rooms>
