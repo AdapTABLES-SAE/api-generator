@@ -62,17 +62,6 @@ public class DungeonGenerator {
 		if(mode.equals(DungeonMode.LINEAR)) {
 			generateLinearDungeon();
 		}else {
-			/*while(true) {
-				System.out.println("ON REFAIT");
-				gridManager.clearGrid();
-				if(generatedDungeon != null) { 	
-					for(int i = 0; i < generatedDungeon.getRooms().size(); i++) {
-						generatedDungeon.getRooms().remove(i);
-					}
-				}
-				
-				dungeonElements.shuffleRoomsOrder();
-			}*/
 			generateLabyrinthineDungeon();
 		}
 		
@@ -103,7 +92,14 @@ public class DungeonGenerator {
 			if(aRoom != null) {
 				dungeonRooms.add(aRoom);
 			} else {
-				createNewPath(randomStartingRoom, originRoom);
+				dungeonElements.addEmptyRoom(dungeonRooms.size());
+				aRoom = createNewRoomFrom(randomStartingRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size()));
+				if(aRoom != null) {
+					dungeonRooms.add(aRoom);
+				} else {
+					createNewPath(randomStartingRoom, originRoom);
+				}
+				
 			}
 			
 		}	
@@ -119,9 +115,10 @@ public class DungeonGenerator {
 	private LabyrinthineRoom createAnExit(List<LabyrinthineRoom> dungeonRooms) throws NonRoomTypeException {
 		List<LabyrinthineRoom> dungeonRoomTemps = new ArrayList<>(dungeonRooms);
 		LabyrinthineRoom exit = null;
+		
 		while (exit == null) {
 			LabyrinthineRoom furthest = findFurthestFromEntryRoomEuclidianDistanceWith(dungeonRoomTemps);
-			exit = createNewRoomFrom(furthest, dungeonElements.getElementsOfRoom(dungeonRooms.size()));
+			exit = createNewRoomFrom(furthest, dungeonElements.getElementsOfRoom(dungeonElements.getRoomsElements().size() - 1));
 			dungeonRoomTemps.remove(furthest);
 		}
 		return exit;
@@ -182,13 +179,13 @@ public class DungeonGenerator {
 				allowedDirections.remove(entry);
 			}
 		}
-		
 		if(allowedDirections.isEmpty()) {
 			return null; 
 		}else {
 			Coordinate validCoord = gridManager.getValidCoordinates(entry, nextPosition);
 			createOriginRoomExitAccess(originRoom, originRoomAvailableDirection);
 			Room aRoom = createRoom(validCoord.getX(), validCoord.getY(), roomType, roomElements, originRoom.getLastRoomAccess(), entry);
+			System.out.println("Created room "+aRoom+" "+(aRoom == null));
 			return new LabyrinthineRoom(aRoom);
 		}
 	}

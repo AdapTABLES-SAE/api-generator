@@ -55,6 +55,7 @@ public class DungeonElements {
 			this.roomsElements = roomElements;
 			
 			System.out.println(this.roomsElements.get(this.roomsElements.size()-1).isExit());
+			System.out.println(this.roomsElements.get(this.roomsElements.size()-1).getGameplay() == null);
 		}
 	}
 	

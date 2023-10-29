@@ -60,12 +60,13 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 	}
 	
 	
-	protected Set<AQuestionableFact> generateAQuestionableFactsOf(ATask task, List<MTResultFact> facts, int nbByFact) {
+	protected Set<AQuestionableFact> generateAQuestionableFactsOf(ATask task, List<MTResultFact> facts, int numberByFact) {
 		Set<AQuestionableFact> qfs = new HashSet<>(); 
 		int k = 0;
-		for (int i = 0; i < (facts.size() / nbByFact); i++) {
+		int numberOfQuestionableFacts = (int) Math.ceil(facts.size() / numberByFact);
+		for (int i = 0; i < numberOfQuestionableFacts; i++) {
 			List<MTResultFact> factres = new ArrayList<>(); 
-			for (int j = 0; j < nbByFact; j++) {
+			while(factres.size() < numberByFact && k < facts.size()) {
 				factres.add(facts.get(k));
 				k++;
 			}
