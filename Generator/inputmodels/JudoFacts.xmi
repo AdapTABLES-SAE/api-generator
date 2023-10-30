@@ -248,4 +248,49 @@
       <representation ID="yoko-wakare"/>
     </facts>
   </knowledgefacts>
+  <knowledgefacts name="GESTE ARBITRAGE (POINTS/VALEURS)">
+    <facts xsi:type="generator:JudoArbitrationGestureFact" name="IPPON" description="victoire suivie de l'arrêt du combat">
+      <representation ID="ippon"/>
+    </facts>
+    <facts xsi:type="generator:JudoArbitrationGestureFact" name="WAZA-ARI" description="presque victoire (demi ippon)">
+      <representation ID="waza-ari"/>
+    </facts>
+    <facts xsi:type="generator:JudoArbitrationGestureFact" name="ANNULATION" description="annuler l'action attribuer (ex. annuler waza-ari)">
+      <representation ID="waza-ari"/>
+    </facts>
+  </knowledgefacts>
+  <knowledgefacts name="GESTE ARBITRAGE (DIRECTIONS)">
+    <facts xsi:type="generator:JudoArbitrationGestureFact" name="HAJIME" description="commencer le combat">
+      <representation ID="hajime"/>
+    </facts>
+    <facts xsi:type="generator:JudoArbitrationGestureFact" name="MATTE" description="arrête temporairement le combat">
+      <representation ID="matte"/>
+    </facts>
+    <facts xsi:type="generator:JudoArbitrationGestureFact" name="OSEAKOMI" description="début du chronomètre du temps d'immobilisation">
+      <representation ID="osaekomi"/>
+    </facts>
+    <facts xsi:type="generator:JudoArbitrationGestureFact" name="TOKETA" description="arrêt du chronomètre du temps d’immobilisation">
+      <representation ID="toketa"/>
+    </facts>
+    <facts xsi:type="generator:JudoArbitrationGestureFact" name="SONOMAMA" description="les combatants ne doivent plus bouger">
+      <representation ID="sonomama_yoshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoArbitrationGestureFact" name="YOSHI" description="le combat reprend (après un sonomama)">
+      <representation ID="sonomama_yoshi"/>
+    </facts>
+    <facts xsi:type="generator:JudoArbitrationGestureFact" name="HIKI WAKE" description="match nul">
+      <representation ID="hiki-wake"/>
+    </facts>
+  </knowledgefacts>
+  <knowledgefacts name="GESTE ARBITRAGE (PENALITES)">
+    <facts xsi:type="generator:JudoArbitrationGestureFact" name="SHIDO (Attribution)" description="désigne le combattant à qui la pénalité revient">
+      <representation ID="penalite"/>
+    </facts>
+    <facts xsi:type="generator:JudoArbitrationGestureFact" name="SHIDO " description="Non combativité">
+      <representation ID="non_combativite"/>
+    </facts>
+    <facts xsi:type="generator:JudoArbitrationGestureFact" name="SHIDO " description="Fausse attaque">
+      <representation ID="fausse_attaque"/>
+    </facts>
+  </knowledgefacts>
 </generator:Knowledge>

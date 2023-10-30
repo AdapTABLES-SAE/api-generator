@@ -1003,6 +1003,33 @@ public interface GeneratorFactory extends EFactory {
 	JudoLevel createJudoLevel();
 
 	/**
+	 * Returns a new object of class '<em>Judo Arbitration Gesture Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Judo Arbitration Gesture Fact</em>'.
+	 * @generated
+	 */
+	JudoArbitrationGestureFact createJudoArbitrationGestureFact();
+
+	/**
+	 * Returns a new object of class '<em>Identify Arbitration Gesture</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Identify Arbitration Gesture</em>'.
+	 * @generated
+	 */
+	IdentifyArbitrationGesture createIdentifyArbitrationGesture();
+
+	/**
+	 * Returns a new object of class '<em>Judo Questionable Arbitration Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Judo Questionable Arbitration Fact</em>'.
+	 * @generated
+	 */
+	JudoQuestionableArbitrationFact createJudoQuestionableArbitrationFact();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -6,6 +6,7 @@ import factsgenerator_hg.HGFactGeneratorAssociation;
 import factsgenerator_hg.HGFactGeneratorChronology;
 import factsgenerator_hg.HGFactGeneratorLocate;
 import factsgenerator_judo.JudoFactGeneratorClassifyTechnique;
+import factsgenerator_judo.JudoFactGeneratorIdentifyArbitration;
 import factsgenerator_judo.JudoFactGeneratorIdentifyTechnique;
 import factsgenerator_maths.MTFactGeneratorCOMP1;
 import factsgenerator_maths.MTFactGeneratorCOMP2;
@@ -15,6 +16,7 @@ import factsgenerator_maths.MTFactGeneratorREB;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.CompletionTask;
+import generator.IdentifyTechnique;
 import generator.ResultsByTask;
 import generators.ALGAGenerator;
 import managers.ModelsManager;
@@ -59,7 +61,11 @@ public class FactGenerator {
 		FactGeneratorTemplate factGenerator; 
 		switch(task.getType()) {
 		case COMPLETE: 
-			factGenerator = new JudoFactGeneratorIdentifyTechnique(modelsManager, dungeonElements);
+			if(task instanceof IdentifyTechnique) {
+				factGenerator = new JudoFactGeneratorIdentifyTechnique(modelsManager, dungeonElements);
+			} else {
+				factGenerator = new JudoFactGeneratorIdentifyArbitration(dungeonElements);
+			}
 			break;
 		default: 
 			factGenerator = new JudoFactGeneratorClassifyTechnique(modelsManager, dungeonElements);

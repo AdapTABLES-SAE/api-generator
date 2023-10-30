@@ -709,5 +709,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableClassifyFact/techniques"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//JudoLevel"/>
+    <genClasses ecoreClass="generator.ecore#//JudoArbitrationGestureFact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoArbitrationGestureFact/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoArbitrationGestureFact/description"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//IdentifyArbitrationGesture">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyArbitrationGesture/nbMissingElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyArbitrationGesture/checkOnLearnerAction"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//JudoQuestionableArbitrationFact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableArbitrationFact/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableArbitrationFact/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableArbitrationFact/representationID"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

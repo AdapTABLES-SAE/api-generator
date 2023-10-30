@@ -275,6 +275,12 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createJudoQuestionableClassifyFact();
 		case GeneratorPackage.JUDO_LEVEL:
 			return createJudoLevel();
+		case GeneratorPackage.JUDO_ARBITRATION_GESTURE_FACT:
+			return createJudoArbitrationGestureFact();
+		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE:
+			return createIdentifyArbitrationGesture();
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT:
+			return createJudoQuestionableArbitrationFact();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1470,6 +1476,36 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public JudoLevel createJudoLevel() {
 		JudoLevelImpl judoLevel = new JudoLevelImpl();
 		return judoLevel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JudoArbitrationGestureFact createJudoArbitrationGestureFact() {
+		JudoArbitrationGestureFactImpl judoArbitrationGestureFact = new JudoArbitrationGestureFactImpl();
+		return judoArbitrationGestureFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IdentifyArbitrationGesture createIdentifyArbitrationGesture() {
+		IdentifyArbitrationGestureImpl identifyArbitrationGesture = new IdentifyArbitrationGestureImpl();
+		return identifyArbitrationGesture;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JudoQuestionableArbitrationFact createJudoQuestionableArbitrationFact() {
+		JudoQuestionableArbitrationFactImpl judoQuestionableArbitrationFact = new JudoQuestionableArbitrationFactImpl();
+		return judoQuestionableArbitrationFact;
 	}
 
 	/**

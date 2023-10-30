@@ -1677,8 +1677,8 @@
         href="HistoryGeographyFacts.xmi#/"/>
   </learningpaths>
   <learningpaths
-      name="PATH_JUDO_BLEMOINE"
-      ID="PATH_JUDO_BLEMOINE">
+      name="PATH_JUDO"
+      ID="PATH_JUDO">
     <objectives
         ID="JUDO_O1"
         name="Judo Technique O1">
@@ -1687,7 +1687,7 @@
           ID="JUDO_O1_L1">
         <tasks
             xsi:type="generator:IdentifyTechnique"
-            percentOfApparition="50"
+            percentOfApparition="25"
             nbConsecutiveSuccess="1"
             ID="JUDO_O1_L1_T1"
             checkOnLearnerAction="false">
@@ -1718,10 +1718,22 @@
               nbChoices="5"
               nbBadChoices="2"/>
         </tasks>
+        <tasks
+            xsi:type="generator:IdentifyArbitrationGesture"
+            percentOfApparition="25"
+            nbConsecutiveSuccess="1"
+            ID="JUDO_O1_L1_T4"
+            nbFacts="3"/>
         <completionCriteria/>
       </levels>
       <setoffacts
           href="JudoFacts.xmi#//@knowledgefacts.0"/>
+      <setoffacts
+          href="JudoFacts.xmi#//@knowledgefacts.7"/>
+      <setoffacts
+          href="JudoFacts.xmi#//@knowledgefacts.8"/>
+      <setoffacts
+          href="JudoFacts.xmi#//@knowledgefacts.9"/>
     </objectives>
     <knowledge
         href="JudoFacts.xmi#/"/>

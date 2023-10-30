@@ -1127,6 +1127,37 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case GeneratorPackage.JUDO_ARBITRATION_GESTURE_FACT: {
+			JudoArbitrationGestureFact judoArbitrationGestureFact = (JudoArbitrationGestureFact) theEObject;
+			T result = caseJudoArbitrationGestureFact(judoArbitrationGestureFact);
+			if (result == null)
+				result = caseAbstractFact(judoArbitrationGestureFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE: {
+			IdentifyArbitrationGesture identifyArbitrationGesture = (IdentifyArbitrationGesture) theEObject;
+			T result = caseIdentifyArbitrationGesture(identifyArbitrationGesture);
+			if (result == null)
+				result = caseCompletionTask(identifyArbitrationGesture);
+			if (result == null)
+				result = caseATask(identifyArbitrationGesture);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT: {
+			JudoQuestionableArbitrationFact judoQuestionableArbitrationFact = (JudoQuestionableArbitrationFact) theEObject;
+			T result = caseJudoQuestionableArbitrationFact(judoQuestionableArbitrationFact);
+			if (result == null)
+				result = caseQuestionableFact(judoQuestionableArbitrationFact);
+			if (result == null)
+				result = caseAQuestionableFact(judoQuestionableArbitrationFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -3034,6 +3065,51 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseJudoLevel(JudoLevel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Judo Arbitration Gesture Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Judo Arbitration Gesture Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJudoArbitrationGestureFact(JudoArbitrationGestureFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Identify Arbitration Gesture</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Identify Arbitration Gesture</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIdentifyArbitrationGesture(IdentifyArbitrationGesture object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Judo Questionable Arbitration Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Judo Questionable Arbitration Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJudoQuestionableArbitrationFact(JudoQuestionableArbitrationFact object) {
 		return null;
 	}
 

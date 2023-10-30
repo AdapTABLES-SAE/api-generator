@@ -211,11 +211,11 @@ public class GameElementsGenerator {
 				} else {
 					modalityCompatible = (task.getResponseModality() != null)? task.getResponseModality() instanceof EnterResponse: false;
 				}
-				System.out.println(task.getNbExpectedAnswers()+" "+task.getNbFacts());	
+				//System.out.println(task.getNbExpectedAnswers()+" "+task.getNbFacts());	
 				
 				
 
-				System.out.println("fact comp "+factCompatible+" expectedanswers "+expectedAnswerCompatible+" modality "+modalityCompatible);
+				//System.out.println("fact comp "+factCompatible+" expectedanswers "+expectedAnswerCompatible+" modality "+modalityCompatible);
 				if(factCompatible && expectedAnswerCompatible && modalityCompatible) {
 					//allowedCategories.addAll(relation.getGameplays());
 					for(GPCategory category: relation.getGameplays()) {
@@ -242,7 +242,7 @@ public class GameElementsGenerator {
 	private List<Gameplay> getValidGameplaysForTask(ATask task) {
 		List<Gameplay> gameplays = new ArrayList<>();
 		Map<GPCategory, Set<EStatementType>> validCategoriesFromRelations = getValidCategoriesFromRelations(task);
-		System.out.println("Valid categories "+validCategoriesFromRelations);
+		//System.out.println("Valid categories "+validCategoriesFromRelations);
 		for(GPCategory category :  new ArrayList<>(validCategoriesFromRelations.keySet())) {
 			gameplays.addAll(getQuestionGameplayForCategorieType(category, task, validCategoriesFromRelations.get(category)));
 		}

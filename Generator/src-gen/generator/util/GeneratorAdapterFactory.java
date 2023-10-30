@@ -702,6 +702,21 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseJudoArbitrationGestureFact(JudoArbitrationGestureFact object) {
+			return createJudoArbitrationGestureFactAdapter();
+		}
+
+		@Override
+		public Adapter caseIdentifyArbitrationGesture(IdentifyArbitrationGesture object) {
+			return createIdentifyArbitrationGestureAdapter();
+		}
+
+		@Override
+		public Adapter caseJudoQuestionableArbitrationFact(JudoQuestionableArbitrationFact object) {
+			return createJudoQuestionableArbitrationFactAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -2439,6 +2454,48 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJudoLevelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.JudoArbitrationGestureFact <em>Judo Arbitration Gesture Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.JudoArbitrationGestureFact
+	 * @generated
+	 */
+	public Adapter createJudoArbitrationGestureFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.IdentifyArbitrationGesture <em>Identify Arbitration Gesture</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.IdentifyArbitrationGesture
+	 * @generated
+	 */
+	public Adapter createIdentifyArbitrationGestureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.JudoQuestionableArbitrationFact <em>Judo Questionable Arbitration Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.JudoQuestionableArbitrationFact
+	 * @generated
+	 */
+	public Adapter createJudoQuestionableArbitrationFactAdapter() {
 		return null;
 	}
 

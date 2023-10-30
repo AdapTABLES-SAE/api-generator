@@ -1,7 +1,6 @@
 package managers;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -299,11 +298,11 @@ public class GameElementsManager {
 		//System.out.println("entry: "+entry+" exit: "+exit+" ");
 
 		for (RoomType roomType : new ArrayList<>(roomTypes)) { 
-			System.out.println(" \troomtype: "+roomType.getName());
+			/*System.out.println(" \troomtype: "+roomType.getName());
 			  if(gameplay != null) System.err.println(gameplay.getName());
 			System.out.println(" \t\t compatible access : "+roomTypeHasCompatibleAccesses(entry, exit, roomType));
 			System.out.println(" \t\t compatible positions : "+roomTypeHasCompatiblePositions(roomType, elementsToQuantity));
-			System.out.println("\tentry "+entry+" "+"exit "+exit);
+			System.out.println("\tentry "+entry+" "+"exit "+exit);*/
 			
 			if(!roomTypeHasCompatibleAccesses(entry, exit, roomType) || !roomTypeHasCompatiblePositions(roomType, elementsToQuantity)) {	
 				//System.out.println("\tentry "+entry+" "+"exit "+exit);
@@ -312,10 +311,7 @@ public class GameElementsManager {
 			
 		}
 		
-		//
-		  if(gameplay != null) System.err.println(gameplay.getName());
-
-		System.err.println(" ALLOWED "+roomTypes);
+		//		System.err.println(" ALLOWED "+roomTypes);
 		if(roomTypes.isEmpty()) { return null; }
 		RoomType rt = removeLargeRoomTypes(roomTypes).get(new Random().nextInt(roomTypes.size()));
 		/*if(ALGAGenerator.MAXIMIZE_ROOMTYPE_ACCESS) {
@@ -330,11 +326,11 @@ public class GameElementsManager {
 	}
 	
 	private List<RoomType> removeLargeRoomTypes(List<RoomType> roomtypes) {
-		System.out.println("ON SUPPRIME LES ROOM LARGE");
+		//System.out.println("ON SUPPRIME LES ROOM LARGE");
 		if(containsSmallAndLargeRoomTypes(roomtypes)) {
 			List<RoomType> roomtypes_ = new ArrayList<>();
 			for(RoomType rt: roomtypes) {
-				System.out.println("ON SUPPRIME LES ROOM LARGE "+rt.getName());
+				//System.out.println("ON SUPPRIME LES ROOM LARGE "+rt.getName());
 
 				if(rt instanceof SmallRoomType) {
 					roomtypes_.add(rt);
@@ -349,7 +345,7 @@ public class GameElementsManager {
 	private boolean containsSmallAndLargeRoomTypes(List<RoomType> roomtypes) {
 		boolean smallRT = false, largeRT = false;
 		for(RoomType rt: roomtypes) {
-			System.out.println("ON SUPPRIME LES ROOM LARGE "+rt.getName());
+			//System.out.println("ON SUPPRIME LES ROOM LARGE "+rt.getName());
 
 			if(rt instanceof LargeRoomType) {
 				largeRT = true;
@@ -360,7 +356,7 @@ public class GameElementsManager {
 		return largeRT && smallRT;
 	}
 	
-	private RoomType getRoomTypeWithMaximumAccess(List<RoomType> roomtypes) {
+	/*private RoomType getRoomTypeWithMaximumAccess(List<RoomType> roomtypes) {
 		Map<Integer, List<RoomType>> accessRoomtypes = new HashMap<>();
 		for(int i = 0; i < roomtypes.size(); i++) {
 			List<RoomType> roomtypes_ = new ArrayList<>();
@@ -373,7 +369,7 @@ public class GameElementsManager {
 		
 		return accessRoomtypes.get(max).get(new Random().nextInt(accessRoomtypes.get(max).size()));
 		
-	}
+	}*/
 	
 	private boolean roomTypeHasCompatibleAccesses(Directions entry, Directions exit, RoomType roomType) {
 		return roomType.getDirections().contains(entry) && (exit.equals(Directions.NONE) || roomType.getDirections().contains(exit));

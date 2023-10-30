@@ -2,155 +2,7 @@
  */
 package generator.impl;
 
-import generator.AComponent;
-import generator.AQuestionParam;
-import generator.AQuestionableFact;
-import generator.ATask;
-import generator.AValue;
-import generator.AVisualizationQuestionableFact;
-import generator.Abilities;
-import generator.Ability;
-import generator.AbstractFact;
-import generator.ClassifyTechnique;
-import generator.Classroom;
-import generator.Classrooms;
-import generator.CompletionCriteria;
-import generator.CompletionTask;
-import generator.Component;
-import generator.Condition;
-import generator.Correctness;
-import generator.CorrectnessValue;
-import generator.CurrentObjectiveLevel;
-import generator.Curse;
-import generator.CurseEligibility;
-import generator.Curses;
-import generator.Date;
-import generator.DateQuestionableFact;
-import generator.Directions;
-import generator.Display;
-import generator.Dungeon;
-import generator.DungeonMode;
-import generator.EBoundary;
-import generator.ECorrectness;
-import generator.EGeographyValue;
-import generator.EHistoryTarget;
-import generator.EJudoTarget;
-import generator.ELegendTarget;
-import generator.EModality;
-import generator.ERoomType;
-import generator.ESeveralTarget;
-import generator.ESingleTarget;
-import generator.EStatementType;
-import generator.ETaskType;
-import generator.ETimeTarget;
-import generator.ElementSize;
-import generator.ElementType;
-import generator.ElementsTypes;
-import generator.EnterResponse;
-import generator.EntrySoluceParam;
-import generator.Equipment;
-import generator.Equipments;
-import generator.ExpectedAnswer;
-import generator.FactCorrectnessParam;
-import generator.FactSolutionParam;
-import generator.GLocate;
-import generator.GPCategory;
-import generator.GameContext;
-import generator.GameDescription;
-import generator.GameElementTypes;
-import generator.Gameplay;
-import generator.GameplayTaskRelations;
-import generator.Gameplays;
-import generator.GeneratorFactory;
-import generator.GeneratorPackage;
-import generator.GeographyFact;
-import generator.GeographyLegendFact;
-import generator.HAssociation;
-import generator.HChronology;
-import generator.HGLevel;
-import generator.HLegend;
-import generator.HistoryFact;
-import generator.IdentificationTask;
-import generator.IdentifyTechnique;
-import generator.Image;
-import generator.Item;
-import generator.Items;
-import generator.JudoLevel;
-import generator.JudoQuestionableClassifyFact;
-import generator.JudoQuestionableTechniqueFact;
-import generator.JudoTechniqueFact;
-import generator.Knowledge;
-import generator.LabyrinthCurse;
-import generator.LargeRoomType;
-import generator.LearnerPlayer;
-import generator.LearnerProgress;
-import generator.LearningDomain;
-import generator.LearningPath;
-import generator.LegendText;
-import generator.Level;
-import generator.LevelsDifficultyProgress;
-import generator.MTCompletion1;
-import generator.MTCompletion2;
-import generator.MTFact;
-import generator.MTIdentification;
-import generator.MTLevel;
-import generator.MTMembership;
-import generator.MTQFCompletion1;
-import generator.MTQFCompletion2;
-import generator.MTQFIdentification;
-import generator.MTQFMembership;
-import generator.MTQFRebuild;
-import generator.MTRecontruction;
-import generator.MTResultFact;
-import generator.MapQuestionableFact;
-import generator.MembershipIDTask;
-import generator.MultipleChoice;
-import generator.NoQuestionGameplay;
-import generator.Objective;
-import generator.OrderingTask;
-import generator.Parameter;
-import generator.PlayerProgress;
-import generator.Position;
-import generator.PositionedElement;
-import generator.PositionedStructureElement;
-import generator.PositionedVisualizationElement;
-import generator.Prerequisite;
-import generator.Progression;
-import generator.Prompt;
-import generator.PropositionParam;
-import generator.Quantity;
-import generator.QuestionGameplay;
-import generator.QuestionParam;
-import generator.QuestionableFact;
-import generator.QuestionableFactResult;
-import generator.QuestionedFact;
-import generator.Relation;
-import generator.ResponseModality;
-import generator.ResultPosition;
-import generator.Results;
-import generator.ResultsByTask;
-import generator.Room;
-import generator.RoomAccess;
-import generator.RoomType;
-import generator.RoomTypes;
-import generator.SetOfFacts;
-import generator.Size;
-import generator.SmallRoomType;
-import generator.StatementElementType;
-import generator.Statistics;
-import generator.Structure;
-import generator.TableBuild;
-import generator.Teacher;
-import generator.Teachers;
-import generator.Time;
-import generator.TimePeriod;
-import generator.Value;
-import generator.Visualization;
-import generator.VisualizationPosition;
-import generator.VisualizationQuestionParam;
-import generator.VisualizationSolution;
-import generator.WantedAnswersParam;
-
+import generator.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -1057,6 +909,27 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass judoLevelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass judoArbitrationGestureFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass identifyArbitrationGestureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass judoQuestionableArbitrationFactEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -5448,6 +5321,96 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getJudoArbitrationGestureFact() {
+		return judoArbitrationGestureFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoArbitrationGestureFact_Name() {
+		return (EAttribute) judoArbitrationGestureFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoArbitrationGestureFact_Description() {
+		return (EAttribute) judoArbitrationGestureFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIdentifyArbitrationGesture() {
+		return identifyArbitrationGestureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIdentifyArbitrationGesture_NbMissingElements() {
+		return (EAttribute) identifyArbitrationGestureEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIdentifyArbitrationGesture_CheckOnLearnerAction() {
+		return (EAttribute) identifyArbitrationGestureEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getJudoQuestionableArbitrationFact() {
+		return judoQuestionableArbitrationFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoQuestionableArbitrationFact_Name() {
+		return (EAttribute) judoQuestionableArbitrationFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoQuestionableArbitrationFact_Description() {
+		return (EAttribute) judoQuestionableArbitrationFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoQuestionableArbitrationFact_RepresentationID() {
+		return (EAttribute) judoQuestionableArbitrationFactEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDirections() {
 		return directionsEEnum;
 	}
@@ -6236,6 +6199,19 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		judoLevelEClass = createEClass(JUDO_LEVEL);
 
+		judoArbitrationGestureFactEClass = createEClass(JUDO_ARBITRATION_GESTURE_FACT);
+		createEAttribute(judoArbitrationGestureFactEClass, JUDO_ARBITRATION_GESTURE_FACT__NAME);
+		createEAttribute(judoArbitrationGestureFactEClass, JUDO_ARBITRATION_GESTURE_FACT__DESCRIPTION);
+
+		identifyArbitrationGestureEClass = createEClass(IDENTIFY_ARBITRATION_GESTURE);
+		createEAttribute(identifyArbitrationGestureEClass, IDENTIFY_ARBITRATION_GESTURE__NB_MISSING_ELEMENTS);
+		createEAttribute(identifyArbitrationGestureEClass, IDENTIFY_ARBITRATION_GESTURE__CHECK_ON_LEARNER_ACTION);
+
+		judoQuestionableArbitrationFactEClass = createEClass(JUDO_QUESTIONABLE_ARBITRATION_FACT);
+		createEAttribute(judoQuestionableArbitrationFactEClass, JUDO_QUESTIONABLE_ARBITRATION_FACT__NAME);
+		createEAttribute(judoQuestionableArbitrationFactEClass, JUDO_QUESTIONABLE_ARBITRATION_FACT__DESCRIPTION);
+		createEAttribute(judoQuestionableArbitrationFactEClass, JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -6355,6 +6331,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		judoQuestionableTechniqueFactEClass.getESuperTypes().add(this.getQuestionableFact());
 		judoQuestionableClassifyFactEClass.getESuperTypes().add(this.getQuestionableFact());
 		judoLevelEClass.getESuperTypes().add(this.getLevel());
+		judoArbitrationGestureFactEClass.getESuperTypes().add(this.getAbstractFact());
+		identifyArbitrationGestureEClass.getESuperTypes().add(this.getCompletionTask());
+		judoQuestionableArbitrationFactEClass.getESuperTypes().add(this.getQuestionableFact());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -7634,6 +7613,36 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(judoLevelEClass, JudoLevel.class, "JudoLevel", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(judoArbitrationGestureFactEClass, JudoArbitrationGestureFact.class, "JudoArbitrationGestureFact",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getJudoArbitrationGestureFact_Name(), ecorePackage.getEString(), "name", null, 0, 1,
+				JudoArbitrationGestureFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJudoArbitrationGestureFact_Description(), ecorePackage.getEString(), "description", null, 0,
+				1, JudoArbitrationGestureFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(identifyArbitrationGestureEClass, IdentifyArbitrationGesture.class, "IdentifyArbitrationGesture",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIdentifyArbitrationGesture_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements",
+				"3", 0, 1, IdentifyArbitrationGesture.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIdentifyArbitrationGesture_CheckOnLearnerAction(), ecorePackage.getEBoolean(),
+				"checkOnLearnerAction", "true", 0, 1, IdentifyArbitrationGesture.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(judoQuestionableArbitrationFactEClass, JudoQuestionableArbitrationFact.class,
+				"JudoQuestionableArbitrationFact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getJudoQuestionableArbitrationFact_Name(), ecorePackage.getEString(), "name", null, 0, 1,
+				JudoQuestionableArbitrationFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJudoQuestionableArbitrationFact_Description(), ecorePackage.getEString(), "description", null,
+				0, 1, JudoQuestionableArbitrationFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJudoQuestionableArbitrationFact_RepresentationID(), ecorePackage.getEString(),
+				"representationID", null, 0, 1, JudoQuestionableArbitrationFact.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

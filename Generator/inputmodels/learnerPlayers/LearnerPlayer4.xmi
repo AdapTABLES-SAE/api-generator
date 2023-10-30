@@ -15,56 +15,72 @@
         <results>
           <resultsbytask>
             <task xsi:type="generator:IdentifyTechnique" href="../LearningDomain.xmi#JUDO_O1_L1_T1"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT5" missingElement="de-ashi-barai" sourceElement="De-Ashi-Barai" missingElementType="TECHNIQUE"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT8" missingElement="yoko-shiho-gatame" sourceElement="Yoko-Shiho-Gatame" missingElementType="TECHNIQUE"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT2" missingElement="o-goshi" sourceElement="O-Goshi" missingElementType="TECHNIQUE"/>
             <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT3" missingElement="uki-goshi" sourceElement="Uki-Goshi" missingElementType="TECHNIQUE"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT0" missingElement="ippon-seoi-nage" sourceElement="Ippon-Seoi-Nage" missingElementType="TECHNIQUE"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT9" missingElement="tate-shiho-gatame" sourceElement="Tate-Shiho-Gatame" missingElementType="TECHNIQUE"/>
             <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT1" missingElement="o-soto-gari" sourceElement="O-Soto-Gari" missingElementType="TECHNIQUE"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT6" missingElement="kami-shiho-gatame" sourceElement="Kami-Shiho-Gatame" missingElementType="TECHNIQUE"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT2" missingElement="o-goshi" sourceElement="O-Goshi" missingElementType="TECHNIQUE"/>
             <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT4" missingElement="hiza-guruma" sourceElement="Hiza-Guruma" missingElementType="TECHNIQUE"/>
             <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT7" missingElement="ushiro-gesa-gatame" sourceElement="Ushiro-Gesa-Gatame" missingElementType="TECHNIQUE"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT8" missingElement="yoko-shiho-gatame" sourceElement="Yoko-Shiho-Gatame" missingElementType="TECHNIQUE"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT0" missingElement="ippon-seoi-nage" sourceElement="Ippon-Seoi-Nage" missingElementType="TECHNIQUE"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT5" missingElement="de-ashi-barai" sourceElement="De-Ashi-Barai" missingElementType="TECHNIQUE"/>
             <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT10" missingElement="kamon-gesa-gatame" sourceElement="Hon-Gesa-Gatame" missingElementType="TECHNIQUE"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT6" missingElement="kami-shiho-gatame" sourceElement="Kami-Shiho-Gatame" missingElementType="TECHNIQUE"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T1-QAFACT9" missingElement="tate-shiho-gatame" sourceElement="Tate-Shiho-Gatame" missingElementType="TECHNIQUE"/>
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:IdentifyTechnique" href="../LearningDomain.xmi#JUDO_O1_L1_T2"/>
             <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT6" missingElement="contr&#xf4;le des 4 points par-dessus" sourceElement="Kami-Shiho-Gatame" missingElementType="DESCRIPTION"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT4" missingElement="roue autour du genou" sourceElement="Hiza-Guruma" missingElementType="DESCRIPTION"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT2" missingElement="grande projection de hanche" sourceElement="O-Goshi" missingElementType="DESCRIPTION"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT5" missingElement="balayage du pied qui avance" sourceElement="De-Ashi-Barai" missingElementType="DESCRIPTION"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT7" missingElement="contr&#xf4;le arri&#xe8;re par le travers" sourceElement="Ushiro-Gesa-Gatame" missingElementType="DESCRIPTION"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT10" missingElement="contr&#xf4;le fondamental par le travers " sourceElement="Hon-Gesa-Gatame" missingElementType="DESCRIPTION"/>
             <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT1" missingElement="grand fauchage ext&#xe9;rieur" sourceElement="O-Soto-Gari" missingElementType="DESCRIPTION"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT3" missingElement="hanche flott&#xe9;e" sourceElement="Uki-Goshi" missingElementType="DESCRIPTION"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT8" missingElement="contr&#xf4;le lat&#xe9;ral des 4 points" sourceElement="Yoko-Shiho-Gatame" missingElementType="DESCRIPTION"/>
-            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT0" missingElement="projection par-dessus l'&#xe9;paule" sourceElement="Ippon-Seoi-Nage" missingElementType="DESCRIPTION"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT2" missingElement="grande projection de hanche" sourceElement="O-Goshi" missingElementType="DESCRIPTION"/>
             <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT9" missingElement="contr&#xf4;le longitudinal des 4 points" sourceElement="Tate-Shiho-Gatame" missingElementType="DESCRIPTION"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT4" missingElement="roue autour du genou" sourceElement="Hiza-Guruma" missingElementType="DESCRIPTION"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT0" missingElement="projection par-dessus l'&#xe9;paule" sourceElement="Ippon-Seoi-Nage" missingElementType="DESCRIPTION"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT7" missingElement="contr&#xf4;le arri&#xe8;re par le travers" sourceElement="Ushiro-Gesa-Gatame" missingElementType="DESCRIPTION"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT8" missingElement="contr&#xf4;le lat&#xe9;ral des 4 points" sourceElement="Yoko-Shiho-Gatame" missingElementType="DESCRIPTION"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT3" missingElement="hanche flott&#xe9;e" sourceElement="Uki-Goshi" missingElementType="DESCRIPTION"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT5" missingElement="balayage du pied qui avance" sourceElement="De-Ashi-Barai" missingElementType="DESCRIPTION"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableTechniqueFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T2-QAFACT10" missingElement="contr&#xf4;le fondamental par le travers " sourceElement="Hon-Gesa-Gatame" missingElementType="DESCRIPTION"/>
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:ClassifyTechnique" href="../LearningDomain.xmi#JUDO_O1_L1_T3"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableClassifyFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T3-QAFACT2" category="OSAEKOMI-WAZA (Techniques d'immobilisation)">
+              <techniques>Yoko-Shiho-Gatame</techniques>
+              <techniques>Ushiro-Gesa-Gatame</techniques>
+              <techniques>Tate-Shiho-Gatame</techniques>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:JudoQuestionableClassifyFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T3-QAFACT3" category="KOSHI-WAZA (Techniques de hanche)">
+              <techniques>O-Goshi</techniques>
+              <techniques>Uki-Goshi</techniques>
+            </questionableFacts>
             <questionableFacts xsi:type="generator:JudoQuestionableClassifyFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T3-QAFACT0" category="TE-WAZA (Techniques de bras)">
               <techniques>Ippon-Seoi-Nage</techniques>
             </questionableFacts>
             <questionableFacts xsi:type="generator:JudoQuestionableClassifyFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T3-QAFACT1" category="ASHI-WAZA (Techniques de jambe)">
-              <techniques>O-Soto-Gari</techniques>
-              <techniques>Hiza-Guruma</techniques>
               <techniques>De-Ashi-Barai</techniques>
+              <techniques>Hiza-Guruma</techniques>
+              <techniques>O-Soto-Gari</techniques>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:JudoQuestionableClassifyFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T3-QAFACT3" category="KOSHI-WAZA (Techniques de hanche)">
-              <techniques>Uki-Goshi</techniques>
-              <techniques>O-Goshi</techniques>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:JudoQuestionableClassifyFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T3-QAFACT2" category="OSAEKOMI-WAZA (Techniques d'immobilisation)">
-              <techniques>Tate-Shiho-Gatame</techniques>
-              <techniques>Yoko-Shiho-Gatame</techniques>
-              <techniques>Hon-Gesa-Gatame</techniques>
-            </questionableFacts>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:IdentifyArbitrationGesture" href="../LearningDomain.xmi#JUDO_O1_L1_T4"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableArbitrationFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T4-QAFACT4" name="MATTE" description="arr&#xea;te temporairement le combat" representationID="matte"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableArbitrationFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T4-QAFACT7" name="SONOMAMA" description="les combatants ne doivent plus bouger" representationID="sonomama_yoshi"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableArbitrationFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T4-QAFACT11" name="SHIDO " description="Non combativit&#xe9;" representationID="non_combativite"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableArbitrationFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T4-QAFACT0" name="IPPON" description="victoire suivie de l'arr&#xea;t du combat" representationID="ippon"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableArbitrationFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T4-QAFACT5" name="OSEAKOMI" description="d&#xe9;but du chronom&#xe8;tre du temps d'immobilisation" representationID="osaekomi"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableArbitrationFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T4-QAFACT3" name="HAJIME" description="commencer le combat" representationID="hajime"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableArbitrationFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T4-QAFACT9" name="HIKI WAKE" description="match nul" representationID="hiki-wake"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableArbitrationFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T4-QAFACT12" name="SHIDO " description="Fausse attaque" representationID="fausse_attaque"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableArbitrationFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T4-QAFACT2" name="ANNULATION" description="annuler l'action attribuer (ex. annuler waza-ari)" representationID="waza-ari"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableArbitrationFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T4-QAFACT10" name="SHIDO (Attribution)" description="d&#xe9;signe le combattant &#xe0; qui la p&#xe9;nalit&#xe9; revient" representationID="penalite"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableArbitrationFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T4-QAFACT1" name="WAZA-ARI" description="presque victoire (demi ippon)" representationID="waza-ari"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableArbitrationFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T4-QAFACT8" name="YOSHI" description="le combat reprend (apr&#xe8;s un sonomama)" representationID="sonomama_yoshi"/>
+            <questionableFacts xsi:type="generator:JudoQuestionableArbitrationFact" wasSelected="false" achieved="false" ID="JUDO_O1_L1_T4-QAFACT6" name="TOKETA" description="arr&#xea;t du chronom&#xe8;tre du temps d&#x2019;immobilisation" representationID="toketa"/>
           </resultsbytask>
         </results>
       </currentobjectivelevels>
     </learnerProgress>
   </progression>
   <learningpath href="../LearningDomain.xmi#PATH_JUDO_BLEMOINE"/>
-  <statistics maxGameLevelReached="1" nbLevelsGenerated="554"/>
+  <statistics maxGameLevelReached="1" nbLevelsGenerated="560"/>
 </generator:LearnerPlayer>

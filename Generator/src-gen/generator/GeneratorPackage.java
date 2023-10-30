@@ -9627,6 +9627,333 @@ public interface GeneratorPackage extends EPackage {
 	int JUDO_LEVEL_OPERATION_COUNT = LEVEL_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.JudoArbitrationGestureFactImpl <em>Judo Arbitration Gesture Fact</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.JudoArbitrationGestureFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getJudoArbitrationGestureFact()
+	 * @generated
+	 */
+	int JUDO_ARBITRATION_GESTURE_FACT = 127;
+
+	/**
+	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_ARBITRATION_GESTURE_FACT__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_ARBITRATION_GESTURE_FACT__NAME = ABSTRACT_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_ARBITRATION_GESTURE_FACT__DESCRIPTION = ABSTRACT_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Judo Arbitration Gesture Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_ARBITRATION_GESTURE_FACT_FEATURE_COUNT = ABSTRACT_FACT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Judo Arbitration Gesture Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_ARBITRATION_GESTURE_FACT_OPERATION_COUNT = ABSTRACT_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.IdentifyArbitrationGestureImpl <em>Identify Arbitration Gesture</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.IdentifyArbitrationGestureImpl
+	 * @see generator.impl.GeneratorPackageImpl#getIdentifyArbitrationGesture()
+	 * @generated
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE = 128;
+
+	/**
+	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE__PERCENT_OF_APPARITION = COMPLETION_TASK__PERCENT_OF_APPARITION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE__NB_CONSECUTIVE_SUCCESS = COMPLETION_TASK__NB_CONSECUTIVE_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE__RESPONSE_MODALITY = COMPLETION_TASK__RESPONSE_MODALITY;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE__ID = COMPLETION_TASK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE__MAX_TIME = COMPLETION_TASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE__NB_FACTS = COMPLETION_TASK__NB_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE__TYPE = COMPLETION_TASK__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE__CHECK_ON_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Identify Arbitration Gesture</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE___GET_TYPE = COMPLETION_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Check On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE___IS_CHECK_ON_LEARNER_ACTION = COMPLETION_TASK___IS_CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Is Graphic Task</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE___IS_GRAPHIC_TASK = COMPLETION_TASK___IS_GRAPHIC_TASK;
+
+	/**
+	 * The operation id for the '<em>Get Nb Missing Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE___GET_NB_EXPECTED_ANSWERS = COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS;
+
+	/**
+	 * The number of operations of the '<em>Identify Arbitration Gesture</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_ARBITRATION_GESTURE_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.JudoQuestionableArbitrationFactImpl <em>Judo Questionable Arbitration Fact</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.JudoQuestionableArbitrationFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getJudoQuestionableArbitrationFact()
+	 * @generated
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT = 129;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT__RESULTS = QUESTIONABLE_FACT__RESULTS;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT__ID = QUESTIONABLE_FACT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT__NAME = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT__DESCRIPTION = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Representation ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID = QUESTIONABLE_FACT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Judo Questionable Arbitration Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
+
+	/**
+	 * The operation id for the '<em>Get Complete Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT___GET_COMPLETE_FACT = QUESTIONABLE_FACT___GET_COMPLETE_FACT;
+
+	/**
+	 * The number of operations of the '<em>Judo Questionable Arbitration Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9634,7 +9961,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 127;
+	int DIRECTIONS = 130;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -9644,7 +9971,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 128;
+	int DUNGEON_MODE = 131;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -9654,7 +9981,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 129;
+	int TABLE_BUILD = 132;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -9664,7 +9991,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 130;
+	int RESULT_POSITION = 133;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -9674,7 +10001,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 131;
+	int ESINGLE_TARGET = 134;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -9684,7 +10011,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 132;
+	int ETASK_TYPE = 135;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -9694,7 +10021,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 133;
+	int EMODALITY = 136;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -9704,7 +10031,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 134;
+	int ESEVERAL_TARGET = 137;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -9714,7 +10041,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 135;
+	int ELEMENT_SIZE = 138;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -9724,7 +10051,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 136;
+	int GP_CATEGORY = 139;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -9734,7 +10061,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 137;
+	int ECORRECTNESS = 140;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -9744,7 +10071,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 138;
+	int EBOUNDARY = 141;
 
 	/**
 	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
@@ -9754,7 +10081,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
 	 * @generated
 	 */
-	int EROOM_TYPE = 139;
+	int EROOM_TYPE = 142;
 
 	/**
 	 * The meta object id for the '{@link generator.EGeographyValue <em>EGeography Value</em>}' enum.
@@ -9764,7 +10091,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEGeographyValue()
 	 * @generated
 	 */
-	int EGEOGRAPHY_VALUE = 140;
+	int EGEOGRAPHY_VALUE = 143;
 
 	/**
 	 * The meta object id for the '{@link generator.EHistoryTarget <em>EHistory Target</em>}' enum.
@@ -9774,7 +10101,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEHistoryTarget()
 	 * @generated
 	 */
-	int EHISTORY_TARGET = 141;
+	int EHISTORY_TARGET = 144;
 
 	/**
 	 * The meta object id for the '{@link generator.ELegendTarget <em>ELegend Target</em>}' enum.
@@ -9784,7 +10111,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getELegendTarget()
 	 * @generated
 	 */
-	int ELEGEND_TARGET = 142;
+	int ELEGEND_TARGET = 145;
 
 	/**
 	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
@@ -9794,7 +10121,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 143;
+	int ESTATEMENT_TYPE = 146;
 
 	/**
 	 * The meta object id for the '{@link generator.ETimeTarget <em>ETime Target</em>}' enum.
@@ -9804,7 +10131,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETimeTarget()
 	 * @generated
 	 */
-	int ETIME_TARGET = 144;
+	int ETIME_TARGET = 147;
 
 	/**
 	 * The meta object id for the '{@link generator.EJudoTarget <em>EJudo Target</em>}' enum.
@@ -9814,7 +10141,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEJudoTarget()
 	 * @generated
 	 */
-	int EJUDO_TARGET = 145;
+	int EJUDO_TARGET = 148;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -14786,6 +15113,113 @@ public interface GeneratorPackage extends EPackage {
 	EClass getJudoLevel();
 
 	/**
+	 * Returns the meta object for class '{@link generator.JudoArbitrationGestureFact <em>Judo Arbitration Gesture Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Judo Arbitration Gesture Fact</em>'.
+	 * @see generator.JudoArbitrationGestureFact
+	 * @generated
+	 */
+	EClass getJudoArbitrationGestureFact();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.JudoArbitrationGestureFact#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.JudoArbitrationGestureFact#getName()
+	 * @see #getJudoArbitrationGestureFact()
+	 * @generated
+	 */
+	EAttribute getJudoArbitrationGestureFact_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.JudoArbitrationGestureFact#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see generator.JudoArbitrationGestureFact#getDescription()
+	 * @see #getJudoArbitrationGestureFact()
+	 * @generated
+	 */
+	EAttribute getJudoArbitrationGestureFact_Description();
+
+	/**
+	 * Returns the meta object for class '{@link generator.IdentifyArbitrationGesture <em>Identify Arbitration Gesture</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Identify Arbitration Gesture</em>'.
+	 * @see generator.IdentifyArbitrationGesture
+	 * @generated
+	 */
+	EClass getIdentifyArbitrationGesture();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.IdentifyArbitrationGesture#getNbMissingElements <em>Nb Missing Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
+	 * @see generator.IdentifyArbitrationGesture#getNbMissingElements()
+	 * @see #getIdentifyArbitrationGesture()
+	 * @generated
+	 */
+	EAttribute getIdentifyArbitrationGesture_NbMissingElements();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.IdentifyArbitrationGesture#isCheckOnLearnerAction <em>Check On Learner Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check On Learner Action</em>'.
+	 * @see generator.IdentifyArbitrationGesture#isCheckOnLearnerAction()
+	 * @see #getIdentifyArbitrationGesture()
+	 * @generated
+	 */
+	EAttribute getIdentifyArbitrationGesture_CheckOnLearnerAction();
+
+	/**
+	 * Returns the meta object for class '{@link generator.JudoQuestionableArbitrationFact <em>Judo Questionable Arbitration Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Judo Questionable Arbitration Fact</em>'.
+	 * @see generator.JudoQuestionableArbitrationFact
+	 * @generated
+	 */
+	EClass getJudoQuestionableArbitrationFact();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.JudoQuestionableArbitrationFact#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.JudoQuestionableArbitrationFact#getName()
+	 * @see #getJudoQuestionableArbitrationFact()
+	 * @generated
+	 */
+	EAttribute getJudoQuestionableArbitrationFact_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.JudoQuestionableArbitrationFact#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see generator.JudoQuestionableArbitrationFact#getDescription()
+	 * @see #getJudoQuestionableArbitrationFact()
+	 * @generated
+	 */
+	EAttribute getJudoQuestionableArbitrationFact_Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.JudoQuestionableArbitrationFact#getRepresentationID <em>Representation ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Representation ID</em>'.
+	 * @see generator.JudoQuestionableArbitrationFact#getRepresentationID()
+	 * @see #getJudoQuestionableArbitrationFact()
+	 * @generated
+	 */
+	EAttribute getJudoQuestionableArbitrationFact_RepresentationID();
+
+	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18991,6 +19425,96 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EClass JUDO_LEVEL = eINSTANCE.getJudoLevel();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.JudoArbitrationGestureFactImpl <em>Judo Arbitration Gesture Fact</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.JudoArbitrationGestureFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getJudoArbitrationGestureFact()
+		 * @generated
+		 */
+		EClass JUDO_ARBITRATION_GESTURE_FACT = eINSTANCE.getJudoArbitrationGestureFact();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_ARBITRATION_GESTURE_FACT__NAME = eINSTANCE.getJudoArbitrationGestureFact_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_ARBITRATION_GESTURE_FACT__DESCRIPTION = eINSTANCE.getJudoArbitrationGestureFact_Description();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.IdentifyArbitrationGestureImpl <em>Identify Arbitration Gesture</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.IdentifyArbitrationGestureImpl
+		 * @see generator.impl.GeneratorPackageImpl#getIdentifyArbitrationGesture()
+		 * @generated
+		 */
+		EClass IDENTIFY_ARBITRATION_GESTURE = eINSTANCE.getIdentifyArbitrationGesture();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IDENTIFY_ARBITRATION_GESTURE__NB_MISSING_ELEMENTS = eINSTANCE
+				.getIdentifyArbitrationGesture_NbMissingElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Check On Learner Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IDENTIFY_ARBITRATION_GESTURE__CHECK_ON_LEARNER_ACTION = eINSTANCE
+				.getIdentifyArbitrationGesture_CheckOnLearnerAction();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.JudoQuestionableArbitrationFactImpl <em>Judo Questionable Arbitration Fact</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.JudoQuestionableArbitrationFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getJudoQuestionableArbitrationFact()
+		 * @generated
+		 */
+		EClass JUDO_QUESTIONABLE_ARBITRATION_FACT = eINSTANCE.getJudoQuestionableArbitrationFact();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_QUESTIONABLE_ARBITRATION_FACT__NAME = eINSTANCE.getJudoQuestionableArbitrationFact_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_QUESTIONABLE_ARBITRATION_FACT__DESCRIPTION = eINSTANCE
+				.getJudoQuestionableArbitrationFact_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Representation ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID = eINSTANCE
+				.getJudoQuestionableArbitrationFact_RepresentationID();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.
