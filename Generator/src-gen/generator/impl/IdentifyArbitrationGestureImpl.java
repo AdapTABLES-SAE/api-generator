@@ -2,6 +2,7 @@
  */
 package generator.impl;
 
+import generator.EJudoTarget;
 import generator.GeneratorPackage;
 import generator.IdentifyArbitrationGesture;
 
@@ -21,6 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link generator.impl.IdentifyArbitrationGestureImpl#getNbMissingElements <em>Nb Missing Elements</em>}</li>
  *   <li>{@link generator.impl.IdentifyArbitrationGestureImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.impl.IdentifyArbitrationGestureImpl#getSource <em>Source</em>}</li>
  * </ul>
  *
  * @generated
@@ -34,7 +36,7 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NB_MISSING_ELEMENTS_EDEFAULT = 3;
+	protected static final int NB_MISSING_ELEMENTS_EDEFAULT = 2;
 
 	/**
 	 * The cached value of the '{@link #getNbMissingElements() <em>Nb Missing Elements</em>}' attribute.
@@ -74,6 +76,26 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 	 * @ordered
 	 */
 	protected boolean checkOnLearnerAction = CHECK_ON_LEARNER_ACTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSource() <em>Source</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSource()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EJudoTarget SOURCE_EDEFAULT = EJudoTarget.NAME;
+
+	/**
+	 * The cached value of the '{@link #getSource() <em>Source</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSource()
+	 * @generated
+	 * @ordered
+	 */
+	protected EJudoTarget source = SOURCE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,6 +162,28 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EJudoTarget getSource() {
+		return source;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSource(EJudoTarget newSource) {
+		EJudoTarget oldSource = source;
+		source = newSource == null ? SOURCE_EDEFAULT : newSource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__SOURCE,
+					oldSource, source));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -147,6 +191,8 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 			return getNbMissingElements();
 		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__CHECK_ON_LEARNER_ACTION:
 			return isCheckOnLearnerAction();
+		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__SOURCE:
+			return getSource();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -162,6 +208,9 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction((Boolean) newValue);
 			return;
+		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__SOURCE:
+			setSource((EJudoTarget) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -176,6 +225,9 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 		switch (featureID) {
 		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction(CHECK_ON_LEARNER_ACTION_EDEFAULT);
+			return;
+		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__SOURCE:
+			setSource(SOURCE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -193,6 +245,8 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 			return isSetNbMissingElements();
 		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__CHECK_ON_LEARNER_ACTION:
 			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
+		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__SOURCE:
+			return source != SOURCE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -215,6 +269,8 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 			result.append("<unset>");
 		result.append(", checkOnLearnerAction: ");
 		result.append(checkOnLearnerAction);
+		result.append(", source: ");
+		result.append(source);
 		result.append(')');
 		return result.toString();
 	}

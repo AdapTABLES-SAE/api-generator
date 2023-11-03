@@ -100,7 +100,7 @@ public abstract class FactGeneratorTemplate {
 					mapValue.setID(sol.getPosition().getID());
 					soluceParam.setPosition(mapValue);
 				}
-				qef.getEntrys().add(soluceParam); //TODO
+				qef.getEntrys().add(soluceParam); 
 			}
 		} else {
 			Map<ECorrectness, List<Soluce>> propositions = getListOfPropositions(roomElement.getTask(), qFact);
@@ -191,6 +191,11 @@ public abstract class FactGeneratorTemplate {
 	}
 	
 	protected List<String> factSolutionsToString(AQuestionableFact qFact){
+		if(qFact instanceof QuestionableFact) {
+			List<String> full_solution = new ArrayList<>();
+			full_solution.add(((QuestionableFact) qFact).getCompleteFact());
+			return full_solution;
+		}
 		return new ArrayList<>();
 	}
 	

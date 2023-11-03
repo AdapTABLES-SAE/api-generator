@@ -9,13 +9,14 @@ context LearningDomain!LearningPath {
 			return self.objectives.forAll(obj | 
 			obj.setoffacts.forAll(facts | 
 			self.knowledge.knowledgefacts.contains(facts))); 
-			//.println(); self.levels.size() = 0; isDefined();
 		}
 		
 		message {
 			return "SetOfFacts does not belong to the correct knowledge";
 		}
 	}
+	
+	//.println(); self.levels.size() = 0; isDefined();
 	
 	/*
 	Checks if every required level of an Objective's Prerequisite, is not

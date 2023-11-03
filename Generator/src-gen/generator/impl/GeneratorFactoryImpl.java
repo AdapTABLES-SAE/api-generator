@@ -115,8 +115,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createResultsByTask();
 		case GeneratorPackage.MT_FACT:
 			return createMTFact();
-		case GeneratorPackage.MT_RESULT_FACT:
-			return createMTResultFact();
 		case GeneratorPackage.MTQF_COMPLETION1:
 			return createMTQFCompletion1();
 		case GeneratorPackage.MTQF_COMPLETION2:
@@ -676,16 +674,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public MTFact createMTFact() {
 		MTFactImpl mtFact = new MTFactImpl();
 		return mtFact;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MTResultFact createMTResultFact() {
-		MTResultFactImpl mtResultFact = new MTResultFactImpl();
-		return mtResultFact;
 	}
 
 	/**

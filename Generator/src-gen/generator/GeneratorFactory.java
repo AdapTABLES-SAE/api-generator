@@ -283,15 +283,6 @@ public interface GeneratorFactory extends EFactory {
 	MTFact createMTFact();
 
 	/**
-	 * Returns a new object of class '<em>MT Result Fact</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MT Result Fact</em>'.
-	 * @generated
-	 */
-	MTResultFact createMTResultFact();
-
-	/**
 	 * Returns a new object of class '<em>MTQF Completion1</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

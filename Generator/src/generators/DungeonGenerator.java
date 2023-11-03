@@ -92,18 +92,11 @@ public class DungeonGenerator {
 			if(aRoom != null) {
 				dungeonRooms.add(aRoom);
 			} else {
-				dungeonElements.addEmptyRoom(dungeonRooms.size());
-				aRoom = createNewRoomFrom(randomStartingRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size()));
-				if(aRoom != null) {
-					dungeonRooms.add(aRoom);
-				} else {
-					createNewPath(randomStartingRoom, originRoom);
-				}
-				
+				createNewPath(randomStartingRoom, originRoom);				
 			}
 			
 		}	
-		//System.out.println("Expected number of rooms "+ nbRooms);
+		System.out.println("Expected number of rooms "+ nbRooms);
 		dungeonRooms.add(createAnExit(dungeonRooms));		
 		for (LabyrinthineRoom aEntry : dungeonRooms) {
 			generatedDungeon.getRooms().add(aEntry.getRoom());
@@ -185,7 +178,6 @@ public class DungeonGenerator {
 			Coordinate validCoord = gridManager.getValidCoordinates(entry, nextPosition);
 			createOriginRoomExitAccess(originRoom, originRoomAvailableDirection);
 			Room aRoom = createRoom(validCoord.getX(), validCoord.getY(), roomType, roomElements, originRoom.getLastRoomAccess(), entry);
-			System.out.println("Created room "+aRoom+" "+(aRoom == null));
 			return new LabyrinthineRoom(aRoom);
 		}
 	}

@@ -13,10 +13,10 @@ import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
 import generator.ECorrectness;
+import generator.MTFact;
 import generator.MTLevel;
 import generator.MTMembership;
 import generator.MTQFMembership;
-import generator.MTResultFact;
 import generator.MultipleChoice;
 import generator.SetOfFacts;
 import generator.impl.MTQFMembershipImpl;
@@ -44,10 +44,10 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 		
 		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
 			if(!setoffact.getName().equals("1")) {
-				List<MTResultFact> facts = new ArrayList<>();
+				List<MTFact> facts = new ArrayList<>();
 				for (AbstractFact f : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
-					if(f instanceof MTResultFact) {
-						MTResultFact fact = (MTResultFact) f;
+					if(f instanceof MTFact) {
+						MTFact fact = (MTFact) f;
 						if(min <= (fact.getRes()/fact.getTable()) && (fact.getRes()/fact.getTable()) <= max){
 							facts.add(fact);
 						}
@@ -60,12 +60,12 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 	}
 	
 	
-	protected Set<AQuestionableFact> generateAQuestionableFactsOf(ATask task, List<MTResultFact> facts, int numberByFact) {
+	protected Set<AQuestionableFact> generateAQuestionableFactsOf(ATask task, List<MTFact> facts, int numberByFact) {
 		Set<AQuestionableFact> qfs = new HashSet<>(); 
 		int k = 0;
 		int numberOfQuestionableFacts = (int) Math.ceil(facts.size() / numberByFact);
 		for (int i = 0; i < numberOfQuestionableFacts; i++) {
-			List<MTResultFact> factres = new ArrayList<>(); 
+			List<MTFact> factres = new ArrayList<>(); 
 			while(factres.size() < numberByFact && k < facts.size()) {
 				factres.add(facts.get(k));
 				k++;
@@ -75,11 +75,11 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 		return qfs;
 	}
 	
-	private MTQFMembership buildQF(List<MTResultFact> facts) {
+	private MTQFMembership buildQF(List<MTFact> facts) {
 		MTQFMembership qf = new MTQFMembershipImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		
-		for (MTResultFact mtResultFact : facts) {
+		for (MTFact mtResultFact : facts) {
 			qf.getGoodResults().add(mtResultFact.getRes());
 		}
 		qf.setTable(facts.get(0).getTable());

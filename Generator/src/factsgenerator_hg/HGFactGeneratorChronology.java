@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
@@ -79,7 +80,6 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 		
 		List<VisualizationPosition> positions = new ArrayList<>(fact.getVisualization().getPositions());
 		positions.removeAll(getSolutionsPositions(goodSolutions));
-		System.out.println("IL y a des positions "+ positions);
 		List<Soluce> badSoluces = new ArrayList<>();
 		if(positions.size() >= numberOfBadSoluce) {
 			for(int i = 0; i < numberOfBadSoluce; i++) {
@@ -116,8 +116,8 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 
 
 	@Override
-	protected java.util.Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) throws BadSolutionGenerationException {
-		java.util.Map<ECorrectness, List<Soluce>> propositions = new HashMap<>();
+	protected Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) throws BadSolutionGenerationException {
+		Map<ECorrectness, List<Soluce>> propositions = new HashMap<>();
 
 		List<Soluce> goodSoluce = getListOfGoodSolutions(qFact);
 		propositions.put(ECorrectness.CORRECT, goodSoluce);
@@ -126,7 +126,6 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
  		List<Soluce> badSoluce = new ArrayList<>();
 
 		if(mc != null) {
-			System.out.println("PAR ICI");
 			badSoluce = getBadSoluces(qFact, goodSoluce, mc.getNbBadChoices());
 		} 
 		

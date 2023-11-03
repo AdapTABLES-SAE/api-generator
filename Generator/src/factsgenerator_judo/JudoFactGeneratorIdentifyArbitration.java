@@ -13,6 +13,7 @@ import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
 import generator.ECorrectness;
+import generator.IdentifyArbitrationGesture;
 import generator.JudoArbitrationGestureFact;
 import generator.JudoQuestionableArbitrationFact;
 import generator.SetOfFacts;
@@ -32,10 +33,30 @@ public class JudoFactGeneratorIdentifyArbitration extends FactGeneratorTemplate 
 		if(fact instanceof JudoArbitrationGestureFact) {		
 			JudoQuestionableArbitrationFact qfact = new JudoQuestionableArbitrationFactImpl();
 			JudoArbitrationGestureFact jfact = (JudoArbitrationGestureFact) fact;
+			
+			IdentifyArbitrationGesture jtask = (IdentifyArbitrationGesture) task;
+			switch(jtask.getSource()) {
+				case NAME: 
+					qfact.setName(jfact.getName());
+					qfact.setDescription("-1");
+					qfact.setRepresentationID("-1");
+					break;
+				case DESCRIPTION: 
+					qfact.setName("-1");
+					qfact.setDescription(jfact.getDescription());
+					qfact.setRepresentationID("-1");
+					break;
+				case TECHNIQUE: 
+					qfact.setName("-1");					
+					qfact.setDescription("-1");
+					qfact.setRepresentationID(jfact.getRepresentation().getID());
+					break;
+			}
+			
 			qfact.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
-			qfact.setName(jfact.getName());
-			qfact.setDescription(jfact.getDescription());
-			qfact.setRepresentationID(jfact.getRepresentation().getID());
+			qfact.setNameSoluce(jfact.getName());
+			qfact.setDescriptionSoluce(jfact.getDescription());
+			qfact.setRepresentationIDSoluce(jfact.getRepresentation().getID());
 			questionableFacts.add(qfact);
 			
 		}
@@ -47,10 +68,16 @@ public class JudoFactGeneratorIdentifyArbitration extends FactGeneratorTemplate 
 		List<Soluce> solutions = new ArrayList<>();
 		JudoQuestionableArbitrationFact jfact = (JudoQuestionableArbitrationFact) qFact;
 		
-		solutions.add(new Soluce(jfact.getName()));
-		solutions.add(new Soluce(jfact.getDescription()));
-		solutions.add(new Soluce(jfact.getRepresentationID(), true));
-	
+		if(jfact.getName().equals("-1")) {
+			solutions.add(new Soluce(jfact.getNameSoluce())); 
+		}
+		if(jfact.getDescription().equals("-1")) {
+			solutions.add(new Soluce(jfact.getDescriptionSoluce()));
+		}
+		if(jfact.getRepresentationID().equals("-1")) {
+			solutions.add(new Soluce(jfact.getRepresentationIDSoluce(), true));
+		}
+		
 		return solutions;
 	}
 	
@@ -76,5 +103,39 @@ public class JudoFactGeneratorIdentifyArbitration extends FactGeneratorTemplate 
 	protected int correctnessToReach(AQuestionableFact fact) {
 		return 1;
 	}
+	
+	private boolean startByName(JudoQuestionableArbitrationFact qfact) {
+		return qfact.getName().isEmpty();
+	}
+	
+	private boolean startByDescription(JudoQuestionableArbitrationFact qfact) {
+		return qfact.getDescription().isEmpty();
+	}
+	
+	private boolean startByTechnique(JudoQuestionableArbitrationFact qfact) {
+		return qfact.getRepresentationID().isEmpty();
+	}
+	
+	@Override
+	protected List<String> factSolutionsToString(AQuestionableFact qFact) {
+		List<String> solutions = new ArrayList<>();
+		JudoQuestionableArbitrationFact qfact = (JudoQuestionableArbitrationFactImpl) qFact;		
+		if(startByName(qfact)) {
+			solutions.add("("+qfact.getNameSoluce()+"-"+qfact.getRepresentationIDSoluce()+"-"+qfact.getDescriptionSoluce()+")");
+			solutions.add("("+qfact.getNameSoluce()+"-"+qfact.getDescriptionSoluce()+"-"+qfact.getRepresentationIDSoluce()+")");
+		}
+		if(startByDescription(qfact)) {
+			solutions.add("("+qfact.getDescriptionSoluce()+"-"+qfact.getNameSoluce()+"-"+qfact.getRepresentationIDSoluce()+")");
+			solutions.add("("+qfact.getDescriptionSoluce()+"-"+qfact.getRepresentationIDSoluce()+"-"+qfact.getNameSoluce()+")");
+		}		
+		if(startByTechnique(qfact)) {
+			solutions.add("("+qfact.getRepresentationIDSoluce()+"-"+qfact.getNameSoluce()+"-"+qfact.getDescriptionSoluce()+")");
+			solutions.add("("+qfact.getRepresentationIDSoluce()+"-"+qfact.getDescriptionSoluce()+"-"+qfact.getNameSoluce()+")");
+		}
+		return solutions;
+	}
+	
+	
 
+	
 }

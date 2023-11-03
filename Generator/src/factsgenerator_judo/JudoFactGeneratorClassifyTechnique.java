@@ -132,7 +132,7 @@ public class JudoFactGeneratorClassifyTechnique extends FactGeneratorTemplate {
 		return propositions;
 	}
 	
-	private List<Soluce> getListOfPossibleBadPropositions(List<Soluce> goodSolutions, EJudoTarget target) {
+	private List<Soluce> getListOfPossibleBadPropositions(List<Soluce> goodSolutions, EJudoTarget target) {  // TODO check category
 		List<Soluce> badPossibleSoluce = new ArrayList<>();
 		for(SetOfFacts setoffact: modelsManager.getKnowledgeModel().getKnowledgefacts()) {
 			for(AbstractFact afact: setoffact.getFacts()) {
@@ -178,5 +178,6 @@ public class JudoFactGeneratorClassifyTechnique extends FactGeneratorTemplate {
 	protected int correctnessToReach(AQuestionableFact fact) {
 		return ((JudoQuestionableClassifyFact) fact).getTechniques().size();
 	}
+	
 
 }

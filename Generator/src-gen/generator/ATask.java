@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see generator.GeneratorPackage#getATask()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
 public interface ATask extends EObject {

@@ -363,15 +363,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.MT_RESULT_FACT: {
-			MTResultFact mtResultFact = (MTResultFact) theEObject;
-			T result = caseMTResultFact(mtResultFact);
-			if (result == null)
-				result = caseAbstractFact(mtResultFact);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case GeneratorPackage.QUESTIONABLE_FACT: {
 			QuestionableFact questionableFact = (QuestionableFact) theEObject;
 			T result = caseQuestionableFact(questionableFact);
@@ -1715,21 +1706,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMTFact(MTFact object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MT Result Fact</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MT Result Fact</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMTResultFact(MTResultFact object) {
 		return null;
 	}
 

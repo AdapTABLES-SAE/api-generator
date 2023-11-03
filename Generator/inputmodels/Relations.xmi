@@ -71,6 +71,7 @@
         nbExpectedAnswers="EQ_NB_FACTS">
       <statementTypes>CLASSIC</statementTypes>
       <statementTypes>GRAPHIC</statementTypes>
+      <statementTypes>FILL_IN</statementTypes>
     </condition>
   </relations>
   <relations

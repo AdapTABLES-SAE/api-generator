@@ -14,6 +14,9 @@ package generator;
  *   <li>{@link generator.JudoQuestionableArbitrationFact#getName <em>Name</em>}</li>
  *   <li>{@link generator.JudoQuestionableArbitrationFact#getDescription <em>Description</em>}</li>
  *   <li>{@link generator.JudoQuestionableArbitrationFact#getRepresentationID <em>Representation ID</em>}</li>
+ *   <li>{@link generator.JudoQuestionableArbitrationFact#getNameSoluce <em>Name Soluce</em>}</li>
+ *   <li>{@link generator.JudoQuestionableArbitrationFact#getRepresentationIDSoluce <em>Representation ID Soluce</em>}</li>
+ *   <li>{@link generator.JudoQuestionableArbitrationFact#getDescriptionSoluce <em>Description Soluce</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getJudoQuestionableArbitrationFact()
@@ -86,5 +89,71 @@ public interface JudoQuestionableArbitrationFact extends QuestionableFact {
 	 * @generated
 	 */
 	void setRepresentationID(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Name Soluce</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name Soluce</em>' attribute.
+	 * @see #setNameSoluce(String)
+	 * @see generator.GeneratorPackage#getJudoQuestionableArbitrationFact_NameSoluce()
+	 * @model
+	 * @generated
+	 */
+	String getNameSoluce();
+
+	/**
+	 * Sets the value of the '{@link generator.JudoQuestionableArbitrationFact#getNameSoluce <em>Name Soluce</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name Soluce</em>' attribute.
+	 * @see #getNameSoluce()
+	 * @generated
+	 */
+	void setNameSoluce(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Representation ID Soluce</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Representation ID Soluce</em>' attribute.
+	 * @see #setRepresentationIDSoluce(String)
+	 * @see generator.GeneratorPackage#getJudoQuestionableArbitrationFact_RepresentationIDSoluce()
+	 * @model
+	 * @generated
+	 */
+	String getRepresentationIDSoluce();
+
+	/**
+	 * Sets the value of the '{@link generator.JudoQuestionableArbitrationFact#getRepresentationIDSoluce <em>Representation ID Soluce</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Representation ID Soluce</em>' attribute.
+	 * @see #getRepresentationIDSoluce()
+	 * @generated
+	 */
+	void setRepresentationIDSoluce(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description Soluce</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description Soluce</em>' attribute.
+	 * @see #setDescriptionSoluce(String)
+	 * @see generator.GeneratorPackage#getJudoQuestionableArbitrationFact_DescriptionSoluce()
+	 * @model
+	 * @generated
+	 */
+	String getDescriptionSoluce();
+
+	/**
+	 * Sets the value of the '{@link generator.JudoQuestionableArbitrationFact#getDescriptionSoluce <em>Description Soluce</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description Soluce</em>' attribute.
+	 * @see #getDescriptionSoluce()
+	 * @generated
+	 */
+	void setDescriptionSoluce(String value);
 
 } // JudoQuestionableArbitrationFact

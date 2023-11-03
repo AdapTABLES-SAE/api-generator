@@ -126,13 +126,13 @@ public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 		return true;
 	}
 	
-	@Override
+	/*@Override
 	protected List<String> factSolutionsToString(AQuestionableFact qFact) {
 		List<String> solutions = new ArrayList<>();
 		DateQuestionableFact qfact = (DateQuestionableFact) qFact;		
 		solutions.add(qfact.getCompleteFact());
 		return solutions;
-	}
+	}*/
 
 	@Override
 	protected int correctnessToReach(AQuestionableFact fact) {

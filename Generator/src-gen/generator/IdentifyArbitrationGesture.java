@@ -13,6 +13,7 @@ package generator;
  * <ul>
  *   <li>{@link generator.IdentifyArbitrationGesture#getNbMissingElements <em>Nb Missing Elements</em>}</li>
  *   <li>{@link generator.IdentifyArbitrationGesture#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.IdentifyArbitrationGesture#getSource <em>Source</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getIdentifyArbitrationGesture()
@@ -22,13 +23,13 @@ package generator;
 public interface IdentifyArbitrationGesture extends CompletionTask {
 	/**
 	 * Returns the value of the '<em><b>Nb Missing Elements</b></em>' attribute.
-	 * The default value is <code>"3"</code>.
+	 * The default value is <code>"2"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nb Missing Elements</em>' attribute.
 	 * @see #isSetNbMissingElements()
 	 * @see generator.GeneratorPackage#getIdentifyArbitrationGesture_NbMissingElements()
-	 * @model default="3" unsettable="true" transient="true" changeable="false"
+	 * @model default="2" unsettable="true" transient="true" changeable="false"
 	 * @generated
 	 */
 	int getNbMissingElements();
@@ -65,5 +66,30 @@ public interface IdentifyArbitrationGesture extends CompletionTask {
 	 * @generated
 	 */
 	void setCheckOnLearnerAction(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Source</b></em>' attribute.
+	 * The literals are from the enumeration {@link generator.EJudoTarget}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Source</em>' attribute.
+	 * @see generator.EJudoTarget
+	 * @see #setSource(EJudoTarget)
+	 * @see generator.GeneratorPackage#getIdentifyArbitrationGesture_Source()
+	 * @model
+	 * @generated
+	 */
+	EJudoTarget getSource();
+
+	/**
+	 * Sets the value of the '{@link generator.IdentifyArbitrationGesture#getSource <em>Source</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Source</em>' attribute.
+	 * @see generator.EJudoTarget
+	 * @see #getSource()
+	 * @generated
+	 */
+	void setSource(EJudoTarget value);
 
 } // IdentifyArbitrationGesture

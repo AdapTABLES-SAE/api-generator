@@ -5,7 +5,8 @@
     xmlns:generator="http://www.example.org/generator"
     ID="LABYRINTHINE_GENERATION_TEST"
     name="LABYRINTHINE_GENERATION_TEST">
-  <gamecontext/>
+  <gamecontext
+      mode="LABYRINTHINE"/>
   <learnerPlayers
       href="learnerPlayers/LearnerPlayer1.xmi#LP001"/>
   <learnerPlayers

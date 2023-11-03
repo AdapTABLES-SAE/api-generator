@@ -34,7 +34,6 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 		super(dungeonElements);
 	}
 
-
 	@Override
 	public Set<AQuestionableFact> generateQuestionableFacts(ATask task){
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();

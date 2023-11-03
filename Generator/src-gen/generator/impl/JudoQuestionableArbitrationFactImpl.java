@@ -22,6 +22,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link generator.impl.JudoQuestionableArbitrationFactImpl#getName <em>Name</em>}</li>
  *   <li>{@link generator.impl.JudoQuestionableArbitrationFactImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link generator.impl.JudoQuestionableArbitrationFactImpl#getRepresentationID <em>Representation ID</em>}</li>
+ *   <li>{@link generator.impl.JudoQuestionableArbitrationFactImpl#getNameSoluce <em>Name Soluce</em>}</li>
+ *   <li>{@link generator.impl.JudoQuestionableArbitrationFactImpl#getRepresentationIDSoluce <em>Representation ID Soluce</em>}</li>
+ *   <li>{@link generator.impl.JudoQuestionableArbitrationFactImpl#getDescriptionSoluce <em>Description Soluce</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +90,66 @@ public class JudoQuestionableArbitrationFactImpl extends QuestionableFactImpl
 	 * @ordered
 	 */
 	protected String representationID = REPRESENTATION_ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNameSoluce() <em>Name Soluce</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameSoluce()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_SOLUCE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNameSoluce() <em>Name Soluce</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameSoluce()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameSoluce = NAME_SOLUCE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRepresentationIDSoluce() <em>Representation ID Soluce</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRepresentationIDSoluce()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String REPRESENTATION_ID_SOLUCE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRepresentationIDSoluce() <em>Representation ID Soluce</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRepresentationIDSoluce()
+	 * @generated
+	 * @ordered
+	 */
+	protected String representationIDSoluce = REPRESENTATION_ID_SOLUCE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescriptionSoluce() <em>Description Soluce</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescriptionSoluce()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_SOLUCE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescriptionSoluce() <em>Description Soluce</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescriptionSoluce()
+	 * @generated
+	 * @ordered
+	 */
+	protected String descriptionSoluce = DESCRIPTION_SOLUCE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,6 +242,74 @@ public class JudoQuestionableArbitrationFactImpl extends QuestionableFactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getNameSoluce() {
+		return nameSoluce;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameSoluce(String newNameSoluce) {
+		String oldNameSoluce = nameSoluce;
+		nameSoluce = newNameSoluce;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__NAME_SOLUCE, oldNameSoluce, nameSoluce));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getRepresentationIDSoluce() {
+		return representationIDSoluce;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRepresentationIDSoluce(String newRepresentationIDSoluce) {
+		String oldRepresentationIDSoluce = representationIDSoluce;
+		representationIDSoluce = newRepresentationIDSoluce;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID_SOLUCE,
+					oldRepresentationIDSoluce, representationIDSoluce));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescriptionSoluce() {
+		return descriptionSoluce;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescriptionSoluce(String newDescriptionSoluce) {
+		String oldDescriptionSoluce = descriptionSoluce;
+		descriptionSoluce = newDescriptionSoluce;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__DESCRIPTION_SOLUCE, oldDescriptionSoluce,
+					descriptionSoluce));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -188,6 +319,12 @@ public class JudoQuestionableArbitrationFactImpl extends QuestionableFactImpl
 			return getDescription();
 		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID:
 			return getRepresentationID();
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__NAME_SOLUCE:
+			return getNameSoluce();
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID_SOLUCE:
+			return getRepresentationIDSoluce();
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__DESCRIPTION_SOLUCE:
+			return getDescriptionSoluce();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -208,6 +345,15 @@ public class JudoQuestionableArbitrationFactImpl extends QuestionableFactImpl
 			return;
 		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID:
 			setRepresentationID((String) newValue);
+			return;
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__NAME_SOLUCE:
+			setNameSoluce((String) newValue);
+			return;
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID_SOLUCE:
+			setRepresentationIDSoluce((String) newValue);
+			return;
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__DESCRIPTION_SOLUCE:
+			setDescriptionSoluce((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -230,6 +376,15 @@ public class JudoQuestionableArbitrationFactImpl extends QuestionableFactImpl
 		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID:
 			setRepresentationID(REPRESENTATION_ID_EDEFAULT);
 			return;
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__NAME_SOLUCE:
+			setNameSoluce(NAME_SOLUCE_EDEFAULT);
+			return;
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID_SOLUCE:
+			setRepresentationIDSoluce(REPRESENTATION_ID_SOLUCE_EDEFAULT);
+			return;
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__DESCRIPTION_SOLUCE:
+			setDescriptionSoluce(DESCRIPTION_SOLUCE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -249,6 +404,14 @@ public class JudoQuestionableArbitrationFactImpl extends QuestionableFactImpl
 		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID:
 			return REPRESENTATION_ID_EDEFAULT == null ? representationID != null
 					: !REPRESENTATION_ID_EDEFAULT.equals(representationID);
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__NAME_SOLUCE:
+			return NAME_SOLUCE_EDEFAULT == null ? nameSoluce != null : !NAME_SOLUCE_EDEFAULT.equals(nameSoluce);
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID_SOLUCE:
+			return REPRESENTATION_ID_SOLUCE_EDEFAULT == null ? representationIDSoluce != null
+					: !REPRESENTATION_ID_SOLUCE_EDEFAULT.equals(representationIDSoluce);
+		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT__DESCRIPTION_SOLUCE:
+			return DESCRIPTION_SOLUCE_EDEFAULT == null ? descriptionSoluce != null
+					: !DESCRIPTION_SOLUCE_EDEFAULT.equals(descriptionSoluce);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -270,18 +433,52 @@ public class JudoQuestionableArbitrationFactImpl extends QuestionableFactImpl
 		result.append(description);
 		result.append(", representationID: ");
 		result.append(representationID);
+		result.append(", nameSoluce: ");
+		result.append(nameSoluce);
+		result.append(", representationIDSoluce: ");
+		result.append(representationIDSoluce);
+		result.append(", descriptionSoluce: ");
+		result.append(descriptionSoluce);
 		result.append(')');
 		return result.toString();
 	}
-	
+
 	@Override
 	public String getQuestionableFact() {
-		return "( ? , ? , ? )";
+
+		String fact = "(";
+		if (!this.name.equals("-1")) {
+			fact += this.nameSoluce + "-";
+		}
+		if (!this.description.equals("-1")) {
+			fact += this.descriptionSoluce + "-";
+		}
+		if (!this.representationID.equals("-1")) {
+			fact += this.representationIDSoluce + "-";
+		}
+
+		return fact + "?-?)";
 	}
 
 	@Override
 	public String getCompleteFact() {
-		return "( "+this.name+" , "+this.description+" , "+this.representationID+" )";
+		String fact = "(";
+		if (!this.name.equals("-1")) {
+			fact += this.nameSoluce + "-";
+			fact += this.descriptionSoluce + "-";
+			fact += this.representationIDSoluce + "-";
+		}
+		if (!this.description.equals("-1")) {
+			fact += this.descriptionSoluce + "-";
+			fact += this.nameSoluce + "-";
+			fact += this.representationIDSoluce + "-";
+		}
+		if (!this.representationID.equals("-1")) {
+			fact += this.representationIDSoluce + "-";
+			fact += this.nameSoluce + "-";
+			fact += this.descriptionSoluce + "-";
+		}
+		return fact + ")";
 	}
 
 } //JudoQuestionableArbitrationFactImpl

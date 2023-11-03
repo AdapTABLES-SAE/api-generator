@@ -324,10 +324,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTFact/op"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTFact/res"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//MTResultFact">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTResultFact/table"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTResultFact/res"/>
-    </genClasses>
     <genClasses ecoreClass="generator.ecore#//QuestionableFact">
       <genOperations ecoreOperation="generator.ecore#//QuestionableFact/getQuestionableFact"/>
       <genOperations ecoreOperation="generator.ecore#//QuestionableFact/getCompleteFact"/>
@@ -716,11 +712,15 @@
     <genClasses ecoreClass="generator.ecore#//IdentifyArbitrationGesture">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyArbitrationGesture/nbMissingElements"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyArbitrationGesture/checkOnLearnerAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyArbitrationGesture/source"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//JudoQuestionableArbitrationFact">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableArbitrationFact/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableArbitrationFact/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableArbitrationFact/representationID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableArbitrationFact/nameSoluce"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableArbitrationFact/representationIDSoluce"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableArbitrationFact/descriptionSoluce"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -285,13 +285,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mtResultFactEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass questionableFactEClass = null;
 
 	/**
@@ -2551,33 +2544,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getMTFact_Res() {
 		return (EAttribute) mtFactEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMTResultFact() {
-		return mtResultFactEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMTResultFact_Table() {
-		return (EAttribute) mtResultFactEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMTResultFact_Res() {
-		return (EAttribute) mtResultFactEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -5375,6 +5341,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getIdentifyArbitrationGesture_Source() {
+		return (EAttribute) identifyArbitrationGestureEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getJudoQuestionableArbitrationFact() {
 		return judoQuestionableArbitrationFactEClass;
 	}
@@ -5404,6 +5379,33 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getJudoQuestionableArbitrationFact_RepresentationID() {
 		return (EAttribute) judoQuestionableArbitrationFactEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoQuestionableArbitrationFact_NameSoluce() {
+		return (EAttribute) judoQuestionableArbitrationFactEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoQuestionableArbitrationFact_RepresentationIDSoluce() {
+		return (EAttribute) judoQuestionableArbitrationFactEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJudoQuestionableArbitrationFact_DescriptionSoluce() {
+		return (EAttribute) judoQuestionableArbitrationFactEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -5800,10 +5802,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(mtFactEClass, MT_FACT__TABLE);
 		createEAttribute(mtFactEClass, MT_FACT__OP);
 		createEAttribute(mtFactEClass, MT_FACT__RES);
-
-		mtResultFactEClass = createEClass(MT_RESULT_FACT);
-		createEAttribute(mtResultFactEClass, MT_RESULT_FACT__TABLE);
-		createEAttribute(mtResultFactEClass, MT_RESULT_FACT__RES);
 
 		questionableFactEClass = createEClass(QUESTIONABLE_FACT);
 		createEOperation(questionableFactEClass, QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT);
@@ -6206,11 +6204,16 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		identifyArbitrationGestureEClass = createEClass(IDENTIFY_ARBITRATION_GESTURE);
 		createEAttribute(identifyArbitrationGestureEClass, IDENTIFY_ARBITRATION_GESTURE__NB_MISSING_ELEMENTS);
 		createEAttribute(identifyArbitrationGestureEClass, IDENTIFY_ARBITRATION_GESTURE__CHECK_ON_LEARNER_ACTION);
+		createEAttribute(identifyArbitrationGestureEClass, IDENTIFY_ARBITRATION_GESTURE__SOURCE);
 
 		judoQuestionableArbitrationFactEClass = createEClass(JUDO_QUESTIONABLE_ARBITRATION_FACT);
 		createEAttribute(judoQuestionableArbitrationFactEClass, JUDO_QUESTIONABLE_ARBITRATION_FACT__NAME);
 		createEAttribute(judoQuestionableArbitrationFactEClass, JUDO_QUESTIONABLE_ARBITRATION_FACT__DESCRIPTION);
 		createEAttribute(judoQuestionableArbitrationFactEClass, JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID);
+		createEAttribute(judoQuestionableArbitrationFactEClass, JUDO_QUESTIONABLE_ARBITRATION_FACT__NAME_SOLUCE);
+		createEAttribute(judoQuestionableArbitrationFactEClass,
+				JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID_SOLUCE);
+		createEAttribute(judoQuestionableArbitrationFactEClass, JUDO_QUESTIONABLE_ARBITRATION_FACT__DESCRIPTION_SOLUCE);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -6281,7 +6284,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtIdentificationEClass.getESuperTypes().add(this.getIdentificationTask());
 		mtMembershipEClass.getESuperTypes().add(this.getMembershipIDTask());
 		mtFactEClass.getESuperTypes().add(this.getAbstractFact());
-		mtResultFactEClass.getESuperTypes().add(this.getAbstractFact());
 		questionableFactEClass.getESuperTypes().add(this.getAQuestionableFact());
 		mtqfCompletion1EClass.getESuperTypes().add(this.getQuestionableFact());
 		mtqfCompletion2EClass.getESuperTypes().add(this.getQuestionableFact());
@@ -6645,7 +6647,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(aTaskEClass, ATask.class, "ATask", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(aTaskEClass, ATask.class, "ATask", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getATask_PercentOfApparition(), ecorePackage.getEInt(), "percentOfApparition", null, 0, 1,
 				ATask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
@@ -6768,13 +6770,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMTFact_Res(), ecorePackage.getEInt(), "res", null, 0, 1, MTFact.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(mtResultFactEClass, MTResultFact.class, "MTResultFact", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMTResultFact_Table(), ecorePackage.getEInt(), "table", null, 0, 1, MTResultFact.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTResultFact_Res(), ecorePackage.getEInt(), "res", null, 0, 1, MTResultFact.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(questionableFactEClass, QuestionableFact.class, "QuestionableFact", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -7626,11 +7621,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(identifyArbitrationGestureEClass, IdentifyArbitrationGesture.class, "IdentifyArbitrationGesture",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIdentifyArbitrationGesture_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements",
-				"3", 0, 1, IdentifyArbitrationGesture.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE,
+				"2", 0, 1, IdentifyArbitrationGesture.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getIdentifyArbitrationGesture_CheckOnLearnerAction(), ecorePackage.getEBoolean(),
 				"checkOnLearnerAction", "true", 0, 1, IdentifyArbitrationGesture.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIdentifyArbitrationGesture_Source(), this.getEJudoTarget(), "source", null, 0, 1,
+				IdentifyArbitrationGesture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(judoQuestionableArbitrationFactEClass, JudoQuestionableArbitrationFact.class,
 				"JudoQuestionableArbitrationFact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -7642,6 +7640,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getJudoQuestionableArbitrationFact_RepresentationID(), ecorePackage.getEString(),
 				"representationID", null, 0, 1, JudoQuestionableArbitrationFact.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJudoQuestionableArbitrationFact_NameSoluce(), ecorePackage.getEString(), "nameSoluce", null,
+				0, 1, JudoQuestionableArbitrationFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJudoQuestionableArbitrationFact_RepresentationIDSoluce(), ecorePackage.getEString(),
+				"representationIDSoluce", null, 0, 1, JudoQuestionableArbitrationFact.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJudoQuestionableArbitrationFact_DescriptionSoluce(), ecorePackage.getEString(),
+				"descriptionSoluce", null, 0, 1, JudoQuestionableArbitrationFact.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals

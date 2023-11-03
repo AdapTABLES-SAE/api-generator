@@ -28,6 +28,7 @@ import structures.Soluce;
 
 public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 
+
 	public MTFactGeneratorCOMP1(DungeonElements dungeonElements) {
 		super(dungeonElements);
 	}
@@ -155,4 +156,5 @@ public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 	protected boolean isQuestionInteractive() {
 		return true;
 	}
+
 }
