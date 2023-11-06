@@ -243,8 +243,149 @@
       <directions>NORTH</directions>
       <directions>WEST</directions>
     </roomtypes>
+    <roomtypes xsi:type="generator:SmallRoomType" name="RoomTrap2" type="TRAP">
+      <elementPositions size="MEDIUM" ID="POSM1"/>
+      <elementPositions ID="POS1"/>
+      <elementPositions ID="POS2"/>
+      <elementPositions ID="POS3"/>
+      <elementPositions ID="POS4"/>
+      <elementPositions ID="POS5"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes xsi:type="generator:SmallRoomType" name="RoomTrap3" type="TRAP">
+      <elementPositions ID="POS1"/>
+      <elementPositions ID="POS2"/>
+      <elementPositions ID="POS3"/>
+      <elementPositions ID="POS4"/>
+      <elementPositions ID="POS5"/>
+      <elementPositions ID="POS6"/>
+      <elementPositions ID="POS7"/>
+      <elementPositions ID="POS8"/>
+      <elementPositions ID="POS9"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes xsi:type="generator:SmallRoomType" name="RoomTrap4" type="TRAP">
+      <elementPositions size="MEDIUM" restrictedTo="AVOIDABLE" ID="POSM1"/>
+      <elementPositions size="MEDIUM" restrictedTo="AVOIDABLE" ID="POSM2"/>
+      <elementPositions size="MEDIUM" restrictedTo="AVOIDABLE" ID="POSM3"/>
+      <elementPositions size="MEDIUM" restrictedTo="AVOIDABLE" ID="POSM4"/>
+      <elementPositions size="MEDIUM" restrictedTo="AVOIDABLE" ID="POSM5"/>
+      <elementPositions size="MEDIUM" restrictedTo="AVOIDABLE" ID="POSM6"/>
+      <elementPositions size="MEDIUM" restrictedTo="AVOIDABLE" ID="POSM7"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes xsi:type="generator:SmallRoomType" name="TwoWaysRoom3">
+      <elementPositions size="LARGE" restrictedTo="DISPLAY" ID="POSQ1"/>
+      <elementPositions size="LARGE" restrictedTo="DISPLAY" ID="POSQ2"/>
+      <elementPositions ID="POS1"/>
+      <elementPositions ID="POS2"/>
+      <elementPositions ID="POS3"/>
+      <elementPositions ID="POS4"/>
+      <elementPositions ID="POS5"/>
+      <elementPositions ID="POS6"/>
+      <directions>SOUTH</directions>
+      <directions>NORTH</directions>
+    </roomtypes>
+    <roomtypes xsi:type="generator:SmallRoomType" name="TwoWaysRoom4">
+      <elementPositions size="LARGE" restrictedTo="DISPLAY" ID="POSQ1"/>
+      <elementPositions size="LARGE" restrictedTo="DISPLAY" ID="POSQ2"/>
+      <elementPositions size="LARGE" restrictedTo="DISPLAY" ID="POSQ3"/>
+      <elementPositions size="LARGE" restrictedTo="DISPLAY" ID="POSQ4"/>
+      <elementPositions size="LARGE" restrictedTo="DISPLAY" ID="POSQ5"/>
+      <elementPositions size="LARGE" restrictedTo="DISPLAY" ID="POSQ6"/>
+      <elementPositions size="MEDIUM" ID="POM1"/>
+      <directions>SOUTH</directions>
+      <directions>NORTH</directions>
+    </roomtypes>
+    <roomtypes xsi:type="generator:SmallRoomType" name="RegularRoom11">
+      <elementPositions size="LARGE" restrictedTo="DISPLAY" ID="POSQ1"/>
+      <elementPositions size="LARGE" restrictedTo="DISPLAY" ID="POSQ2"/>
+      <elementPositions ID="POS1"/>
+      <elementPositions ID="POS2"/>
+      <elementPositions ID="POS3"/>
+      <elementPositions ID="POS4"/>
+      <elementPositions ID="POS5"/>
+      <elementPositions ID="POS6"/>
+      <elementPositions size="MEDIUM" ID="POSM1"/>
+      <elementPositions size="XLARGE" ID="POSXL1"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes xsi:type="generator:SmallRoomType" name="RegularRoom12">
+      <elementPositions ID="POS1"/>
+      <elementPositions ID="POS2"/>
+      <elementPositions ID="POS3"/>
+      <elementPositions ID="POS4"/>
+      <elementPositions ID="POS5"/>
+      <elementPositions ID="POS6"/>
+      <elementPositions size="LARGE" ID="POSL1"/>
+      <elementPositions size="LARGE" ID="POSL2"/>
+      <elementPositions size="LARGE" ID="POSL3"/>
+      <elementPositions ID="POS7"/>
+      <elementPositions ID="POS8"/>
+      <elementPositions ID="POS9"/>
+      <elementPositions ID="POS10"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
+    <roomtypes xsi:type="generator:LargeRoomType" name="MapRoom">
+      <elementPositions size="XXLARGE" restrictedTo="MAP_DISPLAY" ID="POSXXL1"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS1"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS2"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS3"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS4"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS5"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS6"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS7"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS8"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS9"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS10"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS11"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS12"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS13"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS14"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS15"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS16"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS17"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS18"/>
+      <elementPositions restrictedTo="MOVABLE" ID="POS19"/>
+      <elementPositions size="LARGE" restrictedTo="DISPLAY" ID="POSQ1"/>
+      <directions>SOUTH_EAST</directions>
+      <directions>SOUTH_WEST</directions>
+      <directions>NORTH_EAST</directions>
+      <directions>NORTH_WEST</directions>
+      <directions>EAST_SOUTH</directions>
+      <directions>EAST_NORTH</directions>
+      <directions>WEST_NORTH</directions>
+      <directions>WEST_SOUTH</directions>
+    </roomtypes>
+    <roomtypes xsi:type="generator:SmallRoomType" name="PortalRoom" type="PORTAL">
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+      <directions>NONE</directions>
+    </roomtypes>
   </roomtypes>
-  <levelsDifficultyProgress/>
+  <levelsDifficultyProgress>
+    <cursesAvailabilities startLevel="8" curse="//@elements/@curses/@curses.0"/>
+    <cursesAvailabilities startLevel="4" curse="//@elements/@curses/@curses.1"/>
+    <cursesAvailabilities startLevel="12" curse="//@elements/@curses/@curses.3"/>
+    <cursesAvailabilities startLevel="16" curse="//@elements/@curses/@curses.2"/>
+  </levelsDifficultyProgress>
   <gameplays>
     <gameplays xsi:type="generator:QuestionGameplay" name="GP_MULTIPLE_TOUCHABLE" undoable="true" manualValidation="true" category="SELECT_MULTIPLE">
       <components xsi:type="generator:Component" allowedAbility="TOUCHABLE" forProposition="true"/>
@@ -258,7 +399,7 @@
     <gameplays xsi:type="generator:QuestionGameplay" name="GP_MULTIPLE_TOUCHABLE_STRUCT" category="SELECT_MULTIPLE" hasIntegratedPropositions="true">
       <components xsi:type="generator:Structure" allowedAbility="HORIZONTAL_DISPLAY">
         <expectedSize>
-          <value xsi:type="generator:Value" value="LARGE"/>
+          <value xsi:type="generator:Value" value="XLARGE"/>
         </expectedSize>
         <components xsi:type="generator:Component" allowedAbility="DISPLAY">
           <displayValue>
@@ -267,11 +408,11 @@
         </components>
         <components xsi:type="generator:Structure" allowedAbility="VERTICAL_DISPLAY">
           <expectedSize>
-            <value xsi:type="generator:Value" value="LARGE"/>
+            <value xsi:type="generator:Value" value="XLARGE"/>
           </expectedSize>
           <components xsi:type="generator:Structure" allowedAbility="HORIZONTAL_DISPLAY" forFact="true">
             <expectedSize>
-              <value xsi:type="generator:Value" value="LARGE"/>
+              <value xsi:type="generator:Value" value="XLARGE"/>
             </expectedSize>
             <components xsi:type="generator:Component" allowedAbility="TOUCHABLE" forProposition="true">
               <defaultCorrectness>
@@ -303,15 +444,15 @@
     <gameplays xsi:type="generator:QuestionGameplay" name="GP_MULTIPLE-TOUCHABLE_STRUCT-PROP" category="SELECT_MULTIPLE" hasIntegratedPropositions="true">
       <components xsi:type="generator:Structure" allowedAbility="HORIZONTAL_DISPLAY">
         <expectedSize>
-          <value xsi:type="generator:Value" value="LARGE"/>
+          <value xsi:type="generator:Value" value="XLARGE"/>
         </expectedSize>
         <components xsi:type="generator:Structure" allowedAbility="VERTICAL_DISPLAY">
           <expectedSize>
-            <value xsi:type="generator:Value" value="LARGE"/>
+            <value xsi:type="generator:Value" value="XLARGE"/>
           </expectedSize>
           <components xsi:type="generator:Structure" allowedAbility="HORIZONTAL_DISPLAY" forFact="true">
             <expectedSize>
-              <value xsi:type="generator:Value" value="LARGE"/>
+              <value xsi:type="generator:Value" value="XLARGE"/>
             </expectedSize>
             <components xsi:type="generator:Component" allowedAbility="TOUCHABLE" forProposition="true">
               <displayValue>
@@ -378,7 +519,7 @@
     <gameplays xsi:type="generator:QuestionGameplay" name="GP_MULTIPLE_MOVABLE_STRUCT" undoable="true" category="MOVE_MULTIPLE">
       <components xsi:type="generator:Structure" allowedAbility="VERTICAL_DISPLAY" forFact="true">
         <expectedSize>
-          <value xsi:type="generator:Value" value="LARGE"/>
+          <value xsi:type="generator:Value" value="XLARGE"/>
         </expectedSize>
         <components xsi:type="generator:Component" allowedAbility="DETECTOR">
           <expectedSize>
@@ -410,28 +551,8 @@
       <prompt prompt="Attrape les bons elements"/>
       <restrictedTo>COMPLETE</restrictedTo>
     </gameplays>
-    <gameplays xsi:type="generator:NoQuestionGameplay" name="ONE TYPES - 5 SMALL TRAP EVITABLE">
-      <components xsi:type="generator:Component" allowedAbility="AVOIDABLE">
-        <expectedSize>
-          <value xsi:type="generator:Value" value="SMALL"/>
-        </expectedSize>
-        <quantity>
-          <value xsi:type="generator:Value" value="5"/>
-        </quantity>
-      </components>
-    </gameplays>
-    <gameplays xsi:type="generator:NoQuestionGameplay" name="ONE TYPES - 3 SMALL TRAP INEVITABLE">
-      <components xsi:type="generator:Component" allowedAbility="NONAVOIDABLE">
-        <expectedSize>
-          <value xsi:type="generator:Value" value="SMALL"/>
-        </expectedSize>
-        <quantity>
-          <value xsi:type="generator:Value" value="3"/>
-        </quantity>
-      </components>
-    </gameplays>
     <gameplays xsi:type="generator:QuestionGameplay" name="GP_UNIQUE_PUSHABLE" category="MOVE_UNIQUE">
-      <components xsi:type="generator:Structure" allowedAbility="HORIZONTAL_DISPLAY">
+      <components xsi:type="generator:Structure" allowedAbility="HORIZONTAL_DISPLAY" forProposition="true">
         <expectedSize>
           <value xsi:type="generator:Value" value="MEDIUM"/>
         </expectedSize>
@@ -448,27 +569,6 @@
       </components>
       <components xsi:type="generator:Component" allowedAbility="DISPLAY" forStatement="true"/>
       <prompt prompt="Pousse le bon element"/>
-    </gameplays>
-    <gameplays xsi:type="generator:QuestionGameplay" name="GP_MULTIPLE_PUSHABLE" category="MOVE_MULTIPLE">
-      <components xsi:type="generator:Structure" allowedAbility="HORIZONTAL_DISPLAY">
-        <expectedSize>
-          <value xsi:type="generator:Value" value="MEDIUM"/>
-        </expectedSize>
-        <components xsi:type="generator:Component" allowedAbility="PUSHABLE" forProposition="true">
-          <expectedSize>
-            <value xsi:type="generator:Value" value="SMALL"/>
-          </expectedSize>
-        </components>
-        <components xsi:type="generator:Component" allowedAbility="DETECTOR">
-          <expectedSize>
-            <value xsi:type="generator:Value" value="SMALL"/>
-          </expectedSize>
-        </components>
-      </components>
-      <components xsi:type="generator:Component" allowedAbility="DISPLAY" forStatement="true"/>
-      <prompt prompt="Pousse les bons elements"/>
-      <restrictedTo>COMPLETE</restrictedTo>
-      <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
     <gameplays xsi:type="generator:QuestionGameplay" name="GP_UNIQUE_CROSSABLE">
       <components xsi:type="generator:Component" allowedAbility="CROSSABLE" forProposition="true"/>
@@ -554,7 +654,7 @@
     <gameplays xsi:type="generator:QuestionGameplay" name="GP_MULTIPLE_PUSHABLE_STRUCT" category="MOVE_MULTIPLE" hasIntegratedPropositions="true">
       <components xsi:type="generator:Structure" allowedAbility="HORIZONTAL_DISPLAY">
         <expectedSize>
-          <value xsi:type="generator:Value" value="LARGE"/>
+          <value xsi:type="generator:Value" value="XLARGE"/>
         </expectedSize>
         <components xsi:type="generator:Component" allowedAbility="DISPLAY">
           <displayValue>
@@ -563,11 +663,11 @@
         </components>
         <components xsi:type="generator:Structure" allowedAbility="VERTICAL_DISPLAY">
           <expectedSize>
-            <value xsi:type="generator:Value" value="LARGE"/>
+            <value xsi:type="generator:Value" value="XLARGE"/>
           </expectedSize>
           <components xsi:type="generator:Structure" allowedAbility="HORIZONTAL_DISPLAY" forFact="true">
             <expectedSize>
-              <value xsi:type="generator:Value" value="LARGE"/>
+              <value xsi:type="generator:Value" value="XLARGE"/>
             </expectedSize>
             <components xsi:type="generator:Component" allowedAbility="DETECTOR">
               <expectedSize>
@@ -600,15 +700,15 @@
     <gameplays xsi:type="generator:QuestionGameplay" name="GP_MULTIPLE-PUSHABLE_STRUCT-PROP" category="MOVE_MULTIPLE" hasIntegratedPropositions="true">
       <components xsi:type="generator:Structure" allowedAbility="HORIZONTAL_DISPLAY">
         <expectedSize>
-          <value xsi:type="generator:Value" value="LARGE"/>
+          <value xsi:type="generator:Value" value="XLARGE"/>
         </expectedSize>
         <components xsi:type="generator:Structure" allowedAbility="VERTICAL_DISPLAY">
           <expectedSize>
-            <value xsi:type="generator:Value" value="LARGE"/>
+            <value xsi:type="generator:Value" value="XLARGE"/>
           </expectedSize>
           <components xsi:type="generator:Structure" allowedAbility="HORIZONTAL_DISPLAY" forFact="true">
             <expectedSize>
-              <value xsi:type="generator:Value" value="LARGE"/>
+              <value xsi:type="generator:Value" value="XLARGE"/>
             </expectedSize>
             <components xsi:type="generator:Component" allowedAbility="DETECTOR" forProposition="true">
               <expectedSize>
@@ -650,9 +750,8 @@
       </components>
       <components xsi:type="generator:Component" allowedAbility="MOVABLE" forProposition="true"/>
       <prompt prompt="Place les bons elements"/>
-      <restrictedTo>ORDER</restrictedTo>
     </gameplays>
-    <gameplays xsi:type="generator:QuestionGameplay" name="GP_MULTIPLE_MOVABLE_FILL_IN" undoable="true" manualValidation="true" category="MOVE_MULTIPLE" statementType="FILL_IN">
+    <gameplays xsi:type="generator:QuestionGameplay" name="GP_MULTIPLE_MOVABLE_FILL_IN" undoable="true" category="MOVE_MULTIPLE" statementType="FILL_IN">
       <components xsi:type="generator:Structure" allowedAbility="FILL_IN_DISPLAY" forStatement="true" alternateComponents="true">
         <components xsi:type="generator:Component" allowedAbility="DISPLAY" forStatement="true"/>
         <components xsi:type="generator:Component" allowedAbility="DETECTOR">
@@ -662,11 +761,14 @@
         </components>
       </components>
       <components xsi:type="generator:Component" allowedAbility="MOVABLE" forProposition="true"/>
+      <components xsi:type="generator:Component" allowedAbility="VERIFICATOR"/>
       <prompt prompt="Place les bons elements"/>
-      <restrictedTo>ORDER</restrictedTo>
     </gameplays>
     <gameplays xsi:type="generator:QuestionGameplay" name="GP_ROTABLE_MULTIPLE" undoable="true" manualValidation="true" category="ORIENT_MULTIPLE">
-      <components xsi:type="generator:Structure" allowedAbility="VERTICAL_DISPLAY">
+      <components xsi:type="generator:Structure" allowedAbility="VERTICAL_DISPLAY" forFact="true">
+        <expectedSize>
+          <value xsi:type="generator:Value" value="LARGE"/>
+        </expectedSize>
         <components xsi:type="generator:Component" allowedAbility="DISPLAY" forStatement="true"/>
         <components xsi:type="generator:Component" allowedAbility="ROTABLE" forProposition="true"/>
       </components>
@@ -679,12 +781,165 @@
       <prompt prompt="Ouvre les bons elements"/>
       <restrictedTo>IDENTIFY</restrictedTo>
     </gameplays>
+    <gameplays xsi:type="generator:QuestionGameplay" name="GP_GRAPHIC" undoable="true" manualValidation="true" category="MOVE_MULTIPLE" statementType="GRAPHIC">
+      <components xsi:type="generator:Structure" allowedAbility="MAP_DISPLAY" forMap="true">
+        <expectedSize>
+          <value xsi:type="generator:Value" value="XXLARGE"/>
+        </expectedSize>
+        <components xsi:type="generator:Component" allowedAbility="DETECTOR">
+          <expectedSize>
+            <value xsi:type="generator:Value" value="SMALL"/>
+          </expectedSize>
+          <quantity factNbAnswers="true"/>
+        </components>
+      </components>
+      <components xsi:type="generator:Component" allowedAbility="MOVABLE" forProposition="true"/>
+      <components xsi:type="generator:Component" allowedAbility="VERIFICATOR"/>
+      <components xsi:type="generator:Component" allowedAbility="DISPLAY" forStatement="true"/>
+      <prompt prompt="Déplace les éléments sur les bonnes zones "/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>IDENTIFY</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
+    </gameplays>
+    <gameplays xsi:type="generator:NoQuestionGameplay" name="GP_TRAP_5_SMALL_AVOIDABLE">
+      <components xsi:type="generator:Component" allowedAbility="AVOIDABLE">
+        <expectedSize>
+          <value xsi:type="generator:Value" value="SMALL"/>
+        </expectedSize>
+        <quantity>
+          <value xsi:type="generator:Value" value="5"/>
+        </quantity>
+      </components>
+    </gameplays>
+    <gameplays xsi:type="generator:NoQuestionGameplay" name="GP_TRAP_3_SMALL_NONAVOIDABLE">
+      <components xsi:type="generator:Component" allowedAbility="NONAVOIDABLE">
+        <expectedSize>
+          <value xsi:type="generator:Value" value="SMALL"/>
+        </expectedSize>
+        <quantity>
+          <value xsi:type="generator:Value" value="3"/>
+        </quantity>
+      </components>
+    </gameplays>
+    <gameplays xsi:type="generator:NoQuestionGameplay" name="GP_TRAP_7_AVOIDABLE">
+      <components xsi:type="generator:Component" allowedAbility="AVOIDABLE">
+        <expectedSize>
+          <value xsi:type="generator:Value" value="MEDIUM"/>
+        </expectedSize>
+        <quantity>
+          <value xsi:type="generator:Value" value="7"/>
+        </quantity>
+      </components>
+    </gameplays>
+    <gameplays xsi:type="generator:NoQuestionGameplay" name="GP_TRAP_7_AVOIDABLE">
+      <components xsi:type="generator:Component" allowedAbility="AVOIDABLE">
+        <expectedSize>
+          <value xsi:type="generator:Value" value="SMALL"/>
+        </expectedSize>
+        <quantity>
+          <value xsi:type="generator:Value" value="7"/>
+        </quantity>
+      </components>
+    </gameplays>
+    <gameplays xsi:type="generator:QuestionGameplay" name="GP_GRAPHIC_INPUT" undoable="true" category="POSITION_MULTIPLE" statementType="GRAPHIC">
+      <components xsi:type="generator:Structure" allowedAbility="MAP_DISPLAY" forMap="true">
+        <expectedSize>
+          <value xsi:type="generator:Value" value="XXLARGE"/>
+        </expectedSize>
+        <components xsi:type="generator:Component" allowedAbility="TYPABLE_DETECTOR">
+          <expectedSize>
+            <value xsi:type="generator:Value" value="SMALL"/>
+          </expectedSize>
+          <quantity factNbAnswers="true"/>
+        </components>
+      </components>
+      <components xsi:type="generator:Component" allowedAbility="DISPLAY" forStatement="true"/>
+      <prompt prompt="Place toi et saisie les bonnes réponses"/>
+    </gameplays>
+    <gameplays xsi:type="generator:QuestionGameplay" name="GP_GRAPHIC_ORDER" undoable="true" manualValidation="true" category="MOVE_MULTIPLE" statementType="GRAPHIC">
+      <components xsi:type="generator:Structure" allowedAbility="MAP_DISPLAY" forMap="true">
+        <expectedSize>
+          <value xsi:type="generator:Value" value="XXLARGE"/>
+        </expectedSize>
+        <components xsi:type="generator:Component" allowedAbility="DETECTOR">
+          <expectedSize>
+            <value xsi:type="generator:Value" value="SMALL"/>
+          </expectedSize>
+          <quantity factNbAnswers="true"/>
+        </components>
+      </components>
+      <components xsi:type="generator:Component" allowedAbility="MOVABLE" forProposition="true"/>
+      <components xsi:type="generator:Component" allowedAbility="VERIFICATOR"/>
+      <prompt prompt="Déplace les éléments sur les bonnes zones "/>
+      <restrictedTo>ORDER</restrictedTo>
+    </gameplays>
+    <gameplays xsi:type="generator:QuestionGameplay" name="GP_MULTIPLE_PUSHABLE-RIGHT" category="MOVE_MULTIPLE">
+      <components xsi:type="generator:Structure" allowedAbility="HORIZONTAL_DISPLAY" forProposition="true">
+        <expectedSize>
+          <value xsi:type="generator:Value" value="MEDIUM"/>
+        </expectedSize>
+        <components xsi:type="generator:Component" allowedAbility="PUSHABLE" forProposition="true">
+          <expectedSize>
+            <value xsi:type="generator:Value" value="SMALL"/>
+          </expectedSize>
+        </components>
+        <components xsi:type="generator:Component" allowedAbility="DETECTOR">
+          <expectedSize>
+            <value xsi:type="generator:Value" value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components xsi:type="generator:Component" allowedAbility="DISPLAY" forStatement="true"/>
+      <prompt prompt="Pousse les bons elements"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
+    </gameplays>
+    <gameplays xsi:type="generator:QuestionGameplay" name="GP_UNIQUE_MOVABLE2" category="MOVE_UNIQUE">
+      <components xsi:type="generator:Component" allowedAbility="MOVABLE">
+        <quantity factNbAnswers="true"/>
+      </components>
+      <components xsi:type="generator:Component" allowedAbility="DETECTOR" forProposition="true">
+        <expectedSize>
+          <value xsi:type="generator:Value" value="SMALL"/>
+        </expectedSize>
+      </components>
+      <components xsi:type="generator:Component" allowedAbility="DISPLAY" forStatement="true"/>
+      <prompt prompt="Deplace le bon elements sur la zone"/>
+    </gameplays>
+    <gameplays xsi:type="generator:QuestionGameplay" name="GP_MULTIPLE_MOVABLE2" manualValidation="true" category="MOVE_MULTIPLE">
+      <components xsi:type="generator:Component" allowedAbility="MOVABLE">
+        <quantity factNbAnswers="true"/>
+      </components>
+      <components xsi:type="generator:Component" allowedAbility="DETECTOR" forProposition="true">
+        <expectedSize>
+          <value xsi:type="generator:Value" value="SMALL"/>
+        </expectedSize>
+        <quantity factNbAnswers="true"/>
+      </components>
+      <components xsi:type="generator:Component" allowedAbility="DISPLAY" forStatement="true"/>
+      <prompt prompt="Deplace les bons elements sur les zones"/>
+      <restrictedTo>COMPLETE</restrictedTo>
+      <restrictedTo>MEMBERSHIP</restrictedTo>
+    </gameplays>
+    <gameplays xsi:type="generator:QuestionGameplay" name="GP_MULTIPLE_MOVABLE_FILL_IN" undoable="true" manualValidation="true" category="MOVE_MULTIPLE" statementType="FILL_IN">
+      <components xsi:type="generator:Structure" allowedAbility="FILL_IN_DISPLAY" forStatement="true" alternateComponents="true">
+        <components xsi:type="generator:Component" allowedAbility="DISPLAY" forStatement="true"/>
+        <components xsi:type="generator:Component" allowedAbility="DETECTOR">
+          <expectedSize>
+            <value xsi:type="generator:Value" value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components xsi:type="generator:Component" allowedAbility="MOVABLE" forProposition="true"/>
+      <components xsi:type="generator:Component" allowedAbility="VERIFICATOR"/>
+      <prompt prompt="Place les bons elements"/>
+    </gameplays>
   </gameplays>
   <elements>
     <equipments>
-      <equipments ID="BRACELET" lockedAbilities="MOVABLE"/>
-      <equipments ID="BELT" lockedAbilities="ROTABLE"/>
-      <equipments ID="GLOVE" lockedAbilities="PUSHABLE"/>
+      <equipments ID="BRACELET" lockedAbilities="PUSHABLE"/>
+      <equipments ID="BELT" lockedAbilities="BREAKABLE"/>
+      <equipments ID="GLOVE" lockedAbilities="ROTABLE"/>
       <equipments ID="KEYS" lockedAbilities="OPENABLE FOLLOWABLE"/>
       <equipments ID="COAT" lockedAbilities="CROSSABLE"/>
       <equipments ID="CARROT" lockedAbilities="CATCHABLE"/>
@@ -700,19 +955,19 @@
       <equipments ID="HP"/>
     </equipments>
     <elementTypes>
-      <elements size="LARGE" ID="STRUCT_H" type="HStructL" ability="HORIZONTAL_DISPLAY"/>
-      <elements size="LARGE" ID="STRUCT_V" type="VStructL" ability="VERTICAL_DISPLAY"/>
-      <elements ID="ELEMTYPE_INTERRUPTOR" type="FloorInterrupt" nbDisplays="1" ability="TOUCHABLE"/>
-      <elements ID="ELEMTYPE_KEYBOARD" type="KeyBoard" ability="TYPABLE"/>
-      <elements ID="ELEMTYPE_SWITCH" type="Switch" ability="VERIFICATOR"/>
-      <elements ID="ELEMTYPE_DISPLAY" type="Info" nbDisplays="1" ability="DISPLAY"/>
-      <elements ID="ELEMTYPE_POT" type="Pot" nbDisplays="1" ability="MOVABLE"/>
-      <elements ID="ELEMTYPE_DETECTOR" type="ObjectDetector" nbDisplays="1" ability="DETECTOR"/>
-      <elements ID="ELEMTYPE_CHEST" type="Chest" nbDisplays="1" ability="OPENABLE"/>
-      <elements size="LARGE" ID="ELEMTYPE_LARGE_DETECTOR" type="LargeNewObjectDetector" ability="DETECTOR"/>
-      <elements size="MEDIUM" ID="ELEMTYPE_STATUE_ROTABLE" type="Statue" nbDisplays="3" ability="ROTABLE"/>
-      <elements xsi:type="generator:StatementElementType" size="LARGE" ID="ELEMTYPE_STATEMENT_CORRECTNESS" type="StatementFact" nbDisplays="1" ability="DISPLAY" forStructure="true"/>
-      <elements xsi:type="generator:StatementElementType" size="LARGE" ID="ELEMTYPE_STATEMENT_DISPLAY" type="Statement" nbDisplays="1" ability="DISPLAY"/>
+      <elements size="XLARGE" ID="STRUCT_H" type="HStructXL" ability="HORIZONTAL_DISPLAY"/>
+      <elements size="XLARGE" ID="STRUCT_V" type="VStructXL" ability="VERTICAL_DISPLAY"/>
+      <elements ID="ELEMENT_TYPE_INTERRUPTOR" type="FloorInterrupt" nbDisplays="1" ability="TOUCHABLE"/>
+      <elements ID="ELEMENT_TYPE_KEYBOARD" type="KeyBoard" ability="TYPABLE"/>
+      <elements ID="ELEMENT_TYPE_SWITCH" type="Switch" ability="VERIFICATOR"/>
+      <elements ID="ELEMENT_TYPE_DISPLAY" type="Info" nbDisplays="1" ability="DISPLAY"/>
+      <elements ID="ELEMENT_TYPE_POT" type="Pot" nbDisplays="1" ability="MOVABLE"/>
+      <elements ID="ELEMENT_TYPE_DETECTOR" type="ObjectDetector" nbDisplays="1" ability="DETECTOR"/>
+      <elements ID="ELEMENT_TYPE_CHEST" type="Chest" nbDisplays="1" ability="OPENABLE"/>
+      <elements size="LARGE" ID="ELEMENT_TYPE_LARGE_DETECTOR" type="LargeNewObjectDetector" ability="DETECTOR"/>
+      <elements size="MEDIUM" ID="ELEMENT_TYPE_STATUE_ROTABLE" type="Statue" nbDisplays="3" ability="ROTABLE"/>
+      <elements xsi:type="generator:StatementElementType" size="LARGE" ID="ELEMENT_TYPE_STATEMENT_CORRECTNESS" type="StatementFact" nbDisplays="1" ability="DISPLAY" forStructure="true"/>
+      <elements xsi:type="generator:StatementElementType" size="LARGE" ID="ELEMENT_TYPE_STATEMENT_DISPLAY" type="Statement" nbDisplays="1" ability="DISPLAY"/>
       <elements size="MEDIUM" ID="STRUCT_H_MEDIUM" type="HStructM" ability="HORIZONTAL_DISPLAY"/>
       <elements size="MEDIUM" ID="STRUCT_V_MEDIUM" type="VStructM" ability="VERTICAL_DISPLAY"/>
       <elements ID="ELEMENT_TYPE_BEAR-TRAP" type="BearTrap" ability="NONAVOIDABLE"/>
@@ -734,28 +989,42 @@
       <elements size="MEDIUM" ID="ELEMENT_TYPE_CHEST_DETECTOR" type="BigChest" ability="FOLLOWABLE_DETECTOR"/>
       <elements ID="ELEMENT_TYPE_AVATAR_DETECTOR" type="AvatarDetector" nbDisplays="1" ability="DETECTOR_AVATAR"/>
       <elements size="LARGE" ID="STRUCT_FILL_IN" type="StructureStatement" ability="FILL_IN_DISPLAY"/>
+      <elements size="MEDIUM" ID="ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM" type="MediumWaitFireTrap" ability="AVOIDABLE"/>
+      <elements size="XXLARGE" ID="STRUCT_MAP_XXLARGE" type="MapStructure" ability="MAP_DISPLAY"/>
+      <elements ID="ELEMENT_TYPE_TYPABLE_DETECTOR" type="TypableDetector" ability="TYPABLE_DETECTOR"/>
+      <elements size="LARGE" ID="STRUCT_H_LARGE" type="HStructL" ability="HORIZONTAL_DISPLAY"/>
+      <elements size="LARGE" ID="STRUCT_V_LARGE" type="VStructL" ability="VERTICAL_DISPLAY"/>
+      <elements ID="ELEMENT_TYPE_COW" type="Cow" nbDisplays="1" ability="CATCHABLE"/>
     </elementTypes>
+    <curses>
+      <curses xsi:type="generator:LabyrinthCurse" name="Labyrinth"/>
+      <curses name="Night"/>
+      <curses name="OneLife"/>
+      <curses name="OutOfTime"/>
+    </curses>
   </elements>
   <abilities>
     <abilities name="TOUCHABLE"/>
     <abilities name="TYPABLE"/>
     <abilities name="VERIFICATOR"/>
-    <abilities name="ROTABLE" lockingEquipment="BELT"/>
-    <abilities name="MOVABLE" lockingEquipment="BRACELET"/>
+    <abilities name="ROTABLE" lockingEquipment="GLOVE"/>
+    <abilities name="MOVABLE"/>
     <abilities name="DETECTOR"/>
     <abilities name="OPENABLE" lockingEquipment="KEYS"/>
     <abilities name="DISPLAY"/>
     <abilities name="CATCHABLE" lockingEquipment="CARROT"/>
     <abilities name="NONAVOIDABLE"/>
     <abilities name="AVOIDABLE"/>
-    <abilities name="PUSHABLE" lockingEquipment="GLOVE"/>
+    <abilities name="PUSHABLE" lockingEquipment="BRACELET"/>
     <abilities name="CROSSABLE" lockingEquipment="COAT"/>
     <abilities name="FOLLOWABLE" lockingEquipment="KEYS"/>
     <abilities name="HORIZONTAL_DISPLAY"/>
     <abilities name="VERTICAL_DISPLAY"/>
-    <abilities name="BREAKABLE"/>
+    <abilities name="BREAKABLE" lockingEquipment="BELT"/>
     <abilities name="FOLLOWABLE_DETECTOR"/>
     <abilities name="DETECTOR_AVATAR"/>
     <abilities name="FILL_IN_DISPLAY"/>
+    <abilities name="MAP_DISPLAY"/>
+    <abilities name="TYPABLE_DETECTOR"/>
   </abilities>
 </generator:GameDescription>

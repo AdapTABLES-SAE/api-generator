@@ -374,5 +374,15 @@ public class GameElementsManager {
 	private boolean roomTypeHasCompatibleAccesses(Directions entry, Directions exit, RoomType roomType) {
 		return roomType.getDirections().contains(entry) && (exit.equals(Directions.NONE) || roomType.getDirections().contains(exit));
 	}
+
+	public RoomType getPortalRoomType() {
+		List<RoomType> roomtypes = new ArrayList<>();
+		for (RoomType roomtype : this.gameDescriptionModel.getRoomtypes().getRoomtypes()) {
+			if(roomtype.isPortalRoomType()) {
+				roomtypes.add(roomtype);
+			}
+		}
+		return roomtypes.get(new Random().nextInt(roomtypes.size()));
+	}
 	
 }

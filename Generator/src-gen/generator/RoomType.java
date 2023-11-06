@@ -125,4 +125,12 @@ public interface RoomType extends EObject {
 	 */
 	boolean isTrapRoomType();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	boolean isPortalRoomType();
+
 } // RoomType

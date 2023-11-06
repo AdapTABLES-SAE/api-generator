@@ -570,13 +570,22 @@ public interface GeneratorPackage extends EPackage {
 	int ROOM_TYPE___IS_TRAP_ROOM_TYPE = 4;
 
 	/**
+	 * The operation id for the '<em>Is Portal Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE___IS_PORTAL_ROOM_TYPE = 5;
+
+	/**
 	 * The number of operations of the '<em>Room Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_OPERATION_COUNT = 5;
+	int ROOM_TYPE_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.SmallRoomTypeImpl <em>Small Room Type</em>}' class.
@@ -677,6 +686,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int SMALL_ROOM_TYPE___IS_TRAP_ROOM_TYPE = ROOM_TYPE___IS_TRAP_ROOM_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Portal Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMALL_ROOM_TYPE___IS_PORTAL_ROOM_TYPE = ROOM_TYPE___IS_PORTAL_ROOM_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Small Room Type</em>' class.
@@ -786,6 +804,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int LARGE_ROOM_TYPE___IS_TRAP_ROOM_TYPE = ROOM_TYPE___IS_TRAP_ROOM_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Portal Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LARGE_ROOM_TYPE___IS_PORTAL_ROOM_TYPE = ROOM_TYPE___IS_PORTAL_ROOM_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Large Room Type</em>' class.
@@ -10586,6 +10613,16 @@ public interface GeneratorPackage extends EPackage {
 	EOperation getRoomType__IsTrapRoomType();
 
 	/**
+	 * Returns the meta object for the '{@link generator.RoomType#isPortalRoomType() <em>Is Portal Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Portal Room Type</em>' operation.
+	 * @see generator.RoomType#isPortalRoomType()
+	 * @generated
+	 */
+	EOperation getRoomType__IsPortalRoomType();
+
+	/**
 	 * Returns the meta object for class '{@link generator.SmallRoomType <em>Small Room Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15783,6 +15820,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ROOM_TYPE___IS_TRAP_ROOM_TYPE = eINSTANCE.getRoomType__IsTrapRoomType();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Portal Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_TYPE___IS_PORTAL_ROOM_TYPE = eINSTANCE.getRoomType__IsPortalRoomType();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.SmallRoomTypeImpl <em>Small Room Type</em>}' class.

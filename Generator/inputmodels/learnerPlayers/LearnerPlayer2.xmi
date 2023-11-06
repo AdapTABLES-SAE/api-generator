@@ -4,7 +4,7 @@
     <playerProgress currentLevel="9" coins="0">
       <items>
         <items bought="true" activated="true">
-          <equipment href="../GameDescription.xmi#CARROT"/>
+          <equipment href="../GameDescription.xmi#BRACELET"/>
         </items>
       </items>
     </playerProgress>
@@ -170,5 +170,5 @@
     </learnerProgress>
   </progression>
   <learningpath href="../LearningDomain.xmi#PATH404"/>
-  <statistics maxGameLevelReached="9" nbLevelsGenerated="612"/>
+  <statistics maxGameLevelReached="9" nbLevelsGenerated="618"/>
 </generator:LearnerPlayer>

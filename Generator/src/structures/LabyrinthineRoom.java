@@ -35,6 +35,16 @@ public class LabyrinthineRoom {
 		else { return allowed.get(new Random().nextInt(allowed.size())); }
 	}
 	
+	public List<Directions> getAvailableExits(GridManager gridManager) {
+		List<Directions> allowed = new ArrayList<>(room.getRoomtype().getDirections());
+		for (Directions direction : room.getRoomtype().getDirections()) {
+			if(!gridManager.isAvailableDirection(getRoomCoordinates(), direction)) {
+				allowed.remove(direction);
+			}
+		}
+		return allowed; 
+	}
+	
 	public RoomAccess getLastRoomAccess() {
 		return room.getRoomaccess().get(room.getRoomaccess().size() - 1);
 	}

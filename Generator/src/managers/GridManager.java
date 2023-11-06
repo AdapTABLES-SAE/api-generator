@@ -478,5 +478,14 @@ public class GridManager {
 			occupiedCoordinates.put(new Coordinate(c), room); // X,Y+1
 		}
 	}
+
+	public Coordinate getNextCoordForPortalRoom() {
+		Coordinate coord = new Coordinate(100, 100);
+		while(occupiedCoordinates.containsKey(coord)) {
+			coord.setX(coord.getX() + 50);
+			coord.setY(coord.getY() + 50);
+		}
+		return coord;
+	}
 	
 }

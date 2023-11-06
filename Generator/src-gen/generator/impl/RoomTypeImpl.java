@@ -213,6 +213,15 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isPortalRoomType() {
+		return this.type.equals(ERoomType.PORTAL);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -320,6 +329,8 @@ public abstract class RoomTypeImpl extends MinimalEObjectImpl.Container implemen
 			return isQuestionRoomType();
 		case GeneratorPackage.ROOM_TYPE___IS_TRAP_ROOM_TYPE:
 			return isTrapRoomType();
+		case GeneratorPackage.ROOM_TYPE___IS_PORTAL_ROOM_TYPE:
+			return isPortalRoomType();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

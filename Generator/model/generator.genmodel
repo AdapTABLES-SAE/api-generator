@@ -94,6 +94,7 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ERoomType/EXIT"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ERoomType/QUESTION"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ERoomType/TRAP"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//ERoomType/PORTAL"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EGeographyValue">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/CITY"/>
@@ -176,6 +177,8 @@
       <genOperations ecoreOperation="generator.ecore#//RoomType/isQuestionRoomType"
           body="return this.type.equals(ERoomType.QUESTION);"/>
       <genOperations ecoreOperation="generator.ecore#//RoomType/isTrapRoomType" body="return this.type.equals(ERoomType.TRAP);"/>
+      <genOperations ecoreOperation="generator.ecore#//RoomType/isPortalRoomType"
+          body="return this.type.equals(ERoomType.PORTAL);"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//SmallRoomType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//SmallRoomType/directions"/>

@@ -1,4 +1,4 @@
-package game_dimension;
+package old;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;

@@ -56,7 +56,16 @@ public enum ERoomType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TRAP(3, "TRAP", "TRAP");
+	TRAP(3, "TRAP", "TRAP"),
+	/**
+	* The '<em><b>PORTAL</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #PORTAL_VALUE
+	* @generated
+	* @ordered
+	*/
+	PORTAL(3, "PORTAL", "PORTAL");
 
 	/**
 	 * The '<em><b>ENTRY</b></em>' literal value.
@@ -103,12 +112,23 @@ public enum ERoomType implements Enumerator {
 	public static final int TRAP_VALUE = 3;
 
 	/**
+	 * The '<em><b>PORTAL</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #PORTAL
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int PORTAL_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>ERoom Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final ERoomType[] VALUES_ARRAY = new ERoomType[] { ENTRY, EXIT, QUESTION, TRAP, };
+	private static final ERoomType[] VALUES_ARRAY = new ERoomType[] { ENTRY, EXIT, QUESTION, TRAP, PORTAL, };
 
 	/**
 	 * A public read-only list of all the '<em><b>ERoom Type</b></em>' enumerators.

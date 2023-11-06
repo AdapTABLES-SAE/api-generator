@@ -32,8 +32,6 @@
     <learnerPlayers
         href="learnerPlayers/LearnerPlayer19.xmi#LP019"/>
     <learnerPlayers
-        href="learnerPlayers/LearnerPlayer1B.xmi#LP001B"/>
-    <learnerPlayers
         href="learnerPlayers/LearnerPlayer3.xmi#LP003"/>
     <learnerPlayers
         href="learnerPlayers/LearnerPlayer4.xmi#LP004"/>
@@ -76,8 +74,6 @@
     <learnerPlayers
         href="learnerPlayers/LearnerPlayer19.xmi#LP019"/>
     <learnerPlayers
-        href="learnerPlayers/LearnerPlayer1B.xmi#LP001B"/>
-    <learnerPlayers
         href="learnerPlayers/LearnerPlayer2B.xmi#LP002B"/>
     <learnerPlayers
         href="learnerPlayers/LearnerPlayer3.xmi#LP003"/>
@@ -98,14 +94,13 @@
       ID="GAMEPLAY_TEST"
       name="GAMEPLAY_TEST">
     <learnerPlayers
-        href="learnerPlayers/LearnerPlayer1_GAMEPLAY.xmi#LP01"/>
+        href="learnerPlayers/LearnerPlayer1_GAMEPLAY.xmi#LP01GP"/>
     <learnerPlayers
-        href="learnerPlayers/LearnerPlayer2_GAMEPLAY.xmi#LP02"/>
+        href="learnerPlayers/LearnerPlayer2_GAMEPLAY.xmi#LP02GP"/>
     <learnerPlayers
-        href="learnerPlayers/LearnerPlayer3_GAMEPLAY.xmi#LP03"/>
+        href="learnerPlayers/LearnerPlayer3_GAMEPLAY.xmi#LP03GP"/>
     <learnerPlayers
         href="learnerPlayers/LearnerPlayer4_GAMEPLAY.xmi#LP04"/>
- 
   </classrooms>
   <classrooms
       ID="FACT_TEST"

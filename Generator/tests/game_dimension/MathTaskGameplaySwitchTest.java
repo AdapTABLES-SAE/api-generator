@@ -19,7 +19,7 @@ import generator.MTCompletion2;
 import generator.MTRecontruction;
 import generators.ALGAGenerator;
 
-class MathGameplayTest {
+class MathTaskGameplaySwitchTest {
 
 	private List<Dungeon> generatedLinearDungeons, generatedLabyrinthineDungeons;
 	

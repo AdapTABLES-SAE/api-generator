@@ -77,6 +77,80 @@ public class DungeonGenerator {
 	/*   LABYRINTHINE DUNGEON GENERATION METHODS   */
 	/* ******************************************* */
 
+	private LabyrinthineRoom createPortalRoom(boolean isFirstPortal, LabyrinthineRoom originRoom, RoomElements roomElements) {
+		
+		if(isFirstPortal) {
+			List<Directions> originRoomAvailableDirection = originRoom.getAvailableExits(gridManager);
+			if(originRoomAvailableDirection.isEmpty()) { return null; }
+			HashMap<Directions, Set<Directions>> computeDirections = new HashMap<>();
+			for(Directions origin: originRoomAvailableDirection) {
+				Coordinate nextPosition = gridManager.getNextCoord(originRoom.getRoom(), origin);
+				computeDirections.put(origin, gridManager.getAllowedNewRoomEntries(nextPosition, origin));
+			}
+			List<StructureRT> allowedRoomtypes = new ArrayList<>();
+			
+			for(Directions origin: computeDirections.keySet()) {
+				for(Directions entry: computeDirections.get(origin)) {
+					StructureRT structure = new StructureRT(entry, origin, dungeonElements.getElementManager().getPortalRoomType());
+					allowedRoomtypes.add(structure);
+				}
+			}
+			if(allowedRoomtypes.isEmpty()) {
+				return null;
+			} else {
+				StructureRT structure = allowedRoomtypes.get(new Random().nextInt(allowedRoomtypes.size()));
+				Coordinate nextPosition = gridManager.getNextCoord(originRoom.getRoom(), structure.previousRoomOrigin);
+				Coordinate validCoord = gridManager.getValidCoordinates(structure.entry, nextPosition);
+				createOriginRoomExitAccess(originRoom, structure.previousRoomOrigin);
+				Room aRoom = createRoom(validCoord.getX(), validCoord.getY(), structure.roomType, roomElements, originRoom.getLastRoomAccess(), structure.entry);
+				addPortalRoomAccess(aRoom);
+				return new LabyrinthineRoom(aRoom); // TODO : ROOM ACCESS du portail (NOUVELLE METHODE DE CREATION?)
+			}
+		
+		} else {
+			// PORTAIL PLACER PLUS LOINS AVEC POUR L'INSTANT RIEN DE CREER SAUF LE ROOM ACCES DU PORTAIL 
+			// TODO
+			// le calcul de la position change c'est to next pos sinon tout pareil, le choix du roomtype est easy le reste c'est tout pareil 
+			Coordinate nextPosition = gridManager.getNextCoordForPortalRoom();
+			Room aRoom = createRoom(nextPosition.getX(), nextPosition.getY(), dungeonElements.getElementManager().getPortalRoomType(), roomElements, null, null, Directions.NONE);
+			return new LabyrinthineRoom(aRoom);
+		}
+	}
+	
+	private class StructureRT {
+		public Directions entry; 
+		public Directions previousRoomOrigin;
+		public RoomType roomType;
+		
+		public StructureRT(Directions entry, Directions origin, RoomType roomType) {
+			this.entry = entry;
+			this.previousRoomOrigin = origin;
+			this.roomType = roomType;
+		}
+	}
+	
+	private RoomAccess getPortalRoomAccess(Room room) {
+		for(RoomAccess ra: room.getRoomaccess()) {
+			if(ra.getDirection().equals(Directions.NONE)) {
+				return ra;
+			}
+		}
+		return null;
+	}
+	
+	private void addPortalRoomAccess(Room room) {
+		addPortalRoomAccess(room, null);
+	}
+	
+	private void addPortalRoomAccess(Room room, RoomAccess otherRoomAccess) {
+		RoomAccess access = new RoomAccessImpl();
+		access.setDirection(Directions.NONE);
+		if(otherRoomAccess != null) {
+			access.setOtherroomaccess(otherRoomAccess);
+			otherRoomAccess.setOtherroomaccess(access);
+		}
+	}
+	
 	private void generateLabyrinthineDungeon() throws NonRoomTypeException {
 		ALGAGenerator.LOGGER.info("Generation of Labyrinthe dungeon");
 		List<LabyrinthineRoom> dungeonRooms = new ArrayList<>();
@@ -86,12 +160,31 @@ public class DungeonGenerator {
 		dungeonRooms.add(new LabyrinthineRoom(originRoom));
 		selectableRooms.add(new LabyrinthineRoom(originRoom));		
 		while(dungeonRooms.size() < (nbRooms + 1))  {
-			LabyrinthineRoom randomStartingRoom = chooseEntryRoomForNewPathIn(dungeonRooms);
-			LabyrinthineRoom aRoom = createNewRoomFrom(randomStartingRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size()));
+			/*if(selectableRooms.isEmpty()) { 
+				System.out.println("BACKTRACK");
+				// Backtrack remove lask room 
+				lastOriginUsedToCreateOtherRoom = removeCommonRoomAccess(lastOriginUsedToCreateOtherRoom, dungeonRooms.get(dungeonRooms.size() - 1));
+				gridManager.removeAllOccupied(dungeonRooms.get(dungeonRooms.size() - 1).getRoom());
+				dungeonRooms.remove(dungeonRooms.size() - 1);
+				dungeonElements.addEmptyRoom(dungeonRooms.size() - 1);
+				LabyrinthineRoom portalRoom1 = createPortalRoom(true, lastOriginUsedToCreateOtherRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1));
+				dungeonElements.addEmptyRoom(dungeonRooms.size() - 1);
+				// TODO : PENSER A AJOUTER LES SALLES ET LEUR ROOMS ACCES ENTRES-EUX
+				LabyrinthineRoom portalRoom2 = createPortalRoom(false, lastOriginUsedToCreateOtherRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size() - 1));
+				addPortalRoomAccess(portalRoom2.getRoom(), getPortalRoomAccess(portalRoom1.getRoom()));
+				dungeonRooms.add(portalRoom1);
+				dungeonRooms.add(portalRoom2);
+				selectableRooms.add(portalRoom2);
+				dungeonRoomNumber += 2;
+			}*/
+			LabyrinthineRoom randomStartingRoom = chooseEntryRoomForNewPathIn(selectableRooms);
+			LabyrinthineRoom aRoom = createNewLabyrinthineRoomFrom(randomStartingRoom, dungeonElements.getElementsOfRoom(dungeonRooms.size()));
 
 			if(aRoom != null) {
 				dungeonRooms.add(aRoom);
+				selectableRooms.add(aRoom);
 			} else {
+				selectableRooms.remove(randomStartingRoom);
 				createNewPath(randomStartingRoom, originRoom);				
 			}
 			
@@ -111,7 +204,7 @@ public class DungeonGenerator {
 		
 		while (exit == null) {
 			LabyrinthineRoom furthest = findFurthestFromEntryRoomEuclidianDistanceWith(dungeonRoomTemps);
-			exit = createNewRoomFrom(furthest, dungeonElements.getElementsOfRoom(dungeonElements.getRoomsElements().size() - 1));
+			exit = createNewLabyrinthineRoomFrom(furthest, dungeonElements.getElementsOfRoom(dungeonElements.getRoomsElements().size() - 1));
 			dungeonRoomTemps.remove(furthest);
 		}
 		return exit;
@@ -178,6 +271,38 @@ public class DungeonGenerator {
 			Coordinate validCoord = gridManager.getValidCoordinates(entry, nextPosition);
 			createOriginRoomExitAccess(originRoom, originRoomAvailableDirection);
 			Room aRoom = createRoom(validCoord.getX(), validCoord.getY(), roomType, roomElements, originRoom.getLastRoomAccess(), entry);
+			return new LabyrinthineRoom(aRoom);
+		}
+	}
+	
+	private LabyrinthineRoom createNewLabyrinthineRoomFrom(LabyrinthineRoom originRoom, RoomElements roomElements/*, boolean isExitRoom*/) throws NonRoomTypeException {
+		List<Directions> originRoomAvailableDirection = originRoom.getAvailableExits(gridManager);
+		if(originRoomAvailableDirection.isEmpty()) { return null; }
+		HashMap<Directions, Set<Directions>> computeDirections = new HashMap<>();
+		for(Directions origin: originRoomAvailableDirection) {
+			Coordinate nextPosition = gridManager.getNextCoord(originRoom.getRoom(), origin);
+			computeDirections.put(origin, gridManager.getAllowedNewRoomEntries(nextPosition, origin));
+		}
+		//System.out.println(computeDirections);
+		List<StructureRT> allowedRoomtypes = new ArrayList<>();
+		
+		for(Directions origin: computeDirections.keySet()) {
+			for(Directions entry: computeDirections.get(origin)) {
+				RoomType roomType = getCompatibleRoomType(entry, roomElements);
+				if(roomType != null) {
+					StructureRT structure = new StructureRT(entry, origin, roomType);
+					allowedRoomtypes.add(structure);
+				}
+			}
+		}
+		if(allowedRoomtypes.isEmpty()) {
+			return null;
+		} else {
+			StructureRT structure = allowedRoomtypes.get(new Random().nextInt(allowedRoomtypes.size()));
+			Coordinate nextPosition = gridManager.getNextCoord(originRoom.getRoom(), structure.previousRoomOrigin);
+			Coordinate validCoord = gridManager.getValidCoordinates(structure.entry, nextPosition);
+			createOriginRoomExitAccess(originRoom, structure.previousRoomOrigin);
+			Room aRoom = createRoom(validCoord.getX(), validCoord.getY(), structure.roomType, roomElements, originRoom.getLastRoomAccess(), structure.entry);
 			return new LabyrinthineRoom(aRoom);
 		}
 	}

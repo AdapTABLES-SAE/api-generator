@@ -65,6 +65,7 @@
     <eOperations name="isExitRoomType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eOperations name="isQuestionRoomType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eOperations name="isTrapRoomType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="isPortalRoomType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elementPositions" upperBound="-1"
         eType="#//Position" containment="true"/>
@@ -660,6 +661,7 @@
     <eLiterals name="EXIT" value="1"/>
     <eLiterals name="QUESTION" value="2"/>
     <eLiterals name="TRAP" value="3"/>
+    <eLiterals name="PORTAL" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElementType">
     <eOperations name="isDisplayableElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
