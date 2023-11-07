@@ -135,11 +135,25 @@ public class GameElementsManager {
 	}
 	
 	
+	private boolean isStructureComponent(AComponent component, Gameplay gameplay) {
+		return !gameplay.getComponents().contains(component);
+	}
+	
+	
+	
 	public ElementType getElementTypeFor(AComponent component, Map<ElementType, Integer> elementsToQuantity, Gameplay gameplay) {
 		//System.out.println("-------------Gameplay "+gameplay);
 		for (ElementType elementType : elementsToQuantity.keySet()) {
-			if((isComponentForStatement(component) && elementType instanceof StatementElementType) ||
+			/*if((isComponentForStatement(component) && elementType instanceof StatementElementType) ||
 					 (!(elementType instanceof StatementElementType) && abilitiesAreEqual(elementType, component) && sizeAreEqual(elementType, component))) {
+				return elementType;
+			}*/
+			
+			if(elementType instanceof StatementElementType) {
+				if(isComponentForStatement(component) && !isComponentForPropositions(component) && respectStatementConditions((StatementElementType) elementType, isStructureComponent(component, gameplay))) {
+					return elementType;
+				}
+			} else if((!isComponentForStatement(component) || isComponentForStatementAndChoices(component)) && abilitiesAreEqual(elementType, component) && sizeAreEqual(elementType, component)) {		
 				return elementType;
 			}
 		}

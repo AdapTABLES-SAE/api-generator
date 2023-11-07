@@ -120,7 +120,8 @@ public class RoomElements {
 	public void setGameplay(Gameplay gameplay) {
 		this.gameplay = gameplay;
 		//System.err.println("GAMEPLAY "+gameplay.getName()+" nb components "+gameplay.getComponents().size());
-		selectElementType();
+		//selectElementType();
+		selectElementType(gameplay.getComponents());
 	}
 	
 	private void selectElementType() {

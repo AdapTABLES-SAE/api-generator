@@ -44,6 +44,8 @@ rule Room2Room
         	roomOut.idTask = roomIn.task.id;
         	roomOut.time = roomIn.task.maxTime;
         }
+        
+        roomOut.correctnessToReach = roomIn.nbExpectedAnswers+"";
               
         if (roomIn.roomtype.isTypeOf(SmallRoomType)) {
             //"\tsmall".println();

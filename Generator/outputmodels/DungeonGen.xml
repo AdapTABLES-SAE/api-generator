@@ -1,387 +1,392 @@
 <?xml version="1.0" encoding="ASCII"?>
-<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="PATH404-O1" levelID="PATH404-O1-L1" gameLevelID="9" curses="[&quot;Labyrinth&quot;,&quot;Night&quot;,]">
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="PATH404-O1" levelID="PATH404-O1-L1" gameLevelID="9" curses="[]">
   <rooms>
-    <room id="Room[0/0]" roomTypeName="RegularRoomN">
+    <room id="Room[0/0]" roomTypeName="RegularRoomE" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a2" direction="NORTH" accessRef="a3"/>
+        <roomaccess id="a2" direction="EAST" accessRef="a3"/>
       </roomaccesses>
     </room>
-    <room id="Room[0/1]" y="1" roomTypeName="RegularRoom1" time="30" idTask="PATH404-O1-L1-T1" prompt="Deplace le bon elements sur la zone">
+    <room id="Room[1/0]" x="1" roomTypeName="RoomTrap3" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a3" direction="SOUTH" accessRef="a2"/>
-        <roomaccess id="a4" direction="EAST" accessRef="a5"/>
+        <roomaccess id="a3" direction="WEST" accessRef="a2"/>
+        <roomaccess id="a4" direction="SOUTH" accessRef="a5"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM1" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM2" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM3" type="FireTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM4" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM5" type="FireTrap" pos="POS7" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[1/-1]" x="1" y="-1" roomTypeName="RegularRoom2" time="30" idTask="PATH404-O1-L1-T2" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a5" direction="NORTH" accessRef="a4"/>
         <roomaccess id="a6" direction="WEST" accessRef="a7"/>
-        <roomaccess id="a8" direction="NORTH" accessRef="a9"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH404-O1-L1-T1-QAFACT4" complete="3 x 2 = 6" correctnessToReach="1"/>
+        <fact id="PATH404-O1-L1-T2-QAFACT30" complete="8 x 2 = 16" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="ELEM1" type="Pot" pos="POS11" ability="MOVABLE" idFact="PATH404-O1-L1-T1-QAFACT4"/>
-        <element id="ELEM2" type="ObjectDetector" displayValue="3" correctness="INCORRECT" pos="POS3" ability="DETECTOR" idFact="PATH404-O1-L1-T1-QAFACT4"/>
-        <element id="ELEM3" type="ObjectDetector" displayValue="5" correctness="INCORRECT" pos="POS1" ability="DETECTOR" idFact="PATH404-O1-L1-T1-QAFACT4"/>
-        <element id="ELEM4" type="ObjectDetector" displayValue="6" correctness="CORRECT" pos="POS8" ability="DETECTOR" idFact="PATH404-O1-L1-T1-QAFACT4"/>
-        <element id="ELEM5" type="Statement" displayValue="3 x 2 = ?" pos="POSQ3" idFact="PATH404-O1-L1-T1-QAFACT4" interactive="true" acceptedFacts="3 x 2 = 6;"/>
+        <element id="ELEM6" type="FloorInterrupt" displayValue="19" correctness="INCORRECT" pos="POS1" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT30"/>
+        <element id="ELEM7" type="FloorInterrupt" displayValue="0" correctness="INCORRECT" pos="POS2" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT30"/>
+        <element id="ELEM8" type="FloorInterrupt" displayValue="8" correctness="CORRECT" pos="POS3" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT30"/>
+        <element id="ELEM9" type="FloorInterrupt" displayValue="2" correctness="CORRECT" pos="POS6" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT30"/>
+        <element id="ELEM10" type="Switch" pos="POS5" ability="VERIFICATOR"/>
+        <element id="ELEM11" type="Statement" displayValue="? x ? = 16" pos="POSQ1" idFact="PATH404-O1-L1-T2-QAFACT30" interactive="true" acceptedFacts="8 x 2 = 16;2 x 8 = 16;"/>
       </elements>
     </room>
-    <room id="Room[1/1]" x="1" y="1" roomTypeName="RoomTrap3">
-      <roomaccesses>
-        <roomaccess id="a5" direction="WEST" accessRef="a4"/>
-        <roomaccess id="a10" direction="EAST" accessRef="a11"/>
-        <roomaccess id="a12" direction="SOUTH" accessRef="a13"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM6" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM7" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM8" type="SpikeTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM9" type="SpikeTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM10" type="SpikeTrap" pos="POS7" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-1/1]" x="-1" y="1" roomTypeName="RegularRoom2" time="30" idTask="PATH404-O1-L1-T5" prompt="Deplace les bons elements sur la zone" gameplayWithUndo="true">
+    <room id="Room[0/-1]" y="-1" roomTypeName="TrapRoom2" correctnessToReach="0">
       <roomaccesses>
         <roomaccess id="a7" direction="EAST" accessRef="a6"/>
-        <roomaccess id="a14" direction="NORTH" accessRef="a15"/>
-        <roomaccess id="a16" direction="SOUTH" accessRef="a17"/>
-        <roomaccess id="a18" direction="WEST" accessRef="a19"/>
+        <roomaccess id="a8" direction="SOUTH" accessRef="a9"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM12" type="BearTrap" pos="POS3" ability="NONAVOIDABLE"/>
+        <element id="ELEM13" type="BearTrap" pos="POS4" ability="NONAVOIDABLE"/>
+        <element id="ELEM14" type="BearTrap" pos="POS6" ability="NONAVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[0/-2]" y="-2" roomTypeName="RoomTrap4" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a9" direction="NORTH" accessRef="a8"/>
+        <roomaccess id="a10" direction="WEST" accessRef="a11"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM15" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM16" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM17" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM18" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM19" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM20" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM21" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-1/-2]" x="-1" y="-2" roomTypeName="RoomTrap2" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a11" direction="EAST" accessRef="a10"/>
+        <roomaccess id="a12" direction="NORTH" accessRef="a13"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM22" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM23" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM24" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM25" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM26" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-1/-1]" x="-1" y="-1" roomTypeName="RegularRoom2" time="30" idTask="PATH404-O1-L1-T4" prompt="Touche les bons elements" correctnessToReach="3">
+      <roomaccesses>
+        <roomaccess id="a13" direction="SOUTH" accessRef="a12"/>
+        <roomaccess id="a14" direction="WEST" accessRef="a15"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH404-O1-L1-T5-QAFACT0" complete="Resultats table de 2" correctnessToReach="2"/>
-      </facts>
-      <elements>
-        <element id="STRUCT11" type="VStructXL" pos="POSXL1"/>
-        <element id="ELEM12" type="LargeNewObjectDetector" pos="id/STRUCT11" ability="DETECTOR"/>
-        <element id="ELEM13" type="StatementFact" displayValue="Resultats table de 2" pos="id/STRUCT11" idFact="PATH404-O1-L1-T5-QAFACT0" acceptedFacts="Resultats table de 2;"/>
-        <element id="ELEM14" type="Pot" displayValue="9" correctness="INCORRECT" pos="POS4" ability="MOVABLE" idFact="PATH404-O1-L1-T5-QAFACT0"/>
-        <element id="ELEM15" type="Pot" displayValue="21" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="PATH404-O1-L1-T5-QAFACT0"/>
-        <element id="ELEM16" type="Pot" displayValue="6" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH404-O1-L1-T5-QAFACT0"/>
-        <element id="ELEM17" type="Pot" displayValue="8" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T5-QAFACT0"/>
-      </elements>
-    </room>
-    <room id="Room[-1/2]" x="-1" y="2" roomTypeName="RoomTrap2">
-      <roomaccesses>
-        <roomaccess id="a15" direction="SOUTH" accessRef="a14"/>
-        <roomaccess id="a20" direction="EAST" accessRef="a21"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM18" type="RegularSlime" pos="POS1" ability="NONAVOIDABLE"/>
-        <element id="ELEM19" type="RegularSlime" pos="POS3" ability="NONAVOIDABLE"/>
-        <element id="ELEM20" type="RegularSlime" pos="POS5" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[0/2]" y="2" roomTypeName="RoomTrap2">
-      <roomaccesses>
-        <roomaccess id="a9" direction="SOUTH" accessRef="a8"/>
-        <roomaccess id="a22" direction="NORTH" accessRef="a23"/>
-        <roomaccess id="a24" direction="EAST" accessRef="a25"/>
-        <roomaccess id="a21" direction="WEST" accessRef="a20"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM21" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM22" type="SpikeTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM23" type="SpikeTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM24" type="SpikeTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM25" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[2/1]" x="2" y="1" roomTypeName="RegularRoom9" time="30" idTask="PATH404-O1-L1-T5" prompt="Pousse les bons elements">
-      <roomaccesses>
-        <roomaccess id="a11" direction="WEST" accessRef="a10"/>
-      </roomaccesses>
-      <facts>
-        <fact id="PATH404-O1-L1-T5-QAFACT2" complete="Resultats table de 2" correctnessToReach="2"/>
-      </facts>
-      <elements>
-        <element id="STRUCT26" type="HStructM" pos="POSM2"/>
-        <element id="ELEM27" type="ObjectDetector" pos="id/STRUCT26" ability="DETECTOR"/>
-        <element id="ELEM28" type="Block" displayValue="21" correctness="INCORRECT" pos="id/STRUCT26" ability="PUSHABLE" idFact="PATH404-O1-L1-T5-QAFACT2"/>
-        <element id="STRUCT29" type="HStructM" pos="POSM3"/>
-        <element id="ELEM30" type="ObjectDetector" pos="id/STRUCT29" ability="DETECTOR"/>
-        <element id="ELEM31" type="Block" displayValue="5" correctness="INCORRECT" pos="id/STRUCT29" ability="PUSHABLE" idFact="PATH404-O1-L1-T5-QAFACT2"/>
-        <element id="STRUCT32" type="HStructM" pos="POSM6"/>
-        <element id="ELEM33" type="ObjectDetector" pos="id/STRUCT32" ability="DETECTOR"/>
-        <element id="ELEM34" type="Block" displayValue="10" correctness="CORRECT" pos="id/STRUCT32" ability="PUSHABLE" idFact="PATH404-O1-L1-T5-QAFACT2"/>
-        <element id="STRUCT35" type="HStructM" pos="POSM4"/>
-        <element id="ELEM36" type="ObjectDetector" pos="id/STRUCT35" ability="DETECTOR"/>
-        <element id="ELEM37" type="Block" displayValue="16" correctness="CORRECT" pos="id/STRUCT35" ability="PUSHABLE" idFact="PATH404-O1-L1-T5-QAFACT2"/>
-        <element id="ELEM38" type="Statement" displayValue="Resultats table de 2" pos="POSQ1" idFact="PATH404-O1-L1-T5-QAFACT2" acceptedFacts="Resultats table de 2;"/>
-      </elements>
-    </room>
-    <room id="Room[-1/0]" x="-1" roomTypeName="RegularRoom11" time="30" idTask="PATH404-O1-L1-T4" prompt="Touche les bons elements">
-      <roomaccesses>
-        <roomaccess id="a17" direction="NORTH" accessRef="a16"/>
-      </roomaccesses>
-      <facts>
-        <fact id="PATH404-O1-L1-T4-QAFACT29" complete="2 x 8 = 16" correctnessToReach="1" correctness="CORRECT"/>
-        <fact id="PATH404-O1-L1-T4-QAFACT25" complete="2 x 7 = 14" correctnessToReach="1" correctness="CORRECT"/>
-      </facts>
-      <elements>
-        <element id="STRUCT39" type="HStructXL" pos="POSXL1"/>
-        <element id="ELEM40" type="Info" displayValue="FALSE" pos="id/STRUCT39"/>
-        <element id="STRUCT41" type="VStructXL" pos="id/STRUCT39"/>
-        <element id="STRUCT42" type="HStructXL" pos="id/STRUCT41"/>
-        <element id="ELEM43" type="FloorInterrupt" displayValue="" correctness="INCORRECT" pos="id/STRUCT42" ability="TOUCHABLE" idFact="PATH404-O1-L1-T4-QAFACT29"/>
-        <element id="ELEM44" type="Info" displayValue="2 x 8 = 16" pos="id/STRUCT42" idFact="PATH404-O1-L1-T4-QAFACT29" acceptedFacts="2 x 8 = 16;"/>
-        <element id="ELEM45" type="FloorInterrupt" displayValue="" correctness="CORRECT" pos="id/STRUCT42" ability="TOUCHABLE" idFact="PATH404-O1-L1-T4-QAFACT29"/>
-        <element id="STRUCT46" type="HStructXL" pos="id/STRUCT41"/>
-        <element id="ELEM47" type="FloorInterrupt" displayValue="" correctness="INCORRECT" pos="id/STRUCT46" ability="TOUCHABLE" idFact="PATH404-O1-L1-T4-QAFACT25"/>
-        <element id="ELEM48" type="Info" displayValue="2 x 7 = 14" pos="id/STRUCT46" idFact="PATH404-O1-L1-T4-QAFACT25" acceptedFacts="2 x 7 = 14;"/>
-        <element id="ELEM49" type="FloorInterrupt" displayValue="" correctness="CORRECT" pos="id/STRUCT46" ability="TOUCHABLE" idFact="PATH404-O1-L1-T4-QAFACT25"/>
-        <element id="ELEM50" type="Info" displayValue="TRUE" pos="id/STRUCT39"/>
-      </elements>
-    </room>
-    <room id="Room[-2/1]" x="-2" y="1" roomTypeName="RoomTrap">
-      <roomaccesses>
-        <roomaccess id="a19" direction="EAST" accessRef="a18"/>
-        <roomaccess id="a26" direction="NORTH" accessRef="a27"/>
-        <roomaccess id="a28" direction="SOUTH" accessRef="a29"/>
-        <roomaccess id="a30" direction="WEST" accessRef="a31"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM51" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM52" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM53" type="WaitFireTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM54" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM55" type="WaitFireTrap" pos="POS1" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[1/0]" x="1" roomTypeName="RegularRoom2" time="30" idTask="PATH404-O1-L1-T4" prompt="Touche les bons elements">
-      <roomaccesses>
-        <roomaccess id="a13" direction="NORTH" accessRef="a12"/>
-      </roomaccesses>
-      <facts>
-        <fact id="PATH404-O1-L1-T4-QAFACT4" complete="2 x 2 = 4" correctnessToReach="1" correctness="CORRECT"/>
         <fact id="PATH404-O1-L1-T4-QAFACT0" complete="1 x 2 = 2" correctnessToReach="1" correctness="CORRECT"/>
+        <fact id="PATH404-O1-L1-T4-QAFACT2" complete="1 x 2 = 7" correctnessToReach="1" correctness="INCORRECT"/>
       </facts>
       <elements>
-        <element id="STRUCT56" type="HStructXL" pos="POSXL1"/>
-        <element id="STRUCT57" type="VStructXL" pos="id/STRUCT56"/>
-        <element id="STRUCT58" type="HStructXL" pos="id/STRUCT57"/>
-        <element id="ELEM59" type="ObjectDetector" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT58" ability="DETECTOR" idFact="PATH404-O1-L1-T4-QAFACT4"/>
-        <element id="ELEM60" type="StatementFact" displayValue="2 x 2 = 4" pos="id/STRUCT58" idFact="PATH404-O1-L1-T4-QAFACT4" acceptedFacts="2 x 2 = 4;"/>
-        <element id="ELEM61" type="ObjectDetector" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT58" ability="DETECTOR" idFact="PATH404-O1-L1-T4-QAFACT4"/>
-        <element id="STRUCT62" type="HStructXL" pos="id/STRUCT57"/>
-        <element id="ELEM63" type="ObjectDetector" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT62" ability="DETECTOR" idFact="PATH404-O1-L1-T4-QAFACT0"/>
-        <element id="ELEM64" type="StatementFact" displayValue="1 x 2 = 2" pos="id/STRUCT62" idFact="PATH404-O1-L1-T4-QAFACT0" acceptedFacts="1 x 2 = 2;"/>
-        <element id="ELEM65" type="ObjectDetector" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT62" ability="DETECTOR" idFact="PATH404-O1-L1-T4-QAFACT0"/>
+        <element id="STRUCT27" type="HStructXL" pos="POSXL1"/>
+        <element id="STRUCT28" type="VStructXL" pos="id/STRUCT27"/>
+        <element id="STRUCT29" type="HStructXL" pos="id/STRUCT28"/>
+        <element id="ELEM30" type="ObjectDetector" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT29" ability="DETECTOR" idFact="PATH404-O1-L1-T4-QAFACT0"/>
+        <element id="ELEM31" type="Block" displayValue="1 x 2 = 2" correctness="CORRECT" pos="id/STRUCT29" ability="PUSHABLE" idFact="PATH404-O1-L1-T4-QAFACT0"/>
+        <element id="ELEM32" type="ObjectDetector" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT29" ability="DETECTOR" idFact="PATH404-O1-L1-T4-QAFACT0"/>
+        <element id="STRUCT33" type="HStructXL" pos="id/STRUCT28"/>
+        <element id="ELEM34" type="ObjectDetector" displayValue="Faux" correctness="CORRECT" pos="id/STRUCT33" ability="DETECTOR" idFact="PATH404-O1-L1-T4-QAFACT2"/>
+        <element id="ELEM35" type="Block" displayValue="1 x 2 = 7" correctness="INCORRECT" pos="id/STRUCT33" ability="PUSHABLE" idFact="PATH404-O1-L1-T4-QAFACT2"/>
+        <element id="ELEM36" type="ObjectDetector" displayValue="Vrai" correctness="INCORRECT" pos="id/STRUCT33" ability="DETECTOR" idFact="PATH404-O1-L1-T4-QAFACT2"/>
       </elements>
     </room>
-    <room id="Room[-2/2]" x="-2" y="2" roomTypeName="RegularRoom1" time="30" idTask="PATH404-O1-L1-T3" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true">
+    <room id="Room[-2/-1]" x="-2" y="-1" roomTypeName="RegularRoom7" time="30" idTask="PATH404-O1-L1-T3" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="3">
       <roomaccesses>
-        <roomaccess id="a27" direction="SOUTH" accessRef="a26"/>
-        <roomaccess id="a32" direction="NORTH" accessRef="a33"/>
-        <roomaccess id="a34" direction="WEST" accessRef="a35"/>
-      </roomaccesses>
-      <facts>
-        <fact id="PATH404-O1-L1-T3-QAFACT5" complete="3 x 2 = 6" correctnessToReach="3"/>
-      </facts>
-      <elements>
-        <element id="ELEM66" type="FloorInterrupt" displayValue="10" correctness="INCORRECT" pos="POS13" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT5"/>
-        <element id="ELEM67" type="FloorInterrupt" displayValue="15" correctness="INCORRECT" pos="POS10" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT5"/>
-        <element id="ELEM68" type="FloorInterrupt" displayValue="3" correctness="CORRECT" pos="POS9" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT5"/>
-        <element id="ELEM69" type="FloorInterrupt" displayValue="2" correctness="CORRECT" pos="POS2" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT5"/>
-        <element id="ELEM70" type="FloorInterrupt" displayValue="6" correctness="CORRECT" pos="POS11" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT5"/>
-        <element id="ELEM71" type="Switch" pos="POS4" ability="VERIFICATOR"/>
-        <element id="ELEM72" type="Statement" displayValue="? x ? = ?" pos="POSQ5" idFact="PATH404-O1-L1-T3-QAFACT5" interactive="true" acceptedFacts="3 x 2 = 6;2 x 3 = 6;"/>
-      </elements>
-    </room>
-    <room id="Room[0/3]" y="3" roomTypeName="RegularRoom7" time="30" idTask="PATH404-O1-L1-T2" prompt="Place les bons elements" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a23" direction="SOUTH" accessRef="a22"/>
-        <roomaccess id="a36" direction="WEST" accessRef="a37"/>
-      </roomaccesses>
-      <facts>
-        <fact id="PATH404-O1-L1-T2-QAFACT11" complete="2 x 3 = 6" correctnessToReach="2"/>
-      </facts>
-      <elements>
-        <element id="STRUCT73" type="StructureStatement" pos="POSL2" acceptedFacts="2 x 3 = 6;3 x 2 = 6;"/>
-        <element id="ELEM74" type="ObjectDetector" pos="id/STRUCT73" ability="DETECTOR" idFact="PATH404-O1-L1-T2-QAFACT11"/>
-        <element id="ELEM75" type="StatementFact" displayValue=" x " pos="id/STRUCT73" idFact="PATH404-O1-L1-T2-QAFACT11"/>
-        <element id="ELEM76" type="ObjectDetector" pos="id/STRUCT73" ability="DETECTOR" idFact="PATH404-O1-L1-T2-QAFACT11"/>
-        <element id="ELEM77" type="StatementFact" displayValue=" = 6" pos="id/STRUCT73" idFact="PATH404-O1-L1-T2-QAFACT11"/>
-        <element id="ELEM78" type="Pot" displayValue="4" correctness="INCORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT11"/>
-        <element id="ELEM79" type="Pot" displayValue="7" correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT11"/>
-        <element id="ELEM80" type="Pot" displayValue="2" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT11"/>
-        <element id="ELEM81" type="Pot" displayValue="3" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT11"/>
-        <element id="ELEM82" type="Switch" pos="POS6" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[-2/3]" x="-2" y="3" roomTypeName="RoomTrap3">
-      <roomaccesses>
-        <roomaccess id="a33" direction="SOUTH" accessRef="a32"/>
-        <roomaccess id="a38" direction="WEST" accessRef="a39"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM83" type="HoleTrap" pos="POS8" ability="NONAVOIDABLE"/>
-        <element id="ELEM84" type="HoleTrap" pos="POS6" ability="NONAVOIDABLE"/>
-        <element id="ELEM85" type="HoleTrap" pos="POS2" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-3/2]" x="-3" y="2" roomTypeName="RegularRoom8" time="30" idTask="PATH404-O1-L1-T2" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a35" direction="EAST" accessRef="a34"/>
-        <roomaccess id="a40" direction="SOUTH" accessRef="a41"/>
-      </roomaccesses>
-      <facts>
-        <fact id="PATH404-O1-L1-T2-QAFACT4" complete="2 x 2 = 4" correctnessToReach="2"/>
-      </facts>
-      <elements>
-        <element id="ELEM86" type="FloorInterrupt" displayValue="3" correctness="INCORRECT" pos="POS5" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT4"/>
-        <element id="ELEM87" type="FloorInterrupt" displayValue="5" correctness="INCORRECT" pos="POS2" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT4"/>
-        <element id="ELEM88" type="FloorInterrupt" displayValue="2" correctness="CORRECT" pos="POS6" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT4"/>
-        <element id="ELEM89" type="FloorInterrupt" displayValue="4" correctness="CORRECT" pos="POS4" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT4"/>
-        <element id="ELEM90" type="Switch" pos="POS3" ability="VERIFICATOR"/>
-        <element id="ELEM91" type="Statement" displayValue="? x 2 = ?" pos="POSQ1" idFact="PATH404-O1-L1-T2-QAFACT4" interactive="true" acceptedFacts="2 x 2 = 4;2 x 2 = 4;"/>
-      </elements>
-    </room>
-    <room id="Room[-3/1]" x="-3" y="1" roomTypeName="RegularRoom1" time="30" idTask="PATH404-O1-L1-T3" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true">
-      <roomaccesses>
-        <roomaccess id="a41" direction="NORTH" accessRef="a40"/>
-        <roomaccess id="a31" direction="EAST" accessRef="a30"/>
-        <roomaccess id="a42" direction="WEST" accessRef="a43"/>
+        <roomaccess id="a15" direction="EAST" accessRef="a14"/>
+        <roomaccess id="a16" direction="NORTH" accessRef="a17"/>
       </roomaccesses>
       <facts>
         <fact id="PATH404-O1-L1-T3-QAFACT10" complete="2 x 6 = 12" correctnessToReach="3"/>
       </facts>
       <elements>
-        <element id="ELEM92" type="FloorInterrupt" displayValue="15" correctness="INCORRECT" pos="POS3" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT10"/>
-        <element id="ELEM93" type="FloorInterrupt" displayValue="16" correctness="INCORRECT" pos="POS4" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT10"/>
-        <element id="ELEM94" type="FloorInterrupt" displayValue="2" correctness="CORRECT" pos="POS9" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT10"/>
-        <element id="ELEM95" type="FloorInterrupt" displayValue="6" correctness="CORRECT" pos="POS7" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT10"/>
-        <element id="ELEM96" type="FloorInterrupt" displayValue="12" correctness="CORRECT" pos="POS12" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT10"/>
-        <element id="ELEM97" type="Switch" pos="POS11" ability="VERIFICATOR"/>
-        <element id="ELEM98" type="Statement" displayValue="? x ? = ?" pos="POSQ5" idFact="PATH404-O1-L1-T3-QAFACT10" interactive="true" acceptedFacts="2 x 6 = 12;6 x 2 = 12;"/>
+        <element id="STRUCT37" type="StructureStatement" pos="POSL1" acceptedFacts="2 x 6 = 12;6 x 2 = 12;"/>
+        <element id="ELEM38" type="ObjectDetector" pos="id/STRUCT37" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT10"/>
+        <element id="ELEM39" type="StatementFact" displayValue=" x " pos="id/STRUCT37" idFact="PATH404-O1-L1-T3-QAFACT10"/>
+        <element id="ELEM40" type="ObjectDetector" pos="id/STRUCT37" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT10"/>
+        <element id="ELEM41" type="StatementFact" displayValue=" = " pos="id/STRUCT37" idFact="PATH404-O1-L1-T3-QAFACT10"/>
+        <element id="ELEM42" type="ObjectDetector" pos="id/STRUCT37" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT10"/>
+        <element id="ELEM43" type="Pot" displayValue="5" correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT10"/>
+        <element id="ELEM44" type="Pot" displayValue="8" correctness="INCORRECT" pos="POS2" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT10"/>
+        <element id="ELEM45" type="Pot" displayValue="2" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT10"/>
+        <element id="ELEM46" type="Pot" displayValue="6" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT10"/>
+        <element id="ELEM47" type="Pot" displayValue="12" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT10"/>
+        <element id="ELEM48" type="Switch" pos="POS5" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-2/0]" x="-2" roomTypeName="RoomTrap2">
+    <room id="Room[-2/0]" x="-2" roomTypeName="RegularRoom9" time="30" idTask="PATH404-O1-L1-T1" prompt="Pousse le bon element" correctnessToReach="1">
       <roomaccesses>
-        <roomaccess id="a29" direction="NORTH" accessRef="a28"/>
+        <roomaccess id="a17" direction="SOUTH" accessRef="a16"/>
+        <roomaccess id="a18" direction="EAST" accessRef="a19"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH404-O1-L1-T1-QAFACT2" complete="2 x 2 = 4" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT49" type="HStructM" pos="POSM5"/>
+        <element id="ELEM50" type="ObjectDetector" pos="id/STRUCT49" ability="DETECTOR"/>
+        <element id="ELEM51" type="Block" displayValue="5" correctness="INCORRECT" pos="id/STRUCT49" ability="PUSHABLE" idFact="PATH404-O1-L1-T1-QAFACT2"/>
+        <element id="STRUCT52" type="HStructM" pos="POSM3"/>
+        <element id="ELEM53" type="ObjectDetector" pos="id/STRUCT52" ability="DETECTOR"/>
+        <element id="ELEM54" type="Block" displayValue="2" correctness="INCORRECT" pos="id/STRUCT52" ability="PUSHABLE" idFact="PATH404-O1-L1-T1-QAFACT2"/>
+        <element id="STRUCT55" type="HStructM" pos="POSM1"/>
+        <element id="ELEM56" type="ObjectDetector" pos="id/STRUCT55" ability="DETECTOR"/>
+        <element id="ELEM57" type="Block" displayValue="4" correctness="CORRECT" pos="id/STRUCT55" ability="PUSHABLE" idFact="PATH404-O1-L1-T1-QAFACT2"/>
+        <element id="ELEM58" type="Statement" displayValue="2 x 2 = ?" pos="POSQ1" idFact="PATH404-O1-L1-T1-QAFACT2" interactive="true" acceptedFacts="2 x 2 = 4;"/>
+      </elements>
+    </room>
+    <room id="Room[-1/0]" x="-1" roomTypeName="RegularRoom11" time="30" idTask="PATH404-O1-L1-T3" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true" correctnessToReach="3">
+      <roomaccesses>
+        <roomaccess id="a19" direction="WEST" accessRef="a18"/>
+        <roomaccess id="a20" direction="NORTH" accessRef="a21"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH404-O1-L1-T3-QAFACT19" complete="10 x 2 = 20" correctnessToReach="3"/>
+      </facts>
+      <elements>
+        <element id="ELEM59" type="FloorInterrupt" displayValue="11" correctness="INCORRECT" pos="POS2" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM60" type="FloorInterrupt" displayValue="9" correctness="INCORRECT" pos="POS1" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM61" type="FloorInterrupt" displayValue="10" correctness="CORRECT" pos="POS5" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM62" type="FloorInterrupt" displayValue="2" correctness="CORRECT" pos="POS3" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM63" type="FloorInterrupt" displayValue="20" correctness="CORRECT" pos="POS4" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM64" type="Switch" pos="POS6" ability="VERIFICATOR"/>
+        <element id="ELEM65" type="Statement" displayValue="? x ? = ?" pos="POSQ1" idFact="PATH404-O1-L1-T3-QAFACT19" interactive="true" acceptedFacts="10 x 2 = 20;2 x 10 = 20;"/>
+      </elements>
+    </room>
+    <room id="Room[-1/1]" x="-1" y="1" roomTypeName="RoomTrap4" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a21" direction="SOUTH" accessRef="a20"/>
+        <roomaccess id="a22" direction="EAST" accessRef="a23"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM99" type="HoleTrap" pos="POS1" ability="NONAVOIDABLE"/>
-        <element id="ELEM100" type="HoleTrap" pos="POS3" ability="NONAVOIDABLE"/>
-        <element id="ELEM101" type="HoleTrap" pos="POS4" ability="NONAVOIDABLE"/>
+        <element id="ELEM66" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM67" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM68" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM69" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM70" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM71" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM72" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[1/2]" x="1" y="2" roomTypeName="RoomTrap2">
+    <room id="Room[0/1]" y="1" roomTypeName="RoomTrap4" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a23" direction="WEST" accessRef="a22"/>
+        <roomaccess id="a24" direction="EAST" accessRef="a25"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM73" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM74" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM75" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM76" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM77" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM78" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM79" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[1/1]" x="1" y="1" roomTypeName="RegularRoom8" time="30" idTask="PATH404-O1-L1-T3" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true" correctnessToReach="3">
       <roomaccesses>
         <roomaccess id="a25" direction="WEST" accessRef="a24"/>
-        <roomaccess id="a44" direction="NORTH" accessRef="a45"/>
-        <roomaccess id="a46" direction="EAST" accessRef="a47"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM102" type="HoleTrap" pos="POS2" ability="NONAVOIDABLE"/>
-        <element id="ELEM103" type="HoleTrap" pos="POS4" ability="NONAVOIDABLE"/>
-        <element id="ELEM104" type="HoleTrap" pos="POS1" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[1/3]" x="1" y="3" roomTypeName="RoomTrap4">
-      <roomaccesses>
-        <roomaccess id="a45" direction="SOUTH" accessRef="a44"/>
-        <roomaccess id="a48" direction="EAST" accessRef="a49"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM105" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM106" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM107" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM108" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM109" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM110" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM111" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-1/3]" x="-1" y="3" roomTypeName="RoomTrap4">
-      <roomaccesses>
-        <roomaccess id="a37" direction="EAST" accessRef="a36"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM112" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM113" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM114" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM115" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM116" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM117" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM118" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-4/1]" x="-4" y="1" roomTypeName="RegularRoom10" time="30" idTask="PATH404-O1-L1-T5" prompt="Pousse les bons elements">
-      <roomaccesses>
-        <roomaccess id="a43" direction="EAST" accessRef="a42"/>
+        <roomaccess id="a26" direction="EAST" accessRef="a27"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH404-O1-L1-T5-QAFACT0" complete="Resultats table de 2" correctnessToReach="2"/>
+        <fact id="PATH404-O1-L1-T3-QAFACT17" complete="9 x 2 = 18" correctnessToReach="3"/>
       </facts>
       <elements>
-        <element id="STRUCT119" type="HStructM" pos="POSM2"/>
-        <element id="ELEM120" type="ObjectDetector" pos="id/STRUCT119" ability="DETECTOR"/>
-        <element id="ELEM121" type="Block" displayValue="3" correctness="INCORRECT" pos="id/STRUCT119" ability="PUSHABLE" idFact="PATH404-O1-L1-T5-QAFACT0"/>
-        <element id="STRUCT122" type="HStructM" pos="POSM8"/>
-        <element id="ELEM123" type="ObjectDetector" pos="id/STRUCT122" ability="DETECTOR"/>
-        <element id="ELEM124" type="Block" displayValue="17" correctness="INCORRECT" pos="id/STRUCT122" ability="PUSHABLE" idFact="PATH404-O1-L1-T5-QAFACT0"/>
-        <element id="STRUCT125" type="HStructM" pos="POSM1"/>
-        <element id="ELEM126" type="ObjectDetector" pos="id/STRUCT125" ability="DETECTOR"/>
-        <element id="ELEM127" type="Block" displayValue="6" correctness="CORRECT" pos="id/STRUCT125" ability="PUSHABLE" idFact="PATH404-O1-L1-T5-QAFACT0"/>
-        <element id="STRUCT128" type="HStructM" pos="POSM3"/>
-        <element id="ELEM129" type="ObjectDetector" pos="id/STRUCT128" ability="DETECTOR"/>
-        <element id="ELEM130" type="Block" displayValue="8" correctness="CORRECT" pos="id/STRUCT128" ability="PUSHABLE" idFact="PATH404-O1-L1-T5-QAFACT0"/>
-        <element id="ELEM131" type="Statement" displayValue="Resultats table de 2" pos="POSQ1" idFact="PATH404-O1-L1-T5-QAFACT0" acceptedFacts="Resultats table de 2;"/>
+        <element id="ELEM80" type="FloorInterrupt" displayValue="22" correctness="INCORRECT" pos="POS6" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT17"/>
+        <element id="ELEM81" type="FloorInterrupt" displayValue="19" correctness="INCORRECT" pos="POS7" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT17"/>
+        <element id="ELEM82" type="FloorInterrupt" displayValue="9" correctness="CORRECT" pos="POS1" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT17"/>
+        <element id="ELEM83" type="FloorInterrupt" displayValue="2" correctness="CORRECT" pos="POS2" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT17"/>
+        <element id="ELEM84" type="FloorInterrupt" displayValue="18" correctness="CORRECT" pos="POS5" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT17"/>
+        <element id="ELEM85" type="Switch" pos="POS4" ability="VERIFICATOR"/>
+        <element id="ELEM86" type="Statement" displayValue="? x ? = ?" pos="POSQ1" idFact="PATH404-O1-L1-T3-QAFACT17" interactive="true" acceptedFacts="9 x 2 = 18;2 x 9 = 18;"/>
       </elements>
     </room>
-    <room id="Room[2/3]" x="2" y="3" roomTypeName="TwoWaysRoom1" time="30" idTask="PATH404-O1-L1-T1" prompt="Touche le bon element">
+    <room id="Room[2/1]" x="2" y="1" roomTypeName="RegularRoom7" time="30" idTask="PATH404-O1-L1-T2" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true" correctnessToReach="2">
       <roomaccesses>
-        <roomaccess id="a49" direction="WEST" accessRef="a48"/>
+        <roomaccess id="a27" direction="WEST" accessRef="a26"/>
+        <roomaccess id="a28" direction="EAST" accessRef="a29"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH404-O1-L1-T1-QAFACT14" complete="8 x 2 = 16" correctnessToReach="1"/>
+        <fact id="PATH404-O1-L1-T2-QAFACT31" complete="2 x 8 = 16" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="ELEM132" type="FloorInterrupt" displayValue="11" correctness="INCORRECT" pos="POS3" ability="TOUCHABLE" idFact="PATH404-O1-L1-T1-QAFACT14"/>
-        <element id="ELEM133" type="FloorInterrupt" displayValue="18" correctness="INCORRECT" pos="POS2" ability="TOUCHABLE" idFact="PATH404-O1-L1-T1-QAFACT14"/>
-        <element id="ELEM134" type="FloorInterrupt" displayValue="16" correctness="CORRECT" pos="POS1" ability="TOUCHABLE" idFact="PATH404-O1-L1-T1-QAFACT14"/>
-        <element id="ELEM135" type="Statement" displayValue="8 x 2 = ?" pos="POSQ1" idFact="PATH404-O1-L1-T1-QAFACT14" interactive="true" acceptedFacts="8 x 2 = 16;"/>
+        <element id="ELEM87" type="FloorInterrupt" displayValue="10" correctness="INCORRECT" pos="POS4" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT31"/>
+        <element id="ELEM88" type="FloorInterrupt" displayValue="3" correctness="INCORRECT" pos="POS1" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT31"/>
+        <element id="ELEM89" type="FloorInterrupt" displayValue="2" correctness="CORRECT" pos="POS2" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT31"/>
+        <element id="ELEM90" type="FloorInterrupt" displayValue="8" correctness="CORRECT" pos="POS5" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT31"/>
+        <element id="ELEM91" type="Switch" pos="POS6" ability="VERIFICATOR"/>
+        <element id="ELEM92" type="Statement" displayValue="? x ? = 16" pos="POSL2" idFact="PATH404-O1-L1-T2-QAFACT31" interactive="true" acceptedFacts="2 x 8 = 16;8 x 2 = 16;"/>
       </elements>
     </room>
-    <room id="Room[-3/3]" x="-3" y="3" roomTypeName="RegularRoom4" time="30" idTask="PATH404-O1-L1-T1" prompt="Pousse le bon element">
+    <room id="Room[3/1]" x="3" y="1" roomTypeName="RegularRoom5" time="30" idTask="PATH404-O1-L1-T1" prompt="Deplace le bon elements sur la zone" correctnessToReach="1">
       <roomaccesses>
-        <roomaccess id="a39" direction="EAST" accessRef="a38"/>
-        <roomaccess id="a50" direction="NORTH" accessRef="a51"/>
+        <roomaccess id="a29" direction="WEST" accessRef="a28"/>
+        <roomaccess id="a30" direction="EAST" accessRef="a31"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH404-O1-L1-T1-QAFACT7" complete="2 x 4 = 8" correctnessToReach="1"/>
+        <fact id="PATH404-O1-L1-T1-QAFACT19" complete="2 x 10 = 20" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT136" type="HStructM" pos="POSM1"/>
-        <element id="ELEM137" type="Block" displayValue="4" correctness="INCORRECT" pos="id/STRUCT136" ability="PUSHABLE" idFact="PATH404-O1-L1-T1-QAFACT7"/>
-        <element id="ELEM138" type="ObjectDetector" pos="id/STRUCT136" ability="DETECTOR"/>
-        <element id="STRUCT139" type="HStructM" pos="POSM2"/>
-        <element id="ELEM140" type="Block" displayValue="7" correctness="INCORRECT" pos="id/STRUCT139" ability="PUSHABLE" idFact="PATH404-O1-L1-T1-QAFACT7"/>
-        <element id="ELEM141" type="ObjectDetector" pos="id/STRUCT139" ability="DETECTOR"/>
-        <element id="STRUCT142" type="HStructM" pos="POSM3"/>
-        <element id="ELEM143" type="Block" displayValue="8" correctness="CORRECT" pos="id/STRUCT142" ability="PUSHABLE" idFact="PATH404-O1-L1-T1-QAFACT7"/>
-        <element id="ELEM144" type="ObjectDetector" pos="id/STRUCT142" ability="DETECTOR"/>
-        <element id="ELEM145" type="Statement" displayValue="2 x 4 = ?" pos="POSQ1" idFact="PATH404-O1-L1-T1-QAFACT7" interactive="true" acceptedFacts="2 x 4 = 8;"/>
+        <element id="ELEM93" type="Pot" displayValue="22" correctness="INCORRECT" pos="POS6" ability="MOVABLE" idFact="PATH404-O1-L1-T1-QAFACT19"/>
+        <element id="ELEM94" type="Pot" displayValue="15" correctness="INCORRECT" pos="POS9" ability="MOVABLE" idFact="PATH404-O1-L1-T1-QAFACT19"/>
+        <element id="ELEM95" type="Pot" displayValue="20" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH404-O1-L1-T1-QAFACT19"/>
+        <element id="ELEM96" type="ObjectDetector" pos="POS1" ability="DETECTOR"/>
+        <element id="ELEM97" type="Statement" displayValue="2 x 10 = ?" pos="POSL1" idFact="PATH404-O1-L1-T1-QAFACT19" interactive="true" acceptedFacts="2 x 10 = 20;"/>
       </elements>
     </room>
-    <room id="Room[2/2]" x="2" y="2" roomTypeName="RegularRoom11" time="30" idTask="PATH404-O1-L1-T3" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true">
+    <room id="Room[4/1]" x="4" y="1" roomTypeName="RegularRoom1" time="30" idTask="PATH404-O1-L1-T2" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true" correctnessToReach="2">
       <roomaccesses>
-        <roomaccess id="a47" direction="WEST" accessRef="a46"/>
+        <roomaccess id="a31" direction="WEST" accessRef="a30"/>
+        <roomaccess id="a32" direction="NORTH" accessRef="a33"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH404-O1-L1-T3-QAFACT6" complete="2 x 4 = 8" correctnessToReach="3"/>
+        <fact id="PATH404-O1-L1-T2-QAFACT18" complete="5 x 2 = 10" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="ELEM146" type="FloorInterrupt" displayValue="6" correctness="INCORRECT" pos="POS6" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT6"/>
-        <element id="ELEM147" type="FloorInterrupt" displayValue="13" correctness="INCORRECT" pos="POS4" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT6"/>
-        <element id="ELEM148" type="FloorInterrupt" displayValue="2" correctness="CORRECT" pos="POS2" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT6"/>
-        <element id="ELEM149" type="FloorInterrupt" displayValue="4" correctness="CORRECT" pos="POS3" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT6"/>
-        <element id="ELEM150" type="FloorInterrupt" displayValue="8" correctness="CORRECT" pos="POS1" ability="TOUCHABLE" idFact="PATH404-O1-L1-T3-QAFACT6"/>
-        <element id="ELEM151" type="Switch" pos="POS5" ability="VERIFICATOR"/>
-        <element id="ELEM152" type="Statement" displayValue="? x ? = ?" pos="POSQ2" idFact="PATH404-O1-L1-T3-QAFACT6" interactive="true" acceptedFacts="2 x 4 = 8;4 x 2 = 8;"/>
+        <element id="ELEM98" type="FloorInterrupt" displayValue="6" correctness="INCORRECT" pos="POS3" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT18"/>
+        <element id="ELEM99" type="FloorInterrupt" displayValue="8" correctness="INCORRECT" pos="POS4" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT18"/>
+        <element id="ELEM100" type="FloorInterrupt" displayValue="5" correctness="CORRECT" pos="POS9" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT18"/>
+        <element id="ELEM101" type="FloorInterrupt" displayValue="2" correctness="CORRECT" pos="POS13" ability="TOUCHABLE" idFact="PATH404-O1-L1-T2-QAFACT18"/>
+        <element id="ELEM102" type="Switch" pos="POS2" ability="VERIFICATOR"/>
+        <element id="ELEM103" type="Statement" displayValue="? x ? = 10" pos="POSQ1" idFact="PATH404-O1-L1-T2-QAFACT18" interactive="true" acceptedFacts="5 x 2 = 10;2 x 5 = 10;"/>
       </elements>
     </room>
-    <room id="Room[-3/4]" x="-3" y="4" roomTypeName="ExitRoom1">
+    <room id="Room[4/2]" x="4" y="2" roomTypeName="RegularRoom10" time="30" idTask="PATH404-O1-L1-T5" prompt="Pousse les bons elements" correctnessToReach="2">
       <roomaccesses>
-        <roomaccess id="a51" direction="SOUTH" accessRef="a50"/>
+        <roomaccess id="a33" direction="SOUTH" accessRef="a32"/>
+        <roomaccess id="a34" direction="EAST" accessRef="a35"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH404-O1-L1-T5-QAFACT3" complete="Resultats table de 2" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="STRUCT104" type="HStructM" pos="POSM1"/>
+        <element id="ELEM105" type="ObjectDetector" pos="id/STRUCT104" ability="DETECTOR"/>
+        <element id="ELEM106" type="Block" displayValue="11" correctness="INCORRECT" pos="id/STRUCT104" ability="PUSHABLE" idFact="PATH404-O1-L1-T5-QAFACT3"/>
+        <element id="STRUCT107" type="HStructM" pos="POSM4"/>
+        <element id="ELEM108" type="ObjectDetector" pos="id/STRUCT107" ability="DETECTOR"/>
+        <element id="ELEM109" type="Block" displayValue="23" correctness="INCORRECT" pos="id/STRUCT107" ability="PUSHABLE" idFact="PATH404-O1-L1-T5-QAFACT3"/>
+        <element id="STRUCT110" type="HStructM" pos="POSM3"/>
+        <element id="ELEM111" type="ObjectDetector" pos="id/STRUCT110" ability="DETECTOR"/>
+        <element id="ELEM112" type="Block" displayValue="4" correctness="CORRECT" pos="id/STRUCT110" ability="PUSHABLE" idFact="PATH404-O1-L1-T5-QAFACT3"/>
+        <element id="STRUCT113" type="HStructM" pos="POSM8"/>
+        <element id="ELEM114" type="ObjectDetector" pos="id/STRUCT113" ability="DETECTOR"/>
+        <element id="ELEM115" type="Block" displayValue="2" correctness="CORRECT" pos="id/STRUCT113" ability="PUSHABLE" idFact="PATH404-O1-L1-T5-QAFACT3"/>
+        <element id="ELEM116" type="Statement" displayValue="Resultats table de 2" pos="POSQ1" idFact="PATH404-O1-L1-T5-QAFACT3" acceptedFacts="Resultats table de 2;"/>
+      </elements>
+    </room>
+    <room id="Room[5/2]" x="5" y="2" roomTypeName="RegularRoom2" time="30" idTask="PATH404-O1-L1-T4" prompt="Touche les bons elements" correctnessToReach="1">
+      <roomaccesses>
+        <roomaccess id="a35" direction="WEST" accessRef="a34"/>
+        <roomaccess id="a36" direction="EAST" accessRef="a37"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH404-O1-L1-T4-QAFACT5" complete="2 x 2 = 4" correctnessToReach="1" correctness="CORRECT"/>
+        <fact id="PATH404-O1-L1-T4-QAFACT22" complete="2 x 6 = 8" correctnessToReach="1" correctness="INCORRECT"/>
+      </facts>
+      <elements>
+        <element id="STRUCT117" type="HStructXL" pos="POSXL1"/>
+        <element id="ELEM118" type="Info" displayValue="FALSE" pos="id/STRUCT117"/>
+        <element id="STRUCT119" type="VStructXL" pos="id/STRUCT117"/>
+        <element id="STRUCT120" type="HStructXL" pos="id/STRUCT119"/>
+        <element id="ELEM121" type="ObjectDetector" pos="id/STRUCT120" ability="DETECTOR"/>
+        <element id="ELEM122" type="Block" displayValue="2 x 2 = 4" correctness="CORRECT" pos="id/STRUCT120" ability="PUSHABLE" idFact="PATH404-O1-L1-T4-QAFACT5"/>
+        <element id="ELEM123" type="ObjectDetector" pos="id/STRUCT120" ability="DETECTOR"/>
+        <element id="STRUCT124" type="HStructXL" pos="id/STRUCT119"/>
+        <element id="ELEM125" type="ObjectDetector" pos="id/STRUCT124" ability="DETECTOR"/>
+        <element id="ELEM126" type="Block" displayValue="2 x 6 = 8" correctness="INCORRECT" pos="id/STRUCT124" ability="PUSHABLE" idFact="PATH404-O1-L1-T4-QAFACT22"/>
+        <element id="ELEM127" type="ObjectDetector" pos="id/STRUCT124" ability="DETECTOR"/>
+        <element id="ELEM128" type="Info" displayValue="TRUE" pos="id/STRUCT117"/>
+      </elements>
+    </room>
+    <room id="Room[6/2]" x="6" y="2" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a37" direction="WEST" accessRef="a36"/>
+        <roomaccess id="a38" direction="NORTH" accessRef="a39"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM129" type="WaitFireTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM130" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM131" type="WaitFireTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM132" type="WaitFireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM133" type="WaitFireTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM134" type="WaitFireTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM135" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[6/3]" x="6" y="3" roomTypeName="RegularRoom11" time="30" idTask="PATH404-O1-L1-T5" prompt="Deplace les bons elements sur la zone" gameplayWithUndo="true" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a39" direction="SOUTH" accessRef="a38"/>
+        <roomaccess id="a40" direction="EAST" accessRef="a41"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH404-O1-L1-T5-QAFACT3" complete="Resultats table de 2" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="STRUCT136" type="VStructXL" pos="POSXL1"/>
+        <element id="ELEM137" type="LargeNewObjectDetector" pos="id/STRUCT136" ability="DETECTOR"/>
+        <element id="ELEM138" type="StatementFact" displayValue="Resultats table de 2" pos="id/STRUCT136" idFact="PATH404-O1-L1-T5-QAFACT3" acceptedFacts="Resultats table de 2;"/>
+        <element id="ELEM139" type="Pot" displayValue="21" correctness="INCORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T5-QAFACT3"/>
+        <element id="ELEM140" type="Pot" displayValue="9" correctness="INCORRECT" pos="POS6" ability="MOVABLE" idFact="PATH404-O1-L1-T5-QAFACT3"/>
+        <element id="ELEM141" type="Pot" displayValue="4" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="PATH404-O1-L1-T5-QAFACT3"/>
+        <element id="ELEM142" type="Pot" displayValue="2" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="PATH404-O1-L1-T5-QAFACT3"/>
+      </elements>
+    </room>
+    <room id="Room[7/3]" x="7" y="3" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a41" direction="WEST" accessRef="a40"/>
+        <roomaccess id="a42" direction="EAST" accessRef="a43"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM143" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM144" type="WaitFireTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM145" type="WaitFireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM146" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM147" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM148" type="WaitFireTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM149" type="WaitFireTrap" pos="POS9" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[8/3]" x="8" y="3" roomTypeName="RegularRoom11" time="30" idTask="PATH404-O1-L1-T1" prompt="Deplace le bon elements sur la zone" correctnessToReach="1">
+      <roomaccesses>
+        <roomaccess id="a43" direction="WEST" accessRef="a42"/>
+        <roomaccess id="a44" direction="EAST" accessRef="a45"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH404-O1-L1-T1-QAFACT1" complete="2 x 1 = 2" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="ELEM150" type="Pot" displayValue="6" correctness="INCORRECT" pos="POS4" ability="MOVABLE" idFact="PATH404-O1-L1-T1-QAFACT1"/>
+        <element id="ELEM151" type="Pot" displayValue="1" correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="PATH404-O1-L1-T1-QAFACT1"/>
+        <element id="ELEM152" type="Pot" displayValue="2" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH404-O1-L1-T1-QAFACT1"/>
+        <element id="ELEM153" type="ObjectDetector" pos="POS1" ability="DETECTOR"/>
+        <element id="ELEM154" type="Statement" displayValue="2 x 1 = ?" pos="POSQ1" idFact="PATH404-O1-L1-T1-QAFACT1" interactive="true" acceptedFacts="2 x 1 = 2;"/>
+      </elements>
+    </room>
+    <room id="Room[9/3]" x="9" y="3" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a45" direction="WEST" accessRef="a44"/>
+        <roomaccess id="a46" direction="SOUTH" accessRef="a47"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM155" type="WaitFireTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM156" type="WaitFireTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM157" type="WaitFireTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM158" type="WaitFireTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM159" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM160" type="WaitFireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM161" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[9/2]" x="9" y="2" roomTypeName="ExitRoom1" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a47" direction="NORTH" accessRef="a46"/>
       </roomaccesses>
     </room>
   </rooms>

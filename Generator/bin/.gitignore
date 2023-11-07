@@ -1,4 +1,13 @@
-/generators/
-/modelsForTests/
+/educational_dimension/
+/exceptions/
+/factgenerator_template/
+/factsgenerator_hg/
+/factsgenerator_judo/
+/factsgenerator_maths/
 /game_dimension/
+/generator/
+/generators/
+/managers/
+/modelsForTests/
 /old/
+/structures/

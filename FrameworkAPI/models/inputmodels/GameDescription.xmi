@@ -732,6 +732,43 @@
       <directions>NORTH</directions>
       <directions>WEST</directions>
     </roomtypes>
+    <roomtypes
+        xsi:type="generator:SmallRoomType"
+        name="RegularRoom12">
+      <elementPositions
+          ID="POS1"/>
+      <elementPositions
+          ID="POS2"/>
+      <elementPositions
+          ID="POS3"/>
+      <elementPositions
+          ID="POS4"/>
+      <elementPositions
+          ID="POS5"/>
+      <elementPositions
+          ID="POS6"/>
+      <elementPositions
+          size="LARGE"
+          ID="POSL1"/>
+      <elementPositions
+          size="LARGE"
+          ID="POSL2"/>
+      <elementPositions
+          size="LARGE"
+          ID="POSL3"/>
+      <elementPositions
+          ID="POS7"/>
+      <elementPositions
+          ID="POS8"/>
+      <elementPositions
+          ID="POS9"/>
+      <elementPositions
+          ID="POS10"/>
+      <directions>SOUTH</directions>
+      <directions>EAST</directions>
+      <directions>NORTH</directions>
+      <directions>WEST</directions>
+    </roomtypes>
   </roomtypes>
   <levelsDifficultyProgress>
     <cursesAvailabilities
@@ -790,7 +827,7 @@
           <displayValue>
             <value
                 xsi:type="generator:Value"
-                value="FALSE"/>
+                value="FAUX"/>
           </displayValue>
         </components>
         <components
@@ -842,7 +879,7 @@
           <displayValue>
             <value
                 xsi:type="generator:Value"
-                value="TRUE"/>
+                value="VRAI"/>
           </displayValue>
         </components>
       </components>
@@ -1411,6 +1448,7 @@
             <components
                 xsi:type="generator:Component"
                 allowedAbility="PUSHABLE"
+                forProposition="true"
                 forStatement="true"/>
             <components
                 xsi:type="generator:Component"
@@ -1495,6 +1533,7 @@
             <components
                 xsi:type="generator:Component"
                 allowedAbility="PUSHABLE"
+                forProposition="true"
                 forStatement="true"/>
             <components
                 xsi:type="generator:Component"
@@ -1559,7 +1598,6 @@
         xsi:type="generator:QuestionGameplay"
         name="GP_MULTIPLE_MOVABLE_FILL_IN"
         undoable="true"
-        manualValidation="true"
         category="MOVE_MULTIPLE"
         statementType="FILL_IN">
       <components
@@ -1585,6 +1623,9 @@
           xsi:type="generator:Component"
           allowedAbility="MOVABLE"
           forProposition="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="VERIFICATOR"/>
       <prompt
           prompt="Place les bons elements"/>
     </gameplays>
@@ -1643,6 +1684,11 @@
           xsi:type="generator:Structure"
           allowedAbility="MAP_DISPLAY"
           forMap="true">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="XXLARGE"/>
+        </expectedSize>
         <components
             xsi:type="generator:Component"
             allowedAbility="DETECTOR">
@@ -1754,6 +1800,11 @@
           xsi:type="generator:Structure"
           allowedAbility="MAP_DISPLAY"
           forMap="true">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="XXLARGE"/>
+        </expectedSize>
         <components
             xsi:type="generator:Component"
             allowedAbility="TYPABLE_DETECTOR">
@@ -1784,6 +1835,11 @@
           xsi:type="generator:Structure"
           allowedAbility="MAP_DISPLAY"
           forMap="true">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="XXLARGE"/>
+        </expectedSize>
         <components
             xsi:type="generator:Component"
             allowedAbility="DETECTOR">
@@ -1908,6 +1964,42 @@
       <restrictedTo>COMPLETE</restrictedTo>
       <restrictedTo>MEMBERSHIP</restrictedTo>
     </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE_MOVABLE_FILL_IN"
+        undoable="true"
+        manualValidation="true"
+        category="MOVE_MULTIPLE"
+        statementType="FILL_IN">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="FILL_IN_DISPLAY"
+          forStatement="true"
+          alternateComponents="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DISPLAY"
+            forStatement="true"/>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="MOVABLE"
+          forProposition="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="VERIFICATOR"/>
+      <prompt
+          prompt="Place les bons elements"/>
+    </gameplays>
   </gameplays>
   <elements>
     <equipments>
@@ -1916,7 +2008,7 @@
           lockedAbilities="PUSHABLE"/>
       <equipments
           ID="BELT"
-          lockedAbilities="MOVABLE"/>
+          lockedAbilities="BREAKABLE"/>
       <equipments
           ID="GLOVE"
           lockedAbilities="ROTABLE"/>
@@ -2125,8 +2217,8 @@
           type="MediumWaitFireTrap"
           ability="AVOIDABLE"/>
       <elements
-          size="LARGE"
-          ID="STRUCT_MAP_LARGE"
+          size="XXLARGE"
+          ID="STRUCT_MAP_XXLARGE"
           type="MapStructure"
           ability="MAP_DISPLAY"/>
       <elements
@@ -2172,8 +2264,7 @@
         name="ROTABLE"
         lockingEquipment="GLOVE"/>
     <abilities
-        name="MOVABLE"
-        lockingEquipment="BELT"/>
+        name="MOVABLE"/>
     <abilities
         name="DETECTOR"/>
     <abilities
@@ -2202,7 +2293,8 @@
     <abilities
         name="VERTICAL_DISPLAY"/>
     <abilities
-        name="BREAKABLE"/>
+        name="BREAKABLE"
+        lockingEquipment="BELT"/>
     <abilities
         name="FOLLOWABLE_DETECTOR"/>
     <abilities

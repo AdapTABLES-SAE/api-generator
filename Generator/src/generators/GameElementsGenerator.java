@@ -156,6 +156,7 @@ public class GameElementsGenerator {
 	
 	
 	private void computeNumberOfExpectedAnswers(Room room) {
+		
 		int number = 0;
 		for(PositionedElement element: room.getPositionedElement()) {
 			if(element.getCorrectness() != null) {
@@ -165,7 +166,11 @@ public class GameElementsGenerator {
 				}
 			}
 		}
-		room.setNbExpectedAnswers(number);
+		if(number > room.getQuestionedFacts().size()) {
+			room.setNbExpectedAnswers(room.getQuestionedFacts().size());
+		} else {
+			room.setNbExpectedAnswers(number);
+		}
 	}
 	
 	private RoomElements getCorrespondingRoomElements(Room room) {

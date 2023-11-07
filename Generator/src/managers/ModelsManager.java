@@ -47,6 +47,7 @@ public class ModelsManager {
 	private static String INPUT_MODELS_PATH = "inputmodels/";
 	private static String INPUT_MODELS_PATH_TEST = "tests/modelsForTests/";
 	private static String OUTPUT_MODELS_PATH = "outputmodels/";
+	private static String OUTPUT_MODELS_PATH_TEST = "tests/modelsForTests/output/";
 	private static String INPUT_LEARNER_MODELS_PATH = "learnerPlayers/";
 	private static String[] INPUT_MODELS_NAMES = {"Contexts.xmi", "GameDescription.xmi", 
 			didacticDomainFileNames.get(ALGAGenerator.DOMAIN), "LearningDomain.xmi", "Relations.xmi", ""};
@@ -98,7 +99,7 @@ public class ModelsManager {
 	public ModelsManager(boolean isForTest, String learnerID,  String contextsFileName, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		resourceSet = new ResourceSetImpl();
 		launchedFromTEST = isForTest;
-		if(launchedFromTEST) { INPUT_MODELS_PATH = INPUT_MODELS_PATH_TEST;}
+		if(launchedFromTEST) { INPUT_MODELS_PATH = INPUT_MODELS_PATH_TEST; OUTPUT_MODELS_PATH = OUTPUT_MODELS_PATH_TEST; }
 		setLearnerPlayerFileName(learnerID); 
 		if(!contextsFileName.isEmpty()) { INPUT_MODELS_NAMES[0] = contextsFileName; }
 		loadInputModels(contextID);

@@ -39,6 +39,8 @@ class VarietyTest {
 		}
 		return dungeons;
 	}
+	
+	
 
 	@Test
 	@Tag(value = "LP02GP") // everything is bought and activated 

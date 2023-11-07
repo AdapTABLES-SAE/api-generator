@@ -4,7 +4,7 @@
     <semanticResources>FlattenDungeon.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_ZvPtQMT_Ee2B8vZiQySjjA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aJpxUMT_Ee2B8vZiQySjjA" name=" class diagram" repPath="#_aJmG8MT_Ee2B8vZiQySjjA" changeId="1698237873829">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aJpxUMT_Ee2B8vZiQySjjA" name=" class diagram" repPath="#_aJmG8MT_Ee2B8vZiQySjjA" changeId="1699300459660">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="FlattenDungeon.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -102,6 +102,10 @@
             <children xmi:type="notation:Node" xmi:id="_4pVGQOjiEe2vx6kknLyVzA" type="3010" element="_4pMjYOjiEe2vx6kknLyVzA">
               <styles xmi:type="notation:FontStyle" xmi:id="_4pVGQejiEe2vx6kknLyVzA" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_4pVGQujiEe2vx6kknLyVzA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_RicD0HzeEe6UPo1trK86LA" type="3010" element="_RiTg8nzeEe6UPo1trK86LA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_RicD0XzeEe6UPo1trK86LA" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_RicD0nzeEe6UPo1trK86LA"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_b3XQVcT_Ee2B8vZiQySjjA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_b3XQVsT_Ee2B8vZiQySjjA"/>
@@ -544,6 +548,14 @@
         <target xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Room/gameplayWithUndo"/>
         <semanticElements xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Room/gameplayWithUndo"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_5zWCZujiEe2vx6kknLyVzA" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_RiTg8nzeEe6UPo1trK86LA" name="correctnessToReach : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Room/correctnessToReach"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="FlattenDungeon.ecore#//Room/correctnessToReach"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_RiTg83zeEe6UPo1trK86LA" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>

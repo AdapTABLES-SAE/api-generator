@@ -67,6 +67,7 @@ public class ConcreteGameplayGenerator {
 	public List<PositionedElement> buildPositionedElements(RoomElements roomElements) throws MapGameplayElementException{
 		List<PositionedElement> elements = new ArrayList<>();
 		for (AComponent aComp : roomElements.getGameplay().getComponents()) {
+			System.out.println("GP "+roomElements.getGameplay().getName());
 			if(aComp instanceof Structure) {
 				elements.addAll(buildStructuredGameplay(aComp, roomElements));
 			} else {
@@ -242,6 +243,7 @@ public class ConcreteGameplayGenerator {
 	
 	private PositionedElement buildSingleChoiceElement(Component component, ElementType elementType, QuestionedFact fact, int propositionIndex, Position position, boolean hasIntegratedChoices) {
 		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
+		System.out.println(component.getAllowedAbility());
 		comp.setCorrectness(computeCorrectness(component, fact, fact.getPropositions().get(propositionIndex)));
 		
 	
@@ -448,6 +450,19 @@ public class ConcreteGameplayGenerator {
 		return position.getID().contains("id");
 	}
 	
+	private boolean containsForPropositionsAndForPropositionAndStatements(List<AComponent> components) {
+		boolean prop = false;
+		boolean prop_stat = false;
+		for(AComponent comp: components) {
+			if(comp.isForProposition() & comp.isForStatement()) {
+				prop_stat = true;
+			} else if(comp.isForProposition()) {
+				prop = true;
+			}
+		}
+		return prop && prop_stat;
+	}
+	
 	private List<PositionedElement> buildStructureForFacts(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType) throws MapGameplayElementException{
 		List<PositionedElement> elements = new ArrayList<>();
 		Structure comp = (Structure) component;
@@ -463,6 +478,10 @@ public class ConcreteGameplayGenerator {
 			for (AComponent aComp : comp.getComponents()) {
 				elementType = roomElements.getElementTypeFor(aComp);		
 				if(isComponentWearChoice(aComp)) { propIndex++; } 
+				if(aComp.isForProposition() && aComp.isForStatement()) { propIndex --;}
+				/*if(containsForPropositionsAndForPropositionAndStatements(comp.getComponents()) && aComp.isForProposition() && aComp.isForProposition()) {
+					
+				}*/
 				elements.addAll(buildStructuredGameplay(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, i, propIndex));
 				if(elementType instanceof ElementType && isComponentWearChoices(aComp, (ElementType) elementType)) { 
 					propIndex += getNumberOfChoicesWornBy((ElementType) elementType); 
@@ -720,9 +739,10 @@ public class ConcreteGameplayGenerator {
 		boolean hasIntegratedChoices = ((QuestionGameplay) roomElements.getGameplay()).isHasIntegratedPropositions();
 		// Les objets avec des quantites n'ont pas de sens dans le cas des structures et ne sont donc pas geres 
 		if(factIndex != -1) {
-			if(comp.isForStatement()) { 
-				elements.add(buildStatementElement(comp, elementType, roomElements.getFacts().get(factIndex), positionFromParent)); 
-			}
+			if(comp.isForStatement() && comp.isForProposition()) {
+				elements.add(buildStatementAsChoicesElement(comp, elementType, roomElements.getFacts().get(factIndex), positionFromParent));}
+			else if(comp.isForStatement()) { 
+				elements.add(buildStatementElement(comp, elementType, roomElements.getFacts().get(factIndex), positionFromParent)); }
 			else if(comp.isInputEntry()) { elements.add(buildInputEntryElement(comp, elementType,  roomElements.getFacts().get(factIndex), positionFromParent)); }
 			else if(comp.isForProposition()) {
 				if(getNumberOfChoicesWornBy((ElementType) elementType) == 1) { elements.add(buildSingleChoiceElement(comp, elementType,  roomElements.getFacts().get(factIndex), propositionIndex, positionFromParent, hasIntegratedChoices)); }
