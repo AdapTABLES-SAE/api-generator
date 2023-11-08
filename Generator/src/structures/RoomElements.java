@@ -124,12 +124,6 @@ public class RoomElements {
 		selectElementType(gameplay.getComponents());
 	}
 	
-	private void selectElementType() {
-		//System.err.println("************ GP = "+gameplay.getName());
-		selectElementType(gameplay.getComponents());
-		//System.out.println("************Elements to quantity "+this.elementsToQuantity);
-	}
-	
 	public Gameplay getGameplay() {
 		return gameplay;
 	}

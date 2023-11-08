@@ -6,6 +6,7 @@ import java.util.Random;
 
 import exceptions.MapGameplayElementException;
 import generator.AComponent;
+import generator.Ability;
 import generator.Component;
 import generator.Correctness;
 import generator.CorrectnessValue;
@@ -67,7 +68,6 @@ public class ConcreteGameplayGenerator {
 	public List<PositionedElement> buildPositionedElements(RoomElements roomElements) throws MapGameplayElementException{
 		List<PositionedElement> elements = new ArrayList<>();
 		for (AComponent aComp : roomElements.getGameplay().getComponents()) {
-			System.out.println("GP "+roomElements.getGameplay().getName());
 			if(aComp instanceof Structure) {
 				elements.addAll(buildStructuredGameplay(aComp, roomElements));
 			} else {
@@ -110,7 +110,7 @@ public class ConcreteGameplayGenerator {
 		
 		if(component.isForProposition() && component.isForStatement()) {
 			for(QuestionedFact fact : roomElements.getFacts()) {
-				elements.add(buildStatementAsChoicesElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
+				elements.add(buildStatementAsChoicesElement(false,component, elementType, fact, getAvailablePosition(roomtype, elementType)));
 			}
 		} else if(component.isForStatement()) {
 			for(QuestionedFact fact : roomElements.getFacts()) {
@@ -160,14 +160,16 @@ public class ConcreteGameplayGenerator {
 		return buildStructuredGameplay(component, null, null, new ArrayList<>(), roomElements, 0, -1);
 	}
 	
-	private PositionedElement buildStatementAsChoicesElement(Component component, ElementType elementType, QuestionedFact fact, Position position) {
+	private PositionedElement buildStatementAsChoicesElement(boolean inStructure, Component component, ElementType elementType, QuestionedFact fact, Position position) {
 		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
-		Correctness correctness = new CorrectnessImpl();
-		CorrectnessValue value = new CorrectnessValueImpl();
-		value.setValue(((CorrectnessValue) fact.getFactCorrectness().getValue()).getValue());
-		correctness.setValue(value);
-		comp.setCorrectness(correctness);
-	
+		if(!inStructure) {
+			Correctness correctness = new CorrectnessImpl();
+			CorrectnessValue value = new CorrectnessValueImpl();
+			value.setValue(((CorrectnessValue) fact.getFactCorrectness().getValue()).getValue());
+			correctness.setValue(value);
+			comp.setCorrectness(correctness);
+		}
+
 		Display proposition = new DisplayImpl();
 		Value propValue = new ValueImpl();
 		propValue.setValue(((Value) fact.getQuestion().getValue()).getValue());
@@ -243,7 +245,6 @@ public class ConcreteGameplayGenerator {
 	
 	private PositionedElement buildSingleChoiceElement(Component component, ElementType elementType, QuestionedFact fact, int propositionIndex, Position position, boolean hasIntegratedChoices) {
 		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
-		System.out.println(component.getAllowedAbility());
 		comp.setCorrectness(computeCorrectness(component, fact, fact.getPropositions().get(propositionIndex)));
 		
 	
@@ -256,9 +257,12 @@ public class ConcreteGameplayGenerator {
 				propValue.setValue(((Value) component.getDisplayValue().getValue()).getValue());	
 			}
 		}
-		proposition.setImageDisplay(fact.getPropositions().get(propositionIndex).isImage());
 		proposition.setValue(propValue);
-		comp.getDisplays().add(proposition);
+		proposition.setImageDisplay(fact.getPropositions().get(propositionIndex).isImage());
+	
+		if(propValue.getValue() != null) {
+			comp.getDisplays().add(proposition);
+		}
 		
 		return comp;
 	}
@@ -450,19 +454,6 @@ public class ConcreteGameplayGenerator {
 		return position.getID().contains("id");
 	}
 	
-	private boolean containsForPropositionsAndForPropositionAndStatements(List<AComponent> components) {
-		boolean prop = false;
-		boolean prop_stat = false;
-		for(AComponent comp: components) {
-			if(comp.isForProposition() & comp.isForStatement()) {
-				prop_stat = true;
-			} else if(comp.isForProposition()) {
-				prop = true;
-			}
-		}
-		return prop && prop_stat;
-	}
-	
 	private List<PositionedElement> buildStructureForFacts(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType) throws MapGameplayElementException{
 		List<PositionedElement> elements = new ArrayList<>();
 		Structure comp = (Structure) component;
@@ -479,9 +470,6 @@ public class ConcreteGameplayGenerator {
 				elementType = roomElements.getElementTypeFor(aComp);		
 				if(isComponentWearChoice(aComp)) { propIndex++; } 
 				if(aComp.isForProposition() && aComp.isForStatement()) { propIndex --;}
-				/*if(containsForPropositionsAndForPropositionAndStatements(comp.getComponents()) && aComp.isForProposition() && aComp.isForProposition()) {
-					
-				}*/
 				elements.addAll(buildStructuredGameplay(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, i, propIndex));
 				if(elementType instanceof ElementType && isComponentWearChoices(aComp, (ElementType) elementType)) { 
 					propIndex += getNumberOfChoicesWornBy((ElementType) elementType); 
@@ -740,7 +728,7 @@ public class ConcreteGameplayGenerator {
 		// Les objets avec des quantites n'ont pas de sens dans le cas des structures et ne sont donc pas geres 
 		if(factIndex != -1) {
 			if(comp.isForStatement() && comp.isForProposition()) {
-				elements.add(buildStatementAsChoicesElement(comp, elementType, roomElements.getFacts().get(factIndex), positionFromParent));}
+				elements.add(buildStatementAsChoicesElement(true, comp, elementType, roomElements.getFacts().get(factIndex), positionFromParent));}
 			else if(comp.isForStatement()) { 
 				elements.add(buildStatementElement(comp, elementType, roomElements.getFacts().get(factIndex), positionFromParent)); }
 			else if(comp.isInputEntry()) { elements.add(buildInputEntryElement(comp, elementType,  roomElements.getFacts().get(factIndex), positionFromParent)); }
@@ -802,14 +790,30 @@ public class ConcreteGameplayGenerator {
 		return elementType.getSize() == Position.getSize();
 	}
 	
+	private boolean containsRestrictedPostionsToAbility(Ability ability, RoomType roomType) {
+		for (Position position : roomType.getElementPositions()) {
+			if(position.getRestrictedTo().contains(ability)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	private Position getAvailablePosition(RoomType roomType, ElementType elementType) { 
 		List<Position> allowed = new ArrayList<>();
 
 		for (Position position : roomType.getElementPositions()) {
 			if(!occupiedPositions.contains(position) && elementSizeIsAccepted(position, elementType)) {
-				if(position.getRestrictedTo().isEmpty() || position.getRestrictedTo().contains(((ElementType) elementType).getAbility())) {
+				if(containsRestrictedPostionsToAbility(elementType.getAbility(), roomType)) {
+					if(position.getRestrictedTo().contains(elementType.getAbility())) {
+						allowed.add(position);
+					}
+				} else if(position.getRestrictedTo().isEmpty() ) {
 					allowed.add(position);
 				}
+				/*if(position.getRestrictedTo().isEmpty() || position.getRestrictedTo().contains(((ElementType) elementType).getAbility())) {
+					allowed.add(position);
+				}*/
 			}
 		}
 		

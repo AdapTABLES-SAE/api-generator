@@ -831,7 +831,6 @@
           restrictedTo="MOVABLE"
           ID="POS18"/>
       <elementPositions
-          restrictedTo="MOVABLE"
           ID="POS19"/>
       <elementPositions
           size="LARGE"
@@ -854,7 +853,6 @@
       <directions>EAST</directions>
       <directions>NORTH</directions>
       <directions>WEST</directions>
-      <directions>NONE</directions>
     </roomtypes>
   </roomtypes>
   <levelsDifficultyProgress>
@@ -1481,94 +1479,6 @@
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
-        name="GP_MULTIPLE_PUSHABLE_STRUCT"
-        category="MOVE_MULTIPLE"
-        hasIntegratedPropositions="true">
-      <components
-          xsi:type="generator:Structure"
-          allowedAbility="HORIZONTAL_DISPLAY">
-        <expectedSize>
-          <value
-              xsi:type="generator:Value"
-              value="XLARGE"/>
-        </expectedSize>
-        <components
-            xsi:type="generator:Component"
-            allowedAbility="DISPLAY">
-          <displayValue>
-            <value
-                xsi:type="generator:Value"
-                value="FALSE"/>
-          </displayValue>
-        </components>
-        <components
-            xsi:type="generator:Structure"
-            allowedAbility="VERTICAL_DISPLAY">
-          <expectedSize>
-            <value
-                xsi:type="generator:Value"
-                value="XLARGE"/>
-          </expectedSize>
-          <components
-              xsi:type="generator:Structure"
-              allowedAbility="HORIZONTAL_DISPLAY"
-              forFact="true">
-            <expectedSize>
-              <value
-                  xsi:type="generator:Value"
-                  value="XLARGE"/>
-            </expectedSize>
-            <components
-                xsi:type="generator:Component"
-                allowedAbility="DETECTOR">
-              <expectedSize>
-                <value
-                    xsi:type="generator:Value"
-                    value="SMALL"/>
-              </expectedSize>
-              <defaultCorrectness>
-                <value
-                    xsi:type="generator:CorrectnessValue"
-                    value="NOT_FACT_CORRECTNESS"/>
-              </defaultCorrectness>
-            </components>
-            <components
-                xsi:type="generator:Component"
-                allowedAbility="PUSHABLE"
-                forProposition="true"
-                forStatement="true"/>
-            <components
-                xsi:type="generator:Component"
-                allowedAbility="DETECTOR">
-              <expectedSize>
-                <value
-                    xsi:type="generator:Value"
-                    value="SMALL"/>
-              </expectedSize>
-              <defaultCorrectness>
-                <value
-                    xsi:type="generator:CorrectnessValue"
-                    value="FACT_CORRECTNESS"/>
-              </defaultCorrectness>
-            </components>
-          </components>
-        </components>
-        <components
-            xsi:type="generator:Component"
-            allowedAbility="DISPLAY">
-          <displayValue>
-            <value
-                xsi:type="generator:Value"
-                value="TRUE"/>
-          </displayValue>
-        </components>
-      </components>
-      <prompt
-          prompt="Touche les bons elements"/>
-      <restrictedTo>IDENTIFY</restrictedTo>
-    </gameplays>
-    <gameplays
-        xsi:type="generator:QuestionGameplay"
         name="GP_MULTIPLE-PUSHABLE_STRUCT-PROP"
         category="MOVE_MULTIPLE"
         hasIntegratedPropositions="true">
@@ -2086,6 +1996,96 @@
           allowedAbility="VERIFICATOR"/>
       <prompt
           prompt="Place les bons elements"/>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE-PUSHABLE_STRUCT"
+        category="MOVE_MULTIPLE"
+        hasIntegratedPropositions="true">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="HORIZONTAL_DISPLAY">
+        <expectedSize>
+          <value
+              xsi:type="generator:Value"
+              value="XLARGE"/>
+        </expectedSize>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DISPLAY">
+          <displayValue>
+            <value
+                xsi:type="generator:Value"
+                value="FAUX"/>
+          </displayValue>
+        </components>
+        <components
+            xsi:type="generator:Structure"
+            allowedAbility="VERTICAL_DISPLAY">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="XLARGE"/>
+          </expectedSize>
+          <components
+              xsi:type="generator:Structure"
+              allowedAbility="HORIZONTAL_DISPLAY"
+              forFact="true">
+            <expectedSize>
+              <value
+                  xsi:type="generator:Value"
+                  value="XLARGE"/>
+            </expectedSize>
+            <components
+                xsi:type="generator:Component"
+                allowedAbility="DETECTOR"
+                forProposition="true">
+              <expectedSize>
+                <value
+                    xsi:type="generator:Value"
+                    value="SMALL"/>
+              </expectedSize>
+              <defaultCorrectness>
+                <value
+                    xsi:type="generator:CorrectnessValue"
+                    value="NOT_FACT_CORRECTNESS"/>
+              </defaultCorrectness>
+            </components>
+            <components
+                xsi:type="generator:Component"
+                allowedAbility="PUSHABLE"
+                forProposition="true"
+                forStatement="true"/>
+            <components
+                xsi:type="generator:Component"
+                allowedAbility="DETECTOR"
+                forProposition="true">
+              <expectedSize>
+                <value
+                    xsi:type="generator:Value"
+                    value="SMALL"/>
+              </expectedSize>
+              <defaultCorrectness>
+                <value
+                    xsi:type="generator:CorrectnessValue"
+                    value="FACT_CORRECTNESS"/>
+              </defaultCorrectness>
+            </components>
+          </components>
+        </components>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DISPLAY">
+          <displayValue>
+            <value
+                xsi:type="generator:Value"
+                value="VRAI"/>
+          </displayValue>
+        </components>
+      </components>
+      <prompt
+          prompt="Pousse les bons elements"/>
+      <restrictedTo>IDENTIFY</restrictedTo>
     </gameplays>
   </gameplays>
   <elements>

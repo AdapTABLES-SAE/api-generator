@@ -55,7 +55,7 @@ public class DirectionManager {
 	private EnumMap<Directions, Set<Directions>> setOppositeDirections(){
 		EnumMap<Directions, Set<Directions>> oppositeDirections = new EnumMap<>(Directions.class);
 		if(simpleDirections != null && complexDirections != null) {
-			oppositeDirections.put(Directions.SOUTH, new HashSet<>(Arrays.asList(Directions.NORTH_EAST, Directions.NORTH_WEST,Directions.NORTH)));
+			oppositeDirections.put(Directions.SOUTH, new HashSet<>(Arrays.asList(Directions.NORTH_EAST, Directions.NORTH_WEST, Directions.NORTH)));
 			oppositeDirections.put(Directions.NORTH, new HashSet<>(Arrays.asList(Directions.SOUTH, Directions.SOUTH_EAST, Directions.SOUTH_WEST)));
 			oppositeDirections.put(Directions.EAST, new HashSet<>(Arrays.asList(Directions.WEST, Directions.WEST_NORTH, Directions.WEST_SOUTH)));
 			oppositeDirections.put(Directions.WEST, new HashSet<>(Arrays.asList(Directions.EAST, Directions.EAST_NORTH, Directions.EAST_SOUTH)));
@@ -116,9 +116,13 @@ public class DirectionManager {
 		return complexDirections;
 	}
 
-	public EnumMap<Directions, Set<Directions>> getOppositeDirections() {
+	private EnumMap<Directions, Set<Directions>> getOppositeDirections() {
 		return oppositeDirections;
 	}	
+	
+	public Set<Directions> getOppositeDirectionsOf(Directions origin) {
+		return new HashSet<>(oppositeDirections.get(origin));
+	}
 	
 	public Set<Directions> getOppositeDirections(Directions direction){
 		return oppositeDirections.get(direction);

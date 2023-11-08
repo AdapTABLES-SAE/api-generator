@@ -1584,7 +1584,7 @@
           ID="HG_O1_L1">
         <tasks
             xsi:type="generator:GLocate"
-            percentOfApparition="15"
+            percentOfApparition="25"
             ID="HG_O1_L1_T1"
             maxTime="30"
             nbExpectedAnswers="18">
@@ -1594,7 +1594,7 @@
         </tasks>
         <tasks
             xsi:type="generator:GLocate"
-            percentOfApparition="10"
+            percentOfApparition="25"
             ID="HG_O1_L1_T2"
             maxTime="30"
             nbExpectedAnswers="18">
@@ -1603,7 +1603,7 @@
         </tasks>
         <tasks
             xsi:type="generator:HChronology"
-            percentOfApparition="15"
+            percentOfApparition="25"
             ID="HG_O1_L1_T3"
             nbFacts="3"
             checkOnLearnerAction="false"
@@ -1614,7 +1614,6 @@
         </tasks>
         <tasks
             xsi:type="generator:HAssociation"
-            percentOfApparition="10"
             ID="HG_O1_L1_T4"
             nbFacts="2"
             target="PERIOD">
@@ -1623,7 +1622,6 @@
         </tasks>
         <tasks
             xsi:type="generator:HAssociation"
-            percentOfApparition="10"
             ID="HG_O1_L1_T5"
             nbFacts="2"
             target="DATE">
@@ -1632,7 +1630,6 @@
         </tasks>
         <tasks
             xsi:type="generator:HAssociation"
-            percentOfApparition="10"
             ID="HG_O1_L1_T6"
             nbFacts="2"
             target="MIX">
@@ -1641,7 +1638,6 @@
         </tasks>
         <tasks
             xsi:type="generator:HAssociation"
-            percentOfApparition="10"
             ID="HG_O1_L1_T7"
             nbFacts="2"
             source="IMAGE"
@@ -1651,7 +1647,6 @@
         </tasks>
         <tasks
             xsi:type="generator:HAssociation"
-            percentOfApparition="10"
             ID="HG_O1_L1_T8"
             nbFacts="2"
             missing="IMAGE">
@@ -1660,7 +1655,7 @@
         </tasks>
         <tasks
             xsi:type="generator:HChronology"
-            percentOfApparition="10"
+            percentOfApparition="25"
             ID="HG_O1_L1_T9"
             nbFacts="3"
             checkOnLearnerAction="false"

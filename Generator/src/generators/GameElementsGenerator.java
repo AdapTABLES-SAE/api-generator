@@ -26,6 +26,7 @@ import generator.EnterResponse;
 import generator.Equipment;
 import generator.GPCategory;
 import generator.Gameplay;
+import generator.IdentificationTask;
 import generator.Item;
 import generator.MultipleChoice;
 import generator.NoQuestionGameplay;
@@ -166,7 +167,7 @@ public class GameElementsGenerator {
 				}
 			}
 		}
-		if(number > room.getQuestionedFacts().size()) {
+		if(room.getTask() != null && room.getTask() instanceof IdentificationTask && number > room.getQuestionedFacts().size()) {
 			room.setNbExpectedAnswers(room.getQuestionedFacts().size());
 		} else {
 			room.setNbExpectedAnswers(number);

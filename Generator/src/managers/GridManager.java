@@ -276,10 +276,6 @@ public class GridManager {
 		return position;
 	}
 	
-	public Set<Directions> getOppositeDirectionsOf(Directions origin){
-		return directionManager.getOppositeDirections().get(origin);
-	}
-	
 	/**
 	 * For each possible entry entryDirections (in theory), it verifies if the entry is really an option then select its possible exits
 	 * @param actualCoordinates
@@ -287,7 +283,7 @@ public class GridManager {
 	 * @return An association between each verified entryDirection and their possible exits
 	 */
  	public LinearRoomOrientations getAllowedDirections(Coordinate actualCoordinates, Directions theOriginDirection){
- 		Set<Directions> entryDirections = directionManager.getOppositeDirections().get(theOriginDirection);
+ 		Set<Directions> entryDirections = directionManager.getOppositeDirectionsOf(theOriginDirection);
  		LinearRoomOrientations roomOrientations = new LinearRoomOrientations(); // Possible entry to possible exits 
 		Map<GridPositions, Boolean> gridPosOccupations = computesGridPositionsOccupied(actualCoordinates);
 		
@@ -304,7 +300,7 @@ public class GridManager {
 	}
  	
  	public Set<Directions> getAllowedNewRoomEntries(Coordinate actualCoordinates, Directions theOriginDirection){
- 		Set<Directions> entryDirections = directionManager.getOppositeDirections().get(theOriginDirection);
+ 		Set<Directions> entryDirections = directionManager.getOppositeDirectionsOf(theOriginDirection);
 		Map<GridPositions, Boolean> gridPosOccupations = computesGridPositionsOccupied(actualCoordinates);
 		for (Directions direction : new ArrayList<>(entryDirections)) {
 			if(directionManager.getSimpleDirections().contains(direction)) {
@@ -482,8 +478,8 @@ public class GridManager {
 	public Coordinate getNextCoordForPortalRoom() {
 		Coordinate coord = new Coordinate(100, 100);
 		while(occupiedCoordinates.containsKey(coord)) {
-			coord.setX(coord.getX() + 50);
-			coord.setY(coord.getY() + 50);
+			coord.setX(coord.getX() + 100);
+			coord.setY(coord.getY() + 100);
 		}
 		return coord;
 	}
