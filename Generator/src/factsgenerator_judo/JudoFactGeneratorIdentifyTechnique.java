@@ -174,13 +174,4 @@ public class JudoFactGeneratorIdentifyTechnique extends FactGeneratorTemplate {
 	protected int correctnessToReach(AQuestionableFact fact) {
 		return 1;
 	}
-	
-	/*@Override
-	protected List<String> factSolutionsToString(AQuestionableFact qFact) {
-		List<String> solutions = new ArrayList<>();
-		JudoQuestionableTechniqueFact qfact = (JudoQuestionableTechniqueFact) qFact;		
-		solutions.add(qfact.getCompleteFact());
-		return solutions;
-	}*/
-
 }

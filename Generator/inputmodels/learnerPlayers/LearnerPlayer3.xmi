@@ -17,32 +17,35 @@
             <task xsi:type="generator:GLocate" href="../LearningDomain.xmi#HG_O1_L1_T1"/>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T1-QAFACT0" consigne="Donner l'ensemble des r&#xe9;ponses" type="REGIONS">
               <visualization href="../HistoryGeographyFacts.xmi#FRANCE_REGIONS"/>
+              <visualizationSolutions value="Centre-val de Loire">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#CENTRE_VAL_DE_LOIRE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="La R&#xe9;union">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#LA_REUNION"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Bretagne">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#BRETAGNE"/>
+              </visualizationSolutions>
               <visualizationSolutions value="Provence-Alpes-C&#xf4;te-D'Azur">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#PROVENCE_ALPES_COTE_DAZUR"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Corse">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#CORSE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Guyane">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#GUYANE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Normandie">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#NORMANDIE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Bourgogne-Franche-Comt&#xe9;">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#BOURGOGNE_FRANCHE_COMTE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Nouvelle Aquitaine">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#NOUVELLE_AQUITAINE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Centre-val de Loire">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#CENTRE_VAL_DE_LOIRE"/>
+              <visualizationSolutions value="Occitanie">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#OCCITANIE"/>
               </visualizationSolutions>
               <visualizationSolutions value="Grand Est">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#GRAND_EST"/>
               </visualizationSolutions>
-              <visualizationSolutions value="La R&#xe9;union">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#LA_REUNION"/>
+              <visualizationSolutions value="Mayotte">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#MAYOTTE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Auvergne-Rh&#xf4;ne-Alpes">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#AUVERGNE_RHONE_ALPES"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Guyane">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#GUYANE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="&#xce;le-de-France">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#ILE_DE_FRANCE"/>
               </visualizationSolutions>
               <visualizationSolutions value="Hauts-de-France">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#HAUTS_DE_FRANCE"/>
@@ -50,26 +53,23 @@
               <visualizationSolutions value="Pays de la Loire">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#PAYS_DE_LA_LOIRE"/>
               </visualizationSolutions>
-              <visualizationSolutions value="&#xce;le-de-France">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#ILE_DE_FRANCE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Occitanie">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#OCCITANIE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Mayotte">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#MAYOTTE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Guadeloupe">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#GUADELOUPE"/>
+              <visualizationSolutions value="Normandie">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#NORMANDIE"/>
               </visualizationSolutions>
               <visualizationSolutions value="Martinique">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#MARTINIQUE"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Bretagne">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#BRETAGNE"/>
+              <visualizationSolutions value="Corse">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#CORSE"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Auvergne-Rh&#xf4;ne-Alpes">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#AUVERGNE_RHONE_ALPES"/>
+              <visualizationSolutions value="Bourgogne-Franche-Comt&#xe9;">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#BOURGOGNE_FRANCHE_COMTE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Nouvelle Aquitaine">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#NOUVELLE_AQUITAINE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Guadeloupe">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#GUADELOUPE"/>
               </visualizationSolutions>
             </questionableFacts>
           </resultsbytask>
@@ -77,11 +77,44 @@
             <task xsi:type="generator:GLocate" href="../LearningDomain.xmi#HG_O1_L1_T2"/>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T2-QAFACT0" consigne="Donner l'ensemble des r&#xe9;ponses" type="REGIONS">
               <visualization href="../HistoryGeographyFacts.xmi#FRANCE_REGIONS"/>
-              <visualizationSolutions value="Provence-Alpes-C&#xf4;te-D'Azur">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#PROVENCE_ALPES_COTE_DAZUR"/>
+              <visualizationSolutions value="Grand Est">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#GRAND_EST"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Pays de la Loire">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#PAYS_DE_LA_LOIRE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Hauts-de-France">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#HAUTS_DE_FRANCE"/>
               </visualizationSolutions>
               <visualizationSolutions value="Bretagne">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#BRETAGNE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Martinique">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#MARTINIQUE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Bourgogne-Franche-Comt&#xe9;">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#BOURGOGNE_FRANCHE_COMTE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="La R&#xe9;union">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#LA_REUNION"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Auvergne-Rh&#xf4;ne-Alpes">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#AUVERGNE_RHONE_ALPES"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Centre-val de Loire">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#CENTRE_VAL_DE_LOIRE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Mayotte">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#MAYOTTE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Occitanie">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#OCCITANIE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Provence-Alpes-C&#xf4;te-D'Azur">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#PROVENCE_ALPES_COTE_DAZUR"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Nouvelle Aquitaine">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#NOUVELLE_AQUITAINE"/>
               </visualizationSolutions>
               <visualizationSolutions value="Corse">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#CORSE"/>
@@ -89,44 +122,11 @@
               <visualizationSolutions value="Guyane">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#GUYANE"/>
               </visualizationSolutions>
-              <visualizationSolutions value="La R&#xe9;union">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#LA_REUNION"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Pays de la Loire">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#PAYS_DE_LA_LOIRE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Normandie">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#NORMANDIE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Martinique">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#MARTINIQUE"/>
-              </visualizationSolutions>
               <visualizationSolutions value="Guadeloupe">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#GUADELOUPE"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Mayotte">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#MAYOTTE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Centre-val de Loire">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#CENTRE_VAL_DE_LOIRE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Hauts-de-France">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#HAUTS_DE_FRANCE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Occitanie">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#OCCITANIE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Nouvelle Aquitaine">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#NOUVELLE_AQUITAINE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Bourgogne-Franche-Comt&#xe9;">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#BOURGOGNE_FRANCHE_COMTE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Grand Est">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#GRAND_EST"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Auvergne-Rh&#xf4;ne-Alpes">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#AUVERGNE_RHONE_ALPES"/>
+              <visualizationSolutions value="Normandie">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#NORMANDIE"/>
               </visualizationSolutions>
               <visualizationSolutions value="&#xce;le-de-France">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#ILE_DE_FRANCE"/>
@@ -571,5 +571,5 @@
     </learnerProgress>
   </progression>
   <learningpath href="../LearningDomain.xmi#HGPATH"/>
-  <statistics maxGameLevelReached="9" nbLevelsGenerated="3314"/>
+  <statistics maxGameLevelReached="9" nbLevelsGenerated="3318"/>
 </generator:LearnerPlayer>
