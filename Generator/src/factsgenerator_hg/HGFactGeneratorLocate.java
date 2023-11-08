@@ -13,11 +13,11 @@ import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AVisualizationQuestionableFact;
 import generator.AbstractFact;
+import generator.DynamicMultipleChoice;
 import generator.ECorrectness;
 import generator.EGeographyValue;
 import generator.GeographyFact;
 import generator.MapQuestionableFact;
-import generator.MultipleChoice;
 import generator.SetOfFacts;
 import generator.Visualization;
 import generator.VisualizationSolution;
@@ -94,7 +94,7 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 		MapQuestionableFact qfact = (MapQuestionableFact) qFact;
 		
 		List<Soluce> goodSoluces = getListOfGoodSolutions(qFact);
-		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
+		DynamicMultipleChoice mc = (DynamicMultipleChoice) task.getResponseModality();
 		List<Soluce> propositions_temp = new ArrayList<>();
 		while(propositions_temp.size() < mc.getNbBadChoices()) {
 			String choice = badHistoryChoices(goodSoluces, propositions_temp, qfact.getType());

@@ -95,8 +95,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createProgression();
 		case GeneratorPackage.CURRENT_OBJECTIVE_LEVEL:
 			return createCurrentObjectiveLevel();
-		case GeneratorPackage.MULTIPLE_CHOICE:
-			return createMultipleChoice();
+		case GeneratorPackage.DYNAMIC_MULTIPLE_CHOICE:
+			return createDynamicMultipleChoice();
 		case GeneratorPackage.ENTER_RESPONSE:
 			return createEnterResponse();
 		case GeneratorPackage.ROOM_TYPES:
@@ -279,6 +279,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createIdentifyArbitrationGesture();
 		case GeneratorPackage.JUDO_QUESTIONABLE_ARBITRATION_FACT:
 			return createJudoQuestionableArbitrationFact();
+		case GeneratorPackage.MULTIPLE_CHOICE:
+			return createMultipleChoice();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -581,9 +583,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MultipleChoice createMultipleChoice() {
-		MultipleChoiceImpl multipleChoice = new MultipleChoiceImpl();
-		return multipleChoice;
+	public DynamicMultipleChoice createDynamicMultipleChoice() {
+		DynamicMultipleChoiceImpl dynamicMultipleChoice = new DynamicMultipleChoiceImpl();
+		return dynamicMultipleChoice;
 	}
 
 	/**
@@ -1494,6 +1496,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public JudoQuestionableArbitrationFact createJudoQuestionableArbitrationFact() {
 		JudoQuestionableArbitrationFactImpl judoQuestionableArbitrationFact = new JudoQuestionableArbitrationFactImpl();
 		return judoQuestionableArbitrationFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MultipleChoice createMultipleChoice() {
+		MultipleChoiceImpl multipleChoice = new MultipleChoiceImpl();
+		return multipleChoice;
 	}
 
 	/**

@@ -193,13 +193,13 @@ public interface GeneratorFactory extends EFactory {
 	CurrentObjectiveLevel createCurrentObjectiveLevel();
 
 	/**
-	 * Returns a new object of class '<em>Multiple Choice</em>'.
+	 * Returns a new object of class '<em>Dynamic Multiple Choice</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Multiple Choice</em>'.
+	 * @return a new object of class '<em>Dynamic Multiple Choice</em>'.
 	 * @generated
 	 */
-	MultipleChoice createMultipleChoice();
+	DynamicMultipleChoice createDynamicMultipleChoice();
 
 	/**
 	 * Returns a new object of class '<em>Enter Response</em>'.
@@ -1019,6 +1019,15 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	JudoQuestionableArbitrationFact createJudoQuestionableArbitrationFact();
+
+	/**
+	 * Returns a new object of class '<em>Multiple Choice</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Multiple Choice</em>'.
+	 * @generated
+	 */
+	MultipleChoice createMultipleChoice();
 
 	/**
 	 * Returns the package supported by this factory.

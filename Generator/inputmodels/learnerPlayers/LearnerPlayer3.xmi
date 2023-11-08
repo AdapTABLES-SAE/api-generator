@@ -17,59 +17,59 @@
             <task xsi:type="generator:GLocate" href="../LearningDomain.xmi#HG_O1_L1_T1"/>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T1-QAFACT0" consigne="Donner l'ensemble des r&#xe9;ponses" type="REGIONS">
               <visualization href="../HistoryGeographyFacts.xmi#FRANCE_REGIONS"/>
-              <visualizationSolutions value="Martinique">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#MARTINIQUE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Occitanie">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#OCCITANIE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Grand Est">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#GRAND_EST"/>
+              <visualizationSolutions value="Provence-Alpes-C&#xf4;te-D'Azur">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#PROVENCE_ALPES_COTE_DAZUR"/>
               </visualizationSolutions>
               <visualizationSolutions value="Corse">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#CORSE"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Nouvelle Aquitaine">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#NOUVELLE_AQUITAINE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Pays de la Loire">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#PAYS_DE_LA_LOIRE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Bourgogne-Franche-Comt&#xe9;">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#BOURGOGNE_FRANCHE_COMTE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Hauts-de-France">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#HAUTS_DE_FRANCE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="&#xce;le-de-France">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#ILE_DE_FRANCE"/>
-              </visualizationSolutions>
               <visualizationSolutions value="Guyane">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#GUYANE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Provence-Alpes-C&#xf4;te-D'Azur">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#PROVENCE_ALPES_COTE_DAZUR"/>
               </visualizationSolutions>
               <visualizationSolutions value="Normandie">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#NORMANDIE"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Auvergne-Rh&#xf4;ne-Alpes">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#AUVERGNE_RHONE_ALPES"/>
+              <visualizationSolutions value="Bourgogne-Franche-Comt&#xe9;">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#BOURGOGNE_FRANCHE_COMTE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Nouvelle Aquitaine">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#NOUVELLE_AQUITAINE"/>
               </visualizationSolutions>
               <visualizationSolutions value="Centre-val de Loire">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#CENTRE_VAL_DE_LOIRE"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Bretagne">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#BRETAGNE"/>
+              <visualizationSolutions value="Grand Est">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#GRAND_EST"/>
               </visualizationSolutions>
               <visualizationSolutions value="La R&#xe9;union">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#LA_REUNION"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Hauts-de-France">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#HAUTS_DE_FRANCE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Pays de la Loire">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#PAYS_DE_LA_LOIRE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="&#xce;le-de-France">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#ILE_DE_FRANCE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Occitanie">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#OCCITANIE"/>
               </visualizationSolutions>
               <visualizationSolutions value="Mayotte">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#MAYOTTE"/>
               </visualizationSolutions>
               <visualizationSolutions value="Guadeloupe">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#GUADELOUPE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Martinique">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#MARTINIQUE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Bretagne">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#BRETAGNE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Auvergne-Rh&#xf4;ne-Alpes">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#AUVERGNE_RHONE_ALPES"/>
               </visualizationSolutions>
             </questionableFacts>
           </resultsbytask>
@@ -77,68 +77,71 @@
             <task xsi:type="generator:GLocate" href="../LearningDomain.xmi#HG_O1_L1_T2"/>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T2-QAFACT0" consigne="Donner l'ensemble des r&#xe9;ponses" type="REGIONS">
               <visualization href="../HistoryGeographyFacts.xmi#FRANCE_REGIONS"/>
-              <visualizationSolutions value="Bourgogne-Franche-Comt&#xe9;">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#BOURGOGNE_FRANCHE_COMTE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Pays de la Loire">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#PAYS_DE_LA_LOIRE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Guyane">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#GUYANE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Guadeloupe">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#GUADELOUPE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Grand Est">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#GRAND_EST"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Centre-val de Loire">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#CENTRE_VAL_DE_LOIRE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Occitanie">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#OCCITANIE"/>
+              <visualizationSolutions value="Provence-Alpes-C&#xf4;te-D'Azur">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#PROVENCE_ALPES_COTE_DAZUR"/>
               </visualizationSolutions>
               <visualizationSolutions value="Bretagne">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#BRETAGNE"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Nouvelle Aquitaine">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#NOUVELLE_AQUITAINE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Provence-Alpes-C&#xf4;te-D'Azur">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#PROVENCE_ALPES_COTE_DAZUR"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="Martinique">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#MARTINIQUE"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="&#xce;le-de-France">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#ILE_DE_FRANCE"/>
-              </visualizationSolutions>
               <visualizationSolutions value="Corse">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#CORSE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Guyane">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#GUYANE"/>
               </visualizationSolutions>
               <visualizationSolutions value="La R&#xe9;union">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#LA_REUNION"/>
               </visualizationSolutions>
+              <visualizationSolutions value="Pays de la Loire">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#PAYS_DE_LA_LOIRE"/>
+              </visualizationSolutions>
               <visualizationSolutions value="Normandie">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#NORMANDIE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Martinique">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#MARTINIQUE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Guadeloupe">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#GUADELOUPE"/>
               </visualizationSolutions>
               <visualizationSolutions value="Mayotte">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#MAYOTTE"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Auvergne-Rh&#xf4;ne-Alpes">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#AUVERGNE_RHONE_ALPES"/>
+              <visualizationSolutions value="Centre-val de Loire">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#CENTRE_VAL_DE_LOIRE"/>
               </visualizationSolutions>
               <visualizationSolutions value="Hauts-de-France">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#HAUTS_DE_FRANCE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Occitanie">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#OCCITANIE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Nouvelle Aquitaine">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#NOUVELLE_AQUITAINE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Bourgogne-Franche-Comt&#xe9;">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#BOURGOGNE_FRANCHE_COMTE"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Grand Est">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#GRAND_EST"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="Auvergne-Rh&#xf4;ne-Alpes">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#AUVERGNE_RHONE_ALPES"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="&#xce;le-de-France">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#ILE_DE_FRANCE"/>
               </visualizationSolutions>
             </questionableFacts>
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:HChronology" href="../LearningDomain.xmi#HG_O1_L1_T3"/>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT7" type="NONE">
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT0" type="NONE">
               <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Cr&#xe9;ation de l'ONU">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1945"/>
+              <visualizationSolutions value="(Debut) 1er Guerre Mondiale">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1914"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="(Fin) 1er Guerre Mondiale">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1918"/>
               </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT1" type="NONE">
@@ -147,25 +150,34 @@
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#1917"/>
               </visualizationSolutions>
             </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT14" type="NONE">
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Loi Veil (IVG)">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1975"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT10" type="NONE">
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Chute du mur de Berlin">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1989"/>
+              </visualizationSolutions>
+            </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT2" type="NONE">
               <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
               <visualizationSolutions value="Armistice">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#1918"/>
               </visualizationSolutions>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT11" type="NONE">
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT7" type="NONE">
               <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Les accords d'Evian">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1962"/>
+              <visualizationSolutions value="Cr&#xe9;ation de l'ONU">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1945"/>
               </visualizationSolutions>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT0" type="NONE">
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT8" type="NONE">
               <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="(Debut) 1er Guerre Mondiale">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1914"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="(Fin) 1er Guerre Mondiale">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1918"/>
+              <visualizationSolutions value="Trait&#xe9; de Rome">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1957"/>
               </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT3" type="NONE">
@@ -177,34 +189,13 @@
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#1945"/>
               </visualizationSolutions>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT12" type="NONE">
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT6" type="NONE">
               <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Naissance de la Ve R&#xe9;publique">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1958"/>
-              </visualizationSolutions>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT9" type="NONE">
-              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="L'Euro">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#2002"/>
-              </visualizationSolutions>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT15" type="NONE">
-              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Premi&#xe8;re alternance">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1981"/>
-              </visualizationSolutions>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT13" type="NONE">
-              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1962"/>
-              </visualizationSolutions>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT5" type="NONE">
-              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Appel du g&#xe9;n&#xe9;ral de Gaulle">
+              <visualizationSolutions value="(Debut) R&#xe9;gime de Vichy">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#1940"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="(Fin) R&#xe9;gime de Vichy">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1944"/>
               </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT4" type="NONE">
@@ -216,75 +207,66 @@
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#1937"/>
               </visualizationSolutions>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT10" type="NONE">
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT9" type="NONE">
               <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Chute du mur de Berlin">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1989"/>
+              <visualizationSolutions value="L'Euro">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#2002"/>
               </visualizationSolutions>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT14" type="NONE">
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT5" type="NONE">
               <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Loi Veil (IVG)">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1975"/>
-              </visualizationSolutions>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT6" type="NONE">
-              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="(Debut) R&#xe9;gime de Vichy">
+              <visualizationSolutions value="Appel du g&#xe9;n&#xe9;ral de Gaulle">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#1940"/>
               </visualizationSolutions>
-              <visualizationSolutions value="(Fin) R&#xe9;gime de Vichy">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1944"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT12" type="NONE">
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Naissance de la Ve R&#xe9;publique">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1958"/>
               </visualizationSolutions>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT8" type="NONE">
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT15" type="NONE">
               <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Trait&#xe9; de Rome">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1957"/>
+              <visualizationSolutions value="Premi&#xe8;re alternance">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1981"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT11" type="NONE">
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Les accords d'Evian">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1962"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T3-QAFACT13" type="NONE">
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1962"/>
               </visualizationSolutions>
             </questionableFacts>
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:HAssociation" href="../LearningDomain.xmi#HG_O1_L1_T4"/>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T4-QAFACT3" sourceElement="Allemagne Nazie (Hitl&#xe9;rienne)" missingElementsType="TIME">
-              <missingElements>1933</missingElements>
-              <missingElements>1945</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T4-QAFACT0" sourceElement="1er Guerre Mondiale" missingElementsType="TIME">
-              <missingElements>1914</missingElements>
-              <missingElements>1918</missingElements>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T4-QAFACT4" sourceElement="Front Populaire" missingElementsType="TIME">
+              <missingElements>1936</missingElements>
+              <missingElements>1937</missingElements>
             </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T4-QAFACT6" sourceElement="R&#xe9;gime de Vichy" missingElementsType="TIME">
               <missingElements>1940</missingElements>
               <missingElements>1944</missingElements>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T4-QAFACT4" sourceElement="Front Populaire" missingElementsType="TIME">
-              <missingElements>1936</missingElements>
-              <missingElements>1937</missingElements>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T4-QAFACT0" sourceElement="1er Guerre Mondiale" missingElementsType="TIME">
+              <missingElements>1914</missingElements>
+              <missingElements>1918</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T4-QAFACT3" sourceElement="Allemagne Nazie (Hitl&#xe9;rienne)" missingElementsType="TIME">
+              <missingElements>1933</missingElements>
+              <missingElements>1945</missingElements>
             </questionableFacts>
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:HAssociation" href="../LearningDomain.xmi#HG_O1_L1_T5"/>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT2" sourceElement="Armistice" missingElementsType="TIME">
-              <missingElements>11 Novembre 1918</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT13" sourceElement="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct" missingElementsType="TIME">
-              <missingElements>  1962</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT7" sourceElement="Cr&#xe9;ation de l'ONU" missingElementsType="TIME">
-              <missingElements>  1945</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT10" sourceElement="Chute du mur de Berlin" missingElementsType="TIME">
-              <missingElements>  1989</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT11" sourceElement="Les accords d'Evian" missingElementsType="TIME">
-              <missingElements>  1962</missingElements>
-            </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT8" sourceElement="Trait&#xe9; de Rome" missingElementsType="TIME">
               <missingElements>  1957</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT9" sourceElement="L'Euro" missingElementsType="TIME">
-              <missingElements>  2002</missingElements>
             </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT14" sourceElement="Loi Veil (IVG)" missingElementsType="TIME">
               <missingElements>  1975</missingElements>
@@ -292,59 +274,56 @@
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT12" sourceElement="Naissance de la Ve R&#xe9;publique" missingElementsType="TIME">
               <missingElements>  1958</missingElements>
             </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT15" sourceElement="Premi&#xe8;re alternance" missingElementsType="TIME">
+              <missingElements>  1981</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT2" sourceElement="Armistice" missingElementsType="TIME">
+              <missingElements>11 Novembre 1918</missingElements>
+            </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT1" sourceElement="R&#xe9;volution Russe" missingElementsType="TIME">
               <missingElements>1917</missingElements>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT15" sourceElement="Premi&#xe8;re alternance" missingElementsType="TIME">
-              <missingElements>  1981</missingElements>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT9" sourceElement="L'Euro" missingElementsType="TIME">
+              <missingElements>  2002</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT11" sourceElement="Les accords d'Evian" missingElementsType="TIME">
+              <missingElements>  1962</missingElements>
             </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT5" sourceElement="Appel du g&#xe9;n&#xe9;ral de Gaulle" missingElementsType="TIME">
               <missingElements>18 Juin 1940</missingElements>
             </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT10" sourceElement="Chute du mur de Berlin" missingElementsType="TIME">
+              <missingElements>  1989</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT7" sourceElement="Cr&#xe9;ation de l'ONU" missingElementsType="TIME">
+              <missingElements>  1945</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T5-QAFACT13" sourceElement="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct" missingElementsType="TIME">
+              <missingElements>  1962</missingElements>
+            </questionableFacts>
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:HAssociation" href="../LearningDomain.xmi#HG_O1_L1_T6"/>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT9" sourceElement="L'Euro" missingElementsType="TIME">
-              <missingElements>  2002</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT8" sourceElement="Trait&#xe9; de Rome" missingElementsType="TIME">
-              <missingElements>  1957</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT10" sourceElement="Chute du mur de Berlin" missingElementsType="TIME">
-              <missingElements>  1989</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT1" sourceElement="R&#xe9;volution Russe" missingElementsType="TIME">
-              <missingElements>1917</missingElements>
-            </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT11" sourceElement="Les accords d'Evian" missingElementsType="TIME">
               <missingElements>  1962</missingElements>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT3" sourceElement="Allemagne Nazie (Hitl&#xe9;rienne)" missingElementsType="TIME">
-              <missingElements>1933 - 1945</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT12" sourceElement="Naissance de la Ve R&#xe9;publique" missingElementsType="TIME">
-              <missingElements>  1958</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT15" sourceElement="Premi&#xe8;re alternance" missingElementsType="TIME">
-              <missingElements>  1981</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT0" sourceElement="1er Guerre Mondiale" missingElementsType="TIME">
-              <missingElements>1914 - 1918</missingElements>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT14" sourceElement="Loi Veil (IVG)" missingElementsType="TIME">
+              <missingElements>  1975</missingElements>
             </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT7" sourceElement="Cr&#xe9;ation de l'ONU" missingElementsType="TIME">
               <missingElements>  1945</missingElements>
             </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT12" sourceElement="Naissance de la Ve R&#xe9;publique" missingElementsType="TIME">
+              <missingElements>  1958</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT10" sourceElement="Chute du mur de Berlin" missingElementsType="TIME">
+              <missingElements>  1989</missingElements>
+            </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT5" sourceElement="Appel du g&#xe9;n&#xe9;ral de Gaulle" missingElementsType="TIME">
               <missingElements>18 Juin 1940</missingElements>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT13" sourceElement="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct" missingElementsType="TIME">
-              <missingElements>  1962</missingElements>
-            </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT4" sourceElement="Front Populaire" missingElementsType="TIME">
               <missingElements>1936 - 1937</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT14" sourceElement="Loi Veil (IVG)" missingElementsType="TIME">
-              <missingElements>  1975</missingElements>
             </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT6" sourceElement="R&#xe9;gime de Vichy" missingElementsType="TIME">
               <missingElements>1940 - 1944</missingElements>
@@ -352,47 +331,38 @@
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT2" sourceElement="Armistice" missingElementsType="TIME">
               <missingElements>11 Novembre 1918</missingElements>
             </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT3" sourceElement="Allemagne Nazie (Hitl&#xe9;rienne)" missingElementsType="TIME">
+              <missingElements>1933 - 1945</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT9" sourceElement="L'Euro" missingElementsType="TIME">
+              <missingElements>  2002</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT8" sourceElement="Trait&#xe9; de Rome" missingElementsType="TIME">
+              <missingElements>  1957</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT15" sourceElement="Premi&#xe8;re alternance" missingElementsType="TIME">
+              <missingElements>  1981</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT0" sourceElement="1er Guerre Mondiale" missingElementsType="TIME">
+              <missingElements>1914 - 1918</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT13" sourceElement="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct" missingElementsType="TIME">
+              <missingElements>  1962</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T6-QAFACT1" sourceElement="R&#xe9;volution Russe" missingElementsType="TIME">
+              <missingElements>1917</missingElements>
+            </questionableFacts>
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:HAssociation" href="../LearningDomain.xmi#HG_O1_L1_T7"/>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT7" questionWithImage="true" sourceElement="ONU" sourceElementType="IMAGE">
-              <missingElements>Cr&#xe9;ation de l'ONU</missingElements>
-            </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT14" questionWithImage="true" sourceElement="VEIL" sourceElementType="IMAGE">
               <missingElements>Loi Veil (IVG)</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT3" questionWithImage="true" sourceElement="ALLEMAGNE_NAZIE" sourceElementType="IMAGE">
-              <missingElements>Allemagne Nazie (Hitl&#xe9;rienne)</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT10" questionWithImage="true" sourceElement="MUR_BERLIN" sourceElementType="IMAGE">
-              <missingElements>Chute du mur de Berlin</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT0" questionWithImage="true" sourceElement="GRANDE_GUERRE" sourceElementType="IMAGE">
-              <missingElements>1er Guerre Mondiale</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT1" questionWithImage="true" sourceElement="REVOLUTION_RUSSE" sourceElementType="IMAGE">
-              <missingElements>R&#xe9;volution Russe</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT11" questionWithImage="true" sourceElement="EVIAN" sourceElementType="IMAGE">
-              <missingElements>Les accords d'Evian</missingElements>
             </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT2" questionWithImage="true" sourceElement="ARMISTICE" sourceElementType="IMAGE">
               <missingElements>Armistice</missingElements>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT15" questionWithImage="true" sourceElement="ALTERNANCE" sourceElementType="IMAGE">
-              <missingElements>Premi&#xe8;re alternance</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT12" questionWithImage="true" sourceElement="5REPUBLIQUE" sourceElementType="IMAGE">
-              <missingElements>Naissance de la Ve R&#xe9;publique</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT13" questionWithImage="true" sourceElement="ELECTION" sourceElementType="IMAGE">
-              <missingElements>Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT5" questionWithImage="true" sourceElement="DEGAULLE" sourceElementType="IMAGE">
-              <missingElements>Appel du g&#xe9;n&#xe9;ral de Gaulle</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT8" questionWithImage="true" sourceElement="ROME" sourceElementType="IMAGE">
-              <missingElements>Trait&#xe9; de Rome</missingElements>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT7" questionWithImage="true" sourceElement="ONU" sourceElementType="IMAGE">
+              <missingElements>Cr&#xe9;ation de l'ONU</missingElements>
             </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT9" questionWithImage="true" sourceElement="EURO" sourceElementType="IMAGE">
               <missingElements>L'Euro</missingElements>
@@ -400,17 +370,65 @@
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT4" questionWithImage="true" sourceElement="FRONT_POPULAIRE" sourceElementType="IMAGE">
               <missingElements>Front Populaire</missingElements>
             </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT0" questionWithImage="true" sourceElement="GRANDE_GUERRE" sourceElementType="IMAGE">
+              <missingElements>1er Guerre Mondiale</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT5" questionWithImage="true" sourceElement="DEGAULLE" sourceElementType="IMAGE">
+              <missingElements>Appel du g&#xe9;n&#xe9;ral de Gaulle</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT8" questionWithImage="true" sourceElement="ROME" sourceElementType="IMAGE">
+              <missingElements>Trait&#xe9; de Rome</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT10" questionWithImage="true" sourceElement="MUR_BERLIN" sourceElementType="IMAGE">
+              <missingElements>Chute du mur de Berlin</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT12" questionWithImage="true" sourceElement="5REPUBLIQUE" sourceElementType="IMAGE">
+              <missingElements>Naissance de la Ve R&#xe9;publique</missingElements>
+            </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT6" questionWithImage="true" sourceElement="VICHY" sourceElementType="IMAGE">
               <missingElements>R&#xe9;gime de Vichy</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT15" questionWithImage="true" sourceElement="ALTERNANCE" sourceElementType="IMAGE">
+              <missingElements>Premi&#xe8;re alternance</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT13" questionWithImage="true" sourceElement="ELECTION" sourceElementType="IMAGE">
+              <missingElements>Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT3" questionWithImage="true" sourceElement="ALLEMAGNE_NAZIE" sourceElementType="IMAGE">
+              <missingElements>Allemagne Nazie (Hitl&#xe9;rienne)</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT1" questionWithImage="true" sourceElement="REVOLUTION_RUSSE" sourceElementType="IMAGE">
+              <missingElements>R&#xe9;volution Russe</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T7-QAFACT11" questionWithImage="true" sourceElement="EVIAN" sourceElementType="IMAGE">
+              <missingElements>Les accords d'Evian</missingElements>
             </questionableFacts>
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:HAssociation" href="../LearningDomain.xmi#HG_O1_L1_T8"/>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT4" sourceElement="Front Populaire" missingElementsType="IMAGE">
-              <missingElements>FRONT_POPULAIRE</missingElements>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT6" sourceElement="R&#xe9;gime de Vichy" missingElementsType="IMAGE">
+              <missingElements>VICHY</missingElements>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT10" sourceElement="Chute du mur de Berlin" missingElementsType="IMAGE">
-              <missingElements>MUR_BERLIN</missingElements>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT2" sourceElement="Armistice" missingElementsType="IMAGE">
+              <missingElements>ARMISTICE</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT15" sourceElement="Premi&#xe8;re alternance" missingElementsType="IMAGE">
+              <missingElements>ALTERNANCE</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT14" sourceElement="Loi Veil (IVG)" missingElementsType="IMAGE">
+              <missingElements>VEIL</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT5" sourceElement="Appel du g&#xe9;n&#xe9;ral de Gaulle" missingElementsType="IMAGE">
+              <missingElements>DEGAULLE</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT3" sourceElement="Allemagne Nazie (Hitl&#xe9;rienne)" missingElementsType="IMAGE">
+              <missingElements>ALLEMAGNE_NAZIE</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT13" sourceElement="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct" missingElementsType="IMAGE">
+              <missingElements>ELECTION</missingElements>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT7" sourceElement="Cr&#xe9;ation de l'ONU" missingElementsType="IMAGE">
+              <missingElements>ONU</missingElements>
             </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT1" sourceElement="R&#xe9;volution Russe" missingElementsType="IMAGE">
               <missingElements>REVOLUTION_RUSSE</missingElements>
@@ -418,49 +436,37 @@
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT0" sourceElement="1er Guerre Mondiale" missingElementsType="IMAGE">
               <missingElements>GRANDE_GUERRE</missingElements>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT2" sourceElement="Armistice" missingElementsType="IMAGE">
-              <missingElements>ARMISTICE</missingElements>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT4" sourceElement="Front Populaire" missingElementsType="IMAGE">
+              <missingElements>FRONT_POPULAIRE</missingElements>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT14" sourceElement="Loi Veil (IVG)" missingElementsType="IMAGE">
-              <missingElements>VEIL</missingElements>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT10" sourceElement="Chute du mur de Berlin" missingElementsType="IMAGE">
+              <missingElements>MUR_BERLIN</missingElements>
             </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT8" sourceElement="Trait&#xe9; de Rome" missingElementsType="IMAGE">
               <missingElements>ROME</missingElements>
             </questionableFacts>
+            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT9" sourceElement="L'Euro" missingElementsType="IMAGE">
+              <missingElements>EURO</missingElements>
+            </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT11" sourceElement="Les accords d'Evian" missingElementsType="IMAGE">
               <missingElements>EVIAN</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT15" sourceElement="Premi&#xe8;re alternance" missingElementsType="IMAGE">
-              <missingElements>ALTERNANCE</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT5" sourceElement="Appel du g&#xe9;n&#xe9;ral de Gaulle" missingElementsType="IMAGE">
-              <missingElements>DEGAULLE</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT7" sourceElement="Cr&#xe9;ation de l'ONU" missingElementsType="IMAGE">
-              <missingElements>ONU</missingElements>
             </questionableFacts>
             <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT12" sourceElement="Naissance de la Ve R&#xe9;publique" missingElementsType="IMAGE">
               <missingElements>5REPUBLIQUE</missingElements>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT6" sourceElement="R&#xe9;gime de Vichy" missingElementsType="IMAGE">
-              <missingElements>VICHY</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT3" sourceElement="Allemagne Nazie (Hitl&#xe9;rienne)" missingElementsType="IMAGE">
-              <missingElements>ALLEMAGNE_NAZIE</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT9" sourceElement="L'Euro" missingElementsType="IMAGE">
-              <missingElements>EURO</missingElements>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:DateQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T8-QAFACT13" sourceElement="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct" missingElementsType="IMAGE">
-              <missingElements>ELECTION</missingElements>
-            </questionableFacts>
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:HChronology" href="../LearningDomain.xmi#HG_O1_L1_T9"/>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT9" type="NONE">
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT10" type="NONE">
               <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="L'Euro">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#2002"/>
+              <visualizationSolutions value="Chute du mur de Berlin">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1989"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT2" type="NONE">
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Armistice">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1918"/>
               </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT0" type="NONE">
@@ -470,21 +476,6 @@
               </visualizationSolutions>
               <visualizationSolutions value="(Fin) 1er Guerre Mondiale">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#1918"/>
-              </visualizationSolutions>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT1" type="NONE">
-              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="R&#xe9;volution Russe">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1917"/>
-              </visualizationSolutions>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT3" type="NONE">
-              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="(Debut) Allemagne Nazie (Hitl&#xe9;rienne)">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1933"/>
-              </visualizationSolutions>
-              <visualizationSolutions value="(Fin) Allemagne Nazie (Hitl&#xe9;rienne)">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1945"/>
               </visualizationSolutions>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT4" type="NONE">
@@ -502,36 +493,6 @@
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#1962"/>
               </visualizationSolutions>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT2" type="NONE">
-              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Armistice">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1918"/>
-              </visualizationSolutions>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT5" type="NONE">
-              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Appel du g&#xe9;n&#xe9;ral de Gaulle">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1940"/>
-              </visualizationSolutions>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT14" type="NONE">
-              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Loi Veil (IVG)">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1975"/>
-              </visualizationSolutions>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT11" type="NONE">
-              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Les accords d'Evian">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1962"/>
-              </visualizationSolutions>
-            </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT15" type="NONE">
-              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Premi&#xe8;re alternance">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1981"/>
-              </visualizationSolutions>
-            </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT7" type="NONE">
               <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
               <visualizationSolutions value="Cr&#xe9;ation de l'ONU">
@@ -547,22 +508,61 @@
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#1944"/>
               </visualizationSolutions>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT12" type="NONE">
-              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Naissance de la Ve R&#xe9;publique">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1958"/>
-              </visualizationSolutions>
-            </questionableFacts>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT8" type="NONE">
               <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
               <visualizationSolutions value="Trait&#xe9; de Rome">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#1957"/>
               </visualizationSolutions>
             </questionableFacts>
-            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT10" type="NONE">
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT15" type="NONE">
               <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
-              <visualizationSolutions value="Chute du mur de Berlin">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#1989"/>
+              <visualizationSolutions value="Premi&#xe8;re alternance">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1981"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT9" type="NONE">
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="L'Euro">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#2002"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT1" type="NONE">
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="R&#xe9;volution Russe">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1917"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT11" type="NONE">
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Les accords d'Evian">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1962"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT3" type="NONE">
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="(Debut) Allemagne Nazie (Hitl&#xe9;rienne)">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1933"/>
+              </visualizationSolutions>
+              <visualizationSolutions value="(Fin) Allemagne Nazie (Hitl&#xe9;rienne)">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1945"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT5" type="NONE">
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Appel du g&#xe9;n&#xe9;ral de Gaulle">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1940"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT12" type="NONE">
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Naissance de la Ve R&#xe9;publique">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1958"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T9-QAFACT14" type="NONE">
+              <visualization href="../HistoryGeographyFacts.xmi#FRISE_CHRONOLOGIQUE"/>
+              <visualizationSolutions value="Loi Veil (IVG)">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#1975"/>
               </visualizationSolutions>
             </questionableFacts>
           </resultsbytask>
@@ -571,5 +571,5 @@
     </learnerProgress>
   </progression>
   <learningpath href="../LearningDomain.xmi#HGPATH"/>
-  <statistics maxGameLevelReached="9" nbLevelsGenerated="3313"/>
+  <statistics maxGameLevelReached="9" nbLevelsGenerated="3314"/>
 </generator:LearnerPlayer>

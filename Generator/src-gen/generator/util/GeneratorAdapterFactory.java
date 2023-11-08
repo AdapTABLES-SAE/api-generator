@@ -182,8 +182,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMultipleChoice(MultipleChoice object) {
-			return createMultipleChoiceAdapter();
+		public Adapter caseDynamicMultipleChoice(DynamicMultipleChoice object) {
+			return createDynamicMultipleChoiceAdapter();
 		}
 
 		@Override
@@ -712,6 +712,11 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseMultipleChoice(MultipleChoice object) {
+			return createMultipleChoiceAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1053,16 +1058,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.MultipleChoice <em>Multiple Choice</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.DynamicMultipleChoice <em>Dynamic Multiple Choice</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.MultipleChoice
+	 * @see generator.DynamicMultipleChoice
 	 * @generated
 	 */
-	public Adapter createMultipleChoiceAdapter() {
+	public Adapter createDynamicMultipleChoiceAdapter() {
 		return null;
 	}
 
@@ -2477,6 +2482,20 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJudoQuestionableArbitrationFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.MultipleChoice <em>Multiple Choice</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.MultipleChoice
+	 * @generated
+	 */
+	public Adapter createMultipleChoiceAdapter() {
 		return null;
 	}
 

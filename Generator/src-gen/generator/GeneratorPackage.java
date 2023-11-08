@@ -2001,14 +2001,14 @@ public interface GeneratorPackage extends EPackage {
 	int RESPONSE_MODALITY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.MultipleChoiceImpl <em>Multiple Choice</em>}' class.
+	 * The meta object id for the '{@link generator.impl.DynamicMultipleChoiceImpl <em>Dynamic Multiple Choice</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.MultipleChoiceImpl
-	 * @see generator.impl.GeneratorPackageImpl#getMultipleChoice()
+	 * @see generator.impl.DynamicMultipleChoiceImpl
+	 * @see generator.impl.GeneratorPackageImpl#getDynamicMultipleChoice()
 	 * @generated
 	 */
-	int MULTIPLE_CHOICE = 23;
+	int DYNAMIC_MULTIPLE_CHOICE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2017,16 +2017,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_CHOICE__TYPE = RESPONSE_MODALITY_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Nb Choices</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLE_CHOICE__NB_CHOICES = RESPONSE_MODALITY_FEATURE_COUNT + 1;
+	int DYNAMIC_MULTIPLE_CHOICE__TYPE = RESPONSE_MODALITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Nb Bad Choices</b></em>' attribute.
@@ -2035,25 +2026,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_CHOICE__NB_BAD_CHOICES = RESPONSE_MODALITY_FEATURE_COUNT + 2;
+	int DYNAMIC_MULTIPLE_CHOICE__NB_BAD_CHOICES = RESPONSE_MODALITY_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Multiple Choice</em>' class.
+	 * The number of structural features of the '<em>Dynamic Multiple Choice</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_CHOICE_FEATURE_COUNT = RESPONSE_MODALITY_FEATURE_COUNT + 3;
+	int DYNAMIC_MULTIPLE_CHOICE_FEATURE_COUNT = RESPONSE_MODALITY_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Multiple Choice</em>' class.
+	 * The number of operations of the '<em>Dynamic Multiple Choice</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_CHOICE_OPERATION_COUNT = RESPONSE_MODALITY_OPERATION_COUNT + 0;
+	int DYNAMIC_MULTIPLE_CHOICE_OPERATION_COUNT = RESPONSE_MODALITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.EnterResponseImpl <em>Enter Response</em>}' class.
@@ -9962,6 +9953,61 @@ public interface GeneratorPackage extends EPackage {
 	int JUDO_QUESTIONABLE_ARBITRATION_FACT_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.MultipleChoiceImpl <em>Multiple Choice</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.MultipleChoiceImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMultipleChoice()
+	 * @generated
+	 */
+	int MULTIPLE_CHOICE = 129;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_CHOICE__TYPE = DYNAMIC_MULTIPLE_CHOICE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Nb Bad Choices</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_CHOICE__NB_BAD_CHOICES = DYNAMIC_MULTIPLE_CHOICE__NB_BAD_CHOICES;
+
+	/**
+	 * The feature id for the '<em><b>Nb Choices</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_CHOICE__NB_CHOICES = DYNAMIC_MULTIPLE_CHOICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Multiple Choice</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_CHOICE_FEATURE_COUNT = DYNAMIC_MULTIPLE_CHOICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Multiple Choice</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_CHOICE_OPERATION_COUNT = DYNAMIC_MULTIPLE_CHOICE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9969,7 +10015,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 129;
+	int DIRECTIONS = 130;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -9979,7 +10025,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 130;
+	int DUNGEON_MODE = 131;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -9989,7 +10035,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 131;
+	int TABLE_BUILD = 132;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -9999,7 +10045,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 132;
+	int RESULT_POSITION = 133;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -10009,7 +10055,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 133;
+	int ESINGLE_TARGET = 134;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -10019,7 +10065,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 134;
+	int ETASK_TYPE = 135;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -10029,7 +10075,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 135;
+	int EMODALITY = 136;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -10039,7 +10085,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 136;
+	int ESEVERAL_TARGET = 137;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -10049,7 +10095,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 137;
+	int ELEMENT_SIZE = 138;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -10059,7 +10105,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 138;
+	int GP_CATEGORY = 139;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -10069,7 +10115,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 139;
+	int ECORRECTNESS = 140;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -10079,7 +10125,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 140;
+	int EBOUNDARY = 141;
 
 	/**
 	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
@@ -10089,7 +10135,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
 	 * @generated
 	 */
-	int EROOM_TYPE = 141;
+	int EROOM_TYPE = 142;
 
 	/**
 	 * The meta object id for the '{@link generator.EGeographyValue <em>EGeography Value</em>}' enum.
@@ -10099,7 +10145,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEGeographyValue()
 	 * @generated
 	 */
-	int EGEOGRAPHY_VALUE = 142;
+	int EGEOGRAPHY_VALUE = 143;
 
 	/**
 	 * The meta object id for the '{@link generator.EHistoryTarget <em>EHistory Target</em>}' enum.
@@ -10109,7 +10155,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEHistoryTarget()
 	 * @generated
 	 */
-	int EHISTORY_TARGET = 143;
+	int EHISTORY_TARGET = 144;
 
 	/**
 	 * The meta object id for the '{@link generator.ELegendTarget <em>ELegend Target</em>}' enum.
@@ -10119,7 +10165,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getELegendTarget()
 	 * @generated
 	 */
-	int ELEGEND_TARGET = 144;
+	int ELEGEND_TARGET = 145;
 
 	/**
 	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
@@ -10129,7 +10175,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 145;
+	int ESTATEMENT_TYPE = 146;
 
 	/**
 	 * The meta object id for the '{@link generator.ETimeTarget <em>ETime Target</em>}' enum.
@@ -10139,7 +10185,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETimeTarget()
 	 * @generated
 	 */
-	int ETIME_TARGET = 146;
+	int ETIME_TARGET = 147;
 
 	/**
 	 * The meta object id for the '{@link generator.EJudoTarget <em>EJudo Target</em>}' enum.
@@ -10149,7 +10195,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEJudoTarget()
 	 * @generated
 	 */
-	int EJUDO_TARGET = 147;
+	int EJUDO_TARGET = 148;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -11289,47 +11335,36 @@ public interface GeneratorPackage extends EPackage {
 	EClass getResponseModality();
 
 	/**
-	 * Returns the meta object for class '{@link generator.MultipleChoice <em>Multiple Choice</em>}'.
+	 * Returns the meta object for class '{@link generator.DynamicMultipleChoice <em>Dynamic Multiple Choice</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Multiple Choice</em>'.
-	 * @see generator.MultipleChoice
+	 * @return the meta object for class '<em>Dynamic Multiple Choice</em>'.
+	 * @see generator.DynamicMultipleChoice
 	 * @generated
 	 */
-	EClass getMultipleChoice();
+	EClass getDynamicMultipleChoice();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.MultipleChoice#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.DynamicMultipleChoice#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see generator.MultipleChoice#getType()
-	 * @see #getMultipleChoice()
+	 * @see generator.DynamicMultipleChoice#getType()
+	 * @see #getDynamicMultipleChoice()
 	 * @generated
 	 */
-	EAttribute getMultipleChoice_Type();
+	EAttribute getDynamicMultipleChoice_Type();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.MultipleChoice#getNbChoices <em>Nb Choices</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nb Choices</em>'.
-	 * @see generator.MultipleChoice#getNbChoices()
-	 * @see #getMultipleChoice()
-	 * @generated
-	 */
-	EAttribute getMultipleChoice_NbChoices();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.MultipleChoice#getNbBadChoices <em>Nb Bad Choices</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.DynamicMultipleChoice#getNbBadChoices <em>Nb Bad Choices</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nb Bad Choices</em>'.
-	 * @see generator.MultipleChoice#getNbBadChoices()
-	 * @see #getMultipleChoice()
+	 * @see generator.DynamicMultipleChoice#getNbBadChoices()
+	 * @see #getDynamicMultipleChoice()
 	 * @generated
 	 */
-	EAttribute getMultipleChoice_NbBadChoices();
+	EAttribute getDynamicMultipleChoice_NbBadChoices();
 
 	/**
 	 * Returns the meta object for class '{@link generator.EnterResponse <em>Enter Response</em>}'.
@@ -15250,6 +15285,27 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getJudoQuestionableArbitrationFact_DescriptionSoluce();
 
 	/**
+	 * Returns the meta object for class '{@link generator.MultipleChoice <em>Multiple Choice</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Multiple Choice</em>'.
+	 * @see generator.MultipleChoice
+	 * @generated
+	 */
+	EClass getMultipleChoice();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MultipleChoice#getNbChoices <em>Nb Choices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Choices</em>'.
+	 * @see generator.MultipleChoice#getNbChoices()
+	 * @see #getMultipleChoice()
+	 * @generated
+	 */
+	EAttribute getMultipleChoice_NbChoices();
+
+	/**
 	 * Returns the meta object for enum '{@link generator.Directions <em>Directions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16358,14 +16414,14 @@ public interface GeneratorPackage extends EPackage {
 		EClass RESPONSE_MODALITY = eINSTANCE.getResponseModality();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.MultipleChoiceImpl <em>Multiple Choice</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.DynamicMultipleChoiceImpl <em>Dynamic Multiple Choice</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.MultipleChoiceImpl
-		 * @see generator.impl.GeneratorPackageImpl#getMultipleChoice()
+		 * @see generator.impl.DynamicMultipleChoiceImpl
+		 * @see generator.impl.GeneratorPackageImpl#getDynamicMultipleChoice()
 		 * @generated
 		 */
-		EClass MULTIPLE_CHOICE = eINSTANCE.getMultipleChoice();
+		EClass DYNAMIC_MULTIPLE_CHOICE = eINSTANCE.getDynamicMultipleChoice();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -16373,15 +16429,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MULTIPLE_CHOICE__TYPE = eINSTANCE.getMultipleChoice_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Nb Choices</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MULTIPLE_CHOICE__NB_CHOICES = eINSTANCE.getMultipleChoice_NbChoices();
+		EAttribute DYNAMIC_MULTIPLE_CHOICE__TYPE = eINSTANCE.getDynamicMultipleChoice_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Nb Bad Choices</b></em>' attribute feature.
@@ -16389,7 +16437,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MULTIPLE_CHOICE__NB_BAD_CHOICES = eINSTANCE.getMultipleChoice_NbBadChoices();
+		EAttribute DYNAMIC_MULTIPLE_CHOICE__NB_BAD_CHOICES = eINSTANCE.getDynamicMultipleChoice_NbBadChoices();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.EnterResponseImpl <em>Enter Response</em>}' class.
@@ -19562,6 +19610,24 @@ public interface GeneratorPackage extends EPackage {
 		 */
 		EAttribute JUDO_QUESTIONABLE_ARBITRATION_FACT__DESCRIPTION_SOLUCE = eINSTANCE
 				.getJudoQuestionableArbitrationFact_DescriptionSoluce();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.MultipleChoiceImpl <em>Multiple Choice</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.MultipleChoiceImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMultipleChoice()
+		 * @generated
+		 */
+		EClass MULTIPLE_CHOICE = eINSTANCE.getMultipleChoice();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Choices</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MULTIPLE_CHOICE__NB_CHOICES = eINSTANCE.getMultipleChoice_NbChoices();
 
 		/**
 		 * The meta object literal for the '{@link generator.Directions <em>Directions</em>}' enum.

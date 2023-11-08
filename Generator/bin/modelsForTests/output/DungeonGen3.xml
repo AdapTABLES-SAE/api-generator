@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="PATH_FOR_GAMEPLAY_TEST-O1" levelID="PATH_FOR_GAMEPLAY_TEST-O1-L1" gameLevelID="8" curses="[&quot;Labyrinth&quot;,&quot;Night&quot;,]">
+  <rooms>
+    <room id="Room[0/0]" roomTypeName="RegularRoomW">
+      <roomaccesses>
+        <roomaccess id="a2" direction="WEST" accessRef="a3"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[-1/0]" x="-1" roomTypeName="RegularRoom2" time="30" idTask="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4" prompt="Touche les bons elements">
+      <roomaccesses>
+        <roomaccess id="a3" direction="EAST" accessRef="a2"/>
+        <roomaccess id="a4" direction="SOUTH" accessRef="a5"/>
+        <roomaccess id="a6" direction="WEST" accessRef="a7"/>
+        <roomaccess id="a8" direction="NORTH" accessRef="a9"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT197" complete="6 x 10 = 60" correctnessToReach="1" correctness="CORRECT"/>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT338" complete="5 x 10 = 46" correctnessToReach="1" correctness="INCORRECT"/>
+      </facts>
+      <elements>
+        <element id="STRUCT1" type="HStructXL" pos="POSXL1"/>
+        <element id="STRUCT2" type="VStructXL" pos="id/STRUCT1"/>
+        <element id="STRUCT3" type="HStructXL" pos="id/STRUCT2"/>
+        <element id="ELEM4" type="ObjectDetector" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT3" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT197"/>
+        <element id="ELEM5" type="StatementFact" displayValue="6 x 10 = 60" pos="id/STRUCT3" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT197" acceptedFacts="6 x 10 = 60;"/>
+        <element id="ELEM6" type="ObjectDetector" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT3" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT197"/>
+        <element id="STRUCT7" type="HStructXL" pos="id/STRUCT2"/>
+        <element id="ELEM8" type="ObjectDetector" displayValue="Faux" correctness="CORRECT" pos="id/STRUCT7" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT338"/>
+        <element id="ELEM9" type="StatementFact" displayValue="5 x 10 = 46" pos="id/STRUCT7" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT338" acceptedFacts="5 x 10 = 46;"/>
+        <element id="ELEM10" type="ObjectDetector" displayValue="Vrai" correctness="INCORRECT" pos="id/STRUCT7" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT338"/>
+      </elements>
+    </room>
+    <room id="Room[-1/-1]" x="-1" y="-1" roomTypeName="RegularRoom3" time="30" idTask="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5" prompt="Deplace les bons elements sur les zones">
+      <roomaccesses>
+        <roomaccess id="a5" direction="NORTH" accessRef="a4"/>
+        <roomaccess id="a10" direction="SOUTH" accessRef="a11"/>
+        <roomaccess id="a12" direction="EAST" accessRef="a13"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT4" complete="Resultats table de 2" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="ELEM11" type="Pot" displayValue="11" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT4"/>
+        <element id="ELEM12" type="Pot" displayValue="23" correctness="INCORRECT" pos="POS8" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT4"/>
+        <element id="ELEM13" type="Pot" displayValue="18" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT4"/>
+        <element id="ELEM14" type="Pot" displayValue="4" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT4"/>
+        <element id="ELEM15" type="ObjectDetector" pos="POS7" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT4"/>
+        <element id="ELEM16" type="ObjectDetector" pos="POS1" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT4"/>
+        <element id="ELEM17" type="Statement" displayValue="Resultats table de 2" pos="POSQ2" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT4" acceptedFacts="Resultats table de 2;"/>
+      </elements>
+    </room>
+    <room id="Room[-2/0]" x="-2" roomTypeName="RegularRoom12" time="30" idTask="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2" prompt="Place les bons elements" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a7" direction="EAST" accessRef="a6"/>
+        <roomaccess id="a14" direction="NORTH" accessRef="a15"/>
+        <roomaccess id="a16" direction="WEST" accessRef="a17"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT268" complete="8 x 8 = 64" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="STRUCT18" type="StructureStatement" pos="POSL2" acceptedFacts="8 x 8 = 64;8 x 8 = 64;"/>
+        <element id="ELEM19" type="ObjectDetector" pos="id/STRUCT18" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT268"/>
+        <element id="ELEM20" type="StatementFact" displayValue=" x 8 = " pos="id/STRUCT18" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT268"/>
+        <element id="ELEM21" type="ObjectDetector" pos="id/STRUCT18" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT268"/>
+        <element id="ELEM22" type="Pot" displayValue="68" correctness="INCORRECT" pos="POS1" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT268"/>
+        <element id="ELEM23" type="Pot" displayValue="11" correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT268"/>
+        <element id="ELEM24" type="Pot" displayValue="8" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT268"/>
+        <element id="ELEM25" type="Pot" displayValue="64" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT268"/>
+        <element id="ELEM26" type="Switch" pos="POS4" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[-2/1]" x="-2" y="1" roomTypeName="RegularRoom5" time="30" idTask="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2" prompt="Place les bons elements" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a15" direction="SOUTH" accessRef="a14"/>
+        <roomaccess id="a18" direction="NORTH" accessRef="a19"/>
+        <roomaccess id="a20" direction="WEST" accessRef="a21"/>
+        <roomaccess id="a22" direction="EAST" accessRef="a23"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT411" complete="12 x 3 = 36" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="STRUCT27" type="StructureStatement" pos="POSL1" acceptedFacts="12 x 3 = 36;3 x 12 = 36;"/>
+        <element id="ELEM28" type="ObjectDetector" pos="id/STRUCT27" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT411"/>
+        <element id="ELEM29" type="StatementFact" displayValue=" x " pos="id/STRUCT27" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT411"/>
+        <element id="ELEM30" type="ObjectDetector" pos="id/STRUCT27" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT411"/>
+        <element id="ELEM31" type="StatementFact" displayValue=" = 36" pos="id/STRUCT27" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT411"/>
+        <element id="ELEM32" type="Pot" displayValue="33" correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT411"/>
+        <element id="ELEM33" type="Pot" displayValue="5" correctness="INCORRECT" pos="POS7" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT411"/>
+        <element id="ELEM34" type="Pot" displayValue="12" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT411"/>
+        <element id="ELEM35" type="Pot" displayValue="3" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT411"/>
+        <element id="ELEM36" type="Switch" pos="POS2" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[-2/2]" x="-2" y="2" roomTypeName="RegularRoom4" time="30" idTask="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3" prompt="Oriente correctement l(es) element(s)" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a19" direction="SOUTH" accessRef="a18"/>
+        <roomaccess id="a24" direction="WEST" accessRef="a25"/>
+        <roomaccess id="a26" direction="EAST" accessRef="a27"/>
+        <roomaccess id="a28" direction="NORTH" accessRef="a29"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT55" complete="8 x 4 = 32" correctnessToReach="3"/>
+      </facts>
+      <elements>
+        <element id="ELEM37" type="Statue" displayValue="[4];40;" pos="POSM3" ability="ROTABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT55"/>
+        <element id="ELEM38" type="Statue" displayValue="15;[8];" pos="POSM2" ability="ROTABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT55"/>
+        <element id="ELEM39" type="Statue" displayValue="32" pos="POSM1" ability="ROTABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT55"/>
+        <element id="ELEM40" type="Switch" pos="POS2" ability="VERIFICATOR"/>
+        <element id="ELEM41" type="Statement" displayValue="? x ? = ?" pos="POSQ1" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT55" interactive="true" acceptedFacts="8 x 4 = 32;4 x 8 = 32;"/>
+      </elements>
+    </room>
+    <room id="Room[-1/-2]" x="-1" y="-2" roomTypeName="RoomTrap4">
+      <roomaccesses>
+        <roomaccess id="a11" direction="NORTH" accessRef="a10"/>
+        <roomaccess id="a30" direction="EAST" accessRef="a31"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM42" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM43" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM44" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM45" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM46" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM47" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM48" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-1/1]" x="-1" y="1" roomTypeName="RegularRoom4" time="30" idTask="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2" prompt="Oriente correctement l(es) element(s)" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a9" direction="SOUTH" accessRef="a8"/>
+        <roomaccess id="a23" direction="WEST" accessRef="a22"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT29" complete="2 x 8 = 16" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="ELEM49" type="Statue" displayValue="22;[8];" pos="POSM2" ability="ROTABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT29"/>
+        <element id="ELEM50" type="Statue" displayValue="5;[16];" pos="POSM3" ability="ROTABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT29"/>
+        <element id="ELEM51" type="Switch" pos="POS1" ability="VERIFICATOR"/>
+        <element id="ELEM52" type="Statement" displayValue="2 x ? = ?" pos="POSQ1" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT29" interactive="true" acceptedFacts="2 x 8 = 16;8 x 2 = 16;"/>
+      </elements>
+    </room>
+    <room id="Room[-3/2]" x="-3" y="2" roomTypeName="RoomTrap4">
+      <roomaccesses>
+        <roomaccess id="a25" direction="EAST" accessRef="a24"/>
+        <roomaccess id="a32" direction="NORTH" accessRef="a33"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM53" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM54" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM55" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM56" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM57" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM58" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM59" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[0/-2]" y="-2" roomTypeName="RegularRoom5" time="30" idTask="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a31" direction="WEST" accessRef="a30"/>
+        <roomaccess id="a34" direction="SOUTH" accessRef="a35"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT20" complete="Resultats table de 6" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="ELEM60" type="FloorInterrupt" displayValue="9" correctness="INCORRECT" pos="POS6" ability="TOUCHABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT20"/>
+        <element id="ELEM61" type="FloorInterrupt" displayValue="68" correctness="INCORRECT" pos="POS2" ability="TOUCHABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT20"/>
+        <element id="ELEM62" type="FloorInterrupt" displayValue="60" correctness="CORRECT" pos="POS8" ability="TOUCHABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT20"/>
+        <element id="ELEM63" type="FloorInterrupt" displayValue="6" correctness="CORRECT" pos="POS9" ability="TOUCHABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT20"/>
+        <element id="ELEM64" type="Switch" pos="POS3" ability="VERIFICATOR"/>
+        <element id="ELEM65" type="Statement" displayValue="Resultats table de 6" pos="POSL1" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T5-QAFACT20" acceptedFacts="Resultats table de 6;"/>
+      </elements>
+    </room>
+    <room id="Room[0/-3]" y="-3" roomTypeName="RoomTrap3">
+      <roomaccesses>
+        <roomaccess id="a35" direction="NORTH" accessRef="a34"/>
+        <roomaccess id="a36" direction="SOUTH" accessRef="a37"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM66" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM67" type="SpikeTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM68" type="SpikeTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM69" type="SpikeTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM70" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM71" type="SpikeTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM72" type="SpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[0/-4]" y="-4" roomTypeName="RegularRoom2" time="30" idTask="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4" prompt="Touche les bons elements">
+      <roomaccesses>
+        <roomaccess id="a37" direction="NORTH" accessRef="a36"/>
+        <roomaccess id="a38" direction="SOUTH" accessRef="a39"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT21" complete="2 x 6 = 12" correctnessToReach="1" correctness="CORRECT"/>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT169" complete="6 x 3 = 18" correctnessToReach="1" correctness="CORRECT"/>
+      </facts>
+      <elements>
+        <element id="STRUCT73" type="HStructXL" pos="POSXL1"/>
+        <element id="STRUCT74" type="VStructXL" pos="id/STRUCT73"/>
+        <element id="STRUCT75" type="HStructXL" pos="id/STRUCT74"/>
+        <element id="ELEM76" type="ObjectDetector" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT75" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT21"/>
+        <element id="ELEM77" type="StatementFact" displayValue="2 x 6 = 12" pos="id/STRUCT75" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT21" acceptedFacts="2 x 6 = 12;"/>
+        <element id="ELEM78" type="ObjectDetector" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT75" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT21"/>
+        <element id="STRUCT79" type="HStructXL" pos="id/STRUCT74"/>
+        <element id="ELEM80" type="ObjectDetector" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT79" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT169"/>
+        <element id="ELEM81" type="StatementFact" displayValue="6 x 3 = 18" pos="id/STRUCT79" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT169" acceptedFacts="6 x 3 = 18;"/>
+        <element id="ELEM82" type="ObjectDetector" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT79" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT169"/>
+      </elements>
+    </room>
+    <room id="Room[-3/1]" x="-3" y="1" roomTypeName="RoomTrap4">
+      <roomaccesses>
+        <roomaccess id="a21" direction="EAST" accessRef="a20"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM83" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM84" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM85" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM86" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM87" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM88" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM89" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-3/3]" x="-3" y="3" roomTypeName="RegularRoom2" time="30" idTask="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4" prompt="Touche les bons elements">
+      <roomaccesses>
+        <roomaccess id="a33" direction="SOUTH" accessRef="a32"/>
+        <roomaccess id="a40" direction="NORTH" accessRef="a41"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT229" complete="7 x 8 = 56" correctnessToReach="1" correctness="CORRECT"/>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT189" complete="6 x 8 = 48" correctnessToReach="1" correctness="CORRECT"/>
+      </facts>
+      <elements>
+        <element id="STRUCT90" type="HStructXL" pos="POSXL1"/>
+        <element id="STRUCT91" type="VStructXL" pos="id/STRUCT90"/>
+        <element id="STRUCT92" type="HStructXL" pos="id/STRUCT91"/>
+        <element id="ELEM93" type="FloorInterrupt" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT92" ability="TOUCHABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT229"/>
+        <element id="ELEM94" type="StatementFact" displayValue="7 x 8 = 56" pos="id/STRUCT92" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT229" acceptedFacts="7 x 8 = 56;"/>
+        <element id="ELEM95" type="FloorInterrupt" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT92" ability="TOUCHABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT229"/>
+        <element id="STRUCT96" type="HStructXL" pos="id/STRUCT91"/>
+        <element id="ELEM97" type="FloorInterrupt" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT96" ability="TOUCHABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT189"/>
+        <element id="ELEM98" type="StatementFact" displayValue="6 x 8 = 48" pos="id/STRUCT96" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT189" acceptedFacts="6 x 8 = 48;"/>
+        <element id="ELEM99" type="FloorInterrupt" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT96" ability="TOUCHABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4-QAFACT189"/>
+      </elements>
+    </room>
+    <room id="Room[-3/4]" x="-3" y="4" roomTypeName="RoomTrap">
+      <roomaccesses>
+        <roomaccess id="a41" direction="SOUTH" accessRef="a40"/>
+        <roomaccess id="a42" direction="EAST" accessRef="a43"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM100" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM101" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM102" type="WaitSpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM103" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM104" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[0/-1]" y="-1" roomTypeName="RoomTrap">
+      <roomaccesses>
+        <roomaccess id="a13" direction="WEST" accessRef="a12"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM105" type="SpikeTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM106" type="SpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM107" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM108" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM109" type="SpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[0/-5]" y="-5" roomTypeName="RegularRoom4" time="30" idTask="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3" prompt="Oriente correctement l(es) element(s)" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a39" direction="NORTH" accessRef="a38"/>
+        <roomaccess id="a44" direction="WEST" accessRef="a45"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT16" complete="2 x 9 = 18" correctnessToReach="3"/>
+      </facts>
+      <elements>
+        <element id="ELEM110" type="Statue" displayValue="24;[18];" pos="POSM2" ability="ROTABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT16"/>
+        <element id="ELEM111" type="Statue" displayValue="[9];6;" pos="POSM1" ability="ROTABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT16"/>
+        <element id="ELEM112" type="Statue" displayValue="2" pos="POSM3" ability="ROTABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT16"/>
+        <element id="ELEM113" type="Switch" pos="POS1" ability="VERIFICATOR"/>
+        <element id="ELEM114" type="Statement" displayValue="? x ? = ?" pos="POSQ1" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT16" interactive="true" acceptedFacts="2 x 9 = 18;9 x 2 = 18;"/>
+      </elements>
+    </room>
+    <room id="Room[-3/0]" x="-3" roomTypeName="RegularRoom12" time="30" idTask="PATH_FOR_GAMEPLAY_TEST-O1-L1-T1" prompt="Place les bons elements" gameplayWithUndo="true">
+      <roomaccesses>
+        <roomaccess id="a17" direction="EAST" accessRef="a16"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T1-QAFACT163" complete="4 x 8 = 32" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT115" type="StructureStatement" pos="POSL3" acceptedFacts="4 x 8 = 32;"/>
+        <element id="ELEM116" type="StatementFact" displayValue="4 x 8 = " pos="id/STRUCT115" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T1-QAFACT163"/>
+        <element id="ELEM117" type="ObjectDetector" pos="id/STRUCT115" ability="DETECTOR" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T1-QAFACT163"/>
+        <element id="ELEM118" type="Pot" displayValue="36" correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T1-QAFACT163"/>
+        <element id="ELEM119" type="Pot" displayValue="29" correctness="INCORRECT" pos="POS4" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T1-QAFACT163"/>
+        <element id="ELEM120" type="Pot" displayValue="32" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T1-QAFACT163"/>
+      </elements>
+    </room>
+    <room id="Room[-1/2]" x="-1" y="2" roomTypeName="RegularRoom7" time="30" idTask="PATH_FOR_GAMEPLAY_TEST-O1-L1-T1" prompt="Touche le bon element">
+      <roomaccesses>
+        <roomaccess id="a27" direction="WEST" accessRef="a26"/>
+      </roomaccesses>
+      <facts>
+        <fact id="PATH_FOR_GAMEPLAY_TEST-O1-L1-T1-QAFACT577" complete="11 x 7 = 77" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="ELEM121" type="FloorInterrupt" displayValue="74" correctness="INCORRECT" pos="POS2" ability="TOUCHABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T1-QAFACT577"/>
+        <element id="ELEM122" type="FloorInterrupt" displayValue="81" correctness="INCORRECT" pos="POS4" ability="TOUCHABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T1-QAFACT577"/>
+        <element id="ELEM123" type="FloorInterrupt" displayValue="77" correctness="CORRECT" pos="POS3" ability="TOUCHABLE" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T1-QAFACT577"/>
+        <element id="ELEM124" type="Statement" displayValue="11 x 7 = ?" pos="POSQ1" idFact="PATH_FOR_GAMEPLAY_TEST-O1-L1-T1-QAFACT577" interactive="true" acceptedFacts="11 x 7 = 77;"/>
+      </elements>
+    </room>
+    <room id="Room[-2/3]" x="-2" y="3" roomTypeName="TrapRoom2">
+      <roomaccesses>
+        <roomaccess id="a29" direction="SOUTH" accessRef="a28"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM125" type="BearTrap" pos="POS6" ability="NONAVOIDABLE"/>
+        <element id="ELEM126" type="BearTrap" pos="POS5" ability="NONAVOIDABLE"/>
+        <element id="ELEM127" type="BearTrap" pos="POS3" ability="NONAVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-2/4]" x="-2" y="4" roomTypeName="RoomTrap">
+      <roomaccesses>
+        <roomaccess id="a43" direction="WEST" accessRef="a42"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM128" type="BearTrap" pos="POS5" ability="NONAVOIDABLE"/>
+        <element id="ELEM129" type="BearTrap" pos="POS2" ability="NONAVOIDABLE"/>
+        <element id="ELEM130" type="BearTrap" pos="POS3" ability="NONAVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-1/-5]" x="-1" y="-5" roomTypeName="ExitRoom1">
+      <roomaccesses>
+        <roomaccess id="a45" direction="EAST" accessRef="a44"/>
+      </roomaccesses>
+    </room>
+  </rooms>
+</Dungeon>

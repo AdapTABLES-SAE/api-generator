@@ -13,6 +13,7 @@ import factgenerator_template.FactGeneratorTemplate;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
+import generator.DynamicMultipleChoice;
 import generator.ECorrectness;
 import generator.EJudoTarget;
 import generator.JudoQuestionableClassifyFact;
@@ -20,6 +21,7 @@ import generator.JudoTechniqueFact;
 import generator.MultipleChoice;
 import generator.SetOfFacts;
 import generator.impl.JudoQuestionableClassifyFactImpl;
+import generators.ALGAGenerator;
 import managers.ModelsManager;
 import structures.DungeonElements;
 import structures.Shuffle;
@@ -36,8 +38,16 @@ public class JudoFactGeneratorClassifyTechnique extends FactGeneratorTemplate {
 		Set<AQuestionableFact> AQuestionableFacts = new HashSet<>();
 		taskID = task.getID();
 		
-		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
-		int number = mc.getNbChoices() - mc.getNbBadChoices();
+		int number;
+		if(task.getResponseModality() instanceof MultipleChoice) {
+			MultipleChoice mc = (MultipleChoice) task.getResponseModality();
+			number = mc.getNbChoices() - mc.getNbBadChoices();
+		} else {
+			ALGAGenerator.LOGGER.severe("Task response modality should be of MultipleChoice type and not DynamicMultipleChoice type ! "
+					+ " Generation will consider that nbChoices = 2 x nbBadChoices. ");
+			DynamicMultipleChoice mc = (DynamicMultipleChoice) task.getResponseModality();
+			number = mc.getNbBadChoices()*2 - mc.getNbBadChoices();
+		}
 		
 		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
 			System.err.println(setoffact.getFacts().size());

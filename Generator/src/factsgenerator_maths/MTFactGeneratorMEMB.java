@@ -12,6 +12,7 @@ import factgenerator_template.FactGeneratorTemplate;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
+import generator.DynamicMultipleChoice;
 import generator.ECorrectness;
 import generator.MTFact;
 import generator.MTLevel;
@@ -20,6 +21,7 @@ import generator.MTQFMembership;
 import generator.MultipleChoice;
 import generator.SetOfFacts;
 import generator.impl.MTQFMembershipImpl;
+import generators.ALGAGenerator;
 import structures.DungeonElements;
 import structures.Shuffle;
 import structures.Soluce;
@@ -38,9 +40,17 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 		
 		int min = ((MTLevel) dungeonElements.getChosenLevel()).getMinInterval();
 		int max = ((MTLevel) dungeonElements.getChosenLevel()).getMaxInterval();
+		int nbByFact;
+		if(task.getResponseModality() instanceof MultipleChoice) {
+			MultipleChoice mc = (MultipleChoice) task.getResponseModality();
+			nbByFact = mc.getNbChoices() - mc.getNbBadChoices();
+		} else {
+			ALGAGenerator.LOGGER.severe("Task response modality should be of MultipleChoice type and not DynamicMultipleChoice type ! "
+					+ " Generation will consider that nbChoices = 2 x nbBadChoices. ");
+			DynamicMultipleChoice mc = (DynamicMultipleChoice) task.getResponseModality();
+			nbByFact = mc.getNbBadChoices()*2 - mc.getNbBadChoices();
+		}
 		
-		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
-		int nbByFact = mc.getNbChoices() - mc.getNbBadChoices();
 		
 		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
 			if(!setoffact.getName().equals("1")) {

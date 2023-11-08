@@ -2,156 +2,6 @@
  */
 package generator.impl;
 
-import generator.AComponent;
-import generator.AQuestionParam;
-import generator.AQuestionableFact;
-import generator.ATask;
-import generator.AValue;
-import generator.AVisualizationQuestionableFact;
-import generator.Abilities;
-import generator.Ability;
-import generator.AbstractFact;
-import generator.ClassifyTechnique;
-import generator.Classroom;
-import generator.Classrooms;
-import generator.CompletionCriteria;
-import generator.CompletionTask;
-import generator.Component;
-import generator.Condition;
-import generator.Correctness;
-import generator.CorrectnessValue;
-import generator.CurrentObjectiveLevel;
-import generator.Curse;
-import generator.CurseEligibility;
-import generator.Curses;
-import generator.Date;
-import generator.DateQuestionableFact;
-import generator.Directions;
-import generator.Display;
-import generator.Dungeon;
-import generator.DungeonMode;
-import generator.EBoundary;
-import generator.ECorrectness;
-import generator.EGeographyValue;
-import generator.EHistoryTarget;
-import generator.EJudoTarget;
-import generator.ELegendTarget;
-import generator.EModality;
-import generator.ERoomType;
-import generator.ESeveralTarget;
-import generator.ESingleTarget;
-import generator.EStatementType;
-import generator.ETaskType;
-import generator.ETimeTarget;
-import generator.ElementSize;
-import generator.ElementType;
-import generator.ElementsTypes;
-import generator.EnterResponse;
-import generator.EntrySoluceParam;
-import generator.Equipment;
-import generator.Equipments;
-import generator.ExpectedAnswer;
-import generator.FactCorrectnessParam;
-import generator.FactSolutionParam;
-import generator.GLocate;
-import generator.GPCategory;
-import generator.GameContext;
-import generator.GameDescription;
-import generator.GameElementTypes;
-import generator.Gameplay;
-import generator.GameplayTaskRelations;
-import generator.Gameplays;
-import generator.GeneratorFactory;
-import generator.GeneratorPackage;
-import generator.GeographyFact;
-import generator.GeographyLegendFact;
-import generator.HAssociation;
-import generator.HChronology;
-import generator.HGLevel;
-import generator.HLegend;
-import generator.HistoryFact;
-import generator.IdentificationTask;
-import generator.IdentifyArbitrationGesture;
-import generator.IdentifyTechnique;
-import generator.Image;
-import generator.Item;
-import generator.Items;
-import generator.JudoArbitrationGestureFact;
-import generator.JudoLevel;
-import generator.JudoQuestionableArbitrationFact;
-import generator.JudoQuestionableClassifyFact;
-import generator.JudoQuestionableTechniqueFact;
-import generator.JudoTechniqueFact;
-import generator.Knowledge;
-import generator.LabyrinthCurse;
-import generator.LargeRoomType;
-import generator.LearnerPlayer;
-import generator.LearnerProgress;
-import generator.LearningDomain;
-import generator.LearningPath;
-import generator.LegendText;
-import generator.Level;
-import generator.LevelsDifficultyProgress;
-import generator.MTCompletion1;
-import generator.MTCompletion2;
-import generator.MTFact;
-import generator.MTIdentification;
-import generator.MTLevel;
-import generator.MTMembership;
-import generator.MTQFCompletion1;
-import generator.MTQFCompletion2;
-import generator.MTQFIdentification;
-import generator.MTQFMembership;
-import generator.MTQFRebuild;
-import generator.MTRecontruction;
-import generator.MapQuestionableFact;
-import generator.MembershipIDTask;
-import generator.MultipleChoice;
-import generator.NoQuestionGameplay;
-import generator.Objective;
-import generator.OrderingTask;
-import generator.Parameter;
-import generator.PlayerProgress;
-import generator.Position;
-import generator.PositionedElement;
-import generator.PositionedStructureElement;
-import generator.PositionedVisualizationElement;
-import generator.Prerequisite;
-import generator.Progression;
-import generator.Prompt;
-import generator.PropositionParam;
-import generator.Quantity;
-import generator.QuestionGameplay;
-import generator.QuestionParam;
-import generator.QuestionableFact;
-import generator.QuestionableFactResult;
-import generator.QuestionedFact;
-import generator.Relation;
-import generator.ResponseModality;
-import generator.ResultPosition;
-import generator.Results;
-import generator.ResultsByTask;
-import generator.Room;
-import generator.RoomAccess;
-import generator.RoomType;
-import generator.RoomTypes;
-import generator.SetOfFacts;
-import generator.Size;
-import generator.SmallRoomType;
-import generator.StatementElementType;
-import generator.Statistics;
-import generator.Structure;
-import generator.TableBuild;
-import generator.Teacher;
-import generator.Teachers;
-import generator.Time;
-import generator.TimePeriod;
-import generator.Value;
-import generator.Visualization;
-import generator.VisualizationPosition;
-import generator.VisualizationQuestionParam;
-import generator.VisualizationSolution;
-import generator.WantedAnswersParam;
 import generator.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -337,7 +187,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass multipleChoiceEClass = null;
+	private EClass dynamicMultipleChoiceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1073,6 +923,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass judoQuestionableArbitrationFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multipleChoiceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2233,8 +2090,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMultipleChoice() {
-		return multipleChoiceEClass;
+	public EClass getDynamicMultipleChoice() {
+		return dynamicMultipleChoiceEClass;
 	}
 
 	/**
@@ -2242,8 +2099,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMultipleChoice_Type() {
-		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(0);
+	public EAttribute getDynamicMultipleChoice_Type() {
+		return (EAttribute) dynamicMultipleChoiceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2251,17 +2108,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMultipleChoice_NbChoices() {
-		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMultipleChoice_NbBadChoices() {
-		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(2);
+	public EAttribute getDynamicMultipleChoice_NbBadChoices() {
+		return (EAttribute) dynamicMultipleChoiceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -5572,6 +5420,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMultipleChoice() {
+		return multipleChoiceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMultipleChoice_NbChoices() {
+		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDirections() {
 		return directionsEEnum;
 	}
@@ -5896,10 +5762,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		responseModalityEClass = createEClass(RESPONSE_MODALITY);
 
-		multipleChoiceEClass = createEClass(MULTIPLE_CHOICE);
-		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__TYPE);
-		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__NB_CHOICES);
-		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__NB_BAD_CHOICES);
+		dynamicMultipleChoiceEClass = createEClass(DYNAMIC_MULTIPLE_CHOICE);
+		createEAttribute(dynamicMultipleChoiceEClass, DYNAMIC_MULTIPLE_CHOICE__TYPE);
+		createEAttribute(dynamicMultipleChoiceEClass, DYNAMIC_MULTIPLE_CHOICE__NB_BAD_CHOICES);
 
 		enterResponseEClass = createEClass(ENTER_RESPONSE);
 		createEAttribute(enterResponseEClass, ENTER_RESPONSE__TYPE);
@@ -6375,6 +6240,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				JUDO_QUESTIONABLE_ARBITRATION_FACT__REPRESENTATION_ID_SOLUCE);
 		createEAttribute(judoQuestionableArbitrationFactEClass, JUDO_QUESTIONABLE_ARBITRATION_FACT__DESCRIPTION_SOLUCE);
 
+		multipleChoiceEClass = createEClass(MULTIPLE_CHOICE);
+		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__NB_CHOICES);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -6434,7 +6302,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		largeRoomTypeEClass.getESuperTypes().add(this.getRoomType());
 		mtLevelEClass.getESuperTypes().add(this.getLevel());
 		mtCompletion1EClass.getESuperTypes().add(this.getCompletionTask());
-		multipleChoiceEClass.getESuperTypes().add(this.getResponseModality());
+		dynamicMultipleChoiceEClass.getESuperTypes().add(this.getResponseModality());
 		enterResponseEClass.getESuperTypes().add(this.getResponseModality());
 		completionTaskEClass.getESuperTypes().add(this.getATask());
 		identificationTaskEClass.getESuperTypes().add(this.getATask());
@@ -6496,6 +6364,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		judoArbitrationGestureFactEClass.getESuperTypes().add(this.getAbstractFact());
 		identifyArbitrationGestureEClass.getESuperTypes().add(this.getCompletionTask());
 		judoQuestionableArbitrationFactEClass.getESuperTypes().add(this.getQuestionableFact());
+		multipleChoiceEClass.getESuperTypes().add(this.getDynamicMultipleChoice());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -6788,16 +6657,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(responseModalityEClass, ResponseModality.class, "ResponseModality", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(multipleChoiceEClass, MultipleChoice.class, "MultipleChoice", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMultipleChoice_Type(), this.getEModality(), "type", null, 0, 1, MultipleChoice.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMultipleChoice_NbChoices(), ecorePackage.getEInt(), "nbChoices", null, 0, 1,
-				MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMultipleChoice_NbBadChoices(), ecorePackage.getEInt(), "nbBadChoices", null, 0, 1,
-				MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEClass(dynamicMultipleChoiceEClass, DynamicMultipleChoice.class, "DynamicMultipleChoice", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDynamicMultipleChoice_Type(), this.getEModality(), "type", null, 0, 1,
+				DynamicMultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDynamicMultipleChoice_NbBadChoices(), ecorePackage.getEInt(), "nbBadChoices", "0", 0, 1,
+				DynamicMultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(enterResponseEClass, EnterResponse.class, "EnterResponse", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -7813,6 +7680,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getJudoQuestionableArbitrationFact_DescriptionSoluce(), ecorePackage.getEString(),
 				"descriptionSoluce", null, 0, 1, JudoQuestionableArbitrationFact.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(multipleChoiceEClass, MultipleChoice.class, "MultipleChoice", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMultipleChoice_NbChoices(), ecorePackage.getEInt(), "nbChoices", null, 0, 1,
+				MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

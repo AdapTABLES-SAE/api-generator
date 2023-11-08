@@ -17,6 +17,7 @@ import generator.CorrectnessValue;
 import generator.Curse;
 import generator.CurseEligibility;
 import generator.Dungeon;
+import generator.DynamicMultipleChoice;
 import generator.EBoundary;
 import generator.ECorrectness;
 import generator.EModality;
@@ -183,47 +184,51 @@ public class GameElementsGenerator {
 		return null;
 	}
 	
+	private boolean isNumberFactCompatible(Relation relation, ATask task) {
+		boolean factCompatible;
+		if(relation.getCondition().getNbFacts().equals(EBoundary.ONE)) {
+			factCompatible = task.getNbFacts() == 1;
+		} else if (relation.getCondition().getNbFacts().equals(EBoundary.SUP_ONE)) {
+			factCompatible = task.getNbFacts() > 1;
+		} else {
+			factCompatible = task.getNbFacts() >= 1;
+		}
+		return factCompatible;
+	}
+	
+	private boolean isExpectedNumberAnswersCompatible(Relation relation, ATask task) {
+		boolean expectedAnswerCompatible;
+		if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.ONE)) {
+			expectedAnswerCompatible = task.getNbExpectedAnswers() == 1;
+		} else if (relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_ONE)) {
+			expectedAnswerCompatible = task.getNbExpectedAnswers() > 1;
+		} else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.EQ_NB_FACTS)) {
+			expectedAnswerCompatible = task.getNbExpectedAnswers() == task.getNbFacts();
+		} else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_NB_FACTS)) {
+			expectedAnswerCompatible = task.getNbExpectedAnswers() > task.getNbFacts();
+		} else {
+			expectedAnswerCompatible = task.getNbExpectedAnswers() >= 1;
+		}
+		return expectedAnswerCompatible;
+	}
+	
+	private boolean isResponseModalityCompatible(Relation relation, ATask task) {
+		boolean modalityCompatible;
+		if(relation.getCondition().getAnswerModality().equals(EModality.CHOICE)) {
+			modalityCompatible = (task.getResponseModality() != null)? (task.getResponseModality() instanceof MultipleChoice || task.getResponseModality() instanceof DynamicMultipleChoice): true;
+		} else {
+			modalityCompatible = (task.getResponseModality() != null)? task.getResponseModality() instanceof EnterResponse: false;
+		}
+		return modalityCompatible;
+	}
 	
 	private Map<GPCategory, Set<EStatementType>> getValidCategoriesFromRelations(ATask task){
 		Map<GPCategory, Set<EStatementType>> allowedCategoriesWithStatements = new HashMap<>(); 
-		
 		for (Relation relation : new ArrayList<>(modelAccess.getRelationsModel().getRelations())) {
 			if(relation.getTask().equals(task.getType())) {
-				boolean factCompatible;
-				if(relation.getCondition().getNbFacts().equals(EBoundary.ONE)) {
-					factCompatible = task.getNbFacts() == 1;
-				} else if (relation.getCondition().getNbFacts().equals(EBoundary.SUP_ONE)) {
-					factCompatible = task.getNbFacts() > 1;
-				} else {
-					factCompatible = task.getNbFacts() >= 1;
-				}
-
-				boolean expectedAnswerCompatible;
-				if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.ONE)) {
-					expectedAnswerCompatible = task.getNbExpectedAnswers() == 1;
-				} else if (relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_ONE)) {
-					expectedAnswerCompatible = task.getNbExpectedAnswers() > 1;
-				} else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.EQ_NB_FACTS)) {
-					expectedAnswerCompatible = task.getNbExpectedAnswers() == task.getNbFacts();
-				} else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_NB_FACTS)) {
-					expectedAnswerCompatible = task.getNbExpectedAnswers() > task.getNbFacts();
-				} else {
-					expectedAnswerCompatible = task.getNbExpectedAnswers() >= 1;
-				}
-
-				boolean modalityCompatible;
-				if(relation.getCondition().getAnswerModality().equals(EModality.CHOICE)) {
-					modalityCompatible = (task.getResponseModality() != null)? task.getResponseModality() instanceof MultipleChoice: true;
-				} else {
-					modalityCompatible = (task.getResponseModality() != null)? task.getResponseModality() instanceof EnterResponse: false;
-				}
 				//System.out.println(task.getNbExpectedAnswers()+" "+task.getNbFacts());	
-				
-				
-
 				//System.out.println("fact comp "+factCompatible+" expectedanswers "+expectedAnswerCompatible+" modality "+modalityCompatible);
-				if(factCompatible && expectedAnswerCompatible && modalityCompatible) {
-					//allowedCategories.addAll(relation.getGameplays());
+				if(isNumberFactCompatible(relation, task) && isExpectedNumberAnswersCompatible(relation, task) && isResponseModalityCompatible(relation, task)) {
 					for(GPCategory category: relation.getGameplays()) {
 						Set<EStatementType> types = new HashSet<>();
 						if(task.isGraphicTask()) {
@@ -241,7 +246,6 @@ public class GameElementsGenerator {
 				}
 			}
 		}
-		//System.out.println("Valid categories "+allowedCategories);
 		return allowedCategoriesWithStatements; 
 	}
 	

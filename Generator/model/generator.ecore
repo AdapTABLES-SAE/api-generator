@@ -216,10 +216,10 @@
         derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResponseModality" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MultipleChoice" eSuperTypes="#//ResponseModality">
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicMultipleChoice" eSuperTypes="#//ResponseModality">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbBadChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbBadChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EnterResponse" eSuperTypes="#//ResponseModality">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"
@@ -899,5 +899,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="representationIDSoluce"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptionSoluce" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MultipleChoice" eSuperTypes="#//DynamicMultipleChoice">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -12,13 +12,13 @@ import factgenerator_template.FactGeneratorTemplate;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
+import generator.DynamicMultipleChoice;
 import generator.ECorrectness;
 import generator.ESeveralTarget;
 import generator.MTCompletion2;
 import generator.MTFact;
 import generator.MTLevel;
 import generator.MTQFCompletion2;
-import generator.MultipleChoice;
 import generator.ResultPosition;
 import generator.SetOfFacts;
 import generator.TableBuild;
@@ -140,7 +140,7 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 	protected Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) {
 		Map<ECorrectness, List<Soluce>> propositions = new HashMap<>();
 		MTQFCompletion2 qfact = (MTQFCompletion2) qFact;
-		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
+		DynamicMultipleChoice mc = (DynamicMultipleChoice) task.getResponseModality();
 		
 		List<Integer> propositions_temp = new ArrayList<>();
 		List<Soluce> solutions = getListOfGoodSolutions(qFact); 

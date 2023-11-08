@@ -58,13 +58,13 @@ public enum ERoomType implements Enumerator {
 	 */
 	TRAP(3, "TRAP", "TRAP"),
 	/**
-	* The '<em><b>PORTAL</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>PORTAL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #PORTAL_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #PORTAL_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	PORTAL(3, "PORTAL", "PORTAL");
 
 	/**

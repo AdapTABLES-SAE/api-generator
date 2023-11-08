@@ -15,10 +15,10 @@ import generator.ATask;
 import generator.AVisualizationQuestionableFact;
 import generator.AbstractFact;
 import generator.Date;
+import generator.DynamicMultipleChoice;
 import generator.ECorrectness;
 import generator.HistoryFact;
 import generator.MapQuestionableFact;
-import generator.MultipleChoice;
 import generator.QuestionedFact;
 import generator.SetOfFacts;
 import generator.TimePeriod;
@@ -122,12 +122,10 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 		List<Soluce> goodSoluce = getListOfGoodSolutions(qFact);
 		propositions.put(ECorrectness.CORRECT, goodSoluce);
 		
-		MultipleChoice mc = task.getResponseModality() != null? (MultipleChoice) task.getResponseModality():null;
+		DynamicMultipleChoice mc = (DynamicMultipleChoice) task.getResponseModality();
  		List<Soluce> badSoluce = new ArrayList<>();
 
-		if(mc != null) {
-			badSoluce = getBadSoluces(qFact, goodSoluce, mc.getNbBadChoices());
-		} 
+		badSoluce = getBadSoluces(qFact, goodSoluce, mc.getNbBadChoices());
 		
 		propositions.put(ECorrectness.INCORRECT, badSoluce);
 		

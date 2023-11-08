@@ -237,11 +237,11 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.MULTIPLE_CHOICE: {
-			MultipleChoice multipleChoice = (MultipleChoice) theEObject;
-			T result = caseMultipleChoice(multipleChoice);
+		case GeneratorPackage.DYNAMIC_MULTIPLE_CHOICE: {
+			DynamicMultipleChoice dynamicMultipleChoice = (DynamicMultipleChoice) theEObject;
+			T result = caseDynamicMultipleChoice(dynamicMultipleChoice);
 			if (result == null)
-				result = caseResponseModality(multipleChoice);
+				result = caseResponseModality(dynamicMultipleChoice);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1149,6 +1149,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case GeneratorPackage.MULTIPLE_CHOICE: {
+			MultipleChoice multipleChoice = (MultipleChoice) theEObject;
+			T result = caseMultipleChoice(multipleChoice);
+			if (result == null)
+				result = caseDynamicMultipleChoice(multipleChoice);
+			if (result == null)
+				result = caseResponseModality(multipleChoice);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -1500,17 +1511,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Multiple Choice</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Dynamic Multiple Choice</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Multiple Choice</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Dynamic Multiple Choice</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMultipleChoice(MultipleChoice object) {
+	public T caseDynamicMultipleChoice(DynamicMultipleChoice object) {
 		return null;
 	}
 
@@ -3086,6 +3097,21 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseJudoQuestionableArbitrationFact(JudoQuestionableArbitrationFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Multiple Choice</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Multiple Choice</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMultipleChoice(MultipleChoice object) {
 		return null;
 	}
 

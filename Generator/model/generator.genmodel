@@ -257,10 +257,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CurrentObjectiveLevel/successPercent"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//ResponseModality"/>
-    <genClasses ecoreClass="generator.ecore#//MultipleChoice">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MultipleChoice/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MultipleChoice/nbChoices"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MultipleChoice/nbBadChoices"/>
+    <genClasses ecoreClass="generator.ecore#//DynamicMultipleChoice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//DynamicMultipleChoice/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//DynamicMultipleChoice/nbBadChoices"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//EnterResponse">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//EnterResponse/type"/>
@@ -724,6 +723,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableArbitrationFact/nameSoluce"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableArbitrationFact/representationIDSoluce"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableArbitrationFact/descriptionSoluce"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//MultipleChoice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MultipleChoice/nbChoices"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

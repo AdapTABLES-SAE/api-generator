@@ -13,12 +13,12 @@ import factgenerator_template.FactGeneratorTemplate;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
+import generator.DynamicMultipleChoice;
 import generator.ECorrectness;
 import generator.EJudoTarget;
 import generator.IdentifyTechnique;
 import generator.JudoQuestionableTechniqueFact;
 import generator.JudoTechniqueFact;
-import generator.MultipleChoice;
 import generator.SetOfFacts;
 import generator.impl.JudoQuestionableTechniqueFactImpl;
 import managers.ModelsManager;
@@ -152,7 +152,7 @@ public class JudoFactGeneratorIdentifyTechnique extends FactGeneratorTemplate {
 		
 		List<Soluce> badPropositions = new ArrayList<>();
 		if(task.getResponseModality() != null) {
-			MultipleChoice mc = (MultipleChoice) task.getResponseModality();
+			DynamicMultipleChoice mc = (DynamicMultipleChoice) task.getResponseModality();
 			badPropositions = getListOfPossibleBadPropositions(goodPropositions, ((JudoQuestionableTechniqueFact) qFact).getMissingElementType());
 			while(badPropositions.size() > mc.getNbBadChoices()) {
 				int i = new Random().nextInt(badPropositions.size());

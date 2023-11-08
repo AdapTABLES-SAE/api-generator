@@ -116,10 +116,6 @@ public class DirectionManager {
 		return complexDirections;
 	}
 
-	private EnumMap<Directions, Set<Directions>> getOppositeDirections() {
-		return oppositeDirections;
-	}	
-	
 	public Set<Directions> getOppositeDirectionsOf(Directions origin) {
 		return new HashSet<>(oppositeDirections.get(origin));
 	}

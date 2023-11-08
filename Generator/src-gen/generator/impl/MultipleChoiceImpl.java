@@ -5,8 +5,6 @@ package generator.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import generator.EModality;
 import generator.GeneratorPackage;
 import generator.MultipleChoice;
 
@@ -18,34 +16,12 @@ import generator.MultipleChoice;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.MultipleChoiceImpl#getType <em>Type</em>}</li>
  *   <li>{@link generator.impl.MultipleChoiceImpl#getNbChoices <em>Nb Choices</em>}</li>
- *   <li>{@link generator.impl.MultipleChoiceImpl#getNbBadChoices <em>Nb Bad Choices</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MultipleChoiceImpl extends ResponseModalityImpl implements MultipleChoice {
-	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EModality TYPE_EDEFAULT = EModality.CHOICE;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected EModality type = TYPE_EDEFAULT;
-
+public class MultipleChoiceImpl extends DynamicMultipleChoiceImpl implements MultipleChoice {
 	/**
 	 * The default value of the '{@link #getNbChoices() <em>Nb Choices</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -67,26 +43,6 @@ public class MultipleChoiceImpl extends ResponseModalityImpl implements Multiple
 	protected int nbChoices = NB_CHOICES_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNbBadChoices() <em>Nb Bad Choices</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNbBadChoices()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int NB_BAD_CHOICES_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getNbBadChoices() <em>Nb Bad Choices</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNbBadChoices()
-	 * @generated
-	 * @ordered
-	 */
-	protected int nbBadChoices = NB_BAD_CHOICES_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -103,50 +59,6 @@ public class MultipleChoiceImpl extends ResponseModalityImpl implements Multiple
 	@Override
 	protected EClass eStaticClass() {
 		return GeneratorPackage.Literals.MULTIPLE_CHOICE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EModality getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(EModality newType) {
-		EModality oldType = type;
-		type = newType == null ? TYPE_EDEFAULT : newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MULTIPLE_CHOICE__TYPE, oldType,
-					type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getNbBadChoices() {
-		return nbBadChoices;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNbBadChoices(int newNbBadChoices) {
-		int oldNbBadChoices = nbBadChoices;
-		nbBadChoices = newNbBadChoices;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MULTIPLE_CHOICE__NB_BAD_CHOICES,
-					oldNbBadChoices, nbBadChoices));
 	}
 
 	/**
@@ -179,12 +91,8 @@ public class MultipleChoiceImpl extends ResponseModalityImpl implements Multiple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.MULTIPLE_CHOICE__TYPE:
-			return getType();
 		case GeneratorPackage.MULTIPLE_CHOICE__NB_CHOICES:
 			return getNbChoices();
-		case GeneratorPackage.MULTIPLE_CHOICE__NB_BAD_CHOICES:
-			return getNbBadChoices();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -197,14 +105,8 @@ public class MultipleChoiceImpl extends ResponseModalityImpl implements Multiple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.MULTIPLE_CHOICE__TYPE:
-			setType((EModality) newValue);
-			return;
 		case GeneratorPackage.MULTIPLE_CHOICE__NB_CHOICES:
 			setNbChoices((Integer) newValue);
-			return;
-		case GeneratorPackage.MULTIPLE_CHOICE__NB_BAD_CHOICES:
-			setNbBadChoices((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -218,14 +120,8 @@ public class MultipleChoiceImpl extends ResponseModalityImpl implements Multiple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.MULTIPLE_CHOICE__TYPE:
-			setType(TYPE_EDEFAULT);
-			return;
 		case GeneratorPackage.MULTIPLE_CHOICE__NB_CHOICES:
 			setNbChoices(NB_CHOICES_EDEFAULT);
-			return;
-		case GeneratorPackage.MULTIPLE_CHOICE__NB_BAD_CHOICES:
-			setNbBadChoices(NB_BAD_CHOICES_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -239,12 +135,8 @@ public class MultipleChoiceImpl extends ResponseModalityImpl implements Multiple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.MULTIPLE_CHOICE__TYPE:
-			return type != TYPE_EDEFAULT;
 		case GeneratorPackage.MULTIPLE_CHOICE__NB_CHOICES:
 			return nbChoices != NB_CHOICES_EDEFAULT;
-		case GeneratorPackage.MULTIPLE_CHOICE__NB_BAD_CHOICES:
-			return nbBadChoices != NB_BAD_CHOICES_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -260,12 +152,8 @@ public class MultipleChoiceImpl extends ResponseModalityImpl implements Multiple
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (type: ");
-		result.append(type);
-		result.append(", nbChoices: ");
+		result.append(" (nbChoices: ");
 		result.append(nbChoices);
-		result.append(", nbBadChoices: ");
-		result.append(nbBadChoices);
 		result.append(')');
 		return result.toString();
 	}

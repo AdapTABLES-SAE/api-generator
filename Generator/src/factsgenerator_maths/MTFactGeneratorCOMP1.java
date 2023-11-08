@@ -12,13 +12,13 @@ import factgenerator_template.FactGeneratorTemplate;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
+import generator.DynamicMultipleChoice;
 import generator.ECorrectness;
 import generator.ESingleTarget;
 import generator.MTCompletion1;
 import generator.MTFact;
 import generator.MTLevel;
 import generator.MTQFCompletion1;
-import generator.MultipleChoice;
 import generator.ResultPosition;
 import generator.SetOfFacts;
 import generator.TableBuild;
@@ -128,7 +128,7 @@ public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 		MTQFCompletion1 qfact = (MTQFCompletion1) qFact;
 		
 		List<Integer> propositions_temp = new ArrayList<>();
-		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
+		DynamicMultipleChoice mc = (DynamicMultipleChoice) task.getResponseModality();
 		
 		int min = qfact.getSoluce()-5 >= 0? qfact.getSoluce()-5: 0;
 		int max = qfact.getSoluce()+5;

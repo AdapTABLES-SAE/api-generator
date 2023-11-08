@@ -12,11 +12,11 @@ import factgenerator_template.FactGeneratorTemplate;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
+import generator.DynamicMultipleChoice;
 import generator.ECorrectness;
 import generator.MTFact;
 import generator.MTLevel;
 import generator.MTQFRebuild;
-import generator.MultipleChoice;
 import generator.ResultPosition;
 import generator.SetOfFacts;
 import generator.TableBuild;
@@ -149,12 +149,12 @@ public class MTFactGeneratorREB extends FactGeneratorTemplate {
 		MTQFRebuild qfact = (MTQFRebuild) qFact;
 		List<Integer> propositions_temp = new ArrayList<>();
 		List<Integer> allPossiblePropositions = new ArrayList<>();
-		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
+		DynamicMultipleChoice mc = (DynamicMultipleChoice) task.getResponseModality();
 	
 		int number; int index;
 		int boundary = 8;
 		allPossiblePropositions = generateListOfPossibleBadChoices(qfact, ++boundary);
-		while(propositions_temp.size() < mc.getNbBadChoices()) {// TODO : correction bug à l'infini sometimes
+		while(propositions_temp.size() < mc.getNbBadChoices()) {
 			index = new Random().nextInt(allPossiblePropositions.size());
 			number = allPossiblePropositions.get(index);
 			if(!createsOtherSolution(qfact, propositions_temp, number)) {
