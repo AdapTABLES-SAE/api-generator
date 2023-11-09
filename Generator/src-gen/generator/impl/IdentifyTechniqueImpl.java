@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link generator.impl.IdentifyTechniqueImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
  *   <li>{@link generator.impl.IdentifyTechniqueImpl#getMissing <em>Missing</em>}</li>
  *   <li>{@link generator.impl.IdentifyTechniqueImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link generator.impl.IdentifyTechniqueImpl#isNoStatementTask <em>No Statement Task</em>}</li>
  * </ul>
  *
  * @generated
@@ -117,6 +118,26 @@ public class IdentifyTechniqueImpl extends CompletionTaskImpl implements Identif
 	 * @ordered
 	 */
 	protected EJudoTarget source = SOURCE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNoStatementTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean NO_STATEMENT_TASK_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNoStatementTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean noStatementTask = NO_STATEMENT_TASK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -227,6 +248,28 @@ public class IdentifyTechniqueImpl extends CompletionTaskImpl implements Identif
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isNoStatementTask() {
+		return noStatementTask;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNoStatementTask(boolean newNoStatementTask) {
+		boolean oldNoStatementTask = noStatementTask;
+		noStatementTask = newNoStatementTask;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.IDENTIFY_TECHNIQUE__NO_STATEMENT_TASK, oldNoStatementTask, noStatementTask));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -238,6 +281,8 @@ public class IdentifyTechniqueImpl extends CompletionTaskImpl implements Identif
 			return getMissing();
 		case GeneratorPackage.IDENTIFY_TECHNIQUE__SOURCE:
 			return getSource();
+		case GeneratorPackage.IDENTIFY_TECHNIQUE__NO_STATEMENT_TASK:
+			return isNoStatementTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -258,6 +303,9 @@ public class IdentifyTechniqueImpl extends CompletionTaskImpl implements Identif
 			return;
 		case GeneratorPackage.IDENTIFY_TECHNIQUE__SOURCE:
 			setSource((EJudoTarget) newValue);
+			return;
+		case GeneratorPackage.IDENTIFY_TECHNIQUE__NO_STATEMENT_TASK:
+			setNoStatementTask((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -280,6 +328,9 @@ public class IdentifyTechniqueImpl extends CompletionTaskImpl implements Identif
 		case GeneratorPackage.IDENTIFY_TECHNIQUE__SOURCE:
 			setSource(SOURCE_EDEFAULT);
 			return;
+		case GeneratorPackage.IDENTIFY_TECHNIQUE__NO_STATEMENT_TASK:
+			setNoStatementTask(NO_STATEMENT_TASK_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -300,6 +351,8 @@ public class IdentifyTechniqueImpl extends CompletionTaskImpl implements Identif
 			return missing != MISSING_EDEFAULT;
 		case GeneratorPackage.IDENTIFY_TECHNIQUE__SOURCE:
 			return source != SOURCE_EDEFAULT;
+		case GeneratorPackage.IDENTIFY_TECHNIQUE__NO_STATEMENT_TASK:
+			return noStatementTask != NO_STATEMENT_TASK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -326,6 +379,8 @@ public class IdentifyTechniqueImpl extends CompletionTaskImpl implements Identif
 		result.append(missing);
 		result.append(", source: ");
 		result.append(source);
+		result.append(", noStatementTask: ");
+		result.append(noStatementTask);
 		result.append(')');
 		return result.toString();
 	}

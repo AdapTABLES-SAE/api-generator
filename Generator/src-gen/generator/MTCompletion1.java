@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link generator.MTCompletion1#getTargets <em>Targets</em>}</li>
  *   <li>{@link generator.MTCompletion1#getNbMissingElements <em>Nb Missing Elements</em>}</li>
  *   <li>{@link generator.MTCompletion1#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.MTCompletion1#isNoStatementTask <em>No Statement Task</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getMTCompletion1()
@@ -81,5 +82,28 @@ public interface MTCompletion1 extends CompletionTask {
 	 * @generated
 	 */
 	void setCheckOnLearnerAction(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>No Statement Task</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>No Statement Task</em>' attribute.
+	 * @see #setNoStatementTask(boolean)
+	 * @see generator.GeneratorPackage#getMTCompletion1_NoStatementTask()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isNoStatementTask();
+
+	/**
+	 * Sets the value of the '{@link generator.MTCompletion1#isNoStatementTask <em>No Statement Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>No Statement Task</em>' attribute.
+	 * @see #isNoStatementTask()
+	 * @generated
+	 */
+	void setNoStatementTask(boolean value);
 
 } // MTCompletion1

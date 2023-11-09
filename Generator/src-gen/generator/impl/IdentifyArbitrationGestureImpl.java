@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link generator.impl.IdentifyArbitrationGestureImpl#getNbMissingElements <em>Nb Missing Elements</em>}</li>
  *   <li>{@link generator.impl.IdentifyArbitrationGestureImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
  *   <li>{@link generator.impl.IdentifyArbitrationGestureImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link generator.impl.IdentifyArbitrationGestureImpl#isNoStatementTask <em>No Statement Task</em>}</li>
  * </ul>
  *
  * @generated
@@ -96,6 +97,26 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 	 * @ordered
 	 */
 	protected EJudoTarget source = SOURCE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNoStatementTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean NO_STATEMENT_TASK_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNoStatementTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean noStatementTask = NO_STATEMENT_TASK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,6 +205,29 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isNoStatementTask() {
+		return noStatementTask;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNoStatementTask(boolean newNoStatementTask) {
+		boolean oldNoStatementTask = noStatementTask;
+		noStatementTask = newNoStatementTask;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__NO_STATEMENT_TASK, oldNoStatementTask,
+					noStatementTask));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -193,6 +237,8 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 			return isCheckOnLearnerAction();
 		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__SOURCE:
 			return getSource();
+		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__NO_STATEMENT_TASK:
+			return isNoStatementTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -210,6 +256,9 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 			return;
 		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__SOURCE:
 			setSource((EJudoTarget) newValue);
+			return;
+		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__NO_STATEMENT_TASK:
+			setNoStatementTask((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -229,6 +278,9 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__SOURCE:
 			setSource(SOURCE_EDEFAULT);
 			return;
+		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__NO_STATEMENT_TASK:
+			setNoStatementTask(NO_STATEMENT_TASK_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -247,6 +299,8 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
 		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__SOURCE:
 			return source != SOURCE_EDEFAULT;
+		case GeneratorPackage.IDENTIFY_ARBITRATION_GESTURE__NO_STATEMENT_TASK:
+			return noStatementTask != NO_STATEMENT_TASK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -271,6 +325,8 @@ public class IdentifyArbitrationGestureImpl extends CompletionTaskImpl implement
 		result.append(checkOnLearnerAction);
 		result.append(", source: ");
 		result.append(source);
+		result.append(", noStatementTask: ");
+		result.append(noStatementTask);
 		result.append(')');
 		return result.toString();
 	}

@@ -216,10 +216,10 @@
         derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResponseModality" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MultipleChoice" eSuperTypes="#//ResponseModality">
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicMultipleChoice" eSuperTypes="#//ResponseModality">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbBadChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbBadChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EnterResponse" eSuperTypes="#//ResponseModality">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"
@@ -746,7 +746,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="visualization" lowerBound="1"
         eType="#//Visualization"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HAssociation" eSuperTypes="#//CompletionTask">
+  <eClassifiers xsi:type="ecore:EClass" name="HistoricalEventAssociation" eSuperTypes="#//CompletionTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="#//EHistoryTarget"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="missing" eType="#//EHistoryTarget"
         defaultValueLiteral="TIME"/>
@@ -760,7 +760,7 @@
     <eLiterals name="TIME" value="1"/>
     <eLiterals name="IMAGE" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HLegend" eSuperTypes="#//CompletionTask">
+  <eClassifiers xsi:type="ecore:EClass" name="LegendAMap" eSuperTypes="#//CompletionTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbMissingElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" transient="true" defaultValueLiteral="1" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="missing" eType="#//ELegendTarget"
@@ -770,7 +770,7 @@
     <eLiterals name="SYMBOL"/>
     <eLiterals name="TEXT" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GLocate" eSuperTypes="#//MembershipIDTask">
+  <eClassifiers xsi:type="ecore:EClass" name="LocateOnAMap" eSuperTypes="#//MembershipIDTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbExpectedAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="learnersChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="graphicTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
@@ -833,7 +833,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceElementType" eType="#//EHistoryTarget"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="missingElementsType" eType="#//EHistoryTarget"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HChronology" eSuperTypes="#//OrderingTask">
+  <eClassifiers xsi:type="ecore:EClass" name="HistoricalChronology" eSuperTypes="#//OrderingTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixDatePeriod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="graphicTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
@@ -899,5 +899,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="representationIDSoluce"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptionSoluce" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MultipleChoice" eSuperTypes="#//DynamicMultipleChoice">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>

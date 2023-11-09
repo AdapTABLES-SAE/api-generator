@@ -78,7 +78,7 @@ public class GameElementsManager {
 				return facts.size() * facts.get(0).getPropositions().size();
 			}
 		}
-		else if(component.isForStatement()) { return facts.size(); }
+		else if(component.isForStatement()) { if(task.isNoStatementTask()) { return 0; } else {return facts.size(); } }
 		else if(component.getQuantity() != null) {
 			if(component.getQuantity().isFactNbAnswers()) {
 				return facts.size() * task.getNbExpectedAnswers();
@@ -290,8 +290,10 @@ public class GameElementsManager {
 		DirectionManager manager = new DirectionManager(this.gameDescriptionModel);
 		List<RoomType> roomtypes = gameplay instanceof QuestionGameplay? getQuestionRoomTypes(): getTrapRoomTypes();
 		for(RoomType roomType: roomtypes) {
-			if(this.roomTypeHasEveryAccess(manager, roomType) && this.roomTypeHasCompatiblePositions(roomType, elementsToQuantity)) {
-				//System.out.println("\t "+roomType.getName());
+			/*System.out.println("\t "+roomType.getName());
+			System.out.println("\t every access : "+roomTypeHasEveryAccess(manager, roomType));
+			System.out.println("\t positions : "+roomTypeHasCompatiblePositions(roomType, elementsToQuantity));*/
+			if(roomTypeHasEveryAccess(manager, roomType) && roomTypeHasCompatiblePositions(roomType, elementsToQuantity)) {
 				return true;
 			}
 		}

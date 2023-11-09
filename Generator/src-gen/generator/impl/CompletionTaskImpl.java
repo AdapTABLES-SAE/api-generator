@@ -65,7 +65,7 @@ public abstract class CompletionTaskImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NB_CONSECUTIVE_SUCCESS_EDEFAULT = 0;
+	protected static final int NB_CONSECUTIVE_SUCCESS_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getNbConsecutiveSuccess() <em>Nb Consecutive Success</em>}' attribute.
@@ -417,6 +417,15 @@ public abstract class CompletionTaskImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isGraphicTask() {
+		return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isCheckOnLearnerAction() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -428,8 +437,10 @@ public abstract class CompletionTaskImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isGraphicTask() {
-		return false;
+	public boolean isNoStatementTask() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -570,10 +581,12 @@ public abstract class CompletionTaskImpl extends MinimalEObjectImpl.Container im
 			return getNbMissingElements();
 		case GeneratorPackage.COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS:
 			return getNbExpectedAnswers();
-		case GeneratorPackage.COMPLETION_TASK___IS_CHECK_ON_LEARNER_ACTION:
-			return isCheckOnLearnerAction();
 		case GeneratorPackage.COMPLETION_TASK___IS_GRAPHIC_TASK:
 			return isGraphicTask();
+		case GeneratorPackage.COMPLETION_TASK___IS_CHECK_ON_LEARNER_ACTION:
+			return isCheckOnLearnerAction();
+		case GeneratorPackage.COMPLETION_TASK___IS_NO_STATEMENT_TASK:
+			return isNoStatementTask();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

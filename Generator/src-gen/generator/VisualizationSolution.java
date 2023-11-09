@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link generator.VisualizationSolution#getValue <em>Value</em>}</li>
  *   <li>{@link generator.VisualizationSolution#getVisualizationPosition <em>Visualization Position</em>}</li>
+ *   <li>{@link generator.VisualizationSolution#isImage <em>Image</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getVisualizationSolution()
@@ -65,5 +66,27 @@ public interface VisualizationSolution extends EObject {
 	 * @generated
 	 */
 	void setVisualizationPosition(VisualizationPosition value);
+
+	/**
+	 * Returns the value of the '<em><b>Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Image</em>' attribute.
+	 * @see #setImage(boolean)
+	 * @see generator.GeneratorPackage#getVisualizationSolution_Image()
+	 * @model
+	 * @generated
+	 */
+	boolean isImage();
+
+	/**
+	 * Sets the value of the '{@link generator.VisualizationSolution#isImage <em>Image</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Image</em>' attribute.
+	 * @see #isImage()
+	 * @generated
+	 */
+	void setImage(boolean value);
 
 } // VisualizationSolution

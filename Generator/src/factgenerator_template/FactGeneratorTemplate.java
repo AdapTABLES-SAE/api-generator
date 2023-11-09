@@ -20,7 +20,6 @@ import generator.EnterResponse;
 import generator.EntrySoluceParam;
 import generator.FactCorrectnessParam;
 import generator.FactSolutionParam;
-import generator.MapQuestionableFact;
 import generator.Position;
 import generator.PropositionParam;
 import generator.QuestionParam;
@@ -29,7 +28,9 @@ import generator.QuestionedFact;
 import generator.ResultsByTask;
 import generator.SetOfFacts;
 import generator.Value;
+import generator.VisualizationPosition;
 import generator.VisualizationQuestionParam;
+import generator.VisualizationSolution;
 import generator.WantedAnswersParam;
 import generator.impl.CorrectnessValueImpl;
 import generator.impl.EntrySoluceParamImpl;
@@ -41,6 +42,7 @@ import generator.impl.QuestionParamImpl;
 import generator.impl.QuestionedFactImpl;
 import generator.impl.ValueImpl;
 import generator.impl.VisualizationQuestionParamImpl;
+import generator.impl.VisualizationSolutionImpl;
 import generator.impl.WantedAnswersParamImpl;
 import managers.ModelsManager;
 import structures.DungeonElements;
@@ -150,6 +152,14 @@ public abstract class FactGeneratorTemplate {
 		roomElement.addQuestionedFact(qef);
 	}
 	
+	protected VisualizationSolution buildVisualizationSolution(String value, VisualizationPosition position, boolean isImage) {
+		VisualizationSolution soluce = new VisualizationSolutionImpl();
+		soluce.setValue(value);
+		soluce.setVisualizationPosition(position);
+		soluce.setImage(isImage);
+		return soluce;
+	}
+	
 	protected AQuestionParam buildQuestionParam(AQuestionableFact qFact) {
 		if(qFact instanceof QuestionableFact) {
 			QuestionParam question = new QuestionParamImpl();
@@ -165,7 +175,7 @@ public abstract class FactGeneratorTemplate {
 			VisualizationQuestionParam question = new VisualizationQuestionParamImpl();
 			question.setVisualization(((AVisualizationQuestionableFact) qFact).getVisualization());
 			Value consigne = new ValueImpl();
-			consigne.setValue(((MapQuestionableFact) qFact).getConsigne());
+			consigne.setValue(((AVisualizationQuestionableFact) qFact).getConsigne());
 			question.setValue(consigne);
 			return question;
 		}
@@ -208,8 +218,6 @@ public abstract class FactGeneratorTemplate {
 			AQuestionableFact qf = null;
 			try {
 				qf = getAvailableFact(roomElements, roomElements.getCorrespondingResultByTask(dungeonElements.getCurrentObjectiveLevel()));
-				
-				
 				createAQuestionedFactFrom(roomElements, qf);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -259,6 +267,18 @@ public abstract class FactGeneratorTemplate {
 	}
 	
 	protected List<AQuestionableFact> removeUnEligibleFactsBasedOnPreviouslySelectedFact(List<QuestionedFact> previousFacts, List<AQuestionableFact> facts) {
+		/*if(!previousFacts.isEmpty() && previousFacts.get(0).getQuestion() instanceof VisualizationQuestionParam) {
+			List<AQuestionableFact> facts_ = new ArrayList<>(); 
+			for(AQuestionableFact fact: facts) {
+				if(fact instanceof VisualizationQuestionParam) {
+					AVisualizationQuestionableFact vfact = (AVisualizationQuestionableFact) fact; 
+					if( ((VisualizationQuestionParam) previousFacts.get(0).getQuestion()).getVisualization().equals(vfact.getVisualization())) {
+						facts_.add(vfact);
+					}
+				}
+			}
+			return facts_;
+		}*/
 		return facts;
 	}
 

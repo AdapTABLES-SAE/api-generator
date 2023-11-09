@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link generator.impl.VisualizationSolutionImpl#getValue <em>Value</em>}</li>
  *   <li>{@link generator.impl.VisualizationSolutionImpl#getVisualizationPosition <em>Visualization Position</em>}</li>
+ *   <li>{@link generator.impl.VisualizationSolutionImpl#isImage <em>Image</em>}</li>
  * </ul>
  *
  * @generated
@@ -58,6 +59,26 @@ public class VisualizationSolutionImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected VisualizationPosition visualizationPosition;
+
+	/**
+	 * The default value of the '{@link #isImage() <em>Image</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isImage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IMAGE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isImage() <em>Image</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isImage()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean image = IMAGE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -147,6 +168,28 @@ public class VisualizationSolutionImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isImage() {
+		return image;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setImage(boolean newImage) {
+		boolean oldImage = image;
+		image = newImage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.VISUALIZATION_SOLUTION__IMAGE,
+					oldImage, image));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -156,6 +199,8 @@ public class VisualizationSolutionImpl extends MinimalEObjectImpl.Container impl
 			if (resolve)
 				return getVisualizationPosition();
 			return basicGetVisualizationPosition();
+		case GeneratorPackage.VISUALIZATION_SOLUTION__IMAGE:
+			return isImage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -173,6 +218,9 @@ public class VisualizationSolutionImpl extends MinimalEObjectImpl.Container impl
 			return;
 		case GeneratorPackage.VISUALIZATION_SOLUTION__VISUALIZATION_POSITION:
 			setVisualizationPosition((VisualizationPosition) newValue);
+			return;
+		case GeneratorPackage.VISUALIZATION_SOLUTION__IMAGE:
+			setImage((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,6 +240,9 @@ public class VisualizationSolutionImpl extends MinimalEObjectImpl.Container impl
 		case GeneratorPackage.VISUALIZATION_SOLUTION__VISUALIZATION_POSITION:
 			setVisualizationPosition((VisualizationPosition) null);
 			return;
+		case GeneratorPackage.VISUALIZATION_SOLUTION__IMAGE:
+			setImage(IMAGE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -208,6 +259,8 @@ public class VisualizationSolutionImpl extends MinimalEObjectImpl.Container impl
 			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		case GeneratorPackage.VISUALIZATION_SOLUTION__VISUALIZATION_POSITION:
 			return visualizationPosition != null;
+		case GeneratorPackage.VISUALIZATION_SOLUTION__IMAGE:
+			return image != IMAGE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -225,6 +278,8 @@ public class VisualizationSolutionImpl extends MinimalEObjectImpl.Container impl
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: ");
 		result.append(value);
+		result.append(", image: ");
+		result.append(image);
 		result.append(')');
 		return result.toString();
 	}

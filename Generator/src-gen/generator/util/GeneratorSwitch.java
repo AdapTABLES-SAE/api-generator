@@ -928,35 +928,35 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.HASSOCIATION: {
-			HAssociation hAssociation = (HAssociation) theEObject;
-			T result = caseHAssociation(hAssociation);
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION: {
+			HistoricalEventAssociation historicalEventAssociation = (HistoricalEventAssociation) theEObject;
+			T result = caseHistoricalEventAssociation(historicalEventAssociation);
 			if (result == null)
-				result = caseCompletionTask(hAssociation);
+				result = caseCompletionTask(historicalEventAssociation);
 			if (result == null)
-				result = caseATask(hAssociation);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case GeneratorPackage.HLEGEND: {
-			HLegend hLegend = (HLegend) theEObject;
-			T result = caseHLegend(hLegend);
-			if (result == null)
-				result = caseCompletionTask(hLegend);
-			if (result == null)
-				result = caseATask(hLegend);
+				result = caseATask(historicalEventAssociation);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.GLOCATE: {
-			GLocate gLocate = (GLocate) theEObject;
-			T result = caseGLocate(gLocate);
+		case GeneratorPackage.LEGEND_AMAP: {
+			LegendAMap legendAMap = (LegendAMap) theEObject;
+			T result = caseLegendAMap(legendAMap);
 			if (result == null)
-				result = caseMembershipIDTask(gLocate);
+				result = caseCompletionTask(legendAMap);
 			if (result == null)
-				result = caseATask(gLocate);
+				result = caseATask(legendAMap);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.LOCATE_ON_AMAP: {
+			LocateOnAMap locateOnAMap = (LocateOnAMap) theEObject;
+			T result = caseLocateOnAMap(locateOnAMap);
+			if (result == null)
+				result = caseMembershipIDTask(locateOnAMap);
+			if (result == null)
+				result = caseATask(locateOnAMap);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1034,13 +1034,13 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.HCHRONOLOGY: {
-			HChronology hChronology = (HChronology) theEObject;
-			T result = caseHChronology(hChronology);
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY: {
+			HistoricalChronology historicalChronology = (HistoricalChronology) theEObject;
+			T result = caseHistoricalChronology(historicalChronology);
 			if (result == null)
-				result = caseOrderingTask(hChronology);
+				result = caseOrderingTask(historicalChronology);
 			if (result == null)
-				result = caseATask(hChronology);
+				result = caseATask(historicalChronology);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1156,6 +1156,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = caseDynamicMultipleChoice(multipleChoice);
 			if (result == null)
 				result = caseResponseModality(multipleChoice);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.LEGEND_QUESTIONABLE_FACT: {
+			LegendQuestionableFact legendQuestionableFact = (LegendQuestionableFact) theEObject;
+			T result = caseLegendQuestionableFact(legendQuestionableFact);
+			if (result == null)
+				result = caseAVisualizationQuestionableFact(legendQuestionableFact);
+			if (result == null)
+				result = caseAQuestionableFact(legendQuestionableFact);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -2756,47 +2767,47 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>HAssociation</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Historical Event Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>HAssociation</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Historical Event Association</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseHAssociation(HAssociation object) {
+	public T caseHistoricalEventAssociation(HistoricalEventAssociation object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>HLegend</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Legend AMap</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>HLegend</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Legend AMap</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseHLegend(HLegend object) {
+	public T caseLegendAMap(LegendAMap object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GLocate</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Locate On AMap</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GLocate</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Locate On AMap</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGLocate(GLocate object) {
+	public T caseLocateOnAMap(LocateOnAMap object) {
 		return null;
 	}
 
@@ -2936,17 +2947,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>HChronology</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Historical Chronology</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>HChronology</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Historical Chronology</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseHChronology(HChronology object) {
+	public T caseHistoricalChronology(HistoricalChronology object) {
 		return null;
 	}
 
@@ -3112,6 +3123,21 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMultipleChoice(MultipleChoice object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Legend Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Legend Questionable Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLegendQuestionableFact(LegendQuestionableFact object) {
 		return null;
 	}
 

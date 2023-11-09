@@ -534,8 +534,6 @@ public abstract class ATaskImpl extends MinimalEObjectImpl.Container implements 
 		switch (operationID) {
 		case GeneratorPackage.ATASK___GET_TYPE:
 			return getType();
-		case GeneratorPackage.ATASK___IS_CHECK_ON_LEARNER_ACTION:
-			return isCheckOnLearnerAction();
 		case GeneratorPackage.ATASK___GET_NB_EXPECTED_ANSWERS:
 			return getNbExpectedAnswers();
 		case GeneratorPackage.ATASK___IS_GRAPHIC_TASK:

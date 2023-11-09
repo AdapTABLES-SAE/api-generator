@@ -3,7 +3,7 @@
 package generator.impl;
 
 import generator.GeneratorPackage;
-import generator.HChronology;
+import generator.HistoricalChronology;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -13,19 +13,19 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>HChronology</b></em>'.
+ * An implementation of the model object '<em><b>Historical Chronology</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.HChronologyImpl#isMixDatePeriod <em>Mix Date Period</em>}</li>
- *   <li>{@link generator.impl.HChronologyImpl#isGraphicTask <em>Graphic Task</em>}</li>
+ *   <li>{@link generator.impl.HistoricalChronologyImpl#isMixDatePeriod <em>Mix Date Period</em>}</li>
+ *   <li>{@link generator.impl.HistoricalChronologyImpl#isGraphicTask <em>Graphic Task</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class HChronologyImpl extends OrderingTaskImpl implements HChronology {
+public class HistoricalChronologyImpl extends OrderingTaskImpl implements HistoricalChronology {
 	/**
 	 * The default value of the '{@link #isMixDatePeriod() <em>Mix Date Period</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -71,7 +71,7 @@ public class HChronologyImpl extends OrderingTaskImpl implements HChronology {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HChronologyImpl() {
+	public HistoricalChronologyImpl() {
 		super();
 	}
 
@@ -82,7 +82,7 @@ public class HChronologyImpl extends OrderingTaskImpl implements HChronology {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.HCHRONOLOGY;
+		return GeneratorPackage.Literals.HISTORICAL_CHRONOLOGY;
 	}
 
 	/**
@@ -103,8 +103,8 @@ public class HChronologyImpl extends OrderingTaskImpl implements HChronology {
 		boolean oldMixDatePeriod = mixDatePeriod;
 		mixDatePeriod = newMixDatePeriod;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.HCHRONOLOGY__MIX_DATE_PERIOD,
-					oldMixDatePeriod, mixDatePeriod));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.HISTORICAL_CHRONOLOGY__MIX_DATE_PERIOD, oldMixDatePeriod, mixDatePeriod));
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class HChronologyImpl extends OrderingTaskImpl implements HChronology {
 		boolean oldGraphicTask = graphicTask;
 		graphicTask = newGraphicTask;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.HCHRONOLOGY__GRAPHIC_TASK,
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.HISTORICAL_CHRONOLOGY__GRAPHIC_TASK,
 					oldGraphicTask, graphicTask));
 	}
 
@@ -137,9 +137,9 @@ public class HChronologyImpl extends OrderingTaskImpl implements HChronology {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.HCHRONOLOGY__MIX_DATE_PERIOD:
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__MIX_DATE_PERIOD:
 			return isMixDatePeriod();
-		case GeneratorPackage.HCHRONOLOGY__GRAPHIC_TASK:
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__GRAPHIC_TASK:
 			return isGraphicTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -153,10 +153,10 @@ public class HChronologyImpl extends OrderingTaskImpl implements HChronology {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.HCHRONOLOGY__MIX_DATE_PERIOD:
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__MIX_DATE_PERIOD:
 			setMixDatePeriod((Boolean) newValue);
 			return;
-		case GeneratorPackage.HCHRONOLOGY__GRAPHIC_TASK:
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__GRAPHIC_TASK:
 			setGraphicTask((Boolean) newValue);
 			return;
 		}
@@ -171,10 +171,10 @@ public class HChronologyImpl extends OrderingTaskImpl implements HChronology {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.HCHRONOLOGY__MIX_DATE_PERIOD:
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__MIX_DATE_PERIOD:
 			setMixDatePeriod(MIX_DATE_PERIOD_EDEFAULT);
 			return;
-		case GeneratorPackage.HCHRONOLOGY__GRAPHIC_TASK:
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__GRAPHIC_TASK:
 			setGraphicTask(GRAPHIC_TASK_EDEFAULT);
 			return;
 		}
@@ -189,9 +189,9 @@ public class HChronologyImpl extends OrderingTaskImpl implements HChronology {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.HCHRONOLOGY__MIX_DATE_PERIOD:
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__MIX_DATE_PERIOD:
 			return mixDatePeriod != MIX_DATE_PERIOD_EDEFAULT;
-		case GeneratorPackage.HCHRONOLOGY__GRAPHIC_TASK:
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__GRAPHIC_TASK:
 			return graphicTask != GRAPHIC_TASK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -216,4 +216,4 @@ public class HChronologyImpl extends OrderingTaskImpl implements HChronology {
 		return result.toString();
 	}
 
-} //HChronologyImpl
+} //HistoricalChronologyImpl

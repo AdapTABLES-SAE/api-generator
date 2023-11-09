@@ -50,12 +50,13 @@ public interface ATask extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nb Consecutive Success</em>' attribute.
 	 * @see #setNbConsecutiveSuccess(int)
 	 * @see generator.GeneratorPackage#getATask_NbConsecutiveSuccess()
-	 * @model
+	 * @model default="1"
 	 * @generated
 	 */
 	int getNbConsecutiveSuccess();
@@ -201,14 +202,6 @@ public interface ATask extends EObject {
 	 * @model kind="operation"
 	 * @generated
 	 */
-	boolean isCheckOnLearnerAction();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
 	int getNbExpectedAnswers();
 
 	/**
@@ -218,5 +211,21 @@ public interface ATask extends EObject {
 	 * @generated
 	 */
 	boolean isGraphicTask();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	boolean isCheckOnLearnerAction();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	boolean isNoStatementTask();
 
 } // ATask

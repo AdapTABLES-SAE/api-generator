@@ -19,7 +19,7 @@ import generator.DynamicMultipleChoice;
 import generator.ECorrectness;
 import generator.EHistoryTarget;
 import generator.ETimeTarget;
-import generator.HAssociation;
+import generator.HistoricalEventAssociation;
 import generator.HistoryFact;
 import generator.SetOfFacts;
 import generator.Time;
@@ -34,7 +34,7 @@ public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 		super(dungeonElements);
 	}
 	
-	private boolean respectsTaskConditions(HistoryFact fact, HAssociation task) {
+	private boolean respectsTaskConditions(HistoryFact fact, HistoricalEventAssociation task) {
 		if(task.getTarget().equals(ETimeTarget.NONE) || task.getTarget().equals(ETimeTarget.MIX)) { return true; }
 		if(task.getTarget().equals(ETimeTarget.DATE) && fact.getTime() instanceof Date) { return true; }
 		if(task.getTarget().equals(ETimeTarget.PERIOD) && fact.getTime() instanceof TimePeriod) { return true; }
@@ -46,7 +46,7 @@ public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
 		boolean isCreated = false;
 		if(fact instanceof HistoryFact) {		
-			HAssociation ctask = (HAssociation) task;
+			HistoricalEventAssociation ctask = (HistoricalEventAssociation) task;
 			DateQuestionableFact qfact = new DateQuestionableFactImpl();
 			HistoryFact hfact = (HistoryFact) fact;
 			qfact.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;

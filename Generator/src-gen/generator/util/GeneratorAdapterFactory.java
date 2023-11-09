@@ -597,18 +597,18 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseHAssociation(HAssociation object) {
-			return createHAssociationAdapter();
+		public Adapter caseHistoricalEventAssociation(HistoricalEventAssociation object) {
+			return createHistoricalEventAssociationAdapter();
 		}
 
 		@Override
-		public Adapter caseHLegend(HLegend object) {
-			return createHLegendAdapter();
+		public Adapter caseLegendAMap(LegendAMap object) {
+			return createLegendAMapAdapter();
 		}
 
 		@Override
-		public Adapter caseGLocate(GLocate object) {
-			return createGLocateAdapter();
+		public Adapter caseLocateOnAMap(LocateOnAMap object) {
+			return createLocateOnAMapAdapter();
 		}
 
 		@Override
@@ -657,8 +657,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseHChronology(HChronology object) {
-			return createHChronologyAdapter();
+		public Adapter caseHistoricalChronology(HistoricalChronology object) {
+			return createHistoricalChronologyAdapter();
 		}
 
 		@Override
@@ -714,6 +714,11 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseMultipleChoice(MultipleChoice object) {
 			return createMultipleChoiceAdapter();
+		}
+
+		@Override
+		public Adapter caseLegendQuestionableFact(LegendQuestionableFact object) {
+			return createLegendQuestionableFactAdapter();
 		}
 
 		@Override
@@ -2220,44 +2225,44 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.HAssociation <em>HAssociation</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.HistoricalEventAssociation <em>Historical Event Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.HAssociation
+	 * @see generator.HistoricalEventAssociation
 	 * @generated
 	 */
-	public Adapter createHAssociationAdapter() {
+	public Adapter createHistoricalEventAssociationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.HLegend <em>HLegend</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.LegendAMap <em>Legend AMap</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.HLegend
+	 * @see generator.LegendAMap
 	 * @generated
 	 */
-	public Adapter createHLegendAdapter() {
+	public Adapter createLegendAMapAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.GLocate <em>GLocate</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.LocateOnAMap <em>Locate On AMap</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.GLocate
+	 * @see generator.LocateOnAMap
 	 * @generated
 	 */
-	public Adapter createGLocateAdapter() {
+	public Adapter createLocateOnAMapAdapter() {
 		return null;
 	}
 
@@ -2500,6 +2505,20 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link generator.LegendQuestionableFact <em>Legend Questionable Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.LegendQuestionableFact
+	 * @generated
+	 */
+	public Adapter createLegendQuestionableFactAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link generator.HGLevel <em>HG Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2542,16 +2561,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.HChronology <em>HChronology</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.HistoricalChronology <em>Historical Chronology</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.HChronology
+	 * @see generator.HistoricalChronology
 	 * @generated
 	 */
-	public Adapter createHChronologyAdapter() {
+	public Adapter createHistoricalChronologyAdapter() {
 		return null;
 	}
 

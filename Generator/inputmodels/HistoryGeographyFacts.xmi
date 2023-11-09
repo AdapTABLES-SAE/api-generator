@@ -133,4 +133,60 @@
       <positions ID="PARIS"/>
     </visualization>
   </knowledgefacts>
+  <knowledgefacts name="Densité de population (Légende) ">
+    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="FORTE">
+      <representation ID="ROUGE"/>
+      <legend text="plus de 100" position="FORTE_TEXT"/>
+    </facts>
+    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="MOYENNE">
+      <representation ID="ORANGE"/>
+      <legend text="entre 50 et 100" position="MOYENNE_TEXT"/>
+    </facts>
+    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="FAIBLE">
+      <representation ID="JAUNE"/>
+      <legend text="moins de 50" position="FAIBLE_TEXT"/>
+    </facts>
+    <visualization ID="DENSITE_POPU_LEGEND">
+      <positions ID="FORTE"/>
+      <positions ID="MOYENNE"/>
+      <positions ID="FAIBLE"/>
+      <positions ID="FORTE_TEXT"/>
+      <positions ID="MOYENNE_TEXT"/>
+      <positions ID="FAIBLE_TEXT"/>
+    </visualization>
+  </knowledgefacts>
+  <knowledgefacts name="Domaine Bioclimatique (Légende)">
+    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="OCEANIQUE">
+      <representation ID="DARK_GREEN"/>
+      <legend text="Climat Océanique" position="OCEANIQUE_DEGRADE_TEXT"/>
+    </facts>
+    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="OCEANIQUE_DEGRADE">
+      <representation ID="LIGHT_GREEN"/>
+      <legend text="Climat Océanique Dégradé" position="OCEANIQUE_DEGRADE_TEXT"/>
+    </facts>
+    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="SEMI_CONTINENTAL">
+      <representation ID="BLUE"/>
+      <legend text="Climat Semi-continental" position="SEMI_CONTINENTAL_TEXT"/>
+    </facts>
+    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="MEDITERRANEEN">
+      <representation ID="ORANGE"/>
+      <legend text="Climat Méditérranéen" position="MEDITERRANEEN_TEXT"/>
+    </facts>
+    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="MONTAGNARD">
+      <representation ID="BROWN"/>
+      <legend text="Climat Montagnard" position="MONTAGNARD_TEXT"/>
+    </facts>
+    <visualization ID="DOMAINE_BIO_LEGEND">
+      <positions ID="OCEANIQUE"/>
+      <positions ID="OCEANIQUE_DEGRADE"/>
+      <positions ID="SEMI_CONTINENTAL"/>
+      <positions ID="MEDITERRANEEN"/>
+      <positions ID="MONTAGNARD"/>
+      <positions ID="OCEANIQUE_TEXT"/>
+      <positions ID="OCEANIQUE_DEGRADE_TEXT"/>
+      <positions ID="SEMI_CONTINENTAL_TEXT"/>
+      <positions ID="MEDITERRANEEN_TEXT"/>
+      <positions ID="MONTAGNARD_TEXT"/>
+    </visualization>
+  </knowledgefacts>
 </generator:Knowledge>

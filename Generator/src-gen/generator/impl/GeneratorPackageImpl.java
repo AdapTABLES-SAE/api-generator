@@ -768,21 +768,21 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass hAssociationEClass = null;
+	private EClass historicalEventAssociationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass hLegendEClass = null;
+	private EClass legendAMapEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gLocateEClass = null;
+	private EClass locateOnAMapEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -852,7 +852,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass hChronologyEClass = null;
+	private EClass historicalChronologyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -930,6 +930,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass multipleChoiceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass legendQuestionableFactEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1883,6 +1890,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMTCompletion1_NoStatementTask() {
+		return (EAttribute) mtCompletion1EClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getClassroom() {
 		return classroomEClass;
 	}
@@ -2225,7 +2241,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getATask__IsCheckOnLearnerAction() {
+	public EOperation getATask__GetNbExpectedAnswers() {
 		return aTaskEClass.getEOperations().get(1);
 	}
 
@@ -2234,7 +2250,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getATask__GetNbExpectedAnswers() {
+	public EOperation getATask__IsGraphicTask() {
 		return aTaskEClass.getEOperations().get(2);
 	}
 
@@ -2243,8 +2259,17 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getATask__IsGraphicTask() {
+	public EOperation getATask__IsCheckOnLearnerAction() {
 		return aTaskEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getATask__IsNoStatementTask() {
+		return aTaskEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -2315,6 +2340,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getIdentificationTask_NoStatementTask() {
+		return (EAttribute) identificationTaskEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getIdentificationTask__GetNbExpectedAnswers() {
 		return identificationTaskEClass.getEOperations().get(0);
 	}
@@ -2353,6 +2387,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getMembershipIDTask_CheckOnLearnerAction() {
 		return (EAttribute) membershipIDTaskEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMembershipIDTask_NoStatementTask() {
+		return (EAttribute) membershipIDTaskEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2405,6 +2448,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMTCompletion2_NoStatementTask() {
+		return (EAttribute) mtCompletion2EClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMTRecontruction() {
 		return mtRecontructionEClass;
 	}
@@ -2425,6 +2477,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getMTRecontruction_CheckOnLearnerAction() {
 		return (EAttribute) mtRecontructionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTRecontruction_NoStatementTask() {
+		return (EAttribute) mtRecontructionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3818,6 +3879,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getOrderingTask_NoStatementTask() {
+		return (EAttribute) orderingTaskEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getOrderingTask__GetNbExpectedAnswers() {
 		return orderingTaskEClass.getEOperations().get(0);
 	}
@@ -4700,8 +4770,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getHAssociation() {
-		return hAssociationEClass;
+	public EClass getHistoricalEventAssociation() {
+		return historicalEventAssociationEClass;
 	}
 
 	/**
@@ -4709,8 +4779,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getHAssociation_Source() {
-		return (EAttribute) hAssociationEClass.getEStructuralFeatures().get(0);
+	public EAttribute getHistoricalEventAssociation_Source() {
+		return (EAttribute) historicalEventAssociationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4718,8 +4788,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getHAssociation_Missing() {
-		return (EAttribute) hAssociationEClass.getEStructuralFeatures().get(1);
+	public EAttribute getHistoricalEventAssociation_Missing() {
+		return (EAttribute) historicalEventAssociationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -4727,8 +4797,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getHAssociation_Target() {
-		return (EAttribute) hAssociationEClass.getEStructuralFeatures().get(2);
+	public EAttribute getHistoricalEventAssociation_Target() {
+		return (EAttribute) historicalEventAssociationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -4736,8 +4806,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getHAssociation_CheckOnLearnerAction() {
-		return (EAttribute) hAssociationEClass.getEStructuralFeatures().get(3);
+	public EAttribute getHistoricalEventAssociation_CheckOnLearnerAction() {
+		return (EAttribute) historicalEventAssociationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -4745,8 +4815,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getHLegend() {
-		return hLegendEClass;
+	public EAttribute getHistoricalEventAssociation_NoStatementTask() {
+		return (EAttribute) historicalEventAssociationEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -4754,8 +4824,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getHLegend_NbMissingElements() {
-		return (EAttribute) hLegendEClass.getEStructuralFeatures().get(0);
+	public EClass getLegendAMap() {
+		return legendAMapEClass;
 	}
 
 	/**
@@ -4763,8 +4833,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getHLegend_Missing() {
-		return (EAttribute) hLegendEClass.getEStructuralFeatures().get(1);
+	public EAttribute getLegendAMap_NbMissingElements() {
+		return (EAttribute) legendAMapEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4772,8 +4842,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGLocate() {
-		return gLocateEClass;
+	public EAttribute getLegendAMap_Missing() {
+		return (EAttribute) legendAMapEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -4781,8 +4851,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGLocate_NbExpectedAnswers() {
-		return (EAttribute) gLocateEClass.getEStructuralFeatures().get(0);
+	public EAttribute getLegendAMap_GraphicTask() {
+		return (EAttribute) legendAMapEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -4790,8 +4860,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGLocate_LearnersChoices() {
-		return (EAttribute) gLocateEClass.getEStructuralFeatures().get(1);
+	public EAttribute getLegendAMap_CheckOnLearnerAction() {
+		return (EAttribute) legendAMapEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -4799,8 +4869,44 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGLocate_GraphicTask() {
-		return (EAttribute) gLocateEClass.getEStructuralFeatures().get(2);
+	public EAttribute getLegendAMap_NoStatementTask() {
+		return (EAttribute) legendAMapEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLocateOnAMap() {
+		return locateOnAMapEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLocateOnAMap_NbExpectedAnswers() {
+		return (EAttribute) locateOnAMapEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLocateOnAMap_LearnersChoices() {
+		return (EAttribute) locateOnAMapEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLocateOnAMap_GraphicTask() {
+		return (EAttribute) locateOnAMapEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -4997,6 +5103,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getVisualizationSolution_Image() {
+		return (EAttribute) visualizationSolutionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getHGLevel() {
 		return hgLevelEClass;
 	}
@@ -5078,8 +5193,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getHChronology() {
-		return hChronologyEClass;
+	public EClass getHistoricalChronology() {
+		return historicalChronologyEClass;
 	}
 
 	/**
@@ -5087,8 +5202,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getHChronology_MixDatePeriod() {
-		return (EAttribute) hChronologyEClass.getEStructuralFeatures().get(0);
+	public EAttribute getHistoricalChronology_MixDatePeriod() {
+		return (EAttribute) historicalChronologyEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5096,8 +5211,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getHChronology_GraphicTask() {
-		return (EAttribute) hChronologyEClass.getEStructuralFeatures().get(1);
+	public EAttribute getHistoricalChronology_GraphicTask() {
+		return (EAttribute) historicalChronologyEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -5206,6 +5321,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getIdentifyTechnique_Source() {
 		return (EAttribute) identifyTechniqueEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIdentifyTechnique_NoStatementTask() {
+		return (EAttribute) identifyTechniqueEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -5357,6 +5481,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getIdentifyArbitrationGesture_NoStatementTask() {
+		return (EAttribute) identifyArbitrationGestureEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getJudoQuestionableArbitrationFact() {
 		return judoQuestionableArbitrationFactEClass;
 	}
@@ -5431,6 +5564,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getMultipleChoice_NbChoices() {
 		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLegendQuestionableFact() {
+		return legendQuestionableFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLegendQuestionableFact_Target() {
+		return (EAttribute) legendQuestionableFactEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5733,6 +5884,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__TARGETS);
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__NB_MISSING_ELEMENTS);
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__CHECK_ON_LEARNER_ACTION);
+		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__NO_STATEMENT_TASK);
 
 		classroomEClass = createEClass(CLASSROOM);
 		createEReference(classroomEClass, CLASSROOM__GAMECONTEXT);
@@ -5780,9 +5932,10 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(aTaskEClass, ATASK__MAX_TIME);
 		createEAttribute(aTaskEClass, ATASK__NB_FACTS);
 		createEOperation(aTaskEClass, ATASK___GET_TYPE);
-		createEOperation(aTaskEClass, ATASK___IS_CHECK_ON_LEARNER_ACTION);
 		createEOperation(aTaskEClass, ATASK___GET_NB_EXPECTED_ANSWERS);
 		createEOperation(aTaskEClass, ATASK___IS_GRAPHIC_TASK);
+		createEOperation(aTaskEClass, ATASK___IS_CHECK_ON_LEARNER_ACTION);
+		createEOperation(aTaskEClass, ATASK___IS_NO_STATEMENT_TASK);
 
 		completionTaskEClass = createEClass(COMPLETION_TASK);
 		createEAttribute(completionTaskEClass, COMPLETION_TASK__TYPE);
@@ -5792,22 +5945,26 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		identificationTaskEClass = createEClass(IDENTIFICATION_TASK);
 		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__TYPE);
 		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__CHECK_ON_LEARNER_ACTION);
+		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__NO_STATEMENT_TASK);
 		createEOperation(identificationTaskEClass, IDENTIFICATION_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		membershipIDTaskEClass = createEClass(MEMBERSHIP_ID_TASK);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__TYPE);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION);
+		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__NO_STATEMENT_TASK);
 		createEOperation(membershipIDTaskEClass, MEMBERSHIP_ID_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		mtCompletion2EClass = createEClass(MT_COMPLETION2);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__TARGETS);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__NB_MISSING_ELEMENTS);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__CHECK_ON_LEARNER_ACTION);
+		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__NO_STATEMENT_TASK);
 
 		mtRecontructionEClass = createEClass(MT_RECONTRUCTION);
 		createEAttribute(mtRecontructionEClass, MT_RECONTRUCTION__NB_MISSING_ELEMENTS);
 		createEAttribute(mtRecontructionEClass, MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION);
+		createEAttribute(mtRecontructionEClass, MT_RECONTRUCTION__NO_STATEMENT_TASK);
 
 		mtIdentificationEClass = createEClass(MT_IDENTIFICATION);
 		createEAttribute(mtIdentificationEClass, MT_IDENTIFICATION__TARGET);
@@ -6005,6 +6162,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		orderingTaskEClass = createEClass(ORDERING_TASK);
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__TYPE);
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__CHECK_ON_LEARNER_ACTION);
+		createEAttribute(orderingTaskEClass, ORDERING_TASK__NO_STATEMENT_TASK);
 		createEOperation(orderingTaskEClass, ORDERING_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		promptEClass = createEClass(PROMPT);
@@ -6135,20 +6293,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		visualizationQuestionParamEClass = createEClass(VISUALIZATION_QUESTION_PARAM);
 		createEReference(visualizationQuestionParamEClass, VISUALIZATION_QUESTION_PARAM__VISUALIZATION);
 
-		hAssociationEClass = createEClass(HASSOCIATION);
-		createEAttribute(hAssociationEClass, HASSOCIATION__SOURCE);
-		createEAttribute(hAssociationEClass, HASSOCIATION__MISSING);
-		createEAttribute(hAssociationEClass, HASSOCIATION__TARGET);
-		createEAttribute(hAssociationEClass, HASSOCIATION__CHECK_ON_LEARNER_ACTION);
+		historicalEventAssociationEClass = createEClass(HISTORICAL_EVENT_ASSOCIATION);
+		createEAttribute(historicalEventAssociationEClass, HISTORICAL_EVENT_ASSOCIATION__SOURCE);
+		createEAttribute(historicalEventAssociationEClass, HISTORICAL_EVENT_ASSOCIATION__MISSING);
+		createEAttribute(historicalEventAssociationEClass, HISTORICAL_EVENT_ASSOCIATION__TARGET);
+		createEAttribute(historicalEventAssociationEClass, HISTORICAL_EVENT_ASSOCIATION__CHECK_ON_LEARNER_ACTION);
+		createEAttribute(historicalEventAssociationEClass, HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK);
 
-		hLegendEClass = createEClass(HLEGEND);
-		createEAttribute(hLegendEClass, HLEGEND__NB_MISSING_ELEMENTS);
-		createEAttribute(hLegendEClass, HLEGEND__MISSING);
+		legendAMapEClass = createEClass(LEGEND_AMAP);
+		createEAttribute(legendAMapEClass, LEGEND_AMAP__NB_MISSING_ELEMENTS);
+		createEAttribute(legendAMapEClass, LEGEND_AMAP__MISSING);
+		createEAttribute(legendAMapEClass, LEGEND_AMAP__GRAPHIC_TASK);
+		createEAttribute(legendAMapEClass, LEGEND_AMAP__CHECK_ON_LEARNER_ACTION);
+		createEAttribute(legendAMapEClass, LEGEND_AMAP__NO_STATEMENT_TASK);
 
-		gLocateEClass = createEClass(GLOCATE);
-		createEAttribute(gLocateEClass, GLOCATE__NB_EXPECTED_ANSWERS);
-		createEAttribute(gLocateEClass, GLOCATE__LEARNERS_CHOICES);
-		createEAttribute(gLocateEClass, GLOCATE__GRAPHIC_TASK);
+		locateOnAMapEClass = createEClass(LOCATE_ON_AMAP);
+		createEAttribute(locateOnAMapEClass, LOCATE_ON_AMAP__NB_EXPECTED_ANSWERS);
+		createEAttribute(locateOnAMapEClass, LOCATE_ON_AMAP__LEARNERS_CHOICES);
+		createEAttribute(locateOnAMapEClass, LOCATE_ON_AMAP__GRAPHIC_TASK);
 
 		teacherEClass = createEClass(TEACHER);
 		createEAttribute(teacherEClass, TEACHER__ID);
@@ -6177,6 +6339,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		visualizationSolutionEClass = createEClass(VISUALIZATION_SOLUTION);
 		createEAttribute(visualizationSolutionEClass, VISUALIZATION_SOLUTION__VALUE);
 		createEReference(visualizationSolutionEClass, VISUALIZATION_SOLUTION__VISUALIZATION_POSITION);
+		createEAttribute(visualizationSolutionEClass, VISUALIZATION_SOLUTION__IMAGE);
 
 		hgLevelEClass = createEClass(HG_LEVEL);
 
@@ -6190,9 +6353,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(dateQuestionableFactEClass, DATE_QUESTIONABLE_FACT__SOURCE_ELEMENT_TYPE);
 		createEAttribute(dateQuestionableFactEClass, DATE_QUESTIONABLE_FACT__MISSING_ELEMENTS_TYPE);
 
-		hChronologyEClass = createEClass(HCHRONOLOGY);
-		createEAttribute(hChronologyEClass, HCHRONOLOGY__MIX_DATE_PERIOD);
-		createEAttribute(hChronologyEClass, HCHRONOLOGY__GRAPHIC_TASK);
+		historicalChronologyEClass = createEClass(HISTORICAL_CHRONOLOGY);
+		createEAttribute(historicalChronologyEClass, HISTORICAL_CHRONOLOGY__MIX_DATE_PERIOD);
+		createEAttribute(historicalChronologyEClass, HISTORICAL_CHRONOLOGY__GRAPHIC_TASK);
 
 		mapQuestionableFactEClass = createEClass(MAP_QUESTIONABLE_FACT);
 		createEAttribute(mapQuestionableFactEClass, MAP_QUESTIONABLE_FACT__TYPE);
@@ -6209,6 +6372,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(identifyTechniqueEClass, IDENTIFY_TECHNIQUE__CHECK_ON_LEARNER_ACTION);
 		createEAttribute(identifyTechniqueEClass, IDENTIFY_TECHNIQUE__MISSING);
 		createEAttribute(identifyTechniqueEClass, IDENTIFY_TECHNIQUE__SOURCE);
+		createEAttribute(identifyTechniqueEClass, IDENTIFY_TECHNIQUE__NO_STATEMENT_TASK);
 
 		judoQuestionableTechniqueFactEClass = createEClass(JUDO_QUESTIONABLE_TECHNIQUE_FACT);
 		createEAttribute(judoQuestionableTechniqueFactEClass, JUDO_QUESTIONABLE_TECHNIQUE_FACT__SOURCE_ELEMENT_TYPE);
@@ -6230,6 +6394,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(identifyArbitrationGestureEClass, IDENTIFY_ARBITRATION_GESTURE__NB_MISSING_ELEMENTS);
 		createEAttribute(identifyArbitrationGestureEClass, IDENTIFY_ARBITRATION_GESTURE__CHECK_ON_LEARNER_ACTION);
 		createEAttribute(identifyArbitrationGestureEClass, IDENTIFY_ARBITRATION_GESTURE__SOURCE);
+		createEAttribute(identifyArbitrationGestureEClass, IDENTIFY_ARBITRATION_GESTURE__NO_STATEMENT_TASK);
 
 		judoQuestionableArbitrationFactEClass = createEClass(JUDO_QUESTIONABLE_ARBITRATION_FACT);
 		createEAttribute(judoQuestionableArbitrationFactEClass, JUDO_QUESTIONABLE_ARBITRATION_FACT__NAME);
@@ -6242,6 +6407,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		multipleChoiceEClass = createEClass(MULTIPLE_CHOICE);
 		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__NB_CHOICES);
+
+		legendQuestionableFactEClass = createEClass(LEGEND_QUESTIONABLE_FACT);
+		createEAttribute(legendQuestionableFactEClass, LEGEND_QUESTIONABLE_FACT__TARGET);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -6346,14 +6514,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		timePeriodEClass.getESuperTypes().add(this.getTime());
 		aQuestionParamEClass.getESuperTypes().add(this.getParameter());
 		visualizationQuestionParamEClass.getESuperTypes().add(this.getAQuestionParam());
-		hAssociationEClass.getESuperTypes().add(this.getCompletionTask());
-		hLegendEClass.getESuperTypes().add(this.getCompletionTask());
-		gLocateEClass.getESuperTypes().add(this.getMembershipIDTask());
+		historicalEventAssociationEClass.getESuperTypes().add(this.getCompletionTask());
+		legendAMapEClass.getESuperTypes().add(this.getCompletionTask());
+		locateOnAMapEClass.getESuperTypes().add(this.getMembershipIDTask());
 		aVisualizationQuestionableFactEClass.getESuperTypes().add(this.getAQuestionableFact());
 		hgLevelEClass.getESuperTypes().add(this.getLevel());
 		positionedVisualizationElementEClass.getESuperTypes().add(this.getPositionedElement());
 		dateQuestionableFactEClass.getESuperTypes().add(this.getQuestionableFact());
-		hChronologyEClass.getESuperTypes().add(this.getOrderingTask());
+		historicalChronologyEClass.getESuperTypes().add(this.getOrderingTask());
 		mapQuestionableFactEClass.getESuperTypes().add(this.getAVisualizationQuestionableFact());
 		judoTechniqueFactEClass.getESuperTypes().add(this.getAbstractFact());
 		classifyTechniqueEClass.getESuperTypes().add(this.getMembershipIDTask());
@@ -6365,6 +6533,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		identifyArbitrationGestureEClass.getESuperTypes().add(this.getCompletionTask());
 		judoQuestionableArbitrationFactEClass.getESuperTypes().add(this.getQuestionableFact());
 		multipleChoiceEClass.getESuperTypes().add(this.getDynamicMultipleChoice());
+		legendQuestionableFactEClass.getESuperTypes().add(this.getAVisualizationQuestionableFact());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -6591,6 +6760,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTCompletion1_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				null, 0, 1, MTCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTCompletion1_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false", 0, 1,
+				MTCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(classroomEClass, Classroom.class, "Classroom", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -6681,7 +6853,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getATask_PercentOfApparition(), ecorePackage.getEInt(), "percentOfApparition", null, 0, 1,
 				ATask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEAttribute(getATask_NbConsecutiveSuccess(), ecorePackage.getEInt(), "nbConsecutiveSuccess", null, 0, 1,
+		initEAttribute(getATask_NbConsecutiveSuccess(), ecorePackage.getEInt(), "nbConsecutiveSuccess", "1", 0, 1,
 				ATask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 		initEReference(getATask_ResponseModality(), this.getResponseModality(), null, "responseModality", null, 1, 1,
@@ -6696,13 +6868,16 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEOperation(getATask__GetType(), this.getETaskType(), "getType", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getATask__IsCheckOnLearnerAction(), ecorePackage.getEBoolean(), "isCheckOnLearnerAction", 0, 1,
-				IS_UNIQUE, IS_ORDERED);
-
 		initEOperation(getATask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getATask__IsGraphicTask(), ecorePackage.getEBoolean(), "isGraphicTask", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		initEOperation(getATask__IsCheckOnLearnerAction(), ecorePackage.getEBoolean(), "isCheckOnLearnerAction", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getATask__IsNoStatementTask(), ecorePackage.getEBoolean(), "isNoStatementTask", 0, 1, IS_UNIQUE,
 				IS_ORDERED);
 
 		initEClass(completionTaskEClass, CompletionTask.class, "CompletionTask", IS_ABSTRACT, !IS_INTERFACE,
@@ -6724,6 +6899,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getIdentificationTask_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"false", 0, 1, IdentificationTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIdentificationTask_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false",
+				0, 1, IdentificationTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getIdentificationTask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0,
 				1, IS_UNIQUE, IS_ORDERED);
@@ -6739,6 +6917,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMembershipIDTask_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"false", 0, 1, MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMembershipIDTask_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false", 0,
+				1, MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getMembershipIDTask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0,
 				1, IS_UNIQUE, IS_ORDERED);
@@ -6754,6 +6935,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTCompletion2_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"true", 0, 1, MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTCompletion2_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false", 0, 1,
+				MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtRecontructionEClass, MTRecontruction.class, "MTRecontruction", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -6763,6 +6947,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTRecontruction_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"true", 0, 1, MTRecontruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTRecontruction_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false", 0,
+				1, MTRecontruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtIdentificationEClass, MTIdentification.class, "MTIdentification", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -7192,6 +7379,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getOrderingTask_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"true", 0, 1, OrderingTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOrderingTask_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false", 0, 1,
+				OrderingTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getOrderingTask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
@@ -7452,34 +7642,52 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				null, 1, 1, VisualizationQuestionParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(hAssociationEClass, HAssociation.class, "HAssociation", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getHAssociation_Source(), this.getEHistoryTarget(), "source", null, 0, 1, HAssociation.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getHAssociation_Missing(), this.getEHistoryTarget(), "missing", "TIME", 0, 1, HAssociation.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getHAssociation_Target(), this.getETimeTarget(), "target", "NONE", 0, 1, HAssociation.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getHAssociation_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
-				"true", 0, 1, HAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+		initEClass(historicalEventAssociationEClass, HistoricalEventAssociation.class, "HistoricalEventAssociation",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getHistoricalEventAssociation_Source(), this.getEHistoryTarget(), "source", null, 0, 1,
+				HistoricalEventAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHistoricalEventAssociation_Missing(), this.getEHistoryTarget(), "missing", "TIME", 0, 1,
+				HistoricalEventAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHistoricalEventAssociation_Target(), this.getETimeTarget(), "target", "NONE", 0, 1,
+				HistoricalEventAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHistoricalEventAssociation_CheckOnLearnerAction(), ecorePackage.getEBoolean(),
+				"checkOnLearnerAction", "true", 0, 1, HistoricalEventAssociation.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHistoricalEventAssociation_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask",
+				"false", 0, 1, HistoricalEventAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(hLegendEClass, HLegend.class, "HLegend", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getHLegend_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
-				HLegend.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEClass(legendAMapEClass, LegendAMap.class, "LegendAMap", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLegendAMap_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
+				LegendAMap.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getHLegend_Missing(), this.getELegendTarget(), "missing", "", 0, 1, HLegend.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gLocateEClass, GLocate.class, "GLocate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGLocate_NbExpectedAnswers(), ecorePackage.getEInt(), "nbExpectedAnswers", null, 0, 1,
-				GLocate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGLocate_LearnersChoices(), ecorePackage.getEBoolean(), "learnersChoices", null, 0, 1,
-				GLocate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGLocate_GraphicTask(), ecorePackage.getEBoolean(), "graphicTask", "true", 0, 1, GLocate.class,
+		initEAttribute(getLegendAMap_Missing(), this.getELegendTarget(), "missing", "", 0, 1, LegendAMap.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLegendAMap_GraphicTask(), ecorePackage.getEBoolean(), "graphicTask", "true", 0, 1,
+				LegendAMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLegendAMap_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
+				"false", 0, 1, LegendAMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLegendAMap_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "true", 0, 1,
+				LegendAMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(locateOnAMapEClass, LocateOnAMap.class, "LocateOnAMap", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLocateOnAMap_NbExpectedAnswers(), ecorePackage.getEInt(), "nbExpectedAnswers", null, 0, 1,
+				LocateOnAMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocateOnAMap_LearnersChoices(), ecorePackage.getEBoolean(), "learnersChoices", null, 0, 1,
+				LocateOnAMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocateOnAMap_GraphicTask(), ecorePackage.getEBoolean(), "graphicTask", "true", 0, 1,
+				LocateOnAMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(teacherEClass, Teacher.class, "Teacher", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTeacher_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Teacher.class, !IS_TRANSIENT,
@@ -7540,6 +7748,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getVisualizationSolution_VisualizationPosition(), this.getVisualizationPosition(), null,
 				"visualizationPosition", null, 1, 1, VisualizationSolution.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVisualizationSolution_Image(), ecorePackage.getEBoolean(), "image", null, 0, 1,
+				VisualizationSolution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hgLevelEClass, HGLevel.class, "HGLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -7567,14 +7778,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				null, 0, 1, DateQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(hChronologyEClass, HChronology.class, "HChronology", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getHChronology_MixDatePeriod(), ecorePackage.getEBoolean(), "mixDatePeriod", null, 0, 1,
-				HChronology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getHChronology_GraphicTask(), ecorePackage.getEBoolean(), "graphicTask", "true", 0, 1,
-				HChronology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEClass(historicalChronologyEClass, HistoricalChronology.class, "HistoricalChronology", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getHistoricalChronology_MixDatePeriod(), ecorePackage.getEBoolean(), "mixDatePeriod", null, 0, 1,
+				HistoricalChronology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHistoricalChronology_GraphicTask(), ecorePackage.getEBoolean(), "graphicTask", "true", 0, 1,
+				HistoricalChronology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mapQuestionableFactEClass, MapQuestionableFact.class, "MapQuestionableFact", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -7611,6 +7822,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getIdentifyTechnique_Source(), this.getEJudoTarget(), "source", null, 0, 1,
 				IdentifyTechnique.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIdentifyTechnique_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false",
+				0, 1, IdentifyTechnique.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(judoQuestionableTechniqueFactEClass, JudoQuestionableTechniqueFact.class,
 				"JudoQuestionableTechniqueFact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -7659,6 +7873,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getIdentifyArbitrationGesture_Source(), this.getEJudoTarget(), "source", null, 0, 1,
 				IdentifyArbitrationGesture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIdentifyArbitrationGesture_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask",
+				"false", 0, 1, IdentifyArbitrationGesture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(judoQuestionableArbitrationFactEClass, JudoQuestionableArbitrationFact.class,
 				"JudoQuestionableArbitrationFact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -7686,6 +7903,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMultipleChoice_NbChoices(), ecorePackage.getEInt(), "nbChoices", null, 0, 1,
 				MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(legendQuestionableFactEClass, LegendQuestionableFact.class, "LegendQuestionableFact", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLegendQuestionableFact_Target(), this.getELegendTarget(), "target", null, 0, 1,
+				LegendQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

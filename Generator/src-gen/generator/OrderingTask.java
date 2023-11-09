@@ -13,6 +13,7 @@ package generator;
  * <ul>
  *   <li>{@link generator.OrderingTask#getType <em>Type</em>}</li>
  *   <li>{@link generator.OrderingTask#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.OrderingTask#isNoStatementTask <em>No Statement Task</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getOrderingTask()
@@ -56,6 +57,29 @@ public interface OrderingTask extends ATask {
 	 * @generated
 	 */
 	void setCheckOnLearnerAction(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>No Statement Task</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>No Statement Task</em>' attribute.
+	 * @see #setNoStatementTask(boolean)
+	 * @see generator.GeneratorPackage#getOrderingTask_NoStatementTask()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isNoStatementTask();
+
+	/**
+	 * Sets the value of the '{@link generator.OrderingTask#isNoStatementTask <em>No Statement Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>No Statement Task</em>' attribute.
+	 * @see #isNoStatementTask()
+	 * @generated
+	 */
+	void setNoStatementTask(boolean value);
 
 	/**
 	 * <!-- begin-user-doc -->

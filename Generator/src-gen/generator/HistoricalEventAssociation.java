@@ -4,24 +4,25 @@ package generator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>HAssociation</b></em>'.
+ * A representation of the model object '<em><b>Historical Event Association</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.HAssociation#getSource <em>Source</em>}</li>
- *   <li>{@link generator.HAssociation#getMissing <em>Missing</em>}</li>
- *   <li>{@link generator.HAssociation#getTarget <em>Target</em>}</li>
- *   <li>{@link generator.HAssociation#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.HistoricalEventAssociation#getSource <em>Source</em>}</li>
+ *   <li>{@link generator.HistoricalEventAssociation#getMissing <em>Missing</em>}</li>
+ *   <li>{@link generator.HistoricalEventAssociation#getTarget <em>Target</em>}</li>
+ *   <li>{@link generator.HistoricalEventAssociation#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.HistoricalEventAssociation#isNoStatementTask <em>No Statement Task</em>}</li>
  * </ul>
  *
- * @see generator.GeneratorPackage#getHAssociation()
+ * @see generator.GeneratorPackage#getHistoricalEventAssociation()
  * @model
  * @generated
  */
-public interface HAssociation extends CompletionTask {
+public interface HistoricalEventAssociation extends CompletionTask {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' attribute.
 	 * The literals are from the enumeration {@link generator.EHistoryTarget}.
@@ -30,14 +31,14 @@ public interface HAssociation extends CompletionTask {
 	 * @return the value of the '<em>Source</em>' attribute.
 	 * @see generator.EHistoryTarget
 	 * @see #setSource(EHistoryTarget)
-	 * @see generator.GeneratorPackage#getHAssociation_Source()
+	 * @see generator.GeneratorPackage#getHistoricalEventAssociation_Source()
 	 * @model
 	 * @generated
 	 */
 	EHistoryTarget getSource();
 
 	/**
-	 * Sets the value of the '{@link generator.HAssociation#getSource <em>Source</em>}' attribute.
+	 * Sets the value of the '{@link generator.HistoricalEventAssociation#getSource <em>Source</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Source</em>' attribute.
@@ -56,14 +57,14 @@ public interface HAssociation extends CompletionTask {
 	 * @return the value of the '<em>Missing</em>' attribute.
 	 * @see generator.EHistoryTarget
 	 * @see #setMissing(EHistoryTarget)
-	 * @see generator.GeneratorPackage#getHAssociation_Missing()
+	 * @see generator.GeneratorPackage#getHistoricalEventAssociation_Missing()
 	 * @model default="TIME"
 	 * @generated
 	 */
 	EHistoryTarget getMissing();
 
 	/**
-	 * Sets the value of the '{@link generator.HAssociation#getMissing <em>Missing</em>}' attribute.
+	 * Sets the value of the '{@link generator.HistoricalEventAssociation#getMissing <em>Missing</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Missing</em>' attribute.
@@ -82,14 +83,14 @@ public interface HAssociation extends CompletionTask {
 	 * @return the value of the '<em>Target</em>' attribute.
 	 * @see generator.ETimeTarget
 	 * @see #setTarget(ETimeTarget)
-	 * @see generator.GeneratorPackage#getHAssociation_Target()
+	 * @see generator.GeneratorPackage#getHistoricalEventAssociation_Target()
 	 * @model default="NONE"
 	 * @generated
 	 */
 	ETimeTarget getTarget();
 
 	/**
-	 * Sets the value of the '{@link generator.HAssociation#getTarget <em>Target</em>}' attribute.
+	 * Sets the value of the '{@link generator.HistoricalEventAssociation#getTarget <em>Target</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Target</em>' attribute.
@@ -106,14 +107,14 @@ public interface HAssociation extends CompletionTask {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Check On Learner Action</em>' attribute.
 	 * @see #setCheckOnLearnerAction(boolean)
-	 * @see generator.GeneratorPackage#getHAssociation_CheckOnLearnerAction()
+	 * @see generator.GeneratorPackage#getHistoricalEventAssociation_CheckOnLearnerAction()
 	 * @model default="true"
 	 * @generated
 	 */
 	boolean isCheckOnLearnerAction();
 
 	/**
-	 * Sets the value of the '{@link generator.HAssociation#isCheckOnLearnerAction <em>Check On Learner Action</em>}' attribute.
+	 * Sets the value of the '{@link generator.HistoricalEventAssociation#isCheckOnLearnerAction <em>Check On Learner Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Check On Learner Action</em>' attribute.
@@ -122,4 +123,27 @@ public interface HAssociation extends CompletionTask {
 	 */
 	void setCheckOnLearnerAction(boolean value);
 
-} // HAssociation
+	/**
+	 * Returns the value of the '<em><b>No Statement Task</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>No Statement Task</em>' attribute.
+	 * @see #setNoStatementTask(boolean)
+	 * @see generator.GeneratorPackage#getHistoricalEventAssociation_NoStatementTask()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isNoStatementTask();
+
+	/**
+	 * Sets the value of the '{@link generator.HistoricalEventAssociation#isNoStatementTask <em>No Statement Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>No Statement Task</em>' attribute.
+	 * @see #isNoStatementTask()
+	 * @generated
+	 */
+	void setNoStatementTask(boolean value);
+
+} // HistoricalEventAssociation

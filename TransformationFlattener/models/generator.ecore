@@ -65,6 +65,7 @@
     <eOperations name="isExitRoomType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eOperations name="isQuestionRoomType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eOperations name="isTrapRoomType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="isPortalRoomType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elementPositions" upperBound="-1"
         eType="#//Position" containment="true"/>
@@ -173,6 +174,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbMissingElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" transient="true" defaultValueLiteral="1" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noStatementTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Classroom">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gamecontext" eType="#//GameContext"
@@ -215,10 +218,10 @@
         derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResponseModality" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MultipleChoice" eSuperTypes="#//ResponseModality">
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicMultipleChoice" eSuperTypes="#//ResponseModality">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbBadChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbBadChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EnterResponse" eSuperTypes="#//ResponseModality">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EModality"
@@ -228,13 +231,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="roomtypes" lowerBound="1"
         upperBound="-1" eType="#//RoomType" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ATask" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="ATask" abstract="true" interface="true">
     <eOperations name="getType" eType="#//ETaskType"/>
-    <eOperations name="isCheckOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eOperations name="getNbExpectedAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eOperations name="isGraphicTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="isCheckOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="isNoStatementTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentOfApparition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbConsecutiveSuccess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="responseModality" lowerBound="1"
         eType="#//ResponseModality" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
@@ -257,6 +262,8 @@
         changeable="false" transient="true" defaultValueLiteral="IDENTIFY"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noStatementTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MembershipIDTask" abstract="true" eSuperTypes="#//ATask">
     <eOperations name="getNbExpectedAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -265,6 +272,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifySharedProperty"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noStatementTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ETaskType">
@@ -284,12 +293,16 @@
         changeable="false" transient="true" defaultValueLiteral="2" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noStatementTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTRecontruction" eSuperTypes="#//CompletionTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbMissingElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" transient="true" defaultValueLiteral="3" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noStatementTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTIdentification" eSuperTypes="#//IdentificationTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="target" lowerBound="1"
@@ -312,10 +325,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="MTFact" eSuperTypes="#//AbstractFact">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="table" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="res" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MTResultFact" eSuperTypes="#//AbstractFact">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="table" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="res" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QuestionableFact" abstract="true" eSuperTypes="#//AQuestionableFact">
@@ -578,6 +587,8 @@
         changeable="false" transient="true" defaultValueLiteral="ORDER"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noStatementTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Prompt">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="prompt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -664,6 +675,7 @@
     <eLiterals name="EXIT" value="1"/>
     <eLiterals name="QUESTION" value="2"/>
     <eLiterals name="TRAP" value="3"/>
+    <eLiterals name="PORTAL" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElementType">
     <eOperations name="isDisplayableElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -748,7 +760,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="visualization" lowerBound="1"
         eType="#//Visualization"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HAssociation" eSuperTypes="#//CompletionTask">
+  <eClassifiers xsi:type="ecore:EClass" name="HistoricalEventAssociation" eSuperTypes="#//CompletionTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="#//EHistoryTarget"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="missing" eType="#//EHistoryTarget"
         defaultValueLiteral="TIME"/>
@@ -756,23 +768,31 @@
         defaultValueLiteral="NONE"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noStatementTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EHistoryTarget">
     <eLiterals name="EVENT"/>
     <eLiterals name="TIME" value="1"/>
     <eLiterals name="IMAGE" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HLegend" eSuperTypes="#//CompletionTask">
+  <eClassifiers xsi:type="ecore:EClass" name="LegendAMap" eSuperTypes="#//CompletionTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbMissingElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" transient="true" defaultValueLiteral="1" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="missing" eType="#//ELegendTarget"
         defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="graphicTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noStatementTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ELegendTarget">
     <eLiterals name="SYMBOL"/>
     <eLiterals name="TEXT" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GLocate" eSuperTypes="#//MembershipIDTask">
+  <eClassifiers xsi:type="ecore:EClass" name="LocateOnAMap" eSuperTypes="#//MembershipIDTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbExpectedAnswers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="learnersChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="graphicTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
@@ -821,6 +841,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="visualizationPosition"
         lowerBound="1" eType="#//VisualizationPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="image" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HGLevel" eSuperTypes="#//Level"/>
   <eClassifiers xsi:type="ecore:EClass" name="PositionedVisualizationElement" eSuperTypes="#//PositionedElement">
@@ -835,7 +856,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceElementType" eType="#//EHistoryTarget"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="missingElementsType" eType="#//EHistoryTarget"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HChronology" eSuperTypes="#//OrderingTask">
+  <eClassifiers xsi:type="ecore:EClass" name="HistoricalChronology" eSuperTypes="#//OrderingTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixDatePeriod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="graphicTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
@@ -864,6 +885,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="missing" eType="#//EJudoTarget"
         defaultValueLiteral="TECHNIQUE"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="#//EJudoTarget"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noStatementTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JudoQuestionableTechniqueFact" eSuperTypes="#//QuestionableFact">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceElementType" eType="#//EJudoTarget"/>
@@ -888,13 +911,26 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IdentifyArbitrationGesture" eSuperTypes="#//CompletionTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbMissingElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        changeable="false" transient="true" defaultValueLiteral="3" unsettable="true"/>
+        changeable="false" transient="true" defaultValueLiteral="2" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="#//EJudoTarget"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noStatementTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JudoQuestionableArbitrationFact" eSuperTypes="#//QuestionableFact">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="representationID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameSoluce" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="representationIDSoluce"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptionSoluce" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MultipleChoice" eSuperTypes="#//DynamicMultipleChoice">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbChoices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LegendQuestionableFact" eSuperTypes="#//AVisualizationQuestionableFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="target" eType="#//ELegendTarget"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -4,6 +4,7 @@ import java.util.Set;
 
 import factsgenerator_hg.HGFactGeneratorAssociation;
 import factsgenerator_hg.HGFactGeneratorChronology;
+import factsgenerator_hg.HGFactGeneratorLegend;
 import factsgenerator_hg.HGFactGeneratorLocate;
 import factsgenerator_judo.JudoFactGeneratorClassifyTechnique;
 import factsgenerator_judo.JudoFactGeneratorIdentifyArbitration;
@@ -16,6 +17,7 @@ import factsgenerator_maths.MTFactGeneratorREB;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.CompletionTask;
+import generator.HistoricalEventAssociation;
 import generator.IdentifyTechnique;
 import generator.ResultsByTask;
 import generators.ALGAGenerator;
@@ -45,7 +47,11 @@ public class FactGenerator {
 		FactGeneratorTemplate factGenerator; 
 		switch(task.getType()) {
 		case COMPLETE: 
-			factGenerator = new HGFactGeneratorAssociation(dungeonElements);
+			if(task instanceof HistoricalEventAssociation) {
+				factGenerator = new HGFactGeneratorAssociation(dungeonElements);
+			} else {
+				factGenerator = new HGFactGeneratorLegend(dungeonElements);
+			}
 			break;
 		case MEMBERSHIP: 
 			factGenerator = new HGFactGeneratorLocate(dungeonElements);

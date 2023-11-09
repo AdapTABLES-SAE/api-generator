@@ -35,6 +35,7 @@ import generator.ResponseModality;
  *   <li>{@link generator.impl.MembershipIDTaskImpl#getType <em>Type</em>}</li>
  *   <li>{@link generator.impl.MembershipIDTaskImpl#isIdentifySharedProperty <em>Identify Shared Property</em>}</li>
  *   <li>{@link generator.impl.MembershipIDTaskImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.impl.MembershipIDTaskImpl#isNoStatementTask <em>No Statement Task</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,7 +69,7 @@ public abstract class MembershipIDTaskImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NB_CONSECUTIVE_SUCCESS_EDEFAULT = 0;
+	protected static final int NB_CONSECUTIVE_SUCCESS_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getNbConsecutiveSuccess() <em>Nb Consecutive Success</em>}' attribute.
@@ -218,6 +219,26 @@ public abstract class MembershipIDTaskImpl extends MinimalEObjectImpl.Container 
 	 * @ordered
 	 */
 	protected boolean checkOnLearnerAction = CHECK_ON_LEARNER_ACTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNoStatementTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean NO_STATEMENT_TASK_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNoStatementTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean noStatementTask = NO_STATEMENT_TASK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -486,6 +507,28 @@ public abstract class MembershipIDTaskImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isNoStatementTask() {
+		return noStatementTask;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNoStatementTask(boolean newNoStatementTask) {
+		boolean oldNoStatementTask = noStatementTask;
+		noStatementTask = newNoStatementTask;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.MEMBERSHIP_ID_TASK__NO_STATEMENT_TASK, oldNoStatementTask, noStatementTask));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public int getNbExpectedAnswers() {
 		MultipleChoice mc = (MultipleChoice) this.getResponseModality();
 		return mc.getNbChoices() - mc.getNbBadChoices();
@@ -540,6 +583,8 @@ public abstract class MembershipIDTaskImpl extends MinimalEObjectImpl.Container 
 			return isIdentifySharedProperty();
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION:
 			return isCheckOnLearnerAction();
+		case GeneratorPackage.MEMBERSHIP_ID_TASK__NO_STATEMENT_TASK:
+			return isNoStatementTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -575,6 +620,9 @@ public abstract class MembershipIDTaskImpl extends MinimalEObjectImpl.Container 
 			return;
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction((Boolean) newValue);
+			return;
+		case GeneratorPackage.MEMBERSHIP_ID_TASK__NO_STATEMENT_TASK:
+			setNoStatementTask((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -612,6 +660,9 @@ public abstract class MembershipIDTaskImpl extends MinimalEObjectImpl.Container 
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction(CHECK_ON_LEARNER_ACTION_EDEFAULT);
 			return;
+		case GeneratorPackage.MEMBERSHIP_ID_TASK__NO_STATEMENT_TASK:
+			setNoStatementTask(NO_STATEMENT_TASK_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -642,6 +693,8 @@ public abstract class MembershipIDTaskImpl extends MinimalEObjectImpl.Container 
 			return identifySharedProperty != IDENTIFY_SHARED_PROPERTY_EDEFAULT;
 		case GeneratorPackage.MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION:
 			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
+		case GeneratorPackage.MEMBERSHIP_ID_TASK__NO_STATEMENT_TASK:
+			return noStatementTask != NO_STATEMENT_TASK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -692,6 +745,8 @@ public abstract class MembershipIDTaskImpl extends MinimalEObjectImpl.Container 
 		result.append(identifySharedProperty);
 		result.append(", checkOnLearnerAction: ");
 		result.append(checkOnLearnerAction);
+		result.append(", noStatementTask: ");
+		result.append(noStatementTask);
 		result.append(')');
 		return result.toString();
 	}

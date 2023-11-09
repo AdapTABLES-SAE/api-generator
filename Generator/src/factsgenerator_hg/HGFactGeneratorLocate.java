@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
@@ -89,8 +90,8 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 
 
 	@Override
-	protected java.util.Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) throws BadSolutionGenerationException {
-		java.util.Map<ECorrectness, List<Soluce>> propositions = new HashMap<>();
+	protected Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) throws BadSolutionGenerationException {
+		Map<ECorrectness, List<Soluce>> propositions = new HashMap<>();
 		MapQuestionableFact qfact = (MapQuestionableFact) qFact;
 		
 		List<Soluce> goodSoluces = getListOfGoodSolutions(qFact);

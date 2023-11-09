@@ -237,12 +237,12 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createTimePeriod();
 		case GeneratorPackage.VISUALIZATION_QUESTION_PARAM:
 			return createVisualizationQuestionParam();
-		case GeneratorPackage.HASSOCIATION:
-			return createHAssociation();
-		case GeneratorPackage.HLEGEND:
-			return createHLegend();
-		case GeneratorPackage.GLOCATE:
-			return createGLocate();
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION:
+			return createHistoricalEventAssociation();
+		case GeneratorPackage.LEGEND_AMAP:
+			return createLegendAMap();
+		case GeneratorPackage.LOCATE_ON_AMAP:
+			return createLocateOnAMap();
 		case GeneratorPackage.TEACHER:
 			return createTeacher();
 		case GeneratorPackage.TEACHERS:
@@ -257,8 +257,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createPositionedVisualizationElement();
 		case GeneratorPackage.DATE_QUESTIONABLE_FACT:
 			return createDateQuestionableFact();
-		case GeneratorPackage.HCHRONOLOGY:
-			return createHChronology();
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY:
+			return createHistoricalChronology();
 		case GeneratorPackage.MAP_QUESTIONABLE_FACT:
 			return createMapQuestionableFact();
 		case GeneratorPackage.JUDO_TECHNIQUE_FACT:
@@ -281,6 +281,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createJudoQuestionableArbitrationFact();
 		case GeneratorPackage.MULTIPLE_CHOICE:
 			return createMultipleChoice();
+		case GeneratorPackage.LEGEND_QUESTIONABLE_FACT:
+			return createLegendQuestionableFact();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1293,9 +1295,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HAssociation createHAssociation() {
-		HAssociationImpl hAssociation = new HAssociationImpl();
-		return hAssociation;
+	public HistoricalEventAssociation createHistoricalEventAssociation() {
+		HistoricalEventAssociationImpl historicalEventAssociation = new HistoricalEventAssociationImpl();
+		return historicalEventAssociation;
 	}
 
 	/**
@@ -1303,9 +1305,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HLegend createHLegend() {
-		HLegendImpl hLegend = new HLegendImpl();
-		return hLegend;
+	public LegendAMap createLegendAMap() {
+		LegendAMapImpl legendAMap = new LegendAMapImpl();
+		return legendAMap;
 	}
 
 	/**
@@ -1313,9 +1315,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GLocate createGLocate() {
-		GLocateImpl gLocate = new GLocateImpl();
-		return gLocate;
+	public LocateOnAMap createLocateOnAMap() {
+		LocateOnAMapImpl locateOnAMap = new LocateOnAMapImpl();
+		return locateOnAMap;
 	}
 
 	/**
@@ -1393,9 +1395,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HChronology createHChronology() {
-		HChronologyImpl hChronology = new HChronologyImpl();
-		return hChronology;
+	public HistoricalChronology createHistoricalChronology() {
+		HistoricalChronologyImpl historicalChronology = new HistoricalChronologyImpl();
+		return historicalChronology;
 	}
 
 	/**
@@ -1506,6 +1508,16 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public MultipleChoice createMultipleChoice() {
 		MultipleChoiceImpl multipleChoice = new MultipleChoiceImpl();
 		return multipleChoice;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LegendQuestionableFact createLegendQuestionableFact() {
+		LegendQuestionableFactImpl legendQuestionableFact = new LegendQuestionableFactImpl();
+		return legendQuestionableFact;
 	}
 
 	/**

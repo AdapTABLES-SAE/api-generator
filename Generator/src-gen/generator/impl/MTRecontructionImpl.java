@@ -19,6 +19,7 @@ import generator.MTRecontruction;
  * <ul>
  *   <li>{@link generator.impl.MTRecontructionImpl#getNbMissingElements <em>Nb Missing Elements</em>}</li>
  *   <li>{@link generator.impl.MTRecontructionImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.impl.MTRecontructionImpl#isNoStatementTask <em>No Statement Task</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,6 +70,25 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 	 * @ordered
 	 */
 	protected boolean checkOnLearnerAction = CHECK_ON_LEARNER_ACTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNoStatementTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean NO_STATEMENT_TASK_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNoStatementTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean noStatementTask = NO_STATEMENT_TASK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -128,6 +148,8 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 			return getNbMissingElements();
 		case GeneratorPackage.MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION:
 			return isCheckOnLearnerAction();
+		case GeneratorPackage.MT_RECONTRUCTION__NO_STATEMENT_TASK:
+			return isNoStatementTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -143,6 +165,9 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 		case GeneratorPackage.MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction((Boolean) newValue);
 			return;
+		case GeneratorPackage.MT_RECONTRUCTION__NO_STATEMENT_TASK:
+			setNoStatementTask((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -157,6 +182,9 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 		switch (featureID) {
 		case GeneratorPackage.MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction(CHECK_ON_LEARNER_ACTION_EDEFAULT);
+			return;
+		case GeneratorPackage.MT_RECONTRUCTION__NO_STATEMENT_TASK:
+			setNoStatementTask(NO_STATEMENT_TASK_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -174,6 +202,8 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 			return isSetNbMissingElements();
 		case GeneratorPackage.MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION:
 			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
+		case GeneratorPackage.MT_RECONTRUCTION__NO_STATEMENT_TASK:
+			return noStatementTask != NO_STATEMENT_TASK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -196,6 +226,8 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 			result.append("<unset>");
 		result.append(", checkOnLearnerAction: ");
 		result.append(checkOnLearnerAction);
+		result.append(", noStatementTask: ");
+		result.append(noStatementTask);
 		result.append(')');
 		return result.toString();
 	}
@@ -212,6 +244,28 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					GeneratorPackage.MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION, oldCheckOnLearnerAction,
 					checkOnLearnerAction));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isNoStatementTask() {
+		return noStatementTask;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNoStatementTask(boolean newNoStatementTask) {
+		boolean oldNoStatementTask = noStatementTask;
+		noStatementTask = newNoStatementTask;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MT_RECONTRUCTION__NO_STATEMENT_TASK,
+					oldNoStatementTask, noStatementTask));
 	}
 
 } //MTRecontructionImpl

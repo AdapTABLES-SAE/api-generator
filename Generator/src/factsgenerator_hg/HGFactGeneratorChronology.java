@@ -26,7 +26,6 @@ import generator.Visualization;
 import generator.VisualizationPosition;
 import generator.VisualizationSolution;
 import generator.impl.MapQuestionableFactImpl;
-import generator.impl.VisualizationSolutionImpl;
 import structures.DungeonElements;
 import structures.Soluce;
 
@@ -40,28 +39,22 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
 		if(fact instanceof HistoryFact  && parent.getVisualization() != null) {
-			 questionableFacts.add(buildQF(task, (HistoryFact) fact, parent.getVisualization()));
+			 questionableFacts.add(buildQF((HistoryFact) fact, parent.getVisualization()));
 		}
 		
 		return questionableFacts;
 	}
 	
-	private VisualizationSolution buildVisualizationSolution(String value, VisualizationPosition position) {
-		VisualizationSolution soluce = new VisualizationSolutionImpl();
-		soluce.setValue(value);
-		soluce.setVisualizationPosition(position);
-		return soluce;
-	}
 	
-	private AVisualizationQuestionableFact buildQF(ATask task, HistoryFact fact, Visualization map) {
+	private AVisualizationQuestionableFact buildQF(HistoryFact fact, Visualization map) {
 		AVisualizationQuestionableFact qf = new MapQuestionableFactImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		qf.setVisualization(map);
 		if(fact.getTime() instanceof Date) {
-			qf.getVisualizationSolutions().add(buildVisualizationSolution(fact.getEvent(), ((Date) fact.getTime()).getPosition()));
+			qf.getVisualizationSolutions().add(buildVisualizationSolution(fact.getEvent(), ((Date) fact.getTime()).getPosition(), false));
 		} else {
-			qf.getVisualizationSolutions().add(buildVisualizationSolution("(Debut) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getStartPosition()));
-			qf.getVisualizationSolutions().add(buildVisualizationSolution("(Fin) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getEndPosition()));
+			qf.getVisualizationSolutions().add(buildVisualizationSolution("(Debut) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getStartPosition(), false));
+			qf.getVisualizationSolutions().add(buildVisualizationSolution("(Fin) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getEndPosition(), false));
 		}			
 		return qf;
 	}
@@ -70,7 +63,7 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 	protected List<Soluce> getListOfGoodSolutions(AQuestionableFact qFact) {
 		List<Soluce> solutions = new ArrayList<>();
 		for (VisualizationSolution prop : ((MapQuestionableFact) qFact).getVisualizationSolutions()) {
-			solutions.add(new Soluce(prop.getValue(), prop.getVisualizationPosition()));
+			solutions.add(new Soluce(prop.getValue(), prop.isImage(), prop.getVisualizationPosition()));
 		}
 		return solutions;
 	}
@@ -104,17 +97,6 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 		return positions;
 	}
 	
-	/*private boolean containsSoluceWithPosition(List<Soluce> soluces, VisualizationPosition position) {
-		for(Soluce sol: soluces) {
-			System.out.println("SOL "+sol.getPosition().getID()+" bad "+position.getID());
-			if(sol.getPosition().getID().equals(position.getID())) {
-				return true;
-			}
-		}
-		return false;
-	}*/
-
-
 	@Override
 	protected Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) throws BadSolutionGenerationException {
 		Map<ECorrectness, List<Soluce>> propositions = new HashMap<>();
@@ -142,16 +124,6 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 	protected boolean isQuestionInteractive() {
 		return false;
 	}
-	
-	/*private int countNumberOfPeriod(List<QuestionedFact> previousFacts) {
-		int periods = 0; 
-		for(QuestionedFact fact: previousFacts) {	
-			if(fact.getPropositions().size() == 2) {
-				periods++;
-			}
-		}
-		return periods;
-	}*/
 	
 	@Override
 	protected List<AQuestionableFact> removeUnEligibleFactsBasedOnPreviouslySelectedFact(List<QuestionedFact> previousFacts, List<AQuestionableFact> facts) {

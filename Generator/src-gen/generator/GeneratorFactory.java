@@ -832,31 +832,31 @@ public interface GeneratorFactory extends EFactory {
 	VisualizationQuestionParam createVisualizationQuestionParam();
 
 	/**
-	 * Returns a new object of class '<em>HAssociation</em>'.
+	 * Returns a new object of class '<em>Historical Event Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>HAssociation</em>'.
+	 * @return a new object of class '<em>Historical Event Association</em>'.
 	 * @generated
 	 */
-	HAssociation createHAssociation();
+	HistoricalEventAssociation createHistoricalEventAssociation();
 
 	/**
-	 * Returns a new object of class '<em>HLegend</em>'.
+	 * Returns a new object of class '<em>Legend AMap</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>HLegend</em>'.
+	 * @return a new object of class '<em>Legend AMap</em>'.
 	 * @generated
 	 */
-	HLegend createHLegend();
+	LegendAMap createLegendAMap();
 
 	/**
-	 * Returns a new object of class '<em>GLocate</em>'.
+	 * Returns a new object of class '<em>Locate On AMap</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GLocate</em>'.
+	 * @return a new object of class '<em>Locate On AMap</em>'.
 	 * @generated
 	 */
-	GLocate createGLocate();
+	LocateOnAMap createLocateOnAMap();
 
 	/**
 	 * Returns a new object of class '<em>Teacher</em>'.
@@ -922,13 +922,13 @@ public interface GeneratorFactory extends EFactory {
 	DateQuestionableFact createDateQuestionableFact();
 
 	/**
-	 * Returns a new object of class '<em>HChronology</em>'.
+	 * Returns a new object of class '<em>Historical Chronology</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>HChronology</em>'.
+	 * @return a new object of class '<em>Historical Chronology</em>'.
 	 * @generated
 	 */
-	HChronology createHChronology();
+	HistoricalChronology createHistoricalChronology();
 
 	/**
 	 * Returns a new object of class '<em>Map Questionable Fact</em>'.
@@ -1028,6 +1028,15 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	MultipleChoice createMultipleChoice();
+
+	/**
+	 * Returns a new object of class '<em>Legend Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Legend Questionable Fact</em>'.
+	 * @generated
+	 */
+	LegendQuestionableFact createLegendQuestionableFact();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -114,7 +114,10 @@ public class ConcreteGameplayGenerator {
 			}
 		} else if(component.isForStatement()) {
 			for(QuestionedFact fact : roomElements.getFacts()) {
-				elements.add(buildStatementElement(component, elementType, fact, getAvailablePosition(roomtype, elementType)));
+				PositionedElement element = buildStatementElement(component, elementType, fact, getAvailablePosition(roomtype, elementType));
+				if(element != null) {
+					elements.add(element);
+				}
 			}
 		} else if(component.isInputEntry()) { 
 			for(QuestionedFact fact : roomElements.getFacts()) {
@@ -179,6 +182,11 @@ public class ConcreteGameplayGenerator {
 	}
 
 	private PositionedElement buildStatementElement(Component component, ElementType elementType, QuestionedFact fact, Position position) { //QuestionedFact fact, Position position) {
+		
+		if(((Value) fact.getQuestion().getValue()).getValue() == null || ((Value) fact.getQuestion().getValue()).getValue().isEmpty()) {
+			return null;
+		}
+		
 		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
 		
 		Display statement = new DisplayImpl();
@@ -730,8 +738,11 @@ public class ConcreteGameplayGenerator {
 			if(comp.isForStatement() && comp.isForProposition()) {
 				elements.add(buildStatementAsChoicesElement(true, comp, elementType, roomElements.getFacts().get(factIndex), positionFromParent));}
 			else if(comp.isForStatement()) { 
-				elements.add(buildStatementElement(comp, elementType, roomElements.getFacts().get(factIndex), positionFromParent)); }
-			else if(comp.isInputEntry()) { elements.add(buildInputEntryElement(comp, elementType,  roomElements.getFacts().get(factIndex), positionFromParent)); }
+				PositionedElement element = buildStatementElement(comp, elementType, roomElements.getFacts().get(factIndex), positionFromParent);
+				if(element != null) {
+					elements.add(element);
+				}
+			} else if(comp.isInputEntry()) { elements.add(buildInputEntryElement(comp, elementType,  roomElements.getFacts().get(factIndex), positionFromParent)); }
 			else if(comp.isForProposition()) {
 				if(getNumberOfChoicesWornBy((ElementType) elementType) == 1) { elements.add(buildSingleChoiceElement(comp, elementType,  roomElements.getFacts().get(factIndex), propositionIndex, positionFromParent, hasIntegratedChoices)); }
 				else { elements.addAll(buildMultipleChoicesElements(comp, elementType,  roomElements.getFacts().get(factIndex), positionFromParent, roomElements.getRoomTypeOfRoom())); }

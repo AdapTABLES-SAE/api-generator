@@ -2,32 +2,35 @@
  */
 package generator.impl;
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import generator.EHistoryTarget;
 import generator.ETimeTarget;
 import generator.GeneratorPackage;
-import generator.HAssociation;
+import generator.HistoricalEventAssociation;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>HAssociation</b></em>'.
+ * An implementation of the model object '<em><b>Historical Event Association</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.HAssociationImpl#getSource <em>Source</em>}</li>
- *   <li>{@link generator.impl.HAssociationImpl#getMissing <em>Missing</em>}</li>
- *   <li>{@link generator.impl.HAssociationImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link generator.impl.HAssociationImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.impl.HistoricalEventAssociationImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link generator.impl.HistoricalEventAssociationImpl#getMissing <em>Missing</em>}</li>
+ *   <li>{@link generator.impl.HistoricalEventAssociationImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link generator.impl.HistoricalEventAssociationImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.impl.HistoricalEventAssociationImpl#isNoStatementTask <em>No Statement Task</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class HAssociationImpl extends CompletionTaskImpl implements HAssociation {
+public class HistoricalEventAssociationImpl extends CompletionTaskImpl implements HistoricalEventAssociation {
 	/**
 	 * The default value of the '{@link #getSource() <em>Source</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -109,11 +112,31 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 	protected boolean checkOnLearnerAction = CHECK_ON_LEARNER_ACTION_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNoStatementTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean NO_STATEMENT_TASK_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNoStatementTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean noStatementTask = NO_STATEMENT_TASK_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HAssociationImpl() {
+	public HistoricalEventAssociationImpl() {
 		super();
 	}
 
@@ -124,7 +147,7 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.HASSOCIATION;
+		return GeneratorPackage.Literals.HISTORICAL_EVENT_ASSOCIATION;
 	}
 
 	/**
@@ -145,8 +168,8 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 		EHistoryTarget oldSource = source;
 		source = newSource == null ? SOURCE_EDEFAULT : newSource;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.HASSOCIATION__SOURCE, oldSource,
-					source));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__SOURCE,
+					oldSource, source));
 	}
 
 	/**
@@ -167,8 +190,8 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 		EHistoryTarget oldMissing = missing;
 		missing = newMissing == null ? MISSING_EDEFAULT : newMissing;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.HASSOCIATION__MISSING, oldMissing,
-					missing));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__MISSING, oldMissing, missing));
 	}
 
 	/**
@@ -189,8 +212,8 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 		ETimeTarget oldTarget = target;
 		target = newTarget == null ? TARGET_EDEFAULT : newTarget;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.HASSOCIATION__TARGET, oldTarget,
-					target));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__TARGET,
+					oldTarget, target));
 	}
 
 	/**
@@ -207,17 +230,56 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void setCheckOnLearnerAction(boolean newCheckOnLearnerAction) {
+		boolean oldCheckOnLearnerAction = checkOnLearnerAction;
+		checkOnLearnerAction = newCheckOnLearnerAction;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__CHECK_ON_LEARNER_ACTION, oldCheckOnLearnerAction,
+					checkOnLearnerAction));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isNoStatementTask() {
+		return noStatementTask;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNoStatementTask(boolean newNoStatementTask) {
+		boolean oldNoStatementTask = noStatementTask;
+		noStatementTask = newNoStatementTask;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK, oldNoStatementTask,
+					noStatementTask));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.HASSOCIATION__SOURCE:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__SOURCE:
 			return getSource();
-		case GeneratorPackage.HASSOCIATION__MISSING:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__MISSING:
 			return getMissing();
-		case GeneratorPackage.HASSOCIATION__TARGET:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__TARGET:
 			return getTarget();
-		case GeneratorPackage.HASSOCIATION__CHECK_ON_LEARNER_ACTION:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__CHECK_ON_LEARNER_ACTION:
 			return isCheckOnLearnerAction();
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK:
+			return isNoStatementTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -230,17 +292,20 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.HASSOCIATION__SOURCE:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__SOURCE:
 			setSource((EHistoryTarget) newValue);
 			return;
-		case GeneratorPackage.HASSOCIATION__MISSING:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__MISSING:
 			setMissing((EHistoryTarget) newValue);
 			return;
-		case GeneratorPackage.HASSOCIATION__TARGET:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__TARGET:
 			setTarget((ETimeTarget) newValue);
 			return;
-		case GeneratorPackage.HASSOCIATION__CHECK_ON_LEARNER_ACTION:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction((Boolean) newValue);
+			return;
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK:
+			setNoStatementTask((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -254,17 +319,20 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.HASSOCIATION__SOURCE:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__SOURCE:
 			setSource(SOURCE_EDEFAULT);
 			return;
-		case GeneratorPackage.HASSOCIATION__MISSING:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__MISSING:
 			setMissing(MISSING_EDEFAULT);
 			return;
-		case GeneratorPackage.HASSOCIATION__TARGET:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__TARGET:
 			setTarget(TARGET_EDEFAULT);
 			return;
-		case GeneratorPackage.HASSOCIATION__CHECK_ON_LEARNER_ACTION:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction(CHECK_ON_LEARNER_ACTION_EDEFAULT);
+			return;
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK:
+			setNoStatementTask(NO_STATEMENT_TASK_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -278,14 +346,16 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.HASSOCIATION__SOURCE:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__SOURCE:
 			return source != SOURCE_EDEFAULT;
-		case GeneratorPackage.HASSOCIATION__MISSING:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__MISSING:
 			return missing != MISSING_EDEFAULT;
-		case GeneratorPackage.HASSOCIATION__TARGET:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__TARGET:
 			return target != TARGET_EDEFAULT;
-		case GeneratorPackage.HASSOCIATION__CHECK_ON_LEARNER_ACTION:
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__CHECK_ON_LEARNER_ACTION:
 			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
+		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK:
+			return noStatementTask != NO_STATEMENT_TASK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -309,31 +379,10 @@ public class HAssociationImpl extends CompletionTaskImpl implements HAssociation
 		result.append(target);
 		result.append(", checkOnLearnerAction: ");
 		result.append(checkOnLearnerAction);
+		result.append(", noStatementTask: ");
+		result.append(noStatementTask);
 		result.append(')');
 		return result.toString();
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCheckOnLearnerAction(boolean newCheckOnLearnerAction) {
-		boolean oldCheckOnLearnerAction = checkOnLearnerAction;
-		checkOnLearnerAction = newCheckOnLearnerAction;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.HASSOCIATION__CHECK_ON_LEARNER_ACTION, oldCheckOnLearnerAction,
-					checkOnLearnerAction));
-	}
-
-	@Override
-	public int getNbMissingElements() {
-		if (this.target.equals(ETimeTarget.DATE) || this.target.equals(ETimeTarget.MIX)) {
-			return 1 * this.getNbFacts();
-		} else {
-			return 2 * this.getNbFacts();
-		}
-	}
-
-} //HAssociationImpl
+} //HistoricalEventAssociationImpl
