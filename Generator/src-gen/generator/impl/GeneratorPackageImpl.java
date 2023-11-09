@@ -1890,15 +1890,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMTCompletion1_NoStatementTask() {
-		return (EAttribute) mtCompletion1EClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getClassroom() {
 		return classroomEClass;
 	}
@@ -2268,15 +2259,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getATask__IsNoStatementTask() {
-		return aTaskEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCompletionTask() {
 		return completionTaskEClass;
 	}
@@ -2340,15 +2322,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIdentificationTask_NoStatementTask() {
-		return (EAttribute) identificationTaskEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getIdentificationTask__GetNbExpectedAnswers() {
 		return identificationTaskEClass.getEOperations().get(0);
 	}
@@ -2387,15 +2360,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getMembershipIDTask_CheckOnLearnerAction() {
 		return (EAttribute) membershipIDTaskEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMembershipIDTask_NoStatementTask() {
-		return (EAttribute) membershipIDTaskEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2448,15 +2412,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMTCompletion2_NoStatementTask() {
-		return (EAttribute) mtCompletion2EClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMTRecontruction() {
 		return mtRecontructionEClass;
 	}
@@ -2477,15 +2432,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getMTRecontruction_CheckOnLearnerAction() {
 		return (EAttribute) mtRecontructionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMTRecontruction_NoStatementTask() {
-		return (EAttribute) mtRecontructionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3872,15 +3818,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getOrderingTask_CheckOnLearnerAction() {
 		return (EAttribute) orderingTaskEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getOrderingTask_NoStatementTask() {
-		return (EAttribute) orderingTaskEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -5328,15 +5265,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIdentifyTechnique_NoStatementTask() {
-		return (EAttribute) identifyTechniqueEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getJudoQuestionableTechniqueFact() {
 		return judoQuestionableTechniqueFactEClass;
 	}
@@ -5474,15 +5402,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getIdentifyArbitrationGesture_Source() {
 		return (EAttribute) identifyArbitrationGestureEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIdentifyArbitrationGesture_NoStatementTask() {
-		return (EAttribute) identifyArbitrationGestureEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -5884,7 +5803,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__TARGETS);
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__NB_MISSING_ELEMENTS);
 		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__CHECK_ON_LEARNER_ACTION);
-		createEAttribute(mtCompletion1EClass, MT_COMPLETION1__NO_STATEMENT_TASK);
 
 		classroomEClass = createEClass(CLASSROOM);
 		createEReference(classroomEClass, CLASSROOM__GAMECONTEXT);
@@ -5935,7 +5853,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEOperation(aTaskEClass, ATASK___GET_NB_EXPECTED_ANSWERS);
 		createEOperation(aTaskEClass, ATASK___IS_GRAPHIC_TASK);
 		createEOperation(aTaskEClass, ATASK___IS_CHECK_ON_LEARNER_ACTION);
-		createEOperation(aTaskEClass, ATASK___IS_NO_STATEMENT_TASK);
 
 		completionTaskEClass = createEClass(COMPLETION_TASK);
 		createEAttribute(completionTaskEClass, COMPLETION_TASK__TYPE);
@@ -5945,31 +5862,25 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		identificationTaskEClass = createEClass(IDENTIFICATION_TASK);
 		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__TYPE);
 		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__CHECK_ON_LEARNER_ACTION);
-		createEAttribute(identificationTaskEClass, IDENTIFICATION_TASK__NO_STATEMENT_TASK);
 		createEOperation(identificationTaskEClass, IDENTIFICATION_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		membershipIDTaskEClass = createEClass(MEMBERSHIP_ID_TASK);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__TYPE);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY);
 		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION);
-		createEAttribute(membershipIDTaskEClass, MEMBERSHIP_ID_TASK__NO_STATEMENT_TASK);
 		createEOperation(membershipIDTaskEClass, MEMBERSHIP_ID_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		mtCompletion2EClass = createEClass(MT_COMPLETION2);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__TARGETS);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__NB_MISSING_ELEMENTS);
 		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__CHECK_ON_LEARNER_ACTION);
-		createEAttribute(mtCompletion2EClass, MT_COMPLETION2__NO_STATEMENT_TASK);
 
 		mtRecontructionEClass = createEClass(MT_RECONTRUCTION);
 		createEAttribute(mtRecontructionEClass, MT_RECONTRUCTION__NB_MISSING_ELEMENTS);
 		createEAttribute(mtRecontructionEClass, MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION);
-		createEAttribute(mtRecontructionEClass, MT_RECONTRUCTION__NO_STATEMENT_TASK);
 
 		mtIdentificationEClass = createEClass(MT_IDENTIFICATION);
 		createEAttribute(mtIdentificationEClass, MT_IDENTIFICATION__TARGET);
-
-		mtMembershipEClass = createEClass(MT_MEMBERSHIP);
 
 		resultsEClass = createEClass(RESULTS);
 		createEReference(resultsEClass, RESULTS__RESULTSBYTASK);
@@ -6162,7 +6073,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		orderingTaskEClass = createEClass(ORDERING_TASK);
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__TYPE);
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__CHECK_ON_LEARNER_ACTION);
-		createEAttribute(orderingTaskEClass, ORDERING_TASK__NO_STATEMENT_TASK);
 		createEOperation(orderingTaskEClass, ORDERING_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		promptEClass = createEClass(PROMPT);
@@ -6372,7 +6282,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(identifyTechniqueEClass, IDENTIFY_TECHNIQUE__CHECK_ON_LEARNER_ACTION);
 		createEAttribute(identifyTechniqueEClass, IDENTIFY_TECHNIQUE__MISSING);
 		createEAttribute(identifyTechniqueEClass, IDENTIFY_TECHNIQUE__SOURCE);
-		createEAttribute(identifyTechniqueEClass, IDENTIFY_TECHNIQUE__NO_STATEMENT_TASK);
 
 		judoQuestionableTechniqueFactEClass = createEClass(JUDO_QUESTIONABLE_TECHNIQUE_FACT);
 		createEAttribute(judoQuestionableTechniqueFactEClass, JUDO_QUESTIONABLE_TECHNIQUE_FACT__SOURCE_ELEMENT_TYPE);
@@ -6394,7 +6303,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(identifyArbitrationGestureEClass, IDENTIFY_ARBITRATION_GESTURE__NB_MISSING_ELEMENTS);
 		createEAttribute(identifyArbitrationGestureEClass, IDENTIFY_ARBITRATION_GESTURE__CHECK_ON_LEARNER_ACTION);
 		createEAttribute(identifyArbitrationGestureEClass, IDENTIFY_ARBITRATION_GESTURE__SOURCE);
-		createEAttribute(identifyArbitrationGestureEClass, IDENTIFY_ARBITRATION_GESTURE__NO_STATEMENT_TASK);
 
 		judoQuestionableArbitrationFactEClass = createEClass(JUDO_QUESTIONABLE_ARBITRATION_FACT);
 		createEAttribute(judoQuestionableArbitrationFactEClass, JUDO_QUESTIONABLE_ARBITRATION_FACT__NAME);
@@ -6410,6 +6318,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		legendQuestionableFactEClass = createEClass(LEGEND_QUESTIONABLE_FACT);
 		createEAttribute(legendQuestionableFactEClass, LEGEND_QUESTIONABLE_FACT__TARGET);
+
+		mtMembershipEClass = createEClass(MT_MEMBERSHIP);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -6478,7 +6388,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtCompletion2EClass.getESuperTypes().add(this.getCompletionTask());
 		mtRecontructionEClass.getESuperTypes().add(this.getCompletionTask());
 		mtIdentificationEClass.getESuperTypes().add(this.getIdentificationTask());
-		mtMembershipEClass.getESuperTypes().add(this.getMembershipIDTask());
 		mtFactEClass.getESuperTypes().add(this.getAbstractFact());
 		questionableFactEClass.getESuperTypes().add(this.getAQuestionableFact());
 		mtqfCompletion1EClass.getESuperTypes().add(this.getQuestionableFact());
@@ -6534,6 +6443,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		judoQuestionableArbitrationFactEClass.getESuperTypes().add(this.getQuestionableFact());
 		multipleChoiceEClass.getESuperTypes().add(this.getDynamicMultipleChoice());
 		legendQuestionableFactEClass.getESuperTypes().add(this.getAVisualizationQuestionableFact());
+		mtMembershipEClass.getESuperTypes().add(this.getMembershipIDTask());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -6760,9 +6670,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTCompletion1_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				null, 0, 1, MTCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTCompletion1_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false", 0, 1,
-				MTCompletion1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(classroomEClass, Classroom.class, "Classroom", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -6877,9 +6784,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEOperation(getATask__IsCheckOnLearnerAction(), ecorePackage.getEBoolean(), "isCheckOnLearnerAction", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getATask__IsNoStatementTask(), ecorePackage.getEBoolean(), "isNoStatementTask", 0, 1, IS_UNIQUE,
-				IS_ORDERED);
-
 		initEClass(completionTaskEClass, CompletionTask.class, "CompletionTask", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCompletionTask_Type(), this.getETaskType(), "type", "COMPLETE", 0, 1, CompletionTask.class,
@@ -6899,9 +6803,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getIdentificationTask_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"false", 0, 1, IdentificationTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIdentificationTask_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false",
-				0, 1, IdentificationTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getIdentificationTask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0,
 				1, IS_UNIQUE, IS_ORDERED);
@@ -6917,9 +6818,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMembershipIDTask_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"false", 0, 1, MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMembershipIDTask_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false", 0,
-				1, MembershipIDTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getMembershipIDTask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0,
 				1, IS_UNIQUE, IS_ORDERED);
@@ -6935,9 +6833,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTCompletion2_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"true", 0, 1, MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTCompletion2_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false", 0, 1,
-				MTCompletion2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtRecontructionEClass, MTRecontruction.class, "MTRecontruction", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -6947,18 +6842,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getMTRecontruction_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"true", 0, 1, MTRecontruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMTRecontruction_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false", 0,
-				1, MTRecontruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtIdentificationEClass, MTIdentification.class, "MTIdentification", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMTIdentification_Target(), this.getESingleTarget(), "target", "RESULT", 1, 1,
 				MTIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-
-		initEClass(mtMembershipEClass, MTMembership.class, "MTMembership", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(resultsEClass, Results.class, "Results", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResults_Resultsbytask(), this.getResultsByTask(), null, "resultsbytask", null, 0, -1,
@@ -7379,9 +7268,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getOrderingTask_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"true", 0, 1, OrderingTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOrderingTask_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false", 0, 1,
-				OrderingTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getOrderingTask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
@@ -7822,9 +7708,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getIdentifyTechnique_Source(), this.getEJudoTarget(), "source", null, 0, 1,
 				IdentifyTechnique.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIdentifyTechnique_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "false",
-				0, 1, IdentifyTechnique.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(judoQuestionableTechniqueFactEClass, JudoQuestionableTechniqueFact.class,
 				"JudoQuestionableTechniqueFact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -7873,9 +7756,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getIdentifyArbitrationGesture_Source(), this.getEJudoTarget(), "source", null, 0, 1,
 				IdentifyArbitrationGesture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIdentifyArbitrationGesture_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask",
-				"false", 0, 1, IdentifyArbitrationGesture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(judoQuestionableArbitrationFactEClass, JudoQuestionableArbitrationFact.class,
 				"JudoQuestionableArbitrationFact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -7909,6 +7789,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getLegendQuestionableFact_Target(), this.getELegendTarget(), "target", null, 0, 1,
 				LegendQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mtMembershipEClass, MTMembership.class, "MTMembership", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

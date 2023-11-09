@@ -1,412 +1,431 @@
 <?xml version="1.0" encoding="ASCII"?>
-<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="HG_O1" levelID="HG_O1_L1" gameLevelID="9" curses="[&quot;Labyrinth&quot;,&quot;Night&quot;,]">
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="HG_O1" levelID="HG_O1_L1" gameLevelID="9" curses="[&quot;Labyrinth&quot;,]">
   <rooms>
-    <room id="Room[0/0]" roomTypeName="RegularRoomS" correctnessToReach="0">
+    <room id="Room[0/0]" roomTypeName="RegularRoomE" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a2" direction="SOUTH" accessRef="a3"/>
+        <roomaccess id="a2" direction="EAST" accessRef="a3"/>
       </roomaccesses>
     </room>
-    <room id="Room[0/-2]" y="-2" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
+    <room id="Room[1/0]" x="1" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
       <roomaccesses>
-        <roomaccess id="a3" direction="NORTH_WEST" accessRef="a2"/>
-        <roomaccess id="a4" direction="EAST_SOUTH" accessRef="a5"/>
+        <roomaccess id="a3" direction="WEST_SOUTH" accessRef="a2"/>
+        <roomaccess id="a4" direction="NORTH_EAST" accessRef="a5"/>
         <roomaccess id="a6" direction="SOUTH_WEST" accessRef="a7"/>
-        <roomaccess id="a8" direction="WEST_SOUTH" accessRef="a9"/>
+        <roomaccess id="a8" direction="WEST_NORTH" accessRef="a9"/>
+        <roomaccess id="a10" direction="EAST_NORTH" accessRef="a11"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T10-QAFACT0" correctnessToReach="1"/>
         <fact id="HG_O1_L1_T10-QAFACT2" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT3" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT0" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
       </facts>
       <elements>
         <element id="STRUCT1" type="MapStructure" pos="POSXXL1" visualisation="DENSITE_POPU_LEGEND"/>
-        <element id="ELEM2" type="ObjectDetector" pos="id/STRUCT1/FORTE" correctAnswer="ROUGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT0"/>
-        <element id="ELEM3" type="ObjectDetector" pos="id/STRUCT1/FAIBLE" correctAnswer="JAUNE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT2"/>
-        <element id="ELEM4" type="ObjectDetector" pos="id/STRUCT1/OCEANIQUE" correctAnswer="DARK_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT3"/>
-        <element id="ELEM5" type="Pot" displayValue="ROUGE" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT0" isImageDisplay="true"/>
-        <element id="ELEM6" type="Pot" displayValue="JAUNE" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT2" isImageDisplay="true"/>
-        <element id="ELEM7" type="Pot" displayValue="DARK_GREEN" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT3" isImageDisplay="true"/>
+        <element id="ELEM2" type="ObjectDetector" pos="id/STRUCT1/FAIBLE" correctAnswer="JAUNE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT2"/>
+        <element id="ELEM3" type="ObjectDetector" pos="id/STRUCT1/FORTE" correctAnswer="ROUGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT0"/>
+        <element id="ELEM4" type="ObjectDetector" pos="id/STRUCT1/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
+        <element id="ELEM5" type="Pot" displayValue="JAUNE" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT2" isImageDisplay="true"/>
+        <element id="ELEM6" type="Pot" displayValue="ROUGE" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT0" isImageDisplay="true"/>
+        <element id="ELEM7" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS17" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
         <element id="ELEM8" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[2/-3]" x="2" y="-3" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
+    <room id="Room[1/2]" x="1" y="2" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="4">
       <roomaccesses>
-        <roomaccess id="a5" direction="WEST_NORTH" accessRef="a4"/>
-        <roomaccess id="a10" direction="EAST_NORTH" accessRef="a11"/>
-        <roomaccess id="a12" direction="SOUTH_WEST" accessRef="a13"/>
-        <roomaccess id="a14" direction="NORTH_EAST" accessRef="a15"/>
-        <roomaccess id="a16" direction="WEST_SOUTH" accessRef="a17"/>
+        <roomaccess id="a5" direction="SOUTH_EAST" accessRef="a4"/>
+        <roomaccess id="a12" direction="NORTH_EAST" accessRef="a13"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T10-QAFACT5" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT4" correctnessToReach="1"/>
         <fact id="HG_O1_L1_T10-QAFACT7" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT6" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT3" correctnessToReach="1"/>
       </facts>
       <elements>
         <element id="STRUCT9" type="MapStructure" pos="POSXXL1" visualisation="DOMAINE_BIO_LEGEND"/>
-        <element id="ELEM10" type="ObjectDetector" pos="id/STRUCT9/SEMI_CONTINENTAL" correctAnswer="BLUE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT5"/>
+        <element id="ELEM10" type="ObjectDetector" pos="id/STRUCT9/OCEANIQUE_DEGRADE" correctAnswer="LIGHT_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT4"/>
         <element id="ELEM11" type="ObjectDetector" pos="id/STRUCT9/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
-        <element id="ELEM12" type="ObjectDetector" pos="id/STRUCT9/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
-        <element id="ELEM13" type="Pot" displayValue="BLUE" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT5" isImageDisplay="true"/>
-        <element id="ELEM14" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
-        <element id="ELEM15" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM16" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+        <element id="ELEM12" type="ObjectDetector" pos="id/STRUCT9/MEDITERRANEEN" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT6"/>
+        <element id="ELEM13" type="ObjectDetector" pos="id/STRUCT9/OCEANIQUE" correctAnswer="DARK_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT3"/>
+        <element id="ELEM14" type="Pot" displayValue="LIGHT_GREEN" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT4" isImageDisplay="true"/>
+        <element id="ELEM15" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
+        <element id="ELEM16" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT6" isImageDisplay="true"/>
+        <element id="ELEM17" type="Pot" displayValue="DARK_GREEN" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT3" isImageDisplay="true"/>
+        <element id="ELEM18" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[4/-2]" x="4" y="-2" roomTypeName="RoomTrap3" correctnessToReach="0">
+    <room id="Room[0/-2]" y="-2" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="4">
       <roomaccesses>
-        <roomaccess id="a11" direction="WEST" accessRef="a10"/>
-        <roomaccess id="a18" direction="EAST" accessRef="a19"/>
-        <roomaccess id="a20" direction="SOUTH" accessRef="a21"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM17" type="WaitFireTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM18" type="WaitFireTrap" pos="POS8" ability="AVOIDABLE"/>
-        <element id="ELEM19" type="WaitFireTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM20" type="WaitFireTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM21" type="WaitFireTrap" pos="POS7" ability="AVOIDABLE"/>
-        <element id="ELEM22" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM23" type="WaitFireTrap" pos="POS9" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[0/-4]" y="-4" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
-      <roomaccesses>
-        <roomaccess id="a7" direction="NORTH_WEST" accessRef="a6"/>
-        <roomaccess id="a22" direction="SOUTH_WEST" accessRef="a23"/>
-        <roomaccess id="a24" direction="WEST_SOUTH" accessRef="a25"/>
-        <roomaccess id="a26" direction="EAST_SOUTH" accessRef="a27"/>
-        <roomaccess id="a17" direction="EAST_NORTH" accessRef="a16"/>
+        <roomaccess id="a7" direction="NORTH_EAST" accessRef="a6"/>
+        <roomaccess id="a14" direction="WEST_SOUTH" accessRef="a15"/>
+        <roomaccess id="a16" direction="SOUTH_WEST" accessRef="a17"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T10-QAFACT2" correctnessToReach="1"/>
         <fact id="HG_O1_L1_T10-QAFACT3" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT24" type="MapStructure" pos="POSXXL1" visualisation="DENSITE_POPU_LEGEND"/>
-        <element id="ELEM25" type="ObjectDetector" pos="id/STRUCT24/FAIBLE" correctAnswer="JAUNE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT2"/>
-        <element id="ELEM26" type="ObjectDetector" pos="id/STRUCT24/OCEANIQUE" correctAnswer="DARK_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT3"/>
-        <element id="ELEM27" type="ObjectDetector" pos="id/STRUCT24/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
-        <element id="ELEM28" type="Pot" displayValue="JAUNE" correctness="CORRECT" pos="POS17" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT2" isImageDisplay="true"/>
-        <element id="ELEM29" type="Pot" displayValue="DARK_GREEN" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT3" isImageDisplay="true"/>
-        <element id="ELEM30" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM31" type="Switch" pos="POS19" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[5/-3]" x="5" y="-3" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
-      <roomaccesses>
-        <roomaccess id="a19" direction="WEST_NORTH" accessRef="a18"/>
-        <roomaccess id="a28" direction="SOUTH_WEST" accessRef="a29"/>
-        <roomaccess id="a30" direction="EAST_NORTH" accessRef="a31"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT4" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT7" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT32" type="MapStructure" pos="POSXXL1" visualisation="DENSITE_POPU_LEGEND"/>
-        <element id="ELEM33" type="ObjectDetector" pos="id/STRUCT32/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
-        <element id="ELEM34" type="ObjectDetector" pos="id/STRUCT32/OCEANIQUE_DEGRADE" correctAnswer="LIGHT_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT4"/>
-        <element id="ELEM35" type="ObjectDetector" pos="id/STRUCT32/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
-        <element id="ELEM36" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM37" type="Pot" displayValue="LIGHT_GREEN" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT4" isImageDisplay="true"/>
-        <element id="ELEM38" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
-        <element id="ELEM39" type="Switch" pos="POS19" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[5/-4]" x="5" y="-4" roomTypeName="RoomTrap4" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a29" direction="NORTH" accessRef="a28"/>
-        <roomaccess id="a32" direction="SOUTH" accessRef="a33"/>
-        <roomaccess id="a34" direction="EAST" accessRef="a35"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM40" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM41" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM42" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM43" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM44" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM45" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM46" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[2/-5]" x="2" y="-5" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
-      <roomaccesses>
-        <roomaccess id="a13" direction="NORTH_WEST" accessRef="a12"/>
-        <roomaccess id="a36" direction="SOUTH_WEST" accessRef="a37"/>
-        <roomaccess id="a27" direction="WEST_NORTH" accessRef="a26"/>
-      </roomaccesses>
-      <facts>
         <fact id="HG_O1_L1_T10-QAFACT6" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
         <fact id="HG_O1_L1_T10-QAFACT7" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT4" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT47" type="MapStructure" pos="POSXXL1" visualisation="DOMAINE_BIO_LEGEND"/>
-        <element id="ELEM48" type="ObjectDetector" pos="id/STRUCT47/MEDITERRANEEN" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT6"/>
-        <element id="ELEM49" type="ObjectDetector" pos="id/STRUCT47/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
-        <element id="ELEM50" type="ObjectDetector" pos="id/STRUCT47/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
-        <element id="ELEM51" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT6" isImageDisplay="true"/>
-        <element id="ELEM52" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS15" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM53" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
-        <element id="ELEM54" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+        <element id="STRUCT19" type="MapStructure" pos="POSXXL1" visualisation="DOMAINE_BIO_LEGEND"/>
+        <element id="ELEM20" type="ObjectDetector" pos="id/STRUCT19/OCEANIQUE" correctAnswer="DARK_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT3"/>
+        <element id="ELEM21" type="ObjectDetector" pos="id/STRUCT19/MEDITERRANEEN" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT6"/>
+        <element id="ELEM22" type="ObjectDetector" pos="id/STRUCT19/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
+        <element id="ELEM23" type="ObjectDetector" pos="id/STRUCT19/OCEANIQUE_DEGRADE" correctAnswer="LIGHT_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT4"/>
+        <element id="ELEM24" type="Pot" displayValue="DARK_GREEN" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT3" isImageDisplay="true"/>
+        <element id="ELEM25" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT6" isImageDisplay="true"/>
+        <element id="ELEM26" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
+        <element id="ELEM27" type="Pot" displayValue="LIGHT_GREEN" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT4" isImageDisplay="true"/>
+        <element id="ELEM28" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-1/-2]" x="-1" y="-2" roomTypeName="RoomTrap3" correctnessToReach="0">
+    <room id="Room[0/1]" y="1" roomTypeName="RoomTrap3" correctnessToReach="0">
       <roomaccesses>
         <roomaccess id="a9" direction="EAST" accessRef="a8"/>
-        <roomaccess id="a38" direction="WEST" accessRef="a39"/>
-        <roomaccess id="a40" direction="NORTH" accessRef="a41"/>
+        <roomaccess id="a18" direction="NORTH" accessRef="a19"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM55" type="BearTrap" pos="POS4" ability="NONAVOIDABLE"/>
-        <element id="ELEM56" type="BearTrap" pos="POS2" ability="NONAVOIDABLE"/>
-        <element id="ELEM57" type="BearTrap" pos="POS8" ability="NONAVOIDABLE"/>
+        <element id="ELEM29" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM30" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM31" type="FireTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM32" type="FireTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM33" type="FireTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM34" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM35" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[0/-6]" y="-6" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
+    <room id="Room[3/0]" x="3" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="4">
       <roomaccesses>
-        <roomaccess id="a23" direction="NORTH_WEST" accessRef="a22"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T10-QAFACT2" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT3" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT6" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT58" type="MapStructure" pos="POSXXL1" visualisation="DENSITE_POPU_LEGEND"/>
-        <element id="ELEM59" type="ObjectDetector" pos="id/STRUCT58/FAIBLE" correctAnswer="JAUNE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT2"/>
-        <element id="ELEM60" type="ObjectDetector" pos="id/STRUCT58/OCEANIQUE" correctAnswer="DARK_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT3"/>
-        <element id="ELEM61" type="ObjectDetector" pos="id/STRUCT58/MEDITERRANEEN" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT6"/>
-        <element id="ELEM62" type="Pot" displayValue="JAUNE" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT2" isImageDisplay="true"/>
-        <element id="ELEM63" type="Pot" displayValue="DARK_GREEN" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT3" isImageDisplay="true"/>
-        <element id="ELEM64" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT6" isImageDisplay="true"/>
-        <element id="ELEM65" type="Switch" pos="POS19" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[4/-6]" x="4" y="-6" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
-      <roomaccesses>
-        <roomaccess id="a33" direction="NORTH_EAST" accessRef="a32"/>
-        <roomaccess id="a42" direction="WEST_SOUTH" accessRef="a43"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT7" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT6" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT66" type="MapStructure" pos="POSXXL1" visualisation="DENSITE_POPU_LEGEND"/>
-        <element id="ELEM67" type="ObjectDetector" pos="id/STRUCT66/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
-        <element id="ELEM68" type="ObjectDetector" pos="id/STRUCT66/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
-        <element id="ELEM69" type="ObjectDetector" pos="id/STRUCT66/MEDITERRANEEN" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT6"/>
-        <element id="ELEM70" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM71" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
-        <element id="ELEM72" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS17" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT6" isImageDisplay="true"/>
-        <element id="ELEM73" type="Switch" pos="POS19" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[6/-5]" x="6" y="-5" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
-      <roomaccesses>
-        <roomaccess id="a35" direction="WEST_NORTH" accessRef="a34"/>
-        <roomaccess id="a44" direction="EAST_SOUTH" accessRef="a45"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T10-QAFACT7" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT6" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT74" type="MapStructure" pos="POSXXL1" visualisation="DOMAINE_BIO_LEGEND"/>
-        <element id="ELEM75" type="ObjectDetector" pos="id/STRUCT74/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
-        <element id="ELEM76" type="ObjectDetector" pos="id/STRUCT74/MEDITERRANEEN" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT6"/>
-        <element id="ELEM77" type="ObjectDetector" pos="id/STRUCT74/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
-        <element id="ELEM78" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
-        <element id="ELEM79" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT6" isImageDisplay="true"/>
-        <element id="ELEM80" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM81" type="Switch" pos="POS19" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[-3/-3]" x="-3" y="-3" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
-      <roomaccesses>
-        <roomaccess id="a39" direction="EAST_NORTH" accessRef="a38"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T10-QAFACT0" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT5" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT2" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT82" type="MapStructure" pos="POSXXL1" visualisation="DENSITE_POPU_LEGEND"/>
-        <element id="ELEM83" type="ObjectDetector" pos="id/STRUCT82/FORTE" correctAnswer="ROUGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT0"/>
-        <element id="ELEM84" type="ObjectDetector" pos="id/STRUCT82/SEMI_CONTINENTAL" correctAnswer="BLUE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT5"/>
-        <element id="ELEM85" type="ObjectDetector" pos="id/STRUCT82/FAIBLE" correctAnswer="JAUNE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT2"/>
-        <element id="ELEM86" type="Pot" displayValue="ROUGE" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT0" isImageDisplay="true"/>
-        <element id="ELEM87" type="Pot" displayValue="BLUE" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT5" isImageDisplay="true"/>
-        <element id="ELEM88" type="Pot" displayValue="JAUNE" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT2" isImageDisplay="true"/>
-        <element id="ELEM89" type="Switch" pos="POS19" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[7/-3]" x="7" y="-3" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
-      <roomaccesses>
-        <roomaccess id="a31" direction="WEST_NORTH" accessRef="a30"/>
+        <roomaccess id="a11" direction="WEST_NORTH" accessRef="a10"/>
+        <roomaccess id="a20" direction="EAST_SOUTH" accessRef="a21"/>
+        <roomaccess id="a22" direction="SOUTH_EAST" accessRef="a23"/>
       </roomaccesses>
       <facts>
         <fact id="HG_O1_L1_T10-QAFACT3" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT7" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT90" type="MapStructure" pos="POSXXL1" visualisation="DOMAINE_BIO_LEGEND"/>
-        <element id="ELEM91" type="ObjectDetector" pos="id/STRUCT90/OCEANIQUE" correctAnswer="DARK_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT3"/>
-        <element id="ELEM92" type="ObjectDetector" pos="id/STRUCT90/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
-        <element id="ELEM93" type="ObjectDetector" pos="id/STRUCT90/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
-        <element id="ELEM94" type="Pot" displayValue="DARK_GREEN" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT3" isImageDisplay="true"/>
-        <element id="ELEM95" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM96" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
-        <element id="ELEM97" type="Switch" pos="POS19" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[-2/-1]" x="-2" y="-1" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
-      <roomaccesses>
-        <roomaccess id="a41" direction="SOUTH_EAST" accessRef="a40"/>
-        <roomaccess id="a46" direction="NORTH_EAST" accessRef="a47"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT6" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT3" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT98" type="MapStructure" pos="POSXXL1" visualisation="DENSITE_POPU_LEGEND"/>
-        <element id="ELEM99" type="ObjectDetector" pos="id/STRUCT98/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
-        <element id="ELEM100" type="ObjectDetector" pos="id/STRUCT98/MEDITERRANEEN" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT6"/>
-        <element id="ELEM101" type="ObjectDetector" pos="id/STRUCT98/OCEANIQUE" correctAnswer="DARK_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT3"/>
-        <element id="ELEM102" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM103" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT6" isImageDisplay="true"/>
-        <element id="ELEM104" type="Pot" displayValue="DARK_GREEN" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT3" isImageDisplay="true"/>
-        <element id="ELEM105" type="Switch" pos="POS19" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[2/-6]" x="2" y="-6" roomTypeName="RoomTrap" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a37" direction="NORTH" accessRef="a36"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM106" type="BearTrap" pos="POS2" ability="NONAVOIDABLE"/>
-        <element id="ELEM107" type="BearTrap" pos="POS1" ability="NONAVOIDABLE"/>
-        <element id="ELEM108" type="BearTrap" pos="POS5" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-1/-4]" x="-1" y="-4" roomTypeName="RoomTrap4" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a25" direction="EAST" accessRef="a24"/>
-        <roomaccess id="a48" direction="SOUTH" accessRef="a49"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM109" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM110" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM111" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM112" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM113" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM114" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM115" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[2/-1]" x="2" y="-1" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
-      <roomaccesses>
-        <roomaccess id="a15" direction="SOUTH_EAST" accessRef="a14"/>
-        <roomaccess id="a50" direction="NORTH_EAST" accessRef="a51"/>
-      </roomaccesses>
-      <facts>
         <fact id="HG_O1_L1_T10-QAFACT7" correctnessToReach="1"/>
         <fact id="HG_O1_L1_T10-QAFACT4" correctnessToReach="1"/>
-        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT5" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT116" type="MapStructure" pos="POSXXL1" visualisation="DOMAINE_BIO_LEGEND"/>
-        <element id="ELEM117" type="ObjectDetector" pos="id/STRUCT116/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
-        <element id="ELEM118" type="ObjectDetector" pos="id/STRUCT116/OCEANIQUE_DEGRADE" correctAnswer="LIGHT_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT4"/>
-        <element id="ELEM119" type="ObjectDetector" pos="id/STRUCT116/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
-        <element id="ELEM120" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
-        <element id="ELEM121" type="Pot" displayValue="LIGHT_GREEN" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT4" isImageDisplay="true"/>
-        <element id="ELEM122" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM123" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+        <element id="STRUCT36" type="MapStructure" pos="POSXXL1" visualisation="DOMAINE_BIO_LEGEND"/>
+        <element id="ELEM37" type="ObjectDetector" pos="id/STRUCT36/OCEANIQUE" correctAnswer="DARK_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT3"/>
+        <element id="ELEM38" type="ObjectDetector" pos="id/STRUCT36/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
+        <element id="ELEM39" type="ObjectDetector" pos="id/STRUCT36/OCEANIQUE_DEGRADE" correctAnswer="LIGHT_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT4"/>
+        <element id="ELEM40" type="ObjectDetector" pos="id/STRUCT36/SEMI_CONTINENTAL" correctAnswer="BLUE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT5"/>
+        <element id="ELEM41" type="Pot" displayValue="DARK_GREEN" correctness="CORRECT" pos="POS17" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT3" isImageDisplay="true"/>
+        <element id="ELEM42" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS16" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
+        <element id="ELEM43" type="Pot" displayValue="LIGHT_GREEN" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT4" isImageDisplay="true"/>
+        <element id="ELEM44" type="Pot" displayValue="BLUE" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT5" isImageDisplay="true"/>
+        <element id="ELEM45" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-1/1]" x="-1" y="1" roomTypeName="RoomTrap4" correctnessToReach="0">
+    <room id="Room[1/4]" x="1" y="4" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="4">
       <roomaccesses>
-        <roomaccess id="a47" direction="SOUTH" accessRef="a46"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM124" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM125" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM126" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM127" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM128" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM129" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM130" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[4/-3]" x="4" y="-3" roomTypeName="RoomTrap" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a21" direction="NORTH" accessRef="a20"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM131" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM132" type="SpikeTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM133" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM134" type="SpikeTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM135" type="SpikeTrap" pos="POS1" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[3/-6]" x="3" y="-6" roomTypeName="RoomTrap3" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a43" direction="EAST" accessRef="a42"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM136" type="WaitSpikeTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM137" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM138" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM139" type="WaitSpikeTrap" pos="POS8" ability="AVOIDABLE"/>
-        <element id="ELEM140" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-2/-6]" x="-2" y="-6" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
-      <roomaccesses>
-        <roomaccess id="a49" direction="NORTH_EAST" accessRef="a48"/>
+        <roomaccess id="a13" direction="SOUTH_EAST" accessRef="a12"/>
+        <roomaccess id="a24" direction="WEST_NORTH" accessRef="a25"/>
       </roomaccesses>
       <facts>
+        <fact id="HG_O1_L1_T10-QAFACT3" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT6" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT5" correctnessToReach="1"/>
         <fact id="HG_O1_L1_T10-QAFACT7" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT46" type="MapStructure" pos="POSXXL1" visualisation="DOMAINE_BIO_LEGEND"/>
+        <element id="ELEM47" type="ObjectDetector" pos="id/STRUCT46/OCEANIQUE" correctAnswer="DARK_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT3"/>
+        <element id="ELEM48" type="ObjectDetector" pos="id/STRUCT46/MEDITERRANEEN" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT6"/>
+        <element id="ELEM49" type="ObjectDetector" pos="id/STRUCT46/SEMI_CONTINENTAL" correctAnswer="BLUE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT5"/>
+        <element id="ELEM50" type="ObjectDetector" pos="id/STRUCT46/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
+        <element id="ELEM51" type="Pot" displayValue="DARK_GREEN" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT3" isImageDisplay="true"/>
+        <element id="ELEM52" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT6" isImageDisplay="true"/>
+        <element id="ELEM53" type="Pot" displayValue="BLUE" correctness="CORRECT" pos="POS15" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT5" isImageDisplay="true"/>
+        <element id="ELEM54" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
+        <element id="ELEM55" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[5/0]" x="5" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a21" direction="WEST" accessRef="a20"/>
+        <roomaccess id="a26" direction="SOUTH" accessRef="a27"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM56" type="BearTrap" pos="POS2" ability="NONAVOIDABLE"/>
+        <element id="ELEM57" type="BearTrap" pos="POS6" ability="NONAVOIDABLE"/>
+        <element id="ELEM58" type="BearTrap" pos="POS9" ability="NONAVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[5/-1]" x="5" y="-1" roomTypeName="RoomTrap2" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a27" direction="NORTH" accessRef="a26"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM59" type="BearTrap" pos="POS2" ability="NONAVOIDABLE"/>
+        <element id="ELEM60" type="BearTrap" pos="POS4" ability="NONAVOIDABLE"/>
+        <element id="ELEM61" type="BearTrap" pos="POS1" ability="NONAVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[0/2]" y="2" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a19" direction="SOUTH" accessRef="a18"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM62" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM63" type="SpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM64" type="SpikeTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM65" type="SpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM66" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM67" type="SpikeTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM68" type="SpikeTrap" pos="POS2" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-2/-3]" x="-2" y="-3" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
+      <roomaccesses>
+        <roomaccess id="a15" direction="EAST_NORTH" accessRef="a14"/>
+        <roomaccess id="a28" direction="SOUTH_WEST" accessRef="a29"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T10-QAFACT0" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT2" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT69" type="MapStructure" pos="POSXXL1" visualisation="DENSITE_POPU_LEGEND"/>
+        <element id="ELEM70" type="ObjectDetector" pos="id/STRUCT69/FORTE" correctAnswer="ROUGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT0"/>
+        <element id="ELEM71" type="ObjectDetector" pos="id/STRUCT69/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
+        <element id="ELEM72" type="ObjectDetector" pos="id/STRUCT69/FAIBLE" correctAnswer="JAUNE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT2"/>
+        <element id="ELEM73" type="Pot" displayValue="ROUGE" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT0" isImageDisplay="true"/>
+        <element id="ELEM74" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS13" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM75" type="Pot" displayValue="JAUNE" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT2" isImageDisplay="true"/>
+        <element id="ELEM76" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[0/-3]" y="-3" roomTypeName="RoomTrap4" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a17" direction="NORTH" accessRef="a16"/>
+        <roomaccess id="a30" direction="SOUTH" accessRef="a31"/>
+        <roomaccess id="a32" direction="EAST" accessRef="a33"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM77" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM78" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM79" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM80" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM81" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM82" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM83" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-2/-4]" x="-2" y="-4" roomTypeName="RoomTrap" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a29" direction="NORTH" accessRef="a28"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM84" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM85" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM86" type="WaitSpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM87" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM88" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-1/5]" x="-1" y="5" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="4">
+      <roomaccesses>
+        <roomaccess id="a25" direction="EAST_SOUTH" accessRef="a24"/>
+        <roomaccess id="a34" direction="NORTH_EAST" accessRef="a35"/>
+        <roomaccess id="a36" direction="WEST_SOUTH" accessRef="a37"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T10-QAFACT4" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT5" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT7" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT3" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT89" type="MapStructure" pos="POSXXL1" visualisation="DOMAINE_BIO_LEGEND"/>
+        <element id="ELEM90" type="ObjectDetector" pos="id/STRUCT89/OCEANIQUE_DEGRADE" correctAnswer="LIGHT_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT4"/>
+        <element id="ELEM91" type="ObjectDetector" pos="id/STRUCT89/SEMI_CONTINENTAL" correctAnswer="BLUE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT5"/>
+        <element id="ELEM92" type="ObjectDetector" pos="id/STRUCT89/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
+        <element id="ELEM93" type="ObjectDetector" pos="id/STRUCT89/OCEANIQUE" correctAnswer="DARK_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT3"/>
+        <element id="ELEM94" type="Pot" displayValue="LIGHT_GREEN" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT4" isImageDisplay="true"/>
+        <element id="ELEM95" type="Pot" displayValue="BLUE" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT5" isImageDisplay="true"/>
+        <element id="ELEM96" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS17" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
+        <element id="ELEM97" type="Pot" displayValue="DARK_GREEN" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT3" isImageDisplay="true"/>
+        <element id="ELEM98" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[-1/7]" x="-1" y="7" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
+      <roomaccesses>
+        <roomaccess id="a35" direction="SOUTH_EAST" accessRef="a34"/>
+        <roomaccess id="a38" direction="WEST_NORTH" accessRef="a39"/>
+        <roomaccess id="a40" direction="NORTH_WEST" accessRef="a41"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T10-QAFACT0" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT2" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT99" type="MapStructure" pos="POSXXL1" visualisation="DENSITE_POPU_LEGEND"/>
+        <element id="ELEM100" type="ObjectDetector" pos="id/STRUCT99/FORTE" correctAnswer="ROUGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT0"/>
+        <element id="ELEM101" type="ObjectDetector" pos="id/STRUCT99/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
+        <element id="ELEM102" type="ObjectDetector" pos="id/STRUCT99/FAIBLE" correctAnswer="JAUNE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT2"/>
+        <element id="ELEM103" type="Pot" displayValue="ROUGE" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT0" isImageDisplay="true"/>
+        <element id="ELEM104" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM105" type="Pot" displayValue="JAUNE" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT2" isImageDisplay="true"/>
+        <element id="ELEM106" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[-3/4]" x="-3" y="4" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
+      <roomaccesses>
+        <roomaccess id="a37" direction="EAST_NORTH" accessRef="a36"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT2" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT0" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT107" type="MapStructure" pos="POSXXL1" visualisation="DENSITE_POPU_LEGEND"/>
+        <element id="ELEM108" type="ObjectDetector" pos="id/STRUCT107/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
+        <element id="ELEM109" type="ObjectDetector" pos="id/STRUCT107/FAIBLE" correctAnswer="JAUNE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT2"/>
+        <element id="ELEM110" type="ObjectDetector" pos="id/STRUCT107/FORTE" correctAnswer="ROUGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT0"/>
+        <element id="ELEM111" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM112" type="Pot" displayValue="JAUNE" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT2" isImageDisplay="true"/>
+        <element id="ELEM113" type="Pot" displayValue="ROUGE" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT0" isImageDisplay="true"/>
+        <element id="ELEM114" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[-1/-5]" x="-1" y="-5" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
+      <roomaccesses>
+        <roomaccess id="a31" direction="NORTH_EAST" accessRef="a30"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T10-QAFACT2" correctnessToReach="1"/>
         <fact id="HG_O1_L1_T10-QAFACT0" correctnessToReach="1"/>
         <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT141" type="MapStructure" pos="POSXXL1" visualisation="DOMAINE_BIO_LEGEND"/>
-        <element id="ELEM142" type="ObjectDetector" pos="id/STRUCT141/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
-        <element id="ELEM143" type="ObjectDetector" pos="id/STRUCT141/FORTE" correctAnswer="ROUGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT0"/>
-        <element id="ELEM144" type="ObjectDetector" pos="id/STRUCT141/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
-        <element id="ELEM145" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS16" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
-        <element id="ELEM146" type="Pot" displayValue="ROUGE" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT0" isImageDisplay="true"/>
-        <element id="ELEM147" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM148" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+        <element id="STRUCT115" type="MapStructure" pos="POSXXL1" visualisation="DENSITE_POPU_LEGEND"/>
+        <element id="ELEM116" type="ObjectDetector" pos="id/STRUCT115/FAIBLE" correctAnswer="JAUNE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT2"/>
+        <element id="ELEM117" type="ObjectDetector" pos="id/STRUCT115/FORTE" correctAnswer="ROUGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT0"/>
+        <element id="ELEM118" type="ObjectDetector" pos="id/STRUCT115/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
+        <element id="ELEM119" type="Pot" displayValue="JAUNE" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT2" isImageDisplay="true"/>
+        <element id="ELEM120" type="Pot" displayValue="ROUGE" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT0" isImageDisplay="true"/>
+        <element id="ELEM121" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM122" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[3/1]" x="3" y="1" roomTypeName="RoomTrap3" correctnessToReach="0">
+    <room id="Room[1/-4]" x="1" y="-4" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="4">
       <roomaccesses>
-        <roomaccess id="a51" direction="SOUTH" accessRef="a50"/>
+        <roomaccess id="a33" direction="WEST_NORTH" accessRef="a32"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T10-QAFACT7" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT3" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT5" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT4" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT123" type="MapStructure" pos="POSXXL1" visualisation="DOMAINE_BIO_LEGEND"/>
+        <element id="ELEM124" type="ObjectDetector" pos="id/STRUCT123/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
+        <element id="ELEM125" type="ObjectDetector" pos="id/STRUCT123/OCEANIQUE" correctAnswer="DARK_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT3"/>
+        <element id="ELEM126" type="ObjectDetector" pos="id/STRUCT123/SEMI_CONTINENTAL" correctAnswer="BLUE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT5"/>
+        <element id="ELEM127" type="ObjectDetector" pos="id/STRUCT123/OCEANIQUE_DEGRADE" correctAnswer="LIGHT_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT4"/>
+        <element id="ELEM128" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS13" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
+        <element id="ELEM129" type="Pot" displayValue="DARK_GREEN" correctness="CORRECT" pos="POS16" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT3" isImageDisplay="true"/>
+        <element id="ELEM130" type="Pot" displayValue="BLUE" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT5" isImageDisplay="true"/>
+        <element id="ELEM131" type="Pot" displayValue="LIGHT_GREEN" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT4" isImageDisplay="true"/>
+        <element id="ELEM132" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[3/-2]" x="3" y="-2" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="4">
+      <roomaccesses>
+        <roomaccess id="a23" direction="NORTH_EAST" accessRef="a22"/>
+        <roomaccess id="a42" direction="EAST_SOUTH" accessRef="a43"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T10-QAFACT6" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT5" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT3" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT7" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT133" type="MapStructure" pos="POSXXL1" visualisation="DOMAINE_BIO_LEGEND"/>
+        <element id="ELEM134" type="ObjectDetector" pos="id/STRUCT133/MEDITERRANEEN" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT6"/>
+        <element id="ELEM135" type="ObjectDetector" pos="id/STRUCT133/SEMI_CONTINENTAL" correctAnswer="BLUE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT5"/>
+        <element id="ELEM136" type="ObjectDetector" pos="id/STRUCT133/OCEANIQUE" correctAnswer="DARK_GREEN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT3"/>
+        <element id="ELEM137" type="ObjectDetector" pos="id/STRUCT133/MONTAGNARD" correctAnswer="BROWN;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT7"/>
+        <element id="ELEM138" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS16" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT6" isImageDisplay="true"/>
+        <element id="ELEM139" type="Pot" displayValue="BLUE" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT5" isImageDisplay="true"/>
+        <element id="ELEM140" type="Pot" displayValue="DARK_GREEN" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT3" isImageDisplay="true"/>
+        <element id="ELEM141" type="Pot" displayValue="BROWN" correctness="CORRECT" pos="POS13" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT7" isImageDisplay="true"/>
+        <element id="ELEM142" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[-2/8]" x="-2" y="8" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a39" direction="EAST" accessRef="a38"/>
+        <roomaccess id="a44" direction="WEST" accessRef="a45"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM149" type="SpikeTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM150" type="SpikeTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM151" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM152" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM153" type="SpikeTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM143" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM144" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM145" type="WaitSpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM146" type="WaitSpikeTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM147" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[8/-5]" x="8" y="-5" roomTypeName="ExitRoom1" correctnessToReach="0">
+    <room id="Room[5/-2]" x="5" y="-2" roomTypeName="RoomTrap3" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a45" direction="WEST" accessRef="a44"/>
+        <roomaccess id="a43" direction="WEST" accessRef="a42"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM148" type="FireTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM149" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM150" type="FireTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM151" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM152" type="FireTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM153" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM154" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-2/9]" x="-2" y="9" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T10" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="3">
+      <roomaccesses>
+        <roomaccess id="a41" direction="SOUTH_EAST" accessRef="a40"/>
+        <roomaccess id="a46" direction="EAST_NORTH" accessRef="a47"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T10-QAFACT0" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT2" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T10-QAFACT1" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT155" type="MapStructure" pos="POSXXL1" visualisation="DENSITE_POPU_LEGEND"/>
+        <element id="ELEM156" type="ObjectDetector" pos="id/STRUCT155/FORTE" correctAnswer="ROUGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT0"/>
+        <element id="ELEM157" type="ObjectDetector" pos="id/STRUCT155/FAIBLE" correctAnswer="JAUNE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT2"/>
+        <element id="ELEM158" type="ObjectDetector" pos="id/STRUCT155/MOYENNE" correctAnswer="ORANGE;" ability="DETECTOR" idFact="HG_O1_L1_T10-QAFACT1"/>
+        <element id="ELEM159" type="Pot" displayValue="ROUGE" correctness="CORRECT" pos="POS15" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT0" isImageDisplay="true"/>
+        <element id="ELEM160" type="Pot" displayValue="JAUNE" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT2" isImageDisplay="true"/>
+        <element id="ELEM161" type="Pot" displayValue="ORANGE" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T10-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM162" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[-3/8]" x="-3" y="8" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a45" direction="EAST" accessRef="a44"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM163" type="WaitSpikeTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM164" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM165" type="WaitSpikeTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM166" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM167" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM168" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM169" type="WaitSpikeTrap" pos="POS7" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[0/10]" y="10" roomTypeName="ExitRoom1" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a47" direction="WEST" accessRef="a46"/>
       </roomaccesses>
     </room>
   </rooms>

@@ -107,8 +107,6 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createMTRecontruction();
 		case GeneratorPackage.MT_IDENTIFICATION:
 			return createMTIdentification();
-		case GeneratorPackage.MT_MEMBERSHIP:
-			return createMTMembership();
 		case GeneratorPackage.RESULTS:
 			return createResults();
 		case GeneratorPackage.RESULTS_BY_TASK:
@@ -283,6 +281,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createMultipleChoice();
 		case GeneratorPackage.LEGEND_QUESTIONABLE_FACT:
 			return createLegendQuestionableFact();
+		case GeneratorPackage.MT_MEMBERSHIP:
+			return createMTMembership();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}

@@ -33,7 +33,6 @@ import generator.ResponseModality;
  *   <li>{@link generator.impl.OrderingTaskImpl#getNbFacts <em>Nb Facts</em>}</li>
  *   <li>{@link generator.impl.OrderingTaskImpl#getType <em>Type</em>}</li>
  *   <li>{@link generator.impl.OrderingTaskImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
- *   <li>{@link generator.impl.OrderingTaskImpl#isNoStatementTask <em>No Statement Task</em>}</li>
  * </ul>
  *
  * @generated
@@ -197,26 +196,6 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected boolean checkOnLearnerAction = CHECK_ON_LEARNER_ACTION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isNoStatementTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean NO_STATEMENT_TASK_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isNoStatementTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean noStatementTask = NO_STATEMENT_TASK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -461,28 +440,6 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isNoStatementTask() {
-		return noStatementTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNoStatementTask(boolean newNoStatementTask) {
-		boolean oldNoStatementTask = noStatementTask;
-		noStatementTask = newNoStatementTask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ORDERING_TASK__NO_STATEMENT_TASK,
-					oldNoStatementTask, noStatementTask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getNbExpectedAnswers() {
 		return this.getNbFacts();
 	}
@@ -534,8 +491,6 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 			return getType();
 		case GeneratorPackage.ORDERING_TASK__CHECK_ON_LEARNER_ACTION:
 			return isCheckOnLearnerAction();
-		case GeneratorPackage.ORDERING_TASK__NO_STATEMENT_TASK:
-			return isNoStatementTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -568,9 +523,6 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 			return;
 		case GeneratorPackage.ORDERING_TASK__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction((Boolean) newValue);
-			return;
-		case GeneratorPackage.ORDERING_TASK__NO_STATEMENT_TASK:
-			setNoStatementTask((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -605,9 +557,6 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 		case GeneratorPackage.ORDERING_TASK__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction(CHECK_ON_LEARNER_ACTION_EDEFAULT);
 			return;
-		case GeneratorPackage.ORDERING_TASK__NO_STATEMENT_TASK:
-			setNoStatementTask(NO_STATEMENT_TASK_EDEFAULT);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -636,8 +585,6 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 			return type != TYPE_EDEFAULT;
 		case GeneratorPackage.ORDERING_TASK__CHECK_ON_LEARNER_ACTION:
 			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
-		case GeneratorPackage.ORDERING_TASK__NO_STATEMENT_TASK:
-			return noStatementTask != NO_STATEMENT_TASK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -686,8 +633,6 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 		result.append(type);
 		result.append(", checkOnLearnerAction: ");
 		result.append(checkOnLearnerAction);
-		result.append(", noStatementTask: ");
-		result.append(noStatementTask);
 		result.append(')');
 		return result.toString();
 	}

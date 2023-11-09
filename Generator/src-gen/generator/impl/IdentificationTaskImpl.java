@@ -33,7 +33,6 @@ import generator.ResponseModality;
  *   <li>{@link generator.impl.IdentificationTaskImpl#getNbFacts <em>Nb Facts</em>}</li>
  *   <li>{@link generator.impl.IdentificationTaskImpl#getType <em>Type</em>}</li>
  *   <li>{@link generator.impl.IdentificationTaskImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
- *   <li>{@link generator.impl.IdentificationTaskImpl#isNoStatementTask <em>No Statement Task</em>}</li>
  * </ul>
  *
  * @generated
@@ -197,26 +196,6 @@ public abstract class IdentificationTaskImpl extends MinimalEObjectImpl.Containe
 	 * @ordered
 	 */
 	protected boolean checkOnLearnerAction = CHECK_ON_LEARNER_ACTION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isNoStatementTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean NO_STATEMENT_TASK_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isNoStatementTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean noStatementTask = NO_STATEMENT_TASK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -462,28 +441,6 @@ public abstract class IdentificationTaskImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isNoStatementTask() {
-		return noStatementTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNoStatementTask(boolean newNoStatementTask) {
-		boolean oldNoStatementTask = noStatementTask;
-		noStatementTask = newNoStatementTask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.IDENTIFICATION_TASK__NO_STATEMENT_TASK, oldNoStatementTask, noStatementTask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getNbExpectedAnswers() {
 		return this.getNbFacts();
 	}
@@ -535,8 +492,6 @@ public abstract class IdentificationTaskImpl extends MinimalEObjectImpl.Containe
 			return getType();
 		case GeneratorPackage.IDENTIFICATION_TASK__CHECK_ON_LEARNER_ACTION:
 			return isCheckOnLearnerAction();
-		case GeneratorPackage.IDENTIFICATION_TASK__NO_STATEMENT_TASK:
-			return isNoStatementTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -569,9 +524,6 @@ public abstract class IdentificationTaskImpl extends MinimalEObjectImpl.Containe
 			return;
 		case GeneratorPackage.IDENTIFICATION_TASK__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction((Boolean) newValue);
-			return;
-		case GeneratorPackage.IDENTIFICATION_TASK__NO_STATEMENT_TASK:
-			setNoStatementTask((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -606,9 +558,6 @@ public abstract class IdentificationTaskImpl extends MinimalEObjectImpl.Containe
 		case GeneratorPackage.IDENTIFICATION_TASK__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction(CHECK_ON_LEARNER_ACTION_EDEFAULT);
 			return;
-		case GeneratorPackage.IDENTIFICATION_TASK__NO_STATEMENT_TASK:
-			setNoStatementTask(NO_STATEMENT_TASK_EDEFAULT);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -637,8 +586,6 @@ public abstract class IdentificationTaskImpl extends MinimalEObjectImpl.Containe
 			return type != TYPE_EDEFAULT;
 		case GeneratorPackage.IDENTIFICATION_TASK__CHECK_ON_LEARNER_ACTION:
 			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
-		case GeneratorPackage.IDENTIFICATION_TASK__NO_STATEMENT_TASK:
-			return noStatementTask != NO_STATEMENT_TASK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -687,8 +634,6 @@ public abstract class IdentificationTaskImpl extends MinimalEObjectImpl.Containe
 		result.append(type);
 		result.append(", checkOnLearnerAction: ");
 		result.append(checkOnLearnerAction);
-		result.append(", noStatementTask: ");
-		result.append(noStatementTask);
 		result.append(')');
 		return result.toString();
 	}

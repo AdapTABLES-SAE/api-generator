@@ -437,17 +437,6 @@ public abstract class CompletionTaskImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isNoStatementTask() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -585,8 +574,6 @@ public abstract class CompletionTaskImpl extends MinimalEObjectImpl.Container im
 			return isGraphicTask();
 		case GeneratorPackage.COMPLETION_TASK___IS_CHECK_ON_LEARNER_ACTION:
 			return isCheckOnLearnerAction();
-		case GeneratorPackage.COMPLETION_TASK___IS_NO_STATEMENT_TASK:
-			return isNoStatementTask();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

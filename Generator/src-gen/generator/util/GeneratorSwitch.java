@@ -329,17 +329,6 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.MT_MEMBERSHIP: {
-			MTMembership mtMembership = (MTMembership) theEObject;
-			T result = caseMTMembership(mtMembership);
-			if (result == null)
-				result = caseMembershipIDTask(mtMembership);
-			if (result == null)
-				result = caseATask(mtMembership);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case GeneratorPackage.RESULTS: {
 			Results results = (Results) theEObject;
 			T result = caseResults(results);
@@ -1167,6 +1156,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = caseAVisualizationQuestionableFact(legendQuestionableFact);
 			if (result == null)
 				result = caseAQuestionableFact(legendQuestionableFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.MT_MEMBERSHIP: {
+			MTMembership mtMembership = (MTMembership) theEObject;
+			T result = caseMTMembership(mtMembership);
+			if (result == null)
+				result = caseMembershipIDTask(mtMembership);
+			if (result == null)
+				result = caseATask(mtMembership);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;

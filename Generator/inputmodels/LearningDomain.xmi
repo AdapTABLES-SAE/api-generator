@@ -1663,7 +1663,7 @@
             xsi:type="generator:LegendAMap"
             percentOfApparition="100"
             ID="HG_O1_L1_T10"
-            nbFacts="3"
+            nbFacts="4"
             missing="SYMBOL">
           <responseModality
               xsi:type="generator:DynamicMultipleChoice"/>

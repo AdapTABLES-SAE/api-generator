@@ -229,7 +229,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/targets"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/nbMissingElements"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/checkOnLearnerAction"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion1/noStatementTask"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Classroom">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Classroom/gamecontext"/>
@@ -280,7 +279,6 @@
           body="return 1;"/>
       <genOperations ecoreOperation="generator.ecore#//ATask/isGraphicTask" body="return false; "/>
       <genOperations ecoreOperation="generator.ecore#//ATask/isCheckOnLearnerAction"/>
-      <genOperations ecoreOperation="generator.ecore#//ATask/isNoStatementTask"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//CompletionTask">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CompletionTask/type"/>
@@ -291,7 +289,6 @@
     <genClasses ecoreClass="generator.ecore#//IdentificationTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentificationTask/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentificationTask/checkOnLearnerAction"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentificationTask/noStatementTask"/>
       <genOperations ecoreOperation="generator.ecore#//IdentificationTask/getNbExpectedAnswers"
           body="return this.getNbFacts();"/>
     </genClasses>
@@ -299,7 +296,6 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/identifySharedProperty"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/checkOnLearnerAction"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MembershipIDTask/noStatementTask"/>
       <genOperations ecoreOperation="generator.ecore#//MembershipIDTask/getNbExpectedAnswers"
           body="MultipleChoice mc = (MultipleChoice) this.getResponseModality();&#xD;&#xA;return mc.getNbChoices() - mc.getNbBadChoices(); "/>
     </genClasses>
@@ -307,17 +303,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/targets"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/nbMissingElements"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/checkOnLearnerAction"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/noStatementTask"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTRecontruction">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTRecontruction/nbMissingElements"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTRecontruction/checkOnLearnerAction"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTRecontruction/noStatementTask"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTIdentification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTIdentification/target"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//MTMembership"/>
     <genClasses ecoreClass="generator.ecore#//Results">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Results/resultsbytask"/>
     </genClasses>
@@ -504,7 +497,6 @@
     <genClasses ecoreClass="generator.ecore#//OrderingTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/checkOnLearnerAction"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/noStatementTask"/>
       <genOperations ecoreOperation="generator.ecore#//OrderingTask/getNbExpectedAnswers"
           body="return this.getNbFacts();"/>
     </genClasses>
@@ -707,7 +699,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyTechnique/checkOnLearnerAction"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyTechnique/missing"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyTechnique/source"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyTechnique/noStatementTask"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//JudoQuestionableTechniqueFact">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableTechniqueFact/sourceElementType"/>
@@ -728,7 +719,6 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyArbitrationGesture/nbMissingElements"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyArbitrationGesture/checkOnLearnerAction"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyArbitrationGesture/source"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyArbitrationGesture/noStatementTask"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//JudoQuestionableArbitrationFact">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//JudoQuestionableArbitrationFact/name"/>
@@ -744,5 +734,6 @@
     <genClasses ecoreClass="generator.ecore#//LegendQuestionableFact">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LegendQuestionableFact/target"/>
     </genClasses>
+    <genClasses ecoreClass="generator.ecore#//MTMembership"/>
   </genPackages>
 </genmodel:GenModel>

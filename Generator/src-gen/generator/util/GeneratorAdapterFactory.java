@@ -232,11 +232,6 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMTMembership(MTMembership object) {
-			return createMTMembershipAdapter();
-		}
-
-		@Override
 		public Adapter caseResults(Results object) {
 			return createResultsAdapter();
 		}
@@ -719,6 +714,11 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseLegendQuestionableFact(LegendQuestionableFact object) {
 			return createLegendQuestionableFactAdapter();
+		}
+
+		@Override
+		public Adapter caseMTMembership(MTMembership object) {
+			return createMTMembershipAdapter();
 		}
 
 		@Override

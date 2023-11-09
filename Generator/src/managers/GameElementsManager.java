@@ -78,7 +78,7 @@ public class GameElementsManager {
 				return facts.size() * facts.get(0).getPropositions().size();
 			}
 		}
-		else if(component.isForStatement()) { if(task.isNoStatementTask()) { return 0; } else {return facts.size(); } }
+		else if(component.isForStatement()) { if(task.isGraphicTask()) { return 0; } else {return facts.size(); } }
 		else if(component.getQuantity() != null) {
 			if(component.getQuantity().isFactNbAnswers()) {
 				return facts.size() * task.getNbExpectedAnswers();

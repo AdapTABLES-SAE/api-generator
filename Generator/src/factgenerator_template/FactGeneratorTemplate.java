@@ -267,18 +267,18 @@ public abstract class FactGeneratorTemplate {
 	}
 	
 	protected List<AQuestionableFact> removeUnEligibleFactsBasedOnPreviouslySelectedFact(List<QuestionedFact> previousFacts, List<AQuestionableFact> facts) {
-		/*if(!previousFacts.isEmpty() && previousFacts.get(0).getQuestion() instanceof VisualizationQuestionParam) {
+		if(!previousFacts.isEmpty() && previousFacts.get(0).getQuestion() instanceof VisualizationQuestionParam) {
 			List<AQuestionableFact> facts_ = new ArrayList<>(); 
-			for(AQuestionableFact fact: facts) {
-				if(fact instanceof VisualizationQuestionParam) {
+			for(AQuestionableFact fact: facts) {  
+				if(fact instanceof AVisualizationQuestionableFact) {
 					AVisualizationQuestionableFact vfact = (AVisualizationQuestionableFact) fact; 
-					if( ((VisualizationQuestionParam) previousFacts.get(0).getQuestion()).getVisualization().equals(vfact.getVisualization())) {
+					if( ((VisualizationQuestionParam) previousFacts.get(0).getQuestion()).getVisualization().getID().equals(vfact.getVisualization().getID())) {
 						facts_.add(vfact);
 					}
 				}
 			}
 			return facts_;
-		}*/
+		}
 		return facts;
 	}
 

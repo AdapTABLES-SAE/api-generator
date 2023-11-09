@@ -220,12 +220,4 @@ public interface ATask extends EObject {
 	 */
 	boolean isCheckOnLearnerAction();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	boolean isNoStatementTask();
-
 } // ATask
