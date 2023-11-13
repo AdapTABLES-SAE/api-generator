@@ -1601,9 +1601,9 @@
         </tasks>
         <tasks
             xsi:type="generator:HistoricalChronology"
+            percentOfApparition="50"
             ID="HG_O1_L1_T3"
             nbFacts="3"
-            checkOnLearnerAction="false"
             mixDatePeriod="true">
           <responseModality
               xsi:type="generator:DynamicMultipleChoice"
@@ -1652,18 +1652,17 @@
         </tasks>
         <tasks
             xsi:type="generator:HistoricalChronology"
+            percentOfApparition="50"
             ID="HG_O1_L1_T9"
             nbFacts="3"
-            checkOnLearnerAction="false"
             mixDatePeriod="true">
           <responseModality
               xsi:type="generator:DynamicMultipleChoice"/>
         </tasks>
         <tasks
             xsi:type="generator:LegendAMap"
-            percentOfApparition="100"
             ID="HG_O1_L1_T10"
-            nbFacts="4"
+            nbFacts="3"
             missing="SYMBOL">
           <responseModality
               xsi:type="generator:DynamicMultipleChoice"/>

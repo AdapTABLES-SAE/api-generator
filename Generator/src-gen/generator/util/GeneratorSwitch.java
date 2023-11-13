@@ -1027,7 +1027,7 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			HistoricalChronology historicalChronology = (HistoricalChronology) theEObject;
 			T result = caseHistoricalChronology(historicalChronology);
 			if (result == null)
-				result = caseOrderingTask(historicalChronology);
+				result = caseCompletionTask(historicalChronology);
 			if (result == null)
 				result = caseATask(historicalChronology);
 			if (result == null)

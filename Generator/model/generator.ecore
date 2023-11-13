@@ -575,6 +575,8 @@
         changeable="false" transient="true" defaultValueLiteral="ORDER"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbMissingElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" transient="true" defaultValueLiteral="1" unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Prompt">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="prompt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -842,10 +844,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceElementType" eType="#//EHistoryTarget"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="missingElementsType" eType="#//EHistoryTarget"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HistoricalChronology" eSuperTypes="#//OrderingTask">
+  <eClassifiers xsi:type="ecore:EClass" name="HistoricalChronology" eSuperTypes="#//CompletionTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixDatePeriod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="graphicTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbMissingElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" transient="true" defaultValueLiteral="1" unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ETimeTarget">
     <eLiterals name="PERIOD"/>

@@ -25,13 +25,14 @@ import generator.SetOfFacts;
 import generator.Time;
 import generator.TimePeriod;
 import generator.impl.DateQuestionableFactImpl;
+import managers.ModelsManager;
 import structures.DungeonElements;
 import structures.Soluce;
 
 public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 
-	public HGFactGeneratorAssociation(DungeonElements dungeonElements) {
-		super(dungeonElements);
+	public HGFactGeneratorAssociation(ModelsManager modelsManager, DungeonElements dungeonElements) {
+		super(modelsManager, dungeonElements);
 	}
 	
 	private boolean respectsTaskConditions(HistoryFact fact, HistoricalEventAssociation task) {

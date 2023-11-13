@@ -19,6 +19,7 @@ import generator.ATask;
 import generator.CompletionTask;
 import generator.HistoricalEventAssociation;
 import generator.IdentifyTechnique;
+import generator.LegendAMap;
 import generator.ResultsByTask;
 import generators.ALGAGenerator;
 import managers.ModelsManager;
@@ -48,16 +49,15 @@ public class FactGenerator {
 		switch(task.getType()) {
 		case COMPLETE: 
 			if(task instanceof HistoricalEventAssociation) {
-				factGenerator = new HGFactGeneratorAssociation(dungeonElements);
-			} else {
+				factGenerator = new HGFactGeneratorAssociation(modelsManager, dungeonElements);
+			} else if(task instanceof LegendAMap){
 				factGenerator = new HGFactGeneratorLegend(dungeonElements);
+			} else {
+				factGenerator = new HGFactGeneratorChronology(dungeonElements);
 			}
 			break;
-		case MEMBERSHIP: 
-			factGenerator = new HGFactGeneratorLocate(dungeonElements);
-			break;
-			default:
-				factGenerator = new HGFactGeneratorChronology(dungeonElements);
+			default: // MEMBERSHIP
+				factGenerator = new HGFactGeneratorLocate(dungeonElements);
 				break;
 		}
 		return factGenerator;

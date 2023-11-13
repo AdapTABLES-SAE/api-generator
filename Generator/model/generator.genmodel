@@ -497,6 +497,7 @@
     <genClasses ecoreClass="generator.ecore#//OrderingTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/checkOnLearnerAction"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/nbMissingElements"/>
       <genOperations ecoreOperation="generator.ecore#//OrderingTask/getNbExpectedAnswers"
           body="return this.getNbFacts();"/>
     </genClasses>
@@ -684,6 +685,8 @@
     <genClasses ecoreClass="generator.ecore#//HistoricalChronology">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HistoricalChronology/mixDatePeriod"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HistoricalChronology/graphicTask"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HistoricalChronology/checkOnLearnerAction"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HistoricalChronology/nbMissingElements"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MapQuestionableFact">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MapQuestionableFact/type"/>

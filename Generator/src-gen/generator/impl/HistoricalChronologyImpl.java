@@ -21,11 +21,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link generator.impl.HistoricalChronologyImpl#isMixDatePeriod <em>Mix Date Period</em>}</li>
  *   <li>{@link generator.impl.HistoricalChronologyImpl#isGraphicTask <em>Graphic Task</em>}</li>
+ *   <li>{@link generator.impl.HistoricalChronologyImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.impl.HistoricalChronologyImpl#getNbMissingElements <em>Nb Missing Elements</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class HistoricalChronologyImpl extends OrderingTaskImpl implements HistoricalChronology {
+public class HistoricalChronologyImpl extends CompletionTaskImpl implements HistoricalChronology {
 	/**
 	 * The default value of the '{@link #isMixDatePeriod() <em>Mix Date Period</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -65,6 +67,55 @@ public class HistoricalChronologyImpl extends OrderingTaskImpl implements Histor
 	 * @ordered
 	 */
 	protected boolean graphicTask = GRAPHIC_TASK_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isCheckOnLearnerAction() <em>Check On Learner Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCheckOnLearnerAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean CHECK_ON_LEARNER_ACTION_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isCheckOnLearnerAction() <em>Check On Learner Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCheckOnLearnerAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean checkOnLearnerAction = CHECK_ON_LEARNER_ACTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNbMissingElements() <em>Nb Missing Elements</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNbMissingElements()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NB_MISSING_ELEMENTS_EDEFAULT = 1;
+
+	/**
+	 * The cached value of the '{@link #getNbMissingElements() <em>Nb Missing Elements</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNbMissingElements()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nbMissingElements = NB_MISSING_ELEMENTS_EDEFAULT;
+
+	/**
+	 * This is true if the Nb Missing Elements attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean nbMissingElementsESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,6 +185,47 @@ public class HistoricalChronologyImpl extends OrderingTaskImpl implements Histor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isCheckOnLearnerAction() {
+		return checkOnLearnerAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCheckOnLearnerAction(boolean newCheckOnLearnerAction) {
+		boolean oldCheckOnLearnerAction = checkOnLearnerAction;
+		checkOnLearnerAction = newCheckOnLearnerAction;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.HISTORICAL_CHRONOLOGY__CHECK_ON_LEARNER_ACTION, oldCheckOnLearnerAction,
+					checkOnLearnerAction));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getNbMissingElements() {
+		return nbMissingElements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetNbMissingElements() {
+		return nbMissingElementsESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -141,6 +233,10 @@ public class HistoricalChronologyImpl extends OrderingTaskImpl implements Histor
 			return isMixDatePeriod();
 		case GeneratorPackage.HISTORICAL_CHRONOLOGY__GRAPHIC_TASK:
 			return isGraphicTask();
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__CHECK_ON_LEARNER_ACTION:
+			return isCheckOnLearnerAction();
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__NB_MISSING_ELEMENTS:
+			return getNbMissingElements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,6 +254,9 @@ public class HistoricalChronologyImpl extends OrderingTaskImpl implements Histor
 			return;
 		case GeneratorPackage.HISTORICAL_CHRONOLOGY__GRAPHIC_TASK:
 			setGraphicTask((Boolean) newValue);
+			return;
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__CHECK_ON_LEARNER_ACTION:
+			setCheckOnLearnerAction((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,6 +276,9 @@ public class HistoricalChronologyImpl extends OrderingTaskImpl implements Histor
 		case GeneratorPackage.HISTORICAL_CHRONOLOGY__GRAPHIC_TASK:
 			setGraphicTask(GRAPHIC_TASK_EDEFAULT);
 			return;
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__CHECK_ON_LEARNER_ACTION:
+			setCheckOnLearnerAction(CHECK_ON_LEARNER_ACTION_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -193,6 +295,10 @@ public class HistoricalChronologyImpl extends OrderingTaskImpl implements Histor
 			return mixDatePeriod != MIX_DATE_PERIOD_EDEFAULT;
 		case GeneratorPackage.HISTORICAL_CHRONOLOGY__GRAPHIC_TASK:
 			return graphicTask != GRAPHIC_TASK_EDEFAULT;
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__CHECK_ON_LEARNER_ACTION:
+			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
+		case GeneratorPackage.HISTORICAL_CHRONOLOGY__NB_MISSING_ELEMENTS:
+			return isSetNbMissingElements();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -212,6 +318,13 @@ public class HistoricalChronologyImpl extends OrderingTaskImpl implements Histor
 		result.append(mixDatePeriod);
 		result.append(", graphicTask: ");
 		result.append(graphicTask);
+		result.append(", checkOnLearnerAction: ");
+		result.append(checkOnLearnerAction);
+		result.append(", nbMissingElements: ");
+		if (nbMissingElementsESet)
+			result.append(nbMissingElements);
+		else
+			result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

@@ -385,4 +385,13 @@ public class HistoricalEventAssociationImpl extends CompletionTaskImpl implement
 		return result.toString();
 	}
 
+	@Override
+	public int getNbMissingElements() {
+		if (this.target.equals(ETimeTarget.DATE) || this.target.equals(ETimeTarget.MIX)) {
+			return 1 * this.getNbFacts();
+		} else {
+			return 2 * this.getNbFacts();
+		}
+	}
+
 } //HistoricalEventAssociationImpl

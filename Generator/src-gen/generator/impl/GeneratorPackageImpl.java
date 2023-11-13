@@ -3825,6 +3825,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getOrderingTask_NbMissingElements() {
+		return (EAttribute) orderingTaskEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getOrderingTask__GetNbExpectedAnswers() {
 		return orderingTaskEClass.getEOperations().get(0);
 	}
@@ -5157,6 +5166,24 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getHistoricalChronology_CheckOnLearnerAction() {
+		return (EAttribute) historicalChronologyEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHistoricalChronology_NbMissingElements() {
+		return (EAttribute) historicalChronologyEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMapQuestionableFact() {
 		return mapQuestionableFactEClass;
 	}
@@ -6073,6 +6100,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		orderingTaskEClass = createEClass(ORDERING_TASK);
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__TYPE);
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__CHECK_ON_LEARNER_ACTION);
+		createEAttribute(orderingTaskEClass, ORDERING_TASK__NB_MISSING_ELEMENTS);
 		createEOperation(orderingTaskEClass, ORDERING_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		promptEClass = createEClass(PROMPT);
@@ -6266,6 +6294,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		historicalChronologyEClass = createEClass(HISTORICAL_CHRONOLOGY);
 		createEAttribute(historicalChronologyEClass, HISTORICAL_CHRONOLOGY__MIX_DATE_PERIOD);
 		createEAttribute(historicalChronologyEClass, HISTORICAL_CHRONOLOGY__GRAPHIC_TASK);
+		createEAttribute(historicalChronologyEClass, HISTORICAL_CHRONOLOGY__CHECK_ON_LEARNER_ACTION);
+		createEAttribute(historicalChronologyEClass, HISTORICAL_CHRONOLOGY__NB_MISSING_ELEMENTS);
 
 		mapQuestionableFactEClass = createEClass(MAP_QUESTIONABLE_FACT);
 		createEAttribute(mapQuestionableFactEClass, MAP_QUESTIONABLE_FACT__TYPE);
@@ -6430,7 +6460,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		hgLevelEClass.getESuperTypes().add(this.getLevel());
 		positionedVisualizationElementEClass.getESuperTypes().add(this.getPositionedElement());
 		dateQuestionableFactEClass.getESuperTypes().add(this.getQuestionableFact());
-		historicalChronologyEClass.getESuperTypes().add(this.getOrderingTask());
+		historicalChronologyEClass.getESuperTypes().add(this.getCompletionTask());
 		mapQuestionableFactEClass.getESuperTypes().add(this.getAVisualizationQuestionableFact());
 		judoTechniqueFactEClass.getESuperTypes().add(this.getAbstractFact());
 		classifyTechniqueEClass.getESuperTypes().add(this.getMembershipIDTask());
@@ -7268,6 +7298,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getOrderingTask_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"true", 0, 1, OrderingTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOrderingTask_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
+				OrderingTask.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getOrderingTask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
@@ -7671,6 +7704,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getHistoricalChronology_GraphicTask(), ecorePackage.getEBoolean(), "graphicTask", "true", 0, 1,
 				HistoricalChronology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHistoricalChronology_CheckOnLearnerAction(), ecorePackage.getEBoolean(),
+				"checkOnLearnerAction", "false", 0, 1, HistoricalChronology.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHistoricalChronology_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0,
+				1, HistoricalChronology.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mapQuestionableFactEClass, MapQuestionableFact.class, "MapQuestionableFact", !IS_ABSTRACT,

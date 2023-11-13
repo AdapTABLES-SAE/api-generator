@@ -33,6 +33,7 @@ import generator.ResponseModality;
  *   <li>{@link generator.impl.OrderingTaskImpl#getNbFacts <em>Nb Facts</em>}</li>
  *   <li>{@link generator.impl.OrderingTaskImpl#getType <em>Type</em>}</li>
  *   <li>{@link generator.impl.OrderingTaskImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.impl.OrderingTaskImpl#getNbMissingElements <em>Nb Missing Elements</em>}</li>
  * </ul>
  *
  * @generated
@@ -196,6 +197,35 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected boolean checkOnLearnerAction = CHECK_ON_LEARNER_ACTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNbMissingElements() <em>Nb Missing Elements</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNbMissingElements()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NB_MISSING_ELEMENTS_EDEFAULT = 1;
+
+	/**
+	 * The cached value of the '{@link #getNbMissingElements() <em>Nb Missing Elements</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNbMissingElements()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nbMissingElements = NB_MISSING_ELEMENTS_EDEFAULT;
+
+	/**
+	 * This is true if the Nb Missing Elements attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean nbMissingElementsESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -440,6 +470,24 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getNbMissingElements() {
+		return nbMissingElements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetNbMissingElements() {
+		return nbMissingElementsESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public int getNbExpectedAnswers() {
 		return this.getNbFacts();
 	}
@@ -491,6 +539,8 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 			return getType();
 		case GeneratorPackage.ORDERING_TASK__CHECK_ON_LEARNER_ACTION:
 			return isCheckOnLearnerAction();
+		case GeneratorPackage.ORDERING_TASK__NB_MISSING_ELEMENTS:
+			return getNbMissingElements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -585,6 +635,8 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 			return type != TYPE_EDEFAULT;
 		case GeneratorPackage.ORDERING_TASK__CHECK_ON_LEARNER_ACTION:
 			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
+		case GeneratorPackage.ORDERING_TASK__NB_MISSING_ELEMENTS:
+			return isSetNbMissingElements();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -633,6 +685,11 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 		result.append(type);
 		result.append(", checkOnLearnerAction: ");
 		result.append(checkOnLearnerAction);
+		result.append(", nbMissingElements: ");
+		if (nbMissingElementsESet)
+			result.append(nbMissingElements);
+		else
+			result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

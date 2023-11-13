@@ -13,6 +13,7 @@ package generator;
  * <ul>
  *   <li>{@link generator.OrderingTask#getType <em>Type</em>}</li>
  *   <li>{@link generator.OrderingTask#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.OrderingTask#getNbMissingElements <em>Nb Missing Elements</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getOrderingTask()
@@ -56,6 +57,29 @@ public interface OrderingTask extends ATask {
 	 * @generated
 	 */
 	void setCheckOnLearnerAction(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nb Missing Elements</em>' attribute.
+	 * @see #isSetNbMissingElements()
+	 * @see generator.GeneratorPackage#getOrderingTask_NbMissingElements()
+	 * @model default="1" unsettable="true" transient="true" changeable="false"
+	 * @generated
+	 */
+	int getNbMissingElements();
+
+	/**
+	 * Returns whether the value of the '{@link generator.OrderingTask#getNbMissingElements <em>Nb Missing Elements</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Nb Missing Elements</em>' attribute is set.
+	 * @see #getNbMissingElements()
+	 * @generated
+	 */
+	boolean isSetNbMissingElements();
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -5752,13 +5752,22 @@ public interface GeneratorPackage extends EPackage {
 	int ORDERING_TASK__CHECK_ON_LEARNER_ACTION = ATASK_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK__NB_MISSING_ELEMENTS = ATASK_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Ordering Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORDERING_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 2;
+	int ORDERING_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -8581,7 +8590,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY__PERCENT_OF_APPARITION = ORDERING_TASK__PERCENT_OF_APPARITION;
+	int HISTORICAL_CHRONOLOGY__PERCENT_OF_APPARITION = COMPLETION_TASK__PERCENT_OF_APPARITION;
 
 	/**
 	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
@@ -8590,7 +8599,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY__NB_CONSECUTIVE_SUCCESS = ORDERING_TASK__NB_CONSECUTIVE_SUCCESS;
+	int HISTORICAL_CHRONOLOGY__NB_CONSECUTIVE_SUCCESS = COMPLETION_TASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
 	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
@@ -8599,7 +8608,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY__RESPONSE_MODALITY = ORDERING_TASK__RESPONSE_MODALITY;
+	int HISTORICAL_CHRONOLOGY__RESPONSE_MODALITY = COMPLETION_TASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -8608,7 +8617,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY__ID = ORDERING_TASK__ID;
+	int HISTORICAL_CHRONOLOGY__ID = COMPLETION_TASK__ID;
 
 	/**
 	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
@@ -8617,7 +8626,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY__MAX_TIME = ORDERING_TASK__MAX_TIME;
+	int HISTORICAL_CHRONOLOGY__MAX_TIME = COMPLETION_TASK__MAX_TIME;
 
 	/**
 	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
@@ -8626,7 +8635,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY__NB_FACTS = ORDERING_TASK__NB_FACTS;
+	int HISTORICAL_CHRONOLOGY__NB_FACTS = COMPLETION_TASK__NB_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -8635,16 +8644,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY__TYPE = ORDERING_TASK__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_CHRONOLOGY__CHECK_ON_LEARNER_ACTION = ORDERING_TASK__CHECK_ON_LEARNER_ACTION;
+	int HISTORICAL_CHRONOLOGY__TYPE = COMPLETION_TASK__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Mix Date Period</b></em>' attribute.
@@ -8653,7 +8653,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY__MIX_DATE_PERIOD = ORDERING_TASK_FEATURE_COUNT + 0;
+	int HISTORICAL_CHRONOLOGY__MIX_DATE_PERIOD = COMPLETION_TASK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Graphic Task</b></em>' attribute.
@@ -8662,7 +8662,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY__GRAPHIC_TASK = ORDERING_TASK_FEATURE_COUNT + 1;
+	int HISTORICAL_CHRONOLOGY__GRAPHIC_TASK = COMPLETION_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_CHRONOLOGY__CHECK_ON_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_CHRONOLOGY__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Historical Chronology</em>' class.
@@ -8671,7 +8689,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY_FEATURE_COUNT = ORDERING_TASK_FEATURE_COUNT + 2;
+	int HISTORICAL_CHRONOLOGY_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -8680,7 +8698,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY___GET_TYPE = ORDERING_TASK___GET_TYPE;
+	int HISTORICAL_CHRONOLOGY___GET_TYPE = COMPLETION_TASK___GET_TYPE;
 
 	/**
 	 * The operation id for the '<em>Is Graphic Task</em>' operation.
@@ -8689,7 +8707,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY___IS_GRAPHIC_TASK = ORDERING_TASK___IS_GRAPHIC_TASK;
+	int HISTORICAL_CHRONOLOGY___IS_GRAPHIC_TASK = COMPLETION_TASK___IS_GRAPHIC_TASK;
 
 	/**
 	 * The operation id for the '<em>Is Check On Learner Action</em>' operation.
@@ -8698,7 +8716,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY___IS_CHECK_ON_LEARNER_ACTION = ORDERING_TASK___IS_CHECK_ON_LEARNER_ACTION;
+	int HISTORICAL_CHRONOLOGY___IS_CHECK_ON_LEARNER_ACTION = COMPLETION_TASK___IS_CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Nb Missing Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_CHRONOLOGY___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
 
 	/**
 	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
@@ -8707,7 +8734,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY___GET_NB_EXPECTED_ANSWERS = ORDERING_TASK___GET_NB_EXPECTED_ANSWERS;
+	int HISTORICAL_CHRONOLOGY___GET_NB_EXPECTED_ANSWERS = COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS;
 
 	/**
 	 * The number of operations of the '<em>Historical Chronology</em>' class.
@@ -8716,7 +8743,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_CHRONOLOGY_OPERATION_COUNT = ORDERING_TASK_OPERATION_COUNT + 0;
+	int HISTORICAL_CHRONOLOGY_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MapQuestionableFactImpl <em>Map Questionable Fact</em>}' class.
@@ -13539,6 +13566,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getOrderingTask_CheckOnLearnerAction();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.OrderingTask#getNbMissingElements <em>Nb Missing Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
+	 * @see generator.OrderingTask#getNbMissingElements()
+	 * @see #getOrderingTask()
+	 * @generated
+	 */
+	EAttribute getOrderingTask_NbMissingElements();
+
+	/**
 	 * Returns the meta object for the '{@link generator.OrderingTask#getNbExpectedAnswers() <em>Get Nb Expected Answers</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15117,6 +15155,28 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getHistoricalChronology_GraphicTask();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.HistoricalChronology#isCheckOnLearnerAction <em>Check On Learner Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check On Learner Action</em>'.
+	 * @see generator.HistoricalChronology#isCheckOnLearnerAction()
+	 * @see #getHistoricalChronology()
+	 * @generated
+	 */
+	EAttribute getHistoricalChronology_CheckOnLearnerAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.HistoricalChronology#getNbMissingElements <em>Nb Missing Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
+	 * @see generator.HistoricalChronology#getNbMissingElements()
+	 * @see #getHistoricalChronology()
+	 * @generated
+	 */
+	EAttribute getHistoricalChronology_NbMissingElements();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MapQuestionableFact <em>Map Questionable Fact</em>}'.
@@ -18291,6 +18351,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute ORDERING_TASK__CHECK_ON_LEARNER_ACTION = eINSTANCE.getOrderingTask_CheckOnLearnerAction();
 
 		/**
+		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORDERING_TASK__NB_MISSING_ELEMENTS = eINSTANCE.getOrderingTask_NbMissingElements();
+
+		/**
 		 * The meta object literal for the '<em><b>Get Nb Expected Answers</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19571,6 +19639,23 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute HISTORICAL_CHRONOLOGY__GRAPHIC_TASK = eINSTANCE.getHistoricalChronology_GraphicTask();
+
+		/**
+		 * The meta object literal for the '<em><b>Check On Learner Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HISTORICAL_CHRONOLOGY__CHECK_ON_LEARNER_ACTION = eINSTANCE
+				.getHistoricalChronology_CheckOnLearnerAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HISTORICAL_CHRONOLOGY__NB_MISSING_ELEMENTS = eINSTANCE.getHistoricalChronology_NbMissingElements();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MapQuestionableFactImpl <em>Map Questionable Fact</em>}' class.

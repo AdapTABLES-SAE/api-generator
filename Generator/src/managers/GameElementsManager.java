@@ -25,6 +25,7 @@ import generator.SmallRoomType;
 import generator.StatementElementType;
 import generator.Structure;
 import generator.Value;
+import generators.ALGAGenerator;
 
 public class GameElementsManager {
 	
@@ -75,6 +76,10 @@ public class GameElementsManager {
 				double numberofToDisplayPerElement = (double) (facts.get(0).getPropositions().size() * facts.size()) / (double) elementType.getNbDisplays();
 				return numberofToDisplayPerElement > factCorrectnessToReach? numberofToDisplayPerElement: factCorrectnessToReach; 
 			} else {
+				if(facts.size() == 0) {
+					ALGAGenerator.LOGGER.severe("No facts for task "+task.getID()+"!");
+					return 0;
+				}
 				return facts.size() * facts.get(0).getPropositions().size();
 			}
 		}
