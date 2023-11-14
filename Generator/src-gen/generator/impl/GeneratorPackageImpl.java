@@ -264,6 +264,27 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass orderEventEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass orderQuestionableFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass orderSolutionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass resultsEClass = null;
 
 	/**
@@ -2475,6 +2496,60 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getOrderEvent() {
+		return orderEventEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOrderQuestionableFact() {
+		return orderQuestionableFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOrderQuestionableFact_Solutions() {
+		return (EReference) orderQuestionableFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOrderSolution() {
+		return orderSolutionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOrderSolution_Event() {
+		return (EAttribute) orderSolutionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOrderSolution_Order() {
+		return (EAttribute) orderSolutionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getResults() {
 		return resultsEClass;
 	}
@@ -3485,6 +3560,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getPropositionParam_Image() {
 		return (EAttribute) propositionParamEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPropositionParam_Order() {
+		return (EAttribute) propositionParamEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -6066,6 +6150,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(propositionParamEClass, PROPOSITION_PARAM__STATE);
 		createEReference(propositionParamEClass, PROPOSITION_PARAM__POSITION);
 		createEAttribute(propositionParamEClass, PROPOSITION_PARAM__IMAGE);
+		createEAttribute(propositionParamEClass, PROPOSITION_PARAM__ORDER);
 
 		valueEClass = createEClass(VALUE);
 		createEAttribute(valueEClass, VALUE__VALUE);
@@ -6371,6 +6456,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		mtMembershipEClass = createEClass(MT_MEMBERSHIP);
 
+		orderEventEClass = createEClass(ORDER_EVENT);
+
+		orderQuestionableFactEClass = createEClass(ORDER_QUESTIONABLE_FACT);
+		createEReference(orderQuestionableFactEClass, ORDER_QUESTIONABLE_FACT__SOLUTIONS);
+
+		orderSolutionEClass = createEClass(ORDER_SOLUTION);
+		createEAttribute(orderSolutionEClass, ORDER_SOLUTION__EVENT);
+		createEAttribute(orderSolutionEClass, ORDER_SOLUTION__ORDER);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -6494,6 +6588,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		multipleChoiceEClass.getESuperTypes().add(this.getDynamicMultipleChoice());
 		legendQuestionableFactEClass.getESuperTypes().add(this.getAVisualizationQuestionableFact());
 		mtMembershipEClass.getESuperTypes().add(this.getMembershipIDTask());
+		orderEventEClass.getESuperTypes().add(this.getOrderingTask());
+		orderQuestionableFactEClass.getESuperTypes().add(this.getQuestionableFact());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -7218,6 +7314,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getPropositionParam_Image(), ecorePackage.getEBoolean(), "image", null, 0, 1,
 				PropositionParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPropositionParam_Order(), ecorePackage.getEInt(), "order", null, 0, 1, PropositionParam.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getValue_Value(), ecorePackage.getEString(), "value", null, 0, 1, Value.class, !IS_TRANSIENT,
@@ -7857,6 +7955,22 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(mtMembershipEClass, MTMembership.class, "MTMembership", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(orderEventEClass, OrderEvent.class, "OrderEvent", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(orderQuestionableFactEClass, OrderQuestionableFact.class, "OrderQuestionableFact", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOrderQuestionableFact_Solutions(), this.getOrderSolution(), null, "solutions", null, 0, -1,
+				OrderQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(orderSolutionEClass, OrderSolution.class, "OrderSolution", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOrderSolution_Event(), ecorePackage.getEString(), "event", null, 0, 1, OrderSolution.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOrderSolution_Order(), ecorePackage.getEInt(), "order", null, 0, 1, OrderSolution.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

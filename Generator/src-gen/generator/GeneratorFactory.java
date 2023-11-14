@@ -256,6 +256,33 @@ public interface GeneratorFactory extends EFactory {
 	MTMembership createMTMembership();
 
 	/**
+	 * Returns a new object of class '<em>Order Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Order Event</em>'.
+	 * @generated
+	 */
+	OrderEvent createOrderEvent();
+
+	/**
+	 * Returns a new object of class '<em>Order Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Order Questionable Fact</em>'.
+	 * @generated
+	 */
+	OrderQuestionableFact createOrderQuestionableFact();
+
+	/**
+	 * Returns a new object of class '<em>Order Solution</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Order Solution</em>'.
+	 * @generated
+	 */
+	OrderSolution createOrderSolution();
+
+	/**
 	 * Returns a new object of class '<em>Results</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

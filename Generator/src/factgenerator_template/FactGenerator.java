@@ -8,6 +8,7 @@ import factsgenerator_hg.HGFactGeneratorAssociation;
 import factsgenerator_hg.HGFactGeneratorChronology;
 import factsgenerator_hg.HGFactGeneratorLegend;
 import factsgenerator_hg.HGFactGeneratorLocate;
+import factsgenerator_hg.HGFactGeneratorOrderEvent;
 import factsgenerator_judo.JudoFactGeneratorClassifyTechnique;
 import factsgenerator_judo.JudoFactGeneratorIdentifyArbitration;
 import factsgenerator_judo.JudoFactGeneratorIdentifyTechnique;
@@ -68,6 +69,9 @@ public class FactGenerator {
 			} else {
 				factGenerator = new HGFactGeneratorChronology(dungeonElements);
 			}
+			break;
+		case ORDER:
+			factGenerator = new HGFactGeneratorOrderEvent(dungeonElements);
 			break;
 			default: // MEMBERSHIP
 				factGenerator = new HGFactGeneratorLocate(dungeonElements);

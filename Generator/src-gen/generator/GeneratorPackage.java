@@ -4882,13 +4882,22 @@ public interface GeneratorPackage extends EPackage {
 	int PROPOSITION_PARAM__IMAGE = PARAMETER_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPOSITION_PARAM__ORDER = PARAMETER_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Proposition Param</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROPOSITION_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 3;
+	int PROPOSITION_PARAM_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Proposition Param</em>' class.
@@ -10261,6 +10270,306 @@ public interface GeneratorPackage extends EPackage {
 	int MT_MEMBERSHIP_OPERATION_COUNT = MEMBERSHIP_ID_TASK_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.OrderEventImpl <em>Order Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.OrderEventImpl
+	 * @see generator.impl.GeneratorPackageImpl#getOrderEvent()
+	 * @generated
+	 */
+	int ORDER_EVENT = 131;
+
+	/**
+	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT__PERCENT_OF_APPARITION = ORDERING_TASK__PERCENT_OF_APPARITION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT__NB_CONSECUTIVE_SUCCESS = ORDERING_TASK__NB_CONSECUTIVE_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT__RESPONSE_MODALITY = ORDERING_TASK__RESPONSE_MODALITY;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT__ID = ORDERING_TASK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT__MAX_TIME = ORDERING_TASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT__NB_FACTS = ORDERING_TASK__NB_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT__TYPE = ORDERING_TASK__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT__CHECK_ON_LEARNER_ACTION = ORDERING_TASK__CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT__NB_MISSING_ELEMENTS = ORDERING_TASK__NB_MISSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Max Questionable Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT__MAX_QUESTIONABLE_FACTS = ORDERING_TASK__MAX_QUESTIONABLE_FACTS;
+
+	/**
+	 * The number of structural features of the '<em>Order Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT_FEATURE_COUNT = ORDERING_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT___GET_TYPE = ORDERING_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Graphic Task</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT___IS_GRAPHIC_TASK = ORDERING_TASK___IS_GRAPHIC_TASK;
+
+	/**
+	 * The operation id for the '<em>Is Check On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT___IS_CHECK_ON_LEARNER_ACTION = ORDERING_TASK___IS_CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT___GET_NB_EXPECTED_ANSWERS = ORDERING_TASK___GET_NB_EXPECTED_ANSWERS;
+
+	/**
+	 * The number of operations of the '<em>Order Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_EVENT_OPERATION_COUNT = ORDERING_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.OrderQuestionableFactImpl <em>Order Questionable Fact</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.OrderQuestionableFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getOrderQuestionableFact()
+	 * @generated
+	 */
+	int ORDER_QUESTIONABLE_FACT = 132;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_QUESTIONABLE_FACT__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_QUESTIONABLE_FACT__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_QUESTIONABLE_FACT__RESULTS = QUESTIONABLE_FACT__RESULTS;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_QUESTIONABLE_FACT__ID = QUESTIONABLE_FACT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Solutions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_QUESTIONABLE_FACT__SOLUTIONS = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Order Questionable Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_QUESTIONABLE_FACT_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
+
+	/**
+	 * The operation id for the '<em>Get Complete Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_QUESTIONABLE_FACT___GET_COMPLETE_FACT = QUESTIONABLE_FACT___GET_COMPLETE_FACT;
+
+	/**
+	 * The number of operations of the '<em>Order Questionable Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_QUESTIONABLE_FACT_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.OrderSolutionImpl <em>Order Solution</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.OrderSolutionImpl
+	 * @see generator.impl.GeneratorPackageImpl#getOrderSolution()
+	 * @generated
+	 */
+	int ORDER_SOLUTION = 133;
+
+	/**
+	 * The feature id for the '<em><b>Event</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_SOLUTION__EVENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_SOLUTION__ORDER = 1;
+
+	/**
+	 * The number of structural features of the '<em>Order Solution</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_SOLUTION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Order Solution</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_SOLUTION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10268,7 +10577,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 131;
+	int DIRECTIONS = 134;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -10278,7 +10587,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 132;
+	int DUNGEON_MODE = 135;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -10288,7 +10597,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 133;
+	int TABLE_BUILD = 136;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -10298,7 +10607,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 134;
+	int RESULT_POSITION = 137;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -10308,7 +10617,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 135;
+	int ESINGLE_TARGET = 138;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -10318,7 +10627,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 136;
+	int ETASK_TYPE = 139;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -10328,7 +10637,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 137;
+	int EMODALITY = 140;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -10338,7 +10647,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 138;
+	int ESEVERAL_TARGET = 141;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -10348,7 +10657,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 139;
+	int ELEMENT_SIZE = 142;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -10358,7 +10667,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 140;
+	int GP_CATEGORY = 143;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -10368,7 +10677,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 141;
+	int ECORRECTNESS = 144;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -10378,7 +10687,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 142;
+	int EBOUNDARY = 145;
 
 	/**
 	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
@@ -10388,7 +10697,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
 	 * @generated
 	 */
-	int EROOM_TYPE = 143;
+	int EROOM_TYPE = 146;
 
 	/**
 	 * The meta object id for the '{@link generator.EGeographyValue <em>EGeography Value</em>}' enum.
@@ -10398,7 +10707,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEGeographyValue()
 	 * @generated
 	 */
-	int EGEOGRAPHY_VALUE = 144;
+	int EGEOGRAPHY_VALUE = 147;
 
 	/**
 	 * The meta object id for the '{@link generator.EHistoryTarget <em>EHistory Target</em>}' enum.
@@ -10408,7 +10717,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEHistoryTarget()
 	 * @generated
 	 */
-	int EHISTORY_TARGET = 145;
+	int EHISTORY_TARGET = 148;
 
 	/**
 	 * The meta object id for the '{@link generator.ELegendTarget <em>ELegend Target</em>}' enum.
@@ -10418,7 +10727,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getELegendTarget()
 	 * @generated
 	 */
-	int ELEGEND_TARGET = 146;
+	int ELEGEND_TARGET = 149;
 
 	/**
 	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
@@ -10428,7 +10737,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 147;
+	int ESTATEMENT_TYPE = 150;
 
 	/**
 	 * The meta object id for the '{@link generator.ETimeTarget <em>ETime Target</em>}' enum.
@@ -10438,7 +10747,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETimeTarget()
 	 * @generated
 	 */
-	int ETIME_TARGET = 148;
+	int ETIME_TARGET = 151;
 
 	/**
 	 * The meta object id for the '{@link generator.EJudoTarget <em>EJudo Target</em>}' enum.
@@ -10448,7 +10757,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEJudoTarget()
 	 * @generated
 	 */
-	int EJUDO_TARGET = 149;
+	int EJUDO_TARGET = 152;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -12031,6 +12340,69 @@ public interface GeneratorPackage extends EPackage {
 	EClass getMTMembership();
 
 	/**
+	 * Returns the meta object for class '{@link generator.OrderEvent <em>Order Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Order Event</em>'.
+	 * @see generator.OrderEvent
+	 * @generated
+	 */
+	EClass getOrderEvent();
+
+	/**
+	 * Returns the meta object for class '{@link generator.OrderQuestionableFact <em>Order Questionable Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Order Questionable Fact</em>'.
+	 * @see generator.OrderQuestionableFact
+	 * @generated
+	 */
+	EClass getOrderQuestionableFact();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.OrderQuestionableFact#getSolutions <em>Solutions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Solutions</em>'.
+	 * @see generator.OrderQuestionableFact#getSolutions()
+	 * @see #getOrderQuestionableFact()
+	 * @generated
+	 */
+	EReference getOrderQuestionableFact_Solutions();
+
+	/**
+	 * Returns the meta object for class '{@link generator.OrderSolution <em>Order Solution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Order Solution</em>'.
+	 * @see generator.OrderSolution
+	 * @generated
+	 */
+	EClass getOrderSolution();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.OrderSolution#getEvent <em>Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Event</em>'.
+	 * @see generator.OrderSolution#getEvent()
+	 * @see #getOrderSolution()
+	 * @generated
+	 */
+	EAttribute getOrderSolution_Event();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.OrderSolution#getOrder <em>Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Order</em>'.
+	 * @see generator.OrderSolution#getOrder()
+	 * @see #getOrderSolution()
+	 * @generated
+	 */
+	EAttribute getOrderSolution_Order();
+
+	/**
 	 * Returns the meta object for class '{@link generator.Results <em>Results</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13244,6 +13616,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPropositionParam_Image();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.PropositionParam#getOrder <em>Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Order</em>'.
+	 * @see generator.PropositionParam#getOrder()
+	 * @see #getPropositionParam()
+	 * @generated
+	 */
+	EAttribute getPropositionParam_Order();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Value <em>Value</em>}'.
@@ -17159,6 +17542,60 @@ public interface GeneratorPackage extends EPackage {
 		EClass MT_MEMBERSHIP = eINSTANCE.getMTMembership();
 
 		/**
+		 * The meta object literal for the '{@link generator.impl.OrderEventImpl <em>Order Event</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.OrderEventImpl
+		 * @see generator.impl.GeneratorPackageImpl#getOrderEvent()
+		 * @generated
+		 */
+		EClass ORDER_EVENT = eINSTANCE.getOrderEvent();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.OrderQuestionableFactImpl <em>Order Questionable Fact</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.OrderQuestionableFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getOrderQuestionableFact()
+		 * @generated
+		 */
+		EClass ORDER_QUESTIONABLE_FACT = eINSTANCE.getOrderQuestionableFact();
+
+		/**
+		 * The meta object literal for the '<em><b>Solutions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ORDER_QUESTIONABLE_FACT__SOLUTIONS = eINSTANCE.getOrderQuestionableFact_Solutions();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.OrderSolutionImpl <em>Order Solution</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.OrderSolutionImpl
+		 * @see generator.impl.GeneratorPackageImpl#getOrderSolution()
+		 * @generated
+		 */
+		EClass ORDER_SOLUTION = eINSTANCE.getOrderSolution();
+
+		/**
+		 * The meta object literal for the '<em><b>Event</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORDER_SOLUTION__EVENT = eINSTANCE.getOrderSolution_Event();
+
+		/**
+		 * The meta object literal for the '<em><b>Order</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORDER_SOLUTION__ORDER = eINSTANCE.getOrderSolution_Order();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.ResultsImpl <em>Results</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -18116,6 +18553,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PROPOSITION_PARAM__IMAGE = eINSTANCE.getPropositionParam_Image();
+
+		/**
+		 * The meta object literal for the '<em><b>Order</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROPOSITION_PARAM__ORDER = eINSTANCE.getPropositionParam_Order();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ValueImpl <em>Value</em>}' class.

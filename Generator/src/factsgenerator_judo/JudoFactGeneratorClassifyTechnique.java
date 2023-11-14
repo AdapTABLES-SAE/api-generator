@@ -124,7 +124,7 @@ public class JudoFactGeneratorClassifyTechnique extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected boolean conditionForMembershipTaskOnFacts(AbstractFact fact) {
+	protected boolean conditionForMembershipOrOrderTaskOnFacts(AbstractFact fact) {
 		return fact instanceof JudoTechniqueFact;
 	}
 

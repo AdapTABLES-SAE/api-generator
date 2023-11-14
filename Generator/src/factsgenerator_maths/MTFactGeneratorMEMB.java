@@ -49,7 +49,6 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 		return solutions;
 	}
 
-
 	@Override
 	protected Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) {
 		Map<ECorrectness, List<Soluce>> propositions = new HashMap<>();
@@ -102,14 +101,12 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 		return !setoffact.getName().equals("1");
 	}
 
-
 	@Override
-	protected boolean conditionForMembershipTaskOnFacts(AbstractFact fact) {
+	protected boolean conditionForMembershipOrOrderTaskOnFacts(AbstractFact fact) {
 		int min = ((MTLevel) dungeonElements.getChosenLevel()).getMinInterval();
 		int max = ((MTLevel) dungeonElements.getChosenLevel()).getMaxInterval();
 		return fact instanceof MTFact && min <= (((MTFact) fact).getRes()/((MTFact) fact).getTable()) && (((MTFact) fact).getRes()/((MTFact) fact).getTable()) <= max;
 	}
-
 
 	@Override
 	protected String getMembershipPropertyOfAFact(AbstractFact fact) {

@@ -283,6 +283,12 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createLegendQuestionableFact();
 		case GeneratorPackage.MT_MEMBERSHIP:
 			return createMTMembership();
+		case GeneratorPackage.ORDER_EVENT:
+			return createOrderEvent();
+		case GeneratorPackage.ORDER_QUESTIONABLE_FACT:
+			return createOrderQuestionableFact();
+		case GeneratorPackage.ORDER_SOLUTION:
+			return createOrderSolution();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -648,6 +654,36 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public MTMembership createMTMembership() {
 		MTMembershipImpl mtMembership = new MTMembershipImpl();
 		return mtMembership;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OrderEvent createOrderEvent() {
+		OrderEventImpl orderEvent = new OrderEventImpl();
+		return orderEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OrderQuestionableFact createOrderQuestionableFact() {
+		OrderQuestionableFactImpl orderQuestionableFact = new OrderQuestionableFactImpl();
+		return orderQuestionableFact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OrderSolution createOrderSolution() {
+		OrderSolutionImpl orderSolution = new OrderSolutionImpl();
+		return orderSolution;
 	}
 
 	/**

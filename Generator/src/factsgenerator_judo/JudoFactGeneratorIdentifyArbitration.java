@@ -142,7 +142,7 @@ public class JudoFactGeneratorIdentifyArbitration extends FactGeneratorTemplate 
 	}
 
 	@Override
-	protected boolean conditionForMembershipTaskOnFacts(AbstractFact fact) {
+	protected boolean conditionForMembershipOrOrderTaskOnFacts(AbstractFact fact) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -154,7 +154,7 @@ public class JudoFactGeneratorIdentifyArbitration extends FactGeneratorTemplate 
 	}
 
 	@Override
-	protected Set<AQuestionableFact> generateMembershipQuestionableFacts(ATask task, HashMap<String, List<AbstractFact>> facts,
+	protected Set<AQuestionableFact> generateMembershipOrOrderQuestionableFacts(ATask task, HashMap<String, List<AbstractFact>> facts,
 			int numberByFact) {
 		// TODO Auto-generated method stub
 		return null;

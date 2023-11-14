@@ -6,6 +6,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.stream.Collectors;
+
+import org.paukov.combinatorics3.Generator;
+
 import java.util.Random;
 import java.util.Set;
 
@@ -75,46 +79,87 @@ public abstract class FactGeneratorTemplate {
 		this.modelsManager = modelsManager;
 	}
 	
-	public Set<AQuestionableFact> generateQuestionableFacts(ATask task){ // TO OVERRIDE FOR MEMBERSHIP 
+	private Set<AQuestionableFact> generateMembership(ATask task) {
+		Set<AQuestionableFact> questionableFacts = new HashSet<>();
+		int numberByFacts;
+	    if(task.getResponseModality() instanceof MultipleChoice) {
+	      MultipleChoice mc = (MultipleChoice) task.getResponseModality();
+	      numberByFacts = mc.getNbChoices() - mc.getNbBadChoices();
+	    } else{
+	      ALGAGenerator.LOGGER.info("Task response modality is DynamicMultipleChoice or EnterInput for Membership Task ! ");
+	      numberByFacts = -1;
+	    } 	    
+	    
+	    for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
+	    	if(conditionForMembershipTaskOnSetOfFacts(setoffact)) {
+	    	HashMap<String, List<AbstractFact>> facts = new HashMap<>();
+	    	for (AbstractFact fact : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
+	    		List<AbstractFact> factlist = new ArrayList<>();
+	    		factlist.add(fact);
+	    		if(conditionForMembershipOrOrderTaskOnFacts(fact)){
+	    			String key = getMembershipPropertyOfAFact(fact);
+	    			if(facts.containsKey(key)) {
+	    				factlist.addAll(facts.get(key));
+	    			}
+	    			facts.put(key, factlist);
+	            }
+	        } 
+	        questionableFacts.addAll(generateMembershipOrOrderQuestionableFacts(task, facts, numberByFacts));
+	      }
+	    } 
+		return questionableFacts;
+	}
+	
+	private Set<AQuestionableFact> generateOrder(ATask task) {
+		Set<AQuestionableFact> questionableFacts = new HashSet<>(); 
+		
+		List<AbstractFact> facts = new ArrayList<>();
+		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
+			for (AbstractFact fact : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
+	    		if(conditionForMembershipOrOrderTaskOnFacts(fact)){
+	    			facts.add(fact);
+	    		}
+			}
+		}
+		
+		List<List<AbstractFact>> combinaisons = Generator.combination(facts)
+                .simple(4)
+                .stream()
+                .collect(Collectors.toList());
+		
+		for(List<AbstractFact> combinaison: combinaisons) {
+			HashMap<String, List<AbstractFact>> aMap = new HashMap<>(); 
+			aMap.put("ORDER", combinaison);
+			questionableFacts.addAll(generateMembershipOrOrderQuestionableFacts(task, aMap, combinaison.size()));
+		}
+		
+		return questionableFacts;
+	}
+	
+	private Set<AQuestionableFact> generateDefault(ATask task) {
+		Set<AQuestionableFact> questionableFacts = new HashSet<>();
+		for (SetOfFacts setoffact : dungeonElements.getChosenObjective().getSetoffacts()) {
+			for (AbstractFact f : setoffact.getFacts()) { 
+				for(AQuestionableFact fact: generateQuestionableFactsOf(task, f)) {
+					questionableFacts.add(fact);
+				}
+			}
+		}
+		return questionableFacts;
+	}
+	
+	public Set<AQuestionableFact> generateQuestionableFacts(ATask task){
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
 		taskID = task.getID();
 		switch(task.getType()) {
 		case MEMBERSHIP:
-		    int numberByFacts;
-		    if(task.getResponseModality() instanceof MultipleChoice) {
-		      MultipleChoice mc = (MultipleChoice) task.getResponseModality();
-		      numberByFacts = mc.getNbChoices() - mc.getNbBadChoices();
-		    } else{
-		      ALGAGenerator.LOGGER.info("Task response modality is DynamicMultipleChoice or EnterInput for Membership Task ! ");
-		      numberByFacts = -1;
-		    } 	    
-		    
-		    for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
-		    	if(conditionForMembershipTaskOnSetOfFacts(setoffact)) {
-		    	HashMap<String, List<AbstractFact>> facts = new HashMap<>();
-		    	for (AbstractFact fact : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
-		    		List<AbstractFact> factlist = new ArrayList<>();
-		    		factlist.add(fact);
-		    		if(conditionForMembershipTaskOnFacts(fact)){
-		    			String key = getMembershipPropertyOfAFact(fact);
-		    			if(facts.containsKey(key)) {
-		    				factlist.addAll(facts.get(key));
-		    			}
-		    			facts.put(key, factlist);
-		            }
-		        } 
-		        questionableFacts.addAll(generateMembershipQuestionableFacts(task, facts, numberByFacts));
-		      }
-		    } 
+		    questionableFacts.addAll(generateMembership(task));
+			break;
+		case ORDER:
+		    questionableFacts.addAll(generateOrder(task));
 			break;
 		default:
-			for (SetOfFacts setoffact : dungeonElements.getChosenObjective().getSetoffacts()) {
-				for (AbstractFact f : setoffact.getFacts()) { 
-					for(AQuestionableFact fact: generateQuestionableFactsOf(task, f)) {
-						questionableFacts.add(fact);
-					}
-				}
-			}
+			questionableFacts.addAll(generateDefault(task));
 			break;
 		}
 		
@@ -123,7 +168,7 @@ public abstract class FactGeneratorTemplate {
 	}
 	
 	protected abstract boolean conditionForMembershipTaskOnSetOfFacts(SetOfFacts setoffacts);
-	protected abstract boolean conditionForMembershipTaskOnFacts(AbstractFact fact);
+	protected abstract boolean conditionForMembershipOrOrderTaskOnFacts(AbstractFact fact);
 	/**
 	 * Gives the values of the property of a given fact.
 	 * For example, a fact that is "Ippon-Seoi-Nage is a TE-WAZA (Arm projection Technique)" will return
@@ -133,7 +178,7 @@ public abstract class FactGeneratorTemplate {
 	 */
 	protected abstract String getMembershipPropertyOfAFact(AbstractFact fact);
 	
-	protected Set<AQuestionableFact> generateMembershipQuestionableFacts(ATask task, HashMap<String, List<AbstractFact>> facts, int numberByFact) {
+	protected Set<AQuestionableFact> generateMembershipOrOrderQuestionableFacts(ATask task, HashMap<String, List<AbstractFact>> facts, int numberByFact) {
 		Set<AQuestionableFact> qfs = new HashSet<>(); 
 		for(String key: facts.keySet()) {
 			int k = 0;
@@ -197,6 +242,8 @@ public abstract class FactGeneratorTemplate {
 						mapValue.setID(prop.getPosition().getID());
 						propositionParam.setPosition(mapValue);
 					}
+					
+					propositionParam.setOrder(prop.getOrder());
 					
 					propositionParam.setImage(prop.isImage());
 					qef.getPropositions().add(propositionParam);

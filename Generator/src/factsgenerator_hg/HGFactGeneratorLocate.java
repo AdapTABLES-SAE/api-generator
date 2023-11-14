@@ -108,7 +108,7 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected boolean conditionForMembershipTaskOnFacts(AbstractFact fact) {
+	protected boolean conditionForMembershipOrOrderTaskOnFacts(AbstractFact fact) {
 		return fact instanceof GeographyFact;
 	}
 

@@ -1171,6 +1171,35 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case GeneratorPackage.ORDER_EVENT: {
+			OrderEvent orderEvent = (OrderEvent) theEObject;
+			T result = caseOrderEvent(orderEvent);
+			if (result == null)
+				result = caseOrderingTask(orderEvent);
+			if (result == null)
+				result = caseATask(orderEvent);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.ORDER_QUESTIONABLE_FACT: {
+			OrderQuestionableFact orderQuestionableFact = (OrderQuestionableFact) theEObject;
+			T result = caseOrderQuestionableFact(orderQuestionableFact);
+			if (result == null)
+				result = caseQuestionableFact(orderQuestionableFact);
+			if (result == null)
+				result = caseAQuestionableFact(orderQuestionableFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.ORDER_SOLUTION: {
+			OrderSolution orderSolution = (OrderSolution) theEObject;
+			T result = caseOrderSolution(orderSolution);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -1683,6 +1712,51 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMTMembership(MTMembership object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Order Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Order Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOrderEvent(OrderEvent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Order Questionable Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Order Questionable Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOrderQuestionableFact(OrderQuestionableFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Order Solution</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Order Solution</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOrderSolution(OrderSolution object) {
 		return null;
 	}
 

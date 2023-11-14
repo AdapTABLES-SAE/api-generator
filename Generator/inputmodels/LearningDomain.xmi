@@ -697,10 +697,10 @@
   <learningpaths name="HGPATH" ID="HGPATH">
     <objectives ID="HG_O1" name="HG_O1">
       <levels xsi:type="generator:HGLevel" ID="HG_O1_L1">
-        <tasks xsi:type="generator:LocateOnAMap" percentOfApparition="50" ID="HG_O1_L1_T1" maxTime="30" nbExpectedAnswers="18">
+        <tasks xsi:type="generator:LocateOnAMap" ID="HG_O1_L1_T1" maxTime="30" nbExpectedAnswers="18">
           <responseModality xsi:type="generator:DynamicMultipleChoice"/>
         </tasks>
-        <tasks xsi:type="generator:LocateOnAMap" percentOfApparition="50" ID="HG_O1_L1_T2" maxTime="30" nbExpectedAnswers="18">
+        <tasks xsi:type="generator:LocateOnAMap" ID="HG_O1_L1_T2" maxTime="30" nbExpectedAnswers="18">
           <responseModality xsi:type="generator:EnterResponse"/>
         </tasks>
         <tasks xsi:type="generator:HistoricalChronology" ID="HG_O1_L1_T3" nbFacts="3" mixDatePeriod="true">
@@ -727,6 +727,7 @@
         <tasks xsi:type="generator:LegendAMap" ID="HG_O1_L1_T10" nbFacts="3" missing="SYMBOL">
           <responseModality xsi:type="generator:DynamicMultipleChoice"/>
         </tasks>
+        <tasks xsi:type="generator:OrderEvent" percentOfApparition="100" ID="HG_O1_L1_T11" maxQuestionableFacts="30"/>
         <completionCriteria/>
       </levels>
       <setoffacts href="HistoryGeographyFacts.xmi#//@knowledgefacts.0"/>

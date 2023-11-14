@@ -24,6 +24,7 @@ import generator.PropositionParam;
  *   <li>{@link generator.impl.PropositionParamImpl#getState <em>State</em>}</li>
  *   <li>{@link generator.impl.PropositionParamImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link generator.impl.PropositionParamImpl#isImage <em>Image</em>}</li>
+ *   <li>{@link generator.impl.PropositionParamImpl#getOrder <em>Order</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,6 +69,26 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 	 * @ordered
 	 */
 	protected boolean image = IMAGE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getOrder() <em>Order</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOrder()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ORDER_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getOrder() <em>Order</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOrder()
+	 * @generated
+	 * @ordered
+	 */
+	protected int order = ORDER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -215,6 +236,28 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getOrder() {
+		return order;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOrder(int newOrder) {
+		int oldOrder = order;
+		order = newOrder;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PROPOSITION_PARAM__ORDER, oldOrder,
+					order));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -240,6 +283,8 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 			return getPosition();
 		case GeneratorPackage.PROPOSITION_PARAM__IMAGE:
 			return isImage();
+		case GeneratorPackage.PROPOSITION_PARAM__ORDER:
+			return getOrder();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -260,6 +305,9 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 			return;
 		case GeneratorPackage.PROPOSITION_PARAM__IMAGE:
 			setImage((Boolean) newValue);
+			return;
+		case GeneratorPackage.PROPOSITION_PARAM__ORDER:
+			setOrder((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -282,6 +330,9 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 		case GeneratorPackage.PROPOSITION_PARAM__IMAGE:
 			setImage(IMAGE_EDEFAULT);
 			return;
+		case GeneratorPackage.PROPOSITION_PARAM__ORDER:
+			setOrder(ORDER_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -300,6 +351,8 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 			return position != null;
 		case GeneratorPackage.PROPOSITION_PARAM__IMAGE:
 			return image != IMAGE_EDEFAULT;
+		case GeneratorPackage.PROPOSITION_PARAM__ORDER:
+			return order != ORDER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -317,6 +370,8 @@ public class PropositionParamImpl extends ParameterImpl implements PropositionPa
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (image: ");
 		result.append(image);
+		result.append(", order: ");
+		result.append(order);
 		result.append(')');
 		return result.toString();
 	}

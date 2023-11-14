@@ -722,6 +722,21 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseOrderEvent(OrderEvent object) {
+			return createOrderEventAdapter();
+		}
+
+		@Override
+		public Adapter caseOrderQuestionableFact(OrderQuestionableFact object) {
+			return createOrderQuestionableFactAdapter();
+		}
+
+		@Override
+		public Adapter caseOrderSolution(OrderSolution object) {
+			return createOrderSolutionAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1213,6 +1228,48 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMTMembershipAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.OrderEvent <em>Order Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.OrderEvent
+	 * @generated
+	 */
+	public Adapter createOrderEventAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.OrderQuestionableFact <em>Order Questionable Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.OrderQuestionableFact
+	 * @generated
+	 */
+	public Adapter createOrderQuestionableFactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.OrderSolution <em>Order Solution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.OrderSolution
+	 * @generated
+	 */
+	public Adapter createOrderSolutionAdapter() {
 		return null;
 	}
 
