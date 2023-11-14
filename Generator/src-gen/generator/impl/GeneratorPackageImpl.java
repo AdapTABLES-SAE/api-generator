@@ -1161,6 +1161,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAbstractFact_BelongsToVisualization() {
+		return (EReference) abstractFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSetOfFacts() {
 		return setOfFactsEClass;
 	}
@@ -5741,6 +5750,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		// Create classes and their features
 		abstractFactEClass = createEClass(ABSTRACT_FACT);
 		createEReference(abstractFactEClass, ABSTRACT_FACT__REPRESENTATION);
+		createEReference(abstractFactEClass, ABSTRACT_FACT__BELONGS_TO_VISUALIZATION);
 
 		setOfFactsEClass = createEClass(SET_OF_FACTS);
 		createEReference(setOfFactsEClass, SET_OF_FACTS__FACTS);
@@ -6491,6 +6501,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getAbstractFact_Representation(), this.getImage(), null, "representation", null, 0, 1,
 				AbstractFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractFact_BelongsToVisualization(), this.getVisualization(), null,
+				"belongsToVisualization", null, 0, 1, AbstractFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(setOfFactsEClass, SetOfFacts.class, "SetOfFacts", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

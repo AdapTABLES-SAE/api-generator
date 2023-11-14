@@ -34,7 +34,7 @@ public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
 		if(fact instanceof MTFact) {
 			MTCompletion1 taskC = (MTCompletion1) task;
 			MTFact factC = (MTFact) fact;
@@ -76,6 +76,11 @@ public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 	
 	private void add2Set(Set<AQuestionableFact> set, AQuestionableFact fact) {
 		set.add(fact);
+	}
+	
+	@Override
+	protected AQuestionableFact generateQuestionableFactOf(ATask task, List<AbstractFact> facts) {
+		return null;
 	}
 	
 	private MTQFCompletion1 buildQF(MTFact fact, ResultPosition resPos, TableBuild build, ESingleTarget target) {
@@ -156,5 +161,32 @@ public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 	protected boolean isQuestionInteractive() {
 		return true;
 	}
+
+	@Override
+	protected boolean conditionForMembershipTaskOnSetOfFacts(SetOfFacts setoffacts) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	protected boolean conditionForMembershipTaskOnFacts(AbstractFact fact) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	protected String getMembershipPropertyOfAFact(AbstractFact fact) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected Set<AQuestionableFact> generateMembershipQuestionableFacts(ATask task, HashMap<String, List<AbstractFact>> facts,
+			int numberByFact) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 
 }

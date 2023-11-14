@@ -4,6 +4,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="AbstractFact" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="representation" eType="#//Image"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="belongsToVisualization"
+        eType="#//Visualization"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SetOfFacts">
     <eStructuralFeatures xsi:type="ecore:EReference" name="facts" upperBound="-1"

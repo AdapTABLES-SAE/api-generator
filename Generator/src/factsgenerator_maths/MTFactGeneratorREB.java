@@ -31,7 +31,7 @@ public class MTFactGeneratorREB extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
 		if(fact instanceof MTFact) {
 			MTFact factC = (MTFact) fact;
 			
@@ -192,5 +192,36 @@ public class MTFactGeneratorREB extends FactGeneratorTemplate {
 	@Override
 	protected boolean isQuestionInteractive() {
 		return true;
+	}
+
+	@Override
+	protected boolean conditionForMembershipTaskOnSetOfFacts(SetOfFacts setoffacts) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	protected boolean conditionForMembershipTaskOnFacts(AbstractFact fact) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	protected String getMembershipPropertyOfAFact(AbstractFact fact) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected Set<AQuestionableFact> generateMembershipQuestionableFacts(ATask task, HashMap<String, List<AbstractFact>> facts,
+			int numberByFact) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected AQuestionableFact generateQuestionableFactOf(ATask task, List<AbstractFact> facts) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

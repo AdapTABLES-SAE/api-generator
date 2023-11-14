@@ -28,7 +28,7 @@ public class JudoFactGeneratorIdentifyArbitration extends FactGeneratorTemplate 
 	}
 
 	@Override
-	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
 		if(fact instanceof JudoArbitrationGestureFact) {		
 			JudoQuestionableArbitrationFact qfact = new JudoQuestionableArbitrationFactImpl();
@@ -134,8 +134,35 @@ public class JudoFactGeneratorIdentifyArbitration extends FactGeneratorTemplate 
 		}
 		return solutions;
 	}
-	
-	
 
-	
+	@Override
+	protected boolean conditionForMembershipTaskOnSetOfFacts(SetOfFacts setoffacts) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	protected boolean conditionForMembershipTaskOnFacts(AbstractFact fact) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	protected String getMembershipPropertyOfAFact(AbstractFact fact) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected Set<AQuestionableFact> generateMembershipQuestionableFacts(ATask task, HashMap<String, List<AbstractFact>> facts,
+			int numberByFact) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected AQuestionableFact generateQuestionableFactOf(ATask task, List<AbstractFact> facts) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -20,7 +20,6 @@ import generator.GeographyLegendFact;
 import generator.LegendAMap;
 import generator.LegendQuestionableFact;
 import generator.SetOfFacts;
-import generator.Visualization;
 import generator.VisualizationSolution;
 import generator.impl.LegendQuestionableFactImpl;
 import generators.ALGAGenerator;
@@ -34,18 +33,18 @@ public class HGFactGeneratorLegend extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
-		if(fact instanceof GeographyLegendFact && parent.getVisualization() != null) {
-			questionableFacts.add(buildQF((LegendAMap) task, (GeographyLegendFact) fact, parent.getVisualization()));
+		if(fact instanceof GeographyLegendFact && fact.getBelongsToVisualization() != null) {
+			questionableFacts.add(buildQF((LegendAMap) task, (GeographyLegendFact) fact));
 		}		
 		return questionableFacts;
 	}
 
-	private AQuestionableFact buildQF(LegendAMap task, GeographyLegendFact fact, Visualization visualization) {
+	private AQuestionableFact buildQF(LegendAMap task, GeographyLegendFact fact) {
 		AVisualizationQuestionableFact qf = new LegendQuestionableFactImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
-		qf.setVisualization(visualization);		
+		qf.setVisualization(fact.getBelongsToVisualization());		
 		if(task.getMissing().equals(ELegendTarget.SYMBOL)) {
 			qf.getVisualizationSolutions().add(buildVisualizationSolution(fact.getRepresentation().getID(), fact.getSymbolPosition(), true));
 		} else {
@@ -89,6 +88,37 @@ public class HGFactGeneratorLegend extends FactGeneratorTemplate {
 	@Override
 	protected int correctnessToReach(AQuestionableFact fact) {
 		return ((LegendQuestionableFact) fact).getVisualizationSolutions().size();
+	}
+
+	@Override
+	protected boolean conditionForMembershipTaskOnSetOfFacts(SetOfFacts setoffacts) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	protected boolean conditionForMembershipTaskOnFacts(AbstractFact fact) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	protected String getMembershipPropertyOfAFact(AbstractFact fact) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected Set<AQuestionableFact> generateMembershipQuestionableFacts(ATask task, HashMap<String, List<AbstractFact>> facts,
+			int numberByFact) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected AQuestionableFact generateQuestionableFactOf(ATask task, List<AbstractFact> facts) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

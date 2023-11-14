@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import generator.AbstractFact;
 import generator.GeneratorPackage;
 import generator.Image;
+import generator.Visualization;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -22,6 +23,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
  * </p>
  * <ul>
  *   <li>{@link generator.impl.AbstractFactImpl#getRepresentation <em>Representation</em>}</li>
+ *   <li>{@link generator.impl.AbstractFactImpl#getBelongsToVisualization <em>Belongs To Visualization</em>}</li>
  * </ul>
  *
  * @generated
@@ -36,6 +38,16 @@ public abstract class AbstractFactImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected Image representation;
+
+	/**
+	 * The cached value of the '{@link #getBelongsToVisualization() <em>Belongs To Visualization</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBelongsToVisualization()
+	 * @generated
+	 * @ordered
+	 */
+	protected Visualization belongsToVisualization;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,6 +123,48 @@ public abstract class AbstractFactImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Visualization getBelongsToVisualization() {
+		if (belongsToVisualization != null && belongsToVisualization.eIsProxy()) {
+			InternalEObject oldBelongsToVisualization = (InternalEObject) belongsToVisualization;
+			belongsToVisualization = (Visualization) eResolveProxy(oldBelongsToVisualization);
+			if (belongsToVisualization != oldBelongsToVisualization) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							GeneratorPackage.ABSTRACT_FACT__BELONGS_TO_VISUALIZATION, oldBelongsToVisualization,
+							belongsToVisualization));
+			}
+		}
+		return belongsToVisualization;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Visualization basicGetBelongsToVisualization() {
+		return belongsToVisualization;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBelongsToVisualization(Visualization newBelongsToVisualization) {
+		Visualization oldBelongsToVisualization = belongsToVisualization;
+		belongsToVisualization = newBelongsToVisualization;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.ABSTRACT_FACT__BELONGS_TO_VISUALIZATION, oldBelongsToVisualization,
+					belongsToVisualization));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -130,6 +184,10 @@ public abstract class AbstractFactImpl extends MinimalEObjectImpl.Container impl
 		switch (featureID) {
 		case GeneratorPackage.ABSTRACT_FACT__REPRESENTATION:
 			return getRepresentation();
+		case GeneratorPackage.ABSTRACT_FACT__BELONGS_TO_VISUALIZATION:
+			if (resolve)
+				return getBelongsToVisualization();
+			return basicGetBelongsToVisualization();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -144,6 +202,9 @@ public abstract class AbstractFactImpl extends MinimalEObjectImpl.Container impl
 		switch (featureID) {
 		case GeneratorPackage.ABSTRACT_FACT__REPRESENTATION:
 			setRepresentation((Image) newValue);
+			return;
+		case GeneratorPackage.ABSTRACT_FACT__BELONGS_TO_VISUALIZATION:
+			setBelongsToVisualization((Visualization) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -160,6 +221,9 @@ public abstract class AbstractFactImpl extends MinimalEObjectImpl.Container impl
 		case GeneratorPackage.ABSTRACT_FACT__REPRESENTATION:
 			setRepresentation((Image) null);
 			return;
+		case GeneratorPackage.ABSTRACT_FACT__BELONGS_TO_VISUALIZATION:
+			setBelongsToVisualization((Visualization) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -174,6 +238,8 @@ public abstract class AbstractFactImpl extends MinimalEObjectImpl.Container impl
 		switch (featureID) {
 		case GeneratorPackage.ABSTRACT_FACT__REPRESENTATION:
 			return representation != null;
+		case GeneratorPackage.ABSTRACT_FACT__BELONGS_TO_VISUALIZATION:
+			return belongsToVisualization != null;
 		}
 		return super.eIsSet(featureID);
 	}

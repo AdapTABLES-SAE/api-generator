@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <generator:Knowledge xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" name="History Geography Facts">
   <knowledgefacts name="Régions de France">
-    <facts xsi:type="generator:GeographyFact" position="OCCITANIE" type="REGIONS" value="Occitanie"/>
-    <facts xsi:type="generator:GeographyFact" position="PAYS_DE_LA_LOIRE" type="REGIONS" value="Pays de la Loire"/>
-    <facts xsi:type="generator:GeographyFact" position="BRETAGNE" type="REGIONS" value="Bretagne"/>
-    <facts xsi:type="generator:GeographyFact" position="NORMANDIE" type="REGIONS" value="Normandie"/>
-    <facts xsi:type="generator:GeographyFact" position="HAUTS_DE_FRANCE" type="REGIONS" value="Hauts-de-France"/>
-    <facts xsi:type="generator:GeographyFact" position="CENTRE_VAL_DE_LOIRE" type="REGIONS" value="Centre-val de Loire"/>
-    <facts xsi:type="generator:GeographyFact" position="ILE_DE_FRANCE" type="REGIONS" value="Île-de-France"/>
-    <facts xsi:type="generator:GeographyFact" position="GRAND_EST" type="REGIONS" value="Grand Est"/>
-    <facts xsi:type="generator:GeographyFact" position="BOURGOGNE_FRANCHE_COMTE" type="REGIONS" value="Bourgogne-Franche-Comté"/>
-    <facts xsi:type="generator:GeographyFact" position="AUVERGNE_RHONE_ALPES" type="REGIONS" value="Auvergne-Rhône-Alpes"/>
-    <facts xsi:type="generator:GeographyFact" position="PROVENCE_ALPES_COTE_DAZUR" type="REGIONS" value="Provence-Alpes-Côte-D'Azur"/>
-    <facts xsi:type="generator:GeographyFact" position="NOUVELLE_AQUITAINE" type="REGIONS" value="Nouvelle Aquitaine"/>
-    <facts xsi:type="generator:GeographyFact" position="CORSE" type="REGIONS" value="Corse"/>
-    <facts xsi:type="generator:GeographyFact" position="LA_REUNION" type="REGIONS" value="La Réunion"/>
-    <facts xsi:type="generator:GeographyFact" position="MARTINIQUE" type="REGIONS" value="Martinique"/>
-    <facts xsi:type="generator:GeographyFact" position="GUYANE" type="REGIONS" value="Guyane"/>
-    <facts xsi:type="generator:GeographyFact" position="GUADELOUPE" type="REGIONS" value="Guadeloupe"/>
-    <facts xsi:type="generator:GeographyFact" position="MAYOTTE" type="REGIONS" value="Mayotte"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="OCCITANIE" type="REGIONS" value="Occitanie"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="PAYS_DE_LA_LOIRE" type="REGIONS" value="Pays de la Loire"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="BRETAGNE" type="REGIONS" value="Bretagne"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="NORMANDIE" type="REGIONS" value="Normandie"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="HAUTS_DE_FRANCE" type="REGIONS" value="Hauts-de-France"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="CENTRE_VAL_DE_LOIRE" type="REGIONS" value="Centre-val de Loire"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="ILE_DE_FRANCE" type="REGIONS" value="Île-de-France"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="GRAND_EST" type="REGIONS" value="Grand Est"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="BOURGOGNE_FRANCHE_COMTE" type="REGIONS" value="Bourgogne-Franche-Comté"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="AUVERGNE_RHONE_ALPES" type="REGIONS" value="Auvergne-Rhône-Alpes"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="PROVENCE_ALPES_COTE_DAZUR" type="REGIONS" value="Provence-Alpes-Côte-D'Azur"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="NOUVELLE_AQUITAINE" type="REGIONS" value="Nouvelle Aquitaine"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="CORSE" type="REGIONS" value="Corse"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="LA_REUNION" type="REGIONS" value="La Réunion"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="MARTINIQUE" type="REGIONS" value="Martinique"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="GUYANE" type="REGIONS" value="Guyane"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="GUADELOUPE" type="REGIONS" value="Guadeloupe"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="MAYOTTE" type="REGIONS" value="Mayotte"/>
     <visualization ID="FRANCE_REGIONS">
       <positions ID="OCCITANIE"/>
       <positions ID="PAYS_DE_LA_LOIRE"/>
@@ -41,67 +41,67 @@
     </visualization>
   </knowledgefacts>
   <knowledgefacts name="Dates historiques">
-    <facts xsi:type="generator:HistoryFact" event="1er Guerre Mondiale">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="1er Guerre Mondiale">
       <representation ID="GRANDE_GUERRE"/>
       <time xsi:type="generator:TimePeriod" startYear="1914" endYear="1918" startPosition="1914" endPosition="1918"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Révolution Russe">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Révolution Russe">
       <representation ID="REVOLUTION_RUSSE"/>
       <time xsi:type="generator:Date" year="1917" position="1917"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Armistice">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Armistice">
       <representation ID="ARMISTICE"/>
       <time xsi:type="generator:Date" day="11" month="Novembre" year="1918" position="1918"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Allemagne Nazie (Hitlérienne)">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Allemagne Nazie (Hitlérienne)">
       <representation ID="ALLEMAGNE_NAZIE"/>
       <time xsi:type="generator:TimePeriod" startYear="1933" endYear="1945" startPosition="1933" endPosition="1945"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Front Populaire">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Front Populaire">
       <representation ID="FRONT_POPULAIRE"/>
       <time xsi:type="generator:TimePeriod" startYear="1936" endYear="1937" startPosition="1936" endPosition="1937"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Appel du général de Gaulle">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Appel du général de Gaulle">
       <representation ID="DEGAULLE"/>
       <time xsi:type="generator:Date" day="18" month="Juin" year="1940" position="1940"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Régime de Vichy">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Régime de Vichy">
       <representation ID="VICHY"/>
       <time xsi:type="generator:TimePeriod" startYear="1940" endYear="1944" startPosition="1940" endPosition="1944"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Création de l'ONU">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Création de l'ONU">
       <representation ID="ONU"/>
       <time xsi:type="generator:Date" day="" month="" year="1945" position="1945"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Traité de Rome">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Traité de Rome">
       <representation ID="ROME"/>
       <time xsi:type="generator:Date" day="" month="" year="1957" position="1957"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="L'Euro">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="L'Euro">
       <representation ID="EURO"/>
       <time xsi:type="generator:Date" day="" month="" year="2002" position="2002"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Chute du mur de Berlin">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Chute du mur de Berlin">
       <representation ID="MUR_BERLIN"/>
       <time xsi:type="generator:Date" day="" month="" year="1989" position="1989"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Les accords d'Evian">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Les accords d'Evian">
       <representation ID="EVIAN"/>
       <time xsi:type="generator:Date" day="" month="" year="1962" position="1962"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Naissance de la Ve République">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Naissance de la Ve République">
       <representation ID="5REPUBLIQUE"/>
       <time xsi:type="generator:Date" day="" month="" year="1958" position="1958"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Election Président de la République au suffrage universel direct">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Election Président de la République au suffrage universel direct">
       <representation ID="ELECTION"/>
       <time xsi:type="generator:Date" day="" month="" year="1962" position="1962"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Loi Veil (IVG)">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Loi Veil (IVG)">
       <representation ID="VEIL"/>
       <time xsi:type="generator:Date" day="" month="" year="1975" position="1975"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" event="Première alternance">
+    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Première alternance">
       <representation ID="ALTERNANCE"/>
       <time xsi:type="generator:Date" day="" month="" year="1981" position="1981"/>
     </facts>
@@ -128,21 +128,21 @@
     </visualization>
   </knowledgefacts>
   <knowledgefacts name="Aires Urbaines">
-    <facts xsi:type="generator:GeographyFact" position="PARIS" value="Paris"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="PARIS" value="Paris"/>
     <visualization ID="FRANCE_AIRES_URBAINES">
       <positions ID="PARIS"/>
     </visualization>
   </knowledgefacts>
   <knowledgefacts name="Densité de population (Légende) ">
-    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="FORTE">
+    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DENSITE_POPU_LEGEND" symbolPosition="FORTE">
       <representation ID="ROUGE"/>
       <legend text="plus de 100" position="FORTE_TEXT"/>
     </facts>
-    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="MOYENNE">
+    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DENSITE_POPU_LEGEND" symbolPosition="MOYENNE">
       <representation ID="ORANGE"/>
       <legend text="entre 50 et 100" position="MOYENNE_TEXT"/>
     </facts>
-    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="FAIBLE">
+    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DENSITE_POPU_LEGEND" symbolPosition="FAIBLE">
       <representation ID="JAUNE"/>
       <legend text="moins de 50" position="FAIBLE_TEXT"/>
     </facts>
@@ -156,23 +156,23 @@
     </visualization>
   </knowledgefacts>
   <knowledgefacts name="Domaine Bioclimatique (Légende)">
-    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="OCEANIQUE">
+    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="OCEANIQUE">
       <representation ID="DARK_GREEN"/>
       <legend text="Climat Océanique" position="OCEANIQUE_DEGRADE_TEXT"/>
     </facts>
-    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="OCEANIQUE_DEGRADE">
+    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="OCEANIQUE_DEGRADE">
       <representation ID="LIGHT_GREEN"/>
       <legend text="Climat Océanique Dégradé" position="OCEANIQUE_DEGRADE_TEXT"/>
     </facts>
-    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="SEMI_CONTINENTAL">
+    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="SEMI_CONTINENTAL">
       <representation ID="BLUE"/>
       <legend text="Climat Semi-continental" position="SEMI_CONTINENTAL_TEXT"/>
     </facts>
-    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="MEDITERRANEEN">
+    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="MEDITERRANEEN">
       <representation ID="ORANGE"/>
       <legend text="Climat Méditérranéen" position="MEDITERRANEEN_TEXT"/>
     </facts>
-    <facts xsi:type="generator:GeographyLegendFact" symbolPosition="MONTAGNARD">
+    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="MONTAGNARD">
       <representation ID="BROWN"/>
       <legend text="Climat Montagnard" position="MONTAGNARD_TEXT"/>
     </facts>

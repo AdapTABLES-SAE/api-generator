@@ -129,6 +129,7 @@
     </genEnums>
     <genClasses image="false" ecoreClass="generator.ecore#//AbstractFact">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//AbstractFact/representation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//AbstractFact/belongsToVisualization"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//SetOfFacts">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//SetOfFacts/facts"/>

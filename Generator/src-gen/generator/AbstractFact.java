@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link generator.AbstractFact#getRepresentation <em>Representation</em>}</li>
+ *   <li>{@link generator.AbstractFact#getBelongsToVisualization <em>Belongs To Visualization</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getAbstractFact()
@@ -42,5 +43,27 @@ public interface AbstractFact extends EObject {
 	 * @generated
 	 */
 	void setRepresentation(Image value);
+
+	/**
+	 * Returns the value of the '<em><b>Belongs To Visualization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Belongs To Visualization</em>' reference.
+	 * @see #setBelongsToVisualization(Visualization)
+	 * @see generator.GeneratorPackage#getAbstractFact_BelongsToVisualization()
+	 * @model
+	 * @generated
+	 */
+	Visualization getBelongsToVisualization();
+
+	/**
+	 * Sets the value of the '{@link generator.AbstractFact#getBelongsToVisualization <em>Belongs To Visualization</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Belongs To Visualization</em>' reference.
+	 * @see #getBelongsToVisualization()
+	 * @generated
+	 */
+	void setBelongsToVisualization(Visualization value);
 
 } // AbstractFact

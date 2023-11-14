@@ -2,7 +2,6 @@ package factsgenerator_judo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -13,7 +12,6 @@ import factgenerator_template.FactGeneratorTemplate;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
-import generator.DynamicMultipleChoice;
 import generator.ECorrectness;
 import generator.EJudoTarget;
 import generator.JudoQuestionableClassifyFact;
@@ -21,10 +19,8 @@ import generator.JudoTechniqueFact;
 import generator.MultipleChoice;
 import generator.SetOfFacts;
 import generator.impl.JudoQuestionableClassifyFactImpl;
-import generators.ALGAGenerator;
 import managers.ModelsManager;
 import structures.DungeonElements;
-import structures.Shuffle;
 import structures.Soluce;
 
 public class JudoFactGeneratorClassifyTechnique extends FactGeneratorTemplate {
@@ -32,83 +28,16 @@ public class JudoFactGeneratorClassifyTechnique extends FactGeneratorTemplate {
 	public JudoFactGeneratorClassifyTechnique(ModelsManager modelsManager, DungeonElements dungeonElements) {
 		super(modelsManager, dungeonElements);
 	}
-
+	
 	@Override
-	public Set<AQuestionableFact> generateQuestionableFacts(ATask task){
-		Set<AQuestionableFact> AQuestionableFacts = new HashSet<>();
-		taskID = task.getID();
-		
-		int number;
-		if(task.getResponseModality() instanceof MultipleChoice) {
-			MultipleChoice mc = (MultipleChoice) task.getResponseModality();
-			number = mc.getNbChoices() - mc.getNbBadChoices();
-		} else {
-			ALGAGenerator.LOGGER.severe("Task response modality should be of MultipleChoice type and not DynamicMultipleChoice type ! "
-					+ " Generation will consider that nbChoices = 2 x nbBadChoices. ");
-			DynamicMultipleChoice mc = (DynamicMultipleChoice) task.getResponseModality();
-			number = mc.getNbBadChoices()*2 - mc.getNbBadChoices();
-		}
-		
-		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
-			System.err.println(setoffact.getFacts().size());
-			HashMap<String, List<JudoTechniqueFact>> facts = new HashMap<>();
-				for (AbstractFact f : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
-					List<JudoTechniqueFact> factlist = new ArrayList<>();
-					if(f instanceof JudoTechniqueFact) {
-						JudoTechniqueFact fact = (JudoTechniqueFact) f;
-						factlist.add(fact);
-						if(facts.containsKey(fact.getCategory())) {
-							factlist.addAll(facts.get(fact.getCategory()));
-							
-						} 
-						facts.put(fact.getCategory(), factlist);
-					}
-				}
-				AQuestionableFacts.addAll(generateAQuestionableFactsOf(task, facts, number));
-		}	
-		return AQuestionableFacts; 
-	}
-	
-	
-	protected Set<AQuestionableFact> generateAQuestionableFactsOf(ATask task, HashMap<String, List<JudoTechniqueFact>> facts, int numberByFact) {
-		Set<AQuestionableFact> qfs = new HashSet<>(); 
-			
-		System.out.println("HASH "+facts);
-		for(String key: facts.keySet()) {
-			int k = 0;
-			int numberOfQuestionableFacts = (int) Math.floor(facts.get(key).size() / numberByFact);
-			if(numberOfQuestionableFacts == 0) {
-				numberOfQuestionableFacts = facts.get(key).size();
-			}
-			for (int i = 0; i < numberOfQuestionableFacts; i++) {
-				List<JudoTechniqueFact> judoFacts = new ArrayList<>(); 
-				while(judoFacts.size() < numberByFact && k < facts.get(key).size()) {
-					judoFacts.add(facts.get(key).get(k));
-					k++;
-				}
-				System.out.println("GROUPEd "+ judoFacts);
-				if(!judoFacts.isEmpty()) {
-					qfs.add(buildQF(judoFacts)); 
-				}
-			}
-		}
-
-		return qfs;
-	}
-	
-	private JudoQuestionableClassifyFact buildQF(List<JudoTechniqueFact> facts) {
+	protected AQuestionableFact generateQuestionableFactOf(ATask task, List<AbstractFact> facts) {
 		JudoQuestionableClassifyFact qf = new JudoQuestionableClassifyFactImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
-		qf.setCategory(facts.get(0).getCategory());
-		for (JudoTechniqueFact judofact : facts) {
-			qf.getTechniques().add(judofact.getName());
+		qf.setCategory(((JudoTechniqueFact) facts.get(0)).getCategory());
+		for (AbstractFact judofact : facts) {
+			qf.getTechniques().add(((JudoTechniqueFact) judofact).getName());
 		}
-		return qf;
-	}
-
-	@Override	
-	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
-		return null;
+		return (AQuestionableFact) qf;
 	}
 
 	@Override
@@ -142,7 +71,7 @@ public class JudoFactGeneratorClassifyTechnique extends FactGeneratorTemplate {
 		return propositions;
 	}
 	
-	private List<Soluce> getListOfPossibleBadPropositions(List<Soluce> goodSolutions, EJudoTarget target) {  // TODO check category
+	private List<Soluce> getListOfPossibleBadPropositions(List<Soluce> goodSolutions, EJudoTarget target) { 
 		List<Soluce> badPossibleSoluce = new ArrayList<>();
 		for(SetOfFacts setoffact: modelsManager.getKnowledgeModel().getKnowledgefacts()) {
 			for(AbstractFact afact: setoffact.getFacts()) {
@@ -188,6 +117,25 @@ public class JudoFactGeneratorClassifyTechnique extends FactGeneratorTemplate {
 	protected int correctnessToReach(AQuestionableFact fact) {
 		return ((JudoQuestionableClassifyFact) fact).getTechniques().size();
 	}
-	
 
+	@Override
+	protected boolean conditionForMembershipTaskOnSetOfFacts(SetOfFacts setoffacts) {
+		return true;
+	}
+
+	@Override
+	protected boolean conditionForMembershipTaskOnFacts(AbstractFact fact) {
+		return fact instanceof JudoTechniqueFact;
+	}
+
+	@Override
+	protected String getMembershipPropertyOfAFact(AbstractFact fact) {
+		return ((JudoTechniqueFact) fact).getCategory();
+	}
+
+	@Override
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

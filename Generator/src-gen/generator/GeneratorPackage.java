@@ -78,13 +78,22 @@ public interface GeneratorPackage extends EPackage {
 	int ABSTRACT_FACT__REPRESENTATION = 0;
 
 	/**
+	 * The feature id for the '<em><b>Belongs To Visualization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_FACT__BELONGS_TO_VISUALIZATION = 1;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_FACT_FEATURE_COUNT = 1;
+	int ABSTRACT_FACT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Abstract Fact</em>' class.
@@ -2992,6 +3001,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_FACT__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To Visualization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_FACT__BELONGS_TO_VISUALIZATION = ABSTRACT_FACT__BELONGS_TO_VISUALIZATION;
 
 	/**
 	 * The feature id for the '<em><b>Table</b></em>' attribute.
@@ -7090,6 +7108,15 @@ public interface GeneratorPackage extends EPackage {
 	int HISTORY_FACT__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Belongs To Visualization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORY_FACT__BELONGS_TO_VISUALIZATION = ABSTRACT_FACT__BELONGS_TO_VISUALIZATION;
+
+	/**
 	 * The feature id for the '<em><b>Event</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7145,6 +7172,15 @@ public interface GeneratorPackage extends EPackage {
 	int GEOGRAPHY_LEGEND_FACT__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Belongs To Visualization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_LEGEND_FACT__BELONGS_TO_VISUALIZATION = ABSTRACT_FACT__BELONGS_TO_VISUALIZATION;
+
+	/**
 	 * The feature id for the '<em><b>Legend</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7198,6 +7234,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int GEOGRAPHY_FACT__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To Visualization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_FACT__BELONGS_TO_VISUALIZATION = ABSTRACT_FACT__BELONGS_TO_VISUALIZATION;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' reference.
@@ -8883,6 +8928,15 @@ public interface GeneratorPackage extends EPackage {
 	int JUDO_TECHNIQUE_FACT__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Belongs To Visualization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_TECHNIQUE_FACT__BELONGS_TO_VISUALIZATION = ABSTRACT_FACT__BELONGS_TO_VISUALIZATION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9553,6 +9607,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int JUDO_ARBITRATION_GESTURE_FACT__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To Visualization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_ARBITRATION_GESTURE_FACT__BELONGS_TO_VISUALIZATION = ABSTRACT_FACT__BELONGS_TO_VISUALIZATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -10407,6 +10470,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAbstractFact_Representation();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.AbstractFact#getBelongsToVisualization <em>Belongs To Visualization</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Belongs To Visualization</em>'.
+	 * @see generator.AbstractFact#getBelongsToVisualization()
+	 * @see #getAbstractFact()
+	 * @generated
+	 */
+	EReference getAbstractFact_BelongsToVisualization();
 
 	/**
 	 * Returns the meta object for class '{@link generator.SetOfFacts <em>Set Of Facts</em>}'.
@@ -15845,6 +15919,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ABSTRACT_FACT__REPRESENTATION = eINSTANCE.getAbstractFact_Representation();
+
+		/**
+		 * The meta object literal for the '<em><b>Belongs To Visualization</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_FACT__BELONGS_TO_VISUALIZATION = eINSTANCE.getAbstractFact_BelongsToVisualization();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.SetOfFactsImpl <em>Set Of Facts</em>}' class.

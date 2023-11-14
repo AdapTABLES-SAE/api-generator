@@ -1,6 +1,7 @@
 package factgenerator_template;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +21,7 @@ import generator.EnterResponse;
 import generator.EntrySoluceParam;
 import generator.FactCorrectnessParam;
 import generator.FactSolutionParam;
+import generator.MultipleChoice;
 import generator.Position;
 import generator.PropositionParam;
 import generator.QuestionParam;
@@ -44,9 +46,11 @@ import generator.impl.ValueImpl;
 import generator.impl.VisualizationQuestionParamImpl;
 import generator.impl.VisualizationSolutionImpl;
 import generator.impl.WantedAnswersParamImpl;
+import generators.ALGAGenerator;
 import managers.ModelsManager;
 import structures.DungeonElements;
 import structures.RoomElements;
+import structures.Shuffle;
 import structures.Soluce;
 
 public abstract class FactGeneratorTemplate {
@@ -74,17 +78,87 @@ public abstract class FactGeneratorTemplate {
 	public Set<AQuestionableFact> generateQuestionableFacts(ATask task){ // TO OVERRIDE FOR MEMBERSHIP 
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
 		taskID = task.getID();
-		for (SetOfFacts setoffact : dungeonElements.getChosenObjective().getSetoffacts()) {
-			for (AbstractFact f : setoffact.getFacts()) { 
-				for(AQuestionableFact fact: generateQuestionableFactsOf(setoffact, task, f)) {
-					questionableFacts.add(fact);
+		switch(task.getType()) {
+		case MEMBERSHIP:
+		    int numberByFacts;
+		    if(task.getResponseModality() instanceof MultipleChoice) {
+		      MultipleChoice mc = (MultipleChoice) task.getResponseModality();
+		      numberByFacts = mc.getNbChoices() - mc.getNbBadChoices();
+		    } else{
+		      ALGAGenerator.LOGGER.info("Task response modality is DynamicMultipleChoice or EnterInput for Membership Task ! ");
+		      numberByFacts = -1;
+		    } 	    
+		    
+		    for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
+		    	if(conditionForMembershipTaskOnSetOfFacts(setoffact)) {
+		    	HashMap<String, List<AbstractFact>> facts = new HashMap<>();
+		    	for (AbstractFact fact : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
+		    		List<AbstractFact> factlist = new ArrayList<>();
+		    		factlist.add(fact);
+		    		if(conditionForMembershipTaskOnFacts(fact)){
+		    			String key = getMembershipPropertyOfAFact(fact);
+		    			if(facts.containsKey(key)) {
+		    				factlist.addAll(facts.get(key));
+		    			}
+		    			facts.put(key, factlist);
+		            }
+		        } 
+		        questionableFacts.addAll(generateMembershipQuestionableFacts(task, facts, numberByFacts));
+		      }
+		    } 
+			break;
+		default:
+			for (SetOfFacts setoffact : dungeonElements.getChosenObjective().getSetoffacts()) {
+				for (AbstractFact f : setoffact.getFacts()) { 
+					for(AQuestionableFact fact: generateQuestionableFactsOf(task, f)) {
+						questionableFacts.add(fact);
+					}
 				}
 			}
+			break;
 		}
+		
+		
 		return questionableFacts; 
 	}
 	
-	protected abstract Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact);
+	protected abstract boolean conditionForMembershipTaskOnSetOfFacts(SetOfFacts setoffacts);
+	protected abstract boolean conditionForMembershipTaskOnFacts(AbstractFact fact);
+	/**
+	 * Gives the values of the property of a given fact.
+	 * For example, a fact that is "Ippon-Seoi-Nage is a TE-WAZA (Arm projection Technique)" will return
+	 * the category of the technique which is "TE-WAZA (Arm projection Technique)". 
+	 * @param fact
+	 * @return value of the property (used to classify fact by their common properties)
+	 */
+	protected abstract String getMembershipPropertyOfAFact(AbstractFact fact);
+	
+	protected Set<AQuestionableFact> generateMembershipQuestionableFacts(ATask task, HashMap<String, List<AbstractFact>> facts, int numberByFact) {
+		Set<AQuestionableFact> qfs = new HashSet<>(); 
+		for(String key: facts.keySet()) {
+			int k = 0;
+			if(numberByFact == -1) { numberByFact = facts.get(key).size(); }
+			int numberOfQuestionableFacts = (int) Math.ceil((double) facts.get(key).size() / (double) numberByFact);
+			if(numberOfQuestionableFacts == 0) {
+				numberOfQuestionableFacts = facts.get(key).size();
+			}
+			for (int i = 0; i < numberOfQuestionableFacts; i++) {
+				List<AbstractFact> factres = new ArrayList<>(); 
+				while(factres.size() < numberByFact && k < facts.get(key).size()) {
+					factres.add(facts.get(key).get(k));
+					k++;
+				}
+				if(!factres.isEmpty()) {
+					qfs.add(generateQuestionableFactOf(task, factres)); 
+				}
+			}
+		}
+		return qfs;
+	}
+	
+	protected abstract AQuestionableFact generateQuestionableFactOf(ATask task, List<AbstractFact> facts);
+	
+	protected abstract Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact);
 		
 	protected void createAQuestionedFactFrom(RoomElements roomElement, AQuestionableFact qFact) throws BadSolutionGenerationException {
 		QuestionedFact qef = new QuestionedFactImpl(); 
@@ -246,7 +320,6 @@ public abstract class FactGeneratorTemplate {
 	}
 	
 	private AQuestionableFact getAvailableFact(RoomElements roomElements, ResultsByTask resByTask) throws Exception { 
-		//boolean isEveryFactAchieved = areEveryFactAchieved(resByTask); 
 		if(areEveryFactAchieved(resByTask)) {
 			resetPoolWithEveryFacts(resByTask);
 		} else {

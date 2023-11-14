@@ -2,7 +2,6 @@ package factsgenerator_maths;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -12,7 +11,6 @@ import factgenerator_template.FactGeneratorTemplate;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
-import generator.DynamicMultipleChoice;
 import generator.ECorrectness;
 import generator.MTFact;
 import generator.MTLevel;
@@ -21,9 +19,7 @@ import generator.MTQFMembership;
 import generator.MultipleChoice;
 import generator.SetOfFacts;
 import generator.impl.MTQFMembershipImpl;
-import generators.ALGAGenerator;
 import structures.DungeonElements;
-import structures.Shuffle;
 import structures.Soluce;
 
 public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
@@ -32,68 +28,16 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 		super(dungeonElements);
 	}
 
-
 	@Override
-	public Set<AQuestionableFact> generateQuestionableFacts(ATask task){
-		Set<AQuestionableFact> AQuestionableFacts = new HashSet<>();
-		taskID = task.getID();
-		
-		int min = ((MTLevel) dungeonElements.getChosenLevel()).getMinInterval();
-		int max = ((MTLevel) dungeonElements.getChosenLevel()).getMaxInterval();
-		int nbByFact;
-		if(task.getResponseModality() instanceof MultipleChoice) {
-			MultipleChoice mc = (MultipleChoice) task.getResponseModality();
-			nbByFact = mc.getNbChoices() - mc.getNbBadChoices();
-		} else {
-			ALGAGenerator.LOGGER.severe("Task response modality should be of MultipleChoice type and not DynamicMultipleChoice type ! "
-					+ " Generation will consider that nbChoices = 2 x nbBadChoices. ");
-			DynamicMultipleChoice mc = (DynamicMultipleChoice) task.getResponseModality();
-			nbByFact = mc.getNbBadChoices()*2 - mc.getNbBadChoices();
-		}
-		
-		
-		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
-			if(!setoffact.getName().equals("1")) {
-				List<MTFact> facts = new ArrayList<>();
-				for (AbstractFact f : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
-					if(f instanceof MTFact) {
-						MTFact fact = (MTFact) f;
-						if(min <= (fact.getRes()/fact.getTable()) && (fact.getRes()/fact.getTable()) <= max){
-							facts.add(fact);
-						}
-					}
-				}
-				AQuestionableFacts.addAll(generateAQuestionableFactsOf(task, facts, nbByFact));
-			}
-		}	
-		return AQuestionableFacts; 
-	}
-	
-	
-	protected Set<AQuestionableFact> generateAQuestionableFactsOf(ATask task, List<MTFact> facts, int numberByFact) {
-		Set<AQuestionableFact> qfs = new HashSet<>(); 
-		int k = 0;
-		int numberOfQuestionableFacts = (int) Math.ceil(facts.size() / numberByFact);
-		for (int i = 0; i < numberOfQuestionableFacts; i++) {
-			List<MTFact> factres = new ArrayList<>(); 
-			while(factres.size() < numberByFact && k < facts.size()) {
-				factres.add(facts.get(k));
-				k++;
-			}
-			qfs.add(buildQF(factres)); 
-		}
-		return qfs;
-	}
-	
-	private MTQFMembership buildQF(List<MTFact> facts) {
+	protected AQuestionableFact generateQuestionableFactOf(ATask task, List<AbstractFact> facts) {
 		MTQFMembership qf = new MTQFMembershipImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		
-		for (MTFact mtResultFact : facts) {
-			qf.getGoodResults().add(mtResultFact.getRes());
+		for (AbstractFact mtResultFact : facts) {
+			qf.getGoodResults().add(((MTFact) mtResultFact).getRes());
 		}
-		qf.setTable(facts.get(0).getTable());
-		return qf;
+		qf.setTable(((MTFact) facts.get(0)).getTable());
+		return (AQuestionableFact) qf;
 	}
 
 	@Override
@@ -143,7 +87,6 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 		return propositions;
 	}
 
-
 	@Override
 	protected int correctnessToReach(AQuestionableFact fact) {
 		return ((MTQFMembership) fact).getGoodResults().size();
@@ -155,7 +98,27 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
+	protected boolean conditionForMembershipTaskOnSetOfFacts(SetOfFacts setoffact) {
+		return !setoffact.getName().equals("1");
+	}
+
+
+	@Override
+	protected boolean conditionForMembershipTaskOnFacts(AbstractFact fact) {
+		int min = ((MTLevel) dungeonElements.getChosenLevel()).getMinInterval();
+		int max = ((MTLevel) dungeonElements.getChosenLevel()).getMaxInterval();
+		return fact instanceof MTFact && min <= (((MTFact) fact).getRes()/((MTFact) fact).getTable()) && (((MTFact) fact).getRes()/((MTFact) fact).getTable()) <= max;
+	}
+
+
+	@Override
+	protected String getMembershipPropertyOfAFact(AbstractFact fact) {
+		return ((MTFact) fact).getTable()+"";
+	}
+
+	@Override
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 }

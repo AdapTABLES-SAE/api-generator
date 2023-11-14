@@ -22,7 +22,6 @@ import generator.MapQuestionableFact;
 import generator.QuestionedFact;
 import generator.SetOfFacts;
 import generator.TimePeriod;
-import generator.Visualization;
 import generator.VisualizationPosition;
 import generator.VisualizationSolution;
 import generator.impl.MapQuestionableFactImpl;
@@ -36,20 +35,20 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
-		if(fact instanceof HistoryFact  && parent.getVisualization() != null) {
-			 questionableFacts.add(buildQF((HistoryFact) fact, parent.getVisualization()));
+		if(fact instanceof HistoryFact  && fact.getBelongsToVisualization() != null) {
+			 questionableFacts.add(buildQF((HistoryFact) fact));
 		}
 		
 		return questionableFacts;
 	}
 	
 	
-	private AVisualizationQuestionableFact buildQF(HistoryFact fact, Visualization map) {
+	private AVisualizationQuestionableFact buildQF(HistoryFact fact) {
 		AVisualizationQuestionableFact qf = new MapQuestionableFactImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
-		qf.setVisualization(map);
+		qf.setVisualization(fact.getBelongsToVisualization());
 		if(fact.getTime() instanceof Date) {
 			qf.getVisualizationSolutions().add(buildVisualizationSolution(fact.getEvent(), ((Date) fact.getTime()).getPosition(), false));
 		} else {
@@ -147,6 +146,37 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 			}
 		}
 		return eligible;
+	}
+
+	@Override
+	protected boolean conditionForMembershipTaskOnSetOfFacts(SetOfFacts setoffacts) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	protected boolean conditionForMembershipTaskOnFacts(AbstractFact fact) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	protected String getMembershipPropertyOfAFact(AbstractFact fact) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected Set<AQuestionableFact> generateMembershipQuestionableFacts(ATask task, HashMap<String, List<AbstractFact>> facts,
+			int numberByFact) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected AQuestionableFact generateQuestionableFactOf(ATask task, List<AbstractFact> facts) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

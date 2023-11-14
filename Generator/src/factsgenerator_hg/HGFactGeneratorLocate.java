@@ -2,7 +2,6 @@ package factsgenerator_hg;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -20,63 +19,17 @@ import generator.EGeographyValue;
 import generator.GeographyFact;
 import generator.MapQuestionableFact;
 import generator.SetOfFacts;
-import generator.Visualization;
 import generator.VisualizationSolution;
 import generator.impl.MapQuestionableFactImpl;
 import generator.impl.VisualizationSolutionImpl;
 import structures.DungeonElements;
 import structures.HistoryGeographyData;
-import structures.Shuffle;
 import structures.Soluce;
 
 public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 
 	public HGFactGeneratorLocate(DungeonElements dungeonElements) {
 		super(dungeonElements);
-	}
-
-	@Override
-	public Set<AQuestionableFact> generateQuestionableFacts(ATask task){
-		Set<AQuestionableFact> questionableFacts = new HashSet<>();
-		taskID = task.getID();
-		
-		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
-			if(setoffact.getVisualization() != null) {
-				List<GeographyFact> facts = new ArrayList<>();
-				for (AbstractFact f : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
-					if(f instanceof GeographyFact) {
-						GeographyFact fact = (GeographyFact) f;
-						facts.add(fact);
-					}
-				}
-				if(!facts.isEmpty()) {
-					questionableFacts.add(buildQF(task, facts, setoffact.getVisualization()));
-				}
-			}
-		}	
-		return questionableFacts; 
-	}
-	
-	
-
-	private AVisualizationQuestionableFact buildQF(ATask task, List<GeographyFact> facts, Visualization map) {
-		MapQuestionableFact qf = new MapQuestionableFactImpl(); 
-		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
-		qf.setVisualization(map);
-		qf.setType(facts.get(0).getType());
-		for (GeographyFact fact : facts) {
-			VisualizationSolution soluce = new VisualizationSolutionImpl();
-			soluce.setValue(fact.getValue());
-			soluce.setVisualizationPosition(fact.getPosition());
-			qf.getVisualizationSolutions().add(soluce);
-		}
-		
-		if(task.getNbExpectedAnswers() == facts.size()) {
-			qf.setConsigne("Donner l'ensemble des réponses");
-		} else {
-			qf.setConsigne("Donner "+task.getNbExpectedAnswers()+" réponses");
-		}
-		return qf;
 	}
 
 	@Override
@@ -145,8 +98,44 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 	}
 
 	@Override
-	protected Set<AQuestionableFact> generateQuestionableFactsOf(SetOfFacts parent, ATask task, AbstractFact fact) {
+	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
 		return null;
+	}
+
+	@Override
+	protected boolean conditionForMembershipTaskOnSetOfFacts(SetOfFacts setoffacts) {
+		return setoffacts.getVisualization() != null;
+	}
+
+	@Override
+	protected boolean conditionForMembershipTaskOnFacts(AbstractFact fact) {
+		return fact instanceof GeographyFact;
+	}
+
+	@Override
+	protected String getMembershipPropertyOfAFact(AbstractFact fact) {
+		return fact.getBelongsToVisualization().getID();
+	}
+
+	@Override
+	protected AQuestionableFact generateQuestionableFactOf(ATask task, List<AbstractFact> facts) {
+		MapQuestionableFact qf = new MapQuestionableFactImpl(); 
+		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
+		qf.setVisualization(facts.get(0).getBelongsToVisualization());
+		qf.setType(((GeographyFact) facts.get(0)).getType());
+		for (AbstractFact fact : facts) {
+			VisualizationSolution soluce = new VisualizationSolutionImpl();
+			soluce.setValue(((GeographyFact) fact).getValue());
+			soluce.setVisualizationPosition(((GeographyFact) fact).getPosition());
+			qf.getVisualizationSolutions().add(soluce);
+		}
+		
+		if(task.getNbExpectedAnswers() == facts.size()) {
+			qf.setConsigne("Donner l'ensemble des réponses");
+		} else {
+			qf.setConsigne("Donner "+task.getNbExpectedAnswers()+" réponses");
+		}
+		return (AQuestionableFact) qf;
 	}
 
 }
