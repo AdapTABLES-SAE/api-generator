@@ -34,6 +34,7 @@ import generator.ResponseModality;
  *   <li>{@link generator.impl.OrderingTaskImpl#getType <em>Type</em>}</li>
  *   <li>{@link generator.impl.OrderingTaskImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
  *   <li>{@link generator.impl.OrderingTaskImpl#getNbMissingElements <em>Nb Missing Elements</em>}</li>
+ *   <li>{@link generator.impl.OrderingTaskImpl#getMaxQuestionableFacts <em>Max Questionable Facts</em>}</li>
  * </ul>
  *
  * @generated
@@ -226,6 +227,26 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected boolean nbMissingElementsESet;
+
+	/**
+	 * The default value of the '{@link #getMaxQuestionableFacts() <em>Max Questionable Facts</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxQuestionableFacts()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int MAX_QUESTIONABLE_FACTS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getMaxQuestionableFacts() <em>Max Questionable Facts</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxQuestionableFacts()
+	 * @generated
+	 * @ordered
+	 */
+	protected int maxQuestionableFacts = MAX_QUESTIONABLE_FACTS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -488,6 +509,29 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getMaxQuestionableFacts() {
+		return maxQuestionableFacts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMaxQuestionableFacts(int newMaxQuestionableFacts) {
+		int oldMaxQuestionableFacts = maxQuestionableFacts;
+		maxQuestionableFacts = newMaxQuestionableFacts;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.ORDERING_TASK__MAX_QUESTIONABLE_FACTS, oldMaxQuestionableFacts,
+					maxQuestionableFacts));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public int getNbExpectedAnswers() {
 		return this.getNbFacts();
 	}
@@ -541,6 +585,8 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 			return isCheckOnLearnerAction();
 		case GeneratorPackage.ORDERING_TASK__NB_MISSING_ELEMENTS:
 			return getNbMissingElements();
+		case GeneratorPackage.ORDERING_TASK__MAX_QUESTIONABLE_FACTS:
+			return getMaxQuestionableFacts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -573,6 +619,9 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 			return;
 		case GeneratorPackage.ORDERING_TASK__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction((Boolean) newValue);
+			return;
+		case GeneratorPackage.ORDERING_TASK__MAX_QUESTIONABLE_FACTS:
+			setMaxQuestionableFacts((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -607,6 +656,9 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 		case GeneratorPackage.ORDERING_TASK__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction(CHECK_ON_LEARNER_ACTION_EDEFAULT);
 			return;
+		case GeneratorPackage.ORDERING_TASK__MAX_QUESTIONABLE_FACTS:
+			setMaxQuestionableFacts(MAX_QUESTIONABLE_FACTS_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -637,6 +689,8 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
 		case GeneratorPackage.ORDERING_TASK__NB_MISSING_ELEMENTS:
 			return isSetNbMissingElements();
+		case GeneratorPackage.ORDERING_TASK__MAX_QUESTIONABLE_FACTS:
+			return maxQuestionableFacts != MAX_QUESTIONABLE_FACTS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -690,6 +744,8 @@ public abstract class OrderingTaskImpl extends MinimalEObjectImpl.Container impl
 			result.append(nbMissingElements);
 		else
 			result.append("<unset>");
+		result.append(", maxQuestionableFacts: ");
+		result.append(maxQuestionableFacts);
 		result.append(')');
 		return result.toString();
 	}

@@ -14,6 +14,7 @@ package generator;
  *   <li>{@link generator.OrderingTask#getType <em>Type</em>}</li>
  *   <li>{@link generator.OrderingTask#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
  *   <li>{@link generator.OrderingTask#getNbMissingElements <em>Nb Missing Elements</em>}</li>
+ *   <li>{@link generator.OrderingTask#getMaxQuestionableFacts <em>Max Questionable Facts</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getOrderingTask()
@@ -80,6 +81,28 @@ public interface OrderingTask extends ATask {
 	 * @generated
 	 */
 	boolean isSetNbMissingElements();
+
+	/**
+	 * Returns the value of the '<em><b>Max Questionable Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Max Questionable Facts</em>' attribute.
+	 * @see #setMaxQuestionableFacts(int)
+	 * @see generator.GeneratorPackage#getOrderingTask_MaxQuestionableFacts()
+	 * @model
+	 * @generated
+	 */
+	int getMaxQuestionableFacts();
+
+	/**
+	 * Sets the value of the '{@link generator.OrderingTask#getMaxQuestionableFacts <em>Max Questionable Facts</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Max Questionable Facts</em>' attribute.
+	 * @see #getMaxQuestionableFacts()
+	 * @generated
+	 */
+	void setMaxQuestionableFacts(int value);
 
 	/**
 	 * <!-- begin-user-doc -->

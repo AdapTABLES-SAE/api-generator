@@ -3834,6 +3834,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getOrderingTask_MaxQuestionableFacts() {
+		return (EAttribute) orderingTaskEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getOrderingTask__GetNbExpectedAnswers() {
 		return orderingTaskEClass.getEOperations().get(0);
 	}
@@ -6101,6 +6110,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__TYPE);
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__CHECK_ON_LEARNER_ACTION);
 		createEAttribute(orderingTaskEClass, ORDERING_TASK__NB_MISSING_ELEMENTS);
+		createEAttribute(orderingTaskEClass, ORDERING_TASK__MAX_QUESTIONABLE_FACTS);
 		createEOperation(orderingTaskEClass, ORDERING_TASK___GET_NB_EXPECTED_ANSWERS);
 
 		promptEClass = createEClass(PROMPT);
@@ -7300,6 +7310,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrderingTask_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
 				OrderingTask.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOrderingTask_MaxQuestionableFacts(), ecorePackage.getEInt(), "maxQuestionableFacts", null, 0,
+				1, OrderingTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getOrderingTask__GetNbExpectedAnswers(), ecorePackage.getEInt(), "getNbExpectedAnswers", 0, 1,

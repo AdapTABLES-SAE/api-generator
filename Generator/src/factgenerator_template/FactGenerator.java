@@ -1,6 +1,8 @@
 package factgenerator_template;
 
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 import factsgenerator_hg.HGFactGeneratorAssociation;
 import factsgenerator_hg.HGFactGeneratorChronology;
@@ -20,6 +22,7 @@ import generator.CompletionTask;
 import generator.HistoricalEventAssociation;
 import generator.IdentifyTechnique;
 import generator.LegendAMap;
+import generator.OrderingTask;
 import generator.ResultsByTask;
 import generators.ALGAGenerator;
 import managers.ModelsManager;
@@ -40,9 +43,19 @@ public class FactGenerator {
 			factGenerator = getCorrectJudoFactsGenerators(modelsManager, dungeonElements, resBytask.getTask());
 		}
 		
-		Set<AQuestionableFact> facts = factGenerator.generateQuestionableFacts(resBytask.getTask());
+		List<AQuestionableFact> facts = new ArrayList<>(factGenerator.generateQuestionableFacts(resBytask.getTask()));
+		
+		if(resBytask.getTask() instanceof OrderingTask) {
+			OrderingTask task = (OrderingTask) resBytask.getTask(); 
+			while(facts.size() > task.getMaxQuestionableFacts()) {
+				int index = new Random().nextInt(facts.size());
+				facts.remove(index);
+			}
+		}
+		
 		resBytask.getQuestionableFacts().addAll(facts);
 	}
+	
 	
 	private static FactGeneratorTemplate getCorrectHGFactsGenerators(ModelsManager modelsManager, DungeonElements dungeonElements, ATask task) {
 		FactGeneratorTemplate factGenerator; 

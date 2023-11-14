@@ -5761,13 +5761,22 @@ public interface GeneratorPackage extends EPackage {
 	int ORDERING_TASK__NB_MISSING_ELEMENTS = ATASK_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Max Questionable Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERING_TASK__MAX_QUESTIONABLE_FACTS = ATASK_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Ordering Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORDERING_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 3;
+	int ORDERING_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -13577,6 +13586,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getOrderingTask_NbMissingElements();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.OrderingTask#getMaxQuestionableFacts <em>Max Questionable Facts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Max Questionable Facts</em>'.
+	 * @see generator.OrderingTask#getMaxQuestionableFacts()
+	 * @see #getOrderingTask()
+	 * @generated
+	 */
+	EAttribute getOrderingTask_MaxQuestionableFacts();
+
+	/**
 	 * Returns the meta object for the '{@link generator.OrderingTask#getNbExpectedAnswers() <em>Get Nb Expected Answers</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18357,6 +18377,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ORDERING_TASK__NB_MISSING_ELEMENTS = eINSTANCE.getOrderingTask_NbMissingElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Max Questionable Facts</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORDERING_TASK__MAX_QUESTIONABLE_FACTS = eINSTANCE.getOrderingTask_MaxQuestionableFacts();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Nb Expected Answers</b></em>' operation.
