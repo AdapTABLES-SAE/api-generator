@@ -577,14 +577,23 @@ public class ConcreteGameplayGenerator {
 	private List<PositionedElement> buildStructureForFactStatement(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType) throws MapGameplayElementException{
 		List<PositionedElement> elements = new ArrayList<>();
 		
+		if(component.getComponents().size() > 3) {
+			ALGAGenerator.LOGGER.severe("Generator can not deal with fill-in structures that contains more than 3 elements (a structure, a display, a dectector)!");
+		}
+		
 		Component componentForText = null, componentForDetectors = null;
 		ElementType elementForTexts = null, elementForDetectors = null;
-		if(component.isAlternateComponents()) {
-			componentForText = getComponentForText(component);
-			componentForDetectors = getComponentForDetectors(component);
-			elementForTexts = roomElements.getElementTypeFor(componentForText);
-			elementForDetectors = roomElements.getElementTypeFor(componentForDetectors);
+		Structure propositionStructure = null;
+		ElementType elementForPropositionStructure = null; 
+		componentForText = getComponentForText(component);
+		componentForDetectors = getComponentForDetectors(component);
+		propositionStructure = getComponentForStructure(component);
+		elementForTexts = roomElements.getElementTypeFor(componentForText);
+		elementForDetectors = roomElements.getElementTypeFor(componentForDetectors);
+		if(propositionStructure != null) {
+			elementForPropositionStructure = roomElements.getElementTypeFor(propositionStructure);
 		}
+		
 		
 		for (int i = 0; i < roomElements.getFacts().size(); i++) {
 			Structure comp = (Structure) component;
@@ -597,13 +606,42 @@ public class ConcreteGameplayGenerator {
 			elements.add(struct);	
 			
 			if(component.isAlternateComponents()) {
-				elements.addAll(buildFillInStructureContent((QuestionGameplay) roomElements.getGameplay(), roomElements.getFacts().get(i), roomElements, component, struct, elementForTexts, componentForText, elementForDetectors, componentForDetectors));
+				elements.addAll(buildFillInStructureContent((QuestionGameplay) roomElements.getGameplay(), roomElements.getFacts().get(i), roomElements, component, struct, elementForTexts, 
+						componentForText, elementForDetectors, componentForDetectors, elementForPropositionStructure, propositionStructure));
 			} else {
-				for (AComponent aComp : comp.getComponents()) {
-					elements.addAll(buildStructuredGameplay(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, 0, -1));
+				
+				if(propositionStructure != null) { 
+					for(int j = 0; j < roomElements.getFacts().get(i).getPropositions().size(); j++) {
+						elements.addAll(buildPropositionStructureForFillIn(roomElements, i, j, struct.getCreatedPosition(), propositionStructure, elementForPropositionStructure));
+					}
+				} else {
+					for (AComponent aComp : comp.getComponents()) { 
+						elements.addAll(buildStructuredGameplay(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, 0, -1));
+					}
 				}
 			}
 		}		
+		return elements;
+	}
+	
+	private List<PositionedElement> buildPropositionStructureForFillIn(RoomElements roomElements, int factIndex, int propIndex, Position positionFromParent, Structure structure, ElementType typeStructure) {
+		List<PositionedElement> elements = new ArrayList<>();
+		PositionedStructureElement structProp = buildStructure(structure, typeStructure, positionFromParent);
+		structProp.setFact(roomElements.getFacts().get(factIndex));
+		elements.add(structProp);
+		for(AComponent component: structure.getComponents()) {
+			if(component instanceof Structure) {
+				ALGAGenerator.LOGGER.severe("Illegal modelisation! Structure shouldn't contain structure!");
+			} else {
+				if(component.getAllowedAbility().getName().equals("DISPLAY")) {
+					String value = roomElements.getFacts().get(factIndex).getPropositions().get(propIndex).getOrder()+"";
+					elements.add(buildFillInElement((Component) component, roomElements.getElementTypeFor(component), roomElements.getFacts().get(factIndex), structProp.getCreatedPosition(), value, false));
+				} else {
+					elements.add(buildFillInElement((Component) component, roomElements.getElementTypeFor(component), roomElements.getFacts().get(factIndex), structProp.getCreatedPosition())); 
+				}
+			}
+		}
+		
 		return elements;
 	}
 	
@@ -619,34 +657,61 @@ public class ConcreteGameplayGenerator {
 		}
 	}
 	
-	private Component getComponentForText(Structure component) {
+	private Structure getComponentForStructure(Structure component) {
 		for(AComponent comp: component.getComponents()) {
+			System.out.println(comp.getAllowedAbility());
 			if(comp instanceof Structure) {
-				ALGAGenerator.LOGGER.warning("Structure for FILL-IN question does not deal with inside strucutres.");
-			} else {
-				if(comp.getAllowedAbility().getName().equals("DISPLAY")) { // TODO : IMPROVE IF POSSIBLE
-					return (Component) comp;
+				if(!comp.isForProposition()) {
+					ALGAGenerator.LOGGER.warning("Structure should be for propositions.");
 				}
+				return (Structure) comp;
+			}
+		}
+		return null;
+	}
+	
+	private Component getComponentForText(Structure component) {
+		Structure structForProposition = getComponentForStructure(component);
+		List<AComponent> composants = new ArrayList<>(); 
+		if(structForProposition != null) {
+			composants = structForProposition.getComponents();
+		} else {
+			composants = component.getComponents();
+		}
+		for(AComponent comp: composants) {
+			if(comp.isForStatement() || comp.getAllowedAbility().getName().equals("DISPLAY")) { // TODO : IMPROVE IF POSSIBLE
+				return (Component) comp;
 			}
 		}
 		return null;
 	}
 	
 	private Component getComponentForDetectors(Structure component) {
-		for(AComponent comp: component.getComponents()) {
-			if(comp instanceof Structure) {
+		Structure structForProposition = getComponentForStructure(component);
+		List<AComponent> composants = new ArrayList<>(); 
+		if(structForProposition != null) {
+			composants = structForProposition.getComponents();
+		} else {
+			composants = component.getComponents();
+		}
+		for(AComponent comp: composants) {
+			/*if(comp instanceof Structure) {
 				ALGAGenerator.LOGGER.warning("Structure for FILL-IN question does not deal with inside strucutres.");
-			} else {
-				if(!comp.isForStatement()) {
+			} else */
+				if(!comp.isForStatement() && !comp.getAllowedAbility().getName().equals("DISPLAY")) {
 					return (Component) comp;
 				}
-			}
+			//}
 		}
 		return null;
 	}
 	
-	private List<PositionedElement> buildFillInStructureContent(QuestionGameplay gameplay, QuestionedFact fact, RoomElements roomElements, Structure component, PositionedStructureElement structure, ElementType elementForTexts, Component componentForText, ElementType elementForDetectors, Component componentForDetectors) {
+	private List<PositionedElement> buildFillInStructureContent(QuestionGameplay gameplay, QuestionedFact fact, RoomElements roomElements, Structure component, PositionedStructureElement structure, ElementType elementForTexts, Component componentForText, 
+			ElementType elementForDetectors, Component componentForDetectors, ElementType elementForStructureProposition, Structure componentForStructureProposition) {
 		List<PositionedElement> elements = new ArrayList<>();
+		List<PositionedElement> propStructures = new ArrayList<>();
+
+		Position positionFromParent = structure.getCreatedPosition();
 		
 		QuestionedFactSplitter splitter = new QuestionedFactSplitter(fact, gameplay.getStatementType());
 		
@@ -658,24 +723,46 @@ public class ConcreteGameplayGenerator {
 		}
 		
 		int textIndex = 0, i = 0;
-		while(elements.size() < splitter.numberOfHoles()+splitter.numberOfTexts()) {
-			if(i%2 == conditionForTextAppearance) {
-				if(splitter.isTextImage(textIndex)) {
-					elements.add(buildFillInElement(componentForText, elementForTexts, fact, structure.getCreatedPosition(),  splitter.getTexts().get(textIndex), splitter.isTextImage(textIndex)));
-					textIndex++;
-					elements.add(buildFillInElement(componentForText, elementForTexts, fact, structure.getCreatedPosition(),  splitter.getTexts().get(textIndex), splitter.isTextImage(textIndex)));
-					textIndex++;
-				} else {
-					elements.add(buildFillInElement(componentForText, elementForTexts, fact, structure.getCreatedPosition(),  splitter.getTexts().get(textIndex), splitter.isTextImage(textIndex)));
-					textIndex++;
-				}
-			} else {
-					elements.add(buildFillInElement(componentForDetectors, elementForDetectors, fact, structure.getCreatedPosition()));
-			}
-			i++;
-		}
+		
+		boolean detectorCreation = true, textCreation = true;
+		
+		PositionedElement positionedElem; 
 
-		return elements;
+		while(elements.size() < splitter.numberOfHoles()+splitter.numberOfTexts()) {
+			if(componentForStructureProposition != null && textCreation && detectorCreation) {
+				detectorCreation = false;
+				textCreation = false;
+				PositionedStructureElement struct = buildStructure(componentForStructureProposition, 
+						elementForStructureProposition, structure.getCreatedPosition());
+				struct.setFact(fact);
+				positionFromParent = struct.getCreatedPosition();
+				propStructures.add(struct);
+			} else {
+				if(i%2 == conditionForTextAppearance) {
+					if(splitter.isTextImage(textIndex)) {
+						elements.add(positionedElem = buildFillInElement(componentForText, elementForTexts, fact, positionFromParent,  splitter.getTexts().get(textIndex), splitter.isTextImage(textIndex)));
+						propStructures.add(positionedElem);
+						textIndex++;
+						elements.add(positionedElem = buildFillInElement(componentForText, elementForTexts, fact,  positionFromParent,  splitter.getTexts().get(textIndex), splitter.isTextImage(textIndex)));
+						propStructures.add(positionedElem);
+						textIndex++;
+					} else {
+						elements.add(positionedElem = buildFillInElement(componentForText, elementForTexts, fact, positionFromParent,  splitter.getTexts().get(textIndex), splitter.isTextImage(textIndex)));
+						propStructures.add(positionedElem);
+						textIndex++;
+					}
+					textCreation = true;
+				} else {
+					detectorCreation = true;
+					elements.add(positionedElem = buildFillInElement(componentForDetectors, elementForDetectors, fact, positionFromParent));
+					propStructures.add(positionedElem);
+				}
+				i++;
+			}
+
+		}
+		//elements.addAll(propStructures);
+		return propStructures;
 	}
 	private PositionedElement buildFillInElement(Component component, ElementType elementType, QuestionedFact fact, Position position) {
 		return buildFillInElement(component, elementType, fact, position, "", false);
@@ -775,7 +862,6 @@ public class ConcreteGameplayGenerator {
 			if(positionFromParent == null) {
 				positionFromParent = getAvailablePosition(roomElements.getRoomTypeOfRoom(), elementType);
 			}	
-			//System.out.println("on passe ici");
 			elements.addAll(buildStructureClassicElements(roomElements, comp, positionFromParent, elementType, propositionIndex, factIndex));
 		}
 		
@@ -807,9 +893,6 @@ public class ConcreteGameplayGenerator {
 				} else if(position.getRestrictedTo().isEmpty() ) {
 					allowed.add(position);
 				}
-				/*if(position.getRestrictedTo().isEmpty() || position.getRestrictedTo().contains(((ElementType) elementType).getAbility())) {
-					allowed.add(position);
-				}*/
 			}
 		}
 		

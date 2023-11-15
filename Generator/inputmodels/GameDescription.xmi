@@ -2124,6 +2124,49 @@
           forStatement="true"/>
       <prompt
           prompt="Place les bons elements"/>
+      <restrictedTo>IDENTIFY</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE_MOVABLE_FOR_ORDER_VERTICAL-2"
+        undoable="true"
+        manualValidation="true"
+        category="MOVE_MULTIPLE">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="FILL_IN_DISPLAY_VERTICAL"
+          forStatement="true">
+        <components
+            xsi:type="generator:Structure"
+            allowedAbility="VERTICAL_DISPLAY"
+            forProposition="true">
+          <components
+              xsi:type="generator:Component"
+              allowedAbility="DISPLAY"/>
+          <components
+              xsi:type="generator:Component"
+              allowedAbility="DETECTOR">
+            <expectedSize>
+              <value
+                  xsi:type="generator:Value"
+                  value="SMALL"/>
+            </expectedSize>
+          </components>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="VERIFICATOR"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="MOVABLE"
+          forProposition="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          forStatement="true"/>
+      <prompt
+          prompt="Place les bons elements"/>
       <restrictedTo>ORDER</restrictedTo>
     </gameplays>
   </gameplays>
