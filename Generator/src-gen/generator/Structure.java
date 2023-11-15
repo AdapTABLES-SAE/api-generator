@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link generator.Structure#getComponents <em>Components</em>}</li>
  *   <li>{@link generator.Structure#isAlternateComponents <em>Alternate Components</em>}</li>
  *   <li>{@link generator.Structure#isForFact <em>For Fact</em>}</li>
- *   <li>{@link generator.Structure#isForMap <em>For Map</em>}</li>
+ *   <li>{@link generator.Structure#isForVisualization <em>For Visualization</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getStructure()
@@ -81,25 +81,25 @@ public interface Structure extends AComponent {
 	void setForFact(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>For Map</b></em>' attribute.
+	 * Returns the value of the '<em><b>For Visualization</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>For Map</em>' attribute.
-	 * @see #setForMap(boolean)
-	 * @see generator.GeneratorPackage#getStructure_ForMap()
+	 * @return the value of the '<em>For Visualization</em>' attribute.
+	 * @see #setForVisualization(boolean)
+	 * @see generator.GeneratorPackage#getStructure_ForVisualization()
 	 * @model
 	 * @generated
 	 */
-	boolean isForMap();
+	boolean isForVisualization();
 
 	/**
-	 * Sets the value of the '{@link generator.Structure#isForMap <em>For Map</em>}' attribute.
+	 * Sets the value of the '{@link generator.Structure#isForVisualization <em>For Visualization</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>For Map</em>' attribute.
-	 * @see #isForMap()
+	 * @param value the new value of the '<em>For Visualization</em>' attribute.
+	 * @see #isForVisualization()
 	 * @generated
 	 */
-	void setForMap(boolean value);
+	void setForVisualization(boolean value);
 
 } // Structure

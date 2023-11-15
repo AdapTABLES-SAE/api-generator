@@ -3747,7 +3747,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getStructure_ForMap() {
+	public EAttribute getStructure_ForVisualization() {
 		return (EAttribute) structureEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -6176,7 +6176,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(structureEClass, STRUCTURE__COMPONENTS);
 		createEAttribute(structureEClass, STRUCTURE__ALTERNATE_COMPONENTS);
 		createEAttribute(structureEClass, STRUCTURE__FOR_FACT);
-		createEAttribute(structureEClass, STRUCTURE__FOR_MAP);
+		createEAttribute(structureEClass, STRUCTURE__FOR_VISUALIZATION);
 
 		componentEClass = createEClass(COMPONENT);
 		createEReference(componentEClass, COMPONENT__DISPLAY_VALUE);
@@ -7366,8 +7366,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStructure_ForFact(), ecorePackage.getEBoolean(), "forFact", null, 0, 1, Structure.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStructure_ForMap(), ecorePackage.getEBoolean(), "forMap", null, 0, 1, Structure.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStructure_ForVisualization(), ecorePackage.getEBoolean(), "forVisualization", null, 0, 1,
+				Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

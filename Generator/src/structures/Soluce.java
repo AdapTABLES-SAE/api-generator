@@ -34,7 +34,7 @@ public class Soluce {
 	}
 	
 	public Soluce(String value, int order) {
-		this(value, false, null, -1);
+		this(value, false, null, order);
 	}
 	
 	public boolean isGraphicSolution() {

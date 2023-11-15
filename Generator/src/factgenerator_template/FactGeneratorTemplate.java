@@ -6,12 +6,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Random;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.paukov.combinatorics3.Generator;
-
-import java.util.Random;
-import java.util.Set;
 
 import exceptions.BadSolutionGenerationException;
 import generator.AQuestionParam;
@@ -26,6 +25,7 @@ import generator.EntrySoluceParam;
 import generator.FactCorrectnessParam;
 import generator.FactSolutionParam;
 import generator.MultipleChoice;
+import generator.OrderingTask;
 import generator.Position;
 import generator.PropositionParam;
 import generator.QuestionParam;
@@ -250,7 +250,7 @@ public abstract class FactGeneratorTemplate {
 				}
 			}
 		}
-		qef.setQuestion(buildQuestionParam(qFact));
+		qef.setQuestion(buildQuestionParam(roomElement.getTask(), qFact, qef.getPropositions()));
 		WantedAnswersParam correctness = new WantedAnswersParamImpl();
 		Value correctnessValue = new ValueImpl();
 		correctnessValue.setValue(correctnessToReach(qFact)+"");
@@ -281,14 +281,22 @@ public abstract class FactGeneratorTemplate {
 		return soluce;
 	}
 	
-	protected AQuestionParam buildQuestionParam(AQuestionableFact qFact) {
+	protected AQuestionParam buildQuestionParam(ATask task, AQuestionableFact qFact, List<PropositionParam> propositions) {
 		if(qFact instanceof QuestionableFact) {
 			QuestionParam question = new QuestionParamImpl();
 			Value value = new ValueImpl();
 			value.setValue(((QuestionableFact) qFact).getQuestionableFact());
 			question.setValue(value);
 			question.setInteractive(isQuestionInteractive());
-			question.getSolutions().addAll(fullFactsSolution(qFact));			
+			
+			List<String> acceptedFullSolutions;
+			if(task instanceof OrderingTask) {
+				acceptedFullSolutions = buildOrderPossibleFullAcceptedSolution((QuestionableFact) qFact, propositions);
+			} else {
+				acceptedFullSolutions = factSolutionsToString(qFact);
+			}
+			question.getSolutions().addAll(acceptedFullFactSolution(acceptedFullSolutions));	
+					
 			question.setCompleteFact(((QuestionableFact) qFact).getCompleteFact());
 			question.setImage(qFact.isQuestionWithImage());
 			return question;
@@ -306,11 +314,25 @@ public abstract class FactGeneratorTemplate {
 		return null;
 	}
 	
-	private List<FactSolutionParam> fullFactsSolution(AQuestionableFact qFact){
+	/*private List<FactSolutionParam> fullFactsSolution(AQuestionableFact qFact){
 		List<String> stringSolutions = factSolutionsToString(qFact);
 		List<FactSolutionParam> solutions = new ArrayList<>();
 		if(!stringSolutions.isEmpty()) {
 			for (String sol : stringSolutions) {
+				FactSolutionParam factSol = new FactSolutionParamImpl();
+				Value solValue = new ValueImpl();
+				solValue.setValue(sol);
+				factSol.setValue(solValue);
+				solutions.add(factSol);
+			}
+		}		
+		return solutions;
+	}*/
+	
+	private List<FactSolutionParam> acceptedFullFactSolution(List<String> acceptedSolutions){
+		List<FactSolutionParam> solutions = new ArrayList<>();
+		if(!acceptedSolutions.isEmpty()) {
+			for (String sol : acceptedSolutions) {
 				FactSolutionParam factSol = new FactSolutionParamImpl();
 				Value solValue = new ValueImpl();
 				solValue.setValue(sol);
@@ -328,6 +350,24 @@ public abstract class FactGeneratorTemplate {
 			return full_solution;
 		}
 		return new ArrayList<>();
+	}
+	
+	private List<String> buildOrderPossibleFullAcceptedSolution(QuestionableFact qFact, List<PropositionParam> propositions) {
+		String solutionWithStatement = qFact.getCompleteFact() + " : "; 
+		for(int i = 0; i < propositions.size(); i++) {
+			solutionWithStatement += ((Value) propositions.get(i).getValue()).getValue();
+			if(i < propositions.size() - 1) { solutionWithStatement += " - " ; } 
+		}
+		
+		String solutionWithoutStatement = ""; 
+		for(int i = 0; i < propositions.size(); i++) {
+			solutionWithoutStatement += propositions.get(i).getOrder() + " " + ((Value) propositions.get(i).getValue()).getValue();
+			if(i < propositions.size() - 1) { solutionWithoutStatement += " " ; } 
+		}
+		List<String> solutions = new ArrayList<>(); 
+		solutions.add(solutionWithStatement);
+		solutions.add(solutionWithoutStatement);
+		return solutions;
 	}
 	
 	protected abstract List<Soluce> getListOfGoodSolutions(AQuestionableFact qFact);

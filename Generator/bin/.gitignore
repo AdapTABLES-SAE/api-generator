@@ -1,5 +1,8 @@
-/factsgenerator_hg/
-/structures/
 /factsgenerator_maths/
-/factgenerator_template/
+/generator/
+/managers/
 /generators/
+/structures/
+/factsgenerator_hg/
+/factgenerator_template/
+/factsgenerator_judo/

@@ -577,7 +577,6 @@ public class ConcreteGameplayGenerator {
 	private List<PositionedElement> buildStructureForFactStatement(RoomElements roomElements, Structure component, Position positionFromParent, ElementType elementType) throws MapGameplayElementException{
 		List<PositionedElement> elements = new ArrayList<>();
 		
-		
 		Component componentForText = null, componentForDetectors = null;
 		ElementType elementForTexts = null, elementForDetectors = null;
 		if(component.isAlternateComponents()) {
@@ -598,7 +597,7 @@ public class ConcreteGameplayGenerator {
 			elements.add(struct);	
 			
 			if(component.isAlternateComponents()) {
-				elements.addAll(buildFillInStructureContent(roomElements.getFacts().get(i), roomElements, component, struct, elementForTexts, componentForText, elementForDetectors, componentForDetectors));
+				elements.addAll(buildFillInStructureContent((QuestionGameplay) roomElements.getGameplay(), roomElements.getFacts().get(i), roomElements, component, struct, elementForTexts, componentForText, elementForDetectors, componentForDetectors));
 			} else {
 				for (AComponent aComp : comp.getComponents()) {
 					elements.addAll(buildStructuredGameplay(aComp, elementType, struct.getCreatedPosition(), elements, roomElements, 0, -1));
@@ -622,12 +621,10 @@ public class ConcreteGameplayGenerator {
 	
 	private Component getComponentForText(Structure component) {
 		for(AComponent comp: component.getComponents()) {
-			//System.out.println("COMPPP "+comp.getAllowedAbility());
-			//System.out.println("COMPPP statemeent "+comp.isForStatement());
 			if(comp instanceof Structure) {
 				ALGAGenerator.LOGGER.warning("Structure for FILL-IN question does not deal with inside strucutres.");
 			} else {
-				if(comp.isForStatement()) {
+				if(comp.getAllowedAbility().getName().equals("DISPLAY")) { // TODO : IMPROVE IF POSSIBLE
 					return (Component) comp;
 				}
 			}
@@ -648,10 +645,10 @@ public class ConcreteGameplayGenerator {
 		return null;
 	}
 	
-	private List<PositionedElement> buildFillInStructureContent(QuestionedFact fact, RoomElements roomElements, Structure component, PositionedStructureElement structure, ElementType elementForTexts, Component componentForText, ElementType elementForDetectors, Component componentForDetectors) {
+	private List<PositionedElement> buildFillInStructureContent(QuestionGameplay gameplay, QuestionedFact fact, RoomElements roomElements, Structure component, PositionedStructureElement structure, ElementType elementForTexts, Component componentForText, ElementType elementForDetectors, Component componentForDetectors) {
 		List<PositionedElement> elements = new ArrayList<>();
 		
-		QuestionedFactSplitter splitter = new QuestionedFactSplitter(fact);
+		QuestionedFactSplitter splitter = new QuestionedFactSplitter(fact, gameplay.getStatementType());
 		
 		int conditionForTextAppearance; 
 		if(splitter.isBeginByText()) {
@@ -661,30 +658,18 @@ public class ConcreteGameplayGenerator {
 		}
 		
 		int textIndex = 0, i = 0;
-		//System.out.println("Number OF "+splitter.numberOfHoles()+splitter.numberOfTexts());
-		//for(int i = 0; i < splitter.numberOfHoles()+splitter.numberOfTexts(); i++) 
-
 		while(elements.size() < splitter.numberOfHoles()+splitter.numberOfTexts()) {
-			//String expectedtext = "";
-			//boolean isImage = false;
 			if(i%2 == conditionForTextAppearance) {
-				//System.out.println("text "+splitter.numberOfTexts()+" "+textIndex);
 				if(splitter.isTextImage(textIndex)) {
-					//expectedtext = splitter.getTexts().get(textIndex);
-					//isImage = splitter.isTextImage(textIndex);
 					elements.add(buildFillInElement(componentForText, elementForTexts, fact, structure.getCreatedPosition(),  splitter.getTexts().get(textIndex), splitter.isTextImage(textIndex)));
 					textIndex++;
 					elements.add(buildFillInElement(componentForText, elementForTexts, fact, structure.getCreatedPosition(),  splitter.getTexts().get(textIndex), splitter.isTextImage(textIndex)));
 					textIndex++;
 				} else {
-					//expectedtext = splitter.getTexts().get(textIndex);
-					//isImage = splitter.isTextImage(textIndex);
 					elements.add(buildFillInElement(componentForText, elementForTexts, fact, structure.getCreatedPosition(),  splitter.getTexts().get(textIndex), splitter.isTextImage(textIndex)));
 					textIndex++;
 				}
-				
 			} else {
-				//System.out.println("detector"); // need expected value
 					elements.add(buildFillInElement(componentForDetectors, elementForDetectors, fact, structure.getCreatedPosition()));
 			}
 			i++;
@@ -780,7 +765,7 @@ public class ConcreteGameplayGenerator {
 				elements.addAll(buildStructureForPropositions(roomElements, comp, positionFromParent, elementType));
 			} else if(comp.isForStatement()) {
 				elements.addAll(buildStructureForFactStatement(roomElements, comp, positionFromParent, elementType));
-			} else if(comp.isForMap()){
+			} else if(comp.isForVisualization()){
 				elements.addAll(buildStructureForMap(roomElements, comp, positionFromParent, elementType));
 			} else {
 				elements.addAll(buildSimpleStructure(roomElements, comp, positionFromParent, elementType, propositionIndex, factIndex));

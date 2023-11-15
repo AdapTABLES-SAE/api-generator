@@ -735,7 +735,7 @@
       <restrictedTo>IDENTIFY</restrictedTo>
     </gameplays>
     <gameplays xsi:type="generator:QuestionGameplay" name="GP_GRAPHIC" undoable="true" manualValidation="true" category="MOVE_MULTIPLE" statementType="GRAPHIC">
-      <components xsi:type="generator:Structure" allowedAbility="MAP_DISPLAY" forMap="true">
+      <components xsi:type="generator:Structure" allowedAbility="MAP_DISPLAY" forVisualization="true">
         <expectedSize>
           <value xsi:type="generator:Value" value="XXLARGE"/>
         </expectedSize>
@@ -795,7 +795,7 @@
       </components>
     </gameplays>
     <gameplays xsi:type="generator:QuestionGameplay" name="GP_GRAPHIC_INPUT" undoable="true" category="POSITION_MULTIPLE" statementType="GRAPHIC">
-      <components xsi:type="generator:Structure" allowedAbility="MAP_DISPLAY" forMap="true">
+      <components xsi:type="generator:Structure" allowedAbility="MAP_DISPLAY" forVisualization="true">
         <expectedSize>
           <value xsi:type="generator:Value" value="XXLARGE"/>
         </expectedSize>
@@ -810,7 +810,7 @@
       <prompt prompt="Place toi et saisie les bonnes réponses"/>
     </gameplays>
     <gameplays xsi:type="generator:QuestionGameplay" name="GP_GRAPHIC_ORDER" undoable="true" manualValidation="true" category="MOVE_MULTIPLE" statementType="GRAPHIC">
-      <components xsi:type="generator:Structure" allowedAbility="MAP_DISPLAY" forMap="true">
+      <components xsi:type="generator:Structure" allowedAbility="MAP_DISPLAY" forVisualization="true">
         <expectedSize>
           <value xsi:type="generator:Value" value="XXLARGE"/>
         </expectedSize>

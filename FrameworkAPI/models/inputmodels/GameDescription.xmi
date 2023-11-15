@@ -1680,7 +1680,7 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="MAP_DISPLAY"
-          forMap="true">
+          forVisualization="true">
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -1796,7 +1796,7 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="MAP_DISPLAY"
-          forMap="true">
+          forVisualization="true">
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -1831,7 +1831,7 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="MAP_DISPLAY"
-          forMap="true">
+          forVisualization="true">
         <expectedSize>
           <value
               xsi:type="generator:Value"

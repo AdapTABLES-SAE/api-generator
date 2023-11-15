@@ -147,15 +147,15 @@ public class OrderQuestionableFactImpl extends QuestionableFactImpl implements O
 		}
 		return super.eIsSet(featureID);
 	}
-	
+
 	@Override
 	public String getQuestionableFact() {
-		return "Ordonne chronologiquement ces évènements.";
+		return "Ordonner chronologiquement";
 	}
 
 	@Override
 	public String getCompleteFact() {
-		return "Ordonne chronologiquement ces évènements.";
+		return "Ordonner chronologiquement"; //Ordonne chronologiquement ces évènements.
 	}
 
 } //OrderQuestionableFactImpl

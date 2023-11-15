@@ -475,7 +475,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Structure/components"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Structure/alternateComponents"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Structure/forFact"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Structure/forMap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Structure/forVisualization"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Component">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Component/displayValue"/>

@@ -5267,13 +5267,13 @@ public interface GeneratorPackage extends EPackage {
 	int STRUCTURE__FOR_FACT = ACOMPONENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>For Map</b></em>' attribute.
+	 * The feature id for the '<em><b>For Visualization</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__FOR_MAP = ACOMPONENT_FEATURE_COUNT + 3;
+	int STRUCTURE__FOR_VISUALIZATION = ACOMPONENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Structure</em>' class.
@@ -13832,15 +13832,15 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getStructure_ForFact();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.Structure#isForMap <em>For Map</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.Structure#isForVisualization <em>For Visualization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>For Map</em>'.
-	 * @see generator.Structure#isForMap()
+	 * @return the meta object for the attribute '<em>For Visualization</em>'.
+	 * @see generator.Structure#isForVisualization()
 	 * @see #getStructure()
 	 * @generated
 	 */
-	EAttribute getStructure_ForMap();
+	EAttribute getStructure_ForVisualization();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Component <em>Component</em>}'.
@@ -18727,12 +18727,12 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute STRUCTURE__FOR_FACT = eINSTANCE.getStructure_ForFact();
 
 		/**
-		 * The meta object literal for the '<em><b>For Map</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>For Visualization</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STRUCTURE__FOR_MAP = eINSTANCE.getStructure_ForMap();
+		EAttribute STRUCTURE__FOR_VISUALIZATION = eINSTANCE.getStructure_ForVisualization();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ComponentImpl <em>Component</em>}' class.

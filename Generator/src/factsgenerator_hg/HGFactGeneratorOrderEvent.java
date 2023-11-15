@@ -48,6 +48,7 @@ public class HGFactGeneratorOrderEvent extends FactGeneratorTemplate {
 	@Override
 	protected AQuestionableFact generateQuestionableFactOf(ATask task, List<AbstractFact> facts) {
 		OrderQuestionableFact qf = new OrderQuestionableFactImpl();
+		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		int i = 1;
 		for(HistoryFact fact: chronologicallyOrderFacts(facts)) {
 			OrderSolution solution = new OrderSolutionImpl();
@@ -64,7 +65,6 @@ public class HGFactGeneratorOrderEvent extends FactGeneratorTemplate {
 			hfacts.add((HistoryFact) fact);
 		}
 		Collections.sort(hfacts, new HistoryFactComparator());
-		System.out.println(hfacts.toString());
 		return hfacts;
 	}
 

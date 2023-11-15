@@ -1567,7 +1567,7 @@
         statementType="FILL_IN">
       <components
           xsi:type="generator:Structure"
-          allowedAbility="FILL_IN_DISPLAY"
+          allowedAbility="FILL_IN_DISPLAY_HORIZONTAL"
           forStatement="true"
           alternateComponents="true">
         <components
@@ -1599,7 +1599,7 @@
         statementType="FILL_IN">
       <components
           xsi:type="generator:Structure"
-          allowedAbility="FILL_IN_DISPLAY"
+          allowedAbility="FILL_IN_DISPLAY_HORIZONTAL"
           forStatement="true"
           alternateComponents="true">
         <components
@@ -1625,7 +1625,6 @@
           allowedAbility="VERIFICATOR"/>
       <prompt
           prompt="Place les bons elements"/>
-      <restrictedTo>COMPLETE</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -1681,7 +1680,7 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="MAP_DISPLAY"
-          forMap="true">
+          forVisualization="true">
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -1797,7 +1796,7 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="MAP_DISPLAY"
-          forMap="true">
+          forVisualization="true">
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -1832,7 +1831,7 @@
       <components
           xsi:type="generator:Structure"
           allowedAbility="MAP_DISPLAY"
-          forMap="true">
+          forVisualization="true">
         <expectedSize>
           <value
               xsi:type="generator:Value"
@@ -1971,7 +1970,7 @@
         statementType="FILL_IN">
       <components
           xsi:type="generator:Structure"
-          allowedAbility="FILL_IN_DISPLAY"
+          allowedAbility="FILL_IN_DISPLAY_HORIZONTAL"
           forStatement="true"
           alternateComponents="true">
         <components
@@ -1997,7 +1996,6 @@
           allowedAbility="VERIFICATOR"/>
       <prompt
           prompt="Place les bons elements"/>
-      <restrictedTo>COMPLETE</restrictedTo>
     </gameplays>
     <gameplays
         xsi:type="generator:QuestionGameplay"
@@ -2088,6 +2086,45 @@
       <prompt
           prompt="Pousse les bons elements"/>
       <restrictedTo>IDENTIFY</restrictedTo>
+    </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE_MOVABLE_FOR_ORDER_VERTICAL"
+        undoable="true"
+        manualValidation="true"
+        category="MOVE_MULTIPLE">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="FILL_IN_DISPLAY_VERTICAL"
+          forStatement="true"
+          alternateComponents="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DISPLAY"/>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DETECTOR">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="VERIFICATOR"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="MOVABLE"
+          forProposition="true"/>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="DISPLAY"
+          forStatement="true"/>
+      <prompt
+          prompt="Place les bons elements"/>
+      <restrictedTo>ORDER</restrictedTo>
     </gameplays>
   </gameplays>
   <elements>
@@ -2299,7 +2336,7 @@
           size="LARGE"
           ID="STRUCT_FILL_IN"
           type="StructureStatement"
-          ability="FILL_IN_DISPLAY"/>
+          ability="FILL_IN_DISPLAY_HORIZONTAL"/>
       <elements
           size="MEDIUM"
           ID="ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"
@@ -2329,6 +2366,11 @@
           type="Cow"
           nbDisplays="1"
           ability="CATCHABLE"/>
+      <elements
+          size="LARGE"
+          ID="STRUCT_FILL_IN_VERTICAL"
+          type="VStructureStatement"
+          ability="FILL_IN_DISPLAY_VERTICAL"/>
     </elementTypes>
     <curses>
       <curses
@@ -2389,10 +2431,12 @@
     <abilities
         name="DETECTOR_AVATAR"/>
     <abilities
-        name="FILL_IN_DISPLAY"/>
+        name="FILL_IN_DISPLAY_HORIZONTAL"/>
     <abilities
         name="MAP_DISPLAY"/>
     <abilities
         name="TYPABLE_DETECTOR"/>
+    <abilities
+        name="FILL_IN_DISPLAY_VERTICAL"/>
   </abilities>
 </generator:GameDescription>
