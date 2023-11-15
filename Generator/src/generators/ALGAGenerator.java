@@ -36,7 +36,7 @@ public class ALGAGenerator {
 	private Dungeon generatedDungeon;
 	private DungeonElements dungeonElements;
 	
-	public static DidacticDomain DOMAIN = DidacticDomain.HISTORY_GEOGRAPHY;
+	public static DidacticDomain DOMAIN = DidacticDomain.MATHEMATICS;
 	public static boolean MAXIMIZE_ROOMTYPE_ACCESS = false;
 	
 	public static void main(String[] args) {		
