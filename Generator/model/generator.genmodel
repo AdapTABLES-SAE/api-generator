@@ -487,7 +487,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Quantity/factNbAnswers"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//WantedAnswersParam"/>
-    <genClasses ecoreClass="generator.ecore#//ExpectedAnswer"/>
+    <genClasses ecoreClass="generator.ecore#//ExpectedAnswer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//ExpectedAnswer/image"/>
+    </genClasses>
     <genClasses ecoreClass="generator.ecore#//CorrectnessValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//CorrectnessValue/value"/>
     </genClasses>

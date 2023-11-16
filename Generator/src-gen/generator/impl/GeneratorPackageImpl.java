@@ -3837,6 +3837,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getExpectedAnswer_Image() {
+		return (EAttribute) expectedAnswerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCorrectnessValue() {
 		return correctnessValueEClass;
 	}
@@ -6190,6 +6199,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		wantedAnswersParamEClass = createEClass(WANTED_ANSWERS_PARAM);
 
 		expectedAnswerEClass = createEClass(EXPECTED_ANSWER);
+		createEAttribute(expectedAnswerEClass, EXPECTED_ANSWER__IMAGE);
 
 		correctnessValueEClass = createEClass(CORRECTNESS_VALUE);
 		createEAttribute(correctnessValueEClass, CORRECTNESS_VALUE__VALUE);
@@ -7396,6 +7406,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(expectedAnswerEClass, ExpectedAnswer.class, "ExpectedAnswer", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExpectedAnswer_Image(), ecorePackage.getEBoolean(), "image", null, 0, 1, ExpectedAnswer.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(correctnessValueEClass, CorrectnessValue.class, "CorrectnessValue", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

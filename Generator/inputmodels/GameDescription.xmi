@@ -2138,8 +2138,13 @@
           forStatement="true">
         <components
             xsi:type="generator:Structure"
-            allowedAbility="VERTICAL_DISPLAY"
+            allowedAbility="HORIZONTAL_DISPLAY"
             forProposition="true">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="LARGE"/>
+          </expectedSize>
           <components
               xsi:type="generator:Component"
               allowedAbility="DISPLAY"/>

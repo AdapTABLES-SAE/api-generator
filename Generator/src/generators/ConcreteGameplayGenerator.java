@@ -16,6 +16,7 @@ import generator.ElementType;
 import generator.EntrySoluceParam;
 import generator.ExpectedAnswer;
 import generator.FactSolutionParam;
+import generator.OrderingTask;
 import generator.Position;
 import generator.PositionedElement;
 import generator.PositionedStructureElement;
@@ -629,6 +630,7 @@ public class ConcreteGameplayGenerator {
 		PositionedStructureElement structProp = buildStructure(structure, typeStructure, positionFromParent);
 		structProp.setFact(roomElements.getFacts().get(factIndex));
 		elements.add(structProp);
+		boolean isOrderingTask = roomElements.getTask() instanceof OrderingTask;
 		for(AComponent component: structure.getComponents()) {
 			if(component instanceof Structure) {
 				ALGAGenerator.LOGGER.severe("Illegal modelisation! Structure shouldn't contain structure!");
@@ -637,7 +639,14 @@ public class ConcreteGameplayGenerator {
 					String value = roomElements.getFacts().get(factIndex).getPropositions().get(propIndex).getOrder()+"";
 					elements.add(buildFillInElement((Component) component, roomElements.getElementTypeFor(component), roomElements.getFacts().get(factIndex), structProp.getCreatedPosition(), value, false));
 				} else {
-					elements.add(buildFillInElement((Component) component, roomElements.getElementTypeFor(component), roomElements.getFacts().get(factIndex), structProp.getCreatedPosition())); 
+					String expectedAnswer = "";
+					boolean isExpectedImage = false;
+					if(isOrderingTask) {
+						expectedAnswer = ((Value) roomElements.getFacts().get(factIndex).getPropositions().get(propIndex).getValue()).getValue();
+						isExpectedImage = roomElements.getFacts().get(factIndex).getPropositions().get(propIndex).isImage();
+					}
+					System.err.println("EXPECTED "+expectedAnswer);
+					elements.add(buildFillInElement((Component) component, roomElements.getElementTypeFor(component), roomElements.getFacts().get(factIndex), structProp.getCreatedPosition(), "", false, expectedAnswer, isExpectedImage)); 
 				}
 			}
 		}
@@ -710,28 +719,21 @@ public class ConcreteGameplayGenerator {
 			ElementType elementForDetectors, Component componentForDetectors, ElementType elementForStructureProposition, Structure componentForStructureProposition) {
 		List<PositionedElement> elements = new ArrayList<>();
 		List<PositionedElement> propStructures = new ArrayList<>();
-
 		Position positionFromParent = structure.getCreatedPosition();
-		
 		QuestionedFactSplitter splitter = new QuestionedFactSplitter(fact, gameplay.getStatementType());
-		
 		int conditionForTextAppearance; 
 		if(splitter.isBeginByText()) {
 			conditionForTextAppearance = 0;
 		} else {
 			conditionForTextAppearance = 1;
 		}
-		
-		int textIndex = 0, i = 0;
-		
-		boolean detectorCreation = true, textCreation = true;
-		
+		int textIndex = 0, i = 0; boolean detectorCreation = true, textCreation = true;
 		PositionedElement positionedElem; 
+		boolean isOrderingTask = roomElements.getTask() instanceof OrderingTask;
 
 		while(elements.size() < splitter.numberOfHoles()+splitter.numberOfTexts()) {
 			if(componentForStructureProposition != null && textCreation && detectorCreation) {
-				detectorCreation = false;
-				textCreation = false;
+				detectorCreation = false; textCreation = false;
 				PositionedStructureElement struct = buildStructure(componentForStructureProposition, 
 						elementForStructureProposition, structure.getCreatedPosition());
 				struct.setFact(fact);
@@ -753,8 +755,13 @@ public class ConcreteGameplayGenerator {
 					}
 					textCreation = true;
 				} else {
-					detectorCreation = true;
-					elements.add(positionedElem = buildFillInElement(componentForDetectors, elementForDetectors, fact, positionFromParent));
+					detectorCreation = true; String expectedAnswer = ""; boolean expectedIsImage = false;
+					if(isOrderingTask) { 
+						int propositionIndex = splitter.isBeginByText()? textIndex - 1: textIndex;
+						expectedAnswer = splitter.getOrderTaskSolution(splitter.getTexts().get(propositionIndex));
+						expectedIsImage = splitter.getOrderTaskSolutionIsImage(splitter.getTexts().get(propositionIndex));
+					} 
+					elements.add(positionedElem = buildFillInElement(componentForDetectors, elementForDetectors, fact, positionFromParent, "", false, expectedAnswer, expectedIsImage));
 					propStructures.add(positionedElem);
 				}
 				i++;
@@ -764,11 +771,13 @@ public class ConcreteGameplayGenerator {
 		//elements.addAll(propStructures);
 		return propStructures;
 	}
-	private PositionedElement buildFillInElement(Component component, ElementType elementType, QuestionedFact fact, Position position) {
-		return buildFillInElement(component, elementType, fact, position, "", false);
-	}
+	
 	
 	private PositionedElement buildFillInElement(Component component, ElementType elementType, QuestionedFact fact, Position position, String value, boolean isImage) {
+		return buildFillInElement(component, elementType, fact, position, value, isImage, "", false);
+	}
+	
+	private PositionedElement buildFillInElement(Component component, ElementType elementType, QuestionedFact fact, Position position, String value, boolean isImage, String expectedAnswer, boolean expectedIsImage) {
 		PositionedElement comp = initializePositionedElement(component, elementType, fact, position);
 
 		if(!value.isEmpty()) {
@@ -778,6 +787,15 @@ public class ConcreteGameplayGenerator {
 			defaultDisplay.setValue(displayValue);
 			defaultDisplay.setImageDisplay(isImage);
 			comp.getDisplays().add(defaultDisplay);
+		}
+		
+		if(!expectedAnswer.isEmpty()) {
+			ExpectedAnswer answer = new ExpectedAnswerImpl();
+			Value answerValue = new ValueImpl();
+			answerValue.setValue(expectedAnswer);
+			answer.setValue(answerValue);
+			answer.setImage(expectedIsImage);
+			comp.getExpectedAnswer().add(answer);
 		}
 		return comp;
 	}

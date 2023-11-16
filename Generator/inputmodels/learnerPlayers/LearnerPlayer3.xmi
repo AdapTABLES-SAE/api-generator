@@ -805,5 +805,5 @@
     </learnerProgress>
   </progression>
   <learningpath href="../LearningDomain.xmi#HGPATH"/>
-  <statistics maxGameLevelReached="9" nbLevelsGenerated="3413"/>
+  <statistics maxGameLevelReached="9" nbLevelsGenerated="3425"/>
 </generator:LearnerPlayer>

@@ -101,7 +101,7 @@ public class HGFactGeneratorOrderEvent extends FactGeneratorTemplate {
 
 	@Override
 	protected int correctnessToReach(AQuestionableFact fact) {
-		return 1;
+		return ((OrderQuestionableFact) fact).getSolutions().size();
 	}
 
 }

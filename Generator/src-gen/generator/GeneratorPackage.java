@@ -5496,13 +5496,22 @@ public interface GeneratorPackage extends EPackage {
 	int EXPECTED_ANSWER__VALUE = PARAMETER__VALUE;
 
 	/**
+	 * The feature id for the '<em><b>Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPECTED_ANSWER__IMAGE = PARAMETER_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Expected Answer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPECTED_ANSWER_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
+	int EXPECTED_ANSWER_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Expected Answer</em>' class.
@@ -13938,6 +13947,17 @@ public interface GeneratorPackage extends EPackage {
 	EClass getExpectedAnswer();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.ExpectedAnswer#isImage <em>Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Image</em>'.
+	 * @see generator.ExpectedAnswer#isImage()
+	 * @see #getExpectedAnswer()
+	 * @generated
+	 */
+	EAttribute getExpectedAnswer_Image();
+
+	/**
 	 * Returns the meta object for class '{@link generator.CorrectnessValue <em>Correctness Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18813,6 +18833,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EXPECTED_ANSWER = eINSTANCE.getExpectedAnswer();
+
+		/**
+		 * The meta object literal for the '<em><b>Image</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPECTED_ANSWER__IMAGE = eINSTANCE.getExpectedAnswer_Image();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.CorrectnessValueImpl <em>Correctness Value</em>}' class.

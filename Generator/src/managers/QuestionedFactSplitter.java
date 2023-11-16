@@ -30,8 +30,27 @@ public class QuestionedFactSplitter {
 		}
 	}
 	
+	public String getOrderTaskSolution(String order) {
+		for(PropositionParam prop: fact.getPropositions()) {
+			if(order.equals(prop.getOrder()+"")) {
+				return ((Value) prop.getValue()).getValue();
+			}
+		}
+		return "";
+	}
+	
+	public boolean getOrderTaskSolutionIsImage(String order) {
+		for(PropositionParam prop: fact.getPropositions()) {
+			if(order.equals(prop.getOrder()+"")) {
+				return prop.isImage();
+			}
+		}
+		return false;
+	}
+	
 	private void classicStatementType() {
 		// CLASSIC 
+		beginByText = true;
 		for(PropositionParam prop: fact.getPropositions()) {
 			texts.add(prop.getOrder()+"");
 			textsAreImages.add(false);
