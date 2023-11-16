@@ -207,12 +207,17 @@ public class JudoQuestionableClassifyFactImpl extends QuestionableFactImpl imple
 
 	@Override
 	public String getQuestionableFact() {
-		return "Donner les " + this.category;
+		return this.category;
 	}
 
 	@Override
 	public String getCompleteFact() {
-		return "Donner les " + this.category;
+		String completeFact = getQuestionableFact() + " : ";
+		for(int i = 0; i < getTechniques().size(); i++) {
+			completeFact += getTechniques().get(i);
+			if(i < getTechniques().size() - 1) { completeFact += ", "; }
+		}
+		return completeFact;
 	}
 
 } //JudoQuestionableClassifyFactImpl

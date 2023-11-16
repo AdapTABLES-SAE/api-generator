@@ -226,7 +226,12 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 
 	@Override
 	public String getCompleteFact() {
-		return "Resultats table de " + getTable();
+		String completeFact = getQuestionableFact() + " : {";
+		for(int i = 0; i < getGoodResults().size(); i++) {
+			completeFact += getGoodResults().get(i);
+			if(i < getGoodResults().size() - 1) { completeFact += ", "; }
+		}
+		return completeFact+"}";
 	}
 
 } //MTQFMembershipImpl

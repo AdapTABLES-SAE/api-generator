@@ -5,6 +5,7 @@ import java.util.List;
 
 import generator.EStatementType;
 import generator.PropositionParam;
+import generator.QuestionableFact;
 import generator.QuestionedFact;
 import generator.Value;
 
@@ -59,16 +60,22 @@ public class QuestionedFactSplitter {
 	}
 	
 	private void fillInStatementType() {
-		String question = ((Value) fact.getQuestion().getValue()).getValue();
+		String completeFact = ((QuestionableFact) fact.getQuestionablefact()).getCompleteFact();
+		for(PropositionParam proposition: fact.getPropositions()) {
+			String value = ((Value) proposition.getValue()).getValue();
+			completeFact = completeFact.replace(value, "?");
+		}
+		
+		/*String question = ((Value) fact.getQuestion().getValue()).getValue();
 		if(!question.contains("?")) {
 			question += " : ";
 			for(int i = 0; i < fact.getPropositions().size(); i++) {
 				question += "?";
 				if(i < fact.getPropositions().size() - 1) { question += " - "; }
 			}
-		} 
+		} */
 		
-		splitter(question);
+		splitter(completeFact);
 	}
 
 	

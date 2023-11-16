@@ -2,21 +2,18 @@
  */
 package generator.impl;
 
-import generator.GeneratorPackage;
-import generator.OrderQuestionableFact;
-import generator.OrderSolution;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import generator.GeneratorPackage;
+import generator.OrderQuestionableFact;
+import generator.OrderSolution;
 
 /**
  * <!-- begin-user-doc -->
@@ -155,7 +152,12 @@ public class OrderQuestionableFactImpl extends QuestionableFactImpl implements O
 
 	@Override
 	public String getCompleteFact() {
-		return "Ordonner chronologiquement"; //Ordonne chronologiquement ces évènements.
+		String fact = getQuestionableFact() + " : "; 
+		for(int i = 0; i < getSolutions().size(); i++) {
+			fact += getSolutions().get(i).getEvent();
+			if(i < getSolutions().size() - 1) { fact += " - " ; } 
+		}
+		return fact; 
 	}
 
 } //OrderQuestionableFactImpl

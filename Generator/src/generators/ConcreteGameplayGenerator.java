@@ -645,7 +645,6 @@ public class ConcreteGameplayGenerator {
 						expectedAnswer = ((Value) roomElements.getFacts().get(factIndex).getPropositions().get(propIndex).getValue()).getValue();
 						isExpectedImage = roomElements.getFacts().get(factIndex).getPropositions().get(propIndex).isImage();
 					}
-					System.err.println("EXPECTED "+expectedAnswer);
 					elements.add(buildFillInElement((Component) component, roomElements.getElementTypeFor(component), roomElements.getFacts().get(factIndex), structProp.getCreatedPosition(), "", false, expectedAnswer, isExpectedImage)); 
 				}
 			}
@@ -668,7 +667,6 @@ public class ConcreteGameplayGenerator {
 	
 	private Structure getComponentForStructure(Structure component) {
 		for(AComponent comp: component.getComponents()) {
-			System.out.println(comp.getAllowedAbility());
 			if(comp instanceof Structure) {
 				if(!comp.isForProposition()) {
 					ALGAGenerator.LOGGER.warning("Structure should be for propositions.");

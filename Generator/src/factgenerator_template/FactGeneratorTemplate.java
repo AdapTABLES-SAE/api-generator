@@ -25,7 +25,6 @@ import generator.EntrySoluceParam;
 import generator.FactCorrectnessParam;
 import generator.FactSolutionParam;
 import generator.MultipleChoice;
-import generator.OrderingTask;
 import generator.Position;
 import generator.PropositionParam;
 import generator.QuestionParam;
@@ -288,15 +287,7 @@ public abstract class FactGeneratorTemplate {
 			value.setValue(((QuestionableFact) qFact).getQuestionableFact());
 			question.setValue(value);
 			question.setInteractive(isQuestionInteractive());
-			
-			List<String> acceptedFullSolutions;
-			if(task instanceof OrderingTask) {
-				acceptedFullSolutions = buildOrderPossibleFullAcceptedSolution((QuestionableFact) qFact, propositions);
-			} else {
-				acceptedFullSolutions = factSolutionsToString(qFact);
-			}
-			question.getSolutions().addAll(acceptedFullFactSolution(acceptedFullSolutions));	
-					
+			question.getSolutions().addAll(acceptedFullFactSolution(factSolutionsToString(qFact)));	
 			question.setCompleteFact(((QuestionableFact) qFact).getCompleteFact());
 			question.setImage(qFact.isQuestionWithImage());
 			return question;
@@ -313,21 +304,6 @@ public abstract class FactGeneratorTemplate {
 	protected ECorrectness getFactCorrectness(AQuestionableFact qFact) {
 		return null;
 	}
-	
-	/*private List<FactSolutionParam> fullFactsSolution(AQuestionableFact qFact){
-		List<String> stringSolutions = factSolutionsToString(qFact);
-		List<FactSolutionParam> solutions = new ArrayList<>();
-		if(!stringSolutions.isEmpty()) {
-			for (String sol : stringSolutions) {
-				FactSolutionParam factSol = new FactSolutionParamImpl();
-				Value solValue = new ValueImpl();
-				solValue.setValue(sol);
-				factSol.setValue(solValue);
-				solutions.add(factSol);
-			}
-		}		
-		return solutions;
-	}*/
 	
 	private List<FactSolutionParam> acceptedFullFactSolution(List<String> acceptedSolutions){
 		List<FactSolutionParam> solutions = new ArrayList<>();
@@ -352,23 +328,17 @@ public abstract class FactGeneratorTemplate {
 		return new ArrayList<>();
 	}
 	
-	private List<String> buildOrderPossibleFullAcceptedSolution(QuestionableFact qFact, List<PropositionParam> propositions) {
+	/*private List<String> buildOrderPossibleFullAcceptedSolution(QuestionableFact qFact, List<PropositionParam> propositions) {
 		String solutionWithStatement = qFact.getCompleteFact() + " : "; 
 		for(int i = 0; i < propositions.size(); i++) {
 			solutionWithStatement += ((Value) propositions.get(i).getValue()).getValue();
 			if(i < propositions.size() - 1) { solutionWithStatement += " - " ; } 
 		}
-		
-		String solutionWithoutStatement = ""; 
-		for(int i = 0; i < propositions.size(); i++) {
-			solutionWithoutStatement += propositions.get(i).getOrder() + " " + ((Value) propositions.get(i).getValue()).getValue();
-			if(i < propositions.size() - 1) { solutionWithoutStatement += " " ; } 
-		}
+	
 		List<String> solutions = new ArrayList<>(); 
 		solutions.add(solutionWithStatement);
-		solutions.add(solutionWithoutStatement);
 		return solutions;
-	}
+	}*/
 	
 	protected abstract List<Soluce> getListOfGoodSolutions(AQuestionableFact qFact);
 	protected abstract Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) throws BadSolutionGenerationException;

@@ -1,492 +1,385 @@
 <?xml version="1.0" encoding="ASCII"?>
-<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="HG_O1" levelID="HG_O1_L1" gameLevelID="9" curses="[&quot;Labyrinth&quot;,&quot;Night&quot;,]">
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="JUDO_O1" levelID="JUDO_O1_L1" gameLevelID="9" curses="[&quot;Labyrinth&quot;,]">
   <rooms>
-    <room id="Room[0/0]" roomTypeName="RegularRoomE" correctnessToReach="0">
+    <room id="Room[0/0]" roomTypeName="RegularRoomW" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a2" direction="EAST" accessRef="a3"/>
+        <roomaccess id="a2" direction="WEST" accessRef="a3"/>
       </roomaccesses>
     </room>
-    <room id="Room[1/0]" x="1" roomTypeName="RoomTrap" correctnessToReach="0">
+    <room id="Room[-1/0]" x="-1" roomTypeName="RoomTrap3" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a3" direction="WEST" accessRef="a2"/>
-        <roomaccess id="a4" direction="EAST" accessRef="a5"/>
+        <roomaccess id="a3" direction="EAST" accessRef="a2"/>
+        <roomaccess id="a4" direction="WEST" accessRef="a5"/>
         <roomaccess id="a6" direction="SOUTH" accessRef="a7"/>
         <roomaccess id="a8" direction="NORTH" accessRef="a9"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM1" type="SpikeTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM2" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM3" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM4" type="SpikeTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM5" type="SpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM1" type="WaitFireTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM2" type="WaitFireTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM3" type="WaitFireTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM4" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM5" type="WaitFireTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM6" type="WaitFireTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM7" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[2/0]" x="2" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T11" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+    <room id="Room[-2/0]" x="-2" roomTypeName="RegularRoom2" time="20" idTask="JUDO_O1_L1_T1" prompt="Touche le bon element" correctnessToReach="1">
       <roomaccesses>
-        <roomaccess id="a5" direction="WEST" accessRef="a4"/>
-        <roomaccess id="a10" direction="EAST" accessRef="a11"/>
-        <roomaccess id="a12" direction="SOUTH" accessRef="a13"/>
-        <roomaccess id="a14" direction="NORTH" accessRef="a15"/>
+        <roomaccess id="a5" direction="EAST" accessRef="a4"/>
+        <roomaccess id="a10" direction="WEST" accessRef="a11"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T11-QAFACT149" complete="Ordonner chronologiquement" correctnessToReach="4"/>
+        <fact id="JUDO_O1_L1_T1-QAFACT1" complete="O-Soto-Gari correspond a o-soto-gari" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT6" type="StructureStatement" pos="POSL2" acceptedFacts="Ordonner chronologiquement : Armistice - Cr&#xe9;ation de l'ONU - Trait&#xe9; de Rome - Naissance de la Ve R&#xe9;publique;1 Armistice 2 Cr&#xe9;ation de l'ONU 3 Trait&#xe9; de Rome 4 Naissance de la Ve R&#xe9;publique;"/>
-        <element id="ELEM7" type="StatementFact" displayValue="Ordonner chronologiquement : " pos="id/STRUCT6" idFact="HG_O1_L1_T11-QAFACT149"/>
-        <element id="ELEM8" type="ObjectDetector" pos="id/STRUCT6" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT149"/>
-        <element id="ELEM9" type="StatementFact" displayValue=" - " pos="id/STRUCT6" idFact="HG_O1_L1_T11-QAFACT149"/>
-        <element id="ELEM10" type="ObjectDetector" pos="id/STRUCT6" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT149"/>
-        <element id="ELEM11" type="StatementFact" displayValue=" - " pos="id/STRUCT6" idFact="HG_O1_L1_T11-QAFACT149"/>
-        <element id="ELEM12" type="ObjectDetector" pos="id/STRUCT6" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT149"/>
-        <element id="ELEM13" type="StatementFact" displayValue=" - " pos="id/STRUCT6" idFact="HG_O1_L1_T11-QAFACT149"/>
-        <element id="ELEM14" type="ObjectDetector" pos="id/STRUCT6" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT149"/>
-        <element id="ELEM15" type="Pot" displayValue="Armistice" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT149"/>
-        <element id="ELEM16" type="Pot" displayValue="Cr&#xe9;ation de l'ONU" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT149"/>
-        <element id="ELEM17" type="Pot" displayValue="Trait&#xe9; de Rome" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT149"/>
-        <element id="ELEM18" type="Pot" displayValue="Naissance de la Ve R&#xe9;publique" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT149"/>
-        <element id="ELEM19" type="Switch" pos="POS2" ability="VERIFICATOR"/>
+        <element id="ELEM8" type="FloorInterrupt" displayValue="ashi-gatame-jime" correctness="INCORRECT" pos="POS4" ability="TOUCHABLE" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM9" type="FloorInterrupt" displayValue="o-soto-otoshi" correctness="INCORRECT" pos="POS5" ability="TOUCHABLE" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM10" type="FloorInterrupt" displayValue="o-soto-gari" correctness="CORRECT" pos="POS3" ability="TOUCHABLE" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM11" type="Statement" displayValue="O-Soto-Gari correspond a ?" pos="POSQ1" idFact="JUDO_O1_L1_T1-QAFACT1" interactive="true" acceptedFacts="O-Soto-Gari correspond a o-soto-gari;"/>
       </elements>
     </room>
-    <room id="Room[1/-1]" x="1" y="-1" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T11" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+    <room id="Room[-3/0]" x="-3" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a11" direction="EAST" accessRef="a10"/>
+        <roomaccess id="a12" direction="NORTH" accessRef="a13"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM12" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM13" type="FireTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM14" type="FireTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM15" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM16" type="FireTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM17" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM18" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-3/1]" x="-3" y="1" roomTypeName="RegularRoom2" time="20" idTask="JUDO_O1_L1_T2" prompt="Deplace le bon elements sur la zone" correctnessToReach="1">
+      <roomaccesses>
+        <roomaccess id="a13" direction="SOUTH" accessRef="a12"/>
+      </roomaccesses>
+      <facts>
+        <fact id="JUDO_O1_L1_T2-QAFACT4" complete="Hiza-Guruma correspond a roue autour du genou" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="ELEM19" type="Pot" pos="POS3" ability="MOVABLE" idFact="JUDO_O1_L1_T2-QAFACT4"/>
+        <element id="ELEM20" type="ObjectDetector" displayValue="projection d'&#xe9;paule par deux mains" correctness="INCORRECT" pos="POS6" ability="DETECTOR" idFact="JUDO_O1_L1_T2-QAFACT4"/>
+        <element id="ELEM21" type="ObjectDetector" displayValue="roue autour du genou" correctness="CORRECT" pos="POS5" ability="DETECTOR" idFact="JUDO_O1_L1_T2-QAFACT4"/>
+        <element id="ELEM22" type="Statement" displayValue="Hiza-Guruma correspond a ?" pos="POSQ1" idFact="JUDO_O1_L1_T2-QAFACT4" interactive="true" acceptedFacts="Hiza-Guruma correspond a roue autour du genou;"/>
+      </elements>
+    </room>
+    <room id="Room[-1/-1]" x="-1" y="-1" roomTypeName="RoomTrap2" correctnessToReach="0">
       <roomaccesses>
         <roomaccess id="a7" direction="NORTH" accessRef="a6"/>
+        <roomaccess id="a14" direction="WEST" accessRef="a15"/>
         <roomaccess id="a16" direction="SOUTH" accessRef="a17"/>
+        <roomaccess id="a18" direction="EAST" accessRef="a19"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM23" type="BearTrap" pos="POS4" ability="NONAVOIDABLE"/>
+        <element id="ELEM24" type="BearTrap" pos="POS2" ability="NONAVOIDABLE"/>
+        <element id="ELEM25" type="BearTrap" pos="POS1" ability="NONAVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-2/-1]" x="-2" y="-1" roomTypeName="RegularRoom12" time="20" idTask="JUDO_O1_L1_T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="1">
+      <roomaccesses>
+        <roomaccess id="a15" direction="EAST" accessRef="a14"/>
+        <roomaccess id="a20" direction="SOUTH" accessRef="a21"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T11-QAFACT798" complete="Ordonner chronologiquement" correctnessToReach="4"/>
+        <fact id="JUDO_O1_L1_T1-QAFACT2" complete="O-Goshi correspond a o-goshi" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT20" type="StructureStatement" pos="POSL2" acceptedFacts="Ordonner chronologiquement : Appel du g&#xe9;n&#xe9;ral de Gaulle - R&#xe9;gime de Vichy - Trait&#xe9; de Rome - Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct;1 Appel du g&#xe9;n&#xe9;ral de Gaulle 2 R&#xe9;gime de Vichy 3 Trait&#xe9; de Rome 4 Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct;"/>
-        <element id="ELEM21" type="StatementFact" displayValue="Ordonner chronologiquement : " pos="id/STRUCT20" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM22" type="ObjectDetector" pos="id/STRUCT20" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM23" type="StatementFact" displayValue=" - " pos="id/STRUCT20" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM24" type="ObjectDetector" pos="id/STRUCT20" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM25" type="StatementFact" displayValue=" - " pos="id/STRUCT20" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM26" type="ObjectDetector" pos="id/STRUCT20" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM27" type="StatementFact" displayValue=" - " pos="id/STRUCT20" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM28" type="ObjectDetector" pos="id/STRUCT20" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM29" type="Pot" displayValue="Appel du g&#xe9;n&#xe9;ral de Gaulle" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM30" type="Pot" displayValue="R&#xe9;gime de Vichy" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM31" type="Pot" displayValue="Trait&#xe9; de Rome" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM32" type="Pot" displayValue="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM33" type="Switch" pos="POS4" ability="VERIFICATOR"/>
+        <element id="STRUCT26" type="StructureStatement" pos="POSL1" acceptedFacts="O-Goshi correspond a o-goshi;"/>
+        <element id="ELEM27" type="StatementFact" displayValue="O-Goshi correspond a " pos="id/STRUCT26" idFact="JUDO_O1_L1_T1-QAFACT2"/>
+        <element id="ELEM28" type="ObjectDetector" pos="id/STRUCT26" ability="DETECTOR" idFact="JUDO_O1_L1_T1-QAFACT2"/>
+        <element id="ELEM29" type="Pot" displayValue="juji-gatame" correctness="INCORRECT" pos="POS1" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT2" isImageDisplay="true"/>
+        <element id="ELEM30" type="Pot" displayValue="utsuri-goshi" correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT2" isImageDisplay="true"/>
+        <element id="ELEM31" type="Pot" displayValue="o-goshi" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT2" isImageDisplay="true"/>
       </elements>
     </room>
-    <room id="Room[3/0]" x="3" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T11" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a11" direction="WEST" accessRef="a10"/>
-        <roomaccess id="a18" direction="SOUTH" accessRef="a19"/>
-        <roomaccess id="a20" direction="EAST" accessRef="a21"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T11-QAFACT1557" complete="Ordonner chronologiquement" correctnessToReach="4"/>
-      </facts>
-      <elements>
-        <element id="STRUCT34" type="VStructureStatement" pos="POSL1" acceptedFacts="Ordonner chronologiquement : R&#xe9;volution Russe - Trait&#xe9; de Rome - Loi Veil (IVG) - Chute du mur de Berlin;1 R&#xe9;volution Russe 2 Trait&#xe9; de Rome 3 Loi Veil (IVG) 4 Chute du mur de Berlin;"/>
-        <element id="STRUCT35" type="HStructL" pos="id/STRUCT34"/>
-        <element id="ELEM36" type="Info" displayValue="1" pos="id/STRUCT35" idFact="HG_O1_L1_T11-QAFACT1557"/>
-        <element id="ELEM37" type="ObjectDetector" pos="id/STRUCT35" correctAnswer="R&#xe9;volution Russe;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1557"/>
-        <element id="STRUCT38" type="HStructL" pos="id/STRUCT34"/>
-        <element id="ELEM39" type="Info" displayValue="2" pos="id/STRUCT38" idFact="HG_O1_L1_T11-QAFACT1557"/>
-        <element id="ELEM40" type="ObjectDetector" pos="id/STRUCT38" correctAnswer="Trait&#xe9; de Rome;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1557"/>
-        <element id="STRUCT41" type="HStructL" pos="id/STRUCT34"/>
-        <element id="ELEM42" type="Info" displayValue="3" pos="id/STRUCT41" idFact="HG_O1_L1_T11-QAFACT1557"/>
-        <element id="ELEM43" type="ObjectDetector" pos="id/STRUCT41" correctAnswer="Loi Veil (IVG);" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1557"/>
-        <element id="STRUCT44" type="HStructL" pos="id/STRUCT34"/>
-        <element id="ELEM45" type="Info" displayValue="4" pos="id/STRUCT44" idFact="HG_O1_L1_T11-QAFACT1557"/>
-        <element id="ELEM46" type="ObjectDetector" pos="id/STRUCT44" correctAnswer="Chute du mur de Berlin;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1557"/>
-        <element id="ELEM47" type="Switch" pos="POS5" ability="VERIFICATOR"/>
-        <element id="ELEM48" type="Pot" displayValue="R&#xe9;volution Russe" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1557"/>
-        <element id="ELEM49" type="Pot" displayValue="Trait&#xe9; de Rome" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1557"/>
-        <element id="ELEM50" type="Pot" displayValue="Loi Veil (IVG)" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1557"/>
-        <element id="ELEM51" type="Pot" displayValue="Chute du mur de Berlin" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1557"/>
-        <element id="ELEM52" type="Statement" displayValue="Ordonner chronologiquement" pos="POSQ1" idFact="HG_O1_L1_T11-QAFACT1557" acceptedFacts="Ordonner chronologiquement : R&#xe9;volution Russe - Trait&#xe9; de Rome - Loi Veil (IVG) - Chute du mur de Berlin;1 R&#xe9;volution Russe 2 Trait&#xe9; de Rome 3 Loi Veil (IVG) 4 Chute du mur de Berlin;"/>
-      </elements>
-    </room>
-    <room id="Room[2/-1]" x="2" y="-1" roomTypeName="RegularRoom5" time="20" idTask="HG_O1_L1_T11" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a13" direction="NORTH" accessRef="a12"/>
-        <roomaccess id="a22" direction="SOUTH" accessRef="a23"/>
-        <roomaccess id="a24" direction="EAST" accessRef="a25"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T11-QAFACT1530" complete="Ordonner chronologiquement" correctnessToReach="4"/>
-      </facts>
-      <elements>
-        <element id="STRUCT53" type="StructureStatement" pos="POSL2" acceptedFacts="Ordonner chronologiquement : R&#xe9;volution Russe - Loi Veil (IVG) - Chute du mur de Berlin - L'Euro;1 R&#xe9;volution Russe 2 Loi Veil (IVG) 3 Chute du mur de Berlin 4 L'Euro;"/>
-        <element id="ELEM54" type="StatementFact" displayValue="Ordonner chronologiquement : " pos="id/STRUCT53" idFact="HG_O1_L1_T11-QAFACT1530"/>
-        <element id="ELEM55" type="ObjectDetector" pos="id/STRUCT53" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1530"/>
-        <element id="ELEM56" type="StatementFact" displayValue=" - " pos="id/STRUCT53" idFact="HG_O1_L1_T11-QAFACT1530"/>
-        <element id="ELEM57" type="ObjectDetector" pos="id/STRUCT53" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1530"/>
-        <element id="ELEM58" type="StatementFact" displayValue=" - " pos="id/STRUCT53" idFact="HG_O1_L1_T11-QAFACT1530"/>
-        <element id="ELEM59" type="ObjectDetector" pos="id/STRUCT53" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1530"/>
-        <element id="ELEM60" type="StatementFact" displayValue=" - " pos="id/STRUCT53" idFact="HG_O1_L1_T11-QAFACT1530"/>
-        <element id="ELEM61" type="ObjectDetector" pos="id/STRUCT53" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1530"/>
-        <element id="ELEM62" type="Pot" displayValue="R&#xe9;volution Russe" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1530"/>
-        <element id="ELEM63" type="Pot" displayValue="Loi Veil (IVG)" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1530"/>
-        <element id="ELEM64" type="Pot" displayValue="Chute du mur de Berlin" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1530"/>
-        <element id="ELEM65" type="Pot" displayValue="L'Euro" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1530"/>
-        <element id="ELEM66" type="Switch" pos="POS3" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[3/-1]" x="3" y="-1" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T11" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a19" direction="NORTH" accessRef="a18"/>
-        <roomaccess id="a25" direction="WEST" accessRef="a24"/>
-        <roomaccess id="a26" direction="EAST" accessRef="a27"/>
-        <roomaccess id="a28" direction="SOUTH" accessRef="a29"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T11-QAFACT887" complete="Ordonner chronologiquement" correctnessToReach="4"/>
-      </facts>
-      <elements>
-        <element id="STRUCT67" type="VStructureStatement" pos="POSL2" acceptedFacts="Ordonner chronologiquement : R&#xe9;volution Russe - Armistice - Front Populaire - Chute du mur de Berlin;1 R&#xe9;volution Russe 2 Armistice 3 Front Populaire 4 Chute du mur de Berlin;"/>
-        <element id="STRUCT68" type="HStructL" pos="id/STRUCT67"/>
-        <element id="ELEM69" type="Info" displayValue="1" pos="id/STRUCT68" idFact="HG_O1_L1_T11-QAFACT887"/>
-        <element id="ELEM70" type="ObjectDetector" pos="id/STRUCT68" correctAnswer="R&#xe9;volution Russe;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT887"/>
-        <element id="STRUCT71" type="HStructL" pos="id/STRUCT67"/>
-        <element id="ELEM72" type="Info" displayValue="2" pos="id/STRUCT71" idFact="HG_O1_L1_T11-QAFACT887"/>
-        <element id="ELEM73" type="ObjectDetector" pos="id/STRUCT71" correctAnswer="Armistice;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT887"/>
-        <element id="STRUCT74" type="HStructL" pos="id/STRUCT67"/>
-        <element id="ELEM75" type="Info" displayValue="3" pos="id/STRUCT74" idFact="HG_O1_L1_T11-QAFACT887"/>
-        <element id="ELEM76" type="ObjectDetector" pos="id/STRUCT74" correctAnswer="Front Populaire;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT887"/>
-        <element id="STRUCT77" type="HStructL" pos="id/STRUCT67"/>
-        <element id="ELEM78" type="Info" displayValue="4" pos="id/STRUCT77" idFact="HG_O1_L1_T11-QAFACT887"/>
-        <element id="ELEM79" type="ObjectDetector" pos="id/STRUCT77" correctAnswer="Chute du mur de Berlin;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT887"/>
-        <element id="ELEM80" type="Switch" pos="POS1" ability="VERIFICATOR"/>
-        <element id="ELEM81" type="Pot" displayValue="R&#xe9;volution Russe" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT887"/>
-        <element id="ELEM82" type="Pot" displayValue="Armistice" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT887"/>
-        <element id="ELEM83" type="Pot" displayValue="Front Populaire" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT887"/>
-        <element id="ELEM84" type="Pot" displayValue="Chute du mur de Berlin" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT887"/>
-        <element id="ELEM85" type="Statement" displayValue="Ordonner chronologiquement" pos="POSQ1" idFact="HG_O1_L1_T11-QAFACT887" acceptedFacts="Ordonner chronologiquement : R&#xe9;volution Russe - Armistice - Front Populaire - Chute du mur de Berlin;1 R&#xe9;volution Russe 2 Armistice 3 Front Populaire 4 Chute du mur de Berlin;"/>
-      </elements>
-    </room>
-    <room id="Room[2/1]" x="2" y="1" roomTypeName="RoomTrap4" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a15" direction="SOUTH" accessRef="a14"/>
-        <roomaccess id="a30" direction="NORTH" accessRef="a31"/>
-        <roomaccess id="a32" direction="EAST" accessRef="a33"/>
-        <roomaccess id="a34" direction="WEST" accessRef="a35"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM86" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM87" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM88" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM89" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM90" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM91" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM92" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[1/1]" x="1" y="1" roomTypeName="RegularRoom12" time="20" idTask="HG_O1_L1_T11" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a9" direction="SOUTH" accessRef="a8"/>
-        <roomaccess id="a35" direction="EAST" accessRef="a34"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T11-QAFACT1451" complete="Ordonner chronologiquement" correctnessToReach="4"/>
-      </facts>
-      <elements>
-        <element id="STRUCT93" type="StructureStatement" pos="POSL3" acceptedFacts="Ordonner chronologiquement : R&#xe9;volution Russe - Front Populaire - R&#xe9;gime de Vichy - Premi&#xe8;re alternance;1 R&#xe9;volution Russe 2 Front Populaire 3 R&#xe9;gime de Vichy 4 Premi&#xe8;re alternance;"/>
-        <element id="ELEM94" type="StatementFact" displayValue="Ordonner chronologiquement : " pos="id/STRUCT93" idFact="HG_O1_L1_T11-QAFACT1451"/>
-        <element id="ELEM95" type="ObjectDetector" pos="id/STRUCT93" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1451"/>
-        <element id="ELEM96" type="StatementFact" displayValue=" - " pos="id/STRUCT93" idFact="HG_O1_L1_T11-QAFACT1451"/>
-        <element id="ELEM97" type="ObjectDetector" pos="id/STRUCT93" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1451"/>
-        <element id="ELEM98" type="StatementFact" displayValue=" - " pos="id/STRUCT93" idFact="HG_O1_L1_T11-QAFACT1451"/>
-        <element id="ELEM99" type="ObjectDetector" pos="id/STRUCT93" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1451"/>
-        <element id="ELEM100" type="StatementFact" displayValue=" - " pos="id/STRUCT93" idFact="HG_O1_L1_T11-QAFACT1451"/>
-        <element id="ELEM101" type="ObjectDetector" pos="id/STRUCT93" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1451"/>
-        <element id="ELEM102" type="Pot" displayValue="R&#xe9;volution Russe" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1451"/>
-        <element id="ELEM103" type="Pot" displayValue="Front Populaire" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1451"/>
-        <element id="ELEM104" type="Pot" displayValue="R&#xe9;gime de Vichy" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1451"/>
-        <element id="ELEM105" type="Pot" displayValue="Premi&#xe8;re alternance" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1451"/>
-        <element id="ELEM106" type="Switch" pos="POS6" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[2/-2]" x="2" y="-2" roomTypeName="RoomTrap3" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a23" direction="NORTH" accessRef="a22"/>
-        <roomaccess id="a36" direction="EAST" accessRef="a37"/>
-        <roomaccess id="a38" direction="SOUTH" accessRef="a39"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM107" type="BearTrap" pos="POS5" ability="NONAVOIDABLE"/>
-        <element id="ELEM108" type="BearTrap" pos="POS8" ability="NONAVOIDABLE"/>
-        <element id="ELEM109" type="BearTrap" pos="POS4" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[4/0]" x="4" roomTypeName="RegularRoom5" time="20" idTask="HG_O1_L1_T11" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a21" direction="WEST" accessRef="a20"/>
-        <roomaccess id="a40" direction="EAST" accessRef="a41"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T11-QAFACT908" complete="Ordonner chronologiquement" correctnessToReach="4"/>
-      </facts>
-      <elements>
-        <element id="STRUCT110" type="VStructureStatement" pos="POSL1" acceptedFacts="Ordonner chronologiquement : Armistice - Front Populaire - Premi&#xe8;re alternance - L'Euro;1 Armistice 2 Front Populaire 3 Premi&#xe8;re alternance 4 L'Euro;"/>
-        <element id="STRUCT111" type="HStructL" pos="id/STRUCT110"/>
-        <element id="ELEM112" type="Info" displayValue="1" pos="id/STRUCT111" idFact="HG_O1_L1_T11-QAFACT908"/>
-        <element id="ELEM113" type="ObjectDetector" pos="id/STRUCT111" correctAnswer="Armistice;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT908"/>
-        <element id="STRUCT114" type="HStructL" pos="id/STRUCT110"/>
-        <element id="ELEM115" type="Info" displayValue="2" pos="id/STRUCT114" idFact="HG_O1_L1_T11-QAFACT908"/>
-        <element id="ELEM116" type="ObjectDetector" pos="id/STRUCT114" correctAnswer="Front Populaire;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT908"/>
-        <element id="STRUCT117" type="HStructL" pos="id/STRUCT110"/>
-        <element id="ELEM118" type="Info" displayValue="3" pos="id/STRUCT117" idFact="HG_O1_L1_T11-QAFACT908"/>
-        <element id="ELEM119" type="ObjectDetector" pos="id/STRUCT117" correctAnswer="Premi&#xe8;re alternance;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT908"/>
-        <element id="STRUCT120" type="HStructL" pos="id/STRUCT110"/>
-        <element id="ELEM121" type="Info" displayValue="4" pos="id/STRUCT120" idFact="HG_O1_L1_T11-QAFACT908"/>
-        <element id="ELEM122" type="ObjectDetector" pos="id/STRUCT120" correctAnswer="L'Euro;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT908"/>
-        <element id="ELEM123" type="Switch" pos="POS6" ability="VERIFICATOR"/>
-        <element id="ELEM124" type="Pot" displayValue="Armistice" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT908"/>
-        <element id="ELEM125" type="Pot" displayValue="Front Populaire" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT908"/>
-        <element id="ELEM126" type="Pot" displayValue="Premi&#xe8;re alternance" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT908"/>
-        <element id="ELEM127" type="Pot" displayValue="L'Euro" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT908"/>
-        <element id="ELEM128" type="Statement" displayValue="Ordonner chronologiquement" pos="POSQ2" idFact="HG_O1_L1_T11-QAFACT908" acceptedFacts="Ordonner chronologiquement : Armistice - Front Populaire - Premi&#xe8;re alternance - L'Euro;1 Armistice 2 Front Populaire 3 Premi&#xe8;re alternance 4 L'Euro;"/>
-      </elements>
-    </room>
-    <room id="Room[3/-2]" x="3" y="-2" roomTypeName="RoomTrap" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a37" direction="WEST" accessRef="a36"/>
-        <roomaccess id="a29" direction="NORTH" accessRef="a28"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM129" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM130" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM131" type="WaitFireTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM132" type="WaitFireTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM133" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[4/-1]" x="4" y="-1" roomTypeName="RoomTrap3" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a27" direction="WEST" accessRef="a26"/>
-        <roomaccess id="a42" direction="SOUTH" accessRef="a43"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM134" type="WaitFireTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM135" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM136" type="WaitFireTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM137" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM138" type="WaitFireTrap" pos="POS9" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[2/-3]" x="2" y="-3" roomTypeName="RegularRoom12" time="20" idTask="HG_O1_L1_T11" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a39" direction="NORTH" accessRef="a38"/>
-        <roomaccess id="a44" direction="EAST" accessRef="a45"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T11-QAFACT1799" complete="Ordonner chronologiquement" correctnessToReach="4"/>
-      </facts>
-      <elements>
-        <element id="STRUCT139" type="StructureStatement" pos="POSL2" acceptedFacts="Ordonner chronologiquement : R&#xe9;gime de Vichy - Trait&#xe9; de Rome - Naissance de la Ve R&#xe9;publique - Loi Veil (IVG);1 R&#xe9;gime de Vichy 2 Trait&#xe9; de Rome 3 Naissance de la Ve R&#xe9;publique 4 Loi Veil (IVG);"/>
-        <element id="ELEM140" type="StatementFact" displayValue="Ordonner chronologiquement : " pos="id/STRUCT139" idFact="HG_O1_L1_T11-QAFACT1799"/>
-        <element id="ELEM141" type="ObjectDetector" pos="id/STRUCT139" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1799"/>
-        <element id="ELEM142" type="StatementFact" displayValue=" - " pos="id/STRUCT139" idFact="HG_O1_L1_T11-QAFACT1799"/>
-        <element id="ELEM143" type="ObjectDetector" pos="id/STRUCT139" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1799"/>
-        <element id="ELEM144" type="StatementFact" displayValue=" - " pos="id/STRUCT139" idFact="HG_O1_L1_T11-QAFACT1799"/>
-        <element id="ELEM145" type="ObjectDetector" pos="id/STRUCT139" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1799"/>
-        <element id="ELEM146" type="StatementFact" displayValue=" - " pos="id/STRUCT139" idFact="HG_O1_L1_T11-QAFACT1799"/>
-        <element id="ELEM147" type="ObjectDetector" pos="id/STRUCT139" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1799"/>
-        <element id="ELEM148" type="Pot" displayValue="R&#xe9;gime de Vichy" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1799"/>
-        <element id="ELEM149" type="Pot" displayValue="Trait&#xe9; de Rome" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1799"/>
-        <element id="ELEM150" type="Pot" displayValue="Naissance de la Ve R&#xe9;publique" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1799"/>
-        <element id="ELEM151" type="Pot" displayValue="Loi Veil (IVG)" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1799"/>
-        <element id="ELEM152" type="Switch" pos="POS9" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[2/2]" x="2" y="2" roomTypeName="RoomTrap4" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a31" direction="SOUTH" accessRef="a30"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM153" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM154" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM155" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM156" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM157" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM158" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM159" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[5/0]" x="5" roomTypeName="RoomTrap2" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a41" direction="WEST" accessRef="a40"/>
-        <roomaccess id="a46" direction="EAST" accessRef="a47"/>
-        <roomaccess id="a48" direction="SOUTH" accessRef="a49"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM160" type="BearTrap" pos="POS5" ability="NONAVOIDABLE"/>
-        <element id="ELEM161" type="BearTrap" pos="POS3" ability="NONAVOIDABLE"/>
-        <element id="ELEM162" type="BearTrap" pos="POS2" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[3/-3]" x="3" y="-3" roomTypeName="RegularRoom12" time="20" idTask="HG_O1_L1_T11" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a45" direction="WEST" accessRef="a44"/>
-        <roomaccess id="a50" direction="SOUTH" accessRef="a51"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T11-QAFACT1246" complete="Ordonner chronologiquement" correctnessToReach="4"/>
-      </facts>
-      <elements>
-        <element id="STRUCT163" type="VStructureStatement" pos="POSL1" acceptedFacts="Ordonner chronologiquement : R&#xe9;volution Russe - Allemagne Nazie (Hitl&#xe9;rienne) - Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct - L'Euro;1 R&#xe9;volution Russe 2 Allemagne Nazie (Hitl&#xe9;rienne) 3 Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct 4 L'Euro;"/>
-        <element id="STRUCT164" type="HStructL" pos="id/STRUCT163"/>
-        <element id="ELEM165" type="Info" displayValue="1" pos="id/STRUCT164" idFact="HG_O1_L1_T11-QAFACT1246"/>
-        <element id="ELEM166" type="ObjectDetector" pos="id/STRUCT164" correctAnswer="R&#xe9;volution Russe;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1246"/>
-        <element id="STRUCT167" type="HStructL" pos="id/STRUCT163"/>
-        <element id="ELEM168" type="Info" displayValue="2" pos="id/STRUCT167" idFact="HG_O1_L1_T11-QAFACT1246"/>
-        <element id="ELEM169" type="ObjectDetector" pos="id/STRUCT167" correctAnswer="Allemagne Nazie (Hitl&#xe9;rienne);" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1246"/>
-        <element id="STRUCT170" type="HStructL" pos="id/STRUCT163"/>
-        <element id="ELEM171" type="Info" displayValue="3" pos="id/STRUCT170" idFact="HG_O1_L1_T11-QAFACT1246"/>
-        <element id="ELEM172" type="ObjectDetector" pos="id/STRUCT170" correctAnswer="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1246"/>
-        <element id="STRUCT173" type="HStructL" pos="id/STRUCT163"/>
-        <element id="ELEM174" type="Info" displayValue="4" pos="id/STRUCT173" idFact="HG_O1_L1_T11-QAFACT1246"/>
-        <element id="ELEM175" type="ObjectDetector" pos="id/STRUCT173" correctAnswer="L'Euro;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1246"/>
-        <element id="ELEM176" type="Switch" pos="POS5" ability="VERIFICATOR"/>
-        <element id="ELEM177" type="Pot" displayValue="R&#xe9;volution Russe" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1246"/>
-        <element id="ELEM178" type="Pot" displayValue="Allemagne Nazie (Hitl&#xe9;rienne)" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1246"/>
-        <element id="ELEM179" type="Pot" displayValue="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1246"/>
-        <element id="ELEM180" type="Pot" displayValue="L'Euro" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1246"/>
-        <element id="ELEM181" type="Statement" displayValue="Ordonner chronologiquement" pos="POSL2" idFact="HG_O1_L1_T11-QAFACT1246" acceptedFacts="Ordonner chronologiquement : R&#xe9;volution Russe - Allemagne Nazie (Hitl&#xe9;rienne) - Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct - L'Euro;1 R&#xe9;volution Russe 2 Allemagne Nazie (Hitl&#xe9;rienne) 3 Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct 4 L'Euro;"/>
-      </elements>
-    </room>
-    <room id="Room[6/0]" x="6" roomTypeName="RoomTrap4" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a47" direction="WEST" accessRef="a46"/>
-        <roomaccess id="a52" direction="EAST" accessRef="a53"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM182" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM183" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM184" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM185" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM186" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM187" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM188" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[3/1]" x="3" y="1" roomTypeName="RegularRoom5" time="20" idTask="HG_O1_L1_T11" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a33" direction="WEST" accessRef="a32"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T11-QAFACT1793" complete="Ordonner chronologiquement" correctnessToReach="4"/>
-      </facts>
-      <elements>
-        <element id="STRUCT189" type="StructureStatement" pos="POSL2" acceptedFacts="Ordonner chronologiquement : 1er Guerre Mondiale - R&#xe9;gime de Vichy - Trait&#xe9; de Rome - Loi Veil (IVG);1 1er Guerre Mondiale 2 R&#xe9;gime de Vichy 3 Trait&#xe9; de Rome 4 Loi Veil (IVG);"/>
-        <element id="ELEM190" type="StatementFact" displayValue="Ordonner chronologiquement : " pos="id/STRUCT189" idFact="HG_O1_L1_T11-QAFACT1793"/>
-        <element id="ELEM191" type="ObjectDetector" pos="id/STRUCT189" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1793"/>
-        <element id="ELEM192" type="StatementFact" displayValue=" - " pos="id/STRUCT189" idFact="HG_O1_L1_T11-QAFACT1793"/>
-        <element id="ELEM193" type="ObjectDetector" pos="id/STRUCT189" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1793"/>
-        <element id="ELEM194" type="StatementFact" displayValue=" - " pos="id/STRUCT189" idFact="HG_O1_L1_T11-QAFACT1793"/>
-        <element id="ELEM195" type="ObjectDetector" pos="id/STRUCT189" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1793"/>
-        <element id="ELEM196" type="StatementFact" displayValue=" - " pos="id/STRUCT189" idFact="HG_O1_L1_T11-QAFACT1793"/>
-        <element id="ELEM197" type="ObjectDetector" pos="id/STRUCT189" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1793"/>
-        <element id="ELEM198" type="Pot" displayValue="1er Guerre Mondiale" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1793"/>
-        <element id="ELEM199" type="Pot" displayValue="R&#xe9;gime de Vichy" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1793"/>
-        <element id="ELEM200" type="Pot" displayValue="Trait&#xe9; de Rome" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1793"/>
-        <element id="ELEM201" type="Pot" displayValue="Loi Veil (IVG)" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1793"/>
-        <element id="ELEM202" type="Switch" pos="POS6" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[1/-2]" x="1" y="-2" roomTypeName="RegularRoom12" time="20" idTask="HG_O1_L1_T11" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+    <room id="Room[-1/-2]" x="-1" y="-2" roomTypeName="RegularRoom5" time="20" idTask="JUDO_O1_L1_T4" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
       <roomaccesses>
         <roomaccess id="a17" direction="NORTH" accessRef="a16"/>
+        <roomaccess id="a22" direction="WEST" accessRef="a23"/>
+        <roomaccess id="a24" direction="EAST" accessRef="a25"/>
+        <roomaccess id="a26" direction="SOUTH" accessRef="a27"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T11-QAFACT1264" complete="Ordonner chronologiquement" correctnessToReach="4"/>
+        <fact id="JUDO_O1_L1_T4-QAFACT1" complete="(WAZA-ARI-presque victoire (demi ippon)-waza-ari-)" correctnessToReach="1"/>
+        <fact id="JUDO_O1_L1_T4-QAFACT3" complete="(HAJIME-commencer le combat-hajime-)" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT203" type="StructureStatement" pos="POSL2" acceptedFacts="Ordonner chronologiquement : Allemagne Nazie (Hitl&#xe9;rienne) - Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct - Premi&#xe8;re alternance - L'Euro;1 Allemagne Nazie (Hitl&#xe9;rienne) 2 Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct 3 Premi&#xe8;re alternance 4 L'Euro;"/>
-        <element id="ELEM204" type="StatementFact" displayValue="Ordonner chronologiquement : " pos="id/STRUCT203" idFact="HG_O1_L1_T11-QAFACT1264"/>
-        <element id="ELEM205" type="ObjectDetector" pos="id/STRUCT203" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1264"/>
-        <element id="ELEM206" type="StatementFact" displayValue=" - " pos="id/STRUCT203" idFact="HG_O1_L1_T11-QAFACT1264"/>
-        <element id="ELEM207" type="ObjectDetector" pos="id/STRUCT203" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1264"/>
-        <element id="ELEM208" type="StatementFact" displayValue=" - " pos="id/STRUCT203" idFact="HG_O1_L1_T11-QAFACT1264"/>
-        <element id="ELEM209" type="ObjectDetector" pos="id/STRUCT203" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1264"/>
-        <element id="ELEM210" type="StatementFact" displayValue=" - " pos="id/STRUCT203" idFact="HG_O1_L1_T11-QAFACT1264"/>
-        <element id="ELEM211" type="ObjectDetector" pos="id/STRUCT203" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT1264"/>
-        <element id="ELEM212" type="Pot" displayValue="Allemagne Nazie (Hitl&#xe9;rienne)" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1264"/>
-        <element id="ELEM213" type="Pot" displayValue="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1264"/>
-        <element id="ELEM214" type="Pot" displayValue="Premi&#xe8;re alternance" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1264"/>
-        <element id="ELEM215" type="Pot" displayValue="L'Euro" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT1264"/>
-        <element id="ELEM216" type="Switch" pos="POS2" ability="VERIFICATOR"/>
+        <element id="STRUCT32" type="StructureStatement" pos="POSL2"/>
+        <element id="ELEM33" type="StatementFact" displayValue="(WAZA-ARI-" pos="id/STRUCT32" idFact="JUDO_O1_L1_T4-QAFACT1"/>
+        <element id="ELEM34" type="ObjectDetector" pos="id/STRUCT32" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT1"/>
+        <element id="ELEM35" type="StatementFact" displayValue="-" pos="id/STRUCT32" idFact="JUDO_O1_L1_T4-QAFACT1"/>
+        <element id="ELEM36" type="ObjectDetector" pos="id/STRUCT32" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT1"/>
+        <element id="ELEM37" type="StatementFact" displayValue="-)" pos="id/STRUCT32" idFact="JUDO_O1_L1_T4-QAFACT1"/>
+        <element id="STRUCT38" type="StructureStatement" pos="POSL1"/>
+        <element id="ELEM39" type="StatementFact" displayValue="(HAJIME-" pos="id/STRUCT38" idFact="JUDO_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM40" type="ObjectDetector" pos="id/STRUCT38" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM41" type="StatementFact" displayValue="-" pos="id/STRUCT38" idFact="JUDO_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM42" type="ObjectDetector" pos="id/STRUCT38" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM43" type="StatementFact" displayValue="-)" pos="id/STRUCT38" idFact="JUDO_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM44" type="Pot" displayValue="presque victoire (demi ippon)" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT1"/>
+        <element id="ELEM45" type="Pot" displayValue="waza-ari" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM46" type="Pot" displayValue="commencer le combat" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT3"/>
+        <element id="ELEM47" type="Pot" displayValue="hajime" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT3" isImageDisplay="true"/>
+        <element id="ELEM48" type="Switch" pos="POS2" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[3/-4]" x="3" y="-4" roomTypeName="RegularRoom7" time="20" idTask="HG_O1_L1_T11" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+    <room id="Room[-1/1]" x="-1" y="1" roomTypeName="RegularRoom11" time="20" idTask="JUDO_O1_L1_T3" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true" correctnessToReach="3">
       <roomaccesses>
-        <roomaccess id="a51" direction="NORTH" accessRef="a50"/>
+        <roomaccess id="a9" direction="SOUTH" accessRef="a8"/>
+        <roomaccess id="a28" direction="NORTH" accessRef="a29"/>
+        <roomaccess id="a30" direction="WEST" accessRef="a31"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T11-QAFACT798" complete="Ordonner chronologiquement" correctnessToReach="4"/>
+        <fact id="JUDO_O1_L1_T3-QAFACT1" complete="ASHI-WAZA (Techniques de jambe) : Hiza-Guruma, O-Soto-Gari, De-Ashi-Barai" correctnessToReach="3"/>
       </facts>
       <elements>
-        <element id="STRUCT217" type="VStructureStatement" pos="POSL2" acceptedFacts="Ordonner chronologiquement : Appel du g&#xe9;n&#xe9;ral de Gaulle - R&#xe9;gime de Vichy - Trait&#xe9; de Rome - Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct;1 Appel du g&#xe9;n&#xe9;ral de Gaulle 2 R&#xe9;gime de Vichy 3 Trait&#xe9; de Rome 4 Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct;"/>
-        <element id="STRUCT218" type="HStructL" pos="id/STRUCT217"/>
-        <element id="ELEM219" type="Info" displayValue="1" pos="id/STRUCT218" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM220" type="ObjectDetector" pos="id/STRUCT218" correctAnswer="Appel du g&#xe9;n&#xe9;ral de Gaulle;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="STRUCT221" type="HStructL" pos="id/STRUCT217"/>
-        <element id="ELEM222" type="Info" displayValue="2" pos="id/STRUCT221" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM223" type="ObjectDetector" pos="id/STRUCT221" correctAnswer="R&#xe9;gime de Vichy;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="STRUCT224" type="HStructL" pos="id/STRUCT217"/>
-        <element id="ELEM225" type="Info" displayValue="3" pos="id/STRUCT224" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM226" type="ObjectDetector" pos="id/STRUCT224" correctAnswer="Trait&#xe9; de Rome;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="STRUCT227" type="HStructL" pos="id/STRUCT217"/>
-        <element id="ELEM228" type="Info" displayValue="4" pos="id/STRUCT227" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM229" type="ObjectDetector" pos="id/STRUCT227" correctAnswer="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM230" type="Switch" pos="POS4" ability="VERIFICATOR"/>
-        <element id="ELEM231" type="Pot" displayValue="Appel du g&#xe9;n&#xe9;ral de Gaulle" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM232" type="Pot" displayValue="R&#xe9;gime de Vichy" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM233" type="Pot" displayValue="Trait&#xe9; de Rome" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM234" type="Pot" displayValue="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT798"/>
-        <element id="ELEM235" type="Statement" displayValue="Ordonner chronologiquement" pos="POSQ1" idFact="HG_O1_L1_T11-QAFACT798" acceptedFacts="Ordonner chronologiquement : Appel du g&#xe9;n&#xe9;ral de Gaulle - R&#xe9;gime de Vichy - Trait&#xe9; de Rome - Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct;1 Appel du g&#xe9;n&#xe9;ral de Gaulle 2 R&#xe9;gime de Vichy 3 Trait&#xe9; de Rome 4 Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct;"/>
+        <element id="ELEM49" type="FloorInterrupt" displayValue="Ashi-Guruma" correctness="INCORRECT" pos="POS3" ability="TOUCHABLE" idFact="JUDO_O1_L1_T3-QAFACT1"/>
+        <element id="ELEM50" type="FloorInterrupt" displayValue="Sumi-Gaeshi" correctness="INCORRECT" pos="POS6" ability="TOUCHABLE" idFact="JUDO_O1_L1_T3-QAFACT1"/>
+        <element id="ELEM51" type="FloorInterrupt" displayValue="Hiza-Guruma" correctness="CORRECT" pos="POS2" ability="TOUCHABLE" idFact="JUDO_O1_L1_T3-QAFACT1"/>
+        <element id="ELEM52" type="FloorInterrupt" displayValue="O-Soto-Gari" correctness="CORRECT" pos="POS1" ability="TOUCHABLE" idFact="JUDO_O1_L1_T3-QAFACT1"/>
+        <element id="ELEM53" type="FloorInterrupt" displayValue="De-Ashi-Barai" correctness="CORRECT" pos="POS5" ability="TOUCHABLE" idFact="JUDO_O1_L1_T3-QAFACT1"/>
+        <element id="ELEM54" type="Switch" pos="POS4" ability="VERIFICATOR"/>
+        <element id="ELEM55" type="Statement" displayValue="ASHI-WAZA (Techniques de jambe)" pos="POSQ2" idFact="JUDO_O1_L1_T3-QAFACT1" acceptedFacts="ASHI-WAZA (Techniques de jambe) : Hiza-Guruma, O-Soto-Gari, De-Ashi-Barai;"/>
       </elements>
     </room>
-    <room id="Room[5/-1]" x="5" y="-1" roomTypeName="RegularRoom5" time="20" idTask="HG_O1_L1_T11" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+    <room id="Room[-2/-2]" x="-2" y="-2" roomTypeName="RegularRoom5" time="20" idTask="JUDO_O1_L1_T3" prompt="Casse les bons elements" correctnessToReach="3">
       <roomaccesses>
-        <roomaccess id="a49" direction="NORTH" accessRef="a48"/>
+        <roomaccess id="a21" direction="NORTH" accessRef="a20"/>
+        <roomaccess id="a32" direction="SOUTH" accessRef="a33"/>
+        <roomaccess id="a34" direction="WEST" accessRef="a35"/>
+        <roomaccess id="a23" direction="EAST" accessRef="a22"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T11-QAFACT530" complete="Ordonner chronologiquement" correctnessToReach="4"/>
+        <fact id="JUDO_O1_L1_T3-QAFACT2" complete="OSAEKOMI-WAZA (Techniques d'immobilisation) : Yoko-Shiho-Gatame, Kami-Shiho-Gatame, Ushiro-Gesa-Gatame" correctnessToReach="3"/>
       </facts>
       <elements>
-        <element id="STRUCT236" type="VStructureStatement" pos="POSL2" acceptedFacts="Ordonner chronologiquement : Armistice - Appel du g&#xe9;n&#xe9;ral de Gaulle - Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct - Loi Veil (IVG);1 Armistice 2 Appel du g&#xe9;n&#xe9;ral de Gaulle 3 Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct 4 Loi Veil (IVG);"/>
-        <element id="STRUCT237" type="HStructL" pos="id/STRUCT236"/>
-        <element id="ELEM238" type="Info" displayValue="1" pos="id/STRUCT237" idFact="HG_O1_L1_T11-QAFACT530"/>
-        <element id="ELEM239" type="ObjectDetector" pos="id/STRUCT237" correctAnswer="Armistice;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT530"/>
-        <element id="STRUCT240" type="HStructL" pos="id/STRUCT236"/>
-        <element id="ELEM241" type="Info" displayValue="2" pos="id/STRUCT240" idFact="HG_O1_L1_T11-QAFACT530"/>
-        <element id="ELEM242" type="ObjectDetector" pos="id/STRUCT240" correctAnswer="Appel du g&#xe9;n&#xe9;ral de Gaulle;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT530"/>
-        <element id="STRUCT243" type="HStructL" pos="id/STRUCT236"/>
-        <element id="ELEM244" type="Info" displayValue="3" pos="id/STRUCT243" idFact="HG_O1_L1_T11-QAFACT530"/>
-        <element id="ELEM245" type="ObjectDetector" pos="id/STRUCT243" correctAnswer="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct;" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT530"/>
-        <element id="STRUCT246" type="HStructL" pos="id/STRUCT236"/>
-        <element id="ELEM247" type="Info" displayValue="4" pos="id/STRUCT246" idFact="HG_O1_L1_T11-QAFACT530"/>
-        <element id="ELEM248" type="ObjectDetector" pos="id/STRUCT246" correctAnswer="Loi Veil (IVG);" ability="DETECTOR" idFact="HG_O1_L1_T11-QAFACT530"/>
-        <element id="ELEM249" type="Switch" pos="POS2" ability="VERIFICATOR"/>
-        <element id="ELEM250" type="Pot" displayValue="Armistice" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT530"/>
-        <element id="ELEM251" type="Pot" displayValue="Appel du g&#xe9;n&#xe9;ral de Gaulle" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT530"/>
-        <element id="ELEM252" type="Pot" displayValue="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT530"/>
-        <element id="ELEM253" type="Pot" displayValue="Loi Veil (IVG)" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T11-QAFACT530"/>
-        <element id="ELEM254" type="Statement" displayValue="Ordonner chronologiquement" pos="POSQ2" idFact="HG_O1_L1_T11-QAFACT530" acceptedFacts="Ordonner chronologiquement : Armistice - Appel du g&#xe9;n&#xe9;ral de Gaulle - Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct - Loi Veil (IVG);1 Armistice 2 Appel du g&#xe9;n&#xe9;ral de Gaulle 3 Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct 4 Loi Veil (IVG);"/>
+        <element id="ELEM56" type="BreakablePot" displayValue="Utsuri-Goshi" correctness="INCORRECT" pos="POS9" ability="BREAKABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
+        <element id="ELEM57" type="BreakablePot" displayValue="Te-Guruma" correctness="INCORRECT" pos="POS4" ability="BREAKABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
+        <element id="ELEM58" type="BreakablePot" displayValue="Yoko-Shiho-Gatame" correctness="CORRECT" pos="POS5" ability="BREAKABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
+        <element id="ELEM59" type="BreakablePot" displayValue="Kami-Shiho-Gatame" correctness="CORRECT" pos="POS2" ability="BREAKABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
+        <element id="ELEM60" type="BreakablePot" displayValue="Ushiro-Gesa-Gatame" correctness="CORRECT" pos="POS8" ability="BREAKABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
+        <element id="ELEM61" type="Statement" displayValue="OSAEKOMI-WAZA (Techniques d'immobilisation)" pos="POSQ2" idFact="JUDO_O1_L1_T3-QAFACT2" acceptedFacts="OSAEKOMI-WAZA (Techniques d'immobilisation) : Yoko-Shiho-Gatame, Kami-Shiho-Gatame, Ushiro-Gesa-Gatame;"/>
       </elements>
     </room>
-    <room id="Room[4/-2]" x="4" y="-2" roomTypeName="TrapRoom2" correctnessToReach="0">
+    <room id="Room[0/-1]" y="-1" roomTypeName="RoomTrap4" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a43" direction="NORTH" accessRef="a42"/>
+        <roomaccess id="a19" direction="WEST" accessRef="a18"/>
+        <roomaccess id="a36" direction="EAST" accessRef="a37"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM255" type="RegularSlime" pos="POS2" ability="NONAVOIDABLE"/>
-        <element id="ELEM256" type="RegularSlime" pos="POS1" ability="NONAVOIDABLE"/>
-        <element id="ELEM257" type="RegularSlime" pos="POS4" ability="NONAVOIDABLE"/>
+        <element id="ELEM62" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM63" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM64" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM65" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM66" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM67" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM68" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[7/0]" x="7" roomTypeName="ExitRoom1" correctnessToReach="0">
+    <room id="Room[-1/2]" x="-1" y="2" roomTypeName="RoomTrap3" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a53" direction="WEST" accessRef="a52"/>
+        <roomaccess id="a29" direction="SOUTH" accessRef="a28"/>
+        <roomaccess id="a38" direction="NORTH" accessRef="a39"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM69" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM70" type="FireTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM71" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM72" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM73" type="FireTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM74" type="FireTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM75" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-2/-3]" x="-2" y="-3" roomTypeName="RegularRoom5" time="20" idTask="JUDO_O1_L1_T4" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+      <roomaccesses>
+        <roomaccess id="a33" direction="NORTH" accessRef="a32"/>
+      </roomaccesses>
+      <facts>
+        <fact id="JUDO_O1_L1_T4-QAFACT2" complete="(ANNULATION-annuler l'action attribuer (ex. annuler waza-ari)-waza-ari-)" correctnessToReach="1"/>
+        <fact id="JUDO_O1_L1_T4-QAFACT5" complete="(OSEAKOMI-d&#xe9;but du chronom&#xe8;tre du temps d'immobilisation-osaekomi-)" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT76" type="StructureStatement" pos="POSL2"/>
+        <element id="ELEM77" type="StatementFact" displayValue="(ANNULATION-" pos="id/STRUCT76" idFact="JUDO_O1_L1_T4-QAFACT2"/>
+        <element id="ELEM78" type="ObjectDetector" pos="id/STRUCT76" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT2"/>
+        <element id="ELEM79" type="StatementFact" displayValue="-" pos="id/STRUCT76" idFact="JUDO_O1_L1_T4-QAFACT2"/>
+        <element id="ELEM80" type="ObjectDetector" pos="id/STRUCT76" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT2"/>
+        <element id="ELEM81" type="StatementFact" displayValue="-)" pos="id/STRUCT76" idFact="JUDO_O1_L1_T4-QAFACT2"/>
+        <element id="STRUCT82" type="StructureStatement" pos="POSL1"/>
+        <element id="ELEM83" type="StatementFact" displayValue="(OSEAKOMI-" pos="id/STRUCT82" idFact="JUDO_O1_L1_T4-QAFACT5"/>
+        <element id="ELEM84" type="ObjectDetector" pos="id/STRUCT82" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT5"/>
+        <element id="ELEM85" type="StatementFact" displayValue="-" pos="id/STRUCT82" idFact="JUDO_O1_L1_T4-QAFACT5"/>
+        <element id="ELEM86" type="ObjectDetector" pos="id/STRUCT82" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT5"/>
+        <element id="ELEM87" type="StatementFact" displayValue="-)" pos="id/STRUCT82" idFact="JUDO_O1_L1_T4-QAFACT5"/>
+        <element id="ELEM88" type="Pot" displayValue="annuler l'action attribuer (ex. annuler waza-ari)" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT2"/>
+        <element id="ELEM89" type="Pot" displayValue="waza-ari" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT2" isImageDisplay="true"/>
+        <element id="ELEM90" type="Pot" displayValue="d&#xe9;but du chronom&#xe8;tre du temps d'immobilisation" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT5"/>
+        <element id="ELEM91" type="Pot" displayValue="osaekomi" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT5" isImageDisplay="true"/>
+        <element id="ELEM92" type="Switch" pos="POS7" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[-3/-2]" x="-3" y="-2" roomTypeName="RegularRoom5" time="20" idTask="JUDO_O1_L1_T4" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+      <roomaccesses>
+        <roomaccess id="a35" direction="EAST" accessRef="a34"/>
+        <roomaccess id="a40" direction="NORTH" accessRef="a41"/>
+      </roomaccesses>
+      <facts>
+        <fact id="JUDO_O1_L1_T4-QAFACT11" complete="(SHIDO -Non combativit&#xe9;-non_combativite-)" correctnessToReach="1"/>
+        <fact id="JUDO_O1_L1_T4-QAFACT6" complete="(TOKETA-arr&#xea;t du chronom&#xe8;tre du temps d&#x2019;immobilisation-toketa-)" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT93" type="StructureStatement" pos="POSL1"/>
+        <element id="ELEM94" type="StatementFact" displayValue="(SHIDO -" pos="id/STRUCT93" idFact="JUDO_O1_L1_T4-QAFACT11"/>
+        <element id="ELEM95" type="ObjectDetector" pos="id/STRUCT93" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT11"/>
+        <element id="ELEM96" type="StatementFact" displayValue="-" pos="id/STRUCT93" idFact="JUDO_O1_L1_T4-QAFACT11"/>
+        <element id="ELEM97" type="ObjectDetector" pos="id/STRUCT93" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT11"/>
+        <element id="ELEM98" type="StatementFact" displayValue="-)" pos="id/STRUCT93" idFact="JUDO_O1_L1_T4-QAFACT11"/>
+        <element id="STRUCT99" type="StructureStatement" pos="POSL2"/>
+        <element id="ELEM100" type="StatementFact" displayValue="(TOKETA-" pos="id/STRUCT99" idFact="JUDO_O1_L1_T4-QAFACT6"/>
+        <element id="ELEM101" type="ObjectDetector" pos="id/STRUCT99" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT6"/>
+        <element id="ELEM102" type="StatementFact" displayValue="-" pos="id/STRUCT99" idFact="JUDO_O1_L1_T4-QAFACT6"/>
+        <element id="ELEM103" type="ObjectDetector" pos="id/STRUCT99" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT6"/>
+        <element id="ELEM104" type="StatementFact" displayValue="-)" pos="id/STRUCT99" idFact="JUDO_O1_L1_T4-QAFACT6"/>
+        <element id="ELEM105" type="Pot" displayValue="Non combativit&#xe9;" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT11"/>
+        <element id="ELEM106" type="Pot" displayValue="non_combativite" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT11" isImageDisplay="true"/>
+        <element id="ELEM107" type="Pot" displayValue="arr&#xea;t du chronom&#xe8;tre du temps d&#x2019;immobilisation" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT6"/>
+        <element id="ELEM108" type="Pot" displayValue="toketa" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT6" isImageDisplay="true"/>
+        <element id="ELEM109" type="Switch" pos="POS5" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[-3/-1]" x="-3" y="-1" roomTypeName="TwoWaysRoom3" time="20" idTask="JUDO_O1_L1_T2" prompt="Place-toi sur la bonne dalle" correctnessToReach="1">
+      <roomaccesses>
+        <roomaccess id="a41" direction="SOUTH" accessRef="a40"/>
+      </roomaccesses>
+      <facts>
+        <fact id="JUDO_O1_L1_T2-QAFACT0" complete="Ippon-Seoi-Nage correspond a projection par-dessus l'&#xe9;paule" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="ELEM110" type="Statement" displayValue="Ippon-Seoi-Nage correspond a ?" pos="POSQ1" idFact="JUDO_O1_L1_T2-QAFACT0" interactive="true" acceptedFacts="Ippon-Seoi-Nage correspond a projection par-dessus l'&#xe9;paule;"/>
+        <element id="ELEM111" type="AvatarDetector" displayValue="balayage du pied en p&#xea;chant" correctness="INCORRECT" pos="POS1" ability="DETECTOR_AVATAR" idFact="JUDO_O1_L1_T2-QAFACT0"/>
+        <element id="ELEM112" type="AvatarDetector" displayValue="projection par-dessus l'&#xe9;paule" correctness="CORRECT" pos="POS4" ability="DETECTOR_AVATAR" idFact="JUDO_O1_L1_T2-QAFACT0"/>
+      </elements>
+    </room>
+    <room id="Room[0/-2]" y="-2" roomTypeName="RegularRoom8" time="20" idTask="JUDO_O1_L1_T3" prompt="Deplace les bons elements sur les zones" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a25" direction="WEST" accessRef="a24"/>
+      </roomaccesses>
+      <facts>
+        <fact id="JUDO_O1_L1_T3-QAFACT3" complete="OSAEKOMI-WAZA (Techniques d'immobilisation) : Tate-Shiho-Gatame, Hon-Gesa-Gatame" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="ELEM113" type="Pot" pos="POS3" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT3"/>
+        <element id="ELEM114" type="Pot" pos="POS2" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT3"/>
+        <element id="ELEM115" type="ObjectDetector" displayValue="Eri-Seoi-Nage" correctness="INCORRECT" pos="POS5" ability="DETECTOR" idFact="JUDO_O1_L1_T3-QAFACT3"/>
+        <element id="ELEM116" type="ObjectDetector" displayValue="Kata-Ha-Jime" correctness="INCORRECT" pos="POS1" ability="DETECTOR" idFact="JUDO_O1_L1_T3-QAFACT3"/>
+        <element id="ELEM117" type="ObjectDetector" displayValue="Tate-Shiho-Gatame" correctness="CORRECT" pos="POS6" ability="DETECTOR" idFact="JUDO_O1_L1_T3-QAFACT3"/>
+        <element id="ELEM118" type="ObjectDetector" displayValue="Hon-Gesa-Gatame" correctness="CORRECT" pos="POS7" ability="DETECTOR" idFact="JUDO_O1_L1_T3-QAFACT3"/>
+        <element id="ELEM119" type="Statement" displayValue="OSAEKOMI-WAZA (Techniques d'immobilisation)" pos="POSQ1" idFact="JUDO_O1_L1_T3-QAFACT3" acceptedFacts="OSAEKOMI-WAZA (Techniques d'immobilisation) : Tate-Shiho-Gatame, Hon-Gesa-Gatame;"/>
+      </elements>
+    </room>
+    <room id="Room[-1/-4]" x="-1" y="-4" size="LARGE" roomTypeName="MapRoom" time="20" idTask="JUDO_O1_L1_T1" prompt="Deplace le bon elements sur la zone" correctnessToReach="1">
+      <roomaccesses>
+        <roomaccess id="a27" direction="NORTH_WEST" accessRef="a26"/>
+      </roomaccesses>
+      <facts>
+        <fact id="JUDO_O1_L1_T1-QAFACT6" complete="Kami-Shiho-Gatame correspond a kami-shiho-gatame" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="ELEM120" type="Pot" displayValue="ushiro-gesa-gatame" correctness="INCORRECT" pos="POS1" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT6" isImageDisplay="true"/>
+        <element id="ELEM121" type="Pot" displayValue="ko-soto-gake" correctness="INCORRECT" pos="POS10" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT6" isImageDisplay="true"/>
+        <element id="ELEM122" type="Pot" displayValue="kami-shiho-gatame" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT6" isImageDisplay="true"/>
+        <element id="ELEM123" type="ObjectDetector" pos="POS19" ability="DETECTOR"/>
+        <element id="ELEM124" type="Statement" displayValue="Kami-Shiho-Gatame correspond a ?" pos="POSQ1" idFact="JUDO_O1_L1_T1-QAFACT6" interactive="true" acceptedFacts="Kami-Shiho-Gatame correspond a kami-shiho-gatame;"/>
+      </elements>
+    </room>
+    <room id="Room[1/-1]" x="1" y="-1" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a37" direction="WEST" accessRef="a36"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM125" type="SpikeTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM126" type="SpikeTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM127" type="SpikeTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM128" type="SpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM129" type="SpikeTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM130" type="SpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM131" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-1/3]" x="-1" y="3" roomTypeName="RegularRoom11" time="20" idTask="JUDO_O1_L1_T2" prompt="Casse le bon element" correctnessToReach="1">
+      <roomaccesses>
+        <roomaccess id="a39" direction="SOUTH" accessRef="a38"/>
+        <roomaccess id="a42" direction="NORTH" accessRef="a43"/>
+        <roomaccess id="a44" direction="WEST" accessRef="a45"/>
+      </roomaccesses>
+      <facts>
+        <fact id="JUDO_O1_L1_T2-QAFACT8" complete="Yoko-Shiho-Gatame correspond a contr&#xf4;le lat&#xe9;ral des 4 points" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="ELEM132" type="BreakablePot" displayValue="cl&#xe9; au coude sur bras tendu" correctness="INCORRECT" pos="POS2" ability="BREAKABLE" idFact="JUDO_O1_L1_T2-QAFACT8"/>
+        <element id="ELEM133" type="BreakablePot" displayValue="contr&#xf4;le lat&#xe9;ral des 4 points" correctness="CORRECT" pos="POS3" ability="BREAKABLE" idFact="JUDO_O1_L1_T2-QAFACT8"/>
+        <element id="ELEM134" type="Statement" displayValue="Yoko-Shiho-Gatame correspond a ?" pos="POSQ2" idFact="JUDO_O1_L1_T2-QAFACT8" interactive="true" acceptedFacts="Yoko-Shiho-Gatame correspond a contr&#xf4;le lat&#xe9;ral des 4 points;"/>
+      </elements>
+    </room>
+    <room id="Room[-2/1]" x="-2" y="1" roomTypeName="RegularRoom8" time="20" idTask="JUDO_O1_L1_T1" prompt="Touche le bon element" correctnessToReach="1">
+      <roomaccesses>
+        <roomaccess id="a31" direction="EAST" accessRef="a30"/>
+        <roomaccess id="a46" direction="NORTH" accessRef="a47"/>
+      </roomaccesses>
+      <facts>
+        <fact id="JUDO_O1_L1_T1-QAFACT6" complete="Kami-Shiho-Gatame correspond a kami-shiho-gatame" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="ELEM135" type="FloorInterrupt" displayValue="te-guruma" correctness="INCORRECT" pos="POS2" ability="TOUCHABLE" idFact="JUDO_O1_L1_T1-QAFACT6" isImageDisplay="true"/>
+        <element id="ELEM136" type="FloorInterrupt" displayValue="tsubame-gaeshi" correctness="INCORRECT" pos="POS3" ability="TOUCHABLE" idFact="JUDO_O1_L1_T1-QAFACT6" isImageDisplay="true"/>
+        <element id="ELEM137" type="FloorInterrupt" displayValue="kami-shiho-gatame" correctness="CORRECT" pos="POS1" ability="TOUCHABLE" idFact="JUDO_O1_L1_T1-QAFACT6" isImageDisplay="true"/>
+        <element id="ELEM138" type="Statement" displayValue="Kami-Shiho-Gatame correspond a ?" pos="POSQ1" idFact="JUDO_O1_L1_T1-QAFACT6" interactive="true" acceptedFacts="Kami-Shiho-Gatame correspond a kami-shiho-gatame;"/>
+      </elements>
+    </room>
+    <room id="Room[-2/2]" x="-2" y="2" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a47" direction="SOUTH" accessRef="a46"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM139" type="SpikeTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM140" type="SpikeTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM141" type="SpikeTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM142" type="SpikeTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM143" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM144" type="SpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM145" type="SpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-1/4]" x="-1" y="4" roomTypeName="TrapRoom2" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a43" direction="SOUTH" accessRef="a42"/>
+        <roomaccess id="a48" direction="EAST" accessRef="a49"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM146" type="RegularSlime" pos="POS3" ability="NONAVOIDABLE"/>
+        <element id="ELEM147" type="RegularSlime" pos="POS6" ability="NONAVOIDABLE"/>
+        <element id="ELEM148" type="RegularSlime" pos="POS2" ability="NONAVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-2/3]" x="-2" y="3" roomTypeName="RoomTrap" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a45" direction="EAST" accessRef="a44"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM149" type="BearTrap" pos="POS5" ability="NONAVOIDABLE"/>
+        <element id="ELEM150" type="BearTrap" pos="POS3" ability="NONAVOIDABLE"/>
+        <element id="ELEM151" type="BearTrap" pos="POS2" ability="NONAVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[0/4]" y="4" roomTypeName="ExitRoom1" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a49" direction="WEST" accessRef="a48"/>
       </roomaccesses>
     </room>
   </rooms>
