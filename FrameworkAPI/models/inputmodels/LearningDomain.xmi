@@ -11,13 +11,13 @@
       </levels>
       <levels xsi:type="generator:MTLevel" ID="ICM-O1-N2" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK2">
-         <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
       <levels xsi:type="generator:MTLevel" ID="ICM-O1-N3" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK3">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="1" nbChoices="2"/>
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
@@ -34,13 +34,13 @@
       </levels>
       <levels xsi:type="generator:MTLevel" ID="ICM-O2-N2" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK5">
-         <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
       <levels xsi:type="generator:MTLevel" ID="ICM-O2-N3" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK6">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="1" nbChoices="2"/>
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
@@ -121,13 +121,13 @@
       </levels>
       <levels xsi:type="generator:MTLevel" ID="ICM-O4-N2" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK16">
-         <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
       <levels xsi:type="generator:MTLevel" ID="ICM-O4-N3" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK17">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="1" nbChoices="2"/>
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
@@ -144,13 +144,13 @@
       </levels>
       <levels xsi:type="generator:MTLevel" ID="ICM-O5-N2" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK19">
-         <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
       <levels xsi:type="generator:MTLevel" ID="ICM-O5-N3" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK20">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="1" nbChoices="2"/>
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
@@ -167,13 +167,13 @@
       </levels>
       <levels xsi:type="generator:MTLevel" ID="ICM-O6-N2" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="TASK22">
-         <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
       <levels xsi:type="generator:MTLevel" ID="ICM-O6-N3" buildSetup="OPERAND_TABLE">
         <tasks xsi:type="generator:MTMembership" percentOfApparition="100" ID="TASK23">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="2" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="1" nbChoices="2"/>
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
       </levels>
@@ -319,13 +319,13 @@
           <targets>RESULT</targets>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="10" ID="TASK41">
-        	<responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <tasks xsi:type="generator:MTRecontruction" percentOfApparition="10" ID="TASK42">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK43">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="2" nbChoices="5"/>
         </tasks>
         <completionCriteria/>
       </levels>
@@ -341,13 +341,13 @@
           <targets>OPERAND_TABLE</targets>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="15" ID="TASK46">
-        	<responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <tasks xsi:type="generator:MTRecontruction" percentOfApparition="10" ID="TASK47">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK48">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="2" nbChoices="5"/>
         </tasks>
         <completionCriteria/>
       </levels>
@@ -377,10 +377,10 @@
           <targets>OPERAND</targets>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK52">
-         <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK53">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="2" nbChoices="5"/>
         </tasks>
         <completionCriteria/>
       </levels>
@@ -440,10 +440,10 @@
           <targets>OPERAND</targets>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK63">
-         <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK64">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="2" nbChoices="5"/>
         </tasks>
         <completionCriteria/>
       </levels>
@@ -503,10 +503,10 @@
           <targets>OPERAND</targets>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK71">
-         <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK72">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="2" nbChoices="5"/>
         </tasks>
         <completionCriteria/>
       </levels>
@@ -566,10 +566,10 @@
           <targets>OPERAND</targets>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK82">
-         <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK83">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="2" nbChoices="5"/>
         </tasks>
         <completionCriteria/>
       </levels>
@@ -623,10 +623,10 @@
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK92">
-         <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="20" ID="TASK93">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="2" nbChoices="5"/>
         </tasks>
         <completionCriteria/>
       </levels>
@@ -647,10 +647,10 @@
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK97">
-         <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="20" ID="TASK98" identifySharedProperty="false">
-          <responseModality xsi:type="generator:MultipleChoice" nbChoices="5" nbBadChoices="2"/>
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="2" nbChoices="5"/>
         </tasks>
         <completionCriteria successPercent="100.0"/>
       </levels>
@@ -670,7 +670,7 @@
   <learningpaths name="PATH404" ID="PATH404">
     <objectives ID="PATH404-O1" name="PATH404-O1">
       <levels xsi:type="generator:MTLevel" ID="PATH404-O1-L1">
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" nbConsecutiveSuccess="1" ID="PATH404-O1-L1-T4" maxTime="30" nbFacts="2" target="OPERAND">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" ID="PATH404-O1-L1-T4" maxTime="30" nbFacts="2" target="OPERAND">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
         <completionCriteria successPercent="100.0"/>
@@ -707,7 +707,7 @@
   <learningpaths name="DEFAULT_PATH_ROZENN" ID="DEFAULT_PATH_ROZENN">
     <objectives ID="DEFAULT_PATH_ROZENN_O1" name="S'entrainer sur la table de 2 ">
       <levels xsi:type="generator:MTLevel" ID="DEFAULT_PATH_ROZENN_01_L1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" nbConsecutiveSuccess="1" ID="DEFAULT_PATH_ROZENN_01_L1_T1">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="DEFAULT_PATH_ROZENN_01_L1_T1">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
@@ -720,7 +720,7 @@
   <learningpaths name="DEFAULT_PATH_INGRID" ID="DEFAULT_PATH_INGRID">
     <objectives ID="DEFAULT_PATH_INGRID_O1" name="S'entrainer sur la table de 2 ">
       <levels xsi:type="generator:MTLevel" ID="DEFAULT_PATH_INGRID_01_L1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" nbConsecutiveSuccess="1" ID="DEFAULT_PATH_INGRID_01_L1_T1">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="DEFAULT_PATH_INGRID_01_L1_T1">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
@@ -733,7 +733,7 @@
   <learningpaths name="DEFAULT_PATH_DENIS" ID="DEFAULT_PATH_DENIS">
     <objectives ID="DEFAULT_PATH_DENIS_O1" name="S'entrainer sur la table de 2 ">
       <levels xsi:type="generator:MTLevel" ID="DEFAULT_PATH_DENIS_01_L1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" nbConsecutiveSuccess="1" ID="DEFAULT_PATH_DENIS_01_L1_T1">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="DEFAULT_PATH_DENIS_01_L1_T1">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
@@ -746,8 +746,23 @@
   <learningpaths name="DEFAULT_PATH_DEMO2" ID="DEFAULT_PATH_DEMO2">
     <objectives ID="DEFAULT_PATH_DEMO2_O1" name="S'entrainer sur la table de 2 ">
       <levels xsi:type="generator:MTLevel" ID="DEFAULT_PATH_DEMO2_01_L1">
-        <tasks xsi:type="generator:MTIdentification" percentOfApparition="100" nbConsecutiveSuccess="1" ID="DEFAULT_PATH_DEMO2_01_L1_T1" maxTime="30" nbFacts="2">
+        <tasks xsi:type="generator:MTIdentification" percentOfApparition="25" ID="DEFAULT_PATH_DEMO2_01_L1_T3" maxTime="30" nbFacts="2">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+        </tasks>
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="25" ID="DEFAULT_PATH_DEMO2_01_L1_T1">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
+          <targets>RESULT</targets>
+          <targets>TABLE</targets>
+          <targets>OPERAND</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTCompletion2" percentOfApparition="25" ID="DEFAULT_PATH_DEMO2_01_L1_T2">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
+          <targets>OPERAND_TABLE</targets>
+          <targets>OPERAND_RESULT</targets>
+          <targets>TABLE_RESULT</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTMembership" percentOfApparition="25" ID="DEFAULT_PATH_DEMO2_01_L1_T4">
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="3" nbChoices="5"/>
         </tasks>
         <completionCriteria successPercent="100.0"/>
       </levels>
@@ -758,7 +773,7 @@
   <learningpaths name="DEFAULT_PATH_DEMO1" ID="DEFAULT_PATH_DEMO1">
     <objectives ID="DEFAULT_PATH_DEMO1_O1" name="S'entrainer sur la table de 2 ">
       <levels xsi:type="generator:MTLevel" ID="DEFAULT_PATH_DEMO1_01_L1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" nbConsecutiveSuccess="1" ID="DEFAULT_PATH_DEMO1_01_L1_T1">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="DEFAULT_PATH_DEMO1_01_L1_T1">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
@@ -771,7 +786,7 @@
   <learningpaths name="DEFAULT_PATH_BERENICE" ID="DEFAULT_PATH_BERENICE">
     <objectives ID="DEFAULT_PATH_BERENICE_O1" name="S'entrainer sur la table de 2 ">
       <levels xsi:type="generator:MTLevel" ID="DEFAULT_PATH_BERENICE_01_L1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" nbConsecutiveSuccess="1" ID="DEFAULT_PATH_BERENICE_01_L1_T1">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="DEFAULT_PATH_BERENICE_01_L1_T1">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>

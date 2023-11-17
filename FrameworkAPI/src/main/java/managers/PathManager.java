@@ -22,6 +22,7 @@ import generator.ATask;
 import generator.Classroom;
 import generator.Classrooms;
 import generator.CompletionCriteria;
+import generator.DynamicMultipleChoice;
 import generator.ESeveralTarget;
 import generator.ESingleTarget;
 import generator.GeneratorPackage;
@@ -42,6 +43,7 @@ import generator.ResultPosition;
 import generator.SetOfFacts;
 import generator.TableBuild;
 import generator.impl.CompletionCriteriaImpl;
+import generator.impl.DynamicMultipleChoiceImpl;
 import generator.impl.EnterResponseImpl;
 import generator.impl.LearningPathImpl;
 import generator.impl.MTCompletion1Impl;
@@ -110,15 +112,13 @@ public class PathManager {
 				targets.add(target.getName());
 			}
 			obj.put("targets", targets);
-			if(((MTCompletion1Impl) task).getResponseModality() instanceof MultipleChoice) {
+			if(((MTCompletion1Impl) task).getResponseModality() instanceof DynamicMultipleChoice) {
 				obj.put("answerModality", "CHOICE");
-				obj.put("nbCorrectChoices", ((MultipleChoice) ((MTCompletion1Impl) task).getResponseModality()).getNbChoices() -
-						 ((MultipleChoice) ((MTCompletion1Impl) task).getResponseModality()).getNbBadChoices());
-				obj.put("nbIncorrectChoices",  ((MultipleChoice) ((MTCompletion1Impl) task).getResponseModality()).getNbBadChoices());
+				obj.put("nbCorrectChoices", 1);
+				obj.put("nbIncorrectChoices",  ((DynamicMultipleChoice) ((MTCompletion1Impl) task).getResponseModality()).getNbBadChoices());
 				obj.put("taskType", "C1"); 
 			} else {
 				obj.put("answerModality", "INPUT");
-
 			}
 		}
 		if(task instanceof MTCompletion2Impl) {
@@ -128,15 +128,13 @@ public class PathManager {
 			}
 			obj.put("targets", targets);
 			obj.put("answerModality", "CHOICE");
-			obj.put("nbCorrectChoices", ((MultipleChoice) ((MTCompletion2Impl) task).getResponseModality()).getNbChoices() -
-					 ((MultipleChoice) ((MTCompletion2Impl) task).getResponseModality()).getNbBadChoices());
-			obj.put("nbIncorrectChoices",  ((MultipleChoice) ((MTCompletion2Impl) task).getResponseModality()).getNbBadChoices());
+			obj.put("nbCorrectChoices", 2);
+			obj.put("nbIncorrectChoices",  ((DynamicMultipleChoice) ((MTCompletion2Impl) task).getResponseModality()).getNbBadChoices());
 			obj.put("taskType", "C2"); 
 		}
 		if(task instanceof MTRecontructionImpl) {
-			obj.put("nbCorrectChoices", ((MultipleChoice) ((MTRecontructionImpl) task).getResponseModality()).getNbChoices() -
-					 ((MultipleChoice) ((MTRecontructionImpl) task).getResponseModality()).getNbBadChoices());
-			obj.put("nbIncorrectChoices",  ((MultipleChoice) ((MTRecontructionImpl) task).getResponseModality()).getNbBadChoices());
+			obj.put("nbCorrectChoices", 3);
+			obj.put("nbIncorrectChoices",  ((DynamicMultipleChoice) ((MTRecontructionImpl) task).getResponseModality()).getNbBadChoices());
 			obj.put("taskType", "REC"); 
 		}
 		if(task instanceof MTIdentificationImpl) {
@@ -309,8 +307,8 @@ public class PathManager {
 		task.getTargets().addAll(targets);
 		
 		if(((String) jtask.get("answerModality")).equals("CHOICE")) {
-			MultipleChoice modality = new MultipleChoiceImpl();
-			modality.setNbChoices((int)(long) jtask.get("nbCorrectChoices") + (int)(long) jtask.get("nbIncorrectChoices"));
+			DynamicMultipleChoice modality = new DynamicMultipleChoiceImpl();
+			//modality.setNbChoices((int)(long) jtask.get("nbCorrectChoices") + (int)(long) jtask.get("nbIncorrectChoices"));
 			modality.setNbBadChoices((int)(long) jtask.get("nbIncorrectChoices"));	
 			task.setResponseModality(modality);
 		} else {
@@ -335,8 +333,8 @@ public class PathManager {
 		}
 		task.getTargets().addAll(targets);
 		
-		MultipleChoice modality = new MultipleChoiceImpl();
-		modality.setNbChoices((int)(long) jtask.get("nbCorrectChoices") + (int)(long) jtask.get("nbIncorrectChoices"));
+		DynamicMultipleChoice modality = new DynamicMultipleChoiceImpl();
+		//modality.setNbChoices((int)(long) jtask.get("nbCorrectChoices") + (int)(long) jtask.get("nbIncorrectChoices"));
 		modality.setNbBadChoices((int)(long) jtask.get("nbIncorrectChoices"));	
 		task.setResponseModality(modality);
 		
@@ -351,8 +349,8 @@ public class PathManager {
 		task.setPercentOfApparition((int)(long)jtask.get("repartitionPercent"));
 		task.setNbConsecutiveSuccess((int)(long)jtask.get("successiveSuccessesToReach"));
 		
-		MultipleChoice modality = new MultipleChoiceImpl();
-		modality.setNbChoices((int)(long) jtask.get("nbCorrectChoices") + (int)(long) jtask.get("nbIncorrectChoices"));
+		DynamicMultipleChoice modality = new DynamicMultipleChoiceImpl();
+		//modality.setNbChoices((int)(long) jtask.get("nbCorrectChoices") + (int)(long) jtask.get("nbIncorrectChoices"));
 		modality.setNbBadChoices((int)(long) jtask.get("nbIncorrectChoices"));	
 		task.setResponseModality(modality);
 		
@@ -370,8 +368,8 @@ public class PathManager {
 		task.setNbFacts((int)(long) jtask.get("nbFacts"));
 		task.setTarget(ESingleTarget.valueOf((String) jtask.get("sourceVariation")));
 		
-		MultipleChoice modality = new MultipleChoiceImpl();
-		modality.setNbChoices(2);
+		DynamicMultipleChoice modality = new DynamicMultipleChoiceImpl();
+		//modality.setNbChoices(2);
 		modality.setNbBadChoices(1);	
 		task.setResponseModality(modality);
 		

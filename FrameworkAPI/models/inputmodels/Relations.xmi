@@ -70,6 +70,7 @@
         nbFacts="SUP_EQ_ONE"
         nbExpectedAnswers="EQ_NB_FACTS">
       <statementTypes>CLASSIC</statementTypes>
+      <statementTypes>FILL_IN</statementTypes>
     </condition>
   </relations>
   <relations
