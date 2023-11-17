@@ -501,7 +501,6 @@
     <genClasses ecoreClass="generator.ecore#//OrderingTask">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/checkOnLearnerAction"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/nbMissingElements"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderingTask/maxQuestionableFacts"/>
       <genOperations ecoreOperation="generator.ecore#//OrderingTask/getNbExpectedAnswers"
           body="return this.getNbFacts();"/>

@@ -152,12 +152,14 @@ public class OrderQuestionableFactImpl extends QuestionableFactImpl implements O
 
 	@Override
 	public String getCompleteFact() {
-		String fact = getQuestionableFact() + " : "; 
-		for(int i = 0; i < getSolutions().size(); i++) {
+		String fact = getQuestionableFact() + " : ";
+		for (int i = 0; i < getSolutions().size(); i++) {
 			fact += getSolutions().get(i).getEvent();
-			if(i < getSolutions().size() - 1) { fact += " - " ; } 
+			if (i < getSolutions().size() - 1) {
+				fact += " - ";
+			}
 		}
-		return fact; 
+		return fact;
 	}
 
 } //OrderQuestionableFactImpl

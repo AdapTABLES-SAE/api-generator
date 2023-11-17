@@ -213,9 +213,11 @@ public class JudoQuestionableClassifyFactImpl extends QuestionableFactImpl imple
 	@Override
 	public String getCompleteFact() {
 		String completeFact = getQuestionableFact() + " : ";
-		for(int i = 0; i < getTechniques().size(); i++) {
+		for (int i = 0; i < getTechniques().size(); i++) {
 			completeFact += getTechniques().get(i);
-			if(i < getTechniques().size() - 1) { completeFact += ", "; }
+			if (i < getTechniques().size() - 1) {
+				completeFact += ", ";
+			}
 		}
 		return completeFact;
 	}

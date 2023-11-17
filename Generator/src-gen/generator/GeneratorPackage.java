@@ -5788,22 +5788,13 @@ public interface GeneratorPackage extends EPackage {
 	int ORDERING_TASK__CHECK_ON_LEARNER_ACTION = ATASK_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORDERING_TASK__NB_MISSING_ELEMENTS = ATASK_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Max Questionable Facts</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORDERING_TASK__MAX_QUESTIONABLE_FACTS = ATASK_FEATURE_COUNT + 3;
+	int ORDERING_TASK__MAX_QUESTIONABLE_FACTS = ATASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Ordering Task</em>' class.
@@ -5812,7 +5803,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDERING_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 4;
+	int ORDERING_TASK_FEATURE_COUNT = ATASK_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -10361,15 +10352,6 @@ public interface GeneratorPackage extends EPackage {
 	int ORDER_EVENT__CHECK_ON_LEARNER_ACTION = ORDERING_TASK__CHECK_ON_LEARNER_ACTION;
 
 	/**
-	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORDER_EVENT__NB_MISSING_ELEMENTS = ORDERING_TASK__NB_MISSING_ELEMENTS;
-
-	/**
 	 * The feature id for the '<em><b>Max Questionable Facts</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14050,17 +14032,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getOrderingTask_CheckOnLearnerAction();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.OrderingTask#getNbMissingElements <em>Nb Missing Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
-	 * @see generator.OrderingTask#getNbMissingElements()
-	 * @see #getOrderingTask()
-	 * @generated
-	 */
-	EAttribute getOrderingTask_NbMissingElements();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.OrderingTask#getMaxQuestionableFacts <em>Max Questionable Facts</em>}'.
@@ -18924,14 +18895,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ORDERING_TASK__CHECK_ON_LEARNER_ACTION = eINSTANCE.getOrderingTask_CheckOnLearnerAction();
-
-		/**
-		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ORDERING_TASK__NB_MISSING_ELEMENTS = eINSTANCE.getOrderingTask_NbMissingElements();
 
 		/**
 		 * The meta object literal for the '<em><b>Max Questionable Facts</b></em>' attribute feature.
