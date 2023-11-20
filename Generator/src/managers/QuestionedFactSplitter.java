@@ -60,12 +60,16 @@ public class QuestionedFactSplitter {
 	}
 	
 	private void fillInStatementType() {
-		String completeFact = ((QuestionableFact) fact.getQuestionablefact()).getCompleteFact();
-		for(PropositionParam proposition: fact.getPropositions()) {
-			String value = ((Value) proposition.getValue()).getValue();
-			completeFact = completeFact.replace(value, "?");
+		String question = ((Value) fact.getQuestion().getValue()).getValue();
+		if(!question.contains("?")) {
+			String completeFact = ((QuestionableFact) fact.getQuestionablefact()).getCompleteFact();
+			for(PropositionParam proposition: fact.getPropositions()) {
+				String value = ((Value) proposition.getValue()).getValue();
+				completeFact = completeFact.replace(value, "?");
+			}
+			question = completeFact;
 		}
-		
+
 		/*String question = ((Value) fact.getQuestion().getValue()).getValue();
 		if(!question.contains("?")) {
 			question += " : ";
@@ -75,7 +79,7 @@ public class QuestionedFactSplitter {
 			}
 		} */
 		
-		splitter(completeFact);
+		splitter(question);
 	}
 
 	

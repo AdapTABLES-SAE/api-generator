@@ -42,10 +42,39 @@ public class LearningPathResource {
 		manager.updateOrCreateTrainingPath(obj);
 	}
 	
+	@POST
+	@Path("/training")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.TEXT_PLAIN)
+	public void addTrainingPath(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException { 
+		Constant.PROJECT_PATH = app.getRealPath("");		
+		JSONObject obj = new JSONObject();
+
+		try {
+			obj = (JSONObject) new JSONParser().parse(jsonContent);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		//String classID = obj.containsKey("classroomID")? (String) obj.get("classroomID") : Constant.DEFAULT_CLASSROOM_NAME;
+		manager = new PathManager((String) obj.get("learningPathID"));
+		manager.createTrainingPath(obj);
+	}
+	
 	@GET
 	@Path("/learner/{learnerID}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String buildObjectiveLevelParams2JSON(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
+		Constant.PROJECT_PATH = app.getRealPath("");
+		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME,  true));
+		return manager.buildJSONObjectiveLevel(manager.getLearningPath()).toJSONString();
+	}
+	
+	@GET
+	@Path("/training/learner/{learnerID}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String buildOTrainingPathJSON(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME,  true));
@@ -59,7 +88,7 @@ public class LearningPathResource {
 		Constant.PROJECT_PATH = app.getRealPath("");
 		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, Constant.CLASSROOMS_FILE, classID,  true));
-		return manager.buildJSONTrainingPath(manager.getLearningPath()).toJSONString();
+		return manager.buildJSONObjectiveLevel(manager.getLearningPath()).toJSONString();
 	}
 	
 }

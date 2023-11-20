@@ -3,6 +3,7 @@ package managers;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -39,6 +40,7 @@ import generator.MTMembership;
 import generator.MTRecontruction;
 import generator.MultipleChoice;
 import generator.Objective;
+import generator.Prerequisite;
 import generator.ResultPosition;
 import generator.SetOfFacts;
 import generator.TableBuild;
@@ -54,6 +56,7 @@ import generator.impl.MTMembershipImpl;
 import generator.impl.MTRecontructionImpl;
 import generator.impl.MultipleChoiceImpl;
 import generator.impl.ObjectiveImpl;
+import generator.impl.PrerequisiteImpl;
 import generators.ALGAGenerator;
 
 public class PathManager {
@@ -80,7 +83,7 @@ public class PathManager {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public JSONObject buildJSONTrainingPath(LearningPath path) {
+	public JSONObject buildJSONObjectiveLevel(LearningPath path) {
 		JSONObject json = new JSONObject();
 		json.put("learningPathID", path.getID()); // TODO: define a default paths for this version 
 		json.put("objective", path.getObjectives().get(0).getID()); // TODO: define default objective 
@@ -92,6 +95,35 @@ public class PathManager {
 		
 		json.put("setupParameters", setupParameters);
 		return json;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public JSONObject buildJSONTrainingPath(LearningPath path) {
+		JSONObject json = new JSONObject();
+		json.put("learningPathID", path.getID());
+		JSONArray objectives = new JSONArray();
+		for(Objective objective: path.getObjectives()) {
+			JSONObject jobjective = new JSONObject();
+			jobjective.put("objective", objective.getID()); // TODO : pre-requisite
+			jobjective.put("prerequisites", initialiseJSONPrerequisites(path, objective));
+			JSONArray levels = new JSONArray();
+			for(Level level: objective.getLevels()) {
+				JSONObject jlevel = new JSONObject();
+				jlevel.put("level", level.getID());
+				JSONObject setupParameters = new JSONObject();  
+				setupParameters.put("buildingParameters", initialiseJSONBuildParameters(objective, (MTLevel) level));
+				setupParameters.put("tasksParameters", initialiseJSONTaskParameters((MTLevel) level));
+				setupParameters.put("achievementParameters", initialiseJSONCompletionCriteria(level.getCompletionCriteria()));
+				jlevel.put("setupParameters", setupParameters);
+				levels.add(jlevel);
+			}
+			jobjective.put("levels", levels);
+			objectives.add(jobjective);
+		}
+		json.put("objectives", objectives);
+		
+		return json;
+		
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -119,6 +151,7 @@ public class PathManager {
 				obj.put("taskType", "C1"); 
 			} else {
 				obj.put("answerModality", "INPUT");
+				obj.put("taskType", "C1"); 
 			}
 		}
 		if(task instanceof MTCompletion2Impl) {
@@ -173,6 +206,45 @@ public class PathManager {
 		return buildingParameters;
 	}
 	
+	@SuppressWarnings("unchecked")
+	private JSONArray initialiseJSONPrerequisites(LearningPath path, Objective objective) {
+		JSONArray prerequisites = new JSONArray();
+		
+		for(Prerequisite prerequisite: objective.getPrerequisites()) {
+			JSONObject jprerequisite = new JSONObject();
+			Objective requiredObjective = getObjectiveOf(path, prerequisite.getRequiredLevel());
+			if(requiredObjective == null) {
+				ALGAGenerator.LOGGER.severe("requiredObjective should not be null");
+			} else {
+				jprerequisite.put("requiredObjective", requiredObjective.getID());
+				jprerequisite.put("requiredLevel", prerequisite.getRequiredLevel().getID());
+				jprerequisite.put("successPercent", prerequisite.getSuccessPercent());
+				jprerequisite.put("encountersPercent", prerequisite.getEncountersPercent());
+				prerequisites.add(jprerequisite);
+			}
+		}
+		return prerequisites;
+	}
+	
+	private Objective getObjectiveOf(LearningPath path, Level level) {
+		for(Objective objective: path.getObjectives()) {
+			for(Level olevel: objective.getLevels()) {
+				if(olevel.getID().equals(level.getID())) {
+					return objective;
+				}
+			}
+		}
+		return null;
+	}
+	
+	@SuppressWarnings("unchecked")
+	private JSONObject initialiseJSONCompletionCriteria(CompletionCriteria criteria) {
+		JSONObject completionCriteria = new JSONObject(); 
+		completionCriteria.put("successCompletionCriteria", criteria.getSuccessPercent());
+		completionCriteria.put("encounterCompletionCriteria", criteria.getEncountersPercent());
+		return completionCriteria; 
+	}
+	
 	public void updateOrCreateTrainingPath(JSONObject json) throws NonExistantLearnerPlayerException, ContextNotFoundException { // TODO : works for this version might not work for future version 
 		if(path == null) { path = new LearningPathImpl(); } 
 		Knowledge knowledge = loadKnowledge();
@@ -196,7 +268,73 @@ public class PathManager {
 		resetEveryLearnerProgress();
 	}
 	
-
+	
+	public void createTrainingPath(JSONObject json) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		path = new LearningPathImpl();
+		Knowledge knowledge = loadKnowledge();
+		path.setID((String) json.get("learningPathID"));
+		path.setName((String) json.get("learningPathID")); // TODO: improve ?
+		path.setKnowledge(knowledge);
+		
+		HashMap<Objective, JSONArray> obj_prerequisite = new HashMap<>();
+		
+		JSONArray objectives = (JSONArray) json.get("objectives");
+		for(Object oobjective: objectives) {
+			JSONObject jobjective = (JSONObject) oobjective;
+			Objective objective = new ObjectiveImpl();
+			objective.setID((String) jobjective.get("objective"));
+			JSONArray levels = (JSONArray) jobjective.get("levels");
+			for(Object olevel: levels) {
+				JSONObject jlevel = (JSONObject) olevel;
+				Level level = new MTLevelImpl();
+				level.setID((String) jlevel.get("level"));
+				buildLevelTasks(objective, level, jlevel);
+				objective.getLevels().add(level);
+			}
+			obj_prerequisite.put(objective, (JSONArray) jobjective.get("prerequisites"));
+			//path.getObjectives().add(objective);
+		}
+		
+		for(Objective objective: obj_prerequisite.keySet()) {
+			for(Object prerequis: obj_prerequisite.get(objective)) {
+				JSONObject jprerequis = (JSONObject) prerequis;
+				Prerequisite requisite = new PrerequisiteImpl();
+				Level requiredLevel = getLevelOfPath(new ArrayList<>(obj_prerequisite.keySet()), (String) jprerequis.get("requiredObjective"), (String) jprerequis.get("requiredLevel"));
+				if(requiredLevel == null) {
+					ALGAGenerator.LOGGER.severe("RequiredLevel should not be null!!!!!!!!");
+				} else {
+					requisite.setRequiredLevel(requiredLevel);
+					requisite.setSuccessPercent((double) jprerequis.get("successPercent")); // successPercent
+					requisite.setEncountersPercent((double) jprerequis.get("encountersPercent"));
+					objective.getPrerequisites().add(requisite);
+				}
+			}
+			
+			path.getObjectives().add(objective);
+		}
+		
+		if(!domain.getLearningpaths().contains(path)) {
+			domain.getLearningpaths().add(path);
+		}
+		
+		saveDomainModel();
+		// update progress for learner having this path 
+		resetEveryLearnerProgress();
+	}
+	
+	private Level getLevelOfPath(List<Objective> objectives, String objectiveID, String levelID) {
+		System.out.println("Pre-requisite to add : "+objectiveID+" "+levelID);
+		for(Objective objective: objectives) {
+			if(objective.getID().equals(objectiveID)) {
+				for(Level level: objective.getLevels()) {
+					if(level.getID().equals(levelID)) {
+						return level;
+					}
+				}
+			}
+		}
+		return null;
+	}
 	
 	private void resetEveryLearnerProgress() throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		Classrooms classrooms = Constant.loadClassrooms(); 
