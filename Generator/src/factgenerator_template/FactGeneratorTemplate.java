@@ -387,7 +387,9 @@ public abstract class FactGeneratorTemplate {
 
 		List<AQuestionableFact> eligibleFacts = getEligibleQuestionableFacts(resByTask);
 		eligibleFacts.removeAll(alreadySelectedFacts(roomElements));
-		eligibleFacts = removeUnEligibleFactsBasedOnPreviouslySelectedFact(roomElements.getFacts(), eligibleFacts);
+		if(resByTask.getTask().getNbFacts() > 1) {
+			eligibleFacts = removeUnEligibleFactsBasedOnPreviouslySelectedFact(roomElements.getFacts(), eligibleFacts);
+		}
 		if(eligibleFacts.isEmpty()) {
 			throw new Exception("Pool of facts should not be empty for task "+resByTask.getTask().getType());
 		} else {

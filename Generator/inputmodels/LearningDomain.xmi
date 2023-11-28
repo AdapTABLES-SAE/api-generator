@@ -1517,7 +1517,7 @@
           buildSetup="MIX">
         <tasks
             xsi:type="generator:MTCompletion1"
-            percentOfApparition="100"
+            percentOfApparition="20"
             ID="PATH404-O1-L1-T1"
             maxTime="30">
           <responseModality
@@ -1527,6 +1527,7 @@
         </tasks>
         <tasks
             xsi:type="generator:MTCompletion2"
+            percentOfApparition="20"
             ID="PATH404-O1-L1-T2"
             maxTime="30">
           <responseModality
@@ -1537,6 +1538,7 @@
         </tasks>
         <tasks
             xsi:type="generator:MTRecontruction"
+            percentOfApparition="20"
             ID="PATH404-O1-L1-T3"
             maxTime="30">
           <responseModality
@@ -1545,15 +1547,16 @@
         </tasks>
         <tasks
             xsi:type="generator:MTIdentification"
+            percentOfApparition="20"
             ID="PATH404-O1-L1-T4"
-            maxTime="30"
-            nbFacts="2">
+            maxTime="30">
           <responseModality
               xsi:type="generator:DynamicMultipleChoice"
               nbBadChoices="1"/>
         </tasks>
         <tasks
             xsi:type="generator:MTMembership"
+            percentOfApparition="20"
             ID="PATH404-O1-L1-T5"
             maxTime="30">
           <responseModality
