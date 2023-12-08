@@ -104,7 +104,8 @@ public class PathManager {
 		JSONArray objectives = new JSONArray();
 		for(Objective objective: path.getObjectives()) {
 			JSONObject jobjective = new JSONObject();
-			jobjective.put("objective", objective.getID()); // TODO : pre-requisite
+			jobjective.put("objective", objective.getID()); 
+			jobjective.put("name", objective.getName()); 
 			jobjective.put("prerequisites", initialiseJSONPrerequisites(path, objective));
 			JSONArray levels = new JSONArray();
 			for(Level level: objective.getLevels()) {
@@ -283,6 +284,7 @@ public class PathManager {
 			JSONObject jobjective = (JSONObject) oobjective;
 			Objective objective = new ObjectiveImpl();
 			objective.setID((String) jobjective.get("objective"));
+			objective.setName((String) jobjective.get("name"));
 			JSONArray levels = (JSONArray) jobjective.get("levels");
 			for(Object olevel: levels) {
 				JSONObject jlevel = (JSONObject) olevel;
@@ -317,9 +319,25 @@ public class PathManager {
 			domain.getLearningpaths().add(path);
 		}
 		
+		 
+		LearnerPlayer learner = getLearnerPlayer((String) json.get("learnerID"));
+		learner.setLearningpath(path);
+		Constant.saveLearnerModel(learner);
+		
 		saveDomainModel();
 		// update progress for learner having this path 
-		resetEveryLearnerProgress();
+		//resetEveryLearnerProgress();
+	}
+	
+	private LearnerPlayer getLearnerPlayer(String learnerID) {
+		Classrooms classrooms = Constant.loadClassrooms();
+		for(Classroom classroom : classrooms.getClassrooms())
+		for(LearnerPlayer learner : classroom.getLearnerPlayers()) {
+			if(learner.getID().equals(learnerID)) {
+				return learner;
+			} 
+		}
+		return null;
 	}
 	
 	private Level getLevelOfPath(List<Objective> objectives, String objectiveID, String levelID) {
@@ -632,6 +650,7 @@ public class PathManager {
 		EcoreUtil.resolveAll(resourceSet); 
 		this.domain = (LearningDomain) resource.getContents().get(0);
 	}
+
 	
 	private Knowledge loadKnowledge() {
 		GeneratorPackage.eINSTANCE.eClass();

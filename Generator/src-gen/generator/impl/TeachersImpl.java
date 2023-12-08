@@ -3,6 +3,7 @@
 package generator.impl;
 
 import java.util.Collection;
+import java.util.Objects;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -144,5 +145,24 @@ public class TeachersImpl extends MinimalEObjectImpl.Container implements Teache
 		}
 		return super.eIsSet(featureID);
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(teachers);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TeachersImpl other = (TeachersImpl) obj;
+		return Objects.equals(teachers, other.teachers);
+	}
+	
+	
 
 } //TeachersImpl

@@ -16,6 +16,7 @@ import generator.Classroom;
 import generator.Classrooms;
 import generator.GeneratorPackage;
 import generator.LearnerPlayer;
+import generator.LearningDomain;
 import generator.Teacher;
 import generator.Teachers;
 import generators.ALGAGenerator;
@@ -159,10 +160,56 @@ public class Constant {
 		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CLASSROOMS_FILE + "' file : OK");
 	}
 	
-	public static void saveTeachersModel(Teacher teacher) {
-		Teachers teachers = removeTeacherByID(loadTeachers(), teacher.getID());
-		teachers.getTeachers().add(teacher);
+	public static void saveTeachersModel(Teachers teachers) {
+
+		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+		ResourceSet resourceSet = new ResourceSetImpl();
+		Map<String, Object> map = registry.getExtensionToFactoryMap();
+		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
+		map.put("xmi", toSave);
+		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
 		
+		Resource resource = resourceSet.createResource(URI.createURI("file:///"+Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE));
+		resource.getContents().add(teachers);
+		try {
+			resource.save(map);
+		}catch (IOException e) {
+			ALGAGenerator.LOGGER.severe("Error while saving : " +Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE);
+			e.printStackTrace();
+		}
+		
+		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE + "' file : OK");
+
+	}
+	
+	
+	public static void saveDomainModel(LearningDomain domain) {
+		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> map = registry.getExtensionToFactoryMap();
+		ResourceSet resourceSet = new ResourceSetImpl();
+		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
+		map.put("xmi", toSave);
+		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
+		
+		Resource resource = resourceSet.createResource(URI.createURI("file:///"+Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE));
+		resource.getContents().add(domain);
+		try {
+			resource.save(map);
+		}catch (IOException e) {
+			ALGAGenerator.LOGGER.severe("Error while saving : " +Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE);
+			e.printStackTrace();
+		}
+		
+		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE + "' file : OK");
+	}
+	
+	public static void saveTeachersModel(Teacher teacher) {
+		Teachers teachers = loadTeachers();
+		if(teacher != null) {
+			removeTeacherByID(teachers, teacher.getID());
+			teachers.getTeachers().add(teacher);	
+		}
+				
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		ResourceSet resourceSet = new ResourceSetImpl();
 		Map<String, Object> map = registry.getExtensionToFactoryMap();

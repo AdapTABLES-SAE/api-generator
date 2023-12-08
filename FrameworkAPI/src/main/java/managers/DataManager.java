@@ -1,14 +1,26 @@
 package managers;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Map;
 
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import exceptions.NonExistantLearnerPlayerException;
 import generator.Classroom;
 import generator.Classrooms;
+import generator.GeneratorPackage;
 import generator.LearnerPlayer;
+import generator.LearningDomain;
+import generator.LearningPath;
 import generator.Teacher;
 import generator.Teachers;
 import generator.impl.ClassroomImpl;
@@ -48,6 +60,21 @@ public class DataManager {
 			classes.add(classe);
 		}
 		teacherJSON.put("classes", classes);
+		return teacherJSON;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public JSONArray getTeachersDataJSON() {
+		JSONArray teacherJSON = new JSONArray();
+		
+		Teachers teachers = Constant.loadTeachers();
+		for(Teacher teacher: teachers.getTeachers()) {
+			JSONObject oteacher = new JSONObject();
+			oteacher.put("idProf", teacher.getID());
+			oteacher.put("name", teacher.getName());
+			
+			teacherJSON.add(oteacher);
+		}
 		return teacherJSON;
 	}
 	
@@ -96,16 +123,15 @@ public class DataManager {
 	
 	public void updateClassroom(JSONObject data) throws ClassroomNotFoundException {
 		Classrooms classrooms = Constant.loadClassrooms();
-		JSONObject classe = (JSONObject) data.get("classe");
-		String classID = (String) classe.get("id");
+		//JSONObject classe = (JSONObject) data.get("classe");
+		String classID = (String) data.get("id");
 		
 		if(!containsClassroom(classrooms, classID)) {
 			throw new ClassroomNotFoundException(classID);
 		} else {
 			Classroom classroom = getClassroom(classrooms, classID);
-			classroom.setName((String) classe.get("name"));
+			classroom.setName((String) data.get("name"));
 			Constant.saveClassroomsModel(classrooms);
-			Constant.saveTeachersModel(teacher);
 		}
 	}
 	
@@ -221,6 +247,66 @@ public class DataManager {
 		classe.getLearnerPlayers().remove(learner);
 		Constant.saveClassroomsModel(classrooms);
 	}
+	
+	
+	private LearningDomain loadDomain() {
+		GeneratorPackage.eINSTANCE.eClass();
+		ResourceSet resourceSet = new ResourceSetImpl();
+		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> map = registry.getExtensionToFactoryMap();
+		map.put("xmi", new XMIResourceFactoryImpl());
+		File learningPaths = new File(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE);
+		Resource resource = resourceSet.createResource(URI.createFileURI(learningPaths.getAbsolutePath()));
+		try {
+			resource.load(null);
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+		EcoreUtil.resolveAll(resourceSet); 
+		return(LearningDomain) resource.getContents().get(0);
+	}
+	
+	private LearningDomain deletePath(LearningDomain domain, String pathID) {
+		for(LearningPath apath: new ArrayList<>(domain.getLearningpaths())) {
+			if(apath.getID().equals(pathID)) {
+				domain.getLearningpaths().remove(apath);
+			}
+		}
+		return domain;
+		
+	}
+	
+	public void deleteTeacher() {
+		Classrooms classrooms = Constant.loadClassrooms();
+		LearningDomain domain = loadDomain();
+		for(Classroom classroom: teacher.getClassrooms()) {
+			for(LearnerPlayer learner: classroom.getLearnerPlayers()) {
+				deletePath(domain, learner.getLearningpath().getID());
+				String path = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.LEARNERS_FILES_PATH + Constant.LEARNER_FILE_NAME_PREFIX + learner.getID() + ".xmi";
+				File flearner = new File(path); 
+				flearner.delete();
+			}
+			if(classrooms.getClassrooms().contains(classroom)) {
+				classrooms.getClassrooms().remove(classroom);
+			}
+		}
+		Constant.saveDomainModel(domain);
+		Constant.saveClassroomsModel(classrooms);
+		Teachers teachers = Constant.loadTeachers();
+		teachers = removeTeacher(teachers);
+		Constant.saveTeachersModel(teachers);
+	}
+	
+	private Teachers removeTeacher(Teachers teachers) {
+		for(Teacher teacher: new ArrayList<>(teachers.getTeachers())) {
+			if(teacher.getID().equals(teacher.getID())) {
+				teachers.getTeachers().remove(teacher);
+			}
+		}
+		return teachers; 
+	}
+	
+	
 	
 	private LearnerPlayer getLearnerWithID(Classroom classroom, String studentID) {
 		for(LearnerPlayer learner: classroom.getLearnerPlayers()) {

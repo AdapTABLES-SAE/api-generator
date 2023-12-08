@@ -49,6 +49,24 @@ public class DataResource {
 		return manager.getTeacherDataJSON().toJSONString();
 	}
 	
+	@GET
+	@Path("/teachers")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getTeachers(@Context ServletContext app) {  
+		Constant.PROJECT_PATH = app.getRealPath("");
+		manager = new DataManager();
+		return manager.getTeachersDataJSON().toJSONString();
+	}
+	
+	@DELETE
+	@Path("/teacher/{teacherID}")
+	public void deleteTeacher(@PathParam("teacherID") String teacherID, @Context ServletContext app) { 
+		Constant.PROJECT_PATH = app.getRealPath("");
+		
+		manager = new DataManager(Constant.getTeacher(teacherID));
+		manager.deleteTeacher();		
+	}
+	
 	@POST
 	@Path("/teacher")
 	@Consumes(MediaType.APPLICATION_JSON)
