@@ -112,6 +112,16 @@ public abstract class FactGeneratorTemplate {
 	private Set<AQuestionableFact> generateOrder(ATask task) {
 		Set<AQuestionableFact> questionableFacts = new HashSet<>(); 
 		
+		int number = 0;
+		if(task.getResponseModality() instanceof MultipleChoice) {
+			MultipleChoice mc = (MultipleChoice) task.getResponseModality();
+			number = mc.getNbChoices();
+			System.out.println("NUMBER "+number);
+		} else{
+			ALGAGenerator.LOGGER.severe("Task response modality is DynamicMultipleChoice or EnterInput for Ordering Task ! ");
+			number = 0;
+		} 	  
+		
 		List<AbstractFact> facts = new ArrayList<>();
 		for (SetOfFacts setoffact : new ArrayList<>(dungeonElements.getChosenObjective().getSetoffacts())) {
 			for (AbstractFact fact : Shuffle.shuffle(new ArrayList<>(setoffact.getFacts()))) {
@@ -122,7 +132,7 @@ public abstract class FactGeneratorTemplate {
 		}
 		
 		List<List<AbstractFact>> combinaisons = Generator.combination(facts)
-                .simple(4)
+                .simple(number)
                 .stream()
                 .collect(Collectors.toList());
 		

@@ -18,14 +18,21 @@ import exceptions.NonExistantLearnerPlayerException;
 import generator.Classroom;
 import generator.Classrooms;
 import generator.GeneratorPackage;
+import generator.Knowledge;
 import generator.LearnerPlayer;
 import generator.LearningDomain;
 import generator.LearningPath;
+import generator.Level;
+import generator.Objective;
 import generator.Teacher;
 import generator.Teachers;
 import generator.impl.ClassroomImpl;
+import generator.impl.CompletionCriteriaImpl;
 import generator.impl.LearnerPlayerImpl;
 import generator.impl.LearnerProgressImpl;
+import generator.impl.LearningPathImpl;
+import generator.impl.MTLevelImpl;
+import generator.impl.ObjectiveImpl;
 import generator.impl.PlayerProgressImpl;
 import generator.impl.ProgressionImpl;
 import generator.impl.StatisticsImpl;
@@ -35,12 +42,15 @@ import generators.ALGAGenerator;
 public class DataManager {
 
 	private Teacher teacher;
+	ResourceSet resourceSet;
 	
 	public DataManager(Teacher teacher) {
+		resourceSet = new ResourceSetImpl();
 		this.teacher = teacher;
 	}
 	
 	public DataManager() {
+		resourceSet = new ResourceSetImpl();
 		this.teacher = null;
 	}
 	
@@ -171,11 +181,50 @@ public class DataManager {
 			learner.getProgression().setLearnerProgress(new LearnerProgressImpl());
 			learner.getProgression().setPlayerProgress(new PlayerProgressImpl());
 			learner.setStatistics(new StatisticsImpl());
+			learner.setLearningpath(createEmptyPath("PATH_MATH"+learner.getID()));
 			Constant.saveLearnerModel(learner);
 			classroom.getLearnerPlayers().add(learner);
 			Constant.saveClassroomsModel(classrooms);
 		}
 
+	}
+	
+	private LearningPath createEmptyPath(String id) {
+		LearningPath path = new LearningPathImpl();
+		path.setID(id);
+		path.setKnowledge(loadKnowledge());
+		
+		Objective objective = new ObjectiveImpl();
+		objective.setID("O1_"+id);
+		objective.setName("Objectif 1");
+		
+		Level level = new MTLevelImpl();
+		level.setID("L1_"+id);
+		objective.getLevels().add(level);
+		level.setCompletionCriteria(new CompletionCriteriaImpl());
+		path.getObjectives().add(objective);
+		
+		LearningDomain domain = loadDomain();
+		domain.getLearningpaths().add(path);
+		Constant.saveDomainModel(domain);
+		return path;
+	}
+	
+	private Knowledge loadKnowledge() {
+		GeneratorPackage.eINSTANCE.eClass();
+		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> map = registry.getExtensionToFactoryMap();
+		map.put("xmi", new XMIResourceFactoryImpl());
+		File knowledge = new File(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.KNOWLEDGE_FILE);
+		System.out.println();
+		Resource resource = resourceSet.createResource(URI.createFileURI(knowledge.getAbsolutePath()));
+		try {
+			resource.load(null);
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+		EcoreUtil.resolveAll(resourceSet); 
+		return (Knowledge) resource.getContents().get(0);
 	}
 	
 	public void updateStudent(JSONObject data) throws  ClassroomNotFoundException, NonExistantLearnerPlayerException {

@@ -117,7 +117,7 @@ public interface Objective extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Levels</em>' containment reference list.
 	 * @see generator.GeneratorPackage#getObjective_Levels()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Level> getLevels();

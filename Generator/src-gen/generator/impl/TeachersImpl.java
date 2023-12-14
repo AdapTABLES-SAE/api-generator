@@ -162,7 +162,5 @@ public class TeachersImpl extends MinimalEObjectImpl.Container implements Teache
 		TeachersImpl other = (TeachersImpl) obj;
 		return Objects.equals(teachers, other.teachers);
 	}
-	
-	
 
 } //TeachersImpl

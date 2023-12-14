@@ -6751,7 +6751,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLearningPath_Name(), ecorePackage.getEString(), "name", null, 0, 1, LearningPath.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLearningPath_Objectives(), this.getObjective(), null, "objectives", null, 1, -1,
+		initEReference(getLearningPath_Objectives(), this.getObjective(), null, "objectives", null, 0, -1,
 				LearningPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLearningPath_Knowledge(), this.getKnowledge(), null, "knowledge", null, 1, 1,
@@ -6769,7 +6769,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getObjective_Prerequisites(), this.getPrerequisite(), null, "prerequisites", null, 0, -1,
 				Objective.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getObjective_Levels(), this.getLevel(), null, "levels", null, 1, -1, Objective.class,
+		initEReference(getObjective_Levels(), this.getLevel(), null, "levels", null, 0, -1, Objective.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getObjective_Setoffacts(), this.getSetOfFacts(), null, "setoffacts", null, 1, -1,
