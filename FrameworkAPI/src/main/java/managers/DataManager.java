@@ -347,9 +347,9 @@ public class DataManager {
 	}
 	
 	private Teachers removeTeacher(Teachers teachers) {
-		for(Teacher teacher: new ArrayList<>(teachers.getTeachers())) {
-			if(teacher.getID().equals(teacher.getID())) {
-				teachers.getTeachers().remove(teacher);
+		for(Teacher aTeacher: new ArrayList<>(teachers.getTeachers())) {
+			if(aTeacher.getID().equals(this.teacher.getID())) {
+				teachers.getTeachers().remove(aTeacher);
 			}
 		}
 		return teachers; 

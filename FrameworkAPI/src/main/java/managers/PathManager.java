@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -263,16 +262,19 @@ public class PathManager {
 		if(!domain.getLearningpaths().contains(path)) {
 			domain.getLearningpaths().add(path);
 		}
-		saveDomainModel();
+		//saveDomainModel();
+		Constant.saveDomainModel(domain);
 		
 		// update progress for learner having this path 
 		resetEveryLearnerProgress();
 	}
 	
 	
-	public void createTrainingPath(JSONObject json) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+	public void createTrainingPath(JSONObject json) throws NonExistantLearnerPlayerException, ContextNotFoundException, LearningPathIDisNull {
+		if(((String) json.get("learningPathID")) == null) { throw new LearningPathIDisNull() ;}
 		path = new LearningPathImpl();
 		Knowledge knowledge = loadKnowledge();
+		
 		path.setID((String) json.get("learningPathID"));
 		path.setName((String) json.get("learningPathID")); // TODO: improve ?
 		path.setKnowledge(knowledge);
@@ -324,7 +326,8 @@ public class PathManager {
 		learner.setLearningpath(path);
 		Constant.saveLearnerModel(learner);
 		
-		saveDomainModel();
+		//saveDomainModel();
+		Constant.saveDomainModel(domain);
 		// update progress for learner having this path 
 		//resetEveryLearnerProgress();
 	}
@@ -607,15 +610,22 @@ public class PathManager {
 	private void getPath(String pathID) {
 		loadPaths();
 		for(LearningPath path : new ArrayList<>(domain.getLearningpaths())) {
+			if(path.getID() == null) {
+				ALGAGenerator.LOGGER.severe("A LearningPath had a null ID!");
+				domain.getLearningpaths().remove(path);
+				Constant.saveDomainModel(domain);
+			}
 			if(path.getID().equals(pathID)) {
 				this.path = path;
 				domain.getLearningpaths().remove(path);
-				saveDomainModel();
+				//saveDomainModel();
+				
+				Constant.saveDomainModel(domain);
 			}
 		}
 	}
 	
-	private void saveDomainModel() {
+	/*private void saveDomainModel() {
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
@@ -632,7 +642,7 @@ public class PathManager {
 		}
 		
 		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE + "' file : OK");
-	}
+	}*/
 	
 	private void loadPaths() {
 		GeneratorPackage.eINSTANCE.eClass();

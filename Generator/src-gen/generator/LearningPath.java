@@ -55,7 +55,7 @@ public interface LearningPath extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Objectives</em>' containment reference list.
 	 * @see generator.GeneratorPackage#getLearningPath_Objectives()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Objective> getObjectives();

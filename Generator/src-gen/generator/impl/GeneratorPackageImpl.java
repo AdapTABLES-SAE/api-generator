@@ -4863,15 +4863,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getHistoricalEventAssociation_NoStatementTask() {
-		return (EAttribute) historicalEventAssociationEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getLegendAMap() {
 		return legendAMapEClass;
 	}
@@ -4910,15 +4901,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getLegendAMap_CheckOnLearnerAction() {
 		return (EAttribute) legendAMapEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getLegendAMap_NoStatementTask() {
-		return (EAttribute) legendAMapEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -6341,14 +6323,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(historicalEventAssociationEClass, HISTORICAL_EVENT_ASSOCIATION__MISSING);
 		createEAttribute(historicalEventAssociationEClass, HISTORICAL_EVENT_ASSOCIATION__TARGET);
 		createEAttribute(historicalEventAssociationEClass, HISTORICAL_EVENT_ASSOCIATION__CHECK_ON_LEARNER_ACTION);
-		createEAttribute(historicalEventAssociationEClass, HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK);
 
 		legendAMapEClass = createEClass(LEGEND_AMAP);
 		createEAttribute(legendAMapEClass, LEGEND_AMAP__NB_MISSING_ELEMENTS);
 		createEAttribute(legendAMapEClass, LEGEND_AMAP__MISSING);
 		createEAttribute(legendAMapEClass, LEGEND_AMAP__GRAPHIC_TASK);
 		createEAttribute(legendAMapEClass, LEGEND_AMAP__CHECK_ON_LEARNER_ACTION);
-		createEAttribute(legendAMapEClass, LEGEND_AMAP__NO_STATEMENT_TASK);
 
 		locateOnAMapEClass = createEClass(LOCATE_ON_AMAP);
 		createEAttribute(locateOnAMapEClass, LOCATE_ON_AMAP__NB_EXPECTED_ANSWERS);
@@ -6751,7 +6731,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLearningPath_Name(), ecorePackage.getEString(), "name", null, 0, 1, LearningPath.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLearningPath_Objectives(), this.getObjective(), null, "objectives", null, 0, -1,
+		initEReference(getLearningPath_Objectives(), this.getObjective(), null, "objectives", null, 1, -1,
 				LearningPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLearningPath_Knowledge(), this.getKnowledge(), null, "knowledge", null, 1, 1,
@@ -6769,7 +6749,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getObjective_Prerequisites(), this.getPrerequisite(), null, "prerequisites", null, 0, -1,
 				Objective.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getObjective_Levels(), this.getLevel(), null, "levels", null, 0, -1, Objective.class,
+		initEReference(getObjective_Levels(), this.getLevel(), null, "levels", null, 1, -1, Objective.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getObjective_Setoffacts(), this.getSetOfFacts(), null, "setoffacts", null, 1, -1,
@@ -7699,9 +7679,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getHistoricalEventAssociation_CheckOnLearnerAction(), ecorePackage.getEBoolean(),
 				"checkOnLearnerAction", "true", 0, 1, HistoricalEventAssociation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getHistoricalEventAssociation_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask",
-				"false", 0, 1, HistoricalEventAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(legendAMapEClass, LegendAMap.class, "LegendAMap", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -7716,9 +7693,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getLegendAMap_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
 				"false", 0, 1, LegendAMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLegendAMap_NoStatementTask(), ecorePackage.getEBoolean(), "noStatementTask", "true", 0, 1,
-				LegendAMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(locateOnAMapEClass, LocateOnAMap.class, "LocateOnAMap", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

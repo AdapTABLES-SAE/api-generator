@@ -49,20 +49,20 @@ public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 				for (ESingleTarget target : taskC.getTargets()) {
 					if(build.equals(TableBuild.MIX)) {
 						if(equalPos.equals(ResultPosition.MIX)) {
-							add2Set(qfs, buildQF(factC, ResultPosition.LEFT, TableBuild.OPERAND_TABLE, target));
-							add2Set(qfs, buildQF(factC, ResultPosition.RIGHT, TableBuild.OPERAND_TABLE, target));
-							add2Set(qfs, buildQF(factC, ResultPosition.LEFT, TableBuild.TABLE_OPERAND, target));
-							add2Set(qfs, buildQF(factC, ResultPosition.RIGHT, TableBuild.TABLE_OPERAND, target));
+							qfs.add(buildQF(factC, ResultPosition.LEFT, TableBuild.OPERAND_TABLE, target));
+							qfs.add(buildQF(factC, ResultPosition.RIGHT, TableBuild.OPERAND_TABLE, target));
+							qfs.add(buildQF(factC, ResultPosition.LEFT, TableBuild.TABLE_OPERAND, target));
+							qfs.add(buildQF(factC, ResultPosition.RIGHT, TableBuild.TABLE_OPERAND, target));
 						} else {
-							add2Set(qfs, buildQF(factC, equalPos, TableBuild.OPERAND_TABLE, target));
-							add2Set(qfs, buildQF(factC, equalPos, TableBuild.TABLE_OPERAND, target));
+							qfs.add(buildQF(factC, equalPos, TableBuild.OPERAND_TABLE, target));
+							qfs.add(buildQF(factC, equalPos, TableBuild.TABLE_OPERAND, target));
 						}
 					} else {
 						if(equalPos.equals(ResultPosition.MIX)) {
-							add2Set(qfs, buildQF(factC, ResultPosition.LEFT, build, target));
-							add2Set(qfs, buildQF(factC, ResultPosition.RIGHT, build, target));
+							qfs.add(buildQF(factC, ResultPosition.LEFT, build, target));
+							qfs.add(buildQF(factC, ResultPosition.RIGHT, build, target));
 						} else {
-							add2Set(qfs, buildQF(factC, equalPos, build, target));
+							qfs.add(buildQF(factC, equalPos, build, target));
 						}
 					}
 				}
@@ -72,15 +72,6 @@ public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 
 		
 		return new HashSet<>();
-	}
-	
-	private void add2Set(Set<AQuestionableFact> set, AQuestionableFact fact) {
-		set.add(fact);
-	}
-	
-	@Override
-	protected AQuestionableFact generateQuestionableFactOf(ATask task, List<AbstractFact> facts) {
-		return null;
 	}
 	
 	private MTQFCompletion1 buildQF(MTFact fact, ResultPosition resPos, TableBuild build, ESingleTarget target) {
@@ -115,6 +106,11 @@ public class MTFactGeneratorCOMP1 extends FactGeneratorTemplate {
 		return qf;
 	}
 
+	@Override
+	protected AQuestionableFact generateQuestionableFactOf(ATask task, List<AbstractFact> facts) {
+		return null;
+	}
+	
 	@Override
 	protected int correctnessToReach(AQuestionableFact fact) {
 		return 1;

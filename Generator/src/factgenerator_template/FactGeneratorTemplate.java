@@ -171,8 +171,6 @@ public abstract class FactGeneratorTemplate {
 			questionableFacts.addAll(generateDefault(task));
 			break;
 		}
-		
-		
 		return questionableFacts; 
 	}
 	

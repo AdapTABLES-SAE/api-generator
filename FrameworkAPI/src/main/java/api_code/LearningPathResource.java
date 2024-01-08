@@ -16,6 +16,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 import managers.Constant;
+import managers.LearningPathIDisNull;
 import managers.ModelsManager;
 import managers.PathManager;
 
@@ -46,7 +47,7 @@ public class LearningPathResource {
 	@Path("/training")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public void addTrainingPath(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException { 
+	public void addTrainingPath(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException, LearningPathIDisNull { 
 		Constant.PROJECT_PATH = app.getRealPath("");		
 		JSONObject obj = new JSONObject();
 

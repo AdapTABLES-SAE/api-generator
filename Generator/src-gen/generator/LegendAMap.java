@@ -15,7 +15,6 @@ package generator;
  *   <li>{@link generator.LegendAMap#getMissing <em>Missing</em>}</li>
  *   <li>{@link generator.LegendAMap#isGraphicTask <em>Graphic Task</em>}</li>
  *   <li>{@link generator.LegendAMap#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
- *   <li>{@link generator.LegendAMap#isNoStatementTask <em>No Statement Task</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getLegendAMap()
@@ -117,28 +116,5 @@ public interface LegendAMap extends CompletionTask {
 	 * @generated
 	 */
 	void setCheckOnLearnerAction(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>No Statement Task</b></em>' attribute.
-	 * The default value is <code>"true"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>No Statement Task</em>' attribute.
-	 * @see #setNoStatementTask(boolean)
-	 * @see generator.GeneratorPackage#getLegendAMap_NoStatementTask()
-	 * @model default="true"
-	 * @generated
-	 */
-	boolean isNoStatementTask();
-
-	/**
-	 * Sets the value of the '{@link generator.LegendAMap#isNoStatementTask <em>No Statement Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>No Statement Task</em>' attribute.
-	 * @see #isNoStatementTask()
-	 * @generated
-	 */
-	void setNoStatementTask(boolean value);
 
 } // LegendAMap

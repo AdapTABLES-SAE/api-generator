@@ -7628,22 +7628,13 @@ public interface GeneratorPackage extends EPackage {
 	int HISTORICAL_EVENT_ASSOCIATION__CHECK_ON_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>No Statement Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK = COMPLETION_TASK_FEATURE_COUNT + 4;
-
-	/**
 	 * The number of structural features of the '<em>Historical Event Association</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_EVENT_ASSOCIATION_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 5;
+	int HISTORICAL_EVENT_ASSOCIATION_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -7809,22 +7800,13 @@ public interface GeneratorPackage extends EPackage {
 	int LEGEND_AMAP__CHECK_ON_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>No Statement Task</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEGEND_AMAP__NO_STATEMENT_TASK = COMPLETION_TASK_FEATURE_COUNT + 4;
-
-	/**
 	 * The number of structural features of the '<em>Legend AMap</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEGEND_AMAP_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 5;
+	int LEGEND_AMAP_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -15142,17 +15124,6 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getHistoricalEventAssociation_CheckOnLearnerAction();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.HistoricalEventAssociation#isNoStatementTask <em>No Statement Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>No Statement Task</em>'.
-	 * @see generator.HistoricalEventAssociation#isNoStatementTask()
-	 * @see #getHistoricalEventAssociation()
-	 * @generated
-	 */
-	EAttribute getHistoricalEventAssociation_NoStatementTask();
-
-	/**
 	 * Returns the meta object for class '{@link generator.LegendAMap <em>Legend AMap</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15205,17 +15176,6 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLegendAMap_CheckOnLearnerAction();
-
-	/**
-	 * Returns the meta object for the attribute '{@link generator.LegendAMap#isNoStatementTask <em>No Statement Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>No Statement Task</em>'.
-	 * @see generator.LegendAMap#isNoStatementTask()
-	 * @see #getLegendAMap()
-	 * @generated
-	 */
-	EAttribute getLegendAMap_NoStatementTask();
 
 	/**
 	 * Returns the meta object for class '{@link generator.LocateOnAMap <em>Locate On AMap</em>}'.
@@ -19796,15 +19756,6 @@ public interface GeneratorPackage extends EPackage {
 				.getHistoricalEventAssociation_CheckOnLearnerAction();
 
 		/**
-		 * The meta object literal for the '<em><b>No Statement Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK = eINSTANCE
-				.getHistoricalEventAssociation_NoStatementTask();
-
-		/**
 		 * The meta object literal for the '{@link generator.impl.LegendAMapImpl <em>Legend AMap</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19845,14 +19796,6 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LEGEND_AMAP__CHECK_ON_LEARNER_ACTION = eINSTANCE.getLegendAMap_CheckOnLearnerAction();
-
-		/**
-		 * The meta object literal for the '<em><b>No Statement Task</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LEGEND_AMAP__NO_STATEMENT_TASK = eINSTANCE.getLegendAMap_NoStatementTask();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.LocateOnAMapImpl <em>Locate On AMap</em>}' class.

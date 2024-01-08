@@ -86,5 +86,5 @@
     </learnerProgress>
   </progression>
   <learningpath href="../LearningDomain.xmi#PATH_JUDO"/>
-  <statistics maxGameLevelReached="9" nbLevelsGenerated="605"/>
+  <statistics maxGameLevelReached="9" nbLevelsGenerated="606"/>
 </generator:LearnerPlayer>

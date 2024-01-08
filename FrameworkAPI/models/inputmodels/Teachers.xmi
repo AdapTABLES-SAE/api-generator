@@ -4,7 +4,7 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:generator="http://www.example.org/generator">
   <teachers
-      ID="TEACHER_TEST"
+      ID="teachdef"
       name="Un enseignant">
     <classrooms
         href="Classrooms.xmi#default"/>

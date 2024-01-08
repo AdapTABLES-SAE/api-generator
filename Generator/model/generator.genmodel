@@ -633,14 +633,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HistoricalEventAssociation/missing"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HistoricalEventAssociation/target"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HistoricalEventAssociation/checkOnLearnerAction"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HistoricalEventAssociation/noStatementTask"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//LegendAMap">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LegendAMap/nbMissingElements"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LegendAMap/missing"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LegendAMap/graphicTask"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LegendAMap/checkOnLearnerAction"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LegendAMap/noStatementTask"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//LocateOnAMap">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//LocateOnAMap/nbExpectedAnswers"/>

@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link generator.impl.HistoricalEventAssociationImpl#getMissing <em>Missing</em>}</li>
  *   <li>{@link generator.impl.HistoricalEventAssociationImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link generator.impl.HistoricalEventAssociationImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
- *   <li>{@link generator.impl.HistoricalEventAssociationImpl#isNoStatementTask <em>No Statement Task</em>}</li>
  * </ul>
  *
  * @generated
@@ -110,26 +109,6 @@ public class HistoricalEventAssociationImpl extends CompletionTaskImpl implement
 	 * @ordered
 	 */
 	protected boolean checkOnLearnerAction = CHECK_ON_LEARNER_ACTION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isNoStatementTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean NO_STATEMENT_TASK_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isNoStatementTask() <em>No Statement Task</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isNoStatementTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean noStatementTask = NO_STATEMENT_TASK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -244,29 +223,6 @@ public class HistoricalEventAssociationImpl extends CompletionTaskImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isNoStatementTask() {
-		return noStatementTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNoStatementTask(boolean newNoStatementTask) {
-		boolean oldNoStatementTask = noStatementTask;
-		noStatementTask = newNoStatementTask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK, oldNoStatementTask,
-					noStatementTask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -278,8 +234,6 @@ public class HistoricalEventAssociationImpl extends CompletionTaskImpl implement
 			return getTarget();
 		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__CHECK_ON_LEARNER_ACTION:
 			return isCheckOnLearnerAction();
-		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK:
-			return isNoStatementTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -303,9 +257,6 @@ public class HistoricalEventAssociationImpl extends CompletionTaskImpl implement
 			return;
 		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction((Boolean) newValue);
-			return;
-		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK:
-			setNoStatementTask((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -331,9 +282,6 @@ public class HistoricalEventAssociationImpl extends CompletionTaskImpl implement
 		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction(CHECK_ON_LEARNER_ACTION_EDEFAULT);
 			return;
-		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK:
-			setNoStatementTask(NO_STATEMENT_TASK_EDEFAULT);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -354,8 +302,6 @@ public class HistoricalEventAssociationImpl extends CompletionTaskImpl implement
 			return target != TARGET_EDEFAULT;
 		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__CHECK_ON_LEARNER_ACTION:
 			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
-		case GeneratorPackage.HISTORICAL_EVENT_ASSOCIATION__NO_STATEMENT_TASK:
-			return noStatementTask != NO_STATEMENT_TASK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -379,8 +325,6 @@ public class HistoricalEventAssociationImpl extends CompletionTaskImpl implement
 		result.append(target);
 		result.append(", checkOnLearnerAction: ");
 		result.append(checkOnLearnerAction);
-		result.append(", noStatementTask: ");
-		result.append(noStatementTask);
 		result.append(')');
 		return result.toString();
 	}

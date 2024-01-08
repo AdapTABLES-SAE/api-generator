@@ -114,8 +114,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LearningPath">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="objectives" upperBound="-1"
-        eType="#//Objective" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectives" lowerBound="1"
+        upperBound="-1" eType="#//Objective" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="knowledge" lowerBound="1"
         eType="#//Knowledge"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -127,8 +127,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisites" upperBound="-1"
         eType="#//Prerequisite" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="levels" upperBound="-1"
-        eType="#//Level" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="levels" lowerBound="1"
+        upperBound="-1" eType="#//Level" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="setoffacts" lowerBound="1"
         upperBound="-1" eType="#//SetOfFacts"/>
   </eClassifiers>
@@ -760,8 +760,6 @@
         defaultValueLiteral="NONE"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noStatementTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EHistoryTarget">
     <eLiterals name="EVENT"/>
@@ -777,8 +775,6 @@
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noStatementTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ELegendTarget">
     <eLiterals name="SYMBOL"/>
