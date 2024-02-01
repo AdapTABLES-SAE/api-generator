@@ -310,6 +310,24 @@ public interface GeneratorFactory extends EFactory {
 	WrongData createWrongData();
 
 	/**
+	 * Returns a new object of class '<em>History Identification</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>History Identification</em>'.
+	 * @generated
+	 */
+	HistoryIdentification createHistoryIdentification();
+
+	/**
+	 * Returns a new object of class '<em>HGQF Identification</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>HGQF Identification</em>'.
+	 * @generated
+	 */
+	HGQFIdentification createHGQFIdentification();
+
+	/**
 	 * Returns a new object of class '<em>Results</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

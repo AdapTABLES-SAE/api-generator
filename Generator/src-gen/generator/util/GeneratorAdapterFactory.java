@@ -757,6 +757,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseHistoryIdentification(HistoryIdentification object) {
+			return createHistoryIdentificationAdapter();
+		}
+
+		@Override
+		public Adapter caseHGQFIdentification(HGQFIdentification object) {
+			return createHGQFIdentificationAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1346,6 +1356,34 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createWrongDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.HistoryIdentification <em>History Identification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.HistoryIdentification
+	 * @generated
+	 */
+	public Adapter createHistoryIdentificationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.HGQFIdentification <em>HGQF Identification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.HGQFIdentification
+	 * @generated
+	 */
+	public Adapter createHGQFIdentificationAdapter() {
 		return null;
 	}
 

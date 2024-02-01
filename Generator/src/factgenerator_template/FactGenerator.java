@@ -6,6 +6,7 @@ import java.util.Random;
 
 import factsgenerator_hg.HGFactGeneratorAssociation;
 import factsgenerator_hg.HGFactGeneratorChronology;
+import factsgenerator_hg.HGFactGeneratorIdentification;
 import factsgenerator_hg.HGFactGeneratorLegend;
 import factsgenerator_hg.HGFactGeneratorLocate;
 import factsgenerator_hg.HGFactGeneratorMembership;
@@ -75,12 +76,16 @@ public class FactGenerator {
 		case ORDER:
 			factGenerator = new HGFactGeneratorOrderEvent(dungeonElements);
 			break;
-			default: // MEMBERSHIP
-				if(task instanceof GeographyMembership) {
-					factGenerator = new HGFactGeneratorMembership(modelsManager, dungeonElements);
-				} else {
-					factGenerator = new HGFactGeneratorLocate(dungeonElements);
-				}
+			
+		case MEMBERSHIP:
+			if(task instanceof GeographyMembership) {
+				factGenerator = new HGFactGeneratorMembership(modelsManager, dungeonElements);
+			} else {
+				factGenerator = new HGFactGeneratorLocate(dungeonElements);
+			}
+			break;
+			default: // IDENTIFICATION
+				factGenerator = new HGFactGeneratorIdentification(dungeonElements);
 				break;
 		}
 		return factGenerator;

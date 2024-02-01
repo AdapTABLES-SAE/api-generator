@@ -42,66 +42,86 @@
   </knowledgefacts>
   <knowledgefacts name="Dates historiques">
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="1er Guerre Mondiale">
+      <wrongData value="1939"/>
+      <wrongData value="1945"/>
       <representation ID="GRANDE_GUERRE"/>
       <time xsi:type="generator:TimePeriod" startYear="1914" endYear="1918" startPosition="1914" endPosition="1918"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Révolution Russe">
+      <wrongData value="1918"/>
       <representation ID="REVOLUTION_RUSSE"/>
       <time xsi:type="generator:Date" year="1917" position="1917"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Armistice">
+      <wrongData value="11 Septembre 1918"/>
       <representation ID="ARMISTICE"/>
       <time xsi:type="generator:Date" day="11" month="Novembre" year="1918" position="1918"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Allemagne Nazie (Hitlérienne)">
+      <wrongData value="1939"/>
+      <wrongData value="1946"/>
       <representation ID="ALLEMAGNE_NAZIE"/>
       <time xsi:type="generator:TimePeriod" startYear="1933" endYear="1945" startPosition="1933" endPosition="1945"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Front Populaire">
+      <wrongData value="1941"/>
+      <wrongData value="1940"/>
       <representation ID="FRONT_POPULAIRE"/>
       <time xsi:type="generator:TimePeriod" startYear="1936" endYear="1937" startPosition="1936" endPosition="1937"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Appel du général de Gaulle">
+      <wrongData value="16 Juin 1950"/>
       <representation ID="DEGAULLE"/>
       <time xsi:type="generator:Date" day="18" month="Juin" year="1940" position="1940"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Régime de Vichy">
+      <wrongData value="1950"/>
+      <wrongData value="1954"/>
       <representation ID="VICHY"/>
       <time xsi:type="generator:TimePeriod" startYear="1940" endYear="1944" startPosition="1940" endPosition="1944"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Création de l'ONU">
+      <wrongData value="1946"/>
       <representation ID="ONU"/>
       <time xsi:type="generator:Date" day="" month="" year="1945" position="1945"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Traité de Rome">
+      <wrongData value="1958"/>
       <representation ID="ROME"/>
       <time xsi:type="generator:Date" day="" month="" year="1957" position="1957"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="L'Euro">
+      <wrongData value="2000"/>
       <representation ID="EURO"/>
       <time xsi:type="generator:Date" day="" month="" year="2002" position="2002"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Chute du mur de Berlin">
+      <wrongData value="1999"/>
       <representation ID="MUR_BERLIN"/>
       <time xsi:type="generator:Date" day="" month="" year="1989" position="1989"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Les accords d'Evian">
+      <wrongData value="1972"/>
       <representation ID="EVIAN"/>
       <time xsi:type="generator:Date" day="" month="" year="1962" position="1962"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Naissance de la Ve République">
+      <wrongData value="1955"/>
       <representation ID="5REPUBLIQUE"/>
       <time xsi:type="generator:Date" day="" month="" year="1958" position="1958"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Election Président de la République au suffrage universel direct">
+      <wrongData value="1963"/>
       <representation ID="ELECTION"/>
       <time xsi:type="generator:Date" day="" month="" year="1962" position="1962"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Loi Veil (IVG)">
+      <wrongData value="1980"/>
       <representation ID="VEIL"/>
       <time xsi:type="generator:Date" day="" month="" year="1975" position="1975"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Première alternance">
+      <wrongData value="1991"/>
       <representation ID="ALTERNANCE"/>
       <time xsi:type="generator:Date" day="" month="" year="1981" position="1981"/>
     </facts>

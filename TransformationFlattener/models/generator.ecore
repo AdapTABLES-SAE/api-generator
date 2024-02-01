@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="generator" nsURI="http://www.example.org/generator" nsPrefix="generator">
-  <eClassifiers xsi:type="ecore:EClass" name="AbstractFact" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractFact" abstract="true" eSuperTypes="#//GeneralFact">
     <eStructuralFeatures xsi:type="ecore:EReference" name="representation" eType="#//Image"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="belongsToVisualization"
         eType="#//Visualization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="setoffacts" lowerBound="1"
+        eType="#//SetOfFacts" eOpposite="#//SetOfFacts/facts"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SetOfFacts">
+  <eClassifiers xsi:type="ecore:EClass" name="SetOfFacts" eSuperTypes="#//GeneralFact">
     <eStructuralFeatures xsi:type="ecore:EReference" name="facts" upperBound="-1"
-        eType="#//AbstractFact" containment="true"/>
+        eType="#//AbstractFact" containment="true" eOpposite="#//AbstractFact/setoffacts"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="visualization" eType="#//Visualization"
         containment="true"/>
@@ -817,6 +819,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         unsettable="true" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="questionWithImage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="facts" upperBound="-1"
+        eType="#//AbstractFact"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AVisualizationQuestionableFact" abstract="true"
       eSuperTypes="#//AQuestionableFact">
@@ -939,4 +943,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="membershipTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeographyMembership" eSuperTypes="#//MembershipIDTask"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GeneralFact" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wrongData" upperBound="-1"
+        eType="#//WrongData" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WrongData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HistoryIdentification" eSuperTypes="#//IdentificationTask"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HGQFIdentification" eSuperTypes="#//QuestionableFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soluce" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" eType="#//Time" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

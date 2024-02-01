@@ -950,4 +950,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="WrongData">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HistoryIdentification" eSuperTypes="#//IdentificationTask"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HGQFIdentification" eSuperTypes="#//QuestionableFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soluce" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" eType="#//Time" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

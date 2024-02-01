@@ -763,5 +763,11 @@
     <genClasses ecoreClass="generator.ecore#//WrongData">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//WrongData/value"/>
     </genClasses>
+    <genClasses ecoreClass="generator.ecore#//HistoryIdentification"/>
+    <genClasses ecoreClass="generator.ecore#//HGQFIdentification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HGQFIdentification/soluce"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HGQFIdentification/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//HGQFIdentification/time"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

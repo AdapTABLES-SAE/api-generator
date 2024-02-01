@@ -1252,6 +1252,28 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case GeneratorPackage.HISTORY_IDENTIFICATION: {
+			HistoryIdentification historyIdentification = (HistoryIdentification) theEObject;
+			T result = caseHistoryIdentification(historyIdentification);
+			if (result == null)
+				result = caseIdentificationTask(historyIdentification);
+			if (result == null)
+				result = caseATask(historyIdentification);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.HGQF_IDENTIFICATION: {
+			HGQFIdentification hgqfIdentification = (HGQFIdentification) theEObject;
+			T result = caseHGQFIdentification(hgqfIdentification);
+			if (result == null)
+				result = caseQuestionableFact(hgqfIdentification);
+			if (result == null)
+				result = caseAQuestionableFact(hgqfIdentification);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -1869,6 +1891,36 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseWrongData(WrongData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>History Identification</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>History Identification</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHistoryIdentification(HistoryIdentification object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>HGQF Identification</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>HGQF Identification</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHGQFIdentification(HGQFIdentification object) {
 		return null;
 	}
 

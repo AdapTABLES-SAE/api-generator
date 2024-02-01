@@ -992,6 +992,20 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass historyIdentificationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass hgqfIdentificationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum directionsEEnum = null;
 
 	/**
@@ -5755,6 +5769,51 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getHistoryIdentification() {
+		return historyIdentificationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHGQFIdentification() {
+		return hgqfIdentificationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHGQFIdentification_Soluce() {
+		return (EAttribute) hgqfIdentificationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHGQFIdentification_Event() {
+		return (EAttribute) hgqfIdentificationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHGQFIdentification_Time() {
+		return (EReference) hgqfIdentificationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDirections() {
 		return directionsEEnum;
 	}
@@ -6597,6 +6656,13 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		wrongDataEClass = createEClass(WRONG_DATA);
 		createEAttribute(wrongDataEClass, WRONG_DATA__VALUE);
 
+		historyIdentificationEClass = createEClass(HISTORY_IDENTIFICATION);
+
+		hgqfIdentificationEClass = createEClass(HGQF_IDENTIFICATION);
+		createEAttribute(hgqfIdentificationEClass, HGQF_IDENTIFICATION__SOLUCE);
+		createEAttribute(hgqfIdentificationEClass, HGQF_IDENTIFICATION__EVENT);
+		createEReference(hgqfIdentificationEClass, HGQF_IDENTIFICATION__TIME);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -6726,6 +6792,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		orderQuestionableFactEClass.getESuperTypes().add(this.getQuestionableFact());
 		hgqfMembershipEClass.getESuperTypes().add(this.getQuestionableFact());
 		geographyMembershipEClass.getESuperTypes().add(this.getMembershipIDTask());
+		historyIdentificationEClass.getESuperTypes().add(this.getIdentificationTask());
+		hgqfIdentificationEClass.getESuperTypes().add(this.getQuestionableFact());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -8135,6 +8203,21 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWrongData_Value(), ecorePackage.getEString(), "value", null, 0, 1, WrongData.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(historyIdentificationEClass, HistoryIdentification.class, "HistoryIdentification", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(hgqfIdentificationEClass, HGQFIdentification.class, "HGQFIdentification", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getHGQFIdentification_Soluce(), ecorePackage.getEBoolean(), "soluce", null, 0, 1,
+				HGQFIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHGQFIdentification_Event(), ecorePackage.getEString(), "event", null, 0, 1,
+				HGQFIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getHGQFIdentification_Time(), this.getTime(), null, "time", null, 0, 1, HGQFIdentification.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

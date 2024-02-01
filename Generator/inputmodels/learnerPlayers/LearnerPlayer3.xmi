@@ -770,10 +770,177 @@
               <solutions event="Les accords d'Evian" order="3"/>
             </questionableFacts>
           </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:HistoryIdentification" href="../LearningDomain.xmi#HG_01_L1_T12"/>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT8" soluce="true" event="Front Populaire">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.4"/>
+              <time xsi:type="generator:TimePeriod" startYear="1936" endYear="1937">
+                <startPosition href="../HistoryGeographyFacts.xmi#1936"/>
+                <endPosition href="../HistoryGeographyFacts.xmi#1937"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT6" soluce="true" event="Allemagne Nazie (Hitl&#xe9;rienne)">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.3"/>
+              <time xsi:type="generator:TimePeriod" startYear="1933" endYear="1945">
+                <startPosition href="../HistoryGeographyFacts.xmi#1933"/>
+                <endPosition href="../HistoryGeographyFacts.xmi#1945"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT13" event="R&#xe9;gime de Vichy">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.6"/>
+              <time xsi:type="generator:Date" year="1950"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT16" soluce="true" event="Trait&#xe9; de Rome">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.8"/>
+              <time xsi:type="generator:Date" day="" month="" year="1957">
+                <position href="../HistoryGeographyFacts.xmi#1957"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT7" event="Allemagne Nazie (Hitl&#xe9;rienne)">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.3"/>
+              <time xsi:type="generator:Date" year="1946"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT22" soluce="true" event="Les accords d'Evian">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.11"/>
+              <time xsi:type="generator:Date" day="" month="" year="1962">
+                <position href="../HistoryGeographyFacts.xmi#1962"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT18" soluce="true" event="L'Euro">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.9"/>
+              <time xsi:type="generator:Date" day="" month="" year="2002">
+                <position href="../HistoryGeographyFacts.xmi#2002"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT27" event="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.13"/>
+              <time xsi:type="generator:Date" year="1963"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT17" event="Trait&#xe9; de Rome">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.8"/>
+              <time xsi:type="generator:Date" year="1958"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT12" soluce="true" event="R&#xe9;gime de Vichy">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.6"/>
+              <time xsi:type="generator:TimePeriod" startYear="1940" endYear="1944">
+                <startPosition href="../HistoryGeographyFacts.xmi#1940"/>
+                <endPosition href="../HistoryGeographyFacts.xmi#1944"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT24" soluce="true" event="Naissance de la Ve R&#xe9;publique">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.12"/>
+              <time xsi:type="generator:Date" day="" month="" year="1958">
+                <position href="../HistoryGeographyFacts.xmi#1958"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT5" event="Armistice">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.2"/>
+              <time xsi:type="generator:Date" year="11 Septembre 1918"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT9" event="Front Populaire">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.4"/>
+              <time xsi:type="generator:Date" year="1940"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT14" soluce="true" event="Cr&#xe9;ation de l'ONU">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.7"/>
+              <time xsi:type="generator:Date" day="" month="" year="1945">
+                <position href="../HistoryGeographyFacts.xmi#1945"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT1" event="1er Guerre Mondiale">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.0"/>
+              <time xsi:type="generator:Date" year="1945"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT21" event="Chute du mur de Berlin">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.10"/>
+              <time xsi:type="generator:Date" year="1999"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT31" event="Premi&#xe8;re alternance">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.15"/>
+              <time xsi:type="generator:Date" year="1991"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT3" event="R&#xe9;volution Russe">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.1"/>
+              <time xsi:type="generator:Date" year="1918"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT20" soluce="true" event="Chute du mur de Berlin">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.10"/>
+              <time xsi:type="generator:Date" day="" month="" year="1989">
+                <position href="../HistoryGeographyFacts.xmi#1989"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT26" soluce="true" event="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.13"/>
+              <time xsi:type="generator:Date" day="" month="" year="1962">
+                <position href="../HistoryGeographyFacts.xmi#1962"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT0" soluce="true" event="1er Guerre Mondiale">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.0"/>
+              <time xsi:type="generator:TimePeriod" startYear="1914" endYear="1918">
+                <startPosition href="../HistoryGeographyFacts.xmi#1914"/>
+                <endPosition href="../HistoryGeographyFacts.xmi#1918"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT2" soluce="true" event="R&#xe9;volution Russe">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.1"/>
+              <time xsi:type="generator:Date" year="1917">
+                <position href="../HistoryGeographyFacts.xmi#1917"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT30" soluce="true" event="Premi&#xe8;re alternance">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.15"/>
+              <time xsi:type="generator:Date" day="" month="" year="1981">
+                <position href="../HistoryGeographyFacts.xmi#1981"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT25" event="Naissance de la Ve R&#xe9;publique">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.12"/>
+              <time xsi:type="generator:Date" year="1955"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT29" event="Loi Veil (IVG)">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.14"/>
+              <time xsi:type="generator:Date" year="1980"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT4" soluce="true" event="Armistice">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.2"/>
+              <time xsi:type="generator:Date" day="11" month="Novembre" year="1918">
+                <position href="../HistoryGeographyFacts.xmi#1918"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT23" event="Les accords d'Evian">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.11"/>
+              <time xsi:type="generator:Date" year="1972"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT28" soluce="true" event="Loi Veil (IVG)">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.14"/>
+              <time xsi:type="generator:Date" day="" month="" year="1975">
+                <position href="../HistoryGeographyFacts.xmi#1975"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT10" soluce="true" event="Appel du g&#xe9;n&#xe9;ral de Gaulle">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.5"/>
+              <time xsi:type="generator:Date" day="18" month="Juin" year="1940">
+                <position href="../HistoryGeographyFacts.xmi#1940"/>
+              </time>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT19" event="L'Euro">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.9"/>
+              <time xsi:type="generator:Date" year="2000"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT11" event="Appel du g&#xe9;n&#xe9;ral de Gaulle">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.5"/>
+              <time xsi:type="generator:Date" year="16 Juin 1950"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:HGQFIdentification" wasSelected="false" achieved="false" ID="HG_01_L1_T12-QAFACT15" event="Cr&#xe9;ation de l'ONU">
+              <facts xsi:type="generator:HistoryFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.1/@facts.7"/>
+              <time xsi:type="generator:Date" year="1946"/>
+            </questionableFacts>
+          </resultsbytask>
         </results>
       </currentobjectivelevels>
     </learnerProgress>
   </progression>
   <learningpath href="../LearningDomain.xmi#HGPATH"/>
-  <statistics maxGameLevelReached="9" nbLevelsGenerated="3436"/>
+  <statistics maxGameLevelReached="9" nbLevelsGenerated="3442"/>
 </generator:LearnerPlayer>
