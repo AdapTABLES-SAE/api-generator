@@ -8,6 +8,7 @@ import factsgenerator_hg.HGFactGeneratorAssociation;
 import factsgenerator_hg.HGFactGeneratorChronology;
 import factsgenerator_hg.HGFactGeneratorLegend;
 import factsgenerator_hg.HGFactGeneratorLocate;
+import factsgenerator_hg.HGFactGeneratorMembership;
 import factsgenerator_hg.HGFactGeneratorOrderEvent;
 import factsgenerator_judo.JudoFactGeneratorClassifyTechnique;
 import factsgenerator_judo.JudoFactGeneratorIdentifyArbitration;
@@ -20,6 +21,7 @@ import factsgenerator_maths.MTFactGeneratorREB;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.CompletionTask;
+import generator.GeographyMembership;
 import generator.HistoricalEventAssociation;
 import generator.IdentifyTechnique;
 import generator.LegendAMap;
@@ -74,7 +76,11 @@ public class FactGenerator {
 			factGenerator = new HGFactGeneratorOrderEvent(dungeonElements);
 			break;
 			default: // MEMBERSHIP
-				factGenerator = new HGFactGeneratorLocate(dungeonElements);
+				if(task instanceof GeographyMembership) {
+					factGenerator = new HGFactGeneratorMembership(modelsManager, dungeonElements);
+				} else {
+					factGenerator = new HGFactGeneratorLocate(dungeonElements);
+				}
 				break;
 		}
 		return factGenerator;

@@ -257,34 +257,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mtMembershipEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass orderEventEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass orderQuestionableFactEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass orderSolutionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass resultsEClass = null;
 
 	/**
@@ -964,6 +936,62 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass mtMembershipEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass orderEventEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass orderQuestionableFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass orderSolutionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass hgqfMembershipEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass geographyMembershipEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass generalFactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass wrongDataEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum directionsEEnum = null;
 
 	/**
@@ -1184,6 +1212,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EReference getAbstractFact_BelongsToVisualization() {
 		return (EReference) abstractFactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractFact_Setoffacts() {
+		return (EReference) abstractFactEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2480,69 +2517,6 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getMTIdentification_Target() {
 		return (EAttribute) mtIdentificationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMTMembership() {
-		return mtMembershipEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getOrderEvent() {
-		return orderEventEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getOrderQuestionableFact() {
-		return orderQuestionableFactEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getOrderQuestionableFact_Solutions() {
-		return (EReference) orderQuestionableFactEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getOrderSolution() {
-		return orderSolutionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getOrderSolution_Event() {
-		return (EAttribute) orderSolutionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getOrderSolution_Order() {
-		return (EAttribute) orderSolutionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -4674,6 +4648,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getGeographyFact_Category() {
+		return (EAttribute) geographyFactEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDate() {
 		return dateEClass;
 	}
@@ -5063,6 +5046,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getAQuestionableFact_QuestionWithImage() {
 		return (EAttribute) aQuestionableFactEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAQuestionableFact_Facts() {
+		return (EReference) aQuestionableFactEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -5619,6 +5611,150 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMTMembership() {
+		return mtMembershipEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOrderEvent() {
+		return orderEventEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOrderQuestionableFact() {
+		return orderQuestionableFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOrderQuestionableFact_Solutions() {
+		return (EReference) orderQuestionableFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOrderSolution() {
+		return orderSolutionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOrderSolution_Event() {
+		return (EAttribute) orderSolutionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOrderSolution_Order() {
+		return (EAttribute) orderSolutionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHGQFMembership() {
+		return hgqfMembershipEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHGQFMembership_GoodChoices() {
+		return (EAttribute) hgqfMembershipEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHGQFMembership_Type() {
+		return (EAttribute) hgqfMembershipEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHGQFMembership_MembershipTo() {
+		return (EAttribute) hgqfMembershipEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGeographyMembership() {
+		return geographyMembershipEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGeneralFact() {
+		return generalFactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGeneralFact_WrongData() {
+		return (EReference) generalFactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWrongData() {
+		return wrongDataEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getWrongData_Value() {
+		return (EAttribute) wrongDataEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDirections() {
 		return directionsEEnum;
 	}
@@ -5817,6 +5953,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		abstractFactEClass = createEClass(ABSTRACT_FACT);
 		createEReference(abstractFactEClass, ABSTRACT_FACT__REPRESENTATION);
 		createEReference(abstractFactEClass, ABSTRACT_FACT__BELONGS_TO_VISUALIZATION);
+		createEReference(abstractFactEClass, ABSTRACT_FACT__SETOFFACTS);
 
 		setOfFactsEClass = createEClass(SET_OF_FACTS);
 		createEReference(setOfFactsEClass, SET_OF_FACTS__FACTS);
@@ -6296,6 +6433,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(geographyFactEClass, GEOGRAPHY_FACT__POSITION);
 		createEAttribute(geographyFactEClass, GEOGRAPHY_FACT__TYPE);
 		createEAttribute(geographyFactEClass, GEOGRAPHY_FACT__VALUE);
+		createEAttribute(geographyFactEClass, GEOGRAPHY_FACT__CATEGORY);
 
 		dateEClass = createEClass(DATE);
 		createEAttribute(dateEClass, DATE__DAY);
@@ -6352,6 +6490,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEReference(aQuestionableFactEClass, AQUESTIONABLE_FACT__RESULTS);
 		createEAttribute(aQuestionableFactEClass, AQUESTIONABLE_FACT__ID);
 		createEAttribute(aQuestionableFactEClass, AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE);
+		createEReference(aQuestionableFactEClass, AQUESTIONABLE_FACT__FACTS);
 
 		aVisualizationQuestionableFactEClass = createEClass(AVISUALIZATION_QUESTIONABLE_FACT);
 		createEReference(aVisualizationQuestionableFactEClass, AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION);
@@ -6445,6 +6584,19 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(orderSolutionEClass, ORDER_SOLUTION__EVENT);
 		createEAttribute(orderSolutionEClass, ORDER_SOLUTION__ORDER);
 
+		hgqfMembershipEClass = createEClass(HGQF_MEMBERSHIP);
+		createEAttribute(hgqfMembershipEClass, HGQF_MEMBERSHIP__GOOD_CHOICES);
+		createEAttribute(hgqfMembershipEClass, HGQF_MEMBERSHIP__TYPE);
+		createEAttribute(hgqfMembershipEClass, HGQF_MEMBERSHIP__MEMBERSHIP_TO);
+
+		geographyMembershipEClass = createEClass(GEOGRAPHY_MEMBERSHIP);
+
+		generalFactEClass = createEClass(GENERAL_FACT);
+		createEReference(generalFactEClass, GENERAL_FACT__WRONG_DATA);
+
+		wrongDataEClass = createEClass(WRONG_DATA);
+		createEAttribute(wrongDataEClass, WRONG_DATA__VALUE);
+
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
 		dungeonModeEEnum = createEEnum(DUNGEON_MODE);
@@ -6500,6 +6652,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		abstractFactEClass.getESuperTypes().add(this.getGeneralFact());
+		setOfFactsEClass.getESuperTypes().add(this.getGeneralFact());
 		smallRoomTypeEClass.getESuperTypes().add(this.getRoomType());
 		largeRoomTypeEClass.getESuperTypes().add(this.getRoomType());
 		mtLevelEClass.getESuperTypes().add(this.getLevel());
@@ -6570,6 +6724,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		mtMembershipEClass.getESuperTypes().add(this.getMembershipIDTask());
 		orderEventEClass.getESuperTypes().add(this.getOrderingTask());
 		orderQuestionableFactEClass.getESuperTypes().add(this.getQuestionableFact());
+		hgqfMembershipEClass.getESuperTypes().add(this.getQuestionableFact());
+		geographyMembershipEClass.getESuperTypes().add(this.getMembershipIDTask());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -6580,12 +6736,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getAbstractFact_BelongsToVisualization(), this.getVisualization(), null,
 				"belongsToVisualization", null, 0, 1, AbstractFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractFact_Setoffacts(), this.getSetOfFacts(), this.getSetOfFacts_Facts(), "setoffacts",
+				null, 1, 1, AbstractFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(setOfFactsEClass, SetOfFacts.class, "SetOfFacts", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSetOfFacts_Facts(), this.getAbstractFact(), null, "facts", null, 0, -1, SetOfFacts.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSetOfFacts_Facts(), this.getAbstractFact(), this.getAbstractFact_Setoffacts(), "facts", null,
+				0, -1, SetOfFacts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSetOfFacts_Name(), ecorePackage.getEString(), "name", null, 0, 1, SetOfFacts.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSetOfFacts_Visualization(), this.getVisualization(), null, "visualization", null, 0, 1,
@@ -7624,6 +7783,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGeographyFact_Value(), ecorePackage.getEString(), "value", null, 0, 1, GeographyFact.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGeographyFact_Category(), ecorePackage.getEString(), "category", null, 0, 1,
+				GeographyFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(dateEClass, Date.class, "Date", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDate_Day(), ecorePackage.getEString(), "day", null, 0, 1, Date.class, !IS_TRANSIENT,
@@ -7743,6 +7905,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getAQuestionableFact_QuestionWithImage(), ecorePackage.getEBoolean(), "questionWithImage", null,
 				0, 1, AQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAQuestionableFact_Facts(), this.getAbstractFact(), null, "facts", null, 0, -1,
+				AQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(aVisualizationQuestionableFactEClass, AVisualizationQuestionableFact.class,
 				"AVisualizationQuestionableFact", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -7944,6 +8109,31 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getOrderSolution_Event(), ecorePackage.getEString(), "event", null, 0, 1, OrderSolution.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrderSolution_Order(), ecorePackage.getEInt(), "order", null, 0, 1, OrderSolution.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(hgqfMembershipEClass, HGQFMembership.class, "HGQFMembership", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getHGQFMembership_GoodChoices(), ecorePackage.getEString(), "goodChoices", null, 0, -1,
+				HGQFMembership.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHGQFMembership_Type(), this.getEGeographyValue(), "type", null, 0, 1, HGQFMembership.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHGQFMembership_MembershipTo(), ecorePackage.getEString(), "membershipTo", null, 0, 1,
+				HGQFMembership.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(geographyMembershipEClass, GeographyMembership.class, "GeographyMembership", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(generalFactEClass, GeneralFact.class, "GeneralFact", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGeneralFact_WrongData(), this.getWrongData(), null, "wrongData", null, 0, -1,
+				GeneralFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(wrongDataEClass, WrongData.class, "WrongData", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getWrongData_Value(), ecorePackage.getEString(), "value", null, 0, 1, WrongData.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals

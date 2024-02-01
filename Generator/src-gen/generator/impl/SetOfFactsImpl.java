@@ -10,8 +10,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import generator.AbstractFact;
@@ -34,7 +33,7 @@ import generator.Visualization;
  *
  * @generated
  */
-public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetOfFacts {
+public class SetOfFactsImpl extends GeneralFactImpl implements SetOfFacts {
 	/**
 	 * The cached value of the '{@link #getFacts() <em>Facts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -101,8 +100,8 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 	 */
 	public EList<AbstractFact> getFacts() {
 		if (facts == null) {
-			facts = new EObjectContainmentEList<AbstractFact>(AbstractFact.class, this,
-					GeneratorPackage.SET_OF_FACTS__FACTS);
+			facts = new EObjectContainmentWithInverseEList<AbstractFact>(AbstractFact.class, this,
+					GeneratorPackage.SET_OF_FACTS__FACTS, GeneratorPackage.ABSTRACT_FACT__SETOFFACTS);
 		}
 		return facts;
 	}
@@ -176,6 +175,21 @@ public class SetOfFactsImpl extends MinimalEObjectImpl.Container implements SetO
 		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.SET_OF_FACTS__VISUALIZATION,
 					newVisualization, newVisualization));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case GeneratorPackage.SET_OF_FACTS__FACTS:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getFacts()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**

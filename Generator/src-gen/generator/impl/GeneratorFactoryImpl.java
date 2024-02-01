@@ -289,6 +289,12 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createOrderQuestionableFact();
 		case GeneratorPackage.ORDER_SOLUTION:
 			return createOrderSolution();
+		case GeneratorPackage.HGQF_MEMBERSHIP:
+			return createHGQFMembership();
+		case GeneratorPackage.GEOGRAPHY_MEMBERSHIP:
+			return createGeographyMembership();
+		case GeneratorPackage.WRONG_DATA:
+			return createWrongData();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -684,6 +690,36 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public OrderSolution createOrderSolution() {
 		OrderSolutionImpl orderSolution = new OrderSolutionImpl();
 		return orderSolution;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HGQFMembership createHGQFMembership() {
+		HGQFMembershipImpl hgqfMembership = new HGQFMembershipImpl();
+		return hgqfMembership;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GeographyMembership createGeographyMembership() {
+		GeographyMembershipImpl geographyMembership = new GeographyMembershipImpl();
+		return geographyMembership;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public WrongData createWrongData() {
+		WrongDataImpl wrongData = new WrongDataImpl();
+		return wrongData;
 	}
 
 	/**

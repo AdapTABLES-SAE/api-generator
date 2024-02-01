@@ -59,6 +59,43 @@ public interface GeneratorPackage extends EPackage {
 	GeneratorPackage eINSTANCE = generator.impl.GeneratorPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link generator.impl.GeneralFactImpl <em>General Fact</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.GeneralFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getGeneralFact()
+	 * @generated
+	 */
+	int GENERAL_FACT = 136;
+
+	/**
+	 * The feature id for the '<em><b>Wrong Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERAL_FACT__WRONG_DATA = 0;
+
+	/**
+	 * The number of structural features of the '<em>General Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERAL_FACT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>General Fact</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERAL_FACT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link generator.impl.AbstractFactImpl <em>Abstract Fact</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -69,13 +106,22 @@ public interface GeneratorPackage extends EPackage {
 	int ABSTRACT_FACT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Wrong Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_FACT__WRONG_DATA = GENERAL_FACT__WRONG_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_FACT__REPRESENTATION = 0;
+	int ABSTRACT_FACT__REPRESENTATION = GENERAL_FACT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Belongs To Visualization</b></em>' reference.
@@ -84,7 +130,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_FACT__BELONGS_TO_VISUALIZATION = 1;
+	int ABSTRACT_FACT__BELONGS_TO_VISUALIZATION = GENERAL_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Setoffacts</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_FACT__SETOFFACTS = GENERAL_FACT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Fact</em>' class.
@@ -93,7 +148,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_FACT_FEATURE_COUNT = 2;
+	int ABSTRACT_FACT_FEATURE_COUNT = GENERAL_FACT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Abstract Fact</em>' class.
@@ -102,7 +157,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_FACT_OPERATION_COUNT = 0;
+	int ABSTRACT_FACT_OPERATION_COUNT = GENERAL_FACT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.SetOfFactsImpl <em>Set Of Facts</em>}' class.
@@ -115,13 +170,22 @@ public interface GeneratorPackage extends EPackage {
 	int SET_OF_FACTS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Wrong Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_OF_FACTS__WRONG_DATA = GENERAL_FACT__WRONG_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Facts</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SET_OF_FACTS__FACTS = 0;
+	int SET_OF_FACTS__FACTS = GENERAL_FACT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -130,7 +194,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_OF_FACTS__NAME = 1;
+	int SET_OF_FACTS__NAME = GENERAL_FACT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Visualization</b></em>' containment reference.
@@ -139,7 +203,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_OF_FACTS__VISUALIZATION = 2;
+	int SET_OF_FACTS__VISUALIZATION = GENERAL_FACT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Set Of Facts</em>' class.
@@ -148,7 +212,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_OF_FACTS_FEATURE_COUNT = 3;
+	int SET_OF_FACTS_FEATURE_COUNT = GENERAL_FACT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Set Of Facts</em>' class.
@@ -157,7 +221,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_OF_FACTS_OPERATION_COUNT = 0;
+	int SET_OF_FACTS_OPERATION_COUNT = GENERAL_FACT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.KnowledgeImpl <em>Knowledge</em>}' class.
@@ -2994,6 +3058,15 @@ public interface GeneratorPackage extends EPackage {
 	int MT_FACT = 35;
 
 	/**
+	 * The feature id for the '<em><b>Wrong Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_FACT__WRONG_DATA = ABSTRACT_FACT__WRONG_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3010,6 +3083,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_FACT__BELONGS_TO_VISUALIZATION = ABSTRACT_FACT__BELONGS_TO_VISUALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>Setoffacts</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_FACT__SETOFFACTS = ABSTRACT_FACT__SETOFFACTS;
 
 	/**
 	 * The feature id for the '<em><b>Table</b></em>' attribute.
@@ -3112,13 +3194,22 @@ public interface GeneratorPackage extends EPackage {
 	int AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AQUESTIONABLE_FACT__FACTS = 5;
+
+	/**
 	 * The number of structural features of the '<em>AQuestionable Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AQUESTIONABLE_FACT_FEATURE_COUNT = 5;
+	int AQUESTIONABLE_FACT_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>AQuestionable Fact</em>' class.
@@ -3183,6 +3274,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTIONABLE_FACT__FACTS = AQUESTIONABLE_FACT__FACTS;
 
 	/**
 	 * The number of structural features of the '<em>Questionable Fact</em>' class.
@@ -3274,6 +3374,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTQF_COMPLETION1__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_COMPLETION1__FACTS = QUESTIONABLE_FACT__FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Left Operand</b></em>' attribute.
@@ -3410,6 +3519,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTQF_COMPLETION2__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_COMPLETION2__FACTS = QUESTIONABLE_FACT__FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Left Operand</b></em>' attribute.
@@ -3566,6 +3684,15 @@ public interface GeneratorPackage extends EPackage {
 	int MTQF_REBUILD__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_REBUILD__FACTS = QUESTIONABLE_FACT__FACTS;
+
+	/**
 	 * The feature id for the '<em><b>Soluce Left</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3691,6 +3818,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTQF_IDENTIFICATION__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_IDENTIFICATION__FACTS = QUESTIONABLE_FACT__FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Result</b></em>' attribute.
@@ -3836,6 +3972,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTQF_MEMBERSHIP__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_MEMBERSHIP__FACTS = QUESTIONABLE_FACT__FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Good Results</b></em>' attribute list.
@@ -7108,6 +7253,15 @@ public interface GeneratorPackage extends EPackage {
 	int HISTORY_FACT = 97;
 
 	/**
+	 * The feature id for the '<em><b>Wrong Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORY_FACT__WRONG_DATA = ABSTRACT_FACT__WRONG_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7124,6 +7278,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int HISTORY_FACT__BELONGS_TO_VISUALIZATION = ABSTRACT_FACT__BELONGS_TO_VISUALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>Setoffacts</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORY_FACT__SETOFFACTS = ABSTRACT_FACT__SETOFFACTS;
 
 	/**
 	 * The feature id for the '<em><b>Event</b></em>' attribute.
@@ -7172,6 +7335,15 @@ public interface GeneratorPackage extends EPackage {
 	int GEOGRAPHY_LEGEND_FACT = 98;
 
 	/**
+	 * The feature id for the '<em><b>Wrong Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_LEGEND_FACT__WRONG_DATA = ABSTRACT_FACT__WRONG_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7188,6 +7360,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int GEOGRAPHY_LEGEND_FACT__BELONGS_TO_VISUALIZATION = ABSTRACT_FACT__BELONGS_TO_VISUALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>Setoffacts</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_LEGEND_FACT__SETOFFACTS = ABSTRACT_FACT__SETOFFACTS;
 
 	/**
 	 * The feature id for the '<em><b>Legend</b></em>' containment reference.
@@ -7236,6 +7417,15 @@ public interface GeneratorPackage extends EPackage {
 	int GEOGRAPHY_FACT = 99;
 
 	/**
+	 * The feature id for the '<em><b>Wrong Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_FACT__WRONG_DATA = ABSTRACT_FACT__WRONG_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7252,6 +7442,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int GEOGRAPHY_FACT__BELONGS_TO_VISUALIZATION = ABSTRACT_FACT__BELONGS_TO_VISUALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>Setoffacts</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_FACT__SETOFFACTS = ABSTRACT_FACT__SETOFFACTS;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' reference.
@@ -7281,13 +7480,22 @@ public interface GeneratorPackage extends EPackage {
 	int GEOGRAPHY_FACT__VALUE = ABSTRACT_FACT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_FACT__CATEGORY = ABSTRACT_FACT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Geography Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEOGRAPHY_FACT_FEATURE_COUNT = ABSTRACT_FACT_FEATURE_COUNT + 3;
+	int GEOGRAPHY_FACT_FEATURE_COUNT = ABSTRACT_FACT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Geography Fact</em>' class.
@@ -8219,6 +8427,15 @@ public interface GeneratorPackage extends EPackage {
 	int AVISUALIZATION_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AVISUALIZATION_QUESTIONABLE_FACT__FACTS = AQUESTIONABLE_FACT__FACTS;
+
+	/**
 	 * The feature id for the '<em><b>Visualization</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8547,6 +8764,15 @@ public interface GeneratorPackage extends EPackage {
 	int DATE_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_QUESTIONABLE_FACT__FACTS = QUESTIONABLE_FACT__FACTS;
+
+	/**
 	 * The feature id for the '<em><b>Source Element</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8846,6 +9072,15 @@ public interface GeneratorPackage extends EPackage {
 	int MAP_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = AVISUALIZATION_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_QUESTIONABLE_FACT__FACTS = AVISUALIZATION_QUESTIONABLE_FACT__FACTS;
+
+	/**
 	 * The feature id for the '<em><b>Visualization</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8910,6 +9145,15 @@ public interface GeneratorPackage extends EPackage {
 	int JUDO_TECHNIQUE_FACT = 119;
 
 	/**
+	 * The feature id for the '<em><b>Wrong Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_TECHNIQUE_FACT__WRONG_DATA = ABSTRACT_FACT__WRONG_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8926,6 +9170,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int JUDO_TECHNIQUE_FACT__BELONGS_TO_VISUALIZATION = ABSTRACT_FACT__BELONGS_TO_VISUALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>Setoffacts</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_TECHNIQUE_FACT__SETOFFACTS = ABSTRACT_FACT__SETOFFACTS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9345,6 +9598,15 @@ public interface GeneratorPackage extends EPackage {
 	int JUDO_QUESTIONABLE_TECHNIQUE_FACT__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_TECHNIQUE_FACT__FACTS = QUESTIONABLE_FACT__FACTS;
+
+	/**
 	 * The feature id for the '<em><b>Source Element Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9472,6 +9734,15 @@ public interface GeneratorPackage extends EPackage {
 	int JUDO_QUESTIONABLE_CLASSIFY_FACT__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_CLASSIFY_FACT__FACTS = QUESTIONABLE_FACT__FACTS;
+
+	/**
 	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9591,6 +9862,15 @@ public interface GeneratorPackage extends EPackage {
 	int JUDO_ARBITRATION_GESTURE_FACT = 125;
 
 	/**
+	 * The feature id for the '<em><b>Wrong Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_ARBITRATION_GESTURE_FACT__WRONG_DATA = ABSTRACT_FACT__WRONG_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9607,6 +9887,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int JUDO_ARBITRATION_GESTURE_FACT__BELONGS_TO_VISUALIZATION = ABSTRACT_FACT__BELONGS_TO_VISUALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>Setoffacts</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_ARBITRATION_GESTURE_FACT__SETOFFACTS = ABSTRACT_FACT__SETOFFACTS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9863,6 +10152,15 @@ public interface GeneratorPackage extends EPackage {
 	int JUDO_QUESTIONABLE_ARBITRATION_FACT__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_QUESTIONABLE_ARBITRATION_FACT__FACTS = QUESTIONABLE_FACT__FACTS;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10061,6 +10359,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int LEGEND_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = AVISUALIZATION_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEGEND_QUESTIONABLE_FACT__FACTS = AVISUALIZATION_QUESTIONABLE_FACT__FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Visualization</b></em>' reference.
@@ -10452,6 +10759,15 @@ public interface GeneratorPackage extends EPackage {
 	int ORDER_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_QUESTIONABLE_FACT__FACTS = QUESTIONABLE_FACT__FACTS;
+
+	/**
 	 * The feature id for the '<em><b>Solutions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10543,6 +10859,315 @@ public interface GeneratorPackage extends EPackage {
 	int ORDER_SOLUTION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.HGQFMembershipImpl <em>HGQF Membership</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.HGQFMembershipImpl
+	 * @see generator.impl.GeneratorPackageImpl#getHGQFMembership()
+	 * @generated
+	 */
+	int HGQF_MEMBERSHIP = 134;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HGQF_MEMBERSHIP__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HGQF_MEMBERSHIP__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HGQF_MEMBERSHIP__RESULTS = QUESTIONABLE_FACT__RESULTS;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HGQF_MEMBERSHIP__ID = QUESTIONABLE_FACT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HGQF_MEMBERSHIP__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HGQF_MEMBERSHIP__FACTS = QUESTIONABLE_FACT__FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Good Choices</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HGQF_MEMBERSHIP__GOOD_CHOICES = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HGQF_MEMBERSHIP__TYPE = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Membership To</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HGQF_MEMBERSHIP__MEMBERSHIP_TO = QUESTIONABLE_FACT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>HGQF Membership</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HGQF_MEMBERSHIP_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HGQF_MEMBERSHIP___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
+
+	/**
+	 * The operation id for the '<em>Get Complete Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HGQF_MEMBERSHIP___GET_COMPLETE_FACT = QUESTIONABLE_FACT___GET_COMPLETE_FACT;
+
+	/**
+	 * The number of operations of the '<em>HGQF Membership</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HGQF_MEMBERSHIP_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.GeographyMembershipImpl <em>Geography Membership</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.GeographyMembershipImpl
+	 * @see generator.impl.GeneratorPackageImpl#getGeographyMembership()
+	 * @generated
+	 */
+	int GEOGRAPHY_MEMBERSHIP = 135;
+
+	/**
+	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP__PERCENT_OF_APPARITION = MEMBERSHIP_ID_TASK__PERCENT_OF_APPARITION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP__NB_CONSECUTIVE_SUCCESS = MEMBERSHIP_ID_TASK__NB_CONSECUTIVE_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP__RESPONSE_MODALITY = MEMBERSHIP_ID_TASK__RESPONSE_MODALITY;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP__ID = MEMBERSHIP_ID_TASK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP__MAX_TIME = MEMBERSHIP_ID_TASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP__NB_FACTS = MEMBERSHIP_ID_TASK__NB_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP__TYPE = MEMBERSHIP_ID_TASK__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Identify Shared Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP__IDENTIFY_SHARED_PROPERTY = MEMBERSHIP_ID_TASK__IDENTIFY_SHARED_PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP__CHECK_ON_LEARNER_ACTION = MEMBERSHIP_ID_TASK__CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The number of structural features of the '<em>Geography Membership</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP_FEATURE_COUNT = MEMBERSHIP_ID_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP___GET_TYPE = MEMBERSHIP_ID_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Graphic Task</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP___IS_GRAPHIC_TASK = MEMBERSHIP_ID_TASK___IS_GRAPHIC_TASK;
+
+	/**
+	 * The operation id for the '<em>Is Check On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP___IS_CHECK_ON_LEARNER_ACTION = MEMBERSHIP_ID_TASK___IS_CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP___GET_NB_EXPECTED_ANSWERS = MEMBERSHIP_ID_TASK___GET_NB_EXPECTED_ANSWERS;
+
+	/**
+	 * The number of operations of the '<em>Geography Membership</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOGRAPHY_MEMBERSHIP_OPERATION_COUNT = MEMBERSHIP_ID_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.WrongDataImpl <em>Wrong Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.WrongDataImpl
+	 * @see generator.impl.GeneratorPackageImpl#getWrongData()
+	 * @generated
+	 */
+	int WRONG_DATA = 137;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRONG_DATA__VALUE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Wrong Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRONG_DATA_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Wrong Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRONG_DATA_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10550,7 +11175,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 134;
+	int DIRECTIONS = 138;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -10560,7 +11185,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 135;
+	int DUNGEON_MODE = 139;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -10570,7 +11195,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 136;
+	int TABLE_BUILD = 140;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -10580,7 +11205,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 137;
+	int RESULT_POSITION = 141;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -10590,7 +11215,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 138;
+	int ESINGLE_TARGET = 142;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -10600,7 +11225,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 139;
+	int ETASK_TYPE = 143;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -10610,7 +11235,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 140;
+	int EMODALITY = 144;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -10620,7 +11245,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 141;
+	int ESEVERAL_TARGET = 145;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -10630,7 +11255,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 142;
+	int ELEMENT_SIZE = 146;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -10640,7 +11265,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 143;
+	int GP_CATEGORY = 147;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -10650,7 +11275,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 144;
+	int ECORRECTNESS = 148;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -10660,7 +11285,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 145;
+	int EBOUNDARY = 149;
 
 	/**
 	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
@@ -10670,7 +11295,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
 	 * @generated
 	 */
-	int EROOM_TYPE = 146;
+	int EROOM_TYPE = 150;
 
 	/**
 	 * The meta object id for the '{@link generator.EGeographyValue <em>EGeography Value</em>}' enum.
@@ -10680,7 +11305,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEGeographyValue()
 	 * @generated
 	 */
-	int EGEOGRAPHY_VALUE = 147;
+	int EGEOGRAPHY_VALUE = 151;
 
 	/**
 	 * The meta object id for the '{@link generator.EHistoryTarget <em>EHistory Target</em>}' enum.
@@ -10690,7 +11315,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEHistoryTarget()
 	 * @generated
 	 */
-	int EHISTORY_TARGET = 148;
+	int EHISTORY_TARGET = 152;
 
 	/**
 	 * The meta object id for the '{@link generator.ELegendTarget <em>ELegend Target</em>}' enum.
@@ -10700,7 +11325,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getELegendTarget()
 	 * @generated
 	 */
-	int ELEGEND_TARGET = 149;
+	int ELEGEND_TARGET = 153;
 
 	/**
 	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
@@ -10710,7 +11335,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 150;
+	int ESTATEMENT_TYPE = 154;
 
 	/**
 	 * The meta object id for the '{@link generator.ETimeTarget <em>ETime Target</em>}' enum.
@@ -10720,7 +11345,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETimeTarget()
 	 * @generated
 	 */
-	int ETIME_TARGET = 151;
+	int ETIME_TARGET = 155;
 
 	/**
 	 * The meta object id for the '{@link generator.EJudoTarget <em>EJudo Target</em>}' enum.
@@ -10730,7 +11355,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEJudoTarget()
 	 * @generated
 	 */
-	int EJUDO_TARGET = 152;
+	int EJUDO_TARGET = 156;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -10763,6 +11388,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAbstractFact_BelongsToVisualization();
+
+	/**
+	 * Returns the meta object for the container reference '{@link generator.AbstractFact#getSetoffacts <em>Setoffacts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Setoffacts</em>'.
+	 * @see generator.AbstractFact#getSetoffacts()
+	 * @see #getAbstractFact()
+	 * @generated
+	 */
+	EReference getAbstractFact_Setoffacts();
 
 	/**
 	 * Returns the meta object for class '{@link generator.SetOfFacts <em>Set Of Facts</em>}'.
@@ -12374,6 +13010,101 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getOrderSolution_Order();
+
+	/**
+	 * Returns the meta object for class '{@link generator.HGQFMembership <em>HGQF Membership</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>HGQF Membership</em>'.
+	 * @see generator.HGQFMembership
+	 * @generated
+	 */
+	EClass getHGQFMembership();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link generator.HGQFMembership#getGoodChoices <em>Good Choices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Good Choices</em>'.
+	 * @see generator.HGQFMembership#getGoodChoices()
+	 * @see #getHGQFMembership()
+	 * @generated
+	 */
+	EAttribute getHGQFMembership_GoodChoices();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.HGQFMembership#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see generator.HGQFMembership#getType()
+	 * @see #getHGQFMembership()
+	 * @generated
+	 */
+	EAttribute getHGQFMembership_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.HGQFMembership#getMembershipTo <em>Membership To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Membership To</em>'.
+	 * @see generator.HGQFMembership#getMembershipTo()
+	 * @see #getHGQFMembership()
+	 * @generated
+	 */
+	EAttribute getHGQFMembership_MembershipTo();
+
+	/**
+	 * Returns the meta object for class '{@link generator.GeographyMembership <em>Geography Membership</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Geography Membership</em>'.
+	 * @see generator.GeographyMembership
+	 * @generated
+	 */
+	EClass getGeographyMembership();
+
+	/**
+	 * Returns the meta object for class '{@link generator.GeneralFact <em>General Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>General Fact</em>'.
+	 * @see generator.GeneralFact
+	 * @generated
+	 */
+	EClass getGeneralFact();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.GeneralFact#getWrongData <em>Wrong Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Wrong Data</em>'.
+	 * @see generator.GeneralFact#getWrongData()
+	 * @see #getGeneralFact()
+	 * @generated
+	 */
+	EReference getGeneralFact_WrongData();
+
+	/**
+	 * Returns the meta object for class '{@link generator.WrongData <em>Wrong Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Wrong Data</em>'.
+	 * @see generator.WrongData
+	 * @generated
+	 */
+	EClass getWrongData();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.WrongData#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see generator.WrongData#getValue()
+	 * @see #getWrongData()
+	 * @generated
+	 */
+	EAttribute getWrongData_Value();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Results <em>Results</em>}'.
@@ -14901,6 +15632,17 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getGeographyFact_Value();
 
 	/**
+	 * Returns the meta object for the attribute '{@link generator.GeographyFact#getCategory <em>Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Category</em>'.
+	 * @see generator.GeographyFact#getCategory()
+	 * @see #getGeographyFact()
+	 * @generated
+	 */
+	EAttribute getGeographyFact_Category();
+
+	/**
 	 * Returns the meta object for class '{@link generator.Date <em>Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15369,6 +16111,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAQuestionableFact_QuestionWithImage();
+
+	/**
+	 * Returns the meta object for the reference list '{@link generator.AQuestionableFact#getFacts <em>Facts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Facts</em>'.
+	 * @see generator.AQuestionableFact#getFacts()
+	 * @see #getAQuestionableFact()
+	 * @generated
+	 */
+	EReference getAQuestionableFact_Facts();
 
 	/**
 	 * Returns the meta object for class '{@link generator.AVisualizationQuestionableFact <em>AVisualization Questionable Fact</em>}'.
@@ -16261,6 +17014,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ABSTRACT_FACT__BELONGS_TO_VISUALIZATION = eINSTANCE.getAbstractFact_BelongsToVisualization();
+
+		/**
+		 * The meta object literal for the '<em><b>Setoffacts</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_FACT__SETOFFACTS = eINSTANCE.getAbstractFact_Setoffacts();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.SetOfFactsImpl <em>Set Of Facts</em>}' class.
@@ -17545,6 +18306,86 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ORDER_SOLUTION__ORDER = eINSTANCE.getOrderSolution_Order();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.HGQFMembershipImpl <em>HGQF Membership</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.HGQFMembershipImpl
+		 * @see generator.impl.GeneratorPackageImpl#getHGQFMembership()
+		 * @generated
+		 */
+		EClass HGQF_MEMBERSHIP = eINSTANCE.getHGQFMembership();
+
+		/**
+		 * The meta object literal for the '<em><b>Good Choices</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HGQF_MEMBERSHIP__GOOD_CHOICES = eINSTANCE.getHGQFMembership_GoodChoices();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HGQF_MEMBERSHIP__TYPE = eINSTANCE.getHGQFMembership_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Membership To</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HGQF_MEMBERSHIP__MEMBERSHIP_TO = eINSTANCE.getHGQFMembership_MembershipTo();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.GeographyMembershipImpl <em>Geography Membership</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.GeographyMembershipImpl
+		 * @see generator.impl.GeneratorPackageImpl#getGeographyMembership()
+		 * @generated
+		 */
+		EClass GEOGRAPHY_MEMBERSHIP = eINSTANCE.getGeographyMembership();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.GeneralFactImpl <em>General Fact</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.GeneralFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getGeneralFact()
+		 * @generated
+		 */
+		EClass GENERAL_FACT = eINSTANCE.getGeneralFact();
+
+		/**
+		 * The meta object literal for the '<em><b>Wrong Data</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GENERAL_FACT__WRONG_DATA = eINSTANCE.getGeneralFact_WrongData();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.WrongDataImpl <em>Wrong Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.WrongDataImpl
+		 * @see generator.impl.GeneratorPackageImpl#getWrongData()
+		 * @generated
+		 */
+		EClass WRONG_DATA = eINSTANCE.getWrongData();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WRONG_DATA__VALUE = eINSTANCE.getWrongData_Value();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ResultsImpl <em>Results</em>}' class.
@@ -19574,6 +20415,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute GEOGRAPHY_FACT__VALUE = eINSTANCE.getGeographyFact_Value();
 
 		/**
+		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GEOGRAPHY_FACT__CATEGORY = eINSTANCE.getGeographyFact_Category();
+
+		/**
 		 * The meta object literal for the '{@link generator.impl.DateImpl <em>Date</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -19950,6 +20799,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE = eINSTANCE.getAQuestionableFact_QuestionWithImage();
+
+		/**
+		 * The meta object literal for the '<em><b>Facts</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference AQUESTIONABLE_FACT__FACTS = eINSTANCE.getAQuestionableFact_Facts();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.AVisualizationQuestionableFactImpl <em>AVisualization Questionable Fact</em>}' class.

@@ -23,6 +23,7 @@ import generator.VisualizationPosition;
  *   <li>{@link generator.impl.GeographyFactImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link generator.impl.GeographyFactImpl#getType <em>Type</em>}</li>
  *   <li>{@link generator.impl.GeographyFactImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link generator.impl.GeographyFactImpl#getCategory <em>Category</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,6 +78,26 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	 * @ordered
 	 */
 	protected String value = VALUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategory()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CATEGORY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCategory() <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategory()
+	 * @generated
+	 * @ordered
+	 */
+	protected String category = CATEGORY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -186,6 +207,28 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCategory() {
+		return category;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCategory(String newCategory) {
+		String oldCategory = category;
+		category = newCategory;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.GEOGRAPHY_FACT__CATEGORY,
+					oldCategory, category));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -197,6 +240,8 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 			return getType();
 		case GeneratorPackage.GEOGRAPHY_FACT__VALUE:
 			return getValue();
+		case GeneratorPackage.GEOGRAPHY_FACT__CATEGORY:
+			return getCategory();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -217,6 +262,9 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 			return;
 		case GeneratorPackage.GEOGRAPHY_FACT__VALUE:
 			setValue((String) newValue);
+			return;
+		case GeneratorPackage.GEOGRAPHY_FACT__CATEGORY:
+			setCategory((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -239,6 +287,9 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 		case GeneratorPackage.GEOGRAPHY_FACT__VALUE:
 			setValue(VALUE_EDEFAULT);
 			return;
+		case GeneratorPackage.GEOGRAPHY_FACT__CATEGORY:
+			setCategory(CATEGORY_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -257,6 +308,8 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 			return type != TYPE_EDEFAULT;
 		case GeneratorPackage.GEOGRAPHY_FACT__VALUE:
 			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+		case GeneratorPackage.GEOGRAPHY_FACT__CATEGORY:
+			return CATEGORY_EDEFAULT == null ? category != null : !CATEGORY_EDEFAULT.equals(category);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -276,6 +329,8 @@ public class GeographyFactImpl extends AbstractFactImpl implements GeographyFact
 		result.append(type);
 		result.append(", value: ");
 		result.append(value);
+		result.append(", category: ");
+		result.append(category);
 		result.append(')');
 		return result.toString();
 	}

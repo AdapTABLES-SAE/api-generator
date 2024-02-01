@@ -92,7 +92,7 @@ public class MTFactGeneratorCOMP2 extends FactGeneratorTemplate {
 		}
 		qf.setSoluceRes(fact.getRes());
 		qf.setResultOnRight(resPos.equals(ResultPosition.RIGHT));
-		
+		qf.getFacts().add(fact);
 		switch (target) {
 		case OPERAND_TABLE:
 			qf.setLeftOperand(-1); 

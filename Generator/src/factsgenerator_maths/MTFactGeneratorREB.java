@@ -82,7 +82,7 @@ public class MTFactGeneratorREB extends FactGeneratorTemplate {
 		}
 		qf.setSoluceRes(fact.getRes());
 		qf.setResultOnRight(resPos.equals(ResultPosition.RIGHT));
-		
+		qf.getFacts().add(fact);
 		return qf;	
 	}
 	

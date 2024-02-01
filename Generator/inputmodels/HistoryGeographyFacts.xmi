@@ -128,9 +128,40 @@
     </visualization>
   </knowledgefacts>
   <knowledgefacts name="Aires Urbaines">
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="PARIS" value="Paris"/>
+    <wrongData value="Angers"/>
+    <wrongData value="Bayonne"/>
+    <wrongData value="Nimes"/>
+    <wrongData value="Avignon"/>
+    <wrongData value="Brest"/>
+    <wrongData value="Dijon"/>
+    <wrongData value="Toulon"/>
+    <wrongData value="Perpignan"/>
+    <wrongData value="Limoges"/>
+    <wrongData value="Rouen"/>
+    <wrongData value="Le Mans"/>
+    <wrongData value="Reims"/>
+    <wrongData value="Mulhouse"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="PARIS" value="Paris" category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="TOULOUSE" value="Toulouse" category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="LYON" value="Lyon" category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="MARSEILLE" value="Marseille" category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="BORDEAUX" value="Bordeaux" category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="NICE" value="Nice" category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="NANTES" value="Nantes" category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="STRASBOURG" value="Strasbourg" category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="MONTPELLIER" value="Montpellier" category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="RENNES" value="Rennes" category="aires urbaines"/>
     <visualization ID="FRANCE_AIRES_URBAINES">
       <positions ID="PARIS"/>
+      <positions ID="TOULOUSE"/>
+      <positions ID="LYON"/>
+      <positions ID="MARSEILLE"/>
+      <positions ID="BORDEAUX"/>
+      <positions ID="NICE"/>
+      <positions ID="NANTES"/>
+      <positions ID="STRASBOURG"/>
+      <positions ID="MONTPELLIER"/>
+      <positions ID="RENNES"/>
     </visualization>
   </knowledgefacts>
   <knowledgefacts name="Densité de population (Légende) ">

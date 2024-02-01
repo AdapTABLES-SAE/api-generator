@@ -50,6 +50,7 @@ public class HGFactGeneratorLegend extends FactGeneratorTemplate {
 		} else {
 			qf.getVisualizationSolutions().add(buildVisualizationSolution(fact.getLegend().getText(), fact.getLegend().getPosition(), false));
 		}
+		qf.getFacts().add(fact);
 		return qf;
 	}
 

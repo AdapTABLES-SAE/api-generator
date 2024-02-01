@@ -54,7 +54,8 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 		} else {
 			qf.getVisualizationSolutions().add(buildVisualizationSolution("(Debut) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getStartPosition(), false));
 			qf.getVisualizationSolutions().add(buildVisualizationSolution("(Fin) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getEndPosition(), false));
-		}			
+		}		
+		qf.getFacts().add(fact);
 		return qf;
 	}
 

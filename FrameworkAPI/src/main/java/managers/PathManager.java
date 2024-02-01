@@ -279,8 +279,7 @@ public class PathManager {
 		path.setName((String) json.get("learningPathID")); // TODO: improve ?
 		path.setKnowledge(knowledge);
 		
-		HashMap<Objective, JSONArray> obj_prerequisite = new HashMap<>();
-		
+		HashMap<Objective, JSONArray> obj_prerequisite = new HashMap<>();	
 		JSONArray objectives = (JSONArray) json.get("objectives");
 		for(Object oobjective: objectives) {
 			JSONObject jobjective = (JSONObject) oobjective;
@@ -336,6 +335,10 @@ public class PathManager {
 		Classrooms classrooms = Constant.loadClassrooms();
 		for(Classroom classroom : classrooms.getClassrooms())
 		for(LearnerPlayer learner : classroom.getLearnerPlayers()) {
+			if(learner.getID() == null) {
+				classroom.getLearnerPlayers().remove(learner);
+				Constant.saveClassroomsModel(classrooms);
+			}
 			if(learner.getID().equals(learnerID)) {
 				return learner;
 			} 
@@ -397,6 +400,7 @@ public class PathManager {
 		return buildingParams;
 	}
 	
+	@SuppressWarnings("unchecked")
 	private void buildLevelTasks(Objective obj, Level level, JSONObject json) {
 		JSONObject buildingParams = getJSONBuildSetup(json);
 	
@@ -405,6 +409,17 @@ public class PathManager {
 		// jsonElem.equals("TABLE")? TableBuild.TABLE_OPERAND: jsonElem.equals("OPERAND")? TableBuild.OPERAND_TABLE: TableBuild.MIX;
 		jsonElem = (String) buildingParams.get("resultLocation");
 		ResultPosition resPosition = ResultPosition.valueOf(jsonElem);
+		
+		if(buildingParams.containsKey("tables")) {
+			Knowledge knowledge = loadKnowledge();
+			for (String table :  (List<String>) buildingParams.get("tables")) {
+				for (SetOfFacts sof : knowledge.getKnowledgefacts()) {
+					if(Integer.parseInt(sof.getName()) == Integer.parseInt(table)) {
+						obj.getSetoffacts().add(sof); 
+					}
+				}
+			}
+		}
 		
 		((MTLevel) level).setBuildSetup(build);
 		((MTLevel) level).setResultPositionSetup(resPosition);

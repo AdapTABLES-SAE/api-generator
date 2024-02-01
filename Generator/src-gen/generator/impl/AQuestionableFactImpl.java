@@ -3,6 +3,7 @@
 package generator.impl;
 
 import generator.AQuestionableFact;
+import generator.AbstractFact;
 import generator.GeneratorPackage;
 import generator.QuestionableFactResult;
 
@@ -20,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -35,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link generator.impl.AQuestionableFactImpl#getResults <em>Results</em>}</li>
  *   <li>{@link generator.impl.AQuestionableFactImpl#getID <em>ID</em>}</li>
  *   <li>{@link generator.impl.AQuestionableFactImpl#isQuestionWithImage <em>Question With Image</em>}</li>
+ *   <li>{@link generator.impl.AQuestionableFactImpl#getFacts <em>Facts</em>}</li>
  * </ul>
  *
  * @generated
@@ -138,6 +141,16 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected boolean questionWithImage = QUESTION_WITH_IMAGE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getFacts() <em>Facts</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFacts()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AbstractFact> facts;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -290,6 +303,19 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<AbstractFact> getFacts() {
+		if (facts == null) {
+			facts = new EObjectResolvingEList<AbstractFact>(AbstractFact.class, this,
+					GeneratorPackage.AQUESTIONABLE_FACT__FACTS);
+		}
+		return facts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -317,6 +343,8 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 			return getID();
 		case GeneratorPackage.AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE:
 			return isQuestionWithImage();
+		case GeneratorPackage.AQUESTIONABLE_FACT__FACTS:
+			return getFacts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -346,6 +374,10 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 		case GeneratorPackage.AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE:
 			setQuestionWithImage((Boolean) newValue);
 			return;
+		case GeneratorPackage.AQUESTIONABLE_FACT__FACTS:
+			getFacts().clear();
+			getFacts().addAll((Collection<? extends AbstractFact>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -373,6 +405,9 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 		case GeneratorPackage.AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE:
 			setQuestionWithImage(QUESTION_WITH_IMAGE_EDEFAULT);
 			return;
+		case GeneratorPackage.AQUESTIONABLE_FACT__FACTS:
+			getFacts().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -395,6 +430,8 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 			return isSetID();
 		case GeneratorPackage.AQUESTIONABLE_FACT__QUESTION_WITH_IMAGE:
 			return questionWithImage != QUESTION_WITH_IMAGE_EDEFAULT;
+		case GeneratorPackage.AQUESTIONABLE_FACT__FACTS:
+			return facts != null && !facts.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

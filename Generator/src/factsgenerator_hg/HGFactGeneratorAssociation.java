@@ -51,6 +51,7 @@ public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 			DateQuestionableFact qfact = new DateQuestionableFactImpl();
 			HistoryFact hfact = (HistoryFact) fact;
 			qfact.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
+			qfact.getFacts().add(fact);
 			if(respectsTaskConditions(hfact, ctask)) {
 				switch(ctask.getSource()) {
 				case EVENT: 

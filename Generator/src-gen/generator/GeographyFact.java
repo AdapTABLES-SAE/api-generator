@@ -14,6 +14,7 @@ package generator;
  *   <li>{@link generator.GeographyFact#getPosition <em>Position</em>}</li>
  *   <li>{@link generator.GeographyFact#getType <em>Type</em>}</li>
  *   <li>{@link generator.GeographyFact#getValue <em>Value</em>}</li>
+ *   <li>{@link generator.GeographyFact#getCategory <em>Category</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getGeographyFact()
@@ -89,5 +90,27 @@ public interface GeographyFact extends AbstractFact {
 	 * @generated
 	 */
 	void setValue(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Category</em>' attribute.
+	 * @see #setCategory(String)
+	 * @see generator.GeneratorPackage#getGeographyFact_Category()
+	 * @model
+	 * @generated
+	 */
+	String getCategory();
+
+	/**
+	 * Sets the value of the '{@link generator.GeographyFact#getCategory <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Category</em>' attribute.
+	 * @see #getCategory()
+	 * @generated
+	 */
+	void setCategory(String value);
 
 } // GeographyFact

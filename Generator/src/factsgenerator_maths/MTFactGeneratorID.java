@@ -146,7 +146,7 @@ public class MTFactGeneratorID extends FactGeneratorTemplate {
 		qf.setResultOnRight(equalPos.equals(ResultPosition.RIGHT));
 		qf.setBuild(build);
 		qf.setSoluce(true);
-		
+		qf.getFacts().add(fact);
 		return qf;
 	}
 

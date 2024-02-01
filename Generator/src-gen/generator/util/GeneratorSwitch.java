@@ -70,12 +70,16 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			AbstractFact abstractFact = (AbstractFact) theEObject;
 			T result = caseAbstractFact(abstractFact);
 			if (result == null)
+				result = caseGeneralFact(abstractFact);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case GeneratorPackage.SET_OF_FACTS: {
 			SetOfFacts setOfFacts = (SetOfFacts) theEObject;
 			T result = caseSetOfFacts(setOfFacts);
+			if (result == null)
+				result = caseGeneralFact(setOfFacts);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -348,6 +352,8 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			T result = caseMTFact(mtFact);
 			if (result == null)
 				result = caseAbstractFact(mtFact);
+			if (result == null)
+				result = caseGeneralFact(mtFact);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -851,6 +857,8 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseAbstractFact(historyFact);
 			if (result == null)
+				result = caseGeneralFact(historyFact);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -860,6 +868,8 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseAbstractFact(geographyLegendFact);
 			if (result == null)
+				result = caseGeneralFact(geographyLegendFact);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -868,6 +878,8 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			T result = caseGeographyFact(geographyFact);
 			if (result == null)
 				result = caseAbstractFact(geographyFact);
+			if (result == null)
+				result = caseGeneralFact(geographyFact);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1051,6 +1063,8 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseAbstractFact(judoTechniqueFact);
 			if (result == null)
+				result = caseGeneralFact(judoTechniqueFact);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -1112,6 +1126,8 @@ public class GeneratorSwitch<T> extends Switch<T> {
 			T result = caseJudoArbitrationGestureFact(judoArbitrationGestureFact);
 			if (result == null)
 				result = caseAbstractFact(judoArbitrationGestureFact);
+			if (result == null)
+				result = caseGeneralFact(judoArbitrationGestureFact);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1196,6 +1212,42 @@ public class GeneratorSwitch<T> extends Switch<T> {
 		case GeneratorPackage.ORDER_SOLUTION: {
 			OrderSolution orderSolution = (OrderSolution) theEObject;
 			T result = caseOrderSolution(orderSolution);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.HGQF_MEMBERSHIP: {
+			HGQFMembership hgqfMembership = (HGQFMembership) theEObject;
+			T result = caseHGQFMembership(hgqfMembership);
+			if (result == null)
+				result = caseQuestionableFact(hgqfMembership);
+			if (result == null)
+				result = caseAQuestionableFact(hgqfMembership);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.GEOGRAPHY_MEMBERSHIP: {
+			GeographyMembership geographyMembership = (GeographyMembership) theEObject;
+			T result = caseGeographyMembership(geographyMembership);
+			if (result == null)
+				result = caseMembershipIDTask(geographyMembership);
+			if (result == null)
+				result = caseATask(geographyMembership);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.GENERAL_FACT: {
+			GeneralFact generalFact = (GeneralFact) theEObject;
+			T result = caseGeneralFact(generalFact);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.WRONG_DATA: {
+			WrongData wrongData = (WrongData) theEObject;
+			T result = caseWrongData(wrongData);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1757,6 +1809,66 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOrderSolution(OrderSolution object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>HGQF Membership</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>HGQF Membership</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHGQFMembership(HGQFMembership object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Geography Membership</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Geography Membership</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGeographyMembership(GeographyMembership object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>General Fact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>General Fact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGeneralFact(GeneralFact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Wrong Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Wrong Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWrongData(WrongData object) {
 		return null;
 	}
 

@@ -4,8 +4,6 @@ package generator;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Set Of Facts</b></em>'.
@@ -24,15 +22,17 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface SetOfFacts extends EObject {
+public interface SetOfFacts extends GeneralFact {
 	/**
 	 * Returns the value of the '<em><b>Facts</b></em>' containment reference list.
 	 * The list contents are of type {@link generator.AbstractFact}.
+	 * It is bidirectional and its opposite is '{@link generator.AbstractFact#getSetoffacts <em>Setoffacts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Facts</em>' containment reference list.
 	 * @see generator.GeneratorPackage#getSetOfFacts_Facts()
-	 * @model containment="true"
+	 * @see generator.AbstractFact#getSetoffacts
+	 * @model opposite="setoffacts" containment="true"
 	 * @generated
 	 */
 	EList<AbstractFact> getFacts();

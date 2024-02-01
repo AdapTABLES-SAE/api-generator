@@ -130,6 +130,7 @@
     <genClasses image="false" ecoreClass="generator.ecore#//AbstractFact">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//AbstractFact/representation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//AbstractFact/belongsToVisualization"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//AbstractFact/setoffacts"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//SetOfFacts">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//SetOfFacts/facts"/>
@@ -608,6 +609,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//GeographyFact/position"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GeographyFact/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GeographyFact/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//GeographyFact/category"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//Date">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Date/day"/>
@@ -662,6 +664,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//AQuestionableFact/results"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//AQuestionableFact/ID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//AQuestionableFact/questionWithImage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//AQuestionableFact/facts"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//AVisualizationQuestionableFact">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//AVisualizationQuestionableFact/visualization"/>
@@ -747,6 +750,18 @@
     <genClasses ecoreClass="generator.ecore#//OrderSolution">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderSolution/event"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderSolution/order"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//HGQFMembership">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HGQFMembership/goodChoices"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HGQFMembership/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HGQFMembership/membershipTo"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//GeographyMembership"/>
+    <genClasses ecoreClass="generator.ecore#//GeneralFact">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//GeneralFact/wrongData"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//WrongData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//WrongData/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

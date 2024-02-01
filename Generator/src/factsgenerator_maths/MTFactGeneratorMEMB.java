@@ -35,8 +35,10 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 		
 		for (AbstractFact mtResultFact : facts) {
 			qf.getGoodResults().add(((MTFact) mtResultFact).getRes());
+			qf.getFacts().add(mtResultFact);
 		}
 		qf.setTable(((MTFact) facts.get(0)).getTable());
+		
 		return (AQuestionableFact) qf;
 	}
 

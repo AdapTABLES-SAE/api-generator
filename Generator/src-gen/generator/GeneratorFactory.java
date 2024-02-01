@@ -283,6 +283,33 @@ public interface GeneratorFactory extends EFactory {
 	OrderSolution createOrderSolution();
 
 	/**
+	 * Returns a new object of class '<em>HGQF Membership</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>HGQF Membership</em>'.
+	 * @generated
+	 */
+	HGQFMembership createHGQFMembership();
+
+	/**
+	 * Returns a new object of class '<em>Geography Membership</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Geography Membership</em>'.
+	 * @generated
+	 */
+	GeographyMembership createGeographyMembership();
+
+	/**
+	 * Returns a new object of class '<em>Wrong Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Wrong Data</em>'.
+	 * @generated
+	 */
+	WrongData createWrongData();
+
+	/**
 	 * Returns a new object of class '<em>Results</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

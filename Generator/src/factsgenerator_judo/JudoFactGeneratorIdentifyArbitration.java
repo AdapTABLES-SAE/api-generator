@@ -33,8 +33,8 @@ public class JudoFactGeneratorIdentifyArbitration extends FactGeneratorTemplate 
 		if(fact instanceof JudoArbitrationGestureFact) {		
 			JudoQuestionableArbitrationFact qfact = new JudoQuestionableArbitrationFactImpl();
 			JudoArbitrationGestureFact jfact = (JudoArbitrationGestureFact) fact;
-			
 			IdentifyArbitrationGesture jtask = (IdentifyArbitrationGesture) task;
+			qfact.getFacts().add(fact);
 			switch(jtask.getSource()) {
 				case NAME: 
 					qfact.setName(jfact.getName());

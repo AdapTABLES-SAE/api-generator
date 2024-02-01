@@ -36,6 +36,7 @@ public class JudoFactGeneratorClassifyTechnique extends FactGeneratorTemplate {
 		qf.setCategory(((JudoTechniqueFact) facts.get(0)).getCategory());
 		for (AbstractFact judofact : facts) {
 			qf.getTechniques().add(((JudoTechniqueFact) judofact).getName());
+			qf.getFacts().add(judofact);
 		}
 		return (AQuestionableFact) qf;
 	}

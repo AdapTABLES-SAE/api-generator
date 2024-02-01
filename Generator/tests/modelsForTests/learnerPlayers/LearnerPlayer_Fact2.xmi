@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ASCII"?>
 <generator:LearnerPlayer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:generator="http://www.example.org/generator" name="Learner 02 FACT" ID="LP02F">
   <progression>
-    <playerProgress currentLevel="5"/>
+    <playerProgress currentLevel="5" coins="0"/>
     <learnerProgress/>
   </progression>
   <learningpath href="../LearningDomain.xmi#PATH_FOR_FACTS_TEST_2"/>
-  <statistics maxGameLevelReached="4"/>
+  <statistics maxGameLevelReached="5" nbLevelsGenerated="3868"/>
 </generator:LearnerPlayer>

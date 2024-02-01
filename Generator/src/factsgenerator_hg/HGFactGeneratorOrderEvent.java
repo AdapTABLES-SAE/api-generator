@@ -55,6 +55,7 @@ public class HGFactGeneratorOrderEvent extends FactGeneratorTemplate {
 			solution.setEvent(fact.getEvent());
 			solution.setOrder(i); i++;
 			qf.getSolutions().add(solution);
+			qf.getFacts().add(fact);
 		}
 		return qf;
 	}

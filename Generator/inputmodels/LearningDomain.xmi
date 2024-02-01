@@ -763,4 +763,16 @@
     </objectives>
     <knowledge href="JudoFacts.xmi#/"/>
   </learningpaths>
+  <learningpaths name="HG_PATH" ID="HG_PATH">
+    <objectives ID="HG_O1_V2" name="HG_O1">
+      <levels xsi:type="generator:HGLevel" ID="HG_O1_L1_V2">
+        <tasks xsi:type="generator:GeographyMembership" percentOfApparition="100" ID="HG_O1_L1_T1_V2">
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="2" nbChoices="4"/>
+        </tasks>
+        <completionCriteria/>
+      </levels>
+      <setoffacts href="HistoryGeographyFacts.xmi#//@knowledgefacts.2"/>
+    </objectives>
+    <knowledge href="HistoryGeographyFacts.xmi#/"/>
+  </learningpaths>
 </generator:LearningDomain>

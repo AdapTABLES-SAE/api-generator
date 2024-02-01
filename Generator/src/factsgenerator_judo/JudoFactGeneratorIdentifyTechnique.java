@@ -39,6 +39,7 @@ public class JudoFactGeneratorIdentifyTechnique extends FactGeneratorTemplate {
 			JudoQuestionableTechniqueFact qfact = new JudoQuestionableTechniqueFactImpl();
 			JudoTechniqueFact jfact = (JudoTechniqueFact) fact;
 			qfact.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
+			qfact.getFacts().add(fact);
 			switch(ctask.getSource()) {
 				case NAME: 
 					if(ctask.getMissing().equals(EJudoTarget.DESCRIPTION)) {

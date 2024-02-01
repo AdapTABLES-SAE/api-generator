@@ -32,7 +32,7 @@ class FactsSelectionTest { //TODO : refaire proprement
 		generator = new ALGAGenerator(true, learnerID, "Contexts.xmi", "FACT_TEST");
 	}
 
-	@Test
+	@Test // IT TAKES INFITY BUT FINISHES
 	@Tag(value = "LP01F")
 	void oneConsecutiveSuccessTest() {
 		do {

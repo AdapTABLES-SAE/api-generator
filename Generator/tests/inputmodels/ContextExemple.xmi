@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator:Context
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:generator="http://www.example.org/generator">
+  <learnerplayers>
+    <progression>
+      <playerProgress
+          currentLevel="16">
+        <items>
+          <items
+              bought="true"
+              activated="true">
+            <equipment
+                href="GameDescription.xmi#LIGHTWAIGHT_COAT"/>
+          </items>
+        </items>
+      </playerProgress>
+      <learnerProgress>
+        <currentobjectivelevels/>
+      </learnerProgress>
+    </progression>
+  </learnerplayers>
+</generator:Context>

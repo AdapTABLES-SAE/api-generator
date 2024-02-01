@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.AQuestionableFact#getResults <em>Results</em>}</li>
  *   <li>{@link generator.AQuestionableFact#getID <em>ID</em>}</li>
  *   <li>{@link generator.AQuestionableFact#isQuestionWithImage <em>Question With Image</em>}</li>
+ *   <li>{@link generator.AQuestionableFact#getFacts <em>Facts</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getAQuestionableFact()
@@ -155,5 +156,17 @@ public interface AQuestionableFact extends EObject {
 	 * @generated
 	 */
 	void setQuestionWithImage(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Facts</b></em>' reference list.
+	 * The list contents are of type {@link generator.AbstractFact}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Facts</em>' reference list.
+	 * @see generator.GeneratorPackage#getAQuestionableFact_Facts()
+	 * @model
+	 * @generated
+	 */
+	EList<AbstractFact> getFacts();
 
 } // AQuestionableFact

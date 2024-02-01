@@ -128,6 +128,7 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 			soluce.setValue(((GeographyFact) fact).getValue());
 			soluce.setVisualizationPosition(((GeographyFact) fact).getPosition());
 			qf.getVisualizationSolutions().add(soluce);
+			qf.getFacts().add(fact);
 		}
 		
 		if(task.getNbExpectedAnswers() == facts.size()) {

@@ -1,402 +1,369 @@
 <?xml version="1.0" encoding="ASCII"?>
-<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="JUDO_O1" levelID="JUDO_O1_L1" gameLevelID="9" curses="[&quot;Labyrinth&quot;,]">
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="HG_O1_V2" levelID="HG_O1_L1_V2" gameLevelID="9" curses="[&quot;Night&quot;,]">
   <rooms>
-    <room id="Room[0/0]" roomTypeName="RegularRoomE" correctnessToReach="0">
+    <room id="Room[0/0]" roomTypeName="RegularRoomW" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a2" direction="EAST" accessRef="a3"/>
+        <roomaccess id="a2" direction="WEST" accessRef="a3"/>
       </roomaccesses>
     </room>
-    <room id="Room[1/0]" x="1" roomTypeName="RegularRoom12" time="20" idTask="JUDO_O1_L1_T1" prompt="Place-toi sur la bonne dalle" correctnessToReach="1">
+    <room id="Room[-1/0]" x="-1" roomTypeName="RegularRoom1" time="20" idTask="HG_O1_L1_T1_V2" prompt="Casse les bons elements" correctnessToReach="2">
       <roomaccesses>
-        <roomaccess id="a3" direction="WEST" accessRef="a2"/>
+        <roomaccess id="a3" direction="EAST" accessRef="a2"/>
         <roomaccess id="a4" direction="NORTH" accessRef="a5"/>
-        <roomaccess id="a6" direction="EAST" accessRef="a7"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T1_V2-QAFACT2" complete="CITY qui sont des aires urbaines : {Nantes, Bordeaux}" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="ELEM1" type="BreakablePot" displayValue="Nantes" correctness="CORRECT" pos="POS13" ability="BREAKABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM2" type="BreakablePot" displayValue="Bordeaux" correctness="CORRECT" pos="POS7" ability="BREAKABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM3" type="BreakablePot" displayValue="Limoges" correctness="INCORRECT" pos="POS5" ability="BREAKABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM4" type="BreakablePot" displayValue="Perpignan" correctness="INCORRECT" pos="POS12" ability="BREAKABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM5" type="Statement" displayValue="CITY qui sont des aires urbaines" pos="POSQ1" idFact="HG_O1_L1_T1_V2-QAFACT2" acceptedFacts="CITY qui sont des aires urbaines : {Nantes, Bordeaux};"/>
+      </elements>
+    </room>
+    <room id="Room[-1/1]" x="-1" y="1" roomTypeName="RoomTrap2" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a5" direction="SOUTH" accessRef="a4"/>
+        <roomaccess id="a6" direction="WEST" accessRef="a7"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM6" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM7" type="SpikeTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM8" type="SpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM9" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM10" type="SpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-2/1]" x="-2" y="1" roomTypeName="RegularRoom11" time="20" idTask="HG_O1_L1_T1_V2" prompt="Deplace les bons elements sur les zones" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a7" direction="EAST" accessRef="a6"/>
         <roomaccess id="a8" direction="SOUTH" accessRef="a9"/>
       </roomaccesses>
       <facts>
-        <fact id="JUDO_O1_L1_T1-QAFACT1" complete="O-Soto-Gari correspond a o-soto-gari" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T1_V2-QAFACT3" complete="CITY qui sont des aires urbaines : {Toulouse, Montpellier}" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="ELEM1" type="Statement" displayValue="O-Soto-Gari correspond a ?" pos="POSL3" idFact="JUDO_O1_L1_T1-QAFACT1" interactive="true" acceptedFacts="O-Soto-Gari correspond a o-soto-gari;"/>
-        <element id="ELEM2" type="AvatarDetector" displayValue="juji-gatame" correctness="INCORRECT" pos="POS7" ability="DETECTOR_AVATAR" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM3" type="AvatarDetector" displayValue="waki-gatame" correctness="INCORRECT" pos="POS9" ability="DETECTOR_AVATAR" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM4" type="AvatarDetector" displayValue="o-soto-gari" correctness="CORRECT" pos="POS6" ability="DETECTOR_AVATAR" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM11" type="Pot" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM12" type="Pot" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM13" type="ObjectDetector" displayValue="Toulouse" correctness="CORRECT" pos="POS3" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM14" type="ObjectDetector" displayValue="Montpellier" correctness="CORRECT" pos="POS5" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM15" type="ObjectDetector" displayValue="Angers" correctness="INCORRECT" pos="POS4" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM16" type="ObjectDetector" displayValue="Le Mans" correctness="INCORRECT" pos="POS6" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM17" type="Statement" displayValue="CITY qui sont des aires urbaines" pos="POSQ1" idFact="HG_O1_L1_T1_V2-QAFACT3" acceptedFacts="CITY qui sont des aires urbaines : {Toulouse, Montpellier};"/>
       </elements>
     </room>
-    <room id="Room[1/1]" x="1" y="1" roomTypeName="RoomTrap4" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a5" direction="SOUTH" accessRef="a4"/>
-        <roomaccess id="a10" direction="EAST" accessRef="a11"/>
-        <roomaccess id="a12" direction="NORTH" accessRef="a13"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM5" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM6" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM7" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM8" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM9" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM10" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM11" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[2/1]" x="2" y="1" roomTypeName="RoomTrap" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a11" direction="WEST" accessRef="a10"/>
-        <roomaccess id="a14" direction="EAST" accessRef="a15"/>
-        <roomaccess id="a16" direction="NORTH" accessRef="a17"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM12" type="RegularSlime" pos="POS2" ability="NONAVOIDABLE"/>
-        <element id="ELEM13" type="RegularSlime" pos="POS4" ability="NONAVOIDABLE"/>
-        <element id="ELEM14" type="RegularSlime" pos="POS3" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[1/2]" x="1" y="2" roomTypeName="RegularRoom5" time="20" idTask="JUDO_O1_L1_T4" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a13" direction="SOUTH" accessRef="a12"/>
-        <roomaccess id="a18" direction="WEST" accessRef="a19"/>
-        <roomaccess id="a20" direction="EAST" accessRef="a21"/>
-        <roomaccess id="a22" direction="NORTH" accessRef="a23"/>
-      </roomaccesses>
-      <facts>
-        <fact id="JUDO_O1_L1_T4-QAFACT1" complete="(WAZA-ARI-presque victoire (demi ippon)-waza-ari-)" correctnessToReach="1"/>
-        <fact id="JUDO_O1_L1_T4-QAFACT10" complete="(SHIDO (Attribution)-d&#xe9;signe le combattant &#xe0; qui la p&#xe9;nalit&#xe9; revient-penalite-)" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT15" type="StructureStatement" pos="POSL2"/>
-        <element id="ELEM16" type="StatementFact" displayValue="(WAZA-ARI-" pos="id/STRUCT15" idFact="JUDO_O1_L1_T4-QAFACT1"/>
-        <element id="ELEM17" type="ObjectDetector" pos="id/STRUCT15" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT1"/>
-        <element id="ELEM18" type="StatementFact" displayValue="-" pos="id/STRUCT15" idFact="JUDO_O1_L1_T4-QAFACT1"/>
-        <element id="ELEM19" type="ObjectDetector" pos="id/STRUCT15" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT1"/>
-        <element id="ELEM20" type="StatementFact" displayValue=")" pos="id/STRUCT15" idFact="JUDO_O1_L1_T4-QAFACT1"/>
-        <element id="STRUCT21" type="StructureStatement" pos="POSL1"/>
-        <element id="ELEM22" type="StatementFact" displayValue="(SHIDO (Attribution)-" pos="id/STRUCT21" idFact="JUDO_O1_L1_T4-QAFACT10"/>
-        <element id="ELEM23" type="ObjectDetector" pos="id/STRUCT21" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT10"/>
-        <element id="ELEM24" type="StatementFact" displayValue="-" pos="id/STRUCT21" idFact="JUDO_O1_L1_T4-QAFACT10"/>
-        <element id="ELEM25" type="ObjectDetector" pos="id/STRUCT21" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT10"/>
-        <element id="ELEM26" type="StatementFact" displayValue=")" pos="id/STRUCT21" idFact="JUDO_O1_L1_T4-QAFACT10"/>
-        <element id="ELEM27" type="Pot" displayValue="presque victoire (demi ippon)" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT1"/>
-        <element id="ELEM28" type="Pot" displayValue="waza-ari" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM29" type="Pot" displayValue="d&#xe9;signe le combattant &#xe0; qui la p&#xe9;nalit&#xe9; revient" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT10"/>
-        <element id="ELEM30" type="Pot" displayValue="penalite" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT10" isImageDisplay="true"/>
-        <element id="ELEM31" type="Switch" pos="POS2" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[0/2]" y="2" roomTypeName="RoomTrap3" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a19" direction="EAST" accessRef="a18"/>
-        <roomaccess id="a24" direction="WEST" accessRef="a25"/>
-        <roomaccess id="a26" direction="NORTH" accessRef="a27"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM32" type="SpikeTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM33" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM34" type="SpikeTrap" pos="POS8" ability="AVOIDABLE"/>
-        <element id="ELEM35" type="SpikeTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM36" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM37" type="SpikeTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM38" type="SpikeTrap" pos="POS6" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[2/0]" x="2" roomTypeName="RegularRoom7" time="20" idTask="JUDO_O1_L1_T2" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="1">
-      <roomaccesses>
-        <roomaccess id="a7" direction="WEST" accessRef="a6"/>
-      </roomaccesses>
-      <facts>
-        <fact id="JUDO_O1_L1_T2-QAFACT2" complete="O-Goshi correspond a grande projection de hanche" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT39" type="StructureStatement" pos="POSL2" acceptedFacts="O-Goshi correspond a grande projection de hanche;"/>
-        <element id="ELEM40" type="StatementFact" displayValue="O-Goshi correspond a " pos="id/STRUCT39" idFact="JUDO_O1_L1_T2-QAFACT2"/>
-        <element id="ELEM41" type="ObjectDetector" pos="id/STRUCT39" ability="DETECTOR" idFact="JUDO_O1_L1_T2-QAFACT2"/>
-        <element id="ELEM42" type="Pot" displayValue="blocage du pied en p&#xea;chant " correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="JUDO_O1_L1_T2-QAFACT2"/>
-        <element id="ELEM43" type="Pot" displayValue="grande projection de hanche" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="JUDO_O1_L1_T2-QAFACT2"/>
-      </elements>
-    </room>
-    <room id="Room[2/2]" x="2" y="2" roomTypeName="RoomTrap3" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a21" direction="WEST" accessRef="a20"/>
-        <roomaccess id="a17" direction="SOUTH" accessRef="a16"/>
-        <roomaccess id="a28" direction="EAST" accessRef="a29"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM44" type="HoleTrap" pos="POS4" ability="NONAVOIDABLE"/>
-        <element id="ELEM45" type="HoleTrap" pos="POS5" ability="NONAVOIDABLE"/>
-        <element id="ELEM46" type="HoleTrap" pos="POS6" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[3/1]" x="3" y="1" roomTypeName="RegularRoom5" time="20" idTask="JUDO_O1_L1_T4" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a15" direction="WEST" accessRef="a14"/>
-      </roomaccesses>
-      <facts>
-        <fact id="JUDO_O1_L1_T4-QAFACT0" complete="(IPPON-victoire suivie de l'arr&#xea;t du combat-ippon-)" correctnessToReach="1"/>
-        <fact id="JUDO_O1_L1_T4-QAFACT2" complete="(ANNULATION-annuler l'action attribuer (ex. annuler waza-ari)-waza-ari-)" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT47" type="StructureStatement" pos="POSL2"/>
-        <element id="ELEM48" type="StatementFact" displayValue="(IPPON-" pos="id/STRUCT47" idFact="JUDO_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM49" type="ObjectDetector" pos="id/STRUCT47" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM50" type="StatementFact" displayValue="-" pos="id/STRUCT47" idFact="JUDO_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM51" type="ObjectDetector" pos="id/STRUCT47" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM52" type="StatementFact" displayValue=")" pos="id/STRUCT47" idFact="JUDO_O1_L1_T4-QAFACT0"/>
-        <element id="STRUCT53" type="StructureStatement" pos="POSL1"/>
-        <element id="ELEM54" type="StatementFact" displayValue="(ANNULATION-" pos="id/STRUCT53" idFact="JUDO_O1_L1_T4-QAFACT2"/>
-        <element id="ELEM55" type="ObjectDetector" pos="id/STRUCT53" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT2"/>
-        <element id="ELEM56" type="StatementFact" displayValue="-" pos="id/STRUCT53" idFact="JUDO_O1_L1_T4-QAFACT2"/>
-        <element id="ELEM57" type="ObjectDetector" pos="id/STRUCT53" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT2"/>
-        <element id="ELEM58" type="StatementFact" displayValue=")" pos="id/STRUCT53" idFact="JUDO_O1_L1_T4-QAFACT2"/>
-        <element id="ELEM59" type="Pot" displayValue="victoire suivie de l'arr&#xea;t du combat" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM60" type="Pot" displayValue="ippon" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT0" isImageDisplay="true"/>
-        <element id="ELEM61" type="Pot" displayValue="annuler l'action attribuer (ex. annuler waza-ari)" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT2"/>
-        <element id="ELEM62" type="Pot" displayValue="waza-ari" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT2" isImageDisplay="true"/>
-        <element id="ELEM63" type="Switch" pos="POS8" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[-1/2]" x="-1" y="2" roomTypeName="RegularRoom7" time="20" idTask="JUDO_O1_L1_T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="1">
-      <roomaccesses>
-        <roomaccess id="a25" direction="EAST" accessRef="a24"/>
-        <roomaccess id="a30" direction="WEST" accessRef="a31"/>
-      </roomaccesses>
-      <facts>
-        <fact id="JUDO_O1_L1_T1-QAFACT1" complete="O-Soto-Gari correspond a o-soto-gari" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT64" type="StructureStatement" pos="POSL2" acceptedFacts="O-Soto-Gari correspond a o-soto-gari;"/>
-        <element id="ELEM65" type="StatementFact" displayValue="O-Soto-Gari correspond a " pos="id/STRUCT64" idFact="JUDO_O1_L1_T1-QAFACT1"/>
-        <element id="ELEM66" type="ObjectDetector" pos="id/STRUCT64" ability="DETECTOR" idFact="JUDO_O1_L1_T1-QAFACT1"/>
-        <element id="ELEM67" type="Pot" displayValue="yoko-shiho-gatame" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM68" type="Pot" displayValue="uchi-mata" correctness="INCORRECT" pos="POS6" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM69" type="Pot" displayValue="o-soto-gari" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
-      </elements>
-    </room>
-    <room id="Room[1/-1]" x="1" y="-1" roomTypeName="RegularRoom5" time="20" idTask="JUDO_O1_L1_T4" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+    <room id="Room[-2/0]" x="-2" roomTypeName="RegularRoom2" time="20" idTask="HG_O1_L1_T1_V2" prompt="Deplace les bons elements sur la zone" gameplayWithUndo="true" correctnessToReach="2">
       <roomaccesses>
         <roomaccess id="a9" direction="NORTH" accessRef="a8"/>
-        <roomaccess id="a32" direction="EAST" accessRef="a33"/>
-        <roomaccess id="a34" direction="SOUTH" accessRef="a35"/>
-        <roomaccess id="a36" direction="WEST" accessRef="a37"/>
+        <roomaccess id="a10" direction="WEST" accessRef="a11"/>
       </roomaccesses>
       <facts>
-        <fact id="JUDO_O1_L1_T4-QAFACT8" complete="(YOSHI-le combat reprend (apr&#xe8;s un sonomama)-sonomama_yoshi-)" correctnessToReach="1"/>
-        <fact id="JUDO_O1_L1_T4-QAFACT5" complete="(OSEAKOMI-d&#xe9;but du chronom&#xe8;tre du temps d'immobilisation-osaekomi-)" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T1_V2-QAFACT2" complete="CITY qui sont des aires urbaines : {Nantes, Bordeaux}" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT70" type="StructureStatement" pos="POSL2"/>
-        <element id="ELEM71" type="StatementFact" displayValue="(YOSHI-" pos="id/STRUCT70" idFact="JUDO_O1_L1_T4-QAFACT8"/>
-        <element id="ELEM72" type="ObjectDetector" pos="id/STRUCT70" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT8"/>
-        <element id="ELEM73" type="StatementFact" displayValue="-" pos="id/STRUCT70" idFact="JUDO_O1_L1_T4-QAFACT8"/>
-        <element id="ELEM74" type="ObjectDetector" pos="id/STRUCT70" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT8"/>
-        <element id="ELEM75" type="StatementFact" displayValue=")" pos="id/STRUCT70" idFact="JUDO_O1_L1_T4-QAFACT8"/>
-        <element id="STRUCT76" type="StructureStatement" pos="POSL1"/>
-        <element id="ELEM77" type="StatementFact" displayValue="(OSEAKOMI-" pos="id/STRUCT76" idFact="JUDO_O1_L1_T4-QAFACT5"/>
-        <element id="ELEM78" type="ObjectDetector" pos="id/STRUCT76" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT5"/>
-        <element id="ELEM79" type="StatementFact" displayValue="-" pos="id/STRUCT76" idFact="JUDO_O1_L1_T4-QAFACT5"/>
-        <element id="ELEM80" type="ObjectDetector" pos="id/STRUCT76" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT5"/>
-        <element id="ELEM81" type="StatementFact" displayValue=")" pos="id/STRUCT76" idFact="JUDO_O1_L1_T4-QAFACT5"/>
-        <element id="ELEM82" type="Pot" displayValue="le combat reprend (apr&#xe8;s un sonomama)" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT8"/>
-        <element id="ELEM83" type="Pot" displayValue="sonomama_yoshi" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT8" isImageDisplay="true"/>
-        <element id="ELEM84" type="Pot" displayValue="d&#xe9;but du chronom&#xe8;tre du temps d'immobilisation" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT5"/>
-        <element id="ELEM85" type="Pot" displayValue="osaekomi" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT5" isImageDisplay="true"/>
-        <element id="ELEM86" type="Switch" pos="POS8" ability="VERIFICATOR"/>
+        <element id="STRUCT18" type="VStructXL" pos="POSXL1"/>
+        <element id="ELEM19" type="LargeNewObjectDetector" pos="id/STRUCT18" ability="DETECTOR"/>
+        <element id="ELEM20" type="StatementFact" displayValue="CITY qui sont des aires urbaines" pos="id/STRUCT18" idFact="HG_O1_L1_T1_V2-QAFACT2" acceptedFacts="CITY qui sont des aires urbaines : {Nantes, Bordeaux};"/>
+        <element id="ELEM21" type="Pot" displayValue="Nantes" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM22" type="Pot" displayValue="Bordeaux" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM23" type="Pot" displayValue="Perpignan" correctness="INCORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM24" type="Pot" displayValue="Le Mans" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
       </elements>
     </room>
-    <room id="Room[2/-1]" x="2" y="-1" roomTypeName="RegularRoom2" time="20" idTask="JUDO_O1_L1_T3" prompt="Deplace les bons elements sur la zone" gameplayWithUndo="true" correctnessToReach="3">
+    <room id="Room[-3/0]" x="-3" roomTypeName="RoomTrap" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a33" direction="WEST" accessRef="a32"/>
-        <roomaccess id="a38" direction="SOUTH" accessRef="a39"/>
+        <roomaccess id="a11" direction="EAST" accessRef="a10"/>
+        <roomaccess id="a12" direction="SOUTH" accessRef="a13"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM25" type="SpikeTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM26" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM27" type="SpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM28" type="SpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM29" type="SpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-3/-1]" x="-3" y="-1" roomTypeName="RegularRoom2" time="20" idTask="HG_O1_L1_T1_V2" prompt="Deplace les bons elements sur les zones" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a13" direction="NORTH" accessRef="a12"/>
+        <roomaccess id="a14" direction="EAST" accessRef="a15"/>
       </roomaccesses>
       <facts>
-        <fact id="JUDO_O1_L1_T3-QAFACT2" complete="OSAEKOMI-WAZA (Techniques d'immobilisation) : Yoko-Shiho-Gatame, Kami-Shiho-Gatame, Ushiro-Gesa-Gatame" correctnessToReach="3"/>
+        <fact id="HG_O1_L1_T1_V2-QAFACT3" complete="CITY qui sont des aires urbaines : {Toulouse, Montpellier}" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT87" type="VStructXL" pos="POSXL1"/>
-        <element id="ELEM88" type="LargeNewObjectDetector" pos="id/STRUCT87" ability="DETECTOR"/>
-        <element id="ELEM89" type="StatementFact" displayValue="OSAEKOMI-WAZA (Techniques d'immobilisation)" pos="id/STRUCT87" idFact="JUDO_O1_L1_T3-QAFACT2" acceptedFacts="OSAEKOMI-WAZA (Techniques d'immobilisation) : Yoko-Shiho-Gatame, Kami-Shiho-Gatame, Ushiro-Gesa-Gatame;"/>
-        <element id="ELEM90" type="Pot" displayValue="Hon-Gesa-Gatame" correctness="INCORRECT" pos="POS4" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM91" type="Pot" displayValue="Soto-Makikomi" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM92" type="Pot" displayValue="Yoko-Shiho-Gatame" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM93" type="Pot" displayValue="Kami-Shiho-Gatame" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM94" type="Pot" displayValue="Ushiro-Gesa-Gatame" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
+        <element id="ELEM30" type="Pot" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM31" type="Pot" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM32" type="ObjectDetector" displayValue="Toulouse" correctness="CORRECT" pos="POS5" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM33" type="ObjectDetector" displayValue="Montpellier" correctness="CORRECT" pos="POS1" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM34" type="ObjectDetector" displayValue="Bayonne" correctness="INCORRECT" pos="POS6" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM35" type="ObjectDetector" displayValue="Brest" correctness="INCORRECT" pos="POS3" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM36" type="Statement" displayValue="CITY qui sont des aires urbaines" pos="POSQ2" idFact="HG_O1_L1_T1_V2-QAFACT3" acceptedFacts="CITY qui sont des aires urbaines : {Toulouse, Montpellier};"/>
       </elements>
     </room>
-    <room id="Room[1/3]" x="1" y="3" roomTypeName="RoomTrap" correctnessToReach="0">
+    <room id="Room[-2/-1]" x="-2" y="-1" roomTypeName="RoomTrap" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a23" direction="SOUTH" accessRef="a22"/>
-        <roomaccess id="a40" direction="NORTH" accessRef="a41"/>
-        <roomaccess id="a42" direction="EAST" accessRef="a43"/>
+        <roomaccess id="a15" direction="WEST" accessRef="a14"/>
+        <roomaccess id="a16" direction="SOUTH" accessRef="a17"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM95" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM96" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM97" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM98" type="WaitSpikeTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM99" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM37" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM38" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM39" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM40" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM41" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[-2/2]" x="-2" y="2" roomTypeName="TrapRoom2" correctnessToReach="0">
+    <room id="Room[-2/-2]" x="-2" y="-2" roomTypeName="RegularRoom11" time="20" idTask="HG_O1_L1_T1_V2" prompt="Deplace les bons elements sur la zone" gameplayWithUndo="true" correctnessToReach="2">
       <roomaccesses>
-        <roomaccess id="a31" direction="EAST" accessRef="a30"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM100" type="BearTrap" pos="POS6" ability="NONAVOIDABLE"/>
-        <element id="ELEM101" type="BearTrap" pos="POS5" ability="NONAVOIDABLE"/>
-        <element id="ELEM102" type="BearTrap" pos="POS1" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[2/-2]" x="2" y="-2" roomTypeName="RegularRoom5" time="20" idTask="JUDO_O1_L1_T3" prompt="Casse les bons elements" correctnessToReach="2">
-      <roomaccesses>
-        <roomaccess id="a39" direction="NORTH" accessRef="a38"/>
+        <roomaccess id="a17" direction="NORTH" accessRef="a16"/>
+        <roomaccess id="a18" direction="SOUTH" accessRef="a19"/>
       </roomaccesses>
       <facts>
-        <fact id="JUDO_O1_L1_T3-QAFACT4" complete="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi" correctnessToReach="2"/>
+        <fact id="HG_O1_L1_T1_V2-QAFACT3" complete="CITY qui sont des aires urbaines : {Toulouse, Montpellier}" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="ELEM103" type="BreakablePot" displayValue="Morote-Jime" correctness="INCORRECT" pos="POS3" ability="BREAKABLE" idFact="JUDO_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM104" type="BreakablePot" displayValue="Soto-Makikomi" correctness="INCORRECT" pos="POS1" ability="BREAKABLE" idFact="JUDO_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM105" type="BreakablePot" displayValue="Uki-Goshi" correctness="CORRECT" pos="POS2" ability="BREAKABLE" idFact="JUDO_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM106" type="BreakablePot" displayValue="O-Goshi" correctness="CORRECT" pos="POS6" ability="BREAKABLE" idFact="JUDO_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM107" type="Statement" displayValue="KOSHI-WAZA (Techniques de hanche)" pos="POSQ2" idFact="JUDO_O1_L1_T3-QAFACT4" acceptedFacts="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi;"/>
+        <element id="STRUCT42" type="VStructXL" pos="POSXL1"/>
+        <element id="ELEM43" type="LargeNewObjectDetector" pos="id/STRUCT42" ability="DETECTOR"/>
+        <element id="ELEM44" type="StatementFact" displayValue="CITY qui sont des aires urbaines" pos="id/STRUCT42" idFact="HG_O1_L1_T1_V2-QAFACT3" acceptedFacts="CITY qui sont des aires urbaines : {Toulouse, Montpellier};"/>
+        <element id="ELEM45" type="Pot" displayValue="Toulouse" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM46" type="Pot" displayValue="Montpellier" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM47" type="Pot" displayValue="Toulon" correctness="INCORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM48" type="Pot" displayValue="Nimes" correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
       </elements>
     </room>
-    <room id="Room[0/4]" y="4" size="LARGE" roomTypeName="MapRoom" time="20" idTask="JUDO_O1_L1_T2" prompt="Deplace le bon elements sur la zone" correctnessToReach="1">
+    <room id="Room[-2/-3]" x="-2" y="-3" roomTypeName="RoomTrap4" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a41" direction="SOUTH_EAST" accessRef="a40"/>
-        <roomaccess id="a44" direction="NORTH_WEST" accessRef="a45"/>
+        <roomaccess id="a19" direction="NORTH" accessRef="a18"/>
+        <roomaccess id="a20" direction="WEST" accessRef="a21"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM49" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM50" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM51" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM52" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM53" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM54" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM55" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-3/-3]" x="-3" y="-3" roomTypeName="RegularRoom12" time="20" idTask="HG_O1_L1_T1_V2" prompt="Deplace les bons elements sur les zones" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a21" direction="EAST" accessRef="a20"/>
+        <roomaccess id="a22" direction="SOUTH" accessRef="a23"/>
       </roomaccesses>
       <facts>
-        <fact id="JUDO_O1_L1_T2-QAFACT3" complete="Uki-Goshi correspond a hanche flott&#xe9;e" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T1_V2-QAFACT2" complete="CITY qui sont des aires urbaines : {Nantes, Bordeaux}" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="ELEM108" type="Pot" displayValue="grande roue" correctness="INCORRECT" pos="POS18" ability="MOVABLE" idFact="JUDO_O1_L1_T2-QAFACT3"/>
-        <element id="ELEM109" type="Pot" displayValue="hanche flott&#xe9;e" correctness="CORRECT" pos="POS16" ability="MOVABLE" idFact="JUDO_O1_L1_T2-QAFACT3"/>
-        <element id="ELEM110" type="ObjectDetector" pos="POS19" ability="DETECTOR"/>
-        <element id="ELEM111" type="Statement" displayValue="Uki-Goshi correspond a ?" pos="POSQ1" idFact="JUDO_O1_L1_T2-QAFACT3" interactive="true" acceptedFacts="Uki-Goshi correspond a hanche flott&#xe9;e;"/>
+        <element id="ELEM56" type="Pot" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM57" type="Pot" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM58" type="ObjectDetector" displayValue="Nantes" correctness="CORRECT" pos="POS1" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM59" type="ObjectDetector" displayValue="Bordeaux" correctness="CORRECT" pos="POS2" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM60" type="ObjectDetector" displayValue="Nimes" correctness="INCORRECT" pos="POS5" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM61" type="ObjectDetector" displayValue="Toulon" correctness="INCORRECT" pos="POS10" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM62" type="Statement" displayValue="CITY qui sont des aires urbaines" pos="POSL3" idFact="HG_O1_L1_T1_V2-QAFACT2" acceptedFacts="CITY qui sont des aires urbaines : {Nantes, Bordeaux};"/>
       </elements>
     </room>
-    <room id="Room[0/3]" y="3" roomTypeName="RegularRoom5" time="20" idTask="JUDO_O1_L1_T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="1">
+    <room id="Room[-3/-4]" x="-3" y="-4" roomTypeName="RegularRoom3" time="20" idTask="HG_O1_L1_T1_V2" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true" correctnessToReach="2">
       <roomaccesses>
-        <roomaccess id="a27" direction="SOUTH" accessRef="a26"/>
+        <roomaccess id="a23" direction="NORTH" accessRef="a22"/>
+        <roomaccess id="a24" direction="EAST" accessRef="a25"/>
       </roomaccesses>
       <facts>
-        <fact id="JUDO_O1_L1_T1-QAFACT1" complete="O-Soto-Gari correspond a o-soto-gari" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T1_V2-QAFACT3" complete="CITY qui sont des aires urbaines : {Toulouse, Montpellier}" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT112" type="StructureStatement" pos="POSL1" acceptedFacts="O-Soto-Gari correspond a o-soto-gari;"/>
-        <element id="ELEM113" type="StatementFact" displayValue="O-Soto-Gari correspond a " pos="id/STRUCT112" idFact="JUDO_O1_L1_T1-QAFACT1"/>
-        <element id="ELEM114" type="ObjectDetector" pos="id/STRUCT112" ability="DETECTOR" idFact="JUDO_O1_L1_T1-QAFACT1"/>
-        <element id="ELEM115" type="Pot" displayValue="ko-soto-gake" correctness="INCORRECT" pos="POS2" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM116" type="Pot" displayValue="soto-makikomi" correctness="INCORRECT" pos="POS4" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
-        <element id="ELEM117" type="Pot" displayValue="o-soto-gari" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="JUDO_O1_L1_T1-QAFACT1" isImageDisplay="true"/>
+        <element id="ELEM63" type="FloorInterrupt" displayValue="Toulouse" correctness="CORRECT" pos="POS4" ability="TOUCHABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM64" type="FloorInterrupt" displayValue="Montpellier" correctness="CORRECT" pos="POS6" ability="TOUCHABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM65" type="FloorInterrupt" displayValue="Reims" correctness="INCORRECT" pos="POS3" ability="TOUCHABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM66" type="FloorInterrupt" displayValue="Dijon" correctness="INCORRECT" pos="POS1" ability="TOUCHABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM67" type="Switch" pos="POS8" ability="VERIFICATOR"/>
+        <element id="ELEM68" type="Statement" displayValue="CITY qui sont des aires urbaines" pos="POSQ1" idFact="HG_O1_L1_T1_V2-QAFACT3" acceptedFacts="CITY qui sont des aires urbaines : {Toulouse, Montpellier};"/>
       </elements>
     </room>
-    <room id="Room[3/2]" x="3" y="2" roomTypeName="RegularRoom5" time="20" idTask="JUDO_O1_L1_T2" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="1">
+    <room id="Room[-2/-4]" x="-2" y="-4" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a25" direction="WEST" accessRef="a24"/>
+        <roomaccess id="a26" direction="EAST" accessRef="a27"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM69" type="SpikeTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM70" type="SpikeTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM71" type="SpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM72" type="SpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM73" type="SpikeTrap" pos="POS6" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-1/-4]" x="-1" y="-4" roomTypeName="RegularRoom2" time="20" idTask="HG_O1_L1_T1_V2" prompt="Deplace les bons elements sur la zone" gameplayWithUndo="true" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a27" direction="WEST" accessRef="a26"/>
+        <roomaccess id="a28" direction="EAST" accessRef="a29"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T1_V2-QAFACT2" complete="CITY qui sont des aires urbaines : {Nantes, Bordeaux}" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="STRUCT74" type="VStructXL" pos="POSXL1"/>
+        <element id="ELEM75" type="LargeNewObjectDetector" pos="id/STRUCT74" ability="DETECTOR"/>
+        <element id="ELEM76" type="StatementFact" displayValue="CITY qui sont des aires urbaines" pos="id/STRUCT74" idFact="HG_O1_L1_T1_V2-QAFACT2" acceptedFacts="CITY qui sont des aires urbaines : {Nantes, Bordeaux};"/>
+        <element id="ELEM77" type="Pot" displayValue="Nantes" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM78" type="Pot" displayValue="Bordeaux" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM79" type="Pot" displayValue="Reims" correctness="INCORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM80" type="Pot" displayValue="Limoges" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+      </elements>
+    </room>
+    <room id="Room[0/-4]" y="-4" roomTypeName="RegularRoom12" time="20" idTask="HG_O1_L1_T1_V2" prompt="Deplace les bons elements sur les zones" correctnessToReach="2">
       <roomaccesses>
         <roomaccess id="a29" direction="WEST" accessRef="a28"/>
-        <roomaccess id="a46" direction="EAST" accessRef="a47"/>
+        <roomaccess id="a30" direction="NORTH" accessRef="a31"/>
       </roomaccesses>
       <facts>
-        <fact id="JUDO_O1_L1_T2-QAFACT3" complete="Uki-Goshi correspond a hanche flott&#xe9;e" correctnessToReach="1"/>
+        <fact id="HG_O1_L1_T1_V2-QAFACT3" complete="CITY qui sont des aires urbaines : {Toulouse, Montpellier}" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT118" type="StructureStatement" pos="POSL1" acceptedFacts="Uki-Goshi correspond a hanche flott&#xe9;e;"/>
-        <element id="ELEM119" type="StatementFact" displayValue="Uki-Goshi correspond a " pos="id/STRUCT118" idFact="JUDO_O1_L1_T2-QAFACT3"/>
-        <element id="ELEM120" type="ObjectDetector" pos="id/STRUCT118" ability="DETECTOR" idFact="JUDO_O1_L1_T2-QAFACT3"/>
-        <element id="ELEM121" type="Pot" displayValue="contr&#xf4;le longitudinal des 4 points" correctness="INCORRECT" pos="POS7" ability="MOVABLE" idFact="JUDO_O1_L1_T2-QAFACT3"/>
-        <element id="ELEM122" type="Pot" displayValue="hanche flott&#xe9;e" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="JUDO_O1_L1_T2-QAFACT3"/>
+        <element id="ELEM81" type="Pot" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM82" type="Pot" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM83" type="ObjectDetector" displayValue="Toulouse" correctness="CORRECT" pos="POS7" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM84" type="ObjectDetector" displayValue="Montpellier" correctness="CORRECT" pos="POS6" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM85" type="ObjectDetector" displayValue="Limoges" correctness="INCORRECT" pos="POS1" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM86" type="ObjectDetector" displayValue="Brest" correctness="INCORRECT" pos="POS5" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM87" type="Statement" displayValue="CITY qui sont des aires urbaines" pos="POSL3" idFact="HG_O1_L1_T1_V2-QAFACT3" acceptedFacts="CITY qui sont des aires urbaines : {Toulouse, Montpellier};"/>
       </elements>
     </room>
-    <room id="Room[1/-2]" x="1" y="-2" roomTypeName="RoomTrap3" correctnessToReach="0">
+    <room id="Room[0/-3]" y="-3" roomTypeName="RegularRoom11" time="20" idTask="HG_O1_L1_T1_V2" prompt="Deplace les bons elements sur les zones" correctnessToReach="2">
       <roomaccesses>
-        <roomaccess id="a35" direction="NORTH" accessRef="a34"/>
+        <roomaccess id="a31" direction="SOUTH" accessRef="a30"/>
+        <roomaccess id="a32" direction="NORTH" accessRef="a33"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T1_V2-QAFACT2" complete="CITY qui sont des aires urbaines : {Nantes, Bordeaux}" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="ELEM88" type="Pot" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM89" type="Pot" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM90" type="ObjectDetector" displayValue="Nantes" correctness="CORRECT" pos="POS4" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM91" type="ObjectDetector" displayValue="Bordeaux" correctness="CORRECT" pos="POS2" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM92" type="ObjectDetector" displayValue="Brest" correctness="INCORRECT" pos="POS6" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM93" type="ObjectDetector" displayValue="Le Mans" correctness="INCORRECT" pos="POS3" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT2"/>
+        <element id="ELEM94" type="Statement" displayValue="CITY qui sont des aires urbaines" pos="POSQ1" idFact="HG_O1_L1_T1_V2-QAFACT2" acceptedFacts="CITY qui sont des aires urbaines : {Nantes, Bordeaux};"/>
+      </elements>
+    </room>
+    <room id="Room[0/-2]" y="-2" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a33" direction="SOUTH" accessRef="a32"/>
+        <roomaccess id="a34" direction="NORTH" accessRef="a35"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM123" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM124" type="WaitSpikeTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM125" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM126" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM127" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM128" type="WaitSpikeTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM129" type="WaitSpikeTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM95" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM96" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM97" type="FireTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM98" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM99" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM100" type="FireTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM101" type="FireTrap" pos="POS8" ability="AVOIDABLE"/>
       </elements>
     </room>
     <room id="Room[0/-1]" y="-1" roomTypeName="RoomTrap3" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a37" direction="EAST" accessRef="a36"/>
+        <roomaccess id="a35" direction="SOUTH" accessRef="a34"/>
+        <roomaccess id="a36" direction="EAST" accessRef="a37"/>
       </roomaccesses>
       <elements>
+        <element id="ELEM102" type="WaitFireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM103" type="WaitFireTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM104" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM105" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM106" type="WaitFireTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM107" type="WaitFireTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM108" type="WaitFireTrap" pos="POS7" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[1/-1]" x="1" y="-1" roomTypeName="RegularRoom2" time="20" idTask="HG_O1_L1_T1_V2" prompt="Deplace les bons elements sur les zones" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a37" direction="WEST" accessRef="a36"/>
+        <roomaccess id="a38" direction="SOUTH" accessRef="a39"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T1_V2-QAFACT3" complete="CITY qui sont des aires urbaines : {Toulouse, Montpellier}" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="ELEM109" type="Pot" displayValue="Toulouse" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM110" type="Pot" displayValue="Montpellier" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM111" type="Pot" displayValue="Limoges" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM112" type="Pot" displayValue="Bayonne" correctness="INCORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM113" type="ObjectDetector" pos="POS1" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM114" type="ObjectDetector" pos="POS2" ability="DETECTOR" idFact="HG_O1_L1_T1_V2-QAFACT3"/>
+        <element id="ELEM115" type="Statement" displayValue="CITY qui sont des aires urbaines" pos="POSQ1" idFact="HG_O1_L1_T1_V2-QAFACT3" acceptedFacts="CITY qui sont des aires urbaines : {Toulouse, Montpellier};"/>
+      </elements>
+    </room>
+    <room id="Room[1/-2]" x="1" y="-2" roomTypeName="RegularRoom11" time="20" idTask="HG_O1_L1_T1_V2" prompt="Deplace les bons elements sur la zone" gameplayWithUndo="true" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a39" direction="NORTH" accessRef="a38"/>
+        <roomaccess id="a40" direction="SOUTH" accessRef="a41"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T1_V2-QAFACT0" complete="CITY qui sont des aires urbaines : {Nice, Marseille}" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="STRUCT116" type="VStructXL" pos="POSXL1"/>
+        <element id="ELEM117" type="LargeNewObjectDetector" pos="id/STRUCT116" ability="DETECTOR"/>
+        <element id="ELEM118" type="StatementFact" displayValue="CITY qui sont des aires urbaines" pos="id/STRUCT116" idFact="HG_O1_L1_T1_V2-QAFACT0" acceptedFacts="CITY qui sont des aires urbaines : {Nice, Marseille};"/>
+        <element id="ELEM119" type="Pot" displayValue="Nice" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT0"/>
+        <element id="ELEM120" type="Pot" displayValue="Marseille" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT0"/>
+        <element id="ELEM121" type="Pot" displayValue="Reims" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT0"/>
+        <element id="ELEM122" type="Pot" displayValue="Limoges" correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="HG_O1_L1_T1_V2-QAFACT0"/>
+      </elements>
+    </room>
+    <room id="Room[1/-3]" x="1" y="-3" roomTypeName="TwoWaysRoom3" time="20" idTask="HG_O1_L1_T1_V2" prompt="Touche les bons element puis active le levier" gameplayWithUndo="true" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a41" direction="NORTH" accessRef="a40"/>
+        <roomaccess id="a42" direction="SOUTH" accessRef="a43"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T1_V2-QAFACT4" complete="CITY qui sont des aires urbaines : {Lyon, Rennes}" correctnessToReach="2"/>
+      </facts>
+      <elements>
+        <element id="ELEM123" type="FloorInterrupt" displayValue="Lyon" correctness="CORRECT" pos="POS1" ability="TOUCHABLE" idFact="HG_O1_L1_T1_V2-QAFACT4"/>
+        <element id="ELEM124" type="FloorInterrupt" displayValue="Rennes" correctness="CORRECT" pos="POS5" ability="TOUCHABLE" idFact="HG_O1_L1_T1_V2-QAFACT4"/>
+        <element id="ELEM125" type="FloorInterrupt" displayValue="Rouen" correctness="INCORRECT" pos="POS6" ability="TOUCHABLE" idFact="HG_O1_L1_T1_V2-QAFACT4"/>
+        <element id="ELEM126" type="FloorInterrupt" displayValue="Angers" correctness="INCORRECT" pos="POS4" ability="TOUCHABLE" idFact="HG_O1_L1_T1_V2-QAFACT4"/>
+        <element id="ELEM127" type="Switch" pos="POS3" ability="VERIFICATOR"/>
+        <element id="ELEM128" type="Statement" displayValue="CITY qui sont des aires urbaines" pos="POSQ2" idFact="HG_O1_L1_T1_V2-QAFACT4" acceptedFacts="CITY qui sont des aires urbaines : {Lyon, Rennes};"/>
+      </elements>
+    </room>
+    <room id="Room[1/-4]" x="1" y="-4" roomTypeName="RoomTrap" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a43" direction="NORTH" accessRef="a42"/>
+        <roomaccess id="a44" direction="SOUTH" accessRef="a45"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM129" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
         <element id="ELEM130" type="WaitFireTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM131" type="WaitFireTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM132" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM133" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM134" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM135" type="WaitFireTrap" pos="POS8" ability="AVOIDABLE"/>
-        <element id="ELEM136" type="WaitFireTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM131" type="WaitFireTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM132" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM133" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[0/6]" y="6" roomTypeName="RegularRoom3" time="20" idTask="JUDO_O1_L1_T3" prompt="Deplace les bons elements sur les zones" correctnessToReach="3">
+    <room id="Room[1/-5]" x="1" y="-5" roomTypeName="RoomTrap4" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a45" direction="SOUTH" accessRef="a44"/>
-        <roomaccess id="a48" direction="EAST" accessRef="a49"/>
-      </roomaccesses>
-      <facts>
-        <fact id="JUDO_O1_L1_T3-QAFACT2" complete="OSAEKOMI-WAZA (Techniques d'immobilisation) : Yoko-Shiho-Gatame, Kami-Shiho-Gatame, Ushiro-Gesa-Gatame" correctnessToReach="3"/>
-      </facts>
-      <elements>
-        <element id="ELEM137" type="Pot" displayValue="Tani-Otoshi" correctness="INCORRECT" pos="POS6" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM138" type="Pot" displayValue="Ashi-Gatame-Jime" correctness="INCORRECT" pos="POS7" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM139" type="Pot" displayValue="Yoko-Shiho-Gatame" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM140" type="Pot" displayValue="Kami-Shiho-Gatame" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM141" type="Pot" displayValue="Ushiro-Gesa-Gatame" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="JUDO_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM142" type="ObjectDetector" pos="POS5" ability="DETECTOR" idFact="JUDO_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM143" type="ObjectDetector" pos="POS8" ability="DETECTOR" idFact="JUDO_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM144" type="ObjectDetector" pos="POS3" ability="DETECTOR" idFact="JUDO_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM145" type="Statement" displayValue="OSAEKOMI-WAZA (Techniques d'immobilisation)" pos="POSQ2" idFact="JUDO_O1_L1_T3-QAFACT2" acceptedFacts="OSAEKOMI-WAZA (Techniques d'immobilisation) : Yoko-Shiho-Gatame, Kami-Shiho-Gatame, Ushiro-Gesa-Gatame;"/>
-      </elements>
-    </room>
-    <room id="Room[2/3]" x="2" y="3" roomTypeName="RegularRoom5" time="20" idTask="JUDO_O1_L1_T4" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a43" direction="WEST" accessRef="a42"/>
-      </roomaccesses>
-      <facts>
-        <fact id="JUDO_O1_L1_T4-QAFACT0" complete="(IPPON-victoire suivie de l'arr&#xea;t du combat-ippon-)" correctnessToReach="1"/>
-        <fact id="JUDO_O1_L1_T4-QAFACT12" complete="(SHIDO -Fausse attaque-fausse_attaque-)" correctnessToReach="1"/>
-      </facts>
-      <elements>
-        <element id="STRUCT146" type="StructureStatement" pos="POSL1"/>
-        <element id="ELEM147" type="StatementFact" displayValue="(IPPON-" pos="id/STRUCT146" idFact="JUDO_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM148" type="ObjectDetector" pos="id/STRUCT146" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM149" type="StatementFact" displayValue="-" pos="id/STRUCT146" idFact="JUDO_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM150" type="ObjectDetector" pos="id/STRUCT146" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM151" type="StatementFact" displayValue=")" pos="id/STRUCT146" idFact="JUDO_O1_L1_T4-QAFACT0"/>
-        <element id="STRUCT152" type="StructureStatement" pos="POSL2"/>
-        <element id="ELEM153" type="StatementFact" displayValue="(SHIDO -" pos="id/STRUCT152" idFact="JUDO_O1_L1_T4-QAFACT12"/>
-        <element id="ELEM154" type="ObjectDetector" pos="id/STRUCT152" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT12"/>
-        <element id="ELEM155" type="StatementFact" displayValue="-" pos="id/STRUCT152" idFact="JUDO_O1_L1_T4-QAFACT12"/>
-        <element id="ELEM156" type="ObjectDetector" pos="id/STRUCT152" ability="DETECTOR" idFact="JUDO_O1_L1_T4-QAFACT12"/>
-        <element id="ELEM157" type="StatementFact" displayValue=")" pos="id/STRUCT152" idFact="JUDO_O1_L1_T4-QAFACT12"/>
-        <element id="ELEM158" type="Pot" displayValue="victoire suivie de l'arr&#xea;t du combat" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT0"/>
-        <element id="ELEM159" type="Pot" displayValue="ippon" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT0" isImageDisplay="true"/>
-        <element id="ELEM160" type="Pot" displayValue="Fausse attaque" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT12"/>
-        <element id="ELEM161" type="Pot" displayValue="fausse_attaque" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="JUDO_O1_L1_T4-QAFACT12" isImageDisplay="true"/>
-        <element id="ELEM162" type="Switch" pos="POS9" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[4/2]" x="4" y="2" roomTypeName="RoomTrap3" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a47" direction="WEST" accessRef="a46"/>
+        <roomaccess id="a45" direction="NORTH" accessRef="a44"/>
+        <roomaccess id="a46" direction="WEST" accessRef="a47"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM163" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM164" type="WaitSpikeTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM165" type="WaitSpikeTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM166" type="WaitSpikeTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM167" type="WaitSpikeTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM134" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM135" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM136" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM137" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM138" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM139" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM140" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[1/6]" x="1" y="6" roomTypeName="ExitRoom1" correctnessToReach="0">
+    <room id="Room[0/-5]" y="-5" roomTypeName="ExitRoom1" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a49" direction="WEST" accessRef="a48"/>
+        <roomaccess id="a47" direction="EAST" accessRef="a46"/>
       </roomaccesses>
     </room>
   </rooms>

@@ -37,6 +37,7 @@ import generator.VisualizationPosition;
 import generator.VisualizationQuestionParam;
 import generator.VisualizationSolution;
 import generator.WantedAnswersParam;
+import generator.WrongData;
 import generator.impl.CorrectnessValueImpl;
 import generator.impl.EntrySoluceParamImpl;
 import generator.impl.FactCorrectnessParamImpl;
@@ -76,6 +77,15 @@ public abstract class FactGeneratorTemplate {
 		this.dungeonElements = dungeonElements;
 		this.factsCounter = 0;
 		this.modelsManager = modelsManager;
+	}
+	
+	protected Set<WrongData> getPossibleWrongData(AQuestionableFact qFact){
+		Set<WrongData> wrongdata = new HashSet<>();
+		for(AbstractFact fact: qFact.getFacts()) {
+			wrongdata.addAll(fact.getWrongData());
+			wrongdata.addAll(fact.getSetoffacts().getWrongData());
+		}
+		return wrongdata;
 	}
 	
 	private Set<AQuestionableFact> generateMembership(ATask task) {

@@ -5,11 +5,11 @@ package generator.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import generator.AbstractFact;
 import generator.GeneratorPackage;
 import generator.Image;
+import generator.SetOfFacts;
 import generator.Visualization;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -24,11 +24,12 @@ import org.eclipse.emf.common.notify.NotificationChain;
  * <ul>
  *   <li>{@link generator.impl.AbstractFactImpl#getRepresentation <em>Representation</em>}</li>
  *   <li>{@link generator.impl.AbstractFactImpl#getBelongsToVisualization <em>Belongs To Visualization</em>}</li>
+ *   <li>{@link generator.impl.AbstractFactImpl#getSetoffacts <em>Setoffacts</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class AbstractFactImpl extends MinimalEObjectImpl.Container implements AbstractFact {
+public abstract class AbstractFactImpl extends GeneralFactImpl implements AbstractFact {
 	/**
 	 * The cached value of the '{@link #getRepresentation() <em>Representation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -165,13 +166,91 @@ public abstract class AbstractFactImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public SetOfFacts getSetoffacts() {
+		if (eContainerFeatureID() != GeneratorPackage.ABSTRACT_FACT__SETOFFACTS)
+			return null;
+		return (SetOfFacts) eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSetoffacts(SetOfFacts newSetoffacts, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject) newSetoffacts, GeneratorPackage.ABSTRACT_FACT__SETOFFACTS, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSetoffacts(SetOfFacts newSetoffacts) {
+		if (newSetoffacts != eInternalContainer()
+				|| (eContainerFeatureID() != GeneratorPackage.ABSTRACT_FACT__SETOFFACTS && newSetoffacts != null)) {
+			if (EcoreUtil.isAncestor(this, newSetoffacts))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newSetoffacts != null)
+				msgs = ((InternalEObject) newSetoffacts).eInverseAdd(this, GeneratorPackage.SET_OF_FACTS__FACTS,
+						SetOfFacts.class, msgs);
+			msgs = basicSetSetoffacts(newSetoffacts, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ABSTRACT_FACT__SETOFFACTS,
+					newSetoffacts, newSetoffacts));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case GeneratorPackage.ABSTRACT_FACT__SETOFFACTS:
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			return basicSetSetoffacts((SetOfFacts) otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case GeneratorPackage.ABSTRACT_FACT__REPRESENTATION:
 			return basicSetRepresentation(null, msgs);
+		case GeneratorPackage.ABSTRACT_FACT__SETOFFACTS:
+			return basicSetSetoffacts(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+		case GeneratorPackage.ABSTRACT_FACT__SETOFFACTS:
+			return eInternalContainer().eInverseRemove(this, GeneratorPackage.SET_OF_FACTS__FACTS, SetOfFacts.class,
+					msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -188,6 +267,8 @@ public abstract class AbstractFactImpl extends MinimalEObjectImpl.Container impl
 			if (resolve)
 				return getBelongsToVisualization();
 			return basicGetBelongsToVisualization();
+		case GeneratorPackage.ABSTRACT_FACT__SETOFFACTS:
+			return getSetoffacts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -205,6 +286,9 @@ public abstract class AbstractFactImpl extends MinimalEObjectImpl.Container impl
 			return;
 		case GeneratorPackage.ABSTRACT_FACT__BELONGS_TO_VISUALIZATION:
 			setBelongsToVisualization((Visualization) newValue);
+			return;
+		case GeneratorPackage.ABSTRACT_FACT__SETOFFACTS:
+			setSetoffacts((SetOfFacts) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -224,6 +308,9 @@ public abstract class AbstractFactImpl extends MinimalEObjectImpl.Container impl
 		case GeneratorPackage.ABSTRACT_FACT__BELONGS_TO_VISUALIZATION:
 			setBelongsToVisualization((Visualization) null);
 			return;
+		case GeneratorPackage.ABSTRACT_FACT__SETOFFACTS:
+			setSetoffacts((SetOfFacts) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -240,6 +327,8 @@ public abstract class AbstractFactImpl extends MinimalEObjectImpl.Container impl
 			return representation != null;
 		case GeneratorPackage.ABSTRACT_FACT__BELONGS_TO_VISUALIZATION:
 			return belongsToVisualization != null;
+		case GeneratorPackage.ABSTRACT_FACT__SETOFFACTS:
+			return getSetoffacts() != null;
 		}
 		return super.eIsSet(featureID);
 	}
