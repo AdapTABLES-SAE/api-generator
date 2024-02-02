@@ -363,9 +363,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="build" eType="#//TableBuild"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTQFMembership" eSuperTypes="#//QuestionableFact">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="goodResults" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="goodChoices" lowerBound="1"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="table" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultOfTable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QuestionedFact">
     <eStructuralFeatures xsi:type="ecore:EReference" name="questionablefact" lowerBound="1"

@@ -13,8 +13,9 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.MTQFMembership#getGoodResults <em>Good Results</em>}</li>
+ *   <li>{@link generator.MTQFMembership#getGoodChoices <em>Good Choices</em>}</li>
  *   <li>{@link generator.MTQFMembership#getTable <em>Table</em>}</li>
+ *   <li>{@link generator.MTQFMembership#isResultOfTable <em>Result Of Table</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getMTQFMembership()
@@ -23,16 +24,16 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface MTQFMembership extends QuestionableFact {
 	/**
-	 * Returns the value of the '<em><b>Good Results</b></em>' attribute list.
+	 * Returns the value of the '<em><b>Good Choices</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Integer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Good Results</em>' attribute list.
-	 * @see generator.GeneratorPackage#getMTQFMembership_GoodResults()
+	 * @return the value of the '<em>Good Choices</em>' attribute list.
+	 * @see generator.GeneratorPackage#getMTQFMembership_GoodChoices()
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<Integer> getGoodResults();
+	EList<Integer> getGoodChoices();
 
 	/**
 	 * Returns the value of the '<em><b>Table</b></em>' attribute.
@@ -55,5 +56,27 @@ public interface MTQFMembership extends QuestionableFact {
 	 * @generated
 	 */
 	void setTable(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Result Of Table</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Result Of Table</em>' attribute.
+	 * @see #setResultOfTable(boolean)
+	 * @see generator.GeneratorPackage#getMTQFMembership_ResultOfTable()
+	 * @model
+	 * @generated
+	 */
+	boolean isResultOfTable();
+
+	/**
+	 * Sets the value of the '{@link generator.MTQFMembership#isResultOfTable <em>Result Of Table</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Result Of Table</em>' attribute.
+	 * @see #isResultOfTable()
+	 * @generated
+	 */
+	void setResultOfTable(boolean value);
 
 } // MTQFMembership

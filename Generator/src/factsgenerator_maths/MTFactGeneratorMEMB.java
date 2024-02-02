@@ -14,8 +14,8 @@ import generator.AbstractFact;
 import generator.ECorrectness;
 import generator.MTFact;
 import generator.MTLevel;
-import generator.MTMembership;
 import generator.MTQFMembership;
+import generator.MembershipIDTask;
 import generator.MultipleChoice;
 import generator.SetOfFacts;
 import generator.impl.MTQFMembershipImpl;
@@ -34,18 +34,18 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		
 		for (AbstractFact mtResultFact : facts) {
-			qf.getGoodResults().add(((MTFact) mtResultFact).getRes());
+			qf.getGoodChoices().add(((MTFact) mtResultFact).getRes());
 			qf.getFacts().add(mtResultFact);
 		}
 		qf.setTable(((MTFact) facts.get(0)).getTable());
-		
+		qf.setResultOfTable(((MembershipIDTask) task).isIdentifySharedProperty());
 		return (AQuestionableFact) qf;
 	}
 
 	@Override
 	protected List<Soluce> getListOfGoodSolutions(AQuestionableFact qFact) {
 		List<Soluce> solutions = new ArrayList<>();
-		for (Integer prop : ((MTQFMembership) qFact).getGoodResults()) {
+		for (Integer prop : ((MTQFMembership) qFact).getGoodChoices()) {
 			solutions.add(new Soluce(prop+""));
 		}
 		return solutions;
@@ -76,21 +76,15 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 		}
 		
 		
-		if(((MTMembership)task).isIdentifySharedProperty()) {
-			propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
-			propositions.put(ECorrectness.INCORRECT, badpropositions);
-		} else {
-			propositions.put(ECorrectness.CORRECT, badpropositions);
-			propositions.put(ECorrectness.INCORRECT, getListOfGoodSolutions(qFact));
-		}
-		
+		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
+		propositions.put(ECorrectness.INCORRECT, badpropositions);
 		
 		return propositions;
 	}
 
 	@Override
 	protected int correctnessToReach(AQuestionableFact fact) {
-		return ((MTQFMembership) fact).getGoodResults().size();
+		return ((MTQFMembership) fact).getGoodChoices().size();
 	}	
 	
 	@Override

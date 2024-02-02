@@ -15,7 +15,6 @@ import generator.AbstractFact;
 import generator.ECorrectness;
 import generator.GeographyFact;
 import generator.HGQFMembership;
-import generator.MembershipIDTask;
 import generator.MultipleChoice;
 import generator.SetOfFacts;
 import generator.WrongData;
@@ -108,16 +107,8 @@ public class HGFactGeneratorMembership extends FactGeneratorTemplate {
 			badpropositions.add(new Soluce(value));
 		}
 		
-		
-		if(((MembershipIDTask) task).isIdentifySharedProperty()) {
-			propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
-			propositions.put(ECorrectness.INCORRECT, badpropositions);
-		} else {
-			propositions.put(ECorrectness.CORRECT, badpropositions);
-			propositions.put(ECorrectness.INCORRECT, getListOfGoodSolutions(qFact));
-		}
-		
-		
+		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
+		propositions.put(ECorrectness.INCORRECT, badpropositions);
 		return propositions;
 	}
 

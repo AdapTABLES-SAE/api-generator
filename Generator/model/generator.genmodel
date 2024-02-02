@@ -362,8 +362,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFIdentification/build"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTQFMembership">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFMembership/goodResults"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFMembership/goodChoices"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFMembership/table"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTQFMembership/resultOfTable"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//QuestionedFact">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//QuestionedFact/questionablefact"/>

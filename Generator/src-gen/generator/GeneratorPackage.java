@@ -3983,13 +3983,13 @@ public interface GeneratorPackage extends EPackage {
 	int MTQF_MEMBERSHIP__FACTS = QUESTIONABLE_FACT__FACTS;
 
 	/**
-	 * The feature id for the '<em><b>Good Results</b></em>' attribute list.
+	 * The feature id for the '<em><b>Good Choices</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_MEMBERSHIP__GOOD_RESULTS = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+	int MTQF_MEMBERSHIP__GOOD_CHOICES = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Table</b></em>' attribute.
@@ -4001,13 +4001,22 @@ public interface GeneratorPackage extends EPackage {
 	int MTQF_MEMBERSHIP__TABLE = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Result Of Table</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTQF_MEMBERSHIP__RESULT_OF_TABLE = QUESTIONABLE_FACT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>MTQF Membership</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MTQF_MEMBERSHIP_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 2;
+	int MTQF_MEMBERSHIP_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
@@ -13863,15 +13872,15 @@ public interface GeneratorPackage extends EPackage {
 	EClass getMTQFMembership();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link generator.MTQFMembership#getGoodResults <em>Good Results</em>}'.
+	 * Returns the meta object for the attribute list '{@link generator.MTQFMembership#getGoodChoices <em>Good Choices</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Good Results</em>'.
-	 * @see generator.MTQFMembership#getGoodResults()
+	 * @return the meta object for the attribute list '<em>Good Choices</em>'.
+	 * @see generator.MTQFMembership#getGoodChoices()
 	 * @see #getMTQFMembership()
 	 * @generated
 	 */
-	EAttribute getMTQFMembership_GoodResults();
+	EAttribute getMTQFMembership_GoodChoices();
 
 	/**
 	 * Returns the meta object for the attribute '{@link generator.MTQFMembership#getTable <em>Table</em>}'.
@@ -13883,6 +13892,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMTQFMembership_Table();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.MTQFMembership#isResultOfTable <em>Result Of Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Result Of Table</em>'.
+	 * @see generator.MTQFMembership#isResultOfTable()
+	 * @see #getMTQFMembership()
+	 * @generated
+	 */
+	EAttribute getMTQFMembership_ResultOfTable();
 
 	/**
 	 * Returns the meta object for class '{@link generator.QuestionedFact <em>Questioned Fact</em>}'.
@@ -19094,12 +19114,12 @@ public interface GeneratorPackage extends EPackage {
 		EClass MTQF_MEMBERSHIP = eINSTANCE.getMTQFMembership();
 
 		/**
-		 * The meta object literal for the '<em><b>Good Results</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Good Choices</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MTQF_MEMBERSHIP__GOOD_RESULTS = eINSTANCE.getMTQFMembership_GoodResults();
+		EAttribute MTQF_MEMBERSHIP__GOOD_CHOICES = eINSTANCE.getMTQFMembership_GoodChoices();
 
 		/**
 		 * The meta object literal for the '<em><b>Table</b></em>' attribute feature.
@@ -19108,6 +19128,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MTQF_MEMBERSHIP__TABLE = eINSTANCE.getMTQFMembership_Table();
+
+		/**
+		 * The meta object literal for the '<em><b>Result Of Table</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MTQF_MEMBERSHIP__RESULT_OF_TABLE = eINSTANCE.getMTQFMembership_ResultOfTable();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.QuestionedFactImpl <em>Questioned Fact</em>}' class.

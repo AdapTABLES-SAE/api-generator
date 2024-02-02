@@ -311,8 +311,9 @@ public class HGQFIdentificationImpl extends QuestionableFactImpl implements HGQF
 		if (time instanceof TimePeriod) {
 			stime = ((TimePeriod) time).getStartYear() + " et " + ((TimePeriod) time).getEndYear();
 		} else {
-			stime = ((Date) time).getDay() != null && !((Date) time).getDay().isEmpty()? ((Date) time).getDay() : "";
-			stime += ((Date) time).getMonth() != null && !((Date) time).getMonth().isEmpty()? ((Date) time).getMonth() : "";
+			stime = ((Date) time).getDay() != null && !((Date) time).getDay().isEmpty() ? ((Date) time).getDay() : "";
+			stime += ((Date) time).getMonth() != null && !((Date) time).getMonth().isEmpty() ? ((Date) time).getMonth()
+					: "";
 			stime += ((Date) time).getYear();
 		}
 		return event + " " + stime;
@@ -324,8 +325,9 @@ public class HGQFIdentificationImpl extends QuestionableFactImpl implements HGQF
 		if (time instanceof TimePeriod) {
 			stime = ((TimePeriod) time).getStartYear() + " et " + ((TimePeriod) time).getEndYear();
 		} else {
-			stime = ((Date) time).getDay() != null && !((Date) time).getDay().isEmpty()? ((Date) time).getDay() : "";
-			stime += ((Date) time).getMonth() != null && !((Date) time).getMonth().isEmpty()? ((Date) time).getMonth() : "";
+			stime = ((Date) time).getDay() != null && !((Date) time).getDay().isEmpty() ? ((Date) time).getDay() : "";
+			stime += ((Date) time).getMonth() != null && !((Date) time).getMonth().isEmpty() ? ((Date) time).getMonth()
+					: "";
 			stime += ((Date) time).getYear();
 		}
 		return event + " " + stime;

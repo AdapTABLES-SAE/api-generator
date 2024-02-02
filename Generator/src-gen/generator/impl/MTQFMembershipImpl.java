@@ -22,22 +22,23 @@ import generator.MTQFMembership;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.MTQFMembershipImpl#getGoodResults <em>Good Results</em>}</li>
+ *   <li>{@link generator.impl.MTQFMembershipImpl#getGoodChoices <em>Good Choices</em>}</li>
  *   <li>{@link generator.impl.MTQFMembershipImpl#getTable <em>Table</em>}</li>
+ *   <li>{@link generator.impl.MTQFMembershipImpl#isResultOfTable <em>Result Of Table</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMembership {
 	/**
-	 * The cached value of the '{@link #getGoodResults() <em>Good Results</em>}' attribute list.
+	 * The cached value of the '{@link #getGoodChoices() <em>Good Choices</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGoodResults()
+	 * @see #getGoodChoices()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Integer> goodResults;
+	protected EList<Integer> goodChoices;
 
 	/**
 	 * The default value of the '{@link #getTable() <em>Table</em>}' attribute.
@@ -58,6 +59,26 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 	 * @ordered
 	 */
 	protected int table = TABLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isResultOfTable() <em>Result Of Table</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isResultOfTable()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean RESULT_OF_TABLE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isResultOfTable() <em>Result Of Table</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isResultOfTable()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean resultOfTable = RESULT_OF_TABLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -83,12 +104,12 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Integer> getGoodResults() {
-		if (goodResults == null) {
-			goodResults = new EDataTypeUniqueEList<Integer>(Integer.class, this,
-					GeneratorPackage.MTQF_MEMBERSHIP__GOOD_RESULTS);
+	public EList<Integer> getGoodChoices() {
+		if (goodChoices == null) {
+			goodChoices = new EDataTypeUniqueEList<Integer>(Integer.class, this,
+					GeneratorPackage.MTQF_MEMBERSHIP__GOOD_CHOICES);
 		}
-		return goodResults;
+		return goodChoices;
 	}
 
 	/**
@@ -118,13 +139,37 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isResultOfTable() {
+		return resultOfTable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setResultOfTable(boolean newResultOfTable) {
+		boolean oldResultOfTable = resultOfTable;
+		resultOfTable = newResultOfTable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.MTQF_MEMBERSHIP__RESULT_OF_TABLE,
+					oldResultOfTable, resultOfTable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.MTQF_MEMBERSHIP__GOOD_RESULTS:
-			return getGoodResults();
+		case GeneratorPackage.MTQF_MEMBERSHIP__GOOD_CHOICES:
+			return getGoodChoices();
 		case GeneratorPackage.MTQF_MEMBERSHIP__TABLE:
 			return getTable();
+		case GeneratorPackage.MTQF_MEMBERSHIP__RESULT_OF_TABLE:
+			return isResultOfTable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -138,12 +183,15 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.MTQF_MEMBERSHIP__GOOD_RESULTS:
-			getGoodResults().clear();
-			getGoodResults().addAll((Collection<? extends Integer>) newValue);
+		case GeneratorPackage.MTQF_MEMBERSHIP__GOOD_CHOICES:
+			getGoodChoices().clear();
+			getGoodChoices().addAll((Collection<? extends Integer>) newValue);
 			return;
 		case GeneratorPackage.MTQF_MEMBERSHIP__TABLE:
 			setTable((Integer) newValue);
+			return;
+		case GeneratorPackage.MTQF_MEMBERSHIP__RESULT_OF_TABLE:
+			setResultOfTable((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -157,11 +205,14 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.MTQF_MEMBERSHIP__GOOD_RESULTS:
-			getGoodResults().clear();
+		case GeneratorPackage.MTQF_MEMBERSHIP__GOOD_CHOICES:
+			getGoodChoices().clear();
 			return;
 		case GeneratorPackage.MTQF_MEMBERSHIP__TABLE:
 			setTable(TABLE_EDEFAULT);
+			return;
+		case GeneratorPackage.MTQF_MEMBERSHIP__RESULT_OF_TABLE:
+			setResultOfTable(RESULT_OF_TABLE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -175,10 +226,12 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.MTQF_MEMBERSHIP__GOOD_RESULTS:
-			return goodResults != null && !goodResults.isEmpty();
+		case GeneratorPackage.MTQF_MEMBERSHIP__GOOD_CHOICES:
+			return goodChoices != null && !goodChoices.isEmpty();
 		case GeneratorPackage.MTQF_MEMBERSHIP__TABLE:
 			return table != TABLE_EDEFAULT;
+		case GeneratorPackage.MTQF_MEMBERSHIP__RESULT_OF_TABLE:
+			return resultOfTable != RESULT_OF_TABLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -194,22 +247,25 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (goodResults: ");
-		result.append(goodResults);
+		result.append(" (goodChoices: ");
+		result.append(goodChoices);
 		result.append(", table: ");
 		result.append(table);
+		result.append(", resultOfTable: ");
+		result.append(resultOfTable);
 		result.append(')');
 		return result.toString();
 	}
 
 	@Override
 	public String getQuestionableFact() {
-		return "Resultats table de " + getTable();
+		String debut = !isResultOfTable() ? "Pas resultats" : "Resultats";
+		return debut + " table de " + getTable();
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(goodResults, table);
+		return Objects.hash(goodChoices, table);
 	}
 
 	@Override
@@ -221,15 +277,15 @@ public class MTQFMembershipImpl extends QuestionableFactImpl implements MTQFMemb
 		if (getClass() != obj.getClass())
 			return false;
 		MTQFMembershipImpl other = (MTQFMembershipImpl) obj;
-		return Objects.equals(goodResults, other.goodResults) && table == other.table;
+		return Objects.equals(goodChoices, other.goodChoices) && table == other.table;
 	}
 
 	@Override
 	public String getCompleteFact() {
 		String completeFact = getQuestionableFact() + " : {";
-		for (int i = 0; i < getGoodResults().size(); i++) {
-			completeFact += getGoodResults().get(i);
-			if (i < getGoodResults().size() - 1) {
+		for (int i = 0; i < getGoodChoices().size(); i++) {
+			completeFact += getGoodChoices().get(i);
+			if (i < getGoodChoices().size() - 1) {
 				completeFact += ", ";
 			}
 		}

@@ -2907,7 +2907,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMTQFMembership_GoodResults() {
+	public EAttribute getMTQFMembership_GoodChoices() {
 		return (EAttribute) mtqfMembershipEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2918,6 +2918,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EAttribute getMTQFMembership_Table() {
 		return (EAttribute) mtqfMembershipEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMTQFMembership_ResultOfTable() {
+		return (EAttribute) mtqfMembershipEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -6239,8 +6248,9 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(mtqfIdentificationEClass, MTQF_IDENTIFICATION__BUILD);
 
 		mtqfMembershipEClass = createEClass(MTQF_MEMBERSHIP);
-		createEAttribute(mtqfMembershipEClass, MTQF_MEMBERSHIP__GOOD_RESULTS);
+		createEAttribute(mtqfMembershipEClass, MTQF_MEMBERSHIP__GOOD_CHOICES);
 		createEAttribute(mtqfMembershipEClass, MTQF_MEMBERSHIP__TABLE);
+		createEAttribute(mtqfMembershipEClass, MTQF_MEMBERSHIP__RESULT_OF_TABLE);
 
 		questionedFactEClass = createEClass(QUESTIONED_FACT);
 		createEReference(questionedFactEClass, QUESTIONED_FACT__QUESTIONABLEFACT);
@@ -7317,11 +7327,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		initEClass(mtqfMembershipEClass, MTQFMembership.class, "MTQFMembership", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMTQFMembership_GoodResults(), ecorePackage.getEInt(), "goodResults", null, 1, -1,
+		initEAttribute(getMTQFMembership_GoodChoices(), ecorePackage.getEInt(), "goodChoices", null, 1, -1,
 				MTQFMembership.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMTQFMembership_Table(), ecorePackage.getEInt(), "table", null, 0, 1, MTQFMembership.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMTQFMembership_ResultOfTable(), ecorePackage.getEBoolean(), "resultOfTable", null, 0, 1,
+				MTQFMembership.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(questionedFactEClass, QuestionedFact.class, "QuestionedFact", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
