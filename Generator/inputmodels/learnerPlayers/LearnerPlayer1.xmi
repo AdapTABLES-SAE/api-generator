@@ -145,24 +145,24 @@
           <resultsbytask>
             <task xsi:type="generator:MTMembership" href="../LearningDomain.xmi#PATH404-O1-L1-T5"/>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="PATH404-O1-L1-T5-QAFACT2" table="2">
-              <goodResults>4</goodResults>
-              <goodResults>16</goodResults>
+              <goodChoices>4</goodChoices>
+              <goodChoices>16</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="PATH404-O1-L1-T5-QAFACT4" table="2">
-              <goodResults>10</goodResults>
-              <goodResults>6</goodResults>
+              <goodChoices>10</goodChoices>
+              <goodChoices>6</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="PATH404-O1-L1-T5-QAFACT3" table="2">
-              <goodResults>18</goodResults>
-              <goodResults>12</goodResults>
+              <goodChoices>18</goodChoices>
+              <goodChoices>12</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="PATH404-O1-L1-T5-QAFACT0" table="2">
-              <goodResults>14</goodResults>
-              <goodResults>2</goodResults>
+              <goodChoices>14</goodChoices>
+              <goodChoices>2</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="PATH404-O1-L1-T5-QAFACT1" table="2">
-              <goodResults>20</goodResults>
-              <goodResults>8</goodResults>
+              <goodChoices>20</goodChoices>
+              <goodChoices>8</goodChoices>
             </questionableFacts>
           </resultsbytask>
         </results>

@@ -745,184 +745,184 @@
           <resultsbytask successPercent="90.0" encountersPercent="90.0">
             <task xsi:type="generator:MTMembership" href="../LearningDomain.xmi#T1_TASK-MEMB"/>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT16" table="6">
-              <goodResults>24</goodResults>
-              <goodResults>12</goodResults>
-              <goodResults>36</goodResults>
+              <goodChoices>24</goodChoices>
+              <goodChoices>12</goodChoices>
+              <goodChoices>36</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT20" table="7">
-              <goodResults>42</goodResults>
-              <goodResults>35</goodResults>
-              <goodResults>63</goodResults>
+              <goodChoices>42</goodChoices>
+              <goodChoices>35</goodChoices>
+              <goodChoices>63</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT34" table="12">
-              <goodResults>12</goodResults>
-              <goodResults>120</goodResults>
-              <goodResults>36</goodResults>
+              <goodChoices>12</goodChoices>
+              <goodChoices>120</goodChoices>
+              <goodChoices>36</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT35" table="12">
-              <goodResults>24</goodResults>
-              <goodResults>48</goodResults>
-              <goodResults>72</goodResults>
+              <goodChoices>24</goodChoices>
+              <goodChoices>48</goodChoices>
+              <goodChoices>72</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT24" table="9">
-              <goodResults>63</goodResults>
-              <goodResults>27</goodResults>
-              <goodResults>36</goodResults>
+              <goodChoices>63</goodChoices>
+              <goodChoices>27</goodChoices>
+              <goodChoices>36</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT6" table="3">
-              <goodResults>3</goodResults>
-              <goodResults>18</goodResults>
-              <goodResults>15</goodResults>
+              <goodChoices>3</goodChoices>
+              <goodChoices>18</goodChoices>
+              <goodChoices>15</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT9" table="4">
-              <goodResults>28</goodResults>
-              <goodResults>16</goodResults>
-              <goodResults>36</goodResults>
+              <goodChoices>28</goodChoices>
+              <goodChoices>16</goodChoices>
+              <goodChoices>36</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT30" table="11">
-              <goodResults>55</goodResults>
-              <goodResults>44</goodResults>
-              <goodResults>110</goodResults>
+              <goodChoices>55</goodChoices>
+              <goodChoices>44</goodChoices>
+              <goodChoices>110</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT18" table="7">
-              <goodResults>49</goodResults>
-              <goodResults>21</goodResults>
-              <goodResults>28</goodResults>
+              <goodChoices>49</goodChoices>
+              <goodChoices>21</goodChoices>
+              <goodChoices>28</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT8" table="3">
-              <goodResults>30</goodResults>
-              <goodResults>24</goodResults>
-              <goodResults>21</goodResults>
+              <goodChoices>30</goodChoices>
+              <goodChoices>24</goodChoices>
+              <goodChoices>21</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT11" table="4">
-              <goodResults>8</goodResults>
-              <goodResults>24</goodResults>
-              <goodResults>12</goodResults>
+              <goodChoices>8</goodChoices>
+              <goodChoices>24</goodChoices>
+              <goodChoices>12</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT17" table="6">
-              <goodResults>48</goodResults>
-              <goodResults>54</goodResults>
-              <goodResults>18</goodResults>
+              <goodChoices>48</goodChoices>
+              <goodChoices>54</goodChoices>
+              <goodChoices>18</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT32" table="11">
-              <goodResults>11</goodResults>
-              <goodResults>66</goodResults>
-              <goodResults>88</goodResults>
+              <goodChoices>11</goodChoices>
+              <goodChoices>66</goodChoices>
+              <goodChoices>88</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT10" table="4">
-              <goodResults>20</goodResults>
-              <goodResults>4</goodResults>
-              <goodResults>40</goodResults>
+              <goodChoices>20</goodChoices>
+              <goodChoices>4</goodChoices>
+              <goodChoices>40</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT21" table="8">
-              <goodResults>40</goodResults>
-              <goodResults>56</goodResults>
-              <goodResults>32</goodResults>
+              <goodChoices>40</goodChoices>
+              <goodChoices>56</goodChoices>
+              <goodChoices>32</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT22" table="8">
-              <goodResults>72</goodResults>
-              <goodResults>64</goodResults>
-              <goodResults>80</goodResults>
+              <goodChoices>72</goodChoices>
+              <goodChoices>64</goodChoices>
+              <goodChoices>80</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT29" table="10">
-              <goodResults>80</goodResults>
-              <goodResults>90</goodResults>
-              <goodResults>40</goodResults>
+              <goodChoices>80</goodChoices>
+              <goodChoices>90</goodChoices>
+              <goodChoices>40</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT23" table="8">
-              <goodResults>16</goodResults>
-              <goodResults>24</goodResults>
-              <goodResults>8</goodResults>
+              <goodChoices>16</goodChoices>
+              <goodChoices>24</goodChoices>
+              <goodChoices>8</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT3" table="2">
-              <goodResults>14</goodResults>
-              <goodResults>2</goodResults>
-              <goodResults>8</goodResults>
+              <goodChoices>14</goodChoices>
+              <goodChoices>2</goodChoices>
+              <goodChoices>8</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT15" table="6">
-              <goodResults>6</goodResults>
-              <goodResults>30</goodResults>
-              <goodResults>42</goodResults>
+              <goodChoices>6</goodChoices>
+              <goodChoices>30</goodChoices>
+              <goodChoices>42</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT25" table="9">
-              <goodResults>45</goodResults>
-              <goodResults>54</goodResults>
-              <goodResults>9</goodResults>
+              <goodChoices>45</goodChoices>
+              <goodChoices>54</goodChoices>
+              <goodChoices>9</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT31" table="11">
-              <goodResults>33</goodResults>
-              <goodResults>22</goodResults>
-              <goodResults>77</goodResults>
+              <goodChoices>33</goodChoices>
+              <goodChoices>22</goodChoices>
+              <goodChoices>77</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT2" table="1">
-              <goodResults>4</goodResults>
-              <goodResults>5</goodResults>
-              <goodResults>10</goodResults>
+              <goodChoices>4</goodChoices>
+              <goodChoices>5</goodChoices>
+              <goodChoices>10</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT4" table="2">
-              <goodResults>10</goodResults>
-              <goodResults>4</goodResults>
-              <goodResults>6</goodResults>
+              <goodChoices>10</goodChoices>
+              <goodChoices>4</goodChoices>
+              <goodChoices>6</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT33" table="12">
-              <goodResults>84</goodResults>
-              <goodResults>96</goodResults>
-              <goodResults>60</goodResults>
+              <goodChoices>84</goodChoices>
+              <goodChoices>96</goodChoices>
+              <goodChoices>60</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT1" table="1">
-              <goodResults>9</goodResults>
-              <goodResults>8</goodResults>
-              <goodResults>3</goodResults>
+              <goodChoices>9</goodChoices>
+              <goodChoices>8</goodChoices>
+              <goodChoices>3</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT0" table="1">
-              <goodResults>2</goodResults>
-              <goodResults>6</goodResults>
-              <goodResults>7</goodResults>
+              <goodChoices>2</goodChoices>
+              <goodChoices>6</goodChoices>
+              <goodChoices>7</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT7" table="3">
-              <goodResults>6</goodResults>
-              <goodResults>12</goodResults>
-              <goodResults>9</goodResults>
+              <goodChoices>6</goodChoices>
+              <goodChoices>12</goodChoices>
+              <goodChoices>9</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT28" table="10">
-              <goodResults>20</goodResults>
-              <goodResults>10</goodResults>
-              <goodResults>30</goodResults>
+              <goodChoices>20</goodChoices>
+              <goodChoices>10</goodChoices>
+              <goodChoices>30</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT13" table="5">
-              <goodResults>50</goodResults>
-              <goodResults>45</goodResults>
-              <goodResults>15</goodResults>
+              <goodChoices>50</goodChoices>
+              <goodChoices>45</goodChoices>
+              <goodChoices>15</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT5" table="2">
-              <goodResults>18</goodResults>
-              <goodResults>12</goodResults>
-              <goodResults>16</goodResults>
+              <goodChoices>18</goodChoices>
+              <goodChoices>12</goodChoices>
+              <goodChoices>16</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT12" table="5">
-              <goodResults>25</goodResults>
-              <goodResults>40</goodResults>
-              <goodResults>20</goodResults>
+              <goodChoices>25</goodChoices>
+              <goodChoices>40</goodChoices>
+              <goodChoices>20</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT19" table="7">
-              <goodResults>14</goodResults>
-              <goodResults>56</goodResults>
-              <goodResults>70</goodResults>
+              <goodChoices>14</goodChoices>
+              <goodChoices>56</goodChoices>
+              <goodChoices>70</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT14" table="5">
-              <goodResults>5</goodResults>
-              <goodResults>10</goodResults>
-              <goodResults>35</goodResults>
+              <goodChoices>5</goodChoices>
+              <goodChoices>10</goodChoices>
+              <goodChoices>35</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT26" table="9">
-              <goodResults>72</goodResults>
-              <goodResults>90</goodResults>
-              <goodResults>18</goodResults>
+              <goodChoices>72</goodChoices>
+              <goodChoices>90</goodChoices>
+              <goodChoices>18</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:MTQFMembership" wasSelected="false" achieved="false" ID="T1_TASK-MEMB-QAFACT27" table="10">
-              <goodResults>70</goodResults>
-              <goodResults>60</goodResults>
-              <goodResults>50</goodResults>
+              <goodChoices>70</goodChoices>
+              <goodChoices>60</goodChoices>
+              <goodChoices>50</goodChoices>
             </questionableFacts>
           </resultsbytask>
         </results>

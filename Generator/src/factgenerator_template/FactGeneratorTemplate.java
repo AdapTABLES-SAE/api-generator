@@ -362,7 +362,7 @@ public abstract class FactGeneratorTemplate {
 	protected abstract Map<ECorrectness, List<Soluce>> getListOfPropositions(ATask task, AQuestionableFact qFact) throws BadSolutionGenerationException;
 	protected abstract boolean isQuestionInteractive();
 	
-	public void generateQuestionedFact(RoomElements roomElements) {
+	public void generateQuestionedFact(RoomElements roomElements/*, List<AQuestionableFact> dungeonSelectedFacts*/) {
 		for (int i = 0; i < roomElements.getTask().getNbFacts(); i++) {
 			AQuestionableFact qf = null;
 			try {
@@ -437,7 +437,6 @@ public abstract class FactGeneratorTemplate {
 		List<AQuestionableFact> eligibleFacts = new ArrayList<>();
 		for (AQuestionableFact qfact: resByTask.getQuestionableFacts()) {
 			if(!qfact.isWasSelected()) {
-				
 				eligibleFacts.add(qfact);
 			}
 		}

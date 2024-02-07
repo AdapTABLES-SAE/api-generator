@@ -1,409 +1,450 @@
 <?xml version="1.0" encoding="ASCII"?>
-<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="HG_O1" levelID="HG_O1_L1" gameLevelID="9" curses="[&quot;Labyrinth&quot;,&quot;Night&quot;,]">
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="HG_O1_V2" levelID="HG_O1_L1_T1_V2" gameLevelID="9" curses="[&quot;Night&quot;,]">
   <rooms>
-    <room id="Room[0/0]" roomTypeName="RegularRoomN" correctnessToReach="0">
+    <room id="Room[0/0]" roomTypeName="RegularRoomW" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a2" direction="NORTH" accessRef="a3"/>
+        <roomaccess id="a2" direction="WEST" accessRef="a3"/>
       </roomaccesses>
     </room>
-    <room id="Room[0/1]" y="1" roomTypeName="RegularRoom11" time="20" idTask="HG_01_L1_T12" prompt="Touche les bons elements" correctnessToReach="2">
+    <room id="Room[-2/-1]" x="-2" y="-1" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a3" direction="SOUTH" accessRef="a2"/>
-        <roomaccess id="a4" direction="NORTH" accessRef="a5"/>
-        <roomaccess id="a6" direction="EAST" accessRef="a7"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_01_L1_T12-QAFACT0" complete="1er Guerre Mondiale 1914 et 1918" correctnessToReach="1" correctness="CORRECT"/>
-        <fact id="HG_01_L1_T12-QAFACT2" complete="R&#xe9;volution Russe 1917" correctnessToReach="1" correctness="CORRECT"/>
-      </facts>
-      <elements>
-        <element id="STRUCT1" type="HStructXL" pos="POSXL1"/>
-        <element id="STRUCT2" type="VStructXL" pos="id/STRUCT1"/>
-        <element id="STRUCT3" type="HStructXL" pos="id/STRUCT2"/>
-        <element id="ELEM4" type="FloorInterrupt" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT3" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT0"/>
-        <element id="ELEM5" type="StatementFact" displayValue="1er Guerre Mondiale 1914 et 1918" pos="id/STRUCT3" idFact="HG_01_L1_T12-QAFACT0" acceptedFacts="1er Guerre Mondiale 1914 et 1918;"/>
-        <element id="ELEM6" type="FloorInterrupt" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT3" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT0"/>
-        <element id="STRUCT7" type="HStructXL" pos="id/STRUCT2"/>
-        <element id="ELEM8" type="FloorInterrupt" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT7" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT2"/>
-        <element id="ELEM9" type="StatementFact" displayValue="R&#xe9;volution Russe 1917" pos="id/STRUCT7" idFact="HG_01_L1_T12-QAFACT2" acceptedFacts="R&#xe9;volution Russe 1917;"/>
-        <element id="ELEM10" type="FloorInterrupt" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT7" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT2"/>
-      </elements>
-    </room>
-    <room id="Room[0/2]" y="2" roomTypeName="RoomTrap3" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a5" direction="SOUTH" accessRef="a4"/>
-        <roomaccess id="a8" direction="NORTH" accessRef="a9"/>
-        <roomaccess id="a10" direction="WEST" accessRef="a11"/>
-        <roomaccess id="a12" direction="EAST" accessRef="a13"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM11" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM12" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM13" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM14" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM15" type="FireTrap" pos="POS6" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[1/1]" x="1" y="1" roomTypeName="RegularRoom2" time="20" idTask="HG_01_L1_T12" prompt="Touche les bons elements" correctnessToReach="2">
-      <roomaccesses>
-        <roomaccess id="a7" direction="WEST" accessRef="a6"/>
-        <roomaccess id="a14" direction="NORTH" accessRef="a15"/>
-        <roomaccess id="a16" direction="EAST" accessRef="a17"/>
-        <roomaccess id="a18" direction="SOUTH" accessRef="a19"/>
+        <roomaccess id="a3" direction="EAST_NORTH" accessRef="a2"/>
+        <roomaccess id="a4" direction="NORTH_WEST" accessRef="a5"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_01_L1_T12-QAFACT15" complete="Cr&#xe9;ation de l'ONU 1946" correctnessToReach="1" correctness="INCORRECT"/>
-        <fact id="HG_01_L1_T12-QAFACT19" complete="L'Euro 2000" correctnessToReach="1" correctness="INCORRECT"/>
+        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
       </facts>
       <elements>
-        <element id="STRUCT16" type="HStructXL" pos="POSXL1"/>
-        <element id="STRUCT17" type="VStructXL" pos="id/STRUCT16"/>
-        <element id="STRUCT18" type="HStructXL" pos="id/STRUCT17"/>
-        <element id="ELEM19" type="FloorInterrupt" displayValue="Faux" correctness="CORRECT" pos="id/STRUCT18" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT15"/>
-        <element id="ELEM20" type="StatementFact" displayValue="Cr&#xe9;ation de l'ONU 1946" pos="id/STRUCT18" idFact="HG_01_L1_T12-QAFACT15" acceptedFacts="Cr&#xe9;ation de l'ONU 1946;"/>
-        <element id="ELEM21" type="FloorInterrupt" displayValue="Vrai" correctness="INCORRECT" pos="id/STRUCT18" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT15"/>
-        <element id="STRUCT22" type="HStructXL" pos="id/STRUCT17"/>
-        <element id="ELEM23" type="FloorInterrupt" displayValue="Faux" correctness="CORRECT" pos="id/STRUCT22" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT19"/>
-        <element id="ELEM24" type="StatementFact" displayValue="L'Euro 2000" pos="id/STRUCT22" idFact="HG_01_L1_T12-QAFACT19" acceptedFacts="L'Euro 2000;"/>
-        <element id="ELEM25" type="FloorInterrupt" displayValue="Vrai" correctness="INCORRECT" pos="id/STRUCT22" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT19"/>
+        <element id="STRUCT1" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
+        <element id="ELEM2" type="TypableDetector" pos="id/STRUCT1/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM3" type="TypableDetector" pos="id/STRUCT1/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM4" type="TypableDetector" pos="id/STRUCT1/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM5" type="TypableDetector" pos="id/STRUCT1/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM6" type="TypableDetector" pos="id/STRUCT1/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM7" type="TypableDetector" pos="id/STRUCT1/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM8" type="TypableDetector" pos="id/STRUCT1/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM9" type="TypableDetector" pos="id/STRUCT1/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM10" type="TypableDetector" pos="id/STRUCT1/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM11" type="TypableDetector" pos="id/STRUCT1/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM12" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
       </elements>
     </room>
-    <room id="Room[1/2]" x="1" y="2" roomTypeName="RegularRoom2" time="20" idTask="HG_01_L1_T12" prompt="Touche les bons elements" correctnessToReach="2">
+    <room id="Room[-3/1]" x="-3" y="1" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a15" direction="SOUTH" accessRef="a14"/>
-        <roomaccess id="a20" direction="EAST" accessRef="a21"/>
-        <roomaccess id="a13" direction="WEST" accessRef="a12"/>
-        <roomaccess id="a22" direction="NORTH" accessRef="a23"/>
+        <roomaccess id="a5" direction="SOUTH_EAST" accessRef="a4"/>
+        <roomaccess id="a6" direction="WEST_NORTH" accessRef="a7"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_01_L1_T12-QAFACT25" complete="Naissance de la Ve R&#xe9;publique 1955" correctnessToReach="1" correctness="INCORRECT"/>
-        <fact id="HG_01_L1_T12-QAFACT29" complete="Loi Veil (IVG) 1980" correctnessToReach="1" correctness="INCORRECT"/>
+        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
       </facts>
       <elements>
-        <element id="STRUCT26" type="HStructXL" pos="POSXL1"/>
-        <element id="ELEM27" type="Info" displayValue="FAUX" pos="id/STRUCT26"/>
-        <element id="STRUCT28" type="VStructXL" pos="id/STRUCT26"/>
-        <element id="STRUCT29" type="HStructXL" pos="id/STRUCT28"/>
-        <element id="ELEM30" type="FloorInterrupt" correctness="CORRECT" pos="id/STRUCT29" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT25"/>
-        <element id="ELEM31" type="StatementFact" displayValue="Naissance de la Ve R&#xe9;publique 1955" pos="id/STRUCT29" idFact="HG_01_L1_T12-QAFACT25" acceptedFacts="Naissance de la Ve R&#xe9;publique 1955;"/>
-        <element id="ELEM32" type="FloorInterrupt" correctness="INCORRECT" pos="id/STRUCT29" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT25"/>
-        <element id="STRUCT33" type="HStructXL" pos="id/STRUCT28"/>
-        <element id="ELEM34" type="FloorInterrupt" correctness="CORRECT" pos="id/STRUCT33" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT29"/>
-        <element id="ELEM35" type="StatementFact" displayValue="Loi Veil (IVG) 1980" pos="id/STRUCT33" idFact="HG_01_L1_T12-QAFACT29" acceptedFacts="Loi Veil (IVG) 1980;"/>
-        <element id="ELEM36" type="FloorInterrupt" correctness="INCORRECT" pos="id/STRUCT33" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT29"/>
-        <element id="ELEM37" type="Info" displayValue="VRAI" pos="id/STRUCT26"/>
+        <element id="STRUCT13" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
+        <element id="ELEM14" type="TypableDetector" pos="id/STRUCT13/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM15" type="TypableDetector" pos="id/STRUCT13/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM16" type="TypableDetector" pos="id/STRUCT13/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM17" type="TypableDetector" pos="id/STRUCT13/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM18" type="TypableDetector" pos="id/STRUCT13/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM19" type="TypableDetector" pos="id/STRUCT13/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM20" type="TypableDetector" pos="id/STRUCT13/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM21" type="TypableDetector" pos="id/STRUCT13/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM22" type="TypableDetector" pos="id/STRUCT13/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM23" type="TypableDetector" pos="id/STRUCT13/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM24" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
       </elements>
     </room>
-    <room id="Room[0/3]" y="3" roomTypeName="RegularRoom2" time="20" idTask="HG_01_L1_T12" prompt="Touche les bons elements" correctnessToReach="2">
+    <room id="Room[-4/2]" x="-4" y="2" roomTypeName="RoomTrap4" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a9" direction="SOUTH" accessRef="a8"/>
+        <roomaccess id="a7" direction="EAST" accessRef="a6"/>
+        <roomaccess id="a8" direction="WEST" accessRef="a9"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM25" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM26" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM27" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM28" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM29" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM30" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM31" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-6/2]" x="-6" y="2" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a9" direction="EAST_SOUTH" accessRef="a8"/>
+        <roomaccess id="a10" direction="WEST_SOUTH" accessRef="a11"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_01_L1_T12-QAFACT21" complete="Chute du mur de Berlin 1999" correctnessToReach="1" correctness="INCORRECT"/>
-        <fact id="HG_01_L1_T12-QAFACT13" complete="R&#xe9;gime de Vichy 1950" correctnessToReach="1" correctness="INCORRECT"/>
+        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
       </facts>
       <elements>
-        <element id="STRUCT38" type="HStructXL" pos="POSXL1"/>
-        <element id="STRUCT39" type="VStructXL" pos="id/STRUCT38"/>
-        <element id="STRUCT40" type="HStructXL" pos="id/STRUCT39"/>
-        <element id="ELEM41" type="FloorInterrupt" displayValue="Faux" correctness="CORRECT" pos="id/STRUCT40" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT21"/>
-        <element id="ELEM42" type="StatementFact" displayValue="Chute du mur de Berlin 1999" pos="id/STRUCT40" idFact="HG_01_L1_T12-QAFACT21" acceptedFacts="Chute du mur de Berlin 1999;"/>
-        <element id="ELEM43" type="FloorInterrupt" displayValue="Vrai" correctness="INCORRECT" pos="id/STRUCT40" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT21"/>
-        <element id="STRUCT44" type="HStructXL" pos="id/STRUCT39"/>
-        <element id="ELEM45" type="FloorInterrupt" displayValue="Faux" correctness="CORRECT" pos="id/STRUCT44" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT13"/>
-        <element id="ELEM46" type="StatementFact" displayValue="R&#xe9;gime de Vichy 1950" pos="id/STRUCT44" idFact="HG_01_L1_T12-QAFACT13" acceptedFacts="R&#xe9;gime de Vichy 1950;"/>
-        <element id="ELEM47" type="FloorInterrupt" displayValue="Vrai" correctness="INCORRECT" pos="id/STRUCT44" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT13"/>
+        <element id="STRUCT32" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
+        <element id="ELEM33" type="TypableDetector" pos="id/STRUCT32/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM34" type="TypableDetector" pos="id/STRUCT32/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM35" type="TypableDetector" pos="id/STRUCT32/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM36" type="TypableDetector" pos="id/STRUCT32/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM37" type="TypableDetector" pos="id/STRUCT32/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM38" type="TypableDetector" pos="id/STRUCT32/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM39" type="TypableDetector" pos="id/STRUCT32/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM40" type="TypableDetector" pos="id/STRUCT32/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM41" type="TypableDetector" pos="id/STRUCT32/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM42" type="TypableDetector" pos="id/STRUCT32/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM43" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
       </elements>
     </room>
-    <room id="Room[2/2]" x="2" y="2" roomTypeName="RegularRoom11" time="20" idTask="HG_01_L1_T12" prompt="Touche les bons elements" correctnessToReach="2">
+    <room id="Room[-8/1]" x="-8" y="1" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a21" direction="WEST" accessRef="a20"/>
-        <roomaccess id="a24" direction="NORTH" accessRef="a25"/>
-        <roomaccess id="a26" direction="SOUTH" accessRef="a27"/>
-        <roomaccess id="a28" direction="EAST" accessRef="a29"/>
+        <roomaccess id="a11" direction="EAST_NORTH" accessRef="a10"/>
+        <roomaccess id="a12" direction="NORTH_WEST" accessRef="a13"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_01_L1_T12-QAFACT24" complete="Naissance de la Ve R&#xe9;publique 1958" correctnessToReach="1" correctness="CORRECT"/>
-        <fact id="HG_01_L1_T12-QAFACT27" complete="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct 1963" correctnessToReach="1" correctness="INCORRECT"/>
+        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
       </facts>
       <elements>
-        <element id="STRUCT48" type="HStructXL" pos="POSXL1"/>
-        <element id="STRUCT49" type="VStructXL" pos="id/STRUCT48"/>
-        <element id="STRUCT50" type="HStructXL" pos="id/STRUCT49"/>
-        <element id="ELEM51" type="FloorInterrupt" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT50" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT24"/>
-        <element id="ELEM52" type="StatementFact" displayValue="Naissance de la Ve R&#xe9;publique 1958" pos="id/STRUCT50" idFact="HG_01_L1_T12-QAFACT24" acceptedFacts="Naissance de la Ve R&#xe9;publique 1958;"/>
-        <element id="ELEM53" type="FloorInterrupt" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT50" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT24"/>
-        <element id="STRUCT54" type="HStructXL" pos="id/STRUCT49"/>
-        <element id="ELEM55" type="FloorInterrupt" displayValue="Faux" correctness="CORRECT" pos="id/STRUCT54" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT27"/>
-        <element id="ELEM56" type="StatementFact" displayValue="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct 1963" pos="id/STRUCT54" idFact="HG_01_L1_T12-QAFACT27" acceptedFacts="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct 1963;"/>
-        <element id="ELEM57" type="FloorInterrupt" displayValue="Vrai" correctness="INCORRECT" pos="id/STRUCT54" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT27"/>
+        <element id="STRUCT44" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
+        <element id="ELEM45" type="TypableDetector" pos="id/STRUCT44/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM46" type="TypableDetector" pos="id/STRUCT44/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM47" type="TypableDetector" pos="id/STRUCT44/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM48" type="TypableDetector" pos="id/STRUCT44/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM49" type="TypableDetector" pos="id/STRUCT44/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM50" type="TypableDetector" pos="id/STRUCT44/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM51" type="TypableDetector" pos="id/STRUCT44/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM52" type="TypableDetector" pos="id/STRUCT44/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM53" type="TypableDetector" pos="id/STRUCT44/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM54" type="TypableDetector" pos="id/STRUCT44/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM55" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
       </elements>
     </room>
-    <room id="Room[-1/2]" x="-1" y="2" roomTypeName="RoomTrap3" correctnessToReach="0">
+    <room id="Room[-8/3]" x="-8" y="3" roomTypeName="RoomTrap4" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a11" direction="EAST" accessRef="a10"/>
-        <roomaccess id="a30" direction="SOUTH" accessRef="a31"/>
-        <roomaccess id="a32" direction="NORTH" accessRef="a33"/>
+        <roomaccess id="a13" direction="SOUTH" accessRef="a12"/>
+        <roomaccess id="a14" direction="EAST" accessRef="a15"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM58" type="WaitFireTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM59" type="WaitFireTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM60" type="WaitFireTrap" pos="POS8" ability="AVOIDABLE"/>
-        <element id="ELEM61" type="WaitFireTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM62" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM63" type="WaitFireTrap" pos="POS7" ability="AVOIDABLE"/>
-        <element id="ELEM64" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM56" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM57" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM58" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM59" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM60" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM61" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM62" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[1/3]" x="1" y="3" roomTypeName="RoomTrap3" correctnessToReach="0">
+    <room id="Room[-7/3]" x="-7" y="3" roomTypeName="RoomTrap3" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a23" direction="SOUTH" accessRef="a22"/>
-        <roomaccess id="a34" direction="NORTH" accessRef="a35"/>
+        <roomaccess id="a15" direction="WEST" accessRef="a14"/>
+        <roomaccess id="a16" direction="NORTH" accessRef="a17"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM65" type="RegularSlime" pos="POS8" ability="NONAVOIDABLE"/>
-        <element id="ELEM66" type="RegularSlime" pos="POS1" ability="NONAVOIDABLE"/>
-        <element id="ELEM67" type="RegularSlime" pos="POS2" ability="NONAVOIDABLE"/>
+        <element id="ELEM63" type="WaitSpikeTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM64" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM65" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM66" type="WaitSpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM67" type="WaitSpikeTrap" pos="POS7" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[2/1]" x="2" y="1" roomTypeName="RoomTrap3" correctnessToReach="0">
+    <room id="Room[-7/4]" x="-7" y="4" roomTypeName="RoomTrap3" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a17" direction="WEST" accessRef="a16"/>
-        <roomaccess id="a36" direction="EAST" accessRef="a37"/>
-        <roomaccess id="a38" direction="SOUTH" accessRef="a39"/>
-        <roomaccess id="a27" direction="NORTH" accessRef="a26"/>
+        <roomaccess id="a17" direction="SOUTH" accessRef="a16"/>
+        <roomaccess id="a18" direction="NORTH" accessRef="a19"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM68" type="RegularSlime" pos="POS7" ability="NONAVOIDABLE"/>
-        <element id="ELEM69" type="RegularSlime" pos="POS5" ability="NONAVOIDABLE"/>
-        <element id="ELEM70" type="RegularSlime" pos="POS2" ability="NONAVOIDABLE"/>
+        <element id="ELEM68" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM69" type="FireTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM70" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM71" type="FireTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM72" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM73" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM74" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[1/0]" x="1" roomTypeName="RegularRoom2" time="20" idTask="HG_01_L1_T12" prompt="Touche les bons elements" correctnessToReach="2">
+    <room id="Room[-7/5]" x="-7" y="5" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a19" direction="NORTH" accessRef="a18"/>
+        <roomaccess id="a19" direction="SOUTH_WEST" accessRef="a18"/>
+        <roomaccess id="a20" direction="WEST_SOUTH" accessRef="a21"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_01_L1_T12-QAFACT11" complete="Appel du g&#xe9;n&#xe9;ral de Gaulle 16 Juin 1950" correctnessToReach="1" correctness="INCORRECT"/>
-        <fact id="HG_01_L1_T12-QAFACT14" complete="Cr&#xe9;ation de l'ONU 1945" correctnessToReach="1" correctness="CORRECT"/>
+        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
       </facts>
       <elements>
-        <element id="STRUCT71" type="HStructXL" pos="POSXL1"/>
-        <element id="ELEM72" type="Info" displayValue="FAUX" pos="id/STRUCT71"/>
-        <element id="STRUCT73" type="VStructXL" pos="id/STRUCT71"/>
-        <element id="STRUCT74" type="HStructXL" pos="id/STRUCT73"/>
-        <element id="ELEM75" type="FloorInterrupt" correctness="CORRECT" pos="id/STRUCT74" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT11"/>
-        <element id="ELEM76" type="StatementFact" displayValue="Appel du g&#xe9;n&#xe9;ral de Gaulle 16 Juin 1950" pos="id/STRUCT74" idFact="HG_01_L1_T12-QAFACT11" acceptedFacts="Appel du g&#xe9;n&#xe9;ral de Gaulle 16 Juin 1950;"/>
-        <element id="ELEM77" type="FloorInterrupt" correctness="INCORRECT" pos="id/STRUCT74" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT11"/>
-        <element id="STRUCT78" type="HStructXL" pos="id/STRUCT73"/>
-        <element id="ELEM79" type="FloorInterrupt" correctness="INCORRECT" pos="id/STRUCT78" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT14"/>
-        <element id="ELEM80" type="StatementFact" displayValue="Cr&#xe9;ation de l'ONU 1945" pos="id/STRUCT78" idFact="HG_01_L1_T12-QAFACT14" acceptedFacts="Cr&#xe9;ation de l'ONU 1945;"/>
-        <element id="ELEM81" type="FloorInterrupt" correctness="CORRECT" pos="id/STRUCT78" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT14"/>
-        <element id="ELEM82" type="Info" displayValue="VRAI" pos="id/STRUCT71"/>
+        <element id="STRUCT75" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
+        <element id="ELEM76" type="TypableDetector" pos="id/STRUCT75/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM77" type="TypableDetector" pos="id/STRUCT75/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM78" type="TypableDetector" pos="id/STRUCT75/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM79" type="TypableDetector" pos="id/STRUCT75/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM80" type="TypableDetector" pos="id/STRUCT75/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM81" type="TypableDetector" pos="id/STRUCT75/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM82" type="TypableDetector" pos="id/STRUCT75/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM83" type="TypableDetector" pos="id/STRUCT75/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM84" type="TypableDetector" pos="id/STRUCT75/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM85" type="TypableDetector" pos="id/STRUCT75/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM86" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
       </elements>
     </room>
-    <room id="Room[3/1]" x="3" y="1" roomTypeName="RoomTrap4" correctnessToReach="0">
+    <room id="Room[-9/5]" x="-9" y="5" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a37" direction="WEST" accessRef="a36"/>
-        <roomaccess id="a40" direction="SOUTH" accessRef="a41"/>
+        <roomaccess id="a21" direction="EAST_SOUTH" accessRef="a20"/>
+        <roomaccess id="a22" direction="WEST_SOUTH" accessRef="a23"/>
       </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+      </facts>
       <elements>
-        <element id="ELEM83" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM84" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM85" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM86" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM87" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM88" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM89" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="STRUCT87" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
+        <element id="ELEM88" type="TypableDetector" pos="id/STRUCT87/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM89" type="TypableDetector" pos="id/STRUCT87/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM90" type="TypableDetector" pos="id/STRUCT87/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM91" type="TypableDetector" pos="id/STRUCT87/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM92" type="TypableDetector" pos="id/STRUCT87/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM93" type="TypableDetector" pos="id/STRUCT87/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM94" type="TypableDetector" pos="id/STRUCT87/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM95" type="TypableDetector" pos="id/STRUCT87/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM96" type="TypableDetector" pos="id/STRUCT87/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM97" type="TypableDetector" pos="id/STRUCT87/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM98" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
       </elements>
     </room>
-    <room id="Room[2/0]" x="2" roomTypeName="TrapRoom2" correctnessToReach="0">
+    <room id="Room[-11/5]" x="-11" y="5" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a39" direction="NORTH" accessRef="a38"/>
+        <roomaccess id="a23" direction="EAST_SOUTH" accessRef="a22"/>
+        <roomaccess id="a24" direction="NORTH_WEST" accessRef="a25"/>
       </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+      </facts>
       <elements>
-        <element id="ELEM90" type="HoleTrap" pos="POS3" ability="NONAVOIDABLE"/>
-        <element id="ELEM91" type="HoleTrap" pos="POS5" ability="NONAVOIDABLE"/>
-        <element id="ELEM92" type="HoleTrap" pos="POS6" ability="NONAVOIDABLE"/>
+        <element id="STRUCT99" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
+        <element id="ELEM100" type="TypableDetector" pos="id/STRUCT99/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM101" type="TypableDetector" pos="id/STRUCT99/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM102" type="TypableDetector" pos="id/STRUCT99/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM103" type="TypableDetector" pos="id/STRUCT99/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM104" type="TypableDetector" pos="id/STRUCT99/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM105" type="TypableDetector" pos="id/STRUCT99/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM106" type="TypableDetector" pos="id/STRUCT99/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM107" type="TypableDetector" pos="id/STRUCT99/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM108" type="TypableDetector" pos="id/STRUCT99/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM109" type="TypableDetector" pos="id/STRUCT99/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM110" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
       </elements>
     </room>
-    <room id="Room[2/3]" x="2" y="3" roomTypeName="RoomTrap4" correctnessToReach="0">
+    <room id="Room[-11/7]" x="-11" y="7" roomTypeName="TrapRoom2" correctnessToReach="0">
       <roomaccesses>
         <roomaccess id="a25" direction="SOUTH" accessRef="a24"/>
-        <roomaccess id="a42" direction="NORTH" accessRef="a43"/>
+        <roomaccess id="a26" direction="NORTH" accessRef="a27"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM93" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM94" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM95" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM96" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM97" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM98" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM99" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM111" type="RegularSlime" pos="POS6" ability="NONAVOIDABLE"/>
+        <element id="ELEM112" type="RegularSlime" pos="POS1" ability="NONAVOIDABLE"/>
+        <element id="ELEM113" type="RegularSlime" pos="POS3" ability="NONAVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[2/4]" x="2" y="4" roomTypeName="RegularRoom2" time="20" idTask="HG_01_L1_T12" prompt="Touche les bons elements" correctnessToReach="2">
+    <room id="Room[-12/8]" x="-12" y="8" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a27" direction="SOUTH_EAST" accessRef="a26"/>
+        <roomaccess id="a28" direction="WEST_NORTH" accessRef="a29"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+      </facts>
+      <elements>
+        <element id="STRUCT114" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
+        <element id="ELEM115" type="TypableDetector" pos="id/STRUCT114/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM116" type="TypableDetector" pos="id/STRUCT114/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM117" type="TypableDetector" pos="id/STRUCT114/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM118" type="TypableDetector" pos="id/STRUCT114/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM119" type="TypableDetector" pos="id/STRUCT114/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM120" type="TypableDetector" pos="id/STRUCT114/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM121" type="TypableDetector" pos="id/STRUCT114/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM122" type="TypableDetector" pos="id/STRUCT114/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM123" type="TypableDetector" pos="id/STRUCT114/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM124" type="TypableDetector" pos="id/STRUCT114/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM125" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+      </elements>
+    </room>
+    <room id="Room[-14/8]" x="-14" y="8" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a29" direction="EAST_NORTH" accessRef="a28"/>
+        <roomaccess id="a30" direction="SOUTH_WEST" accessRef="a31"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+      </facts>
+      <elements>
+        <element id="STRUCT126" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
+        <element id="ELEM127" type="TypableDetector" pos="id/STRUCT126/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM128" type="TypableDetector" pos="id/STRUCT126/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM129" type="TypableDetector" pos="id/STRUCT126/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM130" type="TypableDetector" pos="id/STRUCT126/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM131" type="TypableDetector" pos="id/STRUCT126/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM132" type="TypableDetector" pos="id/STRUCT126/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM133" type="TypableDetector" pos="id/STRUCT126/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM134" type="TypableDetector" pos="id/STRUCT126/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM135" type="TypableDetector" pos="id/STRUCT126/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM136" type="TypableDetector" pos="id/STRUCT126/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM137" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+      </elements>
+    </room>
+    <room id="Room[-14/6]" x="-14" y="6" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a31" direction="NORTH_WEST" accessRef="a30"/>
+        <roomaccess id="a32" direction="EAST_NORTH" accessRef="a33"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+      </facts>
+      <elements>
+        <element id="STRUCT138" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
+        <element id="ELEM139" type="TypableDetector" pos="id/STRUCT138/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM140" type="TypableDetector" pos="id/STRUCT138/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM141" type="TypableDetector" pos="id/STRUCT138/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM142" type="TypableDetector" pos="id/STRUCT138/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM143" type="TypableDetector" pos="id/STRUCT138/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM144" type="TypableDetector" pos="id/STRUCT138/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM145" type="TypableDetector" pos="id/STRUCT138/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM146" type="TypableDetector" pos="id/STRUCT138/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM147" type="TypableDetector" pos="id/STRUCT138/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM148" type="TypableDetector" pos="id/STRUCT138/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM149" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+      </elements>
+    </room>
+    <room id="Room[-12/7]" x="-12" y="7" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a33" direction="WEST" accessRef="a32"/>
+        <roomaccess id="a34" direction="SOUTH" accessRef="a35"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM150" type="WaitSpikeTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM151" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM152" type="WaitSpikeTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM153" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM154" type="WaitSpikeTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM155" type="WaitSpikeTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM156" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-12/6]" x="-12" y="6" roomTypeName="TwoWaysRoom4" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a35" direction="NORTH" accessRef="a34"/>
+        <roomaccess id="a36" direction="SOUTH" accessRef="a37"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[-13/4]" x="-13" y="4" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a37" direction="NORTH_EAST" accessRef="a36"/>
+        <roomaccess id="a38" direction="SOUTH_WEST" accessRef="a39"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+      </facts>
+      <elements>
+        <element id="STRUCT157" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
+        <element id="ELEM158" type="TypableDetector" pos="id/STRUCT157/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM159" type="TypableDetector" pos="id/STRUCT157/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM160" type="TypableDetector" pos="id/STRUCT157/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM161" type="TypableDetector" pos="id/STRUCT157/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM162" type="TypableDetector" pos="id/STRUCT157/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM163" type="TypableDetector" pos="id/STRUCT157/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM164" type="TypableDetector" pos="id/STRUCT157/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM165" type="TypableDetector" pos="id/STRUCT157/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM166" type="TypableDetector" pos="id/STRUCT157/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM167" type="TypableDetector" pos="id/STRUCT157/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM168" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+      </elements>
+    </room>
+    <room id="Room[-13/3]" x="-13" y="3" roomTypeName="RoomTrap4" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a39" direction="NORTH" accessRef="a38"/>
+        <roomaccess id="a40" direction="EAST" accessRef="a41"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM169" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM170" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM171" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM172" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM173" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM174" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM175" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-12/2]" x="-12" y="2" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a41" direction="WEST_NORTH" accessRef="a40"/>
+        <roomaccess id="a42" direction="NORTH_EAST" accessRef="a43"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+      </facts>
+      <elements>
+        <element id="STRUCT176" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
+        <element id="ELEM177" type="TypableDetector" pos="id/STRUCT176/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM178" type="TypableDetector" pos="id/STRUCT176/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM179" type="TypableDetector" pos="id/STRUCT176/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM180" type="TypableDetector" pos="id/STRUCT176/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM181" type="TypableDetector" pos="id/STRUCT176/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM182" type="TypableDetector" pos="id/STRUCT176/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM183" type="TypableDetector" pos="id/STRUCT176/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM184" type="TypableDetector" pos="id/STRUCT176/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM185" type="TypableDetector" pos="id/STRUCT176/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM186" type="TypableDetector" pos="id/STRUCT176/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM187" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+      </elements>
+    </room>
+    <room id="Room[-11/4]" x="-11" y="4" roomTypeName="RoomTrap3" correctnessToReach="0">
       <roomaccesses>
         <roomaccess id="a43" direction="SOUTH" accessRef="a42"/>
         <roomaccess id="a44" direction="EAST" accessRef="a45"/>
       </roomaccesses>
-      <facts>
-        <fact id="HG_01_L1_T12-QAFACT28" complete="Loi Veil (IVG) 1975" correctnessToReach="1" correctness="CORRECT"/>
-        <fact id="HG_01_L1_T12-QAFACT20" complete="Chute du mur de Berlin 1989" correctnessToReach="1" correctness="CORRECT"/>
-      </facts>
       <elements>
-        <element id="STRUCT100" type="HStructXL" pos="POSXL1"/>
-        <element id="ELEM101" type="Info" displayValue="FAUX" pos="id/STRUCT100"/>
-        <element id="STRUCT102" type="VStructXL" pos="id/STRUCT100"/>
-        <element id="STRUCT103" type="HStructXL" pos="id/STRUCT102"/>
-        <element id="ELEM104" type="FloorInterrupt" correctness="INCORRECT" pos="id/STRUCT103" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT28"/>
-        <element id="ELEM105" type="StatementFact" displayValue="Loi Veil (IVG) 1975" pos="id/STRUCT103" idFact="HG_01_L1_T12-QAFACT28" acceptedFacts="Loi Veil (IVG) 1975;"/>
-        <element id="ELEM106" type="FloorInterrupt" correctness="CORRECT" pos="id/STRUCT103" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT28"/>
-        <element id="STRUCT107" type="HStructXL" pos="id/STRUCT102"/>
-        <element id="ELEM108" type="FloorInterrupt" correctness="INCORRECT" pos="id/STRUCT107" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT20"/>
-        <element id="ELEM109" type="StatementFact" displayValue="Chute du mur de Berlin 1989" pos="id/STRUCT107" idFact="HG_01_L1_T12-QAFACT20" acceptedFacts="Chute du mur de Berlin 1989;"/>
-        <element id="ELEM110" type="FloorInterrupt" correctness="CORRECT" pos="id/STRUCT107" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT20"/>
-        <element id="ELEM111" type="Info" displayValue="VRAI" pos="id/STRUCT100"/>
+        <element id="ELEM188" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM189" type="WaitFireTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM190" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM191" type="WaitFireTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM192" type="WaitFireTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM193" type="WaitFireTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM194" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[3/2]" x="3" y="2" roomTypeName="RegularRoom2" time="20" idTask="HG_01_L1_T12" prompt="Casse les bons elements" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a29" direction="WEST" accessRef="a28"/>
-        <roomaccess id="a46" direction="NORTH" accessRef="a47"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_01_L1_T12-QAFACT29" complete="Loi Veil (IVG) 1980" correctnessToReach="1" correctness="INCORRECT"/>
-        <fact id="HG_01_L1_T12-QAFACT7" complete="Allemagne Nazie (Hitl&#xe9;rienne) 1946" correctnessToReach="1" correctness="INCORRECT"/>
-      </facts>
-      <elements>
-        <element id="ELEM112" type="BreakablePot" displayValue="Loi Veil (IVG) 1980" correctness="INCORRECT" pos="POS3" ability="BREAKABLE" idFact="HG_01_L1_T12-QAFACT29"/>
-        <element id="ELEM113" type="BreakablePot" displayValue="Allemagne Nazie (Hitl&#xe9;rienne) 1946" correctness="INCORRECT" pos="POS1" ability="BREAKABLE" idFact="HG_01_L1_T12-QAFACT7"/>
-      </elements>
-    </room>
-    <room id="Room[1/4]" x="1" y="4" roomTypeName="RegularRoom3" time="20" idTask="HG_01_L1_T12" prompt="Casse les bons elements" correctnessToReach="2">
-      <roomaccesses>
-        <roomaccess id="a35" direction="SOUTH" accessRef="a34"/>
-        <roomaccess id="a48" direction="NORTH" accessRef="a49"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_01_L1_T12-QAFACT4" complete="Armistice 11Novembre1918" correctnessToReach="1" correctness="CORRECT"/>
-        <fact id="HG_01_L1_T12-QAFACT20" complete="Chute du mur de Berlin 1989" correctnessToReach="1" correctness="CORRECT"/>
-      </facts>
-      <elements>
-        <element id="ELEM114" type="BreakablePot" displayValue="Armistice 11Novembre1918" correctness="CORRECT" pos="POS7" ability="BREAKABLE" idFact="HG_01_L1_T12-QAFACT4"/>
-        <element id="ELEM115" type="BreakablePot" displayValue="Chute du mur de Berlin 1989" correctness="CORRECT" pos="POS6" ability="BREAKABLE" idFact="HG_01_L1_T12-QAFACT20"/>
-      </elements>
-    </room>
-    <room id="Room[3/3]" x="3" y="3" roomTypeName="RegularRoom11" time="20" idTask="HG_01_L1_T12" prompt="Touche les bons elements" correctnessToReach="2">
-      <roomaccesses>
-        <roomaccess id="a47" direction="SOUTH" accessRef="a46"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_01_L1_T12-QAFACT17" complete="Trait&#xe9; de Rome 1958" correctnessToReach="1" correctness="INCORRECT"/>
-        <fact id="HG_01_L1_T12-QAFACT5" complete="Armistice 11 Septembre 1918" correctnessToReach="1" correctness="INCORRECT"/>
-      </facts>
-      <elements>
-        <element id="STRUCT116" type="HStructXL" pos="POSXL1"/>
-        <element id="ELEM117" type="Info" displayValue="FAUX" pos="id/STRUCT116"/>
-        <element id="STRUCT118" type="VStructXL" pos="id/STRUCT116"/>
-        <element id="STRUCT119" type="HStructXL" pos="id/STRUCT118"/>
-        <element id="ELEM120" type="FloorInterrupt" correctness="CORRECT" pos="id/STRUCT119" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT17"/>
-        <element id="ELEM121" type="StatementFact" displayValue="Trait&#xe9; de Rome 1958" pos="id/STRUCT119" idFact="HG_01_L1_T12-QAFACT17" acceptedFacts="Trait&#xe9; de Rome 1958;"/>
-        <element id="ELEM122" type="FloorInterrupt" correctness="INCORRECT" pos="id/STRUCT119" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT17"/>
-        <element id="STRUCT123" type="HStructXL" pos="id/STRUCT118"/>
-        <element id="ELEM124" type="FloorInterrupt" correctness="CORRECT" pos="id/STRUCT123" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT5"/>
-        <element id="ELEM125" type="StatementFact" displayValue="Armistice 11 Septembre 1918" pos="id/STRUCT123" idFact="HG_01_L1_T12-QAFACT5" acceptedFacts="Armistice 11 Septembre 1918;"/>
-        <element id="ELEM126" type="FloorInterrupt" correctness="INCORRECT" pos="id/STRUCT123" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT5"/>
-        <element id="ELEM127" type="Info" displayValue="VRAI" pos="id/STRUCT116"/>
-      </elements>
-    </room>
-    <room id="Room[-1/1]" x="-1" y="1" roomTypeName="RegularRoom11" time="20" idTask="HG_01_L1_T12" prompt="Touche les bons elements" correctnessToReach="2">
-      <roomaccesses>
-        <roomaccess id="a31" direction="NORTH" accessRef="a30"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_01_L1_T12-QAFACT0" complete="1er Guerre Mondiale 1914 et 1918" correctnessToReach="1" correctness="CORRECT"/>
-        <fact id="HG_01_L1_T12-QAFACT31" complete="Premi&#xe8;re alternance 1991" correctnessToReach="1" correctness="INCORRECT"/>
-      </facts>
-      <elements>
-        <element id="STRUCT128" type="HStructXL" pos="POSXL1"/>
-        <element id="STRUCT129" type="VStructXL" pos="id/STRUCT128"/>
-        <element id="STRUCT130" type="HStructXL" pos="id/STRUCT129"/>
-        <element id="ELEM131" type="FloorInterrupt" displayValue="Faux" correctness="INCORRECT" pos="id/STRUCT130" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT0"/>
-        <element id="ELEM132" type="StatementFact" displayValue="1er Guerre Mondiale 1914 et 1918" pos="id/STRUCT130" idFact="HG_01_L1_T12-QAFACT0" acceptedFacts="1er Guerre Mondiale 1914 et 1918;"/>
-        <element id="ELEM133" type="FloorInterrupt" displayValue="Vrai" correctness="CORRECT" pos="id/STRUCT130" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT0"/>
-        <element id="STRUCT134" type="HStructXL" pos="id/STRUCT129"/>
-        <element id="ELEM135" type="FloorInterrupt" displayValue="Faux" correctness="CORRECT" pos="id/STRUCT134" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT31"/>
-        <element id="ELEM136" type="StatementFact" displayValue="Premi&#xe8;re alternance 1991" pos="id/STRUCT134" idFact="HG_01_L1_T12-QAFACT31" acceptedFacts="Premi&#xe8;re alternance 1991;"/>
-        <element id="ELEM137" type="FloorInterrupt" displayValue="Vrai" correctness="INCORRECT" pos="id/STRUCT134" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT31"/>
-      </elements>
-    </room>
-    <room id="Room[3/0]" x="3" roomTypeName="RegularRoom3" time="20" idTask="HG_01_L1_T12" prompt="Casse les bons elements" correctnessToReach="2">
-      <roomaccesses>
-        <roomaccess id="a41" direction="NORTH" accessRef="a40"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_01_L1_T12-QAFACT8" complete="Front Populaire 1936 et 1937" correctnessToReach="1" correctness="CORRECT"/>
-        <fact id="HG_01_L1_T12-QAFACT22" complete="Les accords d'Evian 1962" correctnessToReach="1" correctness="CORRECT"/>
-      </facts>
-      <elements>
-        <element id="ELEM138" type="BreakablePot" displayValue="Front Populaire 1936 et 1937" correctness="CORRECT" pos="POS4" ability="BREAKABLE" idFact="HG_01_L1_T12-QAFACT8"/>
-        <element id="ELEM139" type="BreakablePot" displayValue="Les accords d'Evian 1962" correctness="CORRECT" pos="POS2" ability="BREAKABLE" idFact="HG_01_L1_T12-QAFACT22"/>
-      </elements>
-    </room>
-    <room id="Room[-1/3]" x="-1" y="3" roomTypeName="RoomTrap4" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a33" direction="SOUTH" accessRef="a32"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM140" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM141" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM142" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM143" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM144" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM145" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM146" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[1/5]" x="1" y="5" roomTypeName="RoomTrap3" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a49" direction="SOUTH" accessRef="a48"/>
-        <roomaccess id="a50" direction="WEST" accessRef="a51"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM147" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM148" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM149" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM150" type="WaitSpikeTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM151" type="WaitSpikeTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM152" type="WaitSpikeTrap" pos="POS8" ability="AVOIDABLE"/>
-        <element id="ELEM153" type="WaitSpikeTrap" pos="POS7" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[3/4]" x="3" y="4" roomTypeName="RegularRoom2" time="20" idTask="HG_01_L1_T12" prompt="Touche les bons elements" correctnessToReach="2">
+    <room id="Room[-10/4]" x="-10" y="4" roomTypeName="RoomTrap2" correctnessToReach="0">
       <roomaccesses>
         <roomaccess id="a45" direction="WEST" accessRef="a44"/>
+        <roomaccess id="a46" direction="EAST" accessRef="a47"/>
       </roomaccesses>
-      <facts>
-        <fact id="HG_01_L1_T12-QAFACT27" complete="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct 1963" correctnessToReach="1" correctness="INCORRECT"/>
-        <fact id="HG_01_L1_T12-QAFACT13" complete="R&#xe9;gime de Vichy 1950" correctnessToReach="1" correctness="INCORRECT"/>
-      </facts>
       <elements>
-        <element id="STRUCT154" type="HStructXL" pos="POSXL1"/>
-        <element id="STRUCT155" type="VStructXL" pos="id/STRUCT154"/>
-        <element id="STRUCT156" type="HStructXL" pos="id/STRUCT155"/>
-        <element id="ELEM157" type="FloorInterrupt" displayValue="Faux" correctness="CORRECT" pos="id/STRUCT156" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT27"/>
-        <element id="ELEM158" type="StatementFact" displayValue="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct 1963" pos="id/STRUCT156" idFact="HG_01_L1_T12-QAFACT27" acceptedFacts="Election Pr&#xe9;sident de la R&#xe9;publique au suffrage universel direct 1963;"/>
-        <element id="ELEM159" type="FloorInterrupt" displayValue="Vrai" correctness="INCORRECT" pos="id/STRUCT156" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT27"/>
-        <element id="STRUCT160" type="HStructXL" pos="id/STRUCT155"/>
-        <element id="ELEM161" type="FloorInterrupt" displayValue="Faux" correctness="CORRECT" pos="id/STRUCT160" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT13"/>
-        <element id="ELEM162" type="StatementFact" displayValue="R&#xe9;gime de Vichy 1950" pos="id/STRUCT160" idFact="HG_01_L1_T12-QAFACT13" acceptedFacts="R&#xe9;gime de Vichy 1950;"/>
-        <element id="ELEM163" type="FloorInterrupt" displayValue="Vrai" correctness="INCORRECT" pos="id/STRUCT160" ability="TOUCHABLE" idFact="HG_01_L1_T12-QAFACT13"/>
+        <element id="ELEM195" type="BearTrap" pos="POS2" ability="NONAVOIDABLE"/>
+        <element id="ELEM196" type="BearTrap" pos="POS1" ability="NONAVOIDABLE"/>
+        <element id="ELEM197" type="BearTrap" pos="POS3" ability="NONAVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[0/5]" y="5" roomTypeName="ExitRoom1" correctnessToReach="0">
+    <room id="Room[-9/4]" x="-9" y="4" roomTypeName="RegularRoom9" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a51" direction="EAST" accessRef="a50"/>
+        <roomaccess id="a47" direction="WEST" accessRef="a46"/>
+        <roomaccess id="a48" direction="SOUTH" accessRef="a49"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[-10/2]" x="-10" y="2" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a49" direction="NORTH_EAST" accessRef="a48"/>
+        <roomaccess id="a50" direction="SOUTH_WEST" accessRef="a51"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+      </facts>
+      <elements>
+        <element id="STRUCT198" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
+        <element id="ELEM199" type="TypableDetector" pos="id/STRUCT198/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM200" type="TypableDetector" pos="id/STRUCT198/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM201" type="TypableDetector" pos="id/STRUCT198/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM202" type="TypableDetector" pos="id/STRUCT198/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM203" type="TypableDetector" pos="id/STRUCT198/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM204" type="TypableDetector" pos="id/STRUCT198/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM205" type="TypableDetector" pos="id/STRUCT198/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM206" type="TypableDetector" pos="id/STRUCT198/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM207" type="TypableDetector" pos="id/STRUCT198/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM208" type="TypableDetector" pos="id/STRUCT198/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM209" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+      </elements>
+    </room>
+    <room id="Room[-10/1]" x="-10" y="1" roomTypeName="ExitRoom1" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a51" direction="NORTH" accessRef="a50"/>
       </roomaccesses>
     </room>
   </rooms>

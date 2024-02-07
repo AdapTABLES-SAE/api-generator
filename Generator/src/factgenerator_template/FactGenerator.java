@@ -148,4 +148,16 @@ public class FactGenerator {
 		}
 		dungeonElements.shuffleRoomsOrder();
 	}
+	
+	/*private List<AQuestionableFact> getPreviouslySelectedQuestionableFactsForDungeon(DungeonElements dungeonElements){
+		List<AQuestionableFact> qfacts = new ArrayList<>();
+		for (RoomElements roomElements : dungeonElements.getRoomsElements()) {
+			if(!roomElements.getFacts().isEmpty()) {
+				for(QuestionedFact qfact: roomElements.getFacts()) {
+					qfacts.add(qfact.getQuestionablefact());
+				}
+			}
+		}
+		return qfacts;
+	}*/
 }

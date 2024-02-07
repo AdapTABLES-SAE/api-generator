@@ -195,7 +195,9 @@ public class PathManager {
 		JSONObject buildingParameters = new JSONObject(); 
 		JSONArray tables = new JSONArray();
 		for(SetOfFacts set: objective.getSetoffacts()) {
-			tables.add(set.getName());
+			if(!tables.contains(set.getName())) {
+				tables.add(set.getName());
+			}
 		}
 		buildingParameters.put("tables", tables);
 		buildingParameters.put("leftOperand", level.getBuildSetup().getName());

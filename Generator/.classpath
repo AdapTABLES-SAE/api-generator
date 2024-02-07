@@ -14,5 +14,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/blemoine/TheseGenerator/gen1/lib/combinatoricslib3-3.3.3.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/TransformationFlattener"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
