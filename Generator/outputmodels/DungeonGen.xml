@@ -1,450 +1,374 @@
 <?xml version="1.0" encoding="ASCII"?>
-<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="HG_O1_V2" levelID="HG_O1_L1_T1_V2" gameLevelID="9" curses="[&quot;Night&quot;,]">
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="HG_O1" levelID="HG_O1_L1" gameLevelID="9" curses="[&quot;Night&quot;,]">
   <rooms>
-    <room id="Room[0/0]" roomTypeName="RegularRoomW" correctnessToReach="0">
+    <room id="Room[0/0]" roomTypeName="RegularRoomN" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a2" direction="WEST" accessRef="a3"/>
+        <roomaccess id="a2" direction="NORTH" accessRef="a3"/>
       </roomaccesses>
     </room>
-    <room id="Room[-2/-1]" x="-2" y="-1" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+    <room id="Room[0/1]" y="1" roomTypeName="RoomTrap4" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a3" direction="EAST_NORTH" accessRef="a2"/>
-        <roomaccess id="a4" direction="NORTH_WEST" accessRef="a5"/>
+        <roomaccess id="a3" direction="SOUTH" accessRef="a2"/>
+        <roomaccess id="a4" direction="WEST" accessRef="a5"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM1" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM2" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM3" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM4" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM5" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM6" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM7" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-2/0]" x="-2" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a5" direction="EAST_NORTH" accessRef="a4"/>
+        <roomaccess id="a6" direction="NORTH_WEST" accessRef="a7"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+        <fact id="HG_O1_L1_T9-QAFACT6" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT1" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
-        <element id="ELEM2" type="TypableDetector" pos="id/STRUCT1/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM3" type="TypableDetector" pos="id/STRUCT1/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM4" type="TypableDetector" pos="id/STRUCT1/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM5" type="TypableDetector" pos="id/STRUCT1/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM6" type="TypableDetector" pos="id/STRUCT1/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM7" type="TypableDetector" pos="id/STRUCT1/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM8" type="TypableDetector" pos="id/STRUCT1/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM9" type="TypableDetector" pos="id/STRUCT1/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM10" type="TypableDetector" pos="id/STRUCT1/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM11" type="TypableDetector" pos="id/STRUCT1/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM12" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="STRUCT8" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
+        <element id="ELEM9" type="ObjectDetector" pos="id/STRUCT8/1940" correctAnswer="(Debut) R&#xe9;gime de Vichy;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT6"/>
+        <element id="ELEM10" type="ObjectDetector" pos="id/STRUCT8/1944" correctAnswer="(Fin) R&#xe9;gime de Vichy;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT6"/>
+        <element id="ELEM11" type="Pot" displayValue="(Debut) R&#xe9;gime de Vichy" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT6"/>
+        <element id="ELEM12" type="Pot" displayValue="(Fin) R&#xe9;gime de Vichy" correctness="CORRECT" pos="POS16" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT6"/>
+        <element id="ELEM13" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-3/1]" x="-3" y="1" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+    <room id="Room[-2/2]" x="-2" y="2" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="1">
       <roomaccesses>
-        <roomaccess id="a5" direction="SOUTH_EAST" accessRef="a4"/>
-        <roomaccess id="a6" direction="WEST_NORTH" accessRef="a7"/>
+        <roomaccess id="a7" direction="SOUTH_WEST" accessRef="a6"/>
+        <roomaccess id="a8" direction="WEST_SOUTH" accessRef="a9"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+        <fact id="HG_O1_L1_T9-QAFACT2" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT13" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
-        <element id="ELEM14" type="TypableDetector" pos="id/STRUCT13/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM15" type="TypableDetector" pos="id/STRUCT13/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM16" type="TypableDetector" pos="id/STRUCT13/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM17" type="TypableDetector" pos="id/STRUCT13/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM18" type="TypableDetector" pos="id/STRUCT13/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM19" type="TypableDetector" pos="id/STRUCT13/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM20" type="TypableDetector" pos="id/STRUCT13/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM21" type="TypableDetector" pos="id/STRUCT13/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM22" type="TypableDetector" pos="id/STRUCT13/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM23" type="TypableDetector" pos="id/STRUCT13/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM24" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="STRUCT14" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
+        <element id="ELEM15" type="ObjectDetector" pos="id/STRUCT14/1918" correctAnswer="Armistice;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT2"/>
+        <element id="ELEM16" type="Pot" displayValue="Armistice" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT2"/>
+        <element id="ELEM17" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-4/2]" x="-4" y="2" roomTypeName="RoomTrap4" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a7" direction="EAST" accessRef="a6"/>
-        <roomaccess id="a8" direction="WEST" accessRef="a9"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM25" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM26" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM27" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM28" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM29" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM30" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM31" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-6/2]" x="-6" y="2" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+    <room id="Room[-4/2]" x="-4" y="2" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="1">
       <roomaccesses>
         <roomaccess id="a9" direction="EAST_SOUTH" accessRef="a8"/>
-        <roomaccess id="a10" direction="WEST_SOUTH" accessRef="a11"/>
+        <roomaccess id="a10" direction="WEST_NORTH" accessRef="a11"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+        <fact id="HG_O1_L1_T9-QAFACT7" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT32" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
-        <element id="ELEM33" type="TypableDetector" pos="id/STRUCT32/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM34" type="TypableDetector" pos="id/STRUCT32/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM35" type="TypableDetector" pos="id/STRUCT32/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM36" type="TypableDetector" pos="id/STRUCT32/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM37" type="TypableDetector" pos="id/STRUCT32/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM38" type="TypableDetector" pos="id/STRUCT32/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM39" type="TypableDetector" pos="id/STRUCT32/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM40" type="TypableDetector" pos="id/STRUCT32/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM41" type="TypableDetector" pos="id/STRUCT32/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM42" type="TypableDetector" pos="id/STRUCT32/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM43" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="STRUCT18" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
+        <element id="ELEM19" type="ObjectDetector" pos="id/STRUCT18/1945" correctAnswer="Cr&#xe9;ation de l'ONU;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT7"/>
+        <element id="ELEM20" type="Pot" displayValue="Cr&#xe9;ation de l'ONU" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT7"/>
+        <element id="ELEM21" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-8/1]" x="-8" y="1" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+    <room id="Room[-6/3]" x="-6" y="3" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="1">
       <roomaccesses>
-        <roomaccess id="a11" direction="EAST_NORTH" accessRef="a10"/>
+        <roomaccess id="a11" direction="EAST_SOUTH" accessRef="a10"/>
         <roomaccess id="a12" direction="NORTH_WEST" accessRef="a13"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+        <fact id="HG_O1_L1_T9-QAFACT9" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT44" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
-        <element id="ELEM45" type="TypableDetector" pos="id/STRUCT44/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM46" type="TypableDetector" pos="id/STRUCT44/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM47" type="TypableDetector" pos="id/STRUCT44/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM48" type="TypableDetector" pos="id/STRUCT44/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM49" type="TypableDetector" pos="id/STRUCT44/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM50" type="TypableDetector" pos="id/STRUCT44/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM51" type="TypableDetector" pos="id/STRUCT44/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM52" type="TypableDetector" pos="id/STRUCT44/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM53" type="TypableDetector" pos="id/STRUCT44/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM54" type="TypableDetector" pos="id/STRUCT44/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM55" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="STRUCT22" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
+        <element id="ELEM23" type="ObjectDetector" pos="id/STRUCT22/2002" correctAnswer="L'Euro;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT9"/>
+        <element id="ELEM24" type="Pot" displayValue="L'Euro" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT9"/>
+        <element id="ELEM25" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-8/3]" x="-8" y="3" roomTypeName="RoomTrap4" correctnessToReach="0">
+    <room id="Room[-6/5]" x="-6" y="5" roomTypeName="RoomTrap3" correctnessToReach="0">
       <roomaccesses>
         <roomaccess id="a13" direction="SOUTH" accessRef="a12"/>
         <roomaccess id="a14" direction="EAST" accessRef="a15"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM56" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM57" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM58" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM59" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM60" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM61" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM62" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM26" type="HoleTrap" pos="POS6" ability="NONAVOIDABLE"/>
+        <element id="ELEM27" type="HoleTrap" pos="POS9" ability="NONAVOIDABLE"/>
+        <element id="ELEM28" type="HoleTrap" pos="POS1" ability="NONAVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[-7/3]" x="-7" y="3" roomTypeName="RoomTrap3" correctnessToReach="0">
+    <room id="Room[-5/5]" x="-5" y="5" roomTypeName="RoomTrap4" correctnessToReach="0">
       <roomaccesses>
         <roomaccess id="a15" direction="WEST" accessRef="a14"/>
         <roomaccess id="a16" direction="NORTH" accessRef="a17"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM63" type="WaitSpikeTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM64" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM65" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM66" type="WaitSpikeTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM67" type="WaitSpikeTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM29" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM30" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM31" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM32" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM33" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM34" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM35" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[-7/4]" x="-7" y="4" roomTypeName="RoomTrap3" correctnessToReach="0">
+    <room id="Room[-5/6]" x="-5" y="6" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="1">
       <roomaccesses>
-        <roomaccess id="a17" direction="SOUTH" accessRef="a16"/>
-        <roomaccess id="a18" direction="NORTH" accessRef="a19"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM68" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM69" type="FireTrap" pos="POS8" ability="AVOIDABLE"/>
-        <element id="ELEM70" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM71" type="FireTrap" pos="POS7" ability="AVOIDABLE"/>
-        <element id="ELEM72" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM73" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM74" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-7/5]" x="-7" y="5" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a19" direction="SOUTH_WEST" accessRef="a18"/>
-        <roomaccess id="a20" direction="WEST_SOUTH" accessRef="a21"/>
+        <roomaccess id="a17" direction="SOUTH_WEST" accessRef="a16"/>
+        <roomaccess id="a18" direction="EAST_NORTH" accessRef="a19"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+        <fact id="HG_O1_L1_T9-QAFACT7" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT75" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
-        <element id="ELEM76" type="TypableDetector" pos="id/STRUCT75/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM77" type="TypableDetector" pos="id/STRUCT75/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM78" type="TypableDetector" pos="id/STRUCT75/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM79" type="TypableDetector" pos="id/STRUCT75/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM80" type="TypableDetector" pos="id/STRUCT75/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM81" type="TypableDetector" pos="id/STRUCT75/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM82" type="TypableDetector" pos="id/STRUCT75/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM83" type="TypableDetector" pos="id/STRUCT75/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM84" type="TypableDetector" pos="id/STRUCT75/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM85" type="TypableDetector" pos="id/STRUCT75/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM86" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="STRUCT36" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
+        <element id="ELEM37" type="ObjectDetector" pos="id/STRUCT36/1945" correctAnswer="Cr&#xe9;ation de l'ONU;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT7"/>
+        <element id="ELEM38" type="Pot" displayValue="Cr&#xe9;ation de l'ONU" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT7"/>
+        <element id="ELEM39" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-9/5]" x="-9" y="5" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+    <room id="Room[-3/7]" x="-3" y="7" roomTypeName="RoomTrap" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a21" direction="EAST_SOUTH" accessRef="a20"/>
+        <roomaccess id="a19" direction="WEST" accessRef="a18"/>
+        <roomaccess id="a20" direction="SOUTH" accessRef="a21"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM40" type="BearTrap" pos="POS3" ability="NONAVOIDABLE"/>
+        <element id="ELEM41" type="BearTrap" pos="POS1" ability="NONAVOIDABLE"/>
+        <element id="ELEM42" type="BearTrap" pos="POS4" ability="NONAVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-3/5]" x="-3" y="5" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a21" direction="NORTH_WEST" accessRef="a20"/>
         <roomaccess id="a22" direction="WEST_SOUTH" accessRef="a23"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+        <fact id="HG_O1_L1_T9-QAFACT3" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT87" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
-        <element id="ELEM88" type="TypableDetector" pos="id/STRUCT87/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM89" type="TypableDetector" pos="id/STRUCT87/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM90" type="TypableDetector" pos="id/STRUCT87/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM91" type="TypableDetector" pos="id/STRUCT87/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM92" type="TypableDetector" pos="id/STRUCT87/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM93" type="TypableDetector" pos="id/STRUCT87/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM94" type="TypableDetector" pos="id/STRUCT87/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM95" type="TypableDetector" pos="id/STRUCT87/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM96" type="TypableDetector" pos="id/STRUCT87/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM97" type="TypableDetector" pos="id/STRUCT87/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM98" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="STRUCT43" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
+        <element id="ELEM44" type="ObjectDetector" pos="id/STRUCT43/1933" correctAnswer="(Debut) Allemagne Nazie (Hitl&#xe9;rienne);" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT3"/>
+        <element id="ELEM45" type="ObjectDetector" pos="id/STRUCT43/1945" correctAnswer="(Fin) Allemagne Nazie (Hitl&#xe9;rienne);" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT3"/>
+        <element id="ELEM46" type="Pot" displayValue="(Debut) Allemagne Nazie (Hitl&#xe9;rienne)" correctness="CORRECT" pos="POS18" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT3"/>
+        <element id="ELEM47" type="Pot" displayValue="(Fin) Allemagne Nazie (Hitl&#xe9;rienne)" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT3"/>
+        <element id="ELEM48" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-11/5]" x="-11" y="5" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+    <room id="Room[-4/5]" x="-4" y="5" roomTypeName="RegularRoom6" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a23" direction="EAST_SOUTH" accessRef="a22"/>
-        <roomaccess id="a24" direction="NORTH_WEST" accessRef="a25"/>
+        <roomaccess id="a23" direction="EAST" accessRef="a22"/>
+        <roomaccess id="a24" direction="SOUTH" accessRef="a25"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[-4/4]" x="-4" y="4" roomTypeName="RegularRoom4" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a25" direction="NORTH" accessRef="a24"/>
+        <roomaccess id="a26" direction="EAST" accessRef="a27"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[-3/4]" x="-3" y="4" roomTypeName="RegularRoom7" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a27" direction="WEST" accessRef="a26"/>
+        <roomaccess id="a28" direction="EAST" accessRef="a29"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[-2/4]" x="-2" y="4" roomTypeName="RegularRoom4" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a29" direction="WEST" accessRef="a28"/>
+        <roomaccess id="a30" direction="EAST" accessRef="a31"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[-1/4]" x="-1" y="4" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a31" direction="WEST_SOUTH" accessRef="a30"/>
+        <roomaccess id="a32" direction="NORTH_EAST" accessRef="a33"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+        <fact id="HG_O1_L1_T9-QAFACT6" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT99" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
-        <element id="ELEM100" type="TypableDetector" pos="id/STRUCT99/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM101" type="TypableDetector" pos="id/STRUCT99/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM102" type="TypableDetector" pos="id/STRUCT99/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM103" type="TypableDetector" pos="id/STRUCT99/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM104" type="TypableDetector" pos="id/STRUCT99/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM105" type="TypableDetector" pos="id/STRUCT99/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM106" type="TypableDetector" pos="id/STRUCT99/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM107" type="TypableDetector" pos="id/STRUCT99/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM108" type="TypableDetector" pos="id/STRUCT99/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM109" type="TypableDetector" pos="id/STRUCT99/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM110" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="STRUCT49" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
+        <element id="ELEM50" type="ObjectDetector" pos="id/STRUCT49/1940" correctAnswer="(Debut) R&#xe9;gime de Vichy;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT6"/>
+        <element id="ELEM51" type="ObjectDetector" pos="id/STRUCT49/1944" correctAnswer="(Fin) R&#xe9;gime de Vichy;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT6"/>
+        <element id="ELEM52" type="Pot" displayValue="(Debut) R&#xe9;gime de Vichy" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT6"/>
+        <element id="ELEM53" type="Pot" displayValue="(Fin) R&#xe9;gime de Vichy" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT6"/>
+        <element id="ELEM54" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-11/7]" x="-11" y="7" roomTypeName="TrapRoom2" correctnessToReach="0">
+    <room id="Room[0/6]" y="6" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="1">
       <roomaccesses>
-        <roomaccess id="a25" direction="SOUTH" accessRef="a24"/>
-        <roomaccess id="a26" direction="NORTH" accessRef="a27"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM111" type="RegularSlime" pos="POS6" ability="NONAVOIDABLE"/>
-        <element id="ELEM112" type="RegularSlime" pos="POS1" ability="NONAVOIDABLE"/>
-        <element id="ELEM113" type="RegularSlime" pos="POS3" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-12/8]" x="-12" y="8" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a27" direction="SOUTH_EAST" accessRef="a26"/>
-        <roomaccess id="a28" direction="WEST_NORTH" accessRef="a29"/>
+        <roomaccess id="a33" direction="SOUTH_WEST" accessRef="a32"/>
+        <roomaccess id="a34" direction="WEST_NORTH" accessRef="a35"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+        <fact id="HG_O1_L1_T9-QAFACT7" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT114" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
-        <element id="ELEM115" type="TypableDetector" pos="id/STRUCT114/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM116" type="TypableDetector" pos="id/STRUCT114/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM117" type="TypableDetector" pos="id/STRUCT114/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM118" type="TypableDetector" pos="id/STRUCT114/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM119" type="TypableDetector" pos="id/STRUCT114/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM120" type="TypableDetector" pos="id/STRUCT114/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM121" type="TypableDetector" pos="id/STRUCT114/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM122" type="TypableDetector" pos="id/STRUCT114/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM123" type="TypableDetector" pos="id/STRUCT114/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM124" type="TypableDetector" pos="id/STRUCT114/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM125" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="STRUCT55" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
+        <element id="ELEM56" type="ObjectDetector" pos="id/STRUCT55/1945" correctAnswer="Cr&#xe9;ation de l'ONU;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT7"/>
+        <element id="ELEM57" type="Pot" displayValue="Cr&#xe9;ation de l'ONU" correctness="CORRECT" pos="POS13" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT7"/>
+        <element id="ELEM58" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-14/8]" x="-14" y="8" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+    <room id="Room[-2/7]" x="-2" y="7" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="2">
       <roomaccesses>
-        <roomaccess id="a29" direction="EAST_NORTH" accessRef="a28"/>
-        <roomaccess id="a30" direction="SOUTH_WEST" accessRef="a31"/>
+        <roomaccess id="a35" direction="EAST_SOUTH" accessRef="a34"/>
+        <roomaccess id="a36" direction="WEST_NORTH" accessRef="a37"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+        <fact id="HG_O1_L1_T9-QAFACT0" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT126" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
-        <element id="ELEM127" type="TypableDetector" pos="id/STRUCT126/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM128" type="TypableDetector" pos="id/STRUCT126/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM129" type="TypableDetector" pos="id/STRUCT126/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM130" type="TypableDetector" pos="id/STRUCT126/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM131" type="TypableDetector" pos="id/STRUCT126/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM132" type="TypableDetector" pos="id/STRUCT126/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM133" type="TypableDetector" pos="id/STRUCT126/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM134" type="TypableDetector" pos="id/STRUCT126/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM135" type="TypableDetector" pos="id/STRUCT126/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM136" type="TypableDetector" pos="id/STRUCT126/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM137" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="STRUCT59" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
+        <element id="ELEM60" type="ObjectDetector" pos="id/STRUCT59/1914" correctAnswer="(Debut) 1er Guerre Mondiale;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT0"/>
+        <element id="ELEM61" type="ObjectDetector" pos="id/STRUCT59/1918" correctAnswer="(Fin) 1er Guerre Mondiale;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT0"/>
+        <element id="ELEM62" type="Pot" displayValue="(Debut) 1er Guerre Mondiale" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT0"/>
+        <element id="ELEM63" type="Pot" displayValue="(Fin) 1er Guerre Mondiale" correctness="CORRECT" pos="POS13" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT0"/>
+        <element id="ELEM64" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-14/6]" x="-14" y="6" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+    <room id="Room[-4/8]" x="-4" y="8" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="1">
       <roomaccesses>
-        <roomaccess id="a31" direction="NORTH_WEST" accessRef="a30"/>
-        <roomaccess id="a32" direction="EAST_NORTH" accessRef="a33"/>
+        <roomaccess id="a37" direction="EAST_SOUTH" accessRef="a36"/>
+        <roomaccess id="a38" direction="NORTH_WEST" accessRef="a39"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+        <fact id="HG_O1_L1_T9-QAFACT9" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT138" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
-        <element id="ELEM139" type="TypableDetector" pos="id/STRUCT138/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM140" type="TypableDetector" pos="id/STRUCT138/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM141" type="TypableDetector" pos="id/STRUCT138/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM142" type="TypableDetector" pos="id/STRUCT138/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM143" type="TypableDetector" pos="id/STRUCT138/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM144" type="TypableDetector" pos="id/STRUCT138/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM145" type="TypableDetector" pos="id/STRUCT138/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM146" type="TypableDetector" pos="id/STRUCT138/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM147" type="TypableDetector" pos="id/STRUCT138/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM148" type="TypableDetector" pos="id/STRUCT138/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM149" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="STRUCT65" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
+        <element id="ELEM66" type="ObjectDetector" pos="id/STRUCT65/2002" correctAnswer="L'Euro;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT9"/>
+        <element id="ELEM67" type="Pot" displayValue="L'Euro" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT9"/>
+        <element id="ELEM68" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-12/7]" x="-12" y="7" roomTypeName="RoomTrap3" correctnessToReach="0">
+    <room id="Room[-4/10]" x="-4" y="10" roomTypeName="RoomTrap3" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a33" direction="WEST" accessRef="a32"/>
-        <roomaccess id="a34" direction="SOUTH" accessRef="a35"/>
+        <roomaccess id="a39" direction="SOUTH" accessRef="a38"/>
+        <roomaccess id="a40" direction="WEST" accessRef="a41"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM150" type="WaitSpikeTrap" pos="POS7" ability="AVOIDABLE"/>
-        <element id="ELEM151" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM152" type="WaitSpikeTrap" pos="POS8" ability="AVOIDABLE"/>
-        <element id="ELEM153" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM154" type="WaitSpikeTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM155" type="WaitSpikeTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM156" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM69" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM70" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM71" type="FireTrap" pos="POS9" ability="AVOIDABLE"/>
+        <element id="ELEM72" type="FireTrap" pos="POS6" ability="AVOIDABLE"/>
+        <element id="ELEM73" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM74" type="FireTrap" pos="POS8" ability="AVOIDABLE"/>
+        <element id="ELEM75" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[-12/6]" x="-12" y="6" roomTypeName="TwoWaysRoom4" correctnessToReach="0">
+    <room id="Room[-5/10]" x="-5" y="10" roomTypeName="RoomTrap4" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a35" direction="NORTH" accessRef="a34"/>
-        <roomaccess id="a36" direction="SOUTH" accessRef="a37"/>
+        <roomaccess id="a41" direction="EAST" accessRef="a40"/>
+        <roomaccess id="a42" direction="WEST" accessRef="a43"/>
       </roomaccesses>
+      <elements>
+        <element id="ELEM76" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM77" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM78" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM79" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM80" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM81" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM82" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
+      </elements>
     </room>
-    <room id="Room[-13/4]" x="-13" y="4" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+    <room id="Room[-7/10]" x="-7" y="10" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="1">
       <roomaccesses>
-        <roomaccess id="a37" direction="NORTH_EAST" accessRef="a36"/>
-        <roomaccess id="a38" direction="SOUTH_WEST" accessRef="a39"/>
+        <roomaccess id="a43" direction="EAST_SOUTH" accessRef="a42"/>
+        <roomaccess id="a44" direction="WEST_SOUTH" accessRef="a45"/>
       </roomaccesses>
       <facts>
-        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
+        <fact id="HG_O1_L1_T9-QAFACT11" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT157" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
-        <element id="ELEM158" type="TypableDetector" pos="id/STRUCT157/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM159" type="TypableDetector" pos="id/STRUCT157/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM160" type="TypableDetector" pos="id/STRUCT157/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM161" type="TypableDetector" pos="id/STRUCT157/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM162" type="TypableDetector" pos="id/STRUCT157/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM163" type="TypableDetector" pos="id/STRUCT157/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM164" type="TypableDetector" pos="id/STRUCT157/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM165" type="TypableDetector" pos="id/STRUCT157/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM166" type="TypableDetector" pos="id/STRUCT157/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM167" type="TypableDetector" pos="id/STRUCT157/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM168" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="STRUCT83" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
+        <element id="ELEM84" type="ObjectDetector" pos="id/STRUCT83/1962" correctAnswer="Les accords d'Evian;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT11"/>
+        <element id="ELEM85" type="Pot" displayValue="Les accords d'Evian" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT11"/>
+        <element id="ELEM86" type="Switch" pos="POS19" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-13/3]" x="-13" y="3" roomTypeName="RoomTrap4" correctnessToReach="0">
+    <room id="Room[-8/10]" x="-8" y="10" roomTypeName="RoomTrap4" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a39" direction="NORTH" accessRef="a38"/>
-        <roomaccess id="a40" direction="EAST" accessRef="a41"/>
+        <roomaccess id="a45" direction="EAST" accessRef="a44"/>
+        <roomaccess id="a46" direction="SOUTH" accessRef="a47"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM169" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM170" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM171" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM172" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM173" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM174" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM175" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM87" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM88" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM89" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM90" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM91" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM92" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM93" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[-12/2]" x="-12" y="2" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a41" direction="WEST_NORTH" accessRef="a40"/>
-        <roomaccess id="a42" direction="NORTH_EAST" accessRef="a43"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
-      </facts>
-      <elements>
-        <element id="STRUCT176" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
-        <element id="ELEM177" type="TypableDetector" pos="id/STRUCT176/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM178" type="TypableDetector" pos="id/STRUCT176/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM179" type="TypableDetector" pos="id/STRUCT176/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM180" type="TypableDetector" pos="id/STRUCT176/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM181" type="TypableDetector" pos="id/STRUCT176/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM182" type="TypableDetector" pos="id/STRUCT176/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM183" type="TypableDetector" pos="id/STRUCT176/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM184" type="TypableDetector" pos="id/STRUCT176/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM185" type="TypableDetector" pos="id/STRUCT176/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM186" type="TypableDetector" pos="id/STRUCT176/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM187" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-      </elements>
-    </room>
-    <room id="Room[-11/4]" x="-11" y="4" roomTypeName="RoomTrap3" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a43" direction="SOUTH" accessRef="a42"/>
-        <roomaccess id="a44" direction="EAST" accessRef="a45"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM188" type="WaitFireTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM189" type="WaitFireTrap" pos="POS7" ability="AVOIDABLE"/>
-        <element id="ELEM190" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM191" type="WaitFireTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM192" type="WaitFireTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM193" type="WaitFireTrap" pos="POS8" ability="AVOIDABLE"/>
-        <element id="ELEM194" type="WaitFireTrap" pos="POS4" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-10/4]" x="-10" y="4" roomTypeName="RoomTrap2" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a45" direction="WEST" accessRef="a44"/>
-        <roomaccess id="a46" direction="EAST" accessRef="a47"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM195" type="BearTrap" pos="POS2" ability="NONAVOIDABLE"/>
-        <element id="ELEM196" type="BearTrap" pos="POS1" ability="NONAVOIDABLE"/>
-        <element id="ELEM197" type="BearTrap" pos="POS3" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-9/4]" x="-9" y="4" roomTypeName="RegularRoom9" correctnessToReach="0">
+    <room id="Room[-8/9]" x="-8" y="9" roomTypeName="RoomTrap2" correctnessToReach="0">
       <roomaccesses>
         <roomaccess id="a47" direction="WEST" accessRef="a46"/>
-        <roomaccess id="a48" direction="SOUTH" accessRef="a49"/>
+        <roomaccess id="a48" direction="NORTH" accessRef="a49"/>
       </roomaccesses>
-    </room>
-    <room id="Room[-10/2]" x="-10" y="2" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T2_V2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a49" direction="NORTH_EAST" accessRef="a48"/>
-        <roomaccess id="a50" direction="SOUTH_WEST" accessRef="a51"/>
-      </roomaccesses>
-      <facts>
-        <fact id="HG_O1_L1_T2_V2-QAFACT0" correctnessToReach="10"/>
-      </facts>
       <elements>
-        <element id="STRUCT198" type="MapStructure" pos="POSXXL1" visualisation="FRANCE_AIRES_URBAINES"/>
-        <element id="ELEM199" type="TypableDetector" pos="id/STRUCT198/RENNES" correctAnswer="Rennes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM200" type="TypableDetector" pos="id/STRUCT198/NANTES" correctAnswer="Nantes;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM201" type="TypableDetector" pos="id/STRUCT198/TOULOUSE" correctAnswer="Toulouse;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM202" type="TypableDetector" pos="id/STRUCT198/PARIS" correctAnswer="Paris;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM203" type="TypableDetector" pos="id/STRUCT198/MONTPELLIER" correctAnswer="Montpellier;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM204" type="TypableDetector" pos="id/STRUCT198/MARSEILLE" correctAnswer="Marseille;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM205" type="TypableDetector" pos="id/STRUCT198/STRASBOURG" correctAnswer="Strasbourg;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM206" type="TypableDetector" pos="id/STRUCT198/BORDEAUX" correctAnswer="Bordeaux;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM207" type="TypableDetector" pos="id/STRUCT198/NICE" correctAnswer="Nice;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM208" type="TypableDetector" pos="id/STRUCT198/LYON" correctAnswer="Lyon;" ability="TYPABLE_DETECTOR" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
-        <element id="ELEM209" type="Statement" displayValue="Donner l'ensemble des r&#xe9;ponses" pos="POSQ1" idFact="HG_O1_L1_T2_V2-QAFACT0"/>
+        <element id="ELEM94" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM95" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM96" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM97" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM98" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[-10/1]" x="-10" y="1" roomTypeName="ExitRoom1" correctnessToReach="0">
+    <room id="Room[-9/10]" x="-9" y="10" size="LARGE" roomTypeName="MapRoom" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a51" direction="NORTH" accessRef="a50"/>
+        <roomaccess id="a49" direction="SOUTH_EAST" accessRef="a48"/>
+        <roomaccess id="a50" direction="WEST_NORTH" accessRef="a51"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[-11/10]" x="-11" y="10" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="1">
+      <roomaccesses>
+        <roomaccess id="a51" direction="EAST_NORTH" accessRef="a50"/>
+        <roomaccess id="a52" direction="SOUTH_WEST" accessRef="a53"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T9-QAFACT9" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT99" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
+        <element id="ELEM100" type="ObjectDetector" pos="id/STRUCT99/2002" correctAnswer="L'Euro;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT9"/>
+        <element id="ELEM101" type="Pot" displayValue="L'Euro" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT9"/>
+        <element id="ELEM102" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[-11/9]" x="-11" y="9" roomTypeName="RegularRoom3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a53" direction="NORTH" accessRef="a52"/>
+        <roomaccess id="a54" direction="SOUTH" accessRef="a55"/>
+      </roomaccesses>
+    </room>
+    <room id="Room[-11/7]" x="-11" y="7" size="LARGE" roomTypeName="MapRoom" time="20" idTask="HG_O1_L1_T9" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="1">
+      <roomaccesses>
+        <roomaccess id="a55" direction="NORTH_WEST" accessRef="a54"/>
+        <roomaccess id="a56" direction="SOUTH_EAST" accessRef="a57"/>
+      </roomaccesses>
+      <facts>
+        <fact id="HG_O1_L1_T9-QAFACT15" correctnessToReach="1"/>
+      </facts>
+      <elements>
+        <element id="STRUCT103" type="MapStructure" pos="POSXXL1" visualisation="FRISE_CHRONOLOGIQUE"/>
+        <element id="ELEM104" type="ObjectDetector" pos="id/STRUCT103/1981" correctAnswer="Premi&#xe8;re alternance;" ability="DETECTOR" idFact="HG_O1_L1_T9-QAFACT15"/>
+        <element id="ELEM105" type="Pot" displayValue="Premi&#xe8;re alternance" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="HG_O1_L1_T9-QAFACT15"/>
+        <element id="ELEM106" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+      </elements>
+    </room>
+    <room id="Room[-10/6]" x="-10" y="6" roomTypeName="RoomTrap3" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a57" direction="NORTH" accessRef="a56"/>
+        <roomaccess id="a58" direction="WEST" accessRef="a59"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM107" type="HoleTrap" pos="POS4" ability="NONAVOIDABLE"/>
+        <element id="ELEM108" type="HoleTrap" pos="POS6" ability="NONAVOIDABLE"/>
+        <element id="ELEM109" type="HoleTrap" pos="POS8" ability="NONAVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[-11/6]" x="-11" y="6" roomTypeName="ExitRoom1" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a59" direction="EAST" accessRef="a58"/>
       </roomaccesses>
     </room>
   </rooms>

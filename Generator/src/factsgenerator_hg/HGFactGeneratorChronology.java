@@ -21,6 +21,7 @@ import generator.HistoryFact;
 import generator.MapQuestionableFact;
 import generator.QuestionedFact;
 import generator.SetOfFacts;
+import generator.Time;
 import generator.TimePeriod;
 import generator.VisualizationPosition;
 import generator.VisualizationSolution;
@@ -56,6 +57,7 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 			qf.getVisualizationSolutions().add(buildVisualizationSolution("(Fin) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getEndPosition(), false));
 		}		
 		qf.getFacts().add(fact);
+		System.out.println("init " + ((HistoryFact) qf.getFacts().get(0)).getTime());
 		return qf;
 	}
 
@@ -125,22 +127,52 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 		return false;
 	}
 	
+	private boolean equalsTimeYear(HistoryFact f1, HistoryFact f2) {
+		// if = return 1; else return 0
+		System.out.println("f1 "+f1);
+		System.out.println(f2);
+		Time time1 = (Time)  f1.getTime();
+		Time time2 = (Time)  f2.getTime();
+		if(time1 instanceof TimePeriod && time2 instanceof TimePeriod) {
+			TimePeriod tp1 = (TimePeriod) time1;
+			TimePeriod tp2 = (TimePeriod) time2;
+			return tp1.getStartYear().equals(tp2.getStartYear()) || tp1.getStartYear().equals(tp2.getEndYear()) 
+					|| tp1.getEndYear().equals(tp2.getStartYear()) || tp1.getEndYear().equals(tp2.getEndYear());
+		} else if(time1 instanceof TimePeriod && time2 instanceof Date) {
+			TimePeriod tp1 = (TimePeriod) time1;
+			Date tp2 = (Date) time2;
+			return tp1.getStartYear().equals(tp2.getYear()) || tp1.getEndYear().equals(tp2.getYear());
+		} else if(time2 instanceof TimePeriod && time1 instanceof Date) {
+			Date tp1 = (Date) time1;
+			TimePeriod tp2 = (TimePeriod) time2;
+			return tp2.getStartYear().equals(tp1.getYear()) || tp2.getEndYear().equals(tp1.getYear());
+		} else {
+			Date tp1 = (Date) time1;
+			Date tp2 = (Date) time2;
+			return tp2.getYear().equals(tp1.getYear());
+		}
+	}
+	
 	@Override
 	protected List<AQuestionableFact> removeUnEligibleFactsBasedOnPreviouslySelectedFact(List<QuestionedFact> previousFacts, List<AQuestionableFact> facts) {
 		List<AQuestionableFact> eligible = new ArrayList<>();
 		
-		for(AQuestionableFact qfact: facts) {
+		for(AQuestionableFact qfact: facts) { // TODO : correct
 			boolean conditionValide = true;
 			for(QuestionedFact fact: previousFacts) {
-				AVisualizationQuestionableFact prevF = (AVisualizationQuestionableFact) fact.getQuestionablefact();
-				AVisualizationQuestionableFact newF = (AVisualizationQuestionableFact) qfact;
-				for(VisualizationSolution sol1 : prevF.getVisualizationSolutions()) {
+				HistoryFact prevF = (HistoryFact) fact.getQuestionablefact().getFacts().get(0);
+				HistoryFact newF = (HistoryFact) qfact.getFacts().get(0);
+				
+				
+				
+				conditionValide = !equalsTimeYear(prevF, newF);
+				/*for(VisualizationSolution sol1 : prevF.getVisualizationSolutions()) {
 					for(VisualizationSolution sol2 : newF.getVisualizationSolutions()) {
 						if(sol1.getValue().equals(sol2.getValue())) {
 							conditionValide = false;
 						}
 					}
-				}
+				}*/
 			}
 			if(conditionValide) {
 				eligible.add(qfact);

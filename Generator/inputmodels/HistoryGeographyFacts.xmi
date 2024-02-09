@@ -70,7 +70,7 @@
       <time xsi:type="generator:TimePeriod" startYear="1936" endYear="1937" startPosition="1936" endPosition="1937"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Appel du général de Gaulle">
-      <wrongData value="16 Juin 1950"/>
+      <wrongData value="18 Juin 1950"/>
       <representation ID="DEGAULLE"/>
       <time xsi:type="generator:Date" day="18" month="Juin" year="1940" position="1940"/>
     </facts>
@@ -88,7 +88,7 @@
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Traité de Rome">
       <wrongData value="1958"/>
       <representation ID="ROME"/>
-      <time xsi:type="generator:Date" day="" month="" year="1957" position="1957"/>
+      <time xsi:type="generator:Date" year="1957" position="1957"/>
     </facts>
     <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="L'Euro">
       <wrongData value="2000"/>
@@ -208,19 +208,15 @@
   </knowledgefacts>
   <knowledgefacts name="Domaine Bioclimatique (Légende)">
     <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="OCEANIQUE">
-      <representation ID="DARK_GREEN"/>
-      <legend text="Climat Océanique" position="OCEANIQUE_DEGRADE_TEXT"/>
-    </facts>
-    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="OCEANIQUE_DEGRADE">
-      <representation ID="LIGHT_GREEN"/>
-      <legend text="Climat Océanique Dégradé" position="OCEANIQUE_DEGRADE_TEXT"/>
+      <representation ID="GREEN"/>
+      <legend text="Climat Océanique" position="OCEANIQUE_TEXT"/>
     </facts>
     <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="SEMI_CONTINENTAL">
-      <representation ID="BLUE"/>
-      <legend text="Climat Semi-continental" position="SEMI_CONTINENTAL_TEXT"/>
+      <representation ID="PURPLE"/>
+      <legend text="Climat Continental" position="SEMI_CONTINENTAL_TEXT"/>
     </facts>
     <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="MEDITERRANEEN">
-      <representation ID="ORANGE"/>
+      <representation ID="PINK"/>
       <legend text="Climat Méditérranéen" position="MEDITERRANEEN_TEXT"/>
     </facts>
     <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="MONTAGNARD">
@@ -229,12 +225,10 @@
     </facts>
     <visualization ID="DOMAINE_BIO_LEGEND">
       <positions ID="OCEANIQUE"/>
-      <positions ID="OCEANIQUE_DEGRADE"/>
       <positions ID="SEMI_CONTINENTAL"/>
       <positions ID="MEDITERRANEEN"/>
       <positions ID="MONTAGNARD"/>
       <positions ID="OCEANIQUE_TEXT"/>
-      <positions ID="OCEANIQUE_DEGRADE_TEXT"/>
       <positions ID="SEMI_CONTINENTAL_TEXT"/>
       <positions ID="MEDITERRANEEN_TEXT"/>
       <positions ID="MONTAGNARD_TEXT"/>

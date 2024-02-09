@@ -11,63 +11,63 @@
     <learnerProgress>
       <currentobjectivelevels achieved="false">
         <objective href="../LearningDomain.xmi#HG_O1_V2"/>
-        <level xsi:type="generator:HGLevel" href="../LearningDomain.xmi#HG_O1_L1_T1_V2"/>
+        <level xsi:type="generator:HGLevel" href="../LearningDomain.xmi#HG_O1_L1_V2"/>
         <results>
           <resultsbytask>
             <task xsi:type="generator:GeographyMembership" href="../LearningDomain.xmi#HG_O1_L1_T1_V2"/>
             <questionableFacts xsi:type="generator:HGQFMembership" wasSelected="false" achieved="false" ID="HG_O1_L1_T1_V2-QAFACT2" membershipTo="aires urbaines">
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.5"/>
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.0"/>
-              <goodChoices>Nice</goodChoices>
-              <goodChoices>Paris</goodChoices>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.6"/>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.1"/>
+              <goodChoices>Nantes</goodChoices>
+              <goodChoices>Toulouse</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:HGQFMembership" wasSelected="false" achieved="false" ID="HG_O1_L1_T1_V2-QAFACT1" membershipTo="aires urbaines">
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.1"/>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.9"/>
               <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.4"/>
-              <goodChoices>Toulouse</goodChoices>
+              <goodChoices>Rennes</goodChoices>
               <goodChoices>Bordeaux</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:HGQFMembership" wasSelected="false" achieved="false" ID="HG_O1_L1_T1_V2-QAFACT3" membershipTo="aires urbaines">
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.6"/>
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.8"/>
-              <goodChoices>Nantes</goodChoices>
-              <goodChoices>Montpellier</goodChoices>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.7"/>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.2"/>
+              <goodChoices>Strasbourg</goodChoices>
+              <goodChoices>Lyon</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:HGQFMembership" wasSelected="false" achieved="false" ID="HG_O1_L1_T1_V2-QAFACT4" membershipTo="aires urbaines">
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.9"/>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.5"/>
               <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.3"/>
-              <goodChoices>Rennes</goodChoices>
+              <goodChoices>Nice</goodChoices>
               <goodChoices>Marseille</goodChoices>
             </questionableFacts>
             <questionableFacts xsi:type="generator:HGQFMembership" wasSelected="false" achieved="false" ID="HG_O1_L1_T1_V2-QAFACT0" membershipTo="aires urbaines">
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.2"/>
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.7"/>
-              <goodChoices>Lyon</goodChoices>
-              <goodChoices>Strasbourg</goodChoices>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.8"/>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.0"/>
+              <goodChoices>Montpellier</goodChoices>
+              <goodChoices>Paris</goodChoices>
             </questionableFacts>
           </resultsbytask>
           <resultsbytask>
             <task xsi:type="generator:LocateOnAMap" href="../LearningDomain.xmi#HG_O1_L1_T2_V2"/>
             <questionableFacts xsi:type="generator:MapQuestionableFact" wasSelected="false" achieved="false" ID="HG_O1_L1_T2_V2-QAFACT0" consigne="Donner l'ensemble des r&#xe9;ponses" type="CITY">
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.9"/>
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.6"/>
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.1"/>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.5"/>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.4"/>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.2"/>
               <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.0"/>
               <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.8"/>
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.3"/>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.9"/>
               <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.7"/>
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.4"/>
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.5"/>
-              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.2"/>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.1"/>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.6"/>
+              <facts xsi:type="generator:GeographyFact" href="../HistoryGeographyFacts.xmi#//@knowledgefacts.2/@facts.3"/>
               <visualization href="../HistoryGeographyFacts.xmi#FRANCE_AIRES_URBAINES"/>
-              <visualizationSolutions value="Rennes">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#RENNES"/>
+              <visualizationSolutions value="Nice">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#NICE"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Nantes">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#NANTES"/>
+              <visualizationSolutions value="Bordeaux">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#BORDEAUX"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Toulouse">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#TOULOUSE"/>
+              <visualizationSolutions value="Lyon">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#LYON"/>
               </visualizationSolutions>
               <visualizationSolutions value="Paris">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#PARIS"/>
@@ -75,20 +75,20 @@
               <visualizationSolutions value="Montpellier">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#MONTPELLIER"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Marseille">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#MARSEILLE"/>
+              <visualizationSolutions value="Rennes">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#RENNES"/>
               </visualizationSolutions>
               <visualizationSolutions value="Strasbourg">
                 <visualizationPosition href="../HistoryGeographyFacts.xmi#STRASBOURG"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Bordeaux">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#BORDEAUX"/>
+              <visualizationSolutions value="Toulouse">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#TOULOUSE"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Nice">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#NICE"/>
+              <visualizationSolutions value="Nantes">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#NANTES"/>
               </visualizationSolutions>
-              <visualizationSolutions value="Lyon">
-                <visualizationPosition href="../HistoryGeographyFacts.xmi#LYON"/>
+              <visualizationSolutions value="Marseille">
+                <visualizationPosition href="../HistoryGeographyFacts.xmi#MARSEILLE"/>
               </visualizationSolutions>
             </questionableFacts>
           </resultsbytask>
@@ -97,5 +97,5 @@
     </learnerProgress>
   </progression>
   <learningpath href="../LearningDomain.xmi#HG_PATH"/>
-  <statistics maxGameLevelReached="9" nbLevelsGenerated="3449"/>
+  <statistics maxGameLevelReached="9" nbLevelsGenerated="609"/>
 </generator:LearnerPlayer>

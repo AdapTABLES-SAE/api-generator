@@ -24,6 +24,7 @@ import generator.EnterResponse;
 import generator.EntrySoluceParam;
 import generator.FactCorrectnessParam;
 import generator.FactSolutionParam;
+import generator.HistoryFact;
 import generator.MultipleChoice;
 import generator.Position;
 import generator.PropositionParam;
@@ -158,7 +159,7 @@ public abstract class FactGeneratorTemplate {
 	private Set<AQuestionableFact> generateDefault(ATask task) {
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
 		for (SetOfFacts setoffact : dungeonElements.getChosenObjective().getSetoffacts()) {
-			for (AbstractFact f : setoffact.getFacts()) { 
+			for (AbstractFact f : new ArrayList<>(setoffact.getFacts())) { 
 				for(AQuestionableFact fact: generateQuestionableFactsOf(task, f)) {
 					questionableFacts.add(fact);
 				}
@@ -367,6 +368,11 @@ public abstract class FactGeneratorTemplate {
 			AQuestionableFact qf = null;
 			try {
 				qf = getAvailableFact(roomElements, roomElements.getCorrespondingResultByTask(dungeonElements.getCurrentObjectiveLevel()));
+				for(AbstractFact f: qf.getFacts()) {
+					if(f instanceof HistoryFact) {
+						System.out.println("gg "+((HistoryFact) f).getTime());
+					}
+				}
 				createAQuestionedFactFrom(roomElements, qf);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -405,6 +411,15 @@ public abstract class FactGeneratorTemplate {
 
 		List<AQuestionableFact> eligibleFacts = getEligibleQuestionableFacts(resByTask);
 		eligibleFacts.removeAll(alreadySelectedFacts(roomElements));
+		
+		for(AQuestionableFact f: eligibleFacts) {
+			for(AbstractFact af: f.getFacts()) {
+				if(af instanceof HistoryFact) {
+					System.out.println("toto "+ ((HistoryFact) af).getTime());
+				}
+			}
+		}
+		
 		if(resByTask.getTask().getNbFacts() > 1) {
 			eligibleFacts = removeUnEligibleFactsBasedOnPreviouslySelectedFact(roomElements.getFacts(), eligibleFacts);
 		}
