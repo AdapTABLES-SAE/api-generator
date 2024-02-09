@@ -16,8 +16,8 @@ import generator.Date;
 import generator.ECorrectness;
 import generator.HGQFIdentification;
 import generator.HistoryFact;
-import generator.QuestionedFact;
 import generator.SetOfFacts;
+import generator.Time;
 import generator.TimePeriod;
 import generator.WrongData;
 import generator.impl.DateImpl;
@@ -53,10 +53,30 @@ public class HGFactGeneratorIdentification extends FactGeneratorTemplate {
 		HGQFIdentification qf = new HGQFIdentificationImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		qf.setEvent(fact.getEvent());
-		qf.setTime(fact.getTime());
+		qf.setTime(newTime(fact.getTime()));
 		qf.setSoluce(true);
 		qf.getFacts().add(fact);
 		return qf;
+	}
+	
+	private Time newTime(Time time) {
+		if(time instanceof TimePeriod) {
+			TimePeriod tp_ = (TimePeriod) time;
+			TimePeriod tp = new TimePeriodImpl(); 
+			tp.setStartYear(tp_.getStartYear());
+			tp.setEndYear(tp_.getEndYear());
+			tp.setStartPosition(tp_.getStartPosition());
+			tp.setEndPosition(tp_.getEndPosition());
+			return tp;
+		} else {
+			Date d_ = (Date) time;
+			Date d = new DateImpl(); 
+			d.setDay(d_.getDay());
+			d.setMonth(d_.getMonth());
+			d.setYear(d_.getYear());
+			d.setPosition(d_.getPosition());
+			return d;
+		}
 	}
 	
 	private HGQFIdentification buildBadQF(HistoryFact fact) { 

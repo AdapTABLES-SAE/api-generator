@@ -50,14 +50,13 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 		AVisualizationQuestionableFact qf = new MapQuestionableFactImpl(); 
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		qf.setVisualization(fact.getBelongsToVisualization());
+		qf.getFacts().add(fact);
 		if(fact.getTime() instanceof Date) {
 			qf.getVisualizationSolutions().add(buildVisualizationSolution(fact.getEvent(), ((Date) fact.getTime()).getPosition(), false));
 		} else {
 			qf.getVisualizationSolutions().add(buildVisualizationSolution("(Debut) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getStartPosition(), false));
 			qf.getVisualizationSolutions().add(buildVisualizationSolution("(Fin) "+fact.getEvent(), ((TimePeriod) fact.getTime()).getEndPosition(), false));
 		}		
-		qf.getFacts().add(fact);
-		System.out.println("init " + ((HistoryFact) qf.getFacts().get(0)).getTime());
 		return qf;
 	}
 
@@ -129,8 +128,6 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 	
 	private boolean equalsTimeYear(HistoryFact f1, HistoryFact f2) {
 		// if = return 1; else return 0
-		System.out.println("f1 "+f1);
-		System.out.println(f2);
 		Time time1 = (Time)  f1.getTime();
 		Time time2 = (Time)  f2.getTime();
 		if(time1 instanceof TimePeriod && time2 instanceof TimePeriod) {
@@ -161,10 +158,7 @@ public class HGFactGeneratorChronology extends FactGeneratorTemplate {
 			boolean conditionValide = true;
 			for(QuestionedFact fact: previousFacts) {
 				HistoryFact prevF = (HistoryFact) fact.getQuestionablefact().getFacts().get(0);
-				HistoryFact newF = (HistoryFact) qfact.getFacts().get(0);
-				
-				
-				
+				HistoryFact newF = (HistoryFact) qfact.getFacts().get(0);				
 				conditionValide = !equalsTimeYear(prevF, newF);
 				/*for(VisualizationSolution sol1 : prevF.getVisualizationSolutions()) {
 					for(VisualizationSolution sol2 : newF.getVisualizationSolutions()) {

@@ -61,7 +61,7 @@ public class HGFactGeneratorOrderEvent extends FactGeneratorTemplate {
 	}
 	
 	private List<HistoryFact> chronologicallyOrderFacts(List<AbstractFact> facts) {
-		List<HistoryFact> hfacts = new ArrayList<>(); // TODO
+		List<HistoryFact> hfacts = new ArrayList<>(); 
 		for(AbstractFact fact: facts) {
 			hfacts.add((HistoryFact) fact);
 		}
