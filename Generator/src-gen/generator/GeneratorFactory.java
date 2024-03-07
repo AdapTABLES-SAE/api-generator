@@ -265,22 +265,22 @@ public interface GeneratorFactory extends EFactory {
 	OrderEvent createOrderEvent();
 
 	/**
-	 * Returns a new object of class '<em>Order Questionable Fact</em>'.
+	 * Returns a new object of class '<em>HG Order Questionable Fact</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Order Questionable Fact</em>'.
+	 * @return a new object of class '<em>HG Order Questionable Fact</em>'.
 	 * @generated
 	 */
-	OrderQuestionableFact createOrderQuestionableFact();
+	HGOrderQuestionableFact createHGOrderQuestionableFact();
 
 	/**
-	 * Returns a new object of class '<em>Order Solution</em>'.
+	 * Returns a new object of class '<em>HG Order Solution</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Order Solution</em>'.
+	 * @return a new object of class '<em>HG Order Solution</em>'.
 	 * @generated
 	 */
-	OrderSolution createOrderSolution();
+	HGOrderSolution createHGOrderSolution();
 
 	/**
 	 * Returns a new object of class '<em>HGQF Membership</em>'.
@@ -326,6 +326,69 @@ public interface GeneratorFactory extends EFactory {
 	 * @generated
 	 */
 	HGQFIdentification createHGQFIdentification();
+
+	/**
+	 * Returns a new object of class '<em>Solar Sytem Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Solar Sytem Level</em>'.
+	 * @generated
+	 */
+	SolarSytemLevel createSolarSytemLevel();
+
+	/**
+	 * Returns a new object of class '<em>Solar System Planet</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Solar System Planet</em>'.
+	 * @generated
+	 */
+	SolarSystemPlanet createSolarSystemPlanet();
+
+	/**
+	 * Returns a new object of class '<em>Order Planets</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Order Planets</em>'.
+	 * @generated
+	 */
+	OrderPlanets createOrderPlanets();
+
+	/**
+	 * Returns a new object of class '<em>QF Order Planets</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>QF Order Planets</em>'.
+	 * @generated
+	 */
+	QFOrderPlanets createQFOrderPlanets();
+
+	/**
+	 * Returns a new object of class '<em>Planet Order</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Planet Order</em>'.
+	 * @generated
+	 */
+	PlanetOrder createPlanetOrder();
+
+	/**
+	 * Returns a new object of class '<em>Identify Planets</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Identify Planets</em>'.
+	 * @generated
+	 */
+	IdentifyPlanets createIdentifyPlanets();
+
+	/**
+	 * Returns a new object of class '<em>QF Identify Planets</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>QF Identify Planets</em>'.
+	 * @generated
+	 */
+	QFIdentifyPlanets createQFIdentifyPlanets();
 
 	/**
 	 * Returns a new object of class '<em>Results</em>'.

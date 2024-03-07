@@ -3,6 +3,8 @@
 package generator.impl;
 
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -12,23 +14,23 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import generator.GeneratorPackage;
-import generator.OrderQuestionableFact;
-import generator.OrderSolution;
+import generator.PlanetOrder;
+import generator.QFOrderPlanets;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Order Questionable Fact</b></em>'.
+ * An implementation of the model object '<em><b>QF Order Planets</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.OrderQuestionableFactImpl#getSolutions <em>Solutions</em>}</li>
+ *   <li>{@link generator.impl.QFOrderPlanetsImpl#getSolutions <em>Solutions</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class OrderQuestionableFactImpl extends QuestionableFactImpl implements OrderQuestionableFact {
+public class QFOrderPlanetsImpl extends QuestionableFactImpl implements QFOrderPlanets {
 	/**
 	 * The cached value of the '{@link #getSolutions() <em>Solutions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -37,14 +39,14 @@ public class OrderQuestionableFactImpl extends QuestionableFactImpl implements O
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<OrderSolution> solutions;
+	protected EList<PlanetOrder> solutions;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrderQuestionableFactImpl() {
+	public QFOrderPlanetsImpl() {
 		super();
 	}
 
@@ -55,7 +57,7 @@ public class OrderQuestionableFactImpl extends QuestionableFactImpl implements O
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.ORDER_QUESTIONABLE_FACT;
+		return GeneratorPackage.Literals.QF_ORDER_PLANETS;
 	}
 
 	/**
@@ -63,10 +65,10 @@ public class OrderQuestionableFactImpl extends QuestionableFactImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<OrderSolution> getSolutions() {
+	public EList<PlanetOrder> getSolutions() {
 		if (solutions == null) {
-			solutions = new EObjectContainmentEList<OrderSolution>(OrderSolution.class, this,
-					GeneratorPackage.ORDER_QUESTIONABLE_FACT__SOLUTIONS);
+			solutions = new EObjectContainmentEList<PlanetOrder>(PlanetOrder.class, this,
+					GeneratorPackage.QF_ORDER_PLANETS__SOLUTIONS);
 		}
 		return solutions;
 	}
@@ -79,7 +81,7 @@ public class OrderQuestionableFactImpl extends QuestionableFactImpl implements O
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GeneratorPackage.ORDER_QUESTIONABLE_FACT__SOLUTIONS:
+		case GeneratorPackage.QF_ORDER_PLANETS__SOLUTIONS:
 			return ((InternalEList<?>) getSolutions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -93,7 +95,7 @@ public class OrderQuestionableFactImpl extends QuestionableFactImpl implements O
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.ORDER_QUESTIONABLE_FACT__SOLUTIONS:
+		case GeneratorPackage.QF_ORDER_PLANETS__SOLUTIONS:
 			return getSolutions();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,9 +110,9 @@ public class OrderQuestionableFactImpl extends QuestionableFactImpl implements O
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.ORDER_QUESTIONABLE_FACT__SOLUTIONS:
+		case GeneratorPackage.QF_ORDER_PLANETS__SOLUTIONS:
 			getSolutions().clear();
-			getSolutions().addAll((Collection<? extends OrderSolution>) newValue);
+			getSolutions().addAll((Collection<? extends PlanetOrder>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -124,7 +126,7 @@ public class OrderQuestionableFactImpl extends QuestionableFactImpl implements O
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.ORDER_QUESTIONABLE_FACT__SOLUTIONS:
+		case GeneratorPackage.QF_ORDER_PLANETS__SOLUTIONS:
 			getSolutions().clear();
 			return;
 		}
@@ -139,7 +141,7 @@ public class OrderQuestionableFactImpl extends QuestionableFactImpl implements O
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.ORDER_QUESTIONABLE_FACT__SOLUTIONS:
+		case GeneratorPackage.QF_ORDER_PLANETS__SOLUTIONS:
 			return solutions != null && !solutions.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -147,19 +149,30 @@ public class OrderQuestionableFactImpl extends QuestionableFactImpl implements O
 
 	@Override
 	public String getQuestionableFact() {
-		return "Ordonner chronologiquement";
+		return "Du + au - proche du soleil";
 	}
 
 	@Override
 	public String getCompleteFact() {
-		String fact = getQuestionableFact() + " : ";
-		for (int i = 0; i < getSolutions().size(); i++) {
-			fact += getSolutions().get(i).getEvent();
+		String complete = getQuestionableFact() + " : ";
+		int i = 0;
+		orderPlanets();
+		for (PlanetOrder soluce : solutions) {
+			complete += soluce.getPlanet();
 			if (i < getSolutions().size() - 1) {
-				fact += " - ";
+				complete += " - ";
 			}
+			i++;
 		}
-		return fact;
+		return complete;
 	}
 
-} //OrderQuestionableFactImpl
+	private void orderPlanets() {
+		Collections.sort(solutions, new Comparator<PlanetOrder>() {
+			public int compare(PlanetOrder o1, PlanetOrder o2) {
+				return o1.getOrder() - o2.getOrder();
+			}
+		});
+	}
+
+} //QFOrderPlanetsImpl

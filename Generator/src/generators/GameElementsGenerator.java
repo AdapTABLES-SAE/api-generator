@@ -252,7 +252,7 @@ public class GameElementsGenerator {
 	private List<Gameplay> getValidGameplaysForTask(ATask task) {
 		List<Gameplay> gameplays = new ArrayList<>();
 		Map<GPCategory, Set<EStatementType>> validCategoriesFromRelations = getValidCategoriesFromRelations(task);
-		//System.out.println("Valid categories "+validCategoriesFromRelations);
+		System.out.println("Valid categories "+validCategoriesFromRelations);
 		for(GPCategory category :  new ArrayList<>(validCategoriesFromRelations.keySet())) {
 			gameplays.addAll(getQuestionGameplayForCategorieType(category, task, validCategoriesFromRelations.get(category)));
 		}

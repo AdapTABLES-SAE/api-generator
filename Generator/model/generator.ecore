@@ -929,11 +929,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MTMembership" eSuperTypes="#//MembershipIDTask"/>
   <eClassifiers xsi:type="ecore:EClass" name="OrderEvent" eSuperTypes="#//OrderingTask"/>
-  <eClassifiers xsi:type="ecore:EClass" name="OrderQuestionableFact" eSuperTypes="#//QuestionableFact">
+  <eClassifiers xsi:type="ecore:EClass" name="HGOrderQuestionableFact" eSuperTypes="#//QuestionableFact">
     <eStructuralFeatures xsi:type="ecore:EReference" name="solutions" upperBound="-1"
-        eType="#//OrderSolution" containment="true"/>
+        eType="#//HGOrderSolution" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OrderSolution">
+  <eClassifiers xsi:type="ecore:EClass" name="HGOrderSolution">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
@@ -957,4 +957,28 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="time" eType="#//Time" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SolarSytemLevel" eSuperTypes="#//Level"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SolarSystemPlanet" eSuperTypes="#//AbstractFact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sunDistance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orbitPosition" eType="#//VisualizationPosition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrderPlanets" eSuperTypes="#//OrderingTask"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QFOrderPlanets" eSuperTypes="#//QuestionableFact">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="solutions" upperBound="-1"
+        eType="#//PlanetOrder" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlanetOrder">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="planet" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IdentifyPlanets" eSuperTypes="#//CompletionTask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbMissingElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" transient="true" defaultValueLiteral="1" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="graphicTask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QFIdentifyPlanets" eSuperTypes="#//AVisualizationQuestionableFact"/>
 </ecore:EPackage>

@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:LearnerPlayer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" name="SOLAR" ID="SOLAR">
+  <progression>
+    <playerProgress currentLevel="9" coins="0">
+      <items>
+        <items bought="true" activated="true">
+          <equipment href="../GameDescription.xmi#BELT"/>
+        </items>
+      </items>
+    </playerProgress>
+    <learnerProgress>
+      <currentobjectivelevels achieved="false">
+        <objective href="../LearningDomain.xmi#PATH_SOLAR_SYSTEM_O1"/>
+        <level xsi:type="generator:SolarSytemLevel" href="../LearningDomain.xmi#PATH_SOLAR_SYSTEM_O1_L1"/>
+        <results>
+          <resultsbytask>
+            <task xsi:type="generator:OrderPlanets" href="../LearningDomain.xmi#PATH_SOLAR_SYSTEM_O1_L1_T1"/>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT2">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Mars" order="3"/>
+              <solutions planet="Saturne" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT39">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Saturne" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT51">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Saturne" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT67">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Jupiter" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Terre" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT27">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Terre" order="1"/>
+              <solutions planet="Jupiter" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT4">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Mars" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT34">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT49">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mars" order="1"/>
+              <solutions planet="Saturne" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT40">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Mars" order="3"/>
+              <solutions planet="Jupiter" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT43">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT16">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT44">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Mars" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT3">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Terre" order="3"/>
+              <solutions planet="Mars" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT17">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Terre" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT29">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Terre" order="1"/>
+              <solutions planet="Saturne" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Saturne" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT12">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Mars" order="3"/>
+              <solutions planet="Saturne" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT36">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT22">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Terre" order="3"/>
+              <solutions planet="Saturne" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT52">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mars" order="1"/>
+              <solutions planet="Jupiter" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT63">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT46">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT66">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Jupiter" order="1"/>
+              <solutions planet="Saturne" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT41">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT1">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Mars" order="3"/>
+              <solutions planet="Jupiter" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT20">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Terre" order="3"/>
+              <solutions planet="Jupiter" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT45">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Mars" order="1"/>
+              <solutions planet="Jupiter" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT54">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT65">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Jupiter" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT50">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT21">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT7">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Mars" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT11">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Terre" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT10">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Mars" order="3"/>
+              <solutions planet="Jupiter" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT56">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT37">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Mars" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT23">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Terre" order="1"/>
+              <solutions planet="Jupiter" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT35">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT25">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Terre" order="1"/>
+              <solutions planet="Jupiter" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT9">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <solutions planet="Terre" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Saturne" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT64">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT14">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Mars" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT53">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT47">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mars" order="1"/>
+              <solutions planet="Jupiter" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT13">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Terre" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT59">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Saturne" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT19">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Saturne" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT0">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Mars" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT28">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT48">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT57">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Jupiter" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT68">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Saturne" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT60">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT31">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Saturne" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Jupiter" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT6">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Terre" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Terre" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT55">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Jupiter" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT38">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT26">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT5">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <solutions planet="Terre" order="1"/>
+              <solutions planet="Mars" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Uranus" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT62">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Jupiter" order="2"/>
+              <solutions planet="Saturne" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT33">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Venus" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Jupiter" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Venus" order="2"/>
+              <solutions planet="Mars" order="3"/>
+              <solutions planet="Saturne" order="4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFOrderPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT18">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <solutions planet="Mercure" order="1"/>
+              <solutions planet="Terre" order="2"/>
+              <solutions planet="Uranus" order="3"/>
+              <solutions planet="Neptune" order="4"/>
+            </questionableFacts>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:IdentifyPlanets" href="../LearningDomain.xmi#PATH_SOLAR_SYSTEM_O1_L1_T2"/>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT5">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Saturne">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#SATURNE"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT4">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Jupiter">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#JUPITER"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT0">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Terre">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#TERRE"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT3">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Mars">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#MARS"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT2">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Venus">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#VENUS"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT6">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Uranus">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#URANUS"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT7">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Neptune">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#NEPTUNE"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT1">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Mercure">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#MERCURE"/>
+              </visualizationSolutions>
+            </questionableFacts>
+          </resultsbytask>
+          <resultsbytask>
+            <task xsi:type="generator:IdentifyPlanets" href="../LearningDomain.xmi#PATH_SOLAR_SYSTEM_O1_L1_T3"/>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT6">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.6"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Uranus">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#URANUS"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT4">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.4"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Jupiter">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#JUPITER"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT5">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.5"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Saturne">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#SATURNE"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT1">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.1"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Mercure">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#MERCURE"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT7">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.7"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Neptune">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#NEPTUNE"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT0">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.0"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Terre">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#TERRE"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT3">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.3"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Mars">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#MARS"/>
+              </visualizationSolutions>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:QFIdentifyPlanets" wasSelected="false" achieved="false" ID="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT2">
+              <facts xsi:type="generator:SolarSystemPlanet" href="../SolarSystemPlanets.xmi#//@knowledgefacts.0/@facts.2"/>
+              <visualization href="../SolarSystemPlanets.xmi#PLANETS_ORBITS"/>
+              <visualizationSolutions value="Venus">
+                <visualizationPosition href="../SolarSystemPlanets.xmi#VENUS"/>
+              </visualizationSolutions>
+            </questionableFacts>
+          </resultsbytask>
+        </results>
+      </currentobjectivelevels>
+    </learnerProgress>
+  </progression>
+  <learningpath href="../LearningDomain.xmi#PATH_SOLAR_SYSTEM"/>
+  <statistics maxGameLevelReached="9" nbLevelsGenerated="620"/>
+</generator:LearnerPlayer>

@@ -1198,20 +1198,20 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.ORDER_QUESTIONABLE_FACT: {
-			OrderQuestionableFact orderQuestionableFact = (OrderQuestionableFact) theEObject;
-			T result = caseOrderQuestionableFact(orderQuestionableFact);
+		case GeneratorPackage.HG_ORDER_QUESTIONABLE_FACT: {
+			HGOrderQuestionableFact hgOrderQuestionableFact = (HGOrderQuestionableFact) theEObject;
+			T result = caseHGOrderQuestionableFact(hgOrderQuestionableFact);
 			if (result == null)
-				result = caseQuestionableFact(orderQuestionableFact);
+				result = caseQuestionableFact(hgOrderQuestionableFact);
 			if (result == null)
-				result = caseAQuestionableFact(orderQuestionableFact);
+				result = caseAQuestionableFact(hgOrderQuestionableFact);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.ORDER_SOLUTION: {
-			OrderSolution orderSolution = (OrderSolution) theEObject;
-			T result = caseOrderSolution(orderSolution);
+		case GeneratorPackage.HG_ORDER_SOLUTION: {
+			HGOrderSolution hgOrderSolution = (HGOrderSolution) theEObject;
+			T result = caseHGOrderSolution(hgOrderSolution);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1270,6 +1270,77 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = caseQuestionableFact(hgqfIdentification);
 			if (result == null)
 				result = caseAQuestionableFact(hgqfIdentification);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.SOLAR_SYTEM_LEVEL: {
+			SolarSytemLevel solarSytemLevel = (SolarSytemLevel) theEObject;
+			T result = caseSolarSytemLevel(solarSytemLevel);
+			if (result == null)
+				result = caseLevel(solarSytemLevel);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.SOLAR_SYSTEM_PLANET: {
+			SolarSystemPlanet solarSystemPlanet = (SolarSystemPlanet) theEObject;
+			T result = caseSolarSystemPlanet(solarSystemPlanet);
+			if (result == null)
+				result = caseAbstractFact(solarSystemPlanet);
+			if (result == null)
+				result = caseGeneralFact(solarSystemPlanet);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.ORDER_PLANETS: {
+			OrderPlanets orderPlanets = (OrderPlanets) theEObject;
+			T result = caseOrderPlanets(orderPlanets);
+			if (result == null)
+				result = caseOrderingTask(orderPlanets);
+			if (result == null)
+				result = caseATask(orderPlanets);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.QF_ORDER_PLANETS: {
+			QFOrderPlanets qfOrderPlanets = (QFOrderPlanets) theEObject;
+			T result = caseQFOrderPlanets(qfOrderPlanets);
+			if (result == null)
+				result = caseQuestionableFact(qfOrderPlanets);
+			if (result == null)
+				result = caseAQuestionableFact(qfOrderPlanets);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.PLANET_ORDER: {
+			PlanetOrder planetOrder = (PlanetOrder) theEObject;
+			T result = casePlanetOrder(planetOrder);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.IDENTIFY_PLANETS: {
+			IdentifyPlanets identifyPlanets = (IdentifyPlanets) theEObject;
+			T result = caseIdentifyPlanets(identifyPlanets);
+			if (result == null)
+				result = caseCompletionTask(identifyPlanets);
+			if (result == null)
+				result = caseATask(identifyPlanets);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GeneratorPackage.QF_IDENTIFY_PLANETS: {
+			QFIdentifyPlanets qfIdentifyPlanets = (QFIdentifyPlanets) theEObject;
+			T result = caseQFIdentifyPlanets(qfIdentifyPlanets);
+			if (result == null)
+				result = caseAVisualizationQuestionableFact(qfIdentifyPlanets);
+			if (result == null)
+				result = caseAQuestionableFact(qfIdentifyPlanets);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1805,32 +1876,32 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Order Questionable Fact</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>HG Order Questionable Fact</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Order Questionable Fact</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>HG Order Questionable Fact</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOrderQuestionableFact(OrderQuestionableFact object) {
+	public T caseHGOrderQuestionableFact(HGOrderQuestionableFact object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Order Solution</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>HG Order Solution</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Order Solution</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>HG Order Solution</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOrderSolution(OrderSolution object) {
+	public T caseHGOrderSolution(HGOrderSolution object) {
 		return null;
 	}
 
@@ -1921,6 +1992,111 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseHGQFIdentification(HGQFIdentification object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Solar Sytem Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Solar Sytem Level</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSolarSytemLevel(SolarSytemLevel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Solar System Planet</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Solar System Planet</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSolarSystemPlanet(SolarSystemPlanet object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Order Planets</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Order Planets</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOrderPlanets(OrderPlanets object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>QF Order Planets</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>QF Order Planets</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQFOrderPlanets(QFOrderPlanets object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Planet Order</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Planet Order</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePlanetOrder(PlanetOrder object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Identify Planets</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Identify Planets</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIdentifyPlanets(IdentifyPlanets object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>QF Identify Planets</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>QF Identify Planets</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQFIdentifyPlanets(QFIdentifyPlanets object) {
 		return null;
 	}
 

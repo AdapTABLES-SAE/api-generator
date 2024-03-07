@@ -727,13 +727,13 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseOrderQuestionableFact(OrderQuestionableFact object) {
-			return createOrderQuestionableFactAdapter();
+		public Adapter caseHGOrderQuestionableFact(HGOrderQuestionableFact object) {
+			return createHGOrderQuestionableFactAdapter();
 		}
 
 		@Override
-		public Adapter caseOrderSolution(OrderSolution object) {
-			return createOrderSolutionAdapter();
+		public Adapter caseHGOrderSolution(HGOrderSolution object) {
+			return createHGOrderSolutionAdapter();
 		}
 
 		@Override
@@ -764,6 +764,41 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseHGQFIdentification(HGQFIdentification object) {
 			return createHGQFIdentificationAdapter();
+		}
+
+		@Override
+		public Adapter caseSolarSytemLevel(SolarSytemLevel object) {
+			return createSolarSytemLevelAdapter();
+		}
+
+		@Override
+		public Adapter caseSolarSystemPlanet(SolarSystemPlanet object) {
+			return createSolarSystemPlanetAdapter();
+		}
+
+		@Override
+		public Adapter caseOrderPlanets(OrderPlanets object) {
+			return createOrderPlanetsAdapter();
+		}
+
+		@Override
+		public Adapter caseQFOrderPlanets(QFOrderPlanets object) {
+			return createQFOrderPlanetsAdapter();
+		}
+
+		@Override
+		public Adapter casePlanetOrder(PlanetOrder object) {
+			return createPlanetOrderAdapter();
+		}
+
+		@Override
+		public Adapter caseIdentifyPlanets(IdentifyPlanets object) {
+			return createIdentifyPlanetsAdapter();
+		}
+
+		@Override
+		public Adapter caseQFIdentifyPlanets(QFIdentifyPlanets object) {
+			return createQFIdentifyPlanetsAdapter();
 		}
 
 		@Override
@@ -1276,30 +1311,30 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.OrderQuestionableFact <em>Order Questionable Fact</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.HGOrderQuestionableFact <em>HG Order Questionable Fact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.OrderQuestionableFact
+	 * @see generator.HGOrderQuestionableFact
 	 * @generated
 	 */
-	public Adapter createOrderQuestionableFactAdapter() {
+	public Adapter createHGOrderQuestionableFactAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.OrderSolution <em>Order Solution</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.HGOrderSolution <em>HG Order Solution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.OrderSolution
+	 * @see generator.HGOrderSolution
 	 * @generated
 	 */
-	public Adapter createOrderSolutionAdapter() {
+	public Adapter createHGOrderSolutionAdapter() {
 		return null;
 	}
 
@@ -1384,6 +1419,104 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createHGQFIdentificationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.SolarSytemLevel <em>Solar Sytem Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.SolarSytemLevel
+	 * @generated
+	 */
+	public Adapter createSolarSytemLevelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.SolarSystemPlanet <em>Solar System Planet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.SolarSystemPlanet
+	 * @generated
+	 */
+	public Adapter createSolarSystemPlanetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.OrderPlanets <em>Order Planets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.OrderPlanets
+	 * @generated
+	 */
+	public Adapter createOrderPlanetsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.QFOrderPlanets <em>QF Order Planets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.QFOrderPlanets
+	 * @generated
+	 */
+	public Adapter createQFOrderPlanetsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.PlanetOrder <em>Planet Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.PlanetOrder
+	 * @generated
+	 */
+	public Adapter createPlanetOrderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.IdentifyPlanets <em>Identify Planets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.IdentifyPlanets
+	 * @generated
+	 */
+	public Adapter createIdentifyPlanetsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link generator.QFIdentifyPlanets <em>QF Identify Planets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see generator.QFIdentifyPlanets
+	 * @generated
+	 */
+	public Adapter createQFIdentifyPlanetsAdapter() {
 		return null;
 	}
 

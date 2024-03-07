@@ -19,6 +19,8 @@ import factsgenerator_maths.MTFactGeneratorCOMP2;
 import factsgenerator_maths.MTFactGeneratorID;
 import factsgenerator_maths.MTFactGeneratorMEMB;
 import factsgenerator_maths.MTFactGeneratorREB;
+import factsgenerator_solarsystem.SolarSystemFactGeneratorIdentifyPlanets;
+import factsgenerator_solarsystem.SolarSystemFactGeneratorOrderPlanets;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.CompletionTask;
@@ -37,14 +39,16 @@ import structures.RoomElements;
 public class FactGenerator {
 	
 	public static void  generateQuestionableFactsByTask(ModelsManager modelsManager, DungeonElements dungeonElements, ResultsByTask resBytask) {  
-		FactGeneratorTemplate factGenerator; 
+		FactGeneratorTemplate factGenerator;
 		
 		if(ALGAGenerator.DOMAIN.equals(DidacticDomain.MATHEMATICS)) {
 			factGenerator = getCorrectMathFactsGenerators(dungeonElements, resBytask.getTask());
 		} else if(ALGAGenerator.DOMAIN.equals(DidacticDomain.HISTORY_GEOGRAPHY)) {
 			factGenerator = getCorrectHGFactsGenerators(modelsManager, dungeonElements, resBytask.getTask());
-		} else {
+		} else if(ALGAGenerator.DOMAIN.equals(DidacticDomain.JUDO)){
 			factGenerator = getCorrectJudoFactsGenerators(modelsManager, dungeonElements, resBytask.getTask());
+		} else {
+			factGenerator = getCorrectSolarSystemFactsGenerators(modelsManager, dungeonElements, resBytask.getTask());
 		}
 		
 		List<AQuestionableFact> facts = new ArrayList<>(factGenerator.generateQuestionableFacts(resBytask.getTask()));
@@ -108,6 +112,19 @@ public class FactGenerator {
 		return factGenerator;
 	}
 	
+	private static FactGeneratorTemplate getCorrectSolarSystemFactsGenerators(ModelsManager modelsManager, DungeonElements dungeonElements, ATask task) {
+		FactGeneratorTemplate factGenerator; 
+		switch(task.getType()) {
+		case COMPLETE:
+			factGenerator = new SolarSystemFactGeneratorIdentifyPlanets(dungeonElements);
+			break;
+		default: 
+			factGenerator = new SolarSystemFactGeneratorOrderPlanets(dungeonElements);
+			break;
+		}
+		return factGenerator;
+	}
+	
 	private static FactGeneratorTemplate getCorrectMathFactsGenerators(DungeonElements dungeonElements, ATask task) {
 		FactGeneratorTemplate factGenerator; 
 		switch(task.getType()) {
@@ -141,8 +158,10 @@ public class FactGenerator {
 				factGenerator = getCorrectMathFactsGenerators(dungeonElements, roomElements.getTask());
 			} else if(ALGAGenerator.DOMAIN.equals(DidacticDomain.HISTORY_GEOGRAPHY)) {
 				factGenerator = getCorrectHGFactsGenerators(modelsManager, dungeonElements, roomElements.getTask());
-			} else {
+			} else if(ALGAGenerator.DOMAIN.equals(DidacticDomain.JUDO)){
 				factGenerator = getCorrectJudoFactsGenerators(modelsManager, dungeonElements, roomElements.getTask());
+			} else {
+				factGenerator = getCorrectSolarSystemFactsGenerators(modelsManager, dungeonElements, roomElements.getTask());
 			}
 			if(factGenerator != null) factGenerator.generateQuestionedFact(roomElements);
 		}

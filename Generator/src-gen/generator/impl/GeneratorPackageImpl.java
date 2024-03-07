@@ -950,14 +950,14 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass orderQuestionableFactEClass = null;
+	private EClass hgOrderQuestionableFactEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass orderSolutionEClass = null;
+	private EClass hgOrderSolutionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1000,6 +1000,55 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * @generated
 	 */
 	private EClass hgqfIdentificationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass solarSytemLevelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass solarSystemPlanetEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass orderPlanetsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass qfOrderPlanetsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass planetOrderEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass identifyPlanetsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass qfIdentifyPlanetsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -5652,8 +5701,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOrderQuestionableFact() {
-		return orderQuestionableFactEClass;
+	public EClass getHGOrderQuestionableFact() {
+		return hgOrderQuestionableFactEClass;
 	}
 
 	/**
@@ -5661,8 +5710,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOrderQuestionableFact_Solutions() {
-		return (EReference) orderQuestionableFactEClass.getEStructuralFeatures().get(0);
+	public EReference getHGOrderQuestionableFact_Solutions() {
+		return (EReference) hgOrderQuestionableFactEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5670,8 +5719,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOrderSolution() {
-		return orderSolutionEClass;
+	public EClass getHGOrderSolution() {
+		return hgOrderSolutionEClass;
 	}
 
 	/**
@@ -5679,8 +5728,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getOrderSolution_Event() {
-		return (EAttribute) orderSolutionEClass.getEStructuralFeatures().get(0);
+	public EAttribute getHGOrderSolution_Event() {
+		return (EAttribute) hgOrderSolutionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5688,8 +5737,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getOrderSolution_Order() {
-		return (EAttribute) orderSolutionEClass.getEStructuralFeatures().get(1);
+	public EAttribute getHGOrderSolution_Order() {
+		return (EAttribute) hgOrderSolutionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -5816,6 +5865,150 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EReference getHGQFIdentification_Time() {
 		return (EReference) hgqfIdentificationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSolarSytemLevel() {
+		return solarSytemLevelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSolarSystemPlanet() {
+		return solarSystemPlanetEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSolarSystemPlanet_Name() {
+		return (EAttribute) solarSystemPlanetEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSolarSystemPlanet_SunDistance() {
+		return (EAttribute) solarSystemPlanetEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSolarSystemPlanet_OrbitPosition() {
+		return (EReference) solarSystemPlanetEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOrderPlanets() {
+		return orderPlanetsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getQFOrderPlanets() {
+		return qfOrderPlanetsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQFOrderPlanets_Solutions() {
+		return (EReference) qfOrderPlanetsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPlanetOrder() {
+		return planetOrderEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlanetOrder_Planet() {
+		return (EAttribute) planetOrderEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlanetOrder_Order() {
+		return (EAttribute) planetOrderEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIdentifyPlanets() {
+		return identifyPlanetsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIdentifyPlanets_NbMissingElements() {
+		return (EAttribute) identifyPlanetsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIdentifyPlanets_CheckOnLearnerAction() {
+		return (EAttribute) identifyPlanetsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIdentifyPlanets_GraphicTask() {
+		return (EAttribute) identifyPlanetsEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getQFIdentifyPlanets() {
+		return qfIdentifyPlanetsEClass;
 	}
 
 	/**
@@ -6646,12 +6839,12 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 
 		orderEventEClass = createEClass(ORDER_EVENT);
 
-		orderQuestionableFactEClass = createEClass(ORDER_QUESTIONABLE_FACT);
-		createEReference(orderQuestionableFactEClass, ORDER_QUESTIONABLE_FACT__SOLUTIONS);
+		hgOrderQuestionableFactEClass = createEClass(HG_ORDER_QUESTIONABLE_FACT);
+		createEReference(hgOrderQuestionableFactEClass, HG_ORDER_QUESTIONABLE_FACT__SOLUTIONS);
 
-		orderSolutionEClass = createEClass(ORDER_SOLUTION);
-		createEAttribute(orderSolutionEClass, ORDER_SOLUTION__EVENT);
-		createEAttribute(orderSolutionEClass, ORDER_SOLUTION__ORDER);
+		hgOrderSolutionEClass = createEClass(HG_ORDER_SOLUTION);
+		createEAttribute(hgOrderSolutionEClass, HG_ORDER_SOLUTION__EVENT);
+		createEAttribute(hgOrderSolutionEClass, HG_ORDER_SOLUTION__ORDER);
 
 		hgqfMembershipEClass = createEClass(HGQF_MEMBERSHIP);
 		createEAttribute(hgqfMembershipEClass, HGQF_MEMBERSHIP__GOOD_CHOICES);
@@ -6672,6 +6865,29 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(hgqfIdentificationEClass, HGQF_IDENTIFICATION__SOLUCE);
 		createEAttribute(hgqfIdentificationEClass, HGQF_IDENTIFICATION__EVENT);
 		createEReference(hgqfIdentificationEClass, HGQF_IDENTIFICATION__TIME);
+
+		solarSytemLevelEClass = createEClass(SOLAR_SYTEM_LEVEL);
+
+		solarSystemPlanetEClass = createEClass(SOLAR_SYSTEM_PLANET);
+		createEAttribute(solarSystemPlanetEClass, SOLAR_SYSTEM_PLANET__NAME);
+		createEAttribute(solarSystemPlanetEClass, SOLAR_SYSTEM_PLANET__SUN_DISTANCE);
+		createEReference(solarSystemPlanetEClass, SOLAR_SYSTEM_PLANET__ORBIT_POSITION);
+
+		orderPlanetsEClass = createEClass(ORDER_PLANETS);
+
+		qfOrderPlanetsEClass = createEClass(QF_ORDER_PLANETS);
+		createEReference(qfOrderPlanetsEClass, QF_ORDER_PLANETS__SOLUTIONS);
+
+		planetOrderEClass = createEClass(PLANET_ORDER);
+		createEAttribute(planetOrderEClass, PLANET_ORDER__PLANET);
+		createEAttribute(planetOrderEClass, PLANET_ORDER__ORDER);
+
+		identifyPlanetsEClass = createEClass(IDENTIFY_PLANETS);
+		createEAttribute(identifyPlanetsEClass, IDENTIFY_PLANETS__NB_MISSING_ELEMENTS);
+		createEAttribute(identifyPlanetsEClass, IDENTIFY_PLANETS__CHECK_ON_LEARNER_ACTION);
+		createEAttribute(identifyPlanetsEClass, IDENTIFY_PLANETS__GRAPHIC_TASK);
+
+		qfIdentifyPlanetsEClass = createEClass(QF_IDENTIFY_PLANETS);
 
 		// Create enums
 		directionsEEnum = createEEnum(DIRECTIONS);
@@ -6799,11 +7015,17 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		legendQuestionableFactEClass.getESuperTypes().add(this.getAVisualizationQuestionableFact());
 		mtMembershipEClass.getESuperTypes().add(this.getMembershipIDTask());
 		orderEventEClass.getESuperTypes().add(this.getOrderingTask());
-		orderQuestionableFactEClass.getESuperTypes().add(this.getQuestionableFact());
+		hgOrderQuestionableFactEClass.getESuperTypes().add(this.getQuestionableFact());
 		hgqfMembershipEClass.getESuperTypes().add(this.getQuestionableFact());
 		geographyMembershipEClass.getESuperTypes().add(this.getMembershipIDTask());
 		historyIdentificationEClass.getESuperTypes().add(this.getIdentificationTask());
 		hgqfIdentificationEClass.getESuperTypes().add(this.getQuestionableFact());
+		solarSytemLevelEClass.getESuperTypes().add(this.getLevel());
+		solarSystemPlanetEClass.getESuperTypes().add(this.getAbstractFact());
+		orderPlanetsEClass.getESuperTypes().add(this.getOrderingTask());
+		qfOrderPlanetsEClass.getESuperTypes().add(this.getQuestionableFact());
+		identifyPlanetsEClass.getESuperTypes().add(this.getCompletionTask());
+		qfIdentifyPlanetsEClass.getESuperTypes().add(this.getAVisualizationQuestionableFact());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractFactEClass, AbstractFact.class, "AbstractFact", IS_ABSTRACT, !IS_INTERFACE,
@@ -8179,17 +8401,18 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEClass(orderEventEClass, OrderEvent.class, "OrderEvent", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(orderQuestionableFactEClass, OrderQuestionableFact.class, "OrderQuestionableFact", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrderQuestionableFact_Solutions(), this.getOrderSolution(), null, "solutions", null, 0, -1,
-				OrderQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEClass(hgOrderQuestionableFactEClass, HGOrderQuestionableFact.class, "HGOrderQuestionableFact",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getHGOrderQuestionableFact_Solutions(), this.getHGOrderSolution(), null, "solutions", null, 0,
+				-1, HGOrderQuestionableFact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(orderSolutionEClass, OrderSolution.class, "OrderSolution", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(hgOrderSolutionEClass, HGOrderSolution.class, "HGOrderSolution", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOrderSolution_Event(), ecorePackage.getEString(), "event", null, 0, 1, OrderSolution.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOrderSolution_Order(), ecorePackage.getEInt(), "order", null, 0, 1, OrderSolution.class,
+		initEAttribute(getHGOrderSolution_Event(), ecorePackage.getEString(), "event", null, 0, 1,
+				HGOrderSolution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHGOrderSolution_Order(), ecorePackage.getEInt(), "order", null, 0, 1, HGOrderSolution.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hgqfMembershipEClass, HGQFMembership.class, "HGQFMembership", !IS_ABSTRACT, !IS_INTERFACE,
@@ -8231,6 +8454,52 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getHGQFIdentification_Time(), this.getTime(), null, "time", null, 0, 1, HGQFIdentification.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(solarSytemLevelEClass, SolarSytemLevel.class, "SolarSytemLevel", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(solarSystemPlanetEClass, SolarSystemPlanet.class, "SolarSystemPlanet", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSolarSystemPlanet_Name(), ecorePackage.getEString(), "name", null, 0, 1,
+				SolarSystemPlanet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSolarSystemPlanet_SunDistance(), ecorePackage.getELong(), "sunDistance", null, 0, 1,
+				SolarSystemPlanet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getSolarSystemPlanet_OrbitPosition(), this.getVisualizationPosition(), null, "orbitPosition",
+				null, 0, 1, SolarSystemPlanet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(orderPlanetsEClass, OrderPlanets.class, "OrderPlanets", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(qfOrderPlanetsEClass, QFOrderPlanets.class, "QFOrderPlanets", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getQFOrderPlanets_Solutions(), this.getPlanetOrder(), null, "solutions", null, 0, -1,
+				QFOrderPlanets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(planetOrderEClass, PlanetOrder.class, "PlanetOrder", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPlanetOrder_Planet(), ecorePackage.getEString(), "planet", null, 0, 1, PlanetOrder.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPlanetOrder_Order(), ecorePackage.getEInt(), "order", null, 0, 1, PlanetOrder.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(identifyPlanetsEClass, IdentifyPlanets.class, "IdentifyPlanets", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIdentifyPlanets_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
+				IdentifyPlanets.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIdentifyPlanets_CheckOnLearnerAction(), ecorePackage.getEBoolean(), "checkOnLearnerAction",
+				"true", 0, 1, IdentifyPlanets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIdentifyPlanets_GraphicTask(), ecorePackage.getEBoolean(), "graphicTask", "true", 0, 1,
+				IdentifyPlanets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(qfIdentifyPlanetsEClass, QFIdentifyPlanets.class, "QFIdentifyPlanets", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(directionsEEnum, Directions.class, "Directions");

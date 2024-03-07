@@ -41,6 +41,7 @@ public class ModelsManager {
 		didacticDomainFileNames.put(DidacticDomain.MATHEMATICS, "MultiplicationTables.xmi");
 		didacticDomainFileNames.put(DidacticDomain.HISTORY_GEOGRAPHY, "HistoryGeographyFacts.xmi");
 		didacticDomainFileNames.put(DidacticDomain.JUDO, "JudoFacts.xmi");
+		didacticDomainFileNames.put(DidacticDomain.SOLAR_SYSTEM, "SolarSystemPlanets.xmi");
 	}
 	
 	

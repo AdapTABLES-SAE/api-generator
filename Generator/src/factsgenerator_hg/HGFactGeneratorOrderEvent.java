@@ -9,17 +9,16 @@ import java.util.Set;
 
 import exceptions.BadSolutionGenerationException;
 import factgenerator_template.FactGeneratorTemplate;
-import factsgenerator_maths.HistoryFactComparator;
 import generator.AQuestionableFact;
 import generator.ATask;
 import generator.AbstractFact;
 import generator.ECorrectness;
+import generator.HGOrderQuestionableFact;
+import generator.HGOrderSolution;
 import generator.HistoryFact;
-import generator.OrderQuestionableFact;
-import generator.OrderSolution;
 import generator.SetOfFacts;
-import generator.impl.OrderQuestionableFactImpl;
-import generator.impl.OrderSolutionImpl;
+import generator.impl.HGOrderQuestionableFactImpl;
+import generator.impl.HGOrderSolutionImpl;
 import structures.DungeonElements;
 import structures.Soluce;
 
@@ -47,11 +46,11 @@ public class HGFactGeneratorOrderEvent extends FactGeneratorTemplate {
 
 	@Override
 	protected AQuestionableFact generateQuestionableFactOf(ATask task, List<AbstractFact> facts) {
-		OrderQuestionableFact qf = new OrderQuestionableFactImpl();
+		HGOrderQuestionableFact qf = new HGOrderQuestionableFactImpl();
 		qf.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 		int i = 1;
 		for(HistoryFact fact: chronologicallyOrderFacts(facts)) {
-			OrderSolution solution = new OrderSolutionImpl();
+			HGOrderSolution solution = new HGOrderSolutionImpl();
 			solution.setEvent(fact.getEvent());
 			solution.setOrder(i); i++;
 			qf.getSolutions().add(solution);
@@ -78,7 +77,7 @@ public class HGFactGeneratorOrderEvent extends FactGeneratorTemplate {
 	@Override
 	protected List<Soluce> getListOfGoodSolutions(AQuestionableFact qFact) {
 		List<Soluce> solutions = new ArrayList<>();
-		for (OrderSolution prop : ((OrderQuestionableFact) qFact).getSolutions()) {
+		for (HGOrderSolution prop : ((HGOrderQuestionableFact) qFact).getSolutions()) {
 			solutions.add(new Soluce(prop.getEvent(), prop.getOrder()));
 		}
 		return solutions;
@@ -102,7 +101,7 @@ public class HGFactGeneratorOrderEvent extends FactGeneratorTemplate {
 
 	@Override
 	protected int correctnessToReach(AQuestionableFact fact) {
-		return ((OrderQuestionableFact) fact).getSolutions().size();
+		return ((HGOrderQuestionableFact) fact).getSolutions().size();
 	}
 
 }

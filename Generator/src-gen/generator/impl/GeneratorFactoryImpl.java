@@ -285,10 +285,10 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createMTMembership();
 		case GeneratorPackage.ORDER_EVENT:
 			return createOrderEvent();
-		case GeneratorPackage.ORDER_QUESTIONABLE_FACT:
-			return createOrderQuestionableFact();
-		case GeneratorPackage.ORDER_SOLUTION:
-			return createOrderSolution();
+		case GeneratorPackage.HG_ORDER_QUESTIONABLE_FACT:
+			return createHGOrderQuestionableFact();
+		case GeneratorPackage.HG_ORDER_SOLUTION:
+			return createHGOrderSolution();
 		case GeneratorPackage.HGQF_MEMBERSHIP:
 			return createHGQFMembership();
 		case GeneratorPackage.GEOGRAPHY_MEMBERSHIP:
@@ -299,6 +299,20 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createHistoryIdentification();
 		case GeneratorPackage.HGQF_IDENTIFICATION:
 			return createHGQFIdentification();
+		case GeneratorPackage.SOLAR_SYTEM_LEVEL:
+			return createSolarSytemLevel();
+		case GeneratorPackage.SOLAR_SYSTEM_PLANET:
+			return createSolarSystemPlanet();
+		case GeneratorPackage.ORDER_PLANETS:
+			return createOrderPlanets();
+		case GeneratorPackage.QF_ORDER_PLANETS:
+			return createQFOrderPlanets();
+		case GeneratorPackage.PLANET_ORDER:
+			return createPlanetOrder();
+		case GeneratorPackage.IDENTIFY_PLANETS:
+			return createIdentifyPlanets();
+		case GeneratorPackage.QF_IDENTIFY_PLANETS:
+			return createQFIdentifyPlanets();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -681,9 +695,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrderQuestionableFact createOrderQuestionableFact() {
-		OrderQuestionableFactImpl orderQuestionableFact = new OrderQuestionableFactImpl();
-		return orderQuestionableFact;
+	public HGOrderQuestionableFact createHGOrderQuestionableFact() {
+		HGOrderQuestionableFactImpl hgOrderQuestionableFact = new HGOrderQuestionableFactImpl();
+		return hgOrderQuestionableFact;
 	}
 
 	/**
@@ -691,9 +705,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrderSolution createOrderSolution() {
-		OrderSolutionImpl orderSolution = new OrderSolutionImpl();
-		return orderSolution;
+	public HGOrderSolution createHGOrderSolution() {
+		HGOrderSolutionImpl hgOrderSolution = new HGOrderSolutionImpl();
+		return hgOrderSolution;
 	}
 
 	/**
@@ -744,6 +758,76 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	public HGQFIdentification createHGQFIdentification() {
 		HGQFIdentificationImpl hgqfIdentification = new HGQFIdentificationImpl();
 		return hgqfIdentification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SolarSytemLevel createSolarSytemLevel() {
+		SolarSytemLevelImpl solarSytemLevel = new SolarSytemLevelImpl();
+		return solarSytemLevel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SolarSystemPlanet createSolarSystemPlanet() {
+		SolarSystemPlanetImpl solarSystemPlanet = new SolarSystemPlanetImpl();
+		return solarSystemPlanet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OrderPlanets createOrderPlanets() {
+		OrderPlanetsImpl orderPlanets = new OrderPlanetsImpl();
+		return orderPlanets;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QFOrderPlanets createQFOrderPlanets() {
+		QFOrderPlanetsImpl qfOrderPlanets = new QFOrderPlanetsImpl();
+		return qfOrderPlanets;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PlanetOrder createPlanetOrder() {
+		PlanetOrderImpl planetOrder = new PlanetOrderImpl();
+		return planetOrder;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IdentifyPlanets createIdentifyPlanets() {
+		IdentifyPlanetsImpl identifyPlanets = new IdentifyPlanetsImpl();
+		return identifyPlanets;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QFIdentifyPlanets createQFIdentifyPlanets() {
+		QFIdentifyPlanetsImpl qfIdentifyPlanets = new QFIdentifyPlanetsImpl();
+		return qfIdentifyPlanets;
 	}
 
 	/**

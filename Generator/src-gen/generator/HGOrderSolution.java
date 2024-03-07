@@ -6,36 +6,36 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Order Solution</b></em>'.
+ * A representation of the model object '<em><b>HG Order Solution</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link generator.OrderSolution#getEvent <em>Event</em>}</li>
- *   <li>{@link generator.OrderSolution#getOrder <em>Order</em>}</li>
+ *   <li>{@link generator.HGOrderSolution#getEvent <em>Event</em>}</li>
+ *   <li>{@link generator.HGOrderSolution#getOrder <em>Order</em>}</li>
  * </ul>
  *
- * @see generator.GeneratorPackage#getOrderSolution()
+ * @see generator.GeneratorPackage#getHGOrderSolution()
  * @model
  * @generated
  */
-public interface OrderSolution extends EObject {
+public interface HGOrderSolution extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Event</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Event</em>' attribute.
 	 * @see #setEvent(String)
-	 * @see generator.GeneratorPackage#getOrderSolution_Event()
+	 * @see generator.GeneratorPackage#getHGOrderSolution_Event()
 	 * @model
 	 * @generated
 	 */
 	String getEvent();
 
 	/**
-	 * Sets the value of the '{@link generator.OrderSolution#getEvent <em>Event</em>}' attribute.
+	 * Sets the value of the '{@link generator.HGOrderSolution#getEvent <em>Event</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Event</em>' attribute.
@@ -50,14 +50,14 @@ public interface OrderSolution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Order</em>' attribute.
 	 * @see #setOrder(int)
-	 * @see generator.GeneratorPackage#getOrderSolution_Order()
+	 * @see generator.GeneratorPackage#getHGOrderSolution_Order()
 	 * @model
 	 * @generated
 	 */
 	int getOrder();
 
 	/**
-	 * Sets the value of the '{@link generator.OrderSolution#getOrder <em>Order</em>}' attribute.
+	 * Sets the value of the '{@link generator.HGOrderSolution#getOrder <em>Order</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Order</em>' attribute.
@@ -66,4 +66,4 @@ public interface OrderSolution extends EObject {
 	 */
 	void setOrder(int value);
 
-} // OrderSolution
+} // HGOrderSolution

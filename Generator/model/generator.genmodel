@@ -745,12 +745,12 @@
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTMembership"/>
     <genClasses ecoreClass="generator.ecore#//OrderEvent"/>
-    <genClasses ecoreClass="generator.ecore#//OrderQuestionableFact">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//OrderQuestionableFact/solutions"/>
+    <genClasses ecoreClass="generator.ecore#//HGOrderQuestionableFact">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//HGOrderQuestionableFact/solutions"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//OrderSolution">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderSolution/event"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//OrderSolution/order"/>
+    <genClasses ecoreClass="generator.ecore#//HGOrderSolution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HGOrderSolution/event"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HGOrderSolution/order"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//HGQFMembership">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HGQFMembership/goodChoices"/>
@@ -770,5 +770,25 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//HGQFIdentification/event"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//HGQFIdentification/time"/>
     </genClasses>
+    <genClasses ecoreClass="generator.ecore#//SolarSytemLevel"/>
+    <genClasses ecoreClass="generator.ecore#//SolarSystemPlanet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//SolarSystemPlanet/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//SolarSystemPlanet/sunDistance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference generator.ecore#//SolarSystemPlanet/orbitPosition"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//OrderPlanets"/>
+    <genClasses ecoreClass="generator.ecore#//QFOrderPlanets">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//QFOrderPlanets/solutions"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//PlanetOrder">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//PlanetOrder/planet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//PlanetOrder/order"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//IdentifyPlanets">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyPlanets/nbMissingElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyPlanets/checkOnLearnerAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//IdentifyPlanets/graphicTask"/>
+    </genClasses>
+    <genClasses ecoreClass="generator.ecore#//QFIdentifyPlanets"/>
   </genPackages>
 </genmodel:GenModel>

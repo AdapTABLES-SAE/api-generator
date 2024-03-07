@@ -1,4 +1,4 @@
-package factsgenerator_maths;
+package factsgenerator_hg;
 
 import java.util.Comparator;
 

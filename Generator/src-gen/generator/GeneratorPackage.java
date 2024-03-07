@@ -10713,14 +10713,14 @@ public interface GeneratorPackage extends EPackage {
 	int ORDER_EVENT_OPERATION_COUNT = ORDERING_TASK_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.OrderQuestionableFactImpl <em>Order Questionable Fact</em>}' class.
+	 * The meta object id for the '{@link generator.impl.HGOrderQuestionableFactImpl <em>HG Order Questionable Fact</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.OrderQuestionableFactImpl
-	 * @see generator.impl.GeneratorPackageImpl#getOrderQuestionableFact()
+	 * @see generator.impl.HGOrderQuestionableFactImpl
+	 * @see generator.impl.GeneratorPackageImpl#getHGOrderQuestionableFact()
 	 * @generated
 	 */
-	int ORDER_QUESTIONABLE_FACT = 132;
+	int HG_ORDER_QUESTIONABLE_FACT = 132;
 
 	/**
 	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
@@ -10729,7 +10729,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_QUESTIONABLE_FACT__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
+	int HG_ORDER_QUESTIONABLE_FACT__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
 
 	/**
 	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
@@ -10738,7 +10738,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_QUESTIONABLE_FACT__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
+	int HG_ORDER_QUESTIONABLE_FACT__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
 
 	/**
 	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
@@ -10747,7 +10747,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_QUESTIONABLE_FACT__RESULTS = QUESTIONABLE_FACT__RESULTS;
+	int HG_ORDER_QUESTIONABLE_FACT__RESULTS = QUESTIONABLE_FACT__RESULTS;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -10756,7 +10756,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_QUESTIONABLE_FACT__ID = QUESTIONABLE_FACT__ID;
+	int HG_ORDER_QUESTIONABLE_FACT__ID = QUESTIONABLE_FACT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
@@ -10765,7 +10765,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+	int HG_ORDER_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
 
 	/**
 	 * The feature id for the '<em><b>Facts</b></em>' reference list.
@@ -10774,7 +10774,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_QUESTIONABLE_FACT__FACTS = QUESTIONABLE_FACT__FACTS;
+	int HG_ORDER_QUESTIONABLE_FACT__FACTS = QUESTIONABLE_FACT__FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Solutions</b></em>' containment reference list.
@@ -10783,16 +10783,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_QUESTIONABLE_FACT__SOLUTIONS = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+	int HG_ORDER_QUESTIONABLE_FACT__SOLUTIONS = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Order Questionable Fact</em>' class.
+	 * The number of structural features of the '<em>HG Order Questionable Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_QUESTIONABLE_FACT_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+	int HG_ORDER_QUESTIONABLE_FACT_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
@@ -10801,7 +10801,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
+	int HG_ORDER_QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
 
 	/**
 	 * The operation id for the '<em>Get Complete Fact</em>' operation.
@@ -10810,26 +10810,26 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_QUESTIONABLE_FACT___GET_COMPLETE_FACT = QUESTIONABLE_FACT___GET_COMPLETE_FACT;
+	int HG_ORDER_QUESTIONABLE_FACT___GET_COMPLETE_FACT = QUESTIONABLE_FACT___GET_COMPLETE_FACT;
 
 	/**
-	 * The number of operations of the '<em>Order Questionable Fact</em>' class.
+	 * The number of operations of the '<em>HG Order Questionable Fact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_QUESTIONABLE_FACT_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+	int HG_ORDER_QUESTIONABLE_FACT_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.OrderSolutionImpl <em>Order Solution</em>}' class.
+	 * The meta object id for the '{@link generator.impl.HGOrderSolutionImpl <em>HG Order Solution</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.OrderSolutionImpl
-	 * @see generator.impl.GeneratorPackageImpl#getOrderSolution()
+	 * @see generator.impl.HGOrderSolutionImpl
+	 * @see generator.impl.GeneratorPackageImpl#getHGOrderSolution()
 	 * @generated
 	 */
-	int ORDER_SOLUTION = 133;
+	int HG_ORDER_SOLUTION = 133;
 
 	/**
 	 * The feature id for the '<em><b>Event</b></em>' attribute.
@@ -10838,7 +10838,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_SOLUTION__EVENT = 0;
+	int HG_ORDER_SOLUTION__EVENT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Order</b></em>' attribute.
@@ -10847,25 +10847,25 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_SOLUTION__ORDER = 1;
+	int HG_ORDER_SOLUTION__ORDER = 1;
 
 	/**
-	 * The number of structural features of the '<em>Order Solution</em>' class.
+	 * The number of structural features of the '<em>HG Order Solution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_SOLUTION_FEATURE_COUNT = 2;
+	int HG_ORDER_SOLUTION_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Order Solution</em>' class.
+	 * The number of operations of the '<em>HG Order Solution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_SOLUTION_OPERATION_COUNT = 0;
+	int HG_ORDER_SOLUTION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.HGQFMembershipImpl <em>HGQF Membership</em>}' class.
@@ -11440,6 +11440,724 @@ public interface GeneratorPackage extends EPackage {
 	int HGQF_IDENTIFICATION_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link generator.impl.SolarSytemLevelImpl <em>Solar Sytem Level</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.SolarSytemLevelImpl
+	 * @see generator.impl.GeneratorPackageImpl#getSolarSytemLevel()
+	 * @generated
+	 */
+	int SOLAR_SYTEM_LEVEL = 140;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYTEM_LEVEL__ID = LEVEL__ID;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYTEM_LEVEL__TASKS = LEVEL__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Completion Criteria</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYTEM_LEVEL__COMPLETION_CRITERIA = LEVEL__COMPLETION_CRITERIA;
+
+	/**
+	 * The number of structural features of the '<em>Solar Sytem Level</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYTEM_LEVEL_FEATURE_COUNT = LEVEL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Solar Sytem Level</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYTEM_LEVEL_OPERATION_COUNT = LEVEL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.SolarSystemPlanetImpl <em>Solar System Planet</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.SolarSystemPlanetImpl
+	 * @see generator.impl.GeneratorPackageImpl#getSolarSystemPlanet()
+	 * @generated
+	 */
+	int SOLAR_SYSTEM_PLANET = 141;
+
+	/**
+	 * The feature id for the '<em><b>Wrong Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYSTEM_PLANET__WRONG_DATA = ABSTRACT_FACT__WRONG_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Representation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYSTEM_PLANET__REPRESENTATION = ABSTRACT_FACT__REPRESENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To Visualization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYSTEM_PLANET__BELONGS_TO_VISUALIZATION = ABSTRACT_FACT__BELONGS_TO_VISUALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>Setoffacts</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYSTEM_PLANET__SETOFFACTS = ABSTRACT_FACT__SETOFFACTS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYSTEM_PLANET__NAME = ABSTRACT_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Sun Distance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYSTEM_PLANET__SUN_DISTANCE = ABSTRACT_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Orbit Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYSTEM_PLANET__ORBIT_POSITION = ABSTRACT_FACT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Solar System Planet</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYSTEM_PLANET_FEATURE_COUNT = ABSTRACT_FACT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Solar System Planet</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYSTEM_PLANET_OPERATION_COUNT = ABSTRACT_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.OrderPlanetsImpl <em>Order Planets</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.OrderPlanetsImpl
+	 * @see generator.impl.GeneratorPackageImpl#getOrderPlanets()
+	 * @generated
+	 */
+	int ORDER_PLANETS = 142;
+
+	/**
+	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS__PERCENT_OF_APPARITION = ORDERING_TASK__PERCENT_OF_APPARITION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS__NB_CONSECUTIVE_SUCCESS = ORDERING_TASK__NB_CONSECUTIVE_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS__RESPONSE_MODALITY = ORDERING_TASK__RESPONSE_MODALITY;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS__ID = ORDERING_TASK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS__MAX_TIME = ORDERING_TASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS__NB_FACTS = ORDERING_TASK__NB_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS__TYPE = ORDERING_TASK__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS__CHECK_ON_LEARNER_ACTION = ORDERING_TASK__CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Max Questionable Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS__MAX_QUESTIONABLE_FACTS = ORDERING_TASK__MAX_QUESTIONABLE_FACTS;
+
+	/**
+	 * The number of structural features of the '<em>Order Planets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS_FEATURE_COUNT = ORDERING_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS___GET_TYPE = ORDERING_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Graphic Task</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS___IS_GRAPHIC_TASK = ORDERING_TASK___IS_GRAPHIC_TASK;
+
+	/**
+	 * The operation id for the '<em>Is Check On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS___IS_CHECK_ON_LEARNER_ACTION = ORDERING_TASK___IS_CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS___GET_NB_EXPECTED_ANSWERS = ORDERING_TASK___GET_NB_EXPECTED_ANSWERS;
+
+	/**
+	 * The number of operations of the '<em>Order Planets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_PLANETS_OPERATION_COUNT = ORDERING_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.QFOrderPlanetsImpl <em>QF Order Planets</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.QFOrderPlanetsImpl
+	 * @see generator.impl.GeneratorPackageImpl#getQFOrderPlanets()
+	 * @generated
+	 */
+	int QF_ORDER_PLANETS = 143;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_ORDER_PLANETS__WAS_SELECTED = QUESTIONABLE_FACT__WAS_SELECTED;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_ORDER_PLANETS__ACHIEVED = QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_ORDER_PLANETS__RESULTS = QUESTIONABLE_FACT__RESULTS;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_ORDER_PLANETS__ID = QUESTIONABLE_FACT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_ORDER_PLANETS__QUESTION_WITH_IMAGE = QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_ORDER_PLANETS__FACTS = QUESTIONABLE_FACT__FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Solutions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_ORDER_PLANETS__SOLUTIONS = QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>QF Order Planets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_ORDER_PLANETS_FEATURE_COUNT = QUESTIONABLE_FACT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Questionable Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_ORDER_PLANETS___GET_QUESTIONABLE_FACT = QUESTIONABLE_FACT___GET_QUESTIONABLE_FACT;
+
+	/**
+	 * The operation id for the '<em>Get Complete Fact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_ORDER_PLANETS___GET_COMPLETE_FACT = QUESTIONABLE_FACT___GET_COMPLETE_FACT;
+
+	/**
+	 * The number of operations of the '<em>QF Order Planets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_ORDER_PLANETS_OPERATION_COUNT = QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.PlanetOrderImpl <em>Planet Order</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.PlanetOrderImpl
+	 * @see generator.impl.GeneratorPackageImpl#getPlanetOrder()
+	 * @generated
+	 */
+	int PLANET_ORDER = 144;
+
+	/**
+	 * The feature id for the '<em><b>Planet</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANET_ORDER__PLANET = 0;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANET_ORDER__ORDER = 1;
+
+	/**
+	 * The number of structural features of the '<em>Planet Order</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANET_ORDER_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Planet Order</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANET_ORDER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.IdentifyPlanetsImpl <em>Identify Planets</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.IdentifyPlanetsImpl
+	 * @see generator.impl.GeneratorPackageImpl#getIdentifyPlanets()
+	 * @generated
+	 */
+	int IDENTIFY_PLANETS = 145;
+
+	/**
+	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS__PERCENT_OF_APPARITION = COMPLETION_TASK__PERCENT_OF_APPARITION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS__NB_CONSECUTIVE_SUCCESS = COMPLETION_TASK__NB_CONSECUTIVE_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS__RESPONSE_MODALITY = COMPLETION_TASK__RESPONSE_MODALITY;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS__ID = COMPLETION_TASK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS__MAX_TIME = COMPLETION_TASK__MAX_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS__NB_FACTS = COMPLETION_TASK__NB_FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS__TYPE = COMPLETION_TASK__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS__CHECK_ON_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Graphic Task</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS__GRAPHIC_TASK = COMPLETION_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Identify Planets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS___GET_TYPE = COMPLETION_TASK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Graphic Task</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS___IS_GRAPHIC_TASK = COMPLETION_TASK___IS_GRAPHIC_TASK;
+
+	/**
+	 * The operation id for the '<em>Is Check On Learner Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS___IS_CHECK_ON_LEARNER_ACTION = COMPLETION_TASK___IS_CHECK_ON_LEARNER_ACTION;
+
+	/**
+	 * The operation id for the '<em>Get Nb Missing Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS___GET_NB_EXPECTED_ANSWERS = COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS;
+
+	/**
+	 * The number of operations of the '<em>Identify Planets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFY_PLANETS_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link generator.impl.QFIdentifyPlanetsImpl <em>QF Identify Planets</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see generator.impl.QFIdentifyPlanetsImpl
+	 * @see generator.impl.GeneratorPackageImpl#getQFIdentifyPlanets()
+	 * @generated
+	 */
+	int QF_IDENTIFY_PLANETS = 146;
+
+	/**
+	 * The feature id for the '<em><b>Was Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_IDENTIFY_PLANETS__WAS_SELECTED = AVISUALIZATION_QUESTIONABLE_FACT__WAS_SELECTED;
+
+	/**
+	 * The feature id for the '<em><b>Achieved</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_IDENTIFY_PLANETS__ACHIEVED = AVISUALIZATION_QUESTIONABLE_FACT__ACHIEVED;
+
+	/**
+	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_IDENTIFY_PLANETS__RESULTS = AVISUALIZATION_QUESTIONABLE_FACT__RESULTS;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_IDENTIFY_PLANETS__ID = AVISUALIZATION_QUESTIONABLE_FACT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Question With Image</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_IDENTIFY_PLANETS__QUESTION_WITH_IMAGE = AVISUALIZATION_QUESTIONABLE_FACT__QUESTION_WITH_IMAGE;
+
+	/**
+	 * The feature id for the '<em><b>Facts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_IDENTIFY_PLANETS__FACTS = AVISUALIZATION_QUESTIONABLE_FACT__FACTS;
+
+	/**
+	 * The feature id for the '<em><b>Visualization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_IDENTIFY_PLANETS__VISUALIZATION = AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>Visualization Solutions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_IDENTIFY_PLANETS__VISUALIZATION_SOLUTIONS = AVISUALIZATION_QUESTIONABLE_FACT__VISUALIZATION_SOLUTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Consigne</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_IDENTIFY_PLANETS__CONSIGNE = AVISUALIZATION_QUESTIONABLE_FACT__CONSIGNE;
+
+	/**
+	 * The number of structural features of the '<em>QF Identify Planets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_IDENTIFY_PLANETS_FEATURE_COUNT = AVISUALIZATION_QUESTIONABLE_FACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>QF Identify Planets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QF_IDENTIFY_PLANETS_OPERATION_COUNT = AVISUALIZATION_QUESTIONABLE_FACT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link generator.Directions <em>Directions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11447,7 +12165,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDirections()
 	 * @generated
 	 */
-	int DIRECTIONS = 140;
+	int DIRECTIONS = 147;
 
 	/**
 	 * The meta object id for the '{@link generator.DungeonMode <em>Dungeon Mode</em>}' enum.
@@ -11457,7 +12175,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getDungeonMode()
 	 * @generated
 	 */
-	int DUNGEON_MODE = 141;
+	int DUNGEON_MODE = 148;
 
 	/**
 	 * The meta object id for the '{@link generator.TableBuild <em>Table Build</em>}' enum.
@@ -11467,7 +12185,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getTableBuild()
 	 * @generated
 	 */
-	int TABLE_BUILD = 142;
+	int TABLE_BUILD = 149;
 
 	/**
 	 * The meta object id for the '{@link generator.ResultPosition <em>Result Position</em>}' enum.
@@ -11477,7 +12195,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getResultPosition()
 	 * @generated
 	 */
-	int RESULT_POSITION = 143;
+	int RESULT_POSITION = 150;
 
 	/**
 	 * The meta object id for the '{@link generator.ESingleTarget <em>ESingle Target</em>}' enum.
@@ -11487,7 +12205,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESingleTarget()
 	 * @generated
 	 */
-	int ESINGLE_TARGET = 144;
+	int ESINGLE_TARGET = 151;
 
 	/**
 	 * The meta object id for the '{@link generator.ETaskType <em>ETask Type</em>}' enum.
@@ -11497,7 +12215,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETaskType()
 	 * @generated
 	 */
-	int ETASK_TYPE = 145;
+	int ETASK_TYPE = 152;
 
 	/**
 	 * The meta object id for the '{@link generator.EModality <em>EModality</em>}' enum.
@@ -11507,7 +12225,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEModality()
 	 * @generated
 	 */
-	int EMODALITY = 146;
+	int EMODALITY = 153;
 
 	/**
 	 * The meta object id for the '{@link generator.ESeveralTarget <em>ESeveral Target</em>}' enum.
@@ -11517,7 +12235,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getESeveralTarget()
 	 * @generated
 	 */
-	int ESEVERAL_TARGET = 147;
+	int ESEVERAL_TARGET = 154;
 
 	/**
 	 * The meta object id for the '{@link generator.ElementSize <em>Element Size</em>}' enum.
@@ -11527,7 +12245,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getElementSize()
 	 * @generated
 	 */
-	int ELEMENT_SIZE = 148;
+	int ELEMENT_SIZE = 155;
 
 	/**
 	 * The meta object id for the '{@link generator.GPCategory <em>GP Category</em>}' enum.
@@ -11537,7 +12255,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getGPCategory()
 	 * @generated
 	 */
-	int GP_CATEGORY = 149;
+	int GP_CATEGORY = 156;
 
 	/**
 	 * The meta object id for the '{@link generator.ECorrectness <em>ECorrectness</em>}' enum.
@@ -11547,7 +12265,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getECorrectness()
 	 * @generated
 	 */
-	int ECORRECTNESS = 150;
+	int ECORRECTNESS = 157;
 
 	/**
 	 * The meta object id for the '{@link generator.EBoundary <em>EBoundary</em>}' enum.
@@ -11557,7 +12275,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEBoundary()
 	 * @generated
 	 */
-	int EBOUNDARY = 151;
+	int EBOUNDARY = 158;
 
 	/**
 	 * The meta object id for the '{@link generator.ERoomType <em>ERoom Type</em>}' enum.
@@ -11567,7 +12285,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getERoomType()
 	 * @generated
 	 */
-	int EROOM_TYPE = 152;
+	int EROOM_TYPE = 159;
 
 	/**
 	 * The meta object id for the '{@link generator.EGeographyValue <em>EGeography Value</em>}' enum.
@@ -11577,7 +12295,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEGeographyValue()
 	 * @generated
 	 */
-	int EGEOGRAPHY_VALUE = 153;
+	int EGEOGRAPHY_VALUE = 160;
 
 	/**
 	 * The meta object id for the '{@link generator.EHistoryTarget <em>EHistory Target</em>}' enum.
@@ -11587,7 +12305,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEHistoryTarget()
 	 * @generated
 	 */
-	int EHISTORY_TARGET = 154;
+	int EHISTORY_TARGET = 161;
 
 	/**
 	 * The meta object id for the '{@link generator.ELegendTarget <em>ELegend Target</em>}' enum.
@@ -11597,7 +12315,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getELegendTarget()
 	 * @generated
 	 */
-	int ELEGEND_TARGET = 155;
+	int ELEGEND_TARGET = 162;
 
 	/**
 	 * The meta object id for the '{@link generator.EStatementType <em>EStatement Type</em>}' enum.
@@ -11607,7 +12325,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEStatementType()
 	 * @generated
 	 */
-	int ESTATEMENT_TYPE = 156;
+	int ESTATEMENT_TYPE = 163;
 
 	/**
 	 * The meta object id for the '{@link generator.ETimeTarget <em>ETime Target</em>}' enum.
@@ -11617,7 +12335,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getETimeTarget()
 	 * @generated
 	 */
-	int ETIME_TARGET = 157;
+	int ETIME_TARGET = 164;
 
 	/**
 	 * The meta object id for the '{@link generator.EJudoTarget <em>EJudo Target</em>}' enum.
@@ -11627,7 +12345,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @see generator.impl.GeneratorPackageImpl#getEJudoTarget()
 	 * @generated
 	 */
-	int EJUDO_TARGET = 158;
+	int EJUDO_TARGET = 165;
 
 	/**
 	 * Returns the meta object for class '{@link generator.AbstractFact <em>Abstract Fact</em>}'.
@@ -13231,57 +13949,57 @@ public interface GeneratorPackage extends EPackage {
 	EClass getOrderEvent();
 
 	/**
-	 * Returns the meta object for class '{@link generator.OrderQuestionableFact <em>Order Questionable Fact</em>}'.
+	 * Returns the meta object for class '{@link generator.HGOrderQuestionableFact <em>HG Order Questionable Fact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Order Questionable Fact</em>'.
-	 * @see generator.OrderQuestionableFact
+	 * @return the meta object for class '<em>HG Order Questionable Fact</em>'.
+	 * @see generator.HGOrderQuestionableFact
 	 * @generated
 	 */
-	EClass getOrderQuestionableFact();
+	EClass getHGOrderQuestionableFact();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link generator.OrderQuestionableFact#getSolutions <em>Solutions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link generator.HGOrderQuestionableFact#getSolutions <em>Solutions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Solutions</em>'.
-	 * @see generator.OrderQuestionableFact#getSolutions()
-	 * @see #getOrderQuestionableFact()
+	 * @see generator.HGOrderQuestionableFact#getSolutions()
+	 * @see #getHGOrderQuestionableFact()
 	 * @generated
 	 */
-	EReference getOrderQuestionableFact_Solutions();
+	EReference getHGOrderQuestionableFact_Solutions();
 
 	/**
-	 * Returns the meta object for class '{@link generator.OrderSolution <em>Order Solution</em>}'.
+	 * Returns the meta object for class '{@link generator.HGOrderSolution <em>HG Order Solution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Order Solution</em>'.
-	 * @see generator.OrderSolution
+	 * @return the meta object for class '<em>HG Order Solution</em>'.
+	 * @see generator.HGOrderSolution
 	 * @generated
 	 */
-	EClass getOrderSolution();
+	EClass getHGOrderSolution();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.OrderSolution#getEvent <em>Event</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.HGOrderSolution#getEvent <em>Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Event</em>'.
-	 * @see generator.OrderSolution#getEvent()
-	 * @see #getOrderSolution()
+	 * @see generator.HGOrderSolution#getEvent()
+	 * @see #getHGOrderSolution()
 	 * @generated
 	 */
-	EAttribute getOrderSolution_Event();
+	EAttribute getHGOrderSolution_Event();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.OrderSolution#getOrder <em>Order</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.HGOrderSolution#getOrder <em>Order</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Order</em>'.
-	 * @see generator.OrderSolution#getOrder()
-	 * @see #getOrderSolution()
+	 * @see generator.HGOrderSolution#getOrder()
+	 * @see #getHGOrderSolution()
 	 * @generated
 	 */
-	EAttribute getOrderSolution_Order();
+	EAttribute getHGOrderSolution_Order();
 
 	/**
 	 * Returns the meta object for class '{@link generator.HGQFMembership <em>HGQF Membership</em>}'.
@@ -13430,6 +14148,175 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getHGQFIdentification_Time();
+
+	/**
+	 * Returns the meta object for class '{@link generator.SolarSytemLevel <em>Solar Sytem Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Solar Sytem Level</em>'.
+	 * @see generator.SolarSytemLevel
+	 * @generated
+	 */
+	EClass getSolarSytemLevel();
+
+	/**
+	 * Returns the meta object for class '{@link generator.SolarSystemPlanet <em>Solar System Planet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Solar System Planet</em>'.
+	 * @see generator.SolarSystemPlanet
+	 * @generated
+	 */
+	EClass getSolarSystemPlanet();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.SolarSystemPlanet#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.SolarSystemPlanet#getName()
+	 * @see #getSolarSystemPlanet()
+	 * @generated
+	 */
+	EAttribute getSolarSystemPlanet_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.SolarSystemPlanet#getSunDistance <em>Sun Distance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Sun Distance</em>'.
+	 * @see generator.SolarSystemPlanet#getSunDistance()
+	 * @see #getSolarSystemPlanet()
+	 * @generated
+	 */
+	EAttribute getSolarSystemPlanet_SunDistance();
+
+	/**
+	 * Returns the meta object for the reference '{@link generator.SolarSystemPlanet#getOrbitPosition <em>Orbit Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Orbit Position</em>'.
+	 * @see generator.SolarSystemPlanet#getOrbitPosition()
+	 * @see #getSolarSystemPlanet()
+	 * @generated
+	 */
+	EReference getSolarSystemPlanet_OrbitPosition();
+
+	/**
+	 * Returns the meta object for class '{@link generator.OrderPlanets <em>Order Planets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Order Planets</em>'.
+	 * @see generator.OrderPlanets
+	 * @generated
+	 */
+	EClass getOrderPlanets();
+
+	/**
+	 * Returns the meta object for class '{@link generator.QFOrderPlanets <em>QF Order Planets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>QF Order Planets</em>'.
+	 * @see generator.QFOrderPlanets
+	 * @generated
+	 */
+	EClass getQFOrderPlanets();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link generator.QFOrderPlanets#getSolutions <em>Solutions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Solutions</em>'.
+	 * @see generator.QFOrderPlanets#getSolutions()
+	 * @see #getQFOrderPlanets()
+	 * @generated
+	 */
+	EReference getQFOrderPlanets_Solutions();
+
+	/**
+	 * Returns the meta object for class '{@link generator.PlanetOrder <em>Planet Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Planet Order</em>'.
+	 * @see generator.PlanetOrder
+	 * @generated
+	 */
+	EClass getPlanetOrder();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.PlanetOrder#getPlanet <em>Planet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Planet</em>'.
+	 * @see generator.PlanetOrder#getPlanet()
+	 * @see #getPlanetOrder()
+	 * @generated
+	 */
+	EAttribute getPlanetOrder_Planet();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.PlanetOrder#getOrder <em>Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Order</em>'.
+	 * @see generator.PlanetOrder#getOrder()
+	 * @see #getPlanetOrder()
+	 * @generated
+	 */
+	EAttribute getPlanetOrder_Order();
+
+	/**
+	 * Returns the meta object for class '{@link generator.IdentifyPlanets <em>Identify Planets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Identify Planets</em>'.
+	 * @see generator.IdentifyPlanets
+	 * @generated
+	 */
+	EClass getIdentifyPlanets();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.IdentifyPlanets#getNbMissingElements <em>Nb Missing Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
+	 * @see generator.IdentifyPlanets#getNbMissingElements()
+	 * @see #getIdentifyPlanets()
+	 * @generated
+	 */
+	EAttribute getIdentifyPlanets_NbMissingElements();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.IdentifyPlanets#isCheckOnLearnerAction <em>Check On Learner Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check On Learner Action</em>'.
+	 * @see generator.IdentifyPlanets#isCheckOnLearnerAction()
+	 * @see #getIdentifyPlanets()
+	 * @generated
+	 */
+	EAttribute getIdentifyPlanets_CheckOnLearnerAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.IdentifyPlanets#isGraphicTask <em>Graphic Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Graphic Task</em>'.
+	 * @see generator.IdentifyPlanets#isGraphicTask()
+	 * @see #getIdentifyPlanets()
+	 * @generated
+	 */
+	EAttribute getIdentifyPlanets_GraphicTask();
+
+	/**
+	 * Returns the meta object for class '{@link generator.QFIdentifyPlanets <em>QF Identify Planets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>QF Identify Planets</em>'.
+	 * @see generator.QFIdentifyPlanets
+	 * @generated
+	 */
+	EClass getQFIdentifyPlanets();
 
 	/**
 	 * Returns the meta object for class '{@link generator.Results <em>Results</em>}'.
@@ -18600,14 +19487,14 @@ public interface GeneratorPackage extends EPackage {
 		EClass ORDER_EVENT = eINSTANCE.getOrderEvent();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.OrderQuestionableFactImpl <em>Order Questionable Fact</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.HGOrderQuestionableFactImpl <em>HG Order Questionable Fact</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.OrderQuestionableFactImpl
-		 * @see generator.impl.GeneratorPackageImpl#getOrderQuestionableFact()
+		 * @see generator.impl.HGOrderQuestionableFactImpl
+		 * @see generator.impl.GeneratorPackageImpl#getHGOrderQuestionableFact()
 		 * @generated
 		 */
-		EClass ORDER_QUESTIONABLE_FACT = eINSTANCE.getOrderQuestionableFact();
+		EClass HG_ORDER_QUESTIONABLE_FACT = eINSTANCE.getHGOrderQuestionableFact();
 
 		/**
 		 * The meta object literal for the '<em><b>Solutions</b></em>' containment reference list feature.
@@ -18615,17 +19502,17 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ORDER_QUESTIONABLE_FACT__SOLUTIONS = eINSTANCE.getOrderQuestionableFact_Solutions();
+		EReference HG_ORDER_QUESTIONABLE_FACT__SOLUTIONS = eINSTANCE.getHGOrderQuestionableFact_Solutions();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.OrderSolutionImpl <em>Order Solution</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.HGOrderSolutionImpl <em>HG Order Solution</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.OrderSolutionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getOrderSolution()
+		 * @see generator.impl.HGOrderSolutionImpl
+		 * @see generator.impl.GeneratorPackageImpl#getHGOrderSolution()
 		 * @generated
 		 */
-		EClass ORDER_SOLUTION = eINSTANCE.getOrderSolution();
+		EClass HG_ORDER_SOLUTION = eINSTANCE.getHGOrderSolution();
 
 		/**
 		 * The meta object literal for the '<em><b>Event</b></em>' attribute feature.
@@ -18633,7 +19520,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ORDER_SOLUTION__EVENT = eINSTANCE.getOrderSolution_Event();
+		EAttribute HG_ORDER_SOLUTION__EVENT = eINSTANCE.getHGOrderSolution_Event();
 
 		/**
 		 * The meta object literal for the '<em><b>Order</b></em>' attribute feature.
@@ -18641,7 +19528,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ORDER_SOLUTION__ORDER = eINSTANCE.getOrderSolution_Order();
+		EAttribute HG_ORDER_SOLUTION__ORDER = eINSTANCE.getHGOrderSolution_Order();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.HGQFMembershipImpl <em>HGQF Membership</em>}' class.
@@ -18766,6 +19653,148 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference HGQF_IDENTIFICATION__TIME = eINSTANCE.getHGQFIdentification_Time();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.SolarSytemLevelImpl <em>Solar Sytem Level</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.SolarSytemLevelImpl
+		 * @see generator.impl.GeneratorPackageImpl#getSolarSytemLevel()
+		 * @generated
+		 */
+		EClass SOLAR_SYTEM_LEVEL = eINSTANCE.getSolarSytemLevel();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.SolarSystemPlanetImpl <em>Solar System Planet</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.SolarSystemPlanetImpl
+		 * @see generator.impl.GeneratorPackageImpl#getSolarSystemPlanet()
+		 * @generated
+		 */
+		EClass SOLAR_SYSTEM_PLANET = eINSTANCE.getSolarSystemPlanet();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOLAR_SYSTEM_PLANET__NAME = eINSTANCE.getSolarSystemPlanet_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Sun Distance</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOLAR_SYSTEM_PLANET__SUN_DISTANCE = eINSTANCE.getSolarSystemPlanet_SunDistance();
+
+		/**
+		 * The meta object literal for the '<em><b>Orbit Position</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SOLAR_SYSTEM_PLANET__ORBIT_POSITION = eINSTANCE.getSolarSystemPlanet_OrbitPosition();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.OrderPlanetsImpl <em>Order Planets</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.OrderPlanetsImpl
+		 * @see generator.impl.GeneratorPackageImpl#getOrderPlanets()
+		 * @generated
+		 */
+		EClass ORDER_PLANETS = eINSTANCE.getOrderPlanets();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.QFOrderPlanetsImpl <em>QF Order Planets</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.QFOrderPlanetsImpl
+		 * @see generator.impl.GeneratorPackageImpl#getQFOrderPlanets()
+		 * @generated
+		 */
+		EClass QF_ORDER_PLANETS = eINSTANCE.getQFOrderPlanets();
+
+		/**
+		 * The meta object literal for the '<em><b>Solutions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QF_ORDER_PLANETS__SOLUTIONS = eINSTANCE.getQFOrderPlanets_Solutions();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.PlanetOrderImpl <em>Planet Order</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.PlanetOrderImpl
+		 * @see generator.impl.GeneratorPackageImpl#getPlanetOrder()
+		 * @generated
+		 */
+		EClass PLANET_ORDER = eINSTANCE.getPlanetOrder();
+
+		/**
+		 * The meta object literal for the '<em><b>Planet</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PLANET_ORDER__PLANET = eINSTANCE.getPlanetOrder_Planet();
+
+		/**
+		 * The meta object literal for the '<em><b>Order</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PLANET_ORDER__ORDER = eINSTANCE.getPlanetOrder_Order();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.IdentifyPlanetsImpl <em>Identify Planets</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.IdentifyPlanetsImpl
+		 * @see generator.impl.GeneratorPackageImpl#getIdentifyPlanets()
+		 * @generated
+		 */
+		EClass IDENTIFY_PLANETS = eINSTANCE.getIdentifyPlanets();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IDENTIFY_PLANETS__NB_MISSING_ELEMENTS = eINSTANCE.getIdentifyPlanets_NbMissingElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Check On Learner Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IDENTIFY_PLANETS__CHECK_ON_LEARNER_ACTION = eINSTANCE.getIdentifyPlanets_CheckOnLearnerAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Graphic Task</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IDENTIFY_PLANETS__GRAPHIC_TASK = eINSTANCE.getIdentifyPlanets_GraphicTask();
+
+		/**
+		 * The meta object literal for the '{@link generator.impl.QFIdentifyPlanetsImpl <em>QF Identify Planets</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see generator.impl.QFIdentifyPlanetsImpl
+		 * @see generator.impl.GeneratorPackageImpl#getQFIdentifyPlanets()
+		 * @generated
+		 */
+		EClass QF_IDENTIFY_PLANETS = eINSTANCE.getQFIdentifyPlanets();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.ResultsImpl <em>Results</em>}' class.

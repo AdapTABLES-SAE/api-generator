@@ -3,7 +3,7 @@
 package generator.impl;
 
 import generator.GeneratorPackage;
-import generator.OrderSolution;
+import generator.PlanetOrder;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,38 +14,38 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Order Solution</b></em>'.
+ * An implementation of the model object '<em><b>Planet Order</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.OrderSolutionImpl#getEvent <em>Event</em>}</li>
- *   <li>{@link generator.impl.OrderSolutionImpl#getOrder <em>Order</em>}</li>
+ *   <li>{@link generator.impl.PlanetOrderImpl#getPlanet <em>Planet</em>}</li>
+ *   <li>{@link generator.impl.PlanetOrderImpl#getOrder <em>Order</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class OrderSolutionImpl extends MinimalEObjectImpl.Container implements OrderSolution {
+public class PlanetOrderImpl extends MinimalEObjectImpl.Container implements PlanetOrder {
 	/**
-	 * The default value of the '{@link #getEvent() <em>Event</em>}' attribute.
+	 * The default value of the '{@link #getPlanet() <em>Planet</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEvent()
+	 * @see #getPlanet()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EVENT_EDEFAULT = null;
+	protected static final String PLANET_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getEvent() <em>Event</em>}' attribute.
+	 * The cached value of the '{@link #getPlanet() <em>Planet</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEvent()
+	 * @see #getPlanet()
 	 * @generated
 	 * @ordered
 	 */
-	protected String event = EVENT_EDEFAULT;
+	protected String planet = PLANET_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getOrder() <em>Order</em>}' attribute.
@@ -72,7 +72,7 @@ public class OrderSolutionImpl extends MinimalEObjectImpl.Container implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrderSolutionImpl() {
+	public PlanetOrderImpl() {
 		super();
 	}
 
@@ -83,7 +83,7 @@ public class OrderSolutionImpl extends MinimalEObjectImpl.Container implements O
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.ORDER_SOLUTION;
+		return GeneratorPackage.Literals.PLANET_ORDER;
 	}
 
 	/**
@@ -91,8 +91,8 @@ public class OrderSolutionImpl extends MinimalEObjectImpl.Container implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getEvent() {
-		return event;
+	public String getPlanet() {
+		return planet;
 	}
 
 	/**
@@ -100,12 +100,12 @@ public class OrderSolutionImpl extends MinimalEObjectImpl.Container implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEvent(String newEvent) {
-		String oldEvent = event;
-		event = newEvent;
+	public void setPlanet(String newPlanet) {
+		String oldPlanet = planet;
+		planet = newPlanet;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ORDER_SOLUTION__EVENT, oldEvent,
-					event));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PLANET_ORDER__PLANET, oldPlanet,
+					planet));
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class OrderSolutionImpl extends MinimalEObjectImpl.Container implements O
 		int oldOrder = order;
 		order = newOrder;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.ORDER_SOLUTION__ORDER, oldOrder,
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.PLANET_ORDER__ORDER, oldOrder,
 					order));
 	}
 
@@ -138,9 +138,9 @@ public class OrderSolutionImpl extends MinimalEObjectImpl.Container implements O
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.ORDER_SOLUTION__EVENT:
-			return getEvent();
-		case GeneratorPackage.ORDER_SOLUTION__ORDER:
+		case GeneratorPackage.PLANET_ORDER__PLANET:
+			return getPlanet();
+		case GeneratorPackage.PLANET_ORDER__ORDER:
 			return getOrder();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -154,10 +154,10 @@ public class OrderSolutionImpl extends MinimalEObjectImpl.Container implements O
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.ORDER_SOLUTION__EVENT:
-			setEvent((String) newValue);
+		case GeneratorPackage.PLANET_ORDER__PLANET:
+			setPlanet((String) newValue);
 			return;
-		case GeneratorPackage.ORDER_SOLUTION__ORDER:
+		case GeneratorPackage.PLANET_ORDER__ORDER:
 			setOrder((Integer) newValue);
 			return;
 		}
@@ -172,10 +172,10 @@ public class OrderSolutionImpl extends MinimalEObjectImpl.Container implements O
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.ORDER_SOLUTION__EVENT:
-			setEvent(EVENT_EDEFAULT);
+		case GeneratorPackage.PLANET_ORDER__PLANET:
+			setPlanet(PLANET_EDEFAULT);
 			return;
-		case GeneratorPackage.ORDER_SOLUTION__ORDER:
+		case GeneratorPackage.PLANET_ORDER__ORDER:
 			setOrder(ORDER_EDEFAULT);
 			return;
 		}
@@ -190,9 +190,9 @@ public class OrderSolutionImpl extends MinimalEObjectImpl.Container implements O
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.ORDER_SOLUTION__EVENT:
-			return EVENT_EDEFAULT == null ? event != null : !EVENT_EDEFAULT.equals(event);
-		case GeneratorPackage.ORDER_SOLUTION__ORDER:
+		case GeneratorPackage.PLANET_ORDER__PLANET:
+			return PLANET_EDEFAULT == null ? planet != null : !PLANET_EDEFAULT.equals(planet);
+		case GeneratorPackage.PLANET_ORDER__ORDER:
 			return order != ORDER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -209,12 +209,12 @@ public class OrderSolutionImpl extends MinimalEObjectImpl.Container implements O
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (event: ");
-		result.append(event);
+		result.append(" (planet: ");
+		result.append(planet);
 		result.append(", order: ");
 		result.append(order);
 		result.append(')');
 		return result.toString();
 	}
 
-} //OrderSolutionImpl
+} //PlanetOrderImpl
