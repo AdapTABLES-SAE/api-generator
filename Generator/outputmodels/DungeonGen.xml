@@ -1,512 +1,373 @@
 <?xml version="1.0" encoding="ASCII"?>
-<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="PATH_SOLAR_SYSTEM_O1" levelID="PATH_SOLAR_SYSTEM_O1_L1" gameLevelID="9" curses="[&quot;Labyrinth&quot;,]">
+<Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="null ../../TransformationFlattener/models/FlattenDungeon.ecore" entryRoom="Room[0/0]" objectiveID="PATH404-O1" levelID="PATH404-O1-L1" gameLevelID="8" curses="[]">
   <rooms>
-    <room id="Room[0/0]" roomTypeName="RegularRoomS" correctnessToReach="0">
+    <room id="Room[0/0]" roomTypeName="RegularRoomN" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a2" direction="SOUTH" accessRef="a3"/>
+        <roomaccess id="a2" direction="NORTH" accessRef="a3"/>
       </roomaccesses>
     </room>
-    <room id="Room[0/-1]" y="-1" roomTypeName="TrapRoom2" correctnessToReach="0">
+    <room id="Room[0/1]" y="1" roomTypeName="RegularRoom12" time="30" idTask="PATH404-O1-L1-T2" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="2">
       <roomaccesses>
-        <roomaccess id="a3" direction="NORTH" accessRef="a2"/>
-        <roomaccess id="a4" direction="WEST" accessRef="a5"/>
-        <roomaccess id="a6" direction="EAST" accessRef="a7"/>
-        <roomaccess id="a8" direction="SOUTH" accessRef="a9"/>
+        <roomaccess id="a3" direction="SOUTH" accessRef="a2"/>
+        <roomaccess id="a4" direction="EAST" accessRef="a5"/>
       </roomaccesses>
+      <facts>
+        <fact id="PATH404-O1-L1-T2-QAFACT2" complete="1 x 2 = 2" correctnessToReach="2"/>
+      </facts>
       <elements>
-        <element id="ELEM1" type="RegularSlime" pos="POS5" ability="NONAVOIDABLE"/>
-        <element id="ELEM2" type="RegularSlime" pos="POS1" ability="NONAVOIDABLE"/>
-        <element id="ELEM3" type="RegularSlime" pos="POS6" ability="NONAVOIDABLE"/>
+        <element id="STRUCT1" type="StructureStatement" pos="POSL1" acceptedFacts="1 x 2 = 2;2 x 1 = 2;"/>
+        <element id="ELEM2" type="ObjectDetector" pos="id/STRUCT1" ability="DETECTOR" idFact="PATH404-O1-L1-T2-QAFACT2"/>
+        <element id="ELEM3" type="StatementFact" displayValue=" x " pos="id/STRUCT1" idFact="PATH404-O1-L1-T2-QAFACT2"/>
+        <element id="ELEM4" type="ObjectDetector" pos="id/STRUCT1" ability="DETECTOR" idFact="PATH404-O1-L1-T2-QAFACT2"/>
+        <element id="ELEM5" type="StatementFact" displayValue=" = 2" pos="id/STRUCT1" idFact="PATH404-O1-L1-T2-QAFACT2"/>
+        <element id="ELEM6" type="Pot" displayValue="9" correctness="INCORRECT" pos="POS8" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT2"/>
+        <element id="ELEM7" type="Pot" displayValue="7" correctness="INCORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT2"/>
+        <element id="ELEM8" type="Pot" displayValue="1" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT2"/>
+        <element id="ELEM9" type="Pot" displayValue="2" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT2"/>
+        <element id="ELEM10" type="Switch" pos="POS4" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-1/-1]" x="-1" y="-1" roomTypeName="RoomTrap2" correctnessToReach="0">
+    <room id="Room[1/1]" x="1" y="1" roomTypeName="TrapRoom2" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a5" direction="EAST" accessRef="a4"/>
-        <roomaccess id="a10" direction="SOUTH" accessRef="a11"/>
-        <roomaccess id="a12" direction="WEST" accessRef="a13"/>
-        <roomaccess id="a14" direction="NORTH" accessRef="a15"/>
+        <roomaccess id="a5" direction="WEST" accessRef="a4"/>
+        <roomaccess id="a6" direction="NORTH" accessRef="a7"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM4" type="HoleTrap" pos="POS1" ability="NONAVOIDABLE"/>
-        <element id="ELEM5" type="HoleTrap" pos="POS4" ability="NONAVOIDABLE"/>
-        <element id="ELEM6" type="HoleTrap" pos="POS5" ability="NONAVOIDABLE"/>
+        <element id="ELEM11" type="HoleTrap" pos="POS2" ability="NONAVOIDABLE"/>
+        <element id="ELEM12" type="HoleTrap" pos="POS1" ability="NONAVOIDABLE"/>
+        <element id="ELEM13" type="HoleTrap" pos="POS6" ability="NONAVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[-1/-2]" x="-1" y="-2" roomTypeName="RoomTrap4" correctnessToReach="0">
+    <room id="Room[1/2]" x="1" y="2" roomTypeName="RoomTrap4" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a11" direction="NORTH" accessRef="a10"/>
-        <roomaccess id="a16" direction="SOUTH" accessRef="a17"/>
-        <roomaccess id="a18" direction="EAST" accessRef="a19"/>
-        <roomaccess id="a20" direction="WEST" accessRef="a21"/>
+        <roomaccess id="a7" direction="SOUTH" accessRef="a6"/>
+        <roomaccess id="a8" direction="EAST" accessRef="a9"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM7" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM8" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM9" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
-        <element id="ELEM10" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM11" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM12" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM13" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[1/-1]" x="1" y="-1" roomTypeName="RoomTrap4" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a7" direction="WEST" accessRef="a6"/>
-        <roomaccess id="a22" direction="EAST" accessRef="a23"/>
-        <roomaccess id="a24" direction="NORTH" accessRef="a25"/>
-        <roomaccess id="a26" direction="SOUTH" accessRef="a27"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM14" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM15" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM16" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM17" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM18" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM14" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM15" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM16" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM17" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM18" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
         <element id="ELEM19" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
         <element id="ELEM20" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[-3/-1]" x="-3" y="-1" size="LARGE" roomTypeName="MapRoom" time="60" idTask="PATH_SOLAR_SYSTEM_O1_L1_T3" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="8">
+    <room id="Room[2/2]" x="2" y="2" roomTypeName="RoomTrap4" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a13" direction="EAST_SOUTH" accessRef="a12"/>
+        <roomaccess id="a9" direction="WEST" accessRef="a8"/>
+        <roomaccess id="a10" direction="SOUTH" accessRef="a11"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM21" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM22" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
+        <element id="ELEM23" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM24" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM25" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM26" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM27" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[2/1]" x="2" y="1" roomTypeName="RegularRoom5" time="30" idTask="PATH404-O1-L1-T3" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="3">
+      <roomaccesses>
+        <roomaccess id="a11" direction="NORTH" accessRef="a10"/>
+        <roomaccess id="a12" direction="EAST" accessRef="a13"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT6" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT7" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT1" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT0" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT4" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT5" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT2" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT3" correctnessToReach="1"/>
+        <fact id="PATH404-O1-L1-T3-QAFACT19" complete="10 x 2 = 20" correctnessToReach="3"/>
       </facts>
       <elements>
-        <element id="STRUCT21" type="MapStructure" pos="POSXXL1" visualisation="PLANETS_ORBITS"/>
-        <element id="ELEM22" type="ObjectDetector" pos="id/STRUCT21/URANUS" correctAnswer="Uranus;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT6"/>
-        <element id="ELEM23" type="ObjectDetector" pos="id/STRUCT21/NEPTUNE" correctAnswer="Neptune;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT7"/>
-        <element id="ELEM24" type="ObjectDetector" pos="id/STRUCT21/MERCURE" correctAnswer="Mercure;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT1"/>
-        <element id="ELEM25" type="ObjectDetector" pos="id/STRUCT21/TERRE" correctAnswer="Terre;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT0"/>
-        <element id="ELEM26" type="ObjectDetector" pos="id/STRUCT21/JUPITER" correctAnswer="Jupiter;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM27" type="ObjectDetector" pos="id/STRUCT21/SATURNE" correctAnswer="Saturne;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT5"/>
-        <element id="ELEM28" type="ObjectDetector" pos="id/STRUCT21/VENUS" correctAnswer="Venus;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM29" type="ObjectDetector" pos="id/STRUCT21/MARS" correctAnswer="Mars;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT3"/>
-        <element id="ELEM30" type="Pot" displayValue="Uranus" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT6"/>
-        <element id="ELEM31" type="Pot" displayValue="Neptune" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT7"/>
-        <element id="ELEM32" type="Pot" displayValue="Mercure" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT1"/>
-        <element id="ELEM33" type="Pot" displayValue="Terre" correctness="CORRECT" pos="POS15" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT0"/>
-        <element id="ELEM34" type="Pot" displayValue="Jupiter" correctness="CORRECT" pos="POS11" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM35" type="Pot" displayValue="Saturne" correctness="CORRECT" pos="POS17" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT5"/>
-        <element id="ELEM36" type="Pot" displayValue="Venus" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM37" type="Pot" displayValue="Mars" correctness="CORRECT" pos="POS14" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT3"/>
-        <element id="ELEM38" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+        <element id="STRUCT28" type="StructureStatement" pos="POSL2" acceptedFacts="10 x 2 = 20;2 x 10 = 20;"/>
+        <element id="ELEM29" type="ObjectDetector" pos="id/STRUCT28" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM30" type="StatementFact" displayValue=" x " pos="id/STRUCT28" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM31" type="ObjectDetector" pos="id/STRUCT28" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM32" type="StatementFact" displayValue=" = " pos="id/STRUCT28" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM33" type="ObjectDetector" pos="id/STRUCT28" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM34" type="Pot" displayValue="28" correctness="INCORRECT" pos="POS8" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM35" type="Pot" displayValue="19" correctness="INCORRECT" pos="POS9" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM36" type="Pot" displayValue="10" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM37" type="Pot" displayValue="2" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM38" type="Pot" displayValue="20" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT19"/>
+        <element id="ELEM39" type="Switch" pos="POS5" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[0/-2]" y="-2" roomTypeName="RoomTrap" correctnessToReach="0">
+    <room id="Room[3/1]" x="3" y="1" roomTypeName="RegularRoom12" time="30" idTask="PATH404-O1-L1-T3" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="3">
       <roomaccesses>
-        <roomaccess id="a9" direction="NORTH" accessRef="a8"/>
-        <roomaccess id="a28" direction="EAST" accessRef="a29"/>
-        <roomaccess id="a30" direction="SOUTH" accessRef="a31"/>
-        <roomaccess id="a19" direction="WEST" accessRef="a18"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM39" type="WaitSpikeTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM40" type="WaitSpikeTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM41" type="WaitSpikeTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM42" type="WaitSpikeTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM43" type="WaitSpikeTrap" pos="POS2" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[-1/-3]" x="-1" y="-3" roomTypeName="RoomTrap2" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a17" direction="NORTH" accessRef="a16"/>
-        <roomaccess id="a32" direction="SOUTH" accessRef="a33"/>
-        <roomaccess id="a34" direction="EAST" accessRef="a35"/>
-        <roomaccess id="a36" direction="WEST" accessRef="a37"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM44" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM45" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
-        <element id="ELEM46" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
-        <element id="ELEM47" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
-        <element id="ELEM48" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[1/-2]" x="1" y="-2" roomTypeName="RegularRoom2" time="40" idTask="PATH_SOLAR_SYSTEM_O1_L1_T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a29" direction="WEST" accessRef="a28"/>
-        <roomaccess id="a27" direction="NORTH" accessRef="a26"/>
-        <roomaccess id="a38" direction="EAST" accessRef="a39"/>
-        <roomaccess id="a40" direction="SOUTH" accessRef="a41"/>
+        <roomaccess id="a13" direction="WEST" accessRef="a12"/>
+        <roomaccess id="a14" direction="SOUTH" accessRef="a15"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61" complete="Du + au - proche du soleil : Mercure - Venus - Jupiter - Saturne" correctnessToReach="4"/>
+        <fact id="PATH404-O1-L1-T3-QAFACT15" complete="8 x 2 = 16" correctnessToReach="3"/>
       </facts>
       <elements>
-        <element id="STRUCT49" type="VStructureStatement" pos="POSXL1" acceptedFacts="Du + au - proche du soleil : Mercure - Venus - Jupiter - Saturne;"/>
-        <element id="STRUCT50" type="HStructL" pos="id/STRUCT49"/>
-        <element id="ELEM51" type="Info" displayValue="1" pos="id/STRUCT50" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61"/>
-        <element id="ELEM52" type="ObjectDetector" pos="id/STRUCT50" correctAnswer="Mercure;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61"/>
-        <element id="STRUCT53" type="HStructL" pos="id/STRUCT49"/>
-        <element id="ELEM54" type="Info" displayValue="2" pos="id/STRUCT53" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61"/>
-        <element id="ELEM55" type="ObjectDetector" pos="id/STRUCT53" correctAnswer="Venus;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61"/>
-        <element id="STRUCT56" type="HStructL" pos="id/STRUCT49"/>
-        <element id="ELEM57" type="Info" displayValue="3" pos="id/STRUCT56" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61"/>
-        <element id="ELEM58" type="ObjectDetector" pos="id/STRUCT56" correctAnswer="Jupiter;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61"/>
-        <element id="STRUCT59" type="HStructL" pos="id/STRUCT49"/>
-        <element id="ELEM60" type="Info" displayValue="4" pos="id/STRUCT59" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61"/>
-        <element id="ELEM61" type="ObjectDetector" pos="id/STRUCT59" correctAnswer="Saturne;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61"/>
-        <element id="ELEM62" type="Switch" pos="POS3" ability="VERIFICATOR"/>
-        <element id="ELEM63" type="Pot" displayValue="Mercure" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61"/>
-        <element id="ELEM64" type="Pot" displayValue="Venus" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61"/>
-        <element id="ELEM65" type="Pot" displayValue="Jupiter" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61"/>
-        <element id="ELEM66" type="Pot" displayValue="Saturne" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61"/>
-        <element id="ELEM67" type="Statement" displayValue="Du + au - proche du soleil" pos="POSQ1" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT61" acceptedFacts="Du + au - proche du soleil : Mercure - Venus - Jupiter - Saturne;"/>
+        <element id="STRUCT40" type="StructureStatement" pos="POSL1" acceptedFacts="8 x 2 = 16;2 x 8 = 16;"/>
+        <element id="ELEM41" type="ObjectDetector" pos="id/STRUCT40" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT15"/>
+        <element id="ELEM42" type="StatementFact" displayValue=" x " pos="id/STRUCT40" idFact="PATH404-O1-L1-T3-QAFACT15"/>
+        <element id="ELEM43" type="ObjectDetector" pos="id/STRUCT40" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT15"/>
+        <element id="ELEM44" type="StatementFact" displayValue=" = " pos="id/STRUCT40" idFact="PATH404-O1-L1-T3-QAFACT15"/>
+        <element id="ELEM45" type="ObjectDetector" pos="id/STRUCT40" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT15"/>
+        <element id="ELEM46" type="Pot" displayValue="18" correctness="INCORRECT" pos="POS8" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT15"/>
+        <element id="ELEM47" type="Pot" displayValue="13" correctness="INCORRECT" pos="POS2" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT15"/>
+        <element id="ELEM48" type="Pot" displayValue="8" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT15"/>
+        <element id="ELEM49" type="Pot" displayValue="2" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT15"/>
+        <element id="ELEM50" type="Pot" displayValue="16" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT15"/>
+        <element id="ELEM51" type="Switch" pos="POS9" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[0/-3]" y="-3" roomTypeName="RegularRoom12" time="40" idTask="PATH_SOLAR_SYSTEM_O1_L1_T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+    <room id="Room[3/0]" x="3" roomTypeName="RegularRoom12" time="30" idTask="PATH404-O1-L1-T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="1">
       <roomaccesses>
-        <roomaccess id="a31" direction="NORTH" accessRef="a30"/>
-        <roomaccess id="a42" direction="EAST" accessRef="a43"/>
-        <roomaccess id="a44" direction="SOUTH" accessRef="a45"/>
-        <roomaccess id="a35" direction="WEST" accessRef="a34"/>
+        <roomaccess id="a15" direction="NORTH" accessRef="a14"/>
+        <roomaccess id="a16" direction="EAST" accessRef="a17"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32" complete="Du + au - proche du soleil : Terre - Jupiter - Saturne - Neptune" correctnessToReach="4"/>
+        <fact id="PATH404-O1-L1-T1-QAFACT7" complete="2 x 4 = 8" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT68" type="StructureStatement" pos="POSL2" acceptedFacts="Du + au - proche du soleil : Terre - Jupiter - Saturne - Neptune;"/>
-        <element id="ELEM69" type="StatementFact" displayValue="Du + au - proche du soleil : " pos="id/STRUCT68" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32"/>
-        <element id="ELEM70" type="ObjectDetector" pos="id/STRUCT68" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32"/>
-        <element id="ELEM71" type="StatementFact" displayValue=" - " pos="id/STRUCT68" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32"/>
-        <element id="ELEM72" type="ObjectDetector" pos="id/STRUCT68" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32"/>
-        <element id="ELEM73" type="StatementFact" displayValue=" - " pos="id/STRUCT68" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32"/>
-        <element id="ELEM74" type="ObjectDetector" pos="id/STRUCT68" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32"/>
-        <element id="ELEM75" type="StatementFact" displayValue=" - " pos="id/STRUCT68" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32"/>
-        <element id="ELEM76" type="ObjectDetector" pos="id/STRUCT68" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32"/>
-        <element id="ELEM77" type="Pot" displayValue="Terre" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32"/>
-        <element id="ELEM78" type="Pot" displayValue="Jupiter" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32"/>
-        <element id="ELEM79" type="Pot" displayValue="Saturne" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32"/>
-        <element id="ELEM80" type="Pot" displayValue="Neptune" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT32"/>
-        <element id="ELEM81" type="Switch" pos="POS6" ability="VERIFICATOR"/>
+        <element id="STRUCT52" type="StructureStatement" pos="POSL1" acceptedFacts="2 x 4 = 8;"/>
+        <element id="ELEM53" type="StatementFact" displayValue="2 x 4 = " pos="id/STRUCT52" idFact="PATH404-O1-L1-T1-QAFACT7"/>
+        <element id="ELEM54" type="ObjectDetector" pos="id/STRUCT52" ability="DETECTOR" idFact="PATH404-O1-L1-T1-QAFACT7"/>
+        <element id="ELEM55" type="Pot" displayValue="11" correctness="INCORRECT" pos="POS6" ability="MOVABLE" idFact="PATH404-O1-L1-T1-QAFACT7"/>
+        <element id="ELEM56" type="Pot" displayValue="9" correctness="INCORRECT" pos="POS9" ability="MOVABLE" idFact="PATH404-O1-L1-T1-QAFACT7"/>
+        <element id="ELEM57" type="Pot" displayValue="8" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="PATH404-O1-L1-T1-QAFACT7"/>
       </elements>
     </room>
-    <room id="Room[2/-1]" x="2" y="-1" roomTypeName="RegularRoom5" time="40" idTask="PATH_SOLAR_SYSTEM_O1_L1_T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+    <room id="Room[4/0]" x="4" roomTypeName="RegularRoom7" time="30" idTask="PATH404-O1-L1-T2" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="2">
       <roomaccesses>
-        <roomaccess id="a23" direction="WEST" accessRef="a22"/>
+        <roomaccess id="a17" direction="WEST" accessRef="a16"/>
+        <roomaccess id="a18" direction="NORTH" accessRef="a19"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8" complete="Du + au - proche du soleil : Terre - Mars - Uranus - Neptune" correctnessToReach="4"/>
+        <fact id="PATH404-O1-L1-T2-QAFACT39" complete="2 x 10 = 20" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT82" type="StructureStatement" pos="POSL1" acceptedFacts="Du + au - proche du soleil : Terre - Mars - Uranus - Neptune;"/>
-        <element id="ELEM83" type="StatementFact" displayValue="Du + au - proche du soleil : " pos="id/STRUCT82" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8"/>
-        <element id="ELEM84" type="ObjectDetector" pos="id/STRUCT82" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8"/>
-        <element id="ELEM85" type="StatementFact" displayValue=" - " pos="id/STRUCT82" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8"/>
-        <element id="ELEM86" type="ObjectDetector" pos="id/STRUCT82" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8"/>
-        <element id="ELEM87" type="StatementFact" displayValue=" - " pos="id/STRUCT82" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8"/>
-        <element id="ELEM88" type="ObjectDetector" pos="id/STRUCT82" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8"/>
-        <element id="ELEM89" type="StatementFact" displayValue=" - " pos="id/STRUCT82" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8"/>
-        <element id="ELEM90" type="ObjectDetector" pos="id/STRUCT82" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8"/>
-        <element id="ELEM91" type="Pot" displayValue="Terre" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8"/>
-        <element id="ELEM92" type="Pot" displayValue="Mars" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8"/>
-        <element id="ELEM93" type="Pot" displayValue="Uranus" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8"/>
-        <element id="ELEM94" type="Pot" displayValue="Neptune" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT8"/>
-        <element id="ELEM95" type="Switch" pos="POS3" ability="VERIFICATOR"/>
+        <element id="STRUCT58" type="StructureStatement" pos="POSL2" acceptedFacts="2 x 10 = 20;10 x 2 = 20;"/>
+        <element id="ELEM59" type="ObjectDetector" pos="id/STRUCT58" ability="DETECTOR" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM60" type="StatementFact" displayValue=" x " pos="id/STRUCT58" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM61" type="ObjectDetector" pos="id/STRUCT58" ability="DETECTOR" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM62" type="StatementFact" displayValue=" = 20" pos="id/STRUCT58" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM63" type="Pot" displayValue="22" correctness="INCORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM64" type="Pot" displayValue="7" correctness="INCORRECT" pos="POS2" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM65" type="Pot" displayValue="2" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM66" type="Pot" displayValue="10" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM67" type="Switch" pos="POS6" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[1/0]" x="1" size="LARGE" roomTypeName="MapRoom" time="60" idTask="PATH_SOLAR_SYSTEM_O1_L1_T2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+    <room id="Room[4/1]" x="4" y="1" roomTypeName="RoomTrap4" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a25" direction="SOUTH_WEST" accessRef="a24"/>
+        <roomaccess id="a19" direction="SOUTH" accessRef="a18"/>
+        <roomaccess id="a20" direction="NORTH" accessRef="a21"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM68" type="MediumWaitFireTrap" pos="POSM1" ability="AVOIDABLE"/>
+        <element id="ELEM69" type="MediumWaitFireTrap" pos="POSM2" ability="AVOIDABLE"/>
+        <element id="ELEM70" type="MediumWaitFireTrap" pos="POSM6" ability="AVOIDABLE"/>
+        <element id="ELEM71" type="MediumWaitFireTrap" pos="POSM3" ability="AVOIDABLE"/>
+        <element id="ELEM72" type="MediumWaitFireTrap" pos="POSM7" ability="AVOIDABLE"/>
+        <element id="ELEM73" type="MediumWaitFireTrap" pos="POSM5" ability="AVOIDABLE"/>
+        <element id="ELEM74" type="MediumWaitFireTrap" pos="POSM4" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[4/2]" x="4" y="2" roomTypeName="RegularRoom7" time="30" idTask="PATH404-O1-L1-T2" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a21" direction="SOUTH" accessRef="a20"/>
+        <roomaccess id="a22" direction="WEST" accessRef="a23"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT2" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT6" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT5" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT3" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT1" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT0" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT4" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT7" correctnessToReach="1"/>
+        <fact id="PATH404-O1-L1-T2-QAFACT33" complete="2 x 9 = 18" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT96" type="MapStructure" pos="POSXXL1" visualisation="PLANETS_ORBITS"/>
-        <element id="ELEM97" type="TypableDetector" pos="id/STRUCT96/VENUS" correctAnswer="Venus;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT2"/>
-        <element id="ELEM98" type="TypableDetector" pos="id/STRUCT96/URANUS" correctAnswer="Uranus;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT6"/>
-        <element id="ELEM99" type="TypableDetector" pos="id/STRUCT96/SATURNE" correctAnswer="Saturne;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT5"/>
-        <element id="ELEM100" type="TypableDetector" pos="id/STRUCT96/MARS" correctAnswer="Mars;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT3"/>
-        <element id="ELEM101" type="TypableDetector" pos="id/STRUCT96/MERCURE" correctAnswer="Mercure;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT1"/>
-        <element id="ELEM102" type="TypableDetector" pos="id/STRUCT96/TERRE" correctAnswer="Terre;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM103" type="TypableDetector" pos="id/STRUCT96/JUPITER" correctAnswer="Jupiter;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT4"/>
-        <element id="ELEM104" type="TypableDetector" pos="id/STRUCT96/NEPTUNE" correctAnswer="Neptune;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT7"/>
+        <element id="STRUCT75" type="StructureStatement" pos="POSL1" acceptedFacts="2 x 9 = 18;9 x 2 = 18;"/>
+        <element id="ELEM76" type="StatementFact" displayValue="2 x " pos="id/STRUCT75" idFact="PATH404-O1-L1-T2-QAFACT33"/>
+        <element id="ELEM77" type="ObjectDetector" pos="id/STRUCT75" ability="DETECTOR" idFact="PATH404-O1-L1-T2-QAFACT33"/>
+        <element id="ELEM78" type="StatementFact" displayValue=" = " pos="id/STRUCT75" idFact="PATH404-O1-L1-T2-QAFACT33"/>
+        <element id="ELEM79" type="ObjectDetector" pos="id/STRUCT75" ability="DETECTOR" idFact="PATH404-O1-L1-T2-QAFACT33"/>
+        <element id="ELEM80" type="Pot" displayValue="21" correctness="INCORRECT" pos="POS2" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT33"/>
+        <element id="ELEM81" type="Pot" displayValue="8" correctness="INCORRECT" pos="POS4" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT33"/>
+        <element id="ELEM82" type="Pot" displayValue="9" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT33"/>
+        <element id="ELEM83" type="Pot" displayValue="18" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT33"/>
+        <element id="ELEM84" type="Switch" pos="POS5" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-3/-3]" x="-3" y="-3" size="LARGE" roomTypeName="MapRoom" time="60" idTask="PATH_SOLAR_SYSTEM_O1_L1_T3" prompt="D&#xe9;place les &#xe9;l&#xe9;ments sur les bonnes zones " gameplayWithUndo="true" correctnessToReach="8">
+    <room id="Room[3/2]" x="3" y="2" roomTypeName="RegularRoom5" time="30" idTask="PATH404-O1-L1-T2" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="2">
       <roomaccesses>
-        <roomaccess id="a21" direction="EAST_NORTH" accessRef="a20"/>
-        <roomaccess id="a37" direction="EAST_SOUTH" accessRef="a36"/>
-        <roomaccess id="a46" direction="SOUTH_EAST" accessRef="a47"/>
+        <roomaccess id="a23" direction="EAST" accessRef="a22"/>
+        <roomaccess id="a24" direction="NORTH" accessRef="a25"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT4" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT5" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT0" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT3" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT2" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT1" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT6" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT7" correctnessToReach="1"/>
+        <fact id="PATH404-O1-L1-T2-QAFACT0" complete="1 x 2 = 2" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT105" type="MapStructure" pos="POSXXL1" visualisation="PLANETS_ORBITS"/>
-        <element id="ELEM106" type="ObjectDetector" pos="id/STRUCT105/JUPITER" correctAnswer="Jupiter;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM107" type="ObjectDetector" pos="id/STRUCT105/SATURNE" correctAnswer="Saturne;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT5"/>
-        <element id="ELEM108" type="ObjectDetector" pos="id/STRUCT105/TERRE" correctAnswer="Terre;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT0"/>
-        <element id="ELEM109" type="ObjectDetector" pos="id/STRUCT105/MARS" correctAnswer="Mars;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT3"/>
-        <element id="ELEM110" type="ObjectDetector" pos="id/STRUCT105/VENUS" correctAnswer="Venus;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM111" type="ObjectDetector" pos="id/STRUCT105/MERCURE" correctAnswer="Mercure;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT1"/>
-        <element id="ELEM112" type="ObjectDetector" pos="id/STRUCT105/URANUS" correctAnswer="Uranus;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT6"/>
-        <element id="ELEM113" type="ObjectDetector" pos="id/STRUCT105/NEPTUNE" correctAnswer="Neptune;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT7"/>
-        <element id="ELEM114" type="Pot" displayValue="Jupiter" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT4"/>
-        <element id="ELEM115" type="Pot" displayValue="Saturne" correctness="CORRECT" pos="POS13" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT5"/>
-        <element id="ELEM116" type="Pot" displayValue="Terre" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT0"/>
-        <element id="ELEM117" type="Pot" displayValue="Mars" correctness="CORRECT" pos="POS12" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT3"/>
-        <element id="ELEM118" type="Pot" displayValue="Venus" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT2"/>
-        <element id="ELEM119" type="Pot" displayValue="Mercure" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT1"/>
-        <element id="ELEM120" type="Pot" displayValue="Uranus" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT6"/>
-        <element id="ELEM121" type="Pot" displayValue="Neptune" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T3-QAFACT7"/>
-        <element id="ELEM122" type="Switch" pos="POS19" ability="VERIFICATOR"/>
+        <element id="STRUCT85" type="StructureStatement" pos="POSL2" acceptedFacts="1 x 2 = 2;2 x 1 = 2;"/>
+        <element id="ELEM86" type="ObjectDetector" pos="id/STRUCT85" ability="DETECTOR" idFact="PATH404-O1-L1-T2-QAFACT0"/>
+        <element id="ELEM87" type="StatementFact" displayValue=" x 2 = " pos="id/STRUCT85" idFact="PATH404-O1-L1-T2-QAFACT0"/>
+        <element id="ELEM88" type="ObjectDetector" pos="id/STRUCT85" ability="DETECTOR" idFact="PATH404-O1-L1-T2-QAFACT0"/>
+        <element id="ELEM89" type="Pot" displayValue="9" correctness="INCORRECT" pos="POS7" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT0"/>
+        <element id="ELEM90" type="Pot" displayValue="3" correctness="INCORRECT" pos="POS3" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT0"/>
+        <element id="ELEM91" type="Pot" displayValue="1" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT0"/>
+        <element id="ELEM92" type="Pot" displayValue="2" correctness="CORRECT" pos="POS8" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT0"/>
+        <element id="ELEM93" type="Switch" pos="POS1" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[2/-2]" x="2" y="-2" roomTypeName="TrapRoom2" correctnessToReach="0">
+    <room id="Room[3/3]" x="3" y="3" roomTypeName="RegularRoom7" time="30" idTask="PATH404-O1-L1-T3" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="3">
       <roomaccesses>
-        <roomaccess id="a39" direction="WEST" accessRef="a38"/>
-        <roomaccess id="a48" direction="SOUTH" accessRef="a49"/>
-        <roomaccess id="a50" direction="EAST" accessRef="a51"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM123" type="HoleTrap" pos="POS6" ability="NONAVOIDABLE"/>
-        <element id="ELEM124" type="HoleTrap" pos="POS2" ability="NONAVOIDABLE"/>
-        <element id="ELEM125" type="HoleTrap" pos="POS5" ability="NONAVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[1/-3]" x="1" y="-3" roomTypeName="RegularRoom7" time="40" idTask="PATH_SOLAR_SYSTEM_O1_L1_T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a43" direction="WEST" accessRef="a42"/>
-        <roomaccess id="a41" direction="NORTH" accessRef="a40"/>
+        <roomaccess id="a25" direction="SOUTH" accessRef="a24"/>
+        <roomaccess id="a26" direction="NORTH" accessRef="a27"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42" complete="Du + au - proche du soleil : Mercure - Venus - Mars - Saturne" correctnessToReach="4"/>
+        <fact id="PATH404-O1-L1-T3-QAFACT5" complete="3 x 2 = 6" correctnessToReach="3"/>
       </facts>
       <elements>
-        <element id="STRUCT126" type="StructureStatement" pos="POSL1" acceptedFacts="Du + au - proche du soleil : Mercure - Venus - Mars - Saturne;"/>
-        <element id="ELEM127" type="StatementFact" displayValue="Du + au - proche du soleil : " pos="id/STRUCT126" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42"/>
-        <element id="ELEM128" type="ObjectDetector" pos="id/STRUCT126" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42"/>
-        <element id="ELEM129" type="StatementFact" displayValue=" - " pos="id/STRUCT126" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42"/>
-        <element id="ELEM130" type="ObjectDetector" pos="id/STRUCT126" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42"/>
-        <element id="ELEM131" type="StatementFact" displayValue=" - " pos="id/STRUCT126" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42"/>
-        <element id="ELEM132" type="ObjectDetector" pos="id/STRUCT126" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42"/>
-        <element id="ELEM133" type="StatementFact" displayValue=" - " pos="id/STRUCT126" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42"/>
-        <element id="ELEM134" type="ObjectDetector" pos="id/STRUCT126" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42"/>
-        <element id="ELEM135" type="Pot" displayValue="Mercure" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42"/>
-        <element id="ELEM136" type="Pot" displayValue="Venus" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42"/>
-        <element id="ELEM137" type="Pot" displayValue="Mars" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42"/>
-        <element id="ELEM138" type="Pot" displayValue="Saturne" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT42"/>
-        <element id="ELEM139" type="Switch" pos="POS3" ability="VERIFICATOR"/>
+        <element id="STRUCT94" type="StructureStatement" pos="POSL1" acceptedFacts="3 x 2 = 6;2 x 3 = 6;"/>
+        <element id="ELEM95" type="ObjectDetector" pos="id/STRUCT94" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT5"/>
+        <element id="ELEM96" type="StatementFact" displayValue=" x " pos="id/STRUCT94" idFact="PATH404-O1-L1-T3-QAFACT5"/>
+        <element id="ELEM97" type="ObjectDetector" pos="id/STRUCT94" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT5"/>
+        <element id="ELEM98" type="StatementFact" displayValue=" = " pos="id/STRUCT94" idFact="PATH404-O1-L1-T3-QAFACT5"/>
+        <element id="ELEM99" type="ObjectDetector" pos="id/STRUCT94" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT5"/>
+        <element id="ELEM100" type="Pot" displayValue="16" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT5"/>
+        <element id="ELEM101" type="Pot" displayValue="15" correctness="INCORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT5"/>
+        <element id="ELEM102" type="Pot" displayValue="3" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT5"/>
+        <element id="ELEM103" type="Pot" displayValue="2" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT5"/>
+        <element id="ELEM104" type="Pot" displayValue="6" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT5"/>
+        <element id="ELEM105" type="Switch" pos="POS2" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-1/0]" x="-1" roomTypeName="RegularRoom2" time="40" idTask="PATH_SOLAR_SYSTEM_O1_L1_T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+    <room id="Room[3/4]" x="3" y="4" roomTypeName="RoomTrap2" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a15" direction="SOUTH" accessRef="a14"/>
+        <roomaccess id="a27" direction="SOUTH" accessRef="a26"/>
+        <roomaccess id="a28" direction="NORTH" accessRef="a29"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM106" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM107" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM108" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM109" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM110" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[3/5]" x="3" y="5" roomTypeName="RegularRoom12" time="30" idTask="PATH404-O1-L1-T2" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="2">
+      <roomaccesses>
+        <roomaccess id="a29" direction="SOUTH" accessRef="a28"/>
+        <roomaccess id="a30" direction="WEST" accessRef="a31"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58" complete="Du + au - proche du soleil : Mercure - Venus - Saturne - Uranus" correctnessToReach="4"/>
+        <fact id="PATH404-O1-L1-T2-QAFACT39" complete="2 x 10 = 20" correctnessToReach="2"/>
       </facts>
       <elements>
-        <element id="STRUCT140" type="VStructureStatement" pos="POSXL1" acceptedFacts="Du + au - proche du soleil : Mercure - Venus - Saturne - Uranus;"/>
-        <element id="STRUCT141" type="HStructL" pos="id/STRUCT140"/>
-        <element id="ELEM142" type="Info" displayValue="1" pos="id/STRUCT141" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58"/>
-        <element id="ELEM143" type="ObjectDetector" pos="id/STRUCT141" correctAnswer="Mercure;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58"/>
-        <element id="STRUCT144" type="HStructL" pos="id/STRUCT140"/>
-        <element id="ELEM145" type="Info" displayValue="2" pos="id/STRUCT144" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58"/>
-        <element id="ELEM146" type="ObjectDetector" pos="id/STRUCT144" correctAnswer="Venus;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58"/>
-        <element id="STRUCT147" type="HStructL" pos="id/STRUCT140"/>
-        <element id="ELEM148" type="Info" displayValue="3" pos="id/STRUCT147" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58"/>
-        <element id="ELEM149" type="ObjectDetector" pos="id/STRUCT147" correctAnswer="Saturne;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58"/>
-        <element id="STRUCT150" type="HStructL" pos="id/STRUCT140"/>
-        <element id="ELEM151" type="Info" displayValue="4" pos="id/STRUCT150" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58"/>
-        <element id="ELEM152" type="ObjectDetector" pos="id/STRUCT150" correctAnswer="Uranus;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58"/>
-        <element id="ELEM153" type="Switch" pos="POS2" ability="VERIFICATOR"/>
-        <element id="ELEM154" type="Pot" displayValue="Mercure" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58"/>
-        <element id="ELEM155" type="Pot" displayValue="Venus" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58"/>
-        <element id="ELEM156" type="Pot" displayValue="Saturne" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58"/>
-        <element id="ELEM157" type="Pot" displayValue="Uranus" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58"/>
-        <element id="ELEM158" type="Statement" displayValue="Du + au - proche du soleil" pos="POSQ1" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT58" acceptedFacts="Du + au - proche du soleil : Mercure - Venus - Saturne - Uranus;"/>
+        <element id="STRUCT111" type="StructureStatement" pos="POSL2" acceptedFacts="2 x 10 = 20;10 x 2 = 20;"/>
+        <element id="ELEM112" type="ObjectDetector" pos="id/STRUCT111" ability="DETECTOR" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM113" type="StatementFact" displayValue=" x " pos="id/STRUCT111" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM114" type="ObjectDetector" pos="id/STRUCT111" ability="DETECTOR" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM115" type="StatementFact" displayValue=" = 20" pos="id/STRUCT111" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM116" type="Pot" displayValue="26" correctness="INCORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM117" type="Pot" displayValue="8" correctness="INCORRECT" pos="POS10" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM118" type="Pot" displayValue="2" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM119" type="Pot" displayValue="10" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH404-O1-L1-T2-QAFACT39"/>
+        <element id="ELEM120" type="Switch" pos="POS8" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[-1/-4]" x="-1" y="-4" roomTypeName="RoomTrap4" correctnessToReach="0">
+    <room id="Room[2/5]" x="2" y="5" roomTypeName="RegularRoom7" time="30" idTask="PATH404-O1-L1-T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="1">
       <roomaccesses>
-        <roomaccess id="a33" direction="NORTH" accessRef="a32"/>
-      </roomaccesses>
-      <elements>
-        <element id="ELEM159" type="MediumWaitSpikeTrap" pos="POSM3" ability="AVOIDABLE"/>
-        <element id="ELEM160" type="MediumWaitSpikeTrap" pos="POSM7" ability="AVOIDABLE"/>
-        <element id="ELEM161" type="MediumWaitSpikeTrap" pos="POSM2" ability="AVOIDABLE"/>
-        <element id="ELEM162" type="MediumWaitSpikeTrap" pos="POSM4" ability="AVOIDABLE"/>
-        <element id="ELEM163" type="MediumWaitSpikeTrap" pos="POSM1" ability="AVOIDABLE"/>
-        <element id="ELEM164" type="MediumWaitSpikeTrap" pos="POSM5" ability="AVOIDABLE"/>
-        <element id="ELEM165" type="MediumWaitSpikeTrap" pos="POSM6" ability="AVOIDABLE"/>
-      </elements>
-    </room>
-    <room id="Room[2/-3]" x="2" y="-3" roomTypeName="RegularRoom2" time="40" idTask="PATH_SOLAR_SYSTEM_O1_L1_T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
-      <roomaccesses>
-        <roomaccess id="a49" direction="NORTH" accessRef="a48"/>
-        <roomaccess id="a52" direction="EAST" accessRef="a53"/>
-        <roomaccess id="a54" direction="SOUTH" accessRef="a55"/>
+        <roomaccess id="a31" direction="EAST" accessRef="a30"/>
+        <roomaccess id="a32" direction="WEST" accessRef="a33"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15" complete="Du + au - proche du soleil : Mercure - Terre - Jupiter - Uranus" correctnessToReach="4"/>
+        <fact id="PATH404-O1-L1-T1-QAFACT12" complete="7 x 2 = 14" correctnessToReach="1"/>
       </facts>
       <elements>
-        <element id="STRUCT166" type="VStructureStatement" pos="POSXL1" acceptedFacts="Du + au - proche du soleil : Mercure - Terre - Jupiter - Uranus;"/>
-        <element id="STRUCT167" type="HStructL" pos="id/STRUCT166"/>
-        <element id="ELEM168" type="Info" displayValue="1" pos="id/STRUCT167" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15"/>
-        <element id="ELEM169" type="ObjectDetector" pos="id/STRUCT167" correctAnswer="Mercure;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15"/>
-        <element id="STRUCT170" type="HStructL" pos="id/STRUCT166"/>
-        <element id="ELEM171" type="Info" displayValue="2" pos="id/STRUCT170" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15"/>
-        <element id="ELEM172" type="ObjectDetector" pos="id/STRUCT170" correctAnswer="Terre;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15"/>
-        <element id="STRUCT173" type="HStructL" pos="id/STRUCT166"/>
-        <element id="ELEM174" type="Info" displayValue="3" pos="id/STRUCT173" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15"/>
-        <element id="ELEM175" type="ObjectDetector" pos="id/STRUCT173" correctAnswer="Jupiter;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15"/>
-        <element id="STRUCT176" type="HStructL" pos="id/STRUCT166"/>
-        <element id="ELEM177" type="Info" displayValue="4" pos="id/STRUCT176" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15"/>
-        <element id="ELEM178" type="ObjectDetector" pos="id/STRUCT176" correctAnswer="Uranus;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15"/>
-        <element id="ELEM179" type="Switch" pos="POS1" ability="VERIFICATOR"/>
-        <element id="ELEM180" type="Pot" displayValue="Mercure" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15"/>
-        <element id="ELEM181" type="Pot" displayValue="Terre" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15"/>
-        <element id="ELEM182" type="Pot" displayValue="Jupiter" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15"/>
-        <element id="ELEM183" type="Pot" displayValue="Uranus" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15"/>
-        <element id="ELEM184" type="Statement" displayValue="Du + au - proche du soleil" pos="POSQ1" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT15" acceptedFacts="Du + au - proche du soleil : Mercure - Terre - Jupiter - Uranus;"/>
+        <element id="STRUCT121" type="StructureStatement" pos="POSL2" acceptedFacts="7 x 2 = 14;"/>
+        <element id="ELEM122" type="StatementFact" displayValue="7 x 2 = " pos="id/STRUCT121" idFact="PATH404-O1-L1-T1-QAFACT12"/>
+        <element id="ELEM123" type="ObjectDetector" pos="id/STRUCT121" ability="DETECTOR" idFact="PATH404-O1-L1-T1-QAFACT12"/>
+        <element id="ELEM124" type="Pot" displayValue="15" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="PATH404-O1-L1-T1-QAFACT12"/>
+        <element id="ELEM125" type="Pot" displayValue="18" correctness="INCORRECT" pos="POS2" ability="MOVABLE" idFact="PATH404-O1-L1-T1-QAFACT12"/>
+        <element id="ELEM126" type="Pot" displayValue="14" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T1-QAFACT12"/>
       </elements>
     </room>
-    <room id="Room[3/-2]" x="3" y="-2" roomTypeName="RegularRoom7" time="40" idTask="PATH_SOLAR_SYSTEM_O1_L1_T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+    <room id="Room[1/5]" x="1" y="5" roomTypeName="RegularRoom7" time="30" idTask="PATH404-O1-L1-T3" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="3">
       <roomaccesses>
-        <roomaccess id="a51" direction="WEST" accessRef="a50"/>
+        <roomaccess id="a33" direction="EAST" accessRef="a32"/>
+        <roomaccess id="a34" direction="NORTH" accessRef="a35"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30" complete="Du + au - proche du soleil : Venus - Terre - Uranus - Neptune" correctnessToReach="4"/>
+        <fact id="PATH404-O1-L1-T3-QAFACT0" complete="2 x 1 = 2" correctnessToReach="3"/>
       </facts>
       <elements>
-        <element id="STRUCT185" type="StructureStatement" pos="POSL2" acceptedFacts="Du + au - proche du soleil : Venus - Terre - Uranus - Neptune;"/>
-        <element id="ELEM186" type="StatementFact" displayValue="Du + au - proche du soleil : " pos="id/STRUCT185" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30"/>
-        <element id="ELEM187" type="ObjectDetector" pos="id/STRUCT185" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30"/>
-        <element id="ELEM188" type="StatementFact" displayValue=" - " pos="id/STRUCT185" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30"/>
-        <element id="ELEM189" type="ObjectDetector" pos="id/STRUCT185" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30"/>
-        <element id="ELEM190" type="StatementFact" displayValue=" - " pos="id/STRUCT185" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30"/>
-        <element id="ELEM191" type="ObjectDetector" pos="id/STRUCT185" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30"/>
-        <element id="ELEM192" type="StatementFact" displayValue=" - " pos="id/STRUCT185" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30"/>
-        <element id="ELEM193" type="ObjectDetector" pos="id/STRUCT185" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30"/>
-        <element id="ELEM194" type="Pot" displayValue="Venus" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30"/>
-        <element id="ELEM195" type="Pot" displayValue="Terre" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30"/>
-        <element id="ELEM196" type="Pot" displayValue="Uranus" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30"/>
-        <element id="ELEM197" type="Pot" displayValue="Neptune" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT30"/>
-        <element id="ELEM198" type="Switch" pos="POS2" ability="VERIFICATOR"/>
+        <element id="STRUCT127" type="StructureStatement" pos="POSL1" acceptedFacts="2 x 1 = 2;1 x 2 = 2;"/>
+        <element id="ELEM128" type="ObjectDetector" pos="id/STRUCT127" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT0"/>
+        <element id="ELEM129" type="StatementFact" displayValue=" x " pos="id/STRUCT127" idFact="PATH404-O1-L1-T3-QAFACT0"/>
+        <element id="ELEM130" type="ObjectDetector" pos="id/STRUCT127" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT0"/>
+        <element id="ELEM131" type="StatementFact" displayValue=" = " pos="id/STRUCT127" idFact="PATH404-O1-L1-T3-QAFACT0"/>
+        <element id="ELEM132" type="ObjectDetector" pos="id/STRUCT127" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT0"/>
+        <element id="ELEM133" type="Pot" displayValue="9" correctness="INCORRECT" pos="POS5" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT0"/>
+        <element id="ELEM134" type="Pot" displayValue="15" correctness="INCORRECT" pos="POS6" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT0"/>
+        <element id="ELEM135" type="Pot" displayValue="2" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT0"/>
+        <element id="ELEM136" type="Pot" displayValue="1" correctness="CORRECT" pos="POS2" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT0"/>
+        <element id="ELEM137" type="Pot" displayValue="2" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT0"/>
+        <element id="ELEM138" type="Switch" pos="POS4" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[0/-5]" y="-5" size="LARGE" roomTypeName="MapRoom" time="60" idTask="PATH_SOLAR_SYSTEM_O1_L1_T2" prompt="Place toi et saisie les bonnes r&#xe9;ponses" gameplayWithUndo="true" correctnessToReach="0">
+    <room id="Room[1/6]" x="1" y="6" roomTypeName="RoomTrap" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a45" direction="NORTH_WEST" accessRef="a44"/>
-        <roomaccess id="a56" direction="SOUTH_WEST" accessRef="a57"/>
+        <roomaccess id="a35" direction="SOUTH" accessRef="a34"/>
+        <roomaccess id="a36" direction="NORTH" accessRef="a37"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM139" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM140" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
+        <element id="ELEM141" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM142" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM143" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[1/7]" x="1" y="7" roomTypeName="TrapRoom2" correctnessToReach="0">
+      <roomaccesses>
+        <roomaccess id="a37" direction="SOUTH" accessRef="a36"/>
+        <roomaccess id="a38" direction="NORTH" accessRef="a39"/>
+      </roomaccesses>
+      <elements>
+        <element id="ELEM144" type="HoleTrap" pos="POS5" ability="NONAVOIDABLE"/>
+        <element id="ELEM145" type="HoleTrap" pos="POS1" ability="NONAVOIDABLE"/>
+        <element id="ELEM146" type="HoleTrap" pos="POS2" ability="NONAVOIDABLE"/>
+      </elements>
+    </room>
+    <room id="Room[1/8]" x="1" y="8" roomTypeName="RegularRoom5" time="30" idTask="PATH404-O1-L1-T3" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="3">
+      <roomaccesses>
+        <roomaccess id="a39" direction="SOUTH" accessRef="a38"/>
+        <roomaccess id="a40" direction="WEST" accessRef="a41"/>
       </roomaccesses>
       <facts>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT0" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT7" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT3" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT2" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT1" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT6" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT5" correctnessToReach="1"/>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT4" correctnessToReach="1"/>
+        <fact id="PATH404-O1-L1-T3-QAFACT8" complete="2 x 5 = 10" correctnessToReach="3"/>
       </facts>
       <elements>
-        <element id="STRUCT199" type="MapStructure" pos="POSXXL1" visualisation="PLANETS_ORBITS"/>
-        <element id="ELEM200" type="TypableDetector" pos="id/STRUCT199/TERRE" correctAnswer="Terre;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT0"/>
-        <element id="ELEM201" type="TypableDetector" pos="id/STRUCT199/NEPTUNE" correctAnswer="Neptune;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT7"/>
-        <element id="ELEM202" type="TypableDetector" pos="id/STRUCT199/MARS" correctAnswer="Mars;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT3"/>
-        <element id="ELEM203" type="TypableDetector" pos="id/STRUCT199/VENUS" correctAnswer="Venus;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT2"/>
-        <element id="ELEM204" type="TypableDetector" pos="id/STRUCT199/MERCURE" correctAnswer="Mercure;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT1"/>
-        <element id="ELEM205" type="TypableDetector" pos="id/STRUCT199/URANUS" correctAnswer="Uranus;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT6"/>
-        <element id="ELEM206" type="TypableDetector" pos="id/STRUCT199/SATURNE" correctAnswer="Saturne;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT5"/>
-        <element id="ELEM207" type="TypableDetector" pos="id/STRUCT199/JUPITER" correctAnswer="Jupiter;" ability="TYPABLE_DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T2-QAFACT4"/>
+        <element id="STRUCT147" type="StructureStatement" pos="POSL2" acceptedFacts="2 x 5 = 10;5 x 2 = 10;"/>
+        <element id="ELEM148" type="ObjectDetector" pos="id/STRUCT147" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT8"/>
+        <element id="ELEM149" type="StatementFact" displayValue=" x " pos="id/STRUCT147" idFact="PATH404-O1-L1-T3-QAFACT8"/>
+        <element id="ELEM150" type="ObjectDetector" pos="id/STRUCT147" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT8"/>
+        <element id="ELEM151" type="StatementFact" displayValue=" = " pos="id/STRUCT147" idFact="PATH404-O1-L1-T3-QAFACT8"/>
+        <element id="ELEM152" type="ObjectDetector" pos="id/STRUCT147" ability="DETECTOR" idFact="PATH404-O1-L1-T3-QAFACT8"/>
+        <element id="ELEM153" type="Pot" displayValue="17" correctness="INCORRECT" pos="POS4" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT8"/>
+        <element id="ELEM154" type="Pot" displayValue="16" correctness="INCORRECT" pos="POS6" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT8"/>
+        <element id="ELEM155" type="Pot" displayValue="2" correctness="CORRECT" pos="POS1" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT8"/>
+        <element id="ELEM156" type="Pot" displayValue="5" correctness="CORRECT" pos="POS9" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT8"/>
+        <element id="ELEM157" type="Pot" displayValue="10" correctness="CORRECT" pos="POS7" ability="MOVABLE" idFact="PATH404-O1-L1-T3-QAFACT8"/>
+        <element id="ELEM158" type="Switch" pos="POS5" ability="VERIFICATOR"/>
       </elements>
     </room>
-    <room id="Room[3/-3]" x="3" y="-3" roomTypeName="RegularRoom2" time="40" idTask="PATH_SOLAR_SYSTEM_O1_L1_T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+    <room id="Room[0/8]" y="8" roomTypeName="RoomTrap2" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a53" direction="WEST" accessRef="a52"/>
-      </roomaccesses>
-      <facts>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24" complete="Du + au - proche du soleil : Mercure - Venus - Terre - Neptune" correctnessToReach="4"/>
-      </facts>
-      <elements>
-        <element id="STRUCT208" type="VStructureStatement" pos="POSXL1" acceptedFacts="Du + au - proche du soleil : Mercure - Venus - Terre - Neptune;"/>
-        <element id="STRUCT209" type="HStructL" pos="id/STRUCT208"/>
-        <element id="ELEM210" type="Info" displayValue="1" pos="id/STRUCT209" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24"/>
-        <element id="ELEM211" type="ObjectDetector" pos="id/STRUCT209" correctAnswer="Mercure;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24"/>
-        <element id="STRUCT212" type="HStructL" pos="id/STRUCT208"/>
-        <element id="ELEM213" type="Info" displayValue="2" pos="id/STRUCT212" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24"/>
-        <element id="ELEM214" type="ObjectDetector" pos="id/STRUCT212" correctAnswer="Venus;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24"/>
-        <element id="STRUCT215" type="HStructL" pos="id/STRUCT208"/>
-        <element id="ELEM216" type="Info" displayValue="3" pos="id/STRUCT215" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24"/>
-        <element id="ELEM217" type="ObjectDetector" pos="id/STRUCT215" correctAnswer="Terre;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24"/>
-        <element id="STRUCT218" type="HStructL" pos="id/STRUCT208"/>
-        <element id="ELEM219" type="Info" displayValue="4" pos="id/STRUCT218" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24"/>
-        <element id="ELEM220" type="ObjectDetector" pos="id/STRUCT218" correctAnswer="Neptune;" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24"/>
-        <element id="ELEM221" type="Switch" pos="POS2" ability="VERIFICATOR"/>
-        <element id="ELEM222" type="Pot" displayValue="Mercure" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24"/>
-        <element id="ELEM223" type="Pot" displayValue="Venus" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24"/>
-        <element id="ELEM224" type="Pot" displayValue="Terre" correctness="CORRECT" pos="POS6" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24"/>
-        <element id="ELEM225" type="Pot" displayValue="Neptune" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24"/>
-        <element id="ELEM226" type="Statement" displayValue="Du + au - proche du soleil" pos="POSQ1" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT24" acceptedFacts="Du + au - proche du soleil : Mercure - Venus - Terre - Neptune;"/>
-      </elements>
-    </room>
-    <room id="Room[2/-4]" x="2" y="-4" roomTypeName="RoomTrap3" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a55" direction="NORTH" accessRef="a54"/>
+        <roomaccess id="a41" direction="EAST" accessRef="a40"/>
+        <roomaccess id="a42" direction="WEST" accessRef="a43"/>
       </roomaccesses>
       <elements>
-        <element id="ELEM227" type="WaitFireTrap" pos="POS3" ability="AVOIDABLE"/>
-        <element id="ELEM228" type="WaitFireTrap" pos="POS6" ability="AVOIDABLE"/>
-        <element id="ELEM229" type="WaitFireTrap" pos="POS1" ability="AVOIDABLE"/>
-        <element id="ELEM230" type="WaitFireTrap" pos="POS9" ability="AVOIDABLE"/>
-        <element id="ELEM231" type="WaitFireTrap" pos="POS7" ability="AVOIDABLE"/>
+        <element id="ELEM159" type="FireTrap" pos="POS1" ability="AVOIDABLE"/>
+        <element id="ELEM160" type="FireTrap" pos="POS4" ability="AVOIDABLE"/>
+        <element id="ELEM161" type="FireTrap" pos="POS5" ability="AVOIDABLE"/>
+        <element id="ELEM162" type="FireTrap" pos="POS3" ability="AVOIDABLE"/>
+        <element id="ELEM163" type="FireTrap" pos="POS2" ability="AVOIDABLE"/>
       </elements>
     </room>
-    <room id="Room[-2/-4]" x="-2" y="-4" roomTypeName="RegularRoom12" time="40" idTask="PATH_SOLAR_SYSTEM_O1_L1_T1" prompt="Place les bons elements" gameplayWithUndo="true" correctnessToReach="4">
+    <room id="Room[-1/8]" x="-1" y="8" roomTypeName="ExitRoom1" correctnessToReach="0">
       <roomaccesses>
-        <roomaccess id="a47" direction="NORTH" accessRef="a46"/>
-      </roomaccesses>
-      <facts>
-        <fact id="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69" complete="Du + au - proche du soleil : Venus - Jupiter - Saturne - Neptune" correctnessToReach="4"/>
-      </facts>
-      <elements>
-        <element id="STRUCT232" type="StructureStatement" pos="POSL2" acceptedFacts="Du + au - proche du soleil : Venus - Jupiter - Saturne - Neptune;"/>
-        <element id="ELEM233" type="StatementFact" displayValue="Du + au - proche du soleil : " pos="id/STRUCT232" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69"/>
-        <element id="ELEM234" type="ObjectDetector" pos="id/STRUCT232" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69"/>
-        <element id="ELEM235" type="StatementFact" displayValue=" - " pos="id/STRUCT232" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69"/>
-        <element id="ELEM236" type="ObjectDetector" pos="id/STRUCT232" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69"/>
-        <element id="ELEM237" type="StatementFact" displayValue=" - " pos="id/STRUCT232" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69"/>
-        <element id="ELEM238" type="ObjectDetector" pos="id/STRUCT232" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69"/>
-        <element id="ELEM239" type="StatementFact" displayValue=" - " pos="id/STRUCT232" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69"/>
-        <element id="ELEM240" type="ObjectDetector" pos="id/STRUCT232" ability="DETECTOR" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69"/>
-        <element id="ELEM241" type="Pot" displayValue="Venus" correctness="CORRECT" pos="POS10" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69"/>
-        <element id="ELEM242" type="Pot" displayValue="Jupiter" correctness="CORRECT" pos="POS4" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69"/>
-        <element id="ELEM243" type="Pot" displayValue="Saturne" correctness="CORRECT" pos="POS5" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69"/>
-        <element id="ELEM244" type="Pot" displayValue="Neptune" correctness="CORRECT" pos="POS3" ability="MOVABLE" idFact="PATH_SOLAR_SYSTEM_O1_L1_T1-QAFACT69"/>
-        <element id="ELEM245" type="Switch" pos="POS2" ability="VERIFICATOR"/>
-      </elements>
-    </room>
-    <room id="Room[0/-6]" y="-6" roomTypeName="ExitRoom1" correctnessToReach="0">
-      <roomaccesses>
-        <roomaccess id="a57" direction="NORTH" accessRef="a56"/>
+        <roomaccess id="a43" direction="EAST" accessRef="a42"/>
       </roomaccesses>
     </room>
   </rooms>

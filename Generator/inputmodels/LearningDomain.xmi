@@ -1527,7 +1527,7 @@
         </tasks>
         <tasks
             xsi:type="generator:MTCompletion2"
-            percentOfApparition="20"
+            percentOfApparition="40"
             ID="PATH404-O1-L1-T2"
             maxTime="30">
           <responseModality
@@ -1538,7 +1538,7 @@
         </tasks>
         <tasks
             xsi:type="generator:MTRecontruction"
-            percentOfApparition="20"
+            percentOfApparition="40"
             ID="PATH404-O1-L1-T3"
             maxTime="30">
           <responseModality
@@ -1547,7 +1547,6 @@
         </tasks>
         <tasks
             xsi:type="generator:MTIdentification"
-            percentOfApparition="20"
             ID="PATH404-O1-L1-T4"
             maxTime="30">
           <responseModality
@@ -1556,7 +1555,6 @@
         </tasks>
         <tasks
             xsi:type="generator:MTMembership"
-            percentOfApparition="20"
             ID="PATH404-O1-L1-T5"
             maxTime="30">
           <responseModality
@@ -1739,7 +1737,6 @@
         </tasks>
         <tasks
             xsi:type="generator:HistoricalChronology"
-            percentOfApparition="100"
             ID="HG_O1_L1_T9"
             nbFacts="3"
             mixDatePeriod="true">
@@ -1756,6 +1753,7 @@
         </tasks>
         <tasks
             xsi:type="generator:OrderEvent"
+            percentOfApparition="100"
             ID="HG_O1_L1_T11"
             maxQuestionableFacts="30">
           <responseModality

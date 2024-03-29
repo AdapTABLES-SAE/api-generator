@@ -36,7 +36,7 @@ public class ALGAGenerator {
 	private Dungeon generatedDungeon;
 	private DungeonElements dungeonElements;
 	
-	public static DidacticDomain DOMAIN = DidacticDomain.SOLAR_SYSTEM;
+	public static DidacticDomain DOMAIN = DidacticDomain.MATHEMATICS;
 	
 	public static boolean MAXIMIZE_ROOMTYPE_ACCESS = false;
 	
@@ -44,7 +44,7 @@ public class ALGAGenerator {
 		for(int i = 0; i < 1; i++) {
 			ALGAGenerator generator;
 			try {
-				generator = new ALGAGenerator("SOLAR");
+				generator = new ALGAGenerator("FICTIF01");
 				generator.generate();
 				generator.printDungeon();
 				generator.saveDungeon("DungeonGen.xmi");

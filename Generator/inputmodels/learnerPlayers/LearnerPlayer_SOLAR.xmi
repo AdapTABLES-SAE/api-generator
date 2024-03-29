@@ -839,5 +839,5 @@
     </learnerProgress>
   </progression>
   <learningpath href="../LearningDomain.xmi#PATH_SOLAR_SYSTEM"/>
-  <statistics maxGameLevelReached="9" nbLevelsGenerated="620"/>
+  <statistics maxGameLevelReached="9" nbLevelsGenerated="621"/>
 </generator:LearnerPlayer>

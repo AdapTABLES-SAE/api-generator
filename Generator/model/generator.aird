@@ -25,7 +25,6 @@
     <semanticResources>file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/HistoryGeographyFacts.xmi</semanticResources>
     <semanticResources>file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/JudoFacts.xmi</semanticResources>
     <semanticResources>../inputmodels/JudoFacts.xmi</semanticResources>
-    <semanticResources>../inputmodels/GameDescription.xmi</semanticResources>
     <semanticResources>../inputmodels/SolarSystemPlanets.xmi</semanticResources>
     <semanticResources>file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/SolarSystemPlanets.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_-oGdkAnBEe25_Pq4ehy-Rg">
