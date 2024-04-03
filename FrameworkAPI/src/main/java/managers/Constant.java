@@ -84,7 +84,7 @@ public class Constant {
 		return false;
 	}
 	
-	public static Classrooms loadClassrooms() {
+	public synchronized static Classrooms loadClassrooms() {
 		GeneratorPackage.eINSTANCE.eClass();
 		ResourceSet resourceSet = new ResourceSetImpl();
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
@@ -102,7 +102,7 @@ public class Constant {
 		return (Classrooms) resource.getContents().get(0);
 	}
 	
-	public static Teachers loadTeachers() {
+	public synchronized static Teachers loadTeachers() {
 		GeneratorPackage.eINSTANCE.eClass();
 		ResourceSet resourceSet = new ResourceSetImpl();
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
@@ -119,7 +119,7 @@ public class Constant {
 		return (Teachers) resource.getContents().get(0);
 	}
 	
-	public static void saveLearnerModel(LearnerPlayer learner) {
+	public synchronized static void saveLearnerModel(LearnerPlayer learner) {
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		ResourceSet resourceSet = new ResourceSetImpl();
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
@@ -140,7 +140,7 @@ public class Constant {
 	}
 	
 	
-	public static void saveClassroomsModel(Classrooms classrooms) {
+	public synchronized static void saveClassroomsModel(Classrooms classrooms) {
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		ResourceSet resourceSet = new ResourceSetImpl();
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
@@ -160,7 +160,7 @@ public class Constant {
 		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CLASSROOMS_FILE + "' file : OK");
 	}
 	
-	public static void saveTeachersModel(Teachers teachers) {
+	public synchronized static void saveTeachersModel(Teachers teachers) {
 
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		ResourceSet resourceSet = new ResourceSetImpl();
@@ -183,7 +183,7 @@ public class Constant {
 	}
 	
 	
-	public static void saveDomainModel(LearningDomain domain) {
+	public synchronized static void saveDomainModel(LearningDomain domain) {
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		ResourceSet resourceSet = new ResourceSetImpl();
@@ -203,7 +203,7 @@ public class Constant {
 		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE + "' file : OK");
 	}
 	
-	public static void saveTeachersModel(Teacher teacher) {
+	public synchronized static void saveTeachersModel(Teacher teacher) {
 		Teachers teachers = loadTeachers();
 		if(teacher != null) {
 			removeTeacherByID(teachers, teacher.getID());

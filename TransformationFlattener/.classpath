@@ -6,8 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="libs/org.antlr.runtime_3.1.b1_3.1.0.jar"/>
-	<classpathentry kind="lib" path="libs/org.antlr.runtime_4.7.2.v20221112-0806.jar"/>
 	<classpathentry kind="lib" path="libs/org.eclipse.emf_2.9.0.v20230211-1150.jar"/>
 	<classpathentry kind="lib" path="libs/org.eclipse.emf.common_2.28.0.v20230223-0922.jar"/>
 	<classpathentry kind="lib" path="libs/org.eclipse.emf.ecore_2.33.0.v20230226-0921.jar"/>
