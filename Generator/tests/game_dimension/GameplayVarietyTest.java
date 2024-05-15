@@ -20,7 +20,7 @@ import generator.Dungeon;
 import generator.Room;
 import generators.ALGAGenerator;
 
-class VarietyTest {
+class GameplayVarietyTest {
 	
 	private List<Dungeon> generatedDungeons; 
 	
