@@ -750,6 +750,7 @@
     <eLiterals name="COUNTRY" value="1"/>
     <eLiterals name="REGIONS" value="1"/>
     <eLiterals name="NONE" value="3"/>
+    <eLiterals name="ISLAND" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AQuestionParam" abstract="true" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="VisualizationQuestionParam" eSuperTypes="#//AQuestionParam">
