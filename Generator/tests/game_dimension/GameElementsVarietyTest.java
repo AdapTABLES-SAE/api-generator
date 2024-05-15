@@ -25,10 +25,6 @@ class GameElementsVarietyTest {
 	
 	@BeforeEach
 	void initDataSet() throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		/*if(!info.getTags().isEmpty()) {
-			String learnerID = new ArrayList<>(info.getTags()).get(0);
-			generatedDungeons = generateXDungeons(new ALGAGenerator(), 75);
-		}*/
 		generator = new ALGAGenerator(true, "LPGPELEM", "Contexts.xmi", "GAMEPLAY_TEST");
 	}
 	
