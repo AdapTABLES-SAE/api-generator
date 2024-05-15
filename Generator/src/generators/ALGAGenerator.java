@@ -36,7 +36,7 @@ public class ALGAGenerator {
 	private Dungeon generatedDungeon;
 	private DungeonElements dungeonElements;
 	
-	public static DidacticDomain DOMAIN = DidacticDomain.MATHEMATICS;
+	public static DidacticDomain DOMAIN = DidacticDomain.HISTORY_GEOGRAPHY;
 	
 	public static boolean MAXIMIZE_ROOMTYPE_ACCESS = false;
 	
@@ -44,7 +44,7 @@ public class ALGAGenerator {
 		for(int i = 0; i < 1; i++) {
 			ALGAGenerator generator;
 			try {
-				generator = new ALGAGenerator("FICTIF01");
+				generator = new ALGAGenerator("HISTORY");
 				generator.generate();
 				generator.printDungeon();
 				generator.saveDungeon("DungeonGen.xmi");
@@ -56,6 +56,13 @@ public class ALGAGenerator {
 				e.printStackTrace();
 			} 	
 		}
+	}
+	/**
+	 * This method enables you to set up the domain of the generator (MATHEMATIC, JUDO, HISTORY_GEOGRAPHY..) 
+	 * @param targetedDomain
+	 */
+	public void setLearningDomain(DidacticDomain targetedDomain) {
+		DOMAIN = targetedDomain;
 	}
 	
 	public void resetLearnerProgress() {

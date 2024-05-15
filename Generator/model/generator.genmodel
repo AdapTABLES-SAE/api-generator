@@ -101,6 +101,7 @@
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/COUNTRY"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/REGIONS"/>
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EGeographyValue/ISLAND"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="generator.ecore#//EHistoryTarget">
       <genEnumLiterals ecoreEnumLiteral="generator.ecore#//EHistoryTarget/EVENT"/>

@@ -33,7 +33,7 @@ public class HGFactGeneratorMembership extends FactGeneratorTemplate {
 
 	@Override
 	protected boolean conditionForMembershipTaskOnSetOfFacts(SetOfFacts setoffacts) {
-		return true;
+		return !setoffacts.getWrongData().isEmpty();
 	}
 
 	@Override

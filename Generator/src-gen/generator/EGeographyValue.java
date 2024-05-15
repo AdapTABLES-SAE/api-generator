@@ -56,7 +56,16 @@ public enum EGeographyValue implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NONE(3, "NONE", "NONE");
+	NONE(3, "NONE", "NONE"),
+	/**
+	* The '<em><b>ISLAND</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #ISLAND_VALUE
+	* @generated
+	* @ordered
+	*/
+	ISLAND(4, "ISLAND", "ISLAND");
 
 	/**
 	 * The '<em><b>CITY</b></em>' literal value.
@@ -103,12 +112,24 @@ public enum EGeographyValue implements Enumerator {
 	public static final int NONE_VALUE = 3;
 
 	/**
+	 * The '<em><b>ISLAND</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ISLAND
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ISLAND_VALUE = 4;
+
+	/**
 	 * An array of all the '<em><b>EGeography Value</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final EGeographyValue[] VALUES_ARRAY = new EGeographyValue[] { CITY, COUNTRY, REGIONS, NONE, };
+	private static final EGeographyValue[] VALUES_ARRAY = new EGeographyValue[] { CITY, COUNTRY, REGIONS, NONE,
+			ISLAND, };
 
 	/**
 	 * A public read-only list of all the '<em><b>EGeography Value</b></em>' enumerators.
@@ -170,6 +191,8 @@ public enum EGeographyValue implements Enumerator {
 			return COUNTRY;
 		case NONE_VALUE:
 			return NONE;
+		case ISLAND_VALUE:
+			return ISLAND;
 		}
 		return null;
 	}
