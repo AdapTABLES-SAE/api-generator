@@ -21,6 +21,7 @@ import generator.Gameplay;
 import generator.Room;
 import generator.Structure;
 import generators.ALGAGenerator;
+import structures.DidacticDomain;
 
 class PreferencesSelectionTest {
 	
@@ -32,7 +33,7 @@ class PreferencesSelectionTest {
 		initializeDefaultAbilities();
 		if(!info.getTags().isEmpty()) {
 			String learnerID = new ArrayList<>(info.getTags()).get(0);
-			generatedDungeons = generateXDungeons(new ALGAGenerator(true, learnerID, "Contexts.xmi", "GAMEPLAY_TEST"), 75);
+			generatedDungeons = generateXDungeons(new ALGAGenerator(DidacticDomain.MATHEMATICS, true, learnerID, "Contexts.xmi", "GAMEPLAY_TEST"), 75);
 		}
 	}
 	
@@ -145,7 +146,7 @@ class PreferencesSelectionTest {
 	@Test
 	void everythingIsBoughtAndActivatedTest() throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		Map<String, Boolean> items = initialiseItemMap(defaultLockedAbilities);
-		ALGAGenerator generator = new ALGAGenerator(true, "LP02GP", "Contexts.xmi", "GAMEPLAY_TEST");
+		ALGAGenerator generator = new ALGAGenerator(DidacticDomain.MATHEMATICS, true, "LP02GP", "Contexts.xmi", "GAMEPLAY_TEST");
 		while(!isAllAppeared(items)) {
 			Dungeon dungeon = generator.generate();
 			for(String ability: defaultLockedAbilities) {
@@ -165,7 +166,7 @@ class PreferencesSelectionTest {
 		List<String> unlockedAbilities = new ArrayList<>();
 		unlockedAbilities.add("CATCHABLE");
 		Map<String, Boolean> items = initialiseItemMap(unlockedAbilities);
-		ALGAGenerator generator = new ALGAGenerator(true, "LP04GP", "Contexts.xmi", "GAMEPLAY_TEST");
+		ALGAGenerator generator = new ALGAGenerator(DidacticDomain.MATHEMATICS, true, "LP04GP", "Contexts.xmi", "GAMEPLAY_TEST");
 		while(!isAllAppeared(items)) {
 			Dungeon dungeon = generator.generate();
 			for(String ability: unlockedAbilities) {  

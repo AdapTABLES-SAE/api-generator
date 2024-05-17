@@ -18,6 +18,7 @@ import generator.Room;
 import generator.MTCompletion2;
 import generator.MTRecontruction;
 import generators.ALGAGenerator;
+import structures.DidacticDomain;
 
 class MathTaskGameplaySwitchTest {
 
@@ -26,8 +27,8 @@ class MathTaskGameplaySwitchTest {
 	@BeforeEach
 	void initDataSet(TestInfo info) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		String learnerID = new ArrayList<>(info.getTags()).get(0);
-		generatedLinearDungeons = generateXDungeons(new ALGAGenerator(true, learnerID,  "Contexts.xmi", "LINEAR_GENERATION_TEST"), 50);
-		generatedLabyrinthineDungeons = generateXDungeons(new ALGAGenerator(true, learnerID, "Contexts.xmi", "LABYRINTHINE_GENERATION_TEST"), 50);
+		generatedLinearDungeons = generateXDungeons(new ALGAGenerator(DidacticDomain.MATHEMATICS, true, learnerID,  "Contexts.xmi", "LINEAR_GENERATION_TEST"), 50);
+		generatedLabyrinthineDungeons = generateXDungeons(new ALGAGenerator(DidacticDomain.MATHEMATICS, true, learnerID, "Contexts.xmi", "LABYRINTHINE_GENERATION_TEST"), 50);
 	}
 
 	@Test

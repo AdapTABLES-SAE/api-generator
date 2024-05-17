@@ -20,6 +20,7 @@ import jakarta.ws.rs.core.MediaType;
 import managers.Constant;
 import managers.LearnerPlayerManager;
 import managers.ModelsManager;
+import structures.DidacticDomain;
 
 /**
  * Paths : 
@@ -41,7 +42,7 @@ public class PurchaseActivationResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getActivatedItems(@PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, playerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME, true));
 		return manager.getItemsStatus().toJSONString();
 	}
@@ -51,7 +52,7 @@ public class PurchaseActivationResource {
 	@Produces(MediaType.TEXT_PLAIN)
 	public void resetItems(@PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH,  playerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME,true));
 		manager.resetPlayerProgress();
 	}
@@ -61,7 +62,7 @@ public class PurchaseActivationResource {
 	@Produces(MediaType.TEXT_PLAIN)
 	public void resetItems(@PathParam("classroomID") String classID, @PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, playerID, Constant.CLASSROOMS_FILE, classID, true));
 		manager.resetPlayerProgress();
 	}
@@ -71,7 +72,7 @@ public class PurchaseActivationResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getActivatedItems(@PathParam("classroomID") String classID, @PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH,  playerID, Constant.CLASSROOMS_FILE, classID, true));
 		return manager.getItemsStatus().toJSONString();
 	}
@@ -88,7 +89,7 @@ public class PurchaseActivationResource {
 			e.printStackTrace();
 		}
 		String classID = obj.containsKey("classroomID")? (String) obj.get("classroomID"): Constant.DEFAULT_CLASSROOM_NAME;
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) obj.get("learnerID"), Constant.CLASSROOMS_FILE, classID, true));
 		manager.setItemsStatus(obj);
 	}

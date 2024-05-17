@@ -41,11 +41,11 @@ public class FactGenerator {
 	public static void  generateQuestionableFactsByTask(ModelsManager modelsManager, DungeonElements dungeonElements, ResultsByTask resBytask) {  
 		FactGeneratorTemplate factGenerator;
 		
-		if(ALGAGenerator.DOMAIN.equals(DidacticDomain.MATHEMATICS)) {
+		if(modelsManager.getDidacticDomain().equals(DidacticDomain.MATHEMATICS)) {
 			factGenerator = getCorrectMathFactsGenerators(dungeonElements, resBytask.getTask());
-		} else if(ALGAGenerator.DOMAIN.equals(DidacticDomain.HISTORY_GEOGRAPHY)) {
+		} else if(modelsManager.getDidacticDomain().equals(DidacticDomain.HISTORY_GEOGRAPHY)) {
 			factGenerator = getCorrectHGFactsGenerators(modelsManager, dungeonElements, resBytask.getTask());
-		} else if(ALGAGenerator.DOMAIN.equals(DidacticDomain.JUDO)){
+		} else if(modelsManager.getDidacticDomain().equals(DidacticDomain.JUDO)){
 			factGenerator = getCorrectJudoFactsGenerators(modelsManager, dungeonElements, resBytask.getTask());
 		} else {
 			factGenerator = getCorrectSolarSystemFactsGenerators(modelsManager, dungeonElements, resBytask.getTask());
@@ -154,11 +154,11 @@ public class FactGenerator {
 	public static void generateQuestionedFact(ModelsManager modelsManager, DungeonElements dungeonElements) throws Exception {
 		FactGeneratorTemplate factGenerator; 
 		for (RoomElements roomElements : dungeonElements.getRoomsElements()) {
-			if(ALGAGenerator.DOMAIN.equals(DidacticDomain.MATHEMATICS)) {
+			if(modelsManager.getDidacticDomain().equals(DidacticDomain.MATHEMATICS)) {
 				factGenerator = getCorrectMathFactsGenerators(dungeonElements, roomElements.getTask());
-			} else if(ALGAGenerator.DOMAIN.equals(DidacticDomain.HISTORY_GEOGRAPHY)) {
+			} else if(modelsManager.getDidacticDomain().equals(DidacticDomain.HISTORY_GEOGRAPHY)) {
 				factGenerator = getCorrectHGFactsGenerators(modelsManager, dungeonElements, roomElements.getTask());
-			} else if(ALGAGenerator.DOMAIN.equals(DidacticDomain.JUDO)){
+			} else if(modelsManager.getDidacticDomain().equals(DidacticDomain.JUDO)){
 				factGenerator = getCorrectJudoFactsGenerators(modelsManager, dungeonElements, roomElements.getTask());
 			} else {
 				factGenerator = getCorrectSolarSystemFactsGenerators(modelsManager, dungeonElements, roomElements.getTask());

@@ -19,6 +19,7 @@ import managers.Constant;
 import managers.LearningPathIDisNull;
 import managers.ModelsManager;
 import managers.PathManager;
+import structures.DidacticDomain;
 
 @Path("/path")
 public class LearningPathResource {
@@ -67,7 +68,7 @@ public class LearningPathResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String buildObjectiveLevelParams2JSON(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new PathManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME,  true));
 		return manager.buildJSONObjectiveLevel(manager.getLearningPath()).toJSONString();
 	}
@@ -77,7 +78,7 @@ public class LearningPathResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String buildOTrainingPathJSON(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new PathManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME,  true));
 		return manager.buildJSONTrainingPath(manager.getLearningPath()).toJSONString();
 	}
@@ -87,7 +88,7 @@ public class LearningPathResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String buildObjectiveLevelParams2JSON(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		manager = new PathManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new PathManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, Constant.CLASSROOMS_FILE, classID,  true));
 		return manager.buildJSONObjectiveLevel(manager.getLearningPath()).toJSONString();
 	}

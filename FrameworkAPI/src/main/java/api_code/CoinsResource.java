@@ -20,6 +20,7 @@ import jakarta.ws.rs.core.MediaType;
 import managers.Constant;
 import managers.LearnerPlayerManager;
 import managers.ModelsManager;
+import structures.DidacticDomain;
 
 /**
  * Paths : 
@@ -41,7 +42,7 @@ public class CoinsResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getCoins(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, 
 				Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME, true));
 		return manager.getLearnerCoins().toJSONString();
@@ -52,7 +53,7 @@ public class CoinsResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getCoins(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, 
 				Constant.CLASSROOMS_FILE, classID, true));
 		return manager.getLearnerCoins().toJSONString();
@@ -70,7 +71,7 @@ public class CoinsResource {
 			e.printStackTrace();
 		}
 		String classID = obj.containsKey("classroomID")? (String) obj.get("classroomID"): Constant.DEFAULT_CLASSROOM_NAME;
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, 
 				Constant.CLASSROOMS_FILE, classID, true));
 		manager.setLearnerCoins(obj);

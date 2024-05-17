@@ -30,7 +30,7 @@ import structures.DidacticDomain;
 
 public class ModelsManager {
 	
-	
+	private DidacticDomain domain; 
 	private ResourceSet resourceSet;
 	private boolean launchedFromAPI = false;
 	public boolean launchedFromTEST = false;
@@ -50,8 +50,7 @@ public class ModelsManager {
 	private static String OUTPUT_MODELS_PATH = "outputmodels/";
 	private static String OUTPUT_MODELS_PATH_TEST = "tests/modelsForTests/output/";
 	private static String INPUT_LEARNER_MODELS_PATH = "learnerPlayers/";
-	private static String[] INPUT_MODELS_NAMES = {"Contexts.xmi", "GameDescription.xmi", 
-			didacticDomainFileNames.get(ALGAGenerator.DOMAIN), "LearningDomain.xmi", "Relations.xmi", ""};
+	private static String[] INPUT_MODELS_NAMES = new String[6];
 	
 	private static final String DEFAULT_CONTEXTID = "default";
 	
@@ -97,50 +96,68 @@ public class ModelsManager {
 		return (LearnerPlayer) resource.getContents().get(0);
 	}
 	
-	public ModelsManager(boolean isForTest, String learnerID,  String contextsFileName, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+	public ModelsManager(DidacticDomain domain, boolean isForTest, String learnerID,  String contextsFileName, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		resourceSet = new ResourceSetImpl();
 		launchedFromTEST = isForTest;
 		if(launchedFromTEST) { INPUT_MODELS_PATH = INPUT_MODELS_PATH_TEST; OUTPUT_MODELS_PATH = OUTPUT_MODELS_PATH_TEST; }
+		this.domain = domain;
+		initialiseInputModels(contextsFileName);
 		setLearnerPlayerFileName(learnerID); 
 		if(!contextsFileName.isEmpty()) { INPUT_MODELS_NAMES[0] = contextsFileName; }
 		loadInputModels(contextID);
 	}
 	
-	public ModelsManager(boolean isForTest, String learnerID,  String contextsFileName) throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		this(isForTest, learnerID, contextsFileName, DEFAULT_CONTEXTID);
+	public ModelsManager(DidacticDomain domain, boolean isForTest, String learnerID,  String contextsFileName) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		this(domain, isForTest, learnerID, contextsFileName, DEFAULT_CONTEXTID);
 	}
 
-	public ModelsManager(String learnerID, String contextsFileName, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {	
-		this(false, learnerID, contextsFileName, contextID);
+	public ModelsManager(DidacticDomain domain, String learnerID, String contextsFileName, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {	
+		this(domain, false, learnerID, contextsFileName, contextID);
 	}
 
-	public ModelsManager(String learnerID, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		this(learnerID, "", contextID);
+	public ModelsManager(DidacticDomain domain, String learnerID, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		this(domain, learnerID, "", contextID);
 	}
 	
-	public ModelsManager(String learnerID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		this(learnerID, "", DEFAULT_CONTEXTID);
+	public ModelsManager(DidacticDomain domain, String learnerID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		this(domain, learnerID, "", DEFAULT_CONTEXTID);
 	}
 	
-	public ModelsManager(String inputPath, String outputPath, String learnerID, boolean lauchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+	public ModelsManager(DidacticDomain domain, String inputPath, String outputPath, String learnerID, boolean lauchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 
-		this(inputPath, outputPath, learnerID, "", DEFAULT_CONTEXTID, lauchedFromAPI);
+		this(domain, inputPath, outputPath, learnerID, "", DEFAULT_CONTEXTID, lauchedFromAPI);
 	}
 	
-	public ModelsManager(String inputPath, String outputPath, String learnerID, String contextsFileName, boolean launchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+	public ModelsManager(DidacticDomain domain, String inputPath, String outputPath, String learnerID, String contextsFileName, boolean launchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		//System.out.println(INPUT_MODELS_PATH);
-		this(inputPath, outputPath, learnerID, contextsFileName, DEFAULT_CONTEXTID, launchedFromAPI);
+		this(domain, inputPath, outputPath, learnerID, contextsFileName, DEFAULT_CONTEXTID, launchedFromAPI);
 	}
 	
-	public ModelsManager(String inputPath, String outputPath, String learnerID, String contextsFileName, String contextID,  boolean launchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+	public ModelsManager(DidacticDomain domain, String inputPath, String outputPath, String learnerID, String contextsFileName, String contextID,  boolean launchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		//System.out.println(INPUT_MODELS_PATH);
 		resourceSet = new ResourceSetImpl();
 		INPUT_MODELS_PATH = inputPath;
 		OUTPUT_MODELS_PATH = outputPath;
 		this.launchedFromAPI = launchedFromAPI;
-		if(!contextsFileName.isEmpty()) { INPUT_MODELS_NAMES[0] = contextsFileName; }
+		this.domain = domain;
+		initialiseInputModels(contextsFileName);
+		//if(!contextsFileName.isEmpty()) { INPUT_MODELS_NAMES[0] = ; }
 		setLearnerPlayerFileName(learnerID); 
 		loadInputModels(contextID);
+	}
+	
+	public void initialiseInputModels(String contextFileName) { 
+		INPUT_MODELS_NAMES[0] = contextFileName.isEmpty()? "Contexts.xmi": contextFileName;
+		INPUT_MODELS_NAMES[1] = "GameDescription.xmi";
+		INPUT_MODELS_NAMES[2] = didacticDomainFileNames.get(this.domain);
+		INPUT_MODELS_NAMES[3] = "LearningDomain.xmi";
+		INPUT_MODELS_NAMES[4] = "Relations.xmi";
+		INPUT_MODELS_NAMES[5] = "";
+	}
+	
+
+	public DidacticDomain getDidacticDomain() {
+		return domain;
 	}
 
 	public void saveGeneratedModel(Dungeon generatedDungeon, String outFileName) {
@@ -281,6 +298,7 @@ public class ModelsManager {
 		File gamedescription = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[1]);
 		File knowledge = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[2]);
 		File learningPaths = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[3]);
+		System.out.println(learningPaths.getAbsolutePath());
 		File relations = new File(INPUT_MODELS_PATH + INPUT_MODELS_NAMES[4]);
 		File learnerPlayer = new File(INPUT_MODELS_PATH + INPUT_LEARNER_MODELS_PATH + INPUT_MODELS_NAMES[5]);
 		

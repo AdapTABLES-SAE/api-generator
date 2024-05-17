@@ -36,15 +36,19 @@ public class ALGAGenerator {
 	private Dungeon generatedDungeon;
 	private DungeonElements dungeonElements;
 	
-	public static DidacticDomain DOMAIN = DidacticDomain.MATHEMATICS;
+	//public DidacticDomain DOMAIN = DidacticDomain.HISTORY_GEOGRAPHY;
 	
 	public static boolean MAXIMIZE_ROOMTYPE_ACCESS = false;
 	
 	public static void main(String[] args) {		
-		for(int i = 0; i < 1; i++) {
+		for(int i = 0; i < 10; i++) {
 			ALGAGenerator generator;
 			try {
-				generator = new ALGAGenerator("HISTORY");
+				if(i%2==0) {
+				generator = new ALGAGenerator(DidacticDomain.HISTORY_GEOGRAPHY, "HISTORY");
+				} else {
+				generator = new ALGAGenerator(DidacticDomain.MATHEMATICS, "FICTIF01");	
+				}
 				generator.generate();
 				generator.printDungeon();
 				generator.saveDungeon("DungeonGen.xmi");
@@ -61,28 +65,31 @@ public class ALGAGenerator {
 	 * This method enables you to set up the domain of the generator (MATHEMATIC, JUDO, HISTORY_GEOGRAPHY..) 
 	 * @param targetedDomain
 	 */
-	public void setLearningDomain(DidacticDomain targetedDomain) {
+/*	public void setLearningDomain(DidacticDomain targetedDomain) {
 		DOMAIN = targetedDomain;
-	}
+	}*/
 	
 	public void resetLearnerProgress() {
 		modelAccess.getLearnerPlayer().getProgression().setLearnerProgress(new LearnerProgressImpl());
 		modelAccess.saveLearnerPlayerModel();
 	}
 	
-	public ALGAGenerator(String learnerID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		if(DOMAIN.equals(DidacticDomain.HISTORY_GEOGRAPHY)){ MAXIMIZE_ROOMTYPE_ACCESS = true; }
-		modelAccess = new ModelsManager(learnerID);
+	public ALGAGenerator(DidacticDomain domain, String learnerID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		//setLearningDomain(domain);
+		if(domain.equals(DidacticDomain.HISTORY_GEOGRAPHY)){ MAXIMIZE_ROOMTYPE_ACCESS = true; }
+		modelAccess = new ModelsManager(domain, learnerID);
 	}
 
-	public ALGAGenerator(boolean forTest, String learnerID, String contextsFileName, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		if(DOMAIN.equals(DidacticDomain.HISTORY_GEOGRAPHY)){ MAXIMIZE_ROOMTYPE_ACCESS = true; }
-		modelAccess = new ModelsManager(forTest, learnerID, contextsFileName, contextID);
+	public ALGAGenerator(DidacticDomain domain, boolean forTest, String learnerID, String contextsFileName, String contextID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		//setLearningDomain(domain);
+		if(domain.equals(DidacticDomain.HISTORY_GEOGRAPHY)){ MAXIMIZE_ROOMTYPE_ACCESS = true; }
+		modelAccess = new ModelsManager(domain, forTest, learnerID, contextsFileName, contextID);
 	}
 	
-	public ALGAGenerator(String inputPath, String outputPath, String learnerID, String contextsFILE, String contextID,  boolean lauchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		if(DOMAIN.equals(DidacticDomain.HISTORY_GEOGRAPHY)){ MAXIMIZE_ROOMTYPE_ACCESS = true; }
-		modelAccess = new ModelsManager(inputPath, outputPath, learnerID, contextsFILE, contextID, lauchedFromAPI);
+	public ALGAGenerator(DidacticDomain domain, String inputPath, String outputPath, String learnerID, String contextsFILE, String contextID,  boolean lauchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		//setLearningDomain(domain);
+		if(domain.equals(DidacticDomain.HISTORY_GEOGRAPHY)){ MAXIMIZE_ROOMTYPE_ACCESS = true; }
+		modelAccess = new ModelsManager(domain, inputPath, outputPath, learnerID, contextsFILE, contextID, lauchedFromAPI);
 	}
 	
 	public void saveDungeon(String fileName) {

@@ -19,6 +19,7 @@ import exceptions.NonExistantLearnerPlayerException;
 import generator.Dungeon;
 import generator.Room;
 import generators.ALGAGenerator;
+import structures.DidacticDomain;
 
 class GameplayVarietyTest {
 	
@@ -28,7 +29,7 @@ class GameplayVarietyTest {
 	void initDataSet(TestInfo info) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		if(!info.getTags().isEmpty()) {
 			String learnerID = new ArrayList<>(info.getTags()).get(0);
-			generatedDungeons = generateXDungeons(new ALGAGenerator(true, learnerID, "Contexts.xmi", "GAMEPLAY_TEST"), 75);
+			generatedDungeons = generateXDungeons(new ALGAGenerator(DidacticDomain.MATHEMATICS, true, learnerID, "Contexts.xmi", "GAMEPLAY_TEST"), 75);
 		}
 	}
 	

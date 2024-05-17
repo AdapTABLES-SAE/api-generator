@@ -21,6 +21,7 @@ import generator.QuestionableFactResult;
 import generator.ResultsByTask;
 import generator.impl.QuestionableFactResultImpl;
 import generators.ALGAGenerator;
+import structures.DidacticDomain;
 
 class FactsSelectionTest { //TODO : refaire proprement
 	
@@ -29,7 +30,7 @@ class FactsSelectionTest { //TODO : refaire proprement
 	@BeforeEach
 	void initDataSet(TestInfo info) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		String learnerID = new ArrayList<>(info.getTags()).get(0);
-		generator = new ALGAGenerator(true, learnerID, "Contexts.xmi", "FACT_TEST");
+		generator = new ALGAGenerator(DidacticDomain.MATHEMATICS, true, learnerID, "Contexts.xmi", "FACT_TEST");
 	}
 
 	@Test // IT TAKES INFITY BUT FINISHES

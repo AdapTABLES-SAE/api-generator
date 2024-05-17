@@ -19,6 +19,7 @@ import managers.Constant;
 import managers.LearnerPlayerManager;
 import managers.ModelsManager;
 import managers.NonExistantObjectiveOrLevelException;
+import structures.DidacticDomain;
 
 /**
  * Path : http://localhost:8080/FrameworkAPI/results 
@@ -43,7 +44,7 @@ public class LearnerPlayerResultsResource {
 			e.printStackTrace();
 		}
 		
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) obj.get( "learnerID"),
 				Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME, true));
 				
@@ -63,7 +64,7 @@ public class LearnerPlayerResultsResource {
 			e.printStackTrace();
 		}
 		
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) obj.get( "learnerID"),
 				Constant.CLASSROOMS_FILE, classID, true));
 				
@@ -83,7 +84,7 @@ public class LearnerPlayerResultsResource {
 			e.printStackTrace();
 		}
 		
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) obj.get( "learnerID"),
 				Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME, true));
 				
@@ -103,7 +104,7 @@ public class LearnerPlayerResultsResource {
 			e.printStackTrace();
 		}
 		
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) obj.get( "learnerID"),
 				Constant.CLASSROOMS_FILE, classID, true));
 				
@@ -117,7 +118,7 @@ public class LearnerPlayerResultsResource {
 			@PathParam("objID") String objectiveID, @PathParam("levelID") String levelID, 
 			@Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException, NonExistantObjectiveOrLevelException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) learnerID,
 				Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME, true));
 		return manager.getTaskProgresses(objectiveID, levelID).toJSONString();
@@ -129,7 +130,7 @@ public class LearnerPlayerResultsResource {
 	public String buildObjectiveLevelParams2JSON(@PathParam("classroomID") String classID, @PathParam("learnerID") String learnerID,
 			@PathParam("objID") String objectiveID, @PathParam("levelID") String levelID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException, NonExistantObjectiveOrLevelException {  
 		Constant.PROJECT_PATH = app.getRealPath("");
-		manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID,
 				Constant.CLASSROOMS_FILE, classID, true));
 		return manager.getTaskProgresses(objectiveID, levelID).toJSONString();

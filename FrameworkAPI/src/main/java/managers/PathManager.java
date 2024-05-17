@@ -57,6 +57,7 @@ import generator.impl.MultipleChoiceImpl;
 import generator.impl.ObjectiveImpl;
 import generator.impl.PrerequisiteImpl;
 import generators.ALGAGenerator;
+import structures.DidacticDomain;
 
 public class PathManager {
 
@@ -368,7 +369,7 @@ public class PathManager {
 		for(Classroom classroom : classrooms.getClassrooms()) {
 			for(LearnerPlayer LP : classroom.getLearnerPlayers()) {
 				if(LP.getLearningpath().getID().equals(path.getID())) {
-					manager = new LearnerPlayerManager(new ModelsManager(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+					manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 							Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, LP.getID(),
 							Constant.CLASSROOMS_FILE, classroom.getID(), true));
 					manager.resetLearnerProgress(manager);

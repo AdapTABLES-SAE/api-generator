@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:LearnerPlayer
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:generator="http://www.example.org/generator"
+    name="FICTIF05"
+    ID="FICTIF05">
+  <progression>
+    <playerProgress
+        currentLevel="9">
+      <items>
+        <items>
+          <equipment
+              href="../GameDescription.xmi#BELT"/>
+        </items>
+      </items>
+    </playerProgress>
+    <learnerProgress/>
+  </progression>
+  <learningpath
+      href="../LearningDomain.xmi#HGPATH"/>
+  <statistics
+      maxGameLevelReached="9"
+      nbLevelsGenerated="609"/>
+</generator:LearnerPlayer>

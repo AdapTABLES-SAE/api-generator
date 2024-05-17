@@ -35,8 +35,14 @@ public class Constant {
 	 */
 	public static final String ECORE_PATH = "models/ecore/";
 	public static final String FLATNER_PATH = "flattener/";
-	public static final String INPUT_MODELS_PATH = "models/inputmodels/";
-	public static final String OUTPUT_MODELS_PATH = "models/outputmodels/";
+	public static final String INPUT_MODELS_PATH_MATH = "models/inputmodels/";
+	public static final String OUTPUT_MODELS_PATH_MATH = "models/outputmodels/math/";
+	public static final String INPUT_MODELS_PATH_HG = "models/inputmodels_HG/";
+	public static final String OUTPUT_MODELS_PATH_HG = "models/outputmodels/hg/";
+
+	public static String INPUT_MODELS_PATH;
+	public static String OUTPUT_MODELS_PATH;
+
 	
 	/*
 	 * CONTEXT FILE INFORMATION

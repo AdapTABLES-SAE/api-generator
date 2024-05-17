@@ -1,4 +1,4 @@
- package api_code;
+package api_code;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -20,6 +20,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 import managers.Constant;
+import structures.DidacticDomain;
 
 /**
  * Paths : 
@@ -44,14 +45,29 @@ public class GenerationResource {
 	@Produces(MediaType.TEXT_XML)
 	public String generate(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
 		System.out.println("ID learner ="+learnerID);
-		return generateDungeon2String("", learnerID, app);
+		return generateDungeon2String(DidacticDomain.MATHEMATICS, "", learnerID, app);
+	}
+	
+	@GET
+	@Path("/HG/learner/{learnerID}")
+	@Produces(MediaType.TEXT_XML)
+	public String generateHG(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
+		System.out.println("ID learner ="+learnerID);
+		return generateDungeon2String(DidacticDomain.HISTORY_GEOGRAPHY, "", learnerID, app);
 	}
 	
 	@GET
 	@Path("/classroom/{classID}/learner/{learnerID}")
 	@Produces(MediaType.TEXT_XML)
 	public String generate(@PathParam("classID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
-		return generateDungeon2String(classID, learnerID, app);
+		return generateDungeon2String(DidacticDomain.MATHEMATICS, classID, learnerID, app);
+	}
+	
+	@GET
+	@Path("/HG/classroom/{classID}/learner/{learnerID}")
+	@Produces(MediaType.TEXT_XML)
+	public String generateHG(@PathParam("classID") String classID, @PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
+		return generateDungeon2String(DidacticDomain.HISTORY_GEOGRAPHY, classID, learnerID, app);
 	}
 	
 	/**
@@ -63,11 +79,20 @@ public class GenerationResource {
 	 * @throws NonExistantLearnerPlayerException
 	 * @throws ContextNotFoundException 
 	 */
-	private String generateDungeon2String(String classroomID, String learnerID, ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+	private String generateDungeon2String(DidacticDomain domain, String classroomID, String learnerID, ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		Constant.PROJECT_PATH = app.getRealPath("");
 		System.out.println("Project : "+Constant.PROJECT_PATH);
 		
-		generateDungeon(classroomID, learnerID);
+		if(domain.equals(DidacticDomain.MATHEMATICS)) {
+			Constant.INPUT_MODELS_PATH = Constant.INPUT_MODELS_PATH_MATH;
+			Constant.OUTPUT_MODELS_PATH = Constant.OUTPUT_MODELS_PATH_MATH;
+		}else {
+			Constant.INPUT_MODELS_PATH = Constant.INPUT_MODELS_PATH_HG;
+			Constant.OUTPUT_MODELS_PATH = Constant.OUTPUT_MODELS_PATH_HG;
+		}
+		
+
+		generateDungeon(domain, classroomID, learnerID);
 		File xmlFile = new File(Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH + "/DungeonGen_"+ learnerID +".xml");
 		Reader fileReader;
 		StringBuilder sb = new StringBuilder();
@@ -98,8 +123,8 @@ public class GenerationResource {
 	 * @throws NonExistantLearnerPlayerException
 	 * @throws ContextNotFoundException 
 	 */
-	private void generateDungeon(String classroomID, String learnerPlayerID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		ALGAGenerator generator = new ALGAGenerator(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+	private void generateDungeon(DidacticDomain domain, String classroomID, String learnerPlayerID) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		ALGAGenerator generator = new ALGAGenerator(domain, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
 				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, 
 				 learnerPlayerID, Constant.CLASSROOMS_FILE, classroomID.isEmpty()? Constant.DEFAULT_CLASSROOM_NAME: classroomID, true); 
 		generator.generate();

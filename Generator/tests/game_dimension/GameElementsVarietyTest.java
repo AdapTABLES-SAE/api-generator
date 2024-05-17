@@ -18,6 +18,7 @@ import generator.Room;
 import generator.StatementElementType;
 import generator.Structure;
 import generators.ALGAGenerator;
+import structures.DidacticDomain;
 
 class GameElementsVarietyTest {
 	
@@ -25,7 +26,7 @@ class GameElementsVarietyTest {
 	
 	@BeforeEach
 	void initDataSet() throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		generator = new ALGAGenerator(true, "LPGPELEM", "Contexts.xmi", "GAMEPLAY_TEST");
+		generator = new ALGAGenerator(DidacticDomain.MATHEMATICS, true, "LPGPELEM", "Contexts.xmi", "GAMEPLAY_TEST");
 	}
 	
 	@Test
