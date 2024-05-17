@@ -22,6 +22,7 @@ import generator.Ability;
 import generator.Dungeon;
 import generator.Room;
 import generators.ALGAGenerator;
+import structures.DidacticDomain;
 
 class GameplaySelectionTest {
 	
@@ -33,7 +34,7 @@ class GameplaySelectionTest {
 		gameplaysByAbility = new HashMap<>();
 		instanciateGameplayByAbilities();
 		String learnerID = new ArrayList<>(info.getTags()).get(0);
-		generatedDungeons = generateXDungeons(new ALGAGenerator(true, learnerID, "Classrooms.xmi", "GAMEPLAY_TEST"), 150);
+		generatedDungeons = generateXDungeons(new ALGAGenerator(DidacticDomain.MATHEMATICS, true, learnerID, "Classrooms.xmi", "GAMEPLAY_TEST"), 150);
 	}
 	
 	private List<Dungeon> generateXDungeons(ALGAGenerator generator, int quantityX) {

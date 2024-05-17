@@ -1,2 +1,4 @@
 *.class
 Generator/bin
+*.classpath
+*.project

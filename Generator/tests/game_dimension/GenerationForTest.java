@@ -4,13 +4,14 @@ import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
 import flattener.Main;
 import generators.ALGAGenerator;
+import structures.DidacticDomain;
 
 public class GenerationForTest {
 
 	public static void main(String[] args) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		// TODO Auto-generated method stub
 		for(int i=0; i < 4; i++) {
-			ALGAGenerator generator = new ALGAGenerator(true, "LP05GP", "Contexts.xmi", "GAMEPLAY_TEST");
+			ALGAGenerator generator = new ALGAGenerator(DidacticDomain.MATHEMATICS, true, "LP05GP", "Contexts.xmi", "GAMEPLAY_TEST");
 			generator.generate();
 			generator.saveDungeon("DungeonGen"+i+".xmi");
 			Main.transformModel("C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\", 
