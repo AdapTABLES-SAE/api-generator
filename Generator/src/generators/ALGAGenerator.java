@@ -61,7 +61,7 @@ public class ALGAGenerator {
 	 * This method enables you to set up the domain of the generator (MATHEMATIC, JUDO, HISTORY_GEOGRAPHY..) 
 	 * @param targetedDomain
 	 */
-	public void setLearningDomain(DidacticDomain targetedDomain) {
+	public static void setLearningDomain(DidacticDomain targetedDomain) {
 		DOMAIN = targetedDomain;
 	}
 	
