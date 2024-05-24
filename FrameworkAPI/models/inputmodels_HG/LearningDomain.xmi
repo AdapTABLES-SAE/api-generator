@@ -1,38 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<generator:LearningDomain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator">
-  <learningpaths name="HGPATHFULL" ID="HGPATHFULL">
-    <objectives ID="HGF_O1" name="HGF_O1">
-      <levels xsi:type="generator:HGLevel" ID="HGF_O1_L1">
-        <tasks xsi:type="generator:LocateOnAMap" percentOfApparition="20" ID="HGF_O1_L1_T1" maxTime="30" nbExpectedAnswers="18">
-          <responseModality xsi:type="generator:DynamicMultipleChoice"/>
+<generator:LearningDomain
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:generator="http://www.example.org/generator">
+  <learningpaths
+      name="HGPATHFULL"
+      ID="HGPATHFULL">
+    <objectives
+        ID="HGF_O1"
+        name="HGF_O1">
+      <levels
+          xsi:type="generator:HGLevel"
+          ID="HGF_O1_L1">
+        <tasks
+            xsi:type="generator:LocateOnAMap"
+            percentOfApparition="20"
+            ID="HGF_O1_L1_T1"
+            maxTime="30"
+            nbExpectedAnswers="18">
+          <responseModality
+              xsi:type="generator:DynamicMultipleChoice"/>
         </tasks>
-        <tasks xsi:type="generator:HistoricalEventAssociation" percentOfApparition="15" ID="HGF_O1_L1_T4" nbFacts="2" target="PERIOD">
-          <responseModality xsi:type="generator:DynamicMultipleChoice"/>
+        <tasks
+            xsi:type="generator:HistoricalEventAssociation"
+            percentOfApparition="15"
+            ID="HGF_O1_L1_T4"
+            nbFacts="2"
+            target="PERIOD">
+          <responseModality
+              xsi:type="generator:DynamicMultipleChoice"/>
         </tasks>
-        <tasks xsi:type="generator:HistoricalChronology" percentOfApparition="15" ID="HGF_O1_L1_T9" nbFacts="3" mixDatePeriod="true">
-          <responseModality xsi:type="generator:DynamicMultipleChoice"/>
+        <tasks
+            xsi:type="generator:HistoricalChronology"
+            percentOfApparition="15"
+            ID="HGF_O1_L1_T9"
+            nbFacts="3"
+            mixDatePeriod="true">
+          <responseModality
+              xsi:type="generator:DynamicMultipleChoice"/>
         </tasks>
-        <tasks xsi:type="generator:LegendAMap" percentOfApparition="20" ID="HGF_O1_L1_T10" nbFacts="3" missing="SYMBOL">
-          <responseModality xsi:type="generator:DynamicMultipleChoice"/>
+        <tasks
+            xsi:type="generator:LegendAMap"
+            percentOfApparition="20"
+            ID="HGF_O1_L1_T10"
+            nbFacts="3"
+            missing="SYMBOL">
+          <responseModality
+              xsi:type="generator:DynamicMultipleChoice"/>
         </tasks>
-        <tasks xsi:type="generator:HistoryIdentification" percentOfApparition="15" ID="HGF_01_L1_T12" nbFacts="2">
-          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
+        <tasks
+            xsi:type="generator:HistoryIdentification"
+            percentOfApparition="15"
+            ID="HGF_01_L1_T12"
+            nbFacts="2">
+          <responseModality
+              xsi:type="generator:DynamicMultipleChoice"
+              nbBadChoices="1"/>
         </tasks>
-        <tasks xsi:type="generator:GeographyMembership" percentOfApparition="15" ID="HGF_O1_L1_T1_V2">
-          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="2" nbChoices="4"/>
+        <tasks
+            xsi:type="generator:GeographyMembership"
+            percentOfApparition="15"
+            ID="HGF_O1_L1_T1_V2">
+          <responseModality
+              xsi:type="generator:MultipleChoice"
+              nbBadChoices="2"
+              nbChoices="4"/>
         </tasks>
         <completionCriteria/>
       </levels>
-      <setoffacts href="HistoryGeographyFacts.xmi#//@knowledgefacts.0"/>
-      <setoffacts href="HistoryGeographyFacts.xmi#//@knowledgefacts.1"/>
-      <setoffacts href="HistoryGeographyFacts.xmi#//@knowledgefacts.3"/>
-      <setoffacts href="HistoryGeographyFacts.xmi#//@knowledgefacts.4"/>
-      <setoffacts href="HistoryGeographyFacts.xmi#//@knowledgefacts.2"/>
-      <setoffacts href="HistoryGeographyFacts.xmi#//@knowledgefacts.5"/>
-      <setoffacts href="HistoryGeographyFacts.xmi#//@knowledgefacts.6"/>
-      <setoffacts href="HistoryGeographyFacts.xmi#//@knowledgefacts.7"/>
-      <setoffacts href="HistoryGeographyFacts.xmi#//@knowledgefacts.8"/>
+      <setoffacts
+          href="HistoryGeographyFacts.xmi#//@knowledgefacts.0"/>
+      <setoffacts
+          href="HistoryGeographyFacts.xmi#//@knowledgefacts.1"/>
+      <setoffacts
+          href="HistoryGeographyFacts.xmi#//@knowledgefacts.3"/>
+      <setoffacts
+          href="HistoryGeographyFacts.xmi#//@knowledgefacts.4"/>
+      <setoffacts
+          href="HistoryGeographyFacts.xmi#//@knowledgefacts.2"/>
+      <setoffacts
+          href="HistoryGeographyFacts.xmi#//@knowledgefacts.5"/>
+      <setoffacts
+          href="HistoryGeographyFacts.xmi#//@knowledgefacts.6"/>
+      <setoffacts
+          href="HistoryGeographyFacts.xmi#//@knowledgefacts.7"/>
+      <setoffacts
+          href="HistoryGeographyFacts.xmi#//@knowledgefacts.8"/>
     </objectives>
-    <knowledge href="HistoryGeographyFacts.xmi#/"/>
+    <knowledge
+        href="HistoryGeographyFacts.xmi#/"/>
   </learningpaths>
 </generator:LearningDomain>

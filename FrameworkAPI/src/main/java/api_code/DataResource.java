@@ -175,4 +175,17 @@ public class DataResource {
 		manager = new DataManager(Constant.getTeacher(teacherID));
 		manager.deleteStudent(classroomID, studentID);		
 	}
+	
+	
+	//HG
+	@GET
+    @Path("/student/createhg")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public String createStudentHG(@Context ServletContext app) throws ClassroomNotFoundException, NonExistantLearnerPlayerException  { 
+        Constant.PROJECT_PATH = app.getRealPath("");
+
+        manager = new DataManager();
+        return manager.createStudentHG();
+    }
+
 }

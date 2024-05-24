@@ -9,6 +9,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 import managers.Constant;
+import structures.DidacticDomain;
 
 /**
  * Paths : 
@@ -32,6 +33,17 @@ public class LoginResource {
 	@Path("/learner/{learnerID}")
 	public String learnerLogin(@PathParam("learnerID") String learnerID, @Context ServletContext app) {  
 		Constant.PROJECT_PATH = app.getRealPath("");
+		Constant.changeDomains(DidacticDomain.MATHEMATICS);
+		Classroom classroom = Constant.getClassroom(Constant.DEFAULT_CLASSROOM_NAME);
+		return (classroom == null) || !Constant.doesLearnerBelongsToClassroom(classroom, learnerID)? "KO" : "OK";
+	}
+	
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	@Path("/HG/learner/{learnerID}")
+	public String learnerLoginHG(@PathParam("learnerID") String learnerID, @Context ServletContext app) {  
+		Constant.PROJECT_PATH = app.getRealPath("");
+		Constant.changeDomains(DidacticDomain.HISTORY_GEOGRAPHY);
 		Classroom classroom = Constant.getClassroom(Constant.DEFAULT_CLASSROOM_NAME);
 		return (classroom == null) || !Constant.doesLearnerBelongsToClassroom(classroom, learnerID)? "KO" : "OK";
 	}

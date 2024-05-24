@@ -83,13 +83,7 @@ public class GenerationResource {
 		Constant.PROJECT_PATH = app.getRealPath("");
 		System.out.println("Project : "+Constant.PROJECT_PATH);
 		
-		if(domain.equals(DidacticDomain.MATHEMATICS)) {
-			Constant.INPUT_MODELS_PATH = Constant.INPUT_MODELS_PATH_MATH;
-			Constant.OUTPUT_MODELS_PATH = Constant.OUTPUT_MODELS_PATH_MATH;
-		}else {
-			Constant.INPUT_MODELS_PATH = Constant.INPUT_MODELS_PATH_HG;
-			Constant.OUTPUT_MODELS_PATH = Constant.OUTPUT_MODELS_PATH_HG;
-		}
+		Constant.changeDomains(domain);
 		
 
 		generateDungeon(domain, classroomID, learnerID);

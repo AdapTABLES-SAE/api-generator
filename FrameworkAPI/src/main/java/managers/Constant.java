@@ -20,6 +20,7 @@ import generator.LearningDomain;
 import generator.Teacher;
 import generator.Teachers;
 import generators.ALGAGenerator;
+import structures.DidacticDomain;
 
 public class Constant {
 	
@@ -71,6 +72,16 @@ public class Constant {
 		return null;
 	}
 	
+	public static void changeDomains(DidacticDomain domain) {
+		if(domain.equals(DidacticDomain.MATHEMATICS)) {
+			Constant.INPUT_MODELS_PATH = Constant.INPUT_MODELS_PATH_MATH;
+			Constant.OUTPUT_MODELS_PATH = Constant.OUTPUT_MODELS_PATH_MATH;
+		}else {
+			Constant.INPUT_MODELS_PATH = Constant.INPUT_MODELS_PATH_HG;
+			Constant.OUTPUT_MODELS_PATH = Constant.OUTPUT_MODELS_PATH_HG;
+		}
+	}
+	
 	public static Teacher getTeacher(String teacherID) {
 		Teachers teachers = loadTeachers();  
 		for(Teacher teacher : teachers.getTeachers()) {
@@ -97,7 +108,9 @@ public class Constant {
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		map.put("xmi", new XMIResourceFactoryImpl());
 		File classrooms = new File(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CLASSROOMS_FILE);
-		System.out.println();
+		System.out.println(Constant.CLASSROOMS_FILE);
+		System.out.println(Constant.PROJECT_PATH);
+		System.out.println(Constant.INPUT_MODELS_PATH);
 		Resource resource = resourceSet.createResource(URI.createFileURI(classrooms.getAbsolutePath()));
 		try {
 			resource.load(null);

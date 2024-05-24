@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.UUID;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -410,5 +411,27 @@ public class DataManager {
 		}
 		return false;
 	}
+	
+	
+	//HG
+	public String createStudentHG() {
+        String uniqueID = shorten(UUID.randomUUID().toString());
+
+//        LearnerPlayer learnerHG = new LearnerPlayerImpl();
+//        learnerHG.setID(uniqueID);
+//        learnerHG.setLastName("no last name");
+//        learnerHG.setName("no name");
+//        learnerHG.setProgression(new ProgressionImpl());
+//        learnerHG.getProgression().setLearnerProgress(new LearnerProgressImpl());
+//        learnerHG.getProgression().setPlayerProgress(new PlayerProgressImpl());
+//        learnerHG.setStatistics(new StatisticsImpl());
+//        learner.setLearningpath(createEmptyPath("PATH_MATH"+learner.getID()));
+//        Constant.saveLearnerModel(learner);
+        return uniqueID;
+    }
+
+    private String shorten(String longId) {
+        return longId.substring(0, 8);
+    }
 	
 }
