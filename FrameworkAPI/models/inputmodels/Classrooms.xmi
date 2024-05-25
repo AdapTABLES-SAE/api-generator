@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<generator:Classrooms xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:generator="http://www.example.org/generator">
-  <classrooms ID="default" name="DEFAULT">
-    <learnerPlayers href="learnerPlayers/LearnerPlayer_blemoine.xmi#blemoine"/>
-    <learnerPlayers href="learnerPlayers/LearnerPlayer_dorianla.xmi#dorianla"/>
-    <learnerPlayers href="learnerPlayers/LearnerPlayer_demo1.xmi#demo1"/>
-    <learnerPlayers href="learnerPlayers/LearnerPlayer_demo2.xmi#demo2"/>
-    <learnerPlayers href="learnerPlayers/LearnerPlayer_denis.xmi#denis"/>
-    <learnerPlayers href="learnerPlayers/LearnerPlayer_ingrid.xmi#ingrid"/>
-    <learnerPlayers href="learnerPlayers/LearnerPlayer_rozenn.xmi#rozenn"/>
+<generator:Classrooms
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:generator="http://www.example.org/generator">
+  <classrooms
+      ID="default"
+      name="DEFAULT">
+    <learnerPlayers
+        href="learnerPlayers/LearnerPlayer_blemoine.xmi#blemoine"/>
+    <learnerPlayers
+        href="learnerPlayers/LearnerPlayer_dorianla.xmi#dorianla"/>
+    <learnerPlayers
+        href="learnerPlayers/LearnerPlayer_demo1.xmi#demo1"/>
+    <learnerPlayers
+        href="learnerPlayers/LearnerPlayer_demo2.xmi#demo2"/>
+    <learnerPlayers
+        href="learnerPlayers/LearnerPlayer_denis.xmi#denis"/>
+    <learnerPlayers
+        href="learnerPlayers/LearnerPlayer_ingrid.xmi#ingrid"/>
+    <learnerPlayers
+        href="learnerPlayers/LearnerPlayer_rozenn.xmi#rozenn"/>
   </classrooms>
+  <classrooms
+      ID="HGdefault"
+      name="HGdefault"/>
 </generator:Classrooms>

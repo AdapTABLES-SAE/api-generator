@@ -29,6 +29,7 @@ import generator.Teacher;
 import generator.Teachers;
 import generator.impl.ClassroomImpl;
 import generator.impl.CompletionCriteriaImpl;
+import generator.impl.HGLevelImpl;
 import generator.impl.LearnerPlayerImpl;
 import generator.impl.LearnerProgressImpl;
 import generator.impl.LearningPathImpl;
@@ -39,31 +40,32 @@ import generator.impl.ProgressionImpl;
 import generator.impl.StatisticsImpl;
 import generator.impl.TeacherImpl;
 import generators.ALGAGenerator;
+import structures.DidacticDomain;
 
 public class DataManager {
 
 	private Teacher teacher;
 	ResourceSet resourceSet;
-	
+
 	public DataManager(Teacher teacher) {
 		resourceSet = new ResourceSetImpl();
 		this.teacher = teacher;
 	}
-	
+
 	public DataManager() {
 		resourceSet = new ResourceSetImpl();
 		this.teacher = null;
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	public JSONObject getTeacherDataJSON() {
 		JSONObject teacherJSON = new JSONObject();
-		
+
 		teacherJSON.put("idProf", teacher.getID());
 		teacherJSON.put("name", teacher.getName());
-		
+
 		JSONArray classes = new JSONArray();
-		for(Classroom classroom: teacher.getClassrooms()){
+		for (Classroom classroom : teacher.getClassrooms()) {
 			JSONObject classe = new JSONObject();
 			classe.put("id", classroom.getID());
 			classe.put("name", classroom.getName());
@@ -73,28 +75,28 @@ public class DataManager {
 		teacherJSON.put("classes", classes);
 		return teacherJSON;
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	public JSONArray getTeachersDataJSON() {
 		JSONArray teacherJSON = new JSONArray();
-		
+
 		Teachers teachers = Constant.loadTeachers();
-		for(Teacher teacher: teachers.getTeachers()) {
+		for (Teacher teacher : teachers.getTeachers()) {
 			JSONObject oteacher = new JSONObject();
 			oteacher.put("idProf", teacher.getID());
 			oteacher.put("name", teacher.getName());
-			
+
 			teacherJSON.add(oteacher);
 		}
 		return teacherJSON;
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	public JSONArray getLearnersJSON(String classroomID) throws ClassroomNotFoundException {
 		Classroom classroom = getClassroom(classroomID);
 		JSONArray learnersJSON = new JSONArray();
-		
-		for(LearnerPlayer learner: classroom.getLearnerPlayers()) {
+
+		for (LearnerPlayer learner : classroom.getLearnerPlayers()) {
 			JSONObject learnerJSON = new JSONObject();
 			learnerJSON.put("id", learner.getID());
 			learnerJSON.put("nom", learner.getLastName());
@@ -104,25 +106,25 @@ public class DataManager {
 		}
 		return learnersJSON;
 	}
-	
+
 	private Classroom getClassroom(String classroomID) throws ClassroomNotFoundException {
-		for(Classroom classe : teacher.getClassrooms()) {
-			if(classe.getID().equals(classroomID)) {
+		for (Classroom classe : teacher.getClassrooms()) {
+			if (classe.getID().equals(classroomID)) {
 				return classe;
 			}
 		}
 		throw new ClassroomNotFoundException(teacher.getName(), classroomID);
 	}
-	
+
 	public void addClassroom(JSONObject data) throws ClassroomAlreadyExistsException {
 		Classrooms classrooms = Constant.loadClassrooms();
 		JSONObject classe = (JSONObject) data.get("classe");
 		String classID = (String) classe.get("id");
-		
-		if(containsClassroom(classrooms, classID)) {
+
+		if (containsClassroom(classrooms, classID)) {
 			throw new ClassroomAlreadyExistsException(classID);
 		}
-		
+
 		Classroom classroom = new ClassroomImpl();
 		classroom.setID(classID);
 		classroom.setName((String) classe.get("name"));
@@ -131,13 +133,13 @@ public class DataManager {
 		Constant.saveClassroomsModel(classrooms);
 		Constant.saveTeachersModel(teacher);
 	}
-	
+
 	public void updateClassroom(JSONObject data) throws ClassroomNotFoundException {
 		Classrooms classrooms = Constant.loadClassrooms();
-		//JSONObject classe = (JSONObject) data.get("classe");
+		// JSONObject classe = (JSONObject) data.get("classe");
 		String classID = (String) data.get("id");
-		
-		if(!containsClassroom(classrooms, classID)) {
+
+		if (!containsClassroom(classrooms, classID)) {
 			throw new ClassroomNotFoundException(classID);
 		} else {
 			Classroom classroom = getClassroom(classrooms, classID);
@@ -145,33 +147,32 @@ public class DataManager {
 			Constant.saveClassroomsModel(classrooms);
 		}
 	}
-	
+
 	public void addTeacher(JSONObject data) throws TeacherAlreadyExistsException {
 		Teachers teachers = Constant.loadTeachers();
 		String teacherID = (String) data.get("idProf");
-		
-		if(containsTeacher(teachers, teacherID)) {
+
+		if (containsTeacher(teachers, teacherID)) {
 			throw new TeacherAlreadyExistsException(teacherID);
 		}
 		Teacher teacher = new TeacherImpl();
 		teacher.setID(teacherID);
 		teacher.setName((String) data.get("name"));
-		
+
 		teachers.getTeachers().add(teacher);
 		Constant.saveTeachersModel(teacher);
 	}
-	
-	
+
 	public void addStudent(JSONObject data) throws ClassroomNotFoundException, LearnerPlayerAlreadyExistsException {
 		Classrooms classrooms = Constant.loadClassrooms();
 		String classID = (String) data.get("idClasse");
-		
+
 		Classroom classroom = getClassroomWithID(classrooms, classID);
-		if(classroom == null) {
+		if (classroom == null) {
 			throw new ClassroomNotFoundException(classID);
 		}
-		
-		if(containsLearnerPlayer(classroom, (String) data.get("idStudent"))) {
+
+		if (containsLearnerPlayer(classroom, (String) data.get("idStudent"))) {
 			throw new LearnerPlayerAlreadyExistsException((String) data.get("idStudent"));
 		} else {
 			LearnerPlayer learner = new LearnerPlayerImpl();
@@ -182,62 +183,63 @@ public class DataManager {
 			learner.getProgression().setLearnerProgress(new LearnerProgressImpl());
 			learner.getProgression().setPlayerProgress(new PlayerProgressImpl());
 			learner.setStatistics(new StatisticsImpl());
-			learner.setLearningpath(createEmptyPath("PATH_MATH"+learner.getID()));
+			learner.setLearningpath(createEmptyPath("PATH_MATH" + learner.getID(), Constant.KNOWLEDGE_FILE));
 			Constant.saveLearnerModel(learner);
 			classroom.getLearnerPlayers().add(learner);
 			Constant.saveClassroomsModel(classrooms);
 		}
 
 	}
-	
-	private LearningPath createEmptyPath(String id) {
+
+	private LearningPath createEmptyPath(String id, String knowledgeFile) {
 		LearningPath path = new LearningPathImpl();
 		path.setID(id);
-		path.setKnowledge(loadKnowledge());
-		
+		path.setKnowledge(loadKnowledge(knowledgeFile));
+
 		Objective objective = new ObjectiveImpl();
-		objective.setID("O1_"+id);
+		objective.setID("O1_" + id);
 		objective.setName("Objectif 1");
-		
-		Level level = new MTLevelImpl();
-		level.setID("L1_"+id);
+
+		Level level = (knowledgeFile.equals(Constant.KNOWLEDGE_FILE)? new MTLevelImpl():new HGLevelImpl());
+		level.setID("L1_" + id);
 		objective.getLevels().add(level);
 		level.setCompletionCriteria(new CompletionCriteriaImpl());
 		path.getObjectives().add(objective);
-		
+
 		LearningDomain domain = loadDomain();
 		domain.getLearningpaths().add(path);
 		Constant.saveDomainModel(domain);
 		return path;
 	}
-	
-	private Knowledge loadKnowledge() {
+
+	private Knowledge loadKnowledge(String knowledgeFile) {
 		GeneratorPackage.eINSTANCE.eClass();
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		map.put("xmi", new XMIResourceFactoryImpl());
-		File knowledge = new File(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.KNOWLEDGE_FILE);
+		
+		File knowledge = new File(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + knowledgeFile);
 		System.out.println();
 		Resource resource = resourceSet.createResource(URI.createFileURI(knowledge.getAbsolutePath()));
 		try {
 			resource.load(null);
-		}catch (IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		EcoreUtil.resolveAll(resourceSet); 
+		EcoreUtil.resolveAll(resourceSet);
 		return (Knowledge) resource.getContents().get(0);
 	}
 	
-	public void updateStudent(JSONObject data) throws  ClassroomNotFoundException, NonExistantLearnerPlayerException {
+	public void updateStudent(JSONObject data) throws ClassroomNotFoundException, NonExistantLearnerPlayerException {
 		Classrooms classrooms = Constant.loadClassrooms();
 		String classID = (String) data.get("idClasse");
-		
+
 		Classroom classroom = getClassroomWithID(classrooms, classID);
-		if(classroom == null) {
+		if (classroom == null) {
 			throw new ClassroomNotFoundException(classID);
 		}
-		if(!containsLearnerPlayer(classroom, (String) data.get("idStudent"))) {
-			throw new  NonExistantLearnerPlayerException((String) data.get("idStudent"));
+		if (!containsLearnerPlayer(classroom, (String) data.get("idStudent"))) {
+			throw new NonExistantLearnerPlayerException((String) data.get("idStudent"));
 		} else {
 			LearnerPlayer learner = getLearnerPlayer(classroom, (String) data.get("idStudent"));
 			learner.setLastName((String) data.get("nomEleve"));
@@ -249,27 +251,27 @@ public class DataManager {
 			Constant.saveLearnerModel(learner);
 			Constant.saveClassroomsModel(classrooms);
 		}
-		
+
 	}
-	
+
 	private LearnerPlayer getLearnerPlayer(Classroom classroom, String playerID) {
-		for(LearnerPlayer learner : classroom.getLearnerPlayers()) {
-			if(learner.getID().equals(playerID)) {
+		for (LearnerPlayer learner : classroom.getLearnerPlayers()) {
+			if (learner.getID().equals(playerID)) {
 				return learner;
-			} 
+			}
 		}
 		return null;
 	}
-	
+
 	private boolean containsLearnerPlayer(Classroom classroom, String playerID) {
-		for(LearnerPlayer learner : classroom.getLearnerPlayers()) {
-			if(learner.getID().equals(playerID)) {
+		for (LearnerPlayer learner : classroom.getLearnerPlayers()) {
+			if (learner.getID().equals(playerID)) {
 				return true;
-			} 
+			}
 		}
 		return false;
 	}
-	
+
 	public void deleteClassroom(String classroomID) throws ClassroomAlreadyExistsException {
 		Classrooms classrooms = Constant.loadClassrooms();
 		teacher.getClassrooms().remove(getTeacherClassroomWithID(classroomID));
@@ -277,28 +279,28 @@ public class DataManager {
 		Constant.saveTeachersModel(teacher);
 		Constant.saveClassroomsModel(classrooms);
 	}
-	
+
 	public void deleteStudent(String classroomID, String studentID) throws NonExistantLearnerPlayerException {
 		Classrooms classrooms = Constant.loadClassrooms();
 		Classroom classe = getClassroomWithID(classrooms, classroomID);
 		LearnerPlayer learner = getLearnerWithID(classe, studentID);
-		
-		if(learner == null) {
+
+		if (learner == null) {
 			throw new NonExistantLearnerPlayerException(studentID);
 		}
-		String studentFile = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.LEARNERS_FILES_PATH + Constant.LEARNER_FILE_NAME_PREFIX + learner.getID() + ".xmi";
+		String studentFile = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.LEARNERS_FILES_PATH
+				+ Constant.LEARNER_FILE_NAME_PREFIX + learner.getID() + ".xmi";
 		File f = new File(studentFile);
-		
-		if(f.delete()) {
-			ALGAGenerator.LOGGER.info("Deletion of "+f.getName() + "!");
+
+		if (f.delete()) {
+			ALGAGenerator.LOGGER.info("Deletion of " + f.getName() + "!");
 		} else {
-			ALGAGenerator.LOGGER.info("FAILED deletion of "+f.getName() + "!");
+			ALGAGenerator.LOGGER.info("FAILED deletion of " + f.getName() + "!");
 		}
 		classe.getLearnerPlayers().remove(learner);
 		Constant.saveClassroomsModel(classrooms);
 	}
-	
-	
+
 	private LearningDomain loadDomain() {
 		GeneratorPackage.eINSTANCE.eClass();
 		ResourceSet resourceSet = new ResourceSetImpl();
@@ -309,34 +311,35 @@ public class DataManager {
 		Resource resource = resourceSet.createResource(URI.createFileURI(learningPaths.getAbsolutePath()));
 		try {
 			resource.load(null);
-		}catch (IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		EcoreUtil.resolveAll(resourceSet); 
-		return(LearningDomain) resource.getContents().get(0);
+		EcoreUtil.resolveAll(resourceSet);
+		return (LearningDomain) resource.getContents().get(0);
 	}
-	
+
 	private LearningDomain deletePath(LearningDomain domain, String pathID) {
-		for(LearningPath apath: new ArrayList<>(domain.getLearningpaths())) {
-			if(apath.getID().equals(pathID)) {
+		for (LearningPath apath : new ArrayList<>(domain.getLearningpaths())) {
+			if (apath.getID().equals(pathID)) {
 				domain.getLearningpaths().remove(apath);
 			}
 		}
 		return domain;
-		
+
 	}
-	
+
 	public void deleteTeacher() {
 		Classrooms classrooms = Constant.loadClassrooms();
 		LearningDomain domain = loadDomain();
-		for(Classroom classroom: teacher.getClassrooms()) {
-			for(LearnerPlayer learner: classroom.getLearnerPlayers()) {
+		for (Classroom classroom : teacher.getClassrooms()) {
+			for (LearnerPlayer learner : classroom.getLearnerPlayers()) {
 				deletePath(domain, learner.getLearningpath().getID());
-				String path = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.LEARNERS_FILES_PATH + Constant.LEARNER_FILE_NAME_PREFIX + learner.getID() + ".xmi";
-				File flearner = new File(path); 
+				String path = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.LEARNERS_FILES_PATH
+						+ Constant.LEARNER_FILE_NAME_PREFIX + learner.getID() + ".xmi";
+				File flearner = new File(path);
 				flearner.delete();
 			}
-			if(classrooms.getClassrooms().contains(classroom)) {
+			if (classrooms.getClassrooms().contains(classroom)) {
 				classrooms.getClassrooms().remove(classroom);
 			}
 		}
@@ -346,92 +349,110 @@ public class DataManager {
 		teachers = removeTeacher(teachers);
 		Constant.saveTeachersModel(teachers);
 	}
-	
+
 	private Teachers removeTeacher(Teachers teachers) {
-		for(Teacher aTeacher: new ArrayList<>(teachers.getTeachers())) {
-			if(aTeacher.getID().equals(this.teacher.getID())) {
+		for (Teacher aTeacher : new ArrayList<>(teachers.getTeachers())) {
+			if (aTeacher.getID().equals(this.teacher.getID())) {
 				teachers.getTeachers().remove(aTeacher);
 			}
 		}
-		return teachers; 
+		return teachers;
 	}
-	
-	
-	
+
 	private LearnerPlayer getLearnerWithID(Classroom classroom, String studentID) {
-		for(LearnerPlayer learner: classroom.getLearnerPlayers()) {
-			if(learner.getID().equals(studentID)) {
+		for (LearnerPlayer learner : classroom.getLearnerPlayers()) {
+			if (learner.getID().equals(studentID)) {
 				return learner;
 			}
 		}
-		return null; 
+		return null;
 	}
-	
+
 	private Classroom getTeacherClassroomWithID(String classID) {
-		for(Classroom classroom: teacher.getClassrooms()) {
-			if(classroom.getID().equals(classID)) {
-				return classroom; 
-			}
-		}
-		return null;
-	}
-	
-	private Classroom getClassroomWithID(Classrooms classrooms, String classID) {
-		for(Classroom classroom: classrooms.getClassrooms()) {
-			if(classroom.getID().equals(classID)) {
-				return classroom; 
-			}
-		}
-		return null;
-	}
-	
-	private Classroom getClassroom(Classrooms classrooms, String classID) {
-		for(Classroom classroom : classrooms.getClassrooms()) {
-			if(classroom.getID().equals(classID)) {
+		for (Classroom classroom : teacher.getClassrooms()) {
+			if (classroom.getID().equals(classID)) {
 				return classroom;
 			}
 		}
 		return null;
 	}
-	
+
+	private Classroom getClassroomWithID(Classrooms classrooms, String classID) {
+		for (Classroom classroom : classrooms.getClassrooms()) {
+			if (classroom.getID().equals(classID)) {
+				return classroom;
+			}
+		}
+		return null;
+	}
+
+	private Classroom getClassroom(Classrooms classrooms, String classID) {
+		for (Classroom classroom : classrooms.getClassrooms()) {
+			if (classroom.getID().equals(classID)) {
+				return classroom;
+			}
+		}
+		return null;
+	}
+
 	private boolean containsClassroom(Classrooms classrooms, String classID) {
-		for(Classroom classroom : classrooms.getClassrooms()) {
-			if(classroom.getID().equals(classID)) {
+		for (Classroom classroom : classrooms.getClassrooms()) {
+			if (classroom.getID().equals(classID)) {
 				return true;
 			}
 		}
 		return false;
 	}
-	
+
 	private boolean containsTeacher(Teachers teachers, String teacherID) {
-		for(Teacher teacher : teachers.getTeachers()) {
-			if(teacher .getID().equals(teacherID)) {
+		for (Teacher teacher : teachers.getTeachers()) {
+			if (teacher.getID().equals(teacherID)) {
 				return true;
 			}
 		}
 		return false;
 	}
-	
-	
-	//HG
-	public String createStudentHG() {
-        String uniqueID = shorten(UUID.randomUUID().toString());
 
-//        LearnerPlayer learnerHG = new LearnerPlayerImpl();
-//        learnerHG.setID(uniqueID);
-//        learnerHG.setLastName("no last name");
-//        learnerHG.setName("no name");
-//        learnerHG.setProgression(new ProgressionImpl());
-//        learnerHG.getProgression().setLearnerProgress(new LearnerProgressImpl());
-//        learnerHG.getProgression().setPlayerProgress(new PlayerProgressImpl());
-//        learnerHG.setStatistics(new StatisticsImpl());
-//        learner.setLearningpath(createEmptyPath("PATH_MATH"+learner.getID()));
-//        Constant.saveLearnerModel(learner);
-        return uniqueID;
-    }
+	// HG
+	public String createStudentHG() throws ClassroomNotFoundException, LearnerPlayerAlreadyExistsException {
+		
+		Constant.changeDomains(DidacticDomain.HISTORY_GEOGRAPHY);
+		
+		String uniqueID = shorten(UUID.randomUUID().toString());
+		
+		Classrooms classrooms = Constant.loadClassrooms();
+		Classroom classroom = getClassroomWithID(classrooms, Constant.DEFAULT_CLASSROOM_NAME);
+		if (classroom == null) {
+			throw new ClassroomNotFoundException(Constant.DEFAULT_CLASSROOM_NAME);
+		}
 
-    private String shorten(String longId) {
-        return longId.substring(0, 8);
-    }
-	
+		if (containsLearnerPlayer(classroom, uniqueID)) {
+			throw new LearnerPlayerAlreadyExistsException(uniqueID);
+		}
+		
+		LearnerPlayer learnerHG = new LearnerPlayerImpl();
+		learnerHG.setID(uniqueID);
+		learnerHG.setLastName("no last name");
+		learnerHG.setName("no name");
+		learnerHG.setProgression(new ProgressionImpl());
+		learnerHG.getProgression().setLearnerProgress(new LearnerProgressImpl());
+		learnerHG.getProgression().setPlayerProgress(new PlayerProgressImpl());
+		learnerHG.setStatistics(new StatisticsImpl());
+		
+		
+		
+		learnerHG.setLearningpath(createEmptyPath("PATH_HG" + learnerHG.getID(), Constant.KNOWLEDGE_FILE_HG));
+		Constant.saveLearnerModel(learnerHG);
+		
+		classroom.getLearnerPlayers().add(learnerHG);
+		Constant.saveClassroomsModel(classrooms);
+		
+		Constant.changePreviousDomains();
+		return uniqueID;
+	}
+
+	private String shorten(String longId) {
+		return longId.substring(0, 6);
+	}
+
 }
