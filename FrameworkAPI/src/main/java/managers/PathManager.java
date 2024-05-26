@@ -26,11 +26,18 @@ import generator.DynamicMultipleChoice;
 import generator.ESeveralTarget;
 import generator.ESingleTarget;
 import generator.GeneratorPackage;
+import generator.GeographyMembership;
+import generator.HGLevel;
+import generator.HistoricalChronology;
+import generator.HistoricalEventAssociation;
+import generator.HistoryIdentification;
 import generator.Knowledge;
 import generator.LearnerPlayer;
 import generator.LearningDomain;
 import generator.LearningPath;
+import generator.LegendAMap;
 import generator.Level;
+import generator.LocateOnAMap;
 import generator.MTCompletion1;
 import generator.MTCompletion2;
 import generator.MTIdentification;
@@ -154,7 +161,7 @@ public class PathManager {
 				obj.put("answerModality", "INPUT");
 				obj.put("taskType", "C1"); 
 			}
-		}
+		} else
 		if(task instanceof MTCompletion2Impl) {
 			JSONArray targets = new JSONArray();
 			for(ESeveralTarget target: ((MTCompletion2Impl) task).getTargets()) {
@@ -165,28 +172,54 @@ public class PathManager {
 			obj.put("nbCorrectChoices", 2);
 			obj.put("nbIncorrectChoices",  ((DynamicMultipleChoice) ((MTCompletion2Impl) task).getResponseModality()).getNbBadChoices());
 			obj.put("taskType", "C2"); 
-		}
+		} else
 		if(task instanceof MTRecontructionImpl) {
 			obj.put("nbCorrectChoices", 3);
 			obj.put("nbIncorrectChoices",  ((DynamicMultipleChoice) ((MTRecontructionImpl) task).getResponseModality()).getNbBadChoices());
 			obj.put("taskType", "REC"); 
-		}
+		} else
 		if(task instanceof MTIdentificationImpl) {
 			obj.put("nbFacts", task.getNbFacts());
 			obj.put("sourceVariation", ((MTIdentificationImpl) task).getTarget().getName());
 			obj.put("taskType", "ID");
-		}
+		} else
 		if(task instanceof MTMembershipImpl) {
 			obj.put("nbCorrectChoices", ((MultipleChoice) ((MTMembershipImpl) task).getResponseModality()).getNbChoices() -
 					 ((MultipleChoice) ((MTMembershipImpl) task).getResponseModality()).getNbBadChoices());
 			obj.put("nbIncorrectChoices",  ((MultipleChoice) ((MTMembershipImpl) task).getResponseModality()).getNbBadChoices());
 			obj.put("taskType", "MEMB"); 
 			obj.put("target", ((MTMembershipImpl) task).isIdentifySharedProperty()? "CORRECT": "INCORRECT");
+		} else
+		if(task instanceof HistoryIdentification) {
+			obj.put("nbFacts", task.getNbFacts());
+			
+			obj.put("taskType", "IDENT"); 
+		} else
+		if(task instanceof GeographyMembership) {
+			obj.put("taskType", "MEMB"); 
+		} else
+		if(task instanceof HistoricalChronology) {
+			obj.put("taskType", "CHRONO"); 
+		} else
+		if(task instanceof LocateOnAMap) {
+			LocateOnAMap realTask = (LocateOnAMap) task;
+			obj.put("taskType", realTask.getType()); 
+			obj.put("ID", realTask.getID());
+			obj.put("nbExpectedAnswers", realTask.getNbExpectedAnswers());
+			obj.put("nbFacts", realTask.getNbFacts());
+			obj.put("nbExpectedAnswers", realTask.getNbExpectedAnswers());
+			
+		}if(task instanceof LegendAMap) {
+			obj.put("taskType", "LEGEND"); 
+		} else
+		if(task instanceof HistoricalEventAssociation) {
+			obj.put("taskType", "ASSOC"); 
 		}
+		obj.put("ID", task.getID());
 		obj.put("timeMaxSecond", task.getMaxTime());
 		obj.put("successiveSuccessesToReach", task.getNbConsecutiveSuccess());
 		obj.put("repartitionPercent", task.getPercentOfApparition());
-	
+		obj.put("taskType", task.getType()); 
 		return obj;
 	}
 	
@@ -694,5 +727,32 @@ public class PathManager {
 		}
 		EcoreUtil.resolveAll(resourceSet); 
 		return (Knowledge) resource.getContents().get(0);
+	}
+	
+	// HG
+	
+	@SuppressWarnings("unchecked")
+	public JSONObject buildJSONHGObjectiveLevel(LearningPath path) {
+		JSONObject json = new JSONObject();
+		json.put("learningPathID", path.getID()); // TODO: define a default paths for this version 
+		json.put("objective", path.getObjectives().get(0).getID()); // TODO: define default objective 
+		json.put("level",  path.getObjectives().get(0).getLevels().get(0).getID()); // TODO: define default level 
+	
+		JSONObject setupParameters = new JSONObject();
+//		setupParameters.put("buildingParameters", initialiseJSONBuildParameters(path.getObjectives().get(0), (HGLevel) path.getObjectives().get(0).getLevels().get(0)));
+		setupParameters.put("tasksParameters", initialiseJSONTaskParameters4HG((HGLevel) path.getObjectives().get(0).getLevels().get(0)));
+//		
+		json.put("setupParameters", setupParameters);
+		
+		return json;   
+	}  
+	
+	@SuppressWarnings("unchecked")
+	private JSONArray initialiseJSONTaskParameters4HG(HGLevel level) {
+		JSONArray tasksParameters = new JSONArray();
+		for(ATask task: level.getTasks()) {
+			tasksParameters.add(initialiseJSONTask(task));
+		}
+		return tasksParameters; 
 	}
 }

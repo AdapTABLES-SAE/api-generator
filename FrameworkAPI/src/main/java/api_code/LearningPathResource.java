@@ -93,4 +93,20 @@ public class LearningPathResource {
 		return manager.buildJSONObjectiveLevel(manager.getLearningPath()).toJSONString();
 	}
 	
+	//HG
+	
+	@GET
+	@Path("/learnerhg/{learnerID}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String buildObjectiveLevelHGParams2JSON(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
+		Constant.PROJECT_PATH = app.getRealPath("");
+		Constant.changeDomains(DidacticDomain.HISTORY_GEOGRAPHY);
+		manager = new PathManager(new ModelsManager(DidacticDomain.HISTORY_GEOGRAPHY, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME,  true));
+
+		String res = manager.buildJSONHGObjectiveLevel(manager.getLearningPath()).toString();
+		Constant.changePreviousDomains();
+		return res;
+	}
+	
 }
