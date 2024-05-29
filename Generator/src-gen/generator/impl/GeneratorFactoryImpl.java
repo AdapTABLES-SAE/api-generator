@@ -103,8 +103,8 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 			return createRoomTypes();
 		case GeneratorPackage.MT_COMPLETION2:
 			return createMTCompletion2();
-		case GeneratorPackage.MT_RECONTRUCTION:
-			return createMTRecontruction();
+		case GeneratorPackage.MT_RECONSTRUCTION:
+			return createMTReconstruction();
 		case GeneratorPackage.MT_IDENTIFICATION:
 			return createMTIdentification();
 		case GeneratorPackage.RESULTS:
@@ -655,9 +655,9 @@ public class GeneratorFactoryImpl extends EFactoryImpl implements GeneratorFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MTRecontruction createMTRecontruction() {
-		MTRecontructionImpl mtRecontruction = new MTRecontructionImpl();
-		return mtRecontruction;
+	public MTReconstruction createMTReconstruction() {
+		MTReconstructionImpl mtReconstruction = new MTReconstructionImpl();
+		return mtReconstruction;
 	}
 
 	/**

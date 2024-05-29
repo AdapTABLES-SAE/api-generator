@@ -222,8 +222,8 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMTRecontruction(MTRecontruction object) {
-			return createMTRecontructionAdapter();
+		public Adapter caseMTReconstruction(MTReconstruction object) {
+			return createMTReconstructionAdapter();
 		}
 
 		@Override
@@ -1255,16 +1255,16 @@ public class GeneratorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link generator.MTRecontruction <em>MT Recontruction</em>}'.
+	 * Creates a new adapter for an object of class '{@link generator.MTReconstruction <em>MT Reconstruction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see generator.MTRecontruction
+	 * @see generator.MTReconstruction
 	 * @generated
 	 */
-	public Adapter createMTRecontructionAdapter() {
+	public Adapter createMTReconstructionAdapter() {
 		return null;
 	}
 

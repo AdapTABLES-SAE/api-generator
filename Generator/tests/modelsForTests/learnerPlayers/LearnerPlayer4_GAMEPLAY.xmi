@@ -1751,7 +1751,7 @@
             <questionableFacts xsi:type="generator:MTQFCompletion2" wasSelected="false" achieved="false" ID="PATH_FOR_FACTS_TEST_O1_L1_T2-QAFACT981" leftOperand="-1" rightOperand="7" result="-1" soluceLeft="10" soluceRight="7" soluceRes="70" resultOnRight="true"/>
           </resultsbytask>
           <resultsbytask>
-            <task xsi:type="generator:MTRecontruction" href="../LearningDomain.xmi#PATH_FOR_FACTS_TEST_O1_L1_T3"/>
+            <task xsi:type="generator:MTReconstruction" href="../LearningDomain.xmi#PATH_FOR_FACTS_TEST_O1_L1_T3"/>
             <questionableFacts xsi:type="generator:MTQFRebuild" wasSelected="false" achieved="false" ID="PATH_FOR_FACTS_TEST_O1_L1_T3-QAFACT382" soluceLeft="8" soluceRes="96" resultOnRight="false" soluceRight="12"/>
             <questionableFacts xsi:type="generator:MTQFRebuild" wasSelected="false" achieved="false" ID="PATH_FOR_FACTS_TEST_O1_L1_T3-QAFACT221" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
             <questionableFacts xsi:type="generator:MTQFRebuild" wasSelected="false" achieved="false" ID="PATH_FOR_FACTS_TEST_O1_L1_T3-QAFACT130" soluceLeft="2" soluceRes="18" resultOnRight="false" soluceRight="9"/>

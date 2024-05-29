@@ -11,5 +11,4 @@
 /managers/
 /old/
 /structures/
-*.class
-/bin
+/modelsForTests/

@@ -78,7 +78,7 @@
             <questionableFacts xsi:type="generator:MTQFCompletion2" wasSelected="false" achieved="false" ID="PATH404-O1-L1-T2-QAFACT11" leftOperand="-1" rightOperand="-1" result="6" soluceLeft="2" soluceRight="3" soluceRes="6" resultOnRight="true"/>
           </resultsbytask>
           <resultsbytask>
-            <task xsi:type="generator:MTRecontruction" href="../LearningDomain.xmi#PATH404-O1-L1-T3"/>
+            <task xsi:type="generator:MTReconstruction" href="../LearningDomain.xmi#PATH404-O1-L1-T3"/>
             <questionableFacts xsi:type="generator:MTQFRebuild" wasSelected="false" achieved="false" ID="PATH404-O1-L1-T3-QAFACT4" soluceLeft="2" soluceRes="6" resultOnRight="true" soluceRight="3"/>
             <questionableFacts xsi:type="generator:MTQFRebuild" wasSelected="false" achieved="false" ID="PATH404-O1-L1-T3-QAFACT5" soluceLeft="3" soluceRes="6" resultOnRight="true" soluceRight="2"/>
             <questionableFacts xsi:type="generator:MTQFRebuild" wasSelected="false" achieved="false" ID="PATH404-O1-L1-T3-QAFACT6" soluceLeft="2" soluceRes="8" resultOnRight="true" soluceRight="4"/>

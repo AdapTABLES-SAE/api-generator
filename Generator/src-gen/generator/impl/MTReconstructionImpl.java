@@ -2,28 +2,30 @@
  */
 package generator.impl;
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import generator.GeneratorPackage;
-import generator.MTRecontruction;
+import generator.MTReconstruction;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>MT Recontruction</b></em>'.
+ * An implementation of the model object '<em><b>MT Reconstruction</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link generator.impl.MTRecontructionImpl#getNbMissingElements <em>Nb Missing Elements</em>}</li>
- *   <li>{@link generator.impl.MTRecontructionImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
+ *   <li>{@link generator.impl.MTReconstructionImpl#getNbMissingElements <em>Nb Missing Elements</em>}</li>
+ *   <li>{@link generator.impl.MTReconstructionImpl#isCheckOnLearnerAction <em>Check On Learner Action</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontruction {
+public class MTReconstructionImpl extends CompletionTaskImpl implements MTReconstruction {
 	/**
 	 * The default value of the '{@link #getNbMissingElements() <em>Nb Missing Elements</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,6 +35,7 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 	 * @ordered
 	 */
 	protected static final int NB_MISSING_ELEMENTS_EDEFAULT = 3;
+
 	/**
 	 * The cached value of the '{@link #getNbMissingElements() <em>Nb Missing Elements</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -42,6 +45,7 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 	 * @ordered
 	 */
 	protected int nbMissingElements = NB_MISSING_ELEMENTS_EDEFAULT;
+
 	/**
 	 * This is true if the Nb Missing Elements attribute has been set.
 	 * <!-- begin-user-doc -->
@@ -60,6 +64,7 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 	 * @ordered
 	 */
 	protected static final boolean CHECK_ON_LEARNER_ACTION_EDEFAULT = true;
+
 	/**
 	 * The cached value of the '{@link #isCheckOnLearnerAction() <em>Check On Learner Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -75,7 +80,7 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MTRecontructionImpl() {
+	public MTReconstructionImpl() {
 		super();
 	}
 
@@ -86,7 +91,7 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GeneratorPackage.Literals.MT_RECONTRUCTION;
+		return GeneratorPackage.Literals.MT_RECONSTRUCTION;
 	}
 
 	/**
@@ -121,12 +126,26 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void setCheckOnLearnerAction(boolean newCheckOnLearnerAction) {
+		boolean oldCheckOnLearnerAction = checkOnLearnerAction;
+		checkOnLearnerAction = newCheckOnLearnerAction;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					GeneratorPackage.MT_RECONSTRUCTION__CHECK_ON_LEARNER_ACTION, oldCheckOnLearnerAction,
+					checkOnLearnerAction));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GeneratorPackage.MT_RECONTRUCTION__NB_MISSING_ELEMENTS:
+		case GeneratorPackage.MT_RECONSTRUCTION__NB_MISSING_ELEMENTS:
 			return getNbMissingElements();
-		case GeneratorPackage.MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION:
+		case GeneratorPackage.MT_RECONSTRUCTION__CHECK_ON_LEARNER_ACTION:
 			return isCheckOnLearnerAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -140,7 +159,7 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GeneratorPackage.MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION:
+		case GeneratorPackage.MT_RECONSTRUCTION__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction((Boolean) newValue);
 			return;
 		}
@@ -155,7 +174,7 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION:
+		case GeneratorPackage.MT_RECONSTRUCTION__CHECK_ON_LEARNER_ACTION:
 			setCheckOnLearnerAction(CHECK_ON_LEARNER_ACTION_EDEFAULT);
 			return;
 		}
@@ -170,9 +189,9 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GeneratorPackage.MT_RECONTRUCTION__NB_MISSING_ELEMENTS:
+		case GeneratorPackage.MT_RECONSTRUCTION__NB_MISSING_ELEMENTS:
 			return isSetNbMissingElements();
-		case GeneratorPackage.MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION:
+		case GeneratorPackage.MT_RECONSTRUCTION__CHECK_ON_LEARNER_ACTION:
 			return checkOnLearnerAction != CHECK_ON_LEARNER_ACTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -200,18 +219,4 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 		return result.toString();
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCheckOnLearnerAction(boolean newCheckOnLearnerAction) {
-		boolean oldCheckOnLearnerAction = checkOnLearnerAction;
-		checkOnLearnerAction = newCheckOnLearnerAction;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					GeneratorPackage.MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION, oldCheckOnLearnerAction,
-					checkOnLearnerAction));
-	}
-
-} //MTRecontructionImpl
+} //MTReconstructionImpl

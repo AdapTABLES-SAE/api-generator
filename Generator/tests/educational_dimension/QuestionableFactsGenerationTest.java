@@ -31,6 +31,7 @@ import generator.MTCompletion2;
 import generator.MTIdentification;
 import generator.MTLevel;
 import generator.MTMembership;
+import generator.MTReconstruction;
 import generator.MTRecontruction;
 import generator.MultipleChoice;
 import generator.Objective;
@@ -44,7 +45,7 @@ import generator.impl.MTCompletion2Impl;
 import generator.impl.MTIdentificationImpl;
 import generator.impl.MTLevelImpl;
 import generator.impl.MTMembershipImpl;
-import generator.impl.MTRecontructionImpl;
+import generator.impl.MTReconstructionImpl;
 import generator.impl.MultipleChoiceImpl;
 import generator.impl.ObjectiveImpl;
 import generator.impl.ResultsByTaskImpl;
@@ -335,7 +336,7 @@ class QuestionableFactsGenerationTest {
  	private List<ATask> createReconstructionTasks() {
 		List<ATask> tasks = new ArrayList<>();
 		
-		MTRecontruction task = new MTRecontructionImpl(); 
+		MTReconstruction task = new MTReconstructionImpl(); 
 		task.setID("REC#1");
 		task.setResponseModality(this.getMultipleChoiceInstance(task));
 		tasks.add(task);
@@ -461,7 +462,7 @@ class QuestionableFactsGenerationTest {
 			}
 			
 			if(task instanceof MTRecontruction) {
-				MTRecontruction newTask = new MTRecontructionImpl();
+				MTReconstruction newTask = new MTReconstructionImpl();
 				newTask.setID(newID);
 				newTask.setResponseModality(this.getMultipleChoiceInstance(task));
 				return newTask;

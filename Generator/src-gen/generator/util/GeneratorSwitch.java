@@ -311,13 +311,13 @@ public class GeneratorSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GeneratorPackage.MT_RECONTRUCTION: {
-			MTRecontruction mtRecontruction = (MTRecontruction) theEObject;
-			T result = caseMTRecontruction(mtRecontruction);
+		case GeneratorPackage.MT_RECONSTRUCTION: {
+			MTReconstruction mtReconstruction = (MTReconstruction) theEObject;
+			T result = caseMTReconstruction(mtReconstruction);
 			if (result == null)
-				result = caseCompletionTask(mtRecontruction);
+				result = caseCompletionTask(mtReconstruction);
 			if (result == null)
-				result = caseATask(mtRecontruction);
+				result = caseATask(mtReconstruction);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1816,17 +1816,17 @@ public class GeneratorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MT Recontruction</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>MT Reconstruction</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MT Recontruction</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>MT Reconstruction</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMTRecontruction(MTRecontruction object) {
+	public T caseMTReconstruction(MTReconstruction object) {
 		return null;
 	}
 

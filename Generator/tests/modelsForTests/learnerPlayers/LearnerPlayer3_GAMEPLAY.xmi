@@ -811,7 +811,7 @@
             <questionableFacts xsi:type="generator:MTQFCompletion2" wasSelected="false" achieved="false" ID="PATH_FOR_GAMEPLAY_TEST-O1-L1-T2-QAFACT328" leftOperand="-1" rightOperand="10" result="-1" soluceLeft="3" soluceRight="10" soluceRes="30" resultOnRight="true"/>
           </resultsbytask>
           <resultsbytask>
-            <task xsi:type="generator:MTRecontruction" href="../LearningDomain.xmi#PATH_FOR_GAMEPLAY_TEST-O1-L1-T3"/>
+            <task xsi:type="generator:MTReconstruction" href="../LearningDomain.xmi#PATH_FOR_GAMEPLAY_TEST-O1-L1-T3"/>
             <questionableFacts xsi:type="generator:MTQFRebuild" wasSelected="false" achieved="false" ID="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT54" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8"/>
             <questionableFacts xsi:type="generator:MTQFRebuild" wasSelected="false" achieved="false" ID="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT55" soluceLeft="8" soluceRes="32" resultOnRight="true" soluceRight="4"/>
             <questionableFacts xsi:type="generator:MTQFRebuild" wasSelected="false" achieved="false" ID="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT199" soluceLeft="10" soluceRes="110" resultOnRight="true" soluceRight="11"/>

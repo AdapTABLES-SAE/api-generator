@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Generator"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/TransformationFlattener"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
 		<attributes>
 			<attribute name="module" value="true"/>
@@ -187,5 +185,7 @@
 	<classpathentry kind="lib" path="libs/swagger-core/swagger-models-2.2.15.jar"/>
 	<classpathentry kind="lib" path="libs/org.antlr.runtime_3.1.b1_3.1.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Generator"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/TransformationFlattener"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

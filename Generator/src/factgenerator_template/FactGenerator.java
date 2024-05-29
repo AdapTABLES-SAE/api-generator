@@ -30,7 +30,6 @@ import generator.IdentifyTechnique;
 import generator.LegendAMap;
 import generator.OrderingTask;
 import generator.ResultsByTask;
-import generators.ALGAGenerator;
 import managers.ModelsManager;
 import structures.DidacticDomain;
 import structures.DungeonElements;

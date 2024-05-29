@@ -307,9 +307,9 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/nbMissingElements"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTCompletion2/checkOnLearnerAction"/>
     </genClasses>
-    <genClasses ecoreClass="generator.ecore#//MTRecontruction">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTRecontruction/nbMissingElements"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTRecontruction/checkOnLearnerAction"/>
+    <genClasses ecoreClass="generator.ecore#//MTReconstruction">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTReconstruction/nbMissingElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTReconstruction/checkOnLearnerAction"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTIdentification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTIdentification/target"/>

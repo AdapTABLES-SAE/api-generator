@@ -101,7 +101,7 @@
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="T1_TASK-REB">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="20" ID="T1_TASK-REB">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="30" ID="T1_TASK-ID">
@@ -137,7 +137,7 @@
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="T2_TASK-REB">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="20" ID="T2_TASK-REB">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="T2_TASK-ID">
@@ -174,7 +174,7 @@
           <targets>OPERAND_TABLE</targets>
           <targets>TABLE_RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="PATH_FOR_FACTS_TEST_O1_L1_T3">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="20" ID="PATH_FOR_FACTS_TEST_O1_L1_T3">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="PATH_FOR_FACTS_TEST_O1_L1_T4">
@@ -204,7 +204,7 @@
           <targets>TABLE_RESULT</targets>
           <targets>OPERAND_RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="PATH_FOR_FACTS_TEST_O1_L1_T3">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="20" ID="PATH_FOR_FACTS_TEST_O1_L1_T3">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" nbConsecutiveSuccess="3" ID="PATH_FOR_FACTS_TEST_O1_L1_T4">
@@ -244,7 +244,7 @@
           <targets>OPERAND_RESULT</targets>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3" maxTime="30">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="20" ID="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3" maxTime="30">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="PATH_FOR_GAMEPLAY_TEST-O1-L1-T4" maxTime="30" nbFacts="2">

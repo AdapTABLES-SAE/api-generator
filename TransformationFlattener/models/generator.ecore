@@ -291,7 +291,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MTRecontruction" eSuperTypes="#//CompletionTask">
+  <eClassifiers xsi:type="ecore:EClass" name="MTReconstruction" eSuperTypes="#//CompletionTask">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbMissingElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" transient="true" defaultValueLiteral="3" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnLearnerAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
@@ -750,6 +750,7 @@
     <eLiterals name="COUNTRY" value="1"/>
     <eLiterals name="REGIONS" value="1"/>
     <eLiterals name="NONE" value="3"/>
+    <eLiterals name="ISLAND" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AQuestionParam" abstract="true" eSuperTypes="#//Parameter"/>
   <eClassifiers xsi:type="ecore:EClass" name="VisualizationQuestionParam" eSuperTypes="#//AQuestionParam">

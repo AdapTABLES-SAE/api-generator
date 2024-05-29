@@ -36,7 +36,7 @@ import generator.MTCompletion2;
 import generator.MTIdentification;
 import generator.MTLevel;
 import generator.MTMembership;
-import generator.MTRecontruction;
+import generator.MTReconstruction;
 import generator.MultipleChoice;
 import generator.Objective;
 import generator.Prerequisite;
@@ -52,7 +52,7 @@ import generator.impl.MTCompletion2Impl;
 import generator.impl.MTIdentificationImpl;
 import generator.impl.MTLevelImpl;
 import generator.impl.MTMembershipImpl;
-import generator.impl.MTRecontructionImpl;
+import generator.impl.MTReconstructionImpl;
 import generator.impl.MultipleChoiceImpl;
 import generator.impl.ObjectiveImpl;
 import generator.impl.PrerequisiteImpl;
@@ -166,9 +166,9 @@ public class PathManager {
 			obj.put("nbIncorrectChoices",  ((DynamicMultipleChoice) ((MTCompletion2Impl) task).getResponseModality()).getNbBadChoices());
 			obj.put("taskType", "C2"); 
 		}
-		if(task instanceof MTRecontructionImpl) {
+		if(task instanceof MTReconstructionImpl) {
 			obj.put("nbCorrectChoices", 3);
-			obj.put("nbIncorrectChoices",  ((DynamicMultipleChoice) ((MTRecontructionImpl) task).getResponseModality()).getNbBadChoices());
+			obj.put("nbIncorrectChoices",  ((DynamicMultipleChoice) ((MTReconstructionImpl) task).getResponseModality()).getNbBadChoices());
 			obj.put("taskType", "REC"); 
 		}
 		if(task instanceof MTIdentificationImpl) {
@@ -519,7 +519,7 @@ public class PathManager {
 	}
 	
 	private ATask createRECTask(JSONObject jtask, String taskID) {
-		MTRecontruction task = new MTRecontructionImpl();
+		MTReconstruction task = new MTReconstructionImpl();
 		task.setID(taskID);
 		
 		task.setMaxTime((int)(long)jtask.get("timeMaxSecond"));

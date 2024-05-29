@@ -2363,7 +2363,7 @@
             </questionableFacts>
           </resultsbytask>
           <resultsbytask>
-            <task xsi:type="generator:MTRecontruction" href="../LearningDomain.xmi#PATH_FOR_GAMEPLAY_TEST-O1-L1-T3"/>
+            <task xsi:type="generator:MTReconstruction" href="../LearningDomain.xmi#PATH_FOR_GAMEPLAY_TEST-O1-L1-T3"/>
             <questionableFacts xsi:type="generator:MTQFRebuild" wasSelected="false" achieved="false" ID="PATH_FOR_GAMEPLAY_TEST-O1-L1-T3-QAFACT54" soluceLeft="4" soluceRes="32" resultOnRight="true" soluceRight="8">
               <facts xsi:type="generator:MTFact" href="../MultiplicationTables.xmi#//@knowledgefacts.3/@facts.8"/>
             </questionableFacts>

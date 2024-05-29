@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator:LearningDomain
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:generator="http://www.example.org/generator">
+  <learningpaths
+      name="Solar System Path"
+      ID="PATH_SOLAR_SYSTEM">
+    <objectives
+        ID="PATH_SOLAR_SYSTEM_O1"
+        name="PATH_SOLAR_SYSTEM_O1">
+      <levels
+          xsi:type="generator:SolarSytemLevel"
+          ID="PATH_SOLAR_SYSTEM_O1_L1">
+        <tasks
+            xsi:type="generator:OrderPlanets"
+            percentOfApparition="50"
+            ID="PATH_SOLAR_SYSTEM_O1_L1_T1"
+            maxTime="40"
+            maxQuestionableFacts="70">
+          <responseModality
+              xsi:type="generator:MultipleChoice"
+              nbChoices="4"/>
+        </tasks>
+        <tasks
+            xsi:type="generator:IdentifyPlanets"
+            percentOfApparition="25"
+            ID="PATH_SOLAR_SYSTEM_O1_L1_T2"
+            maxTime="60"
+            nbFacts="8">
+          <responseModality
+              xsi:type="generator:EnterResponse"/>
+        </tasks>
+        <tasks
+            xsi:type="generator:IdentifyPlanets"
+            percentOfApparition="25"
+            ID="PATH_SOLAR_SYSTEM_O1_L1_T3"
+            maxTime="60"
+            nbFacts="8">
+          <responseModality
+              xsi:type="generator:DynamicMultipleChoice"/>
+        </tasks>
+      </levels>
+      <setoffacts
+          href="SolarSystemPlanets.xmi#//@knowledgefacts.0"/>
+    </objectives>
+    <knowledge
+        href="SolarSystemPlanets.xmi#/"/>
+  </learningpaths>
+</generator:LearningDomain>

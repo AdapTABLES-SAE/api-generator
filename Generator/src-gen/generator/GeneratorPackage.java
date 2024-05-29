@@ -2638,14 +2638,14 @@ public interface GeneratorPackage extends EPackage {
 	int MT_COMPLETION2_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link generator.impl.MTRecontructionImpl <em>MT Recontruction</em>}' class.
+	 * The meta object id for the '{@link generator.impl.MTReconstructionImpl <em>MT Reconstruction</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see generator.impl.MTRecontructionImpl
-	 * @see generator.impl.GeneratorPackageImpl#getMTRecontruction()
+	 * @see generator.impl.MTReconstructionImpl
+	 * @see generator.impl.GeneratorPackageImpl#getMTReconstruction()
 	 * @generated
 	 */
-	int MT_RECONTRUCTION = 31;
+	int MT_RECONSTRUCTION = 31;
 
 	/**
 	 * The feature id for the '<em><b>Percent Of Apparition</b></em>' attribute.
@@ -2654,7 +2654,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__PERCENT_OF_APPARITION = COMPLETION_TASK__PERCENT_OF_APPARITION;
+	int MT_RECONSTRUCTION__PERCENT_OF_APPARITION = COMPLETION_TASK__PERCENT_OF_APPARITION;
 
 	/**
 	 * The feature id for the '<em><b>Nb Consecutive Success</b></em>' attribute.
@@ -2663,7 +2663,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__NB_CONSECUTIVE_SUCCESS = COMPLETION_TASK__NB_CONSECUTIVE_SUCCESS;
+	int MT_RECONSTRUCTION__NB_CONSECUTIVE_SUCCESS = COMPLETION_TASK__NB_CONSECUTIVE_SUCCESS;
 
 	/**
 	 * The feature id for the '<em><b>Response Modality</b></em>' containment reference.
@@ -2672,7 +2672,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__RESPONSE_MODALITY = COMPLETION_TASK__RESPONSE_MODALITY;
+	int MT_RECONSTRUCTION__RESPONSE_MODALITY = COMPLETION_TASK__RESPONSE_MODALITY;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -2681,7 +2681,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__ID = COMPLETION_TASK__ID;
+	int MT_RECONSTRUCTION__ID = COMPLETION_TASK__ID;
 
 	/**
 	 * The feature id for the '<em><b>Max Time</b></em>' attribute.
@@ -2690,7 +2690,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__MAX_TIME = COMPLETION_TASK__MAX_TIME;
+	int MT_RECONSTRUCTION__MAX_TIME = COMPLETION_TASK__MAX_TIME;
 
 	/**
 	 * The feature id for the '<em><b>Nb Facts</b></em>' attribute.
@@ -2699,7 +2699,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__NB_FACTS = COMPLETION_TASK__NB_FACTS;
+	int MT_RECONSTRUCTION__NB_FACTS = COMPLETION_TASK__NB_FACTS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2708,7 +2708,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__TYPE = COMPLETION_TASK__TYPE;
+	int MT_RECONSTRUCTION__TYPE = COMPLETION_TASK__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Nb Missing Elements</b></em>' attribute.
@@ -2717,7 +2717,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 0;
+	int MT_RECONSTRUCTION__NB_MISSING_ELEMENTS = COMPLETION_TASK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Check On Learner Action</b></em>' attribute.
@@ -2726,16 +2726,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 1;
+	int MT_RECONSTRUCTION__CHECK_ON_LEARNER_ACTION = COMPLETION_TASK_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>MT Recontruction</em>' class.
+	 * The number of structural features of the '<em>MT Reconstruction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 2;
+	int MT_RECONSTRUCTION_FEATURE_COUNT = COMPLETION_TASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Type</em>' operation.
@@ -2744,7 +2744,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION___GET_TYPE = COMPLETION_TASK___GET_TYPE;
+	int MT_RECONSTRUCTION___GET_TYPE = COMPLETION_TASK___GET_TYPE;
 
 	/**
 	 * The operation id for the '<em>Is Graphic Task</em>' operation.
@@ -2753,7 +2753,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION___IS_GRAPHIC_TASK = COMPLETION_TASK___IS_GRAPHIC_TASK;
+	int MT_RECONSTRUCTION___IS_GRAPHIC_TASK = COMPLETION_TASK___IS_GRAPHIC_TASK;
 
 	/**
 	 * The operation id for the '<em>Is Check On Learner Action</em>' operation.
@@ -2762,7 +2762,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION___IS_CHECK_ON_LEARNER_ACTION = COMPLETION_TASK___IS_CHECK_ON_LEARNER_ACTION;
+	int MT_RECONSTRUCTION___IS_CHECK_ON_LEARNER_ACTION = COMPLETION_TASK___IS_CHECK_ON_LEARNER_ACTION;
 
 	/**
 	 * The operation id for the '<em>Get Nb Missing Elements</em>' operation.
@@ -2771,7 +2771,7 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
+	int MT_RECONSTRUCTION___GET_NB_MISSING_ELEMENTS = COMPLETION_TASK___GET_NB_MISSING_ELEMENTS;
 
 	/**
 	 * The operation id for the '<em>Get Nb Expected Answers</em>' operation.
@@ -2780,16 +2780,16 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION___GET_NB_EXPECTED_ANSWERS = COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS;
+	int MT_RECONSTRUCTION___GET_NB_EXPECTED_ANSWERS = COMPLETION_TASK___GET_NB_EXPECTED_ANSWERS;
 
 	/**
-	 * The number of operations of the '<em>MT Recontruction</em>' class.
+	 * The number of operations of the '<em>MT Reconstruction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MT_RECONTRUCTION_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
+	int MT_RECONSTRUCTION_OPERATION_COUNT = COMPLETION_TASK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link generator.impl.MTIdentificationImpl <em>MT Identification</em>}' class.
@@ -13876,36 +13876,36 @@ public interface GeneratorPackage extends EPackage {
 	EAttribute getMTCompletion2_CheckOnLearnerAction();
 
 	/**
-	 * Returns the meta object for class '{@link generator.MTRecontruction <em>MT Recontruction</em>}'.
+	 * Returns the meta object for class '{@link generator.MTReconstruction <em>MT Reconstruction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MT Recontruction</em>'.
-	 * @see generator.MTRecontruction
+	 * @return the meta object for class '<em>MT Reconstruction</em>'.
+	 * @see generator.MTReconstruction
 	 * @generated
 	 */
-	EClass getMTRecontruction();
+	EClass getMTReconstruction();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.MTRecontruction#getNbMissingElements <em>Nb Missing Elements</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.MTReconstruction#getNbMissingElements <em>Nb Missing Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nb Missing Elements</em>'.
-	 * @see generator.MTRecontruction#getNbMissingElements()
-	 * @see #getMTRecontruction()
+	 * @see generator.MTReconstruction#getNbMissingElements()
+	 * @see #getMTReconstruction()
 	 * @generated
 	 */
-	EAttribute getMTRecontruction_NbMissingElements();
+	EAttribute getMTReconstruction_NbMissingElements();
 
 	/**
-	 * Returns the meta object for the attribute '{@link generator.MTRecontruction#isCheckOnLearnerAction <em>Check On Learner Action</em>}'.
+	 * Returns the meta object for the attribute '{@link generator.MTReconstruction#isCheckOnLearnerAction <em>Check On Learner Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Check On Learner Action</em>'.
-	 * @see generator.MTRecontruction#isCheckOnLearnerAction()
-	 * @see #getMTRecontruction()
+	 * @see generator.MTReconstruction#isCheckOnLearnerAction()
+	 * @see #getMTReconstruction()
 	 * @generated
 	 */
-	EAttribute getMTRecontruction_CheckOnLearnerAction();
+	EAttribute getMTReconstruction_CheckOnLearnerAction();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MTIdentification <em>MT Identification</em>}'.
@@ -19423,14 +19423,14 @@ public interface GeneratorPackage extends EPackage {
 		EAttribute MT_COMPLETION2__CHECK_ON_LEARNER_ACTION = eINSTANCE.getMTCompletion2_CheckOnLearnerAction();
 
 		/**
-		 * The meta object literal for the '{@link generator.impl.MTRecontructionImpl <em>MT Recontruction</em>}' class.
+		 * The meta object literal for the '{@link generator.impl.MTReconstructionImpl <em>MT Reconstruction</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see generator.impl.MTRecontructionImpl
-		 * @see generator.impl.GeneratorPackageImpl#getMTRecontruction()
+		 * @see generator.impl.MTReconstructionImpl
+		 * @see generator.impl.GeneratorPackageImpl#getMTReconstruction()
 		 * @generated
 		 */
-		EClass MT_RECONTRUCTION = eINSTANCE.getMTRecontruction();
+		EClass MT_RECONSTRUCTION = eINSTANCE.getMTReconstruction();
 
 		/**
 		 * The meta object literal for the '<em><b>Nb Missing Elements</b></em>' attribute feature.
@@ -19438,7 +19438,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MT_RECONTRUCTION__NB_MISSING_ELEMENTS = eINSTANCE.getMTRecontruction_NbMissingElements();
+		EAttribute MT_RECONSTRUCTION__NB_MISSING_ELEMENTS = eINSTANCE.getMTReconstruction_NbMissingElements();
 
 		/**
 		 * The meta object literal for the '<em><b>Check On Learner Action</b></em>' attribute feature.
@@ -19446,7 +19446,7 @@ public interface GeneratorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MT_RECONTRUCTION__CHECK_ON_LEARNER_ACTION = eINSTANCE.getMTRecontruction_CheckOnLearnerAction();
+		EAttribute MT_RECONSTRUCTION__CHECK_ON_LEARNER_ACTION = eINSTANCE.getMTReconstruction_CheckOnLearnerAction();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTIdentificationImpl <em>MT Identification</em>}' class.

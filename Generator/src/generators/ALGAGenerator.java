@@ -13,6 +13,7 @@ import flattener.Main;
 import generator.AQuestionableFact;
 import generator.CurrentObjectiveLevel;
 import generator.Dungeon;
+import generator.DungeonMode;
 import generator.LevelsDifficultyProgress;
 import generator.PropositionParam;
 import generator.QuestionedFact;
@@ -41,14 +42,14 @@ public class ALGAGenerator {
 	public static boolean MAXIMIZE_ROOMTYPE_ACCESS = false;
 	
 	public static void main(String[] args) {		
-		for(int i = 0; i < 10; i++) {
+		for(int i = 0; i < 1; i++) {
 			ALGAGenerator generator;
 			try {
-				if(i%2==0) {
+				/*if(i%2==0) {
 				generator = new ALGAGenerator(DidacticDomain.HISTORY_GEOGRAPHY, "HISTORY");
-				} else {
-				generator = new ALGAGenerator(DidacticDomain.MATHEMATICS, "FICTIF01");	
-				}
+				} else {*/
+				generator = new ALGAGenerator(DidacticDomain.JUDO, "FICTIF04");	
+				//}
 				generator.generate();
 				generator.printDungeon();
 				generator.saveDungeon("DungeonGen.xmi");
@@ -85,6 +86,16 @@ public class ALGAGenerator {
 		if(domain.equals(DidacticDomain.HISTORY_GEOGRAPHY)){ MAXIMIZE_ROOMTYPE_ACCESS = true; }
 		modelAccess = new ModelsManager(domain, forTest, learnerID, contextsFileName, contextID);
 	}
+	
+	public ALGAGenerator(DidacticDomain domain, boolean forTest, String learnerID, String contextsFileName, String contextID, boolean labyrinthine) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		//setLearningDomain(domain);
+		if(domain.equals(DidacticDomain.HISTORY_GEOGRAPHY)){ MAXIMIZE_ROOMTYPE_ACCESS = true; }
+		modelAccess = new ModelsManager(domain, forTest, learnerID, contextsFileName, contextID);
+		modelAccess.getContextModel().getGamecontext().setMode(labyrinthine? DungeonMode.LABYRINTHINE:DungeonMode.LINEAR);
+	}
+	
+	
+	
 	
 	public ALGAGenerator(DidacticDomain domain, String inputPath, String outputPath, String learnerID, String contextsFILE, String contextID,  boolean lauchedFromAPI) throws NonExistantLearnerPlayerException, ContextNotFoundException {
 		//setLearningDomain(domain);

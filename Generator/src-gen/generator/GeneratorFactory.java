@@ -229,13 +229,13 @@ public interface GeneratorFactory extends EFactory {
 	MTCompletion2 createMTCompletion2();
 
 	/**
-	 * Returns a new object of class '<em>MT Recontruction</em>'.
+	 * Returns a new object of class '<em>MT Reconstruction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MT Recontruction</em>'.
+	 * @return a new object of class '<em>MT Reconstruction</em>'.
 	 * @generated
 	 */
-	MTRecontruction createMTRecontruction();
+	MTReconstruction createMTReconstruction();
 
 	/**
 	 * Returns a new object of class '<em>MT Identification</em>'.
