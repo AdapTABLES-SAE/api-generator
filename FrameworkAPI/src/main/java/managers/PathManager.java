@@ -25,6 +25,7 @@ import generator.CompletionCriteria;
 import generator.DynamicMultipleChoice;
 import generator.ESeveralTarget;
 import generator.ESingleTarget;
+import generator.EnterResponse;
 import generator.GeneratorPackage;
 import generator.GeographyMembership;
 import generator.HGLevel;
@@ -192,34 +193,117 @@ public class PathManager {
 		} else
 		if(task instanceof HistoryIdentification) {
 			obj.put("nbFacts", task.getNbFacts());
-			
 			obj.put("taskType", "IDENT"); 
+			
+			//Answer modality
+			if(task.getResponseModality() instanceof EnterResponse) {
+				obj.put("answerModality", "INPUT");
+			}else{
+				obj.put("answerModality", "CHOICE");
+				if(task.getResponseModality() instanceof DynamicMultipleChoice) {
+					obj.put("nbBadChoices", ((DynamicMultipleChoice)task.getResponseModality()).getNbBadChoices());
+				}
+				if (task.getResponseModality() instanceof MultipleChoice) {
+					obj.put("nbChoices", ((MultipleChoice)task.getResponseModality()).getNbChoices());
+				}
+			}
 		} else
 		if(task instanceof GeographyMembership) {
-			obj.put("taskType", "MEMB"); 
+			obj.put("taskType", "IDENTSET"); 
+			obj.put("nbChoices", ((GeographyMembership)task).getNbExpectedAnswers()); 
+			obj.put("identifySharedProperty", ((GeographyMembership)task).isIdentifySharedProperty());
+
+			
+			//Answer modality
+			if(task.getResponseModality() instanceof EnterResponse) {
+				obj.put("answerModality", "INPUT");
+			}else{
+				obj.put("answerModality", "CHOICE");
+				if(task.getResponseModality() instanceof DynamicMultipleChoice) {
+					obj.put("nbBadChoices", ((DynamicMultipleChoice)task.getResponseModality()).getNbBadChoices());
+				}
+				if (task.getResponseModality() instanceof MultipleChoice) {
+					obj.put("nbChoices", ((MultipleChoice)task.getResponseModality()).getNbChoices());
+				}
+			}
 		} else
 		if(task instanceof HistoricalChronology) {
-			obj.put("taskType", "CHRONO"); 
+			obj.put("taskType", "ORDO"); 
+			obj.put("nbFacts", task.getNbFacts());
+			obj.put("mixDatePeriod", ((HistoricalChronology)task).isMixDatePeriod());
+
+			//Answer modality
+			if(task.getResponseModality() instanceof EnterResponse) {
+				obj.put("answerModality", "INPUT");
+			}else{
+				obj.put("answerModality", "CHOICE");
+				if(task.getResponseModality() instanceof DynamicMultipleChoice) {
+					obj.put("nbBadChoices", ((DynamicMultipleChoice)task.getResponseModality()).getNbBadChoices());
+				}
+				if (task.getResponseModality() instanceof MultipleChoice) {
+					obj.put("nbChoices", ((MultipleChoice)task.getResponseModality()).getNbChoices());
+				}
+			}
 		} else
 		if(task instanceof LocateOnAMap) {
 			LocateOnAMap realTask = (LocateOnAMap) task;
-			obj.put("taskType", realTask.getType()); 
-			obj.put("ID", realTask.getID());
+			obj.put("taskType", "LOCATE"); 
+			//obj.put("ID", realTask.getID());
 			obj.put("nbExpectedAnswers", realTask.getNbExpectedAnswers());
-			obj.put("nbFacts", realTask.getNbFacts());
-			obj.put("nbExpectedAnswers", realTask.getNbExpectedAnswers());
+			obj.put("identifySharedProperty", realTask.isIdentifySharedProperty());
 			
+			//Answer modality
+			if(task.getResponseModality() instanceof EnterResponse) {
+				obj.put("answerModality", "INPUT");
+			}else{
+				obj.put("answerModality", "CHOICE");
+				if(task.getResponseModality() instanceof DynamicMultipleChoice) {
+					obj.put("nbBadChoices", ((DynamicMultipleChoice)task.getResponseModality()).getNbBadChoices());
+				}
+				if (task.getResponseModality() instanceof MultipleChoice) {
+					obj.put("nbChoices", ((MultipleChoice)task.getResponseModality()).getNbChoices());
+				}
+			}
 		}if(task instanceof LegendAMap) {
+			obj.put("nbFacts", task.getNbFacts());
 			obj.put("taskType", "LEGEND"); 
+			obj.put("missing", ((LegendAMap)task).getMissing().getValue());
+
+			//Answer modality
+			if(task.getResponseModality() instanceof EnterResponse) {
+				obj.put("answerModality", "INPUT");
+			}else{
+				obj.put("answerModality", "CHOICE");
+				if(task.getResponseModality() instanceof DynamicMultipleChoice) {
+					obj.put("nbBadChoices", ((DynamicMultipleChoice)task.getResponseModality()).getNbBadChoices());
+				}
+				if (task.getResponseModality() instanceof MultipleChoice) {
+					obj.put("nbChoices", ((MultipleChoice)task.getResponseModality()).getNbChoices());
+				}
+			}
 		} else
 		if(task instanceof HistoricalEventAssociation) {
+			obj.put("nbFacts", task.getNbFacts());
 			obj.put("taskType", "ASSOC"); 
+			obj.put("missing", ((HistoricalEventAssociation)task).getMissing().getValue());
+			obj.put("source", ((HistoricalEventAssociation)task).getSource().getValue());
+			obj.put("target", ((HistoricalEventAssociation)task).getTarget().getValue());
+			//Answer modality
+			if(task.getResponseModality() instanceof EnterResponse) {
+				obj.put("answerModality", "INPUT");
+			}else{
+				obj.put("answerModality", "CHOICE");
+				if(task.getResponseModality() instanceof DynamicMultipleChoice) {
+					obj.put("nbBadChoices", ((DynamicMultipleChoice)task.getResponseModality()).getNbBadChoices());
+				}
+				if (task.getResponseModality() instanceof MultipleChoice) {
+					obj.put("nbChoices", ((MultipleChoice)task.getResponseModality()).getNbChoices());
+				}
+			}
 		}
-		obj.put("ID", task.getID());
-		obj.put("timeMaxSecond", task.getMaxTime());
+		obj.put("maxTime", task.getMaxTime());
 		obj.put("successiveSuccessesToReach", task.getNbConsecutiveSuccess());
 		obj.put("repartitionPercent", task.getPercentOfApparition());
-		obj.put("taskType", task.getType()); 
 		return obj;
 	}
 	
@@ -734,17 +818,32 @@ public class PathManager {
 	@SuppressWarnings("unchecked")
 	public JSONObject buildJSONHGObjectiveLevel(LearningPath path) {
 		JSONObject json = new JSONObject();
-		json.put("learningPathID", path.getID()); // TODO: define a default paths for this version 
-		json.put("objective", path.getObjectives().get(0).getID()); // TODO: define default objective 
-		json.put("level",  path.getObjectives().get(0).getLevels().get(0).getID()); // TODO: define default level 
-	
-		JSONObject setupParameters = new JSONObject();
-//		setupParameters.put("buildingParameters", initialiseJSONBuildParameters(path.getObjectives().get(0), (HGLevel) path.getObjectives().get(0).getLevels().get(0)));
-		setupParameters.put("tasksParameters", initialiseJSONTaskParameters4HG((HGLevel) path.getObjectives().get(0).getLevels().get(0)));
-//		
-		json.put("setupParameters", setupParameters);
+		json.put("learningPathID", path.getID());
+		JSONArray objectives = new JSONArray();
+		for(Objective objective: path.getObjectives()) {
+			JSONObject jobjective = new JSONObject();
+			jobjective.put("id", objective.getID()); 
+			jobjective.put("name", objective.getName()); 
+			//jobjective.put("prerequisites", initialiseJSONPrerequisites(path, objective));
+			JSONArray levels = new JSONArray();
+			for(Level level: objective.getLevels()) {
+				JSONObject jlevel = new JSONObject();
+				jlevel.put("id", level.getID());
+				//JSONObject setupParameters = new JSONObject();  
+				//setupParameters.put("buildingParameters", initialiseJSONBuildParameters(objective, (MTLevel) level));
+				//setupParameters.put("tasksParameters", initialiseJSONTaskParameters4HG((HGLevel) level));
+				//setupParameters.put("achievementParameters", initialiseJSONCompletionCriteria(level.getCompletionCriteria()));
+				//jlevel.put("setupParameters", setupParameters);
+				jlevel.put("tasksParameters", initialiseJSONTaskParameters4HG((HGLevel) level));
+				levels.add(jlevel);
+			}
+			jobjective.put("levels", levels);
+			objectives.add(jobjective);
+		}
+		json.put("objectives", objectives);
 		
-		return json;   
+		return json;
+		
 	}  
 	
 	@SuppressWarnings("unchecked")

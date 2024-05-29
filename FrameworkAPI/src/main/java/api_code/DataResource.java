@@ -182,7 +182,7 @@ public class DataResource {
     @Path("/student/createhg")
     @Consumes(MediaType.APPLICATION_JSON)
     public String createStudentHG(@Context ServletContext app) throws ClassroomNotFoundException, NonExistantLearnerPlayerException, LearnerPlayerAlreadyExistsException  { 
-        Constant.PROJECT_PATH = app.getRealPath("");
+		Constant.PROJECT_PATH = app.getRealPath("");
 
         manager = new DataManager();
         return manager.createStudentHG();
