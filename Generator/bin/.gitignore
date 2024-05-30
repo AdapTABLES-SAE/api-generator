@@ -1,4 +1,3 @@
-/generator/
 /educational_dimension/
 /exceptions/
 /factgenerator_template/
@@ -7,8 +6,11 @@
 /factsgenerator_maths/
 /factsgenerator_solarsystem/
 /game_dimension/
+/generator/
 /generators/
+/inputmodels/
 /managers/
-/old/
-/structures/
 /modelsForTests/
+/old/
+/outputmodels/
+/structures/
