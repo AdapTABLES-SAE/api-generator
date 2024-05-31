@@ -15,54 +15,55 @@ context LearningDomain!LearningPath {
 			return "SetOfFacts does not belong to the correct knowledge";
 		}
 	}
-	
-	//.println(); self.levels.size() = 0; isDefined();
-	
+}
+
+context LearningDomain!Objective {
 	/*
 	Checks if every required level of an Objective's Prerequisite, is not
 	a level of the actual objective. 
 	*/
 	constraint objectivePrerequisiteLevelsAreNotObjectiveLevels {
 		check {
-			return self.objectives.forAll(obj | 
-			obj.prerequisites.forAll(prereq | 
-			not obj.levels.contains(prereq.requiredLevel)));
+			return self.prerequisites.forAll(prereq | 
+			not self.levels.contains(prereq.requiredLevel));
 		}
 		
 		message {
 			return "Prerequisite of an objective references a level the objective";
 		}
 	}
-	
-	/*
-	Checks if every Prerequisite percentages are valid (over 0 and under 100).
-	*/
-	constraint prerequisitesPercentageAreOver0AndUnder100 {
-		check {
-			return self.objectives.forAll(obj | 
-			obj.prerequisites.forAll(prereq | 
-			prereq.successPercent >= 0 and prereq.successPercent <= 100 and 
-			prereq.encountersPercent >= 0 and prereq.encountersPercent <= 100));
-		}
-		
-		message {
-			return "Prerequisite has an non valid percentage (superior to 100 or inferior to 0)";
-		}
-	}
+}
+
+context LearningDomain!CompletionCriteria {
 
 	/*
 	Checks if every CompletionCriteria percentages are valid (over 0 and under 100).
 	*/	
 	constraint completionCriteriaAreOver0AndUnder100 {
 		check {
-			return self.objectives.forAll(obj | 
-			obj.levels.forAll(level | 
-			level.completionCriteria.successPercent >= 0 and level.completionCriteria.successPercent <= 100 and 
-			level.completionCriteria.encountersPercent >= 0 and level.completionCriteria.encountersPercent <= 100));
+			return (self.successPercent >= 0 and self.successPercent <= 100) and 
+			(self.encountersPercent >= 0 and self.encountersPercent <= 100);
 		}
 		
 		message {
 			return "Completion critera of a level has an non valid percentage (superior to 100 or inferior to 0)";
+		}
+	}
+}
+
+context LearningDomain!Prerequisite {
+
+	/*
+	Checks if every Prerequisite percentages are valid (over 0 and under 100).
+	*/
+	constraint prerequisitesPercentageAreOver0AndUnder100 {
+		check {
+			return (self.successPercent >= 0 and self.successPercent <= 100) and 
+			(self.encountersPercent >= 0 and self.encountersPercent <= 100);
+		}
+		
+		message {
+			return "Prerequisite has an non valid percentage (superior to 100 or inferior to 0)";
 		}
 	}
 	
@@ -71,14 +72,85 @@ context LearningDomain!LearningPath {
 	*/	
 	constraint prerequisiteAreUnlockable {
 		check {
-			return self.objectives.forAll(obj | 
-			obj.prerequisites.forAll(prereq | 
-			prereq.successPercent <= prereq.requiredLevel.completionCriteria.successPercent and
-			prereq.encountersPercent <= prereq.requiredLevel.completionCriteria.encountersPercent));
+			return (self.successPercent <= self.requiredLevel.completionCriteria.successPercent) and
+			(self.encountersPercent <= self.requiredLevel.completionCriteria.encountersPercent);
 		}
 		
 		message {
 			return "Prerequisite is not achievable (percentages are superior to those of the level completion criteria)";
 		}
 	}	
+}
+
+context LearningDomain!MultipleChoice {
+	/*
+	Checks that multiple choice have a coherent number of bad choices based on the total number of choices
+	*/	
+	constraint nbOfBadChoicesAreInferiorToNumberOfChoices {
+		check {
+			return self.nbChoices > self.nbBadChoices;
+		}
+		
+		message {
+			return "MultipleChoice should have a number of choices superior (>) to the number of bad choices.";
+		}
+	}
+}
+
+context DungeonGen!Dungeon {
+
+	/*
+	Checks that the objective belongs to the learner-player path
+	*/
+	constraint objectiveBelongsToLearnerPath {
+		check {
+			return self.learnerPlayer.learningpath.objectives.contains(self.learningobjective);
+		}
+		
+		message {
+			return "Dungeon objective does not belong to learner training path.";
+		}
+	}
+	
+	/*
+	Checks that the level belongs to the chosen objective
+	*/	
+	constraint levelBelongsToObjective {
+		check {
+			return self.learningobjective.levels.contains(self.level);
+		}
+		
+		message {
+			return "Dungeon level does not belong to the chosen objective.";
+		}
+	}
+	
+	/*
+	Checks that the tasks belongs to the chosen level
+	*/	
+	constraint tasksBelongsToLevel {
+		check {
+			return self.rooms.forAll(room | room.task == null or self.level.tasks.contains(room.task));
+		}
+		
+		message {
+			return "Dungeon tasks does not belong to the chosen level.";
+		}
+	}
+}
+
+context DungeonGen!Room {
+	/*
+	Checks that the position of elements belongs to the room types of to structures 
+	*/	
+	constraint elementsPositionBelongsToRoomTypeOrStructure {
+		check {
+			return self.positionedElement.forAll(pe | 
+			self.roomtype.elementPositions.contains(pe.position) or pe.position.ID.contains("id/"));
+		}
+		
+		message {
+			return "Elements positions does not belong to the chosen roomtype or structures presents in the room.";
+		}
+	}
 }

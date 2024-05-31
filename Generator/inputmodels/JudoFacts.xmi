@@ -48,9 +48,6 @@
     <facts xsi:type="generator:JudoTechniqueFact" name="Morote-Seoi-Nage" description="projection d'épaule par deux mains">
       <representation ID="morote-seoi-nage"/>
     </facts>
-    <facts xsi:type="generator:JudoTechniqueFact" name="Harai-Goshi" description="hanche fauchée" category="KOSHI-WAZA (Techniques de hanche)">
-      <representation ID="harai-goshi"/>
-    </facts>
     <facts xsi:type="generator:JudoTechniqueFact" name="Ko-Uchi-Gari" description="petit fauchage intérieur" category="ASHI-WAZA (Techniques de jambe)">
       <representation ID="ko-uchi-gari"/>
     </facts>
@@ -70,9 +67,6 @@
     </facts>
     <facts xsi:type="generator:JudoTechniqueFact" name="Hane-Goshi" description="hanche percutée" category="KOSHI-WAZA (Techniques de hanche)">
       <representation ID="hane-goshi"/>
-    </facts>
-    <facts xsi:type="generator:JudoTechniqueFact" name="Koshi-Guruma" description="roue autour des hanches" category="KOSHI-WAZA (Techniques de hanche)">
-      <representation ID="koshi-guruma"/>
     </facts>
     <facts xsi:type="generator:JudoTechniqueFact" name="Ko-Soto-Gari" description="petit fauchage extérieur" category="ASHI-WAZA (Techniques de jambe)">
       <representation ID="ko-soto-gari"/>
@@ -165,9 +159,6 @@
     <facts xsi:type="generator:JudoTechniqueFact" name="Soto-Makikomi" description="enroulement extérieur" category="MA-SUTEMI-WAZA (Techniques de sacrifice de face)">
       <representation ID="soto-makikomi"/>
     </facts>
-    <facts xsi:type="generator:JudoTechniqueFact" name="Harai-Tsuri-Komi-Ashi" description="balayage du pied en pêchant" category="ASHI-WAZA (Techniques de jambe)">
-      <representation ID="harai-tsuri-komi-ashi"/>
-    </facts>
     <facts xsi:type="generator:JudoTechniqueFact" name="O-Soto-Otoshi" description="grande projection extérieur" category="ASHI-WAZA (Techniques de jambe)">
       <representation ID="o-soto-otoshi"/>
     </facts>
@@ -201,9 +192,6 @@
     <facts xsi:type="generator:JudoTechniqueFact" name="Sumi-Gaeshi" description="renversement dans l'angle" category="MA-SUTEMI-WAZA (Techniques de sacrifice de face)">
       <representation ID="sumi-gaeshi"/>
     </facts>
-    <facts xsi:type="generator:JudoTechniqueFact" name="Ura-Nage" description="projection en arrière" category="MA-SUTEMI-WAZA (Techniques de sacrifice de face)">
-      <representation ID="ura-nage"/>
-    </facts>
     <facts xsi:type="generator:JudoTechniqueFact" name="Yoko-Guruma" description="enroulement de côté" category="MA-SUTEMI-WAZA (Techniques de sacrifice de face)">
       <representation ID="yoko-guruma"/>
     </facts>
@@ -212,14 +200,8 @@
     <facts xsi:type="generator:JudoTechniqueFact" name="Yoko-Otoshi" description="renversement latéral" category="MA-SUTEMI-WAZA (Techniques de sacrifice de face)">
       <representation ID="yoko-otoshi"/>
     </facts>
-    <facts xsi:type="generator:JudoTechniqueFact" name="Utsuri-Goshi" description="projection de hanche vers l'avant en soulevant " category="KOSHI-WAZA (Techniques de hanche)">
-      <representation ID="utsuri-goshi"/>
-    </facts>
     <facts xsi:type="generator:JudoTechniqueFact" name="Ura-Nage" description="projection en arrière" category="MA-SUTEMI-WAZA (Techniques de sacrifice de face)">
       <representation ID="ura-nage"/>
-    </facts>
-    <facts xsi:type="generator:JudoTechniqueFact" name="O-Guruma" description="grande roue" category="ASHI-WAZA (Techniques de jambe)">
-      <representation ID="o-guruma"/>
     </facts>
     <facts xsi:type="generator:JudoTechniqueFact" name="Te-Guruma" description="roue autour des mains" category="TE-WAZA (Techniques de bras)">
       <representation ID="te-guruma"/>
@@ -241,9 +223,6 @@
     <facts xsi:type="generator:JudoTechniqueFact" name="Tsubame-Gaeshi" description="e vol de l'hirondelle" category="ASHI-WAZA (Techniques de jambe)">
       <representation ID="tsubame-gaeshi"/>
     </facts>
-    <facts xsi:type="generator:JudoTechniqueFact" name="Uki-Waza" description="technique flottante" category="MA-SUTEMI-WAZA (Techniques de sacrifice de face)">
-      <representation ID="uki-waza"/>
-    </facts>
     <facts xsi:type="generator:JudoTechniqueFact" name="Yoko-Wakare" description="séparation de côté" category="MA-SUTEMI-WAZA (Techniques de sacrifice de face)">
       <representation ID="yoko-wakare"/>
     </facts>
@@ -256,7 +235,7 @@
       <representation ID="waza-ari"/>
     </facts>
     <facts xsi:type="generator:JudoArbitrationGestureFact" name="ANNULATION" description="annuler l'action attribuer (ex. annuler waza-ari)">
-      <representation ID="waza-ari"/>
+      <representation ID="annulation"/>
     </facts>
   </knowledgefacts>
   <knowledgefacts name="GESTE ARBITRAGE (DIRECTIONS)">
@@ -273,10 +252,10 @@
       <representation ID="toketa"/>
     </facts>
     <facts xsi:type="generator:JudoArbitrationGestureFact" name="SONOMAMA" description="les combatants ne doivent plus bouger">
-      <representation ID="sonomama_yoshi"/>
+      <representation ID="sonomama"/>
     </facts>
     <facts xsi:type="generator:JudoArbitrationGestureFact" name="YOSHI" description="le combat reprend (après un sonomama)">
-      <representation ID="sonomama_yoshi"/>
+      <representation ID="yoshi"/>
     </facts>
     <facts xsi:type="generator:JudoArbitrationGestureFact" name="HIKI WAKE" description="match nul">
       <representation ID="hiki-wake"/>

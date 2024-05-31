@@ -136,12 +136,10 @@
       <positions ID="1945"/>
       <positions ID="1940"/>
       <positions ID="1944"/>
-      <positions ID="1945"/>
       <positions ID="1957"/>
       <positions ID="2002"/>
       <positions ID="1962"/>
       <positions ID="1958"/>
-      <positions ID="1962"/>
       <positions ID="1975"/>
       <positions ID="1981"/>
       <positions ID="1989"/>
@@ -185,22 +183,22 @@
     </visualization>
   </knowledgefacts>
   <knowledgefacts name="Densité de population (Légende) ">
-    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DENSITE_POPU_LEGEND" symbolPosition="FORTE">
+    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DENSITE_POPU_LEGEND" symbolPosition="FORTE_DENSITE">
       <representation ID="ROUGE"/>
       <legend text="plus de 100" position="FORTE_TEXT"/>
     </facts>
-    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DENSITE_POPU_LEGEND" symbolPosition="MOYENNE">
+    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DENSITE_POPU_LEGEND" symbolPosition="MOYENNE_DENSITE">
       <representation ID="ORANGE"/>
       <legend text="entre 50 et 100" position="MOYENNE_TEXT"/>
     </facts>
-    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DENSITE_POPU_LEGEND" symbolPosition="FAIBLE">
+    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DENSITE_POPU_LEGEND" symbolPosition="FAIBLE_DENSITE">
       <representation ID="JAUNE"/>
       <legend text="moins de 50" position="FAIBLE_TEXT"/>
     </facts>
     <visualization ID="DENSITE_POPU_LEGEND">
-      <positions ID="FORTE"/>
-      <positions ID="MOYENNE"/>
-      <positions ID="FAIBLE"/>
+      <positions ID="FORTE_DENSITE"/>
+      <positions ID="MOYENNE_DENSITE"/>
+      <positions ID="FAIBLE_DENSITE"/>
       <positions ID="FORTE_TEXT"/>
       <positions ID="MOYENNE_TEXT"/>
       <positions ID="FAIBLE_TEXT"/>
@@ -243,17 +241,17 @@
     <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="ST_BARTHELEMY" type="ISLAND" value="Saint-Barthelemy" category="Collectivite d'outre mer"/>
     <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="ST_PIERRE_MIQUELON" type="ISLAND" value="Saint-Pierre-et-Miquelon" category="Collectivite d'outre mer"/>
     <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="WALLIS_FUTUNA" type="ISLAND" value="Wallis-et-Futuna" category="Collectivite d'outre mer"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="GUADELOUPE" type="REGIONS" value="Guadeloupe" category="Département et Région d'outre mer"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="MARTINIQUE" type="REGIONS" value="Martinique" category="Département et Région d'outre mer"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="MAYOTTE" type="REGIONS" value="Mayotte" category="Département et Région d'outre mer"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="GUADELOUPE2" type="REGIONS" value="Guadeloupe" category="Département et Région d'outre mer"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="MARTINIQUE2" type="REGIONS" value="Martinique" category="Département et Région d'outre mer"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="MAYOTTE2" type="REGIONS" value="Mayotte" category="Département et Région d'outre mer"/>
     <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="LAREUNION" type="REGIONS" value="La Reunion" category="Département et Région d'outre mer"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="GUYANE" type="REGIONS" value="Guyane" category="Département et Région d'outre mer"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="GUYANE2" type="REGIONS" value="Guyane" category="Département et Région d'outre mer"/>
     <visualization ID="TERRITOIRE_ULTRAMARINS">
-      <positions ID="GUADELOUPE"/>
-      <positions ID="MARTINIQUE"/>
+      <positions ID="GUADELOUPE2"/>
+      <positions ID="MARTINIQUE2"/>
       <positions ID="LAREUNION"/>
-      <positions ID="GUYANE"/>
-      <positions ID="MAYOTTE"/>
+      <positions ID="GUYANE2"/>
+      <positions ID="MAYOTTE2"/>
       <positions ID="NOUVELLE_CALEDONIE"/>
       <positions ID="TERRES_AUSTRALES"/>
       <positions ID="CLIPPERTON"/>

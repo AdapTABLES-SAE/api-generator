@@ -1,111 +1,195 @@
 <?xml version="1.0" encoding="ASCII"?>
-<generator:Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" entry="//@rooms.0">
-  <rooms nbExpectedAnswers="0">
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.1/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.1"/>
+<generator:Dungeon xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" xsi:schemaLocation="http://www.example.org/generator ../model/generator.ecore" entry="//@rooms.0">
+  <rooms>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.1/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.2"/>
   </rooms>
-  <rooms y="1" nbExpectedAnswers="0">
-    <roomaccess otherroomaccess="//@rooms.0/@roomaccess.0"/>
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.2/@roomaccess.0"/>
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.8/@roomaccess.0"/>
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.10/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22"/>
-    <positionedElement ID="ELEM1">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM6"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+  <rooms x="1" nbExpectedAnswers="2">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.0/@roomaccess.0"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.2/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.11"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT3"/>
+      <question xsi:type="generator:QuestionParam" completeFact="OSAEKOMI-WAZA (Techniques d'immobilisation) : Hon-Gesa-Gatame, Kami-Shiho-Gatame">
+        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation)"/>
+        <solutions>
+          <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation) : Hon-Gesa-Gatame, Kami-Shiho-Gatame"/>
+        </solutions>
+      </question>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Hon-Gesa-Gatame"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Kami-Shiho-Gatame"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Sode-Tsuri-Komi-Goshi"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="2"/>
+      </correctnessToReach>
+    </questionedFacts>
+    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
+    <positionedElement ID="ELEM1" fact="//@rooms.1/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.11/@elementPositions.1"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Hon-Gesa-Gatame"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
     </positionedElement>
-    <positionedElement ID="ELEM2">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    <positionedElement ID="ELEM2" fact="//@rooms.1/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.11/@elementPositions.3"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Kami-Shiho-Gatame"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
     </positionedElement>
-    <positionedElement ID="ELEM3">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    <positionedElement ID="ELEM3" fact="//@rooms.1/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.11/@elementPositions.2"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Sode-Tsuri-Komi-Goshi"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
     </positionedElement>
-    <positionedElement ID="ELEM4">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    <positionedElement ID="ELEM4" fact="//@rooms.1/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.11/@elementPositions.0"/>
+      <displays>
+        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation)"/>
+      </displays>
+      <acceptedFacts>
+        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation) : Hon-Gesa-Gatame, Kami-Shiho-Gatame"/>
+      </acceptedFacts>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
     </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.18"/>
+  </rooms>
+  <rooms x="2">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.1/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.3/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.19"/>
     <positionedElement ID="ELEM5">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM7"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.19/@elementPositions.5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_BEAR-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM6">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.19/@elementPositions.4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_BEAR-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM7">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.19/@elementPositions.2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_BEAR-TRAP"/>
     </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.31"/>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.30"/>
   </rooms>
-  <rooms x="-1" y="1" nbExpectedAnswers="0">
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.1/@roomaccess.1"/>
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.3/@roomaccess.0"/>
-    <roomaccess otherroomaccess="//@rooms.12/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22"/>
+  <rooms x="3">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.2/@roomaccess.1"/>
+    <roomaccess otherroomaccess="//@rooms.4/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.19"/>
     <positionedElement ID="ELEM8">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.19/@elementPositions.5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_BEAR-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM9">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM7"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.19/@elementPositions.1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_BEAR-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM10">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.19/@elementPositions.4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_BEAR-TRAP"/>
     </positionedElement>
-    <positionedElement ID="ELEM11">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM6"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.30"/>
+  </rooms>
+  <rooms x="3" y="-1" nbExpectedAnswers="2">
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.3/@roomaccess.1"/>
+    <roomaccess otherroomaccess="//@rooms.5/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT4"/>
+      <question xsi:type="generator:QuestionParam" completeFact="OSAEKOMI-WAZA (Techniques d'immobilisation) : Tate-Shiho-Gatame, Ushiro-Gesa-Gatame">
+        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation)"/>
+        <solutions>
+          <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation) : Tate-Shiho-Gatame, Ushiro-Gesa-Gatame"/>
+        </solutions>
+      </question>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Tate-Shiho-Gatame"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Ushiro-Gesa-Gatame"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Ko-Soto-Gari"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="2"/>
+      </correctnessToReach>
+    </questionedFacts>
+    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
+    <positionedElement ID="ELEM11" fact="//@rooms.4/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25/@elementPositions.2"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Tate-Shiho-Gatame"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement ID="ELEM12">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    <positionedElement ID="ELEM12" fact="//@rooms.4/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25/@elementPositions.5"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Ushiro-Gesa-Gatame"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement ID="ELEM13">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    <positionedElement ID="ELEM13" fact="//@rooms.4/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25/@elementPositions.3"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Ko-Soto-Gari"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
     <positionedElement ID="ELEM14">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25/@elementPositions.4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SWITCH"/>
     </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.31"/>
+    <positionedElement ID="ELEM15" fact="//@rooms.4/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25/@elementPositions.0"/>
+      <displays>
+        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation)"/>
+      </displays>
+      <acceptedFacts>
+        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation) : Tate-Shiho-Gatame, Ushiro-Gesa-Gatame"/>
+      </acceptedFacts>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.0"/>
   </rooms>
-  <rooms x="-2" y="1" nbExpectedAnswers="0">
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.2/@roomaccess.1"/>
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.4/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.19"/>
-    <positionedElement ID="ELEM15">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM16">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM17">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM18">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM19">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.29"/>
-  </rooms>
-  <rooms x="-2" y="2" nbExpectedAnswers="1">
-    <roomaccess otherroomaccess="//@rooms.3/@roomaccess.1"/>
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.5/@roomaccess.0"/>
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.9/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+  <rooms x="3" y="-2" nbExpectedAnswers="1">
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.4/@roomaccess.1"/>
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.6/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25"/>
     <questionedFacts>
       <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT2"/>
       <question xsi:type="generator:QuestionParam" completeFact="ASHI-WAZA (Techniques de jambe) : De-Ashi-Barai">
@@ -119,7 +203,7 @@
         <state xsi:type="generator:CorrectnessValue"/>
       </propositions>
       <propositions order="-1">
-        <value xsi:type="generator:Value" value="Hon-Gesa-Gatame"/>
+        <value xsi:type="generator:Value" value="Tate-Shiho-Gatame"/>
         <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </propositions>
       <correctnessToReach>
@@ -127,47 +211,49 @@
       </correctnessToReach>
     </questionedFacts>
     <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
-    <positionedElement ID="ELEM20" fact="//@rooms.4/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="De-Ashi-Barai"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT16">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25/@elementPositions.9"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
+      <createdPosition ID="id/STRUCT16"/>
     </positionedElement>
-    <positionedElement ID="ELEM21" fact="//@rooms.4/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Hon-Gesa-Gatame"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    <positionedElement ID="ELEM17" position="//@rooms.5/@positionedElement.0/@createdPosition">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_LARGE_DETECTOR"/>
     </positionedElement>
-    <positionedElement ID="ELEM22">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SWITCH"/>
-    </positionedElement>
-    <positionedElement ID="ELEM23" fact="//@rooms.4/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSQ1"/>
+    <positionedElement ID="ELEM18" position="//@rooms.5/@positionedElement.0/@createdPosition" fact="//@rooms.5/@questionedFacts.0">
       <displays>
         <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe)"/>
       </displays>
       <acceptedFacts>
         <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe) : De-Ashi-Barai"/>
       </acceptedFacts>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_CORRECTNESS"/>
     </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.0"/>
+    <positionedElement ID="ELEM19" fact="//@rooms.5/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25/@elementPositions.7"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="De-Ashi-Barai"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+    </positionedElement>
+    <positionedElement ID="ELEM20" fact="//@rooms.5/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25/@elementPositions.6"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Tate-Shiho-Gatame"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.9"/>
   </rooms>
-  <rooms x="-3" y="2" nbExpectedAnswers="2">
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.4/@roomaccess.1"/>
-    <roomaccess otherroomaccess="//@rooms.6/@roomaccess.0"/>
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.7/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.6"/>
+  <rooms x="2" y="-2" nbExpectedAnswers="2">
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.5/@roomaccess.1"/>
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.7/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12"/>
     <questionedFacts>
       <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT1"/>
       <question xsi:type="generator:QuestionParam" completeFact="ASHI-WAZA (Techniques de jambe) : Hiza-Guruma, O-Soto-Gari">
@@ -185,7 +271,7 @@
         <state xsi:type="generator:CorrectnessValue"/>
       </propositions>
       <propositions order="-1">
-        <value xsi:type="generator:Value" value="O-Goshi"/>
+        <value xsi:type="generator:Value" value="Soto-Makikomi"/>
         <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </propositions>
       <correctnessToReach>
@@ -193,46 +279,38 @@
       </correctnessToReach>
     </questionedFacts>
     <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
-    <positionedElement ID="ELEM24" fact="//@rooms.5/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
+    <positionedElement ID="ELEM21" fact="//@rooms.6/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.8"/>
       <correctness>
         <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
       <displays>
         <value xsi:type="generator:Value" value="Hiza-Guruma"/>
       </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
     </positionedElement>
-    <positionedElement ID="ELEM25" fact="//@rooms.5/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
+    <positionedElement ID="ELEM22" fact="//@rooms.6/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.2"/>
       <correctness>
         <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
       <displays>
         <value xsi:type="generator:Value" value="O-Soto-Gari"/>
       </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
     </positionedElement>
-    <positionedElement ID="ELEM26" fact="//@rooms.5/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
+    <positionedElement ID="ELEM23" fact="//@rooms.6/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.3"/>
       <correctness>
         <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </correctness>
       <displays>
-        <value xsi:type="generator:Value" value="O-Goshi"/>
+        <value xsi:type="generator:Value" value="Soto-Makikomi"/>
       </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
     </positionedElement>
-    <positionedElement ID="ELEM27" fact="//@rooms.5/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM28" fact="//@rooms.5/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM29" fact="//@rooms.5/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSQ1"/>
+    <positionedElement ID="ELEM24" fact="//@rooms.6/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.0"/>
       <displays>
         <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe)"/>
       </displays>
@@ -241,79 +319,807 @@
       </acceptedFacts>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
     </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.6"/>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.18"/>
   </rooms>
-  <rooms x="-3" y="1" nbExpectedAnswers="0">
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.5/@roomaccess.1"/>
-    <roomaccess otherroomaccess="//@rooms.16/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
+  <rooms x="1" y="-2">
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.6/@roomaccess.1"/>
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.8/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22"/>
+    <positionedElement ID="ELEM25">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.0"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM26">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM27">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM28">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM29">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
     <positionedElement ID="ELEM30">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.6"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
     </positionedElement>
     <positionedElement ID="ELEM31">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS8"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
     </positionedElement>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.31"/>
+  </rooms>
+  <rooms x="1" y="-1">
+    <roomaccess otherroomaccess="//@rooms.7/@roomaccess.1"/>
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.9/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.20"/>
     <positionedElement ID="ELEM32">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS9"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.20/@elementPositions.4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM33">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.20/@elementPositions.5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM34">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.20/@elementPositions.2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM35">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.20/@elementPositions.1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM36">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SPIKE-TRAP"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.20/@elementPositions.3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
     </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.32"/>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.29"/>
   </rooms>
-  <rooms x="-3" y="3" nbExpectedAnswers="0">
-    <roomaccess otherroomaccess="//@rooms.5/@roomaccess.2"/>
+  <rooms y="-1">
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.8/@roomaccess.1"/>
+    <roomaccess otherroomaccess="//@rooms.10/@roomaccess.0"/>
     <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
     <positionedElement ID="ELEM37">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM38">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.6"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM39">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.8"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM40">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.0"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM41">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM42">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS8"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
     </positionedElement>
     <positionedElement ID="ELEM43">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.32"/>
+  </rooms>
+  <rooms y="-2" nbExpectedAnswers="1">
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.9/@roomaccess.1"/>
+    <roomaccess otherroomaccess="//@rooms.11/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.26"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT0"/>
+      <question xsi:type="generator:QuestionParam" completeFact="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage">
+        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras)"/>
+        <solutions>
+          <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage"/>
+        </solutions>
+      </question>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Ippon-Seoi-Nage"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Soto-Makikomi"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+    </questionedFacts>
+    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
+    <positionedElement ID="ELEM44" fact="//@rooms.10/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.26/@elementPositions.0"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Ippon-Seoi-Nage"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM45" fact="//@rooms.10/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.26/@elementPositions.10"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Soto-Makikomi"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM46">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.26/@elementPositions.9"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SWITCH"/>
+    </positionedElement>
+    <positionedElement ID="ELEM47" fact="//@rooms.10/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.26/@elementPositions.6"/>
+      <displays>
+        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras)"/>
+      </displays>
+      <acceptedFacts>
+        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage"/>
+      </acceptedFacts>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.0"/>
+  </rooms>
+  <rooms y="-3" nbExpectedAnswers="1">
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.10/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.12/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.6"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT2"/>
+      <question xsi:type="generator:QuestionParam" completeFact="ASHI-WAZA (Techniques de jambe) : De-Ashi-Barai">
+        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe)"/>
+        <solutions>
+          <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe) : De-Ashi-Barai"/>
+        </solutions>
+      </question>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="De-Ashi-Barai"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Ude-Hishigi-Juji-Gatame"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+    </questionedFacts>
+    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
+    <positionedElement ID="ELEM48" fact="//@rooms.11/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.6/@elementPositions.6"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="De-Ashi-Barai"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM49" fact="//@rooms.11/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.6/@elementPositions.8"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Ude-Hishigi-Juji-Gatame"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM50">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.6/@elementPositions.2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SWITCH"/>
+    </positionedElement>
+    <positionedElement ID="ELEM51" fact="//@rooms.11/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.6/@elementPositions.1"/>
+      <displays>
+        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe)"/>
+      </displays>
+      <acceptedFacts>
+        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe) : De-Ashi-Barai"/>
+      </acceptedFacts>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.0"/>
+  </rooms>
+  <rooms x="1" y="-3">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.11/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.13/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
+    <positionedElement ID="ELEM52">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.8"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM53">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM54">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM55">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM56">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.7"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM57">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM58">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.0"/>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
     </positionedElement>
     <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.32"/>
   </rooms>
-  <rooms x="1" y="1" nbExpectedAnswers="1">
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.1/@roomaccess.2"/>
+  <rooms x="2" y="-3" nbExpectedAnswers="2">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.12/@roomaccess.1"/>
     <roomaccess direction="EAST" otherroomaccess="//@rooms.14/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.13"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT3"/>
+      <question xsi:type="generator:QuestionParam" completeFact="OSAEKOMI-WAZA (Techniques d'immobilisation) : Hon-Gesa-Gatame, Kami-Shiho-Gatame">
+        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation)"/>
+        <solutions>
+          <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation) : Hon-Gesa-Gatame, Kami-Shiho-Gatame"/>
+        </solutions>
+      </question>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Hon-Gesa-Gatame"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Kami-Shiho-Gatame"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Ude-Hishigi-Hiza-Gatame"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="2"/>
+      </correctnessToReach>
+    </questionedFacts>
+    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
+    <positionedElement ID="ELEM59" fact="//@rooms.13/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@elementPositions.7"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Hon-Gesa-Gatame"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM60" fact="//@rooms.13/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@elementPositions.5"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Kami-Shiho-Gatame"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM61" fact="//@rooms.13/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@elementPositions.4"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Ude-Hishigi-Hiza-Gatame"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM62">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@elementPositions.6"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SWITCH"/>
+    </positionedElement>
+    <positionedElement ID="ELEM63" fact="//@rooms.13/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@elementPositions.1"/>
+      <displays>
+        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation)"/>
+      </displays>
+      <acceptedFacts>
+        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation) : Hon-Gesa-Gatame, Kami-Shiho-Gatame"/>
+      </acceptedFacts>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.0"/>
+  </rooms>
+  <rooms x="3" y="-3">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.13/@roomaccess.1"/>
+    <roomaccess otherroomaccess="//@rooms.15/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22"/>
+    <positionedElement ID="ELEM64">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM65">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM66">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM67">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM68">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.6"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM69">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.0"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM70">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.31"/>
+  </rooms>
+  <rooms x="3" y="-4" nbExpectedAnswers="2">
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.14/@roomaccess.1"/>
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.16/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT6"/>
+      <question xsi:type="generator:QuestionParam" completeFact="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi">
+        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche)"/>
+        <solutions>
+          <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi"/>
+        </solutions>
+      </question>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Uki-Goshi"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="O-Goshi"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Morote-Gari"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="2"/>
+      </correctnessToReach>
+    </questionedFacts>
+    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
+    <positionedElement ID="ELEM71" fact="//@rooms.15/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+    </positionedElement>
+    <positionedElement ID="ELEM72" fact="//@rooms.15/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+    </positionedElement>
+    <positionedElement ID="ELEM73" fact="//@rooms.15/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.8"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Uki-Goshi"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM74" fact="//@rooms.15/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.6"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="O-Goshi"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM75" fact="//@rooms.15/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.7"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Morote-Gari"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM76" fact="//@rooms.15/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.0"/>
+      <displays>
+        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche)"/>
+      </displays>
+      <acceptedFacts>
+        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi"/>
+      </acceptedFacts>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.37"/>
+  </rooms>
+  <rooms x="2" y="-4">
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.15/@roomaccess.1"/>
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.17/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
+    <positionedElement ID="ELEM77">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.8"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM78">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM79">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.0"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM80">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
+    </positionedElement>
+    <positionedElement ID="ELEM81">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21/@elementPositions.3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.29"/>
+  </rooms>
+  <rooms x="1" y="-4" nbExpectedAnswers="2">
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.16/@roomaccess.1"/>
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.18/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT6"/>
+      <question xsi:type="generator:QuestionParam" completeFact="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi">
+        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche)"/>
+        <solutions>
+          <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi"/>
+        </solutions>
+      </question>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Uki-Goshi"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="O-Goshi"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="O-Guruma"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="2"/>
+      </correctnessToReach>
+    </questionedFacts>
+    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
+    <positionedElement ID="ELEM82" fact="//@rooms.17/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@elementPositions.13"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Uki-Goshi"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+    </positionedElement>
+    <positionedElement ID="ELEM83" fact="//@rooms.17/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@elementPositions.6"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="O-Goshi"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+    </positionedElement>
+    <positionedElement ID="ELEM84" fact="//@rooms.17/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@elementPositions.11"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="O-Guruma"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+    </positionedElement>
+    <positionedElement ID="ELEM85" fact="//@rooms.17/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@elementPositions.16"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM86" fact="//@rooms.17/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@elementPositions.17"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM87" fact="//@rooms.17/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4/@elementPositions.4"/>
+      <displays>
+        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche)"/>
+      </displays>
+      <acceptedFacts>
+        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi"/>
+      </acceptedFacts>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.6"/>
+  </rooms>
+  <rooms y="-4" nbExpectedAnswers="2">
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.17/@roomaccess.1"/>
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.19/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.9"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT6"/>
+      <question xsi:type="generator:QuestionParam" completeFact="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi">
+        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche)"/>
+        <solutions>
+          <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi"/>
+        </solutions>
+      </question>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Uki-Goshi"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="O-Goshi"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="O-Soto-Otoshi"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="2"/>
+      </correctnessToReach>
+    </questionedFacts>
+    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
+    <positionedElement ID="ELEM88" fact="//@rooms.18/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.9/@elementPositions.10"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+    </positionedElement>
+    <positionedElement ID="ELEM89" fact="//@rooms.18/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.9/@elementPositions.5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+    </positionedElement>
+    <positionedElement ID="ELEM90" fact="//@rooms.18/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.9/@elementPositions.9"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Uki-Goshi"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM91" fact="//@rooms.18/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.9/@elementPositions.8"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="O-Goshi"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM92" fact="//@rooms.18/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.9/@elementPositions.3"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="O-Soto-Otoshi"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM93" fact="//@rooms.18/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.9/@elementPositions.0"/>
+      <displays>
+        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche)"/>
+      </displays>
+      <acceptedFacts>
+        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi"/>
+      </acceptedFacts>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.37"/>
+  </rooms>
+  <rooms x="-1" y="-4" nbExpectedAnswers="2">
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.18/@roomaccess.1"/>
+    <roomaccess otherroomaccess="//@rooms.20/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT1"/>
+      <question xsi:type="generator:QuestionParam" completeFact="ASHI-WAZA (Techniques de jambe) : Hiza-Guruma, O-Soto-Gari">
+        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe)"/>
+        <solutions>
+          <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe) : Hiza-Guruma, O-Soto-Gari"/>
+        </solutions>
+      </question>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Hiza-Guruma"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="O-Soto-Gari"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Gyaku-Juji-Jime"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="2"/>
+      </correctnessToReach>
+    </questionedFacts>
+    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
+    <positionedElement ID="ELEM94" fact="//@rooms.19/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25/@elementPositions.6"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Hiza-Guruma"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM95" fact="//@rooms.19/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25/@elementPositions.7"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="O-Soto-Gari"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM96" fact="//@rooms.19/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25/@elementPositions.3"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Gyaku-Juji-Jime"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM97">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25/@elementPositions.4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SWITCH"/>
+    </positionedElement>
+    <positionedElement ID="ELEM98" fact="//@rooms.19/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25/@elementPositions.1"/>
+      <displays>
+        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe)"/>
+      </displays>
+      <acceptedFacts>
+        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe) : Hiza-Guruma, O-Soto-Gari"/>
+      </acceptedFacts>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.0"/>
+  </rooms>
+  <rooms x="-1" y="-5">
+    <roomaccess direction="NORTH" otherroomaccess="//@rooms.19/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.21/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22"/>
+    <positionedElement ID="ELEM99">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.4"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM100">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.2"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM101">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.6"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM102">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.1"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM103">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.5"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM104">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.3"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <positionedElement ID="ELEM105">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22/@elementPositions.0"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-SPIKE-TRAP_MEDIUM"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.31"/>
+  </rooms>
+  <rooms y="-5" nbExpectedAnswers="1">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.20/@roomaccess.1"/>
+    <roomaccess direction="EAST" otherroomaccess="//@rooms.22/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5"/>
+    <questionedFacts>
+      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT0"/>
+      <question xsi:type="generator:QuestionParam" completeFact="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage">
+        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras)"/>
+        <solutions>
+          <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage"/>
+        </solutions>
+      </question>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Ippon-Seoi-Nage"/>
+        <state xsi:type="generator:CorrectnessValue"/>
+      </propositions>
+      <propositions order="-1">
+        <value xsi:type="generator:Value" value="Uki-Waza"/>
+        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </propositions>
+      <correctnessToReach>
+        <value xsi:type="generator:Value" value="1"/>
+      </correctnessToReach>
+    </questionedFacts>
+    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
+    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT106">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@elementPositions.9"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
+      <createdPosition ID="id/STRUCT106"/>
+    </positionedElement>
+    <positionedElement ID="ELEM107" position="//@rooms.21/@positionedElement.0/@createdPosition">
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_LARGE_DETECTOR"/>
+    </positionedElement>
+    <positionedElement ID="ELEM108" position="//@rooms.21/@positionedElement.0/@createdPosition" fact="//@rooms.21/@questionedFacts.0">
+      <displays>
+        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras)"/>
+      </displays>
+      <acceptedFacts>
+        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage"/>
+      </acceptedFacts>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_CORRECTNESS"/>
+    </positionedElement>
+    <positionedElement ID="ELEM109" fact="//@rooms.21/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@elementPositions.3"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Ippon-Seoi-Nage"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+    </positionedElement>
+    <positionedElement ID="ELEM110" fact="//@rooms.21/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.5/@elementPositions.5"/>
+      <correctness>
+        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
+      </correctness>
+      <displays>
+        <value xsi:type="generator:Value" value="Uki-Waza"/>
+      </displays>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
+    </positionedElement>
+    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.9"/>
+  </rooms>
+  <rooms x="1" y="-5" nbExpectedAnswers="1">
+    <roomaccess direction="WEST" otherroomaccess="//@rooms.21/@roomaccess.1"/>
+    <roomaccess otherroomaccess="//@rooms.23/@roomaccess.0"/>
+    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12"/>
     <questionedFacts>
       <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT5"/>
       <question xsi:type="generator:QuestionParam" completeFact="OSAEKOMI-WAZA (Techniques d'immobilisation) : Yoko-Shiho-Gatame">
@@ -327,7 +1133,7 @@
         <state xsi:type="generator:CorrectnessValue"/>
       </propositions>
       <propositions order="-1">
-        <value xsi:type="generator:Value" value="O-Soto-Gari"/>
+        <value xsi:type="generator:Value" value="Hane-Goshi"/>
         <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </propositions>
       <correctnessToReach>
@@ -335,28 +1141,32 @@
       </correctnessToReach>
     </questionedFacts>
     <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
-    <positionedElement ID="ELEM44" fact="//@rooms.8/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
+    <positionedElement ID="ELEM111" fact="//@rooms.22/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.7"/>
       <correctness>
         <value xsi:type="generator:CorrectnessValue"/>
       </correctness>
       <displays>
         <value xsi:type="generator:Value" value="Yoko-Shiho-Gatame"/>
       </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement ID="ELEM45" fact="//@rooms.8/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
+    <positionedElement ID="ELEM112" fact="//@rooms.22/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.2"/>
       <correctness>
         <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
       </correctness>
       <displays>
-        <value xsi:type="generator:Value" value="O-Soto-Gari"/>
+        <value xsi:type="generator:Value" value="Hane-Goshi"/>
       </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMTYPE_BREAKABLE_POT"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
     </positionedElement>
-    <positionedElement ID="ELEM46" fact="//@rooms.8/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSQ4"/>
+    <positionedElement ID="ELEM113">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.8"/>
+      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SWITCH"/>
+    </positionedElement>
+    <positionedElement ID="ELEM114" fact="//@rooms.22/@questionedFacts.0">
+      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12/@elementPositions.0"/>
       <displays>
         <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation)"/>
       </displays>
@@ -365,856 +1175,14 @@
       </acceptedFacts>
       <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
     </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.18"/>
-  </rooms>
-  <rooms x="-2" y="3" nbExpectedAnswers="2">
-    <roomaccess otherroomaccess="//@rooms.4/@roomaccess.2"/>
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.11/@roomaccess.0"/>
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.13/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT1"/>
-      <question xsi:type="generator:QuestionParam" completeFact="ASHI-WAZA (Techniques de jambe) : Hiza-Guruma, O-Soto-Gari">
-        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe)"/>
-        <solutions>
-          <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe) : Hiza-Guruma, O-Soto-Gari"/>
-        </solutions>
-      </question>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Hiza-Guruma"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="O-Soto-Gari"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Kata-Te-Jime"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="2"/>
-      </correctnessToReach>
-    </questionedFacts>
-    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
-    <positionedElement ID="ELEM47" fact="//@rooms.9/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM48" fact="//@rooms.9/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM49" fact="//@rooms.9/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Hiza-Guruma"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM50" fact="//@rooms.9/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="O-Soto-Gari"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM51" fact="//@rooms.9/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Kata-Te-Jime"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM52" fact="//@rooms.9/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSQ1"/>
-      <displays>
-        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe)"/>
-      </displays>
-      <acceptedFacts>
-        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe) : Hiza-Guruma, O-Soto-Gari"/>
-      </acceptedFacts>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.37"/>
-  </rooms>
-  <rooms y="2" nbExpectedAnswers="0">
-    <roomaccess otherroomaccess="//@rooms.1/@roomaccess.3"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
-    <positionedElement ID="ELEM53">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM54">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS8"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM55">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS9"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM56">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM57">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM58">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM59">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.32"/>
-  </rooms>
-  <rooms x="-2" y="4" nbExpectedAnswers="0">
-    <roomaccess otherroomaccess="//@rooms.9/@roomaccess.1"/>
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.20/@roomaccess.0"/>
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.21/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.22"/>
-    <positionedElement ID="ELEM60">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <positionedElement ID="ELEM61">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <positionedElement ID="ELEM62">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM6"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <positionedElement ID="ELEM63">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <positionedElement ID="ELEM64">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <positionedElement ID="ELEM65">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <positionedElement ID="ELEM66">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSM7"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_WAIT-FIRE-TRAP_MEDIUM"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.31"/>
-  </rooms>
-  <rooms x="-1" nbExpectedAnswers="0">
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.2/@roomaccess.2"/>
-    <roomaccess otherroomaccess="//@rooms.17/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.20"/>
-    <positionedElement ID="ELEM67">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_HOLE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM68">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_HOLE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM69">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_HOLE-TRAP"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.30"/>
-  </rooms>
-  <rooms x="-1" y="3" nbExpectedAnswers="2">
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.9/@roomaccess.2"/>
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.15/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT6"/>
-      <question xsi:type="generator:QuestionParam" completeFact="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi">
-        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche)"/>
-        <solutions>
-          <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi"/>
-        </solutions>
-      </question>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Uki-Goshi"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="O-Goshi"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Ko-Soto-Gari"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="2"/>
-      </correctnessToReach>
-    </questionedFacts>
-    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
-    <positionedElement ID="ELEM70" fact="//@rooms.13/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Uki-Goshi"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM71" fact="//@rooms.13/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="O-Goshi"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM72" fact="//@rooms.13/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Ko-Soto-Gari"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM73" fact="//@rooms.13/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM74" fact="//@rooms.13/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM75" fact="//@rooms.13/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSQ2"/>
-      <displays>
-        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche)"/>
-      </displays>
-      <acceptedFacts>
-        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi"/>
-      </acceptedFacts>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.6"/>
-  </rooms>
-  <rooms x="2" y="1" nbExpectedAnswers="0">
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.8/@roomaccess.1"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.21"/>
-    <positionedElement ID="ELEM76">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM77">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM78">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM79">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS9"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM80">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM81">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <positionedElement ID="ELEM82">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS8"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_FIRE-TRAP"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:NoQuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.32"/>
-  </rooms>
-  <rooms y="3" nbExpectedAnswers="1">
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.13/@roomaccess.1"/>
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.18/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT0"/>
-      <question xsi:type="generator:QuestionParam" completeFact="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage">
-        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras)"/>
-        <solutions>
-          <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage"/>
-        </solutions>
-      </question>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Ippon-Seoi-Nage"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Morote-Jime"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-    </questionedFacts>
-    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT83">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
-      <createdPosition ID="id/STRUCT83"/>
-    </positionedElement>
-    <positionedElement ID="ELEM84" position="id/STRUCT83">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_LARGE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM85" position="id/STRUCT83" fact="//@rooms.15/@questionedFacts.0">
-      <displays>
-        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras)"/>
-      </displays>
-      <acceptedFacts>
-        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage"/>
-      </acceptedFacts>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_CORRECTNESS"/>
-    </positionedElement>
-    <positionedElement ID="ELEM86" fact="//@rooms.15/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Ippon-Seoi-Nage"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM87" fact="//@rooms.15/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Morote-Jime"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.9"/>
-  </rooms>
-  <rooms x="-3" nbExpectedAnswers="2">
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.6/@roomaccess.1"/>
-    <roomaccess otherroomaccess="//@rooms.19/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.12"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT3"/>
-      <question xsi:type="generator:QuestionParam" completeFact="OSAEKOMI-WAZA (Techniques d'immobilisation) : Hon-Gesa-Gatame, Kami-Shiho-Gatame">
-        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation)"/>
-        <solutions>
-          <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation) : Hon-Gesa-Gatame, Kami-Shiho-Gatame"/>
-        </solutions>
-      </question>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Hon-Gesa-Gatame"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Kami-Shiho-Gatame"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Eri-Seoi-Nage"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="2"/>
-      </correctnessToReach>
-    </questionedFacts>
-    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
-    <positionedElement ID="ELEM88" fact="//@rooms.16/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM89" fact="//@rooms.16/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM90" fact="//@rooms.16/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Hon-Gesa-Gatame"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM91" fact="//@rooms.16/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Kami-Shiho-Gatame"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM92" fact="//@rooms.16/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS7"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Eri-Seoi-Nage"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM93" fact="//@rooms.16/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSQ2"/>
-      <displays>
-        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation)"/>
-      </displays>
-      <acceptedFacts>
-        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation) : Hon-Gesa-Gatame, Kami-Shiho-Gatame"/>
-      </acceptedFacts>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.37"/>
-  </rooms>
-  <rooms x="-1" y="-1" nbExpectedAnswers="1">
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.12/@roomaccess.1"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT0"/>
-      <question xsi:type="generator:QuestionParam" completeFact="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage">
-        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras)"/>
-        <solutions>
-          <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage"/>
-        </solutions>
-      </question>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Ippon-Seoi-Nage"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Yoko-Tomoe-Nage"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-    </questionedFacts>
-    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT94">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
-      <createdPosition ID="id/STRUCT94"/>
-    </positionedElement>
-    <positionedElement ID="ELEM95" position="id/STRUCT94">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_LARGE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM96" position="id/STRUCT94" fact="//@rooms.17/@questionedFacts.0">
-      <displays>
-        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras)"/>
-      </displays>
-      <acceptedFacts>
-        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage"/>
-      </acceptedFacts>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_CORRECTNESS"/>
-    </positionedElement>
-    <positionedElement ID="ELEM97" fact="//@rooms.17/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Ippon-Seoi-Nage"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM98" fact="//@rooms.17/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS4"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Yoko-Tomoe-Nage"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.9"/>
-  </rooms>
-  <rooms y="4" nbExpectedAnswers="1">
-    <roomaccess otherroomaccess="//@rooms.15/@roomaccess.1"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.4"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT2"/>
-      <question xsi:type="generator:QuestionParam" completeFact="ASHI-WAZA (Techniques de jambe) : De-Ashi-Barai">
-        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe)"/>
-        <solutions>
-          <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe) : De-Ashi-Barai"/>
-        </solutions>
-      </question>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="De-Ashi-Barai"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="O-Guruma"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-    </questionedFacts>
-    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
-    <positionedElement ID="ELEM99" fact="//@rooms.18/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="De-Ashi-Barai"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM100" fact="//@rooms.18/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS11"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="O-Guruma"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_INTERRUPTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM101">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS12"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_SWITCH"/>
-    </positionedElement>
-    <positionedElement ID="ELEM102" fact="//@rooms.18/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSQ4"/>
-      <displays>
-        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe)"/>
-      </displays>
-      <acceptedFacts>
-        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe) : De-Ashi-Barai"/>
-      </acceptedFacts>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
-    </positionedElement>
     <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.0"/>
   </rooms>
-  <rooms x="-3" y="-1" nbExpectedAnswers="2">
-    <roomaccess direction="NORTH" otherroomaccess="//@rooms.16/@roomaccess.1"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.11"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT6"/>
-      <question xsi:type="generator:QuestionParam" completeFact="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi">
-        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche)"/>
-        <solutions>
-          <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi"/>
-        </solutions>
-      </question>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Uki-Goshi"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="O-Goshi"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Harai-Goshi"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="2"/>
-      </correctnessToReach>
-    </questionedFacts>
-    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
-    <positionedElement ID="ELEM103" fact="//@rooms.19/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM104" fact="//@rooms.19/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM105" fact="//@rooms.19/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Uki-Goshi"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM106" fact="//@rooms.19/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS3"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="O-Goshi"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM107" fact="//@rooms.19/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Harai-Goshi"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM108" fact="//@rooms.19/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSQ1"/>
-      <displays>
-        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche)"/>
-      </displays>
-      <acceptedFacts>
-        <value xsi:type="generator:Value" value="KOSHI-WAZA (Techniques de hanche) : Uki-Goshi, O-Goshi"/>
-      </acceptedFacts>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_DISPLAY"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.37"/>
-  </rooms>
-  <rooms x="-3" y="4" nbExpectedAnswers="2">
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.11/@roomaccess.1"/>
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.22/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT3"/>
-      <question xsi:type="generator:QuestionParam" completeFact="OSAEKOMI-WAZA (Techniques d'immobilisation) : Hon-Gesa-Gatame, Kami-Shiho-Gatame">
-        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation)"/>
-        <solutions>
-          <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation) : Hon-Gesa-Gatame, Kami-Shiho-Gatame"/>
-        </solutions>
-      </question>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Hon-Gesa-Gatame"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Kami-Shiho-Gatame"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Harai-Goshi"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="2"/>
-      </correctnessToReach>
-    </questionedFacts>
-    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT109">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
-      <createdPosition ID="id/STRUCT109"/>
-    </positionedElement>
-    <positionedElement ID="ELEM110" position="id/STRUCT109">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_LARGE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM111" position="id/STRUCT109" fact="//@rooms.20/@questionedFacts.0">
-      <displays>
-        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation)"/>
-      </displays>
-      <acceptedFacts>
-        <value xsi:type="generator:Value" value="OSAEKOMI-WAZA (Techniques d'immobilisation) : Hon-Gesa-Gatame, Kami-Shiho-Gatame"/>
-      </acceptedFacts>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_CORRECTNESS"/>
-    </positionedElement>
-    <positionedElement ID="ELEM112" fact="//@rooms.20/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Hon-Gesa-Gatame"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM113" fact="//@rooms.20/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS1"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Kami-Shiho-Gatame"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM114" fact="//@rooms.20/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Harai-Goshi"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.9"/>
-  </rooms>
-  <rooms x="-1" y="4" nbExpectedAnswers="2">
-    <roomaccess direction="WEST" otherroomaccess="//@rooms.11/@roomaccess.2"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT1"/>
-      <question xsi:type="generator:QuestionParam" completeFact="ASHI-WAZA (Techniques de jambe) : Hiza-Guruma, O-Soto-Gari">
-        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe)"/>
-        <solutions>
-          <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe) : Hiza-Guruma, O-Soto-Gari"/>
-        </solutions>
-      </question>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Hiza-Guruma"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="O-Soto-Gari"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Sasae-Tsuri-Komi-Ashi"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="2"/>
-      </correctnessToReach>
-    </questionedFacts>
-    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT115">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
-      <createdPosition ID="id/STRUCT115"/>
-    </positionedElement>
-    <positionedElement ID="ELEM116" position="id/STRUCT115">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_LARGE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM117" position="id/STRUCT115" fact="//@rooms.21/@questionedFacts.0">
-      <displays>
-        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe)"/>
-      </displays>
-      <acceptedFacts>
-        <value xsi:type="generator:Value" value="ASHI-WAZA (Techniques de jambe) : Hiza-Guruma, O-Soto-Gari"/>
-      </acceptedFacts>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_CORRECTNESS"/>
-    </positionedElement>
-    <positionedElement ID="ELEM118" fact="//@rooms.21/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Hiza-Guruma"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM119" fact="//@rooms.21/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS2"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="O-Soto-Gari"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM120" fact="//@rooms.21/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Sasae-Tsuri-Komi-Ashi"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.9"/>
-  </rooms>
-  <rooms x="-4" y="4" nbExpectedAnswers="1">
-    <roomaccess direction="EAST" otherroomaccess="//@rooms.20/@roomaccess.1"/>
-    <roomaccess otherroomaccess="//@rooms.23/@roomaccess.0"/>
-    <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.25"/>
-    <questionedFacts>
-      <questionablefact xsi:type="generator:JudoQuestionableClassifyFact" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#JUDO_O1_L1_T3-QAFACT0"/>
-      <question xsi:type="generator:QuestionParam" completeFact="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage">
-        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras)"/>
-        <solutions>
-          <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage"/>
-        </solutions>
-      </question>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Ippon-Seoi-Nage"/>
-        <state xsi:type="generator:CorrectnessValue"/>
-      </propositions>
-      <propositions order="-1">
-        <value xsi:type="generator:Value" value="Tsubame-Gaeshi"/>
-        <state xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </propositions>
-      <correctnessToReach>
-        <value xsi:type="generator:Value" value="1"/>
-      </correctnessToReach>
-    </questionedFacts>
-    <task xsi:type="generator:ClassifyTechnique" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1_T3"/>
-    <positionedElement xsi:type="generator:PositionedStructureElement" ID="STRUCT121">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POSXL1"/>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#STRUCT_V"/>
-      <createdPosition ID="id/STRUCT121"/>
-    </positionedElement>
-    <positionedElement ID="ELEM122" position="id/STRUCT121">
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_LARGE_DETECTOR"/>
-    </positionedElement>
-    <positionedElement ID="ELEM123" position="id/STRUCT121" fact="//@rooms.22/@questionedFacts.0">
-      <displays>
-        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras)"/>
-      </displays>
-      <acceptedFacts>
-        <value xsi:type="generator:Value" value="TE-WAZA (Techniques de bras) : Ippon-Seoi-Nage"/>
-      </acceptedFacts>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_STATEMENT_CORRECTNESS"/>
-    </positionedElement>
-    <positionedElement ID="ELEM124" fact="//@rooms.22/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS6"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Ippon-Seoi-Nage"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <positionedElement ID="ELEM125" fact="//@rooms.22/@questionedFacts.0">
-      <position href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#POS5"/>
-      <correctness>
-        <value xsi:type="generator:CorrectnessValue" value="INCORRECT"/>
-      </correctness>
-      <displays>
-        <value xsi:type="generator:Value" value="Tsubame-Gaeshi"/>
-      </displays>
-      <elementType href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#ELEMENT_TYPE_POT"/>
-    </positionedElement>
-    <gameplay xsi:type="generator:QuestionGameplay" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@gameplays/@gameplays.9"/>
-  </rooms>
-  <rooms x="-4" y="3" nbExpectedAnswers="0">
+  <rooms x="1" y="-6">
     <roomaccess direction="NORTH" otherroomaccess="//@rooms.22/@roomaccess.1"/>
     <roomtype xsi:type="generator:SmallRoomType" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@roomtypes/@roomtypes.8"/>
   </rooms>
   <level xsi:type="generator:JudoLevel" href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1_L1"/>
   <learningobjective href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/LearningDomain.xmi#JUDO_O1"/>
   <learnerPlayer href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/learnerPlayers/LearnerPlayer4.xmi#FICTIF04"/>
-  <curses href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@elements/@curses/@curses.0"/>
   <curses href="file:/C:/blemoine/TheseGenerator/gen1/Generator/inputmodels/GameDescription.xmi#//@elements/@curses/@curses.1"/>
 </generator:Dungeon>

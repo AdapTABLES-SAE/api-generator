@@ -694,325 +694,137 @@
     </objectives>
     <knowledge href="MultiplicationTables.xmi#/"/>
   </learningpaths>
- <learningpaths
-      name="Judo Training Path"
-      ID="PATH_JUDO">
-    <objectives
-        ID="JUDO_O1"
-        name="Ceinture Blanche">
-      <levels
-          xsi:type="generator:JudoLevel"
-          ID="JUDO_O1_L1">
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O1_L1_T1"
-            checkOnLearnerAction="false">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="2"/>
+  <learningpaths name="Judo Training Path" ID="PATH_JUDO">
+    <objectives ID="JUDO_O1" name="Ceinture Blanche">
+      <levels xsi:type="generator:JudoLevel" ID="JUDO_O1_L1">
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O1_L1_T1" checkOnLearnerAction="false">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
         </tasks>
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O1_L1_T2"
-            checkOnLearnerAction="false"
-            missing="DESCRIPTION">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="1"/>
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O1_L1_T2" checkOnLearnerAction="false" missing="DESCRIPTION">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
-        <tasks
-            xsi:type="generator:ClassifyTechnique"
-            percentOfApparition="100"
-            ID="JUDO_O1_L1_T3">
-          <responseModality
-              xsi:type="generator:MultipleChoice"
-              nbBadChoices="1"
-              nbChoices="3"/>
+        <tasks xsi:type="generator:ClassifyTechnique" percentOfApparition="100" ID="JUDO_O1_L1_T3">
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="1" nbChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria successPercent="100.0"/>
       </levels>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.0"/>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.7"/>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.8"/>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.0"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.7"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.8"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.9"/>
     </objectives>
-    <objectives
-        ID="JUDO_O2"
-        name="Ceinture Jaune">
-      <prerequisites
-          successPercent="100.0"
-          requiredLevel="JUDO_O1_L1"/>
-      <levels
-          xsi:type="generator:JudoLevel"
-          ID="JUDO_O2_L1">
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O2_L1_T1"
-            checkOnLearnerAction="false">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="2"/>
+    <objectives ID="JUDO_O2" name="Ceinture Jaune">
+      <prerequisites successPercent="100.0" requiredLevel="JUDO_O1_L1"/>
+      <levels xsi:type="generator:JudoLevel" ID="JUDO_O2_L1">
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O2_L1_T1" checkOnLearnerAction="false">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
         </tasks>
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O2_L1_T2"
-            checkOnLearnerAction="false"
-            missing="DESCRIPTION">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="1"/>
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O2_L1_T2" checkOnLearnerAction="false" missing="DESCRIPTION">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
-        <tasks
-            xsi:type="generator:ClassifyTechnique"
-            percentOfApparition="100"
-            ID="JUDO_O2_L1_T3">
-          <responseModality
-              xsi:type="generator:MultipleChoice"
-              nbBadChoices="1"
-              nbChoices="3"/>
+        <tasks xsi:type="generator:ClassifyTechnique" percentOfApparition="100" ID="JUDO_O2_L1_T3">
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="1" nbChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria successPercent="100.0"/>
       </levels>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.7"/>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.8"/>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.9"/>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.1"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.7"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.8"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.1"/>
     </objectives>
-    <objectives
-        ID="JUDO_O3"
-        name="Ceinture Orange">
-      <prerequisites
-          successPercent="100.0"
-          requiredLevel="JUDO_O2_L1"/>
-      <levels
-          xsi:type="generator:JudoLevel"
-          ID="JUDO_O3_L1">
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O3_L1_T1"
-            checkOnLearnerAction="false">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="2"/>
+    <objectives ID="JUDO_O3" name="Ceinture Orange">
+      <prerequisites successPercent="100.0" requiredLevel="JUDO_O2_L1"/>
+      <levels xsi:type="generator:JudoLevel" ID="JUDO_O3_L1">
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O3_L1_T1" checkOnLearnerAction="false">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
         </tasks>
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O3_L1_T2"
-            checkOnLearnerAction="false"
-            missing="DESCRIPTION">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="1"/>
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O3_L1_T2" checkOnLearnerAction="false" missing="DESCRIPTION">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
-        <tasks
-            xsi:type="generator:ClassifyTechnique"
-            percentOfApparition="100"
-            ID="JUDO_O3_L1_T3">
-          <responseModality
-              xsi:type="generator:MultipleChoice"
-              nbBadChoices="1"
-              nbChoices="3"/>
+        <tasks xsi:type="generator:ClassifyTechnique" percentOfApparition="100" ID="JUDO_O3_L1_T3">
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="1" nbChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria successPercent="100.0"/>
       </levels>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.2"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.2"/>
     </objectives>
-    <objectives
-        ID="JUDO_O4"
-        name="Ceinture Verte">
-      <prerequisites
-          successPercent="100.0"
-          requiredLevel="JUDO_O3_L1"/>
-      <levels
-          xsi:type="generator:JudoLevel"
-          ID="JUDO_O4_L1">
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O4_L1_T1"
-            checkOnLearnerAction="false">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="2"/>
+    <objectives ID="JUDO_O4" name="Ceinture Verte">
+      <prerequisites successPercent="100.0" requiredLevel="JUDO_O3_L1"/>
+      <levels xsi:type="generator:JudoLevel" ID="JUDO_O4_L1">
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O4_L1_T1" checkOnLearnerAction="false">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
         </tasks>
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O4_L1_T2"
-            checkOnLearnerAction="false"
-            missing="DESCRIPTION">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="1"/>
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O4_L1_T2" checkOnLearnerAction="false" missing="DESCRIPTION">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
-        <tasks
-            xsi:type="generator:ClassifyTechnique"
-            percentOfApparition="100"
-            ID="JUDO_O4_L1_T3">
-          <responseModality
-              xsi:type="generator:MultipleChoice"
-              nbBadChoices="1"
-              nbChoices="3"/>
+        <tasks xsi:type="generator:ClassifyTechnique" percentOfApparition="100" ID="JUDO_O4_L1_T3">
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="1" nbChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria successPercent="100.0"/>
       </levels>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.3"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.3"/>
     </objectives>
-    <objectives
-        ID="JUDO_O5"
-        name="Ceinture Bleu">
-      <prerequisites
-          successPercent="100.0"
-          requiredLevel="JUDO_O4_L1"/>
-      <levels
-          xsi:type="generator:JudoLevel"
-          ID="JUDO_O5_L1">
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O5_L1_T1"
-            checkOnLearnerAction="false">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="2"/>
+    <objectives ID="JUDO_O5" name="Ceinture Bleu">
+      <prerequisites successPercent="100.0" requiredLevel="JUDO_O4_L1"/>
+      <levels xsi:type="generator:JudoLevel" ID="JUDO_O5_L1">
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O5_L1_T1" checkOnLearnerAction="false">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
         </tasks>
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O5_L1_T2"
-            checkOnLearnerAction="false"
-            missing="DESCRIPTION">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="1"/>
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O5_L1_T2" checkOnLearnerAction="false" missing="DESCRIPTION">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
-        <tasks
-            xsi:type="generator:ClassifyTechnique"
-            percentOfApparition="100"
-            ID="JUDO_O5_L1_T3">
-          <responseModality
-              xsi:type="generator:MultipleChoice"
-              nbBadChoices="1"
-              nbChoices="3"/>
+        <tasks xsi:type="generator:ClassifyTechnique" percentOfApparition="100" ID="JUDO_O5_L1_T3">
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="1" nbChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria successPercent="100.0"/>
       </levels>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.4"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.4"/>
     </objectives>
-    <objectives
-        ID="JUDO_O6"
-        name="Ceinture Marron">
-      <prerequisites
-          successPercent="100.0"
-          requiredLevel="JUDO_O5_L1"/>
-      <levels
-          xsi:type="generator:JudoLevel"
-          ID="JUDO_O6_L1">
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O6_L1_T1"
-            checkOnLearnerAction="false">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="2"/>
+    <objectives ID="JUDO_O6" name="Ceinture Marron">
+      <prerequisites successPercent="100.0" requiredLevel="JUDO_O5_L1"/>
+      <levels xsi:type="generator:JudoLevel" ID="JUDO_O6_L1">
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O6_L1_T1" checkOnLearnerAction="false">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
         </tasks>
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O6_L1_T2"
-            checkOnLearnerAction="false"
-            missing="DESCRIPTION">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="1"/>
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O6_L1_T2" checkOnLearnerAction="false" missing="DESCRIPTION">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
-        <tasks
-            xsi:type="generator:ClassifyTechnique"
-            percentOfApparition="100"
-            ID="JUDO_O6_L1_T3">
-          <responseModality
-              xsi:type="generator:MultipleChoice"
-              nbBadChoices="1"
-              nbChoices="3"/>
+        <tasks xsi:type="generator:ClassifyTechnique" percentOfApparition="100" ID="JUDO_O6_L1_T3">
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="1" nbChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria successPercent="100.0"/>
       </levels>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.5"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.5"/>
     </objectives>
-    <objectives
-        ID="JUDO_O7"
-        name="Ceinture Noir">
-      <prerequisites
-          successPercent="100.0"
-          requiredLevel="JUDO_O6_L1"/>
-      <levels
-          xsi:type="generator:JudoLevel"
-          ID="JUDO_O7_L1">
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O7_L1_T1"
-            checkOnLearnerAction="false">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="2"/>
+    <objectives ID="JUDO_O7" name="Ceinture Noir">
+      <prerequisites successPercent="100.0" requiredLevel="JUDO_O6_L1"/>
+      <levels xsi:type="generator:JudoLevel" ID="JUDO_O7_L1">
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O7_L1_T1" checkOnLearnerAction="false">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
         </tasks>
-        <tasks
-            xsi:type="generator:IdentifyTechnique"
-            ID="JUDO_O7_L1_T2"
-            checkOnLearnerAction="false"
-            missing="DESCRIPTION">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"
-              nbBadChoices="1"/>
+        <tasks xsi:type="generator:IdentifyTechnique" ID="JUDO_O7_L1_T2" checkOnLearnerAction="false" missing="DESCRIPTION">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
-        <tasks
-            xsi:type="generator:ClassifyTechnique"
-            percentOfApparition="100"
-            ID="JUDO_O7_L1_T3">
-          <responseModality
-              xsi:type="generator:MultipleChoice"
-              nbBadChoices="1"
-              nbChoices="3"/>
+        <tasks xsi:type="generator:ClassifyTechnique" percentOfApparition="100" ID="JUDO_O7_L1_T3">
+          <responseModality xsi:type="generator:MultipleChoice" nbBadChoices="1" nbChoices="3"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria successPercent="100.0"/>
       </levels>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.6"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.6"/>
     </objectives>
-    <objectives
-        ID="JUDO_O8"
-        name="Gestes arbitrages">
-      <prerequisites
-          successPercent="100.0"
-          requiredLevel="JUDO_O1_L1"/>
-      <levels
-          xsi:type="generator:JudoLevel"
-          ID="JUDO_O8_L1">
-        <tasks
-            xsi:type="generator:IdentifyArbitrationGesture"
-            ID="JUDO_O1_L1_T4"
-            nbFacts="2">
-          <responseModality
-              xsi:type="generator:DynamicMultipleChoice"/>
+    <objectives ID="JUDO_O8" name="Gestes arbitrages">
+      <prerequisites successPercent="100.0" requiredLevel="JUDO_O1_L1"/>
+      <levels xsi:type="generator:JudoLevel" ID="JUDO_O8_L1">
+        <tasks xsi:type="generator:IdentifyArbitrationGesture" ID="JUDO_O1_L1_T4" nbFacts="2">
+          <responseModality xsi:type="generator:DynamicMultipleChoice"/>
         </tasks>
-        <completionCriteria/>
+        <completionCriteria successPercent="100.0"/>
       </levels>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.7"/>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.8"/>
-      <setoffacts
-          href="JudoFacts.xmi#//@knowledgefacts.9"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.7"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.8"/>
+      <setoffacts href="JudoFacts.xmi#//@knowledgefacts.9"/>
     </objectives>
-    <knowledge
-        href="JudoFacts.xmi#/"/>
+    <knowledge href="JudoFacts.xmi#/"/>
   </learningpaths>
   <learningpaths name="HG_PATH" ID="HG_PATH">
     <objectives ID="HG_O1_V2" name="HG_O1">
@@ -1089,6 +901,7 @@
         <tasks xsi:type="generator:IdentifyPlanets" percentOfApparition="25" ID="PATH_SOLAR_SYSTEM_O1_L1_T3" maxTime="60" nbFacts="8">
           <responseModality xsi:type="generator:DynamicMultipleChoice"/>
         </tasks>
+        <completionCriteria/>
       </levels>
       <setoffacts href="SolarSystemPlanets.xmi#//@knowledgefacts.0"/>
     </objectives>

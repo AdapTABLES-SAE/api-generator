@@ -465,8 +465,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="#//ElementSize"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="restrictedTo" upperBound="-1"
         eType="#//Ability"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PositionedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"

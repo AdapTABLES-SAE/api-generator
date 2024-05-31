@@ -69,7 +69,7 @@ public interface Position extends EObject {
 	 * @return the value of the '<em>ID</em>' attribute.
 	 * @see #setID(String)
 	 * @see generator.GeneratorPackage#getPosition_ID()
-	 * @model id="true"
+	 * @model
 	 * @generated
 	 */
 	String getID();
