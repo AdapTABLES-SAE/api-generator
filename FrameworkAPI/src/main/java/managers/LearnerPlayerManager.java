@@ -68,6 +68,12 @@ public class LearnerPlayerManager {
 		case "MTRecontructionImpl": return "REC"; 
 		case "MTIdentificationImpl": return "ID"; 
 		case "MTMembershipImpl": return "MEMB"; 
+		case "LocateOnAMapImpl": return "LOCATE";
+		case "HistoricalEventAssociationImpl" : return "ASSOC";
+		case "HistoricalChronologyImpl" : return "ORDO";
+		case "LegendAMapImpl" : return "LEGEND";
+		case "HistoryIdentificationImpl" : return "IDENT";
+		case "GeographyMembershipImpl" : return "IDENTSET";
 		default: return "";
 		}
 	}

@@ -105,4 +105,35 @@ public class PurchaseActivationResource {
 	/**          JOB METHODS          **/
 	/***********************************/
 	
+	//HG
+	@GET
+	@Path("/learnerhg/{playerID}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getActivatedItemsHG(@PathParam("playerID") String playerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
+		Constant.changeDomains(DidacticDomain.HISTORY_GEOGRAPHY);
+		Constant.PROJECT_PATH = app.getRealPath("");
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.HISTORY_GEOGRAPHY, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, playerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME, true));
+		return manager.getItemsStatus().toJSONString();
+	}
+	
+	@POST
+	@Path("/hg")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.TEXT_PLAIN)
+	public void setActivatedItemsHG(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		Constant.changeDomains(DidacticDomain.HISTORY_GEOGRAPHY);
+		Constant.PROJECT_PATH = app.getRealPath("");
+		JSONObject obj = new JSONObject();
+		try {
+			obj = (JSONObject) new JSONParser().parse(jsonContent);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		String classID = obj.containsKey("classroomID")? (String) obj.get("classroomID"): Constant.DEFAULT_CLASSROOM_NAME;
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.HISTORY_GEOGRAPHY, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) obj.get("learnerID"), Constant.CLASSROOMS_FILE, classID, true));
+		manager.setItemsStatus(obj);
+	}
+	
 }

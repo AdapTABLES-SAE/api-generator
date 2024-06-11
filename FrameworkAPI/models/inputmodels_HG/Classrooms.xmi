@@ -7,6 +7,6 @@
       ID="default"
       name="DEFAULT">
     <learnerPlayers
-        href="learnerPlayers/LearnerPlayer_HISTORY.xmi#HG_PLAYER"/>
+        href="learnerPlayers/LearnerPlayer_HG_PLAYER.xmi#HG_PLAYER"/>
   </classrooms>
 </generator:Classrooms>

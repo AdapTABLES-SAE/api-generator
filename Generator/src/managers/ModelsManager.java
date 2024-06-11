@@ -64,6 +64,7 @@ public class ModelsManager {
 	private void setLearnerPlayerFileName(String ID) throws NonExistantLearnerPlayerException {
 		String modelsPath = INPUT_MODELS_PATH + INPUT_LEARNER_MODELS_PATH;
 		INPUT_MODELS_NAMES[5] = "";
+		System.out.println("Chargement de " + modelsPath);
 		File[] files = new File(modelsPath).listFiles();
 		int i = 0;
 		while(i < files.length && INPUT_MODELS_NAMES[5].isEmpty()) {

@@ -1,347 +1,983 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<generator:Knowledge xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" name="History Geography Facts">
-  <knowledgefacts name="Régions de France">
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="OCCITANIE" type="REGIONS" value="Occitanie"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="PAYS_DE_LA_LOIRE" type="REGIONS" value="Pays de la Loire"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="BRETAGNE" type="REGIONS" value="Bretagne"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="NORMANDIE" type="REGIONS" value="Normandie"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="HAUTS_DE_FRANCE" type="REGIONS" value="Hauts-de-France"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="CENTRE_VAL_DE_LOIRE" type="REGIONS" value="Centre-val de Loire"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="ILE_DE_FRANCE" type="REGIONS" value="Île-de-France"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="GRAND_EST" type="REGIONS" value="Grand Est"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="BOURGOGNE_FRANCHE_COMTE" type="REGIONS" value="Bourgogne-Franche-Comté"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="AUVERGNE_RHONE_ALPES" type="REGIONS" value="Auvergne-Rhône-Alpes"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="PROVENCE_ALPES_COTE_DAZUR" type="REGIONS" value="Provence-Alpes-Côte-D'Azur"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="NOUVELLE_AQUITAINE" type="REGIONS" value="Nouvelle Aquitaine"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="CORSE" type="REGIONS" value="Corse"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="LA_REUNION" type="REGIONS" value="La Réunion"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="MARTINIQUE" type="REGIONS" value="Martinique"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="GUYANE" type="REGIONS" value="Guyane"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="GUADELOUPE" type="REGIONS" value="Guadeloupe"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_REGIONS" position="MAYOTTE" type="REGIONS" value="Mayotte"/>
-    <visualization ID="FRANCE_REGIONS">
-      <positions ID="OCCITANIE"/>
-      <positions ID="PAYS_DE_LA_LOIRE"/>
-      <positions ID="BRETAGNE"/>
-      <positions ID="NORMANDIE"/>
-      <positions ID="HAUTS_DE_FRANCE"/>
-      <positions ID="CENTRE_VAL_DE_LOIRE"/>
-      <positions ID="ILE_DE_FRANCE"/>
-      <positions ID="GRAND_EST"/>
-      <positions ID="BOURGOGNE_FRANCHE_COMTE"/>
-      <positions ID="AUVERGNE_RHONE_ALPES"/>
-      <positions ID="PROVENCE_ALPES_COTE_DAZUR"/>
-      <positions ID="NOUVELLE_AQUITAINE"/>
-      <positions ID="CORSE"/>
-      <positions ID="LA_REUNION"/>
-      <positions ID="MARTINIQUE"/>
-      <positions ID="GUYANE"/>
-      <positions ID="GUADELOUPE"/>
-      <positions ID="MAYOTTE"/>
+<generator:Knowledge
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:generator="http://www.example.org/generator"
+    name="History Geography Facts">
+  <knowledgefacts
+      name="Régions de France">
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="OCCITANIE"
+        type="REGIONS"
+        value="Occitanie"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="PAYS_DE_LA_LOIRE"
+        type="REGIONS"
+        value="Pays de la Loire"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="BRETAGNE"
+        type="REGIONS"
+        value="Bretagne"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="NORMANDIE"
+        type="REGIONS"
+        value="Normandie"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="HAUTS_DE_FRANCE"
+        type="REGIONS"
+        value="Hauts-de-France"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="CENTRE_VAL_DE_LOIRE"
+        type="REGIONS"
+        value="Centre-val de Loire"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="ILE_DE_FRANCE"
+        type="REGIONS"
+        value="Île-de-France"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="GRAND_EST"
+        type="REGIONS"
+        value="Grand Est"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="BOURGOGNE_FRANCHE_COMTE"
+        type="REGIONS"
+        value="Bourgogne-Franche-Comté"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="AUVERGNE_RHONE_ALPES"
+        type="REGIONS"
+        value="Auvergne-Rhône-Alpes"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="PROVENCE_ALPES_COTE_DAZUR"
+        type="REGIONS"
+        value="Provence-Alpes-Côte-D'Azur"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="NOUVELLE_AQUITAINE"
+        type="REGIONS"
+        value="Nouvelle Aquitaine"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="CORSE"
+        type="REGIONS"
+        value="Corse"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="LA_REUNION"
+        type="REGIONS"
+        value="La Réunion"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="MARTINIQUE"
+        type="REGIONS"
+        value="Martinique"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="GUYANE"
+        type="REGIONS"
+        value="Guyane"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="GUADELOUPE"
+        type="REGIONS"
+        value="Guadeloupe"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_REGIONS"
+        position="MAYOTTE"
+        type="REGIONS"
+        value="Mayotte"/>
+    <visualization
+        ID="FRANCE_REGIONS">
+      <positions
+          ID="OCCITANIE"/>
+      <positions
+          ID="PAYS_DE_LA_LOIRE"/>
+      <positions
+          ID="BRETAGNE"/>
+      <positions
+          ID="NORMANDIE"/>
+      <positions
+          ID="HAUTS_DE_FRANCE"/>
+      <positions
+          ID="CENTRE_VAL_DE_LOIRE"/>
+      <positions
+          ID="ILE_DE_FRANCE"/>
+      <positions
+          ID="GRAND_EST"/>
+      <positions
+          ID="BOURGOGNE_FRANCHE_COMTE"/>
+      <positions
+          ID="AUVERGNE_RHONE_ALPES"/>
+      <positions
+          ID="PROVENCE_ALPES_COTE_DAZUR"/>
+      <positions
+          ID="NOUVELLE_AQUITAINE"/>
+      <positions
+          ID="CORSE"/>
+      <positions
+          ID="LA_REUNION"/>
+      <positions
+          ID="MARTINIQUE"/>
+      <positions
+          ID="GUYANE"/>
+      <positions
+          ID="GUADELOUPE"/>
+      <positions
+          ID="MAYOTTE"/>
     </visualization>
   </knowledgefacts>
-  <knowledgefacts name="Dates historiques">
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="1er Guerre Mondiale">
-      <wrongData value="1939"/>
-      <wrongData value="1945"/>
-      <representation ID="GRANDE_GUERRE"/>
-      <time xsi:type="generator:TimePeriod" startYear="1914" endYear="1918" startPosition="1914" endPosition="1918"/>
+  <knowledgefacts
+      name="Dates historiques">
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="1er Guerre Mondiale">
+      <wrongData
+          value="1939"/>
+      <wrongData
+          value="1945"/>
+      <representation
+          ID="GRANDE_GUERRE"/>
+      <time
+          xsi:type="generator:TimePeriod"
+          startYear="1914"
+          endYear="1918"
+          startPosition="1914"
+          endPosition="1918"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Révolution Russe">
-      <wrongData value="1918"/>
-      <representation ID="REVOLUTION_RUSSE"/>
-      <time xsi:type="generator:Date" year="1917" position="1917"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Révolution Russe">
+      <wrongData
+          value="1918"/>
+      <representation
+          ID="REVOLUTION_RUSSE"/>
+      <time
+          xsi:type="generator:Date"
+          year="1917"
+          position="1917"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Armistice">
-      <wrongData value="11 Septembre 1918"/>
-      <representation ID="ARMISTICE"/>
-      <time xsi:type="generator:Date" day="11" month="Novembre" year="1918" position="1918"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Armistice">
+      <wrongData
+          value="11 Septembre 1918"/>
+      <representation
+          ID="ARMISTICE"/>
+      <time
+          xsi:type="generator:Date"
+          day="11"
+          month="Novembre"
+          year="1918"
+          position="1918"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Allemagne Nazie (Hitlérienne)">
-      <wrongData value="1939"/>
-      <wrongData value="1946"/>
-      <representation ID="ALLEMAGNE_NAZIE"/>
-      <time xsi:type="generator:TimePeriod" startYear="1933" endYear="1945" startPosition="1933" endPosition="1945"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Allemagne Nazie (Hitlérienne)">
+      <wrongData
+          value="1939"/>
+      <wrongData
+          value="1946"/>
+      <representation
+          ID="ALLEMAGNE_NAZIE"/>
+      <time
+          xsi:type="generator:TimePeriod"
+          startYear="1933"
+          endYear="1945"
+          startPosition="1933"
+          endPosition="1945"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Front Populaire">
-      <wrongData value="1941"/>
-      <wrongData value="1940"/>
-      <representation ID="FRONT_POPULAIRE"/>
-      <time xsi:type="generator:TimePeriod" startYear="1936" endYear="1937" startPosition="1936" endPosition="1937"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Front Populaire">
+      <wrongData
+          value="1941"/>
+      <wrongData
+          value="1940"/>
+      <representation
+          ID="FRONT_POPULAIRE"/>
+      <time
+          xsi:type="generator:TimePeriod"
+          startYear="1936"
+          endYear="1937"
+          startPosition="1936"
+          endPosition="1937"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Appel du général de Gaulle">
-      <wrongData value="18 Juin 1950"/>
-      <representation ID="DEGAULLE"/>
-      <time xsi:type="generator:Date" day="18" month="Juin" year="1940" position="1940"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Appel du général de Gaulle">
+      <wrongData
+          value="18 Juin 1950"/>
+      <representation
+          ID="DEGAULLE"/>
+      <time
+          xsi:type="generator:Date"
+          day="18"
+          month="Juin"
+          year="1940"
+          position="1940"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Régime de Vichy">
-      <wrongData value="1950"/>
-      <wrongData value="1954"/>
-      <representation ID="VICHY"/>
-      <time xsi:type="generator:TimePeriod" startYear="1940" endYear="1944" startPosition="1940" endPosition="1944"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Régime de Vichy">
+      <wrongData
+          value="1950"/>
+      <wrongData
+          value="1954"/>
+      <representation
+          ID="VICHY"/>
+      <time
+          xsi:type="generator:TimePeriod"
+          startYear="1940"
+          endYear="1944"
+          startPosition="1940"
+          endPosition="1944"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Création de l'ONU">
-      <wrongData value="1946"/>
-      <representation ID="ONU"/>
-      <time xsi:type="generator:Date" day="" month="" year="1945" position="1945"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Création de l'ONU">
+      <wrongData
+          value="1946"/>
+      <representation
+          ID="ONU"/>
+      <time
+          xsi:type="generator:Date"
+          day=""
+          month=""
+          year="1945"
+          position="1945"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Traité de Rome">
-      <wrongData value="1958"/>
-      <representation ID="ROME"/>
-      <time xsi:type="generator:Date" year="1957" position="1957"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Traité de Rome">
+      <wrongData
+          value="1958"/>
+      <representation
+          ID="ROME"/>
+      <time
+          xsi:type="generator:Date"
+          year="1957"
+          position="1957"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="L'Euro">
-      <wrongData value="2000"/>
-      <representation ID="EURO"/>
-      <time xsi:type="generator:Date" day="" month="" year="2002" position="2002"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="L'Euro">
+      <wrongData
+          value="2000"/>
+      <representation
+          ID="EURO"/>
+      <time
+          xsi:type="generator:Date"
+          day=""
+          month=""
+          year="2002"
+          position="2002"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Chute du mur de Berlin">
-      <wrongData value="1999"/>
-      <representation ID="MUR_BERLIN"/>
-      <time xsi:type="generator:Date" day="" month="" year="1989" position="1989"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Chute du mur de Berlin">
+      <wrongData
+          value="1999"/>
+      <representation
+          ID="MUR_BERLIN"/>
+      <time
+          xsi:type="generator:Date"
+          day=""
+          month=""
+          year="1989"
+          position="1989"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Les accords d'Evian">
-      <wrongData value="1972"/>
-      <representation ID="EVIAN"/>
-      <time xsi:type="generator:Date" day="" month="" year="1962" position="1962"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Les accords d'Evian">
+      <wrongData
+          value="1972"/>
+      <representation
+          ID="EVIAN"/>
+      <time
+          xsi:type="generator:Date"
+          day=""
+          month=""
+          year="1962"
+          position="1962"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Naissance de la Ve République">
-      <wrongData value="1955"/>
-      <representation ID="5REPUBLIQUE"/>
-      <time xsi:type="generator:Date" day="" month="" year="1958" position="1958"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Naissance de la Ve République">
+      <wrongData
+          value="1955"/>
+      <representation
+          ID="5REPUBLIQUE"/>
+      <time
+          xsi:type="generator:Date"
+          day=""
+          month=""
+          year="1958"
+          position="1958"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Election Président de la République au suffrage universel direct">
-      <wrongData value="1963"/>
-      <representation ID="ELECTION"/>
-      <time xsi:type="generator:Date" day="" month="" year="1962" position="1962"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Election Président de la République au suffrage universel direct">
+      <wrongData
+          value="1963"/>
+      <representation
+          ID="ELECTION"/>
+      <time
+          xsi:type="generator:Date"
+          day=""
+          month=""
+          year="1962"
+          position="1962"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Loi Veil (IVG)">
-      <wrongData value="1980"/>
-      <representation ID="VEIL"/>
-      <time xsi:type="generator:Date" day="" month="" year="1975" position="1975"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Loi Veil (IVG)">
+      <wrongData
+          value="1980"/>
+      <representation
+          ID="VEIL"/>
+      <time
+          xsi:type="generator:Date"
+          day=""
+          month=""
+          year="1975"
+          position="1975"/>
     </facts>
-    <facts xsi:type="generator:HistoryFact" belongsToVisualization="FRISE_CHRONOLOGIQUE" event="Première alternance">
-      <wrongData value="1991"/>
-      <representation ID="ALTERNANCE"/>
-      <time xsi:type="generator:Date" day="" month="" year="1981" position="1981"/>
+    <facts xsi:type="generator:HistoryFact"
+        belongsToVisualization="FRISE_CHRONOLOGIQUE"
+        event="Première alternance">
+      <wrongData
+          value="1991"/>
+      <representation
+          ID="ALTERNANCE"/>
+      <time
+          xsi:type="generator:Date"
+          day=""
+          month=""
+          year="1981"
+          position="1981"/>
     </facts>
-    <visualization ID="FRISE_CHRONOLOGIQUE">
-      <positions ID="1914"/>
-      <positions ID="1918"/>
-      <positions ID="1917"/>
-      <positions ID="1933"/>
-      <positions ID="1936"/>
-      <positions ID="1937"/>
-      <positions ID="1939"/>
-      <positions ID="1945"/>
-      <positions ID="1940"/>
-      <positions ID="1944"/>
-      <positions ID="1945"/>
-      <positions ID="1957"/>
-      <positions ID="2002"/>
-      <positions ID="1962"/>
-      <positions ID="1958"/>
-      <positions ID="1962"/>
-      <positions ID="1975"/>
-      <positions ID="1981"/>
-      <positions ID="1989"/>
+    <visualization
+        ID="FRISE_CHRONOLOGIQUE">
+      <positions
+          ID="1914"/>
+      <positions
+          ID="1918"/>
+      <positions
+          ID="1917"/>
+      <positions
+          ID="1933"/>
+      <positions
+          ID="1936"/>
+      <positions
+          ID="1937"/>
+      <positions
+          ID="1939"/>
+      <positions
+          ID="1945"/>
+      <positions
+          ID="1940"/>
+      <positions
+          ID="1944"/>
+      <positions
+          ID="1945"/>
+      <positions
+          ID="1957"/>
+      <positions
+          ID="2002"/>
+      <positions
+          ID="1962"/>
+      <positions
+          ID="1958"/>
+      <positions
+          ID="1962"/>
+      <positions
+          ID="1975"/>
+      <positions
+          ID="1981"/>
+      <positions
+          ID="1989"/>
     </visualization>
   </knowledgefacts>
-  <knowledgefacts name="Aires Urbaines">
-    <wrongData value="Angers"/>
-    <wrongData value="Bayonne"/>
-    <wrongData value="Nimes"/>
-    <wrongData value="Avignon"/>
-    <wrongData value="Brest"/>
-    <wrongData value="Dijon"/>
-    <wrongData value="Toulon"/>
-    <wrongData value="Perpignan"/>
-    <wrongData value="Limoges"/>
-    <wrongData value="Rouen"/>
-    <wrongData value="Le Mans"/>
-    <wrongData value="Reims"/>
-    <wrongData value="Mulhouse"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="PARIS" value="Paris" category="aires urbaines"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="TOULOUSE" value="Toulouse" category="aires urbaines"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="LYON" value="Lyon" category="aires urbaines"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="MARSEILLE" value="Marseille" category="aires urbaines"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="BORDEAUX" value="Bordeaux" category="aires urbaines"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="NICE" value="Nice" category="aires urbaines"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="NANTES" value="Nantes" category="aires urbaines"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="STRASBOURG" value="Strasbourg" category="aires urbaines"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="LILLE" value="Lille" category="aires urbaines"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="RENNES" value="Rennes" category="aires urbaines"/>
-    <visualization ID="FRANCE_AIRES_URBAINES">
-      <positions ID="PARIS"/>
-      <positions ID="TOULOUSE"/>
-      <positions ID="LYON"/>
-      <positions ID="MARSEILLE"/>
-      <positions ID="BORDEAUX"/>
-      <positions ID="NICE"/>
-      <positions ID="NANTES"/>
-      <positions ID="STRASBOURG"/>
-      <positions ID="LILLE"/>
-      <positions ID="RENNES"/>
+  <knowledgefacts
+      name="Aires Urbaines">
+    <wrongData
+        value="Angers"/>
+    <wrongData
+        value="Bayonne"/>
+    <wrongData
+        value="Nimes"/>
+    <wrongData
+        value="Avignon"/>
+    <wrongData
+        value="Brest"/>
+    <wrongData
+        value="Dijon"/>
+    <wrongData
+        value="Toulon"/>
+    <wrongData
+        value="Perpignan"/>
+    <wrongData
+        value="Limoges"/>
+    <wrongData
+        value="Rouen"/>
+    <wrongData
+        value="Le Mans"/>
+    <wrongData
+        value="Reims"/>
+    <wrongData
+        value="Mulhouse"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_AIRES_URBAINES"
+        position="PARIS"
+        value="Paris"
+        category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_AIRES_URBAINES"
+        position="TOULOUSE"
+        value="Toulouse"
+        category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_AIRES_URBAINES"
+        position="LYON"
+        value="Lyon"
+        category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_AIRES_URBAINES"
+        position="MARSEILLE"
+        value="Marseille"
+        category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_AIRES_URBAINES"
+        position="BORDEAUX"
+        value="Bordeaux"
+        category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_AIRES_URBAINES"
+        position="NICE"
+        value="Nice"
+        category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_AIRES_URBAINES"
+        position="NANTES"
+        value="Nantes"
+        category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_AIRES_URBAINES"
+        position="STRASBOURG"
+        value="Strasbourg"
+        category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_AIRES_URBAINES"
+        position="LILLE"
+        value="Lille"
+        category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="FRANCE_AIRES_URBAINES"
+        position="RENNES"
+        value="Rennes"
+        category="aires urbaines"/>
+    <visualization
+        ID="FRANCE_AIRES_URBAINES">
+      <positions
+          ID="PARIS"/>
+      <positions
+          ID="TOULOUSE"/>
+      <positions
+          ID="LYON"/>
+      <positions
+          ID="MARSEILLE"/>
+      <positions
+          ID="BORDEAUX"/>
+      <positions
+          ID="NICE"/>
+      <positions
+          ID="NANTES"/>
+      <positions
+          ID="STRASBOURG"/>
+      <positions
+          ID="LILLE"/>
+      <positions
+          ID="RENNES"/>
     </visualization>
   </knowledgefacts>
-  <knowledgefacts name="Densité de population (Légende) ">
-    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DENSITE_POPU_LEGEND" symbolPosition="FORTE">
-      <representation ID="ROUGE"/>
-      <legend text="plus de 100" position="FORTE_TEXT"/>
+  <knowledgefacts
+      name="Densité de population (Légende)">
+    <facts xsi:type="generator:GeographyLegendFact"
+        belongsToVisualization="DENSITE_POPU_LEGEND"
+        symbolPosition="FORTE">
+      <representation
+          ID="ROUGE"/>
+      <legend
+          text="plus de 100"
+          position="FORTE_TEXT"/>
     </facts>
-    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DENSITE_POPU_LEGEND" symbolPosition="MOYENNE">
-      <representation ID="ORANGE"/>
-      <legend text="entre 50 et 100" position="MOYENNE_TEXT"/>
+    <facts xsi:type="generator:GeographyLegendFact"
+        belongsToVisualization="DENSITE_POPU_LEGEND"
+        symbolPosition="MOYENNE">
+      <representation
+          ID="ORANGE"/>
+      <legend
+          text="entre 50 et 100"
+          position="MOYENNE_TEXT"/>
     </facts>
-    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DENSITE_POPU_LEGEND" symbolPosition="FAIBLE">
-      <representation ID="JAUNE"/>
-      <legend text="moins de 50" position="FAIBLE_TEXT"/>
+    <facts xsi:type="generator:GeographyLegendFact"
+        belongsToVisualization="DENSITE_POPU_LEGEND"
+        symbolPosition="FAIBLE">
+      <representation
+          ID="JAUNE"/>
+      <legend
+          text="moins de 50"
+          position="FAIBLE_TEXT"/>
     </facts>
-    <visualization ID="DENSITE_POPU_LEGEND">
-      <positions ID="FORTE"/>
-      <positions ID="MOYENNE"/>
-      <positions ID="FAIBLE"/>
-      <positions ID="FORTE_TEXT"/>
-      <positions ID="MOYENNE_TEXT"/>
-      <positions ID="FAIBLE_TEXT"/>
+    <visualization
+        ID="DENSITE_POPU_LEGEND">
+      <positions
+          ID="FORTE"/>
+      <positions
+          ID="MOYENNE"/>
+      <positions
+          ID="FAIBLE"/>
+      <positions
+          ID="FORTE_TEXT"/>
+      <positions
+          ID="MOYENNE_TEXT"/>
+      <positions
+          ID="FAIBLE_TEXT"/>
     </visualization>
   </knowledgefacts>
-  <knowledgefacts name="Domaine Bioclimatique (Légende)">
-    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="OCEANIQUE">
-      <representation ID="GREEN"/>
-      <legend text="Climat Océanique" position="OCEANIQUE_TEXT"/>
+  <knowledgefacts
+      name="Domaine Bioclimatique (Légende)">
+    <facts xsi:type="generator:GeographyLegendFact"
+        belongsToVisualization="DOMAINE_BIO_LEGEND"
+        symbolPosition="OCEANIQUE">
+      <representation
+          ID="GREEN"/>
+      <legend
+          text="Climat Océanique"
+          position="OCEANIQUE_TEXT"/>
     </facts>
-    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="SEMI_CONTINENTAL">
-      <representation ID="PURPLE"/>
-      <legend text="Climat Continental" position="SEMI_CONTINENTAL_TEXT"/>
+    <facts xsi:type="generator:GeographyLegendFact"
+        belongsToVisualization="DOMAINE_BIO_LEGEND"
+        symbolPosition="SEMI_CONTINENTAL">
+      <representation
+          ID="PURPLE"/>
+      <legend
+          text="Climat Continental"
+          position="SEMI_CONTINENTAL_TEXT"/>
     </facts>
-    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="MEDITERRANEEN">
-      <representation ID="PINK"/>
-      <legend text="Climat Méditérranéen" position="MEDITERRANEEN_TEXT"/>
+    <facts xsi:type="generator:GeographyLegendFact"
+        belongsToVisualization="DOMAINE_BIO_LEGEND"
+        symbolPosition="MEDITERRANEEN">
+      <representation
+          ID="PINK"/>
+      <legend
+          text="Climat Méditérranéen"
+          position="MEDITERRANEEN_TEXT"/>
     </facts>
-    <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DOMAINE_BIO_LEGEND" symbolPosition="MONTAGNARD">
-      <representation ID="BROWN"/>
-      <legend text="Climat Montagnard" position="MONTAGNARD_TEXT"/>
+    <facts xsi:type="generator:GeographyLegendFact"
+        belongsToVisualization="DOMAINE_BIO_LEGEND"
+        symbolPosition="MONTAGNARD">
+      <representation
+          ID="BROWN"/>
+      <legend
+          text="Climat Montagnard"
+          position="MONTAGNARD_TEXT"/>
     </facts>
-    <visualization ID="DOMAINE_BIO_LEGEND">
-      <positions ID="OCEANIQUE"/>
-      <positions ID="SEMI_CONTINENTAL"/>
-      <positions ID="MEDITERRANEEN"/>
-      <positions ID="MONTAGNARD"/>
-      <positions ID="OCEANIQUE_TEXT"/>
-      <positions ID="SEMI_CONTINENTAL_TEXT"/>
-      <positions ID="MEDITERRANEEN_TEXT"/>
-      <positions ID="MONTAGNARD_TEXT"/>
+    <visualization
+        ID="DOMAINE_BIO_LEGEND">
+      <positions
+          ID="OCEANIQUE"/>
+      <positions
+          ID="SEMI_CONTINENTAL"/>
+      <positions
+          ID="MEDITERRANEEN"/>
+      <positions
+          ID="MONTAGNARD"/>
+      <positions
+          ID="OCEANIQUE_TEXT"/>
+      <positions
+          ID="SEMI_CONTINENTAL_TEXT"/>
+      <positions
+          ID="MEDITERRANEEN_TEXT"/>
+      <positions
+          ID="MONTAGNARD_TEXT"/>
     </visualization>
   </knowledgefacts>
-  <knowledgefacts name="Territoires ultramarins et DROMs">
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="CLIPPERTON" type="ISLAND" value="Clipperton" category="Statue specifique"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="TERRES_AUSTRALES" type="ISLAND" value="Terres australes" category="Statue specifique"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="NOUVELLE_CALEDONIE" type="ISLAND" value="Nouvelle-Caledonie" category="Statue specifique"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="POLYNESIE" type="ISLAND" value="Polynesie francaise" category="Collectivite d'outre mer"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="ST_MARTIN" type="ISLAND" value="Saint-Martin" category="Collectivite d'outre mer"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="ST_BARTHELEMY" type="ISLAND" value="Saint-Barthelemy" category="Collectivite d'outre mer"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="ST_PIERRE_MIQUELON" type="ISLAND" value="Saint-Pierre-et-Miquelon" category="Collectivite d'outre mer"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="WALLIS_FUTUNA" type="ISLAND" value="Wallis-et-Futuna" category="Collectivite d'outre mer"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="GUADELOUPE" type="REGIONS" value="Guadeloupe" category="Département et Région d'outre mer"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="MARTINIQUE" type="REGIONS" value="Martinique" category="Département et Région d'outre mer"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="MAYOTTE" type="REGIONS" value="Mayotte" category="Département et Région d'outre mer"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="LAREUNION" type="REGIONS" value="La Reunion" category="Département et Région d'outre mer"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="TERRITOIRE_ULTRAMARINS" position="GUYANE" type="REGIONS" value="Guyane" category="Département et Région d'outre mer"/>
-    <visualization ID="TERRITOIRE_ULTRAMARINS">
-      <positions ID="GUADELOUPE"/>
-      <positions ID="MARTINIQUE"/>
-      <positions ID="LAREUNION"/>
-      <positions ID="GUYANE"/>
-      <positions ID="MAYOTTE"/>
-      <positions ID="NOUVELLE_CALEDONIE"/>
-      <positions ID="TERRES_AUSTRALES"/>
-      <positions ID="CLIPPERTON"/>
-      <positions ID="ST_PIERRE_MIQUELON"/>
-      <positions ID="ST_MARTIN"/>
-      <positions ID="ST_BARTHELEMY"/>
-      <positions ID="WALLIS_FUTUNA"/>
-      <positions ID="POLYNESIE"/>
+  <knowledgefacts
+      name="Territoires ultramarins et DROMs">
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="TERRITOIRE_ULTRAMARINS"
+        position="CLIPPERTON"
+        type="ISLAND"
+        value="Clipperton"
+        category="Statue specifique"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="TERRITOIRE_ULTRAMARINS"
+        position="TERRES_AUSTRALES"
+        type="ISLAND"
+        value="Terres australes"
+        category="Statue specifique"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="TERRITOIRE_ULTRAMARINS"
+        position="NOUVELLE_CALEDONIE"
+        type="ISLAND"
+        value="Nouvelle-Caledonie"
+        category="Statue specifique"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="TERRITOIRE_ULTRAMARINS"
+        position="POLYNESIE"
+        type="ISLAND"
+        value="Polynesie francaise"
+        category="Collectivite d'outre mer"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="TERRITOIRE_ULTRAMARINS"
+        position="ST_MARTIN"
+        type="ISLAND"
+        value="Saint-Martin"
+        category="Collectivite d'outre mer"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="TERRITOIRE_ULTRAMARINS"
+        position="ST_BARTHELEMY"
+        type="ISLAND"
+        value="Saint-Barthelemy"
+        category="Collectivite d'outre mer"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="TERRITOIRE_ULTRAMARINS"
+        position="ST_PIERRE_MIQUELON"
+        type="ISLAND"
+        value="Saint-Pierre-et-Miquelon"
+        category="Collectivite d'outre mer"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="TERRITOIRE_ULTRAMARINS"
+        position="WALLIS_FUTUNA"
+        type="ISLAND"
+        value="Wallis-et-Futuna"
+        category="Collectivite d'outre mer"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="TERRITOIRE_ULTRAMARINS"
+        position="GUADELOUPE"
+        type="REGIONS"
+        value="Guadeloupe"
+        category="Département et Région d'outre mer"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="TERRITOIRE_ULTRAMARINS"
+        position="MARTINIQUE"
+        type="REGIONS"
+        value="Martinique"
+        category="Département et Région d'outre mer"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="TERRITOIRE_ULTRAMARINS"
+        position="MAYOTTE"
+        type="REGIONS"
+        value="Mayotte"
+        category="Département et Région d'outre mer"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="TERRITOIRE_ULTRAMARINS"
+        position="LAREUNION"
+        type="REGIONS"
+        value="La Reunion"
+        category="Département et Région d'outre mer"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="TERRITOIRE_ULTRAMARINS"
+        position="GUYANE"
+        type="REGIONS"
+        value="Guyane"
+        category="Département et Région d'outre mer"/>
+    <visualization
+        ID="TERRITOIRE_ULTRAMARINS">
+      <positions
+          ID="GUADELOUPE"/>
+      <positions
+          ID="MARTINIQUE"/>
+      <positions
+          ID="LAREUNION"/>
+      <positions
+          ID="GUYANE"/>
+      <positions
+          ID="MAYOTTE"/>
+      <positions
+          ID="NOUVELLE_CALEDONIE"/>
+      <positions
+          ID="TERRES_AUSTRALES"/>
+      <positions
+          ID="CLIPPERTON"/>
+      <positions
+          ID="ST_PIERRE_MIQUELON"/>
+      <positions
+          ID="ST_MARTIN"/>
+      <positions
+          ID="ST_BARTHELEMY"/>
+      <positions
+          ID="WALLIS_FUTUNA"/>
+      <positions
+          ID="POLYNESIE"/>
     </visualization>
   </knowledgefacts>
-  <knowledgefacts name="Membres de l'Union Europeenne">
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="FRANCE" type="COUNTRY" value="France"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="ESPAGNE" type="COUNTRY" value="Espagne"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="PORTUGAL" type="COUNTRY" value="Portugal"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="ITALIE" type="COUNTRY" value="Italie"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="ALLEMAGNE" type="COUNTRY" value="Allemagne"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="IRLANDE" type="COUNTRY" value="Irlande"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="BELGIQUE" type="COUNTRY" value="Belgique"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="MALTE" type="COUNTRY" value="Malte"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="PAYS-BAS" type="COUNTRY" value="Pays-Bas"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="SLOVENIE" type="COUNTRY" value="Slovenie"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="AUTRICHE" type="COUNTRY" value="Autriche"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="CROATIE" type="COUNTRY" value="Croatie"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="GRECE" type="COUNTRY" value="Grece"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="ESTONIE" type="COUNTRY" value="Estonie"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="LITTUANIE" type="COUNTRY" value="Littuanie"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="LETTONIE" type="COUNTRY" value="Lettonie"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="SOLVAQUIE" type="COUNTRY" value="Slovaquie"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="SUEDE" type="COUNTRY" value="Suede"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="DANEMARK" type="COUNTRY" value="Danemark"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="TCHEQUIE" type="COUNTRY" value="Republique Tcheque"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="HONGRIE" type="COUNTRY" value="Hongrie"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="ROUMANIE" type="COUNTRY" value="Roumanie"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="BULGARIE" type="COUNTRY" value="Bulgarie"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="CHYPRE" type="COUNTRY" value="Chypre"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="FINLANDE" type="COUNTRY" value="Finlande"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="POLOGNE" type="COUNTRY" value="Pologne"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="UNION_EURO" position="LUXEMBOURG" type="COUNTRY" value="Luxembourg"/>
-    <visualization ID="UNION_EURO">
-      <positions ID="FRANCE"/>
-      <positions ID="ESPAGNE"/>
-      <positions ID="PORTUGAL"/>
-      <positions ID="ITALIE"/>
-      <positions ID="ALLEMAGNE"/>
-      <positions ID="IRLANDE"/>
-      <positions ID="BELGIQUE"/>
-      <positions ID="MALTE"/>
-      <positions ID="PAYS-BAS"/>
-      <positions ID="SLOVENIE"/>
-      <positions ID="AUTRICHE"/>
-      <positions ID="CROATIE"/>
-      <positions ID="GRECE"/>
-      <positions ID="ESTONIE"/>
-      <positions ID="LITTUANIE"/>
-      <positions ID="LETTONIE"/>
-      <positions ID="SOLVAQUIE"/>
-      <positions ID="SUEDE"/>
-      <positions ID="DANEMARK"/>
-      <positions ID="TCHEQUIE"/>
-      <positions ID="HONGRIE"/>
-      <positions ID="ROUMANIE"/>
-      <positions ID="BULGARIE"/>
-      <positions ID="CHYPRE"/>
-      <positions ID="FINLANDE"/>
-      <positions ID="POLOGNE"/>
-      <positions ID="LUXEMBOURG"/>
+  <knowledgefacts
+      name="Membres de l'Union Europeenne">
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="FRANCE"
+        type="COUNTRY"
+        value="France"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="ESPAGNE"
+        type="COUNTRY"
+        value="Espagne"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="PORTUGAL"
+        type="COUNTRY"
+        value="Portugal"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="ITALIE"
+        type="COUNTRY"
+        value="Italie"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="ALLEMAGNE"
+        type="COUNTRY"
+        value="Allemagne"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="IRLANDE"
+        type="COUNTRY"
+        value="Irlande"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="BELGIQUE"
+        type="COUNTRY"
+        value="Belgique"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="MALTE"
+        type="COUNTRY"
+        value="Malte"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="PAYS-BAS"
+        type="COUNTRY"
+        value="Pays-Bas"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="SLOVENIE"
+        type="COUNTRY"
+        value="Slovenie"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="AUTRICHE"
+        type="COUNTRY"
+        value="Autriche"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="CROATIE"
+        type="COUNTRY"
+        value="Croatie"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="GRECE"
+        type="COUNTRY"
+        value="Grece"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="ESTONIE"
+        type="COUNTRY"
+        value="Estonie"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="LITTUANIE"
+        type="COUNTRY"
+        value="Littuanie"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="LETTONIE"
+        type="COUNTRY"
+        value="Lettonie"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="SOLVAQUIE"
+        type="COUNTRY"
+        value="Slovaquie"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="SUEDE"
+        type="COUNTRY"
+        value="Suede"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="DANEMARK"
+        type="COUNTRY"
+        value="Danemark"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="TCHEQUIE"
+        type="COUNTRY"
+        value="Republique Tcheque"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="HONGRIE"
+        type="COUNTRY"
+        value="Hongrie"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="ROUMANIE"
+        type="COUNTRY"
+        value="Roumanie"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="BULGARIE"
+        type="COUNTRY"
+        value="Bulgarie"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="CHYPRE"
+        type="COUNTRY"
+        value="Chypre"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="FINLANDE"
+        type="COUNTRY"
+        value="Finlande"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="POLOGNE"
+        type="COUNTRY"
+        value="Pologne"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="UNION_EURO"
+        position="LUXEMBOURG"
+        type="COUNTRY"
+        value="Luxembourg"/>
+    <visualization
+        ID="UNION_EURO">
+      <positions
+          ID="FRANCE"/>
+      <positions
+          ID="ESPAGNE"/>
+      <positions
+          ID="PORTUGAL"/>
+      <positions
+          ID="ITALIE"/>
+      <positions
+          ID="ALLEMAGNE"/>
+      <positions
+          ID="IRLANDE"/>
+      <positions
+          ID="BELGIQUE"/>
+      <positions
+          ID="MALTE"/>
+      <positions
+          ID="PAYS-BAS"/>
+      <positions
+          ID="SLOVENIE"/>
+      <positions
+          ID="AUTRICHE"/>
+      <positions
+          ID="CROATIE"/>
+      <positions
+          ID="GRECE"/>
+      <positions
+          ID="ESTONIE"/>
+      <positions
+          ID="LITTUANIE"/>
+      <positions
+          ID="LETTONIE"/>
+      <positions
+          ID="SOLVAQUIE"/>
+      <positions
+          ID="SUEDE"/>
+      <positions
+          ID="DANEMARK"/>
+      <positions
+          ID="TCHEQUIE"/>
+      <positions
+          ID="HONGRIE"/>
+      <positions
+          ID="ROUMANIE"/>
+      <positions
+          ID="BULGARIE"/>
+      <positions
+          ID="CHYPRE"/>
+      <positions
+          ID="FINLANDE"/>
+      <positions
+          ID="POLOGNE"/>
+      <positions
+          ID="LUXEMBOURG"/>
     </visualization>
   </knowledgefacts>
-  <knowledgefacts name="Densité de population ">
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="DENSITE_POPU" position="FAIBLE" type="NONE" value="moins de 50 habitants / km2"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="DENSITE_POPU" position="MOYENNE" type="NONE" value="entre 50 et 100 habitants / km2"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="DENSITE_POPU" position="FORTE" type="NONE" value="plus de 100 habitants / km2"/>
-    <visualization ID="DENSITE_POPU">
-      <positions ID="FAIBLE"/>
-      <positions ID="MOYENNE"/>
-      <positions ID="FORTE"/>
+  <knowledgefacts
+      name="Densité de population">
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="DENSITE_POPU"
+        position="FAIBLE"
+        type="NONE"
+        value="moins de 50 habitants / km2"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="DENSITE_POPU"
+        position="MOYENNE"
+        type="NONE"
+        value="entre 50 et 100 habitants / km2"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="DENSITE_POPU"
+        position="FORTE"
+        type="NONE"
+        value="plus de 100 habitants / km2"/>
+    <visualization
+        ID="DENSITE_POPU">
+      <positions
+          ID="FAIBLE"/>
+      <positions
+          ID="MOYENNE"/>
+      <positions
+          ID="FORTE"/>
     </visualization>
   </knowledgefacts>
-  <knowledgefacts name="Domaine Bioclimatique">
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="DOMAINE_BIO" position="CLIMAT_OCE" type="NONE" value="Climat océanique"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="DOMAINE_BIO" position="CLIMAT_CONTI" type="NONE" value="Climat continental"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="DOMAINE_BIO" position="CLIMAT_MEDI" type="NONE" value="Climat méditerraneen"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="DOMAINE_BIO" position="CLIMAT_MONTA" type="NONE" value="Climat montagnard"/>
-    <visualization ID="DOMAINE_BIO">
-      <positions ID="CLIMAT_OCE"/>
-      <positions ID="CLIMAT_CONTI"/>
-      <positions ID="CLIMAT_MEDI"/>
-      <positions ID="CLIMAT_MONTA"/>
+  <knowledgefacts
+      name="Domaine Bioclimatique">
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="DOMAINE_BIO"
+        position="CLIMAT_OCE"
+        type="NONE"
+        value="Climat océanique"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="DOMAINE_BIO"
+        position="CLIMAT_CONTI"
+        type="NONE"
+        value="Climat continental"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="DOMAINE_BIO"
+        position="CLIMAT_MEDI"
+        type="NONE"
+        value="Climat méditerraneen"/>
+    <facts xsi:type="generator:GeographyFact"
+        belongsToVisualization="DOMAINE_BIO"
+        position="CLIMAT_MONTA"
+        type="NONE"
+        value="Climat montagnard"/>
+    <visualization
+        ID="DOMAINE_BIO">
+      <positions
+          ID="CLIMAT_OCE"/>
+      <positions
+          ID="CLIMAT_CONTI"/>
+      <positions
+          ID="CLIMAT_MEDI"/>
+      <positions
+          ID="CLIMAT_MONTA"/>
     </visualization>
   </knowledgefacts>
 </generator:Knowledge>

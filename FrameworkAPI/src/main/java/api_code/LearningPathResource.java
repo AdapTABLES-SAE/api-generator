@@ -109,4 +109,23 @@ public class LearningPathResource {
 		return res;
 	}
 	
+	@POST
+	@Path("/traininghg")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.TEXT_PLAIN)
+	public String addHgTrainingPath(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException, LearningPathIDisNull { 
+		Constant.PROJECT_PATH = app.getRealPath("");		
+		JSONObject obj = new JSONObject();
+		Constant.changeDomains(DidacticDomain.HISTORY_GEOGRAPHY);
+
+		try {
+			obj = (JSONObject) new JSONParser().parse(jsonContent);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		manager = new PathManager((String) obj.get("learningPathID"));
+		manager.updateHGTrainingPath(obj);
+
+		return "OK";
+	}
 }

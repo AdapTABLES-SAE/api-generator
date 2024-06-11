@@ -199,8 +199,8 @@ public class DataManager {
 		Objective objective = new ObjectiveImpl();
 		objective.setID("O1_" + id);
 		objective.setName("Objectif 1");
-
-		Level level = (knowledgeFile.equals(Constant.KNOWLEDGE_FILE)? new MTLevelImpl():new HGLevelImpl());
+		System.out.println("knowlege file => " + knowledgeFile);
+		Level level = (knowledgeFile.equals(Constant.KNOWLEDGE_FILE_MATH)? new MTLevelImpl():new HGLevelImpl());
 		level.setID("L1_" + id);
 		objective.getLevels().add(level);
 		level.setCompletionCriteria(new CompletionCriteriaImpl());

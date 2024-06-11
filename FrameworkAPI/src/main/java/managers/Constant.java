@@ -56,7 +56,8 @@ public class Constant {
 	public static final String CLASSROOMS_FILE = "Classrooms.xmi";
 	public static final String TEACHERS_FILE = "Teachers.xmi";
 	public static final String PATHS_FILE = "LearningDomain.xmi";
-	public static final String KNOWLEDGE_FILE = "MultiplicationTables.xmi";
+	public static String KNOWLEDGE_FILE = "MultiplicationTables.xmi";
+	public static final String KNOWLEDGE_FILE_MATH = "MultiplicationTables.xmi";
 	public static final String KNOWLEDGE_FILE_HG = "HistoryGeographyFacts.xmi";
 	public static final String LEARNERS_FILES_PATH = "learnerPlayers/";
 
@@ -77,13 +78,16 @@ public class Constant {
 		if (domain.equals(DidacticDomain.MATHEMATICS)) {
 			Constant.INPUT_MODELS_PATH = Constant.INPUT_MODELS_PATH_MATH;
 			Constant.OUTPUT_MODELS_PATH = Constant.OUTPUT_MODELS_PATH_MATH;
+			Constant.KNOWLEDGE_FILE = Constant.KNOWLEDGE_FILE_MATH;
 		} else {
 			Constant.INPUT_MODELS_PATH = Constant.INPUT_MODELS_PATH_HG;
 			Constant.OUTPUT_MODELS_PATH = Constant.OUTPUT_MODELS_PATH_HG;
+			Constant.KNOWLEDGE_FILE = Constant.KNOWLEDGE_FILE_HG;
 		}
 	}
 
 	public static Teacher getTeacher(String teacherID) {
+		Constant.changeDomains(DidacticDomain.MATHEMATICS);
 		Teachers teachers = loadTeachers();
 		for (Teacher teacher : teachers.getTeachers()) {
 			if (teacher.getID().equals(teacherID)) {

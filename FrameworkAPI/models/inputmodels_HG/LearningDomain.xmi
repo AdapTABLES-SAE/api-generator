@@ -6,7 +6,7 @@
         <tasks xsi:type="generator:LocateOnAMap" percentOfApparition="20" ID="HGF_O1_L1_T1" maxTime="30" nbExpectedAnswers="18">
           <responseModality xsi:type="generator:DynamicMultipleChoice"/>
         </tasks>
-        <tasks xsi:type="generator:HistoricalEventAssociation" percentOfApparition="15" ID="HGF_O1_L1_T4" nbFacts="2" missing="IMAGE" target="PERIOD">
+        <tasks xsi:type="generator:HistoricalEventAssociation" percentOfApparition="15" ID="HGF_O1_L1_T4" nbFacts="2" target="PERIOD">
           <responseModality xsi:type="generator:DynamicMultipleChoice"/>
         </tasks>
         <tasks xsi:type="generator:HistoricalChronology" percentOfApparition="15" ID="HGF_O1_L1_T9" nbFacts="3" mixDatePeriod="true">

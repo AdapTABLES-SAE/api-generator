@@ -140,5 +140,60 @@ public class LearnerPlayerResultsResource {
 	/**          JOB METHODS          **/
 	/***********************************/
 
+	//HG
+	@POST
+	@Path("/traininghg")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public void addingLearnerResultsHG(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException { 
+		Constant.changeDomains(DidacticDomain.HISTORY_GEOGRAPHY);
+		Constant.PROJECT_PATH = app.getRealPath("");
+		JSONObject obj = new JSONObject();
+		try {
+			obj = (JSONObject) new JSONParser().parse(jsonContent);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.HISTORY_GEOGRAPHY, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) obj.get( "learnerID"),
+				Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME, true));
+				
+		manager.saveLearnerResults(obj);
+	}
 	
+	@POST
+	@Path("/gamehg")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public void addingPlayerResultsHg(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException { 
+		Constant.changeDomains(DidacticDomain.HISTORY_GEOGRAPHY);
+		Constant.PROJECT_PATH = app.getRealPath("");
+		JSONObject obj = new JSONObject();
+		try {
+			obj = (JSONObject) new JSONParser().parse(jsonContent);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.HISTORY_GEOGRAPHY, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) obj.get( "learnerID"),
+				Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME, true));
+				
+		manager.savePlayerResults(obj);
+	}
+	
+	@GET
+	@Path("/learnerhg/{learnerID}/objective/{objID}/level/{levelID}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String buildObjectiveLevelParams2JSONHG(@PathParam("learnerID") String learnerID,
+			@PathParam("objID") String objectiveID, @PathParam("levelID") String levelID, 
+			@Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException, NonExistantObjectiveOrLevelException {
+		Constant.changeDomains(DidacticDomain.HISTORY_GEOGRAPHY);
+		Constant.PROJECT_PATH = app.getRealPath("");
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.HISTORY_GEOGRAPHY, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) learnerID,
+				Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME, true));
+		return manager.getTaskProgresses(objectiveID, levelID).toJSONString();
+	}
 }
