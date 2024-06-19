@@ -197,19 +197,21 @@ public class GameElementsGenerator {
 	}
 	
 	private boolean isExpectedNumberAnswersCompatible(Relation relation, ATask task) {
-		boolean expectedAnswerCompatible;
-		if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.ONE)) {
-			expectedAnswerCompatible = task.getNbExpectedAnswers() == 1;
-		} else if (relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_ONE)) {
-			expectedAnswerCompatible = task.getNbExpectedAnswers() > 1;
-		} else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.EQ_NB_FACTS)) {
-			expectedAnswerCompatible = task.getNbExpectedAnswers() == task.getNbFacts();
-		} else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_NB_FACTS)) {
-			expectedAnswerCompatible = task.getNbExpectedAnswers() > task.getNbFacts();
-		} else {
-			expectedAnswerCompatible = task.getNbExpectedAnswers() >= 1;
-		}
-		return expectedAnswerCompatible;
+	    boolean expectedAnswerCompatible;
+	    if(task.getNbExpectedAnswers() == -1) {
+	        expectedAnswerCompatible = relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_ONE);
+	    } else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.ONE)) {
+	        expectedAnswerCompatible = task.getNbExpectedAnswers() == 1;
+	    } else if (relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_ONE)) {
+	        expectedAnswerCompatible = task.getNbExpectedAnswers() > 1;
+	    } else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.EQ_NB_FACTS)) {
+	        expectedAnswerCompatible = task.getNbExpectedAnswers() == task.getNbFacts();
+	    } else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_NB_FACTS)) {
+	        expectedAnswerCompatible = task.getNbExpectedAnswers() > task.getNbFacts();
+	    } else {
+	        expectedAnswerCompatible = task.getNbExpectedAnswers() >= 1;
+	    }
+	    return expectedAnswerCompatible;
 	}
 	
 	private boolean isResponseModalityCompatible(Relation relation, ATask task) {
