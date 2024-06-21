@@ -2198,6 +2198,40 @@
       <prompt
           prompt="Place toi et saisie les bonnes réponses"/>
     </gameplays>
+    <gameplays
+        xsi:type="generator:QuestionGameplay"
+        name="GP_MULTIPLE_POSITION_FILL_IN"
+        undoable="true"
+        manualValidation="true"
+        category="POSITION_MULTIPLE"
+        statementType="FILL_IN">
+      <components
+          xsi:type="generator:Structure"
+          allowedAbility="FILL_IN_DISPLAY_HORIZONTAL"
+          forStatement="true"
+          alternateComponents="true">
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="DISPLAY"
+            forStatement="true"/>
+        <components
+            xsi:type="generator:Component"
+            allowedAbility="TYPABLE_DETECTOR"
+            forProposition="true"
+            inputEntry="true">
+          <expectedSize>
+            <value
+                xsi:type="generator:Value"
+                value="SMALL"/>
+          </expectedSize>
+        </components>
+      </components>
+      <components
+          xsi:type="generator:Component"
+          allowedAbility="VERIFICATOR"/>
+      <prompt
+          prompt="Place les bons elements"/>
+    </gameplays>
   </gameplays>
   <elements>
     <equipments>

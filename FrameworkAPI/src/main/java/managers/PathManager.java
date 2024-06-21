@@ -431,7 +431,7 @@ public class PathManager {
 		Constant.saveDomainModel(domain);
 
 		// update progress for learner having this path
-		resetEveryLearnerProgress();
+		resetEveryLearnerProgress(DidacticDomain.MATHEMATICS);
 	}
 
 	public void createTrainingPath(JSONObject json)
@@ -528,23 +528,23 @@ public class PathManager {
 		return null;
 	}
 
-	private void resetEveryLearnerProgress() throws NonExistantLearnerPlayerException, ContextNotFoundException {
-		System.out.println("RESET");
-		Classrooms classrooms = Constant.loadClassrooms();
-		LearnerPlayerManager manager;
-		for (Classroom classroom : classrooms.getClassrooms()) {
-			for (LearnerPlayer LP : classroom.getLearnerPlayers()) {
-				if (LP.getLearningpath().getID().equals(path.getID())) {
-					manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.MATHEMATICS,
-							Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH,
-							Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, LP.getID(), Constant.CLASSROOMS_FILE,
-							classroom.getID(), true));
-					manager.resetLearnerProgress(manager);
-				}
-
+private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistantLearnerPlayerException, ContextNotFoundException {
+	System.out.println("RESET");
+	Classrooms classrooms = Constant.loadClassrooms();
+	LearnerPlayerManager manager;
+	for (Classroom classroom : classrooms.getClassrooms()) {
+		for (LearnerPlayer LP : classroom.getLearnerPlayers()) {
+			if (LP.getLearningpath().getID().equals(path.getID())) {
+				manager = new LearnerPlayerManager(new ModelsManager(domain,
+						Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH,
+						Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, LP.getID(), Constant.CLASSROOMS_FILE,
+						classroom.getID(), true));
+				manager.resetLearnerProgress(manager);
 			}
+
 		}
 	}
+}
 
 	private List<JSONObject> getJSONTasks(JSONObject json) {
 		JSONArray tasksParameters;
@@ -962,7 +962,7 @@ public class PathManager {
 		// saveDomainModel();
 		Constant.saveDomainModel(domain);
 		// update progress for learner having this path
-		// resetEveryLearnerProgress();
+		resetEveryLearnerProgress(DidacticDomain.HISTORY_GEOGRAPHY);
 	}
 	
 	//SAVE LEARNING PATH - TASKS BUILD
@@ -1076,11 +1076,39 @@ public class PathManager {
 		task.setPercentOfApparition((int) (long) jtask.get("repartitionPercent"));
 		task.setNbConsecutiveSuccess((int) (long) jtask.get("successiveSuccessesToReach"));
 		
+		System.out.println(jtask.toJSONString());
 		long nbFacts = jtask.get("nbFacts") != null ? (long)jtask.get("nbFacts") : 1;
 		task.setNbFacts((int)nbFacts);
 
-		//ANSWER MODALITY
-		System.out.println(jtask.get("answerModality"));
+		System.out.println(nbFacts + " ?? ALLEZZ " + task.getNbFacts());
+		//ANSWER MODALITY V2
+		EModality answerModalityType = EModality.get((int)(long)jtask.get("answerModality"));
+		ResponseModality modality;
+		if(answerModalityType == EModality.CHOICE) {
+			if(task instanceof GeographyMembershipImpl) {
+				modality = new MultipleChoiceImpl();
+				
+				int nbChoices = jtask.get("nbChoices") != null ? (int) (long) jtask.get("nbChoices") : 2;
+				((MultipleChoice) modality).setNbChoices(nbChoices);
+				
+				int nbBadChoices = jtask.get("nbBadChoices") != null ? (int) (long) jtask.get("nbBadChoices") : 4;
+				((MultipleChoice) modality).setNbBadChoices(nbBadChoices);
+				
+				((MultipleChoice) modality).setType(answerModalityType);
+			}else {
+				modality = new DynamicMultipleChoiceImpl();
+				((DynamicMultipleChoice) modality).setType(EModality.get((int)(long)jtask.get("answerModality")));
+				
+				int nbBadChoices = jtask.get("nbBadChoices") != null ? (int) (long) jtask.get("nbBadChoices") : 0;
+				((DynamicMultipleChoice) modality).setNbBadChoices(nbBadChoices);
+				((DynamicMultipleChoice) modality).setType(answerModalityType);
+			}
+		}else {
+			modality = new EnterResponseImpl();
+		}
+		
+		//ANSWER MODALITY V1
+		/*System.out.println(jtask.get("answerModality"));
 		EModality answerModalityType = EModality.get((int)(long)jtask.get("answerModality"));
 		ResponseModality modality;
 		if(jtask.get("nbChoices") != null) {
@@ -1095,7 +1123,7 @@ public class PathManager {
 			((DynamicMultipleChoice) modality).setType(answerModalityType);
 		}else {
 			modality = new EnterResponseImpl();
-		}
+		}*/
 		task.setResponseModality(modality);
 	}
 	

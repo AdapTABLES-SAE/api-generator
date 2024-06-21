@@ -44,6 +44,7 @@ public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 	
 	@Override
 	protected Set<AQuestionableFact> generateQuestionableFactsOf(ATask task, AbstractFact fact) {
+		System.out.println("Create fact method");
 		Set<AQuestionableFact> questionableFacts = new HashSet<>();
 		boolean isCreated = false;
 		if(fact instanceof HistoryFact) {		
@@ -52,9 +53,11 @@ public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 			HistoryFact hfact = (HistoryFact) fact;
 			qfact.setID(taskID+"-QAFACT"+factsCounter); factsCounter++;
 			qfact.getFacts().add(fact);
+			System.out.println("in if");
 			if(respectsTaskConditions(hfact, ctask)) {
 				switch(ctask.getSource()) {
 				case EVENT: 
+					System.out.println("in event");
 					if(ctask.getMissing().equals(EHistoryTarget.TIME)) {
 						qfact.setSourceElement(hfact.getEvent());
 						qfact.setSourceElementType(EHistoryTarget.EVENT);
@@ -63,6 +66,7 @@ public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 							qfact.getMissingElements().add(((TimePeriod) hfact.getTime()).getStartYear());
 							qfact.getMissingElements().add(((TimePeriod) hfact.getTime()).getEndYear());
 						} else {
+							System.out.println("fact created");
 							qfact.getMissingElements().add(hfact.getTime().toString());
 						}
 						isCreated = true;
@@ -80,6 +84,7 @@ public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 					}
 					break;
 				case TIME: 
+					System.out.println("in time");
 					if(ctask.getMissing().equals(EHistoryTarget.IMAGE)) {
 						if(hfact.getRepresentation() != null) {
 							qfact.setSourceElement(hfact.getTime().toString());
@@ -99,6 +104,7 @@ public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 					}
 					break;
 				case IMAGE: 
+					System.out.println("in image");
 					if(hfact.getRepresentation() != null) {
 						isCreated = true;
 						if(ctask.getMissing().equals(EHistoryTarget.TIME)) {
@@ -123,6 +129,7 @@ public class HGFactGeneratorAssociation extends FactGeneratorTemplate {
 					}
 					break;
 				}
+				System.out.println("Is created "+isCreated);
 				if(isCreated) {
 					questionableFacts.add(qfact);
 				}

@@ -82,12 +82,13 @@ public class HGFactGeneratorMembership extends FactGeneratorTemplate {
 		if(possibleWrongData.isEmpty()) {
 			ALGAGenerator.LOGGER.severe("No possible wrong data in model! You need to check or implement it differently!");
 		} else {
-			while(badPropositions.size() != number) {
+			while(badPropositions.size() != number && possibleWrongData.isEmpty()) {
 				int rand = new Random().nextInt(possibleWrongData.size());
 				String value = possibleWrongData.get(rand).getValue();
 				if(!badPropositions.contains(value)) {
 					badPropositions.add(value);
 				}
+				possibleWrongData.remove(rand);
 			}
 		}
 		return badPropositions; 

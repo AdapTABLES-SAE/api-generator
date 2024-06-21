@@ -198,7 +198,9 @@ public class GameElementsGenerator {
 	
 	private boolean isExpectedNumberAnswersCompatible(Relation relation, ATask task) {
 		boolean expectedAnswerCompatible;
-		if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.ONE)) {
+		if(task.getNbExpectedAnswers() == -1) {
+			expectedAnswerCompatible = relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_ONE);
+		} else if(relation.getCondition().getNbExpectedAnswers().equals(EBoundary.ONE)) {
 			expectedAnswerCompatible = task.getNbExpectedAnswers() == 1;
 		} else if (relation.getCondition().getNbExpectedAnswers().equals(EBoundary.SUP_ONE)) {
 			expectedAnswerCompatible = task.getNbExpectedAnswers() > 1;
@@ -226,7 +228,8 @@ public class GameElementsGenerator {
 		Map<GPCategory, Set<EStatementType>> allowedCategoriesWithStatements = new HashMap<>(); 
 		for (Relation relation : new ArrayList<>(modelAccess.getRelationsModel().getRelations())) {
 			if(relation.getTask().equals(task.getType())) {
-				//System.out.println(task.getNbExpectedAnswers()+" "+task.getNbFacts());	
+				//System.out.println(((CompletionTaskImpl) task).getNbMissingElements());	
+				System.out.println(task.getNbExpectedAnswers()+" "+task.getNbFacts());	
 				//System.out.println("fact comp "+factCompatible+" expectedanswers "+expectedAnswerCompatible+" modality "+modalityCompatible);
 				if(isNumberFactCompatible(relation, task) && isExpectedNumberAnswersCompatible(relation, task) && isResponseModalityCompatible(relation, task)) {
 					for(GPCategory category: relation.getGameplays()) {
@@ -265,6 +268,7 @@ public class GameElementsGenerator {
 		
 		for(Gameplay gameplay : gameplays) {
 			Map<ElementType, Integer> elementsToQuantity = dungeonElements.getElementManager().selectElementType(gameplay.getComponents(), roomElements.getTask(), roomElements.getFacts());
+			//System.out.println("ROOMTYPE check  "+elementsToQuantity);
 			if(!elementsToQuantity.isEmpty() && dungeonElements.getElementManager().hasCompatibleRoomTypeWithEveryAccessAndPositions(gameplay, elementsToQuantity)) {
 				gameplayWithCompatibleRoomType.add(gameplay);
 			} else {
@@ -315,12 +319,12 @@ public class GameElementsGenerator {
 		List<Gameplay> compatibleGameplays = new ArrayList<>();
 		for (Gameplay gp : this.modelAccess.getGameDescriptionModel().getGameplays().getGameplays()) {
 			if(gp instanceof QuestionGameplay && !gp.isLocked()) {
-				/*System.out.println("\t"+gp.getName()+ " "+((QuestionGameplay) gp).getCategory()+ " "+ category);
+				System.out.println("\t"+gp.getName()+ " "+((QuestionGameplay) gp).getCategory()+ " "+ category);
 				System.out.println("\t cat "+((QuestionGameplay) gp).getCategory().equals(category));
 				System.out.println("\t validation "+respectValidationMethod((QuestionGameplay) gp, task));
 				System.out.println("\t restriction "+respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task, allowedStatementTypes));
-				System.out.println("\t undoable "+respectUndoable((QuestionGameplay) gp, task));*/
-
+				System.out.println("\t undoable "+respectUndoable((QuestionGameplay) gp, task));
+				
 				if(((QuestionGameplay) gp).getCategory().equals(category) && 
 						respectValidationMethod((QuestionGameplay) gp, task) && 
 						respectGameplayTaskTypeRestriction((QuestionGameplay) gp, task, allowedStatementTypes) &&

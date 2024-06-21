@@ -37,6 +37,7 @@ public class GameElementsManager {
 	
 	public Map<ElementType, Integer> selectElementType(List<AComponent> components, ATask task, List<QuestionedFact> facts) {
 		Map<ElementType, Integer> elementsToQuantity = new HashMap<>();
+		System.out.println(facts);
 		selectElementType(elementsToQuantity, components, task, facts, false);
 		return elementsToQuantity;
 	}
