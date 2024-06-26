@@ -82,7 +82,7 @@ public class HGFactGeneratorMembership extends FactGeneratorTemplate {
 		if(possibleWrongData.isEmpty()) {
 			ALGAGenerator.LOGGER.severe("No possible wrong data in model! You need to check or implement it differently!");
 		} else {
-			while(badPropositions.size() != number && possibleWrongData.isEmpty()) {
+			while(badPropositions.size() != number && !possibleWrongData.isEmpty()) {
 				int rand = new Random().nextInt(possibleWrongData.size());
 				String value = possibleWrongData.get(rand).getValue();
 				if(!badPropositions.contains(value)) {
@@ -102,12 +102,11 @@ public class HGFactGeneratorMembership extends FactGeneratorTemplate {
 				
 		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
 		List<String> propositions_temp = generateBadPropositions(mc.getNbBadChoices(), qfact);
-		
 		List<Soluce> badpropositions = new ArrayList<>();
 		for(String value: propositions_temp) {
 			badpropositions.add(new Soluce(value));
 		}
-		
+
 		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
 		propositions.put(ECorrectness.INCORRECT, badpropositions);
 		return propositions;

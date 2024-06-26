@@ -534,6 +534,7 @@ private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistant
 	LearnerPlayerManager manager;
 	for (Classroom classroom : classrooms.getClassrooms()) {
 		for (LearnerPlayer LP : classroom.getLearnerPlayers()) {
+			System.out.println(path.getID() + " " + LP.getLearningpath().getID());
 			if (LP.getLearningpath().getID().equals(path.getID())) {
 				manager = new LearnerPlayerManager(new ModelsManager(domain,
 						Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH,

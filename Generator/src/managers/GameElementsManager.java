@@ -37,7 +37,6 @@ public class GameElementsManager {
 	
 	public Map<ElementType, Integer> selectElementType(List<AComponent> components, ATask task, List<QuestionedFact> facts) {
 		Map<ElementType, Integer> elementsToQuantity = new HashMap<>();
-		System.out.println(facts);
 		selectElementType(elementsToQuantity, components, task, facts, false);
 		return elementsToQuantity;
 	}
@@ -229,6 +228,7 @@ public class GameElementsManager {
 		for (ElementSize size : numberOfElementsPerSize.keySet()) {
 			List<Position> roomPositionOfSize = getRoomTypePositionsOfSize(roomtype, size);
 			if(roomPositionOfSize.size() < sumOfElementOfSize(numberOfElementsPerSize.get(size))) {
+				
 				compatible = false; break;
 			} else {
 				for (Ability ability : numberOfElementsPerSize.get(size).keySet()) {
@@ -257,7 +257,9 @@ public class GameElementsManager {
 	private int sumOfElementOfSize(Map<Ability, Integer> numberOfElementPerAbility) {
 		int quantity = 0;
 		for (Ability ability : numberOfElementPerAbility.keySet()) {
-			quantity += numberOfElementPerAbility.get(ability);
+			if(!(numberOfElementPerAbility.get(ability) < 0)) {
+				quantity += numberOfElementPerAbility.get(ability);
+			}
 		}
 		return quantity;
 	}

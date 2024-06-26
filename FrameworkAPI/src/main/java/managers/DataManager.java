@@ -3,6 +3,7 @@ package managers;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -25,6 +26,7 @@ import generator.LearningDomain;
 import generator.LearningPath;
 import generator.Level;
 import generator.Objective;
+import generator.SetOfFacts;
 import generator.Teacher;
 import generator.Teachers;
 import generator.impl.ClassroomImpl;
@@ -37,6 +39,7 @@ import generator.impl.MTLevelImpl;
 import generator.impl.ObjectiveImpl;
 import generator.impl.PlayerProgressImpl;
 import generator.impl.ProgressionImpl;
+import generator.impl.SetOfFactsImpl;
 import generator.impl.StatisticsImpl;
 import generator.impl.TeacherImpl;
 import generators.ALGAGenerator;
@@ -201,6 +204,7 @@ public class DataManager {
 		objective.setName("Objectif 1");
 		System.out.println("knowlege file => " + knowledgeFile);
 		Level level = (knowledgeFile.equals(Constant.KNOWLEDGE_FILE_MATH)? new MTLevelImpl():new HGLevelImpl());
+		
 		level.setID("L1_" + id);
 		objective.getLevels().add(level);
 		level.setCompletionCriteria(new CompletionCriteriaImpl());
