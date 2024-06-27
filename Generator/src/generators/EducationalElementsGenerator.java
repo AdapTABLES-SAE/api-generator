@@ -22,8 +22,8 @@ import managers.ModelsManager;
 import structures.DungeonElements;
 
 /**
- * Cette classe permet de g�n�rer / choisir, l'objectif d'entrainement vis�e ainsi que le niveau de difficult�. 
- * @author B�r�nice LEMOINE
+ * Cette classe permet de gï¿½nï¿½rer / choisir, l'objectif d'entrainement visï¿½e ainsi que le niveau de difficultï¿½. 
+ * @author Bï¿½rï¿½nice LEMOINE
  */
 public class EducationalElementsGenerator {
 	
@@ -57,7 +57,7 @@ public class EducationalElementsGenerator {
 	}
 	
 	/**
-	 * G�n�re les faits questionnable
+	 * Gï¿½nï¿½re les faits questionnable
 	 */
 	private void generateQuestionnableFacts() {
 		instanciateQFbyTasks();
@@ -131,7 +131,7 @@ public class EducationalElementsGenerator {
 	}
 	
 	/**
-	 * D�fini le nombre de salle du donjon pour chaque t�che
+	 * Dï¿½fini le nombre de salle du donjon pour chaque tï¿½che
 	 * @throws Exception 
 	 */
 	private void defineNumberOfRoomPerTaskNecessary() throws Exception {
@@ -290,6 +290,10 @@ public class EducationalElementsGenerator {
 	
 	private void selectObjectiveLevel() {
 		List<CurrentObjectiveLevel> allowed = eligibleObjectiveLevels(); 
+		for (CurrentObjectiveLevel currentObjectiveLevel : allowed) {
+			System.out.println("Eligible objective/levels "+currentObjectiveLevel.getObjective().getID()+" "+currentObjectiveLevel.getLevel().getID());
+		}
+		
 		dungeonElements.setCurrentObjectiveLevel(allowed.get(random.nextInt(allowed.size())));
 		
 	}
@@ -304,12 +308,15 @@ public class EducationalElementsGenerator {
 		
 		List<CurrentObjectiveLevel> cols = new ArrayList<>();
 		for (CurrentObjectiveLevel currentObjectiveLevel : modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
-			if(!currentObjectiveLevel.isAchieved() || (allObjectiveAreReached && !levelThresholdsAreAt100Percent(currentObjectiveLevel)) || allIObjectiveLevelAreAt100Percent) {
+			Level level = getAvailableLevelForObjective(currentObjectiveLevel.getObjective());
+			if(eligibleObjectives.contains(currentObjectiveLevel.getObjective()) && currentObjectiveLevel.getLevel().equals(level) &&
+					!currentObjectiveLevel.isAchieved() || 
+					(allObjectiveAreReached && !levelThresholdsAreAt100Percent(currentObjectiveLevel)) 
+					|| allIObjectiveLevelAreAt100Percent) {
 				cols.add(currentObjectiveLevel);
 			}
 		}
 		
-		ALGAGenerator.LOGGER.info("Eligible CurrentOLs="+cols);
 		return cols;
 	}
 	
@@ -330,7 +337,7 @@ public class EducationalElementsGenerator {
 		for (Objective objective : eligible_objective) {
 			if(!hasLearnerBeginObjective(objective)) {
 				Level level = getAvailableLevelForObjective(objective);
-				
+				System.out.println("Level eligible "+level.getID());
 				if(!currentObjectiveLevelExist(objective, level)) {
 					CurrentObjectiveLevel col = new CurrentObjectiveLevelImpl();
 					col.setAchieved(false);
