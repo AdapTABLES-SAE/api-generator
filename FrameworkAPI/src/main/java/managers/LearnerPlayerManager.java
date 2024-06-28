@@ -168,10 +168,12 @@ public class LearnerPlayerManager {
 		JSONObject progress = new JSONObject();
 		JSONArray progresses = new JSONArray();
 		try {
-			initialiseCurrentObjectiveLevel();
 			CurrentObjectiveLevel currentOL = getCorrespondingCOL(objectiveID, levelID);
 			if(currentOL == null) {
-				throw new NonExistantObjectiveOrLevelException(objectiveID, levelID, "");
+				//throw new NonExistantObjectiveOrLevelException(objectiveID, levelID, "");
+				initialiseCurrentObjectiveLevel();
+				currentOL = getCorrespondingCOL(objectiveID, levelID);
+				ALGAGenerator.LOGGER.warning("CurrentObjectiveLevel didn't exist, had to be created");
 			}
 			for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {
 				JSONObject taskProgress = new JSONObject(); 
@@ -192,9 +194,10 @@ public class LearnerPlayerManager {
 		return progress;
 	}
 	
-	private void initialiseCurrentObjectiveLevel() {
+	public void initialiseCurrentObjectiveLevel() {
 		
 		LearningPath path = modelsManager.getLearnerPlayer().getLearningpath(); 
+		modelsManager.getLearnerPlayer().getProgression().setLearnerProgress(new LearnerProgressImpl());
 		
 		for(Objective objective: path.getObjectives()) {
 			for(Level level: objective.getLevels()) {
@@ -308,14 +311,17 @@ public class LearnerPlayerManager {
 		double numberOfTasks = currentOL.getResults().getResultsbytask().size();
 		
 		for(ResultsByTask rbt: currentOL.getResults().getResultsbytask()) {	
+			//rbt.setEncountersPercent(this.computeTaskEncounteredPercent(rbt));
+			//rbt.setSuccessPercent(this.computeTaskSuccessPercent(rbt));
 			rbt.setEncountersPercent(this.computeTaskEncounteredPercent(rbt));
 			rbt.setSuccessPercent(this.computeTaskSuccessPercent(rbt));
-			
+			sumTaskSuccess += rbt.getSuccessPercent();
+			sumTaskEncounters += rbt.getEncountersPercent(); 
+
 			/*System.out.println("success "+rbt.getSucessPercent());
 			System.out.println("encounter "+rbt.getEncountersPercent());*/
 			
-			sumTaskSuccess += rbt.getSuccessPercent();
-			sumTaskEncounters += rbt.getEncountersPercent(); 
+			
 		}
 		/*System.out.println(sumTaskEncounters / numberOfTasks);
 		System.out.println(sumTaskSuccess / numberOfTasks);
@@ -339,6 +345,8 @@ public class LearnerPlayerManager {
 	private double computeTaskSuccessPercent(ResultsByTask taskResults) {
 		double numberOfachievedFacts = numberTaskAchievedFacts(taskResults); 
 		double numberOfFacts = taskResults.getQuestionableFacts().size();
+		System.out.println(numberOfachievedFacts);
+		System.out.println(((numberOfachievedFacts / numberOfFacts) * 100));
 		return (numberOfachievedFacts / numberOfFacts) * 100;
 	}
 	
@@ -448,12 +456,15 @@ public class LearnerPlayerManager {
 				JSONObject taskResult = (JSONObject) object;
 				ResultsByTask rbt = getCorrespondingResultsByTask((String) taskResult.get("taskID"), col);
 				if(rbt != null) {
+					//rbt.getTask().getNbConsecutiveSuccess()
 					addResultsToTask(taskResult, rbt);
+					
 				} else {
 					ALGAGenerator.LOGGER.severe("ResultsByTask not found with ID = " + (String) taskResult.get("taskID"));
 				}
 			}
 			updateResultsPercentages(col);
+			
 		} else {
 			ALGAGenerator.LOGGER.severe("CurrentObjectiveLevel not found for O/L = (" + (String) obj.get("objectiveID") + " , " + (String) obj.get("levelID") + ")");
 		}

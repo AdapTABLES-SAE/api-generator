@@ -151,6 +151,9 @@ public class PathManager {
 			objectives.add(jobjective);
 		}
 		json.put("objectives", objectives);
+		
+		//LearnerPlayerManager lpm = new LearnerPlayerManager(modelsManager); 
+		//lpm.initialiseCurrentObjectiveLevel();
 
 		return json;
 
@@ -458,8 +461,8 @@ public class PathManager {
 				JSONObject jlevel = (JSONObject) olevel;
 				Level level = new MTLevelImpl();
 				level.setID((String) jlevel.get("level"));
-				buildLevelTasks(objective, level, jlevel);
 				objective.getLevels().add(level);
+				buildLevelTasks(objective, level, jlevel);
 			}
 			obj_prerequisite.put(objective, (JSONArray) jobjective.get("prerequisites"));
 			// path.getObjectives().add(objective);
@@ -491,11 +494,12 @@ public class PathManager {
 		LearnerPlayer learner = getLearnerPlayer((String) json.get("learnerID"));
 		learner.setLearningpath(path);
 		Constant.saveLearnerModel(learner);
+		System.out.println("ALLOOOo");
 
 		// saveDomainModel();
 		Constant.saveDomainModel(domain);
 		// update progress for learner having this path
-		// resetEveryLearnerProgress();
+		resetEveryLearnerProgress(DidacticDomain.MATHEMATICS);
 	}
 
 	private LearnerPlayer getLearnerPlayer(String learnerID) {
@@ -581,12 +585,14 @@ private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistant
 		// jsonElem.equals("OPERAND")? TableBuild.OPERAND_TABLE: TableBuild.MIX;
 		jsonElem = (String) buildingParams.get("resultLocation");
 		ResultPosition resPosition = ResultPosition.valueOf(jsonElem);
-
-		if (buildingParams.containsKey("tables")) {
+		System.out.println(json.toJSONString());
+		System.out.println(obj.getLevels().size());
+		System.out.println(obj.getLevels().get(0).getID());
+		if (obj.getLevels().get(0).equals(level) && buildingParams.containsKey("tables")) {
 			Knowledge knowledge = loadKnowledge();
 			for (String table : (List<String>) buildingParams.get("tables")) {
 				for (SetOfFacts sof : knowledge.getKnowledgefacts()) {
-					if (Integer.parseInt(sof.getName()) == Integer.parseInt(table)) {
+					if (Integer.parseInt(sof.getName()) == Integer.parseInt(table) ) {
 						obj.getSetoffacts().add(sof);
 					}
 				}
