@@ -8,6 +8,7 @@ import generator.GeneratorPackage;
 import generator.QuestionableFactResult;
 
 import java.util.Collection;
+import java.util.Objects;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -462,4 +463,17 @@ public abstract class AQuestionableFactImpl extends MinimalEObjectImpl.Container
 		return result.toString();
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AQuestionableFactImpl other = (AQuestionableFactImpl) obj;
+		return Objects.equals(id, other.id)
+				&& idESet == other.idESet;
+	}
+	
 } //AQuestionableFactImpl

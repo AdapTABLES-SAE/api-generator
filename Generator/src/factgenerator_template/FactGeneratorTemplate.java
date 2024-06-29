@@ -367,6 +367,10 @@ public abstract class FactGeneratorTemplate {
 			AQuestionableFact qf = null;
 			try {
 				qf = getAvailableFact(roomElements, roomElements.getCorrespondingResultByTask(dungeonElements.getCurrentObjectiveLevel()));
+				qf.setWasSelected(true);
+				System.out.println(qf.getID());
+				//setSelected(qf);
+				//listofselected.add(qf);
 				createAQuestionedFactFrom(roomElements, qf);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -404,18 +408,20 @@ public abstract class FactGeneratorTemplate {
 		}	
 
 		List<AQuestionableFact> eligibleFacts = getEligibleQuestionableFacts(resByTask);
-		eligibleFacts.removeAll(alreadySelectedFacts(roomElements));
+		
 		if(eligibleFacts.isEmpty()) {
 			eligibleFacts = getAllQuestionableFacts(resByTask);
 		}
 		
 		if(resByTask.getTask().getNbFacts() > 1) {
+			eligibleFacts.removeAll(alreadySelectedFacts(roomElements));
 			eligibleFacts = removeUnEligibleFactsBasedOnPreviouslySelectedFact(roomElements.getFacts(), eligibleFacts);
 		}
 		if(eligibleFacts.isEmpty()) {
 			throw new Exception("Pool of facts should not be empty for task "+resByTask.getTask().getType());
 		} else {
 			int number = new Random().nextInt(eligibleFacts.size());
+			//eligibleFacts.get(number).setWasSelected(true);
 			return eligibleFacts.get(number);
 		}
 	}
@@ -464,7 +470,7 @@ public abstract class FactGeneratorTemplate {
 			}
 			i++;
 		}
-		return hasAvailable; 
+		return !hasAvailable; 
 	}
 	
 	private void resetPoolWithEveryFacts(ResultsByTask resByTask) {

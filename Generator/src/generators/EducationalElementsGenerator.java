@@ -454,6 +454,7 @@ public class EducationalElementsGenerator {
 	private void generateFactsToQuestion() throws Exception {
 		buildTaskRoomElements();
 		FactGenerator.generateQuestionedFact(modelAccess, dungeonElements);
+		modelAccess.saveLearnerPlayerModel();
 	}
 	
 	private void buildTaskRoomElements() {

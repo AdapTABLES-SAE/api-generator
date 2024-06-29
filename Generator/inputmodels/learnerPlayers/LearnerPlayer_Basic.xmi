@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:LearnerPlayer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://www.example.org/generator" name="BASIC" ID="BASIC">
+  <progression>
+    <playerProgress currentLevel="1" coins="0">
+      <items>
+        <items bought="true" activated="true">
+          <equipment href="../GameDescription.xmi#BRACELET"/>
+        </items>
+      </items>
+    </playerProgress>
+    <learnerProgress>
+      <currentobjectivelevels achieved="false">
+        <objective href="../LearningDomain.xmi#BASIC_MATH_PATH_O1"/>
+        <level xsi:type="generator:MTLevel" href="../LearningDomain.xmi#BASIC_MATH_PATH_L1"/>
+        <results>
+          <resultsbytask>
+            <task xsi:type="generator:MTCompletion1" href="../LearningDomain.xmi#BASIC_MATH_PATH_T1"/>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" wasSelected="true" achieved="false" ID="BASIC_MATH_PATH_T1-QAFACT0" leftOperand="2" rightOperand="1" result="-1" soluce="2" resultOnRight="true">
+              <facts xsi:type="generator:MTFact" href="../MultiplicationTables.xmi#//@knowledgefacts.1/@facts.1"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" wasSelected="true" achieved="false" ID="BASIC_MATH_PATH_T1-QAFACT1" leftOperand="2" rightOperand="2" result="-1" soluce="4" resultOnRight="true">
+              <facts xsi:type="generator:MTFact" href="../MultiplicationTables.xmi#//@knowledgefacts.1/@facts.2"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" wasSelected="true" achieved="false" ID="BASIC_MATH_PATH_T1-QAFACT4" leftOperand="2" rightOperand="5" result="-1" soluce="10" resultOnRight="true">
+              <facts xsi:type="generator:MTFact" href="../MultiplicationTables.xmi#//@knowledgefacts.1/@facts.5"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" wasSelected="true" achieved="false" ID="BASIC_MATH_PATH_T1-QAFACT5" leftOperand="2" rightOperand="6" result="-1" soluce="12" resultOnRight="true">
+              <facts xsi:type="generator:MTFact" href="../MultiplicationTables.xmi#//@knowledgefacts.1/@facts.6"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" wasSelected="true" achieved="false" ID="BASIC_MATH_PATH_T1-QAFACT2" leftOperand="2" rightOperand="3" result="-1" soluce="6" resultOnRight="true">
+              <facts xsi:type="generator:MTFact" href="../MultiplicationTables.xmi#//@knowledgefacts.1/@facts.3"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" wasSelected="true" achieved="false" ID="BASIC_MATH_PATH_T1-QAFACT3" leftOperand="2" rightOperand="4" result="-1" soluce="8" resultOnRight="true">
+              <facts xsi:type="generator:MTFact" href="../MultiplicationTables.xmi#//@knowledgefacts.1/@facts.4"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" wasSelected="true" achieved="false" ID="BASIC_MATH_PATH_T1-QAFACT8" leftOperand="2" rightOperand="9" result="-1" soluce="18" resultOnRight="true">
+              <facts xsi:type="generator:MTFact" href="../MultiplicationTables.xmi#//@knowledgefacts.1/@facts.9"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" wasSelected="true" achieved="false" ID="BASIC_MATH_PATH_T1-QAFACT9" leftOperand="2" rightOperand="10" result="-1" soluce="20" resultOnRight="true">
+              <facts xsi:type="generator:MTFact" href="../MultiplicationTables.xmi#//@knowledgefacts.1/@facts.10"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" wasSelected="true" achieved="false" ID="BASIC_MATH_PATH_T1-QAFACT6" leftOperand="2" rightOperand="7" result="-1" soluce="14" resultOnRight="true">
+              <facts xsi:type="generator:MTFact" href="../MultiplicationTables.xmi#//@knowledgefacts.1/@facts.7"/>
+            </questionableFacts>
+            <questionableFacts xsi:type="generator:MTQFCompletion1" wasSelected="true" achieved="false" ID="BASIC_MATH_PATH_T1-QAFACT7" leftOperand="2" rightOperand="8" result="-1" soluce="16" resultOnRight="true">
+              <facts xsi:type="generator:MTFact" href="../MultiplicationTables.xmi#//@knowledgefacts.1/@facts.8"/>
+            </questionableFacts>
+          </resultsbytask>
+        </results>
+      </currentobjectivelevels>
+    </learnerProgress>
+  </progression>
+  <learningpath href="../LearningDomain.xmi#//@learningpaths.8"/>
+  <statistics maxGameLevelReached="1" nbLevelsGenerated="809"/>
+</generator:LearnerPlayer>

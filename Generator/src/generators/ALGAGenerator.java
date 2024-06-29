@@ -48,7 +48,7 @@ public class ALGAGenerator {
 				/*if(i%2==0) {
 				generator = new ALGAGenerator(DidacticDomain.HISTORY_GEOGRAPHY, "HISTORY");
 				} else {*/
-				generator = new ALGAGenerator(DidacticDomain.JUDO, "FICTIF04");	
+				generator = new ALGAGenerator(DidacticDomain.MATHEMATICS, "BASIC");	
 				//}
 				generator.generate();
 				generator.printDungeon();
