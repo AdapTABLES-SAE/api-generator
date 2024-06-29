@@ -288,6 +288,8 @@ public abstract class FactGeneratorTemplate {
 		}
 		
 		roomElement.addQuestionedFact(qef);
+		qFact.setWasSelected(true);
+		System.out.println(qFact.getID());
 	}
 	
 	protected VisualizationSolution buildVisualizationSolution(String value, VisualizationPosition position, boolean isImage) {
@@ -367,8 +369,6 @@ public abstract class FactGeneratorTemplate {
 			AQuestionableFact qf = null;
 			try {
 				qf = getAvailableFact(roomElements, roomElements.getCorrespondingResultByTask(dungeonElements.getCurrentObjectiveLevel()));
-				qf.setWasSelected(true);
-				System.out.println(qf.getID());
 				//setSelected(qf);
 				//listofselected.add(qf);
 				createAQuestionedFactFrom(roomElements, qf);
