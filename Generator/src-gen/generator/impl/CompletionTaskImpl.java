@@ -608,4 +608,38 @@ public abstract class CompletionTaskImpl extends MinimalEObjectImpl.Container im
 		return result.toString();
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof CompletionTaskImpl))
+			return false;
+		CompletionTaskImpl other = (CompletionTaskImpl) obj;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (idESet != other.idESet)
+			return false;
+		if (maxTime != other.maxTime)
+			return false;
+		if (nbConsecutiveSuccess != other.nbConsecutiveSuccess)
+			return false;
+		if (nbFacts != other.nbFacts)
+			return false;
+		if (percentOfApparition != other.percentOfApparition)
+			return false;
+		if (responseModality == null) {
+			if (other.responseModality != null)
+				return false;
+		} else if (!responseModality.equals(other.responseModality))
+			return false;
+		if (type != other.type)
+			return false;
+		return true;
+	}
+
+	
+	
 } //CompletionTaskImpl

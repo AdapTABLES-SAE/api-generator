@@ -1,9 +1,12 @@
 package managers;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import org.eclipse.emf.common.util.EList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -15,11 +18,13 @@ import generator.CurrentObjectiveLevel;
 import generator.Equipment;
 import generator.Item;
 import generator.LearnerPlayer;
+import generator.LearnerProgress;
 import generator.LearningPath;
 import generator.Level;
 import generator.Objective;
 import generator.QuestionableFactResult;
 import generator.ResultsByTask;
+import generator.SetOfFacts;
 import generator.impl.CurrentObjectiveLevelImpl;
 import generator.impl.ItemImpl;
 import generator.impl.ItemsImpl;
@@ -472,13 +477,120 @@ public class LearnerPlayerManager {
 		saveLearnerPlayerModel();
 	}
 	
-	public void resetLearnerProgress(LearnerPlayerManager manager) {
-		manager.getLearnerPlayer().getProgression().setLearnerProgress(new LearnerProgressImpl());
-		manager.getLearnerPlayer().getProgression().getPlayerProgress().setCurrentLevel(1);
-		manager.getLearnerPlayer().setStatistics(new StatisticsImpl());
+	public void resetLearnerProgress(LearningPath path, LearningPath previousPath) {
+		
+		if (getLearnerPlayer().getProgression().getLearnerProgress() == null) {
+			getLearnerPlayer().getProgression().setLearnerProgress(new LearnerProgressImpl());
+		} else {
+			if (path != null)
+				smartResetProgress(path, previousPath);
+		}
+		
+		getLearnerPlayer().getProgression().getPlayerProgress().setCurrentLevel(1);
+		
+		if (getLearnerPlayer().getStatistics() == null) {
+			getLearnerPlayer().setStatistics(new StatisticsImpl());
+		}
+		
 		saveLearnerPlayerModel();
 	}
 	
+	private void smartResetProgress(LearningPath path, LearningPath previousPath) {
+		LearnerProgress progress = getLearnerPlayer().getProgression().getLearnerProgress();
+		List<CurrentObjectiveLevel> objLevelstoRemove = new ArrayList<>();
+		
+		for (CurrentObjectiveLevel objLevel: progress.getCurrentobjectivelevels()) {
+			if (needToBeRemoved(objLevel, path, previousPath)) {
+				objLevelstoRemove.add(objLevel);
+			}
+		}
+		for (CurrentObjectiveLevel objLevel2remove: objLevelstoRemove) {
+			progress.getCurrentobjectivelevels().remove(objLevel2remove);
+		}
+		//saveLearnerPlayerModel();
+	}
+
+	private boolean needToBeRemoved(CurrentObjectiveLevel objLevel, LearningPath path, LearningPath previousLP) {
+		//Objective obj = search4Obj(objLevel.getObjective().getID(), path);
+		Objective obj = search4Obj(objLevel.getObjective().getID(), path);
+		Objective previousObj = objLevel.getObjective();
+		if (previousObj == null) {
+			System.out.println("Current Obj/Level removed because Objective does no longer exist");
+			return true;
+		}
+		if (obj == null) {
+			System.out.println("Current Obj/Level removed because there is no more Objective");
+			return true;
+		}
+		if (!obj.equals(previousObj)) {
+			System.out.println("Current Obj/Level removed because Objective " + obj.getName() + " changed its parameters");
+			return true;
+		}
+		Level level = search4Level(obj, objLevel.getLevel().getID());
+		Level previousLevel = objLevel.getLevel();
+		if (previousLevel == null) {
+			System.out.println("Current Obj/Level removed because Level does no longer exist");
+			return true;
+		}
+		if (level == null) {
+			System.out.println("Current Obj/Level removed because there is no more Level");
+			return true;
+		}
+		if (!level.equals(previousLevel)) {
+			System.out.println("Current Obj/Level removed because Level " + level.getID() + " changed its parameters");
+			return true;
+		}
+		return false;
+	}
+
+//	private boolean sameLevel(Level level, Level previousLevel) {
+//		if (!sameCompletionCriteria(level.getCompletionCriteria(), previousLevel.getCompletionCriteria()))
+//			return false;
+//		return true;
+//	}
+
+//	private boolean sameCompletionCriteria(CompletionCriteria criteria1, CompletionCriteria criteria2) {
+//		if (criteria1.getEncountersPercent() != criteria2.getEncountersPercent()) 
+//			return false;
+//		if (criteria1.getSuccessPercent() != criteria2.getSuccessPercent()) 
+//			return false;
+//		return true;
+//	}
+//
+//	private boolean sameObjective(Objective obj, Objective previousObj) {
+//		if (!sameSetofFacts(obj.getSetoffacts(), previousObj.getSetoffacts()))
+//			return false;
+//		return true;
+//	}
+
+//	private boolean sameSetofFacts(EList<SetOfFacts> setoffacts1, EList<SetOfFacts> setoffacts2) {
+//		if (setoffacts1.size() != setoffacts2.size())
+//			return false;
+//		for (SetOfFacts sof: setoffacts1) {
+//			if (!setoffacts2.contains(sof))
+//				return false;
+//		}
+//		return true;
+//	}
+
+	private Level search4Level(Objective obj, String id) {
+		for (Level level: obj.getLevels()) {
+			if (level.getID().equals(id)) {
+				return level;
+			}
+		}
+		return null;
+	}
+
+	private Objective search4Obj(String ID, LearningPath path) {
+		for (Objective o: path.getObjectives()) {
+			if (o.getID().equals(ID)) {
+				return o;
+			}
+		}
+		return null;
+	}
+
 	private void addResultsToTask(JSONObject jtask, ResultsByTask rbt) {
 		JSONArray facts = (JSONArray) jtask.get("questionableFacts");
 		for (Object object : facts) {

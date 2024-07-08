@@ -66,7 +66,7 @@ public class LegendAMapImpl extends CompletionTaskImpl implements LegendAMap {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ELegendTarget MISSING_EDEFAULT = ELegendTarget.SYMBOL;
+	protected static final ELegendTarget MISSING_EDEFAULT = ELegendTarget.TEXT;
 
 	/**
 	 * The cached value of the '{@link #getMissing() <em>Missing</em>}' attribute.

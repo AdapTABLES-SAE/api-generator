@@ -214,4 +214,25 @@ public class MTRecontructionImpl extends CompletionTaskImpl implements MTRecontr
 					checkOnLearnerAction));
 	}
 
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (!(obj instanceof MTRecontructionImpl))
+			return false;
+		MTRecontructionImpl other = (MTRecontructionImpl) obj;
+		if (checkOnLearnerAction != other.checkOnLearnerAction)
+			return false;
+		if (nbMissingElements != other.nbMissingElements)
+			return false;
+		if (nbMissingElementsESet != other.nbMissingElementsESet)
+			return false;
+		return true;
+	}
+	
+	
+
 } //MTRecontructionImpl

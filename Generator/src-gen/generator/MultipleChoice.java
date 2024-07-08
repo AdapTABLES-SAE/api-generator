@@ -40,5 +40,7 @@ public interface MultipleChoice extends DynamicMultipleChoice {
 	 * @generated
 	 */
 	void setNbChoices(int value);
+	
+	
 
 } // MultipleChoice

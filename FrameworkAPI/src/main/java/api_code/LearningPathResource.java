@@ -59,7 +59,9 @@ public class LearningPathResource {
 		}
 		
 		//String classID = obj.containsKey("classroomID")? (String) obj.get("classroomID") : Constant.DEFAULT_CLASSROOM_NAME;
-		manager = new PathManager((String) obj.get("learningPathID"));
+		manager = new PathManager((String) obj.get("learningPathID"), false);
+		//manager = new PathManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		//		Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) obj.get("learningPathID"), Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME,  true));
 		manager.createTrainingPath(obj);
 	}
 	

@@ -1246,13 +1246,22 @@ public interface GeneratorPackage extends EPackage {
 	int LEVEL__COMPLETION_CRITERIA = 2;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVEL__NAME = 3;
+
+	/**
 	 * The number of structural features of the '<em>Level</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEVEL_FEATURE_COUNT = 3;
+	int LEVEL_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Level</em>' class.
@@ -1299,6 +1308,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int MT_LEVEL__COMPLETION_CRITERIA = LEVEL__COMPLETION_CRITERIA;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MT_LEVEL__NAME = LEVEL__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Build Setup</b></em>' attribute.
@@ -8582,6 +8600,15 @@ public interface GeneratorPackage extends EPackage {
 	int HG_LEVEL__COMPLETION_CRITERIA = LEVEL__COMPLETION_CRITERIA;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HG_LEVEL__NAME = LEVEL__NAME;
+
+	/**
 	 * The number of structural features of the '<em>HG Level</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9841,6 +9868,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int JUDO_LEVEL__COMPLETION_CRITERIA = LEVEL__COMPLETION_CRITERIA;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUDO_LEVEL__NAME = LEVEL__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Judo Level</em>' class.
@@ -11475,6 +11511,15 @@ public interface GeneratorPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOLAR_SYTEM_LEVEL__COMPLETION_CRITERIA = LEVEL__COMPLETION_CRITERIA;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLAR_SYTEM_LEVEL__NAME = LEVEL__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Solar Sytem Level</em>' class.
@@ -13160,6 +13205,17 @@ public interface GeneratorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLevel_CompletionCriteria();
+
+	/**
+	 * Returns the meta object for the attribute '{@link generator.Level#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see generator.Level#getName()
+	 * @see #getLevel()
+	 * @generated
+	 */
+	EAttribute getLevel_Name();
 
 	/**
 	 * Returns the meta object for class '{@link generator.MTLevel <em>MT Level</em>}'.
@@ -18852,6 +18908,14 @@ public interface GeneratorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LEVEL__COMPLETION_CRITERIA = eINSTANCE.getLevel_CompletionCriteria();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEVEL__NAME = eINSTANCE.getLevel_Name();
 
 		/**
 		 * The meta object literal for the '{@link generator.impl.MTLevelImpl <em>MT Level</em>}' class.

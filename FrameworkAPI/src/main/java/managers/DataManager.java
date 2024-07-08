@@ -3,6 +3,7 @@ package managers;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -303,6 +304,24 @@ public class DataManager {
 		}
 		classe.getLearnerPlayers().remove(learner);
 		Constant.saveClassroomsModel(classrooms);
+		
+		deleteLearningPath(studentID);
+	}
+
+	private void deleteLearningPath(String studentID) {
+		LearningDomain domain = loadDomain();
+		LearningPath lp2remove = null;
+		for (LearningPath lp: domain.getLearningpaths()) {
+			if (lp.getID().equals("PATH_MATH"+studentID)) {
+				System.out.println("DELETING LP PATH_MATH"+studentID);
+				lp2remove = lp;
+				break;
+			}
+		}
+		if (lp2remove != null) {
+			domain.getLearningpaths().remove(lp2remove);
+		}
+		Constant.saveDomainModel(domain);
 	}
 
 	private LearningDomain loadDomain() {

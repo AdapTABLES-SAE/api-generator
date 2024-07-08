@@ -41,7 +41,7 @@ public class Constant {
 	public static final String INPUT_MODELS_PATH_HG = "models/inputmodels_HG/";
 	public static final String OUTPUT_MODELS_PATH_HG = "models/outputmodels/hg/";
 
-	public static String INPUT_MODELS_PATH;
+	public static String INPUT_MODELS_PATH = "models/inputmodels/";
 	public static String OUTPUT_MODELS_PATH;
 
 	public static DidacticDomain saveDomain;
@@ -132,7 +132,9 @@ public class Constant {
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		map.put("xmi", new XMIResourceFactoryImpl());
-		File teachers = new File(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE);
+		String url = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE;
+		System.out.println("URL 4 teacher file: " + url);
+		File teachers = new File(url);
 		Resource resource = resourceSet.createResource(URI.createFileURI(teachers.getAbsolutePath()));
 		try {
 			resource.load(null);

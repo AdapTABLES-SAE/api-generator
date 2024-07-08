@@ -215,4 +215,20 @@ public class CompletionCriteriaImpl extends MinimalEObjectImpl.Container impleme
 		return result.toString();
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof CompletionCriteriaImpl))
+			return false;
+		CompletionCriteriaImpl other = (CompletionCriteriaImpl) obj;
+		if (Double.doubleToLongBits(encountersPercent) != Double.doubleToLongBits(other.encountersPercent))
+			return false;
+		if (Double.doubleToLongBits(successPercent) != Double.doubleToLongBits(other.successPercent))
+			return false;
+		return true;
+	}
+
+	
+	
 } //CompletionCriteriaImpl

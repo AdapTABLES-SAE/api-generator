@@ -97,9 +97,13 @@ public class PathManager {
 		this.modelsManager = modelsManager;
 	}
 
-	public PathManager(String pathID) {
+	public PathManager(String pathID, boolean remove) {
 		resourceSet = new ResourceSetImpl();
-		getPath(pathID);
+		getPath(pathID, remove);
+	}
+	
+	public PathManager(String pathID) {
+		this(pathID, true);
 	}
 
 	public LearningPath getLearningPath() {
@@ -139,6 +143,7 @@ public class PathManager {
 			for (Level level : objective.getLevels()) {
 				JSONObject jlevel = new JSONObject();
 				jlevel.put("level", level.getID());
+				jlevel.put("name", level.getName());
 				JSONObject setupParameters = new JSONObject();
 				setupParameters.put("buildingParameters", initialiseJSONBuildParameters(objective, (MTLevel) level));
 				setupParameters.put("tasksParameters", initialiseJSONTaskParameters((MTLevel) level));
@@ -151,9 +156,9 @@ public class PathManager {
 			objectives.add(jobjective);
 		}
 		json.put("objectives", objectives);
-		
-		//LearnerPlayerManager lpm = new LearnerPlayerManager(modelsManager); 
-		//lpm.initialiseCurrentObjectiveLevel();
+
+		// LearnerPlayerManager lpm = new LearnerPlayerManager(modelsManager);
+		// lpm.initialiseCurrentObjectiveLevel();
 
 		return json;
 
@@ -226,7 +231,7 @@ public class PathManager {
 			} else {
 				obj.put("answerModality", "CHOICE");
 				if (modality instanceof DynamicMultipleChoice) {
-					if(((DynamicMultipleChoice)modality).getType().equals(EModality.INPUT)) {
+					if (((DynamicMultipleChoice) modality).getType().equals(EModality.INPUT)) {
 						obj.put("answerModality", "INPUT");
 					}
 					obj.put("nbBadChoices", ((DynamicMultipleChoice) modality).getNbBadChoices());
@@ -247,7 +252,7 @@ public class PathManager {
 			} else {
 				obj.put("answerModality", "CHOICE");
 				if (modality instanceof DynamicMultipleChoice) {
-					if(((DynamicMultipleChoice)modality).getType().equals(EModality.INPUT)) {
+					if (((DynamicMultipleChoice) modality).getType().equals(EModality.INPUT)) {
 						obj.put("answerModality", "INPUT");
 					}
 					obj.put("nbBadChoices", ((DynamicMultipleChoice) modality).getNbBadChoices());
@@ -268,7 +273,7 @@ public class PathManager {
 			} else {
 				obj.put("answerModality", "CHOICE");
 				if (modality instanceof DynamicMultipleChoice) {
-					if(((DynamicMultipleChoice)modality).getType().equals(EModality.INPUT)) {
+					if (((DynamicMultipleChoice) modality).getType().equals(EModality.INPUT)) {
 						obj.put("answerModality", "INPUT");
 					}
 					obj.put("nbBadChoices", ((DynamicMultipleChoice) modality).getNbBadChoices());
@@ -291,7 +296,7 @@ public class PathManager {
 			} else {
 				obj.put("answerModality", "CHOICE");
 				if (modality instanceof DynamicMultipleChoice) {
-					if(((DynamicMultipleChoice)modality).getType().equals(EModality.INPUT)) {
+					if (((DynamicMultipleChoice) modality).getType().equals(EModality.INPUT)) {
 						obj.put("answerModality", "INPUT");
 					}
 					obj.put("nbBadChoices", ((DynamicMultipleChoice) modality).getNbBadChoices());
@@ -313,7 +318,7 @@ public class PathManager {
 			} else {
 				obj.put("answerModality", "CHOICE");
 				if (modality instanceof DynamicMultipleChoice) {
-					if(((DynamicMultipleChoice)modality).getType().equals(EModality.INPUT)) {
+					if (((DynamicMultipleChoice) modality).getType().equals(EModality.INPUT)) {
 						obj.put("answerModality", "INPUT");
 					}
 					obj.put("nbBadChoices", ((DynamicMultipleChoice) modality).getNbBadChoices());
@@ -335,7 +340,7 @@ public class PathManager {
 			} else {
 				obj.put("answerModality", "CHOICE");
 				if (modality instanceof DynamicMultipleChoice) {
-					if(((DynamicMultipleChoice)modality).getType().equals(EModality.INPUT)) {
+					if (((DynamicMultipleChoice) modality).getType().equals(EModality.INPUT)) {
 						obj.put("answerModality", "INPUT");
 					}
 					obj.put("nbBadChoices", ((DynamicMultipleChoice) modality).getNbBadChoices());
@@ -434,7 +439,7 @@ public class PathManager {
 		Constant.saveDomainModel(domain);
 
 		// update progress for learner having this path
-		resetEveryLearnerProgress(DidacticDomain.MATHEMATICS);
+		// resetEveryLearnerProgress(DidacticDomain.MATHEMATICS);
 	}
 
 	public void createTrainingPath(JSONObject json)
@@ -449,7 +454,9 @@ public class PathManager {
 		path.setName((String) json.get("learningPathID")); // TODO: improve ?
 		path.setKnowledge(knowledge);
 
-		HashMap<Objective, JSONArray> obj_prerequisite = new HashMap<>();
+		List<Objective> theObjectives = new ArrayList<Objective>();
+		Map<Objective, JSONArray> obj_prerequisite = new HashMap<>();
+
 		JSONArray objectives = (JSONArray) json.get("objectives");
 		for (Object oobjective : objectives) {
 			JSONObject jobjective = (JSONObject) oobjective;
@@ -461,14 +468,16 @@ public class PathManager {
 				JSONObject jlevel = (JSONObject) olevel;
 				Level level = new MTLevelImpl();
 				level.setID((String) jlevel.get("level"));
+				level.setName((String) jlevel.get("name"));
 				objective.getLevels().add(level);
 				buildLevelTasks(objective, level, jlevel);
 			}
+			theObjectives.add(objective);
 			obj_prerequisite.put(objective, (JSONArray) jobjective.get("prerequisites"));
 			// path.getObjectives().add(objective);
 		}
 
-		for (Objective objective : obj_prerequisite.keySet()) {
+		for (Objective objective : theObjectives) {
 			for (Object prerequis : obj_prerequisite.get(objective)) {
 				JSONObject jprerequis = (JSONObject) prerequis;
 				Prerequisite requisite = new PrerequisiteImpl();
@@ -487,19 +496,36 @@ public class PathManager {
 			path.getObjectives().add(objective);
 		}
 
-		if (!domain.getLearningpaths().contains(path)) {
-			domain.getLearningpaths().add(path);
-		}
-
+		// update progress for learner having this path
 		LearnerPlayer learner = getLearnerPlayer((String) json.get("learnerID"));
-		learner.setLearningpath(path);
-		Constant.saveLearnerModel(learner);
-		System.out.println("ALLOOOo");
+		//ModelsManager manager = new ModelsManager(DidacticDomain.MATHEMATICS, learner.getID());
+		//manager.loadDomainModel();
+		//LearningPath previousLP = learner.getLearningpath();
+		//resetEveryLearnerProgress(DidacticDomain.MATHEMATICS);
+		
+		LearnerPlayerManager manager = new LearnerPlayerManager(
+				new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH,
+						Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learner.getID(),
+						Constant.CLASSROOMS_FILE, true));
+		manager.resetLearnerProgress(path, getLearningPath());
+		
+		//getPath(learner.getID(), true); // remove path
+		LearningPath lp2remove = null;
+		for (LearningPath lp: domain.getLearningpaths()) {
+			if (lp.getID().equals(path.getID())) {
+				lp2remove = lp;
+			}
+		}
+		domain.getLearningpaths().remove(lp2remove);
+		
+		domain.getLearningpaths().add(path);
+		
+		manager.getLearnerPlayer().setLearningpath(path);
+		Constant.saveLearnerModel(manager.getLearnerPlayer());
 
 		// saveDomainModel();
 		Constant.saveDomainModel(domain);
-		// update progress for learner having this path
-		resetEveryLearnerProgress(DidacticDomain.MATHEMATICS);
+		
 	}
 
 	private LearnerPlayer getLearnerPlayer(String learnerID) {
@@ -532,24 +558,30 @@ public class PathManager {
 		return null;
 	}
 
-private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistantLearnerPlayerException, ContextNotFoundException {
-	System.out.println("RESET");
-	Classrooms classrooms = Constant.loadClassrooms();
-	LearnerPlayerManager manager;
-	for (Classroom classroom : classrooms.getClassrooms()) {
-		for (LearnerPlayer LP : classroom.getLearnerPlayers()) {
-			System.out.println(path.getID() + " " + LP.getLearningpath().getID());
-			if (LP.getLearningpath().getID().equals(path.getID())) {
-				manager = new LearnerPlayerManager(new ModelsManager(domain,
-						Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH,
-						Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, LP.getID(), Constant.CLASSROOMS_FILE,
-						classroom.getID(), true));
-				manager.resetLearnerProgress(manager);
-			}
+	private void resetEveryLearnerProgress(DidacticDomain domain, LearningPath previousLP)
+			throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		System.out.println("RESET");
+		Classrooms classrooms = Constant.loadClassrooms();
+		LearnerPlayerManager manager;
+		for (Classroom classroom : classrooms.getClassrooms()) {
+			for (LearnerPlayer LP : classroom.getLearnerPlayers()) {
+				System.out.println(path.getID() + " " + LP.getLearningpath().getID());
+				if (LP.getLearningpath().getID().equals(path.getID())) {
+					manager = new LearnerPlayerManager(
+							new ModelsManager(domain, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH,
+									Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, LP.getID(),
+									Constant.CLASSROOMS_FILE, classroom.getID(), true));
+					manager.resetLearnerProgress(path,previousLP);
+				}
 
+			}
 		}
 	}
-}
+	
+	private void resetEveryLearnerProgress(DidacticDomain domain)
+			throws NonExistantLearnerPlayerException, ContextNotFoundException {
+		resetEveryLearnerProgress(domain, null);
+	}
 
 	private List<JSONObject> getJSONTasks(JSONObject json) {
 		JSONArray tasksParameters;
@@ -592,7 +624,7 @@ private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistant
 			Knowledge knowledge = loadKnowledge();
 			for (String table : (List<String>) buildingParams.get("tables")) {
 				for (SetOfFacts sof : knowledge.getKnowledgefacts()) {
-					if (Integer.parseInt(sof.getName()) == Integer.parseInt(table) ) {
+					if (Integer.parseInt(sof.getName()) == Integer.parseInt(table)) {
 						obj.getSetoffacts().add(sof);
 					}
 				}
@@ -804,7 +836,7 @@ private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistant
 		return new LearningPathImpl();
 	}
 
-	private void getPath(String pathID) {
+	private void getPath(String pathID, boolean remove) {
 		loadPaths();
 		for (LearningPath path : new ArrayList<>(domain.getLearningpaths())) {
 			if (path.getID() == null) {
@@ -814,8 +846,11 @@ private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistant
 			}
 			if (path.getID().equals(pathID)) {
 				this.path = path;
-				domain.getLearningpaths().remove(path);
+				if (remove) {
+					domain.getLearningpaths().remove(path);  // ADD PL
+				}
 				// saveDomainModel();
+					
 
 				Constant.saveDomainModel(domain);
 			}
@@ -876,7 +911,7 @@ private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistant
 
 	// HG
 
-	//GET LEARNING PATH
+	// GET LEARNING PATH
 	@SuppressWarnings("unchecked")
 	public JSONObject buildJSONHGObjectiveLevel(LearningPath path) {
 		JSONObject json = new JSONObject();
@@ -886,9 +921,12 @@ private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistant
 			JSONObject jobjective = new JSONObject();
 			jobjective.put("id", objective.getID());
 			jobjective.put("name", objective.getName());
-			jobjective.put("domains", objective.getSetoffacts().
-					stream().map((sof) -> sof.getName()).
-					collect(Collectors.toList())); //Fetch objective set of facts
+			jobjective.put("domains",
+					objective.getSetoffacts().stream().map((sof) -> sof.getName()).collect(Collectors.toList())); // Fetch
+																													// objective
+																													// set
+																													// of
+																													// facts
 			JSONArray levels = new JSONArray();
 			for (Level level : objective.getLevels()) {
 				JSONObject jlevel = new JSONObject();
@@ -905,7 +943,7 @@ private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistant
 
 	}
 
-	//GET LEARNING PATH - TASKS
+	// GET LEARNING PATH - TASKS
 	@SuppressWarnings("unchecked")
 	private JSONArray initialiseJSONTaskParameters4HG(HGLevel level) {
 		JSONArray tasksParameters = new JSONArray();
@@ -915,15 +953,15 @@ private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistant
 		return tasksParameters;
 	}
 
-	//SAVE LEARNING PATH
-	public void updateHGTrainingPath(JSONObject json) throws NonExistantLearnerPlayerException, ContextNotFoundException, LearningPathIDisNull { 
+	// SAVE LEARNING PATH
+	public void updateHGTrainingPath(JSONObject json)
+			throws NonExistantLearnerPlayerException, ContextNotFoundException, LearningPathIDisNull {
 		if (((String) json.get("learningPathID")) == null) {
 			throw new LearningPathIDisNull();
 		}
 		path = new LearningPathImpl();
 		Knowledge knowledge = loadKnowledge();
 		List<SetOfFacts> HGFacts = knowledge.getKnowledgefacts();
-		
 
 		path.setID((String) json.get("learningPathID"));
 		path.setName((String) json.get("learningPathID"));
@@ -935,19 +973,19 @@ private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistant
 			JSONObject jobjective = (JSONObject) oobjective;
 			Objective objective = new ObjectiveImpl();
 			List<SetOfFacts> sofList = objective.getSetoffacts();
-			
+
 			objective.setID((String) jobjective.get("id"));
 			objective.setName((String) jobjective.get("name"));
-			
+
 			JSONArray levels = (JSONArray) jobjective.get("levels");
 			List<String> domains = (List<String>) jobjective.get("domains");
-			
-			if(domains != null) {
-				HGFacts.stream() //Save sets of facts if not null
-				.filter((sof) -> domains.contains(sof.getName()))
-				.forEach((sofToSave) -> sofList.add(sofToSave));
+
+			if (domains != null) {
+				HGFacts.stream() // Save sets of facts if not null
+						.filter((sof) -> domains.contains(sof.getName()))
+						.forEach((sofToSave) -> sofList.add(sofToSave));
 			}
-			
+
 			for (Object olevel : levels) {
 				JSONObject jlevel = (JSONObject) olevel;
 				Level level = new HGLevelImpl();
@@ -957,7 +995,7 @@ private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistant
 			}
 			path.getObjectives().add(objective);
 		}
-		
+
 		if (!domain.getLearningpaths().contains(path)) {
 			domain.getLearningpaths().add(path);
 		}
@@ -971,23 +1009,23 @@ private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistant
 		// update progress for learner having this path
 		resetEveryLearnerProgress(DidacticDomain.HISTORY_GEOGRAPHY);
 	}
-	
-	//SAVE LEARNING PATH - TASKS BUILD
+
+	// SAVE LEARNING PATH - TASKS BUILD
 	@SuppressWarnings("unchecked")
 	private void buildLevelTasksHG(Objective obj, Level level, JSONObject json) {
-		//JSONObject buildingParams = getJSONBuildSetup(json);
+		// JSONObject buildingParams = getJSONBuildSetup(json);
 
-		//JSONObject achievementParam = (JSONObject) json.get("achievementParameters");
+		// JSONObject achievementParam = (JSONObject) json.get("achievementParameters");
 		CompletionCriteria criteria = new CompletionCriteriaImpl();
 		criteria.setEncountersPercent(50);
 		criteria.setSuccessPercent(50);
 		((HGLevel) level).setCompletionCriteria(criteria);
 
-		createLevelTasksHG(((HGLevel) level), (List<JSONObject>)json.get("tasksParameters"));
+		createLevelTasksHG(((HGLevel) level), (List<JSONObject>) json.get("tasksParameters"));
 		obj.getLevels().add(((HGLevel) level));
 	}
-	
-	//SAVE LEARNING PATH - TASKS BUILD - EACH TASK HANDLER
+
+	// SAVE LEARNING PATH - TASKS BUILD - EACH TASK HANDLER
 	private void createLevelTasksHG(HGLevel level, List<JSONObject> jsonTasks) {
 		int idNbTask = 1;
 		String idTask;
@@ -1018,137 +1056,133 @@ private void resetEveryLearnerProgress(DidacticDomain domain) throws NonExistant
 			idNbTask++;
 		}
 	}
-	
-	//SAVE LEARNING PATH - TASKS BUILD - ASSOC TASK HANDLER
+
+	// SAVE LEARNING PATH - TASKS BUILD - ASSOC TASK HANDLER
 	private ATask createASSOCTask(JSONObject jtask, String taskID) {
 		HistoricalEventAssociationImpl task = new HistoricalEventAssociationImpl();
 		setGeneralTaskValuesHG(task, jtask, taskID);
-		task.setMissing(EHistoryTarget.get((int)(long)jtask.get("missing")));
-		task.setSource(EHistoryTarget.get((int)(long)jtask.get("source")));
-		task.setTarget(ETimeTarget.get((int)(long)jtask.get("target")));
+		task.setMissing(EHistoryTarget.get((int) (long) jtask.get("missing")));
+		task.setSource(EHistoryTarget.get((int) (long) jtask.get("source")));
+		task.setTarget(ETimeTarget.get((int) (long) jtask.get("target")));
 
 		return task;
 	}
-	
-	//SAVE LEARNING PATH - TASKS BUILD - LOCATE TASK HANDLER
+
+	// SAVE LEARNING PATH - TASKS BUILD - LOCATE TASK HANDLER
 	private ATask createLOCATETask(JSONObject jtask, String taskID) {
 		LocateOnAMap task = new LocateOnAMapImpl();
 		setGeneralTaskValuesHG(task, jtask, taskID);
-		task.setNbExpectedAnswers((int)(long)jtask.get("nbExpectedAnswers"));
+		task.setNbExpectedAnswers((int) (long) jtask.get("nbExpectedAnswers"));
 
 		return task;
 	}
-	
-	//SAVE LEARNING PATH - TASKS BUILD - ORDO TASK HANDLER
+
+	// SAVE LEARNING PATH - TASKS BUILD - ORDO TASK HANDLER
 	private ATask createORDOTask(JSONObject jtask, String taskID) {
 		HistoricalChronology task = new HistoricalChronologyImpl();
 		setGeneralTaskValuesHG(task, jtask, taskID);
-		task.setMixDatePeriod((boolean)jtask.get("mixDatePeriod"));
-		
-		return task;
-	}
-	
-	//SAVE LEARNING PATH - TASKS BUILD - LEGEND TASK HANDLER
-	private ATask createLEGENDTask(JSONObject jtask, String taskID) {
-		LegendAMap task = new LegendAMapImpl();
-		setGeneralTaskValuesHG(task, jtask, taskID);
-		task.setMissing(ELegendTarget.get((int)(long)jtask.get("missing")));
-		
-		return task;
-	}
-	
-	//SAVE LEARNING PATH - TASKS BUILD - IDENT TASK HANDLER
-	private ATask createIDENTTask(JSONObject jtask, String taskID) {
-		HistoryIdentification task = new HistoryIdentificationImpl();
-		setGeneralTaskValuesHG(task, jtask, taskID);
-		
+		task.setMixDatePeriod((boolean) jtask.get("mixDatePeriod"));
 
 		return task;
 	}
-	
-	//SAVE LEARNING PATH - TASKS BUILD - IDENTSET TASK HANDLER
+
+	// SAVE LEARNING PATH - TASKS BUILD - LEGEND TASK HANDLER
+	private ATask createLEGENDTask(JSONObject jtask, String taskID) {
+		LegendAMap task = new LegendAMapImpl();
+		setGeneralTaskValuesHG(task, jtask, taskID);
+		task.setMissing(ELegendTarget.get((int) (long) jtask.get("missing")));
+
+		return task;
+	}
+
+	// SAVE LEARNING PATH - TASKS BUILD - IDENT TASK HANDLER
+	private ATask createIDENTTask(JSONObject jtask, String taskID) {
+		HistoryIdentification task = new HistoryIdentificationImpl();
+		setGeneralTaskValuesHG(task, jtask, taskID);
+
+		return task;
+	}
+
+	// SAVE LEARNING PATH - TASKS BUILD - IDENTSET TASK HANDLER
 	private ATask createIDENTSETTask(JSONObject jtask, String taskID) {
 		GeographyMembership task = new GeographyMembershipImpl();
 		setGeneralTaskValuesHG(task, jtask, taskID);
-		
+
 		return task;
 	}
-	
-	
-	//SAVE LEARNING PATH - TASKS BUILD - SET GLOBAL TASK VALUES
+
+	// SAVE LEARNING PATH - TASKS BUILD - SET GLOBAL TASK VALUES
 	private void setGeneralTaskValuesHG(ATask task, JSONObject jtask, String taskID) {
 		task.setID(taskID);
 
 		task.setMaxTime((int) (long) jtask.get("maxTime"));
 		task.setPercentOfApparition((int) (long) jtask.get("repartitionPercent"));
 		task.setNbConsecutiveSuccess((int) (long) jtask.get("successiveSuccessesToReach"));
-		
+
 		System.out.println(jtask.toJSONString());
-		long nbFacts = jtask.get("nbFacts") != null ? (long)jtask.get("nbFacts") : 1;
-		task.setNbFacts((int)nbFacts);
+		long nbFacts = jtask.get("nbFacts") != null ? (long) jtask.get("nbFacts") : 1;
+		task.setNbFacts((int) nbFacts);
 
 		System.out.println(nbFacts + " ?? ALLEZZ " + task.getNbFacts());
-		//ANSWER MODALITY V2
-		EModality answerModalityType = EModality.get((int)(long)jtask.get("answerModality"));
+		// ANSWER MODALITY V2
+		EModality answerModalityType = EModality.get((int) (long) jtask.get("answerModality"));
 		ResponseModality modality;
-		if(answerModalityType == EModality.CHOICE) {
-			if(task instanceof GeographyMembershipImpl) {
+		if (answerModalityType == EModality.CHOICE) {
+			if (task instanceof GeographyMembershipImpl) {
 				modality = new MultipleChoiceImpl();
-				
+
 				int nbChoices = jtask.get("nbChoices") != null ? (int) (long) jtask.get("nbChoices") : 2;
 				((MultipleChoice) modality).setNbChoices(nbChoices);
-				
+
 				int nbBadChoices = jtask.get("nbBadChoices") != null ? (int) (long) jtask.get("nbBadChoices") : 4;
 				((MultipleChoice) modality).setNbBadChoices(nbBadChoices);
-				
+
 				((MultipleChoice) modality).setType(answerModalityType);
-			}else {
+			} else {
 				modality = new DynamicMultipleChoiceImpl();
-				((DynamicMultipleChoice) modality).setType(EModality.get((int)(long)jtask.get("answerModality")));
-				
+				((DynamicMultipleChoice) modality).setType(EModality.get((int) (long) jtask.get("answerModality")));
+
 				int nbBadChoices = jtask.get("nbBadChoices") != null ? (int) (long) jtask.get("nbBadChoices") : 0;
 				((DynamicMultipleChoice) modality).setNbBadChoices(nbBadChoices);
 				((DynamicMultipleChoice) modality).setType(answerModalityType);
 			}
-		}else {
+		} else {
 			modality = new EnterResponseImpl();
 		}
-		
-		//ANSWER MODALITY V1
-		/*System.out.println(jtask.get("answerModality"));
-		EModality answerModalityType = EModality.get((int)(long)jtask.get("answerModality"));
-		ResponseModality modality;
-		if(jtask.get("nbChoices") != null) {
-			modality = new MultipleChoiceImpl();
-			((MultipleChoice) modality).setNbChoices((int)(long)jtask.get("nbChoices"));
-			((MultipleChoice) modality).setNbBadChoices((int) (long) jtask.get("nbBadChoices"));
-			((MultipleChoice) modality).setType(answerModalityType);
-		}else if(jtask.get("nbBadChoices") != null){
-			modality = new DynamicMultipleChoiceImpl();
-			((DynamicMultipleChoice) modality).setType(EModality.get((int)(long)jtask.get("answerModality")));
-			((DynamicMultipleChoice) modality).setNbBadChoices((int) (long) jtask.get("nbBadChoices"));
-			((DynamicMultipleChoice) modality).setType(answerModalityType);
-		}else {
-			modality = new EnterResponseImpl();
-		}*/
+
+		// ANSWER MODALITY V1
+		/*
+		 * System.out.println(jtask.get("answerModality")); EModality answerModalityType
+		 * = EModality.get((int)(long)jtask.get("answerModality")); ResponseModality
+		 * modality; if(jtask.get("nbChoices") != null) { modality = new
+		 * MultipleChoiceImpl(); ((MultipleChoice)
+		 * modality).setNbChoices((int)(long)jtask.get("nbChoices")); ((MultipleChoice)
+		 * modality).setNbBadChoices((int) (long) jtask.get("nbBadChoices"));
+		 * ((MultipleChoice) modality).setType(answerModalityType); }else
+		 * if(jtask.get("nbBadChoices") != null){ modality = new
+		 * DynamicMultipleChoiceImpl(); ((DynamicMultipleChoice)
+		 * modality).setType(EModality.get((int)(long)jtask.get("answerModality")));
+		 * ((DynamicMultipleChoice) modality).setNbBadChoices((int) (long)
+		 * jtask.get("nbBadChoices")); ((DynamicMultipleChoice)
+		 * modality).setType(answerModalityType); }else { modality = new
+		 * EnterResponseImpl(); }
+		 */
 		task.setResponseModality(modality);
 	}
-	
-	
-	/*SAMPLE CODE
-	HistoricalEventAssociationImpl task = new HistoricalEventAssociationImpl();
-		task.setID(taskID);
 
-		task.setMaxTime((int) (long) jtask.get("timeMaxSecond"));
-		task.setPercentOfApparition((int) (long) jtask.get("repartitionPercent"));
-		task.setNbConsecutiveSuccess((int) (long) jtask.get("successiveSuccessesToReach"));
-
-		if (((String) jtask.get("answerModality")).equals("CHOICE")) {
-			DynamicMultipleChoice modality = new DynamicMultipleChoiceImpl();
-			modality.setNbBadChoices((int) (long) jtask.get("nbIncorrectChoices"));
-			task.setResponseModality(modality);
-		} else {
-			task.setResponseModality(new EnterResponseImpl());
-		}
-	*/
+	/*
+	 * SAMPLE CODE HistoricalEventAssociationImpl task = new
+	 * HistoricalEventAssociationImpl(); task.setID(taskID);
+	 * 
+	 * task.setMaxTime((int) (long) jtask.get("timeMaxSecond"));
+	 * task.setPercentOfApparition((int) (long) jtask.get("repartitionPercent"));
+	 * task.setNbConsecutiveSuccess((int) (long)
+	 * jtask.get("successiveSuccessesToReach"));
+	 * 
+	 * if (((String) jtask.get("answerModality")).equals("CHOICE")) {
+	 * DynamicMultipleChoice modality = new DynamicMultipleChoiceImpl();
+	 * modality.setNbBadChoices((int) (long) jtask.get("nbIncorrectChoices"));
+	 * task.setResponseModality(modality); } else { task.setResponseModality(new
+	 * EnterResponseImpl()); }
+	 */
 }

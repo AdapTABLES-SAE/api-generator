@@ -2,174 +2,6 @@
  */
 package generator.impl;
 
-import generator.AComponent;
-import generator.AQuestionParam;
-import generator.AQuestionableFact;
-import generator.ATask;
-import generator.AValue;
-import generator.AVisualizationQuestionableFact;
-import generator.Abilities;
-import generator.Ability;
-import generator.AbstractFact;
-import generator.ClassifyTechnique;
-import generator.Classroom;
-import generator.Classrooms;
-import generator.CompletionCriteria;
-import generator.CompletionTask;
-import generator.Component;
-import generator.Condition;
-import generator.Correctness;
-import generator.CorrectnessValue;
-import generator.CurrentObjectiveLevel;
-import generator.Curse;
-import generator.CurseEligibility;
-import generator.Curses;
-import generator.Date;
-import generator.DateQuestionableFact;
-import generator.Directions;
-import generator.Display;
-import generator.Dungeon;
-import generator.DungeonMode;
-import generator.DynamicMultipleChoice;
-import generator.EBoundary;
-import generator.ECorrectness;
-import generator.EGeographyValue;
-import generator.EHistoryTarget;
-import generator.EJudoTarget;
-import generator.ELegendTarget;
-import generator.EModality;
-import generator.ERoomType;
-import generator.ESeveralTarget;
-import generator.ESingleTarget;
-import generator.EStatementType;
-import generator.ETaskType;
-import generator.ETimeTarget;
-import generator.ElementSize;
-import generator.ElementType;
-import generator.ElementsTypes;
-import generator.EnterResponse;
-import generator.EntrySoluceParam;
-import generator.Equipment;
-import generator.Equipments;
-import generator.ExpectedAnswer;
-import generator.FactCorrectnessParam;
-import generator.FactSolutionParam;
-import generator.GPCategory;
-import generator.GameContext;
-import generator.GameDescription;
-import generator.GameElementTypes;
-import generator.Gameplay;
-import generator.GameplayTaskRelations;
-import generator.Gameplays;
-import generator.GeneralFact;
-import generator.GeneratorFactory;
-import generator.GeneratorPackage;
-import generator.GeographyFact;
-import generator.GeographyLegendFact;
-import generator.GeographyMembership;
-import generator.HGLevel;
-import generator.HGOrderQuestionableFact;
-import generator.HGOrderSolution;
-import generator.HGQFIdentification;
-import generator.HGQFMembership;
-import generator.HistoricalChronology;
-import generator.HistoricalEventAssociation;
-import generator.HistoryFact;
-import generator.HistoryIdentification;
-import generator.IdentificationTask;
-import generator.IdentifyArbitrationGesture;
-import generator.IdentifyPlanets;
-import generator.IdentifyTechnique;
-import generator.Image;
-import generator.Item;
-import generator.Items;
-import generator.JudoArbitrationGestureFact;
-import generator.JudoLevel;
-import generator.JudoQuestionableArbitrationFact;
-import generator.JudoQuestionableClassifyFact;
-import generator.JudoQuestionableTechniqueFact;
-import generator.JudoTechniqueFact;
-import generator.Knowledge;
-import generator.LabyrinthCurse;
-import generator.LargeRoomType;
-import generator.LearnerPlayer;
-import generator.LearnerProgress;
-import generator.LearningDomain;
-import generator.LearningPath;
-import generator.LegendAMap;
-import generator.LegendQuestionableFact;
-import generator.LegendText;
-import generator.Level;
-import generator.LevelsDifficultyProgress;
-import generator.LocateOnAMap;
-import generator.MTCompletion1;
-import generator.MTCompletion2;
-import generator.MTFact;
-import generator.MTIdentification;
-import generator.MTLevel;
-import generator.MTMembership;
-import generator.MTQFCompletion1;
-import generator.MTQFCompletion2;
-import generator.MTQFIdentification;
-import generator.MTQFMembership;
-import generator.MTQFRebuild;
-import generator.MTRecontruction;
-import generator.MapQuestionableFact;
-import generator.MembershipIDTask;
-import generator.MultipleChoice;
-import generator.NoQuestionGameplay;
-import generator.Objective;
-import generator.OrderEvent;
-import generator.OrderPlanets;
-import generator.OrderingTask;
-import generator.Parameter;
-import generator.PlanetOrder;
-import generator.PlayerProgress;
-import generator.Position;
-import generator.PositionedElement;
-import generator.PositionedStructureElement;
-import generator.PositionedVisualizationElement;
-import generator.Prerequisite;
-import generator.Progression;
-import generator.Prompt;
-import generator.PropositionParam;
-import generator.QFIdentifyPlanets;
-import generator.QFOrderPlanets;
-import generator.Quantity;
-import generator.QuestionGameplay;
-import generator.QuestionParam;
-import generator.QuestionableFact;
-import generator.QuestionableFactResult;
-import generator.QuestionedFact;
-import generator.Relation;
-import generator.ResponseModality;
-import generator.ResultPosition;
-import generator.Results;
-import generator.ResultsByTask;
-import generator.Room;
-import generator.RoomAccess;
-import generator.RoomType;
-import generator.RoomTypes;
-import generator.SetOfFacts;
-import generator.Size;
-import generator.SmallRoomType;
-import generator.SolarSystemPlanet;
-import generator.SolarSytemLevel;
-import generator.StatementElementType;
-import generator.Statistics;
-import generator.Structure;
-import generator.TableBuild;
-import generator.Teacher;
-import generator.Teachers;
-import generator.Time;
-import generator.TimePeriod;
-import generator.Value;
-import generator.Visualization;
-import generator.VisualizationPosition;
-import generator.VisualizationQuestionParam;
-import generator.VisualizationSolution;
-import generator.WantedAnswersParam;
-import generator.WrongData;
 import generator.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -2100,6 +1932,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 */
 	public EReference getLevel_CompletionCriteria() {
 		return (EReference) levelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLevel_Name() {
+		return (EAttribute) levelEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -6470,6 +6311,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(levelEClass, LEVEL__ID);
 		createEReference(levelEClass, LEVEL__TASKS);
 		createEReference(levelEClass, LEVEL__COMPLETION_CRITERIA);
+		createEAttribute(levelEClass, LEVEL__NAME);
 
 		mtLevelEClass = createEClass(MT_LEVEL);
 		createEAttribute(mtLevelEClass, MT_LEVEL__BUILD_SETUP);
@@ -7404,6 +7246,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getLevel_CompletionCriteria(), this.getCompletionCriteria(), null, "completionCriteria", null, 1,
 				1, Level.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLevel_Name(), ecorePackage.getEString(), "name", null, 0, 1, Level.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtLevelEClass, MTLevel.class, "MTLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMTLevel_BuildSetup(), this.getTableBuild(), "buildSetup", null, 0, 1, MTLevel.class,
@@ -8318,7 +8162,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getLegendAMap_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
 				LegendAMap.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLegendAMap_Missing(), this.getELegendTarget(), "missing", "", 0, 1, LegendAMap.class,
+		initEAttribute(getLegendAMap_Missing(), this.getELegendTarget(), "missing", "TEXT", 0, 1, LegendAMap.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLegendAMap_GraphicTask(), ecorePackage.getEBoolean(), "graphicTask", "true", 0, 1,
 				LegendAMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,

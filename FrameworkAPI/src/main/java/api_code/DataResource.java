@@ -54,6 +54,7 @@ public class DataResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getTeachers(@Context ServletContext app) {  
 		Constant.PROJECT_PATH = app.getRealPath("");
+		Constant.INPUT_MODELS_PATH = Constant.INPUT_MODELS_PATH_MATH;
 		manager = new DataManager();
 		return manager.getTeachersDataJSON().toJSONString();
 	}

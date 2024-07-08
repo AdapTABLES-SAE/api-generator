@@ -158,4 +158,20 @@ public class MultipleChoiceImpl extends DynamicMultipleChoiceImpl implements Mul
 		return result.toString();
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (!(obj instanceof MultipleChoiceImpl))
+			return false;
+		MultipleChoiceImpl other = (MultipleChoiceImpl) obj;
+		if (nbChoices != other.nbChoices)
+			return false;
+		return true;
+	}
+
+	
+	
 } //MultipleChoiceImpl

@@ -58,13 +58,13 @@ public enum EGeographyValue implements Enumerator {
 	 */
 	NONE(3, "NONE", "NONE"),
 	/**
-	* The '<em><b>ISLAND</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>ISLAND</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #ISLAND_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #ISLAND_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	ISLAND(4, "ISLAND", "ISLAND");
 
 	/**
