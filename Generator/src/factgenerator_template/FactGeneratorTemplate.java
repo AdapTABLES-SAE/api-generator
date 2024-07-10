@@ -404,12 +404,13 @@ public abstract class FactGeneratorTemplate {
 		}	
 
 		List<AQuestionableFact> eligibleFacts = getEligibleQuestionableFacts(resByTask);
-		eligibleFacts.removeAll(alreadySelectedFacts(roomElements));
+		
 		if (eligibleFacts.isEmpty()) {
 			eligibleFacts = getAllQuestionableFacts(resByTask);
 		}
 		
 		if(resByTask.getTask().getNbFacts() > 1) {
+			eligibleFacts.removeAll(alreadySelectedFacts(roomElements));
 			eligibleFacts = removeUnEligibleFactsBasedOnPreviouslySelectedFact(roomElements.getFacts(), eligibleFacts);
 		}
 		if(eligibleFacts.isEmpty()) {
