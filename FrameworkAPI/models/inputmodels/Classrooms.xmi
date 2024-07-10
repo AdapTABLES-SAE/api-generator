@@ -20,6 +20,8 @@
         href="learnerPlayers/LearnerPlayer_ingrid.xmi#ingrid"/>
     <learnerPlayers
         href="learnerPlayers/LearnerPlayer_rozenn.xmi#rozenn"/>
+    <learnerPlayers
+        href="learnerPlayers/LearnerPlayer_sandrag.xmi#sandrag"/>
   </classrooms>
   <classrooms
       ID="HGdefault"
