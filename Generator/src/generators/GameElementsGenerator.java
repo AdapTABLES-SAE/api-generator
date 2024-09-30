@@ -268,7 +268,7 @@ public class GameElementsGenerator {
 		
 		for(Gameplay gameplay : gameplays) {
 			Map<ElementType, Integer> elementsToQuantity = dungeonElements.getElementManager().selectElementType(gameplay.getComponents(), roomElements.getTask(), roomElements.getFacts());
-			//System.out.println("ROOMTYPE check  "+elementsToQuantity);
+			System.out.println("ROOMTYPE check  "+elementsToQuantity);
 			if(!elementsToQuantity.isEmpty() && dungeonElements.getElementManager().hasCompatibleRoomTypeWithEveryAccessAndPositions(gameplay, elementsToQuantity)) {
 				gameplayWithCompatibleRoomType.add(gameplay);
 			} else {

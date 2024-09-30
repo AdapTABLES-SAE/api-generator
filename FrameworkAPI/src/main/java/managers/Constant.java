@@ -20,16 +20,17 @@ import generator.LearningDomain;
 import generator.Teacher;
 import generator.Teachers;
 import generators.ALGAGenerator;
+import structures.DidacticDomain;
 
 public class Constant {
-	
-	//rivate static ResourceSet resourceSet;
-	
+
+	// rivate static ResourceSet resourceSet;
+
 	/*
-	 * PROJECT PATH 
+	 * PROJECT PATH
 	 */
-	public static String PROJECT_PATH; 
-	
+	public static String PROJECT_PATH;
+
 	/*
 	 * MODELS PATHS
 	 */
@@ -40,56 +41,71 @@ public class Constant {
 	public static final String INPUT_MODELS_PATH_HG = "models/inputmodels_HG/";
 	public static final String OUTPUT_MODELS_PATH_HG = "models/outputmodels/hg/";
 
-	public static String INPUT_MODELS_PATH;
+	public static String INPUT_MODELS_PATH = "models/inputmodels/";
 	public static String OUTPUT_MODELS_PATH;
 
-	
+	public static DidacticDomain saveDomain;
+
 	/*
 	 * CONTEXT FILE INFORMATION
 	 */
-	//public static final String CONTEXTS_FILES_PATH = "contextsByClass/"; 
-	//public static final String CONTEXTS_FILES_PREFIX = "Context_";
+	// public static final String CONTEXTS_FILES_PATH = "contextsByClass/";
+	// public static final String CONTEXTS_FILES_PREFIX = "Context_";
 	public static final String DEFAULT_CLASSROOM_NAME = "default";
-	
-	
+
 	public static final String CLASSROOMS_FILE = "Classrooms.xmi";
 	public static final String TEACHERS_FILE = "Teachers.xmi";
 	public static final String PATHS_FILE = "LearningDomain.xmi";
-	public static final String KNOWLEDGE_FILE = "MultiplicationTables.xmi";
-	public static final String LEARNERS_FILES_PATH = "learnerPlayers/"; 
+	public static String KNOWLEDGE_FILE = "MultiplicationTables.xmi";
+	public static final String KNOWLEDGE_FILE_MATH = "MultiplicationTables.xmi";
+	public static final String KNOWLEDGE_FILE_HG = "HistoryGeographyFacts.xmi";
+	public static final String LEARNERS_FILES_PATH = "learnerPlayers/";
 
 	public static final String LEARNER_FILE_NAME_PREFIX = "LearnerPlayer_";
-	
+
 	public static Classroom getClassroom(String classroomID) {
-		Classrooms classrooms = loadClassrooms();  
-		for(Classroom classroom : classrooms.getClassrooms()) {
-			if(classroom.getID().equals(classroomID)) {
+		Classrooms classrooms = loadClassrooms();
+		for (Classroom classroom : classrooms.getClassrooms()) {
+			if (classroom.getID().equals(classroomID)) {
 				return classroom;
 			}
 		}
-		
 		return null;
 	}
-	
+
+	public static void changeDomains(DidacticDomain domain) {
+		saveDomain = domain;
+		if (domain.equals(DidacticDomain.MATHEMATICS)) {
+			Constant.INPUT_MODELS_PATH = Constant.INPUT_MODELS_PATH_MATH;
+			Constant.OUTPUT_MODELS_PATH = Constant.OUTPUT_MODELS_PATH_MATH;
+			Constant.KNOWLEDGE_FILE = Constant.KNOWLEDGE_FILE_MATH;
+		} else {
+			Constant.INPUT_MODELS_PATH = Constant.INPUT_MODELS_PATH_HG;
+			Constant.OUTPUT_MODELS_PATH = Constant.OUTPUT_MODELS_PATH_HG;
+			Constant.KNOWLEDGE_FILE = Constant.KNOWLEDGE_FILE_HG;
+		}
+	}
+
 	public static Teacher getTeacher(String teacherID) {
-		Teachers teachers = loadTeachers();  
-		for(Teacher teacher : teachers.getTeachers()) {
-			if(teacher.getID().equals(teacherID)) {
+		Constant.changeDomains(DidacticDomain.MATHEMATICS);
+		Teachers teachers = loadTeachers();
+		for (Teacher teacher : teachers.getTeachers()) {
+			if (teacher.getID().equals(teacherID)) {
 				return teacher;
 			}
 		}
 		return null;
 	}
-	
+
 	public static boolean doesLearnerBelongsToClassroom(Classroom classroom, String learnerID) {
-		for(LearnerPlayer LP: classroom.getLearnerPlayers()) {
-			if(LP.getID().equals(learnerID)) {
+		for (LearnerPlayer LP : classroom.getLearnerPlayers()) {
+			if (LP.getID().equals(learnerID)) {
 				return true;
 			}
 		}
 		return false;
 	}
-	
+
 	public synchronized static Classrooms loadClassrooms() {
 		GeneratorPackage.eINSTANCE.eClass();
 		ResourceSet resourceSet = new ResourceSetImpl();
@@ -97,34 +113,38 @@ public class Constant {
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		map.put("xmi", new XMIResourceFactoryImpl());
 		File classrooms = new File(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CLASSROOMS_FILE);
-		System.out.println();
+		System.out.println(Constant.CLASSROOMS_FILE);
+		System.out.println(Constant.PROJECT_PATH);
+		System.out.println(Constant.INPUT_MODELS_PATH);
 		Resource resource = resourceSet.createResource(URI.createFileURI(classrooms.getAbsolutePath()));
 		try {
 			resource.load(null);
-		}catch (IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		EcoreUtil.resolveAll(resourceSet); 
+		EcoreUtil.resolveAll(resourceSet);
 		return (Classrooms) resource.getContents().get(0);
 	}
-	
+
 	public synchronized static Teachers loadTeachers() {
 		GeneratorPackage.eINSTANCE.eClass();
 		ResourceSet resourceSet = new ResourceSetImpl();
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		map.put("xmi", new XMIResourceFactoryImpl());
-		File teachers = new File(Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE);
+		String url = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE;
+		System.out.println("URL 4 teacher file: " + url);
+		File teachers = new File(url);
 		Resource resource = resourceSet.createResource(URI.createFileURI(teachers.getAbsolutePath()));
 		try {
 			resource.load(null);
-		}catch (IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		EcoreUtil.resolveAll(resourceSet); 
+		EcoreUtil.resolveAll(resourceSet);
 		return (Teachers) resource.getContents().get(0);
 	}
-	
+
 	public synchronized static void saveLearnerModel(LearnerPlayer learner) {
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		ResourceSet resourceSet = new ResourceSetImpl();
@@ -132,20 +152,20 @@ public class Constant {
 		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
-		String path = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.LEARNERS_FILES_PATH + Constant.LEARNER_FILE_NAME_PREFIX + learner.getID() + ".xmi";
-		Resource resource = resourceSet.createResource(URI.createURI("file:///"+path));
+		String path = Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.LEARNERS_FILES_PATH
+				+ Constant.LEARNER_FILE_NAME_PREFIX + learner.getID() + ".xmi";
+		Resource resource = resourceSet.createResource(URI.createURI("file:///" + path));
 		resource.getContents().add(learner);
 		try {
 			resource.save(map);
-		}catch (IOException e) {
+		} catch (IOException e) {
 			ALGAGenerator.LOGGER.severe("Error while saving : " + path);
 			e.printStackTrace();
 		}
-		
+
 		ALGAGenerator.LOGGER.info("Saving '" + path + "' file : OK");
 	}
-	
-	
+
 	public synchronized static void saveClassroomsModel(Classrooms classrooms) {
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		ResourceSet resourceSet = new ResourceSetImpl();
@@ -153,19 +173,22 @@ public class Constant {
 		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
-		
-		Resource resource = resourceSet.createResource(URI.createURI("file:///"+Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CLASSROOMS_FILE));
+
+		Resource resource = resourceSet.createResource(URI
+				.createURI("file:///" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CLASSROOMS_FILE));
 		resource.getContents().add(classrooms);
 		try {
 			resource.save(map);
-		}catch (IOException e) {
-			ALGAGenerator.LOGGER.severe("Error while saving : " +Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CLASSROOMS_FILE);
+		} catch (IOException e) {
+			ALGAGenerator.LOGGER.severe("Error while saving : " + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH
+					+ Constant.CLASSROOMS_FILE);
 			e.printStackTrace();
 		}
-		
-		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.CLASSROOMS_FILE + "' file : OK");
+
+		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH
+				+ Constant.CLASSROOMS_FILE + "' file : OK");
 	}
-	
+
 	public synchronized static void saveTeachersModel(Teachers teachers) {
 
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
@@ -174,21 +197,23 @@ public class Constant {
 		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
-		
-		Resource resource = resourceSet.createResource(URI.createURI("file:///"+Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE));
+
+		Resource resource = resourceSet.createResource(URI
+				.createURI("file:///" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE));
 		resource.getContents().add(teachers);
 		try {
 			resource.save(map);
-		}catch (IOException e) {
-			ALGAGenerator.LOGGER.severe("Error while saving : " +Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE);
+		} catch (IOException e) {
+			ALGAGenerator.LOGGER.severe("Error while saving : " + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH
+					+ Constant.TEACHERS_FILE);
 			e.printStackTrace();
 		}
-		
-		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE + "' file : OK");
+
+		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH
+				+ Constant.TEACHERS_FILE + "' file : OK");
 
 	}
-	
-	
+
 	public synchronized static void saveDomainModel(LearningDomain domain) {
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
@@ -196,52 +221,62 @@ public class Constant {
 		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
-		
-		Resource resource = resourceSet.createResource(URI.createURI("file:///"+Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE));
+
+		Resource resource = resourceSet.createResource(
+				URI.createURI("file:///" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE));
 		resource.getContents().add(domain);
 		try {
 			resource.save(map);
-		}catch (IOException e) {
-			ALGAGenerator.LOGGER.severe("Error while saving : " +Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE);
+		} catch (IOException e) {
+			ALGAGenerator.LOGGER.severe(
+					"Error while saving : " + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE);
 			e.printStackTrace();
 		}
-		
-		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE + "' file : OK");
+
+		ALGAGenerator.LOGGER.info(
+				"Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.PATHS_FILE + "' file : OK");
 	}
-	
+
 	public synchronized static void saveTeachersModel(Teacher teacher) {
 		Teachers teachers = loadTeachers();
-		if(teacher != null) {
+		if (teacher != null) {
 			removeTeacherByID(teachers, teacher.getID());
-			teachers.getTeachers().add(teacher);	
+			teachers.getTeachers().add(teacher);
 		}
-				
+
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
 		ResourceSet resourceSet = new ResourceSetImpl();
 		Map<String, Object> map = registry.getExtensionToFactoryMap();
 		XMIResourceFactoryImpl toSave = new XMIResourceFactoryImpl();
 		map.put("xmi", toSave);
 		map.put(XMLResource.OPTION_KEEP_DEFAULT_CONTENT, Boolean.TRUE);
-		
-		Resource resource = resourceSet.createResource(URI.createURI("file:///"+Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE));
+
+		Resource resource = resourceSet.createResource(URI
+				.createURI("file:///" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE));
 		resource.getContents().add(teachers);
 		try {
 			resource.save(map);
-		}catch (IOException e) {
-			ALGAGenerator.LOGGER.severe("Error while saving : " +Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE);
+		} catch (IOException e) {
+			ALGAGenerator.LOGGER.severe("Error while saving : " + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH
+					+ Constant.TEACHERS_FILE);
 			e.printStackTrace();
 		}
-		
-		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH + Constant.TEACHERS_FILE + "' file : OK");
+
+		ALGAGenerator.LOGGER.info("Saving '" + Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH
+				+ Constant.TEACHERS_FILE + "' file : OK");
 	}
-	
+
 	private static Teachers removeTeacherByID(Teachers teachers, String ID) {
-		for(Teacher teacher: teachers.getTeachers()) {
-			if(teacher.getID().equals(ID)) {
+		for (Teacher teacher : teachers.getTeachers()) {
+			if (teacher.getID().equals(ID)) {
 				teachers.getTeachers().remove(teacher);
 				break;
 			}
 		}
 		return teachers;
+	}
+
+	public static void changePreviousDomains() {
+		changeDomains(saveDomain);
 	}
 }

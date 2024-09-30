@@ -304,5 +304,7 @@ public class SetOfFactsImpl extends GeneralFactImpl implements SetOfFacts {
 		result.append(')');
 		return result.toString();
 	}
+	
+	
 
 } //SetOfFactsImpl

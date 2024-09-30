@@ -166,4 +166,19 @@ public class MTIdentificationImpl extends IdentificationTaskImpl implements MTId
 		return this.type;
 	}
 
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof MTIdentificationImpl))
+			return false;
+		MTIdentificationImpl other = (MTIdentificationImpl) obj;
+		if (target != other.target)
+			return false;
+		return true;
+	}
+	
+	
+
 } //MTIdentificationImpl

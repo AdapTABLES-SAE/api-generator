@@ -326,4 +326,26 @@ public class MTLevelImpl extends LevelImpl implements MTLevel {
 		return result.toString();
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (!(obj instanceof MTLevelImpl))
+			return false;
+		MTLevelImpl other = (MTLevelImpl) obj;
+		if (buildSetup != other.buildSetup)
+			return false;
+		if (maxInterval != other.maxInterval)
+			return false;
+		if (minInterval != other.minInterval)
+			return false;
+		if (resultPositionSetup != other.resultPositionSetup)
+			return false;
+		return true;
+	}
+	
+	
+
 } //MTLevelImpl

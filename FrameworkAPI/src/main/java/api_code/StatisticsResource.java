@@ -57,4 +57,16 @@ public class StatisticsResource {
 	/**          JOB METHODS          **/
 	/***********************************/
 	
+	
+	//HG
+	@GET
+	@Path("/learnerhg/{learnerID}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String generalHGStatistics(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
+		Constant.PROJECT_PATH = app.getRealPath("");
+		manager = new LearnerPlayerManager(new ModelsManager(DidacticDomain.HISTORY_GEOGRAPHY, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH,  learnerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME, true));
+		
+		return manager.getGeneralStats().toJSONString();
+	}
 }

@@ -286,7 +286,7 @@ public abstract class FactGeneratorTemplate {
 			param.setValue(cValue);
 			qef.setFactCorrectness(param);
 		}
-		
+		//qFact.setWasSelected(true);
 		roomElement.addQuestionedFact(qef);
 		qFact.setWasSelected(true);
 		System.out.println(qFact.getID());
@@ -421,7 +421,8 @@ public abstract class FactGeneratorTemplate {
 			throw new Exception("Pool of facts should not be empty for task "+resByTask.getTask().getType());
 		} else {
 			int number = new Random().nextInt(eligibleFacts.size());
-			//eligibleFacts.get(number).setWasSelected(true);
+			eligibleFacts.get(number).setWasSelected(true); // ADD PL
+			System.out.println("SET SELECTED QF TO TRUE");
 			return eligibleFacts.get(number);
 		}
 	}
@@ -446,13 +447,16 @@ public abstract class FactGeneratorTemplate {
 	private List<AQuestionableFact> getEligibleQuestionableFacts(ResultsByTask resByTask){
 		List<AQuestionableFact> eligibleFacts = new ArrayList<>();
 		for (AQuestionableFact qfact: resByTask.getQuestionableFacts()) {
-			if(!qfact.isWasSelected()) {
-				eligibleFacts.add(qfact);
+			if(!qfact.isAchieved()) { // ADD PL
+				if(!qfact.isWasSelected()) {
+			
+					eligibleFacts.add(qfact);
+				}
 			}
 		}
 		return eligibleFacts;
 	}
-
+	
 	private List<AQuestionableFact> getAllQuestionableFacts(ResultsByTask resByTask){
 		List<AQuestionableFact> eligibleFacts = new ArrayList<>();
 		for (AQuestionableFact qfact: resByTask.getQuestionableFacts()) {
@@ -460,7 +464,7 @@ public abstract class FactGeneratorTemplate {
 		}
 		return eligibleFacts;
 	}
-	
+			
 	private boolean isPoolEmpty(ResultsByTask resByTask) {
 		int i = 0; 
 		boolean hasAvailable = false;

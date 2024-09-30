@@ -69,7 +69,7 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 	private String badHistoryChoices(List<Soluce> goodSoluce, List<Soluce> badSelectedSoluce, EGeographyValue dataType) {
 		List<String> possibleBadChoices = HistoryGeographyData.data.get(dataType);
 		String choice = "";
-		while(choice.isEmpty() && !possibleBadChoices.isEmpty()) {
+		while(choice.isEmpty() && (possibleBadChoices != null || !possibleBadChoices.isEmpty())) {
 			choice = possibleBadChoices.get(new Random().nextInt(possibleBadChoices.size()));
 			if(containsSoluce(goodSoluce, choice) || containsSoluce(badSelectedSoluce, choice)) {
 				choice = "";

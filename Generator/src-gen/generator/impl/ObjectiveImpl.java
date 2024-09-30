@@ -384,4 +384,56 @@ public class ObjectiveImpl extends MinimalEObjectImpl.Container implements Objec
 		return result.toString();
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof ObjectiveImpl))
+			return false;
+		ObjectiveImpl other = (ObjectiveImpl) obj;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (idESet != other.idESet)
+			return false;
+		if (levels == null) {
+			if (other.levels != null)
+				return false;
+		} //else if(!levels.equals(other.levels))
+		//	return false;
+		// no level comparison
+		// no name comparison
+		// no prerequis
+		if (setoffacts == null) {
+			if (other.setoffacts != null)
+				return false;
+		} else if (!theSame(setoffacts, other.setoffacts))
+			return false;
+		return true;
+	}
+
+	private boolean theSame(EList<SetOfFacts> lsof1, EList<SetOfFacts> lsof2) {
+		if (lsof1 == null || lsof2 == null)
+			return false;
+		if (lsof1.size() != lsof2.size())
+			return false;
+		for (SetOfFacts sof1: lsof1) {
+			if (!foundIn(sof1, lsof2))
+				return false;
+		}
+		
+		return true;
+	}
+
+	private boolean foundIn(SetOfFacts sof, EList<SetOfFacts> lsof) {
+		for (SetOfFacts sof2: lsof) {
+			if (sof2.getName().equals(sof.getName()))
+				return true;
+		}
+		return false;
+	}
+	
+
 } //ObjectiveImpl

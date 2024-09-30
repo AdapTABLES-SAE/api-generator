@@ -217,4 +217,21 @@ public class DynamicMultipleChoiceImpl extends ResponseModalityImpl implements D
 		return result.toString();
 	}
 
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof DynamicMultipleChoiceImpl))
+			return false;
+		DynamicMultipleChoiceImpl other = (DynamicMultipleChoiceImpl) obj;
+		if (nbBadChoices != other.nbBadChoices)
+			return false;
+		if (type != other.type)
+			return false;
+		return true;
+	}
+	
+	
+
 } //DynamicMultipleChoiceImpl

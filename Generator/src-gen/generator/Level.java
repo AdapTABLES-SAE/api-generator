@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link generator.Level#getID <em>ID</em>}</li>
  *   <li>{@link generator.Level#getTasks <em>Tasks</em>}</li>
  *   <li>{@link generator.Level#getCompletionCriteria <em>Completion Criteria</em>}</li>
+ *   <li>{@link generator.Level#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see generator.GeneratorPackage#getLevel()
@@ -107,5 +108,27 @@ public interface Level extends EObject {
 	 * @generated
 	 */
 	void setCompletionCriteria(CompletionCriteria value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see generator.GeneratorPackage#getLevel_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link generator.Level#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Level

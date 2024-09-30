@@ -638,4 +638,56 @@ public abstract class IdentificationTaskImpl extends MinimalEObjectImpl.Containe
 		return result.toString();
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (checkOnLearnerAction ? 1231 : 1237);
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + (idESet ? 1231 : 1237);
+		result = prime * result + maxTime;
+		result = prime * result + nbConsecutiveSuccess;
+		result = prime * result + nbFacts;
+		result = prime * result + percentOfApparition;
+		result = prime * result + ((responseModality == null) ? 0 : responseModality.hashCode());
+		result = prime * result + ((type == null) ? 0 : type.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof IdentificationTaskImpl))
+			return false;
+		IdentificationTaskImpl other = (IdentificationTaskImpl) obj;
+		if (checkOnLearnerAction != other.checkOnLearnerAction)
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (idESet != other.idESet)
+			return false;
+		if (maxTime != other.maxTime)
+			return false;
+		if (nbConsecutiveSuccess != other.nbConsecutiveSuccess)
+			return false;
+		if (nbFacts != other.nbFacts)
+			return false;
+		if (percentOfApparition != other.percentOfApparition)
+			return false;
+		if (responseModality == null) {
+			if (other.responseModality != null)
+				return false;
+		} else if (!responseModality.equals(other.responseModality))
+			return false;
+		if (type != other.type)
+			return false;
+		return true;
+	}
+	
+	
+
 } //IdentificationTaskImpl

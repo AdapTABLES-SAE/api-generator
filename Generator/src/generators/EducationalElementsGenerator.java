@@ -305,7 +305,9 @@ public class EducationalElementsGenerator {
 		if(!allObjectiveAreReached) {
 			addNewCurrentObjectiveLevelToLearnerPlayer(eligibleObjectives);
 		}
-		
+		for (Objective objective : eligibleObjectives) {
+			System.out.println("o "+objective.getID());
+		}
 		List<CurrentObjectiveLevel> cols = new ArrayList<>();
 		for (CurrentObjectiveLevel currentObjectiveLevel : modelAccess.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
 			Level level = getAvailableLevelForObjective(currentObjectiveLevel.getObjective());

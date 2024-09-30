@@ -1939,6 +1939,15 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getLevel_Name() {
+		return (EAttribute) levelEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMTLevel() {
 		return mtLevelEClass;
 	}
@@ -6302,6 +6311,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		createEAttribute(levelEClass, LEVEL__ID);
 		createEReference(levelEClass, LEVEL__TASKS);
 		createEReference(levelEClass, LEVEL__COMPLETION_CRITERIA);
+		createEAttribute(levelEClass, LEVEL__NAME);
 
 		mtLevelEClass = createEClass(MT_LEVEL);
 		createEAttribute(mtLevelEClass, MT_LEVEL__BUILD_SETUP);
@@ -7236,6 +7246,8 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEReference(getLevel_CompletionCriteria(), this.getCompletionCriteria(), null, "completionCriteria", null, 1,
 				1, Level.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLevel_Name(), ecorePackage.getEString(), "name", null, 0, 1, Level.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mtLevelEClass, MTLevel.class, "MTLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMTLevel_BuildSetup(), this.getTableBuild(), "buildSetup", null, 0, 1, MTLevel.class,
@@ -8150,7 +8162,7 @@ public class GeneratorPackageImpl extends EPackageImpl implements GeneratorPacka
 		initEAttribute(getLegendAMap_NbMissingElements(), ecorePackage.getEInt(), "nbMissingElements", "1", 0, 1,
 				LegendAMap.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLegendAMap_Missing(), this.getELegendTarget(), "missing", "", 0, 1, LegendAMap.class,
+		initEAttribute(getLegendAMap_Missing(), this.getELegendTarget(), "missing", "TEXT", 0, 1, LegendAMap.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLegendAMap_GraphicTask(), ecorePackage.getEBoolean(), "graphicTask", "true", 0, 1,
 				LegendAMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,

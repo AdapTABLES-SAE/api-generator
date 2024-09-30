@@ -47,7 +47,7 @@ public interface LegendAMap extends CompletionTask {
 
 	/**
 	 * Returns the value of the '<em><b>Missing</b></em>' attribute.
-	 * The default value is <code>""</code>.
+	 * The default value is <code>"TEXT"</code>.
 	 * The literals are from the enumeration {@link generator.ELegendTarget}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -55,7 +55,7 @@ public interface LegendAMap extends CompletionTask {
 	 * @see generator.ELegendTarget
 	 * @see #setMissing(ELegendTarget)
 	 * @see generator.GeneratorPackage#getLegendAMap_Missing()
-	 * @model default=""
+	 * @model default="TEXT"
 	 * @generated
 	 */
 	ELegendTarget getMissing();

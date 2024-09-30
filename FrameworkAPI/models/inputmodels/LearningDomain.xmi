@@ -796,4 +796,20 @@
     </objectives>
     <knowledge href="MultiplicationTables.xmi#/"/>
   </learningpaths>
+  <learningpaths name="DEFAULT_PATH_SANDRA" ID="DEFAULT_PATH_SANDRA">
+    <objectives ID="DEFAULT_PATH_SANDRA-O1" name="D&#xe9;couverte table de 2">
+      <levels xsi:type="generator:MTLevel" ID="DEFAULT_PATH_SANDRA-O1-L1" name="Recherche du r&#xe9;sultat">
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" ID="DEFAULT_PATH_SANDRA-O1-L1-T1">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
+          <targets>RESULT</targets>
+        </tasks>
+        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="50" ID="DEFAULT_PATH_SANDRA-O1-L2" maxTime="10">
+          <responseModality xsi:type="generator:EnterResponse"/>
+          <targets>RESULT</targets>
+        </tasks>
+      </levels>
+      <setoffacts href="MultiplicationTables.xmi#//@knowledgefacts.1"/>
+    </objectives>
+    <knowledge href="MultiplicationTables.xmi#/"/>
+  </learningpaths>
 </generator:LearningDomain>

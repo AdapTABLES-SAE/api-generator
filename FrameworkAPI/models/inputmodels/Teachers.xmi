@@ -9,4 +9,10 @@
     <classrooms
         href="Classrooms.xmi#default"/>
   </teachers>
+  <teachers
+      ID="sandrag"
+      name="Sandra Gravouille">
+    <classrooms
+        href="Classrooms.xmi#default"/>
+  </teachers>
 </generator:Teachers>

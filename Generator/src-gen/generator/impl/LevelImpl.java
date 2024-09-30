@@ -30,6 +30,7 @@ import generator.Level;
  *   <li>{@link generator.impl.LevelImpl#getID <em>ID</em>}</li>
  *   <li>{@link generator.impl.LevelImpl#getTasks <em>Tasks</em>}</li>
  *   <li>{@link generator.impl.LevelImpl#getCompletionCriteria <em>Completion Criteria</em>}</li>
+ *   <li>{@link generator.impl.LevelImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,6 +84,26 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected CompletionCriteria completionCriteria;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -218,6 +239,27 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeneratorPackage.LEVEL__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -243,6 +285,8 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 			return getTasks();
 		case GeneratorPackage.LEVEL__COMPLETION_CRITERIA:
 			return getCompletionCriteria();
+		case GeneratorPackage.LEVEL__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -266,6 +310,9 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.LEVEL__COMPLETION_CRITERIA:
 			setCompletionCriteria((CompletionCriteria) newValue);
 			return;
+		case GeneratorPackage.LEVEL__NAME:
+			setName((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -287,6 +334,9 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 		case GeneratorPackage.LEVEL__COMPLETION_CRITERIA:
 			setCompletionCriteria((CompletionCriteria) null);
 			return;
+		case GeneratorPackage.LEVEL__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -305,6 +355,8 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 			return tasks != null && !tasks.isEmpty();
 		case GeneratorPackage.LEVEL__COMPLETION_CRITERIA:
 			return completionCriteria != null;
+		case GeneratorPackage.LEVEL__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -325,8 +377,44 @@ public abstract class LevelImpl extends MinimalEObjectImpl.Container implements 
 			result.append(id);
 		else
 			result.append("<unset>");
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof LevelImpl))
+			return false;
+		LevelImpl other = (LevelImpl) obj;
+		if (completionCriteria == null) {
+			if (other.completionCriteria != null)
+				return false;
+		} else if (!completionCriteria.equals(other.completionCriteria))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (idESet != other.idESet)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (tasks == null) {
+			if (other.tasks != null)
+				return false;
+		} else if (!tasks.equals(other.tasks))
+			return false;
+		return true;
+	}
+	
+	
 
 } //LevelImpl

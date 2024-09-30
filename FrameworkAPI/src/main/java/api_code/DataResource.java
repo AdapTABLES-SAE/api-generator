@@ -54,6 +54,7 @@ public class DataResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getTeachers(@Context ServletContext app) {  
 		Constant.PROJECT_PATH = app.getRealPath("");
+		Constant.INPUT_MODELS_PATH = Constant.INPUT_MODELS_PATH_MATH;
 		manager = new DataManager();
 		return manager.getTeachersDataJSON().toJSONString();
 	}
@@ -175,4 +176,17 @@ public class DataResource {
 		manager = new DataManager(Constant.getTeacher(teacherID));
 		manager.deleteStudent(classroomID, studentID);		
 	}
+	
+	
+	//HG
+	@GET
+    @Path("/student/createhg")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public String createStudentHG(@Context ServletContext app) throws ClassroomNotFoundException, NonExistantLearnerPlayerException, LearnerPlayerAlreadyExistsException  { 
+		Constant.PROJECT_PATH = app.getRealPath("");
+
+        manager = new DataManager();
+        return manager.createStudentHG();
+    }
+
 }

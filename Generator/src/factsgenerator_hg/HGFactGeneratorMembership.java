@@ -88,6 +88,7 @@ public class HGFactGeneratorMembership extends FactGeneratorTemplate {
 				if(!badPropositions.contains(value)) {
 					badPropositions.add(value);
 				}
+				possibleWrongData.remove(rand);
 			}
 		}
 		return badPropositions; 
@@ -101,12 +102,11 @@ public class HGFactGeneratorMembership extends FactGeneratorTemplate {
 				
 		MultipleChoice mc = (MultipleChoice) task.getResponseModality();
 		List<String> propositions_temp = generateBadPropositions(mc.getNbBadChoices(), qfact);
-		
 		List<Soluce> badpropositions = new ArrayList<>();
 		for(String value: propositions_temp) {
 			badpropositions.add(new Soluce(value));
 		}
-		
+
 		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
 		propositions.put(ECorrectness.INCORRECT, badpropositions);
 		return propositions;

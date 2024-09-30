@@ -59,7 +59,9 @@ public class LearningPathResource {
 		}
 		
 		//String classID = obj.containsKey("classroomID")? (String) obj.get("classroomID") : Constant.DEFAULT_CLASSROOM_NAME;
-		manager = new PathManager((String) obj.get("learningPathID"));
+		manager = new PathManager((String) obj.get("learningPathID"), false);
+		//manager = new PathManager(new ModelsManager(DidacticDomain.MATHEMATICS, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+		//		Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, (String) obj.get("learningPathID"), Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME,  true));
 		manager.createTrainingPath(obj);
 	}
 	
@@ -93,4 +95,39 @@ public class LearningPathResource {
 		return manager.buildJSONObjectiveLevel(manager.getLearningPath()).toJSONString();
 	}
 	
+	//HG
+	
+	@GET
+	@Path("/learnerhg/{learnerID}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String buildObjectiveLevelHGParams2JSON(@PathParam("learnerID") String learnerID, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException {  
+		Constant.PROJECT_PATH = app.getRealPath("");
+		Constant.changeDomains(DidacticDomain.HISTORY_GEOGRAPHY);
+		manager = new PathManager(new ModelsManager(DidacticDomain.HISTORY_GEOGRAPHY, Constant.PROJECT_PATH + Constant.INPUT_MODELS_PATH, 
+				Constant.PROJECT_PATH + Constant.OUTPUT_MODELS_PATH, learnerID, Constant.CLASSROOMS_FILE, Constant.DEFAULT_CLASSROOM_NAME,  true));
+
+		String res = manager.buildJSONHGObjectiveLevel(manager.getLearningPath()).toString();
+		Constant.changePreviousDomains();
+		return res;
+	}
+	
+	@POST
+	@Path("/traininghg")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.TEXT_PLAIN)
+	public String addHgTrainingPath(String jsonContent, @Context ServletContext app) throws NonExistantLearnerPlayerException, ContextNotFoundException, LearningPathIDisNull { 
+		Constant.PROJECT_PATH = app.getRealPath("");		
+		JSONObject obj = new JSONObject();
+		Constant.changeDomains(DidacticDomain.HISTORY_GEOGRAPHY);
+
+		try {
+			obj = (JSONObject) new JSONParser().parse(jsonContent);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		manager = new PathManager((String) obj.get("learningPathID"));
+		manager.updateHGTrainingPath(obj);
+
+		return "OK";
+	}
 }

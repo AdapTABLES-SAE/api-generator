@@ -169,7 +169,7 @@
     <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="NICE" value="Nice" category="aires urbaines"/>
     <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="NANTES" value="Nantes" category="aires urbaines"/>
     <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="STRASBOURG" value="Strasbourg" category="aires urbaines"/>
-    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="MONTPELLIER" value="Montpellier" category="aires urbaines"/>
+    <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="LILLE" value="Lille" category="aires urbaines"/>
     <facts xsi:type="generator:GeographyFact" belongsToVisualization="FRANCE_AIRES_URBAINES" position="RENNES" value="Rennes" category="aires urbaines"/>
     <visualization ID="FRANCE_AIRES_URBAINES">
       <positions ID="PARIS"/>
@@ -180,11 +180,11 @@
       <positions ID="NICE"/>
       <positions ID="NANTES"/>
       <positions ID="STRASBOURG"/>
-      <positions ID="MONTPELLIER"/>
+      <positions ID="LILLE"/>
       <positions ID="RENNES"/>
     </visualization>
   </knowledgefacts>
-  <knowledgefacts name="Densité de population (Légende) ">
+  <knowledgefacts name="Densité de population (Légende)">
     <facts xsi:type="generator:GeographyLegendFact" belongsToVisualization="DENSITE_POPU_LEGEND" symbolPosition="FORTE">
       <representation ID="ROUGE"/>
       <legend text="plus de 100" position="FORTE_TEXT"/>
@@ -322,7 +322,7 @@
       <positions ID="LUXEMBOURG"/>
     </visualization>
   </knowledgefacts>
-  <knowledgefacts name="Densité de population ">
+  <knowledgefacts name="Densité de population">
     <facts xsi:type="generator:GeographyFact" belongsToVisualization="DENSITE_POPU" position="FAIBLE" type="NONE" value="moins de 50 habitants / km2"/>
     <facts xsi:type="generator:GeographyFact" belongsToVisualization="DENSITE_POPU" position="MOYENNE" type="NONE" value="entre 50 et 100 habitants / km2"/>
     <facts xsi:type="generator:GeographyFact" belongsToVisualization="DENSITE_POPU" position="FORTE" type="NONE" value="plus de 100 habitants / km2"/>

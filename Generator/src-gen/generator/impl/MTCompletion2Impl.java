@@ -258,4 +258,29 @@ public class MTCompletion2Impl extends CompletionTaskImpl implements MTCompletio
 					checkOnLearnerAction));
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (!(obj instanceof MTCompletion2Impl))
+			return false;
+		MTCompletion2Impl other = (MTCompletion2Impl) obj;
+		if (checkOnLearnerAction != other.checkOnLearnerAction)
+			return false;
+		if (nbMissingElements != other.nbMissingElements)
+			return false;
+		if (nbMissingElementsESet != other.nbMissingElementsESet)
+			return false;
+		if (targets == null) {
+			if (other.targets != null)
+				return false;
+		} else if (!targets.equals(other.targets))
+			return false;
+		return true;
+	}
+	
+	
+
 } //MTCompletion2Impl

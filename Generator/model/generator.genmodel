@@ -221,6 +221,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Level/ID"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Level/tasks"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference generator.ecore#//Level/completionCriteria"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//Level/name"/>
     </genClasses>
     <genClasses ecoreClass="generator.ecore#//MTLevel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generator.ecore#//MTLevel/buildSetup"/>
