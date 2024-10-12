@@ -75,9 +75,16 @@ public class MTFactGeneratorMEMB extends FactGeneratorTemplate {
 			badpropositions.add(new Soluce(value+""));
 		}
 		
+		if (((MembershipIDTask) task).isIdentifySharedProperty()) {
+			propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
+			propositions.put(ECorrectness.INCORRECT, badpropositions);
+		} else {
+			propositions.put(ECorrectness.INCORRECT, getListOfGoodSolutions(qFact));
+			propositions.put(ECorrectness.CORRECT, badpropositions);
+		}
 		
-		propositions.put(ECorrectness.CORRECT, getListOfGoodSolutions(qFact));
-		propositions.put(ECorrectness.INCORRECT, badpropositions);
+		
+		
 		
 		return propositions;
 	}

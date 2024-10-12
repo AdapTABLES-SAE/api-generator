@@ -32,7 +32,6 @@ import generator.MTIdentification;
 import generator.MTLevel;
 import generator.MTMembership;
 import generator.MTReconstruction;
-import generator.MTRecontruction;
 import generator.MultipleChoice;
 import generator.Objective;
 import generator.ResultPosition;
@@ -461,7 +460,7 @@ class QuestionableFactsGenerationTest {
 				return newTask;
 			}
 			
-			if(task instanceof MTRecontruction) {
+			if(task instanceof MTReconstruction) {
 				MTReconstruction newTask = new MTReconstructionImpl();
 				newTask.setID(newID);
 				newTask.setResponseModality(this.getMultipleChoiceInstance(task));
@@ -504,7 +503,7 @@ class QuestionableFactsGenerationTest {
 			break;
 		case MEMBERSHIP: mc.setNbChoices(6); mc.setNbBadChoices(3); 
 			break;
-		default:
+		default: 
 			break;
 		}
 		return mc;

@@ -24,7 +24,7 @@ import structures.DidacticDomain;
 
 public class Constant {
 
-	// rivate static ResourceSet resourceSet;
+	// private static ResourceSet resourceSet;
 
 	/*
 	 * PROJECT PATH

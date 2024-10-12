@@ -14,9 +14,9 @@ import exceptions.ContextNotFoundException;
 import exceptions.NonExistantLearnerPlayerException;
 import generator.ATask;
 import generator.Dungeon;
-import generator.Room;
 import generator.MTCompletion2;
-import generator.MTRecontruction;
+import generator.MTReconstruction;
+import generator.Room;
 import generators.ALGAGenerator;
 import structures.DidacticDomain;
 
@@ -56,7 +56,7 @@ class MathTaskGameplaySwitchTest {
 	}
 	
 	private boolean isInstanceOfComp2OrReb(ATask task) {
-		return task instanceof MTCompletion2 || task instanceof MTRecontruction;
+		return task instanceof MTCompletion2 || task instanceof MTReconstruction; 
 	}
 	
 	

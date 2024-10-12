@@ -10,10 +10,11 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="libs/combinatoricslib3-3.3.3.jar"/>
+	<classpathentry kind="lib" path="/Users/pierrelaforcade/Documents/Boulot/Code Projets/git/gen1/Generator/libs/combinatoricslib3-3.3.3.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/TransformationFlattener"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

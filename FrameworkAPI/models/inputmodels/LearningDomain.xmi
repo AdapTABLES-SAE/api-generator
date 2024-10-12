@@ -99,7 +99,7 @@
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="-1"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="TASK14">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="20" ID="TASK14">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <completionCriteria encountersPercent="80.0"/>
@@ -321,7 +321,7 @@
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="10" ID="TASK41">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="10" ID="TASK42">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="10" ID="TASK42">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK43">
@@ -343,7 +343,7 @@
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="15" ID="TASK46">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="1"/>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="10" ID="TASK47">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="10" ID="TASK47">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <tasks xsi:type="generator:MTMembership" percentOfApparition="10" ID="TASK48">
@@ -395,7 +395,7 @@
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
           <targets>OPERAND_RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="25" ID="TASK56">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="25" ID="TASK56">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <completionCriteria/>
@@ -413,7 +413,7 @@
           <targets>TABLE_RESULT</targets>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="30" ID="TASK59">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="30" ID="TASK59">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <completionCriteria/>
@@ -458,7 +458,7 @@
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="25" ID="TASK67">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="25" ID="TASK67">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <completionCriteria/>
@@ -476,7 +476,7 @@
           <targets>TABLE_RESULT</targets>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="30">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="30">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <completionCriteria/>
@@ -521,7 +521,7 @@
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="25" ID="TASK75">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="25" ID="TASK75">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <completionCriteria/>
@@ -539,7 +539,7 @@
           <targets>TABLE_RESULT</targets>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="30" ID="TASK78">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="30" ID="TASK78">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <completionCriteria/>
@@ -584,7 +584,7 @@
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="25" ID="TASK86">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="25" ID="TASK86">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <completionCriteria/>
@@ -602,7 +602,7 @@
           <targets>TABLE_RESULT</targets>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="30" ID="TASK89">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="30" ID="TASK89">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <completionCriteria/>
@@ -619,7 +619,7 @@
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
           <targets>RESULT</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="TASK91">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="20" ID="TASK91">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK92">
@@ -643,7 +643,7 @@
           <targets>TABLE_RESULT</targets>
           <targets>OPERAND_TABLE</targets>
         </tasks>
-        <tasks xsi:type="generator:MTRecontruction" percentOfApparition="20" ID="TASK96">
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="20" ID="TASK96">
           <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <tasks xsi:type="generator:MTIdentification" percentOfApparition="20" ID="TASK97">
