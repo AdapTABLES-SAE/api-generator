@@ -3,8 +3,6 @@ package managers;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -20,27 +18,29 @@ import org.json.simple.JSONObject;
 import exceptions.NonExistantLearnerPlayerException;
 import generator.Classroom;
 import generator.Classrooms;
+import generator.ESingleTarget;
 import generator.GeneratorPackage;
 import generator.Knowledge;
 import generator.LearnerPlayer;
 import generator.LearningDomain;
 import generator.LearningPath;
 import generator.Level;
+import generator.MTCompletion1;
 import generator.Objective;
-import generator.SetOfFacts;
 import generator.Teacher;
 import generator.Teachers;
 import generator.impl.ClassroomImpl;
 import generator.impl.CompletionCriteriaImpl;
+import generator.impl.EnterResponseImpl;
 import generator.impl.HGLevelImpl;
 import generator.impl.LearnerPlayerImpl;
 import generator.impl.LearnerProgressImpl;
 import generator.impl.LearningPathImpl;
+import generator.impl.MTCompletion1Impl;
 import generator.impl.MTLevelImpl;
 import generator.impl.ObjectiveImpl;
 import generator.impl.PlayerProgressImpl;
 import generator.impl.ProgressionImpl;
-import generator.impl.SetOfFactsImpl;
 import generator.impl.StatisticsImpl;
 import generator.impl.TeacherImpl;
 import generators.ALGAGenerator;
@@ -198,6 +198,7 @@ public class DataManager {
 	private LearningPath createEmptyPath(String id, String knowledgeFile) {
 		LearningPath path = new LearningPathImpl();
 		path.setID(id);
+		path.setName(id);
 		path.setKnowledge(loadKnowledge(knowledgeFile));
 
 		Objective objective = new ObjectiveImpl();
@@ -207,8 +208,18 @@ public class DataManager {
 		Level level = (knowledgeFile.equals(Constant.KNOWLEDGE_FILE_MATH)? new MTLevelImpl():new HGLevelImpl());
 		
 		level.setID("L1_" + id);
+		level.setName("Niveau 1");
 		objective.getLevels().add(level);
+		Knowledge factSource = loadKnowledge(knowledgeFile);
+		objective.getSetoffacts().add(factSource.getKnowledgefacts().get(0));
 		level.setCompletionCriteria(new CompletionCriteriaImpl());
+		MTCompletion1 task = new MTCompletion1Impl();
+		task.getTargets().add(ESingleTarget.RESULT);
+		task.setPercentOfApparition(100);
+		task.setID(level.getID()+"-T1");
+		task.setResponseModality(new EnterResponseImpl());
+		level.getTasks().add(task);
+		
 		path.getObjectives().add(objective);
 
 		LearningDomain domain = loadDomain();

@@ -3,18 +3,30 @@
 	<classpathentry kind="src" path="src-gen"/>
 	<classpathentry kind="src" path="tests"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins">
 		<attributes>
-			<attribute name="module" value="true"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/pierrelaforcade/Documents/Boulot/Code Projets/git/gen1/Generator/libs/combinatoricslib3-3.3.3.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/TransformationFlattener"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="libs/combinatoricslib3-3.3.3.jar"/>
+	<classpathentry kind="lib" path="/TransformationFlattener/libs/org.antlr.runtime_3.1.b1_3.1.0.jar"/>
+	<classpathentry kind="lib" path="/TransformationFlattener/libs/org.antlr.runtime_4.7.2.v20221112-0806.jar"/>
+	<classpathentry kind="lib" path="/TransformationFlattener/libs/org.eclipse.emf_2.9.0.v20230211-1150.jar"/>
+	<classpathentry kind="lib" path="/TransformationFlattener/libs/org.eclipse.emf.common_2.28.0.v20230223-0922.jar"/>
+	<classpathentry kind="lib" path="/TransformationFlattener/libs/org.eclipse.emf.ecore_2.33.0.v20230226-0921.jar"/>
+	<classpathentry kind="lib" path="/TransformationFlattener/libs/org.eclipse.emf.ecore.xmi_2.18.0.v20230211-1150.jar"/>
+	<classpathentry kind="lib" path="/TransformationFlattener/libs/org.eclipse.epsilon.common_2.4.0.202203041826.jar"/>
+	<classpathentry kind="lib" path="/TransformationFlattener/libs/org.eclipse.epsilon.emc.emf_2.4.0.202203041826.jar"/>
+	<classpathentry kind="lib" path="/TransformationFlattener/libs/org.eclipse.epsilon.eol.engine_2.4.0.202203041826.jar"/>
+	<classpathentry kind="lib" path="/TransformationFlattener/libs/org.eclipse.epsilon.erl.engine_2.4.0.202203041826.jar"/>
+	<classpathentry kind="lib" path="/TransformationFlattener/libs/org.eclipse.epsilon.etl.engine_2.4.0.202203041826.jar"/>
+	<classpathentry kind="lib" path="/TransformationFlattener/libs/org.eclipse.xsd_2.19.0.v20230211-1150.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

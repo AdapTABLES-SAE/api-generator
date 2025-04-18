@@ -89,7 +89,7 @@ public class HGFactGeneratorLocate extends FactGeneratorTemplate {
 
 	@Override
 	protected int correctnessToReach(AQuestionableFact fact) {
-		return ((AVisualizationQuestionableFact) fact).getVisualizationSolutions().size();
+		return ((MapQuestionableFact) fact).getVisualizationSolutions().size();
 	}	
 	
 	@Override

@@ -631,14 +631,15 @@ public class LearnerPlayerManager {
 	}
 	
 	private CurrentObjectiveLevel getCorrespondingCOL(String objectiveID, String levelID) throws NonExistantLearnerPlayerException {
+		ALGAGenerator.LOGGER.info("search for " + objectiveID + " and " + levelID);
 		for (CurrentObjectiveLevel col : modelsManager.getLearnerPlayer().getProgression().getLearnerProgress().getCurrentobjectivelevels()) {
-			/*System.out.println(col.getObjective().getID()+" "+col.getLevel().getID());
-			System.out.println(col.getObjective().getID().equals(objectiveID));
-			System.out.println(col.getLevel().getID().equals(levelID));*/
+			ALGAGenerator.LOGGER.info(col.getObjective().getID()+" "+col.getLevel().getID());
 			if(col.getObjective().getID().equals(objectiveID) && col.getLevel().getID().equals(levelID)) {
-				return col;
+				ALGAGenerator.LOGGER.warning("Found");
+				return col;  
 			}
 		}
+		ALGAGenerator.LOGGER.info("not Found");
 		return null;
 	}
 	

@@ -53,8 +53,8 @@ public class ALGAGenerator {
 				generator.generate();
 				generator.printDungeon();
 				generator.saveDungeon("DungeonGen.xmi");
-				Main.transformModel("C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\models\\", 
-					"C:\\blemoine\\TheseGenerator\\gen1\\TransformationFlattener\\flattener\\", "outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
+				Main.transformModel("/Users/pierrelaforcade/Documents/Boulot/CodeProjets/git/gen1/TransformationFlattener/models/", 
+					"/Users/pierrelaforcade/Documents/Boulot/CodeProjets/git/gen1/TransformationFlattener/flattener/", "outputmodels/DungeonGen.xmi", "outputmodels/DungeonGen.xml");
 			} catch (ContextNotFoundException e) {
 				e.printStackTrace();
 			} catch (NonExistantLearnerPlayerException e) {
@@ -126,7 +126,7 @@ public class ALGAGenerator {
 	}
 	
 	public List<AQuestionableFact> getDungeonFacts() {
-		List<AQuestionableFact> facts = new ArrayList<>();
+		List<AQuestionableFact> facts = new ArrayList<>(); 
 	
 		for(Room room:	this.generatedDungeon.getRooms()) {
 			for(QuestionedFact fact: room.getQuestionedFacts()) {

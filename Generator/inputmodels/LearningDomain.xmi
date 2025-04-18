@@ -945,9 +945,8 @@
   <learningpaths name="BASIC MATH PATH (table 2 with simple params)">
     <objectives ID="BASIC_MATH_PATH_O1" name="BASIC_MATH_PATH_O1">
       <levels xsi:type="generator:MTLevel" ID="BASIC_MATH_PATH_L1">
-        <tasks xsi:type="generator:MTCompletion1" percentOfApparition="100" ID="BASIC_MATH_PATH_T1">
-          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="2"/>
-          <targets>RESULT</targets>
+        <tasks xsi:type="generator:MTReconstruction" percentOfApparition="100" ID="BASIC_MATH_PATH_T1">
+          <responseModality xsi:type="generator:DynamicMultipleChoice" nbBadChoices="3"/>
         </tasks>
         <completionCriteria/>
       </levels>
