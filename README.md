@@ -6,7 +6,7 @@
 | GET     | `/data/teacher/{teacherID}`                                             | Récupérer un enseignant           |
 | GET     | `/data/teachers`                                                        | Récupérer tous les enseignants    |
 | DELETE  | `/data/teacher/{teacherID}`                                             | Supprimer un enseignant           |
-| POST          | `/data/teacher` `json:` ```{"idProf" (String), "name" (String)}```                                                        | Identifiant et nom de l’enseignant |
+| POST          | `/data/teacher` `json:` ```{"idProf" (String), "name" (String)}```                                                        | Ajouter un enseignant |
 | GET     | `/data/students/teacher/{teacherID}/classroom/{classroomID}`            | Récupérer les élèves d’une classe |
 | POST    | `/data/classroom` `json:` `{"idProf": (String), "classe": {"id": (String), "name": (String)}}`                         | Ajoute une classe pour un enseignant |
 | PUT     | `/data/classroom` `json:` `{"id": (String), "name": (String)}`| Met à jour une classe existante      |
