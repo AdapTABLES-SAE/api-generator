@@ -53,13 +53,21 @@
 ## 🛤️ LearningPathResource (/path)
 | Méthode | Endpoint                                            | Description                                   |
 | ------- | --------------------------------------------------- | --------------------------------------------- |
-| POST | `/path` `json:` `{"learningPathID": (String), "objective": (String), "level": (String), "setupParameters": {"buildingParameters": {"tables": [String], "leftOperand": (String), "resultLocation": (String), "intervalMin": (int), "intervalMax": (int)}, "tasksParameters": [ {... task défini par type...} ], "achievementParameters": {"successCompletionCriteria": (double), "encounterCompletionCriteria": (double)}}}` | Ajoute ou met à jour un objectif/niveau dans un parcours d’apprentissage                         |            
-| POST | `/path/training` `json:` `{"learningPathID": (String), "learnerID": (String), "objectives": [ {"objective": (String), "name": (String), "prerequisites": [ {"requiredObjective": (String), "requiredLevel": (String), "successPercent": (double), "encountersPercent": (double)} ], "levels": [ {"level": (String), "name": (String), "setupParameters": {... comme ci-dessus ...}} ] } ]}`                          | Crée un nouveau parcours d’entraînement complet avec objectifs, niveaux, prérequis et paramètres |             |
+| POST | `/path` `json:` `{"learningPathID": (String), "learnerID": (String), "objectives": [ { "objective": (String), "name": (String), "prerequisites": [ { "requiredLevel": (String), "requiredObjective": (String), "successPercent": (double), "encountersPercent": (double) } ], "levels": [ { "level": (String), "name": (String), "setupParameters": { "achievementParameters": { "successCompletionCriteria": (double), "encounterCompletionCriteria": (double) }, "buildingParameters": { "tables": [String], "resultLocation": (String), "leftOperand": (String), "intervalMin": (int), "intervalMax": (int) }, "tasksParameters": [ { "taskType": ("C1" \| "C2" \| "REC" \| "ID" \| "MEMB"), "timeMaxSecond": (int), "repartitionPercent": (int), "successiveSuccessesToReach": (int), VOIR TABLEAU TASKTYPE } ] } } ] } ]}` | Ajoute ou met à jour un **objectif/niveau** dans un parcours d’apprentissage pour un élève. |
+| POST | `/path/training` `json:` `{"learningPathID": (String), "learnerID": (String), "objectives": [ { "objective": (String), "name": (String), "prerequisites": [ { "requiredLevel": (String), "requiredObjective": (String), "successPercent": (double), "encountersPercent": (double) } ], "levels": [ { "level": (String), "name": (String), "setupParameters": { "achievementParameters": { "successCompletionCriteria": (double), "encounterCompletionCriteria": (double) }, "buildingParameters": { "tables": [String], "resultLocation": (String), "leftOperand": (String), "intervalMin": (int), "intervalMax": (int) }, "tasksParameters": [ { "taskType": ("C1" \| "C2" \| "REC" \| "ID" \| "MEMB"), "timeMaxSecond": (int), "repartitionPercent": (int), "successiveSuccessesToReach": (int), VOIR TABLEAU TASKTYPE } ] } } ] } ]}` | Crée un **parcours complet d’entraînement** avec plusieurs objectifs, niveaux, prérequis et paramètres associés. |
 | GET     | `/path/learner/{learnerID}`                         | Récupérer parcours d’un élève                 |
 | GET     | `/path/training/learner/{learnerID}`                | Récupérer parcours d’entraînement d’un élève  |
 | GET     | `/path/classroom/{classroomID}/learner/{learnerID}` | Récupérer parcours d’un élève dans une classe |
 | GET     | `/path/learnerhg/{learnerID}`                       | Récupérer parcours HG d’un élève              |
 | POST    | `/path/traininghg`                                  | Créer un parcours d’entraînement HG           |
+
+| taskType | Paramètres spécifiques                                 | Description                                                      |
+|----------|--------------------------------------------------------|------------------------------------------------------------------|
+| C1       | `"targets": [String], "answerModality": ("CHOICE" \| "INPUT"), "nbIncorrectChoices": (int)` | Complétion simple, nécessite des cibles et modalité de réponse. |
+| C2       | `"targets": [String], "nbIncorrectChoices": (int)`     | Complétion multiple avec plusieurs cibles et mauvaises réponses. |
+| REC      | `"nbIncorrectChoices": (int)`                          | Reconstruction avec choix multiples.                            |
+| ID       | `"nbFacts": (int), "sourceVariation": (String)`        | Identification, précise nombre de faits et variation source.    |
+| MEMB     | `"target": ("CORRECT" \| "INCORRECT"), "nbCorrectChoices": (int), "nbIncorrectChoices": (int)` | Vérifie appartenance à un ensemble.                            |
 
 ## 🔑 LoginResource (/login)
 | Méthode | Endpoint                                         | Description                              |
@@ -87,6 +95,14 @@
 | GET     | `/statistics/learner/{learnerID}`                         | Statistiques générales d’un élève                 |
 | GET     | `/statistics/classroom/{classroomID}/learner/{learnerID}` | Statistiques générales d’un élève dans une classe |
 | GET     | `/statistics/learnerhg/{learnerID}`                       | Statistiques générales HG d’un élève              |
+
+
+
+
+| Méthode | Endpoint                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Description                                                                                 |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| POST    | `/path` `json:` `{"learningPathID": (String), "learnerID": (String), "objectives": [ { "objective": (String), "name": (String), "prerequisites": [ { "requiredLevel": (String), "requiredObjective": (String), "successPercent": (double), "encountersPercent": (double) } ], "levels": [ { "level": (String), "name": (String), "setupParameters": { "achievementParameters": { "successCompletionCriteria": (double), "encounterCompletionCriteria": (double) }, "buildingParameters": { "tables": [String], "resultLocation": (String), "leftOperand": (String), "intervalMin": (int), "intervalMax": (int) }, "tasksParameters": [ {... paramètres selon taskType...} ] } } ] } ]}` | Ajoute ou met à jour un **objectif/niveau** dans un parcours d’apprentissage pour un élève. |
+
 
 
 
