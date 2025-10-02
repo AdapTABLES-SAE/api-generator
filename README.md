@@ -99,13 +99,5 @@
 
 
 
-| Méthode | Endpoint                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Description                                                                                 |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| POST    | `/path` `json:` `{"learningPathID": (String), "learnerID": (String), "objectives": [ { "objective": (String), "name": (String), "prerequisites": [ { "requiredLevel": (String), "requiredObjective": (String), "successPercent": (double), "encountersPercent": (double) } ], "levels": [ { "level": (String), "name": (String), "setupParameters": { "achievementParameters": { "successCompletionCriteria": (double), "encounterCompletionCriteria": (double) }, "buildingParameters": { "tables": [String], "resultLocation": (String), "leftOperand": (String), "intervalMin": (int), "intervalMax": (int) }, "tasksParameters": [ {... paramètres selon taskType...} ] } } ] } ]}` | Ajoute ou met à jour un **objectif/niveau** dans un parcours d’apprentissage pour un élève. |
-
-
-
-
-
 
 
